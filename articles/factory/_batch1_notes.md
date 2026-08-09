@@ -119,3 +119,11 @@
 - **Delegate-audit kit**: g6's validate_g6.py (re-verify quotes vs full
   transcript, kind vocab, tripwires vs claim_text, null episodes, duplicate
   quotes, single-episode over-reliance) becomes standard in batch-4 briefs.
+- **REFINED KIMI WINDOW MODEL (2026-08-09 morning, g4's data)**: capacity does
+  NOT reopen wholesale — it trickles back as individual 5h-old requests age
+  out. A probe 200 means "≥1 slot free," not "window open": one write
+  succeeded, the next 403'd 90s later. Drain strategy: single fleet-wide
+  write token, slow-drip (5-10 min spacing) during trickle periods; bulk
+  drains only work ~5h after a big write block (e.g., a 50-write burst frees
+  ~5h later at the burst's own rate). Plan batch pacing around this: steady
+  ~1 write/3-4 min sustained beats bursts.

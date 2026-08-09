@@ -1,0 +1,872 @@
+{
+ "concept": "revision-control",
+ "name": "Revision Control",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "revision-control",
+    "version-control"
+   ],
+   "children": [
+    "dropbox",
+    "git-repository",
+    "project-manager"
+   ],
+   "neighbors": [
+    {
+     "concept": "subversion",
+     "weight": 4
+    }
+   ]
+  },
+  "stats": {
+   "episodes": 65,
+   "mentions": 132,
+   "explains": 65,
+   "opinions": 35,
+   "candidate_episode_count": 53,
+   "candidate_mention_count": 88,
+   "gated_out": 65,
+   "gated_out_by_concept": [
+    [
+     "dropbox",
+     34
+    ],
+    [
+     "project-manager",
+     13
+    ],
+    [
+     "git-repository",
+     11
+    ],
+    [
+     "subversion",
+     7
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 15,
+   "speakers": [
+    [
+     "Chris Gammell",
+     51
+    ],
+    [
+     "Dave Jones",
+     20
+    ],
+    [
+     "Michael",
+     8
+    ],
+    [
+     "Elecia White",
+     3
+    ],
+    [
+     "SPEAKER_03",
+     2
+    ],
+    [
+     "Kyle Dumont",
+     2
+    ],
+    [
+     "SPEAKER_00",
+     1
+    ],
+    [
+     "Michael Ossmann",
+     1
+    ],
+    [
+     "Dave Vandenbout",
+     1
+    ],
+    [
+     "Parker Dillman",
+     1
+    ],
+    [
+     "Dafydd Roche",
+     1
+    ],
+    [
+     "Matt Berggren",
+     1
+    ],
+    [
+     "Fredrik Kensander",
+     1
+    ],
+    [
+     "Jeff Keyzer",
+     1
+    ],
+    [
+     "Pete Staples",
+     1
+    ],
+    [
+     "Dave Young",
+     1
+    ],
+    [
+     "Pallav Aggarwal",
+     1
+    ],
+    [
+     "James Lewis",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 93,
+    "neighbor": 1,
+    "child": 4
+   },
+   "passages_by_depth": {
+    "explains": 65,
+    "opinion": 33
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 98
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "Demand from users for open, text-based ECAD file formats has been driven largely by revision control: an XML or other plain-text project format can be diffed and its changes tracked, which a proprietary binary format cannot. Binary formats can be versioned, but not compared usefully.",
+   "quote_verbatim": "I think that's the reason a lot of people were asking for it, was for doing, you know, version control and that kind of thing and tracking changes",
+   "speaker": null,
+   "episode": 67,
+   "episode_title": "BeagleBoard successors, CAD & Robots - Haussmannized Halloween Hypostrophe",
+   "episode_url": "https://theamphour.com/the-amp-hour-67-haussmannized-halloween-hypostrophe/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A naive byte-wise diff of a binary design file is close to useless, because inserting a single byte shifts everything after it and makes the entire remainder of the file appear changed. This is why binary CAD and FPGA outputs resist meaningful change tracking.",
+   "quote_verbatim": "if you insert a zero somewhere, then everything shifts by one bit, and everything looks wrong at that point",
+   "speaker": "Chris Gammell",
+   "episode": 67,
+   "episode_title": "BeagleBoard successors, CAD & Robots - Haussmannized Halloween Hypostrophe",
+   "episode_url": "https://theamphour.com/the-amp-hour-67-haussmannized-halloween-hypostrophe/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "FPGA vendor toolchains have not built revision control into the design environment, so tracking HDL sources and generated bitstreams has to be done with external tools chosen by the user.",
+   "quote_verbatim": "it's not really integrated into Xilinx or Altera, as far as I can tell",
+   "speaker": "Chris Gammell",
+   "episode": 67,
+   "episode_title": "BeagleBoard successors, CAD & Robots - Haussmannized Halloween Hypostrophe",
+   "episode_url": "https://theamphour.com/the-amp-hour-67-haussmannized-halloween-hypostrophe/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The dated-archive method of revision control, where the whole file set is zipped and labelled with the day's date, is justified on the grounds that storage costs almost nothing while losing a design is expensive. Its weakness is that the archive set becomes unmanageable as revisions accumulate.",
+   "quote_verbatim": "the basis of it is storage is cheap. Messing this crap up is really expensive",
+   "speaker": null,
+   "episode": 67,
+   "episode_title": "BeagleBoard successors, CAD & Robots - Haussmannized Halloween Hypostrophe",
+   "episode_url": "https://theamphour.com/the-amp-hour-67-haussmannized-halloween-hypostrophe/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The usual way of dividing schematic work between engineers is to give each person separate pages or sheets of the schematic; the difficult part is reintegrating those pages afterwards, which is why hardware design teams stay small.",
+   "quote_verbatim": "the best I've seen is people splitting up pages of a schematic, but then even integration of trying to get all that stuff together starts getting messy",
+   "speaker": "Dave Jones",
+   "episode": 67,
+   "episode_title": "BeagleBoard successors, CAD & Robots - Haussmannized Halloween Hypostrophe",
+   "episode_url": "https://theamphour.com/the-amp-hour-67-haussmannized-halloween-hypostrophe/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A common substitute for a version control system on solo projects is a fixed directory convention: one subdirectory per project, split into firmware and hardware, holding the current working files plus a backup subdirectory, with the whole tree covered by a routine backup.",
+   "quote_verbatim": "there's firmware and there's hardware and then there's, you know, the latest files and then there's a backup subdirectory",
+   "speaker": "Dave Jones",
+   "episode": 67,
+   "episode_title": "BeagleBoard successors, CAD & Robots - Haussmannized Halloween Hypostrophe",
+   "episode_url": "https://theamphour.com/the-amp-hour-67-haussmannized-halloween-hypostrophe/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The practical difference between a centralised system such as Subversion and a distributed one such as Git for an open project is the direction of contribution: with Git an outside contributor publishes their own commits for the maintainer to pull, rather than mailing a patch or requesting write access to the central repository.",
+   "quote_verbatim": "I like Git because people can then push things to you instead of saying, here's a patch. Will you apply it?",
+   "speaker": "Ian Lesnet",
+   "episode": 125,
+   "episode_title": "An Interview with Ian Lesnet - Bus Buccaneer Builder",
+   "episode_url": "https://theamphour.com/the-amp-hour-125-bus-buccaneer-builder/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "One workable governance model for a small open-hardware project is to grant commit access to anyone who asks and review after the fact, with the maintainer receiving an email for every commit and raising problems as they appear, on the reasoning that correcting a contributor's style costs less than gatekeeping.",
+   "quote_verbatim": "I get an email for every commit and I look over it",
+   "speaker": "Ian Lesnet",
+   "episode": 125,
+   "episode_title": "An Interview with Ian Lesnet - Bus Buccaneer Builder",
+   "episode_url": "https://theamphour.com/the-amp-hour-125-bus-buccaneer-builder/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "FPGA projects are particularly resistant to revision control because the working tree contains vendor binaries and encrypted proprietary blocks alongside the HDL sources, so much of the project cannot be diffed or merged at all.",
+   "quote_verbatim": "there's a lot of binaries and like encrypted stuff because it's, you know, there's a lot of proprietary code with the vendor zone",
+   "speaker": "Chris Gammell",
+   "episode": 152,
+   "episode_title": "Firmware, Netburner and Semiconductors - Chris's Capitalism Colloquy",
+   "episode_url": "https://theamphour.com/the-amp-hour-152-chriss-capitalism-colloquy/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Publishing a company's ECAD parts library in a public repository lets outside users contribute the symbols and footprints for older products that were never added to the library, submitted as pull requests and merged so that every user gets them.",
+   "quote_verbatim": "we can have our customers design those parts and then, you know, just issue a pull request",
+   "speaker": null,
+   "episode": 157,
+   "episode_title": "An Interview with the SparkFun Team - Efficacious Engineering Ensemble",
+   "episode_url": "https://theamphour.com/the-amp-hour-157-efficacious-engineering-ensemble/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A project whose hardware, embedded firmware and host-side software must interoperate is best versioned as a unit, so that the version numbers of the three parts advance together and any checked-out state is internally consistent.",
+   "quote_verbatim": "that all kind of need to be kind of consistent with each other and track version numbers together",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Git is as effective for hardware as for software on the condition that the ECAD package stores its designs in a text-based file format; the tool's usefulness is set by the file format, not by the domain.",
+   "quote_verbatim": "I find Git to be an excellent tool for hardware and for software. As long as your design software for the hardware side uses a text-based file format.",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The prevailing collaboration model on small hardware teams is single-authorship with review: one person makes substantially all the edits to a design while two or three others act as reviewers, arguing architecture and part choice rather than editing the files themselves.",
+   "quote_verbatim": "one person is a designer and other people are there to help that designer",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "What a board designer typically wants from revision control is the ability to return to specific identified points in a design's history, addressed by commit hash, in place of copying whole project folders into rev1 and rev2 directories.",
+   "quote_verbatim": "I wanted to be able to, like, make boards and go back to very specific points without having, like, the standard, oh, I'm on rev1, you know, save folder rev1, copy the folder 2",
+   "speaker": "Chris Gammell",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Hand-rolled folder-copy versioning degenerates: designers invent ad-hoc naming schemes such as 1A and 1B whose meaning cannot be reconstructed later, so the history exists but is not interpretable.",
+   "quote_verbatim": "you make weird conventions. You go to 1A, 1B, and it's like, why did I do this?",
+   "speaker": "Chris Gammell",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "For engineers who are not software developers, a graphical client that displays the linear progression of commits has been what made distributed version control comprehensible, giving a visible model of the history before any command-line use.",
+   "quote_verbatim": "the only thing that's really made sense to me is the GitHub Windows tool",
+   "speaker": "Chris Gammell",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Attempts to add hardware version control by layering it onto existing CAD packages, including gEDA, Cadence and Altium, and by adapting Git to their file formats, were tried before anyone built a new CAD tool for the purpose; those attempts failed, which is what motivated ground-up tools.",
+   "quote_verbatim": "Like if you could build Git for hardware stuff or take Git, right? Like don't even rebuild Git. Just take Git and make it work better on those files",
+   "speaker": null,
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Mainstream repository hosting is built around linear, text-based version control, while a schematic or layout is a graph rather than a sequence of lines; problems that look like text version control belong in a general host, and graph-structured design data needs different handling.",
+   "quote_verbatim": "GitHub is incredibly good at linear text-based version control",
+   "speaker": null,
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Design review on a hardware repository is anchored to a specific tag or commit identifier: reviewers pull that exact state, examine it and discuss it by reference, even where the tool provides no mechanism for proposing changes back.",
+   "quote_verbatim": "being able to see, look at this, this tag or this, uh, commit number. And that's, that's when you, that's how you review stuff",
+   "speaker": "Chris Gammell",
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Schematic and layout carry their own revisions and can decouple, because a layout change need not imply a schematic change; assembly variants such as alternative populated parts add a further dimension that neither document's revision letter captures.",
+   "quote_verbatim": "sometimes they get decoupled where your layout might change, but your schematic might not",
+   "speaker": "Chris Gammell",
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Treating the schematic as the control document means encoding manufacturing data such as populate or do-not-populate as component attributes in the schematic and generating the purchasing spreadsheet and assembly documents from it, since purchasing staff and contract manufacturers work from a spreadsheet and will not open a schematic.",
+   "quote_verbatim": "if you have a attribute in your schematic that says populate or don't populate, you can then programmatically generate a spreadsheet afterwards",
+   "speaker": "Chris Gammell",
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Capturing a design as HDL rather than as a schematic makes both large architectural changes and revision control substantially easier, because a textual description can be diffed and restructured in ways a drawing cannot.",
+   "quote_verbatim": "doing a diff, you know, version control in a schematic is a lot harder than doing it on a HDL",
+   "speaker": "Dave Vandenbout",
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "In regulated markets such as medical devices, source code is subject to different rules from schematics, which has led companies to enter designs as schematics that generate HDL rather than writing the HDL directly.",
+   "quote_verbatim": "Source code comes under different rules. So if you do it in schematic and it generates the HDL, then that's fine.",
+   "speaker": "Dave Vandenbout",
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Pulling library dependencies from an upstream repository lets a project take updates and observe what they break, but the analogy stops at fabrication: a board that has been built cannot be updated from upstream, so footprints must be checked before the design is committed to manufacture.",
+   "quote_verbatim": "You don't get to do that with hardware. That's a one way road folks",
+   "speaker": "Chris Gammell",
+   "episode": 186,
+   "episode_title": "Someone is watching...we think - Horme Hostility Hypochondriac",
+   "episode_url": "https://theamphour.com/186-someone-is-watching-we-think-horme-hostility-hypochondriac/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Commented-out code should be deleted rather than left in place, because the version control system already preserves it and can return it on demand; leaving it in the source only obscures what the program currently does.",
+   "quote_verbatim": "Delete that code and use your version control system to pick it back up if you need it",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Filename-based versioning on a shared project produces a proliferating set of near-identical files, with sequential numbers followed by further suffixes for individual fixes, and no record of what distinguishes them.",
+   "quote_verbatim": "it would be like, uh, you know, version 46. And then the next day, version 47",
+   "speaker": "Chris Gammell",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Hardware groups inside software companies were among the earliest to put ECAD work under revision control; Altium's hardware engineers used Subversion through the TortoiseSVN graphical client.",
+   "quote_verbatim": "we didn't use GitHub at Altium, but Altium we used, uh, Tortoise",
+   "speaker": "Dave Jones",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A single structural edit, such as adding a hierarchical sheet, can corrupt an ECAD project beyond the user's ability to undo it; without any prior copy the work is unrecoverable, which is the failure that motivates even file-sync-level backup.",
+   "quote_verbatim": "I tried adding a sheet, a hierarchical sheet and it broke everything. And now I don't know what to do",
+   "speaker": "Chris Gammell",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A file synchronisation service is backup rather than revision control: it preserves the files but not an intentional record of states and the reasons for moving between them.",
+   "quote_verbatim": "It's not really revision. It's, it's just backup",
+   "speaker": "Dave Jones",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Merging is the point where revision control breaks down for hardware. Two engineers working on separate schematic pages can be reconciled, but simultaneous edits to the same page or the same layout cannot be merged automatically and one set of work must be redone.",
+   "quote_verbatim": "If it's like you and I change something on the same page, we're screwed",
+   "speaker": "Chris Gammell",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Because design files cannot be merged, small hardware teams avoid conflicts socially rather than technically, by announcing that a revision has been pushed and agreeing not to touch the files while another engineer works on them.",
+   "quote_verbatim": "okay, I just pushed a revision. I'm not going to touch anything for the next week while you work on stuff",
+   "speaker": "Chris Gammell",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Per-seat CAD licence cost is a direct obstacle to using the schematic as the controlled source document: at several thousand dollars a seat only the licensed designer can open and change the file, whereas a low-cost or open tool lets a production engineer make a change and put it through revision control and approval at the schematic level.",
+   "quote_verbatim": "if you have to pay five grand for each seat of the schematic tool or the, you know, the entire layout tool, no one else can go in and change it",
+   "speaker": "Chris Gammell",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Committing or saving on a fixed short interval bounds the work lost when a design tool crashes or an operation destroys the file; making it a scheduled habit rather than a reaction is what makes it effective.",
+   "quote_verbatim": "if I did like an hourly get commit or even just an hourly save",
+   "speaker": "Chris Gammell",
+   "episode": 244,
+   "episode_title": "The Art Of Staying Interested In Electronics - Exponible Electronics Ennui",
+   "episode_url": "https://theamphour.com/244-the-art-of-staying-interested-in-electronics-exponible-electronics-ennui/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Users of a public design repository should build from tagged releases rather than from arbitrary commits, because the tip of a working branch may contain unfinished circuits that were never intended to function.",
+   "quote_verbatim": "Release numbers folks. Not commits. Right. Don't go by commits. Go by release numbers.",
+   "speaker": "Dave Jones",
+   "episode": 251,
+   "episode_title": "Shifting Away From DIY - Pedetentious PnP Progress",
+   "episode_url": "https://theamphour.com/251-shifting-away-from-diy-pedetentious-pnp-progress/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Designs predating routine version control can survive only as scanned documents: for some long-lived semiconductor parts the CAD files no longer exist, and the reference PCB layout has to be recovered by toner-transferring the artwork out of a scanned application note.",
+   "quote_verbatim": "what you have to do is take the old eval application note, which is a scan copy",
+   "speaker": "Dafydd Roche",
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Before CAD, revision control was a paper procedure: work was recorded on ruled A3 sheets in per-project ring binders under a company numbering system, each page hand-written, signed and dated, and a new revision was created by photocopying the previous one, marking the changes by hand, signing it and labelling it as the next revision.",
+   "quote_verbatim": "And then when you wanted to do Rev 2. Well, you photocopied Rev 1. And then you make the hand changes. And then you sign that. And then you mark that as Rev 2.",
+   "speaker": "Dave Jones",
+   "episode": 273,
+   "episode_title": "Part Choice Triathlon",
+   "episode_url": "https://theamphour.com/273-part-choice-triathlon/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "For CAD files a revision control system operates at whole-file granularity: a revision is taken or not taken, with no merging of two engineers' changes. The case for a full version control system rests on merging, which is why it is weaker for a solo CAD user than for a software team.",
+   "quote_verbatim": "even in a revision control system with CAD or some kind of visual thing like that, it's all or nothing. It's not like you're going to merge changes",
+   "speaker": "Chris Gammell",
+   "episode": 287,
+   "episode_title": "Pull The Trigger",
+   "episode_url": "https://theamphour.com/287-pull-the-trigger/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Commit messages written at the time of each change accumulate into a record of why a design took the form it did, which is a form of documentation produced as a by-product of work; obtaining that value depends on the discipline of writing a real reason each time.",
+   "quote_verbatim": "I change this because I change this because that kind of stuff. Like I think there's some value in that too. I mean, that takes a lot of discipline",
+   "speaker": "Chris Gammell",
+   "episode": 289,
+   "episode_title": "Documentation Is A Waste Of Time",
+   "episode_url": "https://theamphour.com/289-documentation-is-a-waste-of-time/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The argument against putting personal projects under revision control is overhead against project size: an engineer working alone on small designs may judge that the setup and daily cost exceeds what the history is worth.",
+   "quote_verbatim": "My own personal projects just aren't big enough to warrant it",
+   "speaker": "Dave Jones",
+   "episode": 300,
+   "episode_title": "Three Hundred Down, Three Hundred To Go",
+   "episode_url": "https://theamphour.com/300-three-hundred-down-three-hundred-to-go/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Keeping a repository's working copy inside a synchronised folder gives a second, independent recovery path while an engineer is still learning the version control commands, because a destructive command that discards local work can be undone from the sync history.",
+   "quote_verbatim": "even though i was using github i was had in a dropbox folder and you know i was able to revert back",
+   "speaker": "Chris Gammell",
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Committing and pushing at the end of each working session replaces physical transfer of files between machines: the other machine pulls the current state instead of receiving a copy on removable media.",
+   "quote_verbatim": "so that i don't have to copy my files onto a thumb drive oh to go between computers",
+   "speaker": "Chris Gammell",
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Teams without a version control system still practise revision control in weaker forms: zipping the project with a date appended, or keeping a text file describing what changed and why. The text file performs the function of a change log, and any such scheme is only as good as the consistency with which it is used.",
+   "quote_verbatim": "he said they have a text file with the details, right? That is revision control",
+   "speaker": "Chris Gammell",
+   "episode": 317,
+   "episode_title": "A Decoupled Episode",
+   "episode_url": "https://theamphour.com/317-a-decoupled-episode/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A text-based ECAD format such as KiCad's makes the files legible to version control where a binary format such as Altium's does not, but in practice engineers still do not compare two revisions of a board by reading the file diff.",
+   "quote_verbatim": "But in reality, you're never really comparing even with a text-based file format.",
+   "speaker": "Chris Gammell",
+   "episode": 317,
+   "episode_title": "A Decoupled Episode",
+   "episode_url": "https://theamphour.com/317-a-decoupled-episode/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Scripted plugins that export schematic fields to a spreadsheet and write the edited values back, such as KiCost and KiField, are what let the schematic remain the single tracked source for costing and part data while the people who work in spreadsheets still get a spreadsheet.",
+   "quote_verbatim": "you can extract it, work from a spreadsheet and then put it back in",
+   "speaker": "Chris Gammell",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Floating licensing weakens the headcount argument against expensive CAD as a control document: a company does not need a seat per employee, only enough concurrent licences for the people using the tool simultaneously.",
+   "quote_verbatim": "it's a floating license. So it's like as long as only one person's using it at a time, you're fine",
+   "speaker": "Dave Jones",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Storing each footprint and each schematic symbol as its own file inside a directory that constitutes the library makes library changes visible to revision control at the level of the individual part, and lets parts be copied between libraries individually.",
+   "quote_verbatim": "each schematic symbol is now its own file. And then you can, you know, drag and drop",
+   "speaker": "Chris Gammell",
+   "episode": 370,
+   "episode_title": "Alternate Info Sources",
+   "episode_url": "https://theamphour.com/370-alternate-info-sources/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Fast iterative debugging is where revision control is most often abandoned and most needed: after dozens of small undocumented edits there is no way back to the last state that worked, because the change that broke it is no longer remembered.",
+   "quote_verbatim": "the thing that was working the first 30 times and on the 31st time I changed something that I don't remember",
+   "speaker": "Chris Gammell",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The inability to merge design files matters less in practice than it appears, because hardware work is generally organised as sequential hand-offs of a block of work rather than as simultaneous editing, and that pattern is well served by revision control.",
+   "quote_verbatim": "doing a chunk of work, handing it off to someone, doing a chunk of work, handing it off to someone",
+   "speaker": "Chris Gammell",
+   "episode": 422,
+   "episode_title": "Stick 'Em On Whales",
+   "episode_url": "https://theamphour.com/422-stick-em-on-whales/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The measurable benefit of routine commits during ECAD work is the bounded loss when the tool crashes: an hour or a day of work rather than weeks.",
+   "quote_verbatim": "you'll lose an hour or two or a day as a work instead of weeks",
+   "speaker": "Chris Gammell",
+   "episode": 422,
+   "episode_title": "Stick 'Em On Whales",
+   "episode_url": "https://theamphour.com/422-stick-em-on-whales/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Storing engineering work in a version control system long predates cloud-hosted design tools, going back to RCS, so the objection to cloud CAD is not that data leaves the local disk but where and under whose control it is held.",
+   "quote_verbatim": "since, since, uh, you know, the days of RCS, which is a revision control system",
+   "speaker": "Matt Berggren",
+   "episode": 471,
+   "episode_title": "An Interview with Matt Berggren",
+   "episode_url": "https://theamphour.com/471-an-interview-with-matt-berggren/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Hosted repositories, whether Git-based or Perforce, concentrate a company's most valuable intellectual property with a third party, which makes the choice of hosting and the terms attached to it an engineering-management decision rather than a convenience one.",
+   "quote_verbatim": "A lot of that is the intellectual property that are in fact, the keys to the castle",
+   "speaker": "Matt Berggren",
+   "episode": 471,
+   "episode_title": "An Interview with Matt Berggren",
+   "episode_url": "https://theamphour.com/471-an-interview-with-matt-berggren/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Git records history in terms of the change between one version and the next rather than as a complete copy per revision, which keeps repository size manageable and distinguishes it from Subversion; it is designed around plain ASCII text files.",
+   "quote_verbatim": "it actually saves files based off of save new versions based off of the, the change, the Delta in from one version to another",
+   "speaker": "Kyle Dumont",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Cloning a Git repository retrieves the entire history into the local .git directory rather than only the current files, so every past state and every change is available offline to whoever has a clone.",
+   "quote_verbatim": "I don't just download the latest files. I download all of the history and I get to see every single change",
+   "speaker": "Chris Gammell",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Firmware written before version control was in use carried its history inline: a house rule required every added line to be commented with the version in which it was added, so the comments recorded version bookkeeping instead of explaining the code. The same era copied whole code bases from one product to the next.",
+   "quote_verbatim": "if you add a line, you will add a comment about which version you added that line in",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A published hardware repository often contains only the design sources and no generated manufacturing files; an outside user can fork it, add an outputs subdirectory containing those generated files and offer the change back as a pull request without touching the source design at all.",
+   "quote_verbatim": "So someone like me could come along, fork it, do an output subdirectory and then put all the files in there and then do a pull request for them to pull it back in",
+   "speaker": "Chris Gammell",
+   "episode": 530,
+   "episode_title": "Living Through Chipageddon",
+   "episode_url": "https://theamphour.com/530-living-through-chipageddon/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Parts specific to a company need a centralised component database rather than per-project libraries, but running one carries real overhead: at one company a dedicated librarian maintained it, and the approval path for admitting a new part governed how quickly purchasing could buy it.",
+   "quote_verbatim": "if you have a part that's an in-house part, you should definitely have a centralized database for that",
+   "speaker": "Dave Jones",
+   "episode": 543,
+   "episode_title": "Cassette decks have browsers?",
+   "episode_url": "https://theamphour.com/543-cassette-decks-have-browsers/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Component libraries can be version controlled in the same repository system as the designs: a four-person hardware group put its component libraries under Subversion via TortoiseSVN rather than keeping library files local to each project.",
+   "quote_verbatim": "we ended up using SVN, the Tortoise SVN. Yeah. Right. Interface for our component libraries",
+   "speaker": "Dave Jones",
+   "episode": 543,
+   "episode_title": "Cassette decks have browsers?",
+   "episode_url": "https://theamphour.com/543-cassette-decks-have-browsers/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Revision control does not protect against a design tool that silently changes its file format. If a week of commits was made with a newer build and the files then have to be opened with the older stable release, the committed history is unreadable and the work is lost anyway; the defence is a known-good tool version, not more commits.",
+   "quote_verbatim": "If you have to go back to that stable version and this new file format that you've got is not compatible with that old version, you've lost that week's work",
+   "speaker": "Dave Jones",
+   "episode": 543,
+   "episode_title": "Cassette decks have browsers?",
+   "episode_url": "https://theamphour.com/543-cassette-decks-have-browsers/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Production test assets are versioned and shipped as releases: a firmware version, its matching test plan and any label configuration are packaged together and deployed to the production line testers, with separate deployment groups so a release can be put on staging before it reaches the line, and identical lines in different factories updated at once.",
+   "quote_verbatim": "these things get packed up into a release and that's the mechanism for deploying out to PLTs",
+   "speaker": "Pete Staples",
+   "episode": 544,
+   "episode_title": "Standardizing Manufacturing with Pete Staples",
+   "episode_url": "https://theamphour.com/544-standardizing-manufacturing-with-pete-staples/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Traceability at the unit level is a distinct problem from revision control of the design: for a complex assembly it means being able to say which revisions of which sub-assemblies went into each individual serial number, which does not fall out of a design repository.",
+   "quote_verbatim": "car serial number one, two, three, four, and I have car serial number one, two, three, five. And what the hell is different between them?",
+   "speaker": "Chris Gammell",
+   "episode": 546,
+   "episode_title": "Thousands Of Dependencies",
+   "episode_url": "https://theamphour.com/546-thousands-of-dependencies/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Product lifecycle management is the product category covering bill-of-materials and CAD file management, revision control, part number generation, and controlled distribution of design content to team members and suppliers, with change orders as the mechanism for making a revision official.",
+   "quote_verbatim": "the core components of PLM is managing your bill materials and CAD files, a location for revision control, part number generation, and distribution content to various team members and suppliers",
+   "speaker": "Michael Corr",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The hardware data tool chain of CAD, PDM, PLM, ERP, MES and inventory systems was designed as separate products decades apart and does not interoperate out of the box, so it is common for a hardware company to spend six months or more configuring the tool chain before it can manage its data properly.",
+   "quote_verbatim": "it's quite common for a hardware company to take six or more months just to set up their tool chain",
+   "speaker": "Michael Corr",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Change notifications should carry a link to the controlled revision rather than an attached copy of the Gerbers or BOM, because an attachment persists in recipients' mailboxes indefinitely and will eventually be used after it has been superseded.",
+   "quote_verbatim": "if it's an attachment, it falls into that same risk of it always being in someone's inbox and being able to be accessed at any time, which means they can accidentally grab the wrong revision",
+   "speaker": "Michael Corr",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Released data has to have one designated authoritative location, whether that is the schematic or a PLM system; once many copies of a BOM are circulating with different vendors, the only defensible position is that the nominated source is definitive and copies are not.",
+   "quote_verbatim": "I call that the source of truth problem",
+   "speaker": "Chris Gammell",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Software practice is to create the repository before writing any code, whereas hardware teams typically begin in CAD, do several design iterations with local file revisions on a laptop, and retrofit revision control or a PLM system only after they recognise the risk they are carrying.",
+   "quote_verbatim": "every single software team, the very first line of code they write is Git init",
+   "speaker": "Michael Corr",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Git degrades on large binary files, and proprietary CAD formats block comparison, merging and diffing, so a hardware project tracked in Git gets the history and the backup but not most of the tool's benefits.",
+   "quote_verbatim": "Git will fall apart because it's not known to handle large binary files at some point",
+   "speaker": "Michael Corr",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A repository per board stops being sufficient once a product is an assembly of interacting boards: a change to one board affects the other, and what has to be tracked is which revisions were sent to the manufacturer and which pair was fastened together and shipped to a customer.",
+   "quote_verbatim": "I need to then be able to track what's actually being sent to my manufacturer. And more importantly, what two boards are getting screwed together and being sent to an end customer",
+   "speaker": "Chris Gammell",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Software development methods have moved into firmware and are now moving into hardware tooling, with cloud-connected ECAD offering revision control built into the design tool itself rather than bolted on, which mainly speeds collaboration with other people.",
+   "quote_verbatim": "the revision control that they have is really good. Yeah. And it's all native to the tool",
+   "speaker": null,
+   "episode": 601,
+   "episode_title": "Rebuilding Projects with Dave Young",
+   "episode_url": "https://theamphour.com/601-rebuilding-projects-with-dave-young/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Code generators overwrite what they produced previously, so hand edits to generated files are destroyed on the next run; committing before regenerating is what makes those edits recoverable.",
+   "quote_verbatim": "commit to your repo before you, before you regenerate",
+   "speaker": "Chris Gammell",
+   "episode": 661,
+   "episode_title": "Blogging Electronics with Pallav Aggarwal",
+   "episode_url": "https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The version control learning curve is a real and persistent barrier for practising hardware engineers, many of whom use only clone for years before understanding the rest of the tool, with the command line remaining the intimidating part.",
+   "quote_verbatim": "have I actually finally understood how to do something other than Git clone. Git command line still scares me",
+   "speaker": "James Lewis",
+   "episode": 670,
+   "episode_title": "Engineering Careers with Circuit Break & James Lewis",
+   "episode_url": "https://theamphour.com/670-engineering-careers-with-circuit-break-james-lewis/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Being required to work on daily builds of the design tool forces fluency in revision control, and the group's own protection was to agree informally on one standardised tool version to use for work that had to be delivered.",
+   "quote_verbatim": "we all secretly agreed in the hardware group to have like a standardized version that we'd use to do serious real world work with",
+   "speaker": "Dave Jones",
+   "episode": 724,
+   "episode_title": "All Heat, No Useful Work",
+   "episode_url": "https://theamphour.com/724-all-heat-no-useful-work/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "ep67: passages are fused host cross-talk and the speaker labels do not track the individual lines. Claims about the XML file format and about dated-zip archiving are left with speaker null; the FPGA and binary-diff lines are attributed to Chris Gammell and the personal-directory and schematic-page-splitting lines to Dave Jones on content.",
+  "ep125: bundle labels the passage SPEAKER_00. Content is unambiguously the interviewed maintainer of the open-source project describing his own repository policy, so attributed to Ian Lesnet.",
+  "ep152: bundle labels the passage Chris Gammell, but the speaker describes working with the developers of the PCB core at his own company and being used as a guinea pig for internal builds, which is Dave Jones at Altium. Overridden.",
+  "ep157: SparkFun group interview; the bundle label (Chris Gammell) is the host, and the line about customers submitting library parts is a SparkFun employee who cannot be identified individually. Speaker null.",
+  "ep163: bundle labels the passages SPEAKER_03; the speaker is one of the two Upverter founders being interviewed and cannot be separated from the other. Speaker null.",
+  "ep181: attribution_reliable is false, but the speaker is the interviewed guest comparing schematic capture with HDL and is the only person in the passage making that argument. Attributed to Dave Vandenbout.",
+  "ep230: bundle labels the command-line-Git passage Dave Jones, but that passage's other lines establish that Dave has never used Git; the command-line line is Chris Gammell. The Dropbox-is-backup rebuttal is labelled Chris Gammell but answers Chris's own claim, so attributed to Dave Jones. Both overridden on content.",
+  "ep243: the canonical-source line is spoken by the Macrofab guests rather than the labelled host, and cannot be assigned between them. Speaker null.",
+  "ep287: bundle labels the all-or-nothing CAD merge passage Dave Jones; the surrounding lines establish Dave as the one being argued with, and the reasoning is Chris Gammell's. Overridden.",
+  "ep370: the observation that Altium had already taken the individual-files route is Dave Jones speaking about his former employer, not the labelled Chris Gammell. Overridden.",
+  "ep422: fused turns between host and guest; the command-line-Git line cannot be separated from the guest's own remarks. Speaker null.",
+  "ep471: attribution_reliable is false; content is the interviewed Autodesk guest speaking about his employer's internal conversations. Attributed to Matt Berggren.",
+  "ep505: attribution_reliable is false. The definition of Git is the interviewed guest and is attributed to Kyle Dumont; the description of cloning a .git directory while teaching it in a course is Chris Gammell and is overridden.",
+  "ep543: bundle labels the file-format-corruption argument Chris Gammell, but the position argued is Dave Jones's counter to Chris's commit cadence. Overridden.",
+  "ep544: attribution_reliable is false; the release-packaging answer is the interviewed guest. Attributed to Pete Staples.",
+  "ep577: attribution_reliable is false and the bundle gives the guest only as 'Michael'. PLM definitions and the Git-on-binaries limits are the guest, recorded as Michael Corr; the dedicated-administrator and two-board traceability lines are the host and recorded as Chris Gammell.",
+  "ep601: the passage mixes host and guest and the remark on native revision control in cloud ECAD cannot be assigned. Speaker null.",
+  "ep661: attribution is the guest by label, but the advice to commit before regenerating code is the host's. Attributed to Chris Gammell."
+ ]
+}
