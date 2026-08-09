@@ -99,7 +99,8 @@ INFOBOX_CSS = """
 <style>
 .amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
   background: var(--lightgray); border: 1px solid var(--lightgray);
-  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px;
+  box-sizing: border-box; }
 .amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
 .amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
 .amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
