@@ -71,3 +71,19 @@
   with an uncited lead-in sentence ("Several failure modes are characteristic
   of X:"). Deleting the lead-in by hand fixes lint in seconds — do not spend a
   rewrite call on it.
+
+## From g2's final lane verification (add to lint.py before batch 3)
+
+- **Assert packet has `name`**: when missing, kimi_write title-cases the slug
+  ("Pcb Layout", "I2c", "Lora"). Hit two articles; fixed by hand.
+- **Assert `kind` ∈ ten-term vocabulary**: `explains` (a depth value) leaked
+  into `kind` on two packets (17 claims total).
+- **State prompt-file semantics in briefs**: kimi_write writes
+  `<concept>.md.prompt.txt` BEFORE the API call; prompt-without-md means
+  "in flight or interrupted", never "key dead".
+- **Delegate watcher pattern**: parent groups never receive delegate
+  completion notifications (they route to the lead). Fix that worked: arm a
+  background `until [ -f <artifact> ]` watcher with ABSOLUTE paths right
+  after launching each delegate (relative paths silently fail — cwd resets
+  between bash calls). Event-driven, costs nothing idle. Mandate in batch-3
+  briefs.
