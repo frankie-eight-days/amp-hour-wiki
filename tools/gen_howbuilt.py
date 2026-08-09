@@ -726,8 +726,9 @@ Everything &mdash; transcripts, census, bundles, packets, tools, this site
 If you want to build a piece of it yourself, start at
 [How to contribute](./contribute).
 
-*The Amp Hour is Chris Gammell and Dave Jones. This is a fan project built on
-their Creative Commons-licensed show; go listen to
+*The Amp Hour is Chris Gammell and Dave Jones, and it is theirs &mdash; this is
+an unaffiliated fan project built out of admiration for the show, quoting
+briefly and always with a link home. Go listen to
 [the real thing](https://theamphour.com).*
 
 </div>

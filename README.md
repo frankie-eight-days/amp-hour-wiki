@@ -36,16 +36,23 @@ hack on the site itself. PRs are lint-checked automatically.
 Spotted an error on the site? Highlight the text and hit **Report** — it
 opens a prefilled GitHub issue here.
 
-## Licensing & attribution
+## Attribution & rights
 
-The Amp Hour podcast is published by Chris Gammell and Dave Jones under a
-Creative Commons license. Transcripts in `transcripts/` are machine-generated
-(ASR) from those episodes and carry their errors; the wiki articles are
-derivative works and are likewise offered under
-[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), with
-attribution to The Amp Hour and the speakers quoted. Code (everything under
-`tools/`, `articles/factory/tools/`, `site/` build config) is MIT.
+**The Amp Hour is © Chris Gammell and Dave Jones.** The show does not publish
+under an open license, so nothing here claims any rights over its content. This
+is an unaffiliated, non-commercial fan project, built out of admiration for the
+show and not endorsed by it.
 
-This is a fan project, not affiliated with or endorsed by The Amp Hour.
-If you're Chris or Dave and want anything changed or removed, open an issue —
-it'll be handled immediately.
+What that means in practice:
+
+- **The articles** quote briefly (typically a single sentence) and always with
+  attribution, cite the specific episode, and link back to it on theamphour.com.
+  They are syntheses, written to send people to the source.
+- **The transcripts** in `transcripts/` are machine-generated from published
+  episodes and remain the show's content, not ours.
+- **The code** — `tools/`, `articles/factory/tools/`, and the `site/` build
+  config — is MIT and is ours to give.
+
+If you're Chris or Dave and want anything changed, credited differently, or
+removed, open an issue or email the maintainer and it will be done immediately,
+no discussion needed.
