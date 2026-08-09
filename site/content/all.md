@@ -25,6 +25,7 @@ title: All articles
 - [[assembly-language|Assembly Language]]
 - [[automated-testing|Automated Testing]]
 - [[automation|Automation]]
+- [[automotive-electronics|Automotive Electronics]]
 
 ### B
 
@@ -32,6 +33,7 @@ title: All articles
 - [[battery|Battery]]
 - [[battery-life|Battery Life]]
 - [[bga|BGA]]
+- [[big-company-vs-small|Big Company vs Small Company]]
 - [[bill-of-materials|Bill of Materials]]
 - [[bluetooth|Bluetooth]]
 - [[bluetooth-low-energy|Bluetooth Low Energy]]
@@ -59,11 +61,13 @@ title: All articles
 - [[contract-manufacturer|Contract Manufacturer]]
 - [[cpu|CPU]]
 - [[crowdfunding|Crowdfunding]]
+- [[crowdfunding-aftermath|Crowdfunding Aftermath]]
 
 ### D
 
 - [[datasheet|Datasheet]]
 - [[dc-dc-converter|DC-DC Converter]]
+- [[defense-and-mil-spec|Defense and Mil-Spec Work]]
 - [[design-for-manufacturing|Design for Manufacturing]]
 - [[design-review|Design Review]]
 - [[design-rule-checking|Design Rule Checking]]
@@ -88,6 +92,7 @@ title: All articles
 
 ### F
 
+- [[failures-and-recalls|Failures, Fires, and Recalls]]
 - [[firmware|Firmware]]
 - [[firmware-update|Firmware Update]]
 - [[flash-memory|Flash Memory]]
@@ -98,6 +103,7 @@ title: All articles
 ### G
 
 - [[gerber|Gerber]]
+- [[getting-hired|Getting Hired and Getting Good]]
 - [[github|GitHub]]
 - [[gpio|GPIO]]
 - [[gps|GPS]]
@@ -132,6 +138,7 @@ title: All articles
 
 - [[lcd|LCD]]
 - [[led|LED]]
+- [[life-at-a-hardware-startup|Life at a Hardware Startup]]
 - [[linux|Linux]]
 - [[logic-analyzer|Logic Analyzer]]
 - [[lora|LoRa]]
@@ -143,6 +150,7 @@ title: All articles
 - [[magnetic-field|Magnetic Field]]
 - [[maker-faire|Maker Faire]]
 - [[mass-production|Mass Production]]
+- [[medical-devices|Medical Device Development]]
 - [[microcontroller|Microcontroller]]
 - [[moores-law|Moore's Law]]
 - [[mosfet|MOSFET]]
@@ -186,6 +194,7 @@ title: All articles
 
 ### R
 
+- [[radar-and-rf-black-magic|Radar and RF Black Magic]]
 - [[radio-frequency|Radio Frequency]]
 - [[ram|RAM]]
 - [[rapid-prototyping|Rapid Prototyping]]
@@ -198,6 +207,7 @@ title: All articles
 - [[research-and-development|Research and Development]]
 - [[resistor|Resistor]]
 - [[resume|Resume]]
+- [[retrocomputing|Retrocomputing and Electronics Archaeology]]
 - [[reverse-engineering|Reverse Engineering]]
 - [[revision-control|Revision Control]]
 - [[risc-v|RISC-V]]
@@ -212,6 +222,7 @@ title: All articles
 - [[semiconductor-fab|Semiconductor Fab]]
 - [[sensor|Sensor]]
 - [[serial-port|Serial Port]]
+- [[shenzhen-and-the-markets|Shenzhen and the Markets]]
 - [[signal-integrity|Signal Integrity]]
 - [[signal-to-noise-ratio|Signal to Noise Ratio]]
 - [[silicon|Silicon]]
@@ -222,10 +233,12 @@ title: All articles
 - [[solder-paste|Solder Paste]]
 - [[soldering|Soldering]]
 - [[soldering-iron|Soldering Iron]]
+- [[space-electronics|Space Electronics]]
 - [[sparkfun|SparkFun]]
 - [[spectrum-analyzer|Spectrum Analyzer]]
 - [[spi|SPI]]
 - [[spice|SPICE]]
+- [[broadcast-and-big-installs|Stage, Broadcast, and Giant Installations]]
 - [[startup-funding|Startup Funding]]
 - [[state-machine|State Machine]]
 - [[supply-chain|Supply Chain]]
@@ -237,6 +250,7 @@ title: All articles
 
 - [[temperature-sensor|Temperature Sensor]]
 - [[test-equipment|Test Equipment]]
+- [[the-teardown-tradition|The Teardown Tradition]]
 - [[transformer|Transformer]]
 - [[transistor|Transistor]]
 - [[troubleshooting|Troubleshooting]]
@@ -262,6 +276,7 @@ title: All articles
 
 - [[wafer|Wafer]]
 - [[wifi|Wi-Fi]]
+- [[working-with-chinese-manufacturers|Working with Chinese Manufacturers]]
 
 ### Y
 

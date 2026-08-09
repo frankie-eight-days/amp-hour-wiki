@@ -19,6 +19,18 @@ DST.mkdir(parents=True, exist_ok=True)
 cand = {c["concept"]: c
         for c in json.load(open(ROOT / "articles" / "candidates.json"))["candidates"]}
 graph = json.load(open(ROOT / "graph" / "graph.json"))
+
+# theme articles: editorially curated, so absent from the ranked candidates
+THEMES, BUNDLES, PACKET_CLAIMS = {}, {}, {}
+_tp = ROOT / "articles" / "factory" / "_themes.json"
+if _tp.exists():
+    for _t in json.load(open(_tp))["themes"]:
+        THEMES[_t["slug"]] = _t
+        for _d, _k in ((BUNDLES, "bundles"), (PACKET_CLAIMS, "packets")):
+            _f = ROOT / "articles" / "factory" / _k / f'{_t["slug"]}.json'
+            if _f.exists():
+                _j = json.load(open(_f))
+                _d[_t["slug"]] = _j if _k == "bundles" else _j.get("claims", [])
 # adjacency with edge weights (cooccurrence only)
 adj = {}
 for e in graph.get("edges", graph.get("links", [])):
@@ -49,7 +61,36 @@ def sparkline(mentions_by_year, width=178, height=34):
         'stroke-width="1.6"/></svg>')
 
 
+def theme_infobox(slug, n_refs):
+    """Themes are not in candidates.json (they are editorial, not ranked), so
+    their box is built from the theme manifest and the bundle's own stats."""
+    t = THEMES[slug]
+    esc = html_mod.escape
+    b = BUNDLES.get(slug, {})
+    st = b.get("stats", {})
+    rows = [("Episodes drawn on", f'{st.get("episodes", 0)}'),
+            ("Cited here", f"{n_refs}"),
+            ("Claims extracted", f'{len(PACKET_CLAIMS.get(slug, []))}')]
+    if b.get("gathering"):
+        rows.append(("Gathering", b["gathering"].replace("-", " ")))
+    rows_html = "".join(f'<tr><td class="ibk">{k}</td><td class="ibv">{v}</td></tr>'
+                        for k, v in rows)
+    sibs = [s for s in THEMES if s != slug and s in published][:5]
+    sib_html = ""
+    if sibs:
+        links = "".join(f'<a href="./{s}">{esc(THEMES[s]["title"])}</a>'
+                        for s in sibs)
+        sib_html = (f'<tr><td class="ibk" colspan="2">Other themes'
+                    f'<div class="ib-siblings">{links}</div></td></tr>')
+    return (f'<div class="amp-infobox amp-themebox">'
+            f'<div class="ib-sparklabel">theme article</div>'
+            f'<div class="amp-themescope">{esc(t.get("scope", ""))}</div>'
+            f'<table>{rows_html}{sib_html}</table></div>')
+
+
 def infobox(slug, n_refs):
+    if slug in THEMES:
+        return theme_infobox(slug, n_refs)
     c = cand.get(slug)
     if not c:
         return ""
@@ -105,7 +146,11 @@ INFOBOX_CSS = """
 .amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
 .amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
   white-space: nowrap; }
-.amp-infobox .ibv { text-align: right; }
+.amp-infobox .ibv { text-align: right; overflow-wrap: anywhere; }
+.amp-themebox { width: 250px; }
+.amp-themebox .ib-siblings { display: flex; flex-direction: column; gap: 3px;
+  margin-top: 5px; text-align: left; }
+.amp-themebox .ib-siblings a { font-size: 0.74rem; line-height: 1.3; }
 .ib-sparklabel { text-align: center; color: var(--darkgray);
   font-size: 0.68rem; margin-bottom: 6px; }
 .amp-provenance { color: var(--darkgray); font-size: 0.8rem;
@@ -134,7 +179,7 @@ def linkify(raw: str, slug: str) -> str:
     def cite(m):
         nums = re.findall(r"\[(\d+)\]", m.group(0))
         return "".join(
-            f'<sup><a href="#ref-{n}" data-tip="{ref_meta.get(n, "")}" '
+            f'<sup><a href="#ref-{n}" '
             f'title="{ref_meta.get(n, "")}">[{n}]</a></sup>'
             for n in nums)
 
@@ -147,7 +192,9 @@ def linkify(raw: str, slug: str) -> str:
         body = prose[fm_end + 4:]
     else:
         head, body = "", prose
-    n_eps = cand.get(slug, {}).get("episode_count", "?")
+    n_eps = cand.get(slug, {}).get("episode_count")
+    if not n_eps:                       # themes: use episodes actually cited
+        n_eps = len(ref_meta)
     inject = (INFOBOX_CSS + PROVENANCE.format(n=n_eps)
               + infobox(slug, len(ref_meta)))
     prose = head + "\n" + inject + "\n" + body
@@ -193,7 +240,11 @@ for md in SRC.glob("*.md"):
 
 # ------------------------------------------------------------- homepage
 by_comm = {}
+theme_arts = []
 for slug, title in articles:
+    if slug in THEMES:                      # editorial lane, own section
+        theme_arts.append((slug, title))
+        continue
     comm = cand.get(slug, {}).get("community_name") or "other topics"
     by_comm.setdefault(comm, []).append((slug, title))
 
@@ -236,6 +287,25 @@ hero = [
     "[how this wiki was built](./how-this-was-built), or "
     "[contribute](./contribute).",
     "",
+]
+
+if theme_arts:
+    hero += [
+        "## Themes",
+        "",
+        "Experiential subjects that the frequency ranking is structurally blind "
+        "to &mdash; what the work is actually like, rather than what a component "
+        "is. These were curated by hand and built from a wider evidence net.",
+        "",
+        '<div class="amp-themegrid">',
+    ]
+    for slug, title in sorted(theme_arts, key=lambda a: a[1].lower()):
+        scope = THEMES[slug].get("scope", "")
+        hero.append(f'<a class="amp-themecard" href="./{slug}">'
+                    f'<strong>{title}</strong><span>{scope}</span></a>')
+    hero += ["</div>", ""]
+
+hero += [
     "## Topics",
     "",
 ]

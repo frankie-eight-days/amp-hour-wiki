@@ -266,7 +266,7 @@ claims cannot be traced does not build.
 
 ### What survives each stage
 
-<div class="hb-fn"><div class="hb-fn-lbl">Words of raw transcript</div><div class="hb-fn-bar"><i style="width:100.0%"></i><span>11,000,000</span></div><div class="hb-fn-sub">719 episodes, machine-transcribed</div></div><div class="hb-fn"><div class="hb-fn-lbl">Concept mentions logged</div><div class="hb-fn-bar"><i style="width:77.2%"></i><span>270,979</span></div><div class="hb-fn-sub">the census pass</div></div><div class="hb-fn"><div class="hb-fn-lbl">Verified claims extracted</div><div class="hb-fn-bar"><i style="width:58.5%"></i><span>13,225</span></div><div class="hb-fn-sub">each pinned to a byte-checked quote</div></div><div class="hb-fn"><div class="hb-fn-lbl">Episode citations published</div><div class="hb-fn-bar"><i style="width:55.4%"></i><span>8,021</span></div><div class="hb-fn-sub">across every live article</div></div><div class="hb-fn"><div class="hb-fn-lbl">Articles live</div><div class="hb-fn-bar"><i style="width:32.5%"></i><span>194</span></div><div class="hb-fn-sub">of 412 planned</div></div>
+<div class="hb-fn"><div class="hb-fn-lbl">Words of raw transcript</div><div class="hb-fn-bar"><i style="width:100.0%"></i><span>11,000,000</span></div><div class="hb-fn-sub">719 episodes, machine-transcribed</div></div><div class="hb-fn"><div class="hb-fn-lbl">Concept mentions logged</div><div class="hb-fn-bar"><i style="width:77.2%"></i><span>270,979</span></div><div class="hb-fn-sub">the census pass</div></div><div class="hb-fn"><div class="hb-fn-lbl">Verified claims extracted</div><div class="hb-fn-bar"><i style="width:59.1%"></i><span>14,495</span></div><div class="hb-fn-sub">each pinned to a byte-checked quote</div></div><div class="hb-fn"><div class="hb-fn-lbl">Episode citations published</div><div class="hb-fn-bar"><i style="width:55.9%"></i><span>8,676</span></div><div class="hb-fn-sub">across every live article</div></div><div class="hb-fn"><div class="hb-fn-lbl">Articles live</div><div class="hb-fn-bar"><i style="width:33.0%"></i><span>209</span></div><div class="hb-fn-sub">of 412 planned</div></div>
 
 </div></div>
 
@@ -274,8 +274,8 @@ claims cannot be traced does not build.
 
 **Guaranteed:** every claim traces to a real, verbatim, byte-checked passage in
 a real episode you can go listen to. Nothing is sourced from a model's general
-knowledge of electronics, from the web, or from vibes. 13,225 claims across
-the wiki carry a quote that has passed this check, and 8,021 citations
+knowledge of electronics, from the web, or from vibes. 14,495 claims across
+the wiki carry a quote that has passed this check, and 8,676 citations
 resolve to a specific episode.
 
 **Not guaranteed:** that the *interpretation* is right. The quotes are real, but
@@ -299,9 +299,9 @@ the one the machinery cannot catch by itself.
 | Concept mentions in the census | 270,979 |
 | Alias table entries | 90,150 |
 | Concept graph | 4,016 nodes, 12,776 edges |
-| Verified claims extracted | 13,225 |
-| Articles live | 194 of 412 planned |
-| Episode citations published | 8,021 |
+| Verified claims extracted | 14,495 |
+| Articles live | 209 of 412 planned |
+| Episode citations published | 8,676 |
 
 Everything &mdash; transcripts, census, bundles, packets, tools, this site
 &mdash; is in the [public repo](https://github.com/frankie-eight-days/amp-hour-wiki).

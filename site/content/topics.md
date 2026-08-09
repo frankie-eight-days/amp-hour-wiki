@@ -7,11 +7,33 @@ title: Browse the wiki
 <p style="font-size: 1.05rem; max-width: 34rem; margin: 0 auto;">Sixteen years of <strong><a href="https://theamphour.com">The Amp Hour</a></strong> &mdash; the rules of thumb, failure modes, and real numbers that never reach a datasheet &mdash; distilled into cited, browsable articles.</p>
 </div>
 
-<div style="display:flex; justify-content:center; gap:2.2rem; flex-wrap:wrap; text-align:center; margin: 1rem 0 1.4rem; font-variant-numeric: tabular-nums;"><div><strong style="font-size:1.5rem;">194</strong><br>articles live</div><div><strong style="font-size:1.5rem;">8,021</strong><br>episode citations</div><div><strong style="font-size:1.5rem;">719</strong><br>episodes indexed</div><div><strong style="font-size:1.5rem;">412</strong><br>articles planned</div></div>
+<div style="display:flex; justify-content:center; gap:2.2rem; flex-wrap:wrap; text-align:center; margin: 1rem 0 1.4rem; font-variant-numeric: tabular-nums;"><div><strong style="font-size:1.5rem;">209</strong><br>articles live</div><div><strong style="font-size:1.5rem;">8,676</strong><br>episode citations</div><div><strong style="font-size:1.5rem;">719</strong><br>episodes indexed</div><div><strong style="font-size:1.5rem;">412</strong><br>articles planned</div></div>
 
 <p style="text-align:center;"><strong><a href="./explore">Explore the concept graph &rarr;</a></strong> &nbsp;·&nbsp; <a href="./all">All articles A&ndash;Z</a> &nbsp;·&nbsp; search with <kbd>⌘K</kbd></p>
 
 Every claim carries a bracketed citation tracing to a verbatim passage in the show's official transcripts. Articles are AI-generated syntheses built by a verified extraction pipeline — read [how this wiki was built](./how-this-was-built), or [contribute](./contribute).
+
+## Themes
+
+Experiential subjects that the frequency ranking is structurally blind to &mdash; what the work is actually like, rather than what a component is. These were curated by hand and built from a wider evidence net.
+
+<div class="amp-themegrid">
+<a class="amp-themecard" href="./automotive-electronics"><strong>Automotive Electronics</strong><span>ECU counts, CAN security, AEC qualification torture, tier-supplier structure</span></a>
+<a class="amp-themecard" href="./big-company-vs-small"><strong>Big Company vs Small Company</strong><span>What died with the giants; sign-off culture vs move-fast; semiconductor consolidation from inside</span></a>
+<a class="amp-themecard" href="./crowdfunding-aftermath"><strong>Crowdfunding Aftermath</strong><span>What happens after funding: fulfillment, oversubscription hazards, the redesign-eats-the-raise arc</span></a>
+<a class="amp-themecard" href="./defense-and-mil-spec"><strong>Defense and Mil-Spec Work</strong><span>ITAR realities, paperwork-as-engineering, decade-scale projects, qualification culture</span></a>
+<a class="amp-themecard" href="./failures-and-recalls"><strong>Failures, Fires, and Recalls</strong><span>Shipped disasters and their mechanisms; the one-cent coin-cell cost-down that bricked the product</span></a>
+<a class="amp-themecard" href="./getting-hired"><strong>Getting Hired and Getting Good</strong><span>Portfolio-over-resume, blog-as-career-lever, interview war stories, self-teaching paths</span></a>
+<a class="amp-themecard" href="./life-at-a-hardware-startup"><strong>Life at a Hardware Startup</strong><span>Equity math, runway reality, spin-cost culture, founder-engineer transitions</span></a>
+<a class="amp-themecard" href="./medical-devices"><strong>Medical Device Development</strong><span>The FDA gauntlet, why a thermometer takes three years, liability-shaped design</span></a>
+<a class="amp-themecard" href="./radar-and-rf-black-magic"><strong>Radar and RF Black Magic</strong><span>Through-wall radar, mm-wave, RF-as-plumbing tradition, the black-magic pedagogy</span></a>
+<a class="amp-themecard" href="./retrocomputing"><strong>Retrocomputing and Electronics Archaeology</strong><span>Commodore bring-up, ROM recovery, why the old tricks still teach</span></a>
+<a class="amp-themecard" href="./shenzhen-and-the-markets"><strong>Shenzhen and the Markets</strong><span>Huaqiangbei norms, the parts-in-hours ecosystem, counterfeit tells, why it exists nowhere else</span></a>
+<a class="amp-themecard" href="./space-electronics"><strong>Space Electronics</strong><span>Radiation tolerance, version-locked toolchains, 20-year-old silicon, test-like-you-fly</span></a>
+<a class="amp-themecard" href="./broadcast-and-big-installs"><strong>Stage, Broadcast, and Giant Installations</strong><span>Mike Harrison territory: very big, very public electronics and its odd physics</span></a>
+<a class="amp-themecard" href="./the-teardown-tradition"><strong>The Teardown Tradition</strong><span>What teardowns teach: cost-down archaeology, how professionals read a board, the EEVblog tradition</span></a>
+<a class="amp-themecard" href="./working-with-chinese-manufacturers"><strong>Working with Chinese Manufacturers</strong><span>Quoting, golden samples, quality fade, tooling ownership, communication rituals, when to fly out</span></a>
+</div>
 
 ## Topics
 

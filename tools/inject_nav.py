@@ -33,8 +33,11 @@ html { scroll-padding-top: calc(var(--amp-nav) + 12px); }
 /* On a phone the brand + four links exceed the viewport, which widens the
    whole document and clips every page. Wrap to two centred rows instead. */
 @media (max-width: 799px) {
-  .amp-topbar { height: auto; min-height: 0; flex-wrap: wrap; gap: 3px 0;
-    justify-content: center; padding: 6px 10px; font-size: 10px;
+  /* the bar wraps to two rows here, so it is taller than the desktop 43px;
+     the JS below measures it and corrects --amp-nav for any width */
+  :root { --amp-nav: 54px; }
+  .amp-topbar { height: auto; min-height: var(--amp-nav); flex-wrap: wrap;
+    gap: 3px 0; justify-content: center; padding: 6px 10px; font-size: 10px;
     letter-spacing: .04em; }
   .amp-brand { flex: 1 0 100%; text-align: center; }
   .amp-links { display: flex; flex-wrap: wrap; justify-content: center;
@@ -48,6 +51,27 @@ html { scroll-padding-top: calc(var(--amp-nav) + 12px); }
 #amp-report:hover { background: #c94628; }
 </style>
 <script>
+(function () {
+  // Keep --amp-nav equal to the bar's REAL height. It wraps to two rows on
+  // narrow screens, so a hardcoded value leaves everything that offsets for
+  // the bar (sticky rails, scroll-padding, the trace page's pinned sentence)
+  // short by the difference, and content tucks under the banner.
+  function ampNavHeight() {
+    var bar = document.querySelector(".amp-topbar");
+    if (!bar) return;
+    var h = Math.round(bar.getBoundingClientRect().height);
+    if (h > 0) document.documentElement.style.setProperty("--amp-nav", h + "px");
+  }
+  document.addEventListener("DOMContentLoaded", ampNavHeight);
+  window.addEventListener("load", ampNavHeight);
+  window.addEventListener("resize", ampNavHeight);
+  if (window.ResizeObserver) {
+    document.addEventListener("DOMContentLoaded", function () {
+      var bar = document.querySelector(".amp-topbar");
+      if (bar) new ResizeObserver(ampNavHeight).observe(bar);
+    });
+  }
+})();
 (function () {
   var REPO = "https://github.com/frankie-eight-days/amp-hour-wiki";
   var btn = document.createElement("button");
