@@ -1,5 +1,5 @@
 ---
-title: Analog To Digital Converter
+title: Analog to Digital Converter
 concept: analog-to-digital-converter
 generated: 2026-08-08
 model: k3

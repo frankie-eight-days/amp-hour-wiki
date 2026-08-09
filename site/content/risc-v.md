@@ -1,5 +1,5 @@
 ---
-title: Risc V
+title: RISC-V
 concept: risc-v
 generated: 2026-08-08
 model: k3

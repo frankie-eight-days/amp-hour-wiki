@@ -176,7 +176,7 @@ for md in sorted(SRC.glob("*.md")):
     (DST / md.name).write_text(linkify(raw, md.stem))
 
 present = {a[0] for a in articles}
-KEEP = {"index", "all", "explore"}
+KEEP = {"topics", "all", "explore"}
 for md in DST.glob("*.md"):
     if md.stem not in KEEP and md.stem not in present:
         md.unlink()
@@ -193,7 +193,7 @@ for slug, title in articles:
 
 hero = [
     "---",
-    "title: The Amp Hour Wiki",
+    "title: Browse the wiki",
     "---",
     "",
     '<div style="text-align:center; padding: 1.2rem 0 0.4rem;">',
@@ -243,7 +243,7 @@ hero.append(
     f"*Last synced {datetime.date.today().isoformat()} · "
     "[source corpus and pipeline]"
     "(https://github.com/frankie-eight-days/amp-hour-wiki)*")
-(DST / "index.md").write_text("\n".join(hero) + "\n")
+(DST / "topics.md").write_text("\n".join(hero) + "\n")
 
 # ---------------------------------------------------------------- /all page
 by_letter = {}

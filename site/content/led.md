@@ -1,5 +1,5 @@
 ---
-title: Led
+title: LED
 concept: led
 generated: 2026-08-08
 model: k3

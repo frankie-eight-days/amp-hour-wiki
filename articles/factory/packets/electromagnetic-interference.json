@@ -1,0 +1,578 @@
+{
+ "concept": "electromagnetic-interference",
+ "name": "Electromagnetic Interference",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "electromagnetic-interference"
+   ],
+   "children": [
+    "air-force",
+    "electromagnetic-shielding",
+    "emi-testing",
+    "microwave-oven",
+    "radiated-emissions",
+    "value-proposition",
+    "western-electric"
+   ],
+   "neighbors": []
+  },
+  "stats": {
+   "episodes": 44,
+   "mentions": 66,
+   "explains": 38,
+   "opinions": 10,
+   "candidate_episode_count": 32,
+   "candidate_mention_count": 44,
+   "gated_out": 71,
+   "gated_out_by_concept": [
+    [
+     "electromagnetic-shielding",
+     16
+    ],
+    [
+     "radiated-emissions",
+     13
+    ],
+    [
+     "emi-testing",
+     11
+    ],
+    [
+     "microwave-oven",
+     10
+    ],
+    [
+     "value-proposition",
+     9
+    ],
+    [
+     "air-force",
+     7
+    ],
+    [
+     "western-electric",
+     5
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 5,
+   "speakers": [
+    [
+     "Dave Jones",
+     17
+    ],
+    [
+     "Chris Gammell",
+     11
+    ],
+    [
+     "Henry Ott",
+     5
+    ],
+    [
+     "Howard Johnson",
+     2
+    ],
+    [
+     "Alan Wolke",
+     2
+    ],
+    [
+     "Hank Zumbahlen",
+     2
+    ],
+    [
+     "Forrest Mims",
+     1
+    ],
+    [
+     "Dafydd Roche",
+     1
+    ],
+    [
+     "Jeff Keyzer",
+     1
+    ],
+    [
+     "Nash Reilly",
+     1
+    ],
+    [
+     "Jared Wolff",
+     1
+    ],
+    [
+     "Eli Hughes",
+     1
+    ],
+    [
+     "Carmen",
+     1
+    ],
+    [
+     "Andrea Longobardi",
+     1
+    ],
+    [
+     "Werner Johansson",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 48
+   },
+   "passages_by_depth": {
+    "opinion": 10,
+    "explains": 38
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 48
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "A pull-up or bias resistor placed across a microcontroller's crystal may be present for emissions reasons rather than for oscillator function; on an AVR-based board the part was not required for the oscillator to start, and its likely purpose was to control high-frequency noise so the board would pass FCC testing. Because such a component is not needed for the product to work, a functional bring-up test does not detect its absence.",
+   "quote_verbatim": "it's possible that they added the resistor there to improve like high frequency noise or some kind of like an EMI or RFI issue, because I know that these boards were FCC tested",
+   "speaker": "Chris Gammell",
+   "episode": 11,
+   "episode_title": "Ardui...no Dave This Week?",
+   "episode_url": "https://theamphour.com/the-amp-hour-11-ardui-no-dave-this-week/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Compliance-only components are invisible to end-of-line electrical test: a board missing a part fitted purely for emissions control powers up and behaves normally, so the unit ships and the defect surfaces only in the field or at retest.",
+   "quote_verbatim": "their electrical testing didn't uncover that there was a problem because they turned on the board and it, you know, it worked just fine",
+   "speaker": "Chris Gammell",
+   "episode": 11,
+   "episode_title": "Ardui...no Dave This Week?",
+   "episode_url": "https://theamphour.com/the-amp-hour-11-ardui-no-dave-this-week/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Phase-cut mains dimmers work by chopping the AC waveform, and the resulting fast discontinuity in the current makes them a strong broadband emissions source; solving the same dimming function cleanly at low cost and in volume is the hard part.",
+   "quote_verbatim": "it's horrible from an EMI point of view too. It spews out all this EMI",
+   "speaker": "Dave Jones",
+   "episode": 56,
+   "episode_title": "Open Orbific Oratiuncle",
+   "episode_url": "https://theamphour.com/the-amp-hour-56-open-orbific-oratiuncle/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Early anti-lock braking systems, first fitted to heavy trucks because a locked-wheel jackknife is so costly, proved susceptible to nearby transmitters: a radio keyed from a vehicle alongside could apply all the brakes on the rig. Safety-critical actuators in vehicles were an immunity problem from the moment they were introduced.",
+   "quote_verbatim": "it would sometimes jam on all the brakes on the big rig",
+   "speaker": "Howard Johnson",
+   "episode": 77,
+   "episode_title": "An Interview with Dr. Howard Johnson - Winsome Waveform Wizardry",
+   "episode_url": "https://theamphour.com/the-amp-hour-77-winsome-waveform-wizardry/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Most product companies have no in-house EMI compliance chamber and buy chamber time from an external laboratory, so every emissions question costs both money and calendar time and cannot be answered on the bench. An intermittent result is the worst case: a unit that fails one run in five leaves the team with no clear pass and no clear defect.",
+   "quote_verbatim": "They test it five times and it fails once out of five times",
+   "speaker": "Alan Wolke",
+   "episode": 117,
+   "episode_title": "An Interview with Alan Wolke (Re-broadcast)",
+   "episode_url": "https://theamphour.com/117-an-interview-with-alan-wolke-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Transient emissions from a product often do not originate in a single source. They are frequently a mixing or intermodulation product of several subsystems, so the offending emission appears only when two or more buses happen to line up, which is why such failures present as intermittent and resist single-cause debugging.",
+   "quote_verbatim": "a lot of times these transient emissions that you get out of a product are not from one particular source. A lot of times it's a mixing product or an intermod product of many things conspiring together",
+   "speaker": "Alan Wolke",
+   "episode": 117,
+   "episode_title": "An Interview with Alan Wolke (Re-broadcast)",
+   "episode_url": "https://theamphour.com/117-an-interview-with-alan-wolke-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Closing a module into its metal housing can create a resonant cavity that produces oscillations or spurious behaviour absent when the unit is open, an effect diagnosed by the symptom disappearing whenever the lid comes off and remedied by packing conductive foam inside the enclosure.",
+   "quote_verbatim": "when they sealed the module up in its housing, they were getting some kinds of oscillations or some spurious results or something like that",
+   "speaker": "Alan Wolke",
+   "episode": 117,
+   "episode_title": "An Interview with Alan Wolke (Re-broadcast)",
+   "episode_url": "https://theamphour.com/117-an-interview-with-alan-wolke-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Noise and interference control is largely absent from electrical engineering curricula, so practitioners who need it typically teach themselves on a live problem. The field's early literature was thin enough that an engineer solving noise coupling problems on the job could become his organisation's resident expert on the strength of that self-teaching alone.",
+   "quote_verbatim": "I had no idea how to control the noise because that was never taught in school and still seldom is",
+   "speaker": "Henry Ott",
+   "episode": 165,
+   "episode_title": "An Interview with Henry Ott - Forced FCC Filtering",
+   "episode_url": "https://theamphour.com/165-an-interview-with-henry-ott-forced-fcc-filtering/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Emissions remedies redistribute energy rather than remove it: a patch such as copper tape over one leak commonly makes the noise escape somewhere else, the way pressing on a balloon makes it bulge elsewhere. That behaviour is not a reason to skip the first fix, because each leak can be closed in turn.",
+   "quote_verbatim": "you push it here on the balloon, it pops out over there",
+   "speaker": "Henry Ott",
+   "episode": 165,
+   "episode_title": "An Interview with Henry Ott - Forced FCC Filtering",
+   "episode_url": "https://theamphour.com/165-an-interview-with-henry-ott-forced-fcc-filtering/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Automotive EMC requirements began as manufacturers' self-imposed restrictions rather than as external regulation, because the consequences of interference in a car — an airbag firing, an engine control circuit disturbed, cruise control misbehaving — followed directly from what the product was.",
+   "quote_verbatim": "automotive has a lot of – it originally started out as self-imposed restrictions",
+   "speaker": "Henry Ott",
+   "episode": 165,
+   "episode_title": "An Interview with Henry Ott - Forced FCC Filtering",
+   "episode_url": "https://theamphour.com/165-an-interview-with-henry-ott-forced-fcc-filtering/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Very high gain analogue instruments are commonly built inside a fully enclosed metal box, because at high gain any coupled interference appears at the output as signal; a field photometer built around an ultra-high-gain op-amp stage was completely enclosed in aluminium for that reason.",
+   "quote_verbatim": "it's completely enclosed in an aluminum box because the gain is so high, you cannot have any electromagnetic interference",
+   "speaker": "Forrest Mims",
+   "episode": 171,
+   "episode_title": "An Interview with Forrest Mims - Snell Solisequious Scientist",
+   "episode_url": "https://theamphour.com/171-an-interview-with-forrest-mims-snell-solisequious-scientist/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Physically small boards have inherently small current loops, which limits both radiated emission and field pickup; on a product of roughly two by one centimetres with reasonable layout, EMC did not become a design problem at all, while antenna performance did.",
+   "quote_verbatim": "we're dealing with in the grand scheme of things, such small currents. And the board is so tiny. It's like two by one centimeters or something. So there's inherently any loop on there is going to be tiny",
+   "speaker": null,
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Radiated emission is governed principally by loop area, so long traces that enclose area with their return path are the structures that cause emissions problems; reviewing a layout for large loops is the fastest way to predict which circuits will fail a scan.",
+   "quote_verbatim": "Yep, EMI is all about the loop area.",
+   "speaker": "Dave Jones",
+   "episode": 183,
+   "episode_title": "An Interview with Scott Driscoll - Impacable Interdisciplinary Inventor",
+   "episode_url": "https://theamphour.com/183-an-interview-with-scott-driscoll-impaccable-interdisciplinary-inventor/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "On USB and similar interfaces the radiating structure is often not the cable itself but the termination at its end, so an expensive well-built cable plugged into a poor jack can still cost a product its compliance result.",
+   "quote_verbatim": "with these USB things that it's oftentimes not like the cable that's the problem. It's just that very end termination",
+   "speaker": "Dave Jones",
+   "episode": 183,
+   "episode_title": "An Interview with Scott Driscoll - Impacable Interdisciplinary Inventor",
+   "episode_url": "https://theamphour.com/183-an-interview-with-scott-driscoll-impaccable-interdisciplinary-inventor/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The boundary between low-frequency and high-frequency circuit behaviour is not sharply defined but sits somewhere between 10 and 100 MHz; below about a megahertz design is comparatively simple, and above 100 MHz circuits must be treated differently. That boundary is roughly the same one at which a circuit starts to radiate appreciably.",
+   "quote_verbatim": "when we start talking about low frequency versus high frequency, generally it's someplace between 10 and 100 meg",
+   "speaker": null,
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Digital isolators that integrate their transformer on-chip are relatively immune to external magnetic fields because the enclosed loop is tiny and couples little energy. An outboard transformer is larger and adds the traces running out to it, enclosing more area and making the same function more susceptible.",
+   "quote_verbatim": "you've got the traces going to the transformers. You've got the transformer sitting there, not quite as small, so they are more susceptible to fields",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A bus line that is left undriven during a read, without an adequate pull-up to define its state, returns whatever RF the node has picked up rather than a defined logic level, turning an ordinary input into an antenna and producing data-dependent intermittent faults.",
+   "quote_verbatim": "you would do a read cycle and either it'd be ground or high or whatever RF it had picked up",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "An immunity fix can be demonstrated by deliberately exposing the repaired hardware to a worst-case field rather than by retesting in the normal environment: fitting a six-foot cable and wrapping it around an uncased CRT deflection yoke proved the circuit was no longer sensitive.",
+   "quote_verbatim": "I had taken the case off of the monitor and I had wrapped the cable around the yoke",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A GSM handset transmits in high-current bursts — on the order of an amp for roughly twenty milliseconds — which makes a phone an unusually severe local interference source compared with continuous-carrier transmitters.",
+   "quote_verbatim": "It's like an amp of current for, like, 20 milliseconds",
+   "speaker": "Dave Jones",
+   "episode": 319,
+   "episode_title": "Photon Rich, Cash Poor",
+   "episode_url": "https://theamphour.com/319-photon-rich-cash-poor/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A handheld multimeter that locked up near a GSM phone was traced to a PCB trace on the MSP430 programming line coupling energy at the GSM band and driving the processor into a programming mode. The failure was frequency-specific: handsets on other cellular standards, in other parts of the spectrum, did not reproduce it.",
+   "quote_verbatim": "the GSM frequency range was matching to a tray, a PCB trace on one of the programming, on the programming line for the MSP430 processor that was putting it into some programming mode",
+   "speaker": "Dave Jones",
+   "episode": 319,
+   "episode_title": "Photon Rich, Cash Poor",
+   "episode_url": "https://theamphour.com/319-photon-rich-cash-poor/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Holding a mobile phone next to a powered product is a standard informal bench check for susceptibility, since the handset radiates strongly across its band; keying nearby VHF radios has been used the same way. It gives no compliance data but reveals gross immunity problems before any chamber booking.",
+   "quote_verbatim": "Just get your mobile phone, put it near it because it's pumping out all sorts of crap",
+   "speaker": "Dave Jones",
+   "episode": 319,
+   "episode_title": "Photon Rich, Cash Poor",
+   "episode_url": "https://theamphour.com/319-photon-rich-cash-poor/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A lightning strike near the installation or an ungrounded operator handling the hardware injects a large surge current at the supply input that can destroy the switching converter electronics, so the input needs dedicated protection such as TVS diodes rather than relying on the converter's own ratings.",
+   "quote_verbatim": "there's going to be a huge surge current that comes in to the input and blow out the, you know, the, the, um, the switching converter electronics. So you have to protect against that with, you know, maybe TVS diodes",
+   "speaker": null,
+   "episode": 401,
+   "episode_title": "An Interview with Brent and Bryce Salmi",
+   "episode_url": "https://theamphour.com/401-an-interview-with-brent-and-bryce-salmi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Filtering cannot simply be applied everywhere on a mass- and vibration-constrained platform: filter components make the design physically larger and heavier, and a heavy, bulky assembly survives launch vibration and shock less well. On a satellite power bus shared with transmitters, computers, actuators and motors, how much to filter is a mass-versus-immunity judgement rather than a default.",
+   "quote_verbatim": "If you add, if you just filter everything, you have a really big design. It's heavy and you know, heavy, big designs probably can't survive, probably can't survive high vibrations",
+   "speaker": null,
+   "episode": 401,
+   "episode_title": "An Interview with Brent and Bryce Salmi",
+   "episode_url": "https://theamphour.com/401-an-interview-with-brent-and-bryce-salmi/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Precompliance emissions work on the bench is done by sweeping a near-field probe over the powered assembly looking for spurs and anything else coming out of it, which localises the radiating structure before any chamber time is bought.",
+   "quote_verbatim": "just looking for spurs and things like that anything that comes out of it",
+   "speaker": "Dave Jones",
+   "episode": 436,
+   "episode_title": "Downward Sloping Trace",
+   "episode_url": "https://theamphour.com/436-downward-sloping-trace/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Precompliance scanning is deferred to the final prototype before production rather than run on early iterations, on the same reasoning that a test fixture is not built until the design is settled: earlier boards will still change, so measurements made on them do not carry forward.",
+   "quote_verbatim": "you wouldn't build a test fixture until you know your stuff's relatively finished anyway so it's the same kind of thing",
+   "speaker": "Dave Jones",
+   "episode": 436,
+   "episode_title": "Downward Sloping Trace",
+   "episode_url": "https://theamphour.com/436-downward-sloping-trace/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Slowing the configured slew rate on a device's outputs reduces the harmonic content of its switching edges and can turn a failed EMC scan into a pass, at the cost of the timing margin the faster edges were providing.",
+   "quote_verbatim": "you can magically pass your EMC standard by setting all your slew-rate outputs slow",
+   "speaker": "Jeff Keyzer",
+   "episode": 472,
+   "episode_title": "Keyzermas Vacation",
+   "episode_url": "https://theamphour.com/472-keyzermas-vacation/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The ESD immunity requirement for a consumer product is 4 kV contact discharge and 8 kV air discharge, representing the spark that reaches the device from a held metal object or across the gap from a finger to a front panel. Real discharges of 15 kV are entirely ordinary on a dry day, so the standard is a floor rather than a description of the service environment.",
+   "quote_verbatim": "The ESD requirements for, like, a consumer product is 4KV contact discharge and 8KV air discharge",
+   "speaker": "Jeff Keyzer",
+   "episode": 472,
+   "episode_title": "Keyzermas Vacation",
+   "episode_url": "https://theamphour.com/472-keyzermas-vacation/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "European requirements place more weight on immunity — a product's ability to keep working amid interference from other products — than United States requirements do, which are weighted toward limiting what a product emits.",
+   "quote_verbatim": "Europe is much better about this than the U.S.",
+   "speaker": "Jeff Keyzer",
+   "episode": 472,
+   "episode_title": "Keyzermas Vacation",
+   "episode_url": "https://theamphour.com/472-keyzermas-vacation/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Regulatory EMC limits function as a minimum bar rather than a design target, and companies making products that are handled daily across wide temperature, humidity and RF conditions generally hold internal requirements that exceed them. The appropriate level scales with the product: a giveaway novelty and a cell phone do not warrant the same standard.",
+   "quote_verbatim": "they have internal requirements which go beyond the requirements of EMC",
+   "speaker": "Jeff Keyzer",
+   "episode": 472,
+   "episode_title": "Keyzermas Vacation",
+   "episode_url": "https://theamphour.com/472-keyzermas-vacation/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The recurring offender on radiated emission scans of audio hardware is the I2S master clock, precisely because its edge rate is deliberately made fast to meet the rise-time specification of the DAC or ADC it drives; the requirement that makes the clock work is the requirement that makes it radiate.",
+   "quote_verbatim": "it's the master clock because the master clock has this nice fast edge rate to meet some rise time spec at the DAC or the ADC",
+   "speaker": "Nash Reilly",
+   "episode": 474,
+   "episode_title": "An Interview with Nash Reilly",
+   "episode_url": "https://theamphour.com/474-an-interview-with-nash-reilly/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A fast repetitive clock shows up on an EMI scan not at its third or fifth overtone but at much higher-order overtones, which for typical audio clock rates land near 100 MHz — the region where the cable interconnects running between boards inside the product are efficient antennas. The emission is therefore radiated by the internal wiring, not by the clock trace itself.",
+   "quote_verbatim": "right in like a hundred megahertz where all of your cable interconnects inside of the product function is really good antennas",
+   "speaker": "Nash Reilly",
+   "episode": 474,
+   "episode_title": "An Interview with Nash Reilly",
+   "episode_url": "https://theamphour.com/474-an-interview-with-nash-reilly/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Utilities inject control signalling onto the mains supply, and that signalling has been known to disturb connected equipment; the common remedy is to fit a reasonably capable mains filter to susceptible products so the provider's control signals are attenuated at the input.",
+   "quote_verbatim": "quite common to put filters on products that are susceptible to this. You have to put a mains, you know, a fairly decent mains filter on there to filter out all these control signals coming from the power provider",
+   "speaker": "Dave Jones",
+   "episode": 477,
+   "episode_title": "EcoWoke and Going Broke",
+   "episode_url": "https://theamphour.com/ecowoke-and-going-broke/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Electric fence energisers, and lightning during storms, disturb nearby digital television receivers: the impulsive field swamps the front end, packets are lost and the picture freezes while error correction reruns. Digital modulation changes the symptom from a visible analogue smear to a hard dropout, which makes the interference harder for the user to attribute.",
+   "quote_verbatim": "it'll freeze frame because it has to re-error correct because it's just been swamped by the magnetic field",
+   "speaker": "Dave Jones",
+   "episode": 481,
+   "episode_title": "An Interview with Paul Thompson",
+   "episode_url": "https://theamphour.com/481-an-interview-with-paul-thompson/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Bench equipment can be the interference source in the fault being investigated. A hot air gun brought near a board induces disturbance through its own field, so the symptom is wrongly attributed to temperature when the actual stimulus is the large coil energised inches from the hardware.",
+   "quote_verbatim": "you think it's the heat but it's not it's the fact that you've turned on this giant magnet",
+   "speaker": "Dave Jones",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A connected product sold internationally is qualified for emissions against several regional regimes at once — FCC in the United States, the Canadian regulator renamed from Industry Canada to ISED, and CE marking for Europe — so the board must be shown free of EMI issues in each region rather than in one.",
+   "quote_verbatim": "So making sure that there's no EMI issues with the board and any of those regions.",
+   "speaker": "Jared Wolff",
+   "episode": 509,
+   "episode_title": "Cellular IoT with Jared Wolff",
+   "episode_url": "https://theamphour.com/509-cellular-iot-with-jared-wolff/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A single non-compliant legacy appliance can disrupt shared infrastructure: an old television emitted a single high-level impulse noise event at switch-on that took out a village's broadband connection. Its strict 7 a.m. regularity was the clue that identified it, because a fault repeating at a fixed hour points at someone's daily routine rather than at the network.",
+   "quote_verbatim": "The TV was found to be emitting a single high-level impulse noise",
+   "speaker": "Dave Jones",
+   "episode": 510,
+   "episode_title": "Knob and Tube Wiring",
+   "episode_url": "https://theamphour.com/510-knob-and-tube-wiring/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Electromagnetic compatibility covers the requirement that a product not radiate harmful interference capable of stopping other equipment from working, aircraft being the canonical example, as well as the converse requirement that the product itself keep working in the presence of others.",
+   "quote_verbatim": "EMC is electromagnetic compatibility, which is making sure that your product doesn't radiate harmful interference that can cause other products to stop working",
+   "speaker": "Jeff Keyzer",
+   "episode": 523,
+   "episode_title": "A Keyzermas Story",
+   "episode_url": "https://theamphour.com/523-a-keyzermas-story/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "DC-DC converters that sit near a radio have their switching frequency chosen to fall outside the receiver's sensitive bands; parts switching at 2 MHz were introduced so that the fundamental sat clear of the AM band, and the practice of choosing switching frequency by the radio's bands rather than by converter efficiency alone followed.",
+   "quote_verbatim": "was the first one to do two megahertz DC, DC converters. So they were out of the AM band",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Deliberately modulating a converter's switching frequency spreads its emitted energy over a band instead of concentrating it in narrow harmonics, lowering the peak the customer's EMC scan measures and easing the customer's path through testing without changing the total energy emitted.",
+   "quote_verbatim": "on the switching frequency to spread the noise and reduce, reduce the switching noise",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A product built with two isolation domains is difficult to take through type approval, because the interconnecting cables have very little return path available and consequently carry and radiate harmonics that a single-domain design would not present.",
+   "quote_verbatim": "doing type approval of a device that has two isolation domains it's very difficult to not have some interesting harmonics show up on your cables",
+   "speaker": "Werner Johansson",
+   "episode": 640,
+   "episode_title": "Software Defined Power Supplies with Werner Johansson",
+   "episode_url": "https://theamphour.com/640-software-defined-power-supplies-with-werner-johansson/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Regulatory testing for medical devices is more demanding than consumer compliance: applied EMI, applied ESD and magnetic field exposure are all imposed and the system must continue functioning throughout, with no reset or crash permitted during an ESD pulse. The priority ordering resembles aerospace, with reliability first and cost a secondary consideration.",
+   "quote_verbatim": "You've got applied EMI issues, applied ESD issues, magnetic field issues, and things like that where the system has to keep working throughout all of that stuff",
+   "speaker": "Jerry Twomey",
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Running a single-ended, ground-referenced data signal off a board on a cable is a standing immunity failure in a hostile electromagnetic environment, because it provides no common-mode rejection of the noise the cable picks up; differential signalling with error detection on the link is the corresponding remedy. A medical device that failed regulatory testing showed exactly this pattern, together with no ESD protection at all on its external interfaces.",
+   "quote_verbatim": "There was no common mode rejection of noise. It was ground reference signal going off of a board, which is a suicide jump when you're trying to have something work in a hostile environment.",
+   "speaker": "Jerry Twomey",
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Noise, EMI and ESD contingencies are cheapest when built into the architecture and board layout from the outset — the protection, the filtering and the fallback options designed in before there is a symptom — rather than retrofitted after a failed compliance run, since by then the architecture and layout decisions that caused the problem are fixed.",
+   "quote_verbatim": "I include all of the contingencies and all of the proactive solutions to noise and EMI and ESD issues from the get-go",
+   "speaker": "Jerry Twomey",
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "Episode 175: bundle labels the passage 'Chris Gammell', but the content is the interviewee answering a question about his own product's EMC results; the guest is not identified unambiguously inside the passage text, so speaker is null.",
+  "Episode 185 (10-100 MHz boundary passage): bundle labels 'Chris Gammell' but the frequency-boundary statement is the answer given to the host's question; the passage does not settle which voice it is, so speaker is null.",
+  "Episode 222: bundle marks attribution unreliable and labels 'Chris Gammell'; the passage content is unambiguously the guest recounting his own schematic, his own boss and his own fix, so both claims are attributed to Bil Herd.",
+  "Episode 401: bundle marks attribution unreliable and labels 'Chris Gammell'; the content is one of the two guest engineers describing satellite power design, but the passage does not distinguish which of the two brothers is speaking, so speaker is null.",
+  "Episode 523: bundle marks attribution unreliable and labels 'Chris Gammell'; the definition of EMC is the guest's answer to the host's request to define the terms, so it is attributed to Jeff Keyzer.",
+  "Episode 640: bundle marks attribution unreliable but the passage content ('that's how the first design was done', 'looking back') is the guest describing his own product, so the Werner Johansson label is retained.",
+  "Episode 704: bundle labels both passages 'Dave Jones'; the content is the interviewee describing a client engagement he was called into and his own book, so both are attributed to Jerry Twomey.",
+  "Episode 165 (balloon-effect passage): the copper-tape remark is the host's, but the quoted balloon analogy is the guest's reply, so the claim is attributed to Henry Ott."
+ ]
+}

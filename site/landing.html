@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Amp Hour Wiki — sixteen years of electronics oral tradition, indexed</title>
+<meta name="description" content="The tribal engineering knowledge in 719 episodes of The Amp Hour, distilled into cited, browsable articles.">
+<style>
+:root {
+  --bg:#fbf7ee; --panel:#f3ecdc; --panel2:#efe7d5; --ink:#16140d; --ink2:#5a5344;
+  --line:#d8cdb4; --ember:#c94628; --ember2:#ef5d3c; --amber:#ffd27a;
+  --copper:#b06a3b; --gold:#c9a13b; --scope:#10130c; --beam:#ffd27a;
+}
+* { box-sizing:border-box; margin:0; }
+html { scroll-behavior:smooth; }
+body { background:var(--bg); color:var(--ink); font:17px/1.6 Georgia, 'Times New Roman', serif; }
+a { color:var(--ember); }
+.mono { font-family:"SF Mono", Menlo, Consolas, monospace; }
+.silk { font-family:Verdana, Geneva, sans-serif; font-size:11px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink2); }
+
+nav { display:flex; justify-content:space-between; align-items:center;
+  padding:14px 26px; border-bottom:3px solid var(--ember); background:var(--panel); }
+nav .brand { font:bold 13px Verdana, sans-serif; letter-spacing:.1em; text-transform:uppercase; }
+nav .brand span { color:var(--ember); }
+nav .links a { font:12px Verdana, sans-serif; text-decoration:none; color:var(--ink);
+  margin-left:22px; }
+nav .links a:hover { color:var(--ember); }
+
+/* ---------------- hero ---------------- */
+.hero { position:relative; overflow:hidden; padding:90px 24px 100px; text-align:center; }
+.hero svg.traces { position:absolute; inset:0; width:100%; height:100%; z-index:0; }
+.hero .inner { position:relative; z-index:1; max-width:760px; margin:0 auto; }
+.hero h1 { font-size:clamp(2.1rem, 5.4vw, 3.6rem); line-height:1.12; font-weight:normal;
+  text-wrap:balance; margin-bottom:18px; }
+.hero h1 em { font-style:normal; color:var(--ember); }
+.hero p.sub { font-size:1.12rem; color:var(--ink2); max-width:36rem; margin:0 auto 30px; }
+.statrow { display:flex; justify-content:center; gap:44px; flex-wrap:wrap;
+  font-variant-numeric:tabular-nums; }
+.stat b { display:block; font-size:1.9rem; color:var(--ember); font-weight:normal; }
+.refdes { position:absolute; font:10px Verdana, sans-serif; color:var(--ink2); opacity:.55; }
+.pulse { stroke-dasharray: 6 240; animation: flow 5s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -246; } }
+@media (prefers-reduced-motion: reduce) { .pulse { animation:none; opacity:0; } }
+
+section { padding:74px 24px; }
+h2.sect { text-align:center; font-size:1.9rem; font-weight:normal; margin-bottom:8px; }
+p.sectsub { text-align:center; color:var(--ink2); max-width:34rem; margin:0 auto 36px; }
+
+/* ---------------- scope ---------------- */
+.scope-wrap { background:var(--panel); border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line); }
+.scope { max-width:860px; margin:0 auto; display:flex; gap:18px; flex-wrap:wrap;
+  justify-content:center; align-items:stretch; }
+.crt { background:var(--scope); border-radius:10px; padding:14px;
+  box-shadow: inset 0 0 40px rgba(0,0,0,.55), 0 2px 12px rgba(22,20,13,.25);
+  flex:1 1 520px; max-width:640px; }
+.crt canvas { width:100%; height:300px; display:block; }
+.crt .readout { display:flex; justify-content:space-between; margin-top:8px;
+  font:11px "SF Mono", Menlo, monospace; color:var(--beam); }
+.knobs { display:flex; flex-direction:column; gap:8px; justify-content:center; }
+.knobs button { font:12px Verdana, sans-serif; letter-spacing:.05em; text-align:left;
+  background:var(--panel2); color:var(--ink); border:1px solid var(--line);
+  border-left:6px solid var(--line); padding:9px 14px; cursor:pointer; border-radius:3px; }
+.knobs button:hover { border-color:var(--ember2); }
+.knobs button.on { border-left-color:var(--ember2); background:var(--bg); font-weight:bold; }
+
+/* ---------------- schematic ---------------- */
+.schem { max-width:900px; margin:0 auto; overflow-x:auto; }
+.schem svg { width:100%; min-width:640px; height:auto; }
+.schem .wire { stroke:var(--ink); stroke-width:1.6; fill:none; }
+.schem .sym { stroke:var(--ink); stroke-width:1.6; fill:none; }
+.schem text { font:12.5px Georgia, serif; fill:var(--ink); }
+.schem text.lbl { font:10.5px Verdana, sans-serif; fill:var(--ink2); }
+.schem .stat { font:bold 13px Georgia, serif; fill:var(--ember); }
+.draw { stroke-dasharray:1400; stroke-dashoffset:1400; transition:stroke-dashoffset 2.4s ease; }
+.drawn .draw { stroke-dashoffset:0; }
+@media (prefers-reduced-motion: reduce) { .draw { stroke-dashoffset:0 !important; } }
+
+/* ---------------- nuggets ---------------- */
+.nuggets { display:flex; gap:20px; justify-content:center; flex-wrap:wrap;
+  max-width:1000px; margin:0 auto; }
+.nugget { flex:1 1 280px; max-width:320px; background:var(--panel);
+  border:1px solid var(--line); border-top:3px solid var(--amber);
+  padding:18px 20px; }
+.nugget blockquote { font-size:.98rem; line-height:1.55; }
+.nugget figcaption { margin-top:10px; font:11px Verdana, sans-serif; color:var(--ink2); }
+
+/* ---------------- CTA ---------------- */
+.cta { text-align:center; padding:80px 24px 0; }
+.cta a.btn { display:inline-block; font:bold 15px Verdana, sans-serif; letter-spacing:.06em;
+  text-transform:uppercase; text-decoration:none; color:#16140d; background:var(--amber);
+  border:2px solid var(--ink); padding:16px 44px; border-radius:4px;
+  box-shadow: 4px 4px 0 var(--ink); transition: transform .08s, box-shadow .08s; }
+.cta a.btn:hover { transform:translate(2px,2px); box-shadow:2px 2px 0 var(--ink); }
+.edge { margin-top:64px; height:64px; display:flex; justify-content:center; gap:7px;
+  align-items:flex-end; overflow:hidden; }
+.edge i { display:block; width:26px; height:52px; border-radius:3px 3px 0 0;
+  background:linear-gradient(180deg, #e8c76a, var(--gold) 55%, #a37d24); }
+footer { border-top:3px solid var(--ember); background:var(--panel);
+  padding:18px 26px; font:11.5px Verdana, sans-serif; color:var(--ink2);
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">The Amp Hour <span>Wiki</span></div>
+  <div class="links">
+    <a href="/topics">Topics</a><a href="/all">All articles</a><a href="/explore">Graph</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <svg class="traces" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g stroke="var(--copper)" stroke-width="2.5" fill="none" opacity="0.5">
+      <path id="t1" d="M-20,80 H300 l40,40 H620 l30,-30 H1220"/>
+      <path id="t2" d="M-20,560 H260 l50,-50 H760 l40,40 H1220"/>
+      <path id="t3" d="M140,-20 V180 l40,40 V660"/>
+      <path id="t4" d="M1030,-20 V240 l-40,40 V660"/>
+      <path id="t5" d="M-20,320 H90 l30,30 V520"/>
+      <path id="t6" d="M1220,380 H1120 l-36,-36 V120"/>
+    </g>
+    <g fill="var(--copper)" opacity="0.6">
+      <circle cx="300" cy="80" r="6"/><circle cx="620" cy="120" r="6"/>
+      <circle cx="260" cy="560" r="6"/><circle cx="760" cy="510" r="6"/>
+      <circle cx="140" cy="180" r="6"/><circle cx="1030" cy="240" r="6"/>
+      <circle cx="120" cy="350" r="6"/><circle cx="1084" cy="344" r="6"/>
+    </g>
+    <g stroke="var(--ember2)" stroke-width="2.5" fill="none">
+      <use href="#t1" class="pulse"/><use href="#t2" class="pulse" style="animation-delay:1.4s"/>
+      <use href="#t3" class="pulse" style="animation-delay:.6s"/>
+      <use href="#t4" class="pulse" style="animation-delay:2.2s"/>
+    </g>
+  </svg>
+  <span class="refdes" style="top:18%; left:8%">R1</span>
+  <span class="refdes" style="top:70%; left:12%">C4</span>
+  <span class="refdes" style="top:26%; right:9%">U7</span>
+  <span class="refdes" style="bottom:14%; right:14%">TP2</span>
+  <div class="inner">
+    <div class="silk" style="margin-bottom:14px">theamphour.com &middot; 2010&ndash;2026 &middot; unofficial index</div>
+    <h1>Sixteen years of electronics oral tradition &mdash; <em>indexed</em>.</h1>
+    <p class="sub">The tribal knowledge in 719 episodes of The Amp Hour &mdash; the practices,
+    rules of thumb, failure modes, and hard numbers engineers only say out loud &mdash;
+    distilled into cited, browsable articles.</p>
+    <div class="statrow">
+      <div class="stat"><b>150</b><span class="silk">articles live</span></div>
+      <div class="stat"><b>6,538</b><span class="silk">episode citations</span></div>
+      <div class="stat"><b>719</b><span class="silk">episodes indexed</span></div>
+      <div class="stat"><b>270,979</b><span class="silk">mentions mined</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="scope-wrap">
+  <h2 class="sect">Watch a topic live sixteen years</h2>
+  <p class="sectsub">Real data on a real instrument: mentions per year across the whole
+  corpus. Switch channels.</p>
+  <div class="scope">
+    <div class="crt">
+      <canvas id="crt" width="1200" height="600"></canvas>
+      <div class="readout"><span id="ch-label">CH1 &middot; Oscilloscope</span>
+      <span>2010 &rarr; 2026 &middot; 1 yr/div</span><span id="ch-peak"></span></div>
+    </div>
+    <div class="knobs" id="knobs"></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="sect">How the signal gets clean</h2>
+  <p class="sectsub">Every article is the output of a verified pipeline &mdash; and every claim
+  traces to a verbatim transcript passage.</p>
+  <div class="schem" id="schem">
+  <svg viewBox="0 0 900 190" role="img" aria-label="pipeline schematic">
+    <!-- mic -->
+    <circle class="sym draw" cx="60" cy="90" r="26"/>
+    <path class="sym draw" d="M48,90 a12,12 0 0 1 24,0 v8 h-24 z"/>
+    <text class="lbl" x="60" y="140" text-anchor="middle">719 episodes</text>
+    <text x="60" y="158" text-anchor="middle">10M words</text>
+    <!-- wire -->
+    <path class="wire draw" d="M86,90 H150"/>
+    <!-- amp triangle -->
+    <path class="sym draw" d="M150,60 V120 L210,90 Z"/>
+    <text class="lbl" x="180" y="140" text-anchor="middle">extraction</text>
+    <text class="stat" x="180" y="158" text-anchor="middle">2 passes</text>
+    <!-- wire -->
+    <path class="wire draw" d="M210,90 H280"/>
+    <!-- filter box -->
+    <rect class="sym draw" x="280" y="62" width="110" height="56"/>
+    <path class="sym draw" d="M295,100 q14,-24 28,0 q14,24 28,0 q14,-24 28,0" />
+    <text class="lbl" x="335" y="140" text-anchor="middle">knowledge-only filter</text>
+    <text class="stat" x="335" y="158" text-anchor="middle">51% killed</text>
+    <!-- wire -->
+    <path class="wire draw" d="M390,90 H460"/>
+    <!-- ADC box -->
+    <rect class="sym draw" x="460" y="62" width="110" height="56"/>
+    <text class="draw" x="515" y="97" text-anchor="middle" style="font-size:15px">&#8992;&#8993; &rarr; 101</text>
+    <text class="lbl" x="515" y="140" text-anchor="middle">verbatim citations</text>
+    <text class="stat" x="515" y="158" text-anchor="middle">6,538 refs</text>
+    <!-- wire -->
+    <path class="wire draw" d="M570,90 H640"/>
+    <!-- display -->
+    <rect class="sym draw" x="640" y="52" width="150" height="76" rx="6"/>
+    <path class="sym draw" d="M652,110 l18,-22 l14,10 l20,-26 l16,14 l24,-20" />
+    <text class="lbl" x="715" y="150" text-anchor="middle">the wiki</text>
+    <text class="stat" x="715" y="168" text-anchor="middle">150 articles &rarr; 412</text>
+    <!-- output wire -->
+    <path class="wire draw" d="M790,90 H860"/>
+    <circle class="sym draw" cx="868" cy="90" r="5"/>
+  </svg>
+  </div>
+</section>
+
+<section style="background:var(--panel); border-top:1px solid var(--line); border-bottom:1px solid var(--line)">
+  <h2 class="sect">The kind of thing you'll find</h2>
+  <p class="sectsub">Not summaries. The specific, transferable stuff.</p>
+  <div class="nuggets"><figure class="nugget"><blockquote>On the Steam Controller, Valve version-locked Altium 12 for the whole project — every engineer on the same build, because a mid-project CAD upgrade is a risk you don't take.</blockquote><figcaption>Jeff Keyzer · ep 279</figcaption></figure><figure class="nugget"><blockquote>The 12-bit ADC inside a Bluetooth SoC measured three effective bits — adequate only for confirming whether a load is on.</blockquote><figcaption>ep 218</figcaption></figure><figure class="nugget"><blockquote>A $3,000, 24-hour PCB layout service exists — with explicit limits: under 3 A, under 500 MHz, under 20 W.</blockquote><figcaption>ep 410</figcaption></figure></div>
+</section>
+
+<div class="cta">
+  <a class="btn" href="/topics">Let me see it</a>
+  <div class="silk" style="margin-top:14px">no signup &middot; no tracking &middot; just the knowledge</div>
+  <div class="edge" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+</div>
+
+<footer>
+  <div>An unofficial, AI-generated index of <a href="https://theamphour.com">The Amp Hour</a>
+  &mdash; every claim cited to the official transcripts.</div>
+  <div><a href="/topics">Browse</a> &middot; <a href="/explore">Graph</a></div>
+</footer>
+
+<script>
+const DATA = {"oscilloscope": {"label": "Oscilloscope", "vals": [1, 67, 52, 135, 78, 61, 62, 64, 26, 40, 47, 42, 55, 36, 20, 29, 7]}, "arduino": {"label": "Arduino", "vals": [7, 83, 53, 76, 50, 66, 69, 61, 33, 37, 14, 17, 26, 22, 14, 15, 10]}, "raspberry-pi": {"label": "Raspberry Pi", "vals": [0, 0, 16, 24, 26, 47, 36, 29, 27, 22, 19, 38, 14, 29, 29, 6, 12]}, "kicad": {"label": "KiCad", "vals": [0, 5, 27, 63, 60, 42, 38, 43, 59, 73, 53, 72, 23, 22, 47, 40, 12]}, "machine-learning": {"label": "Machine learning", "vals": [0, 0, 1, 1, 1, 1, 1, 6, 10, 7, 12, 9, 2, 6, 1, 1, 1]}};
+const YEARS = [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
+const order = ["oscilloscope", "arduino", "raspberry-pi", "kicad", "machine-learning"];
+const knobs = document.getElementById('knobs');
+let active = order[0];
+order.forEach((slug, i) => {
+  const b = document.createElement('button');
+  b.textContent = 'CH' + (i+1) + ' · ' + DATA[slug].label;
+  b.onclick = () => { active = slug;
+    document.querySelectorAll('.knobs button').forEach(x => x.classList.remove('on'));
+    b.classList.add('on'); draw(1); };
+  if (i === 0) b.classList.add('on');
+  knobs.appendChild(b);
+});
+const cv = document.getElementById('crt'), ctx = cv.getContext('2d');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let anim = null;
+function draw(progress) {
+  const W = cv.width, H = cv.height, padL = 46, padB = 44, padT = 24, padR = 16;
+  ctx.clearRect(0,0,W,H);
+  ctx.strokeStyle = 'rgba(255,210,122,0.14)'; ctx.lineWidth = 1;
+  for (let i = 0; i <= 16; i++) { const x = padL + i*(W-padL-padR)/16;
+    ctx.beginPath(); ctx.moveTo(x,padT); ctx.lineTo(x,H-padB); ctx.stroke(); }
+  for (let j = 0; j <= 8; j++) { const y = padT + j*(H-padT-padB)/8;
+    ctx.beginPath(); ctx.moveTo(padL,y); ctx.lineTo(W-padR,y); ctx.stroke(); }
+  const vals = DATA[active].vals, top = Math.max(...vals, 1);
+  ctx.font = '20px Menlo, monospace'; ctx.fillStyle = 'rgba(255,210,122,0.5)';
+  ctx.fillText('2010', padL, H-14); ctx.fillText('2026', W-padR-52, H-14);
+  ctx.fillText(String(top), 4, padT+18);
+  ctx.strokeStyle = '#ffd27a'; ctx.lineWidth = 3.2;
+  ctx.shadowColor = '#ffd27a'; ctx.shadowBlur = 12;
+  ctx.beginPath();
+  const n = Math.max(2, Math.floor(vals.length * progress));
+  for (let i = 0; i < n; i++) {
+    const x = padL + i*(W-padL-padR)/(vals.length-1);
+    const y = H-padB - (vals[i]/top)*(H-padT-padB-8);
+    i ? ctx.lineTo(x,y) : ctx.moveTo(x,y);
+  }
+  ctx.stroke(); ctx.shadowBlur = 0;
+  document.getElementById('ch-label').textContent =
+    'CH' + (order.indexOf(active)+1) + ' · ' + DATA[active].label;
+  document.getElementById('ch-peak').textContent = 'pk ' + top + ' mentions/yr';
+  if (!reduced && progress < 1) {
+    anim = requestAnimationFrame(() => draw(Math.min(1, progress + 0.04)));
+  }
+}
+draw(reduced ? 1 : 0.05);
+
+// schematic scroll-draw
+const schem = document.getElementById('schem');
+new IntersectionObserver((es) => {
+  es.forEach(e => { if (e.isIntersecting) schem.classList.add('drawn'); });
+}, {threshold: 0.35}).observe(schem);
+</script>
+</body>
+</html>

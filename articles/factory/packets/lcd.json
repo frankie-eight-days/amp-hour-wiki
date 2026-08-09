@@ -1,0 +1,631 @@
+{
+ "concept": "lcd",
+ "name": "LCD",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "lcd",
+    "liquid-crystal-display"
+   ],
+   "children": [
+    "conformal-coating",
+    "e-paper-display",
+    "flat-flex-cable",
+    "game-boy",
+    "keypad",
+    "oled",
+    "product-enclosure",
+    "seven-segment-display"
+   ],
+   "neighbors": []
+  },
+  "stats": {
+   "episodes": 97,
+   "mentions": 171,
+   "explains": 53,
+   "opinions": 13,
+   "candidate_episode_count": 81,
+   "candidate_mention_count": 121,
+   "gated_out": 150,
+   "gated_out_by_concept": [
+    [
+     "conformal-coating",
+     26
+    ],
+    [
+     "seven-segment-display",
+     26
+    ],
+    [
+     "product-enclosure",
+     21
+    ],
+    [
+     "game-boy",
+     20
+    ],
+    [
+     "keypad",
+     18
+    ],
+    [
+     "e-paper-display",
+     16
+    ],
+    [
+     "oled",
+     12
+    ],
+    [
+     "flat-flex-cable",
+     11
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 2,
+   "speakers": [
+    [
+     "Dave Jones",
+     38
+    ],
+    [
+     "Chris Gammell",
+     7
+    ],
+    [
+     "Jeff Keyzer",
+     4
+    ],
+    [
+     "Dave Taylor",
+     3
+    ],
+    [
+     "Mike Harrison",
+     2
+    ],
+    [
+     "Bunnie Huang",
+     1
+    ],
+    [
+     "Piotr Esden-Tempski",
+     1
+    ],
+    [
+     "Scotty Allen",
+     1
+    ],
+    [
+     "Julia Truchsess",
+     1
+    ],
+    [
+     "Christina Cyr",
+     1
+    ],
+    [
+     "Ben Heck",
+     1
+    ],
+    [
+     "Jay Carlson",
+     1
+    ],
+    [
+     "Big Clive",
+     1
+    ],
+    [
+     "Michal Zalewski",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 59,
+    "child": 4
+   },
+   "passages_by_depth": {
+    "opinion": 12,
+    "explains": 51
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 63
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "Reflective electrophoretic (e-ink) displays reach a paper-like contrast that liquid-crystal technology has not matched despite decades of manufacturing refinement, which is why reflective e-paper displaced LCDs for long-form reading.",
+   "quote_verbatim": "refined in manufacturing processes for 30, 40 years",
+   "speaker": "Chris Gammell",
+   "episode": 46,
+   "episode_title": "Autorouter, Datasheets & Obscure Chips - Cloddish Collegiate Conversations",
+   "episode_url": "https://theamphour.com/the-amp-hour-46-cloddish-collegiate-conversations/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Distributor stock shown while a bill of materials is being compiled may be gone by the time the order is actually placed, and display panels are particularly exposed to this because a mechanically suitable panel often has no drop-in substitute.",
+   "quote_verbatim": "I could have sworn that DigiKey had it in stock when I looked",
+   "speaker": "Dave Jones",
+   "episode": 74,
+   "episode_title": "Younker Youtube Yarling",
+   "episode_url": "https://theamphour.com/the-amp-hour-74-younker-youtube-yarling/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A conventional character LCD module needs a parallel bus of more than two signals, so on a pin-starved microcontroller it can only be used by adding external latching logic; an I2C display module avoids that by needing only the two bus lines.",
+   "quote_verbatim": "if I try and jury rigging a regular LCD, I can't because it needs more than two lines to drive the LCD",
+   "speaker": "Dave Jones",
+   "episode": 74,
+   "episode_title": "Younker Youtube Yarling",
+   "episode_url": "https://theamphour.com/the-amp-hour-74-younker-youtube-yarling/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "In a small instrument kit the display can be the single most expensive line on the bill of materials: one such kit used a display costing about ten dollars in ones and still about eight dollars in volume, more than any other part.",
+   "quote_verbatim": "Incidentally, the LCD is the most expensive item in this kit. How much? It's like $10. Even in volume, it's $8.",
+   "speaker": "Dave Jones",
+   "episode": 74,
+   "episode_title": "Younker Youtube Yarling",
+   "episode_url": "https://theamphour.com/the-amp-hour-74-younker-youtube-yarling/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "On a consumer device built around a screen, the glass is normally the largest single cost on the bill of materials, and adding a capacitive multi-touch layer pushes it higher still, which can put the product above what its market will pay.",
+   "quote_verbatim": "the most expensive thing in the bomb is glass, right? LCDs are just freaking expensive with touchscreens on them",
+   "speaker": "Bunnie Huang",
+   "episode": 84,
+   "episode_title": "An Interview with Bunnie Huang - Bunnie's Bibelot Bonification",
+   "episode_url": "https://theamphour.com/the-amp-hour-84-bunnies-bibelot-bonification/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "On an embedded product with a display, the display driver is normally brought up before any other peripheral, because without it there is no channel for status output and nothing else can be observed while it is being debugged.",
+   "quote_verbatim": "you've got to get the LCD working first before you can get anything else working",
+   "speaker": "Dave Jones",
+   "episode": 124,
+   "episode_title": "SpaceX, Enclosures & Startups - Urging Unemployment Ullagone",
+   "episode_url": "https://theamphour.com/the-amp-hour-124-urging-unemployment-ullagone/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Liquid-crystal displays slow down as temperature falls: the crystals become less mobile, so the panel's response time lengthens and the visible update rate of the readout drops well before the display fails outright.",
+   "quote_verbatim": "the response time of the LCD goes down, right? As you drop the temperature",
+   "speaker": "Dave Jones",
+   "episode": 127,
+   "episode_title": "FPGA, Xess, 32 Bit - Quirky Qualitative Questions",
+   "episode_url": "https://theamphour.com/the-amp-hour-127-quirky-qualitative-questions/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Low-temperature behaviour of a display can be checked without a climate chamber by leaving the product in a domestic freezer for about half an hour and then watching how quickly the readout updates after it is removed.",
+   "quote_verbatim": "whack it in the freezer for half an hour, take it out. And then look at the update rate of the screen",
+   "speaker": "Dave Jones",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Whether to engineer a portable instrument for sub-zero operation is a deliberate scope decision rather than an oversight; one bench-supply design was left with its display untested at zero degrees on the judgement that its intended users would not operate it there.",
+   "quote_verbatim": "we haven't even tested the LCD down at, down at, you know, zero yet",
+   "speaker": "Dave Jones",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A display and its LED backlight may both need a rail above the microcontroller's supply; a PWM output driving a voltage doubler will generate it with no dedicated converter, but it keeps a core awake that would otherwise sit in a low-power mode.",
+   "quote_verbatim": "Now you can't put your micro into the low power modes.",
+   "speaker": "Dave Jones",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The Intersil 8020-class converter was the first single chip to perform a complete digital-multimeter measurement and drive the result straight onto an LCD, and that integration is what made the handheld meter form factor possible.",
+   "quote_verbatim": "There never had been a single chip DMM chip that could do everything, measurement, and put it out on an LCD",
+   "speaker": "Dave Taylor",
+   "episode": 180,
+   "episode_title": "An Interview with Dave Taylor - Multi-talented Meter Maker",
+   "episode_url": "https://theamphour.com/180-an-interview-with-dave-taylor-multi-talented-meter-maker/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Committing to a particular LCD driver often means accepting a single-source part, and that sourcing exposure has to be weighed as part of the architecture decision rather than treated as a purchasing detail.",
+   "quote_verbatim": "not only would we have to buy a single-source LCD driver, but the 80C48 was single-source too",
+   "speaker": "Dave Taylor",
+   "episode": 180,
+   "episode_title": "An Interview with Dave Taylor - Multi-talented Meter Maker",
+   "episode_url": "https://theamphour.com/180-an-interview-with-dave-taylor-multi-talented-meter-maker/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The characteristic long-term failure of older handheld multimeters is the display itself fading rather than any circuit fault, to the point that replacement glass is sold as a repair kit for those instruments.",
+   "quote_verbatim": "the weakness of old multimeters is the LCDs go out, right? Yep. Yeah, they fade.",
+   "speaker": "Dave Taylor",
+   "episode": 180,
+   "episode_title": "An Interview with Dave Taylor - Multi-talented Meter Maker",
+   "episode_url": "https://theamphour.com/180-an-interview-with-dave-taylor-multi-talented-meter-maker/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Converting an analogue 640-by-480 VGA signal into the parallel drive needed by a flat panel once required a board the size of a pizza box full of logic, sampling and clock-regeneration circuitry; the same function is now a single commodity chip on a small converter board.",
+   "quote_verbatim": "Just to convert. 640 by 480 VGA. Into drive an LCD.",
+   "speaker": "Dave Jones",
+   "episode": 633,
+   "episode_title": "Engineering Optimization",
+   "episode_url": "https://theamphour.com/633-engineering-optimization/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Flat flex cables running to a display are a mechanical weak point when the two ends are far apart and the cable is left unsupported: the free length flexes in service and the copper in the flex eventually fatigues and opens.",
+   "quote_verbatim": "I wonder how long this is going to last before eventually like that copper in that, in that flat flex is going to wear out",
+   "speaker": null,
+   "episode": 292,
+   "episode_title": "An Interview with Timothy Lamb",
+   "episode_url": "https://theamphour.com/292-an-interview-with-timothy-lamb/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Display panels are sold against minimum order quantities, so a prototype built from a sample panel can leave a small company unable to produce the product it has just demonstrated until it can commit to a full panel order plus its lead time.",
+   "quote_verbatim": "you cannot actually make the product because you haven't ordered that, you know, LCD that you need to minimum order X panels",
+   "speaker": "Jeff Keyzer",
+   "episode": 328,
+   "episode_title": "The Ghost of Keyzermas Past",
+   "episode_url": "https://theamphour.com/328-the-ghost-of-keyzermas-past/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Custom display glass is generally out of reach for a low-volume buyer because panel makers will not tool for small quantities; the low-volume route that does exist is specialist military-grade custom glass at prices around a thousand dollars per screen.",
+   "quote_verbatim": "well, how about a thousand dollars a screen?",
+   "speaker": "Jeff Keyzer",
+   "episode": 328,
+   "episode_title": "The Ghost of Keyzermas Past",
+   "episode_url": "https://theamphour.com/328-the-ghost-of-keyzermas-past/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Driving a display over a parallel interface with DMA gives substantially more bandwidth than the SPI connection usually used for small panels, and moving the transfers to DMA keeps the processor free while the frame is written.",
+   "quote_verbatim": "using a DMA to, um, send the data to the display because it has much higher bandwidth than SPI",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Putting display initialisation code inside a bootloader means a display bug becomes a bootloader bug: one product had to have its bootloader updated in the field because the LCD contrast registers were set incorrectly, against the rule that a bootloader should be simple enough never to need changing.",
+   "quote_verbatim": "they had an issue with, you know, they didn't set the registers right. And there was an LCD contrast issue",
+   "speaker": "Dave Jones",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Direct-driving a segment LCD from a microcontroller consumes an enormous number of pins: a moderately sized custom glass took thirty-two segment lines plus eight commons, so at least forty pins of the package were dedicated to the display alone.",
+   "quote_verbatim": "you've got 32 pins just for those plus the eight commons so you've got at least 40 pins dedicated to the lcd",
+   "speaker": null,
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Microcontroller families tie LCD driver capability to package size, so buying more common lines forces a larger package that also carries more memory and a bigger die; the resulting part can cost around three times as much, which is what makes a dedicated external LCD driver chip the cheaper option.",
+   "quote_verbatim": "so the chip is like three times the cost",
+   "speaker": null,
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Choosing an external LCD driver over an integrated one trades silicon cost for supply risk: it adds a bill-of-materials line that can go obsolete or become unobtainable, and commodity display drivers are often not stocked by broadline distributors and must be bought in quantity from a regional distributor.",
+   "quote_verbatim": "then you've got another bomb item right and then you've got another thing that could go obsolete",
+   "speaker": null,
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The crossed polarisers that make a liquid-crystal cell work throw away about half the incident light even when the cell is fully open, so a transmissive LCD can never pass more than roughly fifty per cent of its backlight.",
+   "quote_verbatim": "because you've got the polarizers, even when it's totally clear, you're losing 50% of the light because of those polarizers",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Optical losses in a colour LCD stack multiply: about half the light is lost in the polarisers and roughly two thirds more in the RGB stripe filters, leaving at best about fifteen per cent of the backlight emerging from the panel, which is why the bare backlight of a monitor is painfully bright.",
+   "quote_verbatim": "Then you lose two thirds through the RGB stripe filters. So you end up with at best about 15% of the light coming through.",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A display assembled into an enclosure with insufficient vertical clearance will be destroyed by the closing action itself: repeatedly snapping a phone screen shut cracked the back of the LCD until enough material was shaved from the wiring, connector bodies and case interior to recover the missing height.",
+   "quote_verbatim": "every time I snapped the screen closed, it would crack the back of the LCD because I just didn't have enough vertical space",
+   "speaker": "Scotty Allen",
+   "episode": 414,
+   "episode_title": "An Interview with Scotty Allen (Strangeparts)",
+   "episode_url": "https://theamphour.com/414-an-interview-with-scotty-allen-strangeparts/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Display technology moves at the leading edge while automotive qualification requires parts that have been through a long test cycle, so a screen designed into a car is rarely replaceable from the open market later in the vehicle's life.",
+   "quote_verbatim": "display technologies are so leading edge and sourcing for automotive with all the testing requirements",
+   "speaker": "Chris Gammell",
+   "episode": 464,
+   "episode_title": "KonnectorPanik",
+   "episode_url": "https://theamphour.com/464-konnectorpanik/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Vehicle manufacturers cover the obsolescence of custom display modules by building service stock during the production run and warehousing it, rather than expecting to re-source an equivalent panel years later.",
+   "quote_verbatim": "they have to manufacture these at the time of the car and they keep them in storage",
+   "speaker": "Dave Jones",
+   "episode": 464,
+   "episode_title": "KonnectorPanik",
+   "episode_url": "https://theamphour.com/464-konnectorpanik/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "An LCD can be preferred over OLED in a battery-powered product for power reasons rather than image quality; an 800-by-800 circular LCD was selected for a handset on the grounds that it consumed acceptably little for the panel size.",
+   "quote_verbatim": "it doesn't take too much power because it is LCD",
+   "speaker": "Christina Cyr",
+   "episode": 475,
+   "episode_title": "An Interview with Christina Cyr",
+   "episode_url": "https://theamphour.com/475-an-interview-with-christina-cyr/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Masked stereolithography 3D printers use a liquid-crystal panel as a programmable photomask, switching pixels to expose the whole of each resin layer at once instead of scanning a beam across it.",
+   "quote_verbatim": "the SLA, which uses an LCD to expose each layer",
+   "speaker": "Dave Jones",
+   "episode": 488,
+   "episode_title": "Sowing Discord",
+   "episode_url": "https://theamphour.com/488-sowing-discord/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An LCD television or monitor adds latency in its own right, principally through the scaler upscaling the incoming image, and the delay is measured in tens of milliseconds rather than microseconds; it stacks with the interface, the game engine and the input device.",
+   "quote_verbatim": "Upscaling images on the LCD has a lot of lag.",
+   "speaker": "Ben Heck",
+   "episode": 490,
+   "episode_title": "An Interview with Ben Heck(endorn)",
+   "episode_url": "https://theamphour.com/490-an-interview-with-ben-heckendorn/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A parallel 24-bit RGB display interface runs a continuous pixel clock in the tens of megahertz, around 30 MHz for a modest panel, yet such a bus can still be wired up on a breadboard for evaluation with nothing worse than occasional visual glitching.",
+   "quote_verbatim": "Parallel 24 bit wide, uh, LCD, you got a 30 megahertz pixel clock running",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Many LCD panels have an asymmetric viewing cone, optimised for being read straight on or from below and washing out or inverting when viewed from above, which makes the mounting height and tilt of a bench instrument part of its usability.",
+   "quote_verbatim": "It's designed to view either straight on or at a lower angle",
+   "speaker": "Chris Gammell",
+   "episode": 528,
+   "episode_title": "New Year, New Gear",
+   "episode_url": "https://theamphour.com/528-new-year-new-gear/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Liquid-crystal glass itself is generally reliable, so a dead segment display is more often a connection failure: the elastomeric bonding strip carrying conductive adhesive along the edge of the glass is the usual suspect.",
+   "quote_verbatim": "that horrible little plastic strip that's got conductive glue glued onto the edge of it",
+   "speaker": null,
+   "episode": 539,
+   "episode_title": "The King of Trash with Big Clive",
+   "episode_url": "https://theamphour.com/the-amp-hour-539-the-king-of-trash-with-big-clive/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Some microcontroller LCD peripherals include blink and animation engines that alternate between segment patterns autonomously, so a display can keep changing while the core stays in its deepest sleep mode and never wakes to service it.",
+   "quote_verbatim": "you can do that in power in complete sleep mode and not even power up your core at all to do that",
+   "speaker": "Dave Jones",
+   "episode": 629,
+   "episode_title": "At least my house isn't haunted",
+   "episode_url": "https://theamphour.com/629-at-least-my-house-isnt-haunted/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A visible fade of an LCD when a load switches on indicates that the display bias is being taken from an unregulated supply; in cost-reduced consumer products the regulator is omitted, so the print motor's current draw pulls the rail down and the contrast collapses with it.",
+   "quote_verbatim": "they haven't even got a voltage regulator in there",
+   "speaker": "Dave Jones",
+   "episode": 633,
+   "episode_title": "Engineering Optimization",
+   "episode_url": "https://theamphour.com/633-engineering-optimization/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A CRT displays incoming signal essentially as it arrives, within the propagation delay of the electrical signal, whereas an LCD is inherently latent because it updates on a frame-by-frame basis and cannot show an input change until the next frame.",
+   "quote_verbatim": "LCDs inherently do not do that because LCDs update on a frame by frame",
+   "speaker": "Jeff Keyzer",
+   "episode": 655,
+   "episode_title": "The Twelfth Day of Keyzermas",
+   "episode_url": "https://theamphour.com/655-the-twelfth-day-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Choosing a custom seven-segment glass over a general-purpose graphic LCD removes the need to build and store character fonts, since the segment shapes are etched into the glass; a dot-matrix panel obliges the designer to generate fonts and the rendering code for them.",
+   "quote_verbatim": "if I go for the full graphic display, then I have to do my own fonts",
+   "speaker": "Dave Jones",
+   "episode": 658,
+   "episode_title": "Uncle Al's Eating Garbage Again",
+   "episode_url": "https://theamphour.com/658-uncle-als-eating-garbage-again/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Display size in an instrument follows from the reading distance rather than the resolution wanted: a bench product intended to be read from across a room was specified at roughly three and a half to four inches diagonal, about 100 by 50 millimetres of active area, to carry a large enough font.",
+   "quote_verbatim": "So, it's like an LCD, like 100 millimeters by 50 millimeters or something like that",
+   "speaker": "Dave Jones",
+   "episode": 658,
+   "episode_title": "Uncle Al's Eating Garbage Again",
+   "episode_url": "https://theamphour.com/658-uncle-als-eating-garbage-again/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A memory LCD is a liquid-crystal panel with a bit of static RAM behind every pixel, so the image is held on the glass at a holding current on the order of nanoamps; unlike e-paper it is volatile, and the image is lost when the supply is removed.",
+   "quote_verbatim": "it keeps the information in static SRAM on there, I believe",
+   "speaker": "Dave Jones",
+   "episode": 688,
+   "episode_title": "The Tandy Train",
+   "episode_url": "https://theamphour.com/688-the-tandy-train/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A reflective custom segment LCD is cheap and gives very high contrast for almost no power because it modulates ambient light instead of a backlight, which is what makes it viable in a battery product that has to keep a real-time clock displayed continuously.",
+   "quote_verbatim": "And they're reflective. So they're very high contrast for almost zero power",
+   "speaker": "Dave Jones",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The cost of custom segment glass is inflexibility: the icon and digit layout is frozen in the tooling, so the product cannot later show additional items on screen, add text, or repurpose the display for a different function.",
+   "quote_verbatim": "you can't have multiple timers on the screen at once, for example. You know, you couldn't add text or hack it to do something else",
+   "speaker": "Dave Jones",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Graphic LCD glass is supplied either as transmissive, which is unreadable without its LED backlight, or as transflective, which modulates ambient light as well and so remains readable with the backlight off; the transflective option is what allows a low-power mode that leaves the backlight unlit.",
+   "quote_verbatim": "they only work with a LED backlight or they're transflective, which means you can use them with or without a backlight",
+   "speaker": "Dave Jones",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Selecting a panel that ships with a manufacturer's demonstration board removes the display bring-up from the critical path, since fonts and sizes can be exercised on known-good hardware instead of a day being spent working out how to talk to the controller.",
+   "quote_verbatim": "it came with a demo board so I can try it out instantly",
+   "speaker": "Dave Jones",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Liquid-crystal panels can fail progressively rather than all at once: a row of pixels along one edge bleeding into the display is a symptom of the glass or its edge connection degrading, and it can appear within hours of first powering a new panel.",
+   "quote_verbatim": "There was this, like, a row of pixels at the top that seemed to have, like, bled in to the LCD",
+   "speaker": "Dave Jones",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The LED backlight, not the liquid-crystal layer, dominates the power budget of a graphic LCD; a four-inch panel's backlight drew on the order of 800 milliamps, which rules out running it continuously from a small battery.",
+   "quote_verbatim": "the backlight's like 800 milliamps or something",
+   "speaker": "Dave Jones",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Some display modules can be ordered with the font chip already fitted behind the glass, so the character set arrives as part of the display rather than as a separate part to place; the module's flexible connector, however, is typically on a 0.5 millimetre pin pitch that is awkward to lay out and hand-assemble.",
+   "quote_verbatim": "you can just order it with that font chip and the LCD has it all built in",
+   "speaker": "Dave Jones",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Two panels of similar size are not interchangeable at the software level, because each may use a different display controller; driving a second panel can mean rewriting the driver or reprogramming the controller on the evaluation board rather than reusing the working code.",
+   "quote_verbatim": "I don't even know if it uses the same chip set in the LCD",
+   "speaker": "Dave Jones",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The liquid-crystal display was the enabling step for battery-powered calculators and the novelty formats that followed them, because unlike an LED readout it draws essentially no power in the steady state and only consumes energy when the displayed value changes.",
+   "quote_verbatim": "Once we figured out LCD displays, which required basically no power in, in the steady state",
+   "speaker": "Michal Zalewski",
+   "episode": 725,
+   "episode_title": "The Secret Life of Circuits with lcamtuf / Michał Zalewski",
+   "episode_url": "https://theamphour.com/725-the-secret-life-of-circuits-with-lcamtuf-michal-zalewski/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  }
+ ],
+ "attribution_notes": [
+  "Episode 180: the bundle labels several passages in the Dave Taylor interview 'Chris Gammell' where the diarisation splits a question and its answer. The 8020 chip, its state-machine nature and the Sharp/single-source LCD supply are first-person recollections of the Fluke 8020/8060 development, so they are attributed to Dave Taylor.",
+  "Episode 292: the flat-flex complaint ('my current project') is not the speaker who explains potting immediately before it, and the bundle labels the two overlapping windows 'Dave Jones' and 'Chris Gammell' respectively. Speaker left null.",
+  "Episode 393: the bundle carries no reliable turn split across this LCD pin-count and driver-cost exchange; the technical content is one continuous design account but the labels alternate, so speaker is null on all three claims.",
+  "Episode 515: attribution_reliable is false, but the passage is a first-person account of the embedded-Linux breakout-board project that is the subject of the interview, so Jay Carlson is retained.",
+  "Episode 539: attribution_reliable is false and the passage contains both a question about the failure mode and the answer; the answer is also explicitly a guess. Speaker left null and the claim is graded opinion.",
+  "Episode 658: the bundle labels the display-sizing window 'Chris Gammell', but the dimensions and the font requirement are the speaker describing his own bench-timer project, matched by the overlapping window labelled Dave Jones. Attributed to Dave Jones.",
+  "Episode 700: the backlight-current window is labelled 'Chris Gammell' in the bundle, but the measurement is the project owner reporting on the panel he had just set up, so it is attributed to Dave Jones.",
+  "Episode 464: the bundle labels the automotive-sourcing window 'Dave Jones'; the leading-edge/trailing-edge observation is the co-host's framing and the spare-parts warehousing answer is Dave Jones's, so the two claims are attributed separately."
+ ]
+}

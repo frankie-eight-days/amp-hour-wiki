@@ -11,7 +11,7 @@ title: All articles
 
 - [[accelerometer|Accelerometer]]
 - [[altium|Altium]]
-- [[analog-to-digital-converter|Analog To Digital Converter]]
+- [[analog-to-digital-converter|Analog to Digital Converter]]
 - [[antenna|Antenna]]
 - [[api|API]]
 - [[arduino|Arduino]]
@@ -103,12 +103,12 @@ title: All articles
 
 ### K
 
-- [[kicad|Kicad]]
+- [[kicad|KiCad]]
 - [[kickstarter|Kickstarter]]
 
 ### L
 
-- [[led|Led]]
+- [[led|LED]]
 - [[linux|Linux]]
 - [[logic-analyzer|Logic Analyzer]]
 - [[lora|LoRa]]
@@ -120,7 +120,7 @@ title: All articles
 - [[mass-production|Mass Production]]
 - [[microcontroller|Microcontroller]]
 - [[moores-law|Moore's Law]]
-- [[mosfet|Mosfet]]
+- [[mosfet|MOSFET]]
 - [[multimeter|Multimeter]]
 
 ### O
@@ -137,7 +137,7 @@ title: All articles
 - [[pcb|PCB]]
 - [[pcb-assembly|PCB Assembly]]
 - [[pcb-design|PCB Design]]
-- [[pcb-fabrication|Pcb Fabrication]]
+- [[pcb-fabrication|PCB Fabrication]]
 - [[pcb-footprint|PCB Footprint]]
 - [[pcb-layout|PCB Layout]]
 - [[pcb-lead-time|PCB Lead Time]]
@@ -152,7 +152,7 @@ title: All articles
 - [[professional-networking|Professional Networking]]
 - [[profit-margin|Profit Margin]]
 - [[prototype|Prototype]]
-- [[pwm|Pwm]]
+- [[pwm|PWM]]
 - [[python|Python]]
 
 ### R
@@ -166,7 +166,7 @@ title: All articles
 - [[relay|Relay]]
 - [[resistor|Resistor]]
 - [[reverse-engineering|Reverse Engineering]]
-- [[risc-v|Risc V]]
+- [[risc-v|RISC-V]]
 - [[robotics|Robotics]]
 - [[rtos|RTOS]]
 
@@ -201,7 +201,7 @@ title: All articles
 ### U
 
 - [[uart|UART]]
-- [[usb|Usb]]
+- [[usb|USB]]
 - [[usb-c|USB-C]]
 
 ### V

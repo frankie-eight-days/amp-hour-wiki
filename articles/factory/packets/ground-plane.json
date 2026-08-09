@@ -1,0 +1,664 @@
+{
+ "concept": "ground-plane",
+ "name": "Ground Plane",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "ground-plane"
+   ],
+   "children": [
+    "power-distribution",
+    "power-plane",
+    "thermal-mass"
+   ],
+   "neighbors": []
+  },
+  "stats": {
+   "episodes": 57,
+   "mentions": 103,
+   "explains": 71,
+   "opinions": 7,
+   "candidate_episode_count": 47,
+   "candidate_mention_count": 72,
+   "gated_out": 37,
+   "gated_out_by_concept": [
+    [
+     "power-distribution",
+     15
+    ],
+    [
+     "power-plane",
+     13
+    ],
+    [
+     "thermal-mass",
+     9
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 6,
+   "speakers": [
+    [
+     "Dave Jones",
+     30
+    ],
+    [
+     "Chris Gammell",
+     20
+    ],
+    [
+     "Katerina Galitskaya",
+     5
+    ],
+    [
+     "Eric Bogatin",
+     4
+    ],
+    [
+     "Hank Zumbahlen",
+     2
+    ],
+    [
+     "Henry Ott",
+     1
+    ],
+    [
+     "Andrew Witte",
+     1
+    ],
+    [
+     "Omer Kilic",
+     1
+    ],
+    [
+     "Stefan Dzisiewski-Smith",
+     1
+    ],
+    [
+     "Luke Valenty",
+     1
+    ],
+    [
+     "Kieran O'Leary",
+     1
+    ],
+    [
+     "Mike Grover",
+     1
+    ],
+    [
+     "Jeff Keyzer",
+     1
+    ],
+    [
+     "Sergiy Nesterenko",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 66,
+    "child": 4
+   },
+   "passages_by_depth": {
+    "explains": 63,
+    "opinion": 7
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 70
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "Dead-bug construction, in which a chip is glued upside down on an unetched copper-clad board and its pins wired in the air, performs well at high speed because the continuous copper underneath acts as an uninterrupted ground plane.",
+   "quote_verbatim": "some of the best high speed stuff is dead bug flipped over and actually just stuck down onto a copper clad board",
+   "speaker": null,
+   "episode": 8,
+   "episode_title": "Layouts and Design-Outs",
+   "episode_url": "https://theamphour.com/the-amp-hour-8-layouts-and-design-outs/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Soldering a component lead straight onto a solid copper ground plane, as in Manhattan and dead-bug construction, gives an essentially inductance-free ground connection because no length of trace or wire stands between the part and the plane.",
+   "quote_verbatim": "you sold the component directly to the ground plane and bang, it's there. You know, there's no inductance",
+   "speaker": null,
+   "episode": 56,
+   "episode_title": "Open Orbific Oratiuncle",
+   "episode_url": "https://theamphour.com/the-amp-hour-56-open-orbific-oratiuncle/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A mistake in an internal ground plane is far more costly to correct than an error in a signal trace, because the plane connects to every ground reference on the board and each of those references has to be reworked.",
+   "quote_verbatim": "Trying to fix up that can be a real dog",
+   "speaker": "Dave Jones",
+   "episode": 68,
+   "episode_title": "Radiation Chips & Old Package Types - Technocratic Toilet Troubleshooting",
+   "episode_url": "https://theamphour.com/the-amp-hour-68-technocratic-toilet-troubleshooting/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "In Manhattan construction, small islands are machined or cut out of the copper on a bare board and components are soldered to those islands, while the surrounding uncut copper is retained as the ground plane.",
+   "quote_verbatim": "you can create these little islands basically and you solder all your components to that",
+   "speaker": "Chris Gammell",
+   "episode": 106,
+   "episode_title": "Tektronix, ChipReport.tv, & the Signal Path - Temperative Tegmen Temperature",
+   "episode_url": "https://theamphour.com/the-amp-hour-106-temperative-tegmen-temperature/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A ground plane is not a perfect equipotential sheet of copper: it has inductance, so return current follows the path of least loop inductance rather than spreading evenly across the plane.",
+   "quote_verbatim": "It has inductance, and that's why it will follow the, the current will follow the least inductive loop path. So current doesn't evenly flow across a PCB ground plane",
+   "speaker": null,
+   "episode": 128,
+   "episode_title": "Layout, CAD & Raspberry Pi - Kedogenous Kinetic Knowledge",
+   "episode_url": "https://theamphour.com/the-amp-hour-128-kedogenous-kinetic-knowledge/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The concentration of return current in a ground plane can be demonstrated directly with a current-tracing probe, which shows current flowing in one region of the plane and effectively none in adjacent areas.",
+   "quote_verbatim": "I use a current tracing probe and I trace the return current through a ground plane",
+   "speaker": "Dave Jones",
+   "episode": 165,
+   "episode_title": "An Interview with Henry Ott - Forced FCC Filtering",
+   "episode_url": "https://theamphour.com/165-an-interview-with-henry-ott-forced-fcc-filtering/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Tombstoning of small two-terminal parts arises when one termination lands on a pad tied into a ground plane and the other on a thin trace: the grounded end is coupled to a large thermal mass and cools at a different rate from the other end, so the part lifts during reflow.",
+   "quote_verbatim": "one end is joined to ground, which has a large thermal mass",
+   "speaker": "Dave Jones",
+   "episode": 172,
+   "episode_title": "CAD courses and cross platform creation - Printing Propaedeutic Patterns",
+   "episode_url": "https://theamphour.com/172-cad-courses-and-cross-platform-creation-printing-propaedeutic-patterns/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Thermal relief on pads that connect to internal copper planes is a design requirement rather than a cosmetic detail, because thick boards with large internal copper layers retain heat and unrelieved pads make bypass capacitors and similar small parts liable to tombstone.",
+   "quote_verbatim": "if you don't design your thermal release enough to components",
+   "speaker": "Dave Jones",
+   "episode": 172,
+   "episode_title": "CAD courses and cross platform creation - Printing Propaedeutic Patterns",
+   "episode_url": "https://theamphour.com/172-cad-courses-and-cross-platform-creation-printing-propaedeutic-patterns/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A ceramic chip antenna is specified against a particular board size because the board's ground plane forms part of the radiating structure; a product too small to provide that plane will not reproduce the antenna's rated performance.",
+   "quote_verbatim": "It's designed to perform on such and such a size of board because it needs, it needs a ground plane",
+   "speaker": "Andrew Witte",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A design that carries multiple separate ground planes must define explicitly where those planes are tied together, since they have to meet somewhere, and CAD tools handle that junction awkwardly.",
+   "quote_verbatim": "if you have multiple ground planes, where do they connect? They all have to go together someplace",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Return current in a plane concentrates directly beneath the forward-going trace rather than spreading over the whole plane, because that arrangement minimises the enclosed loop.",
+   "quote_verbatim": "The return path tends to congregate directly under the forward path in traces.",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The behaviour of return current is frequency-dependent: at low frequencies it distributes across a wide ground plane and the plane can be treated as a bulk conductor, while as frequency rises the current follows the path of least inductance and hugs the forward path.",
+   "quote_verbatim": "at low frequencies, if you have a nice wide ground plane, then everything's fine because the current will kind of go through the whole plane. But at high, as you go up in frequency, it's the path of least inductance",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Radio module vendors advise against placing a ground plane under the antenna region of a design, and publish layout documents saying so because first-time integrators frequently do it.",
+   "quote_verbatim": "don't put a ground plane under your antenna",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Although copper under the antenna is the failure most often anticipated, the more common fault seen in module integrations is a board with no ground plane at all, compounded by poor placement such as switching-regulator inductors sited next to the radio.",
+   "quote_verbatim": "Usually the problem we have is people putting no ground plane anywhere whatsoever.",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Where a two-layer board relies on a bottom-side pour for its ground, every trace routed through that pour breaks the plane, and a plane cut in half can leave the board worse off than the designer expected.",
+   "quote_verbatim": "you're always worried about, you know, breaking up the ground plane by, you know, putting a trace through it and cutting it in half",
+   "speaker": null,
+   "episode": 221,
+   "episode_title": "Warming Up To IoT - Tendentious Thermal Tools",
+   "episode_url": "https://theamphour.com/221-warming-up-to-iot-tendentious-thermal-tools/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A switching power supply can be treated as a self-contained block within a larger board, given its own ground plane and otherwise isolated from the surrounding circuitry.",
+   "quote_verbatim": "It even has its own ground plane.",
+   "speaker": "Dave Jones",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "When a stackup computed for a target impedance comes out thinner than the specified board thickness, the fabricator adds a dielectric fill layer to make up the difference and will place it in the middle of the board for symmetry and yield, pulling apart any power and ground plane pair that sits there.",
+   "quote_verbatim": "where do you think the fab house is going to put the dielectric fill layer? Right in the middle",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Leaving stackup decisions to the fabricator optimises for the fabricator's yield rather than the board's electrical performance; the result may still work, but the designer is relying on luck instead of specification or simulation.",
+   "quote_verbatim": "if you leave it up at the fab house, they're not going to come up with the best solution for you",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The function of a power and ground plane pair is to deliver supply voltage at low impedance and low inductance, which is why the geometry of the pair matters more than the mere presence of copper.",
+   "quote_verbatim": "you're delivering low impedance, basically DC voltage. Low inductance",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The inductance of an interconnect is set by three physical properties: its width, since spreading the current out generates fewer rings of magnetic field lines; its length; and its proximity to the return path.",
+   "quote_verbatim": "three physical things that influence the inductance of an interconnect. There's the width.",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Power and ground planes are placed close together because the currents in them counter-propagate: the magnetic field of the power current cancels that of the ground current, reducing total inductance and hence the voltage developed when the current changes.",
+   "quote_verbatim": "The rings of field lines of the power currents help to cancel out the rings of field lines of the ground currents.",
+   "speaker": null,
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A return loop formed by a trace and its path through ground can be resonant at a frequency present in the system, and such a loop has been the root cause of field failures in instruments from major manufacturers; faults of this kind are hard to find because no single component is defective.",
+   "quote_verbatim": "the loop going through ground and going through the trace and everything into the programming line",
+   "speaker": "Dave Jones",
+   "episode": 319,
+   "episode_title": "Photon Rich, Cash Poor",
+   "episode_url": "https://theamphour.com/319-photon-rich-cash-poor/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Board fabrication documentation should specify every parameter explicitly rather than leaving values such as pad clearance to the manufacturer, because fabricators adjust unspecified parameters to suit their own process.",
+   "quote_verbatim": "you specify everything. Don't leave it up to the manufacturer",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A fabricator enlarging clearances and removing copper fill around pads without notice can sever a ground pour, in one documented case breaking a ground plane in half on a delivered board.",
+   "quote_verbatim": "they neck down my copper that they actually removed my copper fill around pads",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "On a two-layer board the bottom-side ground plane ends up perforated by the signal routing it must share the layer with, and the resulting cuts are a standard reason to move a revised design to more layers.",
+   "quote_verbatim": "I used a two layer board, which means that my ground plane on the bottom was like, you know, Swiss cheese",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Running ground as a single thin trace across a board is poor practice because the trace is electrically a long wire and therefore high in inductance, unlike a plane.",
+   "quote_verbatim": "It's quite high in inductance",
+   "speaker": "Dave Jones",
+   "episode": 410,
+   "episode_title": "Secret Buzzer Handshake",
+   "episode_url": "https://theamphour.com/410-secret-buzzer-handshake/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where a ground run cannot be avoided, it should be stitched down to the ground plane with vias at multiple points along its length rather than being tied at a single end, in order to keep the ground connection low in inductance.",
+   "quote_verbatim": "you want to be dropping vias at multiple points along there as well, just to keep that a low inductance ground",
+   "speaker": "Dave Jones",
+   "episode": 410,
+   "episode_title": "Secret Buzzer Handshake",
+   "episode_url": "https://theamphour.com/410-secret-buzzer-handshake/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Return current does not necessarily flow in the ground plane: a signal routed on a layer adjacent to a power plane returns on that power plane instead.",
+   "quote_verbatim": "if you're down on those lower layers near the power plane, it might actually return on the power plane",
+   "speaker": "Chris Gammell",
+   "episode": 439,
+   "episode_title": "Grow A Superbrain",
+   "episode_url": "https://theamphour.com/the-amp-hour-439-grow-a-superbrain/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "As a working rule of thumb a power plane may be treated the same as a ground plane for return purposes, because bypass capacitors hold the two at essentially the same low impedance across the frequencies of interest; the approximation breaks down in the finer details.",
+   "quote_verbatim": "a rule of thumb is you treat the power layer the same as the ground layer",
+   "speaker": "Dave Jones",
+   "episode": 439,
+   "episode_title": "Grow A Superbrain",
+   "episode_url": "https://theamphour.com/the-amp-hour-439-grow-a-superbrain/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The ideal high-speed stackup sandwiches every signal layer between ground layers, which for a six-layer design of moderate complexity would call for ten layers; commercial practice is to take the minimum layer count that works, so such boards ship as six-layer parts.",
+   "quote_verbatim": "each of the signal layers is sandwiched between a ground layer",
+   "speaker": "Dave Jones",
+   "episode": 439,
+   "episode_title": "Grow A Superbrain",
+   "episode_url": "https://theamphour.com/the-amp-hour-439-grow-a-superbrain/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Routing a signal layer adjacent to a positive power plane is almost as good as routing it next to a ground plane, and decidedly better than routing it with no adjacent plane at all.",
+   "quote_verbatim": "you can keep your signal layers next to your positive power plane and that's almost as good as keeping them near a ground plane",
+   "speaker": "Dave Jones",
+   "episode": 439,
+   "episode_title": "Grow A Superbrain",
+   "episode_url": "https://theamphour.com/the-amp-hour-439-grow-a-superbrain/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The most damaging thing a layout can do to a plane is chop it up, whether by splitting it with a routed trace or by punching a field of vias through it, since in either case the return current is forced to detour around the break.",
+   "quote_verbatim": "worst thing you can do for signal integrity point of view is chop up your ground plane either by splitting it with a trace or by dropping the vias down and then the then the signal has to go around",
+   "speaker": "Dave Jones",
+   "episode": 439,
+   "episode_title": "Grow A Superbrain",
+   "episode_url": "https://theamphour.com/the-amp-hour-439-grow-a-superbrain/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A PCB antenna does not work in isolation: the board's ground is part of the radiating structure, which is why purchased antennas are supplied with a required ground-plane size in their datasheets.",
+   "quote_verbatim": "the ground in the PCB is also like part of your antenna",
+   "speaker": "Pete Bevelacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A power plane serves as a return path as readily as a ground plane; the widespread assumption that a high-speed signal must return on ground is mistaken, since the return follows whichever plane is adjacent.",
+   "quote_verbatim": "a power plane can serve as a return path just as, just as easily as a, as a ground plane",
+   "speaker": "Kieran O'Leary",
+   "episode": 452,
+   "episode_title": "An Interview with Kieran O'Leary",
+   "episode_url": "https://theamphour.com/452-an-interview-with-kieran-oleary/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A layer made up of patches of different supply voltages can still act as a valid return plane, provided those power planes are adequately decoupled to ground.",
+   "quote_verbatim": "provided perhaps that the power planes are sufficiently decoupled",
+   "speaker": "Kieran O'Leary",
+   "episode": 452,
+   "episode_title": "An Interview with Kieran O'Leary",
+   "episode_url": "https://theamphour.com/452-an-interview-with-kieran-oleary/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "When a return plane is chopped into islands by multiple supply voltages, the return current cannot stay adjacent to its signal and instead finds another route across the board, enlarging the loop area with a range of undesirable consequences.",
+   "quote_verbatim": "then you start increasing the loop size and you increase the overall loop area",
+   "speaker": "Kieran O'Leary",
+   "episode": 452,
+   "episode_title": "An Interview with Kieran O'Leary",
+   "episode_url": "https://theamphour.com/452-an-interview-with-kieran-oleary/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The return path exists whether or not the designer plans it: Maxwell's equations determine where the return current goes, so the aim of a stackup and plane strategy is to take that determination into the designer's hands as far as is practical.",
+   "quote_verbatim": "you want to take it out of his hands and put it into your own hands as best you can",
+   "speaker": "Kieran O'Leary",
+   "episode": 452,
+   "episode_title": "An Interview with Kieran O'Leary",
+   "episode_url": "https://theamphour.com/452-an-interview-with-kieran-oleary/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A typical wireless module layout is trivial by design: the module and a few passives stitched down to a large ground plane on the layer beneath, with a single controlled-impedance trace running out to the antenna.",
+   "quote_verbatim": "It's a chip with a couple of passive parts around it stitched down to ground. It's got a big ass ground plane on the bottom of it.",
+   "speaker": "Dave Jones",
+   "episode": 453,
+   "episode_title": "Vertically Integrated Design Engineering",
+   "episode_url": "https://theamphour.com/453-vertically-integrated-design-engineering/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Cutouts in a ground plane, a standard technique in low-frequency mixed-signal layout for keeping converter noise out, are counterproductive at RF: a high-frequency signal crossing a plane cutout simply radiates, so the trace becomes an antenna.",
+   "quote_verbatim": "It just becomes an antenna effectively",
+   "speaker": "Chris Gammell",
+   "episode": 457,
+   "episode_title": "Dotty Ernest Annty Frost",
+   "episode_url": "https://theamphour.com/457-dotty-ernest-annty-frost/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Development boards for cellular modules provide a large copper landing pad tying the module ground to the board ground, because a substantial reference plane is wanted for antenna performance; a shield may be fitted under the module as well as over it.",
+   "quote_verbatim": "you obviously want a really big ground for antennas and stuff like that for like a reference plane",
+   "speaker": "Chris Gammell",
+   "episode": 493,
+   "episode_title": "PITA Package",
+   "episode_url": "https://theamphour.com/493-pita-package/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Internal ground planes are poor heat sinks despite their copper area, because they are sandwiched between layers of fibreglass, which conducts heat badly.",
+   "quote_verbatim": "Internal ground planes. Aren't the best heat sinks.",
+   "speaker": "Dave Jones",
+   "episode": 516,
+   "episode_title": "Thermions Aren't A Thing",
+   "episode_url": "https://theamphour.com/516-thermions-arent-a-thing/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "So-called virtual antenna designs radiate from the ground plane itself, so conductive parts bonded into the ground, including a battery, extend the effective plane and can improve radiation rather than degrade it.",
+   "quote_verbatim": "they're using ground plane to emit",
+   "speaker": "Chris Gammell",
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An automated layout tool can fix a four-layer stackup by inferring which net is ground and which is the most used supply, assigning those to the two internal plane layers and routing everything else on the top and bottom.",
+   "quote_verbatim": "we kind of automatically choose, you know, which net is the ground net, which net is the most likely kind of like commonly used power net",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A ground plane can itself be the radiating element: current flowing across the board between two connectors, acting on the plane's own inductance, develops a voltage difference between the two sides of the board.",
+   "quote_verbatim": "there's current flowing on the ground plane, right? So there's, and there's inductance on the ground plane. So you get a voltage difference on the two sides of the board",
+   "speaker": "Scott Williams",
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Lower-frequency antennas require a larger ground plane to radiate efficiently, which is why the low cellular bands are the hardest to accommodate in a small product.",
+   "quote_verbatim": "they require bigger ground plane to work to radiate efficiently",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "An antenna element needs a feed point and a ground plane behind it; the plane acts as an extension of the element, so a wire monopole plus its ground plane together form the dipole that actually radiates.",
+   "quote_verbatim": "if wire is a monopole, so this ground plane is also monopole and it makes dipole",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Module and chip antennas function only because they are connected to the ground plane of the board carrying them; the same element suspended in free space with nothing to work against would not radiate.",
+   "quote_verbatim": "they work because you connect them to your ground plane on your PCB",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An antenna should be placed on the shorter side of the board, in a corner and on the edge, never in the centre, so that the long dimension of the ground plane is available to it.",
+   "quote_verbatim": "Always place the antenna on the shorter side of the PCB and better in the corner and always on the edge, never in the center of PCB.",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Shrinking the antenna element itself buys no radiating performance, because performance follows the size of the ground plane; a smaller element only frees PCB area or allows the radiator to be moved off the board into the space above it.",
+   "quote_verbatim": "you won't get any more benefits from that because it still comes from size of your ground plane",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Antenna types differ in their relationship to the plane: some are designed to work over a ground plane while others require no ground plane beneath them, so the choice of type is constrained by the board and enclosure available.",
+   "quote_verbatim": "some antennas work over the ground plane some antennas doesn't need ground plane below it",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Flying-probe electrical test can be programmed to hold one probe on the ground plane and touch the other to every non-ground net in turn to check for shorts, but this must be repeated for each power plane and is not part of the default automated test.",
+   "quote_verbatim": "one flying probe onto the ground plane and then the other flying probe onto every other trace that's not ground",
+   "speaker": "Dave Jones",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Ground planes on silicon suffer high-frequency inductance effects and are distorted by current injected into them, and an equivalent effect appears on boards as dynamic variation of ground potential from place to place.",
+   "quote_verbatim": "you will have the ground plane twist like a chip due to current injection into the ground plane",
+   "speaker": "Jerry Twomey",
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Because no hard ground reference is achievable on an integrated circuit, on-chip signal paths are designed fully differentially as a matter of course, and thinking differentially is a sound default in any ground-sensitive system.",
+   "quote_verbatim": "you are never going to get a good hard ground reference system on a chip",
+   "speaker": "Jerry Twomey",
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The plane structure of a PCB acts as a bulk capacitor in its own right, and its effectiveness can be compared directly against a discrete bypass capacitor of the order of ten nanofarads.",
+   "quote_verbatim": "I wanted to show how effective a ground plane was in a PCB as a bulk capacitor",
+   "speaker": "Dave Jones",
+   "episode": 710,
+   "episode_title": "Tugging on the Nerd Heartstring",
+   "episode_url": "https://theamphour.com/710-tugging-on-the-nerd-heartstring/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  }
+ ],
+ "attribution_notes": [
+  "Episodes 8, 56, 128, 221: the bundle's fused +/-1 paragraph windows carry the same sentences under both host labels, so the quoted turn cannot be assigned to Chris Gammell or Dave Jones from content alone; speaker left null.",
+  "Episode 202: passage labelled Dave Jones, but the quoted answers describe the guest's own team and its integration documents, so attributed to guest Brandon Harris.",
+  "Episode 252: attribution_reliable is false; the expository content is attributed to Eric Bogatin because it refers to his own book on signal and power integrity. The field-cancellation summary is addressed to Dave in the second person and could belong to either Bogatin or the co-host, so that claim's speaker is null.",
+  "Episode 446: passage labelled Chris Gammell, but the antenna explanation is the guest's answer, so attributed to Pete Bevelacqua.",
+  "Episode 645: passage labelled Dave Jones, but the speaker describes running a consultancy's EMC lab work and over a hundred compliance campaigns, so attributed to guest Scott Williams.",
+  "Episode 678: the antenna placement rule sits in a passage labelled Chris Gammell but is the guest's answer, so attributed to Katerina Galitskaya.",
+  "Episode 704: passage labelled Dave Jones, but the on-silicon grounding answer is the guest's, so attributed to Jerry Twomey."
+ ]
+}

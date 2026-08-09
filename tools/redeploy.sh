@@ -5,6 +5,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 python3 tools/sync_site.py
+python3 tools/gen_landing.py
 cd site
 npx quartz build
 
@@ -18,6 +19,9 @@ cp vercel.json public/ 2>/dev/null || true
 # The theme bootstrap lives in the hashed prescript-*.js bundle.
 LC_ALL=C find public -name 'prescript-*.js' -exec sed -i '' \
   's/window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"/"light"/g' {} +
+
+# marketing landing replaces the Quartz index at /
+cp landing.html public/index.html
 cd public
 if [ ! -d .vercel ]; then
   npx vercel link --yes --project amphour-wiki --scope frankie-eight-days-projects

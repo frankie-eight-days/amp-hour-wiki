@@ -1,5 +1,5 @@
 ---
-title: The Amp Hour Wiki
+title: Browse the wiki
 ---
 
 <div style="text-align:center; padding: 1.2rem 0 0.4rem;">
@@ -17,23 +17,23 @@ Every claim carries a bracketed citation tracing to a verbatim passage in the sh
 
 ### Kicad, Altium, Open Source Hardware
 
-[[altium|Altium]] · [[design-review|Design Review]] · [[design-rule-checking|Design Rule Checking]] · [[eagle|EAGLE]] · [[gerber|Gerber]] · [[github|GitHub]] · [[kicad|Kicad]] · [[open-source|Open Source]] · [[open-source-hardware|Open Source Hardware]] · [[open-source-software|Open Source Software]] · [[pcb-design|PCB Design]] · [[pcb-footprint|PCB Footprint]] · [[pcb-layout|PCB Layout]] · [[pcb-routing|PCB Routing]] · [[reference-design|Reference Design]] · [[schematic|Schematic]] · [[spice|SPICE]]
+[[altium|Altium]] · [[design-review|Design Review]] · [[design-rule-checking|Design Rule Checking]] · [[eagle|EAGLE]] · [[gerber|Gerber]] · [[github|GitHub]] · [[kicad|KiCad]] · [[open-source|Open Source]] · [[open-source-hardware|Open Source Hardware]] · [[open-source-software|Open Source Software]] · [[pcb-design|PCB Design]] · [[pcb-footprint|PCB Footprint]] · [[pcb-layout|PCB Layout]] · [[pcb-routing|PCB Routing]] · [[reference-design|Reference Design]] · [[schematic|Schematic]] · [[spice|SPICE]]
 
 ### Pcb Fabrication, Pcb, Pick And Place Machine
 
-[[bga|BGA]] · [[breadboard|Breadboard]] · [[fr4|FR-4]] · [[hand-soldering|Hand Soldering]] · [[pcb|PCB]] · [[pcb-assembly|PCB Assembly]] · [[pcb-fabrication|Pcb Fabrication]] · [[pcb-lead-time|PCB Lead Time]] · [[pcb-milling|PCB Milling]] · [[pick-and-place-machine|Pick and Place Machine]] · [[reflow-soldering|Reflow Soldering]] · [[solder-mask|Solder Mask]] · [[via|Via]]
+[[bga|BGA]] · [[breadboard|Breadboard]] · [[fr4|FR-4]] · [[hand-soldering|Hand Soldering]] · [[pcb|PCB]] · [[pcb-assembly|PCB Assembly]] · [[pcb-fabrication|PCB Fabrication]] · [[pcb-lead-time|PCB Lead Time]] · [[pcb-milling|PCB Milling]] · [[pick-and-place-machine|Pick and Place Machine]] · [[reflow-soldering|Reflow Soldering]] · [[solder-mask|Solder Mask]] · [[via|Via]]
 
 ### Linux, Usb, Ethernet
 
-[[bootloader|Bootloader]] · [[can-bus|CAN Bus]] · [[eeprom|EEPROM]] · [[firmware-update|Firmware Update]] · [[flash-memory|Flash Memory]] · [[linux|Linux]] · [[ram|RAM]] · [[rtos|RTOS]] · [[serial-port|Serial Port]] · [[usb|Usb]] · [[usb-c|USB-C]] · [[virtual-machine|Virtual Machine]] · [[zephyr|Zephyr]]
+[[bootloader|Bootloader]] · [[can-bus|CAN Bus]] · [[eeprom|EEPROM]] · [[firmware-update|Firmware Update]] · [[flash-memory|Flash Memory]] · [[linux|Linux]] · [[ram|RAM]] · [[rtos|RTOS]] · [[serial-port|Serial Port]] · [[usb|USB]] · [[usb-c|USB-C]] · [[virtual-machine|Virtual Machine]] · [[zephyr|Zephyr]]
 
 ### Capacitor, Led, Op Amp
 
-[[capacitor|Capacitor]] · [[dc-dc-converter|DC-DC Converter]] · [[inductor|Inductor]] · [[integrated-circuit|Integrated Circuit]] · [[led|Led]] · [[mosfet|Mosfet]] · [[op-amp|Op-Amp]] · [[relay|Relay]] · [[resistor|Resistor]] · [[soldering|Soldering]] · [[switching-power-supply|Switching Power Supply]] · [[transformer|Transformer]] · [[transistor|Transistor]]
+[[capacitor|Capacitor]] · [[dc-dc-converter|DC-DC Converter]] · [[inductor|Inductor]] · [[integrated-circuit|Integrated Circuit]] · [[led|LED]] · [[mosfet|MOSFET]] · [[op-amp|Op-Amp]] · [[relay|Relay]] · [[resistor|Resistor]] · [[soldering|Soldering]] · [[switching-power-supply|Switching Power Supply]] · [[transformer|Transformer]] · [[transistor|Transistor]]
 
 ### Analog To Digital Converter, I2C, Spi
 
-[[accelerometer|Accelerometer]] · [[analog-to-digital-converter|Analog To Digital Converter]] · [[bandwidth|Bandwidth]] · [[digital-to-analog-converter|Digital-to-Analog Converter]] · [[dma|DMA]] · [[gpio|GPIO]] · [[i2c|I2C]] · [[pwm|Pwm]] · [[signal-to-noise-ratio|Signal to Noise Ratio]] · [[spi|SPI]] · [[temperature-sensor|Temperature Sensor]] · [[uart|UART]]
+[[accelerometer|Accelerometer]] · [[analog-to-digital-converter|Analog to Digital Converter]] · [[bandwidth|Bandwidth]] · [[digital-to-analog-converter|Digital-to-Analog Converter]] · [[dma|DMA]] · [[gpio|GPIO]] · [[i2c|I2C]] · [[pwm|PWM]] · [[signal-to-noise-ratio|Signal to Noise Ratio]] · [[spi|SPI]] · [[temperature-sensor|Temperature Sensor]] · [[uart|UART]]
 
 ### Bluetooth, Wifi, Internet Of Things
 
@@ -45,7 +45,7 @@ Every claim carries a bracketed citation tracing to a verbatim passage in the sh
 
 ### Fpga, Arm, Risc V
 
-[[arm|ARM]] · [[asic|ASIC]] · [[compiler|Compiler]] · [[fpga|FPGA]] · [[intellectual-property|Intellectual Property]] · [[power-consumption|Power Consumption]] · [[processor|Processor]] · [[register|Register]] · [[risc-v|Risc V]] · [[verilog|Verilog]]
+[[arm|ARM]] · [[asic|ASIC]] · [[compiler|Compiler]] · [[fpga|FPGA]] · [[intellectual-property|Intellectual Property]] · [[power-consumption|Power Consumption]] · [[processor|Processor]] · [[register|Register]] · [[risc-v|RISC-V]] · [[verilog|Verilog]]
 
 ### Kickstarter, Startup, Venture Capital
 

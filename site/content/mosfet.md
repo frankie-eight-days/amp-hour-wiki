@@ -1,5 +1,5 @@
 ---
-title: Mosfet
+title: MOSFET
 concept: mosfet
 generated: 2026-08-08
 model: k3

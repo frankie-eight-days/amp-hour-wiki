@@ -1,5 +1,5 @@
 ---
-title: Usb
+title: USB
 concept: usb
 generated: 2026-08-08
 model: k3
