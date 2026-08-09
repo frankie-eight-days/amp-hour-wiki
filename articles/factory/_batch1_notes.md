@@ -106,3 +106,16 @@
   it would unlock 7+ passages of semiconductor-process material for wafer /
   semiconductor-fab. Site page and sitemap carry no number; needs archive.org
   or RSS-history confirmation.
+- **Watcher reliability (batch-3 finding, supersedes the watcher mandate)**:
+  even absolute-path `until [ -f ]` poll monitors armed inside group agents
+  sometimes silently never fire (g5: two armed watchers, packets landed
+  07:12-07:18, zero events). Two independent notification holes now known
+  (delegate completions route to lead; armed watchers can drop). RELIABLE
+  pattern for batch 4: groups stat the packets/articles directory directly
+  on their own cadence between tool calls — no push mechanism trusted.
+- **Per-article writes as separate tool calls** (g6): a foreground loop
+  writing 3 articles hit the 10-min bash timeout mid-write and silently
+  skipped one. Never loop writes in one call.
+- **Delegate-audit kit**: g6's validate_g6.py (re-verify quotes vs full
+  transcript, kind vocab, tripwires vs claim_text, null episodes, duplicate
+  quotes, single-episode over-reliance) becomes standard in batch-4 briefs.
