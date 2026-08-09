@@ -54,7 +54,9 @@ NAV = (
     '<a href="/all" style="color:var(--ink); text-decoration:none;'
     ' margin-left:18px;">All articles</a>'
     '<a href="/explore" style="color:#c94628; text-decoration:none;'
-    ' margin-left:18px;">Graph</a></span></nav>'
+    ' margin-left:18px;">Graph</a>'
+    '<a href="/contribute" style="color:var(--ink); text-decoration:none;'
+    ' margin-left:18px;">Contribute</a></span></nav>'
 )
 # no <body> tag in this file — inject the fixed nav before the stage div and
 # push the explorer's own overlay title/search down below the bar

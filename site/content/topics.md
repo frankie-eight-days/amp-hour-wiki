@@ -11,7 +11,7 @@ title: Browse the wiki
 
 <p style="text-align:center;"><strong><a href="./explore">Explore the concept graph &rarr;</a></strong> &nbsp;·&nbsp; <a href="./all">All articles A&ndash;Z</a> &nbsp;·&nbsp; search with <kbd>⌘K</kbd></p>
 
-Every claim carries a bracketed citation tracing to a verbatim passage in the show's official transcripts. Articles are AI-generated syntheses built by a verified extraction pipeline; a full *How this wiki was built* page is coming with the complete build.
+Every claim carries a bracketed citation tracing to a verbatim passage in the show's official transcripts. Articles are AI-generated syntheses built by a verified extraction pipeline — read [how this wiki was built](./how-this-was-built), or [contribute](./contribute).
 
 ## Topics
 
