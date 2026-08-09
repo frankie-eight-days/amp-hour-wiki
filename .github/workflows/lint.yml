@@ -1,0 +1,49 @@
+name: lint
+on:
+  pull_request:
+    paths:
+      - "articles/wiki/**"
+      - "articles/factory/packets/**"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Lint changed articles and verify changed packets
+        run: |
+          set -e
+          base="origin/${{ github.base_ref }}"
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          changed=$(git diff --name-only "$base"...HEAD)
+          fail=0
+
+          # every changed packet must verify against its bundle
+          for p in $(echo "$changed" | grep '^articles/factory/packets/.*\.json$' || true); do
+            c=$(basename "$p" .json)
+            echo "::group::verify_packet $c"
+            python3 articles/factory/tools/verify_packet.py "$c" || fail=1
+            echo "::endgroup::"
+          done
+
+          # every changed article (or its packet) gets the full lint
+          for c in $(echo "$changed" | grep -E '^articles/(wiki/.*\.md|factory/packets/.*\.json)$' \
+                     | sed -E 's#.*/##; s#\.(md|json)$##' | sort -u); do
+            a="articles/wiki/$c.md"; p="articles/factory/packets/$c.json"
+            if [ -f "$a" ] && [ -f "$p" ]; then
+              echo "::group::lint $c"
+              python3 articles/factory/tools/lint.py --article "$a" --packet "$p" || fail=1
+              echo "::endgroup::"
+            elif [ -f "$p" ]; then
+              echo "packet-only change for $c (no article yet) — verify only"
+            else
+              echo "::warning::$c has an article but no packet"
+              fail=1
+            fi
+          done
+          exit $fail
