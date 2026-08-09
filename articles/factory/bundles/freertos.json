@@ -1,0 +1,990 @@
+{
+ "concept": "freertos",
+ "name": "FreeRTOS",
+ "type": "software",
+ "score": 165.034,
+ "rank_by_score": 241,
+ "cluster": {
+  "core": [
+   "free rtos",
+   "free-rtos",
+   "freeRTOS",
+   "freertos"
+  ],
+  "children": [
+   "aws-iot",
+   "blinky",
+   "interrupt-service-routine",
+   "magnet-wire",
+   "nrf51",
+   "remote-sensing",
+   "semaphore",
+   "stack",
+   "tcp-ip-stack"
+  ],
+  "neighbors": [
+   {
+    "concept": "amazon",
+    "weight": 5
+   }
+  ]
+ },
+ "stats": {
+  "episodes": 37,
+  "mentions": 92,
+  "explains": 29,
+  "opinions": 6,
+  "candidate_episode_count": 33,
+  "candidate_mention_count": 61,
+  "gated_out": 331,
+  "gated_out_by_concept": [
+   [
+    "amazon",
+    239
+   ],
+   [
+    "blinky",
+    25
+   ],
+   [
+    "interrupt-service-routine",
+    16
+   ],
+   [
+    "aws-iot",
+    12
+   ],
+   [
+    "semaphore",
+    10
+   ],
+   [
+    "nrf51",
+    8
+   ],
+   [
+    "magnet-wire",
+    7
+   ],
+   [
+    "remote-sensing",
+    6
+   ],
+   [
+    "stack",
+    4
+   ],
+   [
+    "tcp-ip-stack",
+    4
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 8,
+  "speakers": [
+   [
+    "Chris Gammell",
+    16
+   ],
+   [
+    "Dave Jones",
+    2
+   ],
+   [
+    "Eli Hughes",
+    2
+   ],
+   [
+    "Shawn Hymel",
+    2
+   ],
+   [
+    "Eric Migicovsky",
+    2
+   ],
+   [
+    "Andrew Witte",
+    1
+   ],
+   [
+    "Jack Ganssle",
+    1
+   ],
+   [
+    "Jay Carlson",
+    1
+   ],
+   [
+    "Jonathan Beri",
+    1
+   ],
+   [
+    "Phillip Johnston",
+    1
+   ],
+   [
+    "Brian Amos",
+    1
+   ],
+   [
+    "Ray Ozzie",
+    1
+   ],
+   [
+    "Alvaro Prieto",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 28,
+   "child": 4
+  },
+  "passages_by_depth": {
+   "explains": 27,
+   "opinion": 5
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 32,
+ "passages": [
+  {
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "guest": "Andrew Witte",
+   "stem": "0175-an-interview-with-andrew-witte-telistic-timepiece-technomania",
+   "paragraph_index": 164,
+   "depth": "explains",
+   "speaker_raw": "Engadget",
+   "speaker_repaired": "Andrew Witte",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "Um, so there is a device, a peripheral device in the microcontroller that we can turn on. It's called the memory protection unit. And basically, um, it sits on the memory bus and it throws an interrupt, um, whenever you access an address outside of a certain range or group of ranges. Um, and then the interrupt handler, which is kernel code, um, can deal with that basically by killing the offending, uh, app, which in our, we're using a free RTOS. So, um, apps run in a free RTOS task that's configured to have sort of low privilege and the memory protection unit turned on and we can kill that task if things go haywire.",
+   "context_before": "So what, I, can you explain that to dumb analog guy here? And of course any of our dumb analog listeners as well. We don't want to forget them. Okay.",
+   "context_after": "Huh? So does that mean that your, your developers, you have, do you have two different levels of developers, some writing apps directly for the pebble and then some writing like, like phone side applications? Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So what, I, can you explain that to dumb analog guy here? And of course any of our dumb analog listeners as well. We don't want to forget them. Okay. Um, so there is a device, a peripheral device in the microcontroller that we can turn on. It's called the memory protection unit. And basically, um, it sits on the memory bus and it throws an interrupt, um, whenever you access an address outside of a certain range or group of ranges. Um, and then the interrupt handler, which is kernel code, um, can deal with that basically by killing the offending, uh, app, which in our, we're using a free RTOS. So, um, apps run in a free RTOS task that's configured to have sort of low privilege and the memory protection unit turned on and we can kill that task if things go haywire. Huh? So does that mean that your, your developers, you have, do you have two different levels of developers, some writing apps directly for the pebble and then some writing like, like phone side applications? Yeah."
+  },
+  {
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "guest": "Jeroen Domburg",
+   "stem": "0359-an-interview-with-jeroen-domburg-sprite_tm",
+   "paragraph_index": 160,
+   "depth": "opinion",
+   "speaker_raw": "Jeroen Domburg Sprite Tm",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "What about the, uh, so like, so we kind of mentioned, so Dave asked if it was Linux based and you said it's our free RTOS space. And I mean, could you give us like some, some power differences and stuff like that just to, I mean, like I assume free RTOS because it's just a little bit closer to the metal would be lower, you know, like more power control over that kind of stuff. Is that, is that a good assumption or no?",
+   "context_before": "puting power. So essentially I was like, yeah, you know, all we need to do is make the free RTOS, uh, dual, uh, dual core. And, um, I think my colleagues weren't as enthusiastic as I was, but, um, uh, the digital team essentially was, yeah, whatever, that's a small change. We can incorporate that and, you know, if that doesn't work out and we can always use it as an asymmetric, uh, uh, processor. And I actually came up with like in a proof of concept, um, shoehorning the asymmetric nature of the, the beta silicon into something that could be used as a symmetric multicore processor. And I actually had a proof of concept with like in multiple threads migrating and stuff. And that is essentially why the ESP32 now is a symmetric multicore processor instead of an asymmetric one. That's awesome.",
+   "context_after": "Uh, yeah. Yeah. Um, um, it's kind of hard to say because there's so much that, that, that depends on other things as well. Um, sure.",
+   "context_before_speaker": "Jeroen Domburg",
+   "context_after_speaker": "Jeroen Domburg",
+   "text": "puting power. So essentially I was like, yeah, you know, all we need to do is make the free RTOS, uh, dual, uh, dual core. And, um, I think my colleagues weren't as enthusiastic as I was, but, um, uh, the digital team essentially was, yeah, whatever, that's a small change. We can incorporate that and, you know, if that doesn't work out and we can always use it as an asymmetric, uh, uh, processor. And I actually came up with like in a proof of concept, um, shoehorning the asymmetric nature of the, the beta silicon into something that could be used as a symmetric multicore processor. And I actually had a proof of concept with like in multiple threads migrating and stuff. And that is essentially why the ESP32 now is a symmetric multicore processor instead of an asymmetric one. That's awesome. What about the, uh, so like, so we kind of mentioned, so Dave asked if it was Linux based and you said it's our free RTOS space. And I mean, could you give us like some, some power differences and stuff like that just to, I mean, like I assume free RTOS because it's just a little bit closer to the metal would be lower, you know, like more power control over that kind of stuff. Is that, is that a good assumption or no? Uh, yeah. Yeah. Um, um, it's kind of hard to say because there's so much that, that, that depends on other things as well. Um, sure."
+  },
+  {
+   "episode": 370,
+   "episode_title": "Alternate Info Sources",
+   "episode_url": "https://theamphour.com/370-alternate-info-sources/",
+   "guest": null,
+   "stem": "0370-alternate-info-sources",
+   "paragraph_index": 303,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "Yeah. I don't get this. Like, is it a fork? Cause free RTOS is an open source.",
+   "context_before": "Ooh. Well, but not necessarily. It's basically the idea is that you, you could do temporal compression, but you also do signal processing on it otherwise. Right. So you're right. That's the idea is just pushing it out. So you don't transmit as much data. Exactly. So that's one of the things they do, but they also have like their whole, you know, they can set up servers and honestly, I don't get any of it. I'm really slacking on that. I still don't get all this IOT crap, Dave. I know I'm supposed to work on it now, but, uh, but, uh, the, the interesting thing that they just announced that might be of interest to our listeners is they have their own flavor of art, free RTOS. So, uh.",
+   "context_after": "It's in the name, right? Right. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Ooh. Well, but not necessarily. It's basically the idea is that you, you could do temporal compression, but you also do signal processing on it otherwise. Right. So you're right. That's the idea is just pushing it out. So you don't transmit as much data. Exactly. So that's one of the things they do, but they also have like their whole, you know, they can set up servers and honestly, I don't get any of it. I'm really slacking on that. I still don't get all this IOT crap, Dave. I know I'm supposed to work on it now, but, uh, but, uh, the, the interesting thing that they just announced that might be of interest to our listeners is they have their own flavor of art, free RTOS. So, uh. Yeah. I don't get this. Like, is it a fork? Cause free RTOS is an open source. It's in the name, right? Right. Yeah."
+  },
+  {
+   "episode": 422,
+   "episode_title": "Stick 'Em On Whales",
+   "episode_url": "https://theamphour.com/422-stick-em-on-whales/",
+   "guest": null,
+   "stem": "0422-stick-em-on-whales",
+   "paragraph_index": 195,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "I don't remember. Sure. So the things that I found so far are one is the Amazon's version of free RTOS. That was, I think you guys talked about and I also talked about on Ampower. I didn't quite understand it, but that actually is one thing that they're talking about. So it's actually compiled for ESP32 and it can handle some of that stuff. Like, so like ESP32 has an OTA bootloader, whatever's internally. And then Amazon wrote it so that basically it can handle that. You know, I receive a piece of a new chunk of firmware. I'm running my old firmware. I try to swap them out and do all that stuff. So that's part of what that is. And then I think on their, their cloud side, they can do it. And then the other one was, uh, uh, Andrea Spies, the, one of the YouTubers, him and his, uh, his business partner started up a new one too. So I'm trying to find the name of it, but I am failing, uh, miserably on that side of things. Uh, but there is, uh, yeah. So there is another one and it's not professional. It's like, there's no professional pricing plan yet, but they're working on that kind of thing. Something maybe in the new year.",
+   "context_before": "Well, and there was a SparkFun thing that was doing that, that they abandoned. Is it Rhino or something?",
+   "context_after": "This is, this is going to be one of those areas that I think next year we will see a lot of, uh, shuffling, but we won't see any resolution for two or three years.",
+   "context_before_speaker": "Elecia White",
+   "context_after_speaker": "Elecia White",
+   "text": "Well, and there was a SparkFun thing that was doing that, that they abandoned. Is it Rhino or something? I don't remember. Sure. So the things that I found so far are one is the Amazon's version of free RTOS. That was, I think you guys talked about and I also talked about on Ampower. I didn't quite understand it, but that actually is one thing that they're talking about. So it's actually compiled for ESP32 and it can handle some of that stuff. Like, so like ESP32 has an OTA bootloader, whatever's internally. And then Amazon wrote it so that basically it can handle that. You know, I receive a piece of a new chunk of firmware. I'm running my old firmware. I try to swap them out and do all that stuff. So that's part of what that is. And then I think on their, their cloud side, they can do it. And then the other one was, uh, uh, Andrea Spies, the, one of the YouTubers, him and his, uh, his business partner started up a new one too. So I'm trying to find the name of it, but I am failing, uh, miserably on that side of things. Uh, but there is, uh, yeah. So there is another one and it's not professional. It's like, there's no professional pricing plan yet, but they're working on that kind of thing. Something maybe in the new year. This is, this is going to be one of those areas that I think next year we will see a lot of, uh, shuffling, but we won't see any resolution for two or three years."
+  },
+  {
+   "episode": 489,
+   "episode_title": "An Interview with Jack Ganssle (2nd)",
+   "episode_url": "https://theamphour.com/489-an-interview-with-jack-ganssle-2nd/",
+   "guest": "Jack Ganssle",
+   "stem": "0489-an-interview-with-jack-ganssle-2nd",
+   "paragraph_index": 51,
+   "depth": "explains",
+   "speaker_raw": "Jack Ganssle",
+   "speaker_repaired": "Jack Ganssle",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "There's still... They do own it. There is still a free version. And, you know, it's a great little OS. It's great. But they have a more proprietary version that they've sort of integrated with their web.",
+   "context_before": "I did not actually realize that. And it was like they had an agreement with the guy that started FreeRTOS, but it's not like... They don't actually own it and own it, do they? It's still free. I don't quite understand how all that works.",
+   "context_after": "Yeah. Yeah. AWS IoT stuff. Exactly. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "I did not actually realize that. And it was like they had an agreement with the guy that started FreeRTOS, but it's not like... They don't actually own it and own it, do they? It's still free. I don't quite understand how all that works. There's still... They do own it. There is still a free version. And, you know, it's a great little OS. It's great. But they have a more proprietary version that they've sort of integrated with their web. Yeah. Yeah. AWS IoT stuff. Exactly. Yeah."
+  },
+  {
+   "episode": 506,
+   "episode_title": "Hipster Fodder",
+   "episode_url": "https://theamphour.com/506-hipster-fodder/",
+   "guest": null,
+   "stem": "0506-hipster-fodder",
+   "paragraph_index": 52,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "Well, speaking, speaking of, uh, signing up for things again, I am actually, uh, I forgot to mention this before the show, but I have, uh, I have once again signed up for things. I have signed up for tutoring again. This is a new, a new topic and new tutors. So I have, I have signed up for that. Uh, basically I tried something new based on a friend's suggestion where basically I just posted on Upwork and, uh, I like posted, posted a job on Upwork to basically show me how to do things. Yep. And, uh, and that's what I'm doing now. It's a, it's an interesting idea. I don't know. I don't know how it's going to work out, but I ended up hiring some, uh, two, two guys out of India to show me some stuff with free RTOS and it's been pretty good so far. So.",
+   "context_before": "Rockstar style. Yeah.",
+   "context_after": "Excellent. So, so did you get flooded with responses or was it? Yeah. Have you been on Upwork ever before? No, no, I've never. No. I might've taken a look at it, but I've never really used it.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Rockstar style. Yeah. Well, speaking, speaking of, uh, signing up for things again, I am actually, uh, I forgot to mention this before the show, but I have, uh, I have once again signed up for things. I have signed up for tutoring again. This is a new, a new topic and new tutors. So I have, I have signed up for that. Uh, basically I tried something new based on a friend's suggestion where basically I just posted on Upwork and, uh, I like posted, posted a job on Upwork to basically show me how to do things. Yep. And, uh, and that's what I'm doing now. It's a, it's an interesting idea. I don't know. I don't know how it's going to work out, but I ended up hiring some, uh, two, two guys out of India to show me some stuff with free RTOS and it's been pretty good so far. So. Excellent. So, so did you get flooded with responses or was it? Yeah. Have you been on Upwork ever before? No, no, I've never. No. I might've taken a look at it, but I've never really used it."
+  },
+  {
+   "episode": 506,
+   "episode_title": "Hipster Fodder",
+   "episode_url": "https://theamphour.com/506-hipster-fodder/",
+   "guest": null,
+   "stem": "0506-hipster-fodder",
+   "paragraph_index": 83,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "Yeah. I think the, the thing that was most exciting, I really started to think about it. Like, okay, so, you know, you can effectively learn anything like, and, and this has been really, uh, has, has come to the forefront for, for my style specifically. Like, so I've been looking at this free RTOS code and these, these two guys that are helping me out, basically them just like walking through examples with me for something. It just like unlock two guys.",
+   "context_before": "See, that's something that I want to get into as well. Like I want to, you know, hire people to do similar kind of things and, you know, and possibly even teach me to do stuff as well. So I might be looking for similar things and hence why, you know, I think it's better to, you know, hoard, hoard the cash, you know, so that I have money in the business to do this sort of thing, you know, so I can spend money on services like this.",
+   "context_after": "Are you, Oh, sorry. Wait, why is there two? Are you hedging your bets? That one's totally. Yeah. If one sucks. Okay. Right.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "See, that's something that I want to get into as well. Like I want to, you know, hire people to do similar kind of things and, you know, and possibly even teach me to do stuff as well. So I might be looking for similar things and hence why, you know, I think it's better to, you know, hoard, hoard the cash, you know, so that I have money in the business to do this sort of thing, you know, so I can spend money on services like this. Yeah. I think the, the thing that was most exciting, I really started to think about it. Like, okay, so, you know, you can effectively learn anything like, and, and this has been really, uh, has, has come to the forefront for, for my style specifically. Like, so I've been looking at this free RTOS code and these, these two guys that are helping me out, basically them just like walking through examples with me for something. It just like unlock two guys. Are you, Oh, sorry. Wait, why is there two? Are you hedging your bets? That one's totally. Yeah. If one sucks. Okay. Right."
+  },
+  {
+   "episode": 510,
+   "episode_title": "Knob and Tube Wiring",
+   "episode_url": "https://theamphour.com/510-knob-and-tube-wiring/",
+   "guest": null,
+   "stem": "0510-knob-and-tube-wiring",
+   "paragraph_index": 268,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "Oh, yeah. They were bought by Amazon. I was like, I knew it was like integrated with Amazon and AWS. But I didn't realize that Amazon actually bought the company that develops free RTOS. So, it's like free asterisk RTOS. But it's still like, you know, still open source. And so, you could still strip out all the other stuff if you want to.",
+   "context_before": "Right. No, I will.",
+   "context_after": "Right.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Right. No, I will. Oh, yeah. They were bought by Amazon. I was like, I knew it was like integrated with Amazon and AWS. But I didn't realize that Amazon actually bought the company that develops free RTOS. So, it's like free asterisk RTOS. But it's still like, you know, still open source. And so, you could still strip out all the other stuff if you want to. Right."
+  },
+  {
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "guest": "Eli Hughes",
+   "stem": "0511-brewing-electronics-with-eli-hughes",
+   "paragraph_index": 9,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Eli Hughes",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "So I saw Zephyr long enough ago, I remember when it was first announced. And the first time I saw it, I was like, oh my God, Linux Foundation, are they just bringing all of this baggage to make my life more difficult than it needs to be? Because at the time, I was really into FreeRTOS. And I actually learned about FreeRTOS at a conference in Guatemala where another engineer from Mexico, he did a session. And he said, Eli, this is so easy. Copy these files. Here's how you set it up. It's ported for all these ARM Cortex. And lo and behold, we had a little NXP board. Probably 10 minutes from setting up a project, copying the files, we were doing something. Now, he knew what he was doing, but I was pretty impressed. I did not know what I was doing.",
+   "context_before": "Yep, yep.",
+   "context_after": "It's like a personified tutorial. That's amazing.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yep, yep. So I saw Zephyr long enough ago, I remember when it was first announced. And the first time I saw it, I was like, oh my God, Linux Foundation, are they just bringing all of this baggage to make my life more difficult than it needs to be? Because at the time, I was really into FreeRTOS. And I actually learned about FreeRTOS at a conference in Guatemala where another engineer from Mexico, he did a session. And he said, Eli, this is so easy. Copy these files. Here's how you set it up. It's ported for all these ARM Cortex. And lo and behold, we had a little NXP board. Probably 10 minutes from setting up a project, copying the files, we were doing something. Now, he knew what he was doing, but I was pretty impressed. I did not know what I was doing. It's like a personified tutorial. That's amazing."
+  },
+  {
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "guest": "Eli Hughes",
+   "stem": "0511-brewing-electronics-with-eli-hughes",
+   "paragraph_index": 21,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Eli Hughes",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "The other thing, and it really clicked for me, and I'm sure there's softer people out there that will like that'll probably face palming right now. But I think I'm pretty correct when I say this. If you're used to interrupt-driven code where you do a lot of things in like interrupts where at any time context can switch and you're in this interrupt doing this thing, and then you leave that thing and you have maybe a different interrupt. I mean, some of those tasks are just kind of like that, right? The process stops. You do some things with the stack. You save state. At any time, this can happen. It's just deterministic with the RToss. And as long as you're in that kind of mode of thinking, free RToss I like as a start because it's not even really an RToss to me. It's just like you set up some tasks and some ways for them to communicate. Yeah. And that's where it kind of ends. Right. It's nice.",
+   "context_before": "That's where I start. Yeah, honestly. And yeah, there was something that popped. So I mentioned on the show last week, but I've been reading a book on FreeR Toss. It's been a great book. I'll link it again. But there was something in there that really made me think about, I think it was something with the sleep code, though, too, like that sleep is just like really easy. And I really didn't understand our tosses fundamentally either. So that was another thing.",
+   "context_after": "Yeah, I feel like to extend that analogy, too, about the traffic lights thing, it'd be like you could have a cop who's like stopping cars when, you know, an important car has to come through. That would be like an interrupt, right? But eventually, you've got so many cops on the road that, like, basically, it's just the important cars going through. And then sometimes the cop has to talk to another cop and have to figure out which car is more important. And it's like, at that point, yeah, just have traffic lights because you shouldn't have that for everything you're doing, you know? So I definitely like that analogy of the traffic.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "That's where I start. Yeah, honestly. And yeah, there was something that popped. So I mentioned on the show last week, but I've been reading a book on FreeR Toss. It's been a great book. I'll link it again. But there was something in there that really made me think about, I think it was something with the sleep code, though, too, like that sleep is just like really easy. And I really didn't understand our tosses fundamentally either. So that was another thing. The other thing, and it really clicked for me, and I'm sure there's softer people out there that will like that'll probably face palming right now. But I think I'm pretty correct when I say this. If you're used to interrupt-driven code where you do a lot of things in like interrupts where at any time context can switch and you're in this interrupt doing this thing, and then you leave that thing and you have maybe a different interrupt. I mean, some of those tasks are just kind of like that, right? The process stops. You do some things with the stack. You save state. At any time, this can happen. It's just deterministic with the RToss. And as long as you're in that kind of mode of thinking, free RToss I like as a start because it's not even really an RToss to me. It's just like you set up some tasks and some ways for them to communicate. Yeah. And that's where it kind of ends. Right. It's nice. Yeah, I feel like to extend that analogy, too, about the traffic lights thing, it'd be like you could have a cop who's like stopping cars when, you know, an important car has to come through. That would be like an interrupt, right? But eventually, you've got so many cops on the road that, like, basically, it's just the important cars going through. And then sometimes the cop has to talk to another cop and have to figure out which car is more important. And it's like, at that point, yeah, just have traffic lights because you shouldn't have that for everything you're doing, you know? So I definitely like that analogy of the traffic."
+  },
+  {
+   "episode": 514,
+   "episode_title": "Focus, Dammit",
+   "episode_url": "https://theamphour.com/514-focus-dammit/",
+   "guest": null,
+   "stem": "0514-focus-dammit",
+   "paragraph_index": 14,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:blinky",
+   "concept_sources": [
+    "child:blinky"
+   ],
+   "concepts": [
+    "blinky"
+   ],
+   "paragraph_text": "It's a, it's a, it's a real-time operating system, right? So like FreeRTOS or like Thread, no, not ThreadX, NutX or like, I don't know, MicroCOS2 or MicroC Linux. No, what was that? Micrium, whatever Micrium made and they've been since bought, right? Yep. And so like, they're all basically real-time OSs are smaller versions of operating system. Usually you, it's not full-blown Linux. We were talking, we'll talk a little bit about Jay Carlson's thing a little later, but like, it's not full-blown Linux. It's real-time. So usually it's deterministic. There's semaphores and mutexes and all these different things. I've been talking about this, this RTOS book that I've been reading and it's been really great. But the idea is Zephyr is a, I'm going to probably botch this too. So one of the Zephyr people was actually unembedded. Well, I'll link that in. And she talked about it a bunch. She was great. And so basically, Zephyr is kind of like among different groups now. So like Nordic supports it, ST supports it. There's basically, it pulls in the SDKs from all these different companies, right? So ST, Nordic, Intel. Actually, so this all started because Intel bought Wind River, I think. And whatever the thing was, whatever it was called before that, that's where the core of this started. Then the Linux Foundation got involved. And the idea is basically it's a, it's a open source shared ecosystem now. So now Intel makes a board support package and all the SDK stuff that goes along with it. Nordic does the same thing. ST does the same thing. And now when I go in and, basically when I go and I compile a Blinky example, right? So this is something I just did the other day and I was very excited about it. I compile a Blinky example. All I say is target the Nordic NRF 52840 DK, like the development kit board. And it knows everything to pull in because there's all of these, there's all of this like abstraction layers on top of it. It knows everything to pull in.",
+   "context_before": "Well, actually, can you explain? I have no idea what Zephyr is. I've heard lots of people actually, I've seen quite a few people say, oh yeah, I'm a Zephyr specialist. What, what the hell is it? I don't know.",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Well, actually, can you explain? I have no idea what Zephyr is. I've heard lots of people actually, I've seen quite a few people say, oh yeah, I'm a Zephyr specialist. What, what the hell is it? I don't know. It's a, it's a, it's a real-time operating system, right? So like FreeRTOS or like Thread, no, not ThreadX, NutX or like, I don't know, MicroCOS2 or MicroC Linux. No, what was that? Micrium, whatever Micrium made and they've been since bought, right? Yep. And so like, they're all basically real-time OSs are smaller versions of operating system. Usually you, it's not full-blown Linux. We were talking, we'll talk a little bit about Jay Carlson's thing a little later, but like, it's not full-blown Linux. It's real-time. So usually it's deterministic. There's semaphores and mutexes and all these different things. I've been talking about this, this RTOS book that I've been reading and it's been really great. But the idea is Zephyr is a, I'm going to probably botch this too. So one of the Zephyr people was actually unembedded. Well, I'll link that in. And she talked about it a bunch. She was great. And so basically, Zephyr is kind of like among different groups now. So like Nordic supports it, ST supports it. There's basically, it pulls in the SDKs from all these different companies, right? So ST, Nordic, Intel. Actually, so this all started because Intel bought Wind River, I think. And whatever the thing was, whatever it was called before that, that's where the core of this started. Then the Linux Foundation got involved. And the idea is basically it's a, it's a open source shared ecosystem now. So now Intel makes a board support package and all the SDK stuff that goes along with it. Nordic does the same thing. ST does the same thing. And now when I go in and, basically when I go and I compile a Blinky example, right? So this is something I just did the other day and I was very excited about it. I compile a Blinky example. All I say is target the Nordic NRF 52840 DK, like the development kit board. And it knows everything to pull in because there's all of these, there's all of this like abstraction layers on top of it. It knows everything to pull in. Yeah."
+  },
+  {
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "guest": "Jay Carlson",
+   "stem": "0515-embedded-linux-with-jay-carlson",
+   "paragraph_index": 293,
+   "depth": "explains",
+   "speaker_raw": "Jay Carlson",
+   "speaker_repaired": "Jay Carlson",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "Well, okay. Yeah. Yeah. I mean, so I guess think about like this, think about like this, let's say you're making, I don't know, like a free RTOS project on a microcontroller, right? And you download free RTOS, you, for your RTOS, you set it up, you configure it, you get your code working, dah, dah, dah, dah, dah. Let's say in the process, you make some changes, right? You now have a different version of free RTOS than what you downloaded. Right. And the question is, what do you do with that? Do you put it on Git? Is it like, like, do you have your own little version of free RTOS that has like your changes? Yeah.",
+   "context_before": "Can you explain the process too, of like what an upstream is? Because I feel like that's, if people are coming in and they're like listening to this and they're still listening after two hours and they're like, oh yeah, I still am interested in Linux and I have no idea what it is. What does that mean to upstream a kernel patch in that case?",
+   "context_after": "I think, I think the big one is when the official one changes, then what? I feel like that's the big question too. Cause then it's like, oh, I got to maintain this shit, you know?",
+   "context_before_speaker": "Jay Carlson",
+   "context_after_speaker": "Jay Carlson",
+   "text": "Can you explain the process too, of like what an upstream is? Because I feel like that's, if people are coming in and they're like listening to this and they're still listening after two hours and they're like, oh yeah, I still am interested in Linux and I have no idea what it is. What does that mean to upstream a kernel patch in that case? Well, okay. Yeah. Yeah. I mean, so I guess think about like this, think about like this, let's say you're making, I don't know, like a free RTOS project on a microcontroller, right? And you download free RTOS, you, for your RTOS, you set it up, you configure it, you get your code working, dah, dah, dah, dah, dah. Let's say in the process, you make some changes, right? You now have a different version of free RTOS than what you downloaded. Right. And the question is, what do you do with that? Do you put it on Git? Is it like, like, do you have your own little version of free RTOS that has like your changes? Yeah. I think, I think the big one is when the official one changes, then what? I feel like that's the big question too. Cause then it's like, oh, I got to maintain this shit, you know?"
+  },
+  {
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "guest": "Jonathan Beri",
+   "stem": "0526-why-iot-is-difficult-with-jonathan-beri",
+   "paragraph_index": 214,
+   "depth": "explains",
+   "speaker_raw": "Jonathan Beri",
+   "speaker_repaired": "Jonathan Beri",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "but what's interesting about, I would say Zephyr and a few other, um, implementations of its generation is that internet is part of it because there was a time and still, uh, where like free RTOS doesn't have an IP stack, doesn't have even a concept of networking. And so the, the free RTOS creators created, um, that solution partially because the majority of embedded systems that had an RTOS was not a connected device. It was a medical device. It was a Bluetooth headset, et cetera. And so they came a little bit earlier. So therefore there was, there's no concept",
+   "context_before": "Yeah. I mean, yeah. Like money is usually like if you're at this scale, like the money pieces is really not that big a deal. Yeah. It feels like,",
+   "context_after": "with, is there now, is there now an IP stack? I mean, obviously they can talk to AWS and stuff, but like, is that bolted on or is it actually like integral to the piece to the, like free RTOS now?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. I mean, yeah. Like money is usually like if you're at this scale, like the money pieces is really not that big a deal. Yeah. It feels like, but what's interesting about, I would say Zephyr and a few other, um, implementations of its generation is that internet is part of it because there was a time and still, uh, where like free RTOS doesn't have an IP stack, doesn't have even a concept of networking. And so the, the free RTOS creators created, um, that solution partially because the majority of embedded systems that had an RTOS was not a connected device. It was a medical device. It was a Bluetooth headset, et cetera. And so they came a little bit earlier. So therefore there was, there's no concept with, is there now, is there now an IP stack? I mean, obviously they can talk to AWS and stuff, but like, is that bolted on or is it actually like integral to the piece to the, like free RTOS now?"
+  },
+  {
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "guest": "Philip Johnston",
+   "stem": "0556-firmware-for-hardware-engineers-with-phillip-johnston",
+   "paragraph_index": 133,
+   "depth": "explains",
+   "speaker_raw": "Philip Johnston",
+   "speaker_repaired": "Phillip Johnston",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "And then you asked about Zephyr. I think Zephyr is a totally different beast. Oh, interesting. Okay. I mean, there's just, you know, with, if you're using free RTOS, you're not opting into an ecosystem. You're picking a component of your system. With Zephyr, you're opting into an entire ecosystem, an entire way of operating. And coincidentally, some of these things that I mentioned, like a dispatch queue or actors, I think are already supported by Zephyr.",
+   "context_before": "Yeah. It's a, there's a lot, there's a lot to consider there for sure.",
+   "context_after": "Yeah. Yeah. It does. It does kind of feel like kind of top down, like Zephyr's like top down. It's like, yeah, you just kind of, it's all there. You choose what you want to turn on or off. And free RTOS is more like, well, it's kind of bolt on your, not bolt on, but you know, you choose your pieces and then you kind of integrate them. Obviously there's a lot of support out there for various things, but you're building kind of bottom up and you're saying, yeah, no, actually I do want a networking piece. Yeah. I do want this other, you know, piece of it now. And, and it's kind of more low level handling.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. It's a, there's a lot, there's a lot to consider there for sure. And then you asked about Zephyr. I think Zephyr is a totally different beast. Oh, interesting. Okay. I mean, there's just, you know, with, if you're using free RTOS, you're not opting into an ecosystem. You're picking a component of your system. With Zephyr, you're opting into an entire ecosystem, an entire way of operating. And coincidentally, some of these things that I mentioned, like a dispatch queue or actors, I think are already supported by Zephyr. Yeah. Yeah. It does. It does kind of feel like kind of top down, like Zephyr's like top down. It's like, yeah, you just kind of, it's all there. You choose what you want to turn on or off. And free RTOS is more like, well, it's kind of bolt on your, not bolt on, but you know, you choose your pieces and then you kind of integrate them. Obviously there's a lot of support out there for various things, but you're building kind of bottom up and you're saying, yeah, no, actually I do want a networking piece. Yeah. I do want this other, you know, piece of it now. And, and it's kind of more low level handling."
+  },
+  {
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "guest": "Brian Amos",
+   "stem": "0581-real-time-operating-systems-with-brian-amos",
+   "paragraph_index": 6,
+   "depth": "opinion",
+   "speaker_raw": "Brian Amos",
+   "speaker_repaired": "Brian Amos",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "Yeah, yeah, yeah, yeah. I mean, this all kind of started coming up when I was... So I was doing some NRF52 projects, and I was kind of poking around the NRF5 SDK, and there was a bunch of free RTOS stuff on there. And I was thinking I could do some Bluetooth stuff using their binary blob, but there was other examples using free RTOS, and a bunch of people had used free RTOS. And so I started exploring it, and I think that kind of led me down the path towards this stuff. And I remember I talked to Alvaro Prieto, who's one of the co-hosts of the Reverse Engineer podcast, and he's a big free RTOS fan as well. And I think he had also maybe mentioned the book. But just kind of like as a starting point, people... I was like, all right, I need to learn RTOS's. And I was kind of just hunting around for info. Is that a common thing that you see? There's people just saying, today's the day I need to start learning RTOS's?",
+   "context_before": "No, hardware engineers with prior programming experience have a familiarity with hardware.",
+   "context_after": "I don't really get too much... People aren't coming to me saying, oh, how do I get started?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "No, hardware engineers with prior programming experience have a familiarity with hardware. Yeah, yeah, yeah, yeah. I mean, this all kind of started coming up when I was... So I was doing some NRF52 projects, and I was kind of poking around the NRF5 SDK, and there was a bunch of free RTOS stuff on there. And I was thinking I could do some Bluetooth stuff using their binary blob, but there was other examples using free RTOS, and a bunch of people had used free RTOS. And so I started exploring it, and I think that kind of led me down the path towards this stuff. And I remember I talked to Alvaro Prieto, who's one of the co-hosts of the Reverse Engineer podcast, and he's a big free RTOS fan as well. And I think he had also maybe mentioned the book. But just kind of like as a starting point, people... I was like, all right, I need to learn RTOS's. And I was kind of just hunting around for info. Is that a common thing that you see? There's people just saying, today's the day I need to start learning RTOS's? I don't really get too much... People aren't coming to me saying, oh, how do I get started?"
+  },
+  {
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "guest": "Brian Amos",
+   "stem": "0581-real-time-operating-systems-with-brian-amos",
+   "paragraph_index": 58,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:interrupt-service-routine",
+    "child:semaphore",
+    "core"
+   ],
+   "concepts": [
+    "freertos",
+    "interrupt-service-routine",
+    "semaphore"
+   ],
+   "paragraph_text": "Yeah. He would definitely be. Yeah. He's a trash collector. Totally be in there. He could be like taking care of, uh, counting semaphores and then. Yeah. Yeah. He'd be like the tick, right? I mean, he'd be like, uh, I think that's Oscar the Grouch should be like config assert. So in free, in free RTOS, there's a, whenever you do something wrong, like there's, there's all the, there's this notion of ISR safe functions. Right. And if you call a, if you, if let's say you try to add to a queue with like the normal API from inside of an ISR, then you get a config assert. So it's just, it's an assert that fails. And it's like, Whoa, this is within an interrupt context. So that's like, that could be awesome. Grouchy. Yeah. It's totally grouchy. That's good. Yeah. Okay.",
+   "context_before": "Yeah.",
+   "context_after": "So that's how you get from one task to another. And so the task is kind of like the. That's one of the ways. Is that like the smallest block of memory? Yeah.",
+   "context_before_speaker": "Brian Amos",
+   "context_after_speaker": "Brian Amos",
+   "text": "Yeah. Yeah. He would definitely be. Yeah. He's a trash collector. Totally be in there. He could be like taking care of, uh, counting semaphores and then. Yeah. Yeah. He'd be like the tick, right? I mean, he'd be like, uh, I think that's Oscar the Grouch should be like config assert. So in free, in free RTOS, there's a, whenever you do something wrong, like there's, there's all the, there's this notion of ISR safe functions. Right. And if you call a, if you, if let's say you try to add to a queue with like the normal API from inside of an ISR, then you get a config assert. So it's just, it's an assert that fails. And it's like, Whoa, this is within an interrupt context. So that's like, that could be awesome. Grouchy. Yeah. It's totally grouchy. That's good. Yeah. Okay. So that's how you get from one task to another. And so the task is kind of like the. That's one of the ways. Is that like the smallest block of memory? Yeah."
+  },
+  {
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "guest": "Brian Amos",
+   "stem": "0581-real-time-operating-systems-with-brian-amos",
+   "paragraph_index": 60,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:semaphore",
+    "core"
+   ],
+   "concepts": [
+    "freertos",
+    "semaphore"
+   ],
+   "paragraph_text": "Yeah. Well, I mean, you know, you have semaphores, which are very, very tiny. I imagine in free RTOS, they kind of implement everything under the hood as a, as a queue, which is interesting from a, I think it saves, it saves ROM space, but you know, there are some people complain that there are faster ways of doing that, but yeah. So, I mean, you can have a queue of length one, you can have a binary semaphore, right? But the only, the only time that you're really creating these things that are running in concurrently or when you're creating a task.",
+   "context_before": "So that's how you get from one task to another. And so the task is kind of like the. That's one of the ways. Is that like the smallest block of memory? Yeah.",
+   "context_after": "Hmm.",
+   "context_before_speaker": "Brian Amos",
+   "context_after_speaker": "Speaker ?",
+   "text": "So that's how you get from one task to another. And so the task is kind of like the. That's one of the ways. Is that like the smallest block of memory? Yeah. Yeah. Well, I mean, you know, you have semaphores, which are very, very tiny. I imagine in free RTOS, they kind of implement everything under the hood as a, as a queue, which is interesting from a, I think it saves, it saves ROM space, but you know, there are some people complain that there are faster ways of doing that, but yeah. So, I mean, you can have a queue of length one, you can have a binary semaphore, right? But the only, the only time that you're really creating these things that are running in concurrently or when you're creating a task. Hmm."
+  },
+  {
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "guest": "Brian Amos",
+   "stem": "0581-real-time-operating-systems-with-brian-amos",
+   "paragraph_index": 144,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "child:stack",
+   "concept_sources": [
+    "child:stack"
+   ],
+   "concepts": [
+    "stack"
+   ],
+   "paragraph_text": "Um, well, it, you know, it kind of depends on the tools that you have at your disposal. One of the reasons that I like ozone a lot is, um, it is free RTOS aware. So, uh, meaning, you know, if you, if you pull up like a standard debugger and now there are a lot of IDs that have gotten this right. But years ago that you're running the mill IDE, it could only look at one stack at a time. That was the, you know, the, the, the processor stack. And that's, and, and you could step through if you have multiple tasks, you could like step through tasks and that kind of stuff. But you couldn't like view multiple stacks at once. Right. So you couldn't view the context of multiple tasks at the same time. You couldn't just hit the pause button. You're like, okay, well, Hey, where's my sensor task? Where's my UI task?",
+   "context_before": "I mean, so you said, uh, when things go right, it seems like magic and I could totally see that. Uh, most of my stuff does not go right the first time. So how does one troubleshoot this? Cause I'd imagine it's a non, uh, straightforward process for troubleshooting in our toss.",
+   "context_after": "Where's, and this one's asleep. This one's asleep.",
+   "context_before_speaker": "Brian Amos",
+   "context_after_speaker": "Brian Amos",
+   "text": "I mean, so you said, uh, when things go right, it seems like magic and I could totally see that. Uh, most of my stuff does not go right the first time. So how does one troubleshoot this? Cause I'd imagine it's a non, uh, straightforward process for troubleshooting in our toss. Um, well, it, you know, it kind of depends on the tools that you have at your disposal. One of the reasons that I like ozone a lot is, um, it is free RTOS aware. So, uh, meaning, you know, if you, if you pull up like a standard debugger and now there are a lot of IDs that have gotten this right. But years ago that you're running the mill IDE, it could only look at one stack at a time. That was the, you know, the, the, the processor stack. And that's, and, and you could step through if you have multiple tasks, you could like step through tasks and that kind of stuff. But you couldn't like view multiple stacks at once. Right. So you couldn't view the context of multiple tasks at the same time. You couldn't just hit the pause button. You're like, okay, well, Hey, where's my sensor task? Where's my UI task? Where's, and this one's asleep. This one's asleep."
+  },
+  {
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "guest": "Brian Amos",
+   "stem": "0581-real-time-operating-systems-with-brian-amos",
+   "paragraph_index": 158,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "They're pouring it back. That's how you wind up with names like that. Or, you know, it was trendy in the nineties or whatever. I don't know how. Yeah. That's what I was really figuring. Yeah. Yeah. I have no idea. But you know, same kind of thing. And that's, that's actually a little bit easier. It's way easier to get set up with Tracelizer than, than system view. Yeah. For free RTOS, because it's just directly. So free RTOS has all these trace hooks built into it and you actually have to go in and like, you have to kind of manually patch in a bunch of stuff. Tell what it is. And yeah. Yeah. For, for system view, but Tracelizer just kind of works out of the box, which is awesome. It's very pretty. You can, you can just see, you know, which tasks are running, which ones are interrupting others. And they give you statistics on, you know, all the tasks, how long they've been in the block state, that kind of stuff.",
+   "context_before": "They're not wasting money.",
+   "context_after": "Mm-hmm.",
+   "context_before_speaker": "Brian Amos",
+   "context_after_speaker": "Brian Amos",
+   "text": "They're not wasting money. They're pouring it back. That's how you wind up with names like that. Or, you know, it was trendy in the nineties or whatever. I don't know how. Yeah. That's what I was really figuring. Yeah. Yeah. I have no idea. But you know, same kind of thing. And that's, that's actually a little bit easier. It's way easier to get set up with Tracelizer than, than system view. Yeah. For free RTOS, because it's just directly. So free RTOS has all these trace hooks built into it and you actually have to go in and like, you have to kind of manually patch in a bunch of stuff. Tell what it is. And yeah. Yeah. For, for system view, but Tracelizer just kind of works out of the box, which is awesome. It's very pretty. You can, you can just see, you know, which tasks are running, which ones are interrupting others. And they give you statistics on, you know, all the tasks, how long they've been in the block state, that kind of stuff. Mm-hmm."
+  },
+  {
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "guest": "Brian Amos",
+   "stem": "0581-real-time-operating-systems-with-brian-amos",
+   "paragraph_index": 244,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "So, you know, in that case, you know, it doesn't really make a lot of sense to, to try to shoe transform that into a super loop. If you've already got like a whole bunch of stuff that's operating well and kind of tailored towards an R toss. There, there's one case in the past where we had written a lot of libraries, like some, some middleware kind of stuff. And we actually couldn't afford the overhead of the scheduler that happened one time, you know, this processor was like just totally maxed out super, super tight timing constraints. And, you know, there was just no way to, to, to run an R toss on it. But in that case, all we really did was the middleware was created in such a way that, you know, instead of a free R toss queue, we were just using like an in-house ring buffer, for example. Right. So you can, you can, you can kind of, you can abstract things well enough that a lot of the code doesn't actually care what it's running on. At the end of the day. Right. It's just like, Hey, I have data for somebody else here. I'm going to, you know, get your data here. Yeah. And that's, and that's all it is. And it hands it off and you know, nobody cares. Yeah. Yeah. So in that case, you know, you have something that's super, super fast, you know, in that, in that middleware can run on, on whatever it does. It didn't, it could run on bare metal. It could run on an R toss. It could run on a full operating system. As long as you're, as long as you're not like, you know, tying everything super, you know, like really, really tight coupling between all your modules and everything. And you have consistent interfaces. You can just very fluidly move between things. That's, that's ideal. But I could work on stuff that has super loops. It oftentimes by the end of, well, so, you know, I, I think I, I'm in like the industrial space most of the time. Yep. So a lot of, a lot of our stuff has like some level of network connectivity, some level of, you know, like manufacturing test code and, you know, like all that kind of stuff. So there's usually it's, it's desirable to like add in other features that kind of need to operate with some level of concurrency at some point. So it just more often than not, it makes a lot of sense and it's not, you know, from like a ROM and RAM perspective, free R toss, especially it's pretty cheap. Yeah. There, there isn't a ton of overhead there. Yeah. So it's not like, you know, if you're, you know, you're, you're using like a Python interpreter or something like that where, oh yeah, look, I, I have this, you know, 256 K ROM and it's almost big enough for my, my 20 line script or whatever. I don't, I don't know how big the normal, normal runtime environment for that is, but",
+   "context_before": "Yeah.",
+   "context_after": "you know. It is impressive how they squeeze it down these days, but yeah, it's a, yeah, it's still, it's sizable. Yeah. Brian, where can people find out more about you, about your book and buy your book and hopefully try it out. And also where can they find the, the boards to run? Sorry. That last one was a. Bubble gum tap shoes.",
+   "context_before_speaker": "Brian Amos",
+   "context_after_speaker": "Brian Amos",
+   "text": "Yeah. So, you know, in that case, you know, it doesn't really make a lot of sense to, to try to shoe transform that into a super loop. If you've already got like a whole bunch of stuff that's operating well and kind of tailored towards an R toss. There, there's one case in the past where we had written a lot of libraries, like some, some middleware kind of stuff. And we actually couldn't afford the overhead of the scheduler that happened one time, you know, this processor was like just totally maxed out super, super tight timing constraints. And, you know, there was just no way to, to, to run an R toss on it. But in that case, all we really did was the middleware was created in such a way that, you know, instead of a free R toss queue, we were just using like an in-house ring buffer, for example. Right. So you can, you can, you can kind of, you can abstract things well enough that a lot of the code doesn't actually care what it's running on. At the end of the day. Right. It's just like, Hey, I have data for somebody else here. I'm going to, you know, get your data here. Yeah. And that's, and that's all it is. And it hands it off and you know, nobody cares. Yeah. Yeah. So in that case, you know, you have something that's super, super fast, you know, in that, in that middleware can run on, on whatever it does. It didn't, it could run on bare metal. It could run on an R toss. It could run on a full operating system. As long as you're, as long as you're not like, you know, tying everything super, you know, like really, really tight coupling between all your modules and everything. And you have consistent interfaces. You can just very fluidly move between things. That's, that's ideal. But I could work on stuff that has super loops. It oftentimes by the end of, well, so, you know, I, I think I, I'm in like the industrial space most of the time. Yep. So a lot of, a lot of our stuff has like some level of network connectivity, some level of, you know, like manufacturing test code and, you know, like all that kind of stuff. So there's usually it's, it's desirable to like add in other features that kind of need to operate with some level of concurrency at some point. So it just more often than not, it makes a lot of sense and it's not, you know, from like a ROM and RAM perspective, free R toss, especially it's pretty cheap. Yeah. There, there isn't a ton of overhead there. Yeah. So it's not like, you know, if you're, you know, you're, you're using like a Python interpreter or something like that where, oh yeah, look, I, I have this, you know, 256 K ROM and it's almost big enough for my, my 20 line script or whatever. I don't, I don't know how big the normal, normal runtime environment for that is, but you know. It is impressive how they squeeze it down these days, but yeah, it's a, yeah, it's still, it's sizable. Yeah. Brian, where can people find out more about you, about your book and buy your book and hopefully try it out. And also where can they find the, the boards to run? Sorry. That last one was a. Bubble gum tap shoes."
+  },
+  {
+   "episode": 603,
+   "episode_title": "An Interview with Ray Ozzie (Blues Wireless)",
+   "episode_url": "https://theamphour.com/603-an-interview-with-ray-ozzie-blues-wireless/",
+   "guest": "Ray Ozzie",
+   "stem": "0603-an-interview-with-ray-ozzie-blues-wireless",
+   "paragraph_index": 79,
+   "depth": "opinion",
+   "speaker_raw": "Ray Ozzie Blues Wireless",
+   "speaker_repaired": "Ray Ozzie",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "Well, and go to the forums and chat with other people who are going through the same thing that you are, you know, when I was the, you know, in the two years that I said, I was, uh, trying to figure out how to get this, the note card built. I didn't know this stuff. I didn't know if I should start with nucleo, uh, uh, or nuke, sorry, nucleus as an, a real-time operating system or this or that. I ended up with free art us. Um, each time I had to make a decision, I had to figure it out. And the only way you learn that is by finding people to talk to, go to a meetup, you know, get, get involved in a, in a Slack discussion or a discord discussion or something with like-minded people, try to build a project together and solve a problem. You always end up coming out knowing more than you did going in. That's yep. That's good advice.",
+   "context_before": "this, I mean, it's, it, it is, it's like, it's exciting to be in this part of the industry. You know, I think what I would, I always encourage people to just try and take it one step at a time, you know, like, like getting a note cardboard and carrier. Like, I think that's a great way to get started in this sort of thing, learning new, you know, taking classes, learning new real-time operating systems, things like that. I think there's just a lot of stuff to learn.",
+   "context_after": "Ray, uh, where could people find information about you, about your company, about your past? Uh,",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "this, I mean, it's, it, it is, it's like, it's exciting to be in this part of the industry. You know, I think what I would, I always encourage people to just try and take it one step at a time, you know, like, like getting a note cardboard and carrier. Like, I think that's a great way to get started in this sort of thing, learning new, you know, taking classes, learning new real-time operating systems, things like that. I think there's just a lot of stuff to learn. Well, and go to the forums and chat with other people who are going through the same thing that you are, you know, when I was the, you know, in the two years that I said, I was, uh, trying to figure out how to get this, the note card built. I didn't know this stuff. I didn't know if I should start with nucleo, uh, uh, or nuke, sorry, nucleus as an, a real-time operating system or this or that. I ended up with free art us. Um, each time I had to make a decision, I had to figure it out. And the only way you learn that is by finding people to talk to, go to a meetup, you know, get, get involved in a, in a Slack discussion or a discord discussion or something with like-minded people, try to build a project together and solve a problem. You always end up coming out knowing more than you did going in. That's yep. That's good advice. Ray, uh, where could people find information about you, about your company, about your past? Uh,"
+  },
+  {
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "guest": null,
+   "stem": "0614-reunion-impedance-matching-and-2023-predictions",
+   "paragraph_index": 141,
+   "depth": "explains",
+   "speaker_raw": "Alvaro",
+   "speaker_repaired": "Alvaro Prieto",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "Yeah. I, I, I can go with, uh, I've been using free RTOS for like over two years now. We did take a look at suffer, but I vetoed it because, uh, uh, for, for a different project, but one is to, you know, stay in the same thing for all of our projects. But the other one is it's great if you're doing things in kind of the domain of, of suffer that, but if you try to do like ultra low power on a platform, that's not been developed or do things different way, it's a lot more complex, but we're, yeah, we're doing everything, uh, free RTOS these days and yeah, you have to write your own drivers. It doesn't come with drivers. That's the, the nice thing is suffer comes with everything.",
+   "context_before": "That's crazy. I would love to hear more about your, uh, so Alvaro, I know you do free RTOS. Yep. Not sure about Chris and Ariel, what you guys are doing for, I feel like my, my personal experience has been with RTOS is this year. That's been like my year of learning RTOS is. So like, I kind of see them everywhere, but that's not necessarily the case. I mean, what do you, what do you guys see in terms of, uh, you know, levels of processing? I remember Chris also said something about the CM4 in an email we had before this as well. So like, you know, where, where in the software stack of the worlds are you guys living?",
+   "context_after": "Not everything, but yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "That's crazy. I would love to hear more about your, uh, so Alvaro, I know you do free RTOS. Yep. Not sure about Chris and Ariel, what you guys are doing for, I feel like my, my personal experience has been with RTOS is this year. That's been like my year of learning RTOS is. So like, I kind of see them everywhere, but that's not necessarily the case. I mean, what do you, what do you guys see in terms of, uh, you know, levels of processing? I remember Chris also said something about the CM4 in an email we had before this as well. So like, you know, where, where in the software stack of the worlds are you guys living? Yeah. I, I, I can go with, uh, I've been using free RTOS for like over two years now. We did take a look at suffer, but I vetoed it because, uh, uh, for, for a different project, but one is to, you know, stay in the same thing for all of our projects. But the other one is it's great if you're doing things in kind of the domain of, of suffer that, but if you try to do like ultra low power on a platform, that's not been developed or do things different way, it's a lot more complex, but we're, yeah, we're doing everything, uh, free RTOS these days and yeah, you have to write your own drivers. It doesn't come with drivers. That's the, the nice thing is suffer comes with everything. Not everything, but yeah."
+  },
+  {
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "guest": "CNLohr",
+   "stem": "0637-ch32v003-fun-with-cnlohr",
+   "paragraph_index": 18,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "Yeah. A lot of people, I guess. So going back to it, when I mentioned, oh, if, if I need to just do this one specific thing, I'll just use whatever hell is available. But also if I have a team of like 30 people and it's going to be some really big effort, like that's there are 10 people, five people, about five people, I think is where this, this trade-off happens. Uh, that's when other environments like free RTOS and stuff like that start to actually make sense, even though they themselves are a massive tax to debug ability and, and like general, like, like the number of times that I found where it's like, we're like, okay, now we have the thing almost working, but we're having to like balance the size of each one of the stacks and trying to get like, like, oh, but it's, it becomes so burdensome. But the answer is like, we wouldn't have been able to even get to where we were in the speed. We were able to, unless we had like a framework that a lot of people could speak a common language into. It just bothers me that the tax is so high. So when it comes to something that it's going to be me alone or me with a few other people going to be working on things, then I think there's a lot of value in just jettisoning a lot of that complexity.",
+   "context_before": "Yeah, that makes sense. Yeah. And I think, especially like, as you're saying, collaborating and not having to like compartmentalize, you know, like there's abstraction layers, but then there's also just compartmentalizing for, as your team needs to grow, if you want to like have a faster timeline, then you start to grow how many people are a part of it. And then you start to compartmentalize and say like, well, I'll just do the ADC, but then you have to start agreeing on APIs and all that other stuff. Yeah.",
+   "context_after": "Yeah. It also is interesting thinking about like how, how far you would expect the chip to go. So like, there's the complexity you've already kind of talked to, like just in like, you know, sometimes they talk about like killer lines of code, but. Even I think actually data sheet pages is a good, like kind of hardware, firmware crossover one. Yeah. But then like how, if it was like a, you know, so I'm using this NRF 9160 a lot. And if it's like a dual core M33 plus cellular interface, like craziness, right. It's like, that's probably going to have more needs for outside libraries and like interface layers to like other, you know, third party plugin type things. And then like, at that point, then it probably makes sense to, to have more stuff than you might want to try and do with it. You k",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah, that makes sense. Yeah. And I think, especially like, as you're saying, collaborating and not having to like compartmentalize, you know, like there's abstraction layers, but then there's also just compartmentalizing for, as your team needs to grow, if you want to like have a faster timeline, then you start to grow how many people are a part of it. And then you start to compartmentalize and say like, well, I'll just do the ADC, but then you have to start agreeing on APIs and all that other stuff. Yeah. Yeah. A lot of people, I guess. So going back to it, when I mentioned, oh, if, if I need to just do this one specific thing, I'll just use whatever hell is available. But also if I have a team of like 30 people and it's going to be some really big effort, like that's there are 10 people, five people, about five people, I think is where this, this trade-off happens. Uh, that's when other environments like free RTOS and stuff like that start to actually make sense, even though they themselves are a massive tax to debug ability and, and like general, like, like the number of times that I found where it's like, we're like, okay, now we have the thing almost working, but we're having to like balance the size of each one of the stacks and trying to get like, like, oh, but it's, it becomes so burdensome. But the answer is like, we wouldn't have been able to even get to where we were in the speed. We were able to, unless we had like a framework that a lot of people could speak a common language into. It just bothers me that the tax is so high. So when it comes to something that it's going to be me alone or me with a few other people going to be working on things, then I think there's a lot of value in just jettisoning a lot of that complexity. Yeah. It also is interesting thinking about like how, how far you would expect the chip to go. So like, there's the complexity you've already kind of talked to, like just in like, you know, sometimes they talk about like killer lines of code, but. Even I think actually data sheet pages is a good, like kind of hardware, firmware crossover one. Yeah. But then like how, if it was like a, you know, so I'm using this NRF 9160 a lot. And if it's like a dual core M33 plus cellular interface, like craziness, right. It's like, that's probably going to have more needs for outside libraries and like interface layers to like other, you know, third party plugin type things. And then like, at that point, then it probably makes sense to, to have more stuff than you might want to try and do with it. You k"
+  },
+  {
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "guest": "CNLohr",
+   "stem": "0637-ch32v003-fun-with-cnlohr",
+   "paragraph_index": 56,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:tcp-ip-stack",
+   "concept_sources": [
+    "child:tcp-ip-stack"
+   ],
+   "concepts": [
+    "tcp-ip-stack"
+   ],
+   "paragraph_text": "I mean, it was, it was kind of embarrassing that like, I had not, not actually done the prior work and realized that or like, like check for it and be like, yeah, no, somebody had already done this like 10 years ago. Uh, and so it's, it's kind of a thing that's been done a fair bit. I, I've also. Sort of in, in, in working for other, other people, like I've seen. I've seen a lot of custom TCP IP stacks out there. Like lightweight IP is not the only game in town. And I think a lot of people forget that. And that there's a lot of other trade-offs that can be made. You're not limited to that. And the same thing goes for things like lightweight USB, which is a total misnomer. Lightweight USB is, is massive. It's, it's, it's a huge USB stack. I don't really know why it's even called lightweight. Maybe it started off as lightweight, but like there are lots of other options out there. And a lot of times, like, I think engineers are scared of, or project managers are scared of like, oh no, it's just USB. We can just write that. Or, oh no, it's just ethernet. Like it's okay. We can do that. Like, like you don't need all of these crazy stacks. So like, I don't want the flag to be at when you're using IP. Well, now you're using free RTOS because like, I've seen times where that's not true. And I just, I don't want, I, I wish engineers were not limited to that thinking.",
+   "context_before": "People in a hack a day comment section pointed out as something being done before. That's so odd.",
+   "context_after": "Cause interesting. Okay. Let me put on my project, project manager hat here then. So like, what about, so what do you, what do you say to a project manager? Who's like, well, what about the support burden? Cause I feel like support burden is, is the main reason in my head that I think like, don't write that from scratch. Is that fair or unfair?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "People in a hack a day comment section pointed out as something being done before. That's so odd. I mean, it was, it was kind of embarrassing that like, I had not, not actually done the prior work and realized that or like, like check for it and be like, yeah, no, somebody had already done this like 10 years ago. Uh, and so it's, it's kind of a thing that's been done a fair bit. I, I've also. Sort of in, in, in working for other, other people, like I've seen. I've seen a lot of custom TCP IP stacks out there. Like lightweight IP is not the only game in town. And I think a lot of people forget that. And that there's a lot of other trade-offs that can be made. You're not limited to that. And the same thing goes for things like lightweight USB, which is a total misnomer. Lightweight USB is, is massive. It's, it's, it's a huge USB stack. I don't really know why it's even called lightweight. Maybe it started off as lightweight, but like there are lots of other options out there. And a lot of times, like, I think engineers are scared of, or project managers are scared of like, oh no, it's just USB. We can just write that. Or, oh no, it's just ethernet. Like it's okay. We can do that. Like, like you don't need all of these crazy stacks. So like, I don't want the flag to be at when you're using IP. Well, now you're using free RTOS because like, I've seen times where that's not true. And I just, I don't want, I, I wish engineers were not limited to that thinking. Cause interesting. Okay. Let me put on my project, project manager hat here then. So like, what about, so what do you, what do you say to a project manager? Who's like, well, what about the support burden? Cause I feel like support burden is, is the main reason in my head that I think like, don't write that from scratch. Is that fair or unfair?"
+  },
+  {
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "guest": "CNLohr",
+   "stem": "0637-ch32v003-fun-with-cnlohr",
+   "paragraph_index": 58,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "I think the problem here is that it's, I don't think I would win an argument in this. Because I have been around the block and my experience says that no, there is a massive amount of support burden with free RTOS. I'm picking on free RTOS, but that's only because that's where I'd have it. And it's not because free RTOS is bad. It's not because there's some bug in it. It's because of the type of code that people who are using free RTOS, right? Inherently like free RTOS is great if you have like one thread, but the reason you're using free RTOS is because you have a lot of threads. That's right. Yeah. And, and when you start doing that, you start finding these really rough situations that you run into. Cause the, the burden of pushing and popping things off of cues inside of interrupts, instead of just doing the work in the interrupt is so high that you end up like burning a lot of your CPU. And even though you started with 144 megahertz or something like it's, it's just, well, now you've burned it all. And I think one of the problems is if you put on the business hat, you're like, well, we'll just buy the next more expensive processor and just solve it by putting in a more expensive",
+   "context_before": "Cause interesting. Okay. Let me put on my project, project manager hat here then. So like, what about, so what do you, what do you say to a project manager? Who's like, well, what about the support burden? Cause I feel like support burden is, is the main reason in my head that I think like, don't write that from scratch. Is that fair or unfair?",
+   "context_after": "processor, which we have the margin. We can, we can eat it.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Cause interesting. Okay. Let me put on my project, project manager hat here then. So like, what about, so what do you, what do you say to a project manager? Who's like, well, what about the support burden? Cause I feel like support burden is, is the main reason in my head that I think like, don't write that from scratch. Is that fair or unfair? I think the problem here is that it's, I don't think I would win an argument in this. Because I have been around the block and my experience says that no, there is a massive amount of support burden with free RTOS. I'm picking on free RTOS, but that's only because that's where I'd have it. And it's not because free RTOS is bad. It's not because there's some bug in it. It's because of the type of code that people who are using free RTOS, right? Inherently like free RTOS is great if you have like one thread, but the reason you're using free RTOS is because you have a lot of threads. That's right. Yeah. And, and when you start doing that, you start finding these really rough situations that you run into. Cause the, the burden of pushing and popping things off of cues inside of interrupts, instead of just doing the work in the interrupt is so high that you end up like burning a lot of your CPU. And even though you started with 144 megahertz or something like it's, it's just, well, now you've burned it all. And I think one of the problems is if you put on the business hat, you're like, well, we'll just buy the next more expensive processor and just solve it by putting in a more expensive processor, which we have the margin. We can, we can eat it."
+  },
+  {
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "guest": "Scott Williams",
+   "stem": "0645-moving-down-the-stack-with-scott-williams",
+   "paragraph_index": 110,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "On the contrary. Yeah. On the contrary, if you've got an application that really should be an RTOS. So it's an SDM, it's got an accelerometer, an SD card, a 4G modem, and it's constantly sampling the accelerometer, constantly writing to the SD card, constantly pulling from the SD card and putting it onto the modem before it sends the modem's file off. Good luck doing that in a finite state machine. You will not be able to do it. Even though in theory, the free RTOS isn't, it's still just C running. It still gets compiled down to machine code. It's not actually parallel processing. Good luck structuring it in a finite state machine. Yeah. So it's almost a risk problem too, right?",
+   "context_before": "Yeah, exactly.",
+   "context_after": "Yeah. So yeah, exactly. Yeah. I mean, like, how are you going to, I think also like when you get to the edge of the things, right? So it's like in the generic case, it doesn't matter all that much, but then like, when you start to actually find a corner case, then you're, I'm not saying that you can't get around it. It's just that it gets, you know, the, the effort ramps quite a bit. And then, and then you have to explain to a client, like, like you said, right? You have to explain to a client, like, well, we have to do it this way because of these decisions we made two years ago or whatever it is, you know, it's just like, oh, and exactly",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Scott Williams",
+   "text": "Yeah, exactly. On the contrary. Yeah. On the contrary, if you've got an application that really should be an RTOS. So it's an SDM, it's got an accelerometer, an SD card, a 4G modem, and it's constantly sampling the accelerometer, constantly writing to the SD card, constantly pulling from the SD card and putting it onto the modem before it sends the modem's file off. Good luck doing that in a finite state machine. You will not be able to do it. Even though in theory, the free RTOS isn't, it's still just C running. It still gets compiled down to machine code. It's not actually parallel processing. Good luck structuring it in a finite state machine. Yeah. So it's almost a risk problem too, right? Yeah. So yeah, exactly. Yeah. I mean, like, how are you going to, I think also like when you get to the edge of the things, right? So it's like in the generic case, it doesn't matter all that much, but then like, when you start to actually find a corner case, then you're, I'm not saying that you can't get around it. It's just that it gets, you know, the, the effort ramps quite a bit. And then, and then you have to explain to a client, like, like you said, right? You have to explain to a client, like, well, we have to do it this way because of these decisions we made two years ago or whatever it is, you know, it's just like, oh, and exactly"
+  },
+  {
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "guest": "Benjamin Cab\u00e9",
+   "stem": "0653-benjamin-cabe-nose-zephyr",
+   "paragraph_index": 17,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "One other thing that I feel like that I always call out with Zephyr is the involvement of hardware companies. Like that to me is so, so different because, so I use Zephyr a lot at my day job, Goliath, and we have different SDKs and we do some free RTOS stuff. But whenever I talk about free RTOS, I'm like free RTOS, the RTOS, and then ESPIDF, the ecosystem, right? So that's the expressive ecosystem on top of free RTOS. And then Modus Toolbox, the ecosystem on top of free RTOS. So there's all these like vendor specific ecosystems on top of free RTOS, which is like a kernel and it's an RTOS, right? And there's a framework, but like that is very different than, maybe you could explain how it's different than from Zephyr.",
+   "context_before": "Yeah.",
+   "context_after": "Yeah, that's actually a good comparison. The way it typically works with Zephyr. And like you said, many vendors are really, really involved in like our platinum members of the project includes the lack of analog devices, NXP, Nordic. It's pretty big about Zephyr. Typically, all those vendors, they have like their existing hardware abstraction layers that potentially they have their own like full IDEs based on top of and usually like tons of interesting and good code samples if you want to stick to their story, let's say. But then they also work like pretty closely with the Zephyr community so that right on top and like just on top of their HAL, they integrate with the Zephyr APIs. And so when it comes to interacting and interfacing with GPIOs and I2C and whatnot, like you typically have l",
+   "context_before_speaker": "Speaker ?",
+   "context_after_speaker": "Benjamin Cabe",
+   "text": "Yeah. One other thing that I feel like that I always call out with Zephyr is the involvement of hardware companies. Like that to me is so, so different because, so I use Zephyr a lot at my day job, Goliath, and we have different SDKs and we do some free RTOS stuff. But whenever I talk about free RTOS, I'm like free RTOS, the RTOS, and then ESPIDF, the ecosystem, right? So that's the expressive ecosystem on top of free RTOS. And then Modus Toolbox, the ecosystem on top of free RTOS. So there's all these like vendor specific ecosystems on top of free RTOS, which is like a kernel and it's an RTOS, right? And there's a framework, but like that is very different than, maybe you could explain how it's different than from Zephyr. Yeah, that's actually a good comparison. The way it typically works with Zephyr. And like you said, many vendors are really, really involved in like our platinum members of the project includes the lack of analog devices, NXP, Nordic. It's pretty big about Zephyr. Typically, all those vendors, they have like their existing hardware abstraction layers that potentially they have their own like full IDEs based on top of and usually like tons of interesting and good code samples if you want to stick to their story, let's say. But then they also work like pretty closely with the Zephyr community so that right on top and like just on top of their HAL, they integrate with the Zephyr APIs. And so when it comes to interacting and interfacing with GPIOs and I2C and whatnot, like you typically have l"
+  },
+  {
+   "episode": 675,
+   "episode_title": "Changing Course with Shawn Hymel",
+   "episode_url": "https://theamphour.com/675-changing-course-with-shawn-hymel/",
+   "guest": "Shawn Hymel",
+   "stem": "0675-changing-course-with-shawn-hymel",
+   "paragraph_index": 72,
+   "depth": "explains",
+   "speaker_raw": "Shawn Hymel",
+   "speaker_repaired": "Shawn Hymel",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "Yeah. Yeah. Like, yeah, I did free RTOS. I wanted to teach RTOS concepts. And so it was a what's a good board and good platform. And free RTOS absolutely nailed it because it's like a bare bones scheduler. It's so good for teaching multi threading. Exactly. That, you know, bare metal level.",
+   "context_before": "Yeah, I really did. I really liked your you did bottom up on the free RTOS. So that was one of your DigiKey series, right?",
+   "context_after": "It is that same thing where like, so like this is stuff that I run into a lot when teaching Zephyr or talking to people to free RTOS or whatever. Like the expectation in free RTOS is that you're starting from a scheduler and kind of adding stuff on. What often happens, this is what I always kind of point out with ecosystem versus RTOS as well, right? Zephyr is both. Zephyr is an ecosystem because all these vendors are involved and they all, you know, they all are basically making their own compatibilities with the quote unquote Zephyr way of doing things. But at the core Zephyr is, it has a kernel and it has a scheduler and it has all the stuff that is, makes it go. And then it has all the peripheral, sorry, all the subsystems that make it interesting and cool and very full featured. So a ",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah, I really did. I really liked your you did bottom up on the free RTOS. So that was one of your DigiKey series, right? Yeah. Yeah. Like, yeah, I did free RTOS. I wanted to teach RTOS concepts. And so it was a what's a good board and good platform. And free RTOS absolutely nailed it because it's like a bare bones scheduler. It's so good for teaching multi threading. Exactly. That, you know, bare metal level. It is that same thing where like, so like this is stuff that I run into a lot when teaching Zephyr or talking to people to free RTOS or whatever. Like the expectation in free RTOS is that you're starting from a scheduler and kind of adding stuff on. What often happens, this is what I always kind of point out with ecosystem versus RTOS as well, right? Zephyr is both. Zephyr is an ecosystem because all these vendors are involved and they all, you know, they all are basically making their own compatibilities with the quote unquote Zephyr way of doing things. But at the core Zephyr is, it has a kernel and it has a scheduler and it has all the stuff that is, makes it go. And then it has all the peripheral, sorry, all the subsystems that make it interesting and cool and very full featured. So a "
+  },
+  {
+   "episode": 675,
+   "episode_title": "Changing Course with Shawn Hymel",
+   "episode_url": "https://theamphour.com/675-changing-course-with-shawn-hymel/",
+   "guest": "Shawn Hymel",
+   "stem": "0675-changing-course-with-shawn-hymel",
+   "paragraph_index": 74,
+   "depth": "explains",
+   "speaker_raw": "Shawn Hymel",
+   "speaker_repaired": "Shawn Hymel",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:tcp-ip-stack",
+   "concept_sources": [
+    "child:tcp-ip-stack"
+   ],
+   "concepts": [
+    "tcp-ip-stack"
+   ],
+   "paragraph_text": "Yeah, it's so true. And like ESP IDF is still unique to Espressif stuff. And that's to me where Zephyr is going to shine in the near future of ideally it does what Linux has done to the PC world of let's bring all this hardware together. We can have a common kernel, a common scheduler. And so if I'm just writing application code in theory, right, this is always in theory with embedded systems is I can write application code and rely on these Zephyr subsystems to handle all this for me. Like, oh, I just pull in a TCP IP stack and I can just make get requests, which would be freaking amazing as opposed to having to write that. And I know that like free RTOS, the like Amazon version has some of those subsystems there that you can maybe use depending on the chips. But it's like dealing with all the drivers and the disparate hardware, the actual like microcontroller and processors and architectures. Like that's where it becomes an issue. So like you said, as it is an ecosystem with more and more partners coming on board, hopefully we get to a point where I just like I pull in these drivers, I write my application code and I kind of don't care what hardware I deploy. I just pick the chip that meets my processing and price needs and I don't have to write these drivers from scratch or like learning a new how or anything like that. So I'm very hopeful. Like I am fully invested that Zephyr is the future.",
+   "context_before": "bilities with the quote unquote Zephyr way of doing things. But at the core Zephyr is, it has a kernel and it has a scheduler and it has all the stuff that is, makes it go. And then it has all the peripheral, sorry, all the subsystems that make it interesting and cool and very full featured. So a lot of vendors will take free RTOS, which is this, you know, starts from bare bones. So like Espressif, ESP IDF is based on free RTOS, but it's really the ecosystem of ESP IDF is built on top of free RTOS. And then they layer on all of the capabilities of things that Espressif parts can do. And that's really like the differentiation. So ESP IDF and Zephyr are both ecosystems. Zephyr and free RTOS are both RTOSs, but then like, it's just kind of which direction you're coming at from them, you know?",
+   "context_after": "Yes. Kites everywhere. Yep. Yeah, it's it is exciting. It is. It's a sharp learning curve, but that's exciting that you're going to make a course on it, too, because that's going to that that'll help a lot of people, I think.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "bilities with the quote unquote Zephyr way of doing things. But at the core Zephyr is, it has a kernel and it has a scheduler and it has all the stuff that is, makes it go. And then it has all the peripheral, sorry, all the subsystems that make it interesting and cool and very full featured. So a lot of vendors will take free RTOS, which is this, you know, starts from bare bones. So like Espressif, ESP IDF is based on free RTOS, but it's really the ecosystem of ESP IDF is built on top of free RTOS. And then they layer on all of the capabilities of things that Espressif parts can do. And that's really like the differentiation. So ESP IDF and Zephyr are both ecosystems. Zephyr and free RTOS are both RTOSs, but then like, it's just kind of which direction you're coming at from them, you know? Yeah, it's so true. And like ESP IDF is still unique to Espressif stuff. And that's to me where Zephyr is going to shine in the near future of ideally it does what Linux has done to the PC world of let's bring all this hardware together. We can have a common kernel, a common scheduler. And so if I'm just writing application code in theory, right, this is always in theory with embedded systems is I can write application code and rely on these Zephyr subsystems to handle all this for me. Like, oh, I just pull in a TCP IP stack and I can just make get requests, which would be freaking amazing as opposed to having to write that. And I know that like free RTOS, the like Amazon version has some of those subsystems there that you can maybe use depending on the chips. But it's like dealing with all the drivers and the disparate hardware, the actual like microcontroller and processors and architectures. Like that's where it becomes an issue. So like you said, as it is an ecosystem with more and more partners coming on board, hopefully we get to a point where I just like I pull in these drivers, I write my application code and I kind of don't care what hardware I deploy. I just pick the chip that meets my processing and price needs and I don't have to write these drivers from scratch or like learning a new how or anything like that. So I'm very hopeful. Like I am fully invested that Zephyr is the future. Yes. Kites everywhere. Yep. Yeah, it's it is exciting. It is. It's a sharp learning curve, but that's exciting that you're going to make a course on it, too, because that's going to that that'll help a lot of people, I think."
+  },
+  {
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "guest": null,
+   "stem": "0713-rubber-duck-incarnate",
+   "paragraph_index": 266,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "Oh, my God. That's the problem. It's like most people who are, like, bottom-up embedded, they're like, yeah, I'm, like, I'm going to build it. You know, I'm going to build free RTOS all the way, you know, from the bottom-up. It's like, dude, you're going to, it's a bad time. Start from, like, a known example.",
+   "context_before": "I'm not going to do it from scratch. No. No. Yeah.",
+   "context_after": "When I was a boy, you did pay a penalty for just, you know, randomly outputting your UART, you know, something to the console, to the actual serial port. Because, you know, I learned very early on that, yeah, okay, you include a printf in your C code so that you can output something to the serial port, right? And, oh, the printf code takes, like, 1K of your memory. You know, it actually compiles in that routine. And it's like, oh, my chip only has 2K or it only has 4K. And I'm using half or a quarter of that just so I can output some nice little strings to the serial port. It's like, oh, my God, I can't afford space, you know? Yeah.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "I'm not going to do it from scratch. No. No. Yeah. Oh, my God. That's the problem. It's like most people who are, like, bottom-up embedded, they're like, yeah, I'm, like, I'm going to build it. You know, I'm going to build free RTOS all the way, you know, from the bottom-up. It's like, dude, you're going to, it's a bad time. Start from, like, a known example. When I was a boy, you did pay a penalty for just, you know, randomly outputting your UART, you know, something to the console, to the actual serial port. Because, you know, I learned very early on that, yeah, okay, you include a printf in your C code so that you can output something to the serial port, right? And, oh, the printf code takes, like, 1K of your memory. You know, it actually compiles in that routine. And it's like, oh, my chip only has 2K or it only has 4K. And I'm using half or a quarter of that just so I can output some nice little strings to the serial port. It's like, oh, my God, I can't afford space, you know? Yeah."
+  },
+  {
+   "episode": 715,
+   "episode_title": "Shiny New Pebble with Eric Migicovsky",
+   "episode_url": "https://theamphour.com/715-shiny-new-pebble-with-eric-migicovsky/",
+   "guest": "Eric Migicovsky",
+   "stem": "0715-shiny-new-pebble-with-eric-migicovsky",
+   "paragraph_index": 76,
+   "depth": "explains",
+   "speaker_raw": "Eric Migicovsky",
+   "speaker_repaired": "Eric Migicovsky",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "near other large. No, you don't have to live there. You could go to CCC. You could go to anywhere. You just have to be out there. You just have to be willing to, to talk to people. And so, yeah, I learned about, you know, most of the chips that I, that I love from friends. And so this latest one has come from a company called Sifli out of China. They're kind of competing in the mid range, mid to low end Bluetooth chip market for smartwatches specifically. There's two vendors in this space. There's a company called BES and Sifli. There's a few lower end products that are even lower. And then there's higher end products like Nordic. We chose Sifli. I mean, I learned about Sifli because the CEO reached out to me, just sent me an email kind of out of the blue after we announced the Pebble relaunch. So we, we met up and chatted quite a bit and talked about, it turns out his chip is just purpose built for smartwatches. Like it checked every box, including it had this very weird connector that's needed to talk through a parallel bus to the memory LCD that we're using. And on older generations of Pebble, we needed a, we actually put down an, an, a separate FPGA whose job it was solely to translate, you know, commands to this really weird bus system. You could also buy like a $2 chip from the company that the display maker recommends. They're so happy to provide that for you. I'm sure. Right. Yeah. But like then Sifli just included it on the chip and it works great. So that, that was a big reason, but more than anything, they, they offered to help support us. And so we realized that not many chip makers, you know, have open source SDKs for their chips and they don't all support free RTOS. Like Nordic doesn't have a free RTOS SDK for their new 50, uh, they just released one. 54L series. They, they just,",
+   "context_before": "You're living in the right spot for, you know, living in Silicon Valley and, you know, near,",
+   "context_after": "uh, they released a bare metal implementation. So yeah. Okay. After the fact, not, yeah, it would have been, yeah, yeah, yeah, yeah. No, they, they are all Zephyr all the time. Yeah. Yeah, exactly. They're all",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "You're living in the right spot for, you know, living in Silicon Valley and, you know, near, near other large. No, you don't have to live there. You could go to CCC. You could go to anywhere. You just have to be out there. You just have to be willing to, to talk to people. And so, yeah, I learned about, you know, most of the chips that I, that I love from friends. And so this latest one has come from a company called Sifli out of China. They're kind of competing in the mid range, mid to low end Bluetooth chip market for smartwatches specifically. There's two vendors in this space. There's a company called BES and Sifli. There's a few lower end products that are even lower. And then there's higher end products like Nordic. We chose Sifli. I mean, I learned about Sifli because the CEO reached out to me, just sent me an email kind of out of the blue after we announced the Pebble relaunch. So we, we met up and chatted quite a bit and talked about, it turns out his chip is just purpose built for smartwatches. Like it checked every box, including it had this very weird connector that's needed to talk through a parallel bus to the memory LCD that we're using. And on older generations of Pebble, we needed a, we actually put down an, an, a separate FPGA whose job it was solely to translate, you know, commands to this really weird bus system. You could also buy like a $2 chip from the company that the display maker recommends. They're so happy to provide that for you. I'm sure. Right. Yeah. But like then Sifli just included it on the chip and it works great. So that, that was a big reason, but more than anything, they, they offered to help support us. And so we realized that not many chip makers, you know, have open source SDKs for their chips and they don't all support free RTOS. Like Nordic doesn't have a free RTOS SDK for their new 50, uh, they just released one. 54L series. They, they just, uh, they released a bare metal implementation. So yeah. Okay. After the fact, not, yeah, it would have been, yeah, yeah, yeah, yeah. No, they, they are all Zephyr all the time. Yeah. Yeah, exactly. They're all"
+  },
+  {
+   "episode": 715,
+   "episode_title": "Shiny New Pebble with Eric Migicovsky",
+   "episode_url": "https://theamphour.com/715-shiny-new-pebble-with-eric-migicovsky/",
+   "guest": "Eric Migicovsky",
+   "stem": "0715-shiny-new-pebble-with-eric-migicovsky",
+   "paragraph_index": 82,
+   "depth": "explains",
+   "speaker_raw": "Eric Migicovsky",
+   "speaker_repaired": "Eric Migicovsky",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "freertos"
+   ],
+   "paragraph_text": "either. The person who built it for us, a guy named Gerard, he's actually on, he's on the Zephyr working committee. So he's, he's a big Zephyr fan already, but he looked at it and he said, like, this would be more, more work than we needed to do. Like the, the, it was a tough decision that we had to make, which was, do we use a chip that uses Zephyr natively, like, like the Nordic 54 and then, and then port, you know, Pebble OS to Zephyr, not really port it, but like swap out the kernel free RTOS for the Zephyr kernel, which would give us the Bluetooth stack, you know, for free or whatever. Or do we keep Pebble OS on free RTOS, find an open source Bluetooth stack and then get, you know, because nothing, because the Sifly chip didn't natively support free RTOS, we'd have to do a bit of work there. It was a tough, it was a tough call. There's a lot of, it's one of those things where you don't know ahead of time, how hard something is going to be. And predicting or, you know, forecasting, software engineering is very difficult. And yeah, that was a, that was a tough call.",
+   "context_before": "you know, put in a pitch, but you know, like that's, it's fine, but it doesn't, Sifly is not in there",
+   "context_after": "Well, I do think, like you said, like having, having something that works, you know, like good is better than perfect. Right. And, uh, that sort of thing is like, and not, not that Zephyr's perfect in any stretch of the imagination. I feel like you are also building momentum behind this new relaunch company with, you know, the open source assets, stuff like that. Like that all matters too, like keeping people interested in a very distracted world in, you know, jumping in and being part of the, the relaunch of Pebble as well. Like that, that's not nothing, you know?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "you know, put in a pitch, but you know, like that's, it's fine, but it doesn't, Sifly is not in there either. The person who built it for us, a guy named Gerard, he's actually on, he's on the Zephyr working committee. So he's, he's a big Zephyr fan already, but he looked at it and he said, like, this would be more, more work than we needed to do. Like the, the, it was a tough decision that we had to make, which was, do we use a chip that uses Zephyr natively, like, like the Nordic 54 and then, and then port, you know, Pebble OS to Zephyr, not really port it, but like swap out the kernel free RTOS for the Zephyr kernel, which would give us the Bluetooth stack, you know, for free or whatever. Or do we keep Pebble OS on free RTOS, find an open source Bluetooth stack and then get, you know, because nothing, because the Sifly chip didn't natively support free RTOS, we'd have to do a bit of work there. It was a tough, it was a tough call. There's a lot of, it's one of those things where you don't know ahead of time, how hard something is going to be. And predicting or, you know, forecasting, software engineering is very difficult. And yeah, that was a, that was a tough call. Well, I do think, like you said, like having, having something that works, you know, like good is better than perfect. Right. And, uh, that sort of thing is like, and not, not that Zephyr's perfect in any stretch of the imagination. I feel like you are also building momentum behind this new relaunch company with, you know, the open source assets, stuff like that. Like that all matters too, like keeping people interested in a very distracted world in, you know, jumping in and being part of the, the relaunch of Pebble as well. Like that, that's not nothing, you know?"
+  }
+ ]
+}

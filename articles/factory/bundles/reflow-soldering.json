@@ -1,0 +1,1605 @@
+{
+ "concept": "reflow-soldering",
+ "name": "Reflow Soldering",
+ "type": "manufacturing",
+ "score": 303.456,
+ "rank_by_score": 143,
+ "cluster": {
+  "core": [
+   "reflow-soldering",
+   "solder-paste-reflow",
+   "solder-reflow"
+  ],
+  "children": [
+   "dry-solder-joint",
+   "product-commercialization",
+   "single-sided-assembly",
+   "software-developer",
+   "tombstoning"
+  ],
+  "neighbors": [
+   {
+    "concept": "flux",
+    "weight": 4
+   },
+   {
+    "concept": "microscope",
+    "weight": 4
+   },
+   {
+    "concept": "qfn",
+    "weight": 4
+   },
+   {
+    "concept": "solder-paste-application",
+    "weight": 4
+   },
+   {
+    "concept": "surface-mount-component",
+    "weight": 4
+   }
+  ]
+ },
+ "stats": {
+  "episodes": 63,
+  "mentions": 90,
+  "explains": 43,
+  "opinions": 14,
+  "candidate_episode_count": 51,
+  "candidate_mention_count": 68,
+  "gated_out": 313,
+  "gated_out_by_concept": [
+   [
+    "microscope",
+    88
+   ],
+   [
+    "qfn",
+    50
+   ],
+   [
+    "surface-mount-component",
+    49
+   ],
+   [
+    "flux",
+    44
+   ],
+   [
+    "tombstoning",
+    25
+   ],
+   [
+    "solder-paste-application",
+    21
+   ],
+   [
+    "software-developer",
+    14
+   ],
+   [
+    "product-commercialization",
+    8
+   ],
+   [
+    "dry-solder-joint",
+    7
+   ],
+   [
+    "single-sided-assembly",
+    7
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 5,
+  "speakers": [
+   [
+    "Dave Jones",
+    21
+   ],
+   [
+    "Chris Gammell",
+    14
+   ],
+   [
+    "SPEAKER_01",
+    3
+   ],
+   [
+    "David Ray",
+    3
+   ],
+   [
+    "Jonathan Hirschman",
+    2
+   ],
+   [
+    "Mike Grover",
+    2
+   ],
+   [
+    "Jeff Keyzer",
+    2
+   ],
+   [
+    "Ryan O'Hara",
+    1
+   ],
+   [
+    "Colin",
+    1
+   ],
+   [
+    "Chris Church",
+    1
+   ],
+   [
+    "Ariel Briner",
+    1
+   ],
+   [
+    "Luke Valenty",
+    1
+   ],
+   [
+    "Chris Denney",
+    1
+   ],
+   [
+    "Mike Harrison",
+    1
+   ],
+   [
+    "Tim Ansell",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 54,
+   "neighbor": 1
+  },
+  "passages_by_depth": {
+   "explains": 42,
+   "opinion": 13
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 55,
+ "passages": [
+  {
+   "episode": 11,
+   "episode_title": "Ardui...no Dave This Week?",
+   "episode_url": "https://theamphour.com/the-amp-hour-11-ardui-no-dave-this-week/",
+   "guest": "Jeff Kaiser",
+   "stem": "the-amp-hour-11-ardui-no-dave-this-week",
+   "paragraph_index": 94,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Yeah. And this started because there were some things flying around on the web and on Twitter about quality issues with the Uno, with the Arduino Uno. And I really didn't make much of it because the original post, and we can post a link on the site, there was a guy and he was complaining that the finish wasn't as good, that there was flux residue, the solder mask was too thin, there were headers that were installed a little bit crooked, things like that. And so whenever I took my Uno out of the box this week, you know, I looked at it. I looked at it closely just to see, you know, how does my board look? Does it look like it was produced well? Are there any issues? And it's within five seconds of looking at the board, I noticed that one of the resistors, and this is actually resistor R1 that sits directly below the crystal that powers that 8U2 microcontroller, was actually tombstoned. And so tombstoning is where, yeah, tombstoning is where during the reflow process, one pad of the resistor or one terminal of the resistor lifts up because the resistor kind of gets sucked upwards by the other pad. Yeah, the surface tension. One land pad will, exactly, the surface tension on one land pad will cause the resistor to lift up on the other one. And so I looked at it, and I could see that something was wrong. And so, you know, they sent this board to like the wrong person because I just happened to have a stereo microscope. And so I took a couple photos with the microscope, and you can actually see that the left terminal, the resistor, is not actually making contact at all with the land pad. And the amazing thing about it is that the UNO still works fine, even with the resistor not connected.",
+   "context_before": "Oh, I hate to upstage you there, but... No, go ahead. Well, basically, I had been seeing it on Twitter. So independently of before asking Jeff to do the show when we found out Dave was sick, you know, on Twitter, I've been watching and seeing people's reactions. And Jeff was actually one of them. But just kind of back and forth. Oh, did you see some process issues? Yeah, I saw some process issues. You know, what's going on here? What's wrong with your board? And so, Jeff, you actually wrote a post about it, right?",
+   "context_after": "So what was the function of it initially?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Oh, I hate to upstage you there, but... No, go ahead. Well, basically, I had been seeing it on Twitter. So independently of before asking Jeff to do the show when we found out Dave was sick, you know, on Twitter, I've been watching and seeing people's reactions. And Jeff was actually one of them. But just kind of back and forth. Oh, did you see some process issues? Yeah, I saw some process issues. You know, what's going on here? What's wrong with your board? And so, Jeff, you actually wrote a post about it, right? Yeah. And this started because there were some things flying around on the web and on Twitter about quality issues with the Uno, with the Arduino Uno. And I really didn't make much of it because the original post, and we can post a link on the site, there was a guy and he was complaining that the finish wasn't as good, that there was flux residue, the solder mask was too thin, there were headers that were installed a little bit crooked, things like that. And so whenever I took my Uno out of the box this week, you know, I looked at it. I looked at it closely just to see, you know, how does my board look? Does it look like it was produced well? Are there any issues? And it's within five seconds of looking at the board, I noticed that one of the resistors, and this is actually resistor R1 that sits directly below the crystal that powers that 8U2 microcontroller, was actually tombstoned. And so tombstoning is where, yeah, tombstoning is where during the reflow process, one pad of the resistor or one terminal of the resistor lifts up because the resistor kind of gets sucked upwards by the other pad. Yeah, the surface tension. One land pad will, exactly, the surface tension on one land pad will cause the resistor to lift up on the other one. And so I looked at it, and I could see that something was wrong. And so, you know, they sent this board to like the wrong person because I just happened to have a stereo microscope. And so I took a couple photos with the microscope, and you can actually see that the left terminal, the resistor, is not actually making contact at all with the land pad. And the amazing thing about it is that the UNO still works fine, even with the resistor not connected. So what was the function of it initially?"
+  },
+  {
+   "episode": 63,
+   "episode_title": "Shop bots, 450 mm fabs & redFrog - Pick and Place Palillogy",
+   "episode_url": "https://theamphour.com/the-amp-hour-63-pick-and-place-palillogy/",
+   "guest": null,
+   "stem": "the-amp-hour-63-pick-and-place-palillogy",
+   "paragraph_index": 157,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "I was pretty interested. I haven't looked at the SparkFun tutorial on it, but I was interested by the fact that they're only from the bottom side. So like, you know, you put a circuit board with, you know, solder paste and the parts on top, whatever, and you only heat it from the bottom side. Yeah.",
+   "context_before": "Yeah, I know.",
+   "context_after": "And you have to rely on the heat flow through the, through the FR4 laminate. Right. Yeah. So if you're doing like metal core. It's not that great.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah, I know. I was pretty interested. I haven't looked at the SparkFun tutorial on it, but I was interested by the fact that they're only from the bottom side. So like, you know, you put a circuit board with, you know, solder paste and the parts on top, whatever, and you only heat it from the bottom side. Yeah. And you have to rely on the heat flow through the, through the FR4 laminate. Right. Yeah. So if you're doing like metal core. It's not that great."
+  },
+  {
+   "episode": 96,
+   "episode_title": "Senseless Saccadic Shemozzle",
+   "episode_url": "https://theamphour.com/the-amp-hour-96-senseless-saccadic-shemozzle/",
+   "guest": null,
+   "stem": "the-amp-hour-96-senseless-saccadic-shemozzle",
+   "paragraph_index": 196,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Well, you couldn't solder this. You would have to reflow it, right?",
+   "context_before": "Yeah.",
+   "context_after": "Oh, no. You definitely can't solder this.",
+   "context_before_speaker": "Speaker ?",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Well, you couldn't solder this. You would have to reflow it, right? Oh, no. You definitely can't solder this."
+  },
+  {
+   "episode": 107,
+   "episode_title": "An interview with Tony Long - Millimeter Microwave Magician",
+   "episode_url": "https://theamphour.com/the-amp-hour-107-millimeter-microwave-magician/",
+   "guest": "Tony Long",
+   "stem": "the-amp-hour-107-millimeter-microwave-magician",
+   "paragraph_index": 296,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core",
+    "neighbor:qfn"
+   ],
+   "concepts": [
+    "qfn",
+    "reflow-soldering"
+   ],
+   "paragraph_text": "I'm going to have some frequency multipliers. This is the next thing. I've got some prototypes that are working really well that will take the output of these synthesizer boards and put a signal out in the 8 to 13 gigahertz range. And with about plus 15 to plus 17 dBm of output power. Wow. Those probably won't be kits because they have QFN packages. And, you know, it's hard enough for people to buy a kit that's all surface mount, but having them do reflow soldering is probably kind of not going to happen.",
+   "context_before": "Nice. That's great. Yeah, that's cool. I like it. And then in the future, you're going to have, what was the other thing you said you were going to have? Yeah.",
+   "context_after": "Some of our listeners do it. Oh, absolutely.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Nice. That's great. Yeah, that's cool. I like it. And then in the future, you're going to have, what was the other thing you said you were going to have? Yeah. I'm going to have some frequency multipliers. This is the next thing. I've got some prototypes that are working really well that will take the output of these synthesizer boards and put a signal out in the 8 to 13 gigahertz range. And with about plus 15 to plus 17 dBm of output power. Wow. Those probably won't be kits because they have QFN packages. And, you know, it's hard enough for people to buy a kit that's all surface mount, but having them do reflow soldering is probably kind of not going to happen. Some of our listeners do it. Oh, absolutely."
+  },
+  {
+   "episode": 107,
+   "episode_title": "An interview with Tony Long - Millimeter Microwave Magician",
+   "episode_url": "https://theamphour.com/the-amp-hour-107-millimeter-microwave-magician/",
+   "guest": "Tony Long",
+   "stem": "the-amp-hour-107-millimeter-microwave-magician",
+   "paragraph_index": 298,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Definitely. But, you know, it's one of those things where a lot of hams aren't too familiar yet with reflow soldering.",
+   "context_before": "Some of our listeners do it. Oh, absolutely.",
+   "context_after": "Right. Right. Yeah, this is cool. This is kind of bridging the gap between hams and, you know, circuit weenies like us, right? Yeah. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Some of our listeners do it. Oh, absolutely. Definitely. But, you know, it's one of those things where a lot of hams aren't too familiar yet with reflow soldering. Right. Right. Yeah, this is cool. This is kind of bridging the gap between hams and, you know, circuit weenies like us, right? Yeah. Yeah."
+  },
+  {
+   "episode": 153,
+   "episode_title": "An Interview with Ryan O'Hara - Keyed, Kerfed Kapton",
+   "episode_url": "https://theamphour.com/the-amp-hour-153-keyed-kerfed-kapton/",
+   "guest": "Ryan O'Hara",
+   "stem": "the-amp-hour-153-keyed-kerfed-kapton",
+   "paragraph_index": 205,
+   "depth": "explains",
+   "speaker_raw": "Ryan O'Hara",
+   "speaker_repaired": "Ryan O'Hara",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Yeah. You could probably be in the tolerances of the solder paste in the, you know, uh, like when you reflow, you know, it kind of wiggles back into place. Yeah.",
+   "context_before": "Oh, 805.",
+   "context_after": "The surface tension.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Oh, 805. Yeah. You could probably be in the tolerances of the solder paste in the, you know, uh, like when you reflow, you know, it kind of wiggles back into place. Yeah. The surface tension."
+  },
+  {
+   "episode": 158,
+   "episode_title": "Hyperloop, Upverter and Soldering - Unbelievable USB Ustulater",
+   "episode_url": "https://theamphour.com/the-amp-hour-158-unbelievable-usb-ustulater/",
+   "guest": null,
+   "stem": "the-amp-hour-158-unbelievable-usb-ustulater",
+   "paragraph_index": 169,
+   "depth": "explains",
+   "speaker_raw": "SPEAKER_01",
+   "speaker_repaired": "SPEAKER_01",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "powder transfer anyway right so you might as well get up the temperature right yeah i tell you the the the day that changed my life i think it was i might have mentioned on the show before i think it was jeff kaiser though that that uh suggested it to me no no that's what it was it was uh curious inventor was talking about on youtube he has a video about uh soldering uh qfn type chips with you know like qfn being quad flat no lead type of chips right so you actually don't see the pads and everything like that evil and uh and so i was i didn't i don't have any like i don't have a reflow oven at my workplace or anything like that and i was like i gotta do this and basically the idea is you preheat the board and then you flood the crap out of it with flux and then you use a hot air pencil and you you know it kind of just kind of seats itself yeah you hope for the best but the preheating of the board man that that thing changed my life uh my my little board preheater yeah i friggin love that thing do you ever use those at all i have used them at work but i don't have one in the lab no they're worth it man like 200 bucks they have they have different ones but man it's like it's like having like a little hot pot underneath your yeah your board and everything oh yeah and like every time like dealing with like big ground pours and stuff like that anything with like any significant amount of of solder of copper rather man sit it there for a minute or two on the",
+   "context_before": "like oh yeah like you almost can't you almost can't uh debunk it because yeah okay it'll get to 480 degrees right but yeah yeah like so their claim is correct but it's just absolutely useless yep as a soldier in iron and it's got a conical tip on it well i guess there's no point having a nice big uh uh chisel tip on there because it's got no bloody",
+   "context_after": "preheater and then get it up to 200 degrees or something you know exactly oh yeah yeah it's a",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "like oh yeah like you almost can't you almost can't uh debunk it because yeah okay it'll get to 480 degrees right but yeah yeah like so their claim is correct but it's just absolutely useless yep as a soldier in iron and it's got a conical tip on it well i guess there's no point having a nice big uh uh chisel tip on there because it's got no bloody powder transfer anyway right so you might as well get up the temperature right yeah i tell you the the the day that changed my life i think it was i might have mentioned on the show before i think it was jeff kaiser though that that uh suggested it to me no no that's what it was it was uh curious inventor was talking about on youtube he has a video about uh soldering uh qfn type chips with you know like qfn being quad flat no lead type of chips right so you actually don't see the pads and everything like that evil and uh and so i was i didn't i don't have any like i don't have a reflow oven at my workplace or anything like that and i was like i gotta do this and basically the idea is you preheat the board and then you flood the crap out of it with flux and then you use a hot air pencil and you you know it kind of just kind of seats itself yeah you hope for the best but the preheating of the board man that that thing changed my life uh my my little board preheater yeah i friggin love that thing do you ever use those at all i have used them at work but i don't have one in the lab no they're worth it man like 200 bucks they have they have different ones but man it's like it's like having like a little hot pot underneath your yeah your board and everything oh yeah and like every time like dealing with like big ground pours and stuff like that anything with like any significant amount of of solder of copper rather man sit it there for a minute or two on the preheater and then get it up to 200 degrees or something you know exactly oh yeah yeah it's a"
+  },
+  {
+   "episode": 170,
+   "episode_title": "What defines an engineer? - Job Judging Jeremiad",
+   "episode_url": "https://theamphour.com/170-what-defines-an-engineer-job-judging-jeremiad/",
+   "guest": null,
+   "stem": "0170-what-defines-an-engineer-job-judging-jeremiad",
+   "paragraph_index": 268,
+   "depth": "opinion",
+   "speaker_raw": "SPEAKER_01",
+   "speaker_repaired": "SPEAKER_01",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "You're translating motion. But, yeah, I mean, so, like, for doing solder paste stuff at home, and I was, you know, like, I was looking at this and it's like, I've never done solder paste stuff at home before. I've done it, you know, with work stuff where we had high quality compressor stuff. But, you know, like, this is good. I like this. I like this, being able to do this. And then you think you throw down a little skillet thingy and this, I mean, and honestly, it's becoming a necessity almost, right? I mean, between this and then some magnification, it's like, you know, certain parts you just can't, like, like, for contextual electronics, one of the parts that I'm using only comes in a TSOP. And it's like, TSOP's doable with drag soldering. I know. But, like, in terms of, like, if you're just starting out, right, I mean, it's good to learn that technique, but it's like sometimes you want to get it right and just have it work, you know? So, doing surface mount from home, or, sorry, a reflow from home would be nice.",
+   "context_before": "So you're using a leverage kind of, you know, a large extension of your hand gives a very small extension of the, of the lever in the, Yeah. Gun. Exactly. Yeah, exactly. Yeah, you're using the lever chair. Right.",
+   "context_after": "Yep. Plus, it's fun. I still don't have a proper reflow setup here, you know? I don't do it enough. Like, I just, you know, either do the drag solder or, you know, because keeping paste in the fridge and stuff, I don't even have a fridge here at the lab. Right. Right. Really? Oh, you don't drink beer. That's why. No, I don't drink beer. So, you know. So, I can't.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "So you're using a leverage kind of, you know, a large extension of your hand gives a very small extension of the, of the lever in the, Yeah. Gun. Exactly. Yeah, exactly. Yeah, you're using the lever chair. Right. You're translating motion. But, yeah, I mean, so, like, for doing solder paste stuff at home, and I was, you know, like, I was looking at this and it's like, I've never done solder paste stuff at home before. I've done it, you know, with work stuff where we had high quality compressor stuff. But, you know, like, this is good. I like this. I like this, being able to do this. And then you think you throw down a little skillet thingy and this, I mean, and honestly, it's becoming a necessity almost, right? I mean, between this and then some magnification, it's like, you know, certain parts you just can't, like, like, for contextual electronics, one of the parts that I'm using only comes in a TSOP. And it's like, TSOP's doable with drag soldering. I know. But, like, in terms of, like, if you're just starting out, right, I mean, it's good to learn that technique, but it's like sometimes you want to get it right and just have it work, you know? So, doing surface mount from home, or, sorry, a reflow from home would be nice. Yep. Plus, it's fun. I still don't have a proper reflow setup here, you know? I don't do it enough. Like, I just, you know, either do the drag solder or, you know, because keeping paste in the fridge and stuff, I don't even have a fridge here at the lab. Right. Right. Really? Oh, you don't drink beer. That's why. No, I don't drink beer. So, you know. So, I can't."
+  },
+  {
+   "episode": 170,
+   "episode_title": "What defines an engineer? - Job Judging Jeremiad",
+   "episode_url": "https://theamphour.com/170-what-defines-an-engineer-job-judging-jeremiad/",
+   "guest": null,
+   "stem": "0170-what-defines-an-engineer-job-judging-jeremiad",
+   "paragraph_index": 284,
+   "depth": "opinion",
+   "speaker_raw": "SPEAKER_01",
+   "speaker_repaired": "SPEAKER_01",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "You're going to burn a couple boards first, too, and then you figure it out. Right. You know, just don't put your production level board in when you're starting out. Right, when you're first learning this thing, but, you know.",
+   "context_before": "Yeah, yeah. Just a cheap stopwatch put on top. You press the button and it dings when you, and you walk over to it and you press stop, you know? Because it's going to have a gradual ramp up anyway, which is going to be, you know, near enough. I mean, it doesn't match the exact profile, but, yeah.",
+   "context_after": "No, these things are generally pretty good. It's actually, you know, they're pretty good in terms of, once again, if you get the convection type, because they're very, you know, because they're hard to go over temperature, because they, you know, the sensor in it is sensing the circulated air, you know, so they have less hot spots inside and stuff like that.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah, yeah. Just a cheap stopwatch put on top. You press the button and it dings when you, and you walk over to it and you press stop, you know? Because it's going to have a gradual ramp up anyway, which is going to be, you know, near enough. I mean, it doesn't match the exact profile, but, yeah. You're going to burn a couple boards first, too, and then you figure it out. Right. You know, just don't put your production level board in when you're starting out. Right, when you're first learning this thing, but, you know. No, these things are generally pretty good. It's actually, you know, they're pretty good in terms of, once again, if you get the convection type, because they're very, you know, because they're hard to go over temperature, because they, you know, the sensor in it is sensing the circulated air, you know, so they have less hot spots inside and stuff like that."
+  },
+  {
+   "episode": 176,
+   "episode_title": "Funding New/Manufacturing Old Projects - Radical Robotic Requisition",
+   "episode_url": "https://theamphour.com/176-funding-newmanufacturing-old-projects-radical-robotic-requisition/",
+   "guest": null,
+   "stem": "0176-funding-newmanufacturing-old-projects-radical-robotic-requisition",
+   "paragraph_index": 249,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Right. I, you know, I was just looking at my hand built, the one I've got in the Kickstarter video is the hand, my hand soldered prototype, right? And, you know, the soldering quality just looks shit, you know, compared, there's nothing beats a nice reflowed board. Yeah. You know, just the quality is, you know, I could really, you know, if I did it under the microscope and I really took my time and paid attention, yeah, I can get decent quality boards that approach the quality.",
+   "context_before": "rious, I mean, you're not getting too serious because you still have, you're not, you're not having like solder mask or anything like that and you can have leakage problems. But, you know, if you're getting into serious components, you're not going to get anything bigger than an SOIC. You know, you're not going to get the package type that you really need because first off, they just don't make them as much as they used to. And second off, you know, there's all the parasitic effects of, you know, like if you go to dip package, you get tons more lead inductance than everything else in there too. And so, uh, and cost and yada, yada, yada. So it's great for that kind of thing. I still haven't tried that on my CNC machine. I needed to do that, but, uh, yeah, another, another on the to-do list.",
+   "context_after": "Right.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "rious, I mean, you're not getting too serious because you still have, you're not, you're not having like solder mask or anything like that and you can have leakage problems. But, you know, if you're getting into serious components, you're not going to get anything bigger than an SOIC. You know, you're not going to get the package type that you really need because first off, they just don't make them as much as they used to. And second off, you know, there's all the parasitic effects of, you know, like if you go to dip package, you get tons more lead inductance than everything else in there too. And so, uh, and cost and yada, yada, yada. So it's great for that kind of thing. I still haven't tried that on my CNC machine. I needed to do that, but, uh, yeah, another, another on the to-do list. Right. I, you know, I was just looking at my hand built, the one I've got in the Kickstarter video is the hand, my hand soldered prototype, right? And, you know, the soldering quality just looks shit, you know, compared, there's nothing beats a nice reflowed board. Yeah. You know, just the quality is, you know, I could really, you know, if I did it under the microscope and I really took my time and paid attention, yeah, I can get decent quality boards that approach the quality. Right."
+  },
+  {
+   "episode": 182,
+   "episode_title": "Manufacturing By Wire And Skipping Testing - Calefacient Cuculine Cash",
+   "episode_url": "https://theamphour.com/182-manufacturing-by-wire-and-skipping-testing-calefacient-cuculine-cash/",
+   "guest": null,
+   "stem": "0182-manufacturing-by-wire-and-skipping-testing-calefacient-cuculine-cash",
+   "paragraph_index": 128,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Oh, that worked okay. I had the odd one that, you know, didn't take. It's not easy to, you know, because you want to set your oven so that, you know, a minimal amount of heat possible to do the job, right? Because you don't want to cook your parts, right? That's always the fear of the homemaker.",
+   "context_before": "Any surprises while you were doing your reflow? I mean, how's that process been going for you?",
+   "context_after": "Especially when the board is part of the case, right? You can't just hide it by putting it inside the entire enclosure.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Any surprises while you were doing your reflow? I mean, how's that process been going for you? Oh, that worked okay. I had the odd one that, you know, didn't take. It's not easy to, you know, because you want to set your oven so that, you know, a minimal amount of heat possible to do the job, right? Because you don't want to cook your parts, right? That's always the fear of the homemaker. Especially when the board is part of the case, right? You can't just hide it by putting it inside the entire enclosure."
+  },
+  {
+   "episode": 184,
+   "episode_title": "Chris Becomes Self Employed - Quixotic Quitting Quaere",
+   "episode_url": "https://theamphour.com/184-chris-becomes-self-employed-quixotic-quitting-quaere/",
+   "guest": null,
+   "stem": "0184-chris-becomes-self-employed-quixotic-quitting-quaere",
+   "paragraph_index": 95,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Yeah, so, so basically you get over there, you, you get tours around and stuff, but then you actually sit with people at the, the ones who, like, can, like, do reflow on cell phones and, like, do, like, this high, high-precision soldering stuff. They'll actually, they're actually going to have classes with these, with these people, and, obviously, you know, you get all the cultural side of things, too, you get all the good food and everything like that, but this is, this looks like a really interesting thing, actually going and sitting with people and learning how to, you know, like, reballing FPGAs, right? Not FPGAs, but PGA parts.",
+   "context_before": "Yeah, it's, I've heard about it, yeah. I love it.",
+   "context_after": "I'd love to go there, yes. I know, that would be really cool. And it's probably not going to be mil-spec training, folks, it's going to be Shenzhen market training, you know? Just get the job done with, with the lowest cost tool possible, you know? Yeah, right. And just a buttload of experience, you know?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah, it's, I've heard about it, yeah. I love it. Yeah, so, so basically you get over there, you, you get tours around and stuff, but then you actually sit with people at the, the ones who, like, can, like, do reflow on cell phones and, like, do, like, this high, high-precision soldering stuff. They'll actually, they're actually going to have classes with these, with these people, and, obviously, you know, you get all the cultural side of things, too, you get all the good food and everything like that, but this is, this looks like a really interesting thing, actually going and sitting with people and learning how to, you know, like, reballing FPGAs, right? Not FPGAs, but PGA parts. I'd love to go there, yes. I know, that would be really cool. And it's probably not going to be mil-spec training, folks, it's going to be Shenzhen market training, you know? Just get the job done with, with the lowest cost tool possible, you know? Yeah, right. And just a buttload of experience, you know?"
+  },
+  {
+   "episode": 195,
+   "episode_title": "Guns and Mobile Labs - Nuanced Nomadic Non-essentials",
+   "episode_url": "https://theamphour.com/195-guns-and-mobile-labs-nuanced-nomadic-non-essentials/",
+   "guest": null,
+   "stem": "0195-guns-and-mobile-labs-nuanced-nomadic-non-essentials",
+   "paragraph_index": 350,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "that wouldn't work because the idea was that it didn't stick to the stem right so you you use a stencil to basically it didn't stick stencil all the balls and then you know you heat it up and then they form up into little little tiny balls of solder yeah and there's something about not sticking to the stencil and that was just like right i don't even i would never try this right so uh but yeah apparently like 40 people went to the the thing and and and ian said uh they're they might try and do it again in the future and i'd i'd love to do that that'd be cool as",
+   "context_before": "there's well there's gel based so no",
+   "context_after": "hell oh yeah yeah that'd be awesome",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "there's well there's gel based so no that wouldn't work because the idea was that it didn't stick to the stem right so you you use a stencil to basically it didn't stick stencil all the balls and then you know you heat it up and then they form up into little little tiny balls of solder yeah and there's something about not sticking to the stencil and that was just like right i don't even i would never try this right so uh but yeah apparently like 40 people went to the the thing and and and ian said uh they're they might try and do it again in the future and i'd i'd love to do that that'd be cool as hell oh yeah yeah that'd be awesome"
+  },
+  {
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "guest": "Colin Karpfinger",
+   "stem": "0226-an-interview-with-colin-karpfinger-blendling-bean-brio",
+   "paragraph_index": 173,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "solder-paste-reflow"
+   ],
+   "paragraph_text": "So you just reflow square pads. So they're not like a ball array. Right. It's not like a ball based system. It's just square pads. Then you just put the solder paste down and it reflows. Yep. Yeah. This is on the module you're talking about, Dave? Sorry. The module. Yeah. Yeah. Yeah. Yeah. Yeah. Sorry. Yes. Yes. This is the module.",
+   "context_before": "Yep. That's how you, um, that's how you attach it to your board. So it's really optimized for size, you know? So, um, by putting the pads underneath.",
+   "context_after": "So we're able to actually do it. Um, you know, hobbies can do it with a hot plate or a, a toaster oven or what have you, but, um, yeah, it's a little harder to inspect, you know, cause you obviously you can't see underneath it.",
+   "context_before_speaker": "Colin",
+   "context_after_speaker": "Colin",
+   "text": "Yep. That's how you, um, that's how you attach it to your board. So it's really optimized for size, you know? So, um, by putting the pads underneath. So you just reflow square pads. So they're not like a ball array. Right. It's not like a ball based system. It's just square pads. Then you just put the solder paste down and it reflows. Yep. Yeah. This is on the module you're talking about, Dave? Sorry. The module. Yeah. Yeah. Yeah. Yeah. Yeah. Sorry. Yes. Yes. This is the module. So we're able to actually do it. Um, you know, hobbies can do it with a hot plate or a, a toaster oven or what have you, but, um, yeah, it's a little harder to inspect, you know, cause you obviously you can't see underneath it."
+  },
+  {
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "guest": "Colin Karpfinger",
+   "stem": "0226-an-interview-with-colin-karpfinger-blendling-bean-brio",
+   "paragraph_index": 174,
+   "depth": "explains",
+   "speaker_raw": "Colin",
+   "speaker_repaired": "Colin",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "So we're able to actually do it. Um, you know, hobbies can do it with a hot plate or a, a toaster oven or what have you, but, um, yeah, it's a little harder to inspect, you know, cause you obviously you can't see underneath it.",
+   "context_before": "So you just reflow square pads. So they're not like a ball array. Right. It's not like a ball based system. It's just square pads. Then you just put the solder paste down and it reflows. Yep. Yeah. This is on the module you're talking about, Dave? Sorry. The module. Yeah. Yeah. Yeah. Yeah. Yeah. Sorry. Yes. Yes. This is the module.",
+   "context_after": "Well, it's practically impossible to inspect. Yes.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "So you just reflow square pads. So they're not like a ball array. Right. It's not like a ball based system. It's just square pads. Then you just put the solder paste down and it reflows. Yep. Yeah. This is on the module you're talking about, Dave? Sorry. The module. Yeah. Yeah. Yeah. Yeah. Yeah. Sorry. Yes. Yes. This is the module. So we're able to actually do it. Um, you know, hobbies can do it with a hot plate or a, a toaster oven or what have you, but, um, yeah, it's a little harder to inspect, you know, cause you obviously you can't see underneath it. Well, it's practically impossible to inspect. Yes."
+  },
+  {
+   "episode": 233,
+   "episode_title": "Glass and Gongkai GSM - Unzymotic Ursidae Upbuilding",
+   "episode_url": "https://theamphour.com/233-glass-and-gongkai-gsm-unzymotic-ursidae-upbuilding/",
+   "guest": null,
+   "stem": "0233-glass-and-gongkai-gsm-unzymotic-ursidae-upbuilding",
+   "paragraph_index": 303,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "still even when you reflow you don't have you don't have the the solder mask then to kind of help guide it along you know you basically just relying on the flux of the of the you've got to have the",
+   "context_before": "than I know I'm gonna hand assemble it and it's usually not gonna have that many parts on it you know so right right like yeah it's yeah and solder paste is nice but then you",
+   "context_after": "right tool for the job you know and here it is you know let's change it to a you know you put the syringe and then it goes down that dispenses a bit of solder paste on there it's like no like why just give me my board and I'll hand solder it you know by the time you set up the machine to do the solder paste you could have hand sold the board all right",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "than I know I'm gonna hand assemble it and it's usually not gonna have that many parts on it you know so right right like yeah it's yeah and solder paste is nice but then you still even when you reflow you don't have you don't have the the solder mask then to kind of help guide it along you know you basically just relying on the flux of the of the you've got to have the right tool for the job you know and here it is you know let's change it to a you know you put the syringe and then it goes down that dispenses a bit of solder paste on there it's like no like why just give me my board and I'll hand solder it you know by the time you set up the machine to do the solder paste you could have hand sold the board all right"
+  },
+  {
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "guest": "Joe and Mark Garrison",
+   "stem": "0237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay",
+   "paragraph_index": 157,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "The amount of pace, the surface tension, all that, the surface tension of the paste. Cause then people don't realize that solder has a, a surface tension. So when it starts to reflow, it pulls on that part. And if that part like an, you know, an O2, O1 doesn't have much mass, then it can just flip it. Yeah.",
+   "context_before": "and paste placement, all that other stuff too, right? I mean like that's, yeah, exactly. Yeah.",
+   "context_after": "So the idea is that, that both sides, um, uh, liquefy at the same time.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Joe Garrison",
+   "text": "and paste placement, all that other stuff too, right? I mean like that's, yeah, exactly. Yeah. The amount of pace, the surface tension, all that, the surface tension of the paste. Cause then people don't realize that solder has a, a surface tension. So when it starts to reflow, it pulls on that part. And if that part like an, you know, an O2, O1 doesn't have much mass, then it can just flip it. Yeah. So the idea is that, that both sides, um, uh, liquefy at the same time."
+  },
+  {
+   "episode": 239,
+   "episode_title": "An Interview with Colin O'Flynn - Aspirated Adamantine Attacks",
+   "episode_url": "https://theamphour.com/239-an-interview-with-colin-oflynn-aspirated-adamantine-attacks/",
+   "guest": "Colin O'Flynn",
+   "stem": "0239-an-interview-with-colin-oflynn-aspirated-adamantine-attacks",
+   "paragraph_index": 234,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "We had that at Altium, right? We were having our stuff made in Shanghai. And one of the assemblers substituted a header connector, you know, one of these surface-mount header connectors, right? So, we got these boards back and all these connectors were all melted. And all the pins were all at weird angles because the plastic they used in these headers was just so crap. That was actually chocolate. Yeah. Yeah. And I've got a photo of this, you know, just totally distorted connector after it went through the reflow process, you know. And, oh, it's just, yeah, thank you very much for that. Yeah. Unbelievable. Yep. So, some of the parts aren't just fake. They're, like, just totally crap. You know, they won't even survive a simple reflow, you know, basic stuff like that. Crazy. Oh, yeah. Hand solder, they will survive just fine, you know, because you're only heating up a single pin at a time, you know, the whole thing doesn't have time to come up to temperature and all that sort of jazz. So, it survives just fine, but not whack them through a reflow and it's gonski. Let that be a lesson to you, folks.",
+   "context_before": "It just doesn't feel as nice. So, it's like, yeah. Yeah. It's good for prototype and, I don't know, if you send them critical parts or stuff like that, that's been pretty successful, actually, for smaller runs.",
+   "context_after": "Yeah. Well, I had one board, too, come back with all of the, I think it was, like, the 10 nanofarad decoupling capacitors were inductors. Oh, nice. That was tricky to power it up, right? Oh, no.",
+   "context_before_speaker": "Colin O'Flynn",
+   "context_after_speaker": "Colin O'Flynn",
+   "text": "It just doesn't feel as nice. So, it's like, yeah. Yeah. It's good for prototype and, I don't know, if you send them critical parts or stuff like that, that's been pretty successful, actually, for smaller runs. We had that at Altium, right? We were having our stuff made in Shanghai. And one of the assemblers substituted a header connector, you know, one of these surface-mount header connectors, right? So, we got these boards back and all these connectors were all melted. And all the pins were all at weird angles because the plastic they used in these headers was just so crap. That was actually chocolate. Yeah. Yeah. And I've got a photo of this, you know, just totally distorted connector after it went through the reflow process, you know. And, oh, it's just, yeah, thank you very much for that. Yeah. Unbelievable. Yep. So, some of the parts aren't just fake. They're, like, just totally crap. You know, they won't even survive a simple reflow, you know, basic stuff like that. Crazy. Oh, yeah. Hand solder, they will survive just fine, you know, because you're only heating up a single pin at a time, you know, the whole thing doesn't have time to come up to temperature and all that sort of jazz. So, it survives just fine, but not whack them through a reflow and it's gonski. Let that be a lesson to you, folks. Yeah. Well, I had one board, too, come back with all of the, I think it was, like, the 10 nanofarad decoupling capacitors were inductors. Oh, nice. That was tricky to power it up, right? Oh, no."
+  },
+  {
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "guest": "Chris Church and Parker Doman",
+   "stem": "0243-an-interview-with-macrofab-macro-manufacturing-mechanization",
+   "paragraph_index": 157,
+   "depth": "explains",
+   "speaker_raw": "Chris Church",
+   "speaker_repaired": "Chris Church",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "It's going to depend on which processes those jobs have. Because the pick and place, say, if we're doing a lot of chip parts, I mean, like leaded chip parts, that can slow down quite a bit while it's validating those. But if it's a whole bunch of resistors and passives, it moves pretty fast. But it's going to depend on the mix of the job. Sometimes just going through the reflow of it is the slowest part of the process.",
+   "context_before": "What is the bottleneck? Is the bottleneck? Because I assume that the bottleneck is like just the manual handling and dicking around and things like that. It's not actually the speed of the machine. I would be, especially if you're doing lots of, like if you've got 10 different jobs to do today, I don't think the speed of the machine would come into it, right?",
+   "context_after": "Ah, yeah.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "What is the bottleneck? Is the bottleneck? Because I assume that the bottleneck is like just the manual handling and dicking around and things like that. It's not actually the speed of the machine. I would be, especially if you're doing lots of, like if you've got 10 different jobs to do today, I don't think the speed of the machine would come into it, right? It's going to depend on which processes those jobs have. Because the pick and place, say, if we're doing a lot of chip parts, I mean, like leaded chip parts, that can slow down quite a bit while it's validating those. But if it's a whole bunch of resistors and passives, it moves pretty fast. But it's going to depend on the mix of the job. Sometimes just going through the reflow of it is the slowest part of the process. Ah, yeah."
+  },
+  {
+   "episode": 255,
+   "episode_title": "Inspirations and Aspirations - Recanting Rocket Rationale",
+   "episode_url": "https://theamphour.com/255-inspirations-and-aspirations-recanting-rocket-rationale/",
+   "guest": null,
+   "stem": "0255-inspirations-and-aspirations-recanting-rocket-rationale",
+   "paragraph_index": 329,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Did I tell you two weeks ago, I finally started, you know, I really don't do reflow ever. I know that you've, you've done some videos of reflow. Yeah.",
+   "context_before": "No, you need some concrete dirty factory somewhere.",
+   "context_after": "That's right. You, you did your first reflow.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "No, you need some concrete dirty factory somewhere. Did I tell you two weeks ago, I finally started, you know, I really don't do reflow ever. I know that you've, you've done some videos of reflow. Yeah. That's right. You, you did your first reflow."
+  },
+  {
+   "episode": 255,
+   "episode_title": "Inspirations and Aspirations - Recanting Rocket Rationale",
+   "episode_url": "https://theamphour.com/255-inspirations-and-aspirations-recanting-rocket-rationale/",
+   "guest": null,
+   "stem": "0255-inspirations-and-aspirations-recanting-rocket-rationale",
+   "paragraph_index": 331,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Yeah. Yeah. Finally got some stencils and stuff like that. And it's just going good. I mean, like, but it's like, but it's still a super micro level, right? I mean, these are the capton stencils. These are, you know, hot play style reflow kind of thing. It's nothing. Right. And, you know, if I tried to scale up, then yeah. Okay. That changes things real quick. Right. But then I might go to a, you know, a small batch or a macro fab or circuit hub or something like that. And, and I think, I think one of the things that I'm learning as I get older is paying for things, like, I think for a long time I was like, oh, I don't want to pay for stuff.",
+   "context_before": "That's right. You, you did your first reflow.",
+   "context_after": "Right.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "That's right. You, you did your first reflow. Yeah. Yeah. Finally got some stencils and stuff like that. And it's just going good. I mean, like, but it's like, but it's still a super micro level, right? I mean, these are the capton stencils. These are, you know, hot play style reflow kind of thing. It's nothing. Right. And, you know, if I tried to scale up, then yeah. Okay. That changes things real quick. Right. But then I might go to a, you know, a small batch or a macro fab or circuit hub or something like that. And, and I think, I think one of the things that I'm learning as I get older is paying for things, like, I think for a long time I was like, oh, I don't want to pay for stuff. Right."
+  },
+  {
+   "episode": 256,
+   "episode_title": "Is This A Show?",
+   "episode_url": "https://theamphour.com/256-is-this-a-show/",
+   "guest": "Alicia White and Chris White",
+   "stem": "0256-is-this-a-show",
+   "paragraph_index": 315,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "I think all these years, too, like, you just got to try. I mean, some of this stuff, you just got to try it, right? I mean, like, I think that's true a lot of program language is, personally, I just did a reflow in my home lab for the first time ever. I don't know if you guys have ever done that on, like, a hot plate. It turned out to be pretty simple. But once you do it, you know, it's scary until you do it. So you got to just kind of jump in.",
+   "context_before": "This sort of thing kills me. Every day I go, geez, I'd love to do a video on that. But, like, I just can't. I can't produce 10 videos a week. It's physically impossible, you know? Yeah. It just, it takes time to produce content. I'd love to be able to just, you know, rattle. I should just, you know, leave the live camera on 24 hours a day and just have a live, you know, Truman Show type channel or something where I just keep talking, you know? But it's, yeah, no, it's a very poor way to disseminate, you know, information. And stuff. But, yeah, I see so much stuff I want to try and not teach.",
+   "context_after": "That's very true. Yeah. We had a listener offer to help us learn Altium, Philip. And it was a very nice offer. And it made me had to admit that I have lots of things I want to learn. And that isn't highest on my list this week. Right.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Elecia White",
+   "text": "This sort of thing kills me. Every day I go, geez, I'd love to do a video on that. But, like, I just can't. I can't produce 10 videos a week. It's physically impossible, you know? Yeah. It just, it takes time to produce content. I'd love to be able to just, you know, rattle. I should just, you know, leave the live camera on 24 hours a day and just have a live, you know, Truman Show type channel or something where I just keep talking, you know? But it's, yeah, no, it's a very poor way to disseminate, you know, information. And stuff. But, yeah, I see so much stuff I want to try and not teach. I think all these years, too, like, you just got to try. I mean, some of this stuff, you just got to try it, right? I mean, like, I think that's true a lot of program language is, personally, I just did a reflow in my home lab for the first time ever. I don't know if you guys have ever done that on, like, a hot plate. It turned out to be pretty simple. But once you do it, you know, it's scary until you do it. So you got to just kind of jump in. That's very true. Yeah. We had a listener offer to help us learn Altium, Philip. And it was a very nice offer. And it made me had to admit that I have lots of things I want to learn. And that isn't highest on my list this week. Right."
+  },
+  {
+   "episode": 260,
+   "episode_title": "An interview with Ariel Briner of Cartesian Co",
+   "episode_url": "https://theamphour.com/260-an-interview-with-ariel-briner-of-cartesian-co/",
+   "guest": "Ariel Briner",
+   "stem": "0260-an-interview-with-ariel-briner-of-cartesian-co",
+   "paragraph_index": 302,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Ariel Briner",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "It works. Oh, yeah. Of course. You can solder. Yeah. Reflow works really well. And you can use normal lead or lead-free solder. Although, I find that lead works a little bit better. As always. Always works better. Always works better. Yeah. Okay. And you can actually reflow. I agree with everyone. Yeah.",
+   "context_before": "Because if we don't get to this point and we actually do finish on this, I'm going to actually be sad. Did you mention that you can solder this too? Did you mention that part or did I just miss that? Yeah. Yeah. Yeah. No. Yeah. We can. Yeah.",
+   "context_after": "And you can reflow onto paper as well. Yes. Yes. So, we've got some videos on our blog.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Dave Jones",
+   "text": "Because if we don't get to this point and we actually do finish on this, I'm going to actually be sad. Did you mention that you can solder this too? Did you mention that part or did I just miss that? Yeah. Yeah. Yeah. No. Yeah. We can. Yeah. It works. Oh, yeah. Of course. You can solder. Yeah. Reflow works really well. And you can use normal lead or lead-free solder. Although, I find that lead works a little bit better. As always. Always works better. Always works better. Yeah. Okay. And you can actually reflow. I agree with everyone. Yeah. And you can reflow onto paper as well. Yes. Yes. So, we've got some videos on our blog."
+  },
+  {
+   "episode": 273,
+   "episode_title": "Part Choice Triathlon",
+   "episode_url": "https://theamphour.com/273-part-choice-triathlon/",
+   "guest": null,
+   "stem": "0273-part-choice-triathlon",
+   "paragraph_index": 150,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Yeah. Yeah. Well, especially for things like, so have you done much, uh, stenciling, stuff like that? Stenciling. This is like a solder paste stencils. Oh, right. I've done a few. Yeah. Yeah. I mean like that kind of stuff. Like if you just, if you need one real quick, like I've been, I've been meaning to assemble a board, but I keep forgetting to send out for the stencil and like I could do it by just, you know, like dabbing. So you end up hand soldering the damn thing. Well, not even hand soldering, but just like dabbing on solder paste and then kind of mushing it together. And it's like, it works, but I've already had this board before and it bridges like crazy when I, when I reflow it. So really I should get a stencil, but I've just been, I keep, like I said, I just keep forgetting. Yeah. Yeah. And having a laser cutter. I mean like, so like, like I've used Osh stencils before and I really liked that service. It's a great service. Um, and I think. But you've got to wait for it. Right. Exactly. And it's, it's actually pretty fast too. I mean, like it's a couple of days, but it's.",
+   "context_before": "But if you need to use a laser cutter or something, you're. Yeah. Grabbing the keys and off you go.",
+   "context_after": "But still it's a couple of days. It's a couple of days.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "But if you need to use a laser cutter or something, you're. Yeah. Grabbing the keys and off you go. Yeah. Yeah. Well, especially for things like, so have you done much, uh, stenciling, stuff like that? Stenciling. This is like a solder paste stencils. Oh, right. I've done a few. Yeah. Yeah. I mean like that kind of stuff. Like if you just, if you need one real quick, like I've been, I've been meaning to assemble a board, but I keep forgetting to send out for the stencil and like I could do it by just, you know, like dabbing. So you end up hand soldering the damn thing. Well, not even hand soldering, but just like dabbing on solder paste and then kind of mushing it together. And it's like, it works, but I've already had this board before and it bridges like crazy when I, when I reflow it. So really I should get a stencil, but I've just been, I keep, like I said, I just keep forgetting. Yeah. Yeah. And having a laser cutter. I mean like, so like, like I've used Osh stencils before and I really liked that service. It's a great service. Um, and I think. But you've got to wait for it. Right. Exactly. And it's, it's actually pretty fast too. I mean, like it's a couple of days, but it's. But still it's a couple of days. It's a couple of days."
+  },
+  {
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "guest": "Jonathan Hirschman",
+   "stem": "0299-an-interview-with-jonathan-hirschman-of-pcbng",
+   "paragraph_index": 193,
+   "depth": "explains",
+   "speaker_raw": "Jonathan Hirschman Of Pcb",
+   "speaker_repaired": "Jonathan Hirschman",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Because otherwise they're going to get tombstoning. They're going to get billboards. They're going to get all kinds of funny gymnastics during reflux.",
+   "context_before": "Interesting.",
+   "context_after": "What's billboarding? Is that when it goes on the side?",
+   "context_before_speaker": "Jonathan Hirschman",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Interesting. Because otherwise they're going to get tombstoning. They're going to get billboards. They're going to get all kinds of funny gymnastics during reflux. What's billboarding? Is that when it goes on the side?"
+  },
+  {
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "guest": "Jonathan Hirschman",
+   "stem": "0299-an-interview-with-jonathan-hirschman-of-pcbng",
+   "paragraph_index": 197,
+   "depth": "explains",
+   "speaker_raw": "Jonathan Hirschman Of Pcb",
+   "speaker_repaired": "Jonathan Hirschman",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Yep. And actually we've actually seen the strange phenomenon where \u2013 I can't begin to tell you how this is happening, but we've seen passives that actually flip over during reflux. No.",
+   "context_before": "I've never heard that.",
+   "context_after": "Oh, I think \u2013 yeah. I think I've seen that once. Yes.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Dave Jones",
+   "text": "I've never heard that. Yep. And actually we've actually seen the strange phenomenon where \u2013 I can't begin to tell you how this is happening, but we've seen passives that actually flip over during reflux. No. Oh, I think \u2013 yeah. I think I've seen that once. Yes."
+  },
+  {
+   "episode": 319,
+   "episode_title": "Photon Rich, Cash Poor",
+   "episode_url": "https://theamphour.com/319-photon-rich-cash-poor/",
+   "guest": null,
+   "stem": "0319-photon-rich-cash-poor",
+   "paragraph_index": 139,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "You can pick and place and reflow them. Yes. Yes, it is actually possible to reflow them. Or, because they're holes, the holes are the same size as your 0.1-inch pinheaders, you can plug pin it, you can solder pinheaders to them as well.",
+   "context_before": "Because you can actually pick and place it, right?",
+   "context_after": "Right, right.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Because you can actually pick and place it, right? You can pick and place and reflow them. Yes. Yes, it is actually possible to reflow them. Or, because they're holes, the holes are the same size as your 0.1-inch pinheaders, you can plug pin it, you can solder pinheaders to them as well. Right, right."
+  },
+  {
+   "episode": 320,
+   "episode_title": "An Interview with Brent of OSHstencils",
+   "episode_url": "https://theamphour.com/320-an-interview-with-brent-of-oshstencils/",
+   "guest": "Brent",
+   "stem": "0320-an-interview-with-brent-of-oshstencils",
+   "paragraph_index": 16,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Yep. Okay. Yep. And ironically, that particular project was my first dabbling into reflow, right? And so I didn't even have a history of doing reflow. And so that's why sort of the light bulb came on was because I realized as a first-time reflower that this cost just didn't make a lot of sense to me for a hobby project. And so I started investigating, you know, alternatives.",
+   "context_before": "So those were capped on, though?",
+   "context_after": "Yeah. Okay. Well, that's good. I mean, and that's how it happens, too, right? Especially when you start getting into projects with, like I said at the top of the show, like the smaller and smaller pitch, it really becomes more critical. You know, even with the dabbing, the paste on kind of stuff, that can get pretty tedious pretty fast.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So those were capped on, though? Yep. Okay. Yep. And ironically, that particular project was my first dabbling into reflow, right? And so I didn't even have a history of doing reflow. And so that's why sort of the light bulb came on was because I realized as a first-time reflower that this cost just didn't make a lot of sense to me for a hobby project. And so I started investigating, you know, alternatives. Yeah. Okay. Well, that's good. I mean, and that's how it happens, too, right? Especially when you start getting into projects with, like I said at the top of the show, like the smaller and smaller pitch, it really becomes more critical. You know, even with the dabbing, the paste on kind of stuff, that can get pretty tedious pretty fast."
+  },
+  {
+   "episode": 320,
+   "episode_title": "An Interview with Brent of OSHstencils",
+   "episode_url": "https://theamphour.com/320-an-interview-with-brent-of-oshstencils/",
+   "guest": "Brent",
+   "stem": "0320-an-interview-with-brent-of-oshstencils",
+   "paragraph_index": 132,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "So, um, but yeah, if you, if you have expensive components or a lot of ultra precision, really, really small components, you know, don't make the investment. You're going to, you're going to make it up in the end. You're going to have a much better reflow experience. You're probably going to get it right, uh, out the gate.",
+   "context_before": "I never heard anyone say, I've never heard anyone say sock. Yeah. I'm going to start saying that, but I've never heard. I was like, why are people soldering socks? That doesn't make any sense.",
+   "context_after": "More likely to get a bunch of money anyways. Right. Exactly. You know, like you're probably used to, like, you're probably paying for $50 chips. Like why not pay for a stencil too?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "I never heard anyone say, I've never heard anyone say sock. Yeah. I'm going to start saying that, but I've never heard. I was like, why are people soldering socks? That doesn't make any sense. So, um, but yeah, if you, if you have expensive components or a lot of ultra precision, really, really small components, you know, don't make the investment. You're going to, you're going to make it up in the end. You're going to have a much better reflow experience. You're probably going to get it right, uh, out the gate. More likely to get a bunch of money anyways. Right. Exactly. You know, like you're probably used to, like, you're probably paying for $50 chips. Like why not pay for a stencil too?"
+  },
+  {
+   "episode": 341,
+   "episode_title": "All the way with DLJ",
+   "episode_url": "https://theamphour.com/341-all-the-way-with-dlj/",
+   "guest": null,
+   "stem": "0341-all-the-way-with-dlj",
+   "paragraph_index": 390,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Right. Well, and that's the same thing that my friend recommended for, um, those board milling machines. It's like, if you want to have one, that's fine, but you better have the guy or, well, or the girl, like, right. So, to, to be doing that all the time. That's all they're doing. Yeah. And nobody else touches it, you know? Yep. And, uh, and that's kind of the problem with these shared spaces in general, but, but even beyond that, right? So, say, no, you have someone sitting there, but you think about the cost of like someone loading up a full machine, right? Obviously just the usual assembly stuff. Right. I was like, you know, we could hire a tech for like 30 to 40 bucks. I was rewatching Akiba's, uh, Hackaday Supercon thing. And he was talking about, there's this placement service in, obviously it was Shenzhen, but it was like a placement service in Shenzhen where, you know, they, they buy the stencil and they just, you know, they put together five boards and they'll reflow it, right? Right. And they're all oven. But it's just, you're paying someone just to do that all day long. And you can get three to five boards out of it and, but pay them for a day's wage. It's probably still going to be cheaper than getting it all set up and all that stuff. Of course it is. Yeah.",
+   "context_before": "Oh, right. Okay. Because I was going to say, you need somebody who actually runs it. You can't have any bloody, you know, Tom, Dick and Harry coming up and having a go. Oh, of course. Oh my God. Oh yeah. A place machine. Right.",
+   "context_after": "It's going to be order of magnitude cheaper.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Oh, right. Okay. Because I was going to say, you need somebody who actually runs it. You can't have any bloody, you know, Tom, Dick and Harry coming up and having a go. Oh, of course. Oh my God. Oh yeah. A place machine. Right. Right. Well, and that's the same thing that my friend recommended for, um, those board milling machines. It's like, if you want to have one, that's fine, but you better have the guy or, well, or the girl, like, right. So, to, to be doing that all the time. That's all they're doing. Yeah. And nobody else touches it, you know? Yep. And, uh, and that's kind of the problem with these shared spaces in general, but, but even beyond that, right? So, say, no, you have someone sitting there, but you think about the cost of like someone loading up a full machine, right? Obviously just the usual assembly stuff. Right. I was like, you know, we could hire a tech for like 30 to 40 bucks. I was rewatching Akiba's, uh, Hackaday Supercon thing. And he was talking about, there's this placement service in, obviously it was Shenzhen, but it was like a placement service in Shenzhen where, you know, they, they buy the stencil and they just, you know, they put together five boards and they'll reflow it, right? Right. And they're all oven. But it's just, you're paying someone just to do that all day long. And you can get three to five boards out of it and, but pay them for a day's wage. It's probably still going to be cheaper than getting it all set up and all that stuff. Of course it is. Yeah. It's going to be order of magnitude cheaper."
+  },
+  {
+   "episode": 367,
+   "episode_title": "Not Reely An Issue",
+   "episode_url": "https://theamphour.com/367-not-reely-an-issue/",
+   "guest": null,
+   "stem": "0367-not-reely-an-issue",
+   "paragraph_index": 340,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "You did reflow, didn't you? So that's easier than...",
+   "context_before": "I did them by eye, actually. Yeah. Okay. Yep. Yeah. Because, like we've talked about on here before, right? So I forget what the mag thing that you have.",
+   "context_after": "Yes, I did that by eye.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "I did them by eye, actually. Yeah. Okay. Yep. Yeah. Because, like we've talked about on here before, right? So I forget what the mag thing that you have. You did reflow, didn't you? So that's easier than... Yes, I did that by eye."
+  },
+  {
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "guest": "Luke Valenty",
+   "stem": "0395-an-interview-with-luke-valenty",
+   "paragraph_index": 185,
+   "depth": "explains",
+   "speaker_raw": "FPGAs",
+   "speaker_repaired": "Luke Valenty",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Uh, I had a lot of fun doing it. That, that helped. That motivation really helped. That's good. So I was, so I was able to escape a bunch of IO for the board and the power and it worked actually, which kind of blew my mind. I was really, this is the first BGI I had ever done. I was able to assemble some myself. I could hardly believe it. Um, but for the B, for the BX board, I wanted more IOs. Um, that's something that really bothered me. So what I did to get more IOs out is I took the outer pads of the BGA and I squished them down to 0.1 millimeter and then I elongated them. So now there's some, they're like, Oh, okay. 0.35 by 0.1 millimeter. So they have about the same surface area and, um, they're going to be able to grab the, the balls and, and be able to wick them on and, and, and reflow. So, and I was able to get a lot more IOs out. I was really happy with it. Um, and so I ordered some. Are you, are your files online",
+   "context_before": "Oh, wow. I had seen it on, uh, software into hardware, huh? You are, you are, I am impressed. I'm always impressed with people with you, like you who just go for it. You know, it's awesome.",
+   "context_after": "anywhere?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Oh, wow. I had seen it on, uh, software into hardware, huh? You are, you are, I am impressed. I'm always impressed with people with you, like you who just go for it. You know, it's awesome. Uh, I had a lot of fun doing it. That, that helped. That motivation really helped. That's good. So I was, so I was able to escape a bunch of IO for the board and the power and it worked actually, which kind of blew my mind. I was really, this is the first BGI I had ever done. I was able to assemble some myself. I could hardly believe it. Um, but for the B, for the BX board, I wanted more IOs. Um, that's something that really bothered me. So what I did to get more IOs out is I took the outer pads of the BGA and I squished them down to 0.1 millimeter and then I elongated them. So now there's some, they're like, Oh, okay. 0.35 by 0.1 millimeter. So they have about the same surface area and, um, they're going to be able to grab the, the balls and, and be able to wick them on and, and, and reflow. So, and I was able to get a lot more IOs out. I was really happy with it. Um, and so I ordered some. Are you, are your files online anywhere?"
+  },
+  {
+   "episode": 408,
+   "episode_title": "Tronnort Software Rises Again!",
+   "episode_url": "https://theamphour.com/408-tronnort-software-rises-again/",
+   "guest": null,
+   "stem": "0408-tronnort-software-rises-again",
+   "paragraph_index": 69,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Oh, for really long blink delay. No, for, um, uh, no, for charge storage for like a CMOS battery backup and stuff like that in our products. But so instead of using a battery or a, or a more traditional super cap, which is in a, you know, a leaded through, you know, through hole, you know, type round circular package and stuff like that. This is just a 1206 compatible, uh, you know, reflow compatible, uh, pick and place machine compatible. Oh, nice. Okay. Yeah. So you just drop it in as one of the other surface mount parts and Bob's your uncle, you know? Great. Yeah. Very nice.",
+   "context_before": "So just for like really, really long blink delay or just for charge storage?",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "So just for like really, really long blink delay or just for charge storage? Oh, for really long blink delay. No, for, um, uh, no, for charge storage for like a CMOS battery backup and stuff like that in our products. But so instead of using a battery or a, or a more traditional super cap, which is in a, you know, a leaded through, you know, through hole, you know, type round circular package and stuff like that. This is just a 1206 compatible, uh, you know, reflow compatible, uh, pick and place machine compatible. Oh, nice. Okay. Yeah. So you just drop it in as one of the other surface mount parts and Bob's your uncle, you know? Great. Yeah. Very nice. Yeah."
+  },
+  {
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "guest": "Chris Denney",
+   "stem": "0411-an-interview-with-chris-denney",
+   "paragraph_index": 221,
+   "depth": "explains",
+   "speaker_raw": "Chris Denney",
+   "speaker_repaired": "Chris Denney",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "And it, and it says can only experience one reflow. Right. And so he puts it on the bottom side of the board with all his other chips and then he puts all his big inductors and aluminum, uh, capacitors and all these other heavy things that are going to fall off during secondary reflow. And so we got to glue all those things down.",
+   "context_before": "Cellular. Yeah.",
+   "context_after": "Yeah. So they don't fall off. I always think about that when I, when I see the glue layer on KiCad, uh, I always think about like, Oh yeah, I remember that. You know, it used to be the, the glue layers were more common as parts were heavier, right? 12.06 components are more likely to fall off. They don't fall off. They don't fall off. When they were big caps or whatever. Anyways, uh, I used to work with glue layers and not a big fan, but it sucks when you have to use glue.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Cellular. Yeah. And it, and it says can only experience one reflow. Right. And so he puts it on the bottom side of the board with all his other chips and then he puts all his big inductors and aluminum, uh, capacitors and all these other heavy things that are going to fall off during secondary reflow. And so we got to glue all those things down. Yeah. So they don't fall off. I always think about that when I, when I see the glue layer on KiCad, uh, I always think about like, Oh yeah, I remember that. You know, it used to be the, the glue layers were more common as parts were heavier, right? 12.06 components are more likely to fall off. They don't fall off. They don't fall off. When they were big caps or whatever. Anyways, uh, I used to work with glue layers and not a big fan, but it sucks when you have to use glue."
+  },
+  {
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "guest": "Mike Harrison",
+   "stem": "0412-3-cent-micros-and-1000s-of-leds",
+   "paragraph_index": 133,
+   "depth": "explains",
+   "speaker_raw": "Mike Harrison",
+   "speaker_repaired": "Mike Harrison",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "I've only found this one place that will actually do that as a finished board. So, I don't know if maybe they've just made up jigs or something. So, obviously, it's really floppy so that \u2013 Oh, they're super flexible, aren't they? But the nice thing is, unlike my last stuff, is literally you can just tape it down to a bit of standard FR4 with capstone tape, pick and place and reflow it as if it was an ordinary PCB. Yeah. You don't have to use a vacuum bed or anything exotic like that because it wants to stay flat. Exactly. Whereas the capstone stuff wants to curl up as soon as you look at it and you've got attention and so on.",
+   "context_before": "It is the pre-prig. I've done that before. It's stock stuff. They order these pre-prigs, and they have them in stock. They use them for people who don't know to build up the multi-layer boards.",
+   "context_after": "Yep. Yeah, they're great. The thin PCBs are fantastic. But, yeah, as you said, yeah, you've got to find a manufacturer who's willing to just give you that pre-prig as a finished board.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "It is the pre-prig. I've done that before. It's stock stuff. They order these pre-prigs, and they have them in stock. They use them for people who don't know to build up the multi-layer boards. I've only found this one place that will actually do that as a finished board. So, I don't know if maybe they've just made up jigs or something. So, obviously, it's really floppy so that \u2013 Oh, they're super flexible, aren't they? But the nice thing is, unlike my last stuff, is literally you can just tape it down to a bit of standard FR4 with capstone tape, pick and place and reflow it as if it was an ordinary PCB. Yeah. You don't have to use a vacuum bed or anything exotic like that because it wants to stay flat. Exactly. Whereas the capstone stuff wants to curl up as soon as you look at it and you've got attention and so on. Yep. Yeah, they're great. The thin PCBs are fantastic. But, yeah, as you said, yeah, you've got to find a manufacturer who's willing to just give you that pre-prig as a finished board."
+  },
+  {
+   "episode": 415,
+   "episode_title": "Ergs Per Second",
+   "episode_url": "https://theamphour.com/415-ergs-per-second/",
+   "guest": null,
+   "stem": "0415-ergs-per-second",
+   "paragraph_index": 83,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Now I'm talking about the combo. Now I'm talking about the combo. Like, a lot of people think that, you know, you either have a flex PCB or you have a rigid PCB. But, you know, I don't know. Maybe the majority of flex technology out there is actually as interconnects between rigid boards. So, I'm not sure if you've, you know, played with those, you know, where you actually get flex and rigid in the same board. So, you get... You effectively might get two boards, right? Two rigid boards, and then they're joined by a sandwiched flexible connector. So, then you can fold the boards back on each other without having an extra... Without having the expense of an extra connector and ribbon cable, you know, flat flex ribbon cable and all that sort of jazz, right? And all the reliability and cost issues which go along with having that extra connector and that extra ribbon cable. You can just order your two rigid boards joined, sandwiched with a flex connector, which is in the inner layers of the board, which actually joins the two boards together. That's awesome. So, it's a board interconnect system, and then you just fold them, and that's how, you know, they... You open, as I said, like open any modern complex... Not even modern. This dates back to the 70s, 80s, where, you know, like inside a camera where, you know, the form factor is everything, and they've got to put all these little rigid boards in there and stuff like that. I mean, it's always going to be easier to pick and place and reflow a rigid board. So, you know, it's like, yeah, you can put your stuff straight on flex, but it's harder. So, you know... Right.",
+   "context_before": "So, now you're talking about flex PCBs, not necessarily... Well, no.",
+   "context_after": "You might need something below it or something to stiffen it up, you're saying, or what?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So, now you're talking about flex PCBs, not necessarily... Well, no. Now I'm talking about the combo. Now I'm talking about the combo. Like, a lot of people think that, you know, you either have a flex PCB or you have a rigid PCB. But, you know, I don't know. Maybe the majority of flex technology out there is actually as interconnects between rigid boards. So, I'm not sure if you've, you know, played with those, you know, where you actually get flex and rigid in the same board. So, you get... You effectively might get two boards, right? Two rigid boards, and then they're joined by a sandwiched flexible connector. So, then you can fold the boards back on each other without having an extra... Without having the expense of an extra connector and ribbon cable, you know, flat flex ribbon cable and all that sort of jazz, right? And all the reliability and cost issues which go along with having that extra connector and that extra ribbon cable. You can just order your two rigid boards joined, sandwiched with a flex connector, which is in the inner layers of the board, which actually joins the two boards together. That's awesome. So, it's a board interconnect system, and then you just fold them, and that's how, you know, they... You open, as I said, like open any modern complex... Not even modern. This dates back to the 70s, 80s, where, you know, like inside a camera where, you know, the form factor is everything, and they've got to put all these little rigid boards in there and stuff like that. I mean, it's always going to be easier to pick and place and reflow a rigid board. So, you know, it's like, yeah, you can put your stuff straight on flex, but it's harder. So, you know... Right. You might need something below it or something to stiffen it up, you're saying, or what?"
+  },
+  {
+   "episode": 427,
+   "episode_title": "An Interview with Maarten Engelen",
+   "episode_url": "https://theamphour.com/427-an-interview-with-maarten-engelen/",
+   "guest": "Maarten Engelen",
+   "stem": "0427-an-interview-with-maarten-engelen",
+   "paragraph_index": 107,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "You can reflow it and put it on your... Yeah.",
+   "context_before": "Yeah, it's like an SMD component.",
+   "context_after": "Got it, okay. And then the antenna is included for the... Is it included for that 40 euro or is it extra?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah, it's like an SMD component. You can reflow it and put it on your... Yeah. Got it, okay. And then the antenna is included for the... Is it included for that 40 euro or is it extra?"
+  },
+  {
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "guest": "Mike Grover",
+   "stem": "the-amp-hour-454-mike-grover",
+   "paragraph_index": 141,
+   "depth": "explains",
+   "speaker_raw": "Mike Grover Mg",
+   "speaker_repaired": "Mike Grover",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Yeah. So it's a little bit easier on reflow then too. You can kind of give them more heat shock.",
+   "context_before": "There's variances there. But yeah, so the other reason with FR-4, it's also, so with the thickness, it seems to be way more commonly available. I'm sourcing from like eBay and Amazon, mostly eBay. Yeah. And that's, it's all FR-4. Oh, okay. And I guess, you know, because it's just a fab that's like cranking out probably blank boards. Yeah. They're probably just chopping up copper clad stuff. Right. Which makes sense. I mean, that's going to be more available. Right. And it's, you know, of course, more heat resistant. The adhesive that, you know, holds the copper to the substrate seems more robust.",
+   "context_after": "Yeah. Granted, when I had issues there, it was because I was using like a really cheap reflow station. And despite setting it to like 240, 220, the FR-4 a few times actually blackened. Oh, yeah. Yeah. So I'm guessing it wasn't quite accurate in terms of its heat output. Yeah.",
+   "context_before_speaker": "Mike Grover",
+   "context_after_speaker": "Mike Grover",
+   "text": "There's variances there. But yeah, so the other reason with FR-4, it's also, so with the thickness, it seems to be way more commonly available. I'm sourcing from like eBay and Amazon, mostly eBay. Yeah. And that's, it's all FR-4. Oh, okay. And I guess, you know, because it's just a fab that's like cranking out probably blank boards. Yeah. They're probably just chopping up copper clad stuff. Right. Which makes sense. I mean, that's going to be more available. Right. And it's, you know, of course, more heat resistant. The adhesive that, you know, holds the copper to the substrate seems more robust. Yeah. So it's a little bit easier on reflow then too. You can kind of give them more heat shock. Yeah. Granted, when I had issues there, it was because I was using like a really cheap reflow station. And despite setting it to like 240, 220, the FR-4 a few times actually blackened. Oh, yeah. Yeah. So I'm guessing it wasn't quite accurate in terms of its heat output. Yeah."
+  },
+  {
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "guest": "Mike Grover",
+   "stem": "the-amp-hour-454-mike-grover",
+   "paragraph_index": 172,
+   "depth": "explains",
+   "speaker_raw": "AT-Tinny's",
+   "speaker_repaired": "Mike Grover",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "So there's that layer. Right. Um, but yeah, I was, uh, using, um, a very amber liquid inside of a tiny, I think it was a one mill syringe, one milliliter syringe, uh, a very tiny one, uh, to dispense the flux. But basically the concept here was really, really sloppy solder paste applied to a board. You put the components on, put a bent spoon over a candle. Now, in this case, the bent was to prop up the spoon over the candle. Right, right. I'm not quite hot. But, uh, um, so yeah, that, uh, that allowed reflow and it worked.",
+   "context_before": "So that was the, uh, that was the theme of the video effectively. Yep. So, you know, not saying we're promoting it. It was just meant to be attention. Right. I mean, if you happen to know what that is, it'll, yeah.",
+   "context_after": "Yeah. That's great. It was, I mean, it's just, I think it's, and like you said, I mean, you said that the people kind of looked at that, obviously it was an attention grabbing video, but then it was like, no, no, no. Hardware is actually accessible and you can do these things. And I really liked that. Yeah, exactly.",
+   "context_before_speaker": "Mike Grover",
+   "context_after_speaker": "Mike Grover",
+   "text": "So that was the, uh, that was the theme of the video effectively. Yep. So, you know, not saying we're promoting it. It was just meant to be attention. Right. I mean, if you happen to know what that is, it'll, yeah. So there's that layer. Right. Um, but yeah, I was, uh, using, um, a very amber liquid inside of a tiny, I think it was a one mill syringe, one milliliter syringe, uh, a very tiny one, uh, to dispense the flux. But basically the concept here was really, really sloppy solder paste applied to a board. You put the components on, put a bent spoon over a candle. Now, in this case, the bent was to prop up the spoon over the candle. Right, right. I'm not quite hot. But, uh, um, so yeah, that, uh, that allowed reflow and it worked. Yeah. That's great. It was, I mean, it's just, I think it's, and like you said, I mean, you said that the people kind of looked at that, obviously it was an attention grabbing video, but then it was like, no, no, no. Hardware is actually accessible and you can do these things. And I really liked that. Yeah, exactly."
+  },
+  {
+   "episode": 486,
+   "episode_title": "Medical Kits, They're The Future",
+   "episode_url": "https://theamphour.com/486-medical-kits-theyre-the-future/",
+   "guest": null,
+   "stem": "0486-medical-kits-theyre-the-future",
+   "paragraph_index": 137,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Right. And I, I, I was in a bad spot for a lot of that stuff. I was using old paste and it just kept burning me, you know, not burning like that. I mean, it, uh, it just kept having really bad reflow and it just looked really, really bad and, you know, bad conductivity and stuff like that. So.",
+   "context_before": "I just don't use it enough, you know, so I've got some in the fridge, but it's probably expired by now. Every time I go to use it, like it's, it's just expired. It's like, Oh God. Yeah. You can use expired paste. It's not like, you know, but it becomes less and less effective.",
+   "context_after": "Right.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "I just don't use it enough, you know, so I've got some in the fridge, but it's probably expired by now. Every time I go to use it, like it's, it's just expired. It's like, Oh God. Yeah. You can use expired paste. It's not like, you know, but it becomes less and less effective. Right. And I, I, I was in a bad spot for a lot of that stuff. I was using old paste and it just kept burning me, you know, not burning like that. I mean, it, uh, it just kept having really bad reflow and it just looked really, really bad and, you know, bad conductivity and stuff like that. So. Right."
+  },
+  {
+   "episode": 486,
+   "episode_title": "Medical Kits, They're The Future",
+   "episode_url": "https://theamphour.com/486-medical-kits-theyre-the-future/",
+   "guest": null,
+   "stem": "0486-medical-kits-theyre-the-future",
+   "paragraph_index": 157,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "And, and that's going to vary. If you've got like a two ounce copper board, right? For example, it's going to take longer. If you've got larger thermal mass components, it's going to take longer. If you've got a mix, one of the horrible things is having a mix of large, really large thermal mass components and really small thermal mass components, because, Ooh, it's almost worth only putting through like the low thermal or like either doing a two pass thing or actually just hand soldering the large thermal mass components, you know, because they require such a long soaking time that you're going to damage the smaller thermal mass components.",
+   "context_before": "Yeah.",
+   "context_after": "Yep. Yeah. It's, there's an art in doing this properly. And yeah.",
+   "context_before_speaker": "Speaker ?",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah. And, and that's going to vary. If you've got like a two ounce copper board, right? For example, it's going to take longer. If you've got larger thermal mass components, it's going to take longer. If you've got a mix, one of the horrible things is having a mix of large, really large thermal mass components and really small thermal mass components, because, Ooh, it's almost worth only putting through like the low thermal or like either doing a two pass thing or actually just hand soldering the large thermal mass components, you know, because they require such a long soaking time that you're going to damage the smaller thermal mass components. Yep. Yeah. It's, there's an art in doing this properly. And yeah."
+  },
+  {
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "guest": "Tim Ansell",
+   "stem": "0501-discussing-the-open-source-pdk-with-tim-ansell",
+   "paragraph_index": 158,
+   "depth": "explains",
+   "speaker_raw": "Sean",
+   "speaker_repaired": "Tim Ansell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core",
+    "neighbor:qfn"
+   ],
+   "concepts": [
+    "qfn",
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Basically, it turns out, uh, when things at that size, uh, solder surface tension is magic. Um, I'm sure people have seen this with, you know, resistors. If you get the resistor pretty much anywhere generally in the vicinity, it just kind of snaps into place. Um, wafer chip scale packages will do that as well. You basically get them mostly aligned and then surface tension sucks them right into being perfectly aligned. Right. Uh, whereas like QFNs always have that giant ground pad that is super hard to, um, you know, heat up enough that the, um, solder reflows correctly.",
+   "context_before": "Yeah. That is consistent with what I've heard as well.",
+   "context_after": "Right. Well, if you put too much solder there too, then it's like swimming in that sea of center pad solder. And then you might have one side that's higher than another and yada, yada, yada. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. That is consistent with what I've heard as well. Basically, it turns out, uh, when things at that size, uh, solder surface tension is magic. Um, I'm sure people have seen this with, you know, resistors. If you get the resistor pretty much anywhere generally in the vicinity, it just kind of snaps into place. Um, wafer chip scale packages will do that as well. You basically get them mostly aligned and then surface tension sucks them right into being perfectly aligned. Right. Uh, whereas like QFNs always have that giant ground pad that is super hard to, um, you know, heat up enough that the, um, solder reflows correctly. Right. Well, if you put too much solder there too, then it's like swimming in that sea of center pad solder. And then you might have one side that's higher than another and yada, yada, yada. Yeah."
+  },
+  {
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "guest": "Tim Ansell",
+   "stem": "0501-discussing-the-open-source-pdk-with-tim-ansell",
+   "paragraph_index": 159,
+   "depth": "explains",
+   "speaker_raw": "Tim Ans",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "neighbor:qfn",
+   "concept_sources": [
+    "neighbor:qfn"
+   ],
+   "concepts": [
+    "qfn"
+   ],
+   "paragraph_text": "Right. Well, if you put too much solder there too, then it's like swimming in that sea of center pad solder. And then you might have one side that's higher than another and yada, yada, yada. Yeah.",
+   "context_before": "Basically, it turns out, uh, when things at that size, uh, solder surface tension is magic. Um, I'm sure people have seen this with, you know, resistors. If you get the resistor pretty much anywhere generally in the vicinity, it just kind of snaps into place. Um, wafer chip scale packages will do that as well. You basically get them mostly aligned and then surface tension sucks them right into being perfectly aligned. Right. Uh, whereas like QFNs always have that giant ground pad that is super hard to, um, you know, heat up enough that the, um, solder reflows correctly.",
+   "context_after": "Um, and so I won't even deal with QFN parts anymore. Um, I have, you know, probably a 50% rate failure rate on my ability to, um, solder QFNs and like maybe an 80% success rate on, um, uh, soldering, uh, WCSP packages. And some of that as well is that the package is so small, it doesn't have a lot of thermal mass. So it heats up really quickly as well. Um, and it reflows really easy. Um, I think once people start doing, um, wafer chip scale packages, they quickly, um, stop fearing them.",
+   "context_before_speaker": "Tim Ansell",
+   "context_after_speaker": "Tim Ansell",
+   "text": "Basically, it turns out, uh, when things at that size, uh, solder surface tension is magic. Um, I'm sure people have seen this with, you know, resistors. If you get the resistor pretty much anywhere generally in the vicinity, it just kind of snaps into place. Um, wafer chip scale packages will do that as well. You basically get them mostly aligned and then surface tension sucks them right into being perfectly aligned. Right. Uh, whereas like QFNs always have that giant ground pad that is super hard to, um, you know, heat up enough that the, um, solder reflows correctly. Right. Well, if you put too much solder there too, then it's like swimming in that sea of center pad solder. And then you might have one side that's higher than another and yada, yada, yada. Yeah. Um, and so I won't even deal with QFN parts anymore. Um, I have, you know, probably a 50% rate failure rate on my ability to, um, solder QFNs and like maybe an 80% success rate on, um, uh, soldering, uh, WCSP packages. And some of that as well is that the package is so small, it doesn't have a lot of thermal mass. So it heats up really quickly as well. Um, and it reflows really easy. Um, I think once people start doing, um, wafer chip scale packages, they quickly, um, stop fearing them."
+  },
+  {
+   "episode": 610,
+   "episode_title": "Picking a Pick and Place Pickiness",
+   "episode_url": "https://theamphour.com/610-picking-a-pick-and-place-pickiness/",
+   "guest": null,
+   "stem": "0610-picking-a-pick-and-place-pickiness",
+   "paragraph_index": 20,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "It's definitely pricey. But like, I don't know. Whenever I do, you know, even when I do hand pick-and-place. So this is like why I was excited to talk to him about it. Like, even when I do hand pick-and-place, the thing that always trips me up is bad reflow. Like, I could, you know, if you have good, you know, if you have decent paste application and if you have decent part placement, you know, even hand placement, solder paste takes care of the rest. Yeah, yeah, yeah. But if you have bad profile and like bad reflow. Bad soldering profile. Yeah.",
+   "context_before": "Oh, okay. Yeah. That's kind of what I'd pay for the pick-and-place machine. So that's a bit pricey for a.",
+   "context_after": "I just haven't done enough volume in-house to sort of, you know, it's always kind of worked for me.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Oh, okay. Yeah. That's kind of what I'd pay for the pick-and-place machine. So that's a bit pricey for a. It's definitely pricey. But like, I don't know. Whenever I do, you know, even when I do hand pick-and-place. So this is like why I was excited to talk to him about it. Like, even when I do hand pick-and-place, the thing that always trips me up is bad reflow. Like, I could, you know, if you have good, you know, if you have decent paste application and if you have decent part placement, you know, even hand placement, solder paste takes care of the rest. Yeah, yeah, yeah. But if you have bad profile and like bad reflow. Bad soldering profile. Yeah. I just haven't done enough volume in-house to sort of, you know, it's always kind of worked for me."
+  },
+  {
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "guest": null,
+   "stem": "0613-its-a-keyzermas-miracle",
+   "paragraph_index": 348,
+   "depth": "explains",
+   "speaker_raw": "Jeff Kaiser",
+   "speaker_repaired": "Jeff Keyzer",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "I was talking to somebody at one of our hardware happy hours who uses a toaster oven to do his reflow. And that's also something I don't have. And I was like kind of ashamed that I've never done toaster oven reflow at home. I think that puts me in like a... I'm a little bit behind the curve there. But I've always used a hot plate and hot air and soldering iron. Like I've never... I haven't done enough dual-sided stuff to need the reflow oven, the toaster oven. So I think I need that before I have the pick and place.",
+   "context_before": "That's right.",
+   "context_after": "Well, you don't need dual-sided. You just need regular SMD to do reflow. Just need single-sided, Jobby.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Dave Jones",
+   "text": "That's right. I was talking to somebody at one of our hardware happy hours who uses a toaster oven to do his reflow. And that's also something I don't have. And I was like kind of ashamed that I've never done toaster oven reflow at home. I think that puts me in like a... I'm a little bit behind the curve there. But I've always used a hot plate and hot air and soldering iron. Like I've never... I haven't done enough dual-sided stuff to need the reflow oven, the toaster oven. So I think I need that before I have the pick and place. Well, you don't need dual-sided. You just need regular SMD to do reflow. Just need single-sided, Jobby."
+  },
+  {
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "guest": null,
+   "stem": "0613-its-a-keyzermas-miracle",
+   "paragraph_index": 349,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Well, you don't need dual-sided. You just need regular SMD to do reflow. Just need single-sided, Jobby.",
+   "context_before": "I was talking to somebody at one of our hardware happy hours who uses a toaster oven to do his reflow. And that's also something I don't have. And I was like kind of ashamed that I've never done toaster oven reflow at home. I think that puts me in like a... I'm a little bit behind the curve there. But I've always used a hot plate and hot air and soldering iron. Like I've never... I haven't done enough dual-sided stuff to need the reflow oven, the toaster oven. So I think I need that before I have the pick and place.",
+   "context_after": "Well, but you don't need a toaster oven if you're going to do single-sided because you can just use a hot plate, which is, I think, easier. There's no like air currents to worry about. I think hot plates are easier than... Don't you agree?",
+   "context_before_speaker": "Jeff Keyzer",
+   "context_after_speaker": "Jeff Keyzer",
+   "text": "I was talking to somebody at one of our hardware happy hours who uses a toaster oven to do his reflow. And that's also something I don't have. And I was like kind of ashamed that I've never done toaster oven reflow at home. I think that puts me in like a... I'm a little bit behind the curve there. But I've always used a hot plate and hot air and soldering iron. Like I've never... I haven't done enough dual-sided stuff to need the reflow oven, the toaster oven. So I think I need that before I have the pick and place. Well, you don't need dual-sided. You just need regular SMD to do reflow. Just need single-sided, Jobby. Well, but you don't need a toaster oven if you're going to do single-sided because you can just use a hot plate, which is, I think, easier. There's no like air currents to worry about. I think hot plates are easier than... Don't you agree?"
+  },
+  {
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "guest": null,
+   "stem": "0613-its-a-keyzermas-miracle",
+   "paragraph_index": 352,
+   "depth": "explains",
+   "speaker_raw": "Jeff Kaiser",
+   "speaker_repaired": "Jeff Keyzer",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "They're super controlled. I feel like I can get a hot plate within like a degree. And I mean, yeah, you have the connectivity through the board to consider. But like you just keep inching it up like a degree at a time until you get it to where you want it. But for big, complicated boards, I could see it being a thing. Or if the board has like a lot of vertical, like tall components on it, then yeah. You're going to have like temperature gradients over the components and that could be a problem. But for like short stuff, like SMT, you know, ordinary components, hot plates work. I think hot plates work really, really well. Because you can actually get your microscope on top of it and watch it while it's reflowing, which you can't do. Oh, yeah.",
+   "context_before": "No, I don't think they're as controlled as I even... Oh, they're super controlled.",
+   "context_after": "No, which you can't do in an oven. Yeah, exactly. It's hard to see inside an oven because, you know, you're peering through this little, you know, glass thing on the front. And it's like, oh, I can't see the components in the back. Are they going? Oh, I can't see it. Yeah.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "No, I don't think they're as controlled as I even... Oh, they're super controlled. They're super controlled. I feel like I can get a hot plate within like a degree. And I mean, yeah, you have the connectivity through the board to consider. But like you just keep inching it up like a degree at a time until you get it to where you want it. But for big, complicated boards, I could see it being a thing. Or if the board has like a lot of vertical, like tall components on it, then yeah. You're going to have like temperature gradients over the components and that could be a problem. But for like short stuff, like SMT, you know, ordinary components, hot plates work. I think hot plates work really, really well. Because you can actually get your microscope on top of it and watch it while it's reflowing, which you can't do. Oh, yeah. No, which you can't do in an oven. Yeah, exactly. It's hard to see inside an oven because, you know, you're peering through this little, you know, glass thing on the front. And it's like, oh, I can't see the components in the back. Are they going? Oh, I can't see it. Yeah."
+  },
+  {
+   "episode": 636,
+   "episode_title": "Discovering Cursed Connectors",
+   "episode_url": "https://theamphour.com/636-discovering-cursed-connectors/",
+   "guest": null,
+   "stem": "0636-discovering-cursed-connectors",
+   "paragraph_index": 191,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Yeah. Because if you don't know how a normal reflow machine works, it's a conveyor belt. Your board comes out of your pick and place machine. It goes on the conveyor belt and then it goes through the oven, which usually has five different stages of heating. But anyway, it goes through and then it comes out the other end. And then it's, you know, super hot when it comes out, but it's all timed perfectly so that it's, you know, whereas you can't do that with the hot plate. You've got to physically put it on the hot plate and you've got to physically take it off. So this is a way to do that.",
+   "context_before": "Yeah. Yeah. It's like an automated hot plate. Yeah. Versus like, yeah. Yeah.",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Yeah. It's like an automated hot plate. Yeah. Versus like, yeah. Yeah. Yeah. Because if you don't know how a normal reflow machine works, it's a conveyor belt. Your board comes out of your pick and place machine. It goes on the conveyor belt and then it goes through the oven, which usually has five different stages of heating. But anyway, it goes through and then it comes out the other end. And then it's, you know, super hot when it comes out, but it's all timed perfectly so that it's, you know, whereas you can't do that with the hot plate. You've got to physically put it on the hot plate and you've got to physically take it off. So this is a way to do that. Yeah."
+  },
+  {
+   "episode": 663,
+   "episode_title": "Motors on PCBs with Carl Bugeja",
+   "episode_url": "https://theamphour.com/663-motors-on-pcbs-with-carl-bugeja/",
+   "guest": "Carl Bugeja",
+   "stem": "0663-motors-on-pcbs-with-carl-bugeja",
+   "paragraph_index": 44,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Yeah. The self-soldering was like, the last, the last step. But, before that, I, I tried to build like, a PCB reflowing quad plate, which didn't work. I mean, it worked. There's, there's a lot of people, I'm trying them right now. But, the main conclusion was, that it wouldn't be reusable. So, after like, five times, you, you could see like, the solder mask, the sculler, and stuff like that. There's obviously, when, when the PCB reaches, around 200 degrees Celsius, for example, just enough for the solder to reflow.",
+   "context_before": "the self-soldering circuit, I saw that one.",
+   "context_after": "Just need to start with like, brown solder mask, and then you're, you're set, right? Yeah. I don't see any discoloration. What's the problem here, folks?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "the self-soldering circuit, I saw that one. Yeah. The self-soldering was like, the last, the last step. But, before that, I, I tried to build like, a PCB reflowing quad plate, which didn't work. I mean, it worked. There's, there's a lot of people, I'm trying them right now. But, the main conclusion was, that it wouldn't be reusable. So, after like, five times, you, you could see like, the solder mask, the sculler, and stuff like that. There's obviously, when, when the PCB reaches, around 200 degrees Celsius, for example, just enough for the solder to reflow. Just need to start with like, brown solder mask, and then you're, you're set, right? Yeah. I don't see any discoloration. What's the problem here, folks?"
+  },
+  {
+   "episode": 686,
+   "episode_title": "A Benchtop Pick and Place with Stephen Hawes",
+   "episode_url": "https://theamphour.com/686-a-benchtop-pick-and-place-with-stephen-hawes/",
+   "guest": "Stephen Hawes",
+   "stem": "0686-a-benchtop-pick-and-place-with-stephen-hawes",
+   "paragraph_index": 139,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Um, yeah, I think one of my concerns is that I'm, uh, I've had a lot of bad luck actually with like paste and reflow. Oh, really? Like. Really? Yeah. I don't know. I think it was bad. It was, it was back when I was at M hub. I had, um, I had like just, I don't know. It was like a bad pace. Like, uh, it was like one of those, you know, like the squeegee beds. Yeah. Yeah. And I just did, I did it poorly. And even when I was hand placing on top, it was, it was problematic. So like, obviously it's isolated from the pick and place machine, but there is that concern too, of like kind of the someone to yell at. There is nice to have someone to yell at, but also like, then you have to do the yelling. So.",
+   "context_before": "tuff like that, but you can always, you can change the numbers. Um, and it's pretty conservative with like speed of lumen and all those kinds of calculations. And it will tell you, you know, like I, I legitimately do not want someone to buy that is not going to find it super useful. So I would, if you were a theoretical person emailing sales at opula.io, I would point you here. I'd ask about your boards. I'd ask how important time turnaround time is for you is waiting 10 days to get boards back a huge pain in the butt. Do you mind getting your 24 hour, you know, 48 hour board turn. And then you immediately put them on the lumen. You have boards, you know, a few hours later, fully populated. If that's super valuable to you. Yeah. I think the lumen's awesome and totally checks your use case.",
+   "context_after": "Yeah. There's, there is another, that's, that's what a great way to say it. Yeah. It's like, if you, if you're, you're still bringing it in house, it's your operation, but you also own the whole stack of it.",
+   "context_before_speaker": "Stephen Hawes",
+   "context_after_speaker": "Stephen Hawes",
+   "text": "tuff like that, but you can always, you can change the numbers. Um, and it's pretty conservative with like speed of lumen and all those kinds of calculations. And it will tell you, you know, like I, I legitimately do not want someone to buy that is not going to find it super useful. So I would, if you were a theoretical person emailing sales at opula.io, I would point you here. I'd ask about your boards. I'd ask how important time turnaround time is for you is waiting 10 days to get boards back a huge pain in the butt. Do you mind getting your 24 hour, you know, 48 hour board turn. And then you immediately put them on the lumen. You have boards, you know, a few hours later, fully populated. If that's super valuable to you. Yeah. I think the lumen's awesome and totally checks your use case. Um, yeah, I think one of my concerns is that I'm, uh, I've had a lot of bad luck actually with like paste and reflow. Oh, really? Like. Really? Yeah. I don't know. I think it was bad. It was, it was back when I was at M hub. I had, um, I had like just, I don't know. It was like a bad pace. Like, uh, it was like one of those, you know, like the squeegee beds. Yeah. Yeah. And I just did, I did it poorly. And even when I was hand placing on top, it was, it was problematic. So like, obviously it's isolated from the pick and place machine, but there is that concern too, of like kind of the someone to yell at. There is nice to have someone to yell at, but also like, then you have to do the yelling. So. Yeah. There's, there is another, that's, that's what a great way to say it. Yeah. It's like, if you, if you're, you're still bringing it in house, it's your operation, but you also own the whole stack of it."
+  },
+  {
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "guest": "David Ray",
+   "stem": "0716-electronics-manufacturing-history-with-david-ray",
+   "paragraph_index": 171,
+   "depth": "opinion",
+   "speaker_raw": "David Ray",
+   "speaker_repaired": "David Ray",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "It's like two, you know, it used to be 125. Now it's $200. It used to be $125 a tube. Hmm. And, uh, you could buy it any day of the week. Uh, but it's less likely now, but I, I promise, you know, and I know it's expensive, but like if you're having solder paste issues and you're having reflow issues, go to a frame, stencil and start using GC 10 and it really, it will change things for you.",
+   "context_before": "Hmm.",
+   "context_after": "So is this, um, stencil machine, um, like semi automated and is it, is it in, and in, as in line with, so your boards flow into the stencil machine, you know, the thing, no,",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Hmm. It's like two, you know, it used to be 125. Now it's $200. It used to be $125 a tube. Hmm. And, uh, you could buy it any day of the week. Uh, but it's less likely now, but I, I promise, you know, and I know it's expensive, but like if you're having solder paste issues and you're having reflow issues, go to a frame, stencil and start using GC 10 and it really, it will change things for you. So is this, um, stencil machine, um, like semi automated and is it, is it in, and in, as in line with, so your boards flow into the stencil machine, you know, the thing, no,"
+  },
+  {
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "guest": "David Ray",
+   "stem": "0716-electronics-manufacturing-history-with-david-ray",
+   "paragraph_index": 196,
+   "depth": "explains",
+   "speaker_raw": "David Ray",
+   "speaker_repaired": "David Ray",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Yeah. Yeah. Yeah. If you like, if you don't have your zones quite right, you know, if you don't have a, you can cook off your flux before it even goes into reflow.",
+   "context_before": "And, and, and then there's a lot of material physics in there. Like the solder goes through the, the plastic region it's called, which is a little temperature range where it, you know, changes state and things like, and if that happens too slowly, you know, boom, you get a cold joint, you know, all sorts of things.",
+   "context_after": "Yeah, exactly. So yeah, bit of a fine art. Okay. I'm, I'm surprised you haven't upgraded to any of the cartridge type irons for high thermal mass stuff.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "And, and, and then there's a lot of material physics in there. Like the solder goes through the, the plastic region it's called, which is a little temperature range where it, you know, changes state and things like, and if that happens too slowly, you know, boom, you get a cold joint, you know, all sorts of things. Yeah. Yeah. Yeah. If you like, if you don't have your zones quite right, you know, if you don't have a, you can cook off your flux before it even goes into reflow. Yeah, exactly. So yeah, bit of a fine art. Okay. I'm, I'm surprised you haven't upgraded to any of the cartridge type irons for high thermal mass stuff."
+  },
+  {
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "guest": "David Ray",
+   "stem": "0716-electronics-manufacturing-history-with-david-ray",
+   "paragraph_index": 347,
+   "depth": "explains",
+   "speaker_raw": "David Ray",
+   "speaker_repaired": "David Ray",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "No, we got to feed them, but it is a conveyor and it runs pretty good. And so if anybody's interested in trying to do at home manufacturing or, you know, small shop stuff, the, the solder paste stencil, that is like the foundation of all of it. Right. If you cannot get a good solder paste application, you cannot have a good reflow. It's impossible. Don't even bother.",
+   "context_before": "Are they on the conveyor that comes straight out of the machine? Into the reflow or they manually feed them?",
+   "context_after": "Yep. And it doesn't matter how much you tweak that thermal profile. You're just not going to get it.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Are they on the conveyor that comes straight out of the machine? Into the reflow or they manually feed them? No, we got to feed them, but it is a conveyor and it runs pretty good. And so if anybody's interested in trying to do at home manufacturing or, you know, small shop stuff, the, the solder paste stencil, that is like the foundation of all of it. Right. If you cannot get a good solder paste application, you cannot have a good reflow. It's impossible. Don't even bother. Yep. And it doesn't matter how much you tweak that thermal profile. You're just not going to get it."
+  },
+  {
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "guest": "David Ray",
+   "stem": "0716-electronics-manufacturing-history-with-david-ray",
+   "paragraph_index": 372,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Fantastic. So do you have any issues doing the double sided load parts falling off when it goes through the reflow a second time? Well, no,",
+   "context_before": "Yeah. And expect nothing to return, no obligation. But if you, you know, you can have us do the manufacturing, but again, no obligation.",
+   "context_after": "but that's because we do the DFM review.",
+   "context_before_speaker": "David Ray",
+   "context_after_speaker": "David Ray",
+   "text": "Yeah. And expect nothing to return, no obligation. But if you, you know, you can have us do the manufacturing, but again, no obligation. Fantastic. So do you have any issues doing the double sided load parts falling off when it goes through the reflow a second time? Well, no, but that's because we do the DFM review."
+  },
+  {
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "guest": "David Ray",
+   "stem": "0716-electronics-manufacturing-history-with-david-ray",
+   "paragraph_index": 376,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "reflow-soldering"
+   ],
+   "paragraph_text": "Right. Yeah. Like if you've got like a heavy transformer or your surface mount transformer, you might have to glue that down. That's not going to reflow very well. Anyway, right. Okay. Right. It may not.",
+   "context_before": "That's why I brought that up, you know, and that can happen. And with some parts with the bigger parts, you know, you do those by hand afterwards, maybe, or.",
+   "context_after": "So I mean, you're at least going to have to touch it up. Maybe.",
+   "context_before_speaker": "David Ray",
+   "context_after_speaker": "David Ray",
+   "text": "That's why I brought that up, you know, and that can happen. And with some parts with the bigger parts, you know, you do those by hand afterwards, maybe, or. Right. Yeah. Like if you've got like a heavy transformer or your surface mount transformer, you might have to glue that down. That's not going to reflow very well. Anyway, right. Okay. Right. It may not. So I mean, you're at least going to have to touch it up. Maybe."
+  }
+ ]
+}

@@ -1,0 +1,905 @@
+{
+ "concept": "serial-communication",
+ "name": "Serial Communication",
+ "type": "standard-protocol",
+ "score": 91.38,
+ "rank_by_score": 418,
+ "cluster": {
+  "core": [
+   "serial-communication",
+   "serial-communication-port"
+  ],
+  "children": [
+   "atm",
+   "dmx",
+   "serial-protocol",
+   "signal-strength"
+  ],
+  "neighbors": []
+ },
+ "stats": {
+  "episodes": 52,
+  "mentions": 62,
+  "explains": 26,
+  "opinions": 5,
+  "candidate_episode_count": 35,
+  "candidate_mention_count": 41,
+  "gated_out": 30,
+  "gated_out_by_concept": [
+   [
+    "serial-protocol",
+    10
+   ],
+   [
+    "dmx",
+    8
+   ],
+   [
+    "atm",
+    6
+   ],
+   [
+    "signal-strength",
+    6
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 0,
+  "speakers": [
+   [
+    "Chris Gammell",
+    12
+   ],
+   [
+    "Dave Jones",
+    11
+   ],
+   [
+    "Richard Ginus",
+    2
+   ],
+   [
+    "Philip Frieden",
+    1
+   ],
+   [
+    "Colin",
+    1
+   ],
+   [
+    "John Davis",
+    1
+   ],
+   [
+    "James Bruton",
+    1
+   ],
+   [
+    "Ben Heck",
+    1
+   ],
+   [
+    "Phillip Johnston",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 31
+  },
+  "passages_by_depth": {
+   "explains": 26,
+   "opinion": 5
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 31,
+ "passages": [
+  {
+   "episode": 103,
+   "episode_title": "An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee",
+   "episode_url": "https://theamphour.com/the-amp-hour-103-xenodochial-xilinx-ex-employee/",
+   "guest": "Philip Frieden",
+   "stem": "the-amp-hour-103-xenodochial-xilinx-ex-employee",
+   "paragraph_index": 340,
+   "depth": "explains",
+   "speaker_raw": "Philip Frieden",
+   "speaker_repaired": "Philip Frieden",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "So serial \u2013 okay, but you see it's serial with embedded clock.",
+   "context_before": "Right. And serial communication coming back from it, right? Right. Right.",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. And serial communication coming back from it, right? Right. Right. So serial \u2013 okay, but you see it's serial with embedded clock. Yeah."
+  },
+  {
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "guest": "Mike Harrison",
+   "stem": "the-amp-hour-135-x-ray-examining-xenogogue",
+   "paragraph_index": 233,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Yeah. That's actually the thing I'm doing. That's actually going to be manufactured probably towards the end of this week. The sort of story behind that was we're looking at doing quite a few different installations. It's actually \u2013 again, it's one of those bottom-up things. I found that quite often I think I'll be thumbing through Farnell or whatever and I'll say, oh, that's an interesting chip or an interesting thing. What can I build with it? And sometimes, for example, some of the \u2013 like the white matrix-led stuff, I've just built a few sample panels, took them into the guys I was working with, and they said, oh, that's fun. And they then maybe pitch it to a client, and that ends up like a year later as a project. And this really came about was I saw the microchip PIC 10F322, which is a six-pin device, dirt cheap, like 25p in like 1,000 up. But it's got like interrupts. It's got self-programming. It's got PWM channels. So I actually just started tinkering around with code. LED. Let's see if I can get this thing to firstly accept DMX data, which is basically 250k-bit serial stream, which I could by some devious tricks. Again, this is the code I love writing. Yeah. Yeah. Serial reception at 250k-bits. Yes. And we had the two PWM channels, and I then figured out how to make the numerically controlled oscillators a fake and other PWM channel. And I did a few sort of test pieces. Basically, the concept is that if you want to design some weird, you know, leads in some weird configuration, it's a real pain in the butt. You know, generally, I was using 16-channel drivers. And just all the PCB routing to that, unless it's a really regular shape, takes forever. And if you're doing a one-off job, it's really, really tedious. So the concept of this is it's a PIC, which has got basically a single line of data. So let's say you want to do some really weird-shaped structure. Each chip drives three LEDs, or in this case, one LED. But the thing is, they're all just connecting. You connect them all in parallel. So your PCB routing is like, I've done some four-layer stuff where you literally just cut and paste. There's a few things which, for example, the glasses. That was done on a four-layer board, and it was literally a straight cut-and-paste job on the control. So you've got all these things connected in parallel. I figured out a really neat way to do the addressing. So each PIC knows where it knows.",
+   "context_before": "That's about right. Yeah. There you go. Nick asks, what is the project where you controlled 2,106 LEDs with 2,106 picks?",
+   "context_after": "I was going to say, how do you do the addressing? How do you set it on each PIC without individually programming each PIC?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "That's about right. Yeah. There you go. Nick asks, what is the project where you controlled 2,106 LEDs with 2,106 picks? Yeah. That's actually the thing I'm doing. That's actually going to be manufactured probably towards the end of this week. The sort of story behind that was we're looking at doing quite a few different installations. It's actually \u2013 again, it's one of those bottom-up things. I found that quite often I think I'll be thumbing through Farnell or whatever and I'll say, oh, that's an interesting chip or an interesting thing. What can I build with it? And sometimes, for example, some of the \u2013 like the white matrix-led stuff, I've just built a few sample panels, took them into the guys I was working with, and they said, oh, that's fun. And they then maybe pitch it to a client, and that ends up like a year later as a project. And this really came about was I saw the microchip PIC 10F322, which is a six-pin device, dirt cheap, like 25p in like 1,000 up. But it's got like interrupts. It's got self-programming. It's got PWM channels. So I actually just started tinkering around with code. LED. Let's see if I can get this thing to firstly accept DMX data, which is basically 250k-bit serial stream, which I could by some devious tricks. Again, this is the code I love writing. Yeah. Yeah. Serial reception at 250k-bits. Yes. And we had the two PWM channels, and I then figured out how to make the numerically controlled oscillators a fake and other PWM channel. And I did a few sort of test pieces. Basically, the concept is that if you want to design some weird, you know, leads in some weird configuration, it's a real pain in the butt. You know, generally, I was using 16-channel drivers. And just all the PCB routing to that, unless it's a really regular shape, takes forever. And if you're doing a one-off job, it's really, really tedious. So the concept of this is it's a PIC, which has got basically a single line of data. So let's say you want to do some really weird-shaped structure. Each chip drives three LEDs, or in this case, one LED. But the thing is, they're all just connecting. You connect them all in parallel. So your PCB routing is like, I've done some four-layer stuff where you literally just cut and paste. There's a few things which, for example, the glasses. That was done on a four-layer board, and it was literally a straight cut-and-paste job on the control. So you've got all these things connected in parallel. I figured out a really neat way to do the addressing. So each PIC knows where it knows. I was going to say, how do you do the addressing? How do you set it on each PIC without individually programming each PIC?"
+  },
+  {
+   "episode": 209,
+   "episode_title": "Headless Units and Baseless Batteries - KiCad Kickoff Kopophobia",
+   "episode_url": "https://theamphour.com/209-headless-units-and-baseless-batteries-kicad-kickoff-kopophobia/",
+   "guest": null,
+   "stem": "0209-headless-units-and-baseless-batteries-kicad-kickoff-kopophobia",
+   "paragraph_index": 294,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "one on the chip flexible and you're right yeah and it's a single input right serial input yeah",
+   "context_before": "they have like uh they have three leds a processor and a regulator on the individual rgb driver on each",
+   "context_after": "serial input it's all daisy chain yeah yeah it's cool man it's cool everybody loves blinkies all right look like burning man's coming up you know there's always blinkies there i'm never going to that but uh all right at least i don't think i am yeah i don't know anything else we should talk about this week i don't know there's other stuff that's interesting on this list i think people should check out jack's new uh video about getting names right in firmware that was a good one yeah",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "they have like uh they have three leds a processor and a regulator on the individual rgb driver on each one on the chip flexible and you're right yeah and it's a single input right serial input yeah serial input it's all daisy chain yeah yeah it's cool man it's cool everybody loves blinkies all right look like burning man's coming up you know there's always blinkies there i'm never going to that but uh all right at least i don't think i am yeah i don't know anything else we should talk about this week i don't know there's other stuff that's interesting on this list i think people should check out jack's new uh video about getting names right in firmware that was a good one yeah"
+  },
+  {
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "guest": "Colin Karpfinger",
+   "stem": "0226-an-interview-with-colin-karpfinger-blendling-bean-brio",
+   "paragraph_index": 218,
+   "depth": "explains",
+   "speaker_raw": "Colin",
+   "speaker_repaired": "Colin",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "It's through serial. Okay. And so it, it kind of interacts with the boot, you know, well, there's a lot of commands that we've added, but then also when it reprograms, it just kind of interacts through the boot loader, like you would expect.",
+   "context_before": "So we've been very, very active with that. How does the module actually talk to the, to the, uh, at mega 328? Is it, is it serial or is there a spy?",
+   "context_after": "Okay. Yeah. What I'm mostly wondering about is, so say then, say Dave or I were silly enough to think that we could do Bluetooth and, uh, we bought a module and then wanted to interface it to something else, you know, what are, what are like the, the limits on the update rates? And I mean, can you do other protocols or anything like that when you're actually talking to other chips?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So we've been very, very active with that. How does the module actually talk to the, to the, uh, at mega 328? Is it, is it serial or is there a spy? It's through serial. Okay. And so it, it kind of interacts with the boot, you know, well, there's a lot of commands that we've added, but then also when it reprograms, it just kind of interacts through the boot loader, like you would expect. Okay. Yeah. What I'm mostly wondering about is, so say then, say Dave or I were silly enough to think that we could do Bluetooth and, uh, we bought a module and then wanted to interface it to something else, you know, what are, what are like the, the limits on the update rates? And I mean, can you do other protocols or anything like that when you're actually talking to other chips?"
+  },
+  {
+   "episode": 273,
+   "episode_title": "Part Choice Triathlon",
+   "episode_url": "https://theamphour.com/273-part-choice-triathlon/",
+   "guest": null,
+   "stem": "0273-part-choice-triathlon",
+   "paragraph_index": 540,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Yeah, and then he converted it into a dip, and I've actually seen it at work. It's really fun because, like, so the demo Philip was showing me was basically, like, he put, like, a serial signal into one of the pins, and then he had another chip. And basically he can just create a pipe between pins. And so you had a serial signal coming into one pin, and then it, like, bounced between that chip and the other chip, and then it went out the pin on the other chip. And it's just, like, it seems really, like, that, obviously that was a very simple example, but it's just, like, oh, it's magical. It's magical.",
+   "context_before": "Oh, yes, it's a little dip thing. It's a little dip package.",
+   "context_after": "Magic, yeah, yeah, yeah, yeah. Because, like, if people can't visualize, well, of course you can't visualize it. We haven't told you yet. It's basically a 16-pin dip, 2, 4, 6, 8, yep, 16-pin dip package, tiny little board. So it fits in your breadboard as a regular dip chip. Yeah. And it's got an ARM Cortex-M0 on it plus a Bluetooth low-energy ant.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Oh, yes, it's a little dip thing. It's a little dip package. Yeah, and then he converted it into a dip, and I've actually seen it at work. It's really fun because, like, so the demo Philip was showing me was basically, like, he put, like, a serial signal into one of the pins, and then he had another chip. And basically he can just create a pipe between pins. And so you had a serial signal coming into one pin, and then it, like, bounced between that chip and the other chip, and then it went out the pin on the other chip. And it's just, like, it seems really, like, that, obviously that was a very simple example, but it's just, like, oh, it's magical. It's magical. Magic, yeah, yeah, yeah, yeah. Because, like, if people can't visualize, well, of course you can't visualize it. We haven't told you yet. It's basically a 16-pin dip, 2, 4, 6, 8, yep, 16-pin dip package, tiny little board. So it fits in your breadboard as a regular dip chip. Yeah. And it's got an ARM Cortex-M0 on it plus a Bluetooth low-energy ant."
+  },
+  {
+   "episode": 291,
+   "episode_title": "Artificially Intelligent Party Platform",
+   "episode_url": "https://theamphour.com/291-artificially-intelligent-party-platform/",
+   "guest": null,
+   "stem": "0291-artificially-intelligent-party-platform",
+   "paragraph_index": 138,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Yeah, so what it did is it used to... So it would be like... So there was like 4 to 20 sensors, which you know what those are, right? Yeah. So like 4 to 20 milliamp sensors. 4 to 20 milliamp, yes. Right. And so that's a... So that you don't have to worry about drops and lines and stuff like that. And then HART was this rather slow serial signal that went on top of it. And that's the kind of thing that I think that would be kind of interesting. That's like kind of what you're talking about. Then there was also wireless HART. Kind of like following those same trends. Obviously, those were very, very robust. So it wouldn't need to hopefully be that robust. But, you know, like using that as an example, it's like that stuff has existed in industry for many, many years now. Right. And honestly, I think that the industry stuff is probably the place... That's what I was getting at, is that industries where it actually needs to be connected, either, you know, mesh or cloud-based kind of thing. So, I don't know. I think there's a lot of examples out there. But I think that any kind of acceptance in a home setting needs to be more natural.",
+   "context_before": "I... It rings a bell.",
+   "context_after": "Right.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "I... It rings a bell. Yeah, so what it did is it used to... So it would be like... So there was like 4 to 20 sensors, which you know what those are, right? Yeah. So like 4 to 20 milliamp sensors. 4 to 20 milliamp, yes. Right. And so that's a... So that you don't have to worry about drops and lines and stuff like that. And then HART was this rather slow serial signal that went on top of it. And that's the kind of thing that I think that would be kind of interesting. That's like kind of what you're talking about. Then there was also wireless HART. Kind of like following those same trends. Obviously, those were very, very robust. So it wouldn't need to hopefully be that robust. But, you know, like using that as an example, it's like that stuff has existed in industry for many, many years now. Right. And honestly, I think that the industry stuff is probably the place... That's what I was getting at, is that industries where it actually needs to be connected, either, you know, mesh or cloud-based kind of thing. So, I don't know. I think there's a lot of examples out there. But I think that any kind of acceptance in a home setting needs to be more natural. Right."
+  },
+  {
+   "episode": 351,
+   "episode_title": "The Automation Amish",
+   "episode_url": "https://theamphour.com/351-the-automation-amish/",
+   "guest": null,
+   "stem": "0351-the-automation-amish",
+   "paragraph_index": 27,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "I followed their instructional video to the letter. I followed their instructional guide to the letter. So what's the, uh, what's the, like, just- Like, the first issue was that it doesn't detect the serial ports properly because it generates two serial ports. One's for data and one's for, like, comms and stuff. And then it talks to, like, a, uh, a web-based app, like a cloud-based demo app. And, um-",
+   "context_before": "Got any PebCab going on there? No? No. PebCab?",
+   "context_after": "Oh, I see. So their software guys are all writing JavaScript and their hardware guys are all writing serial terminals. Yeah. Right.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Got any PebCab going on there? No? No. PebCab? I followed their instructional video to the letter. I followed their instructional guide to the letter. So what's the, uh, what's the, like, just- Like, the first issue was that it doesn't detect the serial ports properly because it generates two serial ports. One's for data and one's for, like, comms and stuff. And then it talks to, like, a, uh, a web-based app, like a cloud-based demo app. And, um- Oh, I see. So their software guys are all writing JavaScript and their hardware guys are all writing serial terminals. Yeah. Right."
+  },
+  {
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "guest": null,
+   "stem": "0364-the-endless-y2k",
+   "paragraph_index": 279,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Right. So I'm actually, the board that I'm building is actually meant to be interfaced with this badge too. I guess that's kind of tying it all together. So it, you know, it's just a serial to a cell modem. Surprising. Yeah. But what was it? Shit. What was I going to say? Oh, oh, oh. I was assuming someone was going to put Wi-Fi in this thing. However, watch out if you're doing Wi-Fi. Right. So. Right. Yeah. There's been a kind of, kind of an important thing.",
+   "context_before": "Okay. Yes. Cause he's a pick 32 fan boy.",
+   "context_after": "There has. Yeah. We were about to update the firmware for our router here, but like, it's not a big, like, it's not like someone's going to suddenly hack me right now.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Okay. Yes. Cause he's a pick 32 fan boy. Right. So I'm actually, the board that I'm building is actually meant to be interfaced with this badge too. I guess that's kind of tying it all together. So it, you know, it's just a serial to a cell modem. Surprising. Yeah. But what was it? Shit. What was I going to say? Oh, oh, oh. I was assuming someone was going to put Wi-Fi in this thing. However, watch out if you're doing Wi-Fi. Right. So. Right. Yeah. There's been a kind of, kind of an important thing. There has. Yeah. We were about to update the firmware for our router here, but like, it's not a big, like, it's not like someone's going to suddenly hack me right now."
+  },
+  {
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "guest": "Richard Ginus",
+   "stem": "0376-an-interview-with-richard-ginus",
+   "paragraph_index": 23,
+   "depth": "explains",
+   "speaker_raw": "IoT",
+   "speaker_repaired": "Richard Ginus",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "But they were also always connected to some kind of studio managing system. So, that meant some kind of network. And in the beginning, that was Ethernet. And then when wireless chips became more available to hobbyists, that was also wireless via Wi-Fi. Some kind of... You have those transceiver chips that I would do some FSK, like serial in, serial out kind of stuff.",
+   "context_before": "Okay.",
+   "context_after": "Right. Like wire replacement, basically, kind of stuff.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. But they were also always connected to some kind of studio managing system. So, that meant some kind of network. And in the beginning, that was Ethernet. And then when wireless chips became more available to hobbyists, that was also wireless via Wi-Fi. Some kind of... You have those transceiver chips that I would do some FSK, like serial in, serial out kind of stuff. Right. Like wire replacement, basically, kind of stuff."
+  },
+  {
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "guest": "Richard Ginus",
+   "stem": "0376-an-interview-with-richard-ginus",
+   "paragraph_index": 249,
+   "depth": "explains",
+   "speaker_raw": "IoT",
+   "speaker_repaired": "Richard Ginus",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Yeah. But it's, it's really working very well. As long as we're still using serial connections, then why wouldn't we use the protocols that are working on top of it?",
+   "context_before": "Yeah. I mean, that's what Nokia phone, and stuff used to, I think. So it's, I know it's like network standard interface, interface type stuff, but boy, it's, yeah, it's, it's sticking around.",
+   "context_after": "Sure. Sure. And so are you,",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. I mean, that's what Nokia phone, and stuff used to, I think. So it's, I know it's like network standard interface, interface type stuff, but boy, it's, yeah, it's, it's sticking around. Yeah. But it's, it's really working very well. As long as we're still using serial connections, then why wouldn't we use the protocols that are working on top of it? Sure. Sure. And so are you,"
+  },
+  {
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "guest": "Jason Kridner and Robert Nelson",
+   "stem": "0378-an-interview-with-jason-kridner-and-robert-nelson",
+   "paragraph_index": 356,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "I mean, I guess it's just to a, if you send like a serial command to an I squared C, you're not going to have as many pins. Well, you might have as many pins, but it's just going to look like garbage, right? So. Yes. It looks like garbage. Yeah. So that's the idea is as long as your part doesn't care. And normally no one would ever do that. Right. As long as it, you know, your part doesn't have a self-destruct mode when it sees like bad data, you're probably okay. Right. Yeah.",
+   "context_before": "That was kind of, it's a bad idea. Yeah. Yeah. But that's kind of the idea that went, let's try this and do this. Yeah. And it works. So that's the way it's wired.",
+   "context_after": "And so that's the way the Configure Pin was rich. And it's like, well, all the profiles are enabled and we have control of all the pin functions at the end. So leave them enabled and just change it on the fly.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "That was kind of, it's a bad idea. Yeah. Yeah. But that's kind of the idea that went, let's try this and do this. Yeah. And it works. So that's the way it's wired. I mean, I guess it's just to a, if you send like a serial command to an I squared C, you're not going to have as many pins. Well, you might have as many pins, but it's just going to look like garbage, right? So. Yes. It looks like garbage. Yeah. So that's the idea is as long as your part doesn't care. And normally no one would ever do that. Right. As long as it, you know, your part doesn't have a self-destruct mode when it sees like bad data, you're probably okay. Right. Yeah. And so that's the way the Configure Pin was rich. And it's like, well, all the profiles are enabled and we have control of all the pin functions at the end. So leave them enabled and just change it on the fly."
+  },
+  {
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "guest": "Scott Shawcroft",
+   "stem": "0383-an-interview-with-scott-shawcroft",
+   "paragraph_index": 200,
+   "depth": "explains",
+   "speaker_raw": "Scott Shawcroft",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Right. Well, and I was thinking even with, uh, I mean like this, like you could set how fast the, the serial can actually talk between like the, over the S the single wire debug SWD. Right. Right. You could say it's default four megahertz, you could say a hundred kilohertz and it won't care. Right. But it's, it's gonna, not gonna be able to stream data back as fast or at all really. Right. So, okay. So that, that makes a lot of sense actually. So then, so basically the GDB server is running on your computer. Yep. It's talking through this hardware chip, the SEGGER hardware chip on the J link. Yep. And that's basically translating it to some kind of serial thing. And then it's going in and saying, all right, I know where to talk to in these, through this quasi serial port. It's saying, go to this location, set this, set this, uh, you know, this rant, this weird number. And that's where the code's going to break. Yep. And, uh, and then, and then we can go and poke around inside. Right. Okay. Right. Any idea how it's actually, so it's like, it's like special access into the, into the processor at that point. Right. Yeah.",
+   "context_before": "Yeah. And that, I think that tends to occur if you don't have your entire source code, if your code goes in somewhere that it didn't know it could, like, uh, we have a bootloader on our boards and if you go into the bootloader, but the GDB didn't know about the bootloader that can get tricky. Okay. Okay. Interesting. Yeah. So there are like advanced J links where it does actually stream data back the J trace and all of that high end stuff. But, um, in general, that's not something I use day to day.",
+   "context_after": "Like the debug hardware, if you've ever looked at a diagram for MCU, it's like right next to the actual processor.",
+   "context_before_speaker": "Scott Shawcroft",
+   "context_after_speaker": "Scott Shawcroft",
+   "text": "Yeah. And that, I think that tends to occur if you don't have your entire source code, if your code goes in somewhere that it didn't know it could, like, uh, we have a bootloader on our boards and if you go into the bootloader, but the GDB didn't know about the bootloader that can get tricky. Okay. Okay. Interesting. Yeah. So there are like advanced J links where it does actually stream data back the J trace and all of that high end stuff. But, um, in general, that's not something I use day to day. Right. Well, and I was thinking even with, uh, I mean like this, like you could set how fast the, the serial can actually talk between like the, over the S the single wire debug SWD. Right. Right. You could say it's default four megahertz, you could say a hundred kilohertz and it won't care. Right. But it's, it's gonna, not gonna be able to stream data back as fast or at all really. Right. So, okay. So that, that makes a lot of sense actually. So then, so basically the GDB server is running on your computer. Yep. It's talking through this hardware chip, the SEGGER hardware chip on the J link. Yep. And that's basically translating it to some kind of serial thing. And then it's going in and saying, all right, I know where to talk to in these, through this quasi serial port. It's saying, go to this location, set this, set this, uh, you know, this rant, this weird number. And that's where the code's going to break. Yep. And, uh, and then, and then we can go and poke around inside. Right. Okay. Right. Any idea how it's actually, so it's like, it's like special access into the, into the processor at that point. Right. Yeah. Like the debug hardware, if you've ever looked at a diagram for MCU, it's like right next to the actual processor."
+  },
+  {
+   "episode": 385,
+   "episode_title": "An Interview with John Davis",
+   "episode_url": "https://theamphour.com/385-an-interview-with-john-davis/",
+   "guest": "John Davis",
+   "stem": "0385-an-interview-with-john-davis",
+   "paragraph_index": 178,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "John Davis",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Oh, sure. So mod bus, uh, would be, so the three that I just mentioned are all, um, Ethernet. So if you looked in a control cabinet, you would see a bunch of Ethernet switches and, you know, cat five, six, seven cable. It looks like an IT, uh, you know, room and it all is interchangeable. I mean, there's nothing special about the switches. Like they still use the OSI layer, you know, all that stuff. Um, mod bus, uh, is a serial protocol. Uh, so like RS, yeah. RS 45. Uh, in fact, I think you'd need to be 45 to use mod bus. Uh, could be wrong about that, but yeah.",
+   "context_before": "Yeah. Yeah. So now that is all in the Ethernet stack, or at least of the, the networking stack of like plugging different controllers together and kind of tying node to node to node. Right. But then I also, what's the one mod bus, what's mod bus, like what level is that at?",
+   "context_after": "But you can also have a lot of hardware, kind of like the low level pieces.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Yeah. So now that is all in the Ethernet stack, or at least of the, the networking stack of like plugging different controllers together and kind of tying node to node to node. Right. But then I also, what's the one mod bus, what's mod bus, like what level is that at? Oh, sure. So mod bus, uh, would be, so the three that I just mentioned are all, um, Ethernet. So if you looked in a control cabinet, you would see a bunch of Ethernet switches and, you know, cat five, six, seven cable. It looks like an IT, uh, you know, room and it all is interchangeable. I mean, there's nothing special about the switches. Like they still use the OSI layer, you know, all that stuff. Um, mod bus, uh, is a serial protocol. Uh, so like RS, yeah. RS 45. Uh, in fact, I think you'd need to be 45 to use mod bus. Uh, could be wrong about that, but yeah. But you can also have a lot of hardware, kind of like the low level pieces."
+  },
+  {
+   "episode": 391,
+   "episode_title": "Only A Transmitter",
+   "episode_url": "https://theamphour.com/391-only-a-transmitter/",
+   "guest": null,
+   "stem": "0391-only-a-transmitter",
+   "paragraph_index": 138,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Well, you can either redo the ROM, right? So you can either recompile it and flash, not flash, but actually burn the EEPROM and then put it in with your new programs or whatever, or you can actually go through the joystick port. You can hook the joystick port up to an Arduino, which then bit bangs in serial stuff and they've got an old school loader built into the ROM. So it's like the, oh, you wouldn't remember, but I'm sure lots of our listeners out there will. Right. Back in the day, right? Computers couldn't, you know, they didn't have any hard, hard storage was tape, right? Was the actual cassette tape, right? So you'd, you know, you'd load the program in on the cassette tape and then you'd type it and then you'd do the load command and it's basically the same sort of thing. So you'd load the program and it comes in and a bit bangs it from the Arduino through the joystick port of all things. And then you can load your program in, but once you remove the, but there's no way to store it because it's just stored in the SRAM. So once you remove it, it's gone. So every time you turn your computer back on, you've got to load your program back in from the tape, you know? So it's like, it's kind of like gone too far in the old school direction. Right. Like to the point of it being like, nobody wants to use that anymore. You know, nobody wants to use that system, you know? Yeah. It's like, yeah. Which is a shame because otherwise it was a fun kit. Well, I mean, so what do you think would be better if you had, well, if it had a basic interpreter built in and you can look it up to a PS2 keyboard, you know?",
+   "context_before": "in the review video. Got it. Got it. Yeah. So how do you interface with it? Is it just a serial port?",
+   "context_after": "Well, why, why didn't you just do that from like just a USB to serial converter? Like a, like one of those little plug in $5 jobbies from eBay. Well, you know, you don't even know. Well,",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "in the review video. Got it. Got it. Yeah. So how do you interface with it? Is it just a serial port? Well, you can either redo the ROM, right? So you can either recompile it and flash, not flash, but actually burn the EEPROM and then put it in with your new programs or whatever, or you can actually go through the joystick port. You can hook the joystick port up to an Arduino, which then bit bangs in serial stuff and they've got an old school loader built into the ROM. So it's like the, oh, you wouldn't remember, but I'm sure lots of our listeners out there will. Right. Back in the day, right? Computers couldn't, you know, they didn't have any hard, hard storage was tape, right? Was the actual cassette tape, right? So you'd, you know, you'd load the program in on the cassette tape and then you'd type it and then you'd do the load command and it's basically the same sort of thing. So you'd load the program and it comes in and a bit bangs it from the Arduino through the joystick port of all things. And then you can load your program in, but once you remove the, but there's no way to store it because it's just stored in the SRAM. So once you remove it, it's gone. So every time you turn your computer back on, you've got to load your program back in from the tape, you know? So it's like, it's kind of like gone too far in the old school direction. Right. Like to the point of it being like, nobody wants to use that anymore. You know, nobody wants to use that system, you know? Yeah. It's like, yeah. Which is a shame because otherwise it was a fun kit. Well, I mean, so what do you think would be better if you had, well, if it had a basic interpreter built in and you can look it up to a PS2 keyboard, you know? Well, why, why didn't you just do that from like just a USB to serial converter? Like a, like one of those little plug in $5 jobbies from eBay. Well, you know, you don't even know. Well,"
+  },
+  {
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "guest": "Felix Rusu",
+   "stem": "0398-an-interview-with-felix-rusu",
+   "paragraph_index": 141,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "The most convenient way would probably be a Motino USB, which has an FTDI chip to take care of all the USB translation. So you just plug that into USB on your, could be your PC or it could be your Raspberry Pi. Or if you're more hardcore and you want to just buy a regular Motino with no USB on it, you can just connect, you know, power and TXRX, which is serial, to your Raspberry Pi. And there you go. You have a gateway.",
+   "context_before": "But it sounds like if you then buy that Motino as the gateway, you can then add as many nodes around it as you want it to. Sure. That's kind of the benefit, right? Yeah. Yeah.",
+   "context_after": "And that's what a lot of people are doing is using it to a Raspberry Pi as like the, so it's like extending a Raspberry Pi as another RF module on there. Yes.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "But it sounds like if you then buy that Motino as the gateway, you can then add as many nodes around it as you want it to. Sure. That's kind of the benefit, right? Yeah. Yeah. The most convenient way would probably be a Motino USB, which has an FTDI chip to take care of all the USB translation. So you just plug that into USB on your, could be your PC or it could be your Raspberry Pi. Or if you're more hardcore and you want to just buy a regular Motino with no USB on it, you can just connect, you know, power and TXRX, which is serial, to your Raspberry Pi. And there you go. You have a gateway. And that's what a lot of people are doing is using it to a Raspberry Pi as like the, so it's like extending a Raspberry Pi as another RF module on there. Yes."
+  },
+  {
+   "episode": 408,
+   "episode_title": "Tronnort Software Rises Again!",
+   "episode_url": "https://theamphour.com/408-tronnort-software-rises-again/",
+   "guest": null,
+   "stem": "0408-tronnort-software-rises-again",
+   "paragraph_index": 345,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Serial port needs like a controller and shit, you know, to actually, you know, interpret serial commands and things. Oh, hell no.",
+   "context_before": "I'm sorry I'm younger than you.",
+   "context_after": "Sorry. Yep. Yeah. Okay. Parallel port. My bad. Parallel port. Good luck finding one of those these days.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "I'm sorry I'm younger than you. Serial port needs like a controller and shit, you know, to actually, you know, interpret serial commands and things. Oh, hell no. Sorry. Yep. Yeah. Okay. Parallel port. My bad. Parallel port. Good luck finding one of those these days."
+  },
+  {
+   "episode": 416,
+   "episode_title": "An Interview with James Bruton",
+   "episode_url": "https://theamphour.com/416-an-interview-with-james-bruton/",
+   "guest": "James Bruton",
+   "stem": "0416-an-interview-with-james-bruton",
+   "paragraph_index": 168,
+   "depth": "explains",
+   "speaker_raw": "James Bruton",
+   "speaker_repaired": "James Bruton",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "So I just need to, I've just got another O drive to make a test rig and test the CAN bus stuff that's in beta to see if that works. So basically, at the moment, I've got one master Arduino. And then that sends serial to two slave Arduinos. And that's because I need six serial ports. OK. Because there's six O drives.",
+   "context_before": "Oh, OK, OK.",
+   "context_after": "For those who aren't aware, sorry, what's the advantage of the CAN bus?",
+   "context_before_speaker": "James Bruton",
+   "context_after_speaker": "Dave Jones",
+   "text": "Oh, OK, OK. So I just need to, I've just got another O drive to make a test rig and test the CAN bus stuff that's in beta to see if that works. So basically, at the moment, I've got one master Arduino. And then that sends serial to two slave Arduinos. And that's because I need six serial ports. OK. Because there's six O drives. For those who aren't aware, sorry, what's the advantage of the CAN bus?"
+  },
+  {
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "guest": null,
+   "stem": "0434-use-the-protection-circuit",
+   "paragraph_index": 315,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "No. We're not using high speed. It's incredibly low speed. In fact, we could have used USB 1, right? It's like, it's that low speed. It's like 115K bits. It's like serial. Oh, it's just serial. Serial. It's just serial, basically. Yep. Yep. So it's nothing. We're only using it for its physical robustness and for its power capability.",
+   "context_before": "Oh, it does. Okay. But are you using it in USB 2.0 mode or using the newer higher speed?",
+   "context_after": "Yeah, exactly. And I think that is... That's the other people that I've known who've been doing it. Like I know some people who have built with it and it's for the power stuff. And then the higher speed stuff is not really a concern. It's the... You know, you talked about making that one prototype unit soldering yourself. That's going to be fun. Those connectors are not fine pitch. No, they're paying me off.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Oh, it does. Okay. But are you using it in USB 2.0 mode or using the newer higher speed? No. We're not using high speed. It's incredibly low speed. In fact, we could have used USB 1, right? It's like, it's that low speed. It's like 115K bits. It's like serial. Oh, it's just serial. Serial. It's just serial, basically. Yep. Yep. So it's nothing. We're only using it for its physical robustness and for its power capability. Yeah, exactly. And I think that is... That's the other people that I've known who've been doing it. Like I know some people who have built with it and it's for the power stuff. And then the higher speed stuff is not really a concern. It's the... You know, you talked about making that one prototype unit soldering yourself. That's going to be fun. Those connectors are not fine pitch. No, they're paying me off."
+  },
+  {
+   "episode": 435,
+   "episode_title": "An Interview with Andreas Spiess",
+   "episode_url": "https://theamphour.com/435-an-interview-with-andreas-spiess/",
+   "guest": "Andreas Spiess",
+   "stem": "0435-an-interview-with-andreas-spiess",
+   "paragraph_index": 169,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "I don't. Yeah, exactly. Because if, if we, if we would have called it app store, then you would have, uh, yeah, Apple layers. Yeah, exactly. And, uh, and, uh, and, and, uh, basically, um, it, it, it, it is a platform. So we had a problem that we had, uh, we had a plenty of devices and how do you update them? Because each and every has a different purpose in my, in my household here. And of course needs a different program. And then if you want to update one, you had based over the air, it was not, not easy. Uh, with serial, it was even more complicated. And then, uh, I started to, to have this idea of OTA updates and so on. And then I met one of my viewers who had a similar problem, but even worse because he built a platform for a, for a, a woman, which was nearly blind and lost her, lost her abilities to walk. And then he built, he built, uh, uh, a device with, uh, accelerators and with, uh, feedback, vibration feedback, which helped her basically to find the balance.",
+   "context_before": "Uh, I can, I get app store, but why app story?",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Uh, I can, I get app store, but why app story? I don't. Yeah, exactly. Because if, if we, if we would have called it app store, then you would have, uh, yeah, Apple layers. Yeah, exactly. And, uh, and, uh, and, and, uh, basically, um, it, it, it, it is a platform. So we had a problem that we had, uh, we had a plenty of devices and how do you update them? Because each and every has a different purpose in my, in my household here. And of course needs a different program. And then if you want to update one, you had based over the air, it was not, not easy. Uh, with serial, it was even more complicated. And then, uh, I started to, to have this idea of OTA updates and so on. And then I met one of my viewers who had a similar problem, but even worse because he built a platform for a, for a, a woman, which was nearly blind and lost her, lost her abilities to walk. And then he built, he built, uh, uh, a device with, uh, accelerators and with, uh, feedback, vibration feedback, which helped her basically to find the balance. Yeah."
+  },
+  {
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "guest": "Jesse Vincent",
+   "stem": "0450-stories-from-teardown-2019",
+   "paragraph_index": 66,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "All right. All right. We're back at Teardown 2019. And who am I talking to here? My name is Adrian Studer. And, um, I hack on radios. That's right. Yeah. So you gave a talk today. Actually, right after mine. It was great. Uh, it was reverse engineering. Can you tell us about that real quick? Yeah. So, um, I'm using, like, sub-gigahertz radios for my little Psy projects, which is a ship tracking device. And so, uh, I was always wondering how does radio work on the inside. And, um, so I found, like, a way to get the firmware out of the radio. And so I, like, pulled on the string and found more and more stuff that I thought was interesting. Yeah. And before we go into that, let's hear a little bit about your, um, your product. Because this is sold a lot of these things on Tinder, right? Yeah, it's, it's, uh, I call it, like, my, my little microcontroller project I got out of hand. Um, so it's, uh, AES receiver. So it's a tracking of ships. What's AES stand for? A-I-S. A-I-S, sorry. Yeah. So it's, uh, people are mostly more, are usually more familiar with flight track and flight radar and ADSB. Flight aware 24. Flight aware. And so there's a similar concept for ships where, um, the ships send out their position. And if you have a radio that listens to the right frequency, you can receive the position. Oh. And then there's open source software that everybody, it's not my software, but that everybody uses on their boats to navigate, like, the waterways. And if they have a receiver, they can see the other ships around them. Oh, that's great. And so I built a receiver for that. I don't have a boat. So, uh. Well, you're building the boat fund. I built it, like, I'm kind of, like, train spotter. Uh-huh. Just, like, for ships. Sure, sure. So I'm more, like, interested in tracking ships. Uh-huh. And then I put it up on Tinder and somebody asked me whether I can buy it. And then it escalated from there. Yeah. And you sold a lot of them, though, right? Yeah. A few thousand. Yeah. That's great. That's great. Yeah. Yeah. So, um, what are people using if this software exists, but if they're not using your product, what are they normally using? If they're not using? If they're not using your hardware, what are they normally using? I mean, the software works without it, so it's more like a navigation software for ships. Oh, okay. Okay. So they plan the route where they want to navigate, to see the, like, where there are rocks in the water or where the harbor is, and these kind of things. Yeah. And then there are commercial receivers for a long time. Probably pretty pricey for those. Pretty pricey. At least when I came out, the commercial receiver, a few hundred dollars, and the USB dongle kind of thing, cheap plastic, was maybe a hundred dollars, and I sold mine for $60 on Tindy, because it's kind of a different concept. I kind of lucked into it. There's a lot of less hardware in mind than commercial receivers. Sure. What's kind of in there, roughly? What's some of the stuff that's actually in the block diagram? In the block, in the receiver, it's basically an MCU and a single chip ISM radio, so sub-gigahertz radio. Uh-huh. And it's a pretty simple concept. Just like the MCU tells the radio, listen to this frequency. I get the bits back, and I extract the data. There's no encryption, nothing involved there, so it's pretty straightforward. Uh-huh. And then I spit out a standardized format on the serial port. Ah, nice. And then all software that, like, all navigation software knows that they have to, or they support that format. Uh-huh. So, and then interfaces over USB, or what's actually? Yeah, I use USB, and it's basic, but it's just like a serial over USB. Uh-huh. Um, the software just is a serial port. Oh, great. Um, and then that's basically about it. And you connect to a Raspberry Pi and kind of, like, transmit over the Wi-Fi. Uh-huh. Uh, with your Raspberry Pi, for example, and make, like, use your tablet instead of a PC to navigate. Yeah. That's great. It sounds like a really good, like, like, it's a kind of maker-y project, but it also has, like, a very practical thing, and it has the price advantage, so it sounds like a good mix. Yeah, and I totally locked into it, so it's, as I said, I don't have a boat, so I, it's, it, like, people sometimes ask me, like, what should I do to build something that sells on Tindy? Yeah. And I can't really give them advice. Like, my advice is build something that you want for yourself. Well, I've done boats and people have done airplanes. How about hovercrafts? Yeah. Maybe motorcycles? But it's more, I think it's more about put out there what you're working on. Yeah. And if you have an interesting project, people will find you. Yeah. That's great. I wrote on a forum and basically escalated from there. Yeah, yeah, yeah. Well, and I think finding communities of enthusiasts, too. Yeah. Whatever the enthusiast group is. You know, like, I know people that do, like, camera hardware. Yeah. And other people that do, like, game software and stuff like that. Like, there are, like, I just interviewed Jesse. You talked about otaku, I think it was. Yeah. People who are, like, really, really passionate about things. That helps a lot. Yeah. Okay, so your talk, you were now digging into that ISM band chip. Yeah. Yeah, so it's a bit of a rabbit hole. So my interest is, I always want to know how things work. And if I see that there's, like, another level below what is presented to me, that always catches my interest. I want to know more about it. Using APIs must take a long time for you, then. Yeah, so typically Vendor, if those ISM radios, they provide you a tool where you put in your frequency and, like, what encoding it is. And then they spit out the configuration file. And you're supposed to send, either send that configuration file to the radio or, like, SPI or I2C. Or you get a vendor library that you have to call and then it does its magic. And so at some point I was, like, researching something independent. And I found, oh, there's a command that's called peak and poke, which is not documented. But they gave me the command number for some other reason. Yeah. And then I thought, well, there's a 16-bit address. And instead of trying just the address that the vendor provides you for that special purpose, let's, like, just drive from 0 to 65535. Right, right. See what you get. And then looked at it what I got and put a disassembler to it and saw that it wasn't everything. And then kind of figured out on how to, like, get more out of it. Right. So that's kind of from where it escalated. Right. I think Alvaro is going to be like, hey, I should have been interviewing Adrian. This is reverse engineering. Yeah. I mean, have you done a lot of reverse engineering in the past? I did occasionally. So I did, that's, like, 10 years, 15 years ago, I did, like, a decompiler for obscure scripting language that was compiled for BBS systems. So I did, like, a decompiler for that. So I always like that, like, finding things out that people don't tell me. I also like it that, I also, for example, I don't reverse engineer for finding security exploits or something like that. So I usually don't do that targeted thing. For me, it's more like mapping out. It's just to satisfy your curiosity. Yeah. Satisfy my curiosity, yeah. And you talked about some of the tools there. Like, do you find it, I mean, I guess you've been doing it for a while. You built the disassembler, like you said. Do you still find it, like, approachable? I've always looked at it and I've been like, ah, I don't really know where to start. Yeah. The tools have a pretty steep learning curve. Yeah. It helps if you already know assembly. So I had, like, a background from, like, C64 times of really writing relatively big software in assembly. So it's kind of natural to read it. The tools, I use the Radare 2, which is an open source tool, which is, it's pretty low level. So it's, like, usually command line kind of interface. Yeah. Textual interface terminal software. So it has a, it's pretty notorious for having a steep learning curve. And you, I needed to, like, write a few, like, the 8051 disassembler was kind of broken. So I had to fix it myself. Oh, yeah. It's like a typical open source project. Right, right. They're really open to accept your commits. Yeah. But they're also very open to accept anybody else commits. That's right. So it's, like, a bit of a moving target. Yeah. More recently, there's a Chidra or Geedra or whatever. Oh, the NSA one you talked about. Yeah. The NSA tool that was released in January. Yeah. Which is much more approachable, I think, because it's, like, a GUI. You can, like, click on things and kind of explore things of how they work. Yeah. That's, yeah, to everybody's their own thing. And that's what you probably hear most about when you look at talks at DEF CON and so on. Everyone's using IDAR Pro. Uh-huh. And that's a commercial software that costs a lot of money. So there's a free version, but that's very limited. If you want to use, like, more obscure targets, it costs you, like, a thousand dollars or more to get a license. Yeah. Yeah. That's a lot. So that's why I stuck to the free tools. But it sounds like there are just a lot of, like, maybe YouTube videos about how to do it then. Yeah, there are a lot of YouTube videos. And once you get the hang on, it's, in my talk, I compared it to a game of Sudoku. Yeah. Because you take, like, something that you know. Like, you know, okay, I have an API call that uses, like, this byte as a command. So you search a source code for where that byte's, like, compared to something else. And then from there, you know, okay, that might be that command. And the command takes, like, it sets a certain parameter, like the frequency. Yeah. It doesn't set that directly, but just as an example. So you know that wherever it writes that byte, which is frequency, let's say, and you know that that address is related to frequency. And then you look with Radar and similar tools, you can get cross-references. So you can see what other code is referencing that address I just wrote the frequency to. Right. And then you can, like, kind of make some theories about what it could be. And the more you add, the more it makes sense. So like a Sudoku game, you get, like, a number, and then from there you get another number. Right. Right, right. That kind of game. Yeah. That's cool. That's really cool. So then, like, how do you use this in a practical way, then? So you're using this to basically reverse engineer firmware. Are you hoping to unlock new capabilities? Or, like, if someone comes up to you and says, like, Adrian, why are you doing reverse engineering? What would you say? Entertainment. Okay, yeah. For me, it's entertainment. I know that a lot of people do it as they're, like, very targeted. They say, I want to make that receiver to a transceiver. For example, in my talk, I found out that physically they're identical. So what's preventing them to not be a transceiver? Unlocking new features. Unlock the transceive function just by the receiver. I don't know whether that works or whether there are other parts. But I'm not really interested. For me, it's more exploring. That's cool. Yeah. I compared it to some people. I said you got, like, those adventure games like Ultima series, for example. Or, like, all those dungeon dragons. Yeah. Where some people play those to slay the dragon and get the gold. When I played those games back in the day, I was playing them to draw the map. I was interested to... You want to see the next cavern and see what else is unlocked. What's the dungeon? How does it look like? What are, like, all the bits and pieces? I wasn't interested in, like, slaying the dragon. Uh-huh. I treat firmware and re-engineering kind of in a similar fashion. That's great. That's great. And do you think that's made you a stronger firmware hardware engineer kind of thing? Um... It certainly... It kind of teaches you some... So I'm not, like, a trained hardware engineer or firmware engineer. I'm more, like, in the, like, higher-level enterprise software. Uh-huh. So it's, like, a different way of writing software. And when you work on that embedded software, you see how others are doing things. So I was presenting, like, a concept of how can you have a hard-coded firmware? How can you structure it so you can still have softer patches if you have a bug in that hard-coded firmware? Right. And so, like, that kind of tricks that you see how it's structured and figure out, oh, oh, that's actually a good idea. Yeah. I probably should copy that from my own software. Right, right. And I can imagine that being at a very high level, the likelihood or the interest in looking under the hood is probably strong because you're, you know, if you're at a high level, you're probably pretty abstracted from a lot of the things that's happening on a day-to-day basis. Yeah. And for me, it's also a bit of a compensation of that. So I learned my ropes on the C64 doing it in assembly and even early PC programming I was doing in assembly. And only for my job I did it in, like, C and C++ and Java and whatnot. Yeah. And I always liked the low level. So for me, I'm not comfortable if I don't understand the system from end to end. And the higher up you get in the software stack, if you try to understand everything that happens, it drives you crazy. Exactly. Right. I always think about, like, trying to, like, hop between all the files and, like, you know, like, you can right-click and you see where it's referenced and it's like, oh, my God. Yeah. It's just spaghetti. So. Yeah. That's great. Where can people find out more about you? So I'm on Twitter at, like, at ADI, ADI, Studer, S-T-U-D-E-R. Mm-hmm. So I occasionally post there. But from there, you can kind of find the links to my projects. Uh-huh. Great. That's one of the easiest. Or just ping me if you have any questions or something. Okay. Great. Well, thanks for being on the show. Thank you. So we're back at Teardown 2019, and I'm with? Zach Archer. I'm. My name is Zach Archer. He just waved at me. I'm like, okay. Hi.",
+   "context_before": "Thanks so much.",
+   "context_after": "Hi. How you doing? Yeah. Yeah. Yeah. We made it. Yeah. I am a developer. I have a software background. I discovered hardware in 2012 when I got dragged to a tour camp with a friend. Nice. It was life-changing. It was just incredible. So I had a background in graphics programming and animation, and I managed to kind of segue that. I found a home for that in hardware, and I started working with large-scale LED projects, all types of displays. Right.",
+   "context_before_speaker": "Jesse Vincent",
+   "context_after_speaker": "Zach Archer",
+   "text": "Thanks so much. All right. All right. We're back at Teardown 2019. And who am I talking to here? My name is Adrian Studer. And, um, I hack on radios. That's right. Yeah. So you gave a talk today. Actually, right after mine. It was great. Uh, it was reverse engineering. Can you tell us about that real quick? Yeah. So, um, I'm using, like, sub-gigahertz radios for my little Psy projects, which is a ship tracking device. And so, uh, I was always wondering how does radio work on the inside. And, um, so I found, like, a way to get the firmware out of the radio. And so I, like, pulled on the string and found more and more stuff that I thought was interesting. Yeah. And before we go into that, let's hear a little bit about your, um, your product. Because this is sold a lot of these things on Tinder, right? Yeah, it's, it's, uh, I call it, like, my, my little microcontroller project I got out of hand. Um, so it's, uh, AES receiver. So it's a tracking of ships. What's AES stand for? A-I-S. A-I-S, sorry. Yeah. So it's, uh, people are mostly more, are usually more familiar with flight track and flight radar and ADSB. Flight aware 24. Flight aware. And so there's a similar concept for ships where, um, the ships send out their position. And if you have a radio that listens to the right frequency, you can receive the position. Oh. And then there's open source software that everybody, it's not my software, but that everybody uses on their boats to navigate, like, the waterways. And if they have a receiver, they can see the other ships around them. Oh, that's great. And so I built a receiver for that. I don't have a boat. So, uh. Well, you're building the boat fund. I built it, like, I'm kind of, like, train spotter. Uh-huh. Just, like, for ships. Sure, sure. So I'm more, like, interested in tracking ships. Uh-huh. And then I put it up on Tinder and somebody asked me whether I can buy it. And then it escalated from there. Yeah. And you sold a lot of them, though, right? Yeah. A few thousand. Yeah. That's great. That's great. Yeah. Yeah. So, um, what are people using if this software exists, but if they're not using your product, what are they normally using? If they're not using? If they're not using your hardware, what are they normally using? I mean, the software works without it, so it's more like a navigation software for ships. Oh, okay. Okay. So they plan the route where they want to navigate, to see the, like, where there are rocks in the water or where the harbor is, and these kind of things. Yeah. And then there are commercial receivers for a long time. Probably pretty pricey for those. Pretty pricey. At least when I came out, the commercial receiver, a few hundred dollars, and the USB dongle kind of thing, cheap plastic, was maybe a hundred dollars, and I sold mine for $60 on Tindy, because it's kind of a different concept. I kind of lucked into it. There's a lot of less hardware in mind than commercial receivers. Sure. What's kind of in there, roughly? What's some of the stuff that's actually in the block diagram? In the block, in the receiver, it's basically an MCU and a single chip ISM radio, so sub-gigahertz radio. Uh-huh. And it's a pretty simple concept. Just like the MCU tells the radio, listen to this frequency. I get the bits back, and I extract the data. There's no encryption, nothing involved there, so it's pretty straightforward. Uh-huh. And then I spit out a standardized format on the serial port. Ah, nice. And then all software that, like, all navigation software knows that they have to, or they support that format. Uh-huh. So, and then interfaces over USB, or what's actually? Yeah, I use USB, and it's basic, but it's just like a serial over USB. Uh-huh. Um, the software just is a serial port. Oh, great. Um, and then that's basically about it. And you connect to a Raspberry Pi and kind of, like, transmit over the Wi-Fi. Uh-huh. Uh, with your Raspberry Pi, for example, and make, like, use your tablet instead of a PC to navigate. Yeah. That's great. It sounds like a really good, like, like, it's a kind of maker-y project, but it also has, like, a very practical thing, and it has the price advantage, so it sounds like a good mix. Yeah, and I totally locked into it, so it's, as I said, I don't have a boat, so I, it's, it, like, people sometimes ask me, like, what should I do to build something that sells on Tindy? Yeah. And I can't really give them advice. Like, my advice is build something that you want for yourself. Well, I've done boats and people have done airplanes. How about hovercrafts? Yeah. Maybe motorcycles? But it's more, I think it's more about put out there what you're working on. Yeah. And if you have an interesting project, people will find you. Yeah. That's great. I wrote on a forum and basically escalated from there. Yeah, yeah, yeah. Well, and I think finding communities of enthusiasts, too. Yeah. Whatever the enthusiast group is. You know, like, I know people that do, like, camera hardware. Yeah. And other people that do, like, game software and stuff like that. Like, there are, like, I just interviewed Jesse. You talked about otaku, I think it was. Yeah. People who are, like, really, really passionate about things. That helps a lot. Yeah. Okay, so your talk, you were now digging into that ISM band chip. Yeah. Yeah, so it's a bit of a rabbit hole. So my interest is, I always want to know how things work. And if I see that there's, like, another level below what is presented to me, that always catches my interest. I want to know more about it. Using APIs must take a long time for you, then. Yeah, so typically Vendor, if those ISM radios, they provide you a tool where you put in your frequency and, like, what encoding it is. And then they spit out the configuration file. And you're supposed to send, either send that configuration file to the radio or, like, SPI or I2C. Or you get a vendor library that you have to call and then it does its magic. And so at some point I was, like, researching something independent. And I found, oh, there's a command that's called peak and poke, which is not documented. But they gave me the command number for some other reason. Yeah. And then I thought, well, there's a 16-bit address. And instead of trying just the address that the vendor provides you for that special purpose, let's, like, just drive from 0 to 65535. Right, right. See what you get. And then looked at it what I got and put a disassembler to it and saw that it wasn't everything. And then kind of figured out on how to, like, get more out of it. Right. So that's kind of from where it escalated. Right. I think Alvaro is going to be like, hey, I should have been interviewing Adrian. This is reverse engineering. Yeah. I mean, have you done a lot of reverse engineering in the past? I did occasionally. So I did, that's, like, 10 years, 15 years ago, I did, like, a decompiler for obscure scripting language that was compiled for BBS systems. So I did, like, a decompiler for that. So I always like that, like, finding things out that people don't tell me. I also like it that, I also, for example, I don't reverse engineer for finding security exploits or something like that. So I usually don't do that targeted thing. For me, it's more like mapping out. It's just to satisfy your curiosity. Yeah. Satisfy my curiosity, yeah. And you talked about some of the tools there. Like, do you find it, I mean, I guess you've been doing it for a while. You built the disassembler, like you said. Do you still find it, like, approachable? I've always looked at it and I've been like, ah, I don't really know where to start. Yeah. The tools have a pretty steep learning curve. Yeah. It helps if you already know assembly. So I had, like, a background from, like, C64 times of really writing relatively big software in assembly. So it's kind of natural to read it. The tools, I use the Radare 2, which is an open source tool, which is, it's pretty low level. So it's, like, usually command line kind of interface. Yeah. Textual interface terminal software. So it has a, it's pretty notorious for having a steep learning curve. And you, I needed to, like, write a few, like, the 8051 disassembler was kind of broken. So I had to fix it myself. Oh, yeah. It's like a typical open source project. Right, right. They're really open to accept your commits. Yeah. But they're also very open to accept anybody else commits. That's right. So it's, like, a bit of a moving target. Yeah. More recently, there's a Chidra or Geedra or whatever. Oh, the NSA one you talked about. Yeah. The NSA tool that was released in January. Yeah. Which is much more approachable, I think, because it's, like, a GUI. You can, like, click on things and kind of explore things of how they work. Yeah. That's, yeah, to everybody's their own thing. And that's what you probably hear most about when you look at talks at DEF CON and so on. Everyone's using IDAR Pro. Uh-huh. And that's a commercial software that costs a lot of money. So there's a free version, but that's very limited. If you want to use, like, more obscure targets, it costs you, like, a thousand dollars or more to get a license. Yeah. Yeah. That's a lot. So that's why I stuck to the free tools. But it sounds like there are just a lot of, like, maybe YouTube videos about how to do it then. Yeah, there are a lot of YouTube videos. And once you get the hang on, it's, in my talk, I compared it to a game of Sudoku. Yeah. Because you take, like, something that you know. Like, you know, okay, I have an API call that uses, like, this byte as a command. So you search a source code for where that byte's, like, compared to something else. And then from there, you know, okay, that might be that command. And the command takes, like, it sets a certain parameter, like the frequency. Yeah. It doesn't set that directly, but just as an example. So you know that wherever it writes that byte, which is frequency, let's say, and you know that that address is related to frequency. And then you look with Radar and similar tools, you can get cross-references. So you can see what other code is referencing that address I just wrote the frequency to. Right. And then you can, like, kind of make some theories about what it could be. And the more you add, the more it makes sense. So like a Sudoku game, you get, like, a number, and then from there you get another number. Right. Right, right. That kind of game. Yeah. That's cool. That's really cool. So then, like, how do you use this in a practical way, then? So you're using this to basically reverse engineer firmware. Are you hoping to unlock new capabilities? Or, like, if someone comes up to you and says, like, Adrian, why are you doing reverse engineering? What would you say? Entertainment. Okay, yeah. For me, it's entertainment. I know that a lot of people do it as they're, like, very targeted. They say, I want to make that receiver to a transceiver. For example, in my talk, I found out that physically they're identical. So what's preventing them to not be a transceiver? Unlocking new features. Unlock the transceive function just by the receiver. I don't know whether that works or whether there are other parts. But I'm not really interested. For me, it's more exploring. That's cool. Yeah. I compared it to some people. I said you got, like, those adventure games like Ultima series, for example. Or, like, all those dungeon dragons. Yeah. Where some people play those to slay the dragon and get the gold. When I played those games back in the day, I was playing them to draw the map. I was interested to... You want to see the next cavern and see what else is unlocked. What's the dungeon? How does it look like? What are, like, all the bits and pieces? I wasn't interested in, like, slaying the dragon. Uh-huh. I treat firmware and re-engineering kind of in a similar fashion. That's great. That's great. And do you think that's made you a stronger firmware hardware engineer kind of thing? Um... It certainly... It kind of teaches you some... So I'm not, like, a trained hardware engineer or firmware engineer. I'm more, like, in the, like, higher-level enterprise software. Uh-huh. So it's, like, a different way of writing software. And when you work on that embedded software, you see how others are doing things. So I was presenting, like, a concept of how can you have a hard-coded firmware? How can you structure it so you can still have softer patches if you have a bug in that hard-coded firmware? Right. And so, like, that kind of tricks that you see how it's structured and figure out, oh, oh, that's actually a good idea. Yeah. I probably should copy that from my own software. Right, right. And I can imagine that being at a very high level, the likelihood or the interest in looking under the hood is probably strong because you're, you know, if you're at a high level, you're probably pretty abstracted from a lot of the things that's happening on a day-to-day basis. Yeah. And for me, it's also a bit of a compensation of that. So I learned my ropes on the C64 doing it in assembly and even early PC programming I was doing in assembly. And only for my job I did it in, like, C and C++ and Java and whatnot. Yeah. And I always liked the low level. So for me, I'm not comfortable if I don't understand the system from end to end. And the higher up you get in the software stack, if you try to understand everything that happens, it drives you crazy. Exactly. Right. I always think about, like, trying to, like, hop between all the files and, like, you know, like, you can right-click and you see where it's referenced and it's like, oh, my God. Yeah. It's just spaghetti. So. Yeah. That's great. Where can people find out more about you? So I'm on Twitter at, like, at ADI, ADI, Studer, S-T-U-D-E-R. Mm-hmm. So I occasionally post there. But from there, you can kind of find the links to my projects. Uh-huh. Great. That's one of the easiest. Or just ping me if you have any questions or something. Okay. Great. Well, thanks for being on the show. Thank you. So we're back at Teardown 2019, and I'm with? Zach Archer. I'm. My name is Zach Archer. He just waved at me. I'm like, okay. Hi. Hi. How you doing? Yeah. Yeah. Yeah. We made it. Yeah. I am a developer. I have a software background. I discovered hardware in 2012 when I got dragged to a tour camp with a friend. Nice. It was life-changing. It was just incredible. So I had a background in graphics programming and animation, and I managed to kind of segue that. I found a home for that in hardware, and I started working with large-scale LED projects, all types of displays. Right."
+  },
+  {
+   "episode": 479,
+   "episode_title": "Why isn't this working?",
+   "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
+   "guest": "Christopher White",
+   "stem": "0479-why-isnt-this-working",
+   "paragraph_index": 157,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Well, I think that that's, I think that kind of rolls back to like the, okay, so what is the value of IDE and all these other things? I think what some of the vendors are doing more and definitely true for Silicon Labs with EFM8. And I think the STM32 tool is doing better with this now too. And there's a lot of other tools that have similar things. But one of the disservices I find with the Arduino IDE and similar things is like, it's simple, but then you never get outside the simple. Yeah. And when you start to have breakpoints and you start to have register inspection, all these other things, no one's there to tell you how much that will help you. And you're not, when you're not just spitting out double debug to a serial port, you know, like that, that is such a big shift and no one listening. Very few listening are going to be surprised by this, but I feel like people who are at university level, it's like are going to be working in the Arduino IDE and similar kind of reduced interfaces. Like you need the leveling up to the, to the breaks and the debugs and everything like that. That gives you the chance to go and see, Hey, I thought I set that CRC register. And then I figured out that, no, I, I, I wasn't doing it. I, I, I had the wrong page selected, you know, and I can actually go and look at the register after I step past that line of code and it's not there. And, um, again, not surprising for many people listening, but, um, but again, how do you, how do you know that if you, you don't Google for that, you know, it's like, what is the best way to do firmware? No one's going to tell you that basic thing, right? Yeah. It's not a discipline.",
+   "context_before": "That was pretty dumb. I was just, my eyes were just skipping over the part where I had spy set to four bits, but.",
+   "context_after": "Firmware is not a discipline. It's, it's a collection of lore over 30, 40 years. It's just, it's not like computer science. It's this collection of all kinds of different things. And most of it's things that have been developed by these hardware companies, right? Yeah. It's nobody's, nobody's mathematically backed. This is the best way to do serial communication. It's okay. Here's our peripheral and here's the 50 registers that configure it. And, and, oh, and here's the exceptions to the rule. And yeah, that's all.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "That was pretty dumb. I was just, my eyes were just skipping over the part where I had spy set to four bits, but. Well, I think that that's, I think that kind of rolls back to like the, okay, so what is the value of IDE and all these other things? I think what some of the vendors are doing more and definitely true for Silicon Labs with EFM8. And I think the STM32 tool is doing better with this now too. And there's a lot of other tools that have similar things. But one of the disservices I find with the Arduino IDE and similar things is like, it's simple, but then you never get outside the simple. Yeah. And when you start to have breakpoints and you start to have register inspection, all these other things, no one's there to tell you how much that will help you. And you're not, when you're not just spitting out double debug to a serial port, you know, like that, that is such a big shift and no one listening. Very few listening are going to be surprised by this, but I feel like people who are at university level, it's like are going to be working in the Arduino IDE and similar kind of reduced interfaces. Like you need the leveling up to the, to the breaks and the debugs and everything like that. That gives you the chance to go and see, Hey, I thought I set that CRC register. And then I figured out that, no, I, I, I wasn't doing it. I, I, I had the wrong page selected, you know, and I can actually go and look at the register after I step past that line of code and it's not there. And, um, again, not surprising for many people listening, but, um, but again, how do you, how do you know that if you, you don't Google for that, you know, it's like, what is the best way to do firmware? No one's going to tell you that basic thing, right? Yeah. It's not a discipline. Firmware is not a discipline. It's, it's a collection of lore over 30, 40 years. It's just, it's not like computer science. It's this collection of all kinds of different things. And most of it's things that have been developed by these hardware companies, right? Yeah. It's nobody's, nobody's mathematically backed. This is the best way to do serial communication. It's okay. Here's our peripheral and here's the 50 registers that configure it. And, and, oh, and here's the exceptions to the rule. And yeah, that's all."
+  },
+  {
+   "episode": 479,
+   "episode_title": "Why isn't this working?",
+   "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
+   "guest": "Christopher White",
+   "stem": "0479-why-isnt-this-working",
+   "paragraph_index": 158,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Firmware is not a discipline. It's, it's a collection of lore over 30, 40 years. It's just, it's not like computer science. It's this collection of all kinds of different things. And most of it's things that have been developed by these hardware companies, right? Yeah. It's nobody's, nobody's mathematically backed. This is the best way to do serial communication. It's okay. Here's our peripheral and here's the 50 registers that configure it. And, and, oh, and here's the exceptions to the rule. And yeah, that's all.",
+   "context_before": "like people who are at university level, it's like are going to be working in the Arduino IDE and similar kind of reduced interfaces. Like you need the leveling up to the, to the breaks and the debugs and everything like that. That gives you the chance to go and see, Hey, I thought I set that CRC register. And then I figured out that, no, I, I, I wasn't doing it. I, I, I had the wrong page selected, you know, and I can actually go and look at the register after I step past that line of code and it's not there. And, um, again, not surprising for many people listening, but, um, but again, how do you, how do you know that if you, you don't Google for that, you know, it's like, what is the best way to do firmware? No one's going to tell you that basic thing, right? Yeah. It's not a discipline.",
+   "context_after": "I talked to, uh, I talked to someone from a very, very, very large web scale company who's doing some hardware and, um, boy, are there software people perplexed by hardware. And it's not, not just because it's, you know, it's hard and there's, you know, electrons involved and all these other. But just like the methods, they're like, what are you doing here? Do you know what we can do with code? Yes. You know, it just, it is so far afield. And, uh, and, you know, some people have tried to fix it and I, these are great efforts. The, the chip companies are, I feel like more software people coming into the, or more software, uh, um, background type people coming into the hardware space and getting hired at like an ST or similar things. That is probably one of the best things that will happen f",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "like people who are at university level, it's like are going to be working in the Arduino IDE and similar kind of reduced interfaces. Like you need the leveling up to the, to the breaks and the debugs and everything like that. That gives you the chance to go and see, Hey, I thought I set that CRC register. And then I figured out that, no, I, I, I wasn't doing it. I, I, I had the wrong page selected, you know, and I can actually go and look at the register after I step past that line of code and it's not there. And, um, again, not surprising for many people listening, but, um, but again, how do you, how do you know that if you, you don't Google for that, you know, it's like, what is the best way to do firmware? No one's going to tell you that basic thing, right? Yeah. It's not a discipline. Firmware is not a discipline. It's, it's a collection of lore over 30, 40 years. It's just, it's not like computer science. It's this collection of all kinds of different things. And most of it's things that have been developed by these hardware companies, right? Yeah. It's nobody's, nobody's mathematically backed. This is the best way to do serial communication. It's okay. Here's our peripheral and here's the 50 registers that configure it. And, and, oh, and here's the exceptions to the rule. And yeah, that's all. I talked to, uh, I talked to someone from a very, very, very large web scale company who's doing some hardware and, um, boy, are there software people perplexed by hardware. And it's not, not just because it's, you know, it's hard and there's, you know, electrons involved and all these other. But just like the methods, they're like, what are you doing here? Do you know what we can do with code? Yes. You know, it just, it is so far afield. And, uh, and, you know, some people have tried to fix it and I, these are great efforts. The, the chip companies are, I feel like more software people coming into the, or more software, uh, um, background type people coming into the hardware space and getting hired at like an ST or similar things. That is probably one of the best things that will happen f"
+  },
+  {
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "guest": null,
+   "stem": "0482-shine-a-light",
+   "paragraph_index": 177,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Okay. Yeah. Yeah. Yeah. So if people go back and listen to the episode with, uh, Jason Kreidner and, uh, Robert, uh, I can't remember Robert's last name, Robert Nelson from DigiKey. They, that was like an amazing chat with them. Cause they kind of, I didn't realize that all that stuff was how it was working. I had no idea when we were writing to that episode. And it's great though, because like, that is like a, you know, it's kind of a good mix of high level. You're, you want to like talk to a network. You want to have actual Linux running on there. You want to run, you know, node JS, or you want to, you know, run Python or something. And then it can talk down to these modules that are watching a process and just acting based on input. Right. So it's watching when a bit comes in high, it goes and does a spy command or something like that. It's fine. Good, whatever. Right. And then it dumps it into memory and then you can read that memory later. Uh, I'm working on a project right now. That's like this, where I actually have discrete boards that are kind of all talking to one another because I wanted to do something like this. And I wanted to actually have some supply chain stability of like, I'd rather make a system that has, you know, small microcontrollers that talk over serial in this case up to a larger Linux system. Um, but like this is now shrinking all this stuff down. And I think this is a, going to be a more and more common thing is you want to have a system that has memory internal, has all the drivers internal. So this thing has processing. So it has integrated memory. It has integrated power. So you only have to give it three.",
+   "context_before": "Okay. I didn't know that.",
+   "context_after": "So it's got integrated, uh, 128 meg or 512 meg DDR3 integrated.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Okay. I didn't know that. Okay. Yeah. Yeah. Yeah. So if people go back and listen to the episode with, uh, Jason Kreidner and, uh, Robert, uh, I can't remember Robert's last name, Robert Nelson from DigiKey. They, that was like an amazing chat with them. Cause they kind of, I didn't realize that all that stuff was how it was working. I had no idea when we were writing to that episode. And it's great though, because like, that is like a, you know, it's kind of a good mix of high level. You're, you want to like talk to a network. You want to have actual Linux running on there. You want to run, you know, node JS, or you want to, you know, run Python or something. And then it can talk down to these modules that are watching a process and just acting based on input. Right. So it's watching when a bit comes in high, it goes and does a spy command or something like that. It's fine. Good, whatever. Right. And then it dumps it into memory and then you can read that memory later. Uh, I'm working on a project right now. That's like this, where I actually have discrete boards that are kind of all talking to one another because I wanted to do something like this. And I wanted to actually have some supply chain stability of like, I'd rather make a system that has, you know, small microcontrollers that talk over serial in this case up to a larger Linux system. Um, but like this is now shrinking all this stuff down. And I think this is a, going to be a more and more common thing is you want to have a system that has memory internal, has all the drivers internal. So this thing has processing. So it has integrated memory. It has integrated power. So you only have to give it three. So it's got integrated, uh, 128 meg or 512 meg DDR3 integrated."
+  },
+  {
+   "episode": 490,
+   "episode_title": "An Interview with Ben Heck(endorn)",
+   "episode_url": "https://theamphour.com/490-an-interview-with-ben-heckendorn/",
+   "guest": "Ben Heckendorn",
+   "stem": "0490-an-interview-with-ben-heckendorn",
+   "paragraph_index": 131,
+   "depth": "explains",
+   "speaker_raw": "Ben Heckendorn",
+   "speaker_repaired": "Ben Heck",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "And well, there, there did exist, uh, flash memory cameras at that time, but they were obviously flash was extremely expensive. So you might have two megabytes tops and we had one, but the only way to dump the data was through a 9,600 baud serial cable. So even though the Mavica was lower quality images, you could get them off super fast. And the key thing is if you're on location, you just stick it another floppy disk.",
+   "context_before": "the secretary or whoever was in control of this camera. And if you wanted it to take a photo, to put documentation into your, you know, your 1990s Word document, right, you would, you know, yeah, you'd have to go sign out the camera and then you'd get it and you'd charge it out and you'd take your photos. You had to return it and sign it back in. And it was that valuable, you know? It was like, yeah, it was like 800 bucks. I want to say. Yeah, it was, yeah, it wasn't cheap, but it was, you know, it was the only way that you could get images into a PC to include them in, in like, you know, uh, testing documents and, you know, test procedures and things like that. You had to take photos of, you know, things to hook up and, and it was the only way to get photos into a Word document back then.",
+   "context_after": "Exactly. So yeah. And it was, it was good enough for like, you know, putting a photo in a report or something like that. You know, it wasn't, it wasn't good for blowing up images and things like that, but I think it was six, was it 640 by 480 or something? It was like one megapixel or something.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "the secretary or whoever was in control of this camera. And if you wanted it to take a photo, to put documentation into your, you know, your 1990s Word document, right, you would, you know, yeah, you'd have to go sign out the camera and then you'd get it and you'd charge it out and you'd take your photos. You had to return it and sign it back in. And it was that valuable, you know? It was like, yeah, it was like 800 bucks. I want to say. Yeah, it was, yeah, it wasn't cheap, but it was, you know, it was the only way that you could get images into a PC to include them in, in like, you know, uh, testing documents and, you know, test procedures and things like that. You had to take photos of, you know, things to hook up and, and it was the only way to get photos into a Word document back then. And well, there, there did exist, uh, flash memory cameras at that time, but they were obviously flash was extremely expensive. So you might have two megabytes tops and we had one, but the only way to dump the data was through a 9,600 baud serial cable. So even though the Mavica was lower quality images, you could get them off super fast. And the key thing is if you're on location, you just stick it another floppy disk. Exactly. So yeah. And it was, it was good enough for like, you know, putting a photo in a report or something like that. You know, it wasn't, it wasn't good for blowing up images and things like that, but I think it was six, was it 640 by 480 or something? It was like one megapixel or something."
+  },
+  {
+   "episode": 516,
+   "episode_title": "Thermions Aren't A Thing",
+   "episode_url": "https://theamphour.com/516-thermions-arent-a-thing/",
+   "guest": null,
+   "stem": "0516-thermions-arent-a-thing",
+   "paragraph_index": 60,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "But, well, no. It wasn't that easy. Because as I said. Well, yeah. It sounds like it was not easy. Yeah. Bluetooth LE does not support proper serial implementation. We thought it did. And that's why we spent a huge amount of time, money, and effort. Trying to get it working. And it's a real kludge in the end. Yeah. You can get it to do it. But, geez. You know. Yeah. It's just not as easy as it is on normal Bluetooth. Got it. Yep. Yeah.",
+   "context_before": "Okay.",
+   "context_after": "Isn't it crazy when some of those. So, like. You know. At the. You know. Now. Thinking about it now. You know that like. You would go back and tell yourself like. Oh. Well. Look a little closer. At that serial side of things. That's really going to be important. Right?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. But, well, no. It wasn't that easy. Because as I said. Well, yeah. It sounds like it was not easy. Yeah. Bluetooth LE does not support proper serial implementation. We thought it did. And that's why we spent a huge amount of time, money, and effort. Trying to get it working. And it's a real kludge in the end. Yeah. You can get it to do it. But, geez. You know. Yeah. It's just not as easy as it is on normal Bluetooth. Got it. Yep. Yeah. Isn't it crazy when some of those. So, like. You know. At the. You know. Now. Thinking about it now. You know that like. You would go back and tell yourself like. Oh. Well. Look a little closer. At that serial side of things. That's really going to be important. Right?"
+  },
+  {
+   "episode": 551,
+   "episode_title": "Feed the Mouse",
+   "episode_url": "https://theamphour.com/551-feed-the-mouse/",
+   "guest": null,
+   "stem": "0551-feed-the-mouse",
+   "paragraph_index": 233,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "know. Yeah. Someone was talking about that with like a, the first thing they do on a digital project, it might've been an embedded FM or someone like that, somewhere like that. But they talked about the first thing they do in an embedded project is they create their own console so that you basically can set up console commands from there. And I just like never really thought to do that. That's a great idea. You know, just have it respond over serial. You know, you can always do output, but why not take some input too, right? Actually have some standardization there.",
+   "context_before": "Yeah. Or you might build that in from the start. Sure. You might build that in from the start. If you're a designer who goes, oh yeah, it'll be handy to have like a secret pins on there. You've got spare pins or take them to a header that goes off to an LCD or something and you",
+   "context_after": "Mm-hmm. Although when he is a, so when I was a boy, you often didn't have the luxury of that because you're designing for a low memory footprint micro, like a PIC 16 F84, it might have one or two K of memory. And just including the S print F function so that you can output a serial string that, that uses one, one, one K of memory just for the S S print F function.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah. Or you might build that in from the start. Sure. You might build that in from the start. If you're a designer who goes, oh yeah, it'll be handy to have like a secret pins on there. You've got spare pins or take them to a header that goes off to an LCD or something and you know. Yeah. Someone was talking about that with like a, the first thing they do on a digital project, it might've been an embedded FM or someone like that, somewhere like that. But they talked about the first thing they do in an embedded project is they create their own console so that you basically can set up console commands from there. And I just like never really thought to do that. That's a great idea. You know, just have it respond over serial. You know, you can always do output, but why not take some input too, right? Actually have some standardization there. Mm-hmm. Although when he is a, so when I was a boy, you often didn't have the luxury of that because you're designing for a low memory footprint micro, like a PIC 16 F84, it might have one or two K of memory. And just including the S print F function so that you can output a serial string that, that uses one, one, one K of memory just for the S S print F function."
+  },
+  {
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "guest": "Philip Johnston",
+   "stem": "0556-firmware-for-hardware-engineers-with-phillip-johnston",
+   "paragraph_index": 94,
+   "depth": "explains",
+   "speaker_raw": "Philip Johnston",
+   "speaker_repaired": "Phillip Johnston",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "It's all baby steps, I think. And, you know, a minimum bar is that's really great is every time I push a commit, can I have some kind of server, check out the code and make sure that it compiles successfully? Like that's a huge step in the right direction that I think a lot of teams in the embedded space still aren't doing. And once you have that, it's easier to, to add in other things. It's like, okay, well now our code compiles automatically. What if we didn't have that developer packaging the release at his desk? What if instead we had the server package it in a known good way every time? And so I think usually I start introducing ideas one at a time in that way, you know, and especially for testing. I think testing, especially in an automated fashion is one of the more difficult things to do because if you didn't design your system in a particular way at the start, it can feel impossible to, to bring it under test, especially if you're trying to untangle all the, the hardware pieces from it, um, that are preventing you from running it on your development machine. And in that way, I think there's, you know, you, you might set up a command line interface or maybe that already exists for the project. Most, you know, most projects I've worked on have some kind of serial or USB command line you can talk to. And you just, you know, have a Python script that opens up a serial connection and start sending commands and checking for expected responses on the device. You know, it can be simple.",
+   "context_before": "Yeah.",
+   "context_after": "Got it. So like you're, you're having like a little shell that's on your, your end device you're saying. Right. Yeah. Cool. Yeah, that's good. And that allows you to kind of try different things and communicate back and that, that idea and working through a bunch of tests that you might want to have.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. It's all baby steps, I think. And, you know, a minimum bar is that's really great is every time I push a commit, can I have some kind of server, check out the code and make sure that it compiles successfully? Like that's a huge step in the right direction that I think a lot of teams in the embedded space still aren't doing. And once you have that, it's easier to, to add in other things. It's like, okay, well now our code compiles automatically. What if we didn't have that developer packaging the release at his desk? What if instead we had the server package it in a known good way every time? And so I think usually I start introducing ideas one at a time in that way, you know, and especially for testing. I think testing, especially in an automated fashion is one of the more difficult things to do because if you didn't design your system in a particular way at the start, it can feel impossible to, to bring it under test, especially if you're trying to untangle all the, the hardware pieces from it, um, that are preventing you from running it on your development machine. And in that way, I think there's, you know, you, you might set up a command line interface or maybe that already exists for the project. Most, you know, most projects I've worked on have some kind of serial or USB command line you can talk to. And you just, you know, have a Python script that opens up a serial connection and start sending commands and checking for expected responses on the device. You know, it can be simple. Got it. So like you're, you're having like a little shell that's on your, your end device you're saying. Right. Yeah. Cool. Yeah, that's good. And that allows you to kind of try different things and communicate back and that, that idea and working through a bunch of tests that you might want to have."
+  },
+  {
+   "episode": 578,
+   "episode_title": "Histogrammic or Histomagraphical",
+   "episode_url": "https://theamphour.com/578-histogrammic-or-histomagraphical/",
+   "guest": null,
+   "stem": "0578-histogrammic-or-histomagraphical",
+   "paragraph_index": 39,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "No, yeah, but boo-hoo. I want serial.",
+   "context_before": "Yeah, yeah. No, yeah. Right. ESP. No, this is ESP32 S2. And yeah, actually, so I have one of the breakout boards just from Espressif. It actually runs CircuitPython as well. And so really fast, really fast prototyping and stuff like that. But the cool thing about it is it's got, you don't need a USB to UR converter anymore, which is nice. Right. It actually is built in. So yeah, lots of fun stuff coming out from Espressif too. I think they have.",
+   "context_after": "Oh, you can still access the serial port. I mean, you'll need a, so like there is a USB to serial internally. Oh, okay. I can, yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah, yeah. No, yeah. Right. ESP. No, this is ESP32 S2. And yeah, actually, so I have one of the breakout boards just from Espressif. It actually runs CircuitPython as well. And so really fast, really fast prototyping and stuff like that. But the cool thing about it is it's got, you don't need a USB to UR converter anymore, which is nice. Right. It actually is built in. So yeah, lots of fun stuff coming out from Espressif too. I think they have. No, yeah, but boo-hoo. I want serial. Oh, you can still access the serial port. I mean, you'll need a, so like there is a USB to serial internally. Oh, okay. I can, yeah."
+  },
+  {
+   "episode": 697,
+   "episode_title": "LEDs Everywhere with Tim from Mitxela",
+   "episode_url": "https://theamphour.com/697-leds-everywhere-with-tim-from-mitxela/",
+   "guest": "Tim",
+   "stem": "0697-leds-everywhere-with-tim-from-mitxela",
+   "paragraph_index": 123,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Is it in fact, it's one of similar to, I think my first experience was actually buying like a broken asshole synth. And like, there was like all these things in there, like, oh, you know, like program this to your 3.5 inch floppy. And then, you know, then it does this and this, and I'm just like, I don't get it. You know, it was this higher level function on top of it, but yeah, it was on the back end. It's just like, it's just got that funky plug and it's just in serial.",
+   "context_before": "just went a bit mad when I, uh, discovered AVR assembly. Um, and so what did you start building? Like, what was the, what did that unlock then? Uh, well, what I ended up doing was that, uh, oscilloscope games console, which, uh, it was, it was just, I think it just been pent up inside of me, all these things I wanted to do. And they just, I just, um, yeah, I did the games console. I did all that MIDI stuff. Like suddenly it's like MIDI is, uh, is easy. It's just, um, it's you heart. It's like, it's, it's just three bytes and it's just, I don't know. What was MIDI is shockingly. It is simple. You don't realize until you actually start fiddling around with it at a protocol level. Cause if you're, if you, all you've done is like use it on a computer software, it, you know, you've got no idea.",
+   "context_after": "Yeah. Okay. So it's, it's remarkably accessible. Um, yeah. I really don't like it when, um, there's unnecessary abstraction. Well, I mean, I don't know.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "just went a bit mad when I, uh, discovered AVR assembly. Um, and so what did you start building? Like, what was the, what did that unlock then? Uh, well, what I ended up doing was that, uh, oscilloscope games console, which, uh, it was, it was just, I think it just been pent up inside of me, all these things I wanted to do. And they just, I just, um, yeah, I did the games console. I did all that MIDI stuff. Like suddenly it's like MIDI is, uh, is easy. It's just, um, it's you heart. It's like, it's, it's just three bytes and it's just, I don't know. What was MIDI is shockingly. It is simple. You don't realize until you actually start fiddling around with it at a protocol level. Cause if you're, if you, all you've done is like use it on a computer software, it, you know, you've got no idea. Is it in fact, it's one of similar to, I think my first experience was actually buying like a broken asshole synth. And like, there was like all these things in there, like, oh, you know, like program this to your 3.5 inch floppy. And then, you know, then it does this and this, and I'm just like, I don't get it. You know, it was this higher level function on top of it, but yeah, it was on the back end. It's just like, it's just got that funky plug and it's just in serial. Yeah. Okay. So it's, it's remarkably accessible. Um, yeah. I really don't like it when, um, there's unnecessary abstraction. Well, I mean, I don't know."
+  },
+  {
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "guest": null,
+   "stem": "0713-rubber-duck-incarnate",
+   "paragraph_index": 238,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "Tailscale? Oh, yeah. It totally. I don't. I'm not sure what I'm doing. Yeah. So I was like, I had like an internet. I had like a Wi-Fi blip and it's like, I don't know what any website is anymore. It's like, oh, OK. Nothing of restart won't fix, Dave. You know. Right. I can do that remotely now. Excellent. Actually. Oh, this is actually interesting, though. So that's what I was like thinking about. I was trying to think of what actually I figured out from this. One was Cloud Code, fine, whatever. But the one that I actually really, really liked, I had been like looking around for terminal programs for this sort of thing on a phone. And there's a ton. There are just a ton of like SSH things. But there was one that like came highly recommended called Terminus. In Terminus, it had an option in there. So it's like SSH to this, SSH to that, you know, SF, F2P, whatever to that. And then it had a serial option. I'm like, no frigging way. And Dave, I plugged in a Zephyr board that had a UART on it. And I plugged it into my phone, USB-C to USB-C. And I just started seeing log outputs. And I don't know if I've been just in the dark about this forever. But like being able to have basically like a portable like debug machine, you know, I could actually like interact with, you know, Zephyr shell. I can type stuff in. It'll actually do commands, whatever. But now from my phone, I can like get outputs over the shell. It's like spitting out sensor readings and status and whatever. And then I can send actual commands to it as well. So I can like just like plug in my hardware, USB-C to USB-C. And I can control it from without like pulling out a laptop or anything like that. Have you ever seen that sort of thing before?",
+   "context_before": "But you told me before the show that it completely screwed up your system.",
+   "context_after": "No, but you have to have, wouldn't you, to do this, you would have to have support into the product that you're debugging to be able to send that serial stuff over the USB.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "But you told me before the show that it completely screwed up your system. Tailscale? Oh, yeah. It totally. I don't. I'm not sure what I'm doing. Yeah. So I was like, I had like an internet. I had like a Wi-Fi blip and it's like, I don't know what any website is anymore. It's like, oh, OK. Nothing of restart won't fix, Dave. You know. Right. I can do that remotely now. Excellent. Actually. Oh, this is actually interesting, though. So that's what I was like thinking about. I was trying to think of what actually I figured out from this. One was Cloud Code, fine, whatever. But the one that I actually really, really liked, I had been like looking around for terminal programs for this sort of thing on a phone. And there's a ton. There are just a ton of like SSH things. But there was one that like came highly recommended called Terminus. In Terminus, it had an option in there. So it's like SSH to this, SSH to that, you know, SF, F2P, whatever to that. And then it had a serial option. I'm like, no frigging way. And Dave, I plugged in a Zephyr board that had a UART on it. And I plugged it into my phone, USB-C to USB-C. And I just started seeing log outputs. And I don't know if I've been just in the dark about this forever. But like being able to have basically like a portable like debug machine, you know, I could actually like interact with, you know, Zephyr shell. I can type stuff in. It'll actually do commands, whatever. But now from my phone, I can like get outputs over the shell. It's like spitting out sensor readings and status and whatever. And then I can send actual commands to it as well. So I can like just like plug in my hardware, USB-C to USB-C. And I can control it from without like pulling out a laptop or anything like that. Have you ever seen that sort of thing before? No, but you have to have, wouldn't you, to do this, you would have to have support into the product that you're debugging to be able to send that serial stuff over the USB."
+  },
+  {
+   "episode": 724,
+   "episode_title": "All Heat, No Useful Work",
+   "episode_url": "https://theamphour.com/724-all-heat-no-useful-work/",
+   "guest": null,
+   "stem": "0724-all-heat-no-useful-work",
+   "paragraph_index": 251,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "serial-communication"
+   ],
+   "paragraph_text": "I have something I'm hoping to publish about this week, if not this week, the next week. But I had a very exciting breakthrough with Claude the other day. Right. So, I had gotten, like, a web serial, you know, interface working. There's literally nothing special about that. But I had not really seen one for Zephyr. So, anyways. Okay. Vibe coded up a web serial interface. Basically, you plug in. I think I told you about this. You plug in a board. You can, like, basically connect to it over web serial. And then you can interface with it using your browser, which is super cool. But the big one was SMP. So, like, so SMP is, like, the protocol that a lot of things that use MCU boot talk over, like, Bluetooth or serial, which is the one that I'm using. And the clanker, really, the clanker did all the work. I'm just kind of poking and prodding at it. Got SMP working over web serial, which means that once you plug in a browser now, over, so you plug in a, you know, so I have, like, a cellular board that I built. Right. It's got a serial connection out. I can talk to it over the shell. But the really killer thing is I can push files into it using SMP, which is the transport. So, basically, you know, you have to turn off the shell at the same time. But you can push stuff using SMP over serial. So, I can push, like, certificate files into the file system. So, I can do security stuff there. And I can do firmware updates through the browser, which is very, very exciting for me. Because, like, that has been a long time. Like, so you basically plug in a board.",
+   "context_before": "No. No, sorry. I'm using it daily, but just for, you know, asking it questions and shit like that. Yeah, of course. But no, no, no.",
+   "context_after": "Yeah, that's kind of, yeah, yeah. With a bootloader. That's a big thing, yeah.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "No. No, sorry. I'm using it daily, but just for, you know, asking it questions and shit like that. Yeah, of course. But no, no, no. I have something I'm hoping to publish about this week, if not this week, the next week. But I had a very exciting breakthrough with Claude the other day. Right. So, I had gotten, like, a web serial, you know, interface working. There's literally nothing special about that. But I had not really seen one for Zephyr. So, anyways. Okay. Vibe coded up a web serial interface. Basically, you plug in. I think I told you about this. You plug in a board. You can, like, basically connect to it over web serial. And then you can interface with it using your browser, which is super cool. But the big one was SMP. So, like, so SMP is, like, the protocol that a lot of things that use MCU boot talk over, like, Bluetooth or serial, which is the one that I'm using. And the clanker, really, the clanker did all the work. I'm just kind of poking and prodding at it. Got SMP working over web serial, which means that once you plug in a browser now, over, so you plug in a, you know, so I have, like, a cellular board that I built. Right. It's got a serial connection out. I can talk to it over the shell. But the really killer thing is I can push files into it using SMP, which is the transport. So, basically, you know, you have to turn off the shell at the same time. But you can push stuff using SMP over serial. So, I can push, like, certificate files into the file system. So, I can do security stuff there. And I can do firmware updates through the browser, which is very, very exciting for me. Because, like, that has been a long time. Like, so you basically plug in a board. Yeah, that's kind of, yeah, yeah. With a bootloader. That's a big thing, yeah."
+  }
+ ]
+}

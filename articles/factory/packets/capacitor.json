@@ -1,0 +1,991 @@
+{
+ "concept": "capacitor",
+ "name": "Capacitor",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "capacitor",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "capacitor"
+  ],
+  "children": [
+   "0805-package",
+   "ac-coupling",
+   "ceramic-capacitor",
+   "dielectric",
+   "electrolytic-capacitor",
+   "epoxy",
+   "high-voltage-capacitor",
+   "inductive-load",
+   "material-science",
+   "multilayer-ceramic-capacitor",
+   "polysilicon",
+   "power-engineering",
+   "power-factor-correction",
+   "power-system",
+   "power-transistor",
+   "quantum-mechanics",
+   "rectifier",
+   "resonance",
+   "short-circuit",
+   "tantalum-capacitor"
+  ],
+  "neighbors": {
+   "circuit-board": 4,
+   "soic": 4
+  },
+  "episodes_with_kept_mentions": 241,
+  "mentions_kept": 489,
+  "pins_final": 197,
+  "capped": false,
+  "total_available": 197
+ },
+ "claims": [
+  {
+   "claim_text": "Ceramic capacitor values are specified at zero volts of applied DC, which is a condition no working circuit meets. Putting three volts across a nominally one-microfarad 25-volt X7R part leaves about 0.90 microfarads with a good part and a small fraction of that with a poor one, so the derating is a design input rather than a footnote.",
+   "quote_verbatim": "capacitor values are specified at zero volt DC working voltage",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The effect is severe in high-value parts in small packages: a 100-microfarad 0603 ceramic is that value at one volt, and its capacitance plummets as the applied voltage approaches its rating.",
+   "quote_verbatim": "There are 100 microfarads in quote marks at one volt",
+   "speaker": "Dave Jones",
+   "episode": 570,
+   "episode_title": "Keyzermas All The Way",
+   "episode_url": "https://theamphour.com/570-keyzermas-all-the-way/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Where linearity matters, NPO and C0G dielectrics are chosen because they are stable not only with temperature but with applied voltage, which the high-permittivity dielectrics are not.",
+   "quote_verbatim": "they're linear with voltage as well",
+   "speaker": "Dave Jones",
+   "episode": 570,
+   "episode_title": "Keyzermas All The Way",
+   "episode_url": "https://theamphour.com/570-keyzermas-all-the-way/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Voltage dependence of ceramic capacitance is a routine property that younger engineers frequently meet for the first time in an environment where it matters, such as aerospace hardware.",
+   "quote_verbatim": "ceramic capacitors change their capacitance based on the voltage applied to them",
+   "speaker": null,
+   "episode": 401,
+   "episode_title": "An Interview with Brent and Bryce Salmi",
+   "episode_url": "https://theamphour.com/401-an-interview-with-brent-and-bryce-salmi/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "The trade behind a large value in a small case is the dielectric: a 100-microfarad 0603 part uses a Y5U-class dielectric whose capacitance varies with voltage, as distinct from an X7R.",
+   "quote_verbatim": "it's one of those awful dielectrics which changes with voltage",
+   "speaker": "Dave Jones",
+   "episode": 488,
+   "episode_title": "Sowing Discord",
+   "episode_url": "https://theamphour.com/488-sowing-discord/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "High-value multilayer ceramics also carry low voltage ratings, with parts available only at a few volts, so substituting them for an electrolytic is limited by rating as much as by dielectric behaviour.",
+   "quote_verbatim": "they're very low voltage",
+   "speaker": "Chris Gammell",
+   "episode": 188,
+   "episode_title": "Capacitors, Simulation and Closures - Deonerated Design Dealmaking",
+   "episode_url": "https://theamphour.com/188-capacitors-simulation-and-closures-deonerated-design-dealmaking/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Strictly linear, temperature-independent dielectrics once topped out at a few nanofarads, so an AC-coupling requirement had to be met by paralleling many parts; the same dielectric class now reaches around a hundred nanofarads.",
+   "quote_verbatim": "the biggest we could get at the time was like 2.2 nanofarads",
+   "speaker": null,
+   "episode": 539,
+   "episode_title": "The King of Trash with Big Clive",
+   "episode_url": "https://theamphour.com/the-amp-hour-539-the-king-of-trash-with-big-clive/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A printed circuit board flexes, and a multilayer ceramic capacitor mounted on it does not: the ceramic cracks before the solder joint does, because the rigid layer stack is soldered at both ends to a substrate that bends.",
+   "quote_verbatim": "The ceramic will crack before the solder does",
+   "speaker": "Dave Jones",
+   "episode": 367,
+   "episode_title": "Not Reely An Issue",
+   "episode_url": "https://theamphour.com/367-not-reely-an-issue/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Cracked ceramic capacitors commonly fail short rather than open, and because most of them sit across a power rail, a short is a path for the supply's full energy, which is how capacitor cracks become fires.",
+   "quote_verbatim": "they can fail short. So the capacitor is a short circuit",
+   "speaker": "Dave Jones",
+   "episode": 367,
+   "episode_title": "Not Reely An Issue",
+   "episode_url": "https://theamphour.com/367-not-reely-an-issue/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Three mitigations are used against flex cracking: extra standoffs to stop the board flexing, rotating the component ninety degrees because the parts break along their longitudinal axis, and routed stress-isolation slots around mounting posts and around the components themselves.",
+   "quote_verbatim": "reorienting the capacitor along, because they actually break along the longitudinal axes",
+   "speaker": "Dave Jones",
+   "episode": 367,
+   "episode_title": "Not Reely An Issue",
+   "episode_url": "https://theamphour.com/367-not-reely-an-issue/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Modern layer thicknesses make the problem worse: with layers that thin, the slightest stress or fracture turns the part into a resistor rather than an open circuit.",
+   "quote_verbatim": "the slightest stress or fracture turns them into a resistor",
+   "speaker": null,
+   "episode": 539,
+   "episode_title": "The King of Trash with Big Clive",
+   "episode_url": "https://theamphour.com/the-amp-hour-539-the-king-of-trash-with-big-clive/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Parts with compliant terminations exist for the automotive and high-vibration industries, where the end caps that solder to the board are made to flex and absorb the stress rather than transmit it into the ceramic.",
+   "quote_verbatim": "They're designed for the automotive industry and high vibration industries",
+   "speaker": null,
+   "episode": 539,
+   "episode_title": "The King of Trash with Big Clive",
+   "episode_url": "https://theamphour.com/the-amp-hour-539-the-king-of-trash-with-big-clive/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In circuits that must not fail, two capacitors are placed in series wherever one would normally sit across a rail: a single shorted part then leaves a working capacitor rather than a short, at the cost of halved capacitance and doubled component count.",
+   "quote_verbatim": "You put two capacitors in series",
+   "speaker": "Chris Gammell",
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The failure is not theoretical: a permanently powered alarm panel with a small ceramic capacitor across its supply went short, caught fire and destroyed the board, in a benign vibration environment with no power cycling.",
+   "quote_verbatim": "It just went short",
+   "speaker": "Chris Gammell",
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Damage begins before the board is powered: the compression of vacuum pickup and forced placement, followed by the surface tension of the solder joints and thermal shock in reflow, initiates micro-cracks in a brittle ceramic body.",
+   "quote_verbatim": "it starts to create these micro cracks",
+   "speaker": "Dave Jones",
+   "episode": 188,
+   "episode_title": "Capacitors, Simulation and Closures - Deonerated Design Dealmaking",
+   "episode_url": "https://theamphour.com/188-capacitors-simulation-and-closures-deonerated-design-dealmaking/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Multilayer ceramic capacitors are piezoelectric in both directions: they emit audible sound under a varying voltage, which is heard as a singing or buzzing board, and they generate a voltage when the board is tapped or vibrated.",
+   "quote_verbatim": "they can actually become microphonic and they can sing",
+   "speaker": "Dave Jones",
+   "episode": 127,
+   "episode_title": "FPGA, Xess, 32 Bit - Quirky Qualitative Questions",
+   "episode_url": "https://theamphour.com/the-amp-hour-127-quirky-qualitative-questions/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "That microphony is a diagnosis to reach for when a qualified filter misbehaves on a customer board: swapping the ceramic for a film capacitor is the quick test.",
+   "quote_verbatim": "if you're tapping on the board, ceramic capacitors are susceptible to microphone",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Electrolytic capacitors in a high-temperature environment can reach end of life in about a thousand hours, which is what forces a different technology into long-life designs.",
+   "quote_verbatim": "They'll die in a thousand hours",
+   "speaker": "Chris Gammell",
+   "episode": 9,
+   "episode_title": "From Boston In Boxers?",
+   "episode_url": "https://theamphour.com/the-amp-hour-9-from-boston-in-boxers/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Substituting ceramics for that reason moves the problem rather than removing it, because high-value ceramics are expensive and susceptible to mechanical stress, which is a liability in a high-vibration installation.",
+   "quote_verbatim": "they're highly susceptible to stress",
+   "speaker": "Chris Gammell",
+   "episode": 9,
+   "episode_title": "From Boston In Boxers?",
+   "episode_url": "https://theamphour.com/the-amp-hour-9-from-boston-in-boxers/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "The lifetime rating of a lamp or luminaire is in practice the lifetime of its capacitors: an electrolytic waiting to dry out sets the ceiling under any figure quoted for the light-emitting part itself.",
+   "quote_verbatim": "That's if the components inside last that long, like the capacitors",
+   "speaker": "Dave Jones",
+   "episode": 56,
+   "episode_title": "Open Orbific Oratiuncle",
+   "episode_url": "https://theamphour.com/the-amp-hour-56-open-orbific-oratiuncle/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Most failures of retail LED lamps are the capacitors in the driver rather than the emitters, which is why reliability tracks the quality of the converter circuitry and its thermal environment rather than the diode.",
+   "quote_verbatim": "Most failures in those bulbs that you buy, um, are the capacitors",
+   "speaker": "John Edmond",
+   "episode": 71,
+   "episode_title": "An Interview with John Edmond - Luciferous LED Lucubrator",
+   "episode_url": "https://theamphour.com/the-amp-hour-71-luciferous-led-lucubrator/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Overvoltage on an electrolytic does not require mains potential: twenty volts on a sixteen-volt part heats and boils the electrolyte until the pressure bursts the can, and a supply able to deliver current accelerates it.",
+   "quote_verbatim": "you put 20 volts across it",
+   "speaker": "Dave Jones",
+   "episode": 580,
+   "episode_title": "Electrical Archeology",
+   "episode_url": "https://theamphour.com/580-electrical-archeology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A classic version of that mistake is designing a voltage doubler around the nominal line voltage rather than its peak, since a 120-volt line reaches about 170 volts, which condemns hundred-volt parts fitted to the circuit.",
+   "quote_verbatim": "not realizing that it's really 170, you know, square root of two",
+   "speaker": null,
+   "episode": 485,
+   "episode_title": "An Interview with John Day",
+   "episode_url": "https://theamphour.com/485-an-interview-with-john-day/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Long-stored equipment fails through its electrolytics: decades in an attic dry the electrolyte, and capacitance can sometimes be recovered by reforming rather than replacement.",
+   "quote_verbatim": "they can regain their capacitance",
+   "speaker": "Dave Jones",
+   "episode": 688,
+   "episode_title": "The Tandy Train",
+   "episode_url": "https://theamphour.com/688-the-tandy-train/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In one family of second-hand instruments every unit's power supply is found leaking, the symptom being rails drifting out of specification while many of the capacitors still measure in tolerance; the recommendation is to recap immediately, because leaked electrolyte on the board is itself destructive.",
+   "quote_verbatim": "The capacitors are all leaking",
+   "speaker": "Jeff Keyzer",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Metallised-paper mains-rated capacitors of a well-known series approach a hundred percent failure with age, and are still sold new; replacing them in old equipment is routine restoration work.",
+   "quote_verbatim": "reaching a hundred percent failure rate as time goes on",
+   "speaker": "Jeff Keyzer",
+   "episode": 570,
+   "episode_title": "Keyzermas All The Way",
+   "episode_url": "https://theamphour.com/570-keyzermas-all-the-way/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The mechanism is moisture ingress: the case cracks, moisture is absorbed by the paper, and switch-on produces a conductive path and a violent failure. Film capacitors are not immune, with ingress found in a part only a year old.",
+   "quote_verbatim": "The cases crack. Moisture gets in",
+   "speaker": null,
+   "episode": 596,
+   "episode_title": "Capacitor Schoopage with Ron Demcko from AVX",
+   "episode_url": "https://theamphour.com/596-capacitor-schoopage-with-ron-demcko-from-avx/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Mains-rated X and Y class capacitors are required to be self-healing, because a localised dielectric breakdown must clear itself rather than propagate.",
+   "quote_verbatim": "For mains rated X and Y class caps, you get self-healing",
+   "speaker": "Dave Jones",
+   "episode": 707,
+   "episode_title": "Welding with an HDMI Cable",
+   "episode_url": "https://theamphour.com/707-welding-with-an-hdmi-cable/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A microscopic arc between the plates of an ageing electrolytic produces a current pulse, and where that capacitor sits in an audio signal chain the pulse is heard as an intermittent pop, which is a repair symptom that points straight at the capacitor.",
+   "quote_verbatim": "you hear that as a pop in your audio",
+   "speaker": "Dave Jones",
+   "episode": 707,
+   "episode_title": "Welding with an HDMI Cable",
+   "episode_url": "https://theamphour.com/707-welding-with-an-hdmi-cable/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Capacitors are not always the culprit in old equipment: in laboratory instruments built with good parts and adequate cooling, capacitor failures are rare and drifting resistors are the more common fault.",
+   "quote_verbatim": "I've had very few capacitor problems in microscopes",
+   "speaker": "Adam McCombs",
+   "episode": 431,
+   "episode_title": "An Interview with Adam McCombs",
+   "episode_url": "https://theamphour.com/431-an-interview-with-adam-mccombs/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Bypassing works like a two-way loudspeaker: the large electrolytic is a local reservoir of charge for low frequencies and the small ceramic keeps high-frequency noise out of the device, and neither does the other's job well.",
+   "quote_verbatim": "You have the reservoir of charge",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "No capacitor is only a capacitor: every part is a complex network of capacitance, inductance and resistance, and holding that model in mind is one of the working skills of analogue design.",
+   "quote_verbatim": "they're a complex system",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "The habit of fitting three bypass capacitors a decade apart in value came from the impedance minimum of each part: one capacitor gives its lowest impedance at one frequency, and overlaying several extends the low-impedance region across a wider band.",
+   "quote_verbatim": "the rule of thumb for the last like 50 years has been you put multiple capacitors in parallel",
+   "speaker": "Dave Jones",
+   "episode": 488,
+   "episode_title": "Sowing Discord",
+   "episode_url": "https://theamphour.com/488-sowing-discord/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The counter-argument is that a single larger capacitor is more effective across a wider band than a small one, and the reason not to fit large values everywhere is size, cost and the dielectric behaviour that comes with them; a board with a hundred ten-microfarad ceramics carries a real cost.",
+   "quote_verbatim": "you can't afford to populate your board with you know 10 microfarad caps everywhere",
+   "speaker": "Dave Jones",
+   "episode": 488,
+   "episode_title": "Sowing Discord",
+   "episode_url": "https://theamphour.com/488-sowing-discord/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Low-inductance constructions changed the calculation: a low-inductance chip capacitor or a three-terminal feed-through part can give a ten-microfarad capacitor a broad frequency of operation on its own, where paralleling many parts brings its own poles and zeros against the board inductance.",
+   "quote_verbatim": "it has a very low inductance. So it has a broad frequency of operation",
+   "speaker": null,
+   "episode": 596,
+   "episode_title": "Capacitor Schoopage with Ron Demcko from AVX",
+   "episode_url": "https://theamphour.com/596-capacitor-schoopage-with-ron-demcko-from-avx/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A hundred nanofarads next to every digital device was adequate when clocks ran at ten megahertz; at a hundred megahertz those parts are inductors and contribute nothing, so scattering them by habit is not power distribution design.",
+   "quote_verbatim": "They are an inductor. They don't do anything",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The engineering method for a power distribution network is measurement rather than habit: remove the switcher, feed the device from a clean supply, sweep the impedance of the distribution network with a network analyser and a bias tee, identify the frequency where emissions exceed the limit, and select capacitors with the vendor's tool for that frequency, DC bias and temperature.",
+   "quote_verbatim": "make a spectrum plot of the impedance of the power distribution",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Bulk capacitance for a switching regulator is sized from the load current, switching frequency and duty cycle to hold ripple below a target, and doing that correctly still leaves harmonics that show up as an electromagnetic compatibility failure.",
+   "quote_verbatim": "you need 22 microfarad to get that ripple below 10 millivolt",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Decoupling package size is decided with the pin assignment, not after layout: whether 0402 parts can be packed close or 0603 is needed is settled at the concept stage, and the high-current switching node is kept away from the voltage sense lines from the start.",
+   "quote_verbatim": "where do we put the decoupling capacitors? What size?",
+   "speaker": null,
+   "episode": 566,
+   "episode_title": "Switching Converter Engineering with Carmen Parisi",
+   "episode_url": "https://theamphour.com/566-switching-converter-engineering-with-carmen-parisi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Board practice has migrated downward in size over about a decade, from 0805 and 1206 parts to 0603 and smaller, with many designs going all-ceramic and accepting the design consequences that follow.",
+   "quote_verbatim": "I could get away with 0805s, maybe a 1206 cap",
+   "speaker": null,
+   "episode": 566,
+   "episode_title": "Switching Converter Engineering with Carmen Parisi",
+   "episode_url": "https://theamphour.com/566-switching-converter-engineering-with-carmen-parisi/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "0603 is the smallest case size any ordinary assembly house can handle; below it the customer needs a shop with more specialised placement equipment, which makes package choice a supplier decision as well as a board decision.",
+   "quote_verbatim": "0603 is what any regular assembly house can do",
+   "speaker": "Dave Jones",
+   "episode": 391,
+   "episode_title": "Only A Transmitter",
+   "episode_url": "https://theamphour.com/391-only-a-transmitter/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Choosing a package to hedge against component shortages is the wrong reason to change: moving a whole design to smaller parts changes the assembly process technology, lowers yield and may force a change of assembler.",
+   "quote_verbatim": "you've just changed the whole assembly process technology",
+   "speaker": "Dave Jones",
+   "episode": 391,
+   "episode_title": "Only A Transmitter",
+   "episode_url": "https://theamphour.com/391-only-a-transmitter/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Shortages are selective rather than universal: through one capacitor shortage the high-voltage, high-value parts were effectively unobtainable while hundred-nanofarad 0603 parts stayed available at a slightly higher price, and orders had to be placed quickly because parts went out of stock between quotation and purchase.",
+   "quote_verbatim": "it's the high-voltage, high-value ones that are just super, super unobtainium",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Ceramic capacitor lead times can be forecast rather than merely observed: about eight companies make ninety percent of the market, and because a phone contains on the order of a thousand capacitors of one small size, the development money goes to the smaller footprints. Lead times on small parts therefore improve while large-footprint parts stay long, which is decision-relevant when choosing a part to design in.",
+   "quote_verbatim": "there's eight companies that make up 90% of the capacitors in the market",
+   "speaker": "Scott Miller",
+   "episode": 451,
+   "episode_title": "An Interview with Scott Miller (2nd)",
+   "episode_url": "https://theamphour.com/451-an-interview-with-scott-miller-2nd/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Lot traceability separates factory tiers: a top-tier plant tracks the solder paste lot, its four-hour warm-up and its window of use, and can say which reel went into which serial number, while lower-tier shops scan barcodes without that database. The reason it matters is a bad batch of capacitors reaching the field.",
+   "quote_verbatim": "I've had a bad batch of capacitors burn me in the past",
+   "speaker": "Chris Gammell",
+   "episode": 451,
+   "episode_title": "An Interview with Scott Miller (2nd)",
+   "episode_url": "https://theamphour.com/451-an-interview-with-scott-miller-2nd/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Approved vendor lists are drawn selectively: resistors and diodes can be left to local brands, while capacitors are specified to known Japanese or Korean manufacturers, and a capable factory helps with that sourcing where the customer's own knowledge of local brands is thin.",
+   "quote_verbatim": "Capacitors, we still spec, you know, either Korean or Japanese brands",
+   "speaker": "Jesse Vincent",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Brand selection for capacitors rests on accumulated industry trust rather than incoming inspection, because a buyer cannot run parts in a thermal chamber for ten thousand hours; the brands worth caring about are those in the stressed parts of a power product.",
+   "quote_verbatim": "you have to do it based on your knowledge of the industry",
+   "speaker": "Dave Jones",
+   "episode": 671,
+   "episode_title": "NDA Sideshow",
+   "episode_url": "https://theamphour.com/671-nda-sideshow/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Constraining the approved part catalogue is a design aid rather than a restriction: a designer denied a new part number will fit two 2.2-microfarad capacitors instead of registering a 4.7, and having the decision made in advance removes a class of choices from every project.",
+   "quote_verbatim": "I already have these caps, so I might as well just use them",
+   "speaker": "Chris Gammell",
+   "episode": 137,
+   "episode_title": "Mars, System Design & NAND - Mercurial Mars Mission",
+   "episode_url": "https://theamphour.com/the-amp-hour-137-mercurial-mars-mission/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Assembly consumes more parts than the board needs, because winding a reel onto the machine wastes ten or twenty components; the customer must supply excess, and must flag expensive parts so they are handled carefully rather than wasted.",
+   "quote_verbatim": "you've actually got to provide excess components to them",
+   "speaker": "Dave Jones",
+   "episode": 24,
+   "episode_title": "Solar Cells, SparkFun, TSMC - The Detroit Debunking",
+   "episode_url": "https://theamphour.com/the-amp-hour-24-the-detroit-debunking/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Counterfeit capacitors are built to pass inspection by weight and appearance: a part marked at sixty-eight thousand microfarads, cut open, contained a much smaller capacitor inside the casing.",
+   "quote_verbatim": "there was just a smaller capacitor on the inside",
+   "speaker": "Chris Gammell",
+   "episode": 5,
+   "episode_title": "Girl Power",
+   "episode_url": "https://theamphour.com/the-amp-hour-5-girl-power/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Surface-mount capacitors carry no printed value, which is why they have to be bagged and identified individually for kits and why a recipient without a capacitance meter cannot verify them; through-hole parts have their values written on them.",
+   "quote_verbatim": "all of the capacitors have the value written on them",
+   "speaker": "Dave Jones",
+   "episode": 143,
+   "episode_title": "PCBs, Tektronix & Ham Radio - Habitual Handicraft Hangups",
+   "episode_url": "https://theamphour.com/the-amp-hour-143-habitual-handicraft-hangups/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Two unmarked capacitors of similar appearance were swapped on a bench, putting a hundred nanofarads where a microfarad was needed; the low-dropout regulator became unstable for want of its minimum output capacitance and produced random resets that were first blamed on software.",
+   "quote_verbatim": "it didn't have the minimum required output capacitance",
+   "speaker": "Dave Jones",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A regulator's ceramic output capacitor has to meet a specified equivalent series resistance, not merely a capacitance value, and that requirement is often buried deep in the data sheet.",
+   "quote_verbatim": "you have to make sure that you match this specific ESR",
+   "speaker": "Chris Gammell",
+   "episode": 276,
+   "episode_title": "Eating An Elephant",
+   "episode_url": "https://theamphour.com/276-eating-an-elephant/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A vendor's own application circuit destroyed parts in the field: a capacitor on the regulator's set pin holds charge, so shorting the output creates a voltage differential between the set and output pins that exceeds the device's undocumented limit. Later variants of the same architecture added a series resistor with the back-to-back protection diodes while the original part was never respun.",
+   "quote_verbatim": "having that capacitor on the set pin can cause the set pin to then, if you short your output",
+   "speaker": "Dave Jones",
+   "episode": 140,
+   "episode_title": "Project Management, Lasers & Robots - Staunch Specialty Sanctanimity",
+   "episode_url": "https://theamphour.com/the-amp-hour-140-staunch-specialty-sanctanimity/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A tantalum capacitor is chosen when a small design needs both a large value and high current availability, as for a cellular transmit burst that pulls hard on the supply, and is paid for at a dollar fifty to two dollars a part against a few cents for a ceramic.",
+   "quote_verbatim": "It needed high availability of current",
+   "speaker": "Chris Gammell",
+   "episode": 367,
+   "episode_title": "Not Reely An Issue",
+   "episode_url": "https://theamphour.com/367-not-reely-an-issue/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Tantalum capacitors are excluded from spacecraft hardware, and a payload built without that knowledge emitted smoke aboard a crewed station.",
+   "quote_verbatim": "you don't put tantalum capacitors",
+   "speaker": "Tom Lee",
+   "episode": 459,
+   "episode_title": "An Interview with Tom Lee",
+   "episode_url": "https://theamphour.com/459-an-interview-with-tom-lee/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Electrolytic capacitors are the first exclusion for airborne and space hardware, because their lifetime is limited, they leak, and reduced pressure at altitude or in vacuum dries them out.",
+   "quote_verbatim": "don't use electrolytic capacitors because they have a limited lifetime",
+   "speaker": null,
+   "episode": 401,
+   "episode_title": "An Interview with Brent and Bryce Salmi",
+   "episode_url": "https://theamphour.com/401-an-interview-with-brent-and-bryce-salmi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Small ceramic capacitors, particularly in high values, are commonly rated at only six or ten volts, so fitting them to a boost-converter rail is a rating error that destroys them; the check belongs at the point the bill of materials is assembled, which in tools that do not bind the ordering data to the library is a separate step from schematic capture.",
+   "quote_verbatim": "most small ceramic capacitors are designed for like low voltage",
+   "speaker": "Chris Gammell",
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The relation between current and voltage in a capacitor, that current equals capacitance times rate of change of voltage, is the concept a designer needs to hold; recognising that a spike into an integrator produces a step is the working use of it, and the calculation itself is rarely done by hand.",
+   "quote_verbatim": "the current in a capacitor equals the capacitance times the change in voltage",
+   "speaker": "Chris Gammell",
+   "episode": 33,
+   "episode_title": "Bob Widlar, Electronic Design, FIRST Robotics - Monday, Meta Monday",
+   "episode_url": "https://theamphour.com/the-amp-hour-33-monday-meta-monday/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Treating current as flowing through a capacitor is a deliberate simplification that circuit design depends on, even though charge accumulates on the plates and returns the other way; the model is retained because impedance at frequency is the useful abstraction.",
+   "quote_verbatim": "from a circuit design point of view, it's, it's very convenient to think about current flowing through a capacitor",
+   "speaker": "Dave Jones",
+   "episode": 491,
+   "episode_title": "The Almighty Dollarydoo",
+   "episode_url": "https://theamphour.com/491-the-almighty-dollarydoo/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "A quick sanity check when probing a working board is that bypass capacitors should have voltage across them and resistors should not, since voltage across a resistor means power is being dissipated where none was intended.",
+   "quote_verbatim": "Capacitors have voltage across them. For your bypass caps, resistors don't",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Continuity testing on a populated board produces false short indications, because a capacitor is a short circuit at the moment voltage is applied and the meter latches on the resulting beep; the tester's latching behaviour is a trade-off rather than an improvement.",
+   "quote_verbatim": "It's a short circuit, right? And that will give you a false",
+   "speaker": "Dave Jones",
+   "episode": 690,
+   "episode_title": "Clap on, clap off, lights flicker",
+   "episode_url": "https://theamphour.com/690-clap-on-clap-off-lights-flicker/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Adding a capacitor to stop an oscillation is not an incremental change: it alters the whole system and invalidates the analysis that preceded it. The disciplined form is to place the component in the system design from the start, with a value that may turn out to be zero, and to reason about the consequences of it being there.",
+   "quote_verbatim": "just adding a capacitor to something changes everything",
+   "speaker": null,
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Finding the fix by touch, putting a finger on a node until the oscillation stops and fitting a capacitor there, solves the day's problem but leaves no understanding; the follow-up work is to determine what the intervention actually did, by hand analysis or simulation.",
+   "quote_verbatim": "if you don't realize why, then that's just, you know, you can't build, you know, credible electronics on that",
+   "speaker": null,
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Empirical component swapping has to be recorded as it happens: fitting a capacitor, removing it, fitting another and failing to write down which value was in place at each measurement costs the rest of the day.",
+   "quote_verbatim": "you didn't record that last value",
+   "speaker": "Chris Gammell",
+   "episode": 341,
+   "episode_title": "All the way with DLJ",
+   "episode_url": "https://theamphour.com/341-all-the-way-with-dlj/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Tuning loop stability by trying capacitors is legitimate, but a value that works only under precise conditions is a warning rather than a solution; the fallback is to slow the loop down. A one-off test fixture can be tuned to a known load, while a general-purpose product must be stable into an unknown load that may be strongly inductive or capacitive.",
+   "quote_verbatim": "if you have a magical cap value",
+   "speaker": "Chris Gammell",
+   "episode": 184,
+   "episode_title": "Chris Becomes Self Employed - Quixotic Quitting Quaere",
+   "episode_url": "https://theamphour.com/184-chris-becomes-self-employed-quixotic-quitting-quaere/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Class-D amplifier output filters need the inductor and capacitor configurations chosen so that fluxes cancel and the impedances at both ends are balanced; an imbalance produces an audible click or pop at startup, and the same filters show up on radiated emissions scans, which makes late discovery expensive against a production ramp.",
+   "quote_verbatim": "the correct configuration of capacitors to make sure that, uh, your fluxes are canceling out",
+   "speaker": "Nash Reilly",
+   "episode": 474,
+   "episode_title": "An Interview with Nash Reilly",
+   "episode_url": "https://theamphour.com/474-an-interview-with-nash-reilly/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Trailing-edge dimming into a transformer destroyed the mains power supply behind it: switching off about four amps from an inductive secondary generated roughly an eight-hundred-volt spike. The remedies are to avoid the transformer or to place a few microfarads of capacitance across its output.",
+   "quote_verbatim": "stick a few microfrads of capacitance on the output of that transformer",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Leading-edge dimmers create the opposite problem, since switching on part-way through the cycle drives a high current surge into the rectifier and electrolytic front end of a switch-mode load, which is why conventional dimmers contain a sizeable choke to limit the rise time.",
+   "quote_verbatim": "you get quite a high current surge",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "In a pulsed energiser the capacitors and the output transformer are the life-limiting components, because the design dumps the stored energy repeatedly; the charging circuit watches the rate of rise of capacitor voltage to detect a shorted capacitor before attempting to charge it, since charging a shorted capacitor is a fire risk.",
+   "quote_verbatim": "we're looking at the, uh, the rate of rise of the voltage on the capacitor",
+   "speaker": "Paul Thompson",
+   "episode": 481,
+   "episode_title": "An Interview with Paul Thompson",
+   "episode_url": "https://theamphour.com/481-an-interview-with-paul-thompson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A pulse output stage stores energy in a capacitor bank at a much higher voltage than the output requires, thirty volts for a five-volt output, because the drive voltage is what produces sharp edges; without it the output degenerates from a square wave towards a sine.",
+   "quote_verbatim": "it needs to create those really sharp edges",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "A capacitor can buffer a radio's transmit burst, supplying on the order of ten milliamps for a fraction of a second, and where the source is energy harvesting the binding constraint becomes recharge time rather than peak current; scaling transmit power down in software is the complementary lever.",
+   "quote_verbatim": "you can get a cap on there that can supply, you know, your 10 milliamps for your 0.2 seconds it needs to transmit",
+   "speaker": "Dave Jones",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A tuned loop antenna needs a capacitor rated far above the supply voltage, on the order of six to ten kilovolts for a hundred watts, because the flyback effect in the antenna drives the voltage up; an ordinary low-voltage ceramic arcs through immediately. Vacuum variable capacitors serve where available, and home-built sliding-plate and trombone capacitors substitute where they are not.",
+   "quote_verbatim": "you need a capacitor that's, like, 6,000 volts, 10,000 volts",
+   "speaker": "Jeri Ellsworth",
+   "episode": 394,
+   "episode_title": "Jeri Ellsworth and the demise of CastAR",
+   "episode_url": "https://theamphour.com/394-jeri-ellsworth-and-the-demise-of-castar/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A Marx generator charges a ladder of capacitors in parallel through a resistor chain and then fires spark gaps that reconnect them in series, converting twenty-five kilovolts across many capacitors into hundreds of kilovolts across one; the device is simple in principle and difficult to make reliable.",
+   "quote_verbatim": "when one fires, it basically wires all those capacitors in series",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Power factor correction with capacitor banks is real engineering where a site runs large inductive loads such as motors and is billed on apparent power, which is why industrial installations carry banks of capacitors.",
+   "quote_verbatim": "if you've got huge motors everywhere, then they'll have huge banks of capacitors as well to try and correct for that power factor",
+   "speaker": "Dave Jones",
+   "episode": 215,
+   "episode_title": "Wrong Hardware, Wrong Software - Fugacious Fan Funding",
+   "episode_url": "https://theamphour.com/215-wrong-hardware-wrong-software-fugacious-fan-funding/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "The same physics does not transfer to a domestic supply: residential metering charges for real power and does not measure power factor, so a capacitor in a box sold as an energy saver cannot reduce a household bill, and the correction only applies to large commercial installations.",
+   "quote_verbatim": "generally it's only applicable to, uh, to big commercial companies with big installations",
+   "speaker": "Chris Gammell",
+   "episode": 64,
+   "episode_title": "OSHW, Makerbot & Memristo - Maundering Memristor Mathematicaster",
+   "episode_url": "https://theamphour.com/the-amp-hour-64-maundering-memristor-mathematicaster/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "The capacitance of a multilayer ceramic part comes from surface area repeated over hundreds of layers of dielectric interleaved with electrodes, which is the same principle by which a battery's capacity comes from stacked layers.",
+   "quote_verbatim": "They've got, you know, hundreds of layers in there",
+   "speaker": "Dave Jones",
+   "episode": 188,
+   "episode_title": "Capacitors, Simulation and Closures - Deonerated Design Dealmaking",
+   "episode_url": "https://theamphour.com/188-capacitors-simulation-and-closures-deonerated-design-dealmaking/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Dimensions inside a modern high-capacitance ceramic part are of the order of 0.4-micron particles in a two-micron dielectric layer, while the sprayed termination penetrates the body by around a millimetre.",
+   "quote_verbatim": "0.4 micron particles and 2 micron dielectric thickness",
+   "speaker": null,
+   "episode": 596,
+   "episode_title": "Capacitor Schoopage with Ron Demcko from AVX",
+   "episode_url": "https://theamphour.com/596-capacitor-schoopage-with-ron-demcko-from-avx/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "On silicon a capacitor is two metal plates placed close together, and the difficulty is making that reproducible: capacitors and resistors both spread by around twenty percent across a process, which destroys an error budget built on absolute values.",
+   "quote_verbatim": "it's a matter of putting two metal plates very close to each other",
+   "speaker": "J\u00f8rgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with J\u00f8rgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Analogue silicon design answers that spread by designing with ratios rather than absolute values: adjacent devices on the same die match each other closely even though the next wafer may be ten percent different, because a few microns of process variation shift everything together.",
+   "quote_verbatim": "you do the ratios between components, not precise values of components",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "On-chip capacitance is scarce: devoting an entire small shared-shuttle tile to one capacitor yields on the order of a picofarad, and that value moves by around ten percent from run to run.",
+   "quote_verbatim": "you would reach maybe one pick a farad",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Large inductors and capacitors are among the elements that do not integrate into silicon at all, so they remain on the package substrate or the board no matter how much else is absorbed into a single device.",
+   "quote_verbatim": "things like big inductors and capacitors and that type of deal",
+   "speaker": null,
+   "episode": 499,
+   "episode_title": "Discussing Chiplets with Ming Zhang",
+   "episode_url": "https://theamphour.com/499-discussing-chiplets-with-ming-zhang/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Very small capacitances can be built from the board itself: a half-picofarad AC-coupling input capacitor was made from the printed circuit board material, which is the same technique used for on-chip capacitors applied at board scale.",
+   "quote_verbatim": "the input cap is actually half a picofarret and he actually makes it out of the PCB material",
+   "speaker": "Dave Jones",
+   "episode": 76,
+   "episode_title": "Fremescent Floccose Fortification",
+   "episode_url": "https://theamphour.com/the-amp-hour-76-fremescent-floccose-fortification/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Capacitance measurement estimates cable length, because two conductors separated by an insulator form a capacitor whose value grows roughly linearly with the run.",
+   "quote_verbatim": "when you have two wires that are separated by an insulator, that's a capacitor",
+   "speaker": null,
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Charging the internal capacitance of a chip's data lines takes power, so a power trace taken on each clock edge reveals how many bus lines went high; that is the physical basis of power analysis side-channel attacks.",
+   "quote_verbatim": "Setting those data lines high is basically charging a very small capacitor, which physically takes power",
+   "speaker": "Colin O'Flynn",
+   "episode": 239,
+   "episode_title": "An Interview with Colin O'Flynn - Aspirated Adamantine Attacks",
+   "episode_url": "https://theamphour.com/239-an-interview-with-colin-oflynn-aspirated-adamantine-attacks/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Automatic reset over a serial connection was found by accident: soldering a capacitor between the port's data terminal ready line and the reset pin turns the line's transition into a reset pulse, which removed the need to press a button before every upload.",
+   "quote_verbatim": "if you put a capacitor there, you generate a reset pin",
+   "speaker": "Massimo Banzi",
+   "episode": 726,
+   "episode_title": "Arduino's Invisible Touch with Massimo Banzi",
+   "episode_url": "https://theamphour.com/the-amp-hour-726-arduinos-invisible-touch-with-massimo-banzi/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Dynamic memory stores each bit on a tiny capacitor, which is why it must be refreshed and why its behaviour differs fundamentally from a non-volatile memory.",
+   "quote_verbatim": "there are little capacitors in there, right? So those things are refreshed",
+   "speaker": "Chris Gammell",
+   "episode": 43,
+   "episode_title": "An Interview with Jeff Keyzer and Jeremy Blum - Audacious Arduino Arguments",
+   "episode_url": "https://theamphour.com/the-amp-hour-43-audacious-arduino-arguments/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Digital isolators can use capacitive coupling for their barrier, built from tens of picofarads of deliberately large capacitance rather than a magnetic or optical path.",
+   "quote_verbatim": "they're using capacitor isolation",
+   "speaker": "Dave Jones",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "A condenser microphone is a capacitor whose spacing, and therefore capacitance, is modulated by air pressure.",
+   "quote_verbatim": "they're effectively capacitors that are, you know, modulated by air pressure",
+   "speaker": "Dave Jones",
+   "episode": 410,
+   "episode_title": "Secret Buzzer Handshake",
+   "episode_url": "https://theamphour.com/410-secret-buzzer-handshake/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Removing a capacitor's discharge resistor leaves the part charged after disconnection: a 6.8-microfarad capacitor rated at four hundred volts held at two hundred and forty volts delivers a substantial shock, made worse by closely spaced contacts.",
+   "quote_verbatim": "I recently deliberately took the discharge resistor off a small capacitor",
+   "speaker": null,
+   "episode": 539,
+   "episode_title": "The King of Trash with Big Clive",
+   "episode_url": "https://theamphour.com/the-amp-hour-539-the-king-of-trash-with-big-clive/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Stray capacitance in a wall switch and its wiring passes enough current to make modern LED lamps glow faintly with the switch off, because the lamps operate at such low current.",
+   "quote_verbatim": "just due to the capacitance in the switch and the wiring",
+   "speaker": "Chris Gammell",
+   "episode": 629,
+   "episode_title": "At least my house isn't haunted",
+   "episode_url": "https://theamphour.com/629-at-least-my-house-isnt-haunted/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Deep-submergence electronics must survive hydrostatic pressure at the component level: capacitors implode, and even a sealed enclosure transmits pressure into the potting compound and the parts inside it.",
+   "quote_verbatim": "what happens when a capacitor goes down super deep and experiences tons of pressure",
+   "speaker": "Chris Gammell",
+   "episode": 407,
+   "episode_title": "Gregory Charvat and Three New Companies",
+   "episode_url": "https://theamphour.com/407-gregory-charvat-and-three-new-companies/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A cost-reduction method attributed to a mid-century television maker was to remove components from a working product one at a time until it stopped working and then restore the last one, which is a working description of finding which capacitors a design actually needs.",
+   "quote_verbatim": "you start removing components randomly until it stops working",
+   "speaker": "Dave Jones",
+   "episode": 391,
+   "episode_title": "Only A Transmitter",
+   "episode_url": "https://theamphour.com/391-only-a-transmitter/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Capacitors are also a weapon: a device that buck-boosts an internal capacitor bank to two hundred volts and dumps it into a port's data lines repeatedly destroys the host hardware, which is a direct hardware attack rather than a software one.",
+   "quote_verbatim": "charges up to 200 volts and then zaps your data lines",
+   "speaker": "Stephen Craig",
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  }
+ ],
+ "attribution_notes": [
+  "ep 401, 476, 485, 539, 566, 596: speaker labels flagged unreliable; those claims are attributed by content (an aerospace hardware team, a filter designer, a co-op student's high-voltage supply, a teardown practitioner, a switching-converter designer and a capacitor manufacturer's applications engineer) and carry no name where the identity is not itself the content.",
+  "ep 169: labels read self-consistently as the guest describing his own ADSL and hard-disk work; content-attributed as labelled."
+ ],
+ "capped": false
+}

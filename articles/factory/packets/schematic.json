@@ -1,0 +1,868 @@
+{
+ "concept": "schematic",
+ "name": "Schematic",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "schematic",
+  "census": "union",
+  "passages_in": 194,
+  "capped": false
+ },
+ "claims": [
+  {
+   "claim_text": "Board design begins with a finished schematic rather than with layout: the schematic must be complete and must carry the design notes that constrain layout, such as which pin is to be star-grounded to where, and only then are footprints and library components verified. That preparation can consume a month before any track is laid.",
+   "quote_verbatim": "step number one is to ensure you have a proper schematic and it's finished and it's, and it's got the design notes on there that you want",
+   "speaker": "Dave Jones",
+   "episode": 16,
+   "episode_title": "LED Designs, Last Minute Designs and Board Designs",
+   "episode_url": "https://theamphour.com/the-amp-hour-16-led-designs-last-minute-designs-and-board-designs/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Between component selection and layout sits a drafting phase of roughly two weeks spent getting symbols and footprints in order, which is the part of the schematic process practitioners find most painful and most often underestimate.",
+   "quote_verbatim": "you sit there for the next two weeks, getting all your symbols and your footprints in order",
+   "speaker": "Andrew Seddon",
+   "episode": 131,
+   "episode_title": "An Interview with Andrew Seddon - Necessary Networked Novelty",
+   "episode_url": "https://theamphour.com/the-amp-hour-131-necessary-networked-novelty/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Tools differ in when the physical package is bound to a part. Eagle associates a footprint with each device variant in the library, so pulling in a specific variant brings its package; Altium and KiCad place only the schematic symbol at capture and defer package assignment to the layout step, which makes the designer the librarian at that moment and turns missing footprints into layout-time work.",
+   "quote_verbatim": "you're the librarian at that point with those kinds of tools where you're pulling it in like that",
+   "speaker": "Andrew Seddon",
+   "episode": 131,
+   "episode_title": "An Interview with Andrew Seddon - Necessary Networked Novelty",
+   "episode_url": "https://theamphour.com/the-amp-hour-131-necessary-networked-novelty/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Professional-tier design flows assume a librarian produces correct part data before capture begins, so the process runs as three discrete siloed handoffs, library then schematic then layout, potentially between different people; hobbyist-tier tools are deliberately freeform and let the decisions be made later.",
+   "quote_verbatim": "they kind of work on this assumption that you're going to have a librarian",
+   "speaker": "Andrew Seddon",
+   "episode": 131,
+   "episode_title": "An Interview with Andrew Seddon - Necessary Networked Novelty",
+   "episode_url": "https://theamphour.com/the-amp-hour-131-necessary-networked-novelty/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The standard open-source tool workflow runs schematic first, then an association step that ties the library parts referenced by the schematic to footprints, then layout, placement and routing, and finally export of fabrication files.",
+   "quote_verbatim": "in KiCad, the standard workflow for people is you start out by making a schematic",
+   "speaker": "Adam Wolf",
+   "episode": 167,
+   "episode_title": "An Interview with Adam Wolf - Brick & Board Biuners",
+   "episode_url": "https://theamphour.com/167-an-interview-with-adam-wolf-brick-board-biuners/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Schedule estimates for professional board work run one to two months for a multi-page schematic and two to four months for the layout, depending on density; a fifty-page schematic implies connecting every pin on every part, which is why the work cannot be compressed into evenings over three weeks.",
+   "quote_verbatim": "you may need one, two months to do the schematic, because some schematics, they have a lot of pages",
+   "speaker": "Robert Feranec",
+   "episode": 316,
+   "episode_title": "An Interview with Robert Feranec",
+   "episode_url": "https://theamphour.com/316-an-interview-with-robert-feranec/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The function of a printed circuit board is to execute the schematic faithfully, so an ideal board would have zero-length traces with no resistance, inductance or capacitance, and every real board is an approximation of its schematic. Framing layout that way makes the schematic the specification against which the board is judged.",
+   "quote_verbatim": "The job of a PCB is to faithfully execute the schematic",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Having the same person draw the schematic and lay out the board avoids a class of communication failure, because constraints such as which jumper position is intended are difficult to express in schematic notes alone.",
+   "quote_verbatim": "it's better if the piece of person who does the schematic lays out the board as well",
+   "speaker": "Dave Jones",
+   "episode": 410,
+   "episode_title": "Secret Buzzer Handshake",
+   "episode_url": "https://theamphour.com/410-secret-buzzer-handshake/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Treating the schematic as the design's control document means part numbers, supplier information and fit or no-fit attributes live as schematic attributes and every downstream artefact, including the bill of materials in whatever template a vendor requires, is generated programmatically from it. The objection is that purchasing departments and contract manufacturers will not open a schematic, which the generated spreadsheet answers; the method yields nothing unless it is adopted completely.",
+   "quote_verbatim": "using your schematic as a control document",
+   "speaker": "Chris Gammell",
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Keeping the bill of materials in a spreadsheet decoupled from the schematic produces drift, because a change made in one place is not pushed back to the other in time; generating the spreadsheet from the schematic on demand confines every change to one place.",
+   "quote_verbatim": "then you only change it one place because when you start decoupling the two",
+   "speaker": "Chris Gammell",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Expensive per-seat schematic tools are the practical obstacle to using the schematic as the control document, because only the seat holder can open and change the file. A low-cost or open-source tool lets a production engineer open the source file, make the change, put it under revision control and route it for approval at the schematic level rather than at the level of exported artefacts.",
+   "quote_verbatim": "if you have to pay five grand for each seat of the schematic tool",
+   "speaker": "Chris Church",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The design source file, not the artefacts generated from it, is the canonical representation of a hardware design, an argument imported directly from source-code practice.",
+   "quote_verbatim": "we really need to look at that original source code as sort of the",
+   "speaker": "Chris Church",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Scripted plugins that extract schematic fields to a spreadsheet and write the edited values back close the practical gap in using the schematic as the source of truth for costing, part lists and modifications.",
+   "quote_verbatim": "you can extract it, work from a spreadsheet and then put it back in",
+   "speaker": "Chris Gammell",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Version control tags alone are insufficient for released hardware revisions: an exported schematic file is committed into an output folder at each release, so that revisions A through D exist as hard files that can be opened side by side, which a tag-based checkout of a single working tree cannot provide.",
+   "quote_verbatim": "when rev a happens, I put an official schematic in the output folder",
+   "speaker": "Chris Gammell",
+   "episode": 530,
+   "episode_title": "Living Through Chipageddon",
+   "episode_url": "https://theamphour.com/530-living-through-chipageddon/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Schematic and layout revisions decouple in practice, because a layout can change without the schematic changing, and population options for pin-compatible alternatives add a further dimension that is not captured by either file. That dimension habitually degrades into spreadsheets keyed by reference designator, which is the lowest common denominator rather than the right representation.",
+   "quote_verbatim": "sometimes they get decoupled where your layout might change, but your schematic might not",
+   "speaker": "Chris Gammell",
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A design file serves two incompatible purposes, current information resource and historical record. Ordinary practice keeps only the latest corrected schematic and discards superseded versions, but anything that shipped to customers or exists as prototypes that may be used later must be retained as a historical record and cannot be overwritten.",
+   "quote_verbatim": "you always keep the latest schematic with all the corrections on it",
+   "speaker": "Dave Jones",
+   "episode": 178,
+   "episode_title": "A 2013 Recap - Year-end Yarn Yakking",
+   "episode_url": "https://theamphour.com/178-a-2013-recap-year-end-yarn-yakking/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Annotation is where published schematics most often fail: symbols are drawn with their pins and connections but without the part number or chip designation, so that the device cannot be identified from the drawing.",
+   "quote_verbatim": "they haven't put the chip number next to it",
+   "speaker": "Dave Jones",
+   "episode": 80,
+   "episode_title": "Otiose Ontocyclic Opiniasters",
+   "episode_url": "https://theamphour.com/the-amp-hour-80-otiose-ontocyclic-opiniasters/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Fitting a design onto a single schematic sheet is prized for readability, but rearranging a schematic between sheet sizes by cutting, selecting and pasting blocks introduced an error that required a further board revision, so the reformatting itself is a source of defects.",
+   "quote_verbatim": "There was one error because I was dragging around my schematics",
+   "speaker": "Dave Jones",
+   "episode": 80,
+   "episode_title": "Otiose Ontocyclic Opiniasters",
+   "episode_url": "https://theamphour.com/the-amp-hour-80-otiose-ontocyclic-opiniasters/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A readable schematic style draws functional blocks in outline, separates them with colour and gives each a header, so the page structure carries the block diagram of the design.",
+   "quote_verbatim": "with the outline block diagram, with the outline block diagrams and separating the blocks with the colors and putting headers on them",
+   "speaker": "Dave Jones",
+   "episode": 324,
+   "episode_title": "Mapping Out Nerdery",
+   "episode_url": "https://theamphour.com/324-mapping-out-nerdery/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A well-drawn schematic documents much of a design by itself: signal flow reads left to right, components are meaningfully named, and notes describe what parts do, which is qualitatively different from a hundred-page binder with every net on a separate page. What the schematic cannot carry is design intent, the constraints in force and the alternatives rejected, and that context is what makes an inherited design extensible rather than merely readable.",
+   "quote_verbatim": "somebody handing you a schematic where it kind of flows left to right and components are, have notes",
+   "speaker": "Jeff Keyzer",
+   "episode": 365,
+   "episode_title": "Wait, why is Jeff glowing?",
+   "episode_url": "https://theamphour.com/365-wait-why-is-jeff-glowing/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Layout quality depends on schematic drawing quality, because a well-drawn schematic groups the circuit into the regions the board should mirror; a layout designer from an art rather than engineering background was able to place effectively on that basis alone.",
+   "quote_verbatim": "if you have a well-drawn schematic, it kind of, it kind of makes it easier to kind of group things",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Reading a schematic is a pattern-recognition skill rather than a knowledge one: a practitioner learns to decompose the page into recognisable blocks such as an amplifier or a filter, and until that happens even determining the direction of signal flow is difficult, particularly where nets loop back on themselves because the drawing ran out of room.",
+   "quote_verbatim": "really it's about pattern recognition",
+   "speaker": "Chris Gammell",
+   "episode": 146,
+   "episode_title": "Hamvention, Arduino and Intel - Burdensome Background Battology",
+   "episode_url": "https://theamphour.com/the-amp-hour-146-burdensome-background-battology/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The same decomposition applies at transistor level: a detailed internal schematic in a data sheet resolves into a differential amplifier, a current source and other standard structures, while the simplified figure alongside it presents the part as an operational amplifier driving a pass transistor through a feedback element.",
+   "quote_verbatim": "you start to see structures. You understand, right. There's like a, there's a differential amplifier in there",
+   "speaker": "Dave Jones",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Idiosyncratic drawing defeats block recognition entirely. Bob Pease's hand-drawn circuits, whose signals run in every direction across the page, present no recognisable common building blocks and cannot be read at a glance regardless of competence.",
+   "quote_verbatim": "you couldn't recognize any common building blocks",
+   "speaker": "Chris Gammell",
+   "episode": 146,
+   "episode_title": "Hamvention, Arduino and Intel - Burdensome Background Battology",
+   "episode_url": "https://theamphour.com/the-amp-hour-146-burdensome-background-battology/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Drawing conventions have changed over time and older schematics are not readable under modern habits: a mid-1960s power supply schematic drawn in the valve-era convention places the negative rail at the top and the positive at the bottom, and has to be redrawn before it can be followed.",
+   "quote_verbatim": "it is, like, literally upside down and back to front",
+   "speaker": "Dave Jones",
+   "episode": 210,
+   "episode_title": "Risky Components and Hardware Innovation - Slipshod Shack Shutdown",
+   "episode_url": "https://theamphour.com/210-risky-components-and-hardware-innovation-slipshod-shack-shutdown/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Partitioning a design into modules both physically and in the schematic makes each block independently verifiable and reduces cross-coupling between them, which is why instruments such as spectrum analysers are built as visibly separated modules following the signal chain of filter, mixer, down-converter and detector.",
+   "quote_verbatim": "Both physically and in terms of your schematic as well",
+   "speaker": "Dave Jones",
+   "episode": 464,
+   "episode_title": "KonnectorPanik",
+   "episode_url": "https://theamphour.com/464-konnectorpanik/",
+   "depth_regraded": "opinion",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Schematic standards split into a soft layer and a hard layer. The soft layer is style, covering naming conventions and reference designator practice, which affects readability only; the hard layer is checkable, such as confirming that reference designators match their part classes so that a part prefixed as a battery actually is one. The need for formalised standards scales with the number of people working in the tool.",
+   "quote_verbatim": "did you check that the reference designators all match",
+   "speaker": "Chris Gammell",
+   "episode": 203,
+   "episode_title": "Tesla, Checklists and Bullies - Emerging External Eupsychics",
+   "episode_url": "https://theamphour.com/203-tesla-checklists-and-bullies-emerging-external-eupsychics/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A remote schematic review is made tractable by dividing each page into numbered blocks: a border is drawn around each functional section and numbered by page, so section 1.1, 1.2 and so on can be signed off one at a time over a call with nothing more than a printed page.",
+   "quote_verbatim": "every block in the schematic gets, you know, there's a little border drawn around the circuit and the schematic and it's given a number",
+   "speaker": "Kieran O'Leary",
+   "episode": 492,
+   "episode_title": "More Electronics Consultant Impedance Matching",
+   "episode_url": "https://theamphour.com/492-more-electronics-consultant-impedance-matching/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A designer cannot review their own schematic: after months of looking at the same drawing, ten errors became obvious the moment the assembled prototype was in hand, because familiarity had stopped the errors being visible on the page.",
+   "quote_verbatim": "You cannot review your own work",
+   "speaker": "Chris Gammell",
+   "episode": 134,
+   "episode_title": "Intel, EPA & Brown Field - Google's Ground Gurgitation",
+   "episode_url": "https://theamphour.com/the-amp-hour-134-googles-ground-gurgitation/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A thorough schematic check assumes nothing and is done pin by pin: each pin on the symbol is cross-referenced against the data sheet, and the footprint is checked separately for pitch, pad sizes and the mapping from schematic pin to land. Footprint errors are not equivalent in severity, since transposed pin numbers behave differently from a slightly wrong pitch, and the transposition is the harder failure to detect from the board.",
+   "quote_verbatim": "You cross-reference each individual pin on the schematic against the data sheet",
+   "speaker": "Dave Jones",
+   "episode": 201,
+   "episode_title": "Cheap Respins And A Time Machine - Multiscience Mercenary Marketplace",
+   "episode_url": "https://theamphour.com/201-cheap-respins-and-a-time-machine-multiscience-mercenary-marketplace/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Checking is defeated by a subconscious mechanism rather than by carelessness: the reviewer believes a section was checked thoroughly when it was skipped, because the mind recorded an assumption as a verification. There is also a threshold below which review is worthless, since a cursory pass finds nothing, while genuinely checking every element of a complex design would take weeks and become taxing enough that corners get cut, which is why assembly and test remain the real verification.",
+   "quote_verbatim": "Your mind told you that you thoroughly checked it, but you didn't",
+   "speaker": "Chris Gammell",
+   "episode": 201,
+   "episode_title": "Cheap Respins And A Time Machine - Multiscience Mercenary Marketplace",
+   "episode_url": "https://theamphour.com/201-cheap-respins-and-a-time-machine-multiscience-mercenary-marketplace/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The diagnostic signal in a design review is the depth of the questions asked. A reviewer who returns only spelling corrections has either not read the schematic or does not understand it, so silence and superficial feedback are the warning, not a pass.",
+   "quote_verbatim": "If you don't get the people asking the deep questions, it's like, you know that either they haven't reviewed it or they don't understand it",
+   "speaker": "Chris Gammell",
+   "episode": 211,
+   "episode_title": "Design Reviews Are Important - Habitual Hype Hebetude",
+   "episode_url": "https://theamphour.com/211-design-reviews-are-important-habitual-hype-hebetude/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Formal procedures for checking the schematic, the layout and the footprints before release exist because the cost of debugging a design already in production is disproportionately higher than the cost of the check.",
+   "quote_verbatim": "How to check the schematic. How to check the layout, footprints and everything. Before it goes to production",
+   "speaker": "Robert Feranec",
+   "episode": 316,
+   "episode_title": "An Interview with Robert Feranec",
+   "episode_url": "https://theamphour.com/316-an-interview-with-robert-feranec/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A minimum viable hardware process inserts explicit steps between finishing the schematic and sending the board out: a schematic check against a reusable checklist, then layout, then a separate layout checklist. Having no process is not faster.",
+   "quote_verbatim": "check the schematic, you know, like whatever, come up with a checklist of things that you always test",
+   "speaker": "",
+   "episode": 584,
+   "episode_title": "Software for Rockets with Charles Aylward",
+   "episode_url": "https://theamphour.com/584-software-for-rockets-with-charles-aylward/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Where a design is executed by an outside party, reviewing their schematic before hardware is built is the control point: a supplier that declined to send the schematic ahead of the product had implemented something incorrectly, and the error, which a schematic review would have caught, instead cost a complete board respin.",
+   "quote_verbatim": "If I had checked that schematic first, then, you know, they wouldn't have had",
+   "speaker": "Dave Jones",
+   "episode": 282,
+   "episode_title": "3D Product Logistics",
+   "episode_url": "https://theamphour.com/282-3d-product-logistics/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A wire that appears connected on a schematic but is not actually joined is a defect class serious enough that the capture tool should report it, since it survives visual review and manifests only in hardware.",
+   "quote_verbatim": "If you miss a wire in a schematic and it looks like it's connected, but it's not actually connected, that will totally ruin your year",
+   "speaker": "John Saunders",
+   "episode": 379,
+   "episode_title": "An Interview with John Saunders",
+   "episode_url": "https://theamphour.com/379-an-interview-with-john-saunders/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Library errors propagate into field failures through the schematic. In one connector, the CAD librarian numbered the symbol pins so that physically adjacent pins appeared numerically far apart; the designer, reading the numbers, placed a 52 volt backlight rail next to a low-voltage differential line, and the resulting damage was common enough that a repair shop could identify it without opening the machine. Drawing connectors on the schematic physically grouped to match the real pin layout defends against this, at the cost of not always being practical.",
+   "quote_verbatim": "The error started with the CAD librarian, who's responsible for drawing the schematic symbols for new parts",
+   "speaker": "Dave Jones",
+   "episode": 447,
+   "episode_title": "Voltnuts for Flashlights",
+   "episode_url": "https://theamphour.com/447-voltnuts-for-flashlights/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Parts taken from an official vendor library cannot be assumed correct; symbols obtained that way have had wrong pinouts, and the working rule is that library content is verified before use rather than trusted.",
+   "quote_verbatim": "the pinouts in the schematic symbol are wrong. I've gotten them from the official library",
+   "speaker": "Dave Jones",
+   "episode": 104,
+   "episode_title": "Ceramic capacitors & High end scopes - Kempt Kickstarter Kakorrhaphiophobia",
+   "episode_url": "https://theamphour.com/the-amp-hour-104-kempt-kickstarter-kakorrhaphiophobia/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "There is no settled convention for arranging pins on a schematic symbol. Three incompatible preferences coexist: inputs on the left and outputs on the right, pins matching the physical layout of the package, and pins grouped functionally. The same designer may want different arrangements on different designs, which is why a universal library standard has never been reachable.",
+   "quote_verbatim": "everyone wants their schematic ! done a different way",
+   "speaker": "Dave Jones",
+   "episode": 70,
+   "episode_title": "Idiorhythmic IPC Inconcinnity",
+   "episode_url": "https://theamphour.com/the-amp-hour-70-idiorhythmic-ipc-inconcinnity/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Library file granularity is a revision-control decision. Storing each schematic symbol and each footprint as its own file, rather than bundling all symbols of a class into one library file, allows parts to be added by drag and drop and makes changes trackable per part.",
+   "quote_verbatim": "each schematic symbol is now its own file",
+   "speaker": "Chris Gammell",
+   "episode": 370,
+   "episode_title": "Alternate Info Sources",
+   "episode_url": "https://theamphour.com/370-alternate-info-sources/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Distributor-published libraries are atomic, binding one footprint, one symbol and one 3D model to one orderable part number, in contrast to the decoupled model where a symbol is assigned a package later. The atomic form is necessary because two orderable variants of the same device can have entirely different footprints and must therefore be distinct entries in both the schematic and the layout tool.",
+   "quote_verbatim": "atomic being like a one footprint, one symbol, one 3D model",
+   "speaker": "Dave Jones",
+   "episode": 508,
+   "episode_title": "Doomed To The Flatland",
+   "episode_url": "https://theamphour.com/508-doomed-to-the-flatland/",
+   "depth_regraded": "opinion",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Third-party symbol and footprint services exist to replace the in-house librarian, generally charging per footprint, which deters individuals but is economic for a company. Inside a tool vendor with staff librarians, a request for a 1500-pin BGA part complete with 3D model was fulfilled on demand, and on a part that size the schematic symbol is as much work as the footprint.",
+   "quote_verbatim": "on the schematic symbol side is a big deal as well",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A supplied symbol whose pin arrangement does not match the designer's preference is still worth having, because rearranging existing pins is far cheaper than creating, numbering and verifying them from scratch.",
+   "quote_verbatim": "it's much easier to go in there and just move the pins than it is to create them all from scratch",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Library work is irreducibly preference-driven because the standards do not reach far enough: workmanship standards define land-pattern density levels, but nothing defines the size of a pin-one indicator or the line width of silkscreen, and engineers divide on whether symbols should follow a logical flow with inputs left, outputs right and power top and bottom, or should mirror the application circuit in the data sheet so that, for example, an inductor sits on a short lead between the switching pin and the feedback pin.",
+   "quote_verbatim": "they don't define standards for things like the pin one indicator or the line widths of your silk screen",
+   "speaker": "",
+   "episode": 531,
+   "episode_title": "Footprints and Symbols with Natasha Baker",
+   "episode_url": "https://theamphour.com/531-footprints-and-symbols-with-natasha-baker/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Symbol creation can be partly automated from the data sheet: optical character recognition and simple computer vision detect the pin table and its rule lines, extract the rows, and classify each pin as input, output or power to generate the symbol.",
+   "quote_verbatim": "a computer vision based schematic symbol builder",
+   "speaker": "",
+   "episode": 531,
+   "episode_title": "Footprints and Symbols with Natasha Baker",
+   "episode_url": "https://theamphour.com/531-footprints-and-symbols-with-natasha-baker/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Part import can be reduced to a command-line call keyed on a distributor part number, which fetches the footprint, the schematic symbol and the 3D model together and deposits them into a common library. The acknowledged cost of relying on it rather than maintaining a library is that unverified parts eventually cause a failure.",
+   "quote_verbatim": "it grabs the footprint, it grabs the schematic, it grabs the 3d model, puts them all in a common library",
+   "speaker": "Chris Gammell",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A graphical schematic editor is a front end that emits a netlist, which is what the simulation engine actually consumes; older tools expose that netlist as readable text listing which nodes each component connects, and the same netlist representation carries over into SPICE.",
+   "quote_verbatim": "The, the gooey schematic interface just generates a net list, which goes into the spice engine",
+   "speaker": "Chris Gammell",
+   "episode": 148,
+   "episode_title": "Contextual Electronics, ClubJameco and Solderpaste - Lifelong Learning Likelihood",
+   "episode_url": "https://theamphour.com/the-amp-hour-148-lifelong-learning-likelihood/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Importing a captured schematic into a simulator rather than redrawing it eliminates transcription errors, but only partially automates the work: passive components map onto generic models automatically while each integrated circuit must have a model chosen by hand or be absent from the simulator's library entirely.",
+   "quote_verbatim": "you eliminate the error in draw, in drawing the schematic as in, in redrawing the schematic",
+   "speaker": "Dave Jones",
+   "episode": 148,
+   "episode_title": "Contextual Electronics, ClubJameco and Solderpaste - Lifelong Learning Likelihood",
+   "episode_url": "https://theamphour.com/the-amp-hour-148-lifelong-learning-likelihood/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "When working directly against a simulation engine, drawing the schematic and labelling every node explicitly is the only reliable method of getting the circuit right.",
+   "quote_verbatim": "Go draw your schematics, label each node. That is the only way you will get it right",
+   "speaker": "Chris Gammell",
+   "episode": 148,
+   "episode_title": "Contextual Electronics, ClubJameco and Solderpaste - Lifelong Learning Likelihood",
+   "episode_url": "https://theamphour.com/the-amp-hour-148-lifelong-learning-likelihood/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "At integrated circuit scale the equivalent of a schematic check is layout-versus-schematic verification against the mask set, which carries both long run times and high tool cost, on top of mask costs in the millions of dollars.",
+   "quote_verbatim": "that's the schematic versus layout and check for your mask set",
+   "speaker": "Jørgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with Jørgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Web-hosted schematic capture makes the design inaccessible when the service fails: users of one online tool were unable to export their schematics for more than eighteen days, with the design files effectively trapped, whereas a locally installed tool keeps working without a network.",
+   "quote_verbatim": "they can't export schematics, uh, for over 18 days now",
+   "speaker": "Dave Jones",
+   "episode": 317,
+   "episode_title": "A Decoupled Episode",
+   "episode_url": "https://theamphour.com/317-a-decoupled-episode/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Schematic capture is network-dependent even with locally installed software, because the work requires data sheets, footprints and 3D models to be looked up as the design proceeds. Layout, by contrast, is genuinely offline work once the schematic is complete and the parts are in hand, which makes the two phases differently portable.",
+   "quote_verbatim": "if you're doing a schematic and you're designing your product and you're doing the schematic, you need access to the internet anyway",
+   "speaker": "Dave Jones",
+   "episode": 219,
+   "episode_title": "Get Smart About Automation - Caducous Cyborg Concerns",
+   "episode_url": "https://theamphour.com/219-get-smart-about-automation-caducous-cyborg-concerns/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Simultaneous multi-user editing of one schematic addresses a case that barely exists, because even large designs have a single person owning the schematic, with perhaps a second owning the layout. The practical collaboration mechanism is distributing the schematic as a PDF for markup and feeding comments back through the one person who makes every change.",
+   "quote_verbatim": "One person's doing the schematic. Maybe a different person's doing the PCB",
+   "speaker": "Dave Jones",
+   "episode": 563,
+   "episode_title": "Grumpy Collaboration",
+   "episode_url": "https://theamphour.com/563-grumpy-collaboration/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Applying source-control forking to hardware, so that a published design including schematic, layout and bill of materials can be forked into a derivative project, transfers cleanly in one direction only; reintegrating changes back is the difficult half and does not work at the layout level.",
+   "quote_verbatim": "this is an implementation of GitHub forking into hardware",
+   "speaker": "Chris Gammell",
+   "episode": 154,
+   "episode_title": "Arduino, IndiGoGo and Hack-a-Day - Doodad Dealer Dancing",
+   "episode_url": "https://theamphour.com/the-amp-hour-154-doodad-dealer-dancing/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Describing a circuit in a programming language rather than drawing it allows parameterised generation, so that a 555 astable can be emitted from a target frequency and one resistor value instead of the designer working through the data sheet formulas. The argument is strongest on large parts, where a schematic page is a box with labelled stubs continued on another page, so the graphical representation carries no information and instead introduces a class of error where a mislabelled net silently fails to match and nothing checks it.",
+   "quote_verbatim": "instead of drawing schematics with pictures and boxes and little wires that use a language in this case python to describe your circuit",
+   "speaker": "Chris Gammell",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "opinion",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Reducing a schematic to a PDF loses machine readability in ways that are not obvious: searching the PDF for a net name can fail because the text box holding the name has been split into two pieces.",
+   "quote_verbatim": "you take a schematic pdf and you control f to search for a net name and it turns out oh that pdf text box is split in two pieces",
+   "speaker": "Chris Gammell",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Automated layout tools take the schematic as their input specification and aim to emit a manufacturable, design-rule-checked board from it, on the analogy of a compiler consuming source code. A practical safeguard for such a tool is to state its limitations in advance and warn when a design exceeds them, since knowing when to be concerned is separable from knowing how to solve the problem.",
+   "quote_verbatim": "our ultimate goal is to start with circuit schematics and then output a ready to go PCB",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Graphical block-based design environments provide a migration path into hardware description languages by letting blocks be wired together like a schematic while permitting Verilog to be written inside an individual block.",
+   "quote_verbatim": "you can have blocks that you connect with wires and make, make basically schematic diagrams, but in the blocks, you can also write very log itself",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Open source hardware, under its formal definition, requires the PCB and schematic files to be released; releasing only the software does not qualify, and the definition is all or nothing.",
+   "quote_verbatim": "You must give away your PCB and schematic files",
+   "speaker": "Dave Jones",
+   "episode": 55,
+   "episode_title": "Shonky Stiver Stultiloquence",
+   "episode_url": "https://theamphour.com/the-amp-hour-55-shonky-stiver-stultiloquence/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Because the definition is all or nothing while practice is partial, projects releasing only a schematic PDF use the open source hardware mark anyway, and the mark therefore conveys nothing about what is actually available. A proposed remedy adds letter suffixes to the logo, on the model of Creative Commons licences, so that it can be seen at a glance which of schematic, board files, firmware and mechanical CAD were released and under what commercial terms.",
+   "quote_verbatim": "Do they just release a schematic as a PDF and that's it and call it open?",
+   "speaker": "Chris Gammell",
+   "episode": 316,
+   "episode_title": "An Interview with Robert Feranec",
+   "episode_url": "https://theamphour.com/316-an-interview-with-robert-feranec/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Releasing the schematic of a commercial product costs little in competitive terms, because the schematic can be reconstructed from the product itself in about a day and the part markings are visible; the firmware source is the asset that is not recoverable that way.",
+   "quote_verbatim": "anyone can reverse engineer the schematic in a day",
+   "speaker": "Dave Jones",
+   "episode": 298,
+   "episode_title": "Don't Turn It On, Don't Take It Apart",
+   "episode_url": "https://theamphour.com/298-dont-turn-it-on-dont-take-it-apart/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "In the repair trade the schematic is the threshold requirement: service manuals, official parts and even rentable factory repair tooling do not substitute for it. Two further mechanisms can make a released schematic useless anyway, serialising components so that a salvaged part is rejected by the device software, and exclusive supply arrangements under which the semiconductor vendor will sell the part only to the original manufacturer.",
+   "quote_verbatim": "You should be able to have a schematic",
+   "speaker": "Dave Jones",
+   "episode": 534,
+   "episode_title": "Firmware Update Capabilities",
+   "episode_url": "https://theamphour.com/534-firmware-update-capabilities/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Where schematics are not published, they circulate through an informal market in which access is bought from unidentified intermediaries by untraceable payment, rather than purchased from the manufacturer.",
+   "quote_verbatim": "I can get a schematic. Or I have to PayPal somebody at this strange email, 300 bucks",
+   "speaker": "Louis Rossmann",
+   "episode": 311,
+   "episode_title": "An Interview with Louis Rossmann",
+   "episode_url": "https://theamphour.com/311-an-interview-with-louis-rossmann/",
+   "depth_regraded": "explains",
+   "kind": "sourcing"
+  },
+  {
+   "claim_text": "In the Chinese repair ecosystem schematics are published as printed repair manuals in a recognisable format, sold in electronics markets but kept out of sight under other stock; phone schematics are reissued continuously and also circulate online, while laptop volumes have become harder to obtain. Printed copies remain preferred for being browsable at speed and markable, where a PDF forces zooming into one region at a time.",
+   "quote_verbatim": "they always print it in a certain form factor, and they always hide them under a pile of other things",
+   "speaker": "Bunnie Huang",
+   "episode": 336,
+   "episode_title": "An Interview with Bunnie Huang (2nd)",
+   "episode_url": "https://theamphour.com/the-amp-hour-336-an-interview-with-bunnie-huang-2nd/",
+   "depth_regraded": "explains",
+   "kind": "sourcing"
+  },
+  {
+   "claim_text": "Service manual quality varies by manufacturer far more than by equipment class. Some electron microscope manuals run to thousands of pages of fold-out schematics with half the document explaining how the circuit works, enough to build the instrument from; others supply schematics that are commonly wrong and incomplete, or no documentation at all.",
+   "quote_verbatim": "every page is fold out massive schematics, incredibly well laid out",
+   "speaker": "",
+   "episode": 431,
+   "episode_title": "An Interview with Adam McCombs",
+   "episode_url": "https://theamphour.com/431-an-interview-with-adam-mccombs/",
+   "depth_regraded": "explains",
+   "kind": "sourcing"
+  },
+  {
+   "claim_text": "Repair without a schematic is a categorically different activity, amounting to probing blind, and some instruments are abandoned as uneconomic to repair specifically because the manufacturer will not release the schematic for a complex design.",
+   "quote_verbatim": "without a schematic too, right? You're, you're, you're basically probing blind",
+   "speaker": "Chris Gammell",
+   "episode": 578,
+   "episode_title": "Histogrammic or Histomagraphical",
+   "episode_url": "https://theamphour.com/578-histogrammic-or-histomagraphical/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Professional board-level repair rests on tooling as much as skill: board-view software cross-probes between the schematic and a physical location on the board, and a specialist who has both that software and access to the schematics through informal networks will outperform a generalist engineer who lacks them.",
+   "quote_verbatim": "they've got the board view program that allows them to cross probe from the schematic to the thing",
+   "speaker": "Dave Jones",
+   "episode": 702,
+   "episode_title": "Test Point Accupuncture",
+   "episode_url": "https://theamphour.com/702-test-point-accupuncture/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Equipment was historically shipped with its schematic pasted inside the cover of the enclosure, which guaranteed the document was present at the point of repair; the objection is that paper fades and tears away.",
+   "quote_verbatim": "printing out and pasting a schematic on the inside cover of a bit of a equipment",
+   "speaker": "Dave Jones",
+   "episode": 183,
+   "episode_title": "An Interview with Scott Driscoll - Impacable Interdisciplinary Inventor",
+   "episode_url": "https://theamphour.com/183-an-interview-with-scott-driscoll-impaccable-interdisciplinary-inventor/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A complete service manual of the older kind contains theory of operation, flow charts, a bill of materials, schematics and PCB overlays together, which is what allows a fault to be traced from symptom to component rather than merely to a replaceable assembly.",
+   "quote_verbatim": "they had theory of operation and flow charts and they had bill of materials and they had, you know, schematics and PCB overlays",
+   "speaker": "Dave Jones",
+   "episode": 688,
+   "episode_title": "The Tandy Train",
+   "episode_url": "https://theamphour.com/688-the-tandy-train/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Early personal computers shipped with schematics because owners were expected to understand and extend the machines, and that combination of published schematics, through-hole or coarse surface-mount construction, low clock rates and five or three volt logic is what makes such machines repairable and their failed subsystems replaceable with microcontroller or FPGA substitutes today.",
+   "quote_verbatim": "many of them shipped with schematics",
+   "speaker": "Trammell Hudson",
+   "episode": 463,
+   "episode_title": "An Interview with Trammell Hudson",
+   "episode_url": "https://theamphour.com/463-an-interview-with-trammell-hudson/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Old semiconductor patents are a substitute source for schematics: patents covering calculator chips included pages of full schematics along with the code the chip executed, and reverse engineering has been carried out from that material.",
+   "quote_verbatim": "they'll have like pages and pages of entire schematics for the calculator chip, all the source code that the chip is running",
+   "speaker": "Ken Shirriff",
+   "episode": 361,
+   "episode_title": "An Interview with Ken Shirriff",
+   "episode_url": "https://theamphour.com/361-an-interview-with-ken-shirriff/",
+   "depth_regraded": "explains",
+   "kind": "sourcing"
+  },
+  {
+   "claim_text": "A schematic alone does not explain a design. Two nearly identical MOSFETs from the same vendor differing only in built-in ESD protection can appear in adjacent positions, and no amount of circuit analysis recovers why; the reasoning lives as institutional knowledge, so analysis from outside is closer to archaeology than to reading a specification.",
+   "quote_verbatim": "Maybe this, the schematic alone isn't enough",
+   "speaker": "Chris Gammell",
+   "episode": 580,
+   "episode_title": "Electrical Archeology",
+   "episode_url": "https://theamphour.com/580-electrical-archeology/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Reverse engineering as a teaching method runs a circuit backwards to a documentation package: a simple product such as a guitar pedal is torn down, its schematic recovered, component values determined and the circuit simulated, then the documentation is handed to another team to rebuild from, and the two implementations are compared to expose what the reconstruction missed.",
+   "quote_verbatim": "tear it down, get the schematic, figure out all the component values",
+   "speaker": "Kent Lundberg",
+   "episode": 119,
+   "episode_title": "An Interview with Dr. Kent Lundberg - Luculent Linear Legacy",
+   "episode_url": "https://theamphour.com/the-amp-hour-119-luculent-linear-legacy/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A device's design can be inferred from its schematic where one is published across product generations: two schematic variants of the same instrument, split at a serial number boundary, differ by the presence of a front-end preamplifier.",
+   "quote_verbatim": "they've got two different versions of the schematic",
+   "speaker": "Dave Jones",
+   "episode": 253,
+   "episode_title": "Consolidate All The Things - Zonked Zelotic Zaitech",
+   "episode_url": "https://theamphour.com/253-consolidate-all-the-things-zonked-zelotic-zaitech/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Data sheet application circuits are incomplete as designs: turning the circuit diagram in a data sheet into a working circuit means adding decoupling, protection, current limiting, noise suppression and filtering around it.",
+   "quote_verbatim": "Given a circuit diagram in a data sheet, what would you add to make it into a real circuit?",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A vendor changing the internal design of a long-standing part without announcement can be detected from the data sheet's internal schematic: an operational amplifier long specified for driving 600 ohm audio loads had that specification removed, and the internal schematic showed the input transistors changed from NPN to PNP.",
+   "quote_verbatim": "if you go into the schematic, you'll see that they've entirely changed the actual design",
+   "speaker": "Dave Jones",
+   "episode": 727,
+   "episode_title": "Boat Anchor Warehouse",
+   "episode_url": "https://theamphour.com/727-boat-anchor-warehouse/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Hand-drafted schematics were organised one page per functional section on C-size sheets at the drafting board, and a section could be removed from the design by discarding its sheet, with the signals that crossed the boundary becoming control signals brought out to a connector.",
+   "quote_verbatim": "I hand drew the schematics. Yes. I was working on a drafting board and C-sized sheets",
+   "speaker": "Lee Felsenstein",
+   "episode": 684,
+   "episode_title": "Lee Felsenstein: The Computer Revolution & Counterculture",
+   "episode_url": "https://theamphour.com/684-lee-felsenstein-the-computer-revolution-counterculture/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Documentation handoff between hardware and firmware is a recurring failure point: the hardware engineer works out register addresses and programming sequences from data sheets while preparing the schematic, does not record them, and the firmware engineer repeats the work. Supplying a handful of expected values alongside the schematic gives the firmware engineer a test criterion for whether the implementation is right.",
+   "quote_verbatim": "the firmware engineer has to redo all that work because the hardware engineer doesn't document it",
+   "speaker": "Chris Gammell",
+   "episode": 373,
+   "episode_title": "Pedantic or Andrantic",
+   "episode_url": "https://theamphour.com/373-pedantic-or-andrantic/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Where a schematic is released as a low-resolution image rather than as a document, component values become unreadable and recovering them requires measuring or desoldering parts from the hardware, which negates the release.",
+   "quote_verbatim": "the schematic diagram was a blurry JPEG screenshot",
+   "speaker": "",
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Instructional electronics kits deliberately withdraw pictorial wiring diagrams after the first several projects and substitute schematics, forcing the learner to translate the drawing into connections; the value of such kits is in the accompanying circuits and explanations rather than in the hardware, since no soldering or lead forming is involved.",
+   "quote_verbatim": "then they would transition into, hey, now we're going to give you a schematic",
+   "speaker": "Dave Jones",
+   "episode": 336,
+   "episode_title": "An Interview with Bunnie Huang (2nd)",
+   "episode_url": "https://theamphour.com/the-amp-hour-336-an-interview-with-bunnie-huang-2nd/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Design reviews conducted on paper require the schematic to be printed and readable in advance, because navigating a PDF by page number does not work in a meeting.",
+   "quote_verbatim": "Readable schematics that are already printed out",
+   "speaker": "Chris Gammell",
+   "episode": 116,
+   "episode_title": "Distribution, Wozniak & Robots - Early Eight-bit Endgame",
+   "episode_url": "https://theamphour.com/the-amp-hour-116-early-eight-bit-endgame/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Schematic and layout are worked on simultaneously rather than sequentially at the screen, which is why the practical working arrangement is two displays carrying the schematic and the board at full size.",
+   "quote_verbatim": "I've got the schematic on one, I've got the PCB on the other",
+   "speaker": "Dave Jones",
+   "episode": 106,
+   "episode_title": "Tektronix, ChipReport.tv, & the Signal Path - Temperative Tegmen Temperature",
+   "episode_url": "https://theamphour.com/the-amp-hour-106-temperative-tegmen-temperature/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where silicon is developed alongside the board that will carry it, schematic capture begins before the pin-out is finalised and even before the die is bonded out, with PCB layout and applications engineers involved from that point, followed by the normal schematic and layout reviews. The board returns from fabrication before the silicon does, and untested parts are received into custom sockets that can themselves cost thousands of dollars.",
+   "quote_verbatim": "your guys will be doing the schematic capture for that pin",
+   "speaker": "Kieran O'Leary",
+   "episode": 452,
+   "episode_title": "An Interview with Kieran O'Leary",
+   "episode_url": "https://theamphour.com/452-an-interview-with-kieran-oleary/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Interchange between design tools has trended towards XML-based schematic formats, and the requirement that matters is round-tripping: export alone permits viewing, while import as well allows a design to be taken into another tool, worked on and pushed back.",
+   "quote_verbatim": "So I want to be able to export it, use it, you know, actually like do some useful work, do a layout and then push it back",
+   "speaker": "Dave Jones",
+   "episode": 106,
+   "episode_title": "Tektronix, ChipReport.tv, & the Signal Path - Temperative Tegmen Temperature",
+   "episode_url": "https://theamphour.com/the-amp-hour-106-temperative-tegmen-temperature/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Understanding a design is a precondition for owning it: a schematic worked on by its author is understood in a way a superficially reviewed one is not, which sets a limit on how far schematic capture can be treated as a shareable, casual activity.",
+   "quote_verbatim": "If you're working on a schematic, you, you know that schematic because you have to, right?",
+   "speaker": "Chris Gammell",
+   "episode": 106,
+   "episode_title": "Tektronix, ChipReport.tv, & the Signal Path - Temperative Tegmen Temperature",
+   "episode_url": "https://theamphour.com/the-amp-hour-106-temperative-tegmen-temperature/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  }
+ ],
+ "attribution_notes": [
+  "ep 431, 442, 531 and 584 are on the unreliable-attribution list; those claims are attributed by content with no speaker name.",
+  "Four bundle passages carry no episode number and were dropped, since an uncitable passage cannot support a claim."
+ ],
+ "capped": false
+}

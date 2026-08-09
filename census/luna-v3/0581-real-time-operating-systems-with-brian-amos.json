@@ -1,0 +1,2347 @@
+{
+ "episode": 581,
+ "title": "Real Time Operating Systems with Brian Amos",
+ "url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+ "file": "0581-real-time-operating-systems-with-brian-amos.md",
+ "main_topics": [
+  "rtos",
+  "freertos",
+  "task-scheduling"
+ ],
+ "guest_name": "Brian Amos",
+ "guest_affiliation": null,
+ "notes": null,
+ "mentions": [
+  {
+   "concept": "hands-on-rtos-with-microcontrollers",
+   "type": "media-resource",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 1,
+   "char_start": 246,
+   "depth": "mention",
+   "context_snippet": "author of Hands-On RTOS with Microcontrollers"
+  },
+  {
+   "concept": "rtos",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 2,
+   "char_start": 481,
+   "depth": "mention",
+   "context_snippet": "I was getting into RTOS's, and it's a really good book"
+  },
+  {
+   "concept": "nrf52",
+   "type": "component",
+   "speaker": "Brian Amos",
+   "paragraph_index": 6,
+   "char_start": 1047,
+   "depth": "mention",
+   "context_snippet": "doing some NRF52 projects"
+  },
+  {
+   "concept": "nrf5-sdk",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 6,
+   "char_start": 1092,
+   "depth": "mention",
+   "context_snippet": "poking around the NRF5 SDK"
+  },
+  {
+   "concept": "freertos",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 6,
+   "char_start": 1124,
+   "depth": "mention",
+   "context_snippet": "there was a bunch of free RTOS stuff on there"
+  },
+  {
+   "concept": "rtos",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 6,
+   "char_start": 1697,
+   "depth": "opinion",
+   "context_snippet": "I need to learn RTOS's"
+  },
+  {
+   "concept": "c-compiler",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 9,
+   "char_start": 2358,
+   "depth": "mention",
+   "context_snippet": "I have my C compiler"
+  },
+  {
+   "concept": "state-machine",
+   "type": "technique",
+   "speaker": "Brian Amos",
+   "paragraph_index": 10,
+   "char_start": 2598,
+   "depth": "explains",
+   "context_snippet": "would a state machine do what you're really needing?"
+  },
+  {
+   "concept": "rtos",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 10,
+   "char_start": 2892,
+   "depth": "opinion",
+   "context_snippet": "I'm going to have a real-time operating system instead of a state machine"
+  },
+  {
+   "concept": "rtos",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 13,
+   "char_start": 4069,
+   "depth": "opinion",
+   "context_snippet": "if you have a user interface, almost definitely"
+  },
+  {
+   "concept": "graphical-user-interface",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 13,
+   "char_start": 4136,
+   "depth": "mention",
+   "context_snippet": "especially like a GUI and onboard GUI"
+  },
+  {
+   "concept": "network-connectivity",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 13,
+   "char_start": 4198,
+   "depth": "mention",
+   "context_snippet": "Anything with extensive communications capability"
+  },
+  {
+   "concept": "usb",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 13,
+   "char_start": 4258,
+   "depth": "mention",
+   "context_snippet": "So network connectivity, USB"
+  },
+  {
+   "concept": "spi",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 13,
+   "char_start": 4283,
+   "depth": "mention",
+   "context_snippet": "USB, tons and tons of spy"
+  },
+  {
+   "concept": "interrupt-service-routine",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 15,
+   "char_start": 4739,
+   "depth": "mention",
+   "context_snippet": "we're talking ISRs"
+  },
+  {
+   "concept": "task-priority",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 15,
+   "char_start": 4840,
+   "depth": "explains",
+   "context_snippet": "push it into its own task, give it a nice low priority"
+  },
+  {
+   "concept": "cortex-m",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 17,
+   "char_start": 5520,
+   "depth": "mention",
+   "context_snippet": "the cortex, I'm not talking about a cortex M ISR"
+  },
+  {
+   "concept": "closed-loop-control-system",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 17,
+   "char_start": 5736,
+   "depth": "explains",
+   "context_snippet": "I have a closed loop control system where I'm reading sensor data"
+  },
+  {
+   "concept": "motor",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 17,
+   "char_start": 5806,
+   "depth": "mention",
+   "context_snippet": "I want to control the position of, let's say a motor"
+  },
+  {
+   "concept": "servo-control-system",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 17,
+   "char_start": 6141,
+   "depth": "explains",
+   "context_snippet": "It's a servo control system"
+  },
+  {
+   "concept": "internet-of-things",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 21,
+   "char_start": 7463,
+   "depth": "mention",
+   "context_snippet": "this thing has also got some crazy IOT stack on it"
+  },
+  {
+   "concept": "multitasking",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 23,
+   "char_start": 8151,
+   "depth": "opinion",
+   "context_snippet": "So anytime multitasking is important"
+  },
+  {
+   "concept": "embedded-linux",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 24,
+   "char_start": 8400,
+   "depth": "mention",
+   "context_snippet": "thinking about it from more of a, like an embedded Linux perspective"
+  },
+  {
+   "concept": "rtos",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 24,
+   "char_start": 8788,
+   "depth": "explains",
+   "context_snippet": "differentiate then for people real time operating system from a full operating system"
+  },
+  {
+   "concept": "scheduler",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 25,
+   "char_start": 9084,
+   "depth": "explains",
+   "context_snippet": "it's pretty much just a scheduler and like some really basic things"
+  },
+  {
+   "concept": "queue",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 25,
+   "char_start": 9168,
+   "depth": "mention",
+   "context_snippet": "cues, semaphores, task notifications"
+  },
+  {
+   "concept": "semaphore",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 25,
+   "char_start": 9168,
+   "depth": "mention",
+   "context_snippet": "cues, semaphores, task notifications"
+  },
+  {
+   "concept": "task-notification",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 25,
+   "char_start": 9186,
+   "depth": "mention",
+   "context_snippet": "task notifications, that kind of stuff"
+  },
+  {
+   "concept": "timeout",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 25,
+   "char_start": 10123,
+   "depth": "explains",
+   "context_snippet": "you could actually bound that and say, Hey, I expect data back from the sensor within 10 milliseconds"
+  },
+  {
+   "concept": "mutex",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 25,
+   "char_start": 10327,
+   "depth": "mention",
+   "context_snippet": "if I can't acquire a mutex or a semifor"
+  },
+  {
+   "concept": "memory-management",
+   "type": "technique",
+   "speaker": "Brian Amos",
+   "paragraph_index": 26,
+   "char_start": 11202,
+   "depth": "mention",
+   "context_snippet": "something about memory management is one thing"
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 26,
+   "char_start": 11393,
+   "depth": "opinion",
+   "context_snippet": "I've been doing a lot of Zephyr stuff poorly"
+  },
+  {
+   "concept": "heap",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 27,
+   "char_start": 12448,
+   "depth": "explains",
+   "context_snippet": "there is no heap"
+  },
+  {
+   "concept": "task",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 29,
+   "char_start": 12950,
+   "depth": "explains",
+   "context_snippet": "you create tasks and then they just run forever"
+  },
+  {
+   "concept": "stack",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 29,
+   "char_start": 13241,
+   "depth": "explains",
+   "context_snippet": "you would set up a stack for each one of those tasks"
+  },
+  {
+   "concept": "dynamic-memory-allocation",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 29,
+   "char_start": 13518,
+   "depth": "explains",
+   "context_snippet": "there is no more dynamic allocation"
+  },
+  {
+   "concept": "stack-overflow",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 31,
+   "char_start": 14112,
+   "depth": "explains",
+   "context_snippet": "as long as you never go above 512 bytes, you're golden"
+  },
+  {
+   "concept": "semaphore",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 36,
+   "char_start": 15856,
+   "depth": "mention",
+   "context_snippet": "they immediately want to talk about just like only semaphores"
+  },
+  {
+   "concept": "micrium-microcos",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 36,
+   "char_start": 15949,
+   "depth": "mention",
+   "context_snippet": "John Labros's book about Micrium and Micro-COS too"
+  },
+  {
+   "concept": "mutex",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 36,
+   "char_start": 16047,
+   "depth": "mention",
+   "context_snippet": "it just wants to talk about mutexes"
+  },
+  {
+   "concept": "memory-segmentation",
+   "type": "concept-principle",
+   "speaker": "Brian Amos",
+   "paragraph_index": 38,
+   "char_start": 16857,
+   "depth": "mention",
+   "context_snippet": "the idea of an artos having the segmented memory"
+  },
+  {
+   "concept": "inter-task-communication",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 42,
+   "char_start": 17824,
+   "depth": "explains",
+   "context_snippet": "there's inner task communication between the tasks"
+  },
+  {
+   "concept": "queue",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 42,
+   "char_start": 17950,
+   "depth": "explains",
+   "context_snippet": "I can have a queue and that queue, you know, let's, let's say that's a, that's a global"
+  },
+  {
+   "concept": "global-variable",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 42,
+   "char_start": 18091,
+   "depth": "explains",
+   "context_snippet": "It's effectively a global variable"
+  },
+  {
+   "concept": "pdf",
+   "type": "media-resource",
+   "speaker": "Brian Amos",
+   "paragraph_index": 45,
+   "char_start": 18671,
+   "depth": "mention",
+   "context_snippet": "I have, I have the same PDF that Brian has opened"
+  },
+  {
+   "concept": "kindle",
+   "type": "tool-equipment",
+   "speaker": "Brian Amos",
+   "paragraph_index": 45,
+   "char_start": 18840,
+   "depth": "mention",
+   "context_snippet": "we'll probably talk about page numbers here from the PDF. So if you're on my Kindle version"
+  },
+  {
+   "concept": "book-publisher",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 50,
+   "char_start": 19507,
+   "depth": "opinion",
+   "context_snippet": "the publisher decided it was a good idea not to put chapter numbers"
+  },
+  {
+   "concept": "chapter-number",
+   "type": "media-resource",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 50,
+   "char_start": 19582,
+   "depth": "opinion",
+   "context_snippet": "There's no, there are no chapter numbers anywhere"
+  },
+  {
+   "concept": "queue",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 52,
+   "char_start": 19884,
+   "depth": "explains",
+   "context_snippet": "If you have a, you have a cue of length four, right? You can think of that as four bins"
+  },
+  {
+   "concept": "memory-isolation",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 54,
+   "char_start": 20514,
+   "depth": "explains",
+   "context_snippet": "making sure that one task doesn't step on the data of another task"
+  },
+  {
+   "concept": "semaphore",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 58,
+   "char_start": 21164,
+   "depth": "explains",
+   "context_snippet": "counting semaphores"
+  },
+  {
+   "concept": "freertos",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 58,
+   "char_start": 21327,
+   "depth": "explains",
+   "context_snippet": "in free, in free RTOS"
+  },
+  {
+   "concept": "interrupt-service-routine",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 58,
+   "char_start": 21425,
+   "depth": "explains",
+   "context_snippet": "there's this notion of ISR safe functions"
+  },
+  {
+   "concept": "interrupt-context",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 58,
+   "char_start": 21681,
+   "depth": "explains",
+   "context_snippet": "this is within an interrupt context"
+  },
+  {
+   "concept": "semaphore",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 60,
+   "char_start": 22044,
+   "depth": "explains",
+   "context_snippet": "you have semaphores, which are very, very tiny"
+  },
+  {
+   "concept": "freertos",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 60,
+   "char_start": 22092,
+   "depth": "opinion",
+   "context_snippet": "I imagine in free RTOS, they kind of implement everything under the hood as a, as a queue"
+  },
+  {
+   "concept": "rom-space",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 60,
+   "char_start": 22212,
+   "depth": "opinion",
+   "context_snippet": "I think it saves, it saves ROM space"
+  },
+  {
+   "concept": "binary-semaphore",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 60,
+   "char_start": 22395,
+   "depth": "explains",
+   "context_snippet": "you can have a binary semaphore"
+  },
+  {
+   "concept": "concurrency",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 60,
+   "char_start": 22491,
+   "depth": "explains",
+   "context_snippet": "these things that are running in concurrently"
+  },
+  {
+   "concept": "ventilator",
+   "type": "component",
+   "speaker": "Brian Amos",
+   "paragraph_index": 66,
+   "char_start": 22885,
+   "depth": "mention",
+   "context_snippet": "Let's say, let's, let's call it a, um, how about a ventilator"
+  },
+  {
+   "concept": "air-pressure-sensor",
+   "type": "component",
+   "speaker": "Brian Amos",
+   "paragraph_index": 66,
+   "char_start": 23009,
+   "depth": "explains",
+   "context_snippet": "there's a task that's measuring air pressure"
+  },
+  {
+   "concept": "pump-actuator",
+   "type": "component",
+   "speaker": "Brian Amos",
+   "paragraph_index": 66,
+   "char_start": 23055,
+   "depth": "mention",
+   "context_snippet": "There's a task that's actuating pump"
+  },
+  {
+   "concept": "task-priority",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 67,
+   "char_start": 23562,
+   "depth": "explains",
+   "context_snippet": "that gets the highest priority in the system"
+  },
+  {
+   "concept": "shared-resource",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 67,
+   "char_start": 24035,
+   "depth": "explains",
+   "context_snippet": "it can't be waiting on any shared resources from any of the other tasks"
+  },
+  {
+   "concept": "shared-memory",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 67,
+   "char_start": 24194,
+   "depth": "opinion",
+   "context_snippet": "you don't want to get into a situation where there's this crazy big block of shared memory"
+  },
+  {
+   "concept": "mutex",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 67,
+   "char_start": 24289,
+   "depth": "explains",
+   "context_snippet": "you're waiting on a mutex for something to update"
+  },
+  {
+   "concept": "queue",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 67,
+   "char_start": 24435,
+   "depth": "explains",
+   "context_snippet": "when it has information to disperse to the other part of the system, you know, it would do that probably through a queue"
+  },
+  {
+   "concept": "sensor-reading",
+   "type": "technique",
+   "speaker": "Brian Amos",
+   "paragraph_index": 68,
+   "char_start": 24749,
+   "depth": "explains",
+   "context_snippet": "it's a task. It's just reading a sensor"
+  },
+  {
+   "concept": "sleep-delay",
+   "type": "technique",
+   "speaker": "Brian Amos",
+   "paragraph_index": 68,
+   "char_start": 25067,
+   "depth": "explains",
+   "context_snippet": "it says, I'm going to go to sleep for 5,000 milliseconds"
+  },
+  {
+   "concept": "task-decomposition",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 71,
+   "char_start": 25563,
+   "depth": "explains",
+   "context_snippet": "typically if I'm, if I'm creating tasks, then they're going to have, it'll be a task"
+  },
+  {
+   "concept": "actuator-control",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 71,
+   "char_start": 25816,
+   "depth": "mention",
+   "context_snippet": "You're going to be taking that measurement in, you're going to be controlling your actuator"
+  },
+  {
+   "concept": "iot",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 71,
+   "char_start": 26178,
+   "depth": "mention",
+   "context_snippet": "you push all your IOT stuff and that stack out onto a different lower priority task"
+  },
+  {
+   "concept": "real-time-system-design",
+   "type": "engineering-practice",
+   "speaker": "Brian Amos",
+   "paragraph_index": 72,
+   "char_start": 26314,
+   "depth": "opinion",
+   "context_snippet": "when you make, I mean, you mentioned design decisions"
+  },
+  {
+   "concept": "real-time-scheduling",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 75,
+   "char_start": 27185,
+   "depth": "explains",
+   "context_snippet": "Each thing that's going to happen, you know, seemingly in parallel, get its own, would get its own task"
+  },
+  {
+   "concept": "real-time-constraint",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 75,
+   "char_start": 27388,
+   "depth": "explains",
+   "context_snippet": "higher priority things that need to happen with tight time constraints"
+  },
+  {
+   "concept": "interrupt-service-routine",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 75,
+   "char_start": 27460,
+   "depth": "explains",
+   "context_snippet": "they either need to go into, you know, ISRs and just deal with them below any of the RTOS stuff"
+  },
+  {
+   "concept": "interrupt-service-routine",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 76,
+   "char_start": 27654,
+   "depth": "explains",
+   "context_snippet": "ISR is interrupt service routine"
+  },
+  {
+   "concept": "scheduler-interrupt",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 77,
+   "char_start": 27880,
+   "depth": "explains",
+   "context_snippet": "your scheduler interrupt is a lower priority than any of your critical interrupts"
+  },
+  {
+   "concept": "pressure-sensor",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 77,
+   "char_start": 28078,
+   "depth": "explains",
+   "context_snippet": "that pressure sensor on the ventilators is streaming data"
+  },
+  {
+   "concept": "semaphore",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 77,
+   "char_start": 28315,
+   "depth": "explains",
+   "context_snippet": "post a semaphore whenever you have enough of it"
+  },
+  {
+   "concept": "rtos-task",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 77,
+   "char_start": 28437,
+   "depth": "explains",
+   "context_snippet": "the scheduler takes over and you start having RTOS tasks"
+  },
+  {
+   "concept": "bare-metal-programming",
+   "type": "technique",
+   "speaker": "Brian Amos",
+   "paragraph_index": 78,
+   "char_start": 28664,
+   "depth": "mention",
+   "context_snippet": "I had been, you know, kind of in the bare metal working with interrupts"
+  },
+  {
+   "concept": "real-time-operating-system",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 78,
+   "char_start": 28790,
+   "depth": "opinion",
+   "context_snippet": "if you're in an RTOS now"
+  },
+  {
+   "concept": "hardware-interrupt",
+   "type": "component",
+   "speaker": "Brian Amos",
+   "paragraph_index": 78,
+   "char_start": 28816,
+   "depth": "opinion",
+   "context_snippet": "you actually don't ever need to use an actual hardware interrupt anymore"
+  },
+  {
+   "concept": "sensor",
+   "type": "component",
+   "speaker": "Brian Amos",
+   "paragraph_index": 80,
+   "char_start": 29176,
+   "depth": "mention",
+   "context_snippet": "a lot of the sensors I use"
+  },
+  {
+   "concept": "analog-sensor",
+   "type": "component",
+   "speaker": "Brian Amos",
+   "paragraph_index": 80,
+   "char_start": 29377,
+   "depth": "mention",
+   "context_snippet": "I just had like really silly, simple, just analog sensors"
+  },
+  {
+   "concept": "hardware-interrupt",
+   "type": "component",
+   "speaker": "Brian Amos",
+   "paragraph_index": 80,
+   "char_start": 29525,
+   "depth": "opinion",
+   "context_snippet": "In theory, I don't need to have physical hardware interrupts"
+  },
+  {
+   "concept": "interrupt-driven-system",
+   "type": "technique",
+   "speaker": "Brian Amos",
+   "paragraph_index": 86,
+   "char_start": 30181,
+   "depth": "mention",
+   "context_snippet": "the two choices were, well, you can have an interrupt driven system"
+  },
+  {
+   "concept": "polling",
+   "type": "technique",
+   "speaker": "Brian Amos",
+   "paragraph_index": 86,
+   "char_start": 30209,
+   "depth": "explains",
+   "context_snippet": "you can have an interrupt driven system where, you know, you have these sensors"
+  },
+  {
+   "concept": "uart",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 87,
+   "char_start": 31078,
+   "depth": "mention",
+   "context_snippet": "it starts communicating to a UART"
+  },
+  {
+   "concept": "serial-peripheral",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 87,
+   "char_start": 31200,
+   "depth": "mention",
+   "context_snippet": "Some sort of serial peripheral has interrupts"
+  },
+  {
+   "concept": "event-driven-system",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 87,
+   "char_start": 31535,
+   "depth": "explains",
+   "context_snippet": "you can wind up with more scalable systems that have better response times"
+  },
+  {
+   "concept": "low-power-design",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 87,
+   "char_start": 31741,
+   "depth": "opinion",
+   "context_snippet": "that also holds true for, for low power designs too"
+  },
+  {
+   "concept": "freertos",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 87,
+   "char_start": 31943,
+   "depth": "mention",
+   "context_snippet": "depending on which port of free RTOS you're using"
+  },
+  {
+   "concept": "tickless-mode",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 87,
+   "char_start": 32039,
+   "depth": "explains",
+   "context_snippet": "they have a tickless mode"
+  },
+  {
+   "concept": "event-driven-system",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 91,
+   "char_start": 32520,
+   "depth": "explains",
+   "context_snippet": "if you have a, a fully event driven system and it needs to be low power"
+  },
+  {
+   "concept": "real-time-clock",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 91,
+   "char_start": 33116,
+   "depth": "explains",
+   "context_snippet": "using hardware that has the capability with a real time clock with an alarm"
+  },
+  {
+   "concept": "clock-drift",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 91,
+   "char_start": 33498,
+   "depth": "opinion",
+   "context_snippet": "at that point you start talking about clock drift"
+  },
+  {
+   "concept": "crystal-oscillator",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 91,
+   "char_start": 33587,
+   "depth": "opinion",
+   "context_snippet": "that's where crystals versus RC oscillators start to become kind of important"
+  },
+  {
+   "concept": "rc-oscillator",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 91,
+   "char_start": 33600,
+   "depth": "mention",
+   "context_snippet": "crystals versus RC oscillators"
+  },
+  {
+   "concept": "vibration-monitoring-sensor",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 93,
+   "char_start": 34143,
+   "depth": "mention",
+   "context_snippet": "we were developing a vibration monitoring sensor"
+  },
+  {
+   "concept": "mesh-network",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 93,
+   "char_start": 34162,
+   "depth": "mention",
+   "context_snippet": "a vibration monitoring sensor that was living on a mesh network"
+  },
+  {
+   "concept": "waveform-capture",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 93,
+   "char_start": 34334,
+   "depth": "mention",
+   "context_snippet": "wake up every once in a while and capture a waveform"
+  },
+  {
+   "concept": "telos-module",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 93,
+   "char_start": 34485,
+   "depth": "mention",
+   "context_snippet": "there's this thing called a Telos module made by a company"
+  },
+  {
+   "concept": "tinyos",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 93,
+   "char_start": 34634,
+   "depth": "explains",
+   "context_snippet": "It was developed using this operating system called TinyOS"
+  },
+  {
+   "concept": "nesc",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 93,
+   "char_start": 34693,
+   "depth": "mention",
+   "context_snippet": "using a language called Nessi"
+  },
+  {
+   "concept": "power-management",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 99,
+   "char_start": 35228,
+   "depth": "explains",
+   "context_snippet": "it tries to push off as much as it can to do later so that it doesn't need to wake up"
+  },
+  {
+   "concept": "interrupt",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 101,
+   "char_start": 35541,
+   "depth": "explains",
+   "context_snippet": "you had all this, all the, the interrupt level stuff"
+  },
+  {
+   "concept": "message-queue",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 101,
+   "char_start": 35611,
+   "depth": "explains",
+   "context_snippet": "you would just effectively like post it to a queue"
+  },
+  {
+   "concept": "scheduling",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 101,
+   "char_start": 35672,
+   "depth": "explains",
+   "context_snippet": "at a certain schedule and the schedule could be like at one Hertz"
+  },
+  {
+   "concept": "msp430",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 101,
+   "char_start": 36276,
+   "depth": "mention",
+   "context_snippet": "this is all, this is on MSP four thirties"
+  },
+  {
+   "concept": "msp430",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 36459,
+   "depth": "mention",
+   "context_snippet": "these are like little 16, 16 bit microcontrollers"
+  },
+  {
+   "concept": "contiki",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 36926,
+   "depth": "mention",
+   "context_snippet": "I want to say Contiki"
+  },
+  {
+   "concept": "tinyos",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 37013,
+   "depth": "mention",
+   "context_snippet": "TinyOS kind of went by the wayside"
+  },
+  {
+   "concept": "nesc",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 37165,
+   "depth": "explains",
+   "context_snippet": "Ness C was like a really cool combination of structural VHDL and C"
+  },
+  {
+   "concept": "vhdl",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 37210,
+   "depth": "mention",
+   "context_snippet": "structural VHDL and C"
+  },
+  {
+   "concept": "hardware-presentation-layer",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 37348,
+   "depth": "explains",
+   "context_snippet": "they would have these hardware presentation layers at the very, very bottom"
+  },
+  {
+   "concept": "hardware-abstraction-layer",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 37594,
+   "depth": "explains",
+   "context_snippet": "you have, you know, like this hardware abstraction layer"
+  },
+  {
+   "concept": "software-portability",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 38103,
+   "depth": "explains",
+   "context_snippet": "your code was immediately portable and it didn't, it didn't matter what processor it was running on"
+  },
+  {
+   "concept": "vhdl",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 104,
+   "char_start": 38484,
+   "depth": "mention",
+   "context_snippet": "rewrite the VHDL ish piece"
+  },
+  {
+   "concept": "gpio",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 105,
+   "char_start": 38854,
+   "depth": "explains",
+   "context_snippet": "rewrite the routines that access GPIO registers"
+  },
+  {
+   "concept": "timer-peripheral",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 105,
+   "char_start": 38960,
+   "depth": "mention",
+   "context_snippet": "timer peripherals, serial peripherals"
+  },
+  {
+   "concept": "serial-peripheral",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 105,
+   "char_start": 38960,
+   "depth": "mention",
+   "context_snippet": "timer peripherals, serial peripherals, that kind of stuff"
+  },
+  {
+   "concept": "hardware-abstraction",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 105,
+   "char_start": 39189,
+   "depth": "explains",
+   "context_snippet": "using that level of abstraction, you can very easily write drivers for an IC"
+  },
+  {
+   "concept": "device-driver",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 105,
+   "char_start": 39242,
+   "depth": "mention",
+   "context_snippet": "write drivers for an IC"
+  },
+  {
+   "concept": "test-driven-development",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 107,
+   "char_start": 39662,
+   "depth": "mention",
+   "context_snippet": "things like test driven development"
+  },
+  {
+   "concept": "james-grenning",
+   "type": "person",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 107,
+   "char_start": 39757,
+   "depth": "mention",
+   "context_snippet": "reading James Grenning's book"
+  },
+  {
+   "concept": "embedded-c",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 107,
+   "char_start": 39788,
+   "depth": "mention",
+   "context_snippet": "TDD with embedded C"
+  },
+  {
+   "concept": "bitwise-operation",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 109,
+   "char_start": 40287,
+   "depth": "mention",
+   "context_snippet": "Got to do the bitwise math to get access to anything"
+  },
+  {
+   "concept": "custom-real-time-operating-system",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 110,
+   "char_start": 40916,
+   "depth": "mention",
+   "context_snippet": "the number one RTOS out there is, uh, custom"
+  },
+  {
+   "concept": "buffer-overflow",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 111,
+   "char_start": 41255,
+   "depth": "mention",
+   "context_snippet": "you need to check to see if your, your buffer is overflowing"
+  },
+  {
+   "concept": "real-time-operating-system",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 111,
+   "char_start": 41459,
+   "depth": "opinion",
+   "context_snippet": "I have no desire to, to write my own, to roll my own RTOS"
+  },
+  {
+   "concept": "grpc",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 113,
+   "char_start": 41912,
+   "depth": "mention",
+   "context_snippet": "I almost accidentally recreated portions of GRPC"
+  },
+  {
+   "concept": "embedded-systems",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 115,
+   "char_start": 42564,
+   "depth": "mention",
+   "context_snippet": "I focused on embedded systems in college"
+  },
+  {
+   "concept": "operating-systems-course",
+   "type": "media-resource",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 115,
+   "char_start": 42612,
+   "depth": "mention",
+   "context_snippet": "there was an operating systems course"
+  },
+  {
+   "concept": "linux",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 116,
+   "char_start": 42767,
+   "depth": "mention",
+   "context_snippet": "Everything was, you know, it was all Linux"
+  },
+  {
+   "concept": "windows",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 116,
+   "char_start": 42817,
+   "depth": "mention",
+   "context_snippet": "It's like for writing Linux or Windows"
+  },
+  {
+   "concept": "systems-programming",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 117,
+   "char_start": 42926,
+   "depth": "mention",
+   "context_snippet": "basically a systems programming course"
+  },
+  {
+   "concept": "superloop",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 117,
+   "char_start": 43204,
+   "depth": "mention",
+   "context_snippet": "a little bit more complicated to do. Yeah. And just a super loop"
+  },
+  {
+   "concept": "super-loop",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 117,
+   "char_start": 43247,
+   "depth": "mention",
+   "context_snippet": "And just a super loop."
+  },
+  {
+   "concept": "super-loop",
+   "type": "technique",
+   "speaker": "Brian Amos",
+   "paragraph_index": 118,
+   "char_start": 43411,
+   "depth": "mention",
+   "context_snippet": "you had a super loop project"
+  },
+  {
+   "concept": "super-loop",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 119,
+   "char_start": 43854,
+   "depth": "explains",
+   "context_snippet": "converting like a super loop program into"
+  },
+  {
+   "concept": "task",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 119,
+   "char_start": 44192,
+   "depth": "explains",
+   "context_snippet": "make requirement A into a task requirement B into a task"
+  },
+  {
+   "concept": "uart",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 119,
+   "char_start": 44574,
+   "depth": "explains",
+   "context_snippet": "every hundred iterations of this loop, I should, I need to go check on the UART"
+  },
+  {
+   "concept": "buffer-overflow",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 119,
+   "char_start": 44657,
+   "depth": "explains",
+   "context_snippet": "make sure that I don't get, you know, a buffer overflow"
+  },
+  {
+   "concept": "interrupt-service-routine",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 119,
+   "char_start": 44963,
+   "depth": "explains",
+   "context_snippet": "the UART ISR isn't really, you know, it's not really like a big deal"
+  },
+  {
+   "concept": "semaphore",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 119,
+   "char_start": 45485,
+   "depth": "explains",
+   "context_snippet": "attach the interrupt of the push button to a, to a semaphore"
+  },
+  {
+   "concept": "ventilator",
+   "type": "component",
+   "speaker": "Brian Amos",
+   "paragraph_index": 120,
+   "char_start": 45637,
+   "depth": "mention",
+   "context_snippet": "the ventilator example"
+  },
+  {
+   "concept": "real-time-task-priority",
+   "type": "concept-principle",
+   "speaker": "Brian Amos",
+   "paragraph_index": 120,
+   "char_start": 45713,
+   "depth": "opinion",
+   "context_snippet": "you have this super high priority task, like keeping someone alive"
+  },
+  {
+   "concept": "ventilator",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 123,
+   "char_start": 46762,
+   "depth": "explains",
+   "context_snippet": "run this control algorithm for the ventilator at a rate of a hundred Hertz"
+  },
+  {
+   "concept": "control-algorithm",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 123,
+   "char_start": 46762,
+   "depth": "explains",
+   "context_snippet": "run this control algorithm for the ventilator at a rate of a hundred Hertz"
+  },
+  {
+   "concept": "sensor",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 123,
+   "char_start": 46926,
+   "depth": "mention",
+   "context_snippet": "streaming data coming back from your sensor"
+  },
+  {
+   "concept": "actuator",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 123,
+   "char_start": 47113,
+   "depth": "mention",
+   "context_snippet": "the thing that you're the pump or whatever"
+  },
+  {
+   "concept": "hardware-timer",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 125,
+   "char_start": 47954,
+   "depth": "explains",
+   "context_snippet": "waiting on some sort of a, you know, like a semaphore that's being generated by a hardware timer"
+  },
+  {
+   "concept": "idle-task",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 125,
+   "char_start": 48308,
+   "depth": "explains",
+   "context_snippet": "your idle task is going to just sit there and check to see if it's time to bring in another task"
+  },
+  {
+   "concept": "tickless-mode",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 127,
+   "char_start": 48576,
+   "depth": "explains",
+   "context_snippet": "if you're running a tickless version of an OS, the whole chip just goes to sleep"
+  },
+  {
+   "concept": "cpu-sleep-mode",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 127,
+   "char_start": 48688,
+   "depth": "explains",
+   "context_snippet": "the CPU, right. And you can go into the power, whatever parts"
+  },
+  {
+   "concept": "shared-resource",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 127,
+   "char_start": 49180,
+   "depth": "mention",
+   "context_snippet": "a different lower priority task. Right. That's holding a shared resource."
+  },
+  {
+   "concept": "priority-inversion",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 127,
+   "char_start": 49254,
+   "depth": "explains",
+   "context_snippet": "That's called priority inversion."
+  },
+  {
+   "concept": "software-timer",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 131,
+   "char_start": 50396,
+   "depth": "explains",
+   "context_snippet": "there's going to be some mechanism, either a software timer that goes off"
+  },
+  {
+   "concept": "free-rtos",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 131,
+   "char_start": 50523,
+   "depth": "mention",
+   "context_snippet": "software. Timers in free RTOS"
+  },
+  {
+   "concept": "hardware-timer",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 133,
+   "char_start": 50927,
+   "depth": "explains",
+   "context_snippet": "set up a hardware timer peripheral"
+  },
+  {
+   "concept": "interrupt-service-routine",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 133,
+   "char_start": 51069,
+   "depth": "explains",
+   "context_snippet": "inside of the, your, your ISR for this, you know, this 10 millisecond repeated timer"
+  },
+  {
+   "concept": "task-notification",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 133,
+   "char_start": 51247,
+   "depth": "explains",
+   "context_snippet": "there's, there's also task notifications"
+  },
+  {
+   "concept": "task-priority",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 136,
+   "char_start": 51887,
+   "depth": "explains",
+   "context_snippet": "the beauty of, you know, task priorities is that that's happening all the time"
+  },
+  {
+   "concept": "multithreading",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 137,
+   "char_start": 52301,
+   "depth": "mention",
+   "context_snippet": "obviously there's more threads"
+  },
+  {
+   "concept": "microcontroller",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 140,
+   "char_start": 52860,
+   "depth": "explains",
+   "context_snippet": "modern microcontrollers, they can do a lot in parallel too"
+  },
+  {
+   "concept": "direct-memory-access",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 140,
+   "char_start": 53053,
+   "depth": "explains",
+   "context_snippet": "you've got direct memory access controllers, DMA controllers"
+  },
+  {
+   "concept": "dma-controller",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 140,
+   "char_start": 53487,
+   "depth": "explains",
+   "context_snippet": "DMA controller says, Hey, I've collected 12 bytes"
+  },
+  {
+   "concept": "parallel-computing",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 140,
+   "char_start": 53754,
+   "depth": "explains",
+   "context_snippet": "there are actual ways to get true parallel computing on a microcontroller"
+  },
+  {
+   "concept": "computer-history",
+   "type": "media-resource",
+   "speaker": "Brian Amos",
+   "paragraph_index": 141,
+   "char_start": 54126,
+   "depth": "mention",
+   "context_snippet": "reading about a lot of like computer history at park, Xerox park"
+  },
+  {
+   "concept": "ozone",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 144,
+   "char_start": 54936,
+   "depth": "explains",
+   "context_snippet": "One of the reasons that I like ozone a lot is"
+  },
+  {
+   "concept": "free-rtos",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 144,
+   "char_start": 54987,
+   "depth": "mention",
+   "context_snippet": "it is free RTOS aware"
+  },
+  {
+   "concept": "debugger",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 144,
+   "char_start": 55045,
+   "depth": "mention",
+   "context_snippet": "if you pull up like a standard debugger"
+  },
+  {
+   "concept": "integrated-development-environment",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 144,
+   "char_start": 55093,
+   "depth": "mention",
+   "context_snippet": "there are a lot of IDs that have gotten this right"
+  },
+  {
+   "concept": "stack",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 144,
+   "char_start": 55425,
+   "depth": "explains",
+   "context_snippet": "you couldn't like view multiple stacks at once"
+  },
+  {
+   "concept": "nxp",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 146,
+   "char_start": 55848,
+   "depth": "mention",
+   "context_snippet": "the NXP stuff has, you know, RTOS awareness"
+  },
+  {
+   "concept": "segger",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 146,
+   "char_start": 55904,
+   "depth": "mention",
+   "context_snippet": "Ozone is the SEGUR debunkers"
+  },
+  {
+   "concept": "stm32cube",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 146,
+   "char_start": 55991,
+   "depth": "mention",
+   "context_snippet": "STM 32, their cube stuff"
+  },
+  {
+   "concept": "task-control-block",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 148,
+   "char_start": 56372,
+   "depth": "explains",
+   "context_snippet": "you have task control blocks for each task"
+  },
+  {
+   "concept": "rtos-awareness",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 148,
+   "char_start": 56697,
+   "depth": "explains",
+   "context_snippet": "you have to use something that supports the, the RTOS that you're using specifically"
+  },
+  {
+   "concept": "systemview",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 148,
+   "char_start": 57470,
+   "depth": "explains",
+   "context_snippet": "Sager makes something called system view, system viewer"
+  },
+  {
+   "concept": "percepio-tracealyzer",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 150,
+   "char_start": 57731,
+   "depth": "mention",
+   "context_snippet": "another product called Persefio Tracelizer"
+  },
+  {
+   "concept": "free-rtos",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 158,
+   "char_start": 59073,
+   "depth": "explains",
+   "context_snippet": "free RTOS has all these trace hooks built into it"
+  },
+  {
+   "concept": "trace-hook",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 158,
+   "char_start": 59073,
+   "depth": "explains",
+   "context_snippet": "free RTOS has all these trace hooks built into it"
+  },
+  {
+   "concept": "systemview",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 158,
+   "char_start": 59370,
+   "depth": "explains",
+   "context_snippet": "you can just see, you know, which tasks are running, which ones are interrupting others"
+  },
+  {
+   "concept": "task-state-statistics",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 158,
+   "char_start": 59463,
+   "depth": "explains",
+   "context_snippet": "they give you statistics on, you know, all the tasks, how long they've been in the block state"
+  },
+  {
+   "concept": "printf-debugging",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 160,
+   "char_start": 59708,
+   "depth": "explains",
+   "context_snippet": "a really efficient printf debug that gets automatically timestamped and cross correlated"
+  },
+  {
+   "concept": "real-time-graphing",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 160,
+   "char_start": 59802,
+   "depth": "explains",
+   "context_snippet": "the real time graphing of all this stuff"
+  },
+  {
+   "concept": "preemptive-scheduler",
+   "type": "concept-principle",
+   "speaker": "Brian Amos",
+   "paragraph_index": 161,
+   "char_start": 60264,
+   "depth": "explains",
+   "context_snippet": "a realistic task setup and preemptive scheduler"
+  },
+  {
+   "concept": "task-scheduling",
+   "type": "concept-principle",
+   "speaker": "Brian Amos",
+   "paragraph_index": 161,
+   "char_start": 60635,
+   "depth": "explains",
+   "context_snippet": "the scheduler being part of the task as well, because it does take time"
+  },
+  {
+   "concept": "cortex-m",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 164,
+   "char_start": 61243,
+   "depth": "explains",
+   "context_snippet": "This is not Cortex M priorities, which are inverted"
+  },
+  {
+   "concept": "interrupt-priority",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 164,
+   "char_start": 61303,
+   "depth": "explains",
+   "context_snippet": "higher priority is more important in, in, in this world"
+  },
+  {
+   "concept": "non-maskable-interrupt",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 166,
+   "char_start": 61668,
+   "depth": "mention",
+   "context_snippet": "you have like non-maskable interrupts and that kind of stuff too"
+  },
+  {
+   "concept": "creative-commons",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 170,
+   "char_start": 62511,
+   "depth": "explains",
+   "context_snippet": "They're all, you know, it's all creative commons. So you use them as you see fit"
+  },
+  {
+   "concept": "draw-io",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 176,
+   "char_start": 62904,
+   "depth": "mention",
+   "context_snippet": "These were all done with draw.io"
+  },
+  {
+   "concept": "github",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 176,
+   "char_start": 63043,
+   "depth": "mention",
+   "context_snippet": "my personal GitHub repo has like RTOS images"
+  },
+  {
+   "concept": "digi-key",
+   "type": "company-product",
+   "speaker": "Brian Amos",
+   "paragraph_index": 177,
+   "char_start": 63349,
+   "depth": "mention",
+   "context_snippet": "you show digi-key, a digi-key window"
+  },
+  {
+   "concept": "stm32",
+   "type": "component",
+   "speaker": "Brian Amos",
+   "paragraph_index": 177,
+   "char_start": 63390,
+   "depth": "mention",
+   "context_snippet": "you show a bunch of STM 32 parts being available"
+  },
+  {
+   "concept": "mouser",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 178,
+   "char_start": 63602,
+   "depth": "mention",
+   "context_snippet": "Mouser actually had 32, 32 of the dev boards"
+  },
+  {
+   "concept": "ethernet",
+   "type": "standard-protocol",
+   "speaker": "Brian Amos",
+   "paragraph_index": 181,
+   "char_start": 64316,
+   "depth": "mention",
+   "context_snippet": "I remember it's got the ethernet port on it"
+  },
+  {
+   "concept": "j-link",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 182,
+   "char_start": 64696,
+   "depth": "explains",
+   "context_snippet": "reflash the firmware that runs on that ST link and make it look like a J link"
+  },
+  {
+   "concept": "segger",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 184,
+   "char_start": 65066,
+   "depth": "mention",
+   "context_snippet": "you can use all the sacred tooling on like a trial basis for non-commercial kind of stuff"
+  },
+  {
+   "concept": "embedded-debugging",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 186,
+   "char_start": 65406,
+   "depth": "opinion",
+   "context_snippet": "effectively a professional grade debug set up, you know, just with a dev board only"
+  },
+  {
+   "concept": "usb",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 194,
+   "char_start": 66571,
+   "depth": "explains",
+   "context_snippet": "it has USB connectivity to your computer"
+  },
+  {
+   "concept": "python",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 194,
+   "char_start": 66616,
+   "depth": "mention",
+   "context_snippet": "it's got like this little Python UI"
+  },
+  {
+   "concept": "light-emitting-diode",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 194,
+   "char_start": 66739,
+   "depth": "explains",
+   "context_snippet": "you can control the brightness of each LED with little sliders on the UI"
+  },
+  {
+   "concept": "message-receiver",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 194,
+   "char_start": 66879,
+   "depth": "explains",
+   "context_snippet": "there's a, you know, there's a message receiver and then there's a couple of different tasks"
+  },
+  {
+   "concept": "preconfigured-project",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 194,
+   "char_start": 67282,
+   "depth": "explains",
+   "context_snippet": "you get like several dozen pre-configured projects and configurations"
+  },
+  {
+   "concept": "stm32cube",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 194,
+   "char_start": 67431,
+   "depth": "explains",
+   "context_snippet": "you just import it into STM 3D cube"
+  },
+  {
+   "concept": "eclipse-ide",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 194,
+   "char_start": 67483,
+   "depth": "mention",
+   "context_snippet": "it's effectively just an eclipse ID"
+  },
+  {
+   "concept": "youtube",
+   "type": "media-resource",
+   "speaker": "Brian Amos",
+   "paragraph_index": 195,
+   "char_start": 68233,
+   "depth": "mention",
+   "context_snippet": "I find YouTube videos"
+  },
+  {
+   "concept": "toolchain",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 195,
+   "char_start": 68274,
+   "depth": "opinion",
+   "context_snippet": "this tool, this tool chain is completely different now"
+  },
+  {
+   "concept": "silicon-manufacturer",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 196,
+   "char_start": 68428,
+   "depth": "mention",
+   "context_snippet": "they have all these silicon manufacturers"
+  },
+  {
+   "concept": "configuration-tool",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 196,
+   "char_start": 68488,
+   "depth": "opinion",
+   "context_snippet": "coming out with all these really cool tools for configuration"
+  },
+  {
+   "concept": "project-archiving",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 196,
+   "char_start": 68792,
+   "depth": "explains",
+   "context_snippet": "just make a, an archive of the project"
+  },
+  {
+   "concept": "source-code",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 196,
+   "char_start": 68848,
+   "depth": "opinion",
+   "context_snippet": "just deal with the actual source that matters"
+  },
+  {
+   "concept": "integrated-development-environment",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 196,
+   "char_start": 69024,
+   "depth": "opinion",
+   "context_snippet": "reconfigure this extra spy, you know, this extra peripheral"
+  },
+  {
+   "concept": "register",
+   "type": "component",
+   "speaker": "Brian Amos",
+   "paragraph_index": 197,
+   "char_start": 69383,
+   "depth": "explains",
+   "context_snippet": "dig through all the registers that set things up"
+  },
+  {
+   "concept": "reference-manual",
+   "type": "media-resource",
+   "speaker": "Brian Amos",
+   "paragraph_index": 197,
+   "char_start": 69533,
+   "depth": "explains",
+   "context_snippet": "prepared for some time with the reference manual and really making sure things are right"
+  },
+  {
+   "concept": "nxp",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 198,
+   "char_start": 69776,
+   "depth": "opinion",
+   "context_snippet": "NXP more so, I think they're, they're very good at creating like a workable starting point"
+  },
+  {
+   "concept": "gpio",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 200,
+   "char_start": 70008,
+   "depth": "explains",
+   "context_snippet": "I know what registers to tickle. I know what bits in the registers"
+  },
+  {
+   "concept": "stm32cube",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 201,
+   "char_start": 70225,
+   "depth": "opinion",
+   "context_snippet": "I'm never touching cube again for this project"
+  },
+  {
+   "concept": "abstraction-layer",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 207,
+   "char_start": 71652,
+   "depth": "opinion",
+   "context_snippet": "being handed a bunch of hardware abstraction layers"
+  },
+  {
+   "concept": "interrupt-service-routine",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 208,
+   "char_start": 72036,
+   "depth": "explains",
+   "context_snippet": "they're doing stuff inside of interrupt"
+  },
+  {
+   "concept": "interrupt-service-routine",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 212,
+   "char_start": 73551,
+   "depth": "explains",
+   "context_snippet": "you would actually see the ISR show up right on the screen"
+  },
+  {
+   "concept": "debugger",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 214,
+   "char_start": 74380,
+   "depth": "mention",
+   "context_snippet": "at minimum, some sort of a debugger"
+  },
+  {
+   "concept": "system-viewer",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 214,
+   "char_start": 74476,
+   "depth": "mention",
+   "context_snippet": "system views or something to visualize tasks is nice"
+  },
+  {
+   "concept": "logic-analyzer",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 214,
+   "char_start": 74650,
+   "depth": "explains",
+   "context_snippet": "but a logic analyzer, right? Just, just instrument the crap out of everything significant"
+  },
+  {
+   "concept": "test-point",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 218,
+   "char_start": 75228,
+   "depth": "explains",
+   "context_snippet": "I can afford to actually put down like a very, very tiny test point"
+  },
+  {
+   "concept": "external-bus",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 220,
+   "char_start": 75482,
+   "depth": "explains",
+   "context_snippet": "Instrument your external buses. That's what I'm saying."
+  },
+  {
+   "concept": "gpio-toggling",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 222,
+   "char_start": 76232,
+   "depth": "explains",
+   "context_snippet": "you just go to old GPIO toggle, right?"
+  },
+  {
+   "concept": "soldering-iron",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 224,
+   "char_start": 76924,
+   "depth": "mention",
+   "context_snippet": "I have a soldering art at my desk"
+  },
+  {
+   "concept": "schematic",
+   "type": "media-resource",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 228,
+   "char_start": 77396,
+   "depth": "mention",
+   "context_snippet": "well, do you have a schematic?"
+  },
+  {
+   "concept": "freertos",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 231,
+   "char_start": 77772,
+   "depth": "mention",
+   "context_snippet": "Amazon bought free art toss"
+  },
+  {
+   "concept": "third-party-library",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 231,
+   "char_start": 77925,
+   "depth": "mention",
+   "context_snippet": "you need to move up the stack and do more complex stuff at third party libraries"
+  },
+  {
+   "concept": "wifi",
+   "type": "standard-protocol",
+   "speaker": "Brian Amos",
+   "paragraph_index": 231,
+   "char_start": 78195,
+   "depth": "mention",
+   "context_snippet": "a screen maybe, or a, you know, wifi, wifi connection"
+  },
+  {
+   "concept": "user-interface",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 234,
+   "char_start": 78978,
+   "depth": "opinion",
+   "context_snippet": "if you have that kind of glitchy feeling UI"
+  },
+  {
+   "concept": "embedded-linux",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 235,
+   "char_start": 79323,
+   "depth": "mention",
+   "context_snippet": "the embedded Linux space"
+  },
+  {
+   "concept": "embedded-linux",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 236,
+   "char_start": 79524,
+   "depth": "opinion",
+   "context_snippet": "I've done a few embedded Linux projects"
+  },
+  {
+   "concept": "yocto",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 236,
+   "char_start": 79639,
+   "depth": "opinion",
+   "context_snippet": "suffered through Yocto for six, six months"
+  },
+  {
+   "concept": "system-on-module",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 236,
+   "char_start": 79683,
+   "depth": "explains",
+   "context_snippet": "getting a system on modules set up and brought up"
+  },
+  {
+   "concept": "operating-system",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 236,
+   "char_start": 79957,
+   "depth": "explains",
+   "context_snippet": "you have a whole bunch of other people's code that you can use most of the time"
+  },
+  {
+   "concept": "hard-real-time",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 238,
+   "char_start": 80242,
+   "depth": "explains",
+   "context_snippet": "if you have very strict real time requirements"
+  },
+  {
+   "concept": "serial-interface",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 238,
+   "char_start": 80653,
+   "depth": "mention",
+   "context_snippet": "have some sort of a serial interface between them"
+  },
+  {
+   "concept": "processor-register",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 238,
+   "char_start": 80980,
+   "depth": "explains",
+   "context_snippet": "write code that doesn't directly access your processor registers"
+  },
+  {
+   "concept": "concurrency",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 242,
+   "char_start": 82011,
+   "depth": "explains",
+   "context_snippet": "at some point it's highly desirable to have some level of concurrency"
+  },
+  {
+   "concept": "timing-constraint",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 244,
+   "char_start": 82581,
+   "depth": "explains",
+   "context_snippet": "this processor was like just totally maxed out super, super tight timing constraints"
+  },
+  {
+   "concept": "ring-buffer",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 244,
+   "char_start": 82865,
+   "depth": "explains",
+   "context_snippet": "we were just using like an in-house ring buffer"
+  },
+  {
+   "concept": "software-abstraction",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 244,
+   "char_start": 82972,
+   "depth": "explains",
+   "context_snippet": "you can abstract things well enough that a lot of the code doesn't actually care what it's running on"
+  },
+  {
+   "concept": "bare-metal",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 244,
+   "char_start": 83460,
+   "depth": "mention",
+   "context_snippet": "it could run on bare metal"
+  },
+  {
+   "concept": "operating-system",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 244,
+   "char_start": 83515,
+   "depth": "mention",
+   "context_snippet": "It could run on a full operating system"
+  },
+  {
+   "concept": "network-connectivity",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 244,
+   "char_start": 84008,
+   "depth": "mention",
+   "context_snippet": "a lot of our stuff has like some level of network connectivity"
+  },
+  {
+   "concept": "rom-and-ram",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 244,
+   "char_start": 84395,
+   "depth": "mention",
+   "context_snippet": "from like a ROM and RAM perspective"
+  },
+  {
+   "concept": "mouser",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 248,
+   "char_start": 85308,
+   "depth": "mention",
+   "context_snippet": "Mouser does have, well, as of yesterday, they had 32 of them"
+  },
+  {
+   "concept": "linkedin",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 250,
+   "char_start": 85574,
+   "depth": "mention",
+   "context_snippet": "I'm probably easiest to get a hold of through LinkedIn"
+  },
+  {
+   "concept": "amazon",
+   "type": "company-product",
+   "speaker": "Brian Amos",
+   "paragraph_index": 250,
+   "char_start": 85700,
+   "depth": "mention",
+   "context_snippet": "the books on Amazon"
+  },
+  {
+   "concept": "mutex",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 251,
+   "char_start": 86235,
+   "depth": "mention",
+   "context_snippet": "Mutex Semaphore"
+  },
+  {
+   "concept": "semaphore",
+   "type": "software",
+   "speaker": "Brian Amos",
+   "paragraph_index": 251,
+   "char_start": 86235,
+   "depth": "mention",
+   "context_snippet": "Mutex Semaphore"
+  }
+ ]
+}

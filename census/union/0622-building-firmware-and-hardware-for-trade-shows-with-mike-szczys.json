@@ -1,0 +1,2431 @@
+{
+ "episode": 622,
+ "title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+ "url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+ "file": "0622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys.md",
+ "main_topics": [
+  "zephyr",
+  "embedded-world",
+  "badge-life"
+ ],
+ "guest_name": "Mike Szczys",
+ "guest_affiliation": "Goliath",
+ "notes": "The transcript calls the guest Mike Stich in the opening, and the guest does not have a consistent dedicated speaker label.",
+ "passes": [
+  1,
+  2
+ ],
+ "mentions": [
+  {
+   "concept": "contextual-electronics",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 0,
+   "char_start": 178,
+   "depth": "mention",
+   "context_snippet": "I'm Chris Gammell of Contextual Electronics",
+   "pass": "both"
+  },
+  {
+   "concept": "jumptuck",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 0,
+   "char_start": 223,
+   "depth": "mention",
+   "context_snippet": "I'm Mike Stich of Jumptuck.com",
+   "pass": 1
+  },
+  {
+   "concept": "goliath",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 6,
+   "char_start": 1089,
+   "depth": "mention",
+   "context_snippet": "We work together at a company called Goliath",
+   "pass": "both"
+  },
+  {
+   "concept": "embedded-world",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 6,
+   "char_start": 1389,
+   "depth": "mention",
+   "context_snippet": "getting ready for Embedded World",
+   "pass": "both"
+  },
+  {
+   "concept": "embedded-world",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 7,
+   "char_start": 1545,
+   "depth": "opinion",
+   "context_snippet": "I'm super excited for Embedded World",
+   "pass": "both"
+  },
+  {
+   "concept": "trade-show",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 8,
+   "char_start": 1948,
+   "depth": "opinion",
+   "context_snippet": "there's not a good Embedded Show in the U.S. anymore",
+   "pass": 1
+  },
+  {
+   "concept": "embedded-world",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 8,
+   "char_start": 2057,
+   "depth": "opinion",
+   "context_snippet": "we get to go. Like you said, talk to all these great engineers",
+   "pass": 1
+  },
+  {
+   "concept": "maker-faire",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 9,
+   "char_start": 2652,
+   "depth": "mention",
+   "context_snippet": "almost like the Maker Faire, Maker Meetup",
+   "pass": "both"
+  },
+  {
+   "concept": "trade-show",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 12,
+   "char_start": 3154,
+   "depth": "explains",
+   "context_snippet": "I think any kind of trade show though, it's just like a lot of individual companies",
+   "pass": "both"
+  },
+  {
+   "concept": "trade-show-booth",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 12,
+   "char_start": 3405,
+   "depth": "opinion",
+   "context_snippet": "they're always just talking about like, oh, come see our booth",
+   "pass": 1
+  },
+  {
+   "concept": "dev-board",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 14,
+   "char_start": 4556,
+   "depth": "opinion",
+   "context_snippet": "we're trying to do, I think we're kind of abusing the notion of dev boards",
+   "pass": "both"
+  },
+  {
+   "concept": "dev-board",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 16,
+   "char_start": 4914,
+   "depth": "explains",
+   "context_snippet": "you think about like a lot of the ones that we have on our bench",
+   "pass": "both"
+  },
+  {
+   "concept": "feather-form-factor",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 16,
+   "char_start": 5073,
+   "depth": "mention",
+   "context_snippet": "we took like feather form factors type things",
+   "pass": "both"
+  },
+  {
+   "concept": "click-header",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 16,
+   "char_start": 5123,
+   "depth": "mention",
+   "context_snippet": "we're taking these click headers",
+   "pass": "both"
+  },
+  {
+   "concept": "project-box",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 17,
+   "char_start": 6166,
+   "depth": "mention",
+   "context_snippet": "we took, you know, project boxes",
+   "pass": 1
+  },
+  {
+   "concept": "display",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 17,
+   "char_start": 6503,
+   "depth": "explains",
+   "context_snippet": "replace that inert face plate with some kind of display",
+   "pass": "both"
+  },
+  {
+   "concept": "e-ink",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 18,
+   "char_start": 6917,
+   "depth": "mention",
+   "context_snippet": "we've been doing, you and I have been working on E-Ink things",
+   "pass": "both"
+  },
+  {
+   "concept": "micropython",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 18,
+   "char_start": 7097,
+   "depth": "mention",
+   "context_snippet": "I think we talk a little bit about MicroPython",
+   "pass": "both"
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 18,
+   "char_start": 7277,
+   "depth": "mention",
+   "context_snippet": "And then Zephyr, I think is a big one",
+   "pass": "both"
+  },
+  {
+   "concept": "real-time-operating-system",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 18,
+   "char_start": 7316,
+   "depth": "mention",
+   "context_snippet": "Or really, our tosses in general",
+   "pass": 1
+  },
+  {
+   "concept": "def-con",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 18,
+   "char_start": 7546,
+   "depth": "mention",
+   "context_snippet": "That was, it was at DEF CON, I think",
+   "pass": 1
+  },
+  {
+   "concept": "badge-life",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 19,
+   "char_start": 7687,
+   "depth": "explains",
+   "context_snippet": "we both decided to jump on the Badge Life train",
+   "pass": "both"
+  },
+  {
+   "concept": "custom-circuit-board",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 19,
+   "char_start": 8402,
+   "depth": "explains",
+   "context_snippet": "let's make, you know, several dozen custom circuit boards",
+   "pass": "both"
+  },
+  {
+   "concept": "backlight-led",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 20,
+   "char_start": 8947,
+   "depth": "explains",
+   "context_snippet": "that faceplate you're talking about, it's backlit LEDs",
+   "pass": "both"
+  },
+  {
+   "concept": "printed-circuit-board-art",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 20,
+   "char_start": 9343,
+   "depth": "explains",
+   "context_snippet": "using the PCB as art is, is not exclusive to badge life",
+   "pass": 1
+  },
+  {
+   "concept": "badge-life",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 20,
+   "char_start": 9404,
+   "depth": "opinion",
+   "context_snippet": "it's definitely something that's highlighted there",
+   "pass": 1
+  },
+  {
+   "concept": "backlight-led",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 21,
+   "char_start": 9781,
+   "depth": "explains",
+   "context_snippet": "put a back under mount LED that fires through the substrate",
+   "pass": 1
+  },
+  {
+   "concept": "electroless-nickel-immersion-gold",
+   "type": "manufacturing",
+   "speaker": "Dave Jones",
+   "paragraph_index": 21,
+   "char_start": 9946,
+   "depth": "mention",
+   "context_snippet": "Is it, are these in Enig?",
+   "pass": 1
+  },
+  {
+   "concept": "printed-circuit-board",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 23,
+   "char_start": 10374,
+   "depth": "opinion",
+   "context_snippet": "only one out of 10 people that sees these things is, is even going to realize that they're a circuit board",
+   "pass": 1
+  },
+  {
+   "concept": "hackaday",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 26,
+   "char_start": 10783,
+   "depth": "mention",
+   "context_snippet": "you were the editor in chief of Hackaday",
+   "pass": "both"
+  },
+  {
+   "concept": "virtual-conference",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 27,
+   "char_start": 11609,
+   "depth": "mention",
+   "context_snippet": "the remote icons, which were the virtual, um, conferences",
+   "pass": 1
+  },
+  {
+   "concept": "supercon",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 27,
+   "char_start": 11809,
+   "depth": "mention",
+   "context_snippet": "in person at the, the, the super con again",
+   "pass": 1
+  },
+  {
+   "concept": "iot-security",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 27,
+   "char_start": 12504,
+   "depth": "opinion",
+   "context_snippet": "I watched IOT being done without security",
+   "pass": 1
+  },
+  {
+   "concept": "supercon-badge",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 29,
+   "char_start": 13527,
+   "depth": "mention",
+   "context_snippet": "I never did all the work on the, on the Supercon badge",
+   "pass": 1
+  },
+  {
+   "concept": "firmware-development",
+   "type": "career",
+   "speaker": "Dave Jones",
+   "paragraph_index": 29,
+   "char_start": 13909,
+   "depth": "explains",
+   "context_snippet": "being able to do stuff because it's like part of your job description is different",
+   "pass": 1
+  },
+  {
+   "concept": "iot-device-management-platform",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 29,
+   "char_start": 15932,
+   "depth": "explains",
+   "context_snippet": "all of the different things that you could do with this IOT, you know, device management platform",
+   "pass": "both"
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 29,
+   "char_start": 16222,
+   "depth": "explains",
+   "context_snippet": "especially cause we're in, we're in Zephyr",
+   "pass": "both"
+  },
+  {
+   "concept": "esp-idf",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 29,
+   "char_start": 16316,
+   "depth": "mention",
+   "context_snippet": "we're in ESP IDF",
+   "pass": "both"
+  },
+  {
+   "concept": "pico-sdk",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 29,
+   "char_start": 16503,
+   "depth": "mention",
+   "context_snippet": "the Pico SDK for this AstenTis project",
+   "pass": "both"
+  },
+  {
+   "concept": "micropython",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 29,
+   "char_start": 16552,
+   "depth": "mention",
+   "context_snippet": "that pushed us into, to MicroPython",
+   "pass": 1
+  },
+  {
+   "concept": "firmware-development",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 30,
+   "char_start": 17924,
+   "depth": "opinion",
+   "context_snippet": "that I've been excited about for my own career",
+   "pass": 1
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 30,
+   "char_start": 18508,
+   "depth": "mention",
+   "context_snippet": "especially using Zephyr do feel a little bit better",
+   "pass": 1
+  },
+  {
+   "concept": "zephyr-manifest-file",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 31,
+   "char_start": 18719,
+   "depth": "explains",
+   "context_snippet": "the, the manifest files in Zephyr are super fascinating",
+   "pass": "both"
+  },
+  {
+   "concept": "gps-module",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 31,
+   "char_start": 18930,
+   "depth": "mention",
+   "context_snippet": "this latest project we're doing some GPS stuff",
+   "pass": "both"
+  },
+  {
+   "concept": "nmea-0183",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 31,
+   "char_start": 18992,
+   "depth": "explains",
+   "context_snippet": "GPS modules that are just streaming in NMEA 0183",
+   "pass": "both"
+  },
+  {
+   "concept": "west-meta-tool",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 31,
+   "char_start": 19357,
+   "depth": "explains",
+   "context_snippet": "West, the, the meta tool for Zephyr will always just like pull that in",
+   "pass": 1
+  },
+  {
+   "concept": "cmake",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 31,
+   "char_start": 19432,
+   "depth": "mention",
+   "context_snippet": "you can tell what directory you want it in",
+   "pass": 1
+  },
+  {
+   "concept": "git-submodule",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 32,
+   "char_start": 20181,
+   "depth": "opinion",
+   "context_snippet": "I can do sub modules. I can do get sub modules",
+   "pass": "both"
+  },
+  {
+   "concept": "git-submodule",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 33,
+   "char_start": 20692,
+   "depth": "opinion",
+   "context_snippet": "I think some modules are a pain in the butt",
+   "pass": 1
+  },
+  {
+   "concept": "git-submodule",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 35,
+   "char_start": 21669,
+   "depth": "opinion",
+   "context_snippet": "getting a, getting a sub module out of your repo is a super pain in the butt",
+   "pass": 1
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 36,
+   "char_start": 22696,
+   "depth": "mention",
+   "context_snippet": "what is Zephyr and why might people encounter it?",
+   "pass": "both"
+  },
+  {
+   "concept": "marty-bolivar",
+   "type": "person",
+   "speaker": "Dave Jones",
+   "paragraph_index": 37,
+   "char_start": 23138,
+   "depth": "mention",
+   "context_snippet": "a guy named Marty Bolivar",
+   "pass": "both"
+  },
+  {
+   "concept": "nordic",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 39,
+   "char_start": 23307,
+   "depth": "mention",
+   "context_snippet": "He is employed by Nordic",
+   "pass": "both"
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 39,
+   "char_start": 24070,
+   "depth": "explains",
+   "context_snippet": "device tree is like a whole nother language that describes the hardware",
+   "pass": "both"
+  },
+  {
+   "concept": "device-tree",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 39,
+   "char_start": 24070,
+   "depth": "explains",
+   "context_snippet": "device tree is like a whole nother language that describes the hardware",
+   "pass": "both"
+  },
+  {
+   "concept": "uart",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 39,
+   "char_start": 24214,
+   "depth": "explains",
+   "context_snippet": "I have a UART, the UART is at this address in the memory map",
+   "pass": "both"
+  },
+  {
+   "concept": "i2c",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 39,
+   "char_start": 24556,
+   "depth": "explains",
+   "context_snippet": "let's say I squared C, I have a device on I squared C two",
+   "pass": "both"
+  },
+  {
+   "concept": "humidity-sensor",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 39,
+   "char_start": 24814,
+   "depth": "explains",
+   "context_snippet": "now I have a different, you know, humidity sensor",
+   "pass": "both"
+  },
+  {
+   "concept": "zephyr-overlay-file",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 39,
+   "char_start": 24865,
+   "depth": "explains",
+   "context_snippet": "You can just give it a different overlay file and everything in your C code will be the same",
+   "pass": "both"
+  },
+  {
+   "concept": "overlay-file",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 39,
+   "char_start": 24865,
+   "depth": "explains",
+   "context_snippet": "You can just give it a different overlay file and everything in your C code will be the same",
+   "pass": 1
+  },
+  {
+   "concept": "real-time-operating-system",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 40,
+   "char_start": 25259,
+   "depth": "explains",
+   "context_snippet": "Zephyr is a real-time operating system, right? So that means it has a scheduler",
+   "pass": "both"
+  },
+  {
+   "concept": "freertos",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 40,
+   "char_start": 25347,
+   "depth": "mention",
+   "context_snippet": "we've had, oh shoot, free RTOS",
+   "pass": "both"
+  },
+  {
+   "concept": "scheduler",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 40,
+   "char_start": 25646,
+   "depth": "explains",
+   "context_snippet": "There is a scheduler. There's threads. There's queues and all of the semaphores and mutexes",
+   "pass": "both"
+  },
+  {
+   "concept": "network-driver",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 40,
+   "char_start": 26122,
+   "depth": "mention",
+   "context_snippet": "they all develop like network drivers and Bluetooth drivers",
+   "pass": "both"
+  },
+  {
+   "concept": "bluetooth",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 40,
+   "char_start": 26144,
+   "depth": "mention",
+   "context_snippet": "network drivers and Bluetooth drivers and all these different things",
+   "pass": "both"
+  },
+  {
+   "concept": "linux-foundation",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 41,
+   "char_start": 26649,
+   "depth": "explains",
+   "context_snippet": "Zephyr is maintained by the Linux Foundation",
+   "pass": "both"
+  },
+  {
+   "concept": "amazon",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 41,
+   "char_start": 27078,
+   "depth": "mention",
+   "context_snippet": "I believe it was purchased by Amazon",
+   "pass": "both"
+  },
+  {
+   "concept": "sensor-api",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 43,
+   "char_start": 28753,
+   "depth": "explains",
+   "context_snippet": "they have a really well specced out API for sensors",
+   "pass": "both"
+  },
+  {
+   "concept": "pin-control",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 47,
+   "char_start": 30657,
+   "depth": "explains",
+   "context_snippet": "pin control was a new thing that came out and like completely changed how some parts of the device tree were working",
+   "pass": "both"
+  },
+  {
+   "concept": "zephyr-documentation",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 47,
+   "char_start": 30940,
+   "depth": "explains",
+   "context_snippet": "I can't find any documentation for it",
+   "pass": "both"
+  },
+  {
+   "concept": "wioterminal",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 49,
+   "char_start": 32929,
+   "depth": "explains",
+   "context_snippet": "Seed Studio has this thing called the WIO terminal, which is like a 4.3 inch color LCD screen",
+   "pass": 1
+  },
+  {
+   "concept": "sam-d51",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 49,
+   "char_start": 33174,
+   "depth": "mention",
+   "context_snippet": "It's a SAM 51, maybe. SAM D51. Yep. SAM D51.",
+   "pass": "both"
+  },
+  {
+   "concept": "realtek-wifi",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 49,
+   "char_start": 33504,
+   "depth": "opinion",
+   "context_snippet": "I'd really like to figure out how to hack a real tech wifi driver into Zephyr",
+   "pass": "both"
+  },
+  {
+   "concept": "open-source-software",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 50,
+   "char_start": 33880,
+   "depth": "opinion",
+   "context_snippet": "open source projects generally are like this weird mix",
+   "pass": 1
+  },
+  {
+   "concept": "bme280",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 56,
+   "char_start": 35848,
+   "depth": "explains",
+   "context_snippet": "The BME 280. That thing is great little chip. I squared C based.",
+   "pass": "both"
+  },
+  {
+   "concept": "i2c-address",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 56,
+   "char_start": 36415,
+   "depth": "explains",
+   "context_snippet": "say, this is, uh, address 28 on the I squared C bus",
+   "pass": 1
+  },
+  {
+   "concept": "kconfig",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 57,
+   "char_start": 36698,
+   "depth": "explains",
+   "context_snippet": "there's a K config, uh, for it. So you just turn on sensors and, and it enables it",
+   "pass": 1
+  },
+  {
+   "concept": "sensor-driver",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 57,
+   "char_start": 37011,
+   "depth": "explains",
+   "context_snippet": "then it literally is a command that's like sensor fetch",
+   "pass": 1
+  },
+  {
+   "concept": "vl5301x",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 61,
+   "char_start": 38953,
+   "depth": "mention",
+   "context_snippet": "The VL 5301X is not in tree",
+   "pass": 1
+  },
+  {
+   "concept": "proof-of-concept",
+   "type": "engineering-practice",
+   "speaker": "Dave Jones",
+   "paragraph_index": 65,
+   "char_start": 40336,
+   "depth": "explains",
+   "context_snippet": "you could start off with a proof of concept",
+   "pass": 1
+  },
+  {
+   "concept": "iot",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 65,
+   "char_start": 42001,
+   "depth": "explains",
+   "context_snippet": "the growth in IoT is going to happen in the future",
+   "pass": 1
+  },
+  {
+   "concept": "http",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 66,
+   "char_start": 43598,
+   "depth": "mention",
+   "context_snippet": "you want to go write your own HTTP handler",
+   "pass": 1
+  },
+  {
+   "concept": "zephyr-shell",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 67,
+   "char_start": 44265,
+   "depth": "explains",
+   "context_snippet": "there's an I squared C shell just built into Zephyr",
+   "pass": 1
+  },
+  {
+   "concept": "ipv6",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 70,
+   "char_start": 46331,
+   "depth": "mention",
+   "context_snippet": "Pinging over IP IPV six from a NRF 52",
+   "pass": "both"
+  },
+  {
+   "concept": "nrf52",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 70,
+   "char_start": 46331,
+   "depth": "mention",
+   "context_snippet": "Pinging over IP IPV six from a NRF 52",
+   "pass": 1
+  },
+  {
+   "concept": "esp-idf",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 71,
+   "char_start": 47131,
+   "depth": "explains",
+   "context_snippet": "we've done work on, uh, ESP IDF, which is built on free RTOS",
+   "pass": "both"
+  },
+  {
+   "concept": "eclipse",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 73,
+   "char_start": 50288,
+   "depth": "opinion",
+   "context_snippet": "I hate using Eclipse",
+   "pass": 1
+  },
+  {
+   "concept": "visual-studio-code",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 73,
+   "char_start": 51225,
+   "depth": "mention",
+   "context_snippet": "Nordic has been working on VS code plugins for Zephyr",
+   "pass": "both"
+  },
+  {
+   "concept": "github",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 75,
+   "char_start": 52346,
+   "depth": "mention",
+   "context_snippet": "all of that was just coming off of GitHub",
+   "pass": 1
+  },
+  {
+   "concept": "internet-of-things",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 82,
+   "char_start": 54303,
+   "depth": "mention",
+   "context_snippet": "an IOT kind of context",
+   "pass": "both"
+  },
+  {
+   "concept": "internet-of-things",
+   "type": "concept-principle",
+   "speaker": "Dave Jones",
+   "paragraph_index": 83,
+   "char_start": 54404,
+   "depth": "opinion",
+   "context_snippet": "I think the IOT is going to have major impacts on people's ability",
+   "pass": "both"
+  },
+  {
+   "concept": "food-production",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 85,
+   "char_start": 54765,
+   "depth": "opinion",
+   "context_snippet": "Food production and transportation and the ability to make it available at a price",
+   "pass": "both"
+  },
+  {
+   "concept": "fresh-water-resource",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 85,
+   "char_start": 54890,
+   "depth": "opinion",
+   "context_snippet": "maintain, you know, precious resources like fresh water",
+   "pass": "both"
+  },
+  {
+   "concept": "automation",
+   "type": "engineering-practice",
+   "speaker": "Dave Jones",
+   "paragraph_index": 87,
+   "char_start": 55506,
+   "depth": "opinion",
+   "context_snippet": "automation is going to be good because that's going to take the drudgery tasks out",
+   "pass": "both"
+  },
+  {
+   "concept": "prototyping",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 88,
+   "char_start": 56096,
+   "depth": "mention",
+   "context_snippet": "the amount of like tools and like kind of, uh, services that are available to actually go and build things",
+   "pass": "both"
+  },
+  {
+   "concept": "pinoco",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 88,
+   "char_start": 56274,
+   "depth": "mention",
+   "context_snippet": "prototyping services like Pinoco",
+   "pass": 1
+  },
+  {
+   "concept": "3d-printing",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 88,
+   "char_start": 56311,
+   "depth": "mention",
+   "context_snippet": "3d printing services",
+   "pass": "both"
+  },
+  {
+   "concept": "pcb-fabrication",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 88,
+   "char_start": 56336,
+   "depth": "mention",
+   "context_snippet": "PCB fabs",
+   "pass": "both"
+  },
+  {
+   "concept": "micropython",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 88,
+   "char_start": 56656,
+   "depth": "mention",
+   "context_snippet": "Oh, MicroPython",
+   "pass": 1
+  },
+  {
+   "concept": "micro-electronika-click-header",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 95,
+   "char_start": 58014,
+   "depth": "mention",
+   "context_snippet": "the click headers for that's the micro electronica click headers",
+   "pass": "both"
+  },
+  {
+   "concept": "uart",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 95,
+   "char_start": 58080,
+   "depth": "mention",
+   "context_snippet": "There's an RX, TX line",
+   "pass": "both"
+  },
+  {
+   "concept": "device-tree",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 95,
+   "char_start": 58265,
+   "depth": "explains",
+   "context_snippet": "you could just go into Zephyr's pin control and remap the pins",
+   "pass": "both"
+  },
+  {
+   "concept": "pin-control",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 95,
+   "char_start": 58280,
+   "depth": "explains",
+   "context_snippet": "go into Zephyr's pin control and remap the pins",
+   "pass": "both"
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 95,
+   "char_start": 58288,
+   "depth": "mention",
+   "context_snippet": "Zephyr's pin control",
+   "pass": 1
+  },
+  {
+   "concept": "zero-ohm-resistor",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 96,
+   "char_start": 58414,
+   "depth": "opinion",
+   "context_snippet": "I did put zero on resistors on there",
+   "pass": "both"
+  },
+  {
+   "concept": "custom-board-definition",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 97,
+   "char_start": 58672,
+   "depth": "explains",
+   "context_snippet": "I made a custom board definition for it",
+   "pass": "both"
+  },
+  {
+   "concept": "schematic",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 97,
+   "char_start": 59458,
+   "depth": "mention",
+   "context_snippet": "you usually send me a schematic",
+   "pass": 1
+  },
+  {
+   "concept": "pcb-fabrication",
+   "type": "manufacturing",
+   "speaker": "Dave Jones",
+   "paragraph_index": 97,
+   "char_start": 59537,
+   "depth": "mention",
+   "context_snippet": "the order button fabrication button",
+   "pass": "both"
+  },
+  {
+   "concept": "e-paper-display",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 97,
+   "char_start": 59995,
+   "depth": "mention",
+   "context_snippet": "I have been cursing your name on this one because of the e-paper",
+   "pass": 1
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 98,
+   "char_start": 60276,
+   "depth": "mention",
+   "context_snippet": "a training about Zephyr using the Adafruit mag tag",
+   "pass": 1
+  },
+  {
+   "concept": "adafruit-magtag",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 98,
+   "char_start": 60300,
+   "depth": "mention",
+   "context_snippet": "using the Adafruit mag tag",
+   "pass": "both"
+  },
+  {
+   "concept": "e-paper-display",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 99,
+   "char_start": 60871,
+   "depth": "explains",
+   "context_snippet": "the Adafruit mag tag has an e-paper display",
+   "pass": "both"
+  },
+  {
+   "concept": "neopixel-ws2812",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 99,
+   "char_start": 60916,
+   "depth": "mention",
+   "context_snippet": "four of those NeoPixel WS2812 LEDs",
+   "pass": "both"
+  },
+  {
+   "concept": "button",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 99,
+   "char_start": 60960,
+   "depth": "mention",
+   "context_snippet": "four buttons",
+   "pass": 1
+  },
+  {
+   "concept": "speaker",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 99,
+   "char_start": 60974,
+   "depth": "mention",
+   "context_snippet": "a speaker",
+   "pass": "both"
+  },
+  {
+   "concept": "light-sensor",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 99,
+   "char_start": 60985,
+   "depth": "mention",
+   "context_snippet": "a light sensor",
+   "pass": "both"
+  },
+  {
+   "concept": "esp32-s2",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 99,
+   "char_start": 61064,
+   "depth": "mention",
+   "context_snippet": "and an ESP32S2",
+   "pass": "both"
+  },
+  {
+   "concept": "e-paper-driver",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 99,
+   "char_start": 61225,
+   "depth": "explains",
+   "context_snippet": "I kind of like had to hack together an e-paper driver to use in Zephyr",
+   "pass": "both"
+  },
+  {
+   "concept": "golioth",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 99,
+   "char_start": 61716,
+   "depth": "mention",
+   "context_snippet": "get people connecting the thing up to Goliath",
+   "pass": 1
+  },
+  {
+   "concept": "e-paper-display",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 100,
+   "char_start": 61886,
+   "depth": "mention",
+   "context_snippet": "why are e-paper displays",
+   "pass": "both"
+  },
+  {
+   "concept": "kindle",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 100,
+   "char_start": 61976,
+   "depth": "mention",
+   "context_snippet": "the Kindle was one of the first large commercial products for it",
+   "pass": 1
+  },
+  {
+   "concept": "e-paper-display-driver",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 62241,
+   "depth": "explains",
+   "context_snippet": "even different displays that share the same chip",
+   "pass": "both"
+  },
+  {
+   "concept": "flex-cable",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 62355,
+   "depth": "mention",
+   "context_snippet": "it communicates through a flex cable",
+   "pass": 1
+  },
+  {
+   "concept": "microcontroller",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 62395,
+   "depth": "mention",
+   "context_snippet": "your actual microcontroller",
+   "pass": 1
+  },
+  {
+   "concept": "grayscale",
+   "type": "concept-principle",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 62529,
+   "depth": "explains",
+   "context_snippet": "there are e-paper displays that are gray scale",
+   "pass": 1
+  },
+  {
+   "concept": "e-paper-waveform",
+   "type": "concept-principle",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 63003,
+   "depth": "explains",
+   "context_snippet": "the controller that's on the board makes a waveform",
+   "pass": 1
+  },
+  {
+   "concept": "partial-display-update",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 63479,
+   "depth": "explains",
+   "context_snippet": "I was having trouble getting the partial update to work",
+   "pass": "both"
+  },
+  {
+   "concept": "datasheet",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 64092,
+   "depth": "mention",
+   "context_snippet": "You can get data sheets",
+   "pass": 1
+  },
+  {
+   "concept": "application-note",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 64557,
+   "depth": "mention",
+   "context_snippet": "handholdy app note type of stuff",
+   "pass": 1
+  },
+  {
+   "concept": "holotech",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 64764,
+   "depth": "mention",
+   "context_snippet": "I think Holotech makes these",
+   "pass": "both"
+  },
+  {
+   "concept": "ali-express",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 64801,
+   "depth": "mention",
+   "context_snippet": "a Holotech screen that I got from AliExpress",
+   "pass": 1
+  },
+  {
+   "concept": "power-down",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 65349,
+   "depth": "explains",
+   "context_snippet": "making sure that it powered down",
+   "pass": 1
+  },
+  {
+   "concept": "power-cycling",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 65903,
+   "depth": "mention",
+   "context_snippet": "power cycle stuff",
+   "pass": 1
+  },
+  {
+   "concept": "reset-line",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 65925,
+   "depth": "mention",
+   "context_snippet": "make sure the reset lines are all okay",
+   "pass": 1
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 66352,
+   "depth": "mention",
+   "context_snippet": "move that over to like Zephyr",
+   "pass": 1
+  },
+  {
+   "concept": "rp2040",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 106,
+   "char_start": 66977,
+   "depth": "opinion",
+   "context_snippet": "what you can always get is the RP 2040",
+   "pass": "both"
+  },
+  {
+   "concept": "pimoroni-badger",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 106,
+   "char_start": 67093,
+   "depth": "mention",
+   "context_snippet": "You came around the Pyramoroni badger",
+   "pass": 1
+  },
+  {
+   "concept": "usb-mass-storage",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 106,
+   "char_start": 67607,
+   "depth": "explains",
+   "context_snippet": "it gives you a, like a USB mass storage device",
+   "pass": "both"
+  },
+  {
+   "concept": "i2c",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 107,
+   "char_start": 68073,
+   "depth": "explains",
+   "context_snippet": "over I squared C, basically there, you set up a bunch of registers",
+   "pass": "both"
+  },
+  {
+   "concept": "esp-idf",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 107,
+   "char_start": 68558,
+   "depth": "mention",
+   "context_snippet": "we can do it from ESP IDF as well",
+   "pass": "both"
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 107,
+   "char_start": 68593,
+   "depth": "mention",
+   "context_snippet": "We can do it from Zephyr",
+   "pass": "both"
+  },
+  {
+   "concept": "sprite-file",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 108,
+   "char_start": 69200,
+   "depth": "explains",
+   "context_snippet": "here's a sprite file with a whole bunch of different icons in it",
+   "pass": 1
+  },
+  {
+   "concept": "interrupt",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 108,
+   "char_start": 70351,
+   "depth": "explains",
+   "context_snippet": "you want to use interrupts that are fired by them",
+   "pass": 1
+  },
+  {
+   "concept": "soldering",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 110,
+   "char_start": 71164,
+   "depth": "explains",
+   "context_snippet": "there was noise on the I squared C lines because of my soldering job",
+   "pass": "both"
+  },
+  {
+   "concept": "i2c",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 110,
+   "char_start": 71164,
+   "depth": "explains",
+   "context_snippet": "there was noise on the I squared C lines",
+   "pass": 1
+  },
+  {
+   "concept": "pio",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 112,
+   "char_start": 72279,
+   "depth": "explains",
+   "context_snippet": "it uses PIO to, which is cool",
+   "pass": "both"
+  },
+  {
+   "concept": "raspberry-pi-pico-sdk",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 112,
+   "char_start": 72471,
+   "depth": "explains",
+   "context_snippet": "the driver that is in the Pico SDK can't do multiple addresses",
+   "pass": "both"
+  },
+  {
+   "concept": "fifo-buffer",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 112,
+   "char_start": 72935,
+   "depth": "explains",
+   "context_snippet": "everything else it puts into a FIFO buffer",
+   "pass": "both"
+  },
+  {
+   "concept": "marshalling",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 112,
+   "char_start": 72988,
+   "depth": "explains",
+   "context_snippet": "you do this like weird, it's called marshalling",
+   "pass": "both"
+  },
+  {
+   "concept": "bme280",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 113,
+   "char_start": 73811,
+   "depth": "mention",
+   "context_snippet": "inside this BME 280",
+   "pass": 1
+  },
+  {
+   "concept": "finite-state-machine",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 113,
+   "char_start": 73888,
+   "depth": "explains",
+   "context_snippet": "There's a state machine in there. That's just listening for I squared C",
+   "pass": 1
+  },
+  {
+   "concept": "i2c-peripheral",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 113,
+   "char_start": 74492,
+   "depth": "explains",
+   "context_snippet": "making I squared C peripherals",
+   "pass": "both"
+  },
+  {
+   "concept": "pin-count",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 113,
+   "char_start": 74758,
+   "depth": "opinion",
+   "context_snippet": "we were out of pins",
+   "pass": 1
+  },
+  {
+   "concept": "i2c-register",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 115,
+   "char_start": 75675,
+   "depth": "explains",
+   "context_snippet": "there's a register, you know, let's say 0x15",
+   "pass": 1
+  },
+  {
+   "concept": "fitbit",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 116,
+   "char_start": 76463,
+   "depth": "mention",
+   "context_snippet": "displays on the Fitbit",
+   "pass": 1
+  },
+  {
+   "concept": "pico",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 117,
+   "char_start": 76741,
+   "depth": "mention",
+   "context_snippet": "the Pico has low power modes",
+   "pass": 1
+  },
+  {
+   "concept": "e-paper-display",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 117,
+   "char_start": 76790,
+   "depth": "opinion",
+   "context_snippet": "the e-paper is well suited for that",
+   "pass": "both"
+  },
+  {
+   "concept": "low-power-mode",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 117,
+   "char_start": 76865,
+   "depth": "explains",
+   "context_snippet": "we turn it off and then we meet someone in the hallway and you pull it out, it still has data on it",
+   "pass": "both"
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 77132,
+   "depth": "mention",
+   "context_snippet": "the one person that I thought of who has been on the show that talked about Zephyr is Jared Wolf",
+   "pass": "both"
+  },
+  {
+   "concept": "jared-wolf",
+   "type": "person",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 77132,
+   "depth": "mention",
+   "context_snippet": "the one person that I thought of who has been on the show that talked about Zephyr is Jared Wolf",
+   "pass": "both"
+  },
+  {
+   "concept": "circuit-dojo",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 77323,
+   "depth": "mention",
+   "context_snippet": "it's not circuit dojo board",
+   "pass": 1
+  },
+  {
+   "concept": "sparkfun",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 77371,
+   "depth": "mention",
+   "context_snippet": "he licensed his design to, um, SparkFun",
+   "pass": "both"
+  },
+  {
+   "concept": "nrf9160",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 77460,
+   "depth": "mention",
+   "context_snippet": "basically the NRF 9160, um, feather board thing",
+   "pass": "both"
+  },
+  {
+   "concept": "feather-board",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 77470,
+   "depth": "mention",
+   "context_snippet": "the NRF 9160, um, feather board thing",
+   "pass": "both"
+  },
+  {
+   "concept": "sleep-mode",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 77603,
+   "depth": "explains",
+   "context_snippet": "when it goes into sleep mode, it basically only leaves the RTC on the battery power",
+   "pass": "both"
+  },
+  {
+   "concept": "battery-power",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 77633,
+   "depth": "mention",
+   "context_snippet": "it basically only leaves the RTC on the battery power",
+   "pass": "both"
+  },
+  {
+   "concept": "3-3-volt-rail",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 77691,
+   "depth": "explains",
+   "context_snippet": "it shuts off everything, including the 3.3 volt rail to the rest of the design",
+   "pass": "both"
+  },
+  {
+   "concept": "real-time-clock",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 77816,
+   "depth": "explains",
+   "context_snippet": "the only two things that can wake it up are the real time clock that you have to set",
+   "pass": "both"
+  },
+  {
+   "concept": "button-press",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 77901,
+   "depth": "mention",
+   "context_snippet": "or a button press",
+   "pass": 1
+  },
+  {
+   "concept": "quick-header",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 78069,
+   "depth": "mention",
+   "context_snippet": "this board Mike and I are talking about is on the quick header",
+   "pass": "both"
+  },
+  {
+   "concept": "sda",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 78133,
+   "depth": "mention",
+   "context_snippet": "it has four lines. It has power ground, SDA, SEL",
+   "pass": 1
+  },
+  {
+   "concept": "e-paper",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 78402,
+   "depth": "opinion",
+   "context_snippet": "it would still be showing all the ink stuff in, in a very beautiful way",
+   "pass": 1
+  },
+  {
+   "concept": "passing-context",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 78844,
+   "depth": "mention",
+   "context_snippet": "more notes, passing context versus individual values",
+   "pass": 1
+  },
+  {
+   "concept": "memory-alignment",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 78922,
+   "depth": "mention",
+   "context_snippet": "dealing with memory alignment",
+   "pass": "both"
+  },
+  {
+   "concept": "cmake",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 78953,
+   "depth": "mention",
+   "context_snippet": "getting better at CMake",
+   "pass": "both"
+  },
+  {
+   "concept": "git",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 78981,
+   "depth": "mention",
+   "context_snippet": "get mastery",
+   "pass": "both"
+  },
+  {
+   "concept": "git",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 119,
+   "char_start": 79011,
+   "depth": "mention",
+   "context_snippet": "Those all sound like get mastery",
+   "pass": 1
+  },
+  {
+   "concept": "community-building",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 122,
+   "char_start": 79336,
+   "depth": "opinion",
+   "context_snippet": "We'd love to hang out and, uh, build community with you",
+   "pass": "both"
+  },
+  {
+   "concept": "engineering-hiring",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 122,
+   "char_start": 79627,
+   "depth": "mention",
+   "context_snippet": "there are two positions that would directly work with Mike and myself",
+   "pass": 1
+  },
+  {
+   "concept": "goliath",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 122,
+   "char_start": 79734,
+   "depth": "mention",
+   "context_snippet": "that's the only pitch about Goliath that I'll do",
+   "pass": "both"
+  },
+  {
+   "concept": "twitter",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 127,
+   "char_start": 80183,
+   "depth": "mention",
+   "context_snippet": "I've kind of sworn off the bird site",
+   "pass": 1
+  },
+  {
+   "concept": "chaos-social",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 127,
+   "char_start": 80229,
+   "depth": "mention",
+   "context_snippet": "you can definitely find me on at stitch at chaos.social",
+   "pass": "both"
+  },
+  {
+   "concept": "jekyll",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 127,
+   "char_start": 80335,
+   "depth": "explains",
+   "context_snippet": "go to jump tuck.com, which is my beautiful new Jekyll site",
+   "pass": "both"
+  },
+  {
+   "concept": "wordpress",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 127,
+   "char_start": 80395,
+   "depth": "mention",
+   "context_snippet": "I just migrated it from WordPress",
+   "pass": "both"
+  },
+  {
+   "concept": "website-migration",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 127,
+   "char_start": 80395,
+   "depth": "explains",
+   "context_snippet": "I just migrated it from WordPress",
+   "pass": "both"
+  },
+  {
+   "concept": "firmware",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 128,
+   "char_start": 80634,
+   "depth": "opinion",
+   "context_snippet": "thanks for all the good firmer",
+   "pass": "both"
+  },
+  {
+   "concept": "printed-circuit-board",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 21,
+   "char_start": 9719,
+   "depth": "explains",
+   "context_snippet": "removed all the copper all the way through the board",
+   "pass": 2
+  },
+  {
+   "concept": "career-transition",
+   "type": "career",
+   "speaker": "Dave Jones",
+   "paragraph_index": 29,
+   "char_start": 13855,
+   "depth": "explains",
+   "context_snippet": "being able to do stuff for fun and you love it versus being able to do stuff because it's like part of your job description is different",
+   "pass": 2
+  },
+  {
+   "concept": "devrel",
+   "type": "career",
+   "speaker": "Dave Jones",
+   "paragraph_index": 29,
+   "char_start": 14576,
+   "depth": "mention",
+   "context_snippet": "I'm on the DevRel team",
+   "pass": 2
+  },
+  {
+   "concept": "firmware",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 29,
+   "char_start": 15228,
+   "depth": "explains",
+   "context_snippet": "I've been doing a ton of firmware",
+   "pass": 2
+  },
+  {
+   "concept": "rtos",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 29,
+   "char_start": 16637,
+   "depth": "explains",
+   "context_snippet": "all these different ways that people are like putting these software platforms and RTOS is together",
+   "pass": 2
+  },
+  {
+   "concept": "device-driver",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 39,
+   "char_start": 24649,
+   "depth": "explains",
+   "context_snippet": "it needs this specific driver",
+   "pass": 2
+  },
+  {
+   "concept": "device-tree-overlay",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 39,
+   "char_start": 24865,
+   "depth": "explains",
+   "context_snippet": "You can just give it a different overlay file and everything in your C code will be the same",
+   "pass": 2
+  },
+  {
+   "concept": "zephyr-learning-curve",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 44,
+   "char_start": 29086,
+   "depth": "opinion",
+   "context_snippet": "Nothing in Zephyr is simple the first time. Yeah. It's so confusing at first",
+   "pass": 2
+  },
+  {
+   "concept": "button-interrupt",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 46,
+   "char_start": 30076,
+   "depth": "mention",
+   "context_snippet": "Like a button interrupts",
+   "pass": 2
+  },
+  {
+   "concept": "zephyr-test-suite",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 47,
+   "char_start": 31840,
+   "depth": "explains",
+   "context_snippet": "every subsystem in Zephyr has a test and you can see how every possible function can be used",
+   "pass": 2
+  },
+  {
+   "concept": "wio-terminal",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 49,
+   "char_start": 32929,
+   "depth": "explains",
+   "context_snippet": "Seed Studio has this thing called the WIO terminal, which is like a 4.3 inch color LCD screen",
+   "pass": 2
+  },
+  {
+   "concept": "sensor-fetch",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 57,
+   "char_start": 37011,
+   "depth": "explains",
+   "context_snippet": "then it literally is a command that's like sensor fetch",
+   "pass": 2
+  },
+  {
+   "concept": "i2c-shell",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 67,
+   "char_start": 44265,
+   "depth": "explains",
+   "context_snippet": "there's an I squared C shell just built into Zephyr",
+   "pass": 2
+  },
+  {
+   "concept": "bus-pirate",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 67,
+   "char_start": 44716,
+   "depth": "mention",
+   "context_snippet": "like the bus pirate did back in the like 2009 days",
+   "pass": 2
+  },
+  {
+   "concept": "menuconfig",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 71,
+   "char_start": 47798,
+   "depth": "explains",
+   "context_snippet": "their menu config, which is like a, uh, an N curses type of like antsy",
+   "pass": 2
+  },
+  {
+   "concept": "http-client",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 71,
+   "char_start": 48278,
+   "depth": "explains",
+   "context_snippet": "I need an HTTP client for that. And like Espressif just has one already built in",
+   "pass": 2
+  },
+  {
+   "concept": "eclipse-ide",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 73,
+   "char_start": 50288,
+   "depth": "mention",
+   "context_snippet": "I hate using Eclipse. Eclipse is an IDE that's been around for, I don't know, long, long time",
+   "pass": 2
+  },
+  {
+   "concept": "open-source-hardware-development",
+   "type": "engineering-practice",
+   "speaker": "Dave Jones",
+   "paragraph_index": 75,
+   "char_start": 52782,
+   "depth": "opinion",
+   "context_snippet": "the things that we're able to accomplish as individual engineers is just mind blowing at this point",
+   "pass": 2
+  },
+  {
+   "concept": "transportation",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 85,
+   "char_start": 54765,
+   "depth": "mention",
+   "context_snippet": "Food production and transportation",
+   "pass": 2
+  },
+  {
+   "concept": "ponoko",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 88,
+   "char_start": 56274,
+   "depth": "mention",
+   "context_snippet": "prototyping services like Pinoco",
+   "asr_suspect": true,
+   "pass": 2
+  },
+  {
+   "concept": "hologram",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 92,
+   "char_start": 57061,
+   "depth": "mention",
+   "context_snippet": "I had coworkers at hologram",
+   "pass": 2
+  },
+  {
+   "concept": "abb",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 92,
+   "char_start": 57147,
+   "depth": "mention",
+   "context_snippet": "prior to that, I was at ABB",
+   "pass": 2
+  },
+  {
+   "concept": "keithley",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 92,
+   "char_start": 57224,
+   "depth": "mention",
+   "context_snippet": "same thing at Keithley",
+   "pass": 2
+  },
+  {
+   "concept": "wifi",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 99,
+   "char_start": 61406,
+   "depth": "mention",
+   "context_snippet": "you have to get your wifi credentials onto it",
+   "pass": 2
+  },
+  {
+   "concept": "zephyr-toolchain",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 99,
+   "char_start": 61496,
+   "depth": "mention",
+   "context_snippet": "you had to actually compile the thing, which means you had to have the Zephyr tool chain installed",
+   "pass": 2
+  },
+  {
+   "concept": "iot-cloud-connectivity",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 99,
+   "char_start": 61716,
+   "depth": "mention",
+   "context_snippet": "get people connecting the thing up to Goliath and sending some logs",
+   "pass": 2
+  },
+  {
+   "concept": "spi",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 62355,
+   "depth": "mention",
+   "context_snippet": "it communicates through a flex cable to your actual microcontroller. It's like spy",
+   "pass": 2
+  },
+  {
+   "concept": "grayscale-display",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 62529,
+   "depth": "explains",
+   "context_snippet": "there are e-paper displays that are gray scale",
+   "pass": 2
+  },
+  {
+   "concept": "three-color-e-paper",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 62580,
+   "depth": "explains",
+   "context_snippet": "there are ones that have like three colors, which are like white, black, and red",
+   "pass": 2
+  },
+  {
+   "concept": "waveform",
+   "type": "concept-principle",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 63003,
+   "depth": "explains",
+   "context_snippet": "the controller that's on the board makes a waveform",
+   "pass": 2
+  },
+  {
+   "concept": "e-paper-documentation",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 64043,
+   "depth": "opinion",
+   "context_snippet": "there's like zero documentation on these things",
+   "pass": 2
+  },
+  {
+   "concept": "lut",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 101,
+   "char_start": 64851,
+   "depth": "explains",
+   "context_snippet": "I'm still trying to get, you know, the LUTs, the lookup tables on their right",
+   "pass": 2
+  },
+  {
+   "concept": "pimoroni-badger",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 66061,
+   "depth": "mention",
+   "context_snippet": "using the, uh, Pyramoroni badger",
+   "pass": 2
+  },
+  {
+   "concept": "adafruit",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 66160,
+   "depth": "mention",
+   "context_snippet": "you use some Adafruit stuff",
+   "pass": 2
+  },
+  {
+   "concept": "i2c",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 104,
+   "char_start": 66739,
+   "depth": "mention",
+   "context_snippet": "send some I squared C stuff",
+   "pass": 2
+  },
+  {
+   "concept": "pimoroni-badger",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 104,
+   "char_start": 66780,
+   "depth": "mention",
+   "context_snippet": "you again, found the Pyramoroni board",
+   "pass": 2
+  },
+  {
+   "concept": "micropython",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 106,
+   "char_start": 67529,
+   "depth": "explains",
+   "context_snippet": "through the MicroPython, you can plug in a USB cable to these face plates",
+   "pass": 2
+  },
+  {
+   "concept": "i2c-sensor-interface",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 107,
+   "char_start": 68673,
+   "depth": "explains",
+   "context_snippet": "it is just an I squared C sensor at a certain point",
+   "pass": 2
+  },
+  {
+   "concept": "capacitive-touch-controller",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 108,
+   "char_start": 69545,
+   "depth": "mention",
+   "context_snippet": "we put a, a capacitive touch controller on that",
+   "pass": 2
+  },
+  {
+   "concept": "micropython",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 108,
+   "char_start": 69860,
+   "depth": "explains",
+   "context_snippet": "I was pretty sure I didn't want MicroPython being in charge of that listening for I squared C stuff",
+   "pass": 2
+  },
+  {
+   "concept": "i2c-interrupt",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 108,
+   "char_start": 70290,
+   "depth": "explains",
+   "context_snippet": "you want to use the, the I squared C hardware peripheral and you want to use interrupts",
+   "pass": 2
+  },
+  {
+   "concept": "i2c-multi-address",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 112,
+   "char_start": 72217,
+   "depth": "mention",
+   "context_snippet": "Called I2C multi address for Raspberry Pi for the RP2040",
+   "pass": 2
+  },
+  {
+   "concept": "i2c",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 113,
+   "char_start": 74055,
+   "depth": "explains",
+   "context_snippet": "when you send, you say like, Hey, device on this address",
+   "pass": 2
+  },
+  {
+   "concept": "hersey-font",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 115,
+   "char_start": 75108,
+   "depth": "mention",
+   "context_snippet": "you can actually give it a Hershey font file",
+   "pass": 2
+  },
+  {
+   "concept": "micropython",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 115,
+   "char_start": 75420,
+   "depth": "explains",
+   "context_snippet": "The MicroPython has a loop in it that is always just checking",
+   "pass": 2
+  },
+  {
+   "concept": "i2c-protocol",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 115,
+   "char_start": 75675,
+   "depth": "explains",
+   "context_snippet": "there's a register, you know, let's say 0x15. And then the next byte is going to tell you the number of letters",
+   "pass": 2
+  },
+  {
+   "concept": "power-management",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 117,
+   "char_start": 76741,
+   "depth": "mention",
+   "context_snippet": "the Pico has low power modes",
+   "pass": 2
+  },
+  {
+   "concept": "raspberry-pi-pico",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 117,
+   "char_start": 76741,
+   "depth": "mention",
+   "context_snippet": "the Pico has low power modes",
+   "pass": 2
+  },
+  {
+   "concept": "circuit-dojo-board",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 77323,
+   "depth": "mention",
+   "context_snippet": "it's not circuit dojo board",
+   "pass": 2
+  },
+  {
+   "concept": "button-wake",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 77927,
+   "depth": "explains",
+   "context_snippet": "the only two ways you can wake up this board",
+   "pass": 2
+  },
+  {
+   "concept": "nuremberg",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 122,
+   "char_start": 79267,
+   "depth": "mention",
+   "context_snippet": "if you were going to be anywhere near Nuremberg",
+   "pass": 2
+  },
+  {
+   "concept": "engineering-job",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 122,
+   "char_start": 79627,
+   "depth": "mention",
+   "context_snippet": "there are two positions that would directly work with Mike and myself",
+   "pass": 2
+  },
+  {
+   "concept": "firmware-engineer",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 122,
+   "char_start": 79833,
+   "depth": "mention",
+   "context_snippet": "there's a firmer role and a FAA role",
+   "pass": 2
+  },
+  {
+   "concept": "faa",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 122,
+   "char_start": 79859,
+   "depth": "mention",
+   "context_snippet": "a FAA role",
+   "pass": 2
+  },
+  {
+   "concept": "social-media-platform",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 127,
+   "char_start": 80183,
+   "depth": "opinion",
+   "context_snippet": "I've kind of sworn off the bird site",
+   "pass": 2
+  }
+ ]
+}

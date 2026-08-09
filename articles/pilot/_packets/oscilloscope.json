@@ -1,0 +1,661 @@
+{
+ "concept": "oscilloscope",
+ "claims": [
+  {
+   "claim_text": "An oscilloscope's function is to make circuit behaviour observable; it is the primary instrument for seeing what a circuit is doing rather than inferring it.",
+   "quote_verbatim": "the oscilloscope is your window into what's going on, you know, to be able to see things",
+   "speaker": "Dave Jones",
+   "episode": 289,
+   "episode_title": "Documentation Is A Waste Of Time",
+   "episode_url": "https://theamphour.com/289-documentation-is-a-waste-of-time/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Interpreting a scope requires understanding how the instrument itself distorts what it shows.",
+   "quote_verbatim": "how that window might tint things",
+   "speaker": "Chris Gammell",
+   "episode": 289,
+   "episode_title": "Documentation Is A Waste Of Time",
+   "episode_url": "https://theamphour.com/289-documentation-is-a-waste-of-time/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Competence with a scope, and with what it is displaying, is treated as a defining skill for analog work.",
+   "quote_verbatim": "you need to know your way around a scope and you need to understand what it is that it's showing you",
+   "speaker": "Kendall Castor-Perry",
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The BNC shells on a mains-powered bench scope are referenced to mains earth, so grounding a probe at any node not at earth potential creates a fault path. This is the most common way beginners destroy a scope or a circuit.",
+   "quote_verbatim": "a lot of beginners don't know that those B and C connectors are mains-earth reference",
+   "speaker": "Chris Gammell",
+   "episode": 20,
+   "episode_title": "Military Electronics and The Free Eagle (Freagle) Campaign",
+   "episode_url": "https://theamphour.com/the-amp-hour-20-military-electronics-and-our-first-wotws/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Almost all bench scopes and bench multimeters are ground-referenced, which is what makes floating measurement difficult.",
+   "quote_verbatim": "almost every scope and every bench DMM",
+   "speaker": "Chris Gammell",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Floating high-voltage measurement is performed with high-voltage probes plus an isolation transformer on the instrument, or with isolated probes.",
+   "quote_verbatim": "you can also put the oscilloscope directly on the IGBTs with some high voltage probes",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "An unknown signal is approached from the fastest timebase and dialled downward until a trace appears, which guarantees the signal is never undersampled.",
+   "quote_verbatim": "I put that thing in its fastest time base setting, apply my unknown signal, and then I start dialing it downwards until I see something",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A scope has a single trigger point shared by all channels, so two signals at slightly different frequencies yield one stable trace and one drifting at the difference frequency. Alternate trigger mode resolves this; without it the alternative is a second scope.",
+   "quote_verbatim": "You've only got the one trigger point",
+   "speaker": "Dave Jones",
+   "episode": 145,
+   "episode_title": "PCB Mills, SDR and Oscilloscopes - Flaunting Furbelow Fanciness",
+   "episode_url": "https://theamphour.com/the-amp-hour-145-flaunting-furbelow-fanciness/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "In the absence of alternate trigger, viewing two unrelated signals stably requires two instruments.",
+   "quote_verbatim": "If you don't have a scope with alternate trigger, then you've got to use two different scopes.",
+   "speaker": "Dave Jones",
+   "episode": 145,
+   "episode_title": "PCB Mills, SDR and Oscilloscopes - Flaunting Furbelow Fanciness",
+   "episode_url": "https://theamphour.com/the-amp-hour-145-flaunting-furbelow-fanciness/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A dead bus is debugged from the physical layer upward: probe the line for pull-up and edge integrity first, then check device addressing, then the protocol layer.",
+   "quote_verbatim": "the first thing I'm going to do is actually get the scope out and just probe it to make sure that there's nothing funny with the pull-up",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "I2C edges are asymmetric by design, pulling low through a transistor almost instantly and high through a resistor, which is what makes the physical layer worth inspecting first.",
+   "quote_verbatim": "It'll pull down, like, almost instantaneously",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Assumed configuration values should be measured rather than trusted; a serial decode failure attributed to instrument settings proved to be an incorrect baud rate at the source.",
+   "quote_verbatim": "Why isn't my scope decoding the serial string? I've got it set to the right board rate",
+   "speaker": "Dave Jones",
+   "episode": 551,
+   "episode_title": "Feed the Mouse",
+   "episode_url": "https://theamphour.com/551-feed-the-mouse/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Bandwidth beyond roughly 200-300 MHz is not useful on a general-purpose scope because the supplied passive probes cannot follow it.",
+   "quote_verbatim": "the passive probes that come with it won't go that high",
+   "speaker": "Dave Jones",
+   "episode": 567,
+   "episode_title": "The Rodeo Drive of Electronics",
+   "episode_url": "https://theamphour.com/567-the-rodeo-drive-of-electronics/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A broadband high-impedance tap is built by terminating the scope input at 50 ohms and placing a series kilohm resistance ahead of it, isolating cable capacitance and inductance.",
+   "quote_verbatim": "You 50 Ohm terminate your scope. Uh, and then you have a kilohm resistance so that you have a high impedance that's broadband",
+   "speaker": "Nash Reilly",
+   "episode": 474,
+   "episode_title": "An Interview with Nash Reilly",
+   "episode_url": "https://theamphour.com/474-an-interview-with-nash-reilly/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Older analog scopes are available at negligible cost and are recommended as learning instruments, with the single filter that the scope should be a triggered-sweep design rather than a recurrent-sweep one.",
+   "quote_verbatim": "there's almost no excuse now if you're going to buy an analog scope to buy anything other than a triggered sweep scope",
+   "speaker": "Alan Wolke",
+   "episode": 117,
+   "episode_title": "An Interview with Alan Wolke (Re-broadcast)",
+   "episode_url": "https://theamphour.com/117-an-interview-with-alan-wolke-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Learning the fundamentals on a simple instrument establishes what the display represents, after which a buyer can identify which digital features they actually require.",
+   "quote_verbatim": "there's a lot of value in understanding those fundamentals and what a scope is showing you",
+   "speaker": "Alan Wolke",
+   "episode": 117,
+   "episode_title": "An Interview with Alan Wolke (Re-broadcast)",
+   "episode_url": "https://theamphour.com/117-an-interview-with-alan-wolke-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Terminology diverged between analog and digital generations: the analog sweep speed control is the digital horizontal scale.",
+   "quote_verbatim": "on the new digital scopes, it's not sweep speed. It's horizontal scale",
+   "speaker": "Alan Wolke",
+   "episode": 117,
+   "episode_title": "An Interview with Alan Wolke (Re-broadcast)",
+   "episode_url": "https://theamphour.com/117-an-interview-with-alan-wolke-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Test equipment must exist before the technology it measures, so scope vendors must ship an instrument fast enough for each new serial data rate before the first silicon implementing it is produced.",
+   "quote_verbatim": "the test equipment has, has to be able to test the thing before it's invented",
+   "speaker": "Martin Rowe",
+   "episode": 714,
+   "episode_title": "The Measurement Blues with Martin Rowe",
+   "episode_url": "https://theamphour.com/714-the-measurement-blues-with-martin-rowe/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Whether measurement functions run in dedicated silicon or in software is invisible at purchase and dominates real throughput: enabling a single horizontal measurement on one instrument collapsed its waveform update rate by three orders of magnitude.",
+   "quote_verbatim": "It drops from four, from a million waveform updates per second to, to under a thousand. By turning on that one thing.",
+   "speaker": "Dave Jones",
+   "episode": 619,
+   "episode_title": "Super Tecmo Bug",
+   "episode_url": "https://theamphour.com/619-super-tecmo-bug/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Higher ADC resolution yields real sensitivity: a 14-bit instrument resolved a 15-microvolt signal out of the noise floor that a 12-bit instrument could not.",
+   "quote_verbatim": "I actually pick a 15-microvolt signal out of the noise",
+   "speaker": "Dave Jones",
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The LMH6518 is used in the front end of most modern scopes; a silent revision reduced its input offset capability without a part-number change, with reports of instruments bricked by excessive front-end DC offset.",
+   "quote_verbatim": "which is used in the front end of almost every modern scope",
+   "speaker": "Dave Jones",
+   "episode": 727,
+   "episode_title": "Boat Anchor Warehouse",
+   "episode_url": "https://theamphour.com/727-boat-anchor-warehouse/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "In high-voltage service work scopes are treated as consumable, channel damage from arc-over being routine.",
+   "quote_verbatim": "oscilloscopes in this field are kind of considered consumable sometimes",
+   "speaker": "Adam McCombs",
+   "episode": 431,
+   "episode_title": "An Interview with Adam McCombs",
+   "episode_url": "https://theamphour.com/431-an-interview-with-adam-mccombs/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Advocates buying the cheapest instrument that remains usable and upgrading only when a real limit is reached.",
+   "quote_verbatim": "go as cheap as you can until you can't use it anymore",
+   "speaker": "Chris Gammell",
+   "episode": 18,
+   "episode_title": "Transistor Types and Where To Get Electronic Gear",
+   "episode_url": "https://theamphour.com/the-amp-hour-18-transistor-types-and-where-to-get-electronic-gear/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "how-much-to-spend"
+  },
+  {
+   "claim_text": "Applies a disposal test to owned equipment: gear he would not buy at its market value is sold.",
+   "quote_verbatim": "if I had that cash, would I buy this bit of gear?",
+   "speaker": "Dave Jones",
+   "episode": 18,
+   "episode_title": "Transistor Types and Where To Get Electronic Gear",
+   "episode_url": "https://theamphour.com/the-amp-hour-18-transistor-types-and-where-to-get-electronic-gear/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "how-much-to-spend"
+  },
+  {
+   "claim_text": "Places the hobbyist overkill threshold at four figures, holding that a 400 dollar four-channel scope suffices indefinitely for general use and does not become obsolete.",
+   "quote_verbatim": "I would say overkill for hobbyist use would be once you enter the four digit range",
+   "speaker": "Dave Jones",
+   "episode": 606,
+   "episode_title": "Professional Scooter Charger",
+   "episode_url": "https://theamphour.com/606-professional-scooter-charger/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "how-much-to-spend"
+  },
+  {
+   "claim_text": "Dismisses pocket scopes as filling only a narrow niche defined by budget and portability.",
+   "quote_verbatim": "they're just toys, you know, they fit an incredibly small niche",
+   "speaker": "Dave Jones",
+   "episode": 190,
+   "episode_title": "Let's Hear It For The Buoys - Vanishing Vessel Vexation",
+   "episode_url": "https://theamphour.com/190-lets-hear-it-for-the-buoys-vanishing-vessel-vexation/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "pocket-scopes"
+  },
+  {
+   "claim_text": "Objects to pocket scopes on pedagogical grounds: a beginner cannot separate instrument artefacts such as aliasing from circuit behaviour.",
+   "quote_verbatim": "you're going to run into things like anti-alising and just other stuff",
+   "speaker": "Chris Gammell",
+   "episode": 606,
+   "episode_title": "Professional Scooter Charger",
+   "episode_url": "https://theamphour.com/606-professional-scooter-charger/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "pocket-scopes"
+  },
+  {
+   "claim_text": "Recommends beginners prioritise repeatability and buy an instrument others already own, so that community support exists when problems arise.",
+   "quote_verbatim": "one thing that's important for beginners is buying something that other people have",
+   "speaker": "Chris Gammell",
+   "episode": 567,
+   "episode_title": "The Rodeo Drive of Electronics",
+   "episode_url": "https://theamphour.com/567-the-rodeo-drive-of-electronics/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "Defends software-locked features on industry-sustainability grounds, arguing that margin on high-end options funds continued development.",
+   "quote_verbatim": "if you just follow the race to the bottom and sell, you know, a one gig bandwidth scope with all the bells and whistles in decoding for $400, the industry won't exist",
+   "speaker": "Dave Jones",
+   "episode": 117,
+   "episode_title": "An Interview with Alan Wolke (Re-broadcast)",
+   "episode_url": "https://theamphour.com/117-an-interview-with-alan-wolke-re-broadcast/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "feature-locking"
+  },
+  {
+   "claim_text": "Agrees with the vendor position while noting he held the opposite view for two decades as a customer, and cites the non-recurring engineering cost as the justification.",
+   "quote_verbatim": "there is a lot of NRE that went into developing that",
+   "speaker": "Alan Wolke",
+   "episode": 117,
+   "episode_title": "An Interview with Alan Wolke (Re-broadcast)",
+   "episode_url": "https://theamphour.com/117-an-interview-with-alan-wolke-re-broadcast/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "feature-locking"
+  },
+  {
+   "claim_text": "Argues tiered pricing helps buyers, because a lower entry price clears capital-expenditure approval thresholds that a full-featured instrument would not.",
+   "quote_verbatim": "it's just easier to get it in the door",
+   "speaker": "Chris Gammell",
+   "episode": 145,
+   "episode_title": "PCB Mills, SDR and Oscilloscopes - Flaunting Furbelow Fanciness",
+   "episode_url": "https://theamphour.com/the-amp-hour-145-flaunting-furbelow-fanciness/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "feature-locking"
+  },
+  {
+   "claim_text": "Demonstrated that a bandwidth restriction sold as a licence key could be defeated in hardware, having assumed it could not.",
+   "quote_verbatim": "they sell a license key option for 100 megahertz bandwidth",
+   "speaker": "Dave Jones",
+   "episode": 339,
+   "episode_title": "Look at nature and meet nerds",
+   "episode_url": "https://theamphour.com/339-look-at-nature-and-meet-nerds/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "feature-locking"
+  },
+  {
+   "claim_text": "Endorsed the forum consensus that essentially no individual has productive use for a 1 GHz instrument.",
+   "quote_verbatim": "nobody is worthy of winning a one gig scope",
+   "speaker": "Dave Jones",
+   "episode": 287,
+   "episode_title": "Pull The Trigger",
+   "episode_url": "https://theamphour.com/287-pull-the-trigger/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "who-needs-bandwidth"
+  },
+  {
+   "claim_text": "Converts the same judgement into a lab provisioning rule favouring many mid-bandwidth instruments over one high-bandwidth instrument.",
+   "quote_verbatim": "You don't put a one gig scope in there. You put in 10, 100 megahertz scopes",
+   "speaker": "Chris Gammell",
+   "episode": 287,
+   "episode_title": "Pull The Trigger",
+   "episode_url": "https://theamphour.com/287-pull-the-trigger/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "who-needs-bandwidth"
+  },
+  {
+   "claim_text": "Argues that starting on limited equipment is what makes better equipment legible later.",
+   "quote_verbatim": "You have to start with the crusty old meter",
+   "speaker": "Chris Gammell",
+   "episode": 269,
+   "episode_title": "Be Tidy",
+   "episode_url": "https://theamphour.com/269-be-tidy/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "learn-on-bad-gear"
+  },
+  {
+   "claim_text": "Notes the difficulty is that a beginner cannot evaluate instrument quality before encountering a problem that requires it.",
+   "quote_verbatim": "you don't know you need that thing until you, until you struggle with it",
+   "speaker": "Chris Gammell",
+   "episode": 536,
+   "episode_title": "NFT Schematics",
+   "episode_url": "https://theamphour.com/536-nft-schematics/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "learn-on-bad-gear"
+  },
+  {
+   "claim_text": "Answers the recurring beginner question affirmatively, while noting he worked without one for years for cost reasons.",
+   "quote_verbatim": "Should I buy an oscilloscope? I'm beginning in electronic. Should I? Yes, is the answer.",
+   "speaker": "Dave Jones",
+   "episode": 306,
+   "episode_title": "Catalyzing Change Agents",
+   "episode_url": "https://theamphour.com/306-catalyzing-change-agents/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "Read Agilent's restructuring as a retreat from the low end rather than from research-grade instruments, on the basis that it cannot compete on price.",
+   "quote_verbatim": "if anything, they're going to stop trying to target the low-end. Because they can't compete at the low-end",
+   "speaker": "Dave Jones",
+   "episode": 164,
+   "episode_title": "Agilent's New Name, Molex's New Owner and PCB artwork - Nonsensical Naming Neolatry",
+   "episode_url": "https://theamphour.com/164-agilents-new-name-molexs-new-owner-and-pcb-artwork-nonsensical-naming-neolatry/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "Argued that a heavily promoted Tektronix launch had been preceded on specifications by a LeCroy instrument that received little attention.",
+   "quote_verbatim": "they were beaten to the punch by LaCroix",
+   "speaker": "Dave Jones",
+   "episode": 347,
+   "episode_title": "Re-scoping the problem",
+   "episode_url": "https://theamphour.com/347-re-scoping-the-problem/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "A dual-processor bus fault was located on a scope as a transient on address line A10 occurring only when the second processor drove the bus, caused by a PCB stub; recognising it required knowing what normal bus activity looks like.",
+   "quote_verbatim": "a little ghost of a spike on A10 when the Z80 was trying to do it",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "An intermittent supply fault caused by a lifting bond wire inside a diode was caught only by monitoring every rail continuously across two scopes and eight channels.",
+   "quote_verbatim": "I ended up using two scopes. I think I ended up having like eight channels or something, just measuring all the different rails at once",
+   "speaker": "Dave Jones",
+   "episode": 551,
+   "episode_title": "Feed the Mouse",
+   "episode_url": "https://theamphour.com/551-feed-the-mouse/",
+   "depth_regraded": "explains",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "Capturing gigabit Ethernet through a differential probe at one terasample per second yielded roughly a hundred microseconds of data, sufficient for only a few packets.",
+   "quote_verbatim": "all of this is to catch one to three UDP packets",
+   "speaker": "Chris Gammell",
+   "episode": 600,
+   "episode_title": "The Custodial Arts",
+   "episode_url": "https://theamphour.com/600-the-custodial-arts/",
+   "depth_regraded": "explains",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "Working on gigahertz-rate serialisers with a 100 MHz instrument rendered the measurements useless.",
+   "quote_verbatim": "Everything looks like DC to my crappy old oscilloscope.",
+   "speaker": "Jeri Ellsworth",
+   "episode": 173,
+   "episode_title": "An Interview with Jeri Ellsworth - Intense Illusion Introduction",
+   "episode_url": "https://theamphour.com/173-an-interview-with-jeri-ellsworth-intense-illusion-introduction/",
+   "depth_regraded": "opinion",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "Space-hardware power supplies are qualified by repeatedly shorting the output with a screwdriver while observing recovery on a scope, with full test re-qualification expected afterwards.",
+   "quote_verbatim": "you jam the screwdriver in the output and you put it on the scope a bunch of times and you watch what the recovery looks like",
+   "speaker": "Todd Bailey",
+   "episode": 701,
+   "episode_title": "Electric Propulsion with Todd Bailey",
+   "episode_url": "https://theamphour.com/701-electric-propulsion-with-todd-bailey/",
+   "depth_regraded": "explains",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "On a bus carrying signals in multiple directions, terminators were placed mid-bus and adjusted against the scope to minimise overshoot.",
+   "quote_verbatim": "then you adjusted those with the oscilloscope, minimize the overshoot",
+   "speaker": "Lee Felsenstein",
+   "episode": 684,
+   "episode_title": "Lee Felsenstein: The Computer Revolution & Counterculture",
+   "episode_url": "https://theamphour.com/684-lee-felsenstein-the-computer-revolution-counterculture/",
+   "depth_regraded": "explains",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "Electric fence energiser waveforms were characterised in the field through attenuators at Kruger National Park.",
+   "quote_verbatim": "put oscilloscopes on the fence at Kruger National Park and had a look at the waveforms",
+   "speaker": "Paul Thompson",
+   "episode": 481,
+   "episode_title": "An Interview with Paul Thompson",
+   "episode_url": "https://theamphour.com/481-an-interview-with-paul-thompson/",
+   "depth_regraded": "explains",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "Before online instruction existed, scope operation was learned from the ring-bound manuals supplied with the instrument, which documented each control and the expected waveforms.",
+   "quote_verbatim": "it came with a beautiful ring bound manual",
+   "speaker": "Dave Jones",
+   "episode": 690,
+   "episode_title": "Clap on, clap off, lights flicker",
+   "episode_url": "https://theamphour.com/690-clap-on-clap-off-lights-flicker/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "A first scope purchase in the 1980s was a dual-channel 20 MHz analog instrument at eight to nine hundred dollars, without delayed timebase.",
+   "quote_verbatim": "It didn't even have delayed time base.",
+   "speaker": "Dave Jones",
+   "episode": 117,
+   "episode_title": "An Interview with Alan Wolke (Re-broadcast)",
+   "episode_url": "https://theamphour.com/117-an-interview-with-alan-wolke-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "Sub-thousand-dollar digital scopes went from unavailable to commonplace over roughly five years to 2012, reaching the 250-300 dollar range.",
+   "quote_verbatim": "five years ago, it was unheard of to buy a digital scope under a thousand bucks",
+   "speaker": "Dave Jones",
+   "episode": 127,
+   "episode_title": "FPGA, Xess, 32 Bit - Quirky Qualitative Questions",
+   "episode_url": "https://theamphour.com/the-amp-hour-127-quirky-qualitative-questions/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "By 2013 a 100 MHz instrument could be bought secondhand for around two hundred dollars.",
+   "quote_verbatim": "you can buy a hundred megahertz bandwidth one on eBay for two hundred bucks",
+   "speaker": "Dave Jones",
+   "episode": 148,
+   "episode_title": "Contextual Electronics, ClubJameco and Solderpaste - Lifelong Learning Likelihood",
+   "episode_url": "https://theamphour.com/the-amp-hour-148-lifelong-learning-likelihood/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "Entry-level four-channel scopes of the 400 dollar class could be unlocked to 200 MHz.",
+   "quote_verbatim": "they're 200 meg bandwidth, right? You can hack them to 200 meg bandwidth",
+   "speaker": "Dave Jones",
+   "episode": 606,
+   "episode_title": "Professional Scooter Charger",
+   "episode_url": "https://theamphour.com/606-professional-scooter-charger/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "By 2025 roughly a thousand dollars bought a four-channel instrument of 800 MHz to 1 GHz bandwidth with deep memory and a two-channel 100 MHz generator.",
+   "quote_verbatim": "for $999, you can get a 1 gigahertz or at least 800 megahertz bandwidth four-channel scope",
+   "speaker": "Dave Jones",
+   "episode": 710,
+   "episode_title": "Tugging on the Nerd Heartstring",
+   "episode_url": "https://theamphour.com/710-tugging-on-the-nerd-heartstring/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "Described a recurring trade-show pattern of being condescended to about basic instrument function, and a practice of allowing it to continue before asking a specialist question.",
+   "quote_verbatim": "I'll go up to a booth and I'll let the salesperson start talking down to me",
+   "speaker": "Jeri Ellsworth",
+   "episode": 35,
+   "episode_title": "An Interview with Jeri Ellsworth - The Ternary Tussle",
+   "episode_url": "https://theamphour.com/the-amp-hour-35-the-ternary-tussle/",
+   "depth_regraded": "opinion",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "In Australian usage a scope is a CRO, from cathode ray oscilloscope.",
+   "quote_verbatim": "a crow is an oscilloscope here in Australia",
+   "speaker": "Dave Jones",
+   "episode": 481,
+   "episode_title": "An Interview with Paul Thompson",
+   "episode_url": "https://theamphour.com/481-an-interview-with-paul-thompson/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  }
+ ],
+ "disagreements": [
+  {
+   "id": "feature-locking",
+   "question": "Is it legitimate for vendors to sell bandwidth and decoding as software-unlocked options?",
+   "positions": [
+    {
+     "speaker": "Dave Jones",
+     "episode": 117,
+     "stance": "legitimate - high-end margin funds continued R&D"
+    },
+    {
+     "speaker": "Alan Wolke",
+     "episode": 117,
+     "stance": "legitimate now, but opposed it for 20 years as a customer; NRE justifies it"
+    },
+    {
+     "speaker": "Chris Gammell",
+     "episode": 145,
+     "stance": "beneficial to buyers - a low entry price clears capex approval"
+    },
+    {
+     "speaker": "Dave Jones",
+     "episode": 339,
+     "stance": "in tension - published a hardware defeat of a bandwidth licence key"
+    }
+   ]
+  },
+  {
+   "id": "who-needs-bandwidth",
+   "question": "Does anyone outside specialist work need a 1 GHz scope?",
+   "positions": [
+    {
+     "speaker": "Dave Jones",
+     "episode": 287,
+     "stance": "essentially nobody"
+    },
+    {
+     "speaker": "Chris Gammell",
+     "episode": 287,
+     "stance": "provision ten 100 MHz instruments instead of one 1 GHz"
+    }
+   ]
+  },
+  {
+   "id": "how-much-to-spend",
+   "question": "How much should a non-professional spend on a scope?",
+   "positions": [
+    {
+     "speaker": "Chris Gammell",
+     "episode": 18,
+     "stance": "cheapest that remains usable; upgrade at a real limit"
+    },
+    {
+     "speaker": "Dave Jones",
+     "episode": 18,
+     "stance": "sell anything you would not re-buy at market value"
+    },
+    {
+     "speaker": "Dave Jones",
+     "episode": 606,
+     "stance": "overkill begins at four figures; $400 four-channel suffices indefinitely"
+    }
+   ]
+  },
+  {
+   "id": "learn-on-bad-gear",
+   "question": "Should beginners start on limited equipment?",
+   "positions": [
+    {
+     "speaker": "Chris Gammell",
+     "episode": 269,
+     "stance": "yes - limitation is what makes good equipment legible"
+    },
+    {
+     "speaker": "Chris Gammell",
+     "episode": 536,
+     "stance": "complication - beginners cannot judge quality before hitting a need"
+    },
+    {
+     "speaker": "Chris Gammell",
+     "episode": 606,
+     "stance": "but not below a floor; pocket scopes teach artefacts, not circuits"
+    }
+   ]
+  },
+  {
+   "id": "pocket-scopes",
+   "question": "Are sub-$100 pocket scopes worth buying?",
+   "positions": [
+    {
+     "speaker": "Dave Jones",
+     "episode": 190,
+     "stance": "no - a narrow niche of budget and portability only"
+    },
+    {
+     "speaker": "Chris Gammell",
+     "episode": 606,
+     "stance": "no - beginners cannot separate instrument artefacts from circuit behaviour"
+    }
+   ]
+  }
+ ],
+ "capped": true
+}

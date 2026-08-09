@@ -1,0 +1,901 @@
+{
+ "concept": "linux",
+ "name": "Linux",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "linux",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "linux"
+  ],
+  "children": [
+   "angstrom",
+   "apache",
+   "buildroot",
+   "debian",
+   "eclipse",
+   "edge-computing",
+   "embedded-device",
+   "embedded-software",
+   "file-system",
+   "ios",
+   "macos",
+   "nokia",
+   "opengl",
+   "programmable-real-time-unit",
+   "qt",
+   "raspberry-pi-compute-module",
+   "sleep-mode",
+   "software-dependency",
+   "software-security",
+   "ssh",
+   "terminal",
+   "time-division-multiplexing",
+   "u-boot",
+   "ubuntu",
+   "unix",
+   "visual-studio-code",
+   "windows",
+   "windows-10"
+  ],
+  "neighbors": {
+   "android": 9,
+   "beagleboard": 8,
+   "red-hat": 7,
+   "embedded-linux": 5,
+   "system-on-module": 5,
+   "beaglebone": 4,
+   "broadcom": 4,
+   "espressif": 4,
+   "hdmi": 4,
+   "integrated-development-environment": 4,
+   "osh-park": 4,
+   "system-in-package": 4
+  },
+  "episodes_with_kept_mentions": 236,
+  "mentions_kept": 790,
+  "pins_final": 241,
+  "capped": false,
+  "total_available": 241
+ },
+ "claims": [
+  {
+   "claim_text": "A full Linux kernel requires a memory management unit, which is the dividing line between processors that can run it and microcontrollers that cannot; cut-down variants exist for parts without an MMU.",
+   "quote_verbatim": "to do full-blown Linux, you need a memory management unit",
+   "speaker": "Chris Gammell",
+   "episode": 146,
+   "episode_title": "Hamvention, Arduino and Intel - Burdensome Background Battology",
+   "episode_url": "https://theamphour.com/the-amp-hour-146-burdensome-background-battology/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Linux also imposes a RAM floor: eight megabytes is the practical minimum and is cramped, an amount that is enormous by microcontroller standards, so memory cost is part of the decision to run it.",
+   "quote_verbatim": "nowadays you can probably get away with like in eight megabytes, but eight megabytes is really cramped",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A microcontroller without sufficient on-chip memory cannot run Linux at all; putting a Linux-capable core on such a die means going off-chip for memory, at which point the input-output bandwidth to that memory becomes the limit.",
+   "quote_verbatim": "you would have to have off-board memory",
+   "speaker": "Matt Venn",
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Sleep-mode power is where embedded Linux systems are weakest: a microcontroller running bare-metal code out of internal SRAM, with no external DRAM to keep alive, is orders of magnitude better.",
+   "quote_verbatim": "embedded Linux systems are horrible for like sleep mode power consumption",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A single-board Linux computer needs a mains supply or a large battery, and using one for a task a microcontroller could do wastes most of the power it draws; low-power Linux boards are quoted at around two watts.",
+   "quote_verbatim": "if you're using one of these things just to, you know, flash some leads or something, then you're really, you know, the, the power's just being pissed away",
+   "speaker": "Chris Gammell",
+   "episode": 565,
+   "episode_title": "Here for a reason",
+   "episode_url": "https://theamphour.com/565-here-for-a-reason/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Linux is not deterministic, so timing-critical control cannot be placed in it; robotics work that must react within a bounded time has to keep that path off the general-purpose operating system.",
+   "quote_verbatim": "Linux is notoriously not, uh, uh, deterministic",
+   "speaker": null,
+   "episode": 97,
+   "episode_title": "An Interview with Eben Upton - Morbus Moilsome MakerFaire",
+   "episode_url": "https://theamphour.com/the-amp-hour-97-morbus-moilsome-makerfaire/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Real-time motor control loops do not belong in Linux; the standard arrangement is a second processor or real-time core handling the loop while Linux handles everything above it, and the designer then has to account for buffer sizes and how often Linux services the interface.",
+   "quote_verbatim": "you're not going to like be running your real time motor control loops in Linux",
+   "speaker": "Dave Jones",
+   "episode": 466,
+   "episode_title": "An Interview with Ryan Cousins",
+   "episode_url": "https://theamphour.com/466-an-interview-with-ryan-cousins/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Texas Instruments programmable real-time units are used to synthesise peripherals a system-on-chip has run out of: software UARTs, extra pulse-width-modulation outputs, and a fourth quadrature encoder where only three exist in hardware, all while Linux runs on the main cores.",
+   "quote_verbatim": "they use the PRUs to generate software UARTs",
+   "speaker": "Jason Kridner And Robert",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Real-time firmware for those cores is deployed by placing the executable in the kernel's firmware directory and instructing the kernel to load it, after which it is reloaded automatically on every boot.",
+   "quote_verbatim": "you put the, the executables inside of lib firmware",
+   "speaker": "Chris Gammell",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The correct way to reach hardware under Linux is a kernel driver, with nothing in user space touching peripheral registers; memory-mapping a peripheral from user space is common because it requires less understanding of the system and reaches a timing goal sooner, not because the resulting code runs faster.",
+   "quote_verbatim": "It requires less understanding of the system. It's not necessarily faster or slower",
+   "speaker": "Jason Kridner And Robert",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Linux presents devices as files, so a driver's job is to map a part's register set onto virtual files that application code reads and writes; an accelerometer becomes files carrying the three axes.",
+   "quote_verbatim": "Linux turns everything into files",
+   "speaker": "Jason Kridner And Robert",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "The kernel already contains support for most classes of device, so bringing up a new part on a board is largely a matter of declaring its presence and address in the device tree rather than writing code.",
+   "quote_verbatim": "you just have to tell them that it's there",
+   "speaker": "Jason Kridner And Robert",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Separating hardware description into a device tree rather than embedding it in application source is what makes a later change of chip affordable; where the pin mapping and controller specifics are woven into the code, unpicking them is expensive and produces corner-case defects.",
+   "quote_verbatim": "when hardware description is integrated and embedded into the actual code itself, you just have a disaster unwrapping it",
+   "speaker": "Mark Palmeri",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Custom logic in an FPGA is only half the work: once the fabric talks to the processor, someone still has to write the Linux driver, because the kernel has no knowledge of a block that did not exist before.",
+   "quote_verbatim": "I gotta go write a driver now",
+   "speaker": "Dave Jones",
+   "episode": 466,
+   "episode_title": "An Interview with Ryan Cousins",
+   "episode_url": "https://theamphour.com/466-an-interview-with-ryan-cousins/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "On a system-on-chip combining ARM cores with FPGA fabric, the processor boots first and brings up the fabric rather than the other way round: JTAG reaches the ARM side, a debug UART is established, U-Boot is placed in boot flash and ported, and only then can a kernel be booted.",
+   "quote_verbatim": "They actually boot up the dual Cortex-A9, and that ARM part of the chip actually controls bringing up the FPGA side",
+   "speaker": "Craig J Bishop",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The bootloader reads the kernel image from an SD card or flash into RAM and sets the program counter to it; drivers are either compiled into that image or loaded afterwards as kernel object files, which means enough must be built in to reach the storage and its file system before any module can be loaded.",
+   "quote_verbatim": "it literally just sets the program counter",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Moving the console to a different UART is a multi-place change: the base address and pin multiplexing in the U-Boot source and device tree, and separately the kernel's own console setting passed as boot arguments; getting only the first half right produces a bootloader that prints and then a blank screen after the kernel starts.",
+   "quote_verbatim": "starting kernel and then nothing, blank, black screen",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The same change can be far more expensive on an unfamiliar tree: moving a console from one UART to another once took a month and a half because roughly ten places in the kernel source had to be found and altered.",
+   "quote_verbatim": "it took me about a month, month and a half to figure out how to switch the UART",
+   "speaker": "Chris Gammell",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "When selecting a processor for an embedded Linux design, the criterion is not merely that the kernel and bootloader support it but that a build system does, meaning Buildroot or Yocto; that support is what decides how much work the board bring-up will be.",
+   "quote_verbatim": "not just good, you know, U-boot support. But like good, like build system support",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The working method with Buildroot is to configure a defconfig, build, write the resulting image to an SD card, boot it and then modify it incrementally, adding drivers and changes on a system that already runs.",
+   "quote_verbatim": "you fire up build root. You configure the def config. You make it.",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Buildroot is simpler than Yocto at the price of doing more yourself, and Yocto's layered overlay system is what makes it heavier; a camera product built on a compute module used Buildroot to generate its distribution.",
+   "quote_verbatim": "build root, you sort of have to do more yourself",
+   "speaker": "Ariel Briner",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A fielded Linux product needs its update path designed defensively: a power-on self test with fallback to the previous image means an update interrupted by loss of power does not brick the device, and that behaviour has to be tested deliberately.",
+   "quote_verbatim": "fail back to the previous image",
+   "speaker": "Ariel Briner",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Across ten different embedded Linux boards, most parts took roughly three hours of software work to reach a prompt, so the barrier is knowing the process rather than the per-part effort.",
+   "quote_verbatim": "it took, I don't know, three hours on the software side to boot them up to a prompt",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Some processors are effectively plug and play: soldering the part down with a chunk of DDR memory and inserting an SD card was enough to boot one Allwinner device straight away, which is the property to look for when choosing silicon.",
+   "quote_verbatim": "I soldered this thing to the board",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The character of the work differs from bare metal: bare-metal C is dominated by writing code and reading register maps, while embedded Linux work is dominated by reading other people's source.",
+   "quote_verbatim": "bare metal C, you spend all your time writing lots of code",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Assembling a system from device tree files and existing programs rather than writing it produces fewer defects, because every line written is a line that can be wrong; the offsetting cost is that the first board support package is painful.",
+   "quote_verbatim": "every line of code you write is like possibly going to be buggy",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Getting Linux running properly on a new board can exceed the effort of designing the hardware, and was the single largest drain on engineering resources for one FPGA module product.",
+   "quote_verbatim": "getting Linux to run properly on this thing, like is, was more effort than like probably designing the hardware was",
+   "speaker": "Dave Jones",
+   "episode": 466,
+   "episode_title": "An Interview with Ryan Cousins",
+   "episode_url": "https://theamphour.com/466-an-interview-with-ryan-cousins/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Choosing a mainstream distribution over an embedded build system is a decision about who the customer is: Ubuntu gives software developers the package manager they expect, at the cost of maintaining a general-purpose distribution, with its releases every April and October, on an embedded platform.",
+   "quote_verbatim": "now you're maintaining Ubuntu on a, on an embedded platform",
+   "speaker": "Dave Jones",
+   "episode": 466,
+   "episode_title": "An Interview with Ryan Cousins",
+   "episode_url": "https://theamphour.com/466-an-interview-with-ryan-cousins/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Bare metal remains the alternative for teams that want the system to work without rebuilding device trees, kernel modules and drivers against versions that stop being supported.",
+   "quote_verbatim": "the rebuilding device trees and kernel modules",
+   "speaker": "Dave Jones",
+   "episode": 466,
+   "episode_title": "An Interview with Ryan Cousins",
+   "episode_url": "https://theamphour.com/466-an-interview-with-ryan-cousins/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "In regulated work the kernel's size counts against it: verification and validation of a system carrying millions of lines is a different undertaking from validating a few thousand lines running bare metal.",
+   "quote_verbatim": "with their 10 million lines of code or whatever, isn't necessarily a good option",
+   "speaker": "Dave Jones",
+   "episode": 466,
+   "episode_title": "An Interview with Ryan Cousins",
+   "episode_url": "https://theamphour.com/466-an-interview-with-ryan-cousins/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Where a system's function is confined to a real-time task, a small kernel that pulls in few third-party dependencies gives better provenance over what actually runs on the silicon, easier tracking when a security defect appears, and a smaller surface to certify.",
+   "quote_verbatim": "you only rely on so many third-party dependencies",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A real-time operating system of the FreeRTOS type is a scheduling kernel with queues, semaphores and task notifications and nothing else, whereas Linux brings libraries and drivers with it; the RTOS earns its place by bounding operations in time, since every call takes a timeout and forces the designer to decide what happens when the deadline passes.",
+   "quote_verbatim": "it's really just a scheduling kernel",
+   "speaker": null,
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Zephyr was built as a distribution rather than a bare kernel, standing in the same relation to other real-time operating systems as a full Linux distribution does to the kernel alone, and it carries Linux conventions into the microcontroller world, including the device tree and a Linux-style configuration system.",
+   "quote_verbatim": "It's a distro rather than an OS",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "The device tree idea carried over from Linux lets a driver be swapped without rewriting application code: the device is looked up by name and the code calls a generic interface, so replacing one real-time clock part with another is a driver plus a project-file change.",
+   "quote_verbatim": "they have a whole, I think it's a Linux idea of this device tree",
+   "speaker": "Chris Gammell",
+   "episode": 509,
+   "episode_title": "Cellular IoT with Jared Wolff",
+   "episode_url": "https://theamphour.com/509-cellular-iot-with-jared-wolff/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The cost of that convenience is download size: pulling every vendor software development kit into one tree runs to tens of gigabytes.",
+   "quote_verbatim": "this is like 20 gigabytes of stuff",
+   "speaker": "Jared Wolff",
+   "episode": 509,
+   "episode_title": "Cellular IoT with Jared Wolff",
+   "episode_url": "https://theamphour.com/509-cellular-iot-with-jared-wolff/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Some microcontrollers now sit right at the boundary and would run Linux if they had a memory management unit, so the choice between a small kernel and a full operating system is decided by that one architectural feature plus the memory it implies.",
+   "quote_verbatim": "this could probably run Linux if it had a memory management unit",
+   "speaker": "Chris Gammell",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A price-based rule of thumb used in production test work puts devices under a hundred dollars in real-time operating system territory, where a temperature sensor has no business running a full kernel, and devices above about two hundred and fifty dollars in Linux territory.",
+   "quote_verbatim": "things under a hundred dollars are Zephyr land",
+   "speaker": null,
+   "episode": 544,
+   "episode_title": "Standardizing Manufacturing with Pete Staples",
+   "episode_url": "https://theamphour.com/544-standardizing-manufacturing-with-pete-staples/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Linux appearing in progressively cheaper products changed production test equipment: programming fixtures aimed at 32-bit microcontrollers had to be extended to program Linux devices over USB.",
+   "quote_verbatim": "capable of programming Linux devices over USB",
+   "speaker": null,
+   "episode": 544,
+   "episode_title": "Standardizing Manufacturing with Pete Staples",
+   "episode_url": "https://theamphour.com/544-standardizing-manufacturing-with-pete-staples/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The crossover in silicon cost is narrow, with roughly ten dollars for a Linux-capable system against five for a microprocessor system, so volume rather than capability often decides which side of the line a design falls.",
+   "quote_verbatim": "if you're looking at a $10 Linux system or a $5 microprocessor system",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Graphical user interface toolkits distort that comparison: the free options for bare-metal and real-time systems are poor, and a commercial toolkit licence runs to about ten thousand dollars, which on a low-volume product can justify moving to Linux and Qt instead.",
+   "quote_verbatim": "you're going to pay 10 K for a license",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The presence of a touchscreen is not by itself a reason to run Linux, since embedded graphics on microcontrollers is routine; the case for Linux is built on the whole set of subsystems a product needs.",
+   "quote_verbatim": "as soon as you have a touchscreen, it doesn't mean, oh, you need to run Linux",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Networking is where Linux is hardest to argue against: the same network stack that runs servers is available, a sixty-cent SDIO Wi-Fi module can be wired to an MMC bus and enabled with an existing driver, and no proprietary TCP/IP stack with its list of unsupported features is involved.",
+   "quote_verbatim": "I'll just grab some SDIO wifi module off of AliExpress for 60 cents",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Existing Linux drivers cover work that would otherwise be a large undertaking, which is why instruments that gained USB mass-storage and similar interfaces late did so once they moved to a general-purpose kernel.",
+   "quote_verbatim": "all this stuff that would be a massive difficulty to do on your own is all just taken care of",
+   "speaker": "Chris Gammell",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Binaries are portable across ARM Linux systems in a way firmware is not: a precompiled ARM executable copied onto the SD card of an unrelated board runs, because the program does not know which system-on-chip it is on.",
+   "quote_verbatim": "this thing doesn't know if it's running a raspberry pi or V3S or any other arm chip",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Source-level longevity is a distinguishing property: a program built a decade ago can usually be rebuilt and run today, and an old distribution can be installed in a virtual machine to build code from twenty-five years ago, which is why open formats and open toolchains bear directly on long-term data access.",
+   "quote_verbatim": "install an ancient version of Linux and still build that code from 1995",
+   "speaker": "Trammell Hudson",
+   "episode": 463,
+   "episode_title": "An Interview with Trammell Hudson",
+   "episode_url": "https://theamphour.com/463-an-interview-with-trammell-hudson/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "That longevity contrasts with closed tools: a widely used FPGA suite segmentation-faulted during synthesis on current Linux distributions for years with no recourse available to users, whereas an open toolchain leaves the option of inspecting and fixing it.",
+   "quote_verbatim": "Xilinx Vivado on modern Linux distributions for many years were just segmentation fault",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 423,
+   "episode_title": "Open FPGA Toolchains at 35c3",
+   "episode_url": "https://theamphour.com/423-open-fpga-toolchains-at-35c3/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Pinning a build machine to an old kernel version has physical consequences: one team's build system could not accept wireless cards at all and had to be given a wired connection.",
+   "quote_verbatim": "we have to run kind of an older version of Linux. And in order to do so, it doesn't accept wireless cards",
+   "speaker": "Christina Cyr",
+   "episode": 475,
+   "episode_title": "An Interview with Christina Cyr",
+   "episode_url": "https://theamphour.com/475-an-interview-with-christina-cyr/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Case sensitivity in file names is a real portability failure: a library that includes a header with the wrong capitalisation compiles on Windows and fails on Linux, and the fault appears to be in the build environment rather than the code.",
+   "quote_verbatim": "if you compile it on a Windows computer, it works. But when you compile it on Linux, it breaks",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Cross-platform compilation does not follow automatically from writing portable source; a project planned as cross-platform from the first day still met substantial work to build for Linux.",
+   "quote_verbatim": "it's not just going to automatically compile for Linux",
+   "speaker": "Dave Jones",
+   "episode": 368,
+   "episode_title": "The EEVblog Sparkgap Generator",
+   "episode_url": "https://theamphour.com/368-the-eevblog-sparkgap-generator/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Continuous integration for embedded work depends on being able to build from the command line rather than only inside an IDE, because only a command-line build is repeatable on a machine nobody is watching.",
+   "quote_verbatim": "you really need to be able to build your software from the command line",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Command-line builds on Windows were historically painful enough to tie developers to IDEs, and the Windows Subsystem for Linux is what made that workflow practical on Windows machines.",
+   "quote_verbatim": "WSL made it a lot better actually to work on Windows",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Storing the toolchain alongside the code protects a project from its own build environment ageing, and is lighter than archiving a virtual machine image, which drags a whole operating system and its interface along with the compiler.",
+   "quote_verbatim": "you actually store all the tooling with your, your code as well",
+   "speaker": "Chris Gammell",
+   "episode": 612,
+   "episode_title": "Slapping Industries",
+   "episode_url": "https://theamphour.com/612-slapping-industries/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Embedded toolchains do not install equally on every host: one Zephyr toolchain took a full day on Windows without success and installed on Linux immediately, so the documented host for a framework is a practical constraint on the developer's machine.",
+   "quote_verbatim": "I literally spent a solid day just trying to install the tool chain on Windows",
+   "speaker": "Eli Hughes",
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A vendor's own tools are expected to install and build without assembly: where the supplied development software does not simply work, that is itself evidence against choosing the silicon.",
+   "quote_verbatim": "If the vendor tools don't do that, then you shouldn't be using their chips",
+   "speaker": "Dave Jones",
+   "episode": 470,
+   "episode_title": "Just Add Salt",
+   "episode_url": "https://theamphour.com/470-just-add-salt/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Embedded development remains predominantly hosted on Windows, with over sixty percent of attendees at one practitioner training reporting it as their operating system.",
+   "quote_verbatim": "60 plus percent are like windows users embedded",
+   "speaker": "Chris Gammell",
+   "episode": 612,
+   "episode_title": "Slapping Industries",
+   "episode_url": "https://theamphour.com/612-slapping-industries/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A compute module packages the processor, RAM and flash on a single connector so a product can carry Linux without the designer solving memory routing; a hackable camera product was built this way with a full single-board computer inside every unit.",
+   "quote_verbatim": "if you want Linux in your product, you can put this into your design",
+   "speaker": "Matt Richardson",
+   "episode": 235,
+   "episode_title": "An Interview with Matt Richardson - Raspberry Risorgimento Regent",
+   "episode_url": "https://theamphour.com/235-an-interview-with-matt-richardson-raspberry-risorgimento-regent/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A system-in-package takes that further by integrating over a hundred components into one wide-pitch BGA, removing the memory layout and controlled-impedance work from the customer's board at a price premium over the equivalent development board.",
+   "quote_verbatim": "over 100 components integrated",
+   "speaker": "Chris Gammell",
+   "episode": 362,
+   "episode_title": "Secret Squirrel",
+   "episode_url": "https://theamphour.com/362-secret-squirrel/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The appeal of that approach for industrial work is that it puts Linux on a board with one part soldered down, and it is the answer where the processor itself cannot be bought as a loose chip.",
+   "quote_verbatim": "if you want Linux on a board with a single thing soldered down",
+   "speaker": "Chris Gammell",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Where such a module is open source, the customer can read its bill of materials and ask for a part that is holding up delivery to be depopulated, or change it themselves, which is the argument for the user of a central building block owning that block.",
+   "quote_verbatim": "just depopulate it and deliver the board to us without the specific component",
+   "speaker": "Lukas Henkel",
+   "episode": 681,
+   "episode_title": "Compact High Speed Design with Lukas Henkel",
+   "episode_url": "https://theamphour.com/681-compact-high-speed-design-with-lukas-henkel/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The hardware abstraction Linux provides is what makes a module upgrade path real: if a later, faster module keeps the same footprint and pinout, the same base board can carry it after retesting.",
+   "quote_verbatim": "if the SIP footprint stays the same",
+   "speaker": "Chris Gammell",
+   "episode": 681,
+   "episode_title": "Compact High Speed Design with Lukas Henkel",
+   "episode_url": "https://theamphour.com/681-compact-high-speed-design-with-lukas-henkel/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Building a Linux computer from a system-in-package is within reach of an engineer who has made microcontroller boards, provided they understand signal integrity and matched trace lengths; those are the skills that should decide the attempt, not the software.",
+   "quote_verbatim": "you should have some idea of what signal integrity means",
+   "speaker": "Jason Kridner And Robert",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Single-board Linux computers combine a desktop environment reached over HDMI, USB and audio with direct access to the input-output pins, and are provisioned by writing a distribution image to an SD card.",
+   "quote_verbatim": "You can just download an SD card image and just pop it on",
+   "speaker": "Jeff Keyzer",
+   "episode": 59,
+   "episode_title": "An Interview with Jeff Keyzer and Jason Kridner - Bonafide BeagleBoard Bionomics",
+   "episode_url": "https://theamphour.com/the-amp-hour-59-bonafide-beagleboard-bionomics/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An SD card as the root file system is a wear item: a product built on that arrangement failed through card death in the field, and the experience argued for a microcontroller with a wireless module in place of a board that requires managing an operating system and software stack.",
+   "quote_verbatim": "I've been through the Ninja blocks and I've learned my lessons when it comes to SD cards that die",
+   "speaker": "Marcus Schappi",
+   "episode": 189,
+   "episode_title": "An Interview with Marcus Schappi - Kit Ketch Kenophobia",
+   "episode_url": "https://theamphour.com/189-an-interview-with-marcus-schappi-kit-ketch-kenophobia/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Devices sold as simple serial peripherals are frequently full Linux systems inside; marketing a module as a serial-to-wireless converter limits the support obligation to documenting the serial interface, while the knowledgeable user can replace the firmware with OpenWRT and run a web server on it.",
+   "quote_verbatim": "under the hood, they were entire, uh, Linux devices",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Cheap silicon capable of carrying a Linux stack does not mean a product should carry one: the network stack arrives but the hardening does not, and default credentials persist because a device needs some reset path, with no password amounting to the same exposure as a shared default.",
+   "quote_verbatim": "no password's the same as a default password",
+   "speaker": "Chris Gammell",
+   "episode": 321,
+   "episode_title": "Monster Scale Production",
+   "episode_url": "https://theamphour.com/321-monster-scale-production/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Once a device holds an IP address on a Linux stack, its attack surface is larger than a comparable microcontroller product, because network reachability, common open-source components and shipped defaults all widen the ways in.",
+   "quote_verbatim": "There's oftentimes just a bigger attack surface",
+   "speaker": null,
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Reproducible builds are the supply-chain answer at distribution level: Debian's move to full reproducibility means the artefacts can be rebuilt identically at every level, and because Debian sits upstream of Ubuntu the property propagates downstream.",
+   "quote_verbatim": "Debian Linux goes fully reproducible",
+   "speaker": "Dave Jones",
+   "episode": 724,
+   "episode_title": "All Heat, No Useful Work",
+   "episode_url": "https://theamphour.com/724-all-heat-no-useful-work/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Fielded fleets can be kept current with an immutable Linux image aimed at single-board computers, where updates are pushed as packages to machines already deployed rather than reflashed by hand.",
+   "quote_verbatim": "you can basically update machines out in the field",
+   "speaker": "Chris Gammell",
+   "episode": 720,
+   "episode_title": "Hyper Growth and OpenClaw Interns",
+   "episode_url": "https://theamphour.com/720-hyper-growth-and-openclaw-interns/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A remote shell and the ability to run a container on the target are why remotely managed assets are built on Linux, whereas over-the-air update mechanisms for microcontrollers remain awkward by comparison; power consumption is what pulls the decision back the other way.",
+   "quote_verbatim": "actually just run a Docker container on the, the, the board",
+   "speaker": "Jason Kridner",
+   "episode": 723,
+   "episode_title": "BeagleBoard's Back with Jason Kridner",
+   "episode_url": "https://theamphour.com/723-beagleboards-back-with-jason-kridner/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Splitting a machine between Linux and microcontrollers is a live architecture in motion control: the planner runs on Linux and sends timed packets over USB so that microcontrollers on the head and the base stay step-synchronised.",
+   "quote_verbatim": "there's actually like something that runs on Linux that does real time, like packet sending over USB",
+   "speaker": "Stephen Hawes",
+   "episode": 686,
+   "episode_title": "A Benchtop Pick and Place with Stephen Hawes",
+   "episode_url": "https://theamphour.com/686-a-benchtop-pick-and-place-with-stephen-hawes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A soft RISC-V core can put a multi-core Linux-capable system inside a modest FPGA, on the order of thirty-five thousand lookup tables or fewer, which contradicts the assumption that Linux in fabric requires a very large device.",
+   "quote_verbatim": "you can put a multi-core Linux capable SOC into your FPGA",
+   "speaker": "Michael Gielda",
+   "episode": 547,
+   "episode_title": "Open Source Mindset with Michael Gielda",
+   "episode_url": "https://theamphour.com/547-open-source-mindset-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A Linux-capable system-on-chip has been taped out on a shared 130-nanometre shuttle by one part-time developer with no prior chip design experience, and it boots an unmodified upstream kernel with no board support package.",
+   "quote_verbatim": "I have a Tiny Tape Out board with his design on it and it boots Linux",
+   "speaker": null,
+   "episode": 703,
+   "episode_title": "Building wafer.space with Tim Ansell",
+   "episode_url": "https://theamphour.com/703-building-wafer-space-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Choosing Android on top of the same hardware is a staffing decision as much as a technical one: it supplies an interface users recognise and lets the work be done by developers who write Java applications rather than by scarce low-level C engineers.",
+   "quote_verbatim": "just find someone who knows Java and can crank out an Android app",
+   "speaker": "Adam Wolf",
+   "episode": 167,
+   "episode_title": "An Interview with Adam Wolf - Brick & Board Biuners",
+   "episode_url": "https://theamphour.com/167-an-interview-with-adam-wolf-brick-board-biuners/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The same argument constrains ecosystem design: insisting that everything be bare-metal C limits a product line to the number of engineers who can work that way, and raising the abstraction level widens the pool that can build on it.",
+   "quote_verbatim": "you're going to just run out of engineers",
+   "speaker": "Kerry Scharfglass",
+   "episode": 487,
+   "episode_title": "An Interview with Kerry Scharfglass",
+   "episode_url": "https://theamphour.com/487-an-interview-with-kerry-scharfglass/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Putting a whole Linux computer into a device that only toggles three outputs and turns on a light is defensible where the organisation's engineers write Python and JavaScript, and where the vehicle's battery makes the extra draw a small fraction of the total; on a scooter design the argument was made on team skills rather than power.",
+   "quote_verbatim": "it's only ever going to need to like actuate three GPIOs and turn on a light",
+   "speaker": "Kerry Scharfglass",
+   "episode": 487,
+   "episode_title": "An Interview with Kerry Scharfglass",
+   "episode_url": "https://theamphour.com/487-an-interview-with-kerry-scharfglass/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "An experienced firmware practitioner will strip a real-time operating system out of a design in favour of bare metal or a small scheduler and message passer, and reverses that position when the product needs a touchscreen interface, storage and networking at once.",
+   "quote_verbatim": "I will rip out any RTOS",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Linux projects are more complex than microcontroller projects in a way that shows up as team size: a single engineer can carry hardware, firmware and production for a small embedded product, while a Linux-based product of the same ambition needs more people to ship in a normal timeframe, or an engineer with a set of tools they have already used on previous systems.",
+   "quote_verbatim": "Linux systems are generally are more complex",
+   "speaker": "Chris Gammell",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Linux is only the kernel, not the interface, and conflating the two misstates what a vendor supplies and what the product team must still build.",
+   "quote_verbatim": "Linux is just the kernel. It's not the, it's not the GUI",
+   "speaker": "Chris Gammell",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Software given away without warranty or complete documentation creates the opening for a business selling support and end-to-end service around it, which is how Red Hat and IBM built on the kernel and is the model open hardware inherits.",
+   "quote_verbatim": "Linux is basically given without warranty",
+   "speaker": "Chris Anderson",
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The commercial value of a free tool sits in services rather than licences, and the same route is expected for open-source design tools, where the expensive part for a company switching is the manpower to rebuild libraries rather than the software itself.",
+   "quote_verbatim": "they charge professional for professional services",
+   "speaker": "Dave Jones",
+   "episode": 441,
+   "episode_title": "Motivational Speaker",
+   "episode_url": "https://theamphour.com/441-motivational-speaker/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Paying for software buys someone to hold to an agreement; that accountability is the thing a free project cannot supply, and it is a legitimate input to a tooling decision independent of technical merit.",
+   "quote_verbatim": "penning a check allows you, gives you that power",
+   "speaker": "Chris Gammell",
+   "episode": 489,
+   "episode_title": "An Interview with Jack Ganssle (2nd)",
+   "episode_url": "https://theamphour.com/489-an-interview-with-jack-ganssle-2nd/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Nearly all users of an open-source system consume a finished, supported distribution rather than building from source, so the packaged product and its support are what determine whether the underlying project reaches users at all.",
+   "quote_verbatim": "They want the fully supported, finished, polished product",
+   "speaker": "Dave Jones",
+   "episode": 22,
+   "episode_title": "The Hard Work Hypothesis",
+   "episode_url": "https://theamphour.com/the-amp-hour-22-the-hard-work-hypothesis/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Development-board design frequently obstructs the intended use: on one Linux-capable microcontroller board the display pins were routed to an HDMI transmitter so a parallel LCD could not be attached at all, only a subset of the input-output reached any pin, and boards loaded with transceivers and terminal blocks for every bus reach several hundred dollars.",
+   "quote_verbatim": "you can't even hook up a parallel LCD to this thing",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  }
+ ],
+ "attribution_notes": [
+  "ep 515: labels are flagged unreliable but the passages are self-consistently the guest describing his own survey of ten embedded Linux boards, which matches the episode's stated subject; content-attributed to Jay Carlson.",
+  "ep 544, 581, 698, 703: labels flagged unreliable; claims are attributed by content (a manufacturing-test equipment vendor, an RTOS author, an IoT security researcher and an open-source silicon programme) and carry no name.",
+  "ep 97: the raw label is an unresolved speaker id, so the determinism claim carries no name.",
+  "Host operating-system preference material was discarded throughout; only transferable engineering content was kept."
+ ],
+ "capped": false
+}

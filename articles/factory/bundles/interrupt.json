@@ -1,0 +1,1043 @@
+{
+ "concept": "interrupt",
+ "name": "Interrupt",
+ "type": "technique",
+ "score": 185.407,
+ "rank_by_score": 210,
+ "cluster": {
+  "core": [
+   "interrupt"
+  ],
+  "children": [],
+  "neighbors": [
+   {
+    "concept": "timer",
+    "weight": 4
+   }
+  ]
+ },
+ "stats": {
+  "episodes": 28,
+  "mentions": 49,
+  "explains": 34,
+  "opinions": 2,
+  "candidate_episode_count": 24,
+  "candidate_mention_count": 33,
+  "gated_out": 23,
+  "gated_out_by_concept": [
+   [
+    "timer",
+    23
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 8,
+  "speakers": [
+   [
+    "Chris Gammell",
+    8
+   ],
+   [
+    "Elecia White",
+    3
+   ],
+   [
+    "Dave Jones",
+    3
+   ],
+   [
+    "Piotr Esden-Tempski",
+    3
+   ],
+   [
+    "Bart Dring",
+    3
+   ],
+   [
+    "Andrew Witte",
+    1
+   ],
+   [
+    "Dave Vandenbout",
+    1
+   ],
+   [
+    "Ronald Sousa",
+    1
+   ],
+   [
+    "Scott Shawcroft",
+    1
+   ],
+   [
+    "Ken Burns",
+    1
+   ],
+   [
+    "Ben Heck",
+    1
+   ],
+   [
+    "Jared Wolff",
+    1
+   ],
+   [
+    "Jay Carlson",
+    1
+   ],
+   [
+    "Fredrik Kensander",
+    1
+   ],
+   [
+    "Phillip Johnston",
+    1
+   ],
+   [
+    "Carmen",
+    1
+   ],
+   [
+    "Alvaro Prieto",
+    1
+   ],
+   [
+    "CNLohr",
+    1
+   ],
+   [
+    "Matt Venn",
+    1
+   ],
+   [
+    "Liam Fraser",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 34,
+   "neighbor": 1
+  },
+  "passages_by_depth": {
+   "explains": 33,
+   "opinion": 2
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 35,
+ "passages": [
+  {
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "guest": "Andrew Witte",
+   "stem": "0175-an-interview-with-andrew-witte-telistic-timepiece-technomania",
+   "paragraph_index": 164,
+   "depth": "explains",
+   "speaker_raw": "Engadget",
+   "speaker_repaired": "Andrew Witte",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Um, so there is a device, a peripheral device in the microcontroller that we can turn on. It's called the memory protection unit. And basically, um, it sits on the memory bus and it throws an interrupt, um, whenever you access an address outside of a certain range or group of ranges. Um, and then the interrupt handler, which is kernel code, um, can deal with that basically by killing the offending, uh, app, which in our, we're using a free RTOS. So, um, apps run in a free RTOS task that's configured to have sort of low privilege and the memory protection unit turned on and we can kill that task if things go haywire.",
+   "context_before": "So what, I, can you explain that to dumb analog guy here? And of course any of our dumb analog listeners as well. We don't want to forget them. Okay.",
+   "context_after": "Huh? So does that mean that your, your developers, you have, do you have two different levels of developers, some writing apps directly for the pebble and then some writing like, like phone side applications? Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So what, I, can you explain that to dumb analog guy here? And of course any of our dumb analog listeners as well. We don't want to forget them. Okay. Um, so there is a device, a peripheral device in the microcontroller that we can turn on. It's called the memory protection unit. And basically, um, it sits on the memory bus and it throws an interrupt, um, whenever you access an address outside of a certain range or group of ranges. Um, and then the interrupt handler, which is kernel code, um, can deal with that basically by killing the offending, uh, app, which in our, we're using a free RTOS. So, um, apps run in a free RTOS task that's configured to have sort of low privilege and the memory protection unit turned on and we can kill that task if things go haywire. Huh? So does that mean that your, your developers, you have, do you have two different levels of developers, some writing apps directly for the pebble and then some writing like, like phone side applications? Yeah."
+  },
+  {
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "guest": "Elecia White",
+   "stem": "0187-an-interview-with-elecia-white-wirewove-worshipping-wookieist",
+   "paragraph_index": 143,
+   "depth": "opinion",
+   "speaker_raw": "Alicia White",
+   "speaker_repaired": "Elecia White",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "But I also do like to see things ship. So sometimes I get to see the whole cycle. And right now, one of my clients, they have a whole ton of code and I have been trying to use their code and occasionally throwing bits out. Who uses floating point divide and interrupts? It's just wrong. Wait for it. Wait for it. Wait for it. So I get to see lots of things and I do a fair amount of system architecture because of the book and because I have a decent reputation. I mean, last summer I worked on an IMU with a whole bunch of people that I'd worked with at a different company on an IMU. And what they wanted was how fast can we get the basics working so that we can go back to working on algorithms. And I know it's a Lego project. You can go to SparkFun. You buy an accelerometer. You look at the specs for all the gyros that are out.",
+   "context_before": "It's easy. What could possibly go wrong?",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "SPEAKER_01",
+   "text": "It's easy. What could possibly go wrong? But I also do like to see things ship. So sometimes I get to see the whole cycle. And right now, one of my clients, they have a whole ton of code and I have been trying to use their code and occasionally throwing bits out. Who uses floating point divide and interrupts? It's just wrong. Wait for it. Wait for it. Wait for it. So I get to see lots of things and I do a fair amount of system architecture because of the book and because I have a decent reputation. I mean, last summer I worked on an IMU with a whole bunch of people that I'd worked with at a different company on an IMU. And what they wanted was how fast can we get the basics working so that we can go back to working on algorithms. And I know it's a Lego project. You can go to SparkFun. You buy an accelerometer. You look at the specs for all the gyros that are out. Yeah."
+  },
+  {
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "guest": "Elecia White",
+   "stem": "0187-an-interview-with-elecia-white-wirewove-worshipping-wookieist",
+   "paragraph_index": 284,
+   "depth": "explains",
+   "speaker_raw": "Alicia White",
+   "speaker_repaired": "Elecia White",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Well, processor dependent, but sleep cycles, you know, we PLL the clock so that you only have to put in eight megahertz or sometimes even three megahertz to get up to a 30 megahertz clock. And so you turn your PLL down and now you're drawing much less power. Or many processors have actual sleep instructions and they wake up for a limited number of interrupts. You design your system so the important interrupts are on those interrupts. And, and when you need to wake up and do something, you do it as fast as possible so you can go back to sleep, which is kind of how I do engineering really, kind of lazy.",
+   "context_before": "Oh, God. So, so what, I mean, so what do you do in that case then? So you like shut things down or you do like, like sleep cycles or how are you doing that?",
+   "context_after": "I love the processors that have little dedicated hardware things in them. Like they'll have a, you won't have to run the process at all. Like it'll have an analog to digital converter that just works on its own, takes a measurement, wakes up, just the ADC part wakes up, takes a, on a timer, takes a measurement and goes back to sleep and stores it without the actual processor waking up. I love those.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Dave Jones",
+   "text": "Oh, God. So, so what, I mean, so what do you do in that case then? So you like shut things down or you do like, like sleep cycles or how are you doing that? Well, processor dependent, but sleep cycles, you know, we PLL the clock so that you only have to put in eight megahertz or sometimes even three megahertz to get up to a 30 megahertz clock. And so you turn your PLL down and now you're drawing much less power. Or many processors have actual sleep instructions and they wake up for a limited number of interrupts. You design your system so the important interrupts are on those interrupts. And, and when you need to wake up and do something, you do it as fast as possible so you can go back to sleep, which is kind of how I do engineering really, kind of lazy. I love the processors that have little dedicated hardware things in them. Like they'll have a, you won't have to run the process at all. Like it'll have an analog to digital converter that just works on its own, takes a measurement, wakes up, just the ADC part wakes up, takes a, on a timer, takes a measurement and goes back to sleep and stores it without the actual processor waking up. I love those."
+  },
+  {
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "guest": "Elecia White",
+   "stem": "0187-an-interview-with-elecia-white-wirewove-worshipping-wookieist",
+   "paragraph_index": 285,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "neighbor:timer",
+   "concept_sources": [
+    "neighbor:timer"
+   ],
+   "concepts": [
+    "timer"
+   ],
+   "paragraph_text": "I love the processors that have little dedicated hardware things in them. Like they'll have a, you won't have to run the process at all. Like it'll have an analog to digital converter that just works on its own, takes a measurement, wakes up, just the ADC part wakes up, takes a, on a timer, takes a measurement and goes back to sleep and stores it without the actual processor waking up. I love those.",
+   "context_before": "Well, processor dependent, but sleep cycles, you know, we PLL the clock so that you only have to put in eight megahertz or sometimes even three megahertz to get up to a 30 megahertz clock. And so you turn your PLL down and now you're drawing much less power. Or many processors have actual sleep instructions and they wake up for a limited number of interrupts. You design your system so the important interrupts are on those interrupts. And, and when you need to wake up and do something, you do it as fast as possible so you can go back to sleep, which is kind of how I do engineering really, kind of lazy.",
+   "context_after": "And then it wakes your processor up when your FIFO's full. That's just brilliant. That's how it should work.",
+   "context_before_speaker": "Elecia White",
+   "context_after_speaker": "Elecia White",
+   "text": "Well, processor dependent, but sleep cycles, you know, we PLL the clock so that you only have to put in eight megahertz or sometimes even three megahertz to get up to a 30 megahertz clock. And so you turn your PLL down and now you're drawing much less power. Or many processors have actual sleep instructions and they wake up for a limited number of interrupts. You design your system so the important interrupts are on those interrupts. And, and when you need to wake up and do something, you do it as fast as possible so you can go back to sleep, which is kind of how I do engineering really, kind of lazy. I love the processors that have little dedicated hardware things in them. Like they'll have a, you won't have to run the process at all. Like it'll have an analog to digital converter that just works on its own, takes a measurement, wakes up, just the ADC part wakes up, takes a, on a timer, takes a measurement and goes back to sleep and stores it without the actual processor waking up. I love those. And then it wakes your processor up when your FIFO's full. That's just brilliant. That's how it should work."
+  },
+  {
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "guest": "Elecia White",
+   "stem": "0187-an-interview-with-elecia-white-wirewove-worshipping-wookieist",
+   "paragraph_index": 349,
+   "depth": "explains",
+   "speaker_raw": "Alicia White",
+   "speaker_repaired": "Elecia White",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "I mentioned the floating point division in interrupt. Oh, yeah. Yeah, that will always, man. I think dividing in general is usually pretty bad, right? Yes. Yes, and when you type wait millisecond in interrupt, you're doing it wrong. Yeah, yeah. Just a clue. I guess one of the things that if you're at that cusp of, I think I'm doing all the right things, but my stuff isn't getting better, don't be afraid of opening up the assembly with the C code, especially if you can walk through it. And C, which instructions take a long time. In C, every instruction takes a line, right? I mean, you actually can pile in a couple dozen lines on there, a couple of go-to fails, too. But when you open up the assembly, you can see how long a divide takes. When you do a floating point divide, oh, look, there's a whole library out there, and it takes a couple more hundred instructions. So I think that's something people can do to get much better. And it really helps figure out, well, why does my interrupt take so long?",
+   "context_before": "Yeah, well, kind of both. I mean, I'm interested in all this stuff, really. I mean, I was really looking at, so I was looking at, you know, chapter four and five and thinking about how crappy I am at, like, interrupts and stuff like that. And seeing how people, like, thinking about how people do that wrong, like, interrupts wrong and state machines and all that. All, like, the more in-depth stuff, like, how you see those being implemented wrong.",
+   "context_after": "Did you get started doing assembly, or did you start at C?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah, well, kind of both. I mean, I'm interested in all this stuff, really. I mean, I was really looking at, so I was looking at, you know, chapter four and five and thinking about how crappy I am at, like, interrupts and stuff like that. And seeing how people, like, thinking about how people do that wrong, like, interrupts wrong and state machines and all that. All, like, the more in-depth stuff, like, how you see those being implemented wrong. I mentioned the floating point division in interrupt. Oh, yeah. Yeah, that will always, man. I think dividing in general is usually pretty bad, right? Yes. Yes, and when you type wait millisecond in interrupt, you're doing it wrong. Yeah, yeah. Just a clue. I guess one of the things that if you're at that cusp of, I think I'm doing all the right things, but my stuff isn't getting better, don't be afraid of opening up the assembly with the C code, especially if you can walk through it. And C, which instructions take a long time. In C, every instruction takes a line, right? I mean, you actually can pile in a couple dozen lines on there, a couple of go-to fails, too. But when you open up the assembly, you can see how long a divide takes. When you do a floating point divide, oh, look, there's a whole library out there, and it takes a couple more hundred instructions. So I think that's something people can do to get much better. And it really helps figure out, well, why does my interrupt take so long? Did you get started doing assembly, or did you start at C?"
+  },
+  {
+   "episode": 232,
+   "episode_title": "Impedance Matching\" with Davidson and Vandenbout - Presbytes Pushing Portfolios",
+   "episode_url": "https://theamphour.com/232-impedance-matching-with-davidson-and-vandenbout-presbytes-pushing-portfolios/",
+   "guest": "Bob Davidson and Dave Vandenbaum",
+   "stem": "0232-impedance-matching-with-davidson-and-vandenbout-presbytes-pushing-portfolios",
+   "paragraph_index": 39,
+   "depth": "explains",
+   "speaker_raw": "Dave Vandenbaum",
+   "speaker_repaired": "Dave Vandenbout",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "We needed that processor in the way that it did its interrupts and the way that some of the peripherals it had for generating waveforms because we were generating and decoding the modem waveforms in the processor under interrupt loops. And so we needed it to be able to do that. And we had an internal group in Bell Labs that was making a 4-bit microcontroller called the MAC-4. And the problem with the internal groups in AT&T was we couldn't sell outside. Oh, yeah. It was not allowed legally for us to sell anything outside and compete with outside companies. So any project that needed a microprocessor, microcontroller, this MAC-4 group was going to latch onto it because that was the only way they had to make sales. And they came in and they pitched the MAC-4 to us. And we, you know, said, well, it doesn't do this and this. You know, it's a 4-bit machine. We need an 8-bit machine. We need these peripherals on here. You don't have the peripherals. It won't run fast enough. It's going to cost too much also because we not only had to pay our overhead on it, we had to pay your overhead on it as well as you know.",
+   "context_before": "Where will I find the opcodes? What will I do with all this opportunity?",
+   "context_after": "Support the fab and buy the chemicals.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Where will I find the opcodes? What will I do with all this opportunity? We needed that processor in the way that it did its interrupts and the way that some of the peripherals it had for generating waveforms because we were generating and decoding the modem waveforms in the processor under interrupt loops. And so we needed it to be able to do that. And we had an internal group in Bell Labs that was making a 4-bit microcontroller called the MAC-4. And the problem with the internal groups in AT&T was we couldn't sell outside. Oh, yeah. It was not allowed legally for us to sell anything outside and compete with outside companies. So any project that needed a microprocessor, microcontroller, this MAC-4 group was going to latch onto it because that was the only way they had to make sales. And they came in and they pitched the MAC-4 to us. And we, you know, said, well, it doesn't do this and this. You know, it's a 4-bit machine. We need an 8-bit machine. We need these peripherals on here. You don't have the peripherals. It won't run fast enough. It's going to cost too much also because we not only had to pay our overhead on it, we had to pay your overhead on it as well as you know. Support the fab and buy the chemicals."
+  },
+  {
+   "episode": 258,
+   "episode_title": "An Interview with Bertrand Irrisou and Gerald Friedland of Audeme",
+   "episode_url": "https://theamphour.com/258-an-interview-with-bertrand-and-gerald-of-audeme/",
+   "guest": "Bertrand Irrisou and Gerald Friedland",
+   "stem": "0258-an-interview-with-bertrand-and-gerald-of-audeme",
+   "paragraph_index": 101,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "And it's, and it's, and it's really a hybrid of, of low level and high level. If you think about it, I mean, it's high level in a sense that, yeah, we are programming at higher level. It's low level in a sense that we kind of control the hardware. So, and we like the idea of having just that running on that board. Um, it helps us control timing. It helps us control, uh, all kinds of things. I mean, you're doing real time speech recognition. You know, you want your system to react in 300 to 500 milliseconds. Uh, so you don't want, you know, all of a sudden, you know, a service interrupt, you know, servicing your screen. Right. Or you're dizzy. And also, again, the system become unresponsive. So that's one of the advantages of controlling the hardware. Definitely.",
+   "context_before": "So that's not really a showstopper. That's the benefit of doing high level, like programming like that. That's great actually. Yeah.",
+   "context_after": "Is there any, um, would your ultimate goal be a custom processor? Like I say, there are other speech, uh, recognition, uh, voice recognition chips out there, like the, you know, the HM2007 or whatever it is. Um, ones like that. Would you want to go for a custom if you could? Is there any huge advantage to that?",
+   "context_before_speaker": "Bertrand",
+   "context_after_speaker": "Dave Jones",
+   "text": "So that's not really a showstopper. That's the benefit of doing high level, like programming like that. That's great actually. Yeah. And it's, and it's, and it's really a hybrid of, of low level and high level. If you think about it, I mean, it's high level in a sense that, yeah, we are programming at higher level. It's low level in a sense that we kind of control the hardware. So, and we like the idea of having just that running on that board. Um, it helps us control timing. It helps us control, uh, all kinds of things. I mean, you're doing real time speech recognition. You know, you want your system to react in 300 to 500 milliseconds. Uh, so you don't want, you know, all of a sudden, you know, a service interrupt, you know, servicing your screen. Right. Or you're dizzy. And also, again, the system become unresponsive. So that's one of the advantages of controlling the hardware. Definitely. Is there any, um, would your ultimate goal be a custom processor? Like I say, there are other speech, uh, recognition, uh, voice recognition chips out there, like the, you know, the HM2007 or whatever it is. Um, ones like that. Would you want to go for a custom if you could? Is there any huge advantage to that?"
+  },
+  {
+   "episode": 266,
+   "episode_title": "An Interview with Ronald Sousa of Hash Define Electronics",
+   "episode_url": "https://theamphour.com/266-an-interview-with-ronald-sousa-of-hash-define-electronics/",
+   "guest": "Ronald Sousa",
+   "stem": "0266-an-interview-with-ronald-sousa-of-hash-define-electronics",
+   "paragraph_index": 163,
+   "depth": "explains",
+   "speaker_raw": "London",
+   "speaker_repaired": "Ronald Sousa",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Yeah, precisely. Like a broadcast. Yeah, it's precisely that. And so the way I had it set up at the time, like the first time I designed the hardware for this, um, I would have it like every 500 milliseconds, I would sample the network. And so any data that I want to read from all of them, they should be able to come back and send their information within 500 milliseconds before I do the broadcast again. Um, but the reason why I'm saying that you have to be careful is because when I came to the second, uh, version of the system, I wanted to go for more of just send your data once a second, we'll see how it goes. And so what would happen is that the way the code was set up is that it would try to send the data. If it can't send the data, it would just pull back and just leave it and we'll try again next time around. And so what would happen is if I'm, if they're all being set up to send data once a second, because I, I stupidly, uh, wrote the code so that it will, it will, it will be basically every second, precisely every second, it will be, there'll be an interrupt asking for the data to be sent. You basically had like one sense of talking all the time and the rest kind of going, I can't talk right now. We'll, we'll just leave it. Right. Exactly. Yeah. And the next time it was, uh, I mean, you can set it up so that the can would all, the hardware proof itself would automatically reset the message. But at the time I didn't build up with that, I just kind of wanted to kind of control every aspect of it and let me decide if I want to retry and let me see what the error is. And yeah, that very quickly.",
+   "context_before": "So it's like a broadcast packet almost.",
+   "context_after": "Yeah. Does that, so does that, so two questions. One is, uh, first off, how do you actually set the node numbers on those kinds of things? Is it like a jumper or how do you do that?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So it's like a broadcast packet almost. Yeah, precisely. Like a broadcast. Yeah, it's precisely that. And so the way I had it set up at the time, like the first time I designed the hardware for this, um, I would have it like every 500 milliseconds, I would sample the network. And so any data that I want to read from all of them, they should be able to come back and send their information within 500 milliseconds before I do the broadcast again. Um, but the reason why I'm saying that you have to be careful is because when I came to the second, uh, version of the system, I wanted to go for more of just send your data once a second, we'll see how it goes. And so what would happen is that the way the code was set up is that it would try to send the data. If it can't send the data, it would just pull back and just leave it and we'll try again next time around. And so what would happen is if I'm, if they're all being set up to send data once a second, because I, I stupidly, uh, wrote the code so that it will, it will, it will be basically every second, precisely every second, it will be, there'll be an interrupt asking for the data to be sent. You basically had like one sense of talking all the time and the rest kind of going, I can't talk right now. We'll, we'll just leave it. Right. Exactly. Yeah. And the next time it was, uh, I mean, you can set it up so that the can would all, the hardware proof itself would automatically reset the message. But at the time I didn't build up with that, I just kind of wanted to kind of control every aspect of it and let me decide if I want to retry and let me see what the error is. And yeah, that very quickly. Yeah. Does that, so does that, so two questions. One is, uh, first off, how do you actually set the node numbers on those kinds of things? Is it like a jumper or how do you do that?"
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 67,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Yeah, yeah. It can then interrupt the task that is running at the moment with a higher priority task that would be the actuator task. And yeah, and the estimator task would just be interrupted. And that's why eventually there is an option for using GBOS instead. Oh, I have another idea. It's like one other thing that also got added was, for example, logging to an SD card. This can take forever. Okay, just to write all the data. Yeah, SD cards are very unpredictable. Got it. So, yeah, that's a simpler example, actually.",
+   "context_before": "Okay. Because it doesn't wait for the one 512th. It just goes to the next thing.",
+   "context_after": "Yeah, right. Just because it's a number of bits you might have to write or whatever, right? It just takes longer than...",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. Because it doesn't wait for the one 512th. It just goes to the next thing. Yeah, yeah. It can then interrupt the task that is running at the moment with a higher priority task that would be the actuator task. And yeah, and the estimator task would just be interrupted. And that's why eventually there is an option for using GBOS instead. Oh, I have another idea. It's like one other thing that also got added was, for example, logging to an SD card. This can take forever. Okay, just to write all the data. Yeah, SD cards are very unpredictable. Got it. So, yeah, that's a simpler example, actually. Yeah, right. Just because it's a number of bits you might have to write or whatever, right? It just takes longer than..."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 164,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Yeah. Or call specific instructions that are initializing the vector table and enabling the interrupts and doing the stuff like that.",
+   "context_before": "You're trying to like go to the beginning of the memory map or go to this address or whatever. Like jump here, jump there, do this thing, push this there, that kind of stuff, right?",
+   "context_after": "Right, right, right, right. Yeah. Yeah. Yeah. And flipping all the switches.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "You're trying to like go to the beginning of the memory map or go to this address or whatever. Like jump here, jump there, do this thing, push this there, that kind of stuff, right? Yeah. Or call specific instructions that are initializing the vector table and enabling the interrupts and doing the stuff like that. Right, right, right, right. Yeah. Yeah. Yeah. And flipping all the switches."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 293,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Yeah. I don't think these days you really have to learn assembly immediately either. Okay. I don't think this is that far that you have to go with it. But understanding how the mechanics work, how interrupts are being triggered.",
+   "context_before": "And so, when should that happen, though? Like, again, in terms of sequence, you said learn Python first, learn some programming stuff, maybe even dive into the hardware, software barrier. Maybe with Rint, we know if you don't put too much of that.",
+   "context_after": "Oh, that's interesting. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "And so, when should that happen, though? Like, again, in terms of sequence, you said learn Python first, learn some programming stuff, maybe even dive into the hardware, software barrier. Maybe with Rint, we know if you don't put too much of that. Yeah. I don't think these days you really have to learn assembly immediately either. Okay. I don't think this is that far that you have to go with it. But understanding how the mechanics work, how interrupts are being triggered. Oh, that's interesting. Yeah."
+  },
+  {
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "guest": "Scott Shawcroft",
+   "stem": "0383-an-interview-with-scott-shawcroft",
+   "paragraph_index": 177,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Scott Shawcroft",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Well, so break points you can think of as something that's a special way of stopping. Right. Um, a lot of the time, well, a lot of the debugging I've been doing recently, I'm not actually hitting a break point. I just have a loop that's looping until a register is a particular value, right? Like I'm doing DMA and I'm waiting for an interrupt to happen and I'm checking for the interrupt by just reading a register and the DMA is not working. So I just control C and I'm stopped. So I haven't, I didn't do a break point to stop there. Um, but yeah, break points are a special way of, of picking where you want to stop when you get there.",
+   "context_before": "Right. There might be a new version of it, but you didn't want to break the old version. So you didn't change the base functionality. Right. Okay. That's good. Um, I mean, how much, how much of the, so the, the debugger is, is like you're saying, you said there's, you know, there's like play, there's stop, there's, you know, you can go and read stuff back out. Right. How much, how much of that are you utilizing on a, you know, like how much do you need to do break points in this stuff?",
+   "context_after": "Okay. That makes sense. Yeah. I guess, I guess in that case though. So I feel like, I feel, I feel like a little guilty here. Like, cause I'm like, I'm, you know, I'm obviously doing a little bit of my own learning as I ask you these questions and I've talked in the past weeks too. And I, I feel like I should know some of this stuff. And then I also feel like a lot of this stuff should be on the embedded podcast, but I feel like hardware people need to know this stuff sometimes. You know, I, I speak for the hardware person.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. There might be a new version of it, but you didn't want to break the old version. So you didn't change the base functionality. Right. Okay. That's good. Um, I mean, how much, how much of the, so the, the debugger is, is like you're saying, you said there's, you know, there's like play, there's stop, there's, you know, you can go and read stuff back out. Right. How much, how much of that are you utilizing on a, you know, like how much do you need to do break points in this stuff? Well, so break points you can think of as something that's a special way of stopping. Right. Um, a lot of the time, well, a lot of the debugging I've been doing recently, I'm not actually hitting a break point. I just have a loop that's looping until a register is a particular value, right? Like I'm doing DMA and I'm waiting for an interrupt to happen and I'm checking for the interrupt by just reading a register and the DMA is not working. So I just control C and I'm stopped. So I haven't, I didn't do a break point to stop there. Um, but yeah, break points are a special way of, of picking where you want to stop when you get there. Okay. That makes sense. Yeah. I guess, I guess in that case though. So I feel like, I feel, I feel like a little guilty here. Like, cause I'm like, I'm, you know, I'm obviously doing a little bit of my own learning as I ask you these questions and I've talked in the past weeks too. And I, I feel like I should know some of this stuff. And then I also feel like a lot of this stuff should be on the embedded podcast, but I feel like hardware people need to know this stuff sometimes. You know, I, I speak for the hardware person."
+  },
+  {
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "guest": "Scott Shawcroft",
+   "stem": "0383-an-interview-with-scott-shawcroft",
+   "paragraph_index": 180,
+   "depth": "explains",
+   "speaker_raw": "Scott Shawcroft",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Cool. Um, but in this case, like, okay, so say, say you, so you're waiting for an interrupt and what, and, and what have you, but, uh, it's never going to come cause it's broken. Oh, okay. Say it, say it did show up though. Uh, so you, I mean, yeah. So an interrupt is basically just like a, a, a bit in an internal register of the processor, right? That flips from a zero to one or whatever. And then it goes off and does its routine. Right.",
+   "context_before": "Uh, and I'm, I'm like, I'm a software person definitely by training and I have picked up some of the hardware stuff.",
+   "context_after": "Right.",
+   "context_before_speaker": "Scott Shawcroft",
+   "context_after_speaker": "Scott Shawcroft",
+   "text": "Uh, and I'm, I'm like, I'm a software person definitely by training and I have picked up some of the hardware stuff. Cool. Um, but in this case, like, okay, so say, say you, so you're waiting for an interrupt and what, and, and what have you, but, uh, it's never going to come cause it's broken. Oh, okay. Say it, say it did show up though. Uh, so you, I mean, yeah. So an interrupt is basically just like a, a, a bit in an internal register of the processor, right? That flips from a zero to one or whatever. And then it goes off and does its routine. Right. Right."
+  },
+  {
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "guest": "Bart Dring",
+   "stem": "0438-an-interview-with-bart-dring",
+   "paragraph_index": 135,
+   "depth": "explains",
+   "speaker_raw": "Bart Dring",
+   "speaker_repaired": "Bart Dring",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "It's got a great IDE where, um, you visually map out all the peripherals and you can sort of create peripherals on the fly and stuff like that. You know, you started drawing out of pool of resources, creating these different peripherals. Um, so if you want, uh, an interrupt to, um, uh, you know, toggle a pin, you can do that in all in hardware, kind of FPGA like. Um, but it, so what you're doing in Gerbil is you have these interrupts, you've got, um, all these pins doing different things. Like when you send a pulse to a stepper motor driver, it has to be a very specific shape. It might have to have a, uh, a direction first, then a short delay, then a pulse length and stuff like that. That eats up a lot of resources on things like the Arduino and stuff like that. You can just create those pulse shapes right in the, um, so, and also you can do that. You kind of like, what's the code for, um, an interrupt. You just drag an interrupt out on the screen and say, generate an API for that interrupt. I've just pulled out. So it's really, really quick, um, to, um, get up to speed on the, um, hardware. There's no looking up data. Data sheets. It's like that. Yeah. And then if you are, if you do need to know, yeah. If you do need to know like some of the deeper stuff, you just kind of like right click on that thing and it brings up the data sheet.",
+   "context_before": "Um, it feels like people that are into it are like really into it.",
+   "context_after": "Got it.",
+   "context_before_speaker": "Bart Dring",
+   "context_after_speaker": "Bart Dring",
+   "text": "Um, it feels like people that are into it are like really into it. It's got a great IDE where, um, you visually map out all the peripherals and you can sort of create peripherals on the fly and stuff like that. You know, you started drawing out of pool of resources, creating these different peripherals. Um, so if you want, uh, an interrupt to, um, uh, you know, toggle a pin, you can do that in all in hardware, kind of FPGA like. Um, but it, so what you're doing in Gerbil is you have these interrupts, you've got, um, all these pins doing different things. Like when you send a pulse to a stepper motor driver, it has to be a very specific shape. It might have to have a, uh, a direction first, then a short delay, then a pulse length and stuff like that. That eats up a lot of resources on things like the Arduino and stuff like that. You can just create those pulse shapes right in the, um, so, and also you can do that. You kind of like, what's the code for, um, an interrupt. You just drag an interrupt out on the screen and say, generate an API for that interrupt. I've just pulled out. So it's really, really quick, um, to, um, get up to speed on the, um, hardware. There's no looking up data. Data sheets. It's like that. Yeah. And then if you are, if you do need to know, yeah. If you do need to know like some of the deeper stuff, you just kind of like right click on that thing and it brings up the data sheet. Got it."
+  },
+  {
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "guest": "Bart Dring",
+   "stem": "0438-an-interview-with-bart-dring",
+   "paragraph_index": 147,
+   "depth": "explains",
+   "speaker_raw": "Bart Dring",
+   "speaker_repaired": "Bart Dring",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "It's like halfway through a step. It's like, no, wait, hold on, hold on. Got to do a post. Got to do a get, you know. I was actually doing that. Yeah. It was actually well behaved and everything was coordinated, but it would like, you know, stutter and stuff like that, you know, when I wasn't getting it right. High network traffic. So you could tell real easy. Yeah. Yeah. And, um, so, uh, so by using the one core and avoiding the RTOS for Gerbil, I was using, um, just a primary thread and interrupts. Um, and, um, but the API is very RTOS friendly.",
+   "context_before": "Exactly.",
+   "context_after": "Um, they expect you're going to be using it.",
+   "context_before_speaker": "Bart Dring",
+   "context_after_speaker": "Bart Dring",
+   "text": "Exactly. It's like halfway through a step. It's like, no, wait, hold on, hold on. Got to do a post. Got to do a get, you know. I was actually doing that. Yeah. It was actually well behaved and everything was coordinated, but it would like, you know, stutter and stuff like that, you know, when I wasn't getting it right. High network traffic. So you could tell real easy. Yeah. Yeah. And, um, so, uh, so by using the one core and avoiding the RTOS for Gerbil, I was using, um, just a primary thread and interrupts. Um, and, um, but the API is very RTOS friendly. Um, they expect you're going to be using it."
+  },
+  {
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "guest": "Bart Dring",
+   "stem": "0438-an-interview-with-bart-dring",
+   "paragraph_index": 165,
+   "depth": "explains",
+   "speaker_raw": "Bart Dring",
+   "speaker_repaired": "Bart Dring",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Yeah. Right. Um, so you're, um, uh, buffering up that much more, you know? Um, so yeah, so it's running, um, so the, the basic step generation, an Arduino Uno or mega is probably gonna max out at about 30 kilohertz. And, um, after that, your, um, uh, your interrupt is almost gonna start stepping on itself, you know, because the, the, the, the divisions, you know, are running out of space there. Uh, now we have the, um, I say we, cause a couple of people helped me out, uh, it running at, uh, 120 kilohertz. So it's 4x faster on the step generation. And at that point, even if you're like 32x micro stepping and stuff like that, stepper motors just don't go that fast.",
+   "context_before": "You're just storing it.",
+   "context_after": "Sure. Right. There's just physical world limitations. You're saying. Yeah.",
+   "context_before_speaker": "Bart Dring",
+   "context_after_speaker": "Bart Dring",
+   "text": "You're just storing it. Yeah. Right. Um, so you're, um, uh, buffering up that much more, you know? Um, so yeah, so it's running, um, so the, the basic step generation, an Arduino Uno or mega is probably gonna max out at about 30 kilohertz. And, um, after that, your, um, uh, your interrupt is almost gonna start stepping on itself, you know, because the, the, the, the divisions, you know, are running out of space there. Uh, now we have the, um, I say we, cause a couple of people helped me out, uh, it running at, uh, 120 kilohertz. So it's 4x faster on the step generation. And at that point, even if you're like 32x micro stepping and stuff like that, stepper motors just don't go that fast. Sure. Right. There's just physical world limitations. You're saying. Yeah."
+  },
+  {
+   "episode": 458,
+   "episode_title": "An Interview with Ken Burns",
+   "episode_url": "https://theamphour.com/458-an-interview-with-ken-burns/",
+   "guest": "Ken Burns",
+   "stem": "0458-an-interview-with-ken-burns",
+   "paragraph_index": 150,
+   "depth": "explains",
+   "speaker_raw": "Ken Burns",
+   "speaker_repaired": "Ken Burns",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Yeah. So in this case, um, basically we, so we, it's a five pin connector. So we've got, you know, 3.3 volts in ground and then also I squared C and an extra pin, which can be an analog input or it can be a digital pin. And actually the I squared C can be driven digital as well. But the nice thing with it, like the I squared C, like, so all our, our breakout boards for this have a mux on there. So you potentially, if you have, let's say a nine axis sensor and accelerometer or something that is on some set I squared C address, you can actually use four or actually in our case, like up to 16 of all these things on the exact same address. Um, because then there's a mux to select which one you're talking to. Um, you can, that's nice. And also again, it's not just I squared C so you can do much simpler things. So like a push button. Um, so again, if you're making, let's say an arcade cabinet, you can wire out a small joystick or a push button. Um, actually more in the case of like a push button. So it's just a digital input, uh, that can go to an interrupt on your micro. Um, so again, it doesn't have to, you don't have to have a processor in that overhead of doing the I squared C communication. But it, you know, we've got like 35 different boards, um, out for it again, most typical type sensors, whether it's a barometric pressure, nine axis color sensors, then, you know, output devices, like little vibrating motors, LRAs, um, buzzers, all sorts of fun stuff. And a lot of little screens too. So the cool thing is like, we've got these little I squared, I squared C screens. So like a 0.42 inch screen up to like a 0.95 inch screen. Um, and so you can kind of add these things really easily to your project. And again, the other thing that we kind of, cause again, our, our main product, you know, the tiny, do we know these stackable boards, it's kind of a niche type product. Um, so we tried to expand this beyond that. So that's why we have a pie hat for it as well, or just a standard Arduino shield. So you're not just stuck into this. And the other thing is it's just I squared C so you can easily hook up to anything if you want to. Right. Um, and it just uses small GST SH type connectors. So it's a nice small connector. The cables are super cheap and it's just. Yeah.",
+   "context_before": "Grove is, can be analog digital. I always thought that was kind of weird too. Cause like what happens if you plug into the wrong thing? But most of the time it's not a problem. Uh, I think they do analog, digital serial and I squared C.",
+   "context_after": "How much are the cables? Cause I always feel like that's the, that's the hidden cost of a lot of, a lot of these. Yeah.",
+   "context_before_speaker": "Ken Burns",
+   "context_after_speaker": "Ken Burns",
+   "text": "Grove is, can be analog digital. I always thought that was kind of weird too. Cause like what happens if you plug into the wrong thing? But most of the time it's not a problem. Uh, I think they do analog, digital serial and I squared C. Yeah. So in this case, um, basically we, so we, it's a five pin connector. So we've got, you know, 3.3 volts in ground and then also I squared C and an extra pin, which can be an analog input or it can be a digital pin. And actually the I squared C can be driven digital as well. But the nice thing with it, like the I squared C, like, so all our, our breakout boards for this have a mux on there. So you potentially, if you have, let's say a nine axis sensor and accelerometer or something that is on some set I squared C address, you can actually use four or actually in our case, like up to 16 of all these things on the exact same address. Um, because then there's a mux to select which one you're talking to. Um, you can, that's nice. And also again, it's not just I squared C so you can do much simpler things. So like a push button. Um, so again, if you're making, let's say an arcade cabinet, you can wire out a small joystick or a push button. Um, actually more in the case of like a push button. So it's just a digital input, uh, that can go to an interrupt on your micro. Um, so again, it doesn't have to, you don't have to have a processor in that overhead of doing the I squared C communication. But it, you know, we've got like 35 different boards, um, out for it again, most typical type sensors, whether it's a barometric pressure, nine axis color sensors, then, you know, output devices, like little vibrating motors, LRAs, um, buzzers, all sorts of fun stuff. And a lot of little screens too. So the cool thing is like, we've got these little I squared, I squared C screens. So like a 0.42 inch screen up to like a 0.95 inch screen. Um, and so you can kind of add these things really easily to your project. And again, the other thing that we kind of, cause again, our, our main product, you know, the tiny, do we know these stackable boards, it's kind of a niche type product. Um, so we tried to expand this beyond that. So that's why we have a pie hat for it as well, or just a standard Arduino shield. So you're not just stuck into this. And the other thing is it's just I squared C so you can easily hook up to anything if you want to. Right. Um, and it just uses small GST SH type connectors. So it's a nice small connector. The cables are super cheap and it's just. Yeah. How much are the cables? Cause I always feel like that's the, that's the hidden cost of a lot of, a lot of these. Yeah."
+  },
+  {
+   "episode": 460,
+   "episode_title": "Rubber Ducking",
+   "episode_url": "https://theamphour.com/460-rubber-ducking/",
+   "guest": null,
+   "stem": "0460-rubber-ducking",
+   "paragraph_index": 28,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Yeah. So the, the, one of the problems that I chased down was just that I, um, you know, so a lot of, you know, and like, especially coming from like the Arduino world and stuff like that, right. A lot of people come in, I was doing that for a long time as well. And, um, and so like when I was, uh, setting up a timer, right. So a lot of like what you look at in, so I'm using STM 32, right. So that F zero three zero family. And, um, and when you're using a timer, what you're really doing is you're kind of like setting all the variables. It's really just like setting switches in the registers that are there. Right. So if you're like, Oh, I want this, I want this to have a prescaler of, so it's like a 48 megahertz clock. I say the prescaler is 48, 48,000. And then I get up like a one millisecond increment basically. And then I say, Hey, count to a thousand. And the timer hardware. Yeah.",
+   "context_before": "Uh, see, why do you have to debug blinky, timey, simple stuff? Why do you have to use it? Because it wasn't working, Dave. Because it wasn't working. Why? It wasn't working. Like what was the, give us the, the end, the end result.",
+   "context_after": "Timer hardware actually does the rest.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Uh, see, why do you have to debug blinky, timey, simple stuff? Why do you have to use it? Because it wasn't working, Dave. Because it wasn't working. Why? It wasn't working. Like what was the, give us the, the end, the end result. Yeah. So the, the, one of the problems that I chased down was just that I, um, you know, so a lot of, you know, and like, especially coming from like the Arduino world and stuff like that, right. A lot of people come in, I was doing that for a long time as well. And, um, and so like when I was, uh, setting up a timer, right. So a lot of like what you look at in, so I'm using STM 32, right. So that F zero three zero family. And, um, and when you're using a timer, what you're really doing is you're kind of like setting all the variables. It's really just like setting switches in the registers that are there. Right. So if you're like, Oh, I want this, I want this to have a prescaler of, so it's like a 48 megahertz clock. I say the prescaler is 48, 48,000. And then I get up like a one millisecond increment basically. And then I say, Hey, count to a thousand. And the timer hardware. Yeah. Timer hardware actually does the rest."
+  },
+  {
+   "episode": 479,
+   "episode_title": "Why isn't this working?",
+   "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
+   "guest": "Christopher White",
+   "stem": "0479-why-isnt-this-working",
+   "paragraph_index": 114,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Parts of it. As you may both recall, I've sought some help on the embedded Slack. And there's been some quirky stuff. The interrupt stuff is always a challenge. Not just interrupt stuff. So like there's paging. So there's a special function register paging. And so like I think that I'm writing to a register. And it's like, no, Chris, you're on the wrong page. Change the page before you write to a value. But some stuff's really simple, actually. So like the way that you're just reading and writing from registers sometimes is just super intuitive. You know, there's basically there's a macro that assigns a value or a register name to it. And it's just equals one, equals zero kind of stuff. And you're turning things on and off like that. And I know that there are similar things in HALS and stuff. But it seems like there's less overhead to do some of that.",
+   "context_before": "I think the thing about STM versus things like that is the STM has all this infrastructure behind it. And the clock tree that's, you know, if you look at the configuration thing in Cube, it's a poster. Oh, yeah. There's a lot of complicated stuff. So if you were to try to bring up an STM without Cube and without help by yourself, that's like a year-long project for somebody. Yeah, right. Sometimes. And it's just you're in front of a data sheet the whole time, right? Yeah, yeah. I think the 8-bit stuff usually is a lot more friendly. Am I wrong? Or do you find it more friendly?",
+   "context_after": "That's true. I mean, the HALS purpose is so that you can switch chips.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Christopher White",
+   "text": "I think the thing about STM versus things like that is the STM has all this infrastructure behind it. And the clock tree that's, you know, if you look at the configuration thing in Cube, it's a poster. Oh, yeah. There's a lot of complicated stuff. So if you were to try to bring up an STM without Cube and without help by yourself, that's like a year-long project for somebody. Yeah, right. Sometimes. And it's just you're in front of a data sheet the whole time, right? Yeah, yeah. I think the 8-bit stuff usually is a lot more friendly. Am I wrong? Or do you find it more friendly? Parts of it. As you may both recall, I've sought some help on the embedded Slack. And there's been some quirky stuff. The interrupt stuff is always a challenge. Not just interrupt stuff. So like there's paging. So there's a special function register paging. And so like I think that I'm writing to a register. And it's like, no, Chris, you're on the wrong page. Change the page before you write to a value. But some stuff's really simple, actually. So like the way that you're just reading and writing from registers sometimes is just super intuitive. You know, there's basically there's a macro that assigns a value or a register name to it. And it's just equals one, equals zero kind of stuff. And you're turning things on and off like that. And I know that there are similar things in HALS and stuff. But it seems like there's less overhead to do some of that. That's true. I mean, the HALS purpose is so that you can switch chips."
+  },
+  {
+   "episode": 490,
+   "episode_title": "An Interview with Ben Heck(endorn)",
+   "episode_url": "https://theamphour.com/490-an-interview-with-ben-heckendorn/",
+   "guest": "Ben Heckendorn",
+   "stem": "0490-an-interview-with-ben-heckendorn",
+   "paragraph_index": 294,
+   "depth": "explains",
+   "speaker_raw": "Ben Heckendorn",
+   "speaker_repaired": "Ben Heck",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Yeah, and now it's changed to, oh, I have to spend $35 for an Aviar ISP Mark II? I won't pay it. Oh, gosh darn it. But if you think about it, like, I was designing, or it's already been done, but we made a new pinball platform for making games or whatever, right? And we used Atmel SAM D21, the little ARM chip. It's basically the same thing as the Arduino Zero. Now, for that, I programmed it using Atmel Studio from the Metal Up, right? Right. But I think about that. Like, you might do it, you might, like, do it like that. Like, I do it like that because I want to know, you know, what every interrupt's doing, all the IRQs, you know, all the timers. But then you think about, like, this is, you know, yeah, not that long ago. This is how everything had to be done from scratch. And it's a very large learning curve or a cliff that you have to climb. And, yeah, the average person wouldn't have done it. But now pretty much anyone can pick up an Arduino. And, yes, there's a bunch of software, a code bloat and all that shit that's on there. But it still works. It still works.",
+   "context_before": "It was just, it was, like, I can remember when microcontrollers, it was a couple of thousand dollars to buy a dev kit for a PIC microcontroller. And, like, and you had to, like, you couldn't buy it. You had to go through a dealer where you had to have an account and you had to, like, you know, like, who are you? You had to be a big business to get this development kit for a microcontroller. It was just nuts.",
+   "context_after": "Yes, exactly. It gets the job done easily, you know, with minimal. Yeah, exactly. You don't have to dick around with the registers and getting it booted and, you know, all that sort of jazz.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "It was just, it was, like, I can remember when microcontrollers, it was a couple of thousand dollars to buy a dev kit for a PIC microcontroller. And, like, and you had to, like, you couldn't buy it. You had to go through a dealer where you had to have an account and you had to, like, you know, like, who are you? You had to be a big business to get this development kit for a microcontroller. It was just nuts. Yeah, and now it's changed to, oh, I have to spend $35 for an Aviar ISP Mark II? I won't pay it. Oh, gosh darn it. But if you think about it, like, I was designing, or it's already been done, but we made a new pinball platform for making games or whatever, right? And we used Atmel SAM D21, the little ARM chip. It's basically the same thing as the Arduino Zero. Now, for that, I programmed it using Atmel Studio from the Metal Up, right? Right. But I think about that. Like, you might do it, you might, like, do it like that. Like, I do it like that because I want to know, you know, what every interrupt's doing, all the IRQs, you know, all the timers. But then you think about, like, this is, you know, yeah, not that long ago. This is how everything had to be done from scratch. And it's a very large learning curve or a cliff that you have to climb. And, yeah, the average person wouldn't have done it. But now pretty much anyone can pick up an Arduino. And, yes, there's a bunch of software, a code bloat and all that shit that's on there. But it still works. It still works. Yes, exactly. It gets the job done easily, you know, with minimal. Yeah, exactly. You don't have to dick around with the registers and getting it booted and, you know, all that sort of jazz."
+  },
+  {
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "guest": "Tim Ansell",
+   "stem": "0501-discussing-the-open-source-pdk-with-tim-ansell",
+   "paragraph_index": 100,
+   "depth": "explains",
+   "speaker_raw": "Tim Ans",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Yeah. Like you could set up like a, a thing that's like watching on a spy bus or serial bus. And you basically say, Hey, once you get the string, you know, throw an interrupt and basically it's, it's actually sitting there and watching or handling, handling like the, the real time bit banging like you're talking about, but it's inside a tiny processor that's on the RTU. Yeah.",
+   "context_before": "tz on 130 nanometers. Obviously that's going to use a lot more power and not be as performant as something on, you know, seven nanometers by almost order of magnitude. What happens if you don't think of, okay, I don't need a full CPU, but I just need, you know, um, the multiply and accumulate unit, or I just need some part that could run at these very high speeds and a bunch of, um, IOT level functionality. Um, we were kind of having a discussion before, um, this recording, um, happened and you brought up the BeagleBone and the fact that, uh, inside the BeagleBone, there's like the main processor, but there's also these, um, RPU units that, uh, let you do effectively, um, software defined real time bit banging type stuff. At least that's my understanding. I've never actually used it. Yeah.",
+   "context_after": "Yep. So there's definitely a lot of interesting things you could do around there on this type of process node. Um, especially if you're concerned about power, like the more transistors you have switching, the more power hungry it is. But on the flip side, um, if your peripheral is software defined, um, it doesn't matter that you only have one type of peripheral. It can be an I squared C peripheral. It can be a spy peripheral. It can be a cam peripheral. It can be all these other things defined by what software you load into the little processor. Um, and so I think there's a lot of interesting things that could be done with more, um, approaches to this rather than just say, well, what we're going to do is put a risk five core on it. Why don't we put, you know, a bunch of really minimal risk",
+   "context_before_speaker": "Tim Ansell",
+   "context_after_speaker": "Tim Ansell",
+   "text": "tz on 130 nanometers. Obviously that's going to use a lot more power and not be as performant as something on, you know, seven nanometers by almost order of magnitude. What happens if you don't think of, okay, I don't need a full CPU, but I just need, you know, um, the multiply and accumulate unit, or I just need some part that could run at these very high speeds and a bunch of, um, IOT level functionality. Um, we were kind of having a discussion before, um, this recording, um, happened and you brought up the BeagleBone and the fact that, uh, inside the BeagleBone, there's like the main processor, but there's also these, um, RPU units that, uh, let you do effectively, um, software defined real time bit banging type stuff. At least that's my understanding. I've never actually used it. Yeah. Yeah. Like you could set up like a, a thing that's like watching on a spy bus or serial bus. And you basically say, Hey, once you get the string, you know, throw an interrupt and basically it's, it's actually sitting there and watching or handling, handling like the, the real time bit banging like you're talking about, but it's inside a tiny processor that's on the RTU. Yeah. Yep. So there's definitely a lot of interesting things you could do around there on this type of process node. Um, especially if you're concerned about power, like the more transistors you have switching, the more power hungry it is. But on the flip side, um, if your peripheral is software defined, um, it doesn't matter that you only have one type of peripheral. It can be an I squared C peripheral. It can be a spy peripheral. It can be a cam peripheral. It can be all these other things defined by what software you load into the little processor. Um, and so I think there's a lot of interesting things that could be done with more, um, approaches to this rather than just say, well, what we're going to do is put a risk five core on it. Why don't we put, you know, a bunch of really minimal risk"
+  },
+  {
+   "episode": 509,
+   "episode_title": "Cellular IoT with Jared Wolff",
+   "episode_url": "https://theamphour.com/509-cellular-iot-with-jared-wolff/",
+   "guest": "Jared Wolff",
+   "stem": "0509-cellular-iot-with-jared-wolff",
+   "paragraph_index": 212,
+   "depth": "explains",
+   "speaker_raw": "Jared Wolff",
+   "speaker_repaired": "Jared Wolff",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core",
+    "neighbor:timer"
+   ],
+   "concepts": [
+    "interrupt",
+    "timer"
+   ],
+   "paragraph_text": "I think there are better ways of testing it, but right now I'm just doing functionality testing. So it's not that crazy of a driver. It's just like, it's a, it's timer, like an external timer. So I'm just making sure that it's working and I can change it and set it to different, different, uh, timer intervals and it'll actually interrupt when I need it to.",
+   "context_before": "So how, how are you testing this? So you're writing this code for the low level RTC. How are you testing it? Is it like a standalone test for just the code that you write? Or how do you actually go and step through all that to make sure it's, it's correct?",
+   "context_after": "Okay. So you're writing the full app and then using that with like breakpoints or whatever, like you're just debugging the full app and that works. Okay.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So how, how are you testing this? So you're writing this code for the low level RTC. How are you testing it? Is it like a standalone test for just the code that you write? Or how do you actually go and step through all that to make sure it's, it's correct? I think there are better ways of testing it, but right now I'm just doing functionality testing. So it's not that crazy of a driver. It's just like, it's a, it's timer, like an external timer. So I'm just making sure that it's working and I can change it and set it to different, different, uh, timer intervals and it'll actually interrupt when I need it to. Okay. So you're writing the full app and then using that with like breakpoints or whatever, like you're just debugging the full app and that works. Okay."
+  },
+  {
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "guest": "Jay Carlson",
+   "stem": "0515-embedded-linux-with-jay-carlson",
+   "paragraph_index": 150,
+   "depth": "explains",
+   "speaker_raw": "Jay Carlson",
+   "speaker_repaired": "Jay Carlson",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Yeah. I mean, and certainly like I've written kernel modules and I've certainly had to hack at them and get them working and everything like that. And I think that's, that's kind of one of the issues, right? Are you someone who, I think like when you, when you get more experienced, you are no longer interested in just writing code. Right. And the main thing, I guess, when, when you're using like free, free RTOS, right. When like you write so much code. And so it's simple because you understand everything that's going on because you wrote it all. Right. That's like what we were talking about earlier. Right. With Linux, you spend all your time reading source code and trying to figure out why this code doesn't work. Right. Or figure out how to use this code. Right. To be fair, Jay, that's what I also do when I write my own code. So, you know. But I think, you know, I think about like microcontroller development, it's just a totally different thing. Right. I mean, like, you know, something like a, like an image sensor. If you hook up an image sensor to an STM 32. Right. So you configure the CSI, you've got your DMA going, you get a interrupt at the end of every line at the end of every frame. I forget. I haven't looked at that stuff for a while. But, you know, you can imagine like literally in the DMA callback, like, okay, well, let's, you know, uh, uh, let's, uh, are we at the end of the image? Okay. If not, well, let's do another line, you know, and, and like kind of writing these like basic kind of if, if statements, if else, and kind of going through. And then at the end, it's like, okay, well, we got our image. Let's copy it to here and reset the DMA pointer to some other address and do kind of some ping pong buffering thing. And then we'll call a little function to process the image. Right. And you have total control. If the image is coming in as, you know, why you be four, two, two, right. With chroma subsampled crap. I mean, then the first bite is your luminance. The second bites, your prominence. And, and you know that, right. Because you wrote this code, you, you wrote every I squared C register to that image sensor. You got it all set up so you can go through and process it the way that you think it is. Right. When you're in Linux, what ends up happening is it doesn't work. You don't know why. Right. And, and you end up just reading code and trying to figure out, well, and it's like, why is this driver not getting glued to this I squared C address probably. Right. And, and it's just stupid. It's just stupid stuff like that. You, you, you end up spending way more time debugging and way less time writing code, I guess is what I would say. Yeah. Yeah.",
+   "context_before": "But it sounds like you're avoiding it for that reason. Right. It's, you don't want to go do that.",
+   "context_after": "Yeah. But it's because you're the, the pot of gold at the end of the rainbow is it, it quote unquote just works, right. It's never, it just works, but it, it's a, a lot of stuff has been done for you. It's, it's included, you know, it's, it's, it's, it's, it's, it's like, yeah. Yeah. And freebies.",
+   "context_before_speaker": "Jay Carlson",
+   "context_after_speaker": "Jay Carlson",
+   "text": "But it sounds like you're avoiding it for that reason. Right. It's, you don't want to go do that. Yeah. I mean, and certainly like I've written kernel modules and I've certainly had to hack at them and get them working and everything like that. And I think that's, that's kind of one of the issues, right? Are you someone who, I think like when you, when you get more experienced, you are no longer interested in just writing code. Right. And the main thing, I guess, when, when you're using like free, free RTOS, right. When like you write so much code. And so it's simple because you understand everything that's going on because you wrote it all. Right. That's like what we were talking about earlier. Right. With Linux, you spend all your time reading source code and trying to figure out why this code doesn't work. Right. Or figure out how to use this code. Right. To be fair, Jay, that's what I also do when I write my own code. So, you know. But I think, you know, I think about like microcontroller development, it's just a totally different thing. Right. I mean, like, you know, something like a, like an image sensor. If you hook up an image sensor to an STM 32. Right. So you configure the CSI, you've got your DMA going, you get a interrupt at the end of every line at the end of every frame. I forget. I haven't looked at that stuff for a while. But, you know, you can imagine like literally in the DMA callback, like, okay, well, let's, you know, uh, uh, let's, uh, are we at the end of the image? Okay. If not, well, let's do another line, you know, and, and like kind of writing these like basic kind of if, if statements, if else, and kind of going through. And then at the end, it's like, okay, well, we got our image. Let's copy it to here and reset the DMA pointer to some other address and do kind of some ping pong buffering thing. And then we'll call a little function to process the image. Right. And you have total control. If the image is coming in as, you know, why you be four, two, two, right. With chroma subsampled crap. I mean, then the first bite is your luminance. The second bites, your prominence. And, and you know that, right. Because you wrote this code, you, you wrote every I squared C register to that image sensor. You got it all set up so you can go through and process it the way that you think it is. Right. When you're in Linux, what ends up happening is it doesn't work. You don't know why. Right. And, and you end up just reading code and trying to figure out, well, and it's like, why is this driver not getting glued to this I squared C address probably. Right. And, and it's just stupid. It's just stupid stuff like that. You, you, you end up spending way more time debugging and way less time writing code, I guess is what I would say. Yeah. Yeah. Yeah. But it's because you're the, the pot of gold at the end of the rainbow is it, it quote unquote just works, right. It's never, it just works, but it, it's a, a lot of stuff has been done for you. It's, it's included, you know, it's, it's, it's, it's, it's, it's like, yeah. Yeah. And freebies."
+  },
+  {
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "guest": "Fredrik Kensander",
+   "stem": "0522-high-power-supplies-with-fredrik-kensander",
+   "paragraph_index": 164,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Fredrik Kensander",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Yeah. It's like some of the products are set up in a specific way. So you have like, it's done with interrupts right now. So maybe you have a one kilohertz interrupt, a hundred hertz interrupt and a 10 hertz interrupt, and they do different things. And there's some priority maybe to the faster one. And the slower one, do some communication stuff. And even in the power module, you have the 37 kilohertz interrupt. That's really important. That must always be served. So if you're going to put it in our R2OS, I don't see the immediate benefit for us. Maybe we can get it to work, but if we don't need it, why go for it? Yeah.",
+   "context_before": "Right. Yeah. So even, yeah. So you're just re-implementing like an API layer and you're not going to, so you're going to do that. You were saying you're not necessarily going to use the whole framework. You're not going to use everything from it because I think you said it was specifically because of timing requirements. Is that right?",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. Yeah. So even, yeah. So you're just re-implementing like an API layer and you're not going to, so you're going to do that. You were saying you're not necessarily going to use the whole framework. You're not going to use everything from it because I think you said it was specifically because of timing requirements. Is that right? Yeah. It's like some of the products are set up in a specific way. So you have like, it's done with interrupts right now. So maybe you have a one kilohertz interrupt, a hundred hertz interrupt and a 10 hertz interrupt, and they do different things. And there's some priority maybe to the faster one. And the slower one, do some communication stuff. And even in the power module, you have the 37 kilohertz interrupt. That's really important. That must always be served. So if you're going to put it in our R2OS, I don't see the immediate benefit for us. Maybe we can get it to work, but if we don't need it, why go for it? Yeah. Yeah."
+  },
+  {
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "guest": "Philip Johnston",
+   "stem": "0556-firmware-for-hardware-engineers-with-phillip-johnston",
+   "paragraph_index": 127,
+   "depth": "explains",
+   "speaker_raw": "Philip Johnston",
+   "speaker_repaired": "Phillip Johnston",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Luckily, most of the RTOS have, you know, resolved that one, at least with some of the constructs that are available, but yeah, it's, it's a, it leads to a very complicated design that I think is hard for people to reason about. Like you mentioned for the complexity. Personally, this is something I will be focusing on in the future, but I don't have a good answer yet because I'm still exploring in this way. But I think it's a lot easier to reason about the code if we are able to structure it in such a way that we're not thinking about threads and locks and semaphores and events. There, you know, it's one model I like is a dispatch queue. So I have a queue that I can take function pointers and add them to a queue or one of four queues. And there's a certain number of threads associated with it. And each thread essentially checks the queue. And, you know, if there's work to do, it pops it off and runs it on that thread. That makes it easier to do things like, okay, I have, I don't need a button thread anymore. That's doing something when a button's thrust. I can have my interrupt fire that adds a function to a queue. And then that runs when there's, you know, the work is next available. However, that requires a totally different way of thinking about how you write your programs. And, you know, I don't know that I'm prepared to, to give the electrical engineer turned software developer advice that makes sense on, on how that's done. Yeah. Other way. But I think the idea of not working with raw threads and instead using the constructs that hide a thread and a queue together. So you're, you know, when you're writing the code, it seems like you're popping events onto a queue. I think that model helps manage the complexity of multi-threaded code quite a bit. And I wish I had a more, I guess, more structured answer on that front for you.",
+   "context_before": "You know, or a priority inversion. I know that term.",
+   "context_after": "No, I think it's, I mean, it, it actually kind of sounds like what we talked about at the beginning of like just trying to reduce in a testing mindset, you're just trying to reduce complexity as much as possible to, to make it a kind of an atomic test. It feels like that, is that a fair assumption?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "You know, or a priority inversion. I know that term. Luckily, most of the RTOS have, you know, resolved that one, at least with some of the constructs that are available, but yeah, it's, it's a, it leads to a very complicated design that I think is hard for people to reason about. Like you mentioned for the complexity. Personally, this is something I will be focusing on in the future, but I don't have a good answer yet because I'm still exploring in this way. But I think it's a lot easier to reason about the code if we are able to structure it in such a way that we're not thinking about threads and locks and semaphores and events. There, you know, it's one model I like is a dispatch queue. So I have a queue that I can take function pointers and add them to a queue or one of four queues. And there's a certain number of threads associated with it. And each thread essentially checks the queue. And, you know, if there's work to do, it pops it off and runs it on that thread. That makes it easier to do things like, okay, I have, I don't need a button thread anymore. That's doing something when a button's thrust. I can have my interrupt fire that adds a function to a queue. And then that runs when there's, you know, the work is next available. However, that requires a totally different way of thinking about how you write your programs. And, you know, I don't know that I'm prepared to, to give the electrical engineer turned software developer advice that makes sense on, on how that's done. Yeah. Other way. But I think the idea of not working with raw threads and instead using the constructs that hide a thread and a queue together. So you're, you know, when you're writing the code, it seems like you're popping events onto a queue. I think that model helps manage the complexity of multi-threaded code quite a bit. And I wish I had a more, I guess, more structured answer on that front for you. No, I think it's, I mean, it, it actually kind of sounds like what we talked about at the beginning of like just trying to reduce in a testing mindset, you're just trying to reduce complexity as much as possible to, to make it a kind of an atomic test. It feels like that, is that a fair assumption?"
+  },
+  {
+   "episode": 566,
+   "episode_title": "Switching Converter Engineering with Carmen Parisi",
+   "episode_url": "https://theamphour.com/566-switching-converter-engineering-with-carmen-parisi/",
+   "guest": "Carmen Parisi",
+   "stem": "0566-switching-converter-engineering-with-carmen-parisi",
+   "paragraph_index": 135,
+   "depth": "explains",
+   "speaker_raw": "Carmen",
+   "speaker_repaired": "Carmen",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Yeah. It's like a subset of the system management bus. They're, they're almost one in the same. If you're compliant with one, you're most likely compliant with the other as far as I understand it. Don't quote me on that. Okay. There's probably some subtle differences, but yeah. PM bus, SM bus are almost interchangeable and yeah, it's I squared C at the heart of it. Basically, you know, it's open drain clock data lines. And then there's a dedicated alert interrupt pin that you can use for fault toggling and stuff. And then PM bus sort of fixes some of the registers. I don't remember what they all are off the top of my head, but like say register zero B is always output voltage telemetry. So if you read register zero B, you'll know what the output voltage is at any given time. So it just sort of standardizes that stuff. And then it says, you know, registers two to two F are vendor specific. Look at their data sheet. That could be anything.",
+   "context_before": "firmware that way. Okay. What does PM bus stand for? It's just like an SM bus, but PM bus.",
+   "context_after": "Got it. Yeah. You know, stuff like that. Huh? That's cool. That's really cool. Yeah.",
+   "context_before_speaker": "Carmen",
+   "context_after_speaker": "Carmen",
+   "text": "firmware that way. Okay. What does PM bus stand for? It's just like an SM bus, but PM bus. Yeah. It's like a subset of the system management bus. They're, they're almost one in the same. If you're compliant with one, you're most likely compliant with the other as far as I understand it. Don't quote me on that. Okay. There's probably some subtle differences, but yeah. PM bus, SM bus are almost interchangeable and yeah, it's I squared C at the heart of it. Basically, you know, it's open drain clock data lines. And then there's a dedicated alert interrupt pin that you can use for fault toggling and stuff. And then PM bus sort of fixes some of the registers. I don't remember what they all are off the top of my head, but like say register zero B is always output voltage telemetry. So if you read register zero B, you'll know what the output voltage is at any given time. So it just sort of standardizes that stuff. And then it says, you know, registers two to two F are vendor specific. Look at their data sheet. That could be anything. Got it. Yeah. You know, stuff like that. Huh? That's cool. That's really cool. Yeah."
+  },
+  {
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "guest": "Brian Amos",
+   "stem": "0581-real-time-operating-systems-with-brian-amos",
+   "paragraph_index": 101,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "That's exactly what it was. So, so they would batch up these processes. So you had all this, all the, the interrupt level stuff, right? And then you would just effectively like post it to a queue. And then at a certain schedule and the schedule could be like at one Hertz or, you know, once every five seconds or whatever, the, the processor would wake up and it would chug through all the stuff that it had to do and, you know, whatever, whatever those kinds of tasks needed to be, needed to have their stuff done. And she was like, okay, here, I'm, I'm good. I have taken care of all of my duties. I'm going back to sleep for another five seconds or whatever that, whatever that was. But that was my first exposure to it. So I was like, okay, there is such a thing as. You know, like an operating system and this is all, this is on MSP four thirties.",
+   "context_before": "It's like a, it's like a sleepy time, sleepy time.",
+   "context_after": "Oh, so already pretty, pretty low power to start with. Yeah.",
+   "context_before_speaker": "Brian Amos",
+   "context_after_speaker": "Brian Amos",
+   "text": "It's like a, it's like a sleepy time, sleepy time. That's exactly what it was. So, so they would batch up these processes. So you had all this, all the, the interrupt level stuff, right? And then you would just effectively like post it to a queue. And then at a certain schedule and the schedule could be like at one Hertz or, you know, once every five seconds or whatever, the, the processor would wake up and it would chug through all the stuff that it had to do and, you know, whatever, whatever those kinds of tasks needed to be, needed to have their stuff done. And she was like, okay, here, I'm, I'm good. I have taken care of all of my duties. I'm going back to sleep for another five seconds or whatever that, whatever that was. But that was my first exposure to it. So I was like, okay, there is such a thing as. You know, like an operating system and this is all, this is on MSP four thirties. Oh, so already pretty, pretty low power to start with. Yeah."
+  },
+  {
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "guest": null,
+   "stem": "0614-reunion-impedance-matching-and-2023-predictions",
+   "paragraph_index": 158,
+   "depth": "opinion",
+   "speaker_raw": "Alvaro",
+   "speaker_repaired": "Alvaro Prieto",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "They also have pretty awesome logging capabilities. Um, I was talking to the folks over Oxide and actually I think it was a Memphold did a local meetup, but, but they were saying how, and there's some libraries to do this and see, but usually, you know, we put print apps in our code and then it goes to our UART or USB, but it's really slow. You're not supposed to do an interrupts and it takes up all your, your flash space. And, and there's a Rust library that lets you do all these logging prints, but they don't get compiled into the binary. It's just kind of symbols. And then you're only basically sending pointers to the strings, even though the, the point, the thing they point to is not in the micro control itself. You, you have it on the other side. So now you're only sending a few bytes back and forth for very verbose messaging or logging and, and, um, very lightweight and fast way. That's cool.",
+   "context_before": "And Espress has done a good job of porting the standard Rust library to that part. So you can actually do like thread dot spawn and, you know, mutexes and, you know, the full standard library, uh, basically exists for that target. You know, you're not, uh, down in, in the weeds with like an embedded, no standard Rust. It's, it was pretty feature rich. And so I was able to, you know, develop a fairly simple, you know, power ons monitoring, you know, watched a kind of system for a main processor on this little ESP 32 C3 in a couple hundred lines of, uh, of Rust and, uh, works really, really well, really stable. Awesome. And it was easy to debug, easy to write. I was impressed.",
+   "context_after": "I'm, yeah, I'm actually looking at using their hubris, uh, embedded RTOS for a new project.",
+   "context_before_speaker": "Ariel Briner",
+   "context_after_speaker": "Ariel Briner",
+   "text": "And Espress has done a good job of porting the standard Rust library to that part. So you can actually do like thread dot spawn and, you know, mutexes and, you know, the full standard library, uh, basically exists for that target. You know, you're not, uh, down in, in the weeds with like an embedded, no standard Rust. It's, it was pretty feature rich. And so I was able to, you know, develop a fairly simple, you know, power ons monitoring, you know, watched a kind of system for a main processor on this little ESP 32 C3 in a couple hundred lines of, uh, of Rust and, uh, works really, really well, really stable. Awesome. And it was easy to debug, easy to write. I was impressed. They also have pretty awesome logging capabilities. Um, I was talking to the folks over Oxide and actually I think it was a Memphold did a local meetup, but, but they were saying how, and there's some libraries to do this and see, but usually, you know, we put print apps in our code and then it goes to our UART or USB, but it's really slow. You're not supposed to do an interrupts and it takes up all your, your flash space. And, and there's a Rust library that lets you do all these logging prints, but they don't get compiled into the binary. It's just kind of symbols. And then you're only basically sending pointers to the strings, even though the, the point, the thing they point to is not in the micro control itself. You, you have it on the other side. So now you're only sending a few bytes back and forth for very verbose messaging or logging and, and, um, very lightweight and fast way. That's cool. I'm, yeah, I'm actually looking at using their hubris, uh, embedded RTOS for a new project."
+  },
+  {
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "guest": "Mike Szczys",
+   "stem": "0622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys",
+   "paragraph_index": 108,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "And we just reused the, the Pimeroni, um, MIT licensed, or maybe it's, I can't remember what the license is, but it is a permissive license, um, that ecosystem and then took out the e-paper driver because we had, we used a different e-paper screen, but things like the ability to say, um, here's a sprite file with a whole bunch of different icons in it and show icon number seven, like Pimeroni did a great job of writing that. And we just are reusing that. It's beautiful. Um, they had like a user led. So we just like extended that user led to run five different icon LEDs on it. Um, there is some more custom stuff in there. Like we put a, a capacitive touch controller on that. So we're actually reading that over a second bus. I suppose the real custom thing in here is the, the I squared C that listens, um, for the Zephyr device to talk to it. Um, and that's, this was a challenge cause I hadn't really done MicroPython anything before, but I was pretty sure I didn't want MicroPython being in charge of that listening for I squared C stuff. I did try for a while to use a MicroPython driver for that. And it did not work well, but luckily I found a, uh, before you say that, why, why is that a bad idea? Oh, you know, it's just kind of like, um, layers upon layers. You're not very close to the hardware. And if you're listening for communications, at least in my mind, you want to use the, the I squared C hardware peripheral and you want to use interrupts that are fired by them. And, and I wasn't really sure how to make sure in MicroPython, which is like at least two steps up the software stack that I was going to have that tight hardware loop. And I wasn't going to be servicing other things and missing communications. Um, got it. I also, uh, I, we didn't, I was using a, um, dev board. Of, of our Aludel mini that didn't have a quick header on it. And I had just done my own soldering to the pads and I'd done a crappy job that I, I made",
+   "context_before": "sically there, you set up a bunch of registers and then you send data and you send like, what is it like temp? So like in temperature case, you say like, this is a temperature and then you send the temperature number and then it displays that on the screen. And that's all I have to think about. And that's like set up as like a slideshow. So, and that's, that's all I've ever wanted, but because it's now I squared C talking up to this, you know, PCB display, uh, we can do it from ESP IDF as well. We can do it from Zephyr. We can do it regardless of which, you know, basically it is just an I squared C sensor at a certain point or sync device. And then, uh, all of the fancy display stuff is now on the RP 2040, like you said with us and you can change assets over the mass storage as well. Yeah.",
+   "context_after": "and then Mike, yeah, I hadn't soldered a header on it. So Mike just soldered directly to the board, wired a board.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "sically there, you set up a bunch of registers and then you send data and you send like, what is it like temp? So like in temperature case, you say like, this is a temperature and then you send the temperature number and then it displays that on the screen. And that's all I have to think about. And that's like set up as like a slideshow. So, and that's, that's all I've ever wanted, but because it's now I squared C talking up to this, you know, PCB display, uh, we can do it from ESP IDF as well. We can do it from Zephyr. We can do it regardless of which, you know, basically it is just an I squared C sensor at a certain point or sync device. And then, uh, all of the fancy display stuff is now on the RP 2040, like you said with us and you can change assets over the mass storage as well. Yeah. And we just reused the, the Pimeroni, um, MIT licensed, or maybe it's, I can't remember what the license is, but it is a permissive license, um, that ecosystem and then took out the e-paper driver because we had, we used a different e-paper screen, but things like the ability to say, um, here's a sprite file with a whole bunch of different icons in it and show icon number seven, like Pimeroni did a great job of writing that. And we just are reusing that. It's beautiful. Um, they had like a user led. So we just like extended that user led to run five different icon LEDs on it. Um, there is some more custom stuff in there. Like we put a, a capacitive touch controller on that. So we're actually reading that over a second bus. I suppose the real custom thing in here is the, the I squared C that listens, um, for the Zephyr device to talk to it. Um, and that's, this was a challenge cause I hadn't really done MicroPython anything before, but I was pretty sure I didn't want MicroPython being in charge of that listening for I squared C stuff. I did try for a while to use a MicroPython driver for that. And it did not work well, but luckily I found a, uh, before you say that, why, why is that a bad idea? Oh, you know, it's just kind of like, um, layers upon layers. You're not very close to the hardware. And if you're listening for communications, at least in my mind, you want to use the, the I squared C hardware peripheral and you want to use interrupts that are fired by them. And, and I wasn't really sure how to make sure in MicroPython, which is like at least two steps up the software stack that I was going to have that tight hardware loop. And I wasn't going to be servicing other things and missing communications. Um, got it. I also, uh, I, we didn't, I was using a, um, dev board. Of, of our Aludel mini that didn't have a quick header on it. And I had just done my own soldering to the pads and I'd done a crappy job that I, I made and then Mike, yeah, I hadn't soldered a header on it. So Mike just soldered directly to the board, wired a board."
+  },
+  {
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "guest": "CNLohr",
+   "stem": "0637-ch32v003-fun-with-cnlohr",
+   "paragraph_index": 58,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "I think the problem here is that it's, I don't think I would win an argument in this. Because I have been around the block and my experience says that no, there is a massive amount of support burden with free RTOS. I'm picking on free RTOS, but that's only because that's where I'd have it. And it's not because free RTOS is bad. It's not because there's some bug in it. It's because of the type of code that people who are using free RTOS, right? Inherently like free RTOS is great if you have like one thread, but the reason you're using free RTOS is because you have a lot of threads. That's right. Yeah. And, and when you start doing that, you start finding these really rough situations that you run into. Cause the, the burden of pushing and popping things off of cues inside of interrupts, instead of just doing the work in the interrupt is so high that you end up like burning a lot of your CPU. And even though you started with 144 megahertz or something like it's, it's just, well, now you've burned it all. And I think one of the problems is if you put on the business hat, you're like, well, we'll just buy the next more expensive processor and just solve it by putting in a more expensive",
+   "context_before": "Cause interesting. Okay. Let me put on my project, project manager hat here then. So like, what about, so what do you, what do you say to a project manager? Who's like, well, what about the support burden? Cause I feel like support burden is, is the main reason in my head that I think like, don't write that from scratch. Is that fair or unfair?",
+   "context_after": "processor, which we have the margin. We can, we can eat it.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Cause interesting. Okay. Let me put on my project, project manager hat here then. So like, what about, so what do you, what do you say to a project manager? Who's like, well, what about the support burden? Cause I feel like support burden is, is the main reason in my head that I think like, don't write that from scratch. Is that fair or unfair? I think the problem here is that it's, I don't think I would win an argument in this. Because I have been around the block and my experience says that no, there is a massive amount of support burden with free RTOS. I'm picking on free RTOS, but that's only because that's where I'd have it. And it's not because free RTOS is bad. It's not because there's some bug in it. It's because of the type of code that people who are using free RTOS, right? Inherently like free RTOS is great if you have like one thread, but the reason you're using free RTOS is because you have a lot of threads. That's right. Yeah. And, and when you start doing that, you start finding these really rough situations that you run into. Cause the, the burden of pushing and popping things off of cues inside of interrupts, instead of just doing the work in the interrupt is so high that you end up like burning a lot of your CPU. And even though you started with 144 megahertz or something like it's, it's just, well, now you've burned it all. And I think one of the problems is if you put on the business hat, you're like, well, we'll just buy the next more expensive processor and just solve it by putting in a more expensive processor, which we have the margin. We can, we can eat it."
+  },
+  {
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "guest": "CNLohr",
+   "stem": "0637-ch32v003-fun-with-cnlohr",
+   "paragraph_index": 88,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "But yeah, I mean that, yeah, sure. Going back, I guess just to finish the USB discussion. So idea was get this, this, this USB stack up and running. And the idea is like, it's just, it's an interrupt that gets fired when the host sends a message to the device. And, and you just look at each one of the bits, each one it's 1.5 megabaud for USB low speed. And so every, you know, 0.66 microseconds later, you do another check, you do another check, you do another check and you go read a message. And then I do all that in assembly. And then I kick the message out to C, and then I process the USB packet in C, and then I go send a response back to the host in assembly. This has kind of been done before with Granium, but Granium, there was a lot of compromises like Granium never checked CRCs. They just assumed everything was fine. Granium never. I'm trying to remember what was some of the other things that they did that was just rough. Like the, it was never the right answer. It was just sort of like theirs was an experiment to see what is the minimum possible thing you can do and get a USB device to enumerate. And Granium is for 48 megahertz ARM zeros, like the really tiny micros that, that have no USB five, but you know, they're really cheap. And so for me, it was like, no, my, my, my, my flag in the sand, like the thing I'm going for is it's going to compute the polynomial for the CRC in line while it's receiving the messages. It's going to compute all of the stuff surrounding like the packet type and stuff like that. Like as it's going, it's going to do all of these things like as it's going so that like there's this funny thing that happens with things like a, like loofah and tiny USB where when they get a message that says, Hey, the host says it wants data. Their first response is always to knack it and say like, Nope, I don't have the data ready. Then they'll go and they'll have a user space, like, like, like let the user code figure out what to put there. And they'll be like, okay, I'm ready. Here's your data. And so I was like, no, I don't want to do that. I want to just, when, when the host says, give me the data, I want to have the data for it. And so I sort of like made sure that from the get go, all of those pieces were already designed into the low, the, the low end stack.",
+   "context_before": "Yeah. Yeah. I mean, we're, we're basically a commercial for like market systems at work right now. They're like capitalism. Reward the winners.",
+   "context_after": "Interesting.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah. Yeah. I mean, we're, we're basically a commercial for like market systems at work right now. They're like capitalism. Reward the winners. But yeah, I mean that, yeah, sure. Going back, I guess just to finish the USB discussion. So idea was get this, this, this USB stack up and running. And the idea is like, it's just, it's an interrupt that gets fired when the host sends a message to the device. And, and you just look at each one of the bits, each one it's 1.5 megabaud for USB low speed. And so every, you know, 0.66 microseconds later, you do another check, you do another check, you do another check and you go read a message. And then I do all that in assembly. And then I kick the message out to C, and then I process the USB packet in C, and then I go send a response back to the host in assembly. This has kind of been done before with Granium, but Granium, there was a lot of compromises like Granium never checked CRCs. They just assumed everything was fine. Granium never. I'm trying to remember what was some of the other things that they did that was just rough. Like the, it was never the right answer. It was just sort of like theirs was an experiment to see what is the minimum possible thing you can do and get a USB device to enumerate. And Granium is for 48 megahertz ARM zeros, like the really tiny micros that, that have no USB five, but you know, they're really cheap. And so for me, it was like, no, my, my, my, my flag in the sand, like the thing I'm going for is it's going to compute the polynomial for the CRC in line while it's receiving the messages. It's going to compute all of the stuff surrounding like the packet type and stuff like that. Like as it's going, it's going to do all of these things like as it's going so that like there's this funny thing that happens with things like a, like loofah and tiny USB where when they get a message that says, Hey, the host says it wants data. Their first response is always to knack it and say like, Nope, I don't have the data ready. Then they'll go and they'll have a user space, like, like, like let the user code figure out what to put there. And they'll be like, okay, I'm ready. Here's your data. And so I was like, no, I don't want to do that. I want to just, when, when the host says, give me the data, I want to have the data for it. And so I sort of like made sure that from the get go, all of those pieces were already designed into the low, the, the low end stack. Interesting."
+  },
+  {
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "guest": "Charles Lohr",
+   "stem": "0667-long-distance-with-cnlohr-a",
+   "paragraph_index": 135,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "CNLohr",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Yeah. So that's actually a lot of that plays directly into the story of one of the things that from the last episode that we were talking about is the CH32 V003 fun, which is basically a, like a, a development environment for the CH32 V003. It's a 10 cent processor, which is basically a mountain of examples. And the core of it is just enough to get the chip to wake up and handle interrupts. Like when you make it as small as you can, it's like 128 bytes of, of flash. I think is the minimum, the minimum incarnation. I don't recommend using it. You have to know certain things with that, but you can get like for a pretty, pretty good setup around 300 bytes of Ram will get you a lot of stuff and around maybe like five, hundred bytes. It'll get you even like print F back to your host. Like it's pretty stripped down. And it means that you can develop things very quick iteration. And also when the overhead of the tool, the, the, the, the, the environment is small, you have a lot more room to play with for your actual application, what you're trying to do. And so people have like really taken that and run. I mentioned the earring thing before that was by a Metaxilla. They did some really cool projects with this. They also did a, like a MIDI adapter, a USB MIDI adapter with the OO3 that fits inside of a MIDI connector. Wow. Like a bunch of interesting projects with that by like having it really tight. And a lot of other people have done interesting things there too. Uh, but, but for this project, um, I was like, well, I really want to try to use the two Oh three. Uh, the two Oh three goes at 144 megahertz. See, it's 32 V two Oh three. That is. And it's, it's a lot like the O three. It's pretty cheap. It's like 24 cents, I think, but it's a much more powerful processor. And so since I have a transceiver as well, a USB transceiver.",
+   "context_before": "Yeah. Well, we were already way, way deep into this episode, but one of the things you and I were talking about before the episode is one of the things that's enabled all the, a lot of this stuff too. And well, I guess we did kind of refer to it, but like the, so the CH32 V003, we talked about last time we mentioned some of the things that are maybe possible with new parts. And we were going to talk about that too, because that might end up feeding back into the Lowell repository. And, and then also like just some of the new things that are possible on these newer, newer versions. Yeah.",
+   "context_after": "I thought one of them. Uh, yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Well, we were already way, way deep into this episode, but one of the things you and I were talking about before the episode is one of the things that's enabled all the, a lot of this stuff too. And well, I guess we did kind of refer to it, but like the, so the CH32 V003, we talked about last time we mentioned some of the things that are maybe possible with new parts. And we were going to talk about that too, because that might end up feeding back into the Lowell repository. And, and then also like just some of the new things that are possible on these newer, newer versions. Yeah. Yeah. So that's actually a lot of that plays directly into the story of one of the things that from the last episode that we were talking about is the CH32 V003 fun, which is basically a, like a, a development environment for the CH32 V003. It's a 10 cent processor, which is basically a mountain of examples. And the core of it is just enough to get the chip to wake up and handle interrupts. Like when you make it as small as you can, it's like 128 bytes of, of flash. I think is the minimum, the minimum incarnation. I don't recommend using it. You have to know certain things with that, but you can get like for a pretty, pretty good setup around 300 bytes of Ram will get you a lot of stuff and around maybe like five, hundred bytes. It'll get you even like print F back to your host. Like it's pretty stripped down. And it means that you can develop things very quick iteration. And also when the overhead of the tool, the, the, the, the, the environment is small, you have a lot more room to play with for your actual application, what you're trying to do. And so people have like really taken that and run. I mentioned the earring thing before that was by a Metaxilla. They did some really cool projects with this. They also did a, like a MIDI adapter, a USB MIDI adapter with the OO3 that fits inside of a MIDI connector. Wow. Like a bunch of interesting projects with that by like having it really tight. And a lot of other people have done interesting things there too. Uh, but, but for this project, um, I was like, well, I really want to try to use the two Oh three. Uh, the two Oh three goes at 144 megahertz. See, it's 32 V two Oh three. That is. And it's, it's a lot like the O three. It's pretty cheap. It's like 24 cents, I think, but it's a much more powerful processor. And so since I have a transceiver as well, a USB transceiver. I thought one of them. Uh, yeah."
+  },
+  {
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "guest": "Matt Venn",
+   "stem": "0672-silicon-revolution-with-matt-venn",
+   "paragraph_index": 162,
+   "depth": "explains",
+   "speaker_raw": "Matt Venn",
+   "speaker_repaired": "Matt Venn",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "But then next time you're writing code for a serial port, you're more thinking about, okay, yeah, the data gets loaded into this thing. And the serial port is going to go off and use a clock divider to clock this stuff out at the right board and then raise an interrupt. And then that's when the CPU will get interrupted and load the next byte of data in. And you kind of get a bit of a better understanding of what's going on under the hood with all these libraries and levels of indirect that we all take for granted these days.",
+   "context_before": "Yeah.",
+   "context_after": "Yeah. And that's, that is good. I mean, like I think younger, earlier, let's just say earlier, Chris would have been more like grumpy about that. Like, why do I need to learn it? But I think as I've done more programming, I do, I do think there's value, value to understanding it. Right. So it's not a true black box where it's just like, well, I wrote it in there. Why didn't it do what I wanted it to, you know, like it's actually understanding some of the underlying does, does have benefits outside of.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. But then next time you're writing code for a serial port, you're more thinking about, okay, yeah, the data gets loaded into this thing. And the serial port is going to go off and use a clock divider to clock this stuff out at the right board and then raise an interrupt. And then that's when the CPU will get interrupted and load the next byte of data in. And you kind of get a bit of a better understanding of what's going on under the hood with all these libraries and levels of indirect that we all take for granted these days. Yeah. And that's, that is good. I mean, like I think younger, earlier, let's just say earlier, Chris would have been more like grumpy about that. Like, why do I need to learn it? But I think as I've done more programming, I do, I do think there's value, value to understanding it. Right. So it's not a true black box where it's just like, well, I wrote it in there. Why didn't it do what I wanted it to, you know, like it's actually understanding some of the underlying does, does have benefits outside of."
+  },
+  {
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "guest": "James Adams, Luke Wren, Liam Fraser, Chris Boris",
+   "stem": "0687-the-rp2350-with-the-raspberry-pi-team",
+   "paragraph_index": 35,
+   "depth": "explains",
+   "speaker_raw": "Liam Fraser",
+   "speaker_repaired": "Liam Fraser",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "Okay. Sorry, Luke. I was just going to say part of the reason that it's not sort of a four-core microcontroller is because architecturally, everything was designed for two cores. Yeah. So it's easier to sort of have a mux on the actual processor core itself. It would have been a much bigger change to, not a much bigger change, but like a simple example is like all the GPIO pins are designed to be able to interrupt processor zero or processor one. And then if you add two more processors, you've then got to rework all that kind of stuff. And it sort of, it grows as a problem. And also the more sort of masters that you add to your bus fabric. So if we were to add two more processors, it's then becomes harder to synthesize and meet timing and all that kind of stuff.",
+   "context_before": "Yeah. Hazard 3 implements a bus protocol called HP5, which is a standard interface for attaching, you know, small scalar cores to memory. And you can detach another processor and attach Hazard 3 in exactly the same place. And everything talks the same language. Yeah. So things like Atomics working across different architectures.",
+   "context_after": "One thing that I always think about is the cost of adding stuff seems pretty high in silicon, but maybe you guys had kind of a chunk available. Like, was it, Luke had said that like Eben wanted to have something in there, but is it, was it budgeted for that space-wise or was it more like, well, you get a, I'm going to take a total guess here. You get a five by five, you know, die size and you can just fit in whatever you fit in.",
+   "context_before_speaker": "James Adams",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Hazard 3 implements a bus protocol called HP5, which is a standard interface for attaching, you know, small scalar cores to memory. And you can detach another processor and attach Hazard 3 in exactly the same place. And everything talks the same language. Yeah. So things like Atomics working across different architectures. Okay. Sorry, Luke. I was just going to say part of the reason that it's not sort of a four-core microcontroller is because architecturally, everything was designed for two cores. Yeah. So it's easier to sort of have a mux on the actual processor core itself. It would have been a much bigger change to, not a much bigger change, but like a simple example is like all the GPIO pins are designed to be able to interrupt processor zero or processor one. And then if you add two more processors, you've then got to rework all that kind of stuff. And it sort of, it grows as a problem. And also the more sort of masters that you add to your bus fabric. So if we were to add two more processors, it's then becomes harder to synthesize and meet timing and all that kind of stuff. One thing that I always think about is the cost of adding stuff seems pretty high in silicon, but maybe you guys had kind of a chunk available. Like, was it, Luke had said that like Eben wanted to have something in there, but is it, was it budgeted for that space-wise or was it more like, well, you get a, I'm going to take a total guess here. You get a five by five, you know, die size and you can just fit in whatever you fit in."
+  },
+  {
+   "episode": 702,
+   "episode_title": "Test Point Accupuncture",
+   "episode_url": "https://theamphour.com/702-test-point-accupuncture/",
+   "guest": null,
+   "stem": "0702-test-point-accupuncture",
+   "paragraph_index": 377,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "interrupt"
+   ],
+   "paragraph_text": "up every second to display the clock it just powers up on a interrupt right you can just do a background interrupt it sleeps and then you interrupt every once per second you dump the data over to the memory and shut down over to the display and shut down again anyway it's fun project i gotta get into that so yeah it gives me something to work on anyway with the very little time i have available at the moment",
+   "context_before": "like that so yeah you could look at um i guess i don't know how much it's going to be like updating the screen and stuff like that like in a true like power down mode you could really you could turn everything off i mean you could oh yeah kevin dara as uh he's another youtuber and he's got",
+   "context_after": "crazy anyway we are well over time yeah you should uh you should go do some work i should probably go",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "like that so yeah you could look at um i guess i don't know how much it's going to be like updating the screen and stuff like that like in a true like power down mode you could really you could turn everything off i mean you could oh yeah kevin dara as uh he's another youtuber and he's got up every second to display the clock it just powers up on a interrupt right you can just do a background interrupt it sleeps and then you interrupt every once per second you dump the data over to the memory and shut down over to the display and shut down again anyway it's fun project i gotta get into that so yeah it gives me something to work on anyway with the very little time i have available at the moment crazy anyway we are well over time yeah you should uh you should go do some work i should probably go"
+  }
+ ]
+}

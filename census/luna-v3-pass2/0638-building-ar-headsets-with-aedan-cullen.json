@@ -1,0 +1,1843 @@
+{
+ "episode": 638,
+ "title": "Building AR Headsets with Aedan Cullen",
+ "url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+ "file": "0638-building-ar-headsets-with-aedan-cullen.md",
+ "main_topics": [
+  "augmented-reality-headset",
+  "computer-vision",
+  "low-power-design"
+ ],
+ "guest_name": "Aedan Cullen",
+ "guest_affiliation": null,
+ "notes": "The transcript inconsistently renders Aedan's name as Aidan and misrecognises Vuzix, Tegra, and RISC-V in places.",
+ "mentions": [
+  {
+   "concept": "embedded-system",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 2,
+   "char_start": 261,
+   "depth": "mention",
+   "context_snippet": "interested in both the hardware and software aspects of embedded systems"
+  },
+  {
+   "concept": "augmented-reality-headset",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 5,
+   "char_start": 1019,
+   "depth": "mention",
+   "context_snippet": "an AR system that you were building for yourself and for fun"
+  },
+  {
+   "concept": "computer-vision",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 6,
+   "char_start": 1208,
+   "depth": "explains",
+   "context_snippet": "all of these sort of slam and computer vision aspects of the problem"
+  },
+  {
+   "concept": "microelectronics-design",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 6,
+   "char_start": 1466,
+   "depth": "opinion",
+   "context_snippet": "make an effort to learn as much about microelectronics design as I could"
+  },
+  {
+   "concept": "pcb-design",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 8,
+   "char_start": 2087,
+   "depth": "explains",
+   "context_snippet": "starting from a blank slate and doing a complete electrical and mechanical design"
+  },
+  {
+   "concept": "augmented-reality",
+   "type": "concept-principle",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 10,
+   "char_start": 3063,
+   "depth": "opinion",
+   "context_snippet": "the augmented reality idea to be a good motivation for learning"
+  },
+  {
+   "concept": "robot-motion-planning",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 12,
+   "char_start": 3996,
+   "depth": "mention",
+   "context_snippet": "in robot motion planning and navigating robots"
+  },
+  {
+   "concept": "slam",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 12,
+   "char_start": 4058,
+   "depth": "explains",
+   "context_snippet": "similar, often slam and computer vision pipelines"
+  },
+  {
+   "concept": "computer-vision",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 12,
+   "char_start": 4119,
+   "depth": "explains",
+   "context_snippet": "tracking things using cameras"
+  },
+  {
+   "concept": "nvidia-jetson-tk1",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 12,
+   "char_start": 4347,
+   "depth": "mention",
+   "context_snippet": "NVIDIA released their Jetson TK1 developer board"
+  },
+  {
+   "concept": "magic-leap",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 12,
+   "char_start": 4587,
+   "depth": "mention",
+   "context_snippet": "people did put in AR headsets like Magic Leap"
+  },
+  {
+   "concept": "nvidia-tegra",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 14,
+   "char_start": 4951,
+   "depth": "mention",
+   "context_snippet": "it had an NVIDIA Tegra SAC"
+  },
+  {
+   "concept": "slam",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 16,
+   "char_start": 6194,
+   "depth": "explains",
+   "context_snippet": "simultaneous localization and mapping"
+  },
+  {
+   "concept": "inertial-measurement-unit",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 16,
+   "char_start": 6317,
+   "depth": "mention",
+   "context_snippet": "perhaps other sensors like IMUs"
+  },
+  {
+   "concept": "computer-vision",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 16,
+   "char_start": 6364,
+   "depth": "explains",
+   "context_snippet": "tracking the location of this camera unit in space"
+  },
+  {
+   "concept": "augmented-reality-headset",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 16,
+   "char_start": 6509,
+   "depth": "explains",
+   "context_snippet": "the technique that you find used on a lot of these headsets"
+  },
+  {
+   "concept": "google-glass",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 17,
+   "char_start": 6957,
+   "depth": "mention",
+   "context_snippet": "I was a glass hole"
+  },
+  {
+   "concept": "magic-leap",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 17,
+   "char_start": 7144,
+   "depth": "explains",
+   "context_snippet": "on certain things like Magic Leap"
+  },
+  {
+   "concept": "augmented-reality",
+   "type": "concept-principle",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 18,
+   "char_start": 7480,
+   "depth": "explains",
+   "context_snippet": "an entire spectrum of design choices you could make in this field"
+  },
+  {
+   "concept": "hololens",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 18,
+   "char_start": 7774,
+   "depth": "mention",
+   "context_snippet": "the goals behind HoloLens"
+  },
+  {
+   "concept": "apple-vision-pro",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 18,
+   "char_start": 7828,
+   "depth": "mention",
+   "context_snippet": "and Apple Vision Pro now"
+  },
+  {
+   "concept": "vuzix",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 18,
+   "char_start": 8226,
+   "depth": "explains",
+   "context_snippet": "Vuzix is a company that they've been doing quite a few sort of smart glasses devices"
+  },
+  {
+   "concept": "android",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 18,
+   "char_start": 8340,
+   "depth": "mention",
+   "context_snippet": "Most of them run Android"
+  },
+  {
+   "concept": "telepresence",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 18,
+   "char_start": 8624,
+   "depth": "mention",
+   "context_snippet": "or telepresence, video conferencing things"
+  },
+  {
+   "concept": "monocular-display",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 24,
+   "char_start": 9810,
+   "depth": "explains",
+   "context_snippet": "my designs that I've been doing are monocular displays"
+  },
+  {
+   "concept": "low-power-design",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 24,
+   "char_start": 10528,
+   "depth": "explains",
+   "context_snippet": "if you pursue low power designs"
+  },
+  {
+   "concept": "google-glass",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 25,
+   "char_start": 11075,
+   "depth": "mention",
+   "context_snippet": "more akin to the Google Glass of the world's"
+  },
+  {
+   "concept": "display-resolution",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 26,
+   "char_start": 11426,
+   "depth": "explains",
+   "context_snippet": "Most of the devices you find that VueVix is making in Google Glass had relatively low display resolutions"
+  },
+  {
+   "concept": "computer-vision",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 28,
+   "char_start": 12375,
+   "depth": "explains",
+   "context_snippet": "the challenge with slam and cameras in general with my designs is just power consumption"
+  },
+  {
+   "concept": "microcontroller",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 28,
+   "char_start": 13053,
+   "depth": "mention",
+   "context_snippet": "the processing on board this device, you know, is a microcontroller style system"
+  },
+  {
+   "concept": "optical-flow",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 28,
+   "char_start": 13329,
+   "depth": "explains",
+   "context_snippet": "simple optical flow stuff for tracking translation of the user in space"
+  },
+  {
+   "concept": "cortex-m33",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 28,
+   "char_start": 13525,
+   "depth": "mention",
+   "context_snippet": "as well as a Cortex M33"
+  },
+  {
+   "concept": "dsp",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 28,
+   "char_start": 13553,
+   "depth": "explains",
+   "context_snippet": "you could program the DSP to, you know, offload some of that vision stuff"
+  },
+  {
+   "concept": "risc-v",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 30,
+   "char_start": 14278,
+   "depth": "mention",
+   "context_snippet": "being interested in RISC-V"
+  },
+  {
+   "concept": "h264",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 30,
+   "char_start": 14487,
+   "depth": "mention",
+   "context_snippet": "it has H.264"
+  },
+  {
+   "concept": "h265",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 30,
+   "char_start": 14501,
+   "depth": "mention",
+   "context_snippet": "And perhaps also H.265 decoding and encoding on the chip"
+  },
+  {
+   "concept": "mipi-dsi",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 30,
+   "char_start": 14559,
+   "depth": "mention",
+   "context_snippet": "It has MIPI DSI outputs"
+  },
+  {
+   "concept": "lvds",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 30,
+   "char_start": 14584,
+   "depth": "explains",
+   "context_snippet": "It also has LVDS outputs, which were important for the display"
+  },
+  {
+   "concept": "system-in-package",
+   "type": "manufacturing",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 30,
+   "char_start": 15287,
+   "depth": "explains",
+   "context_snippet": "The system in package concept is very helpful for doing miniaturized designs"
+  },
+  {
+   "concept": "octavo-systems",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 32,
+   "char_start": 15820,
+   "depth": "mention",
+   "context_snippet": "There's this company in Texas, Octavo Systems"
+  },
+  {
+   "concept": "stm32mp1",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 32,
+   "char_start": 16109,
+   "depth": "mention",
+   "context_snippet": "the ST Microelectronics, STM32 MP1"
+  },
+  {
+   "concept": "bga",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 33,
+   "char_start": 16600,
+   "depth": "mention",
+   "context_snippet": "They're like 0.8 millimeter pitch BGAs"
+  },
+  {
+   "concept": "bga",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 34,
+   "char_start": 16676,
+   "depth": "explains",
+   "context_snippet": "they still have large BGA pitches. So they're still easy to work with"
+  },
+  {
+   "concept": "lithium-ion-polymer-battery",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 36,
+   "char_start": 17513,
+   "depth": "mention",
+   "context_snippet": "a single cell lithium ion polymer battery"
+  },
+  {
+   "concept": "linear-battery-charger",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 36,
+   "char_start": 17564,
+   "depth": "mention",
+   "context_snippet": "That's just a typical linear battery charger"
+  },
+  {
+   "concept": "wifi",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 36,
+   "char_start": 17866,
+   "depth": "explains",
+   "context_snippet": "I was choosing Wi-Fi over Bluetooth because of the increased data rates"
+  },
+  {
+   "concept": "bluetooth",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 36,
+   "char_start": 17947,
+   "depth": "explains",
+   "context_snippet": "with Bluetooth, you know, having a practical limit of one megabit per second"
+  },
+  {
+   "concept": "sony-ecx337",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 38,
+   "char_start": 18642,
+   "depth": "mention",
+   "context_snippet": "this display from Sony, the ECX337"
+  },
+  {
+   "concept": "boost-converter",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 38,
+   "char_start": 18739,
+   "depth": "mention",
+   "context_snippet": "there's, you know, boost converter for that"
+  },
+  {
+   "concept": "dc-dc-converter",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 38,
+   "char_start": 19090,
+   "depth": "explains",
+   "context_snippet": "the inductor stacked on top of the chip"
+  },
+  {
+   "concept": "display-interface",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 38,
+   "char_start": 19970,
+   "depth": "explains",
+   "context_snippet": "choose SoCs with the correct display interface already and not bridging it"
+  },
+  {
+   "concept": "fpd-link",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 38,
+   "char_start": 20076,
+   "depth": "explains",
+   "context_snippet": "LVDS, I suppose, is technically the better name is FPD Link"
+  },
+  {
+   "concept": "display",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 39,
+   "char_start": 20390,
+   "depth": "opinion",
+   "context_snippet": "you chose the display for its specs, for its size"
+  },
+  {
+   "concept": "miniaturization",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 39,
+   "char_start": 20450,
+   "depth": "opinion",
+   "context_snippet": "that just like had this cascading effect throughout your design"
+  },
+  {
+   "concept": "board-area",
+   "type": "engineering-practice",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 40,
+   "char_start": 20664,
+   "depth": "opinion",
+   "context_snippet": "I don't want to spend board area on a bridge"
+  },
+  {
+   "concept": "bridge-chip",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 40,
+   "char_start": 20664,
+   "depth": "mention",
+   "context_snippet": "I don't want to spend board area on a bridge"
+  },
+  {
+   "concept": "wi-fi",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 41,
+   "char_start": 21019,
+   "depth": "mention",
+   "context_snippet": "able to send images over Wi-Fi"
+  },
+  {
+   "concept": "video-streaming",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 42,
+   "char_start": 21214,
+   "depth": "explains",
+   "context_snippet": "you can easily just stream video over Wi-Fi in the standard ways"
+  },
+  {
+   "concept": "transport-stream",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 42,
+   "char_start": 21305,
+   "depth": "mention",
+   "context_snippet": "just taking a transport stream and, you know, throwing it over the network"
+  },
+  {
+   "concept": "partial-display-refresh",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 42,
+   "char_start": 21515,
+   "depth": "explains",
+   "context_snippet": "not send entire frames, just refresh part of the display"
+  },
+  {
+   "concept": "hardware-revision",
+   "type": "engineering-practice",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 42,
+   "char_start": 21637,
+   "depth": "opinion",
+   "context_snippet": "finishing a hardware design like that, you know, then working on the software and then wishing I had different hardware"
+  },
+  {
+   "concept": "application-software",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 42,
+   "char_start": 22033,
+   "depth": "mention",
+   "context_snippet": "I didn't spend too much time doing like application level software development"
+  },
+  {
+   "concept": "google-glass",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 43,
+   "char_start": 22658,
+   "depth": "mention",
+   "context_snippet": "my main context for all this is Google Glass"
+  },
+  {
+   "concept": "omap",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 43,
+   "char_start": 22708,
+   "depth": "mention",
+   "context_snippet": "they used an OMAP on that"
+  },
+  {
+   "concept": "android",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 43,
+   "char_start": 22834,
+   "depth": "mention",
+   "context_snippet": "they basically wrote a quasi Android thing for that as well"
+  },
+  {
+   "concept": "embedded-processing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 43,
+   "char_start": 22955,
+   "depth": "opinion",
+   "context_snippet": "it's all embedded processing"
+  },
+  {
+   "concept": "bluetooth",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 43,
+   "char_start": 23059,
+   "depth": "mention",
+   "context_snippet": "it could talk over Bluetooth to your app on the phone"
+  },
+  {
+   "concept": "offloaded-processing",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 44,
+   "char_start": 23258,
+   "depth": "explains",
+   "context_snippet": "offloaded processing to a laptop, if you're by a laptop or your phone"
+  },
+  {
+   "concept": "microcontroller",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 44,
+   "char_start": 23451,
+   "depth": "mention",
+   "context_snippet": "put a low power, you know, microcontroller or very basic Linux system"
+  },
+  {
+   "concept": "linux",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 44,
+   "char_start": 23494,
+   "depth": "mention",
+   "context_snippet": "or very basic Linux system into something like this"
+  },
+  {
+   "concept": "low-power-wearable",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 44,
+   "char_start": 23644,
+   "depth": "opinion",
+   "context_snippet": "this sort of low power all day wearable"
+  },
+  {
+   "concept": "battery",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 45,
+   "char_start": 23894,
+   "depth": "mention",
+   "context_snippet": "my Google glass had like a four or 500 milliamp hour battery"
+  },
+  {
+   "concept": "wi-fi-power-consumption",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 45,
+   "char_start": 24026,
+   "depth": "opinion",
+   "context_snippet": "wifi streaming as well as even in low power wifi"
+  },
+  {
+   "concept": "bluetooth",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 46,
+   "char_start": 24444,
+   "depth": "explains",
+   "context_snippet": "Bluetooth is great for low power consumption"
+  },
+  {
+   "concept": "nordic-nrf",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 46,
+   "char_start": 24498,
+   "depth": "opinion",
+   "context_snippet": "Nordics NRF series of chips are awesome for that"
+  },
+  {
+   "concept": "video-over-bluetooth",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 47,
+   "char_start": 24964,
+   "depth": "opinion",
+   "context_snippet": "they successfully did video over Bluetooth"
+  },
+  {
+   "concept": "power-management",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 50,
+   "char_start": 26356,
+   "depth": "mention",
+   "context_snippet": "running Linux and power management for the risk five core"
+  },
+  {
+   "concept": "risc-v",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 50,
+   "char_start": 26374,
+   "depth": "mention",
+   "context_snippet": "power management for the risk five core"
+  },
+  {
+   "concept": "oled",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 50,
+   "char_start": 27076,
+   "depth": "explains",
+   "context_snippet": "if most of the pixels on the display are off, you know, in these OLEDs, then those pixels are not consuming power"
+  },
+  {
+   "concept": "battery-life",
+   "type": "concept-principle",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 50,
+   "char_start": 27429,
+   "depth": "explains",
+   "context_snippet": "eventually get to the point of, you know, eight hours or so"
+  },
+  {
+   "concept": "display-frame-buffer",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 50,
+   "char_start": 27712,
+   "depth": "explains",
+   "context_snippet": "a display that's fully"
+  },
+  {
+   "concept": "lithium-ion-cell",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 52,
+   "char_start": 27909,
+   "depth": "mention",
+   "context_snippet": "a 500 milliamp hour lithium ion cell"
+  },
+  {
+   "concept": "hdi-pcb",
+   "type": "manufacturing",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 54,
+   "char_start": 28848,
+   "depth": "opinion",
+   "context_snippet": "this was my first HDI board"
+  },
+  {
+   "concept": "turnkey-assembly",
+   "type": "manufacturing",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 54,
+   "char_start": 29045,
+   "depth": "mention",
+   "context_snippet": "did full turnkey assembly"
+  },
+  {
+   "concept": "contract-manufacturer",
+   "type": "manufacturing",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 54,
+   "char_start": 29080,
+   "depth": "mention",
+   "context_snippet": "had a contract manufacturer build them for me"
+  },
+  {
+   "concept": "0402-component",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 54,
+   "char_start": 29204,
+   "depth": "mention",
+   "context_snippet": "assembling, you know, 0402s, 0201s"
+  },
+  {
+   "concept": "0201-component",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 54,
+   "char_start": 29204,
+   "depth": "mention",
+   "context_snippet": "assembling, you know, 0402s, 0201s"
+  },
+  {
+   "concept": "chip-scale-package",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 56,
+   "char_start": 29633,
+   "depth": "mention",
+   "context_snippet": "assembling three or four, you know, 0.4 millimeter pitch chip scale packages"
+  },
+  {
+   "concept": "mipi-dsi",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 58,
+   "char_start": 30552,
+   "depth": "explains",
+   "context_snippet": "which is a MIPI DSI display"
+  },
+  {
+   "concept": "nxp",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 58,
+   "char_start": 30590,
+   "depth": "mention",
+   "context_snippet": "I'm connecting it to this SoC from NXP"
+  },
+  {
+   "concept": "differential-pair",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 60,
+   "char_start": 31444,
+   "depth": "explains",
+   "context_snippet": "the data is transmitted as, you know, a serial stream of bits over these differential pairs"
+  },
+  {
+   "concept": "mipi-dsi-data-lane",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 60,
+   "char_start": 31537,
+   "depth": "explains",
+   "context_snippet": "Each pair transmitting data, they call it data lane"
+  },
+  {
+   "concept": "raspberry-pi",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 60,
+   "char_start": 31609,
+   "depth": "mention",
+   "context_snippet": "on the Raspberry Pi's connectors"
+  },
+  {
+   "concept": "rt500",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 60,
+   "char_start": 32484,
+   "depth": "explains",
+   "context_snippet": "this chip I'm using is the RT500"
+  },
+  {
+   "concept": "garmin",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 60,
+   "char_start": 32601,
+   "depth": "mention",
+   "context_snippet": "Garmin has been using NXP microcontrollers"
+  },
+  {
+   "concept": "sram",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 60,
+   "char_start": 32713,
+   "depth": "explains",
+   "context_snippet": "this particular one has five megabytes of SRAM on board"
+  },
+  {
+   "concept": "2d-gpu",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 60,
+   "char_start": 33218,
+   "depth": "explains",
+   "context_snippet": "It also has like a simple 2D GPU"
+  },
+  {
+   "concept": "display-controller",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 64,
+   "char_start": 35279,
+   "depth": "opinion",
+   "context_snippet": "these display controllers can sometimes be annoying to deal with"
+  },
+  {
+   "concept": "display-register",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 64,
+   "char_start": 35363,
+   "depth": "explains",
+   "context_snippet": "they have tons of registers for configuration"
+  },
+  {
+   "concept": "silicon-backplane",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 66,
+   "char_start": 35849,
+   "depth": "explains",
+   "context_snippet": "it's a silicon backplane with the OLED structure on top of it"
+  },
+  {
+   "concept": "display-driver-ic",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 66,
+   "char_start": 35978,
+   "depth": "explains",
+   "context_snippet": "this driver IC is responsible for, you know, taking those lanes, shuffling the data around"
+  },
+  {
+   "concept": "vutrix-technology",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 66,
+   "char_start": 36171,
+   "depth": "mention",
+   "context_snippet": "this company is Vutrix Technology, who makes this display"
+  },
+  {
+   "concept": "partial-panel-refresh",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 68,
+   "char_start": 36813,
+   "depth": "explains",
+   "context_snippet": "you can configure it to only refresh parts of the panel"
+  },
+  {
+   "concept": "reverse-engineering",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 70,
+   "char_start": 37316,
+   "depth": "explains",
+   "context_snippet": "I was sort of reverse engineering the thing and I dumped out all the registers"
+  },
+  {
+   "concept": "blanking-period",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 70,
+   "char_start": 37911,
+   "depth": "explains",
+   "context_snippet": "during the blanking period"
+  },
+  {
+   "concept": "clock-lane",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 70,
+   "char_start": 37940,
+   "depth": "explains",
+   "context_snippet": "Some displays require the clock lane to be put in the low power mode"
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 70,
+   "char_start": 38362,
+   "depth": "mention",
+   "context_snippet": "this is in the Zephyr real-time operating system"
+  },
+  {
+   "concept": "mcuxpresso-sdk",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 72,
+   "char_start": 39165,
+   "depth": "mention",
+   "context_snippet": "in their MCU Expresso sort of SDK"
+  },
+  {
+   "concept": "gpu-driver",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 72,
+   "char_start": 39592,
+   "depth": "mention",
+   "context_snippet": "The particular driver for the display controller on this chip"
+  },
+  {
+   "concept": "frame-buffer",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 72,
+   "char_start": 39879,
+   "depth": "mention",
+   "context_snippet": "minor bugs in terms of managing frame buffers"
+  },
+  {
+   "concept": "mipi-dsi-phy",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 74,
+   "char_start": 41020,
+   "depth": "explains",
+   "context_snippet": "sends it out to the MIPI DSI PHY, which then transmits it to your display"
+  },
+  {
+   "concept": "vivante",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 74,
+   "char_start": 41426,
+   "depth": "mention",
+   "context_snippet": "the GPU in this system is from Vivante"
+  },
+  {
+   "concept": "openvg",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 74,
+   "char_start": 41921,
+   "depth": "mention",
+   "context_snippet": "it's supposed to support OpenVG, I think 1.1 or something"
+  },
+  {
+   "concept": "vector-graphics",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 74,
+   "char_start": 42032,
+   "depth": "explains",
+   "context_snippet": "It's meant for those vector graphics applications"
+  },
+  {
+   "concept": "nxp",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 76,
+   "char_start": 42269,
+   "depth": "mention",
+   "context_snippet": "NXP, of course, goes to them and uses their IP in the silicon"
+  },
+  {
+   "concept": "silicon-ip-licensing",
+   "type": "business-model",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 76,
+   "char_start": 42302,
+   "depth": "explains",
+   "context_snippet": "uses their IP in the silicon"
+  },
+  {
+   "concept": "system-on-chip",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 78,
+   "char_start": 42556,
+   "depth": "explains",
+   "context_snippet": "you find that with a lot of blocks in these SOCs"
+  },
+  {
+   "concept": "soc-ip-integration",
+   "type": "engineering-practice",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 78,
+   "char_start": 42616,
+   "depth": "explains",
+   "context_snippet": "they're designed by other companies other than the SOC maker, and then they get dropped in"
+  },
+  {
+   "concept": "display-controller",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 78,
+   "char_start": 42716,
+   "depth": "mention",
+   "context_snippet": "the display controller itself is like from the same family of products"
+  },
+  {
+   "concept": "intellectual-property-block",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 80,
+   "char_start": 42968,
+   "depth": "explains",
+   "context_snippet": "DC Nano is the, you know, name of the IP block, which does the display control"
+  },
+  {
+   "concept": "dc-nano",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 80,
+   "char_start": 42968,
+   "depth": "explains",
+   "context_snippet": "DC Nano is the, you know, name of the IP block, which does the display control"
+  },
+  {
+   "concept": "display-driver",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 80,
+   "char_start": 43074,
+   "depth": "explains",
+   "context_snippet": "there's a driver, which is the DC Nano driver"
+  },
+  {
+   "concept": "nxp",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 80,
+   "char_start": 43150,
+   "depth": "mention",
+   "context_snippet": "NXP has put together"
+  },
+  {
+   "concept": "2d-gpu",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 81,
+   "char_start": 43234,
+   "depth": "mention",
+   "context_snippet": "2D GPU in this case would be like"
+  },
+  {
+   "concept": "vector-graphics-rendering",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 82,
+   "char_start": 43559,
+   "depth": "explains",
+   "context_snippet": "sharp text rendering as vectors"
+  },
+  {
+   "concept": "raster-graphics",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 82,
+   "char_start": 43896,
+   "depth": "explains",
+   "context_snippet": "In terms of raster stuff, you know, if you have bitmaps"
+  },
+  {
+   "concept": "bitmap",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 82,
+   "char_start": 43932,
+   "depth": "explains",
+   "context_snippet": "if you have bitmaps, you can transform them"
+  },
+  {
+   "concept": "graphical-user-interface",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 82,
+   "char_start": 44040,
+   "depth": "explains",
+   "context_snippet": "it's meant for producing the sort of GUIs you'd find on a smartwatch"
+  },
+  {
+   "concept": "wifi",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 83,
+   "char_start": 44286,
+   "depth": "mention",
+   "context_snippet": "pushing actual, like fully formed frames over Wi-Fi"
+  },
+  {
+   "concept": "on-device-processing",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 84,
+   "char_start": 44626,
+   "depth": "explains",
+   "context_snippet": "best utilize this sort of on-device processing with content sent over Wi-Fi"
+  },
+  {
+   "concept": "closed-loop-control",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 84,
+   "char_start": 45037,
+   "depth": "explains",
+   "context_snippet": "those sorts of very fast closed loop interactions between, you know, motion to a frame"
+  },
+  {
+   "concept": "data-compression",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 84,
+   "char_start": 45356,
+   "depth": "explains",
+   "context_snippet": "how you encode or compress this content to send it over Wi-Fi"
+  },
+  {
+   "concept": "drawing-instruction",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 84,
+   "char_start": 45513,
+   "depth": "explains",
+   "context_snippet": "simple drawing instructions, like put text here, put vectors"
+  },
+  {
+   "concept": "video-codec",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 88,
+   "char_start": 47172,
+   "depth": "explains",
+   "context_snippet": "compressing video is a lot more complex than that"
+  },
+  {
+   "concept": "h-264",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 88,
+   "char_start": 47443,
+   "depth": "mention",
+   "context_snippet": "we know with H.264 and H.265, AV1"
+  },
+  {
+   "concept": "h-265",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 88,
+   "char_start": 47443,
+   "depth": "mention",
+   "context_snippet": "we know with H.264 and H.265, AV1"
+  },
+  {
+   "concept": "av1",
+   "type": "standard-protocol",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 88,
+   "char_start": 47456,
+   "depth": "mention",
+   "context_snippet": "H.264 and H.265, AV1, all the fancy codecs"
+  },
+  {
+   "concept": "hardware-decoder",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 88,
+   "char_start": 47648,
+   "depth": "explains",
+   "context_snippet": "I don't have a hardware decoder for those codecs"
+  },
+  {
+   "concept": "microcontroller",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 88,
+   "char_start": 47719,
+   "depth": "explains",
+   "context_snippet": "decoding them in software is not feasible, you know, on a microcontroller"
+  },
+  {
+   "concept": "heads-up-display",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 91,
+   "char_start": 48490,
+   "depth": "mention",
+   "context_snippet": "more like the heads-up display that Tony Stark uses"
+  },
+  {
+   "concept": "helper-program",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 96,
+   "char_start": 49379,
+   "depth": "explains",
+   "context_snippet": "you need a helper program like that"
+  },
+  {
+   "concept": "power-consumption",
+   "type": "concept-principle",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 96,
+   "char_start": 49529,
+   "depth": "explains",
+   "context_snippet": "you consume some extra power on whatever device is transmitting this data"
+  },
+  {
+   "concept": "battery-life",
+   "type": "concept-principle",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 96,
+   "char_start": 49748,
+   "depth": "explains",
+   "context_snippet": "your phone's battery life is going to have to take a bit of a hit"
+  },
+  {
+   "concept": "optics",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 98,
+   "char_start": 50750,
+   "depth": "explains",
+   "context_snippet": "the optics on the device are definitely a big challenge in making things look nice"
+  },
+  {
+   "concept": "16-9-aspect-ratio",
+   "type": "concept-principle",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 98,
+   "char_start": 50998,
+   "depth": "explains",
+   "context_snippet": "the display in this device is oriented, you know, as a typical 16 to 9 ratio landscape display"
+  },
+  {
+   "concept": "mechanical-design",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 98,
+   "char_start": 51476,
+   "depth": "explains",
+   "context_snippet": "that also comes into the mechanical designs of it"
+  },
+  {
+   "concept": "3d-printing",
+   "type": "manufacturing",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 102,
+   "char_start": 52851,
+   "depth": "mention",
+   "context_snippet": "especially if you're trying to, you know, 3D print it"
+  },
+  {
+   "concept": "flex-circuit",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 103,
+   "char_start": 53040,
+   "depth": "mention",
+   "context_snippet": "figuring out the flex circuits"
+  },
+  {
+   "concept": "cad",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 104,
+   "char_start": 53219,
+   "depth": "explains",
+   "context_snippet": "when I get into, you know, CAD and start doing 3D models for the enclosure"
+  },
+  {
+   "concept": "display-flex-folding",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 108,
+   "char_start": 55170,
+   "depth": "explains",
+   "context_snippet": "make a 90 degree turn in the flex by folding it"
+  },
+  {
+   "concept": "google-glass",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 108,
+   "char_start": 55259,
+   "depth": "mention",
+   "context_snippet": "kind of where Google Glass used to have"
+  },
+  {
+   "concept": "optical-combiner",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 110,
+   "char_start": 55715,
+   "depth": "explains",
+   "context_snippet": "you do need some sort of combiner"
+  },
+  {
+   "concept": "prism",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 110,
+   "char_start": 55753,
+   "depth": "mention",
+   "context_snippet": "people do prisms"
+  },
+  {
+   "concept": "birdbath-combiner",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 110,
+   "char_start": 55784,
+   "depth": "mention",
+   "context_snippet": "birdbath style combiners, like the NREAL devices"
+  },
+  {
+   "concept": "xreal",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 110,
+   "char_start": 55834,
+   "depth": "mention",
+   "context_snippet": "Now NREAL is called XREAL"
+  },
+  {
+   "concept": "diffractive-waveguide",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 110,
+   "char_start": 55870,
+   "depth": "explains",
+   "context_snippet": "there are people who do diffractive waveguides"
+  },
+  {
+   "concept": "reflective-waveguide",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 110,
+   "char_start": 55918,
+   "depth": "explains",
+   "context_snippet": "reflective waveguides"
+  },
+  {
+   "concept": "optical-efficiency",
+   "type": "concept-principle",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 110,
+   "char_start": 56318,
+   "depth": "explains",
+   "context_snippet": "their optical efficiency is pretty terrible"
+  },
+  {
+   "concept": "oled-on-silicon",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 112,
+   "char_start": 56677,
+   "depth": "explains",
+   "context_snippet": "this OLED on silicon technology is not really currently bright enough"
+  },
+  {
+   "concept": "dlp",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 112,
+   "char_start": 56792,
+   "depth": "mention",
+   "context_snippet": "you'll see people doing like DLP things"
+  },
+  {
+   "concept": "liquid-crystal-on-silicon",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 112,
+   "char_start": 56899,
+   "depth": "mention",
+   "context_snippet": "or liquid crystal on silicon with bright white LEDs"
+  },
+  {
+   "concept": "laser-beam-scanning",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 114,
+   "char_start": 57262,
+   "depth": "explains",
+   "context_snippet": "people who do laser beam scanning too"
+  },
+  {
+   "concept": "rgb-laser",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 114,
+   "char_start": 57329,
+   "depth": "explains",
+   "context_snippet": "they'll have, you know, red, green, and blue lasers, combine those"
+  },
+  {
+   "concept": "mems-mirror",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 114,
+   "char_start": 57397,
+   "depth": "explains",
+   "context_snippet": "then have a MEMS mirror"
+  },
+  {
+   "concept": "persistence-of-vision",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 115,
+   "char_start": 57543,
+   "depth": "mention",
+   "context_snippet": "you just get like persistence of vision"
+  },
+  {
+   "concept": "hololens",
+   "type": "company-product",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 116,
+   "char_start": 57677,
+   "depth": "mention",
+   "context_snippet": "at least one of the HoloLens designs used that laser beam scanning"
+  },
+  {
+   "concept": "hololens",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 117,
+   "char_start": 58094,
+   "depth": "opinion",
+   "context_snippet": "I cannot believe that HoloLens still exists"
+  },
+  {
+   "concept": "magic-leap",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 117,
+   "char_start": 58139,
+   "depth": "mention",
+   "context_snippet": "I cannot believe that Magic Leap still exists"
+  },
+  {
+   "concept": "diffractive-waveguide",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 118,
+   "char_start": 58375,
+   "depth": "mention",
+   "context_snippet": "simpler than you have with those diffractive waveguides"
+  },
+  {
+   "concept": "lbs",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 118,
+   "char_start": 58431,
+   "depth": "mention",
+   "context_snippet": "and LBS technologies"
+  },
+  {
+   "concept": "oled-on-silicon",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 118,
+   "char_start": 58466,
+   "depth": "explains",
+   "context_snippet": "the OLED on silicon displays are definitely the most mature display technology"
+  },
+  {
+   "concept": "combiner",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 118,
+   "char_start": 58637,
+   "depth": "explains",
+   "context_snippet": "I'm not using a combiner right now"
+  },
+  {
+   "concept": "monocular-display",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 118,
+   "char_start": 58938,
+   "depth": "explains",
+   "context_snippet": "your right eye can view the display while your left eye views the real world beyond"
+  },
+  {
+   "concept": "augmented-reality-overlay",
+   "type": "concept-principle",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 118,
+   "char_start": 59074,
+   "depth": "explains",
+   "context_snippet": "you end up getting this effect where, you know, you have an overlay"
+  },
+  {
+   "concept": "pupillary-distance",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 119,
+   "char_start": 59968,
+   "depth": "explains",
+   "context_snippet": "how much differentiation there is with pupillary distance"
+  },
+  {
+   "concept": "head-size",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 119,
+   "char_start": 60046,
+   "depth": "opinion",
+   "context_snippet": "head size and all these, all these factors because people just look different"
+  },
+  {
+   "concept": "monocular-display",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 120,
+   "char_start": 60250,
+   "depth": "explains",
+   "context_snippet": "with the monocular display"
+  },
+  {
+   "concept": "interpupillary-distance-adjustment",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 120,
+   "char_start": 60297,
+   "depth": "explains",
+   "context_snippet": "avoid some of the issues with the interpupillary distance adjustment"
+  },
+  {
+   "concept": "combiner",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 120,
+   "char_start": 60490,
+   "depth": "explains",
+   "context_snippet": "using your brain as the combiner between the two eyes"
+  },
+  {
+   "concept": "optical-packaging",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 120,
+   "char_start": 60686,
+   "depth": "explains",
+   "context_snippet": "whether the entire optic setup can be small enough that it doesn't look too bulky"
+  },
+  {
+   "concept": "digital-eye-display",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 121,
+   "char_start": 61134,
+   "depth": "opinion",
+   "context_snippet": "project a copy of someone's eyes onto the front of your device"
+  },
+  {
+   "concept": "virtual-reality",
+   "type": "concept-principle",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 122,
+   "char_start": 61592,
+   "depth": "mention",
+   "context_snippet": "fully immersive stuff with, you know, high resolution displays in VR"
+  },
+  {
+   "concept": "hololens",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 123,
+   "char_start": 62007,
+   "depth": "opinion",
+   "context_snippet": "HoloLens looks so, so dumb"
+  },
+  {
+   "concept": "magic-leap",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 123,
+   "char_start": 62038,
+   "depth": "opinion",
+   "context_snippet": "the Magic Leap looks so, so dumb"
+  },
+  {
+   "concept": "google-glass",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 123,
+   "char_start": 62075,
+   "depth": "opinion",
+   "context_snippet": "honestly, Google Glass looks so, so dumb"
+  },
+  {
+   "concept": "electronics-miniaturization",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 124,
+   "char_start": 62452,
+   "depth": "explains",
+   "context_snippet": "if you can get the electronics really, really tiny and the display really, really tiny"
+  },
+  {
+   "concept": "augmented-world-expo",
+   "type": "community-event",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 124,
+   "char_start": 62771,
+   "depth": "mention",
+   "context_snippet": "I was at the Augmented World Expo"
+  },
+  {
+   "concept": "augmented-reality-industry",
+   "type": "industry-economics",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 124,
+   "char_start": 63023,
+   "depth": "opinion",
+   "context_snippet": "that's a good indication of the status of that industry"
+  },
+  {
+   "concept": "wearable-comfort",
+   "type": "engineering-practice",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 126,
+   "char_start": 63425,
+   "depth": "explains",
+   "context_snippet": "trying to wear them around to get a good idea of your dog food, the comfort aspects of it"
+  },
+  {
+   "concept": "microcontroller-platform",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 128,
+   "char_start": 64309,
+   "depth": "mention",
+   "context_snippet": "software development for this, you know, microcontroller platform"
+  },
+  {
+   "concept": "bga-assembly",
+   "type": "manufacturing",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 128,
+   "char_start": 64764,
+   "depth": "mention",
+   "context_snippet": "I hadn't even done like assembly of a BGA"
+  },
+  {
+   "concept": "through-hole-assembly",
+   "type": "manufacturing",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 128,
+   "char_start": 64816,
+   "depth": "mention",
+   "context_snippet": "anything beyond through hole, simple through hole boards"
+  },
+  {
+   "concept": "pcb-design",
+   "type": "technique",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 128,
+   "char_start": 64961,
+   "depth": "explains",
+   "context_snippet": "if I want to design a board, you know, I can do it"
+  },
+  {
+   "concept": "open-source-hardware",
+   "type": "community-event",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 128,
+   "char_start": 65294,
+   "depth": "opinion",
+   "context_snippet": "Maybe I open source some of this stuff at some point"
+  },
+  {
+   "concept": "startup",
+   "type": "business-model",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 128,
+   "char_start": 65383,
+   "depth": "mention",
+   "context_snippet": "if I've considered doing a startup related to this technology"
+  },
+  {
+   "concept": "job-interview",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 131,
+   "char_start": 66053,
+   "depth": "mention",
+   "context_snippet": "if you're interviewing or have interviewed"
+  },
+  {
+   "concept": "job-interview",
+   "type": "career",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 132,
+   "char_start": 66204,
+   "depth": "explains",
+   "context_snippet": "I've brought boards, individual PCBs to interviews"
+  },
+  {
+   "concept": "hardware-demo",
+   "type": "engineering-practice",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 134,
+   "char_start": 66589,
+   "depth": "opinion",
+   "context_snippet": "it's always the software work that gets in the way of having nice demos"
+  },
+  {
+   "concept": "special-computing-system",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 136,
+   "char_start": 67249,
+   "depth": "explains",
+   "context_snippet": "I like special computing systems, robots, wearables"
+  },
+  {
+   "concept": "wearable-computing",
+   "type": "component",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 136,
+   "char_start": 67283,
+   "depth": "mention",
+   "context_snippet": "robots, wearables, things that require special thought"
+  },
+  {
+   "concept": "github",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 140,
+   "char_start": 67998,
+   "depth": "mention",
+   "context_snippet": "they would show up on my GitHub"
+  },
+  {
+   "concept": "twitter",
+   "type": "software",
+   "speaker": "Aedan Cullen",
+   "paragraph_index": 140,
+   "char_start": 68062,
+   "depth": "mention",
+   "context_snippet": "I also have a Twitter account"
+  },
+  {
+   "concept": "career",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 143,
+   "char_start": 68638,
+   "depth": "mention",
+   "context_snippet": "I'm really excited to see where you go in your career"
+  }
+ ]
+}

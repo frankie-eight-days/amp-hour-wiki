@@ -1,0 +1,3767 @@
+{
+  "_meta": {
+    "description": "Speaker label repair map for the Amp Hour transcript corpus (pipeline step 2.5).",
+    "structure": "{file_stem: {raw_label: {canonical_person, confidence, evidence}}} under 'files'; see also 'unresolvable', 'attribution_unreliable', 'fused_turn_files'.",
+    "source_audit": "research/speaker_label_audit.md",
+    "corpus": {
+      "files": 719,
+      "distinct_raw_labels": 360,
+      "labelled_turns": 244496
+    },
+    "notes": [
+      "Labels absent from a file's entry are already canonical and pass through unchanged.",
+      "canonical_person '__SPONSOR_READ__' marks a non-participant sponsor voiceover; drop it from person censuses.",
+      "Placeholders ('Speaker ?', SPEAKER_NN) are intentionally unmapped - see 'unresolvable'.",
+      "Several entries CORRECT the source audit; those say so in their evidence string.",
+      "Step 2.6 added per-file swap reassignments plus 'attribution_unreliable' (fall back to content-based attribution there) and 'fused_turn_files' (paragraphs carrying more than one speaker; relabelling cannot fix these)."
+    ]
+  },
+  "files": {
+    "0117-an-interview-with-alan-wolke-re-broadcast": {
+      "Alan Wolke Rebroadcast": {
+        "canonical_person": "Alan Wolke",
+        "confidence": "high",
+        "evidence": "Trailing '(rebroadcast)' note fused into the label"
+      }
+    },
+    "0167-an-interview-with-adam-wolf-brick-board-biuners": {
+      "Adam Wolfe": {
+        "canonical_person": "Adam Wolf",
+        "confidence": "high",
+        "evidence": "Ep 167 title 'An Interview with Adam Wolf'"
+      }
+    },
+    "0169-an-interview-with-vincent-himpe-escaped-electron-elocution": {
+      "Free Electron": {
+        "canonical_person": "Vincent Himpe",
+        "confidence": "high",
+        "evidence": "Label self-IDs: 'this is Free Electron, or as I'm known in the real world, Vincent Hempey'"
+      }
+    },
+    "0173-an-interview-with-jeri-ellsworth-intense-illusion-introduction": {
+      "Jerry Ellsworth": {
+        "canonical_person": "Jeri Ellsworth",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 173 title 'An Interview with Jeri Ellsworth'"
+      }
+    },
+    "0175-an-interview-with-andrew-witte-telistic-timepiece-technomania": {
+      "Engadget": {
+        "canonical_person": "Andrew Witte",
+        "confidence": "high",
+        "evidence": "Title names Andrew Witte; label describes working at Pebble"
+      }
+    },
+    "0185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism": {
+      "Hank Zumbelan": {
+        "canonical_person": "Hank Zumbahlen",
+        "confidence": "high",
+        "evidence": "Ep 185 title 'An Interview with Hank Zumbahlen'"
+      }
+    },
+    "0187-an-interview-with-elecia-white-wirewove-worshipping-wookieist": {
+      "Alicia White": {
+        "canonical_person": "Elecia White",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 187 title 'An Interview with Elecia White'"
+      }
+    },
+    "0189-an-interview-with-marcus-schappi-kit-ketch-kenophobia": {
+      "Marcus Schaffe": {
+        "canonical_person": "Marcus Schappi",
+        "confidence": "high",
+        "evidence": "Ep 189 title 'An Interview with Marcus Schappi'"
+      }
+    },
+    "0196-an-interview-with-mike-engelhardt-re-broadcast": {
+      "Mike Englehart": {
+        "canonical_person": "Mike Engelhardt",
+        "confidence": "high",
+        "evidence": "Ep 196 title 'An Interview with Mike Engelhardt'"
+      }
+    },
+    "0196-an-interview-with-mike-engelhardt-spice-simulator-synteresis": {
+      "Mike Englehart": {
+        "canonical_person": "Mike Engelhardt",
+        "confidence": "high",
+        "evidence": "Ep 196 title 'An Interview with Mike Engelhardt'"
+      }
+    },
+    "0198-mike-ossmann-returns-planetic-portalab-packaging": {
+      "Michael Ossman": {
+        "canonical_person": "Michael Ossmann",
+        "confidence": "high",
+        "evidence": "One-letter variant of same person, ep 198"
+      }
+    },
+    "0204-an-interview-with-noah-feehan-biloquistic-blinking-blush": {
+      "Noah Fian": {
+        "canonical_person": "Noah Feehan",
+        "confidence": "high",
+        "evidence": "Ep 204 title 'An Interview with Noah Feehan'"
+      },
+      "Kotki": {
+        "canonical_person": "Noah Feehan",
+        "confidence": "high",
+        "evidence": "Title names Noah Feehan; 'Noah Fian'=67 is the other cluster of the same speaker"
+      }
+    },
+    "0208-an-interview-with-nadya-peek-gallant-gcode-gerontology": {
+      "Nadia Peek": {
+        "canonical_person": "Nadya Peek",
+        "confidence": "high",
+        "evidence": "Ep 208 title 'An Interview with Nadya Peek'"
+      }
+    },
+    "0214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados": {
+      "Gregory Charvat": {
+        "canonical_person": "Greg Charvat",
+        "confidence": "high",
+        "evidence": "Same person as 'Greg Charvat' label; canonical form unified"
+      },
+      "Michael Osman": {
+        "canonical_person": "Michael Ossmann",
+        "confidence": "high",
+        "evidence": "Ep 318 title names Michael Ossmann; correct spelling in ep 265"
+      }
+    },
+    "0220-an-interview-with-shaun-meehan-doctiloquent-dove-deployer": {
+      "Sean Meehan": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "medium",
+        "evidence": "This label holds only 1 turn(s), the 'This is The Amp Hour... Episode N' boilerplate, which is a host line - Chris Gammell reads it in 86% of clean files (363/431). The guest's real speech sits under a different label in this file. [step 2.6 swap repair]"
+      }
+    },
+    "0222-an-interview-with-bil-herd-zany-z80-zygology": {
+      "Bill Hurd": {
+        "canonical_person": "Bil Herd",
+        "confidence": "high",
+        "evidence": "Ep 222 title 'An Interview with Bil Herd'"
+      }
+    },
+    "0228-an-interview-with-shahriar-from-the-signal-path-quisquous-quivering-quadripole": {
+      "Shariar": {
+        "canonical_person": "Shahriar Shahramian",
+        "confidence": "high",
+        "evidence": "Ep 228 title 'An Interview with Shahriar'; The Signal Path host"
+      }
+    },
+    "0229-mightyhohm-for-the-holidays-kaiser-keyzers-kits": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "0232-impedance-matching-with-davidson-and-vandenbout-presbytes-pushing-portfolios": {
+      "Dave Vandenbaum": {
+        "canonical_person": "Dave Vandenbout",
+        "confidence": "high",
+        "evidence": "Ep 232 title names Vandenbout; 'Dave Vandenbout' label used in ep 181"
+      },
+      "Bluetooth Low Energy": {
+        "canonical_person": "Bob Davidson",
+        "confidence": "medium",
+        "evidence": "Title names Davidson and Vandenbout; Vandenbout carries his own (mangled) label, so this cluster is Davidson. Spot-check confirms guest-side consulting/product talk"
+      }
+    },
+    "0235-an-interview-with-matt-richardson-raspberry-risorgimento-regent": {
+      "Arduino": {
+        "canonical_person": "Matt Richardson",
+        "confidence": "high",
+        "evidence": "Title names Matt Richardson; sole guest in file"
+      }
+    },
+    "0241-an-interview-with-chuck-peddle-charismatic-chipmaking-coryphaeus": {
+      "Atari": {
+        "canonical_person": "Chuck Peddle",
+        "confidence": "high",
+        "evidence": "Title names Chuck Peddle; label self-IDs 'My name is Chuck Petal'"
+      }
+    },
+    "0241-an-interview-with-chuck-peddle-re-air": {
+      "Atari": {
+        "canonical_person": "Chuck Peddle",
+        "confidence": "high",
+        "evidence": "Duplicate of the ep-241 transcript; same evidence"
+      }
+    },
+    "0243-an-interview-with-macrofab-macro-manufacturing-mechanization": {
+      "Parker Doman": {
+        "canonical_person": "Parker Dillman",
+        "confidence": "high",
+        "evidence": "Phonetic variant; MacroFab Engineering Podcast co-host"
+      }
+    },
+    "0245-an-interview-with-akiba-from-freaklabs-dimissory-diagraphical-debt": {
+      "Akiba": {
+        "canonical_person": "Akiba",
+        "confidence": "high",
+        "evidence": "Handle is the name he goes by (Christopher Wang); already canonical"
+      }
+    },
+    "0247-an-interview-with-voja-antonic-gerontogenous-galaksija-genesis": {
+      "Voya Antinich": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "medium",
+        "evidence": "This label holds only 1 turn(s), the 'This is The Amp Hour... Episode N' boilerplate, which is a host line - Chris Gammell reads it in 86% of clean files (363/431). The guest's real speech sits under a different label in this file. [step 2.6 swap repair]"
+      }
+    },
+    "0250-an-interview-with-vic-aprea-federated-firmware-functionalism": {
+      "Vic Apria": {
+        "canonical_person": "Vic Aprea",
+        "confidence": "high",
+        "evidence": "Ep 250 title 'An Interview with Vic Aprea'"
+      }
+    },
+    "0252-an-interview-with-eric-bogatin-tilded-thumb-tenets": {
+      "Eric Bogutin": {
+        "canonical_person": "Eric Bogatin",
+        "confidence": "high",
+        "evidence": "Ep 252 title 'An Interview with Eric Bogatin'"
+      }
+    },
+    "0256-is-this-a-show": {
+      "Alicia White": {
+        "canonical_person": "Elecia White",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 187 title 'An Interview with Elecia White'"
+      }
+    },
+    "0257-an-interview-with-fabienne-serriere-of-knityak": {
+      "Fabienne Of Knityak": {
+        "canonical_person": "Fabienne Serriere",
+        "confidence": "high",
+        "evidence": "Trailing affiliation; ep 257 title names Fabienne Serriere"
+      },
+      "Forbes": {
+        "canonical_person": "Fabienne Serriere",
+        "confidence": "high",
+        "evidence": "Title names Fabienne Serriere; 'Fabienne Of Knityak'=7 residual cluster in same file"
+      }
+    },
+    "0260-an-interview-with-ariel-briner-of-cartesian-co": {
+      "Ariel Of Cartesian Co": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 27 words/turn and 0.46 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Ariel Briner",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 56 words/turn and 0.17 questions/turn against control medians of 76/0.29 for a guest (2.1x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0266-an-interview-with-ronald-sousa-of-hash-define-electronics": {
+      "Ronald Sousa Of Hash Defi": {
+        "canonical_person": "Ronald Sousa",
+        "confidence": "high",
+        "evidence": "Trailing affiliation fused into label"
+      },
+      "London": {
+        "canonical_person": "Ronald Sousa",
+        "confidence": "high",
+        "evidence": "Title names Ronald Sousa; 'Ronald Sousa Of Hash Defi'=1 residual cluster in same file"
+      }
+    },
+    "0268-an-interview-with-luke-iseman-of-ycombinator": {
+      "Luke Iseman Of Ycombinato": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "medium",
+        "evidence": "This label holds only 1 turn(s), the 'This is The Amp Hour... Episode N' boilerplate, which is a host line - Chris Gammell reads it in 86% of clean files (363/431). The guest's real speech sits under a different label in this file. [step 2.6 swap repair]"
+      },
+      "Y Combinator": {
+        "canonical_person": "Luke Iseman",
+        "confidence": "high",
+        "evidence": "Title names Luke Iseman; 'Luke Iseman Of Ycombinato'=1 residual cluster in same file"
+      }
+    },
+    "0270-an-interview-with-dafydd-roche": {
+      "Davith Roche": {
+        "canonical_person": "Dafydd Roche",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 270 title 'An Interview with Dafydd Roche'"
+      }
+    },
+    "0279-merry-keyzermas": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "0281-crossovers-and-call-ins": {
+      "Alicia White": {
+        "canonical_person": "Elecia White",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 187 title 'An Interview with Elecia White'"
+      }
+    },
+    "0299-an-interview-with-jonathan-hirschman-of-pcbng": {
+      "Jonathan Hirschman Of Pcb": {
+        "canonical_person": "Jonathan Hirschman",
+        "confidence": "high",
+        "evidence": "Trailing affiliation ('of PCB:NG') fused into label"
+      }
+    },
+    "0302-an-interview-with-clint-cole-of-digilent": {
+      "Clint Cole Of Digilent": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 30 words/turn and 0.46 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Clint Cole",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 64 words/turn and 0.17 questions/turn against control medians of 76/0.29 for a guest (2.1x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0308-an-interview-with-samy-kamkar": {
+      "OpenGL": {
+        "canonical_person": "Samy Kamkar",
+        "confidence": "high",
+        "evidence": "Title names Samy Kamkar; 'Samy Kamkar'=1 residual cluster in same file"
+      }
+    },
+    "0309-an-interview-with-stefan-dzisiewski-smith": {
+      "Stefan Dzisiewski Smith": {
+        "canonical_person": "Stefan Dzisiewski-Smith",
+        "confidence": "high",
+        "evidence": "Hyphen lost from double-barrelled surname"
+      }
+    },
+    "0318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov": {
+      "Dmitry Netospazov": {
+        "canonical_person": "Dmitry Nedospasov",
+        "confidence": "high",
+        "evidence": "Ep 318 title names Dmitry Nedospasov; correct spelling used in ep 303"
+      }
+    },
+    "0323-an-interview-with-tony-dicola": {
+      "MicroPython": {
+        "canonical_person": "Tony DiCola",
+        "confidence": "high",
+        "evidence": "Title names Tony DiCola; sole guest in file"
+      }
+    },
+    "0328-the-ghost-of-keyzermas-past": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "0329-work-on-it-for-10-years": {
+      "Eliseo White": {
+        "canonical_person": "Elecia White",
+        "confidence": "high",
+        "evidence": "Phonetic variant of same person; co-occurs with Chris White (Embedded.fm co-host)"
+      }
+    },
+    "0331-an-interview-with-simone-giertz": {
+      "Simone Yach": {
+        "canonical_person": "Simone Giertz",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 331 title 'An Interview with Simone Giertz'"
+      }
+    },
+    "0332-an-interview-with-zach-barth-of-zachtronics": {
+      "Zach Barth Of Zachtronics": {
+        "canonical_person": "Zach Barth",
+        "confidence": "high",
+        "evidence": "Trailing affiliation fused into label"
+      }
+    },
+    "0333-science-not-silence": {
+      "Jeff": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Speaks the episode intro. Dave=238 vs 238, no Chris label in file"
+      }
+    },
+    "0354-a-meeting-of-the-davids": {
+      "David": {
+        "canonical_person": "David Ledger",
+        "confidence": "high",
+        "evidence": "UPGRADES AUDIT (was medium/unnamed). Label self-IDs 'Yeah, it's on the website. David Ledger.' and Dave Jones confirms 'his real name is David Ledger'"
+      }
+    },
+    "0355-the-internet-of-septage-with-akiba": {
+      "Akiba": {
+        "canonical_person": "Akiba",
+        "confidence": "high",
+        "evidence": "Title names Akiba; handle is the name he goes by"
+      }
+    },
+    "0356-an-interview-with-piotr-esden-tempski": {
+      "Piotr Ezdintensky": {
+        "canonical_person": "Piotr Esden-Tempski",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 356 title 'An Interview with Piotr Esden-Tempski'"
+      }
+    },
+    "0359-an-interview-with-jeroen-domburg-sprite_tm": {
+      "Jeroen Domburg Sprite Tm": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 31 words/turn and 0.56 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Jeroen Domburg",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 120 words/turn and 0.33 questions/turn against control medians of 76/0.29 for a guest (3.8x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0365-wait-why-is-jeff-glowing": {
+      "Mighty Home": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "'MightyOhm' is Keyzer's site/handle; title is 'Wait, why is Jeff glowing?'; only Chris=93 else in file"
+      }
+    },
+    "0374-an-interview-with-claire-nee-clifford-wolf": {
+      "Clifford Wolf": {
+        "canonical_person": "Claire Wolf",
+        "confidence": "high",
+        "evidence": "Ep 374 title reads \"Claire (nee 'Clifford') Wolf\"; current name used"
+      }
+    },
+    "0375-an-interview-with-tim-mithro-ansell": {
+      "Tim Mithro Ansell": {
+        "canonical_person": "Tim Ansell",
+        "confidence": "high",
+        "evidence": "Trailing handle 'mithro' fused into label"
+      }
+    },
+    "0376-an-interview-with-richard-ginus": {
+      "IoT": {
+        "canonical_person": "Richard Ginus",
+        "confidence": "high",
+        "evidence": "Title names Richard Ginus; sole guest in file"
+      }
+    },
+    "0388-an-interview-with-earl-sharpe-and-collin-kidder": {
+      "Colin Kidder": {
+        "canonical_person": "Collin Kidder",
+        "confidence": "high",
+        "evidence": "Ep 388 title 'An Interview with Earl Sharpe and Collin Kidder'"
+      }
+    },
+    "0390-an-interview-with-sam-zeloof": {
+      "Arduinos": {
+        "canonical_person": "Sam Zeloof",
+        "confidence": "high",
+        "evidence": "Title names Sam Zeloof; sole guest, discusses garage chip fabrication"
+      }
+    },
+    "0394-jeri-ellsworth-and-the-demise-of-castar": {
+      "Jerry Ellsworth": {
+        "canonical_person": "Jeri Ellsworth",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 173 title 'An Interview with Jeri Ellsworth'"
+      }
+    },
+    "0395-an-interview-with-luke-valenty": {
+      "FPGAs": {
+        "canonical_person": "Luke Valenty",
+        "confidence": "high",
+        "evidence": "Title names Luke Valenty; sole guest in file"
+      }
+    },
+    "0403-an-interview-with-mike-szczys": {
+      "Mike Stisch": {
+        "canonical_person": "Mike Szczys",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 403 title 'An Interview with Mike Szczys'"
+      }
+    },
+    "0407-gregory-charvat-and-three-new-companies": {
+      "Gregory Charvat": {
+        "canonical_person": "Greg Charvat",
+        "confidence": "high",
+        "evidence": "Same person as 'Greg Charvat' label; canonical form unified"
+      }
+    },
+    "0409-electronics-consultant-impedance-matching": {
+      "Peter": {
+        "canonical_person": "Piotr Esden-Tempski",
+        "confidence": "high",
+        "evidence": "Label self-IDs 'Hi, I'm Peter from OneWidSquared' and 'I own OneBitSquared'; Piotr Esden-Tempski founded 1BitSquared"
+      }
+    },
+    "0412-3-cent-micros-and-1000s-of-leds": {
+      "Mike Harrison": {
+        "canonical_person": "Mike Harrison",
+        "confidence": "high",
+        "evidence": "CORRECTS AUDIT (which read this as a host's turns). Label self-IDs 'And I'm Mike Harrison from Mike's Electric Stuff'. Chris=3 is genuine - he reads the intro then leaves ('he's skiving off'), making this a Dave + Mike Harrison episode. No repair needed"
+      }
+    },
+    "0421-the-legend-of-keyzermas": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "0422-stick-em-on-whales": {
+      "Alicia White": {
+        "canonical_person": "Elecia White",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 187 title 'An Interview with Elecia White'"
+      }
+    },
+    "0423-open-fpga-toolchains-at-35c3": {
+      "Clifford Wolf": {
+        "canonical_person": "Claire Wolf",
+        "confidence": "high",
+        "evidence": "Ep 374 title reads \"Claire (nee 'Clifford') Wolf\"; current name used"
+      },
+      "Pietro Ezrin-Temsky": {
+        "canonical_person": "Piotr Esden-Tempski",
+        "confidence": "high",
+        "evidence": "Phonetic variant of same person, ep 423"
+      }
+    },
+    "0430-shahriar-discusses-5g": {
+      "Shariar": {
+        "canonical_person": "Shahriar Shahramian",
+        "confidence": "high",
+        "evidence": "Ep 228 title 'An Interview with Shahriar'; The Signal Path host"
+      }
+    },
+    "0431-an-interview-with-adam-mccombs": {
+      "Adam Mccombs": {
+        "canonical_person": "Adam McCombs",
+        "confidence": "high",
+        "evidence": "Casing split within the same file"
+      }
+    },
+    "0446-an-interview-with-pete-bevelacqua": {
+      "Pete Bevelaqua": {
+        "canonical_person": "Pete Bevelacqua",
+        "confidence": "high",
+        "evidence": "Ep 446 title carries correct spelling"
+      }
+    },
+    "0448-an-interview-with-jean-rintoul": {
+      "Gene": {
+        "canonical_person": "Jean Rintoul",
+        "confidence": "high",
+        "evidence": "Ep 448 title 'An Interview with Jean Rintoul'; 'Gene' is the phonetic rendering"
+      }
+    },
+    "0451-an-interview-with-scott-miller-2nd": {
+      "Scott Miller 2nd": {
+        "canonical_person": "Scott Miller",
+        "confidence": "high",
+        "evidence": "Trailing '2nd appearance' note fused into label"
+      }
+    },
+    "0452-an-interview-with-kieran-oleary": {
+      "Kieran Oleary": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 50 words/turn and 0.98 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Kieran O'Leary",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 349 words/turn and 0.63 questions/turn against control medians of 76/0.29 for a guest (7.0x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0461-an-interview-with-jonathan-georgino": {
+      "Bino": {
+        "canonical_person": "Jonathan Georgino",
+        "confidence": "high",
+        "evidence": "Ep 461 title; 'Bino' is the tail of the surname Georgino"
+      }
+    },
+    "0467-stories-from-supercon-2019": {
+      "Super Nintendo": {
+        "canonical_person": "Jeroen Domburg",
+        "confidence": "high",
+        "evidence": "CORRECTS AUDIT (was low). Chris opens 'I'm talking to Sprite' at line 7 and closes the block 'Well, Sprite, thank you for this great badge'; label spans lines 9-285 contiguously"
+      },
+      "Dave Jones": {
+        "canonical_person": "Sylvain Minot",
+        "confidence": "high",
+        "evidence": "CORRECTS AUDIT (not flagged). Dave Jones was not at Supercon. This label spans lines 289-493, the segment Chris opens with 'I'm here with...' and the label answers 'Sylvain Minot' and again self-IDs 'I'm doing great at the moment. Sylvain Minot.'"
+      }
+    },
+    "0469-an-interview-with-craig-j-bishop": {
+      "Craig J Bishop": {
+        "canonical_person": "Craig Bishop",
+        "confidence": "high",
+        "evidence": "Middle initial normalised, ep 469"
+      }
+    },
+    "0472-keyzermas-vacation": {
+      "Jeff Kaiser": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "medium",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 27 words/turn and 0.49 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "medium",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 116 words/turn and 0.50 questions/turn against control medians of 76/0.29 for a guest (4.3x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0473-an-interview-with-greg-davill": {
+      "Icebreaker FPGA": {
+        "canonical_person": "Greg Davill",
+        "confidence": "high",
+        "evidence": "Title names Greg Davill; sole guest, only two labels in file"
+      }
+    },
+    "0480-an-interview-with-ben-krasnow-8-years-on": {
+      "Ben Krasnow 8 Years On": {
+        "canonical_person": "Ben Krasnow",
+        "confidence": "high",
+        "evidence": "Trailing episode-framing text fused into label"
+      }
+    },
+    "0482-shine-a-light": {
+      "Screaming Circuits": {
+        "canonical_person": "__SPONSOR_READ__",
+        "confidence": "high",
+        "evidence": "Not a show participant: 3 turns of sponsor ad copy for Screaming Circuits. Exclude from any person census rather than mapping to a human"
+      }
+    },
+    "0487-an-interview-with-kerry-scharfglass": {
+      "Carrie Sharpglass": {
+        "canonical_person": "Kerry Scharfglass",
+        "confidence": "high",
+        "evidence": "Ep 487 title 'An Interview with Kerry Scharfglass'"
+      }
+    },
+    "0490-an-interview-with-ben-heckendorn": {
+      "Ben Heckendorn": {
+        "canonical_person": "Ben Heck",
+        "confidence": "high",
+        "evidence": "Ep 490 title; 'Heckendorn' is his legal surname, 'Ben Heck' the public name"
+      }
+    },
+    "0501-discussing-the-open-source-pdk-with-tim-ansell": {
+      "Tim Ans": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "CORRECTS AUDIT (which called both clusters Tim Ansell). This label speaks the episode intro including 'I'm Chris Gammell of Contextual Electronics' and asks all interviewer questions ('So your fourth time on...', 'Past guest of The Amp Hour'). No Chris label in file"
+      },
+      "Sean": {
+        "canonical_person": "Tim Ansell",
+        "confidence": "high",
+        "evidence": "Guest-side speech: 'the other reasons I've been on The Amp Hour... the first time I was here', 'I'm quite happy with stuff that I can do on my computer'. Exact 145/145 tie with the host cluster is the two-speaker signature"
+      }
+    },
+    "0517-depth-and-ai-with-brandon-gilles-and-brian-weinstein": {
+      "Brandon Gillis": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 60 words/turn and 0.71 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Brandon Gilles",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 176 words/turn and 0.63 questions/turn against control medians of 76/0.29 for a guest (2.9x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0518-satellites-and-evs-with-joris-aerts": {
+      "Starlink": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Hand-verified. The 'Starlink' label explains the guest's own company to the audience - 'if people don't remember, Hyber is a IoT-centric kind of satellite company... Is that a good characterization?' - which is host speech. The 'Chris Gammell' label carries the fused self-intro 'Hi, my name is Yoris, and I currently work at Hyber' and Joris's answers. NOTE: this overrides the step-2.5 entry that read 'Starlink' as Joris Aerts. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Joris Aerts",
+        "confidence": "high",
+        "evidence": "Counterpart of the hand-verified swap in this file: this label carries Joris Aerts's speech. [step 2.6 swap repair]"
+      }
+    },
+    "0519-simulating-embedded-hardware-with-michael-gielda": {
+      "Michael G": {
+        "canonical_person": "Michael Gielda",
+        "confidence": "high",
+        "evidence": "Truncated; ep 547 spells 'Michael Gielda' in full"
+      }
+    },
+    "0522-high-power-supplies-with-fredrik-kensander": {
+      "Frederick Kinsander": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 39 words/turn and 0.56 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Fredrik Kensander",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 72 words/turn and 0.16 questions/turn against control medians of 76/0.29 for a guest (1.8x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0523-a-keyzermas-story": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "0525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic": {
+      "FPGAs": {
+        "canonical_person": "Brian Faith",
+        "confidence": "high",
+        "evidence": "Title names Brian Faith of QuickLogic; sole guest in file"
+      }
+    },
+    "0529-embedded-hardware-with-the-raspberry-pi-team": {
+      "Raspberry Pi": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "CORRECTS AUDIT (which said James Adams). This label is the host: asks 'what is Raspberry Pi Trading?', says 'I'm very excited to have you guys here', delivers the outro and the patron-thanks read"
+      },
+      "Chris Gammell": {
+        "canonical_person": "James Adams",
+        "confidence": "high",
+        "evidence": "CORRECTS AUDIT. The 'Chris Gammell' label carries James Adams's speech: 'we are basically a subsidiary of the charity', 'Who's going to answer that one? Perhaps that one's for me', and gives his own Twitter handle 'At James Adams 314'. The two labels are swapped in this file"
+      }
+    },
+    "0537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala": {
+      "Akbar Dinaliwala": {
+        "canonical_person": "Akbar Dhanaliwala",
+        "confidence": "high",
+        "evidence": "Phonetic, ep 537"
+      }
+    },
+    "0538-missle-man-with-bruce-simson": {
+      "Bruce Simpson": {
+        "canonical_person": "Bruce Simson",
+        "confidence": "high",
+        "evidence": "Ep 538 title 'Missle Man with Bruce Simson'"
+      }
+    },
+    "0552-shouting-at-chips-with-colin-oflynn": {
+      "Colin Oflynn": {
+        "canonical_person": "Colin O'Flynn",
+        "confidence": "high",
+        "evidence": "Punctuation split of 'Colin O'Flynn'"
+      }
+    },
+    "0553-debunking-with-shahriar": {
+      "Shahriar": {
+        "canonical_person": "Shahriar Shahramian",
+        "confidence": "high",
+        "evidence": "First-name-only label for the same recurring guest"
+      }
+    },
+    "0555-timing-is-everything": {
+      "Yankee": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Two-host live episode. Dave=260 vs 261; Chris=13 residual cluster"
+      }
+    },
+    "0556-firmware-for-hardware-engineers-with-phillip-johnston": {
+      "Philip Johnston": {
+        "canonical_person": "Phillip Johnston",
+        "confidence": "high",
+        "evidence": "Spelling variant, ep 556"
+      }
+    },
+    "0557-generic-nodes-with-orkhan-amiraslanov": {
+      "LoRaWAN": {
+        "canonical_person": "Orkhan Amiraslanov",
+        "confidence": "high",
+        "evidence": "Title names Orkhan Amiraslanov; 'Orkhan Amiraslanov'=1 residual cluster in same file"
+      },
+      "Orkhan Amiraslanov": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "medium",
+        "evidence": "This label holds only 1 turn(s), the 'This is The Amp Hour... Episode N' boilerplate, which is a host line - Chris Gammell reads it in 86% of clean files (363/431). The guest's real speech sits under a different label in this file. [step 2.6 swap repair]"
+      }
+    },
+    "0562-electroboom": {
+      "Mehdi": {
+        "canonical_person": "Mehdi Sadaghdar",
+        "confidence": "high",
+        "evidence": "Ep 562 'ElectroBOOM'; Sadaghdar is ElectroBOOM"
+      }
+    },
+    "0564-pavlovian-cheapskates": {
+      "Parker Dolman": {
+        "canonical_person": "Parker Dillman",
+        "confidence": "high",
+        "evidence": "Phonetic variant of the same recurring guest"
+      }
+    },
+    "0570-keyzermas-all-the-way": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "0572-technology-instruction-with-charlie-larrabee": {
+      "Charlie Larrabe": {
+        "canonical_person": "Charlie Larrabee",
+        "confidence": "high",
+        "evidence": "Ep 572 title carries full spelling"
+      }
+    },
+    "0573-mixed-signal-education-with-philip-salmony": {
+      "Phil's Lab": {
+        "canonical_person": "Philip Salmony",
+        "confidence": "high",
+        "evidence": "'Phil's Lab' is Salmony's channel; 'Philip Salmony' label also in same file"
+      },
+      "Philip Salmony": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "medium",
+        "evidence": "This label holds only 2 turn(s), the 'This is The Amp Hour... Episode N' boilerplate, which is a host line - Chris Gammell reads it in 86% of clean files (363/431). The guest's real speech sits under a different label in this file. [step 2.6 swap repair]"
+      }
+    },
+    "0576-a-literal-trainwreck": {
+      "Missouri": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Speaks the episode intro. Dave=180 vs 179; Chris=5 residual cluster"
+      }
+    },
+    "0585-return-of-the-trade-show-jedi": {
+      "Paul": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Speaks the episode intro. Dave=149 vs 156; Chris=21 residual cluster"
+      }
+    },
+    "0589-mute-button-discipline": {
+      "LTSpice": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Speaks intro and refers to Dave in the third person. Dave=165 vs 164, no Chris label in file"
+      }
+    },
+    "0592-product-design-with-simone-giertz": {
+      "Simone Yetsch": {
+        "canonical_person": "Simone Giertz",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 592 title 'Product Design with Simone Giertz'"
+      }
+    },
+    "0596-capacitor-schoopage-with-ron-demcko-from-avx": {
+      "Ron Demko": {
+        "canonical_person": "Ron Demcko",
+        "confidence": "high",
+        "evidence": "Ep 596 title 'Capacitor Schoopage with Ron Demcko'"
+      }
+    },
+    "0599-an-interview-with-uri-shaked-wokwi-com": {
+      "Uri Shaked Wokwicom": {
+        "canonical_person": "Uri Shaked",
+        "confidence": "high",
+        "evidence": "Trailing 'wokwi.com' fused into label"
+      }
+    },
+    "0603-an-interview-with-ray-ozzie-blues-wireless": {
+      "Ray Ozzie Blues Wireless": {
+        "canonical_person": "Ray Ozzie",
+        "confidence": "high",
+        "evidence": "Trailing company name fused into label"
+      }
+    },
+    "0608-vapor-phase-with-saber-kaygusuz": {
+      "Saberkite Use Us": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "medium",
+        "evidence": "This label holds only 1 turn(s), the 'This is The Amp Hour... Episode N' boilerplate, which is a host line - Chris Gammell reads it in 86% of clean files (363/431). The guest's real speech sits under a different label in this file. [step 2.6 swap repair]"
+      }
+    },
+    "0609-open-circuits-with-eric-schlaepfer-and-windell-oskay": {
+      "Eric Schlepfer": {
+        "canonical_person": "Eric Schlaepfer",
+        "confidence": "high",
+        "evidence": "Ep 609 title 'Open Circuits with Eric Schlaepfer'"
+      },
+      "Wendell Aske": {
+        "canonical_person": "Windell Oskay",
+        "confidence": "high",
+        "evidence": "Phonetic; Open Circuits co-author with Schlaepfer, ep 609"
+      }
+    },
+    "0611-grad-school-time-capsule-with-joshua-and-zach": {
+      "Zach Ferdinand": {
+        "canonical_person": "Zach Fredin",
+        "confidence": "high",
+        "evidence": "Phonetic; 'Zach Fredin' label present in ep 330"
+      }
+    },
+    "0613-its-a-keyzermas-miracle": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "0614-reunion-impedance-matching-and-2023-predictions": {
+      "Alvaro": {
+        "canonical_person": "Alvaro Prieto",
+        "confidence": "high",
+        "evidence": "Ep 614 reunion episode; 'Alvaro Prieto' label used in ep 363"
+      }
+    },
+    "0616-open-source-tapeout-with-matthew-venn": {
+      "Matthew Venn": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 40 words/turn and 0.53 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Matt Venn",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 61 words/turn and 0.23 questions/turn against control medians of 76/0.29 for a guest (1.5x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0618-refrigerators-and-robots-with-amitabh-shrivastava": {
+      "Amitabh Shriv": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 36 words/turn and 0.52 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Amitabh Shrivastava",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 62 words/turn and 0.41 questions/turn against control medians of 76/0.29 for a guest (1.7x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0624-design-manufacturing-consulting-with-scott-williams-from-xentronics": {
+      "Scott Williams From": {
+        "canonical_person": "Scott Williams",
+        "confidence": "high",
+        "evidence": "Truncated affiliation clause; ep 624 sole guest"
+      }
+    },
+    "0632-steve-sanghi-microchip-ceo-for-31-years": {
+      "Steve Senge": {
+        "canonical_person": "Steve Sanghi",
+        "confidence": "high",
+        "evidence": "Ep 632 title 'Steve Sanghi, Microchip CEO'"
+      }
+    },
+    "0640-software-defined-power-supplies-with-werner-johansson": {
+      "Werner": {
+        "canonical_person": "Werner Johansson",
+        "confidence": "high",
+        "evidence": "Ep 640 title; second cluster of the same speaker in that file"
+      },
+      "Bluetooth": {
+        "canonical_person": "Werner Johansson",
+        "confidence": "high",
+        "evidence": "Title names Werner Johansson; 'Werner'=105 is the other cluster of the same speaker"
+      }
+    },
+    "0650-accessible-asics-with-andreas-olofsson": {
+      "Parallela": {
+        "canonical_person": "Andreas Olofsson",
+        "confidence": "high",
+        "evidence": "Title names Olofsson; 'Andreas Olofsson'=4 residual cluster in same file"
+      }
+    },
+    "0653-benjamin-cabe-nose-zephyr": {
+      "Benjamin Kabe": {
+        "canonical_person": "Benjamin Cabe",
+        "confidence": "high",
+        "evidence": "Ep 653 title 'Benjamin Cabe, Nose, Zephyr'"
+      }
+    },
+    "0655-the-twelfth-day-of-keyzermas": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "0667-long-distance-with-cnlohr-a": {
+      "Cnlohr A": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 56 words/turn and 0.80 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "CNLohr",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 145 words/turn and 0.32 questions/turn against control medians of 76/0.29 for a guest (2.6x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0674-turtles-as-a-service": {
+      "Ethernet": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Speaks the episode intro. Dave=199 vs 198, no Chris label in file"
+      }
+    },
+    "0680-catching-rockets-with-musk-sticks": {
+      "Musk Sticks": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Label speaks the episode intro; next turn self-IDs 'And I'm Chris Gammell of Contextual Electronics'. Dave Jones=220 vs 215, no Chris label in file"
+      }
+    },
+    "0689-a-jumperless-breadboard-with-kevin-cappuccio": {
+      "Kevin Cappucio": {
+        "canonical_person": "Kevin Cappuccio",
+        "confidence": "high",
+        "evidence": "Ep 689 title carries full spelling"
+      }
+    },
+    "0691-system-designer-lets-you-try-everything-with-michael-gielda": {
+      "Michael Gieldo": {
+        "canonical_person": "Michael Gielda",
+        "confidence": "high",
+        "evidence": "Phonetic variant of same person, ep 691"
+      }
+    },
+    "0695-making-the-invisible-visible-with-sam-aldahar": {
+      "Sam Aldah": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 67 words/turn and 0.29 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Sam Aldhaher",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 102 words/turn and 0.06 questions/turn against control medians of 76/0.29 for a guest (1.5x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0699-circuithub-12-years-later-with-andrew-seddon": {
+      "Andrew Seddo": {
+        "canonical_person": "Andrew Seddon",
+        "confidence": "high",
+        "evidence": "Truncated; 'Andrew Seddon' label present in the-amp-hour-131"
+      }
+    },
+    "0707-welding-with-an-hdmi-cable": {
+      "An Hdmi Cable": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Speaks intro line and self-IDs 'And I'm Chris Gammell'. Dave=165 vs 169, no Chris label in file"
+      }
+    },
+    "0711-medical-electronics-education-with-mark-palmeri": {
+      "Mark Palmieri": {
+        "canonical_person": "Mark Palmeri",
+        "confidence": "high",
+        "evidence": "Ep 711 spelling"
+      }
+    },
+    "0725-the-secret-life-of-circuits-with-lcamtuf-michal-zalewski": {
+      "Michael Zalewski": {
+        "canonical_person": "Michal Zalewski",
+        "confidence": "high",
+        "evidence": "Ep 725; Michal 'lcamtuf' Zalewski"
+      }
+    },
+    "0729-the-terahertz-frontier-greg-charvat-teradar": {
+      "Chris Gammell (sponsored segment)": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Sponsored-segment suffix on a correct host label; strip suffix, keep person"
+      },
+      "Shrouk El Attar (sponsored segment)": {
+        "canonical_person": "Shrouk El Attar",
+        "confidence": "high",
+        "evidence": "Sponsored-segment suffix on a correct guest label; strip suffix, keep person"
+      }
+    },
+    "the-amp-hour-114-judging-jurisdictional-junctures": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "the-amp-hour-121-creative-china-commorant": {
+      "Zach Hoken": {
+        "canonical_person": "Zach Hoeken",
+        "confidence": "high",
+        "evidence": "Phonetic (Zach 'Hoeken' Smith), the-amp-hour-121"
+      }
+    },
+    "the-amp-hour-133-tenacious-transistor-teacher": {
+      "Ron Kwan": {
+        "canonical_person": "Ron Quan",
+        "confidence": "high",
+        "evidence": "Phonetic, the-amp-hour-133"
+      }
+    },
+    "the-amp-hour-147-absorptive-augmented-actuality": {
+      "Jerry Ellsworth": {
+        "canonical_person": "Jeri Ellsworth",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 173 title 'An Interview with Jeri Ellsworth'"
+      }
+    },
+    "the-amp-hour-149-purple-pcb-philosophy": {
+      "Lane": {
+        "canonical_person": "Laen",
+        "confidence": "high",
+        "evidence": "the-amp-hour-149 'Purple PCB Philosophy'; Laen founded OSH Park"
+      }
+    },
+    "the-amp-hour-161-gifted-grimgribber-grokker": {
+      "Michael Osman": {
+        "canonical_person": "Michael Ossmann",
+        "confidence": "high",
+        "evidence": "Ep 318 title names Michael Ossmann; correct spelling in ep 265"
+      }
+    },
+    "the-amp-hour-162-ostrobogulous-openness-occasion": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "the-amp-hour-29-dj-and-jazzy-jeff": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "the-amp-hour-325-an-interview-with-david-kronstein-tesla500": {
+      "David Kronstein Tesla500": {
+        "canonical_person": "David Kronstein",
+        "confidence": "high",
+        "evidence": "Trailing handle 'tesla500' fused into label"
+      }
+    },
+    "the-amp-hour-336-an-interview-with-bunnie-huang-2nd": {
+      "Asia": {
+        "canonical_person": "Bunnie Huang",
+        "confidence": "high",
+        "evidence": "Title names Bunnie Huang; label says 'I'm located in Singapore'"
+      }
+    },
+    "the-amp-hour-35-the-ternary-tussle": {
+      "Jerry Ellsworth": {
+        "canonical_person": "Jeri Ellsworth",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 173 title 'An Interview with Jeri Ellsworth'"
+      }
+    },
+    "the-amp-hour-38-comical-keyzer-comes-a-callin": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "the-amp-hour-41-exhilarating-esc-escapades": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "the-amp-hour-43-audacious-arduino-arguments": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "the-amp-hour-45-nerdy-neuroelectronic-neurosis": {
+      "Fat Man": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Speaks the episode intro. Dave=257 vs 258, no Chris label in file"
+      }
+    },
+    "the-amp-hour-454-mike-grover": {
+      "Mike Grover Mg": {
+        "canonical_person": "Mike Grover",
+        "confidence": "high",
+        "evidence": "Trailing handle '_MG_' fused into label"
+      },
+      "AT-Tinny's": {
+        "canonical_person": "Mike Grover",
+        "confidence": "high",
+        "evidence": "Title names Mike Grover; 'Mike Grover Mg'=79 is the other cluster of the same speaker"
+      }
+    },
+    "the-amp-hour-52-carnassial-chip-chemicals": {
+      "Jerry Ellsworth": {
+        "canonical_person": "Jeri Ellsworth",
+        "confidence": "high",
+        "evidence": "Phonetic; ep 173 title 'An Interview with Jeri Ellsworth'"
+      }
+    },
+    "the-amp-hour-54-embedded-elchee-epexegesis": {
+      "Jack Gansel": {
+        "canonical_person": "Jack Ganssle",
+        "confidence": "high",
+        "evidence": "Phonetic; 'Jack Ganssle' label also present in corpus (ep 489)"
+      }
+    },
+    "the-amp-hour-59-bonafide-beagleboard-bionomics": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      },
+      "Ed McMahon": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "medium",
+        "evidence": "CONTRADICTS AUDIT (which said Jason Kridner). Label asks BeagleBoard questions as an interviewer ('where did the name BeagleBoard come from?', 'for the benefit of me and also our listeners') with zero first-person TI/BeagleBoard ownership, and addresses Kridner in the second person ('We've met before, Jason, right?'). 'Ed McMahon' is the show's running nickname for Keyzer - confirmed in ep 61 where Chris says 'Ed McMahon's in the house' immediately after introducing Jeff Kaiser. Reads as a second cluster of Keyzer, split from 'Jeff Kaiser'=111. Kridner's speech appears merged into other labels"
+      }
+    },
+    "the-amp-hour-61-gallimaufry-gan-gabble": {
+      "Sydney": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "medium",
+        "evidence": "CORRECTS AUDIT (which guessed a Dave split). Chris introduces 'this is Jeff Kaiser from MightyOhm.com', then Sydney answers 'The usual.'; Dave=114 and Chris=90 both already labelled, so Sydney is the third chair. No Jeff label in file"
+      }
+    },
+    "the-amp-hour-66-xenomorphic-xerox-xebec": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "the-amp-hour-70-idiorhythmic-ipc-inconcinnity": {
+      "Abraham": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Two-host episode. Dave=199 vs 195, no Chris label in file"
+      }
+    },
+    "the-amp-hour-73-horrisonous-holiday-habromania": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "the-amp-hour-84-bunnies-bibelot-bonification": {
+      "Bunny": {
+        "canonical_person": "Bunnie Huang",
+        "confidence": "high",
+        "evidence": "the-amp-hour-84 'Bunnie's Bibelot Bonification'"
+      }
+    },
+    "the-amp-hour-93-cacaesthestic-chronometric-carriwitchet": {
+      "Tom Laments": {
+        "canonical_person": "Tom LeMense",
+        "confidence": "high",
+        "evidence": "Phonetic, the-amp-hour-93"
+      }
+    },
+    "the-amp-hour-95-feracious-fabless-facilitator": {
+      "Evin Yanbu": {
+        "canonical_person": "Oyvind Janbu",
+        "confidence": "high",
+        "evidence": "Phonetic rendering of Norwegian name, the-amp-hour-95"
+      },
+      "Oyvian Yanbu": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "medium",
+        "evidence": "This label holds only 3 turn(s), the 'This is The Amp Hour... Episode N' boilerplate, which is a host line - Chris Gammell reads it in 86% of clean files (363/431). The guest's real speech sits under a different label in this file. [step 2.6 swap repair]"
+      }
+    },
+    "theamphour-117-undulating-utensil-utility": {
+      "Alan Wolke Rebroadcast": {
+        "canonical_person": "Alan Wolke",
+        "confidence": "high",
+        "evidence": "Trailing '(rebroadcast)' note fused into the label"
+      }
+    },
+    "theamphour47-the-mothership-manifesto": {
+      "Jeff Kaiser": {
+        "canonical_person": "Jeff Keyzer",
+        "confidence": "high",
+        "evidence": "Phonetic; spelled 'Jeff Keyzer' in theamphour-82; self-IDs 'from MightyOhm.com'"
+      }
+    },
+    "0297-an-interview-with-jake-baker": {
+      "Jake Baker": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Hand-verified. The 'Chris Gammell' label says 'I'm a professor here in the U.S., and I've been a professor at University of Nevada, Las Vegas, where I am right now' - that is Jake Baker. The 'Jake Baker' label carries the fused 'And I'm Chris Gammell of Contextual Electronics... So, Jake, what is your main profession?' [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Jake Baker",
+        "confidence": "high",
+        "evidence": "Counterpart of the hand-verified swap in this file: this label carries Jake Baker's speech. [step 2.6 swap repair]"
+      }
+    },
+    "0305-an-interview-with-dave-young": {
+      "Dave Young": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 38 words/turn and 0.66 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Dave Young",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 80 words/turn and 0.31 questions/turn against control medians of 76/0.29 for a guest (2.1x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0314-an-interview-with-josh-lifton": {
+      "Josh Lifton": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Hand-verified. The 'Chris Gammell' label speaks as Crowd Supply - 'there's the vetting and then there's what we do to actually help you once we do work with you' and 'our creators' - which is Josh Lifton. The 'Josh Lifton' label refers to Dave in the third person ('Dave is in the throes of this right now'). [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Josh Lifton",
+        "confidence": "high",
+        "evidence": "Counterpart of the hand-verified swap in this file: this label carries Josh Lifton's speech. [step 2.6 swap repair]"
+      }
+    },
+    "0383-an-interview-with-scott-shawcroft": {
+      "Scott Shawcroft": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Hand-verified. The 'Scott Shawcroft' label says 'my complaining about J-Link, which I obviously got from the wonderful folks at Adafruit' and 'did you know I help people with that stuff?' - that is Chris, whose Contextual Electronics does exactly that; Scott is the one who works with Adafruit. The 'Chris Gammell' label carries Scott's replies. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Scott Shawcroft",
+        "confidence": "high",
+        "evidence": "Counterpart of the hand-verified swap in this file: this label carries Scott Shawcroft's speech. [step 2.6 swap repair]"
+      }
+    },
+    "0385-an-interview-with-john-davis": {
+      "John Davis": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Hand-verified. The 'John Davis' label says 'you are a regular listener and an old friend from Cleveland, so welcome to the show' - Chris is the Cleveland host doing the welcoming. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "John Davis",
+        "confidence": "high",
+        "evidence": "Counterpart of the hand-verified swap in this file: this label carries John Davis's speech. [step 2.6 swap repair]"
+      }
+    },
+    "0426-an-interview-with-dean-pick": {
+      "Dean Pick": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 56 words/turn and 1.10 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Dean Pick",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 93 words/turn and 0.06 questions/turn against control medians of 76/0.29 for a guest (1.7x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0429-an-interview-with-charles-alexanian": {
+      "Charles Alexanian": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 31 words/turn and 0.48 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Charles Alexanian",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 109 words/turn and 0.23 questions/turn against control medians of 76/0.29 for a guest (3.5x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0433-an-interview-with-sam-stranks": {
+      "Sam Stranks": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 40 words/turn and 0.89 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Sam Stranks",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 116 words/turn and 0.17 questions/turn against control medians of 76/0.29 for a guest (2.9x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0511-brewing-electronics-with-eli-hughes": {
+      "Eli Hughes": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 40 words/turn and 0.50 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Eli Hughes",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 103 words/turn and 0.38 questions/turn against control medians of 76/0.29 for a guest (2.6x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0524-leds-and-evs-with-mike-harrison": {
+      "Mike Harrison": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Hand-verified. The 'Mike Harrison' label reads the episode intro and the 'Chris Gammell' label carries the fused 'And I'm Chris Gammell of Contextual Electronics. And I'm Mike Harrison from Mike's Electric Stuff, again.' Role stats confirm: the intro-bearing cluster runs 28 words/turn at 0.48 questions/turn (host-shaped) against 51/0.13 for the 'Chris Gammell' cluster (guest-shaped). [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Mike Harrison",
+        "confidence": "high",
+        "evidence": "Counterpart of the hand-verified swap in this file: this label carries Mike Harrison's speech. [step 2.6 swap repair]"
+      }
+    },
+    "0588-siloed-engineering-with-leigh-brady": {
+      "Leigh Brady": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Hand-verified. The 'Leigh Brady' label asks 'But what kind of industry is there? Where are you floating around in industry right now?' (host). The 'Chris Gammell' label answers 'It's an interesting place to be an electrical engineer... Disney parks, Universal, SeaWorld... are here' (guest, in Orlando). [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Leigh Brady",
+        "confidence": "high",
+        "evidence": "Counterpart of the hand-verified swap in this file: this label carries Leigh Brady's speech. [step 2.6 swap repair]"
+      }
+    },
+    "0601-rebuilding-projects-with-dave-young": {
+      "Dave Young": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Hand-verified. The 'Dave Young' label says 'You are a guest of the show in the past... 305 and 409, which of course we will link into the show notes' - host speech referencing his own show notes. The 'Chris Gammell' label carries Dave Young's replies. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Dave Young",
+        "confidence": "high",
+        "evidence": "Counterpart of the hand-verified swap in this file: this label carries Dave Young's speech. [step 2.6 swap repair]"
+      }
+    },
+    "0657-automating-the-home-with-keith-burzinski": {
+      "Keith Burzinski": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 64 words/turn and 0.79 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Keith Burzinski",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 183 words/turn and 0.72 questions/turn against control medians of 76/0.29 for a guest (2.9x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "the-amp-hour-155-mini-module-master": {
+      "Jeff Roberg": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "high",
+        "evidence": "Swap: this label speaks the 'This is The Amp Hour... Episode N' boilerplate (host-only line) and its speech is host-shaped - 39 words/turn and 0.61 questions/turn against the control medians of 38/0.66 for a host. [step 2.6 swap repair]"
+      },
+      "Chris Gammell": {
+        "canonical_person": "Jeff Roberg",
+        "confidence": "high",
+        "evidence": "Swap: the 'Chris Gammell' label carries guest-shaped speech - 168 words/turn and 0.37 questions/turn against control medians of 76/0.29 for a guest (4.3x the word length of the intro-bearing cluster). [step 2.6 swap repair]"
+      }
+    },
+    "0320-an-interview-with-brent-of-oshstencils": {
+      "Brent Of Oshstencils": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "medium",
+        "evidence": "This label holds only 1 turn(s), the 'This is The Amp Hour... Episode N' boilerplate, which is a host line - Chris Gammell reads it in 86% of clean files (363/431). The guest's real speech sits under a different label in this file. [step 2.6 swap repair]"
+      }
+    },
+    "0455-bill-and-daves-excellent-equipment": {
+      "Bill": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "medium",
+        "evidence": "This label holds only 1 turn(s), the 'This is The Amp Hour... Episode N' boilerplate, which is a host line - Chris Gammell reads it in 86% of clean files (363/431). The guest's real speech sits under a different label in this file. [step 2.6 swap repair]"
+      }
+    },
+    "0476-an-interview-with-kendall-castor-perry": {
+      "Kendall Castor Perry": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "medium",
+        "evidence": "This label holds only 3 turn(s), the 'This is The Amp Hour... Episode N' boilerplate, which is a host line - Chris Gammell reads it in 86% of clean files (363/431). The guest's real speech sits under a different label in this file. [step 2.6 swap repair]"
+      }
+    },
+    "0663-motors-on-pcbs-with-carl-bugeja": {
+      "Carl Bugeja": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "medium",
+        "evidence": "This label holds only 2 turn(s), the 'This is The Amp Hour... Episode N' boilerplate, which is a host line - Chris Gammell reads it in 86% of clean files (363/431). The guest's real speech sits under a different label in this file. [step 2.6 swap repair]"
+      }
+    },
+    "the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk": {
+      "Remco Stardustite": {
+        "canonical_person": "Chris Gammell",
+        "confidence": "medium",
+        "evidence": "This label holds only 1 turn(s), the 'This is The Amp Hour... Episode N' boilerplate, which is a host line - Chris Gammell reads it in 86% of clean files (363/431). The guest's real speech sits under a different label in this file. [step 2.6 swap repair]"
+      }
+    }
+  },
+  "unresolvable": {
+    "placeholders": [
+      {
+        "raw_label": "Speaker ?",
+        "files": 678,
+        "turns": 3460,
+        "reason": "Diarizer catch-all for short interjections; carries many different people"
+      },
+      {
+        "raw_label": "SPEAKER_01",
+        "files": 27,
+        "turns": 958,
+        "reason": "Raw diarizer cluster id; not resolvable without per-file listening"
+      },
+      {
+        "raw_label": "SPEAKER_00",
+        "files": 22,
+        "turns": 397,
+        "reason": "Raw diarizer cluster id; not resolvable without per-file listening"
+      },
+      {
+        "raw_label": "SPEAKER_02",
+        "files": 13,
+        "turns": 285,
+        "reason": "Raw diarizer cluster id; not resolvable without per-file listening"
+      },
+      {
+        "raw_label": "SPEAKER_03",
+        "files": 2,
+        "turns": 120,
+        "reason": "Raw diarizer cluster id; not resolvable without per-file listening"
+      },
+      {
+        "raw_label": "Narrator",
+        "files": 3,
+        "turns": 8,
+        "reason": "Non-participant narration"
+      },
+      {
+        "raw_label": "Intro Voice",
+        "files": 1,
+        "turns": 4,
+        "reason": "Non-participant intro bumper"
+      },
+      {
+        "raw_label": "Music",
+        "files": 1,
+        "turns": 3,
+        "reason": "Non-speech"
+      },
+      {
+        "raw_label": "Unknown",
+        "files": 1,
+        "turns": 2,
+        "reason": "Explicit unknown"
+      }
+    ],
+    "ambiguous_or_merged": [
+      {
+        "raw_label": "Caller",
+        "files": 1,
+        "turns": 26,
+        "file_stems": [
+          "0307-call-in-show-5"
+        ],
+        "reason": "Unnamed listener; self-IDs as 'Alexander from Toronto' in his first turn, but the label may cover more than one caller"
+      },
+      {
+        "raw_label": "Mahesh",
+        "files": 1,
+        "turns": 47,
+        "file_stems": [
+          "0288-call-in-show-3"
+        ],
+        "reason": "MULTI-PERSON MERGE, not a mangled name. One caller self-IDs 'My name is Mahesh, and I'm from India', but the same label later says 'I'm Sebastian from Germany'. At least two callers share this cluster - cannot be repaired by relabelling"
+      },
+      {
+        "raw_label": "Jason Kridner And Robert",
+        "files": 1,
+        "turns": 86,
+        "file_stems": [
+          "0378-an-interview-with-jason-kridner-and-robert-nelson"
+        ],
+        "reason": "Two people (Jason Kridner + Robert Nelson) merged into one cluster"
+      },
+      {
+        "raw_label": "Brent And Bryce Salmi",
+        "files": 1,
+        "turns": 84,
+        "file_stems": [
+          "0401-an-interview-with-brent-and-bryce-salmi"
+        ],
+        "reason": "Two people (Brent + Bryce Salmi) merged into one cluster"
+      },
+      {
+        "raw_label": "Joshua And Za",
+        "files": 1,
+        "turns": 137,
+        "file_stems": [
+          "0611-grad-school-time-capsule-with-joshua-and-zach"
+        ],
+        "reason": "Two people (Joshua Vasquez + Zach Fredin) merged into one cluster"
+      },
+      {
+        "raw_label": "Alvaro And Jen From The Ure",
+        "files": 1,
+        "turns": 97,
+        "file_stems": [
+          "0363-an-interview-with-alvaro-and-jen-from-the-ure-podcast"
+        ],
+        "reason": "Two people (Alvaro Prieto + Jen) merged into one cluster"
+      },
+      {
+        "raw_label": "Jeff",
+        "files": 1,
+        "turns": 24,
+        "file_stems": [
+          "the-amp-hour-30-funding-fusion-is-not-futile"
+        ],
+        "reason": "24 short interjections with no self-ID and no 'Jeff'/'MightyOhm' mention anywhere in the file. Plausibly Jeff Keyzer (recurring third chair of that era) but there is no evidence in the transcript - left unmapped rather than invented"
+      },
+      {
+        "raw_label": "David",
+        "files": 1,
+        "turns": 37,
+        "file_stems": [
+          "show-345-milling-about"
+        ],
+        "reason": "37 turns; distinct from the ep-354 'David'. No self-ID in file; Chris=255 and Dave=252 both present, so this is a third speaker of unknown identity"
+      },
+      {
+        "raw_label": "Remco Stardustite",
+        "files": 1,
+        "turns": 1,
+        "file_stems": [
+          "the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk"
+        ],
+        "reason": "Surname garbled beyond recovery from the transcript; first name 'Remco' is reliable but no full name appears"
+      },
+      {
+        "raw_label": "Brent Of Oshstencils",
+        "files": 1,
+        "turns": 1,
+        "file_stems": [
+          "0320-an-interview-with-brent-of-oshstencils"
+        ],
+        "reason": "Only a first name plus affiliation appears anywhere; full name not recoverable from the transcript"
+      },
+      {
+        "raw_label": "Florin Of Voltlo",
+        "files": 1,
+        "turns": 150,
+        "file_stems": [
+          "0568-youtube-to-consulting-with-florin-of-voltlog"
+        ],
+        "reason": "Voltlog's host; only the first name 'Florin' appears. Same person as 'Florin Of Voltlog' in the same file (two spellings) but no surname to canonicalise to"
+      },
+      {
+        "raw_label": "Florin Of Voltlog",
+        "files": 1,
+        "turns": 147,
+        "file_stems": [
+          "0568-youtube-to-consulting-with-florin-of-voltlog"
+        ],
+        "reason": "Second spelling of the same speaker in the same file; no surname available"
+      }
+    ]
+  },
+  "attribution_unreliable": [
+    {
+      "file": "0181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Dave Vandenbout"
+      ]
+    },
+    {
+      "file": "0194-an-interview-with-todd-bailey-embedded-embrasure-engineering",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Todd Bailey"
+      ]
+    },
+    {
+      "file": "0204-an-interview-with-noah-feehan-biloquistic-blinking-blush",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Dave Jones",
+        "Kotki",
+        "Noah Fian"
+      ]
+    },
+    {
+      "file": "0206-an-interview-with-martin-lorton-variegated-video-vagility",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Martin Lorton"
+      ]
+    },
+    {
+      "file": "0220-an-interview-with-shaun-meehan-doctiloquent-dove-deployer",
+      "reason": "The guest-named label holds only the intro boilerplate (n=1) and no other cluster is substantive, so the guest's speech is fused into the host labels and cannot be recovered by relabelling",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Sean Meehan"
+      ]
+    },
+    {
+      "file": "0222-an-interview-with-bil-herd-zany-z80-zygology",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Bill Hurd",
+        "Chris Gammell",
+        "Dave Jones"
+      ]
+    },
+    {
+      "file": "0247-an-interview-with-voja-antonic-gerontogenous-galaksija-genesis",
+      "reason": "The guest-named label holds only the intro boilerplate (n=1) and no other cluster is substantive, so the guest's speech is fused into the host labels and cannot be recovered by relabelling",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Voya Antinich"
+      ]
+    },
+    {
+      "file": "0250-an-interview-with-vic-aprea-federated-firmware-functionalism",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Vic Apria"
+      ]
+    },
+    {
+      "file": "0252-an-interview-with-eric-bogatin-tilded-thumb-tenets",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Eric Bogutin"
+      ]
+    },
+    {
+      "file": "0257-an-interview-with-fabienne-serriere-of-knityak",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Fabienne Of Knityak",
+        "Forbes"
+      ]
+    },
+    {
+      "file": "0258-an-interview-with-bertrand-and-gerald-of-audeme",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Bertrand",
+        "Chris Gammell",
+        "Dave Jones",
+        "Gerald Friedland"
+      ]
+    },
+    {
+      "file": "0295-an-interview-with-omer-kilic",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Omer Kilic"
+      ]
+    },
+    {
+      "file": "0320-an-interview-with-brent-of-oshstencils",
+      "reason": "The guest-named label holds only the intro boilerplate (n=1) and no other cluster is substantive, so the guest's speech is fused into the host labels and cannot be recovered by relabelling",
+      "affected_labels": [
+        "Brent Of Oshstencils",
+        "Chris Gammell",
+        "Dave Jones"
+      ]
+    },
+    {
+      "file": "0327-an-interview-with-avidan-ross",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Avidan Ross",
+        "Chris Gammell",
+        "Dave Jones"
+      ]
+    },
+    {
+      "file": "0341-all-the-way-with-dlj",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Dlj"
+      ]
+    },
+    {
+      "file": "0346-an-interview-with-joe-fitzpatrick",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Joe Fitzpatrick"
+      ]
+    },
+    {
+      "file": "0350-an-interview-with-zach-dunham",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Zach Dunham"
+      ]
+    },
+    {
+      "file": "0368-the-eevblog-sparkgap-generator",
+      "reason": "No usable intro-line anchor (no_intro_label), so the swap hypothesis cannot be tested against the boilerplate rule",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones"
+      ]
+    },
+    {
+      "file": "0369-an-interview-with-jason-huggins",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Jason Huggins"
+      ]
+    },
+    {
+      "file": "0371-an-interview-with-joe-bamberg",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Joe Bamberg"
+      ]
+    },
+    {
+      "file": "0374-an-interview-with-claire-nee-clifford-wolf",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Clifford Wolf"
+      ]
+    },
+    {
+      "file": "0381-interview-with-derek-kozel",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Derek Kozel"
+      ]
+    },
+    {
+      "file": "0384-a-will-buy-again",
+      "reason": "No usable intro-line anchor (no_intro_label), so the swap hypothesis cannot be tested against the boilerplate rule",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones"
+      ]
+    },
+    {
+      "file": "0392-an-interview-with-matt-duff",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Matt Duff"
+      ]
+    },
+    {
+      "file": "0401-an-interview-with-brent-and-bryce-salmi",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Brent And Bryce Salmi",
+        "Chris Gammell"
+      ]
+    },
+    {
+      "file": "0405-an-interview-with-spencer-wright",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Spencer Wright"
+      ]
+    },
+    {
+      "file": "0418-an-interview-with-josh-datko",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Josh Datko"
+      ]
+    },
+    {
+      "file": "0420-an-interview-with-joe-long",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Joe Long"
+      ]
+    },
+    {
+      "file": "0425-an-interview-with-chris-osterwood",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Chris Osterwood"
+      ]
+    },
+    {
+      "file": "0431-an-interview-with-adam-mccombs",
+      "reason": "No usable intro-line anchor (no_host_label), so the swap hypothesis cannot be tested against the boilerplate rule",
+      "affected_labels": [
+        "Adam McCombs",
+        "Adam Mccombs"
+      ]
+    },
+    {
+      "file": "0437-an-interview-with-chrissy-meyer",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Chrissy Meyer"
+      ]
+    },
+    {
+      "file": "0438-an-interview-with-bart-dring",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Bart Dring"
+      ]
+    },
+    {
+      "file": "0442-an-interview-with-travis-goodspeed",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Travis Goodspeed"
+      ]
+    },
+    {
+      "file": "0455-bill-and-daves-excellent-equipment",
+      "reason": "The guest-named label holds only the intro boilerplate (n=1) and no other cluster is substantive, so the guest's speech is fused into the host labels and cannot be recovered by relabelling",
+      "affected_labels": [
+        "Bill",
+        "Chris Gammell",
+        "Dave Jones"
+      ]
+    },
+    {
+      "file": "0458-an-interview-with-ken-burns",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Ken Burns"
+      ]
+    },
+    {
+      "file": "0471-an-interview-with-matt-berggren",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Matt Berggren"
+      ]
+    },
+    {
+      "file": "0476-an-interview-with-kendall-castor-perry",
+      "reason": "The guest-named label holds only the intro boilerplate (n=3) and no other cluster is substantive, so the guest's speech is fused into the host labels and cannot be recovered by relabelling",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Kendall Castor Perry"
+      ]
+    },
+    {
+      "file": "0485-an-interview-with-john-day",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "John Day"
+      ]
+    },
+    {
+      "file": "0495-an-interview-with-eric-klein",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Eric Klein"
+      ]
+    },
+    {
+      "file": "0498-quantum-computing-with-andrea-morello",
+      "reason": "Intro boilerplate sits on the guest label and the 'Chris Gammell' cluster is vestigial (n=4), so this is a collapse of two speakers into one cluster rather than a recoverable 2-way swap",
+      "affected_labels": [
+        "Andrea Morello",
+        "Chris Gammell"
+      ]
+    },
+    {
+      "file": "0499-discussing-chiplets-with-ming-zhang",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Ming Zhang"
+      ]
+    },
+    {
+      "file": "0505-hardware-revision-control-with-kyle-dumont",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Kyle Dumont"
+      ]
+    },
+    {
+      "file": "0513-audio-dsp-with-shannon-parks",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Shannon Parks"
+      ]
+    },
+    {
+      "file": "0515-embedded-linux-with-jay-carlson",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Jay Carlson"
+      ]
+    },
+    {
+      "file": "0519-simulating-embedded-hardware-with-michael-gielda",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Michael G"
+      ]
+    },
+    {
+      "file": "0523-a-keyzermas-story",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Jeff Kaiser"
+      ]
+    },
+    {
+      "file": "0527-measuring-current-with-matt-liberty",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Matt Liberty"
+      ]
+    },
+    {
+      "file": "0531-footprints-and-symbols-with-natasha-baker",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Natasha Baker"
+      ]
+    },
+    {
+      "file": "0537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Akbar Dinaliwala",
+        "Chris Gammell"
+      ]
+    },
+    {
+      "file": "0538-missle-man-with-bruce-simson",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Bruce Simpson"
+      ]
+    },
+    {
+      "file": "0540-the-space-time-continuum-with-fran-blanche",
+      "reason": "No usable intro-line anchor (no_intro_label), so the swap hypothesis cannot be tested against the boilerplate rule",
+      "affected_labels": [
+        "Dave Jones",
+        "Fran Blanche"
+      ]
+    },
+    {
+      "file": "0542-component-management-with-jan-rychter",
+      "reason": "Intro boilerplate sits on the guest label and the 'Chris Gammell' cluster is vestigial (n=9), so this is a collapse of two speakers into one cluster rather than a recoverable 2-way swap",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Jan Rychter"
+      ]
+    },
+    {
+      "file": "0544-standardizing-manufacturing-with-pete-staples",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Pete Staples"
+      ]
+    },
+    {
+      "file": "0566-switching-converter-engineering-with-carmen-parisi",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Carmen"
+      ]
+    },
+    {
+      "file": "0568-youtube-to-consulting-with-florin-of-voltlog",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Florin Of Voltlo",
+        "Florin Of Voltlog"
+      ]
+    },
+    {
+      "file": "0572-technology-instruction-with-charlie-larrabee",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Charlie Larrabe",
+        "Chris Gammell"
+      ]
+    },
+    {
+      "file": "0575-new-life-skills-with-joe-grand",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Joe Grand"
+      ]
+    },
+    {
+      "file": "0577-product-lifecycle-management-with-michael-corr",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Michael"
+      ]
+    },
+    {
+      "file": "0581-real-time-operating-systems-with-brian-amos",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Brian Amos",
+        "Chris Gammell"
+      ]
+    },
+    {
+      "file": "0584-software-for-rockets-with-charles-aylward",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Charles Aylward",
+        "Chris Gammell"
+      ]
+    },
+    {
+      "file": "0593-publicly-traded-hobby-with-ben-jordan",
+      "reason": "No usable intro-line anchor (no_intro_label), so the swap hypothesis cannot be tested against the boilerplate rule",
+      "affected_labels": [
+        "Ben Jordan",
+        "Dave Jones"
+      ]
+    },
+    {
+      "file": "0596-capacitor-schoopage-with-ron-demcko-from-avx",
+      "reason": "No usable intro-line anchor (no_intro_label), so the swap hypothesis cannot be tested against the boilerplate rule",
+      "affected_labels": [
+        "Dave Jones",
+        "Ron Demko"
+      ]
+    },
+    {
+      "file": "0607-the-joulescope-upgrade-with-matt-liberty",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Matt Liberty"
+      ]
+    },
+    {
+      "file": "0611-grad-school-time-capsule-with-joshua-and-zach",
+      "reason": "No usable intro-line anchor (no_host_label), so the swap hypothesis cannot be tested against the boilerplate rule",
+      "affected_labels": [
+        "Joshua And Za",
+        "Joshua Vasquez",
+        "Zach Ferdinand"
+      ]
+    },
+    {
+      "file": "0624-design-manufacturing-consulting-with-scott-williams-from-xentronics",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Scott Williams From"
+      ]
+    },
+    {
+      "file": "0630-renewable-energy-policy-with-ari-gerstman",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Ari Gerstman"
+      ]
+    },
+    {
+      "file": "0636-discovering-cursed-connectors",
+      "reason": "No usable intro-line anchor (no_intro_label), so the swap hypothesis cannot be tested against the boilerplate rule",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones"
+      ]
+    },
+    {
+      "file": "0640-software-defined-power-supplies-with-werner-johansson",
+      "reason": "No usable intro-line anchor (no_host_label), so the swap hypothesis cannot be tested against the boilerplate rule",
+      "affected_labels": [
+        "Bluetooth",
+        "Werner"
+      ]
+    },
+    {
+      "file": "0645-moving-down-the-stack-with-scott-williams",
+      "reason": "Intro boilerplate sits on the guest label and the 'Chris Gammell' cluster is vestigial (n=12), so this is a collapse of two speakers into one cluster rather than a recoverable 2-way swap",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Scott Williams"
+      ]
+    },
+    {
+      "file": "0647-dave-hanging-with-fran-blanche",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Fran Blanche"
+      ]
+    },
+    {
+      "file": "0650-accessible-asics-with-andreas-olofsson",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Andreas Olofsson",
+        "Chris Gammell",
+        "Parallela"
+      ]
+    },
+    {
+      "file": "0651-learning-computing-with-jeff-geerling",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Jeff Geerling"
+      ]
+    },
+    {
+      "file": "0663-motors-on-pcbs-with-carl-bugeja",
+      "reason": "The guest-named label holds only the intro boilerplate (n=2) and no other cluster is substantive, so the guest's speech is fused into the host labels and cannot be recovered by relabelling",
+      "affected_labels": [
+        "Carl Bugeja",
+        "Chris Gammell",
+        "Dave Jones"
+      ]
+    },
+    {
+      "file": "0669-freelance-pcb-design-with-petr-dvorak",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Petr Dvorak"
+      ]
+    },
+    {
+      "file": "0698-hardware-security-with-matt-brown",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Matt Brown"
+      ]
+    },
+    {
+      "file": "0699-circuithub-12-years-later-with-andrew-seddon",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Andrew Seddo"
+      ]
+    },
+    {
+      "file": "0703-building-wafer-space-with-tim-ansell",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Tim Ansell"
+      ]
+    },
+    {
+      "file": "0708-all-the-connectors-with-davide-andrea",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Davide Andrea"
+      ]
+    },
+    {
+      "file": "the-amp-hour-159-transorted-testing-tachydidaxy",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Dave Jones",
+        "Eric Ries"
+      ]
+    },
+    {
+      "file": "the-amp-hour-38-comical-keyzer-comes-a-callin",
+      "reason": "No usable intro-line anchor (no_intro_label), so the swap hypothesis cannot be tested against the boilerplate rule",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Jeff Kaiser",
+        "Mitch Altman"
+      ]
+    },
+    {
+      "file": "the-amp-hour-539-the-king-of-trash-with-big-clive",
+      "reason": "Every turn in the file is under a single named label, so host and guest share one cluster; no label-level reassignment can separate them",
+      "affected_labels": [
+        "Big Clive"
+      ]
+    },
+    {
+      "file": "the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk",
+      "reason": "The guest-named label holds only the intro boilerplate (n=1) and no other cluster is substantive, so the guest's speech is fused into the host labels and cannot be recovered by relabelling",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Remco Stardustite"
+      ]
+    },
+    {
+      "file": "the-amp-hour-93-cacaesthestic-chronometric-carriwitchet",
+      "reason": "Role statistics do not separate host from guest cleanly (word- and question-rates overlap), so the direction of the mislabelling cannot be established without a listen",
+      "affected_labels": [
+        "Chris Gammell",
+        "Dave Jones",
+        "Tom Laments"
+      ]
+    }
+  ],
+  "fused_turn_files": {
+    "_criterion": "A paragraph is counted as fused when it contains two or more distinct multi-word first-person self-introductions, or asks a question and answers it in the first person twice, or asks a question and runs past 80 words. Conservative: it finds openings and Q&A fusion reliably and undercounts mid-answer fusion.",
+    "_scope": "Measured over the 144 step-2.6 suspect files.",
+    "_corpus_wide": {
+      "fused_turns": 10321,
+      "total_turns": 244496,
+      "pct": 4.2,
+      "files_affected": 713,
+      "files_total": 719
+    },
+    "_totals": {
+      "files_listed": 143,
+      "fused_turns": 1873
+    },
+    "files": [
+      {
+        "file": "the-amp-hour-93-cacaesthestic-chronometric-carriwitchet",
+        "fused_turns": 44,
+        "turns": 408,
+        "rate": 0.108,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "And I'm Chris Gammell of Chris Gammell's Analog Life. And I'm Tom Laments, joining from the depths of the automotive industry."
+        }
+      },
+      {
+        "file": "0515-embedded-linux-with-jay-carlson",
+        "fused_turns": 37,
+        "turns": 336,
+        "rate": 0.11,
+        "example": {
+          "label": "Jay Carlson",
+          "text": "All right. Well-named. Well-named. Hey, Jay, how are you doing? I'm doing great. How are you doing, Chris? I am a bit flabbergasted. It's been a couple days sin"
+        }
+      },
+      {
+        "file": "0206-an-interview-with-martin-lorton-variegated-video-vagility",
+        "fused_turns": 35,
+        "turns": 446,
+        "rate": 0.078,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to The Amp Hour. I'm Dave Jones from the EEV blog. And I'm Chris Gammell of Contextual Electronics."
+        }
+      },
+      {
+        "file": "0222-an-interview-with-bil-herd-zany-z80-zygology",
+        "fused_turns": 31,
+        "turns": 316,
+        "rate": 0.098,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "And I'm Chris Gammell of Contextual Electronics. And I'm Bill Hurd, and I'm a recovering Commodore engineer from the old days."
+        }
+      },
+      {
+        "file": "0401-an-interview-with-brent-and-bryce-salmi",
+        "fused_turns": 28,
+        "turns": 171,
+        "rate": 0.164,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to The Amp Hour. I'm Chris Gammell of Contextual Electronics. I'm Bryce Salmi of Faraday RF and Relativity Space. And I'm Brent Salmi of Faraday RF and "
+        }
+      },
+      {
+        "file": "0645-moving-down-the-stack-with-scott-williams",
+        "fused_turns": 28,
+        "turns": 193,
+        "rate": 0.145,
+        "example": {
+          "label": "Scott Williams",
+          "text": "Yeah. And so we're going to talk a little bit more technical side of the things today. Although I probably should have been there for the last one when, you kno"
+        }
+      },
+      {
+        "file": "0346-an-interview-with-joe-fitzpatrick",
+        "fused_turns": 26,
+        "turns": 216,
+        "rate": 0.12,
+        "example": {
+          "label": "Joe Fitzpatrick",
+          "text": "Yeah, yeah. I mean, I think that's the thing that – so, like, you know, having you on here and then, you know, Mike Osman and Dimitri and everybody who's come o"
+        }
+      },
+      {
+        "file": "0519-simulating-embedded-hardware-with-michael-gielda",
+        "fused_turns": 26,
+        "turns": 150,
+        "rate": 0.173,
+        "example": {
+          "label": "Michael G",
+          "text": "Hi, I'm Michael Gielda. I'm VP Business Development of Antmicro, and I'm also Chair of Marketing of Chips Alliance, as well as Vice Chair of Marketing of RISC-V"
+        }
+      },
+      {
+        "file": "0383-an-interview-with-scott-shawcroft",
+        "fused_turns": 24,
+        "turns": 373,
+        "rate": 0.064,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "I'm Chris Gammell of Contextual Electronics. And I'm Scott Shawcroft, a freelance software engineer that works with Adafruit. Welcome, Scott. How are you doing?"
+        }
+      },
+      {
+        "file": "0495-an-interview-with-eric-klein",
+        "fused_turns": 24,
+        "turns": 184,
+        "rate": 0.13,
+        "example": {
+          "label": "Eric Klein",
+          "text": "Welcome, Eric. How are you? I'm good. It's good to talk to you. Yeah, we're both in lockdown, but we're surviving, and we're going to talk a bit about some vent"
+        }
+      },
+      {
+        "file": "0601-rebuilding-projects-with-dave-young",
+        "fused_turns": 24,
+        "turns": 302,
+        "rate": 0.079,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to The Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Dave Young of Young Circuit Designs and Blue Stamp Engineering. Welcome back, my o"
+        }
+      },
+      {
+        "file": "0350-an-interview-with-zach-dunham",
+        "fused_turns": 23,
+        "turns": 282,
+        "rate": 0.082,
+        "example": {
+          "label": "Zach Dunham",
+          "text": "Yeah. There was this one moment, I think, where there was, like, a homework assignment and you were talking about, you know, proper transfer of power. And someo"
+        }
+      },
+      {
+        "file": "0385-an-interview-with-john-davis",
+        "fused_turns": 23,
+        "turns": 280,
+        "rate": 0.082,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm John Davis of Paul Davis Automation and 3ML, I guess, 3ML LLC. Welcome, John. How "
+        }
+      },
+      {
+        "file": "0420-an-interview-with-joe-long",
+        "fused_turns": 22,
+        "turns": 154,
+        "rate": 0.143,
+        "example": {
+          "label": "Joe Long",
+          "text": "This is The Amp Hour Podcast. Released December 16th, 2018. Episode 420. An interview with Joe Long. Welcome to the Amp Hour. I'm Chris Gammell of Contextual El"
+        }
+      },
+      {
+        "file": "0537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala",
+        "fused_turns": 22,
+        "turns": 184,
+        "rate": 0.12,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. Hi, I'm Akbar Dinaliwala of Logger Data."
+        }
+      },
+      {
+        "file": "0228-an-interview-with-shahriar-from-the-signal-path-quisquous-quivering-quadripole",
+        "fused_turns": 21,
+        "turns": 377,
+        "rate": 0.056,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to The Amp Hour. I'm Dave Jones from the EEV blog. And I'm Chris Gammell of Contextual Electronics."
+        }
+      },
+      {
+        "file": "0330-an-interview-with-zach-fredin",
+        "fused_turns": 21,
+        "turns": 377,
+        "rate": 0.056,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome, Zach, my old friend. How are you doing? I'm doing all right, Chris. How about yourself? I'm good. I'm good. Thanks for being on the show. Dave's obviou"
+        }
+      },
+      {
+        "file": "0302-an-interview-with-clint-cole-of-digilent",
+        "fused_turns": 20,
+        "turns": 463,
+        "rate": 0.043,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "And I'm Chris Gammell of Contextual Electronics. And I'm Clint Cole from Digilent."
+        }
+      },
+      {
+        "file": "0368-the-eevblog-sparkgap-generator",
+        "fused_turns": 20,
+        "turns": 474,
+        "rate": 0.042,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "I think it's like maybe a freemium thing, like some, oh no, it says GPL, so. Oh, okay. Yeah. What, you stick it on your phone or you? There you go. There's your"
+        }
+      },
+      {
+        "file": "the-amp-hour-155-mini-module-master",
+        "fused_turns": 20,
+        "turns": 223,
+        "rate": 0.09,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "And I'm Chris Gammell of Chris Gammell's Analog Life. And I am Jeff Roberg of the KeyGlove Project and Blue Giga Technologies. Hey, Jeff. Thanks for joining us."
+        }
+      },
+      {
+        "file": "0165-an-interview-with-henry-ott-forced-fcc-filtering",
+        "fused_turns": 19,
+        "turns": 535,
+        "rate": 0.036,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to the Amp Hour. I'm Dave Jones from the EEV blog. And I'm Chris Gammell of Contextual Electronics."
+        }
+      },
+      {
+        "file": "0250-an-interview-with-vic-aprea-federated-firmware-functionalism",
+        "fused_turns": 19,
+        "turns": 393,
+        "rate": 0.048,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to the Amp Hour. I'm Dave Jones from the EEV blog. And I'm Chris Gammell of Contextual Electronics."
+        }
+      },
+      {
+        "file": "0472-keyzermas-vacation",
+        "fused_turns": 19,
+        "turns": 297,
+        "rate": 0.064,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Yeah. So I haven't been with Valve since February. I was a contractor for about a year, a little bit less than a year, from like mid-2018 through February of th"
+        }
+      },
+      {
+        "file": "0517-depth-and-ai-with-brandon-gilles-and-brian-weinstein",
+        "fused_turns": 19,
+        "turns": 209,
+        "rate": 0.091,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to The Amp Hour. I'm Chris Gammell of Contextual Electronics. Hi, I'm Brandon Gillis of Luxonis Holding Corporation. Hi, I'm Brian Weinstein of Luxonis "
+        }
+      },
+      {
+        "file": "0657-automating-the-home-with-keith-burzinski",
+        "fused_turns": 19,
+        "turns": 142,
+        "rate": 0.134,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I am Keith Brzezinski, working at Nabucasa right now as an ESP Home hardware and softw"
+        }
+      },
+      {
+        "file": "0194-an-interview-with-todd-bailey-embedded-embrasure-engineering",
+        "fused_turns": 18,
+        "turns": 254,
+        "rate": 0.071,
+        "example": {
+          "label": "Todd Bailey",
+          "text": "Almost seen it. Both Detroit Rock City and Almost Famous made it into my thesis. Nice. Anyway, so, I spent a lot of time screwing around, and I worked repairing"
+        }
+      },
+      {
+        "file": "0379-an-interview-with-john-saunders",
+        "fused_turns": 18,
+        "turns": 371,
+        "rate": 0.049,
+        "example": {
+          "label": "John Saunders",
+          "text": "You know, it's funny because that term gets thrown out a lot. And I'm not sure a lot of people know. I'm not sure I really know. The idea of parametric really r"
+        }
+      },
+      {
+        "file": "0490-an-interview-with-ben-heckendorn",
+        "fused_turns": 18,
+        "turns": 331,
+        "rate": 0.054,
+        "example": {
+          "label": "Ben Heckendorn",
+          "text": "I was getting asked that a lot at conventions, you know, before all the conventions stopped. It's like, what do you, what do you do now? Right. I kind of miss h"
+        }
+      },
+      {
+        "file": "0581-real-time-operating-systems-with-brian-amos",
+        "fused_turns": 18,
+        "turns": 252,
+        "rate": 0.071,
+        "example": {
+          "label": "Brian Amos",
+          "text": "Hey, Brian. How are you? Doing well. How about you, Chris? I'm good. I first heard about your book, I believe, from Philip from Embedded Artistry. And then I re"
+        }
+      },
+      {
+        "file": "0247-an-interview-with-voja-antonic-gerontogenous-galaksija-genesis",
+        "fused_turns": 17,
+        "turns": 210,
+        "rate": 0.081,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Oh, it was long ago. It was maybe about 50 years ago. 50 years? Yes, yes. Very long ago. I'm almost 63 now, and I began it very, very early. I didn't know anyth"
+        }
+      },
+      {
+        "file": "0258-an-interview-with-bertrand-and-gerald-of-audeme",
+        "fused_turns": 17,
+        "turns": 257,
+        "rate": 0.066,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to the Amp Hour. I'm Dave Jones from the EEV blog. And I'm Chris Gammell of Contextual Electronics."
+        }
+      },
+      {
+        "file": "0311-an-interview-with-louis-rossmann",
+        "fused_turns": 17,
+        "turns": 221,
+        "rate": 0.077,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to the Amp Hour. I'm Dave Jones from the EEV blog. I'm Louis Rossman from Brooklyn. From Brooklyn. G'day, Louis. Thanks for joining us. Well, I was goin"
+        }
+      },
+      {
+        "file": "0455-bill-and-daves-excellent-equipment",
+        "fused_turns": 17,
+        "turns": 393,
+        "rate": 0.043,
+        "example": {
+          "label": "Dave Jones",
+          "text": "This is the Vion multimeter. For those who aren't aware, it was a Kickstarter and Indiegogo, because you've got to have two sucks of the sav these days. Of cour"
+        }
+      },
+      {
+        "file": "0523-a-keyzermas-story",
+        "fused_turns": 17,
+        "turns": 303,
+        "rate": 0.056,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Well, I was just thinking that this means that we've made it. Right. I mean, we just. Oh, yeah. I don't want to jinx it. We still have a couple of weeks left, b"
+        }
+      },
+      {
+        "file": "0618-refrigerators-and-robots-with-amitabh-shrivastava",
+        "fused_turns": 17,
+        "turns": 270,
+        "rate": 0.063,
+        "example": {
+          "label": "Amitabh Shriv",
+          "text": "Pretty good. How are you doing, Chris? The last time I saw you, you were refrigerating fireball shots on the run. On the run? On the go? Yeah. It was a very imp"
+        }
+      },
+      {
+        "file": "0171-an-interview-with-forrest-mims-snell-solisequious-scientist",
+        "fused_turns": 16,
+        "turns": 318,
+        "rate": 0.05,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to The Amp Hour. I'm Dave Jones from the EEV blog. And I'm Chris Gammell of Contextual Electronics."
+        }
+      },
+      {
+        "file": "0268-an-interview-with-luke-iseman-of-ycombinator",
+        "fused_turns": 16,
+        "turns": 149,
+        "rate": 0.107,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to The Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Luke Oseman from Y Combinator. Welcome, Luke. Coming to us from across the pond in"
+        }
+      },
+      {
+        "file": "0297-an-interview-with-jake-baker",
+        "fused_turns": 16,
+        "turns": 280,
+        "rate": 0.057,
+        "example": {
+          "label": "Jake Baker",
+          "text": "And I'm Chris Gammell of Contextual Electronics. And I'm Jake Baker. Welcome, Jake. That's a heck of a title you got there, Jake Baker. That's it. We have intri"
+        }
+      },
+      {
+        "file": "0341-all-the-way-with-dlj",
+        "fused_turns": 16,
+        "turns": 488,
+        "rate": 0.033,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "I really wish that when I was in school, someone had just been like there's certain points where it's like it's almost like you're a dad. Right. You know, this "
+        }
+      },
+      {
+        "file": "0416-an-interview-with-james-bruton",
+        "fused_turns": 16,
+        "turns": 453,
+        "rate": 0.035,
+        "example": {
+          "label": "James Bruton",
+          "text": "Well, none of them worked as I hoped they would, but like Android 2 did actually take steps and it could go along. And I can't find the video. I wish I had the "
+        }
+      },
+      {
+        "file": "0471-an-interview-with-matt-berggren",
+        "fused_turns": 16,
+        "turns": 208,
+        "rate": 0.077,
+        "example": {
+          "label": "Matt Berggren",
+          "text": "And I'm Matt Berggren from Autodesk, run the Fusion 360 team. All right. Welcome, Matt. How are you doing? Good. Good. How are you? Good. We are former co-worke"
+        }
+      },
+      {
+        "file": "0499-discussing-chiplets-with-ming-zhang",
+        "fused_turns": 16,
+        "turns": 159,
+        "rate": 0.101,
+        "example": {
+          "label": "Ming Zhang",
+          "text": "Yeah. Yeah. And I think it ties into differentiation, which I think it also is a value add for Zglue, right? It's like at the end of the day, if I have a custom"
+        }
+      },
+      {
+        "file": "0511-brewing-electronics-with-eli-hughes",
+        "fused_turns": 16,
+        "turns": 217,
+        "rate": 0.074,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Eli Hughes of T0 Research and Development. Welcome, Eli. How are you? Good, Chris."
+        }
+      },
+      {
+        "file": "0513-audio-dsp-with-shannon-parks",
+        "fused_turns": 16,
+        "turns": 254,
+        "rate": 0.063,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Shannon Parks of Parks Audio. Hey Shannon, how are you? Doing fantastic, Chris. So"
+        }
+      },
+      {
+        "file": "0305-an-interview-with-dave-young",
+        "fused_turns": 15,
+        "turns": 277,
+        "rate": 0.054,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Dave Young of Young Circuit Designs and Blue Stamp Engineering."
+        }
+      },
+      {
+        "file": "0332-an-interview-with-zach-barth-of-zachtronics",
+        "fused_turns": 15,
+        "turns": 316,
+        "rate": 0.047,
+        "example": {
+          "label": "Zach Barth Of Zachtronics",
+          "text": "Yeah. And lovely Troy. Yep. And so I got an engineering degree there. But that was sort of where I started. I discovered like making games. And of course, it ju"
+        }
+      },
+      {
+        "file": "0369-an-interview-with-jason-huggins",
+        "fused_turns": 15,
+        "turns": 346,
+        "rate": 0.043,
+        "example": {
+          "label": "Jason Huggins",
+          "text": "what what's a website? Right. But, but yeah, yeah. So for two months of my life, all of November and December, 2013, I always had to clarify, I was started help"
+        }
+      },
+      {
+        "file": "0438-an-interview-with-bart-dring",
+        "fused_turns": 15,
+        "turns": 277,
+        "rate": 0.054,
+        "example": {
+          "label": "Bart Dring",
+          "text": "Yeah. I know, uh, Romain, uh, is someone who worked on like an open pinball. He actually came to a, um, a thing here in town and he was doing a, um, it was like"
+        }
+      },
+      {
+        "file": "0540-the-space-time-continuum-with-fran-blanche",
+        "fused_turns": 15,
+        "turns": 268,
+        "rate": 0.056,
+        "example": {
+          "label": "Fran Blanche",
+          "text": "It's an old factory. Well, it's, it's, it's, it's been divided into semi, it's like a live work, um, building. So, you know, I, I, I choose to do both. So I, I "
+        }
+      },
+      {
+        "file": "0624-design-manufacturing-consulting-with-scott-williams-from-xentronics",
+        "fused_turns": 15,
+        "turns": 336,
+        "rate": 0.045,
+        "example": {
+          "label": "Scott Williams From",
+          "text": "All regulatory compliance and approvals, we guide clients through that. You know, we've done it so many times. It's quite easy for us to have those conversation"
+        }
+      },
+      {
+        "file": "0650-accessible-asics-with-andreas-olofsson",
+        "fused_turns": 15,
+        "turns": 197,
+        "rate": 0.076,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to The Amp Hour. I'm Chris Gammell of Contextual Electronics. I'm Andreas Olofsson from Zero ASIC. Welcome back, Andreas. How are you? Thank you, Chris."
+        }
+      },
+      {
+        "file": "0252-an-interview-with-eric-bogatin-tilded-thumb-tenets",
+        "fused_turns": 14,
+        "turns": 253,
+        "rate": 0.055,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to the Amp Hour. I'm Dave Jones from the EEV blog. And I'm Chris Gammell of Contextual Electronics."
+        }
+      },
+      {
+        "file": "0418-an-interview-with-josh-datko",
+        "fused_turns": 14,
+        "turns": 256,
+        "rate": 0.055,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to The Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Josh Datko from Cryptotronics. Welcome, Josh. How are you doing? Doing well, Chris"
+        }
+      },
+      {
+        "file": "0498-quantum-computing-with-andrea-morello",
+        "fused_turns": 14,
+        "turns": 386,
+        "rate": 0.036,
+        "example": {
+          "label": "Andrea Morello",
+          "text": "I am, but also antimony for other reasons that I can go into if you're curious. Sure. So they're N-type dopants. Okay. So normally that dopant will donate, it's"
+        }
+      },
+      {
+        "file": "0524-leds-and-evs-with-mike-harrison",
+        "fused_turns": 14,
+        "turns": 673,
+        "rate": 0.021,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "And I'm Chris Gammell of Contextual Electronics. And I'm Mike Harrison from Mike's Electric Stuff, again."
+        }
+      },
+      {
+        "file": "0607-the-joulescope-upgrade-with-matt-liberty",
+        "fused_turns": 14,
+        "turns": 257,
+        "rate": 0.054,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Matt Liberty, the creator of Jewelscope and owner of JetPerch LLC. Matt, how are y"
+        }
+      },
+      {
+        "file": "0616-open-source-tapeout-with-matthew-venn",
+        "fused_turns": 14,
+        "turns": 281,
+        "rate": 0.05,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Matt Venn. And these days I'm mostly focusing on open source EDA."
+        }
+      },
+      {
+        "file": "the-amp-hour-133-tenacious-transistor-teacher",
+        "fused_turns": 14,
+        "turns": 265,
+        "rate": 0.053,
+        "example": {
+          "label": "Ron Kwan",
+          "text": "Okay. So I went to San Francisco Public Schools. And the high school that I went to is Galileo High School. Galileo? Yeah. So our high school was one of the few"
+        }
+      },
+      {
+        "file": "the-amp-hour-159-transorted-testing-tachydidaxy",
+        "fused_turns": 14,
+        "turns": 164,
+        "rate": 0.085,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to The Amp Hour. I'm Dave Jones from the EEV blog. And I'm Chris Gammell of Chris Gammell's Analog Life."
+        }
+      },
+      {
+        "file": "0181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue",
+        "fused_turns": 13,
+        "turns": 348,
+        "rate": 0.037,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "No, I think... I don't know if that's... You know, the music... It definitely was not InXS. The music, Chris. No? Oh, jeez. Who was it? Now I've got to look it "
+        }
+      },
+      {
+        "file": "0290-an-interview-with-mark-morin-of-nufern",
+        "fused_turns": 13,
+        "turns": 387,
+        "rate": 0.034,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to The Amp Hour. I'm Dave Jones from the AEV blog. And I'm Chris Gammell of Contextual Electronics."
+        }
+      },
+      {
+        "file": "0334-an-interview-with-gerry-roston",
+        "fused_turns": 13,
+        "turns": 394,
+        "rate": 0.033,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Uh-huh. Okay. Right. So that's the kind of thing you see when you go, like, so I was at IMTS this year and they, they love showing off their robots of those kin"
+        }
+      },
+      {
+        "file": "0431-an-interview-with-adam-mccombs",
+        "fused_turns": 13,
+        "turns": 201,
+        "rate": 0.065,
+        "example": {
+          "label": "Adam Mccombs",
+          "text": "This is The Amp Hour Podcast. Released February 24th, 2019. Episode 431. An interview with Adam McCombs. Welcome to the Amp Hour. I'm Chris Gammell of Contextua"
+        }
+      },
+      {
+        "file": "0458-an-interview-with-ken-burns",
+        "fused_turns": 13,
+        "turns": 234,
+        "rate": 0.056,
+        "example": {
+          "label": "Ken Burns",
+          "text": "And so, well, let's hear it. So we're going to work all the way up first. You said you're from Tiny Circus. We'll definitely talk about that. You have a Kicksta"
+        }
+      },
+      {
+        "file": "0544-standardizing-manufacturing-with-pete-staples",
+        "fused_turns": 13,
+        "turns": 185,
+        "rate": 0.07,
+        "example": {
+          "label": "Pete Staples",
+          "text": "Hey Pete, how are you? I'm great. How are you? Great. I've heard you before on the Embedded FM podcast, and we wanted to talk a little bit more about manufactur"
+        }
+      },
+      {
+        "file": "0572-technology-instruction-with-charlie-larrabee",
+        "fused_turns": 13,
+        "turns": 205,
+        "rate": 0.063,
+        "example": {
+          "label": "Charlie Larrabe",
+          "text": "But yeah, I've always been drawn to projects like that that have to do with RF. That's why I got really interested in vacuum tubes and thyrotrons and stuff like"
+        }
+      },
+      {
+        "file": "0584-software-for-rockets-with-charles-aylward",
+        "fused_turns": 13,
+        "turns": 325,
+        "rate": 0.04,
+        "example": {
+          "label": "Charles Aylward",
+          "text": "Hi, Charles. How are you doing? I'm good. How are you doing? I'm good. We know each other from the consulting forum, but also your name has come up a bunch in, "
+        }
+      },
+      {
+        "file": "0596-capacitor-schoopage-with-ron-demcko-from-avx",
+        "fused_turns": 13,
+        "turns": 381,
+        "rate": 0.034,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Is that right? It's not going to be stable with temperature or with applied voltage. Yep. Or with time. Yeah. Even some AC noise on that, some ripple. Oh, right"
+        }
+      },
+      {
+        "file": "0667-long-distance-with-cnlohr-a",
+        "fused_turns": 13,
+        "turns": 190,
+        "rate": 0.068,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Charles Lohr. I'm a developer by day, but by night, I'm a sort of recreational har"
+        }
+      },
+      {
+        "file": "the-amp-hour-95-feracious-fabless-facilitator",
+        "fused_turns": 13,
+        "turns": 311,
+        "rate": 0.042,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Okay. Well, can we maybe get, could you give us a little more background of it? You mentioned the company started in 07. You know, what was the, what was the ra"
+        }
+      },
+      {
+        "file": "0220-an-interview-with-shaun-meehan-doctiloquent-dove-deployer",
+        "fused_turns": 12,
+        "turns": 462,
+        "rate": 0.026,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Sean Meehan of Planet Labs. Welcome, Sean. It's just me and you today, but I think"
+        }
+      },
+      {
+        "file": "0299-an-interview-with-jonathan-hirschman-of-pcbng",
+        "fused_turns": 12,
+        "turns": 359,
+        "rate": 0.033,
+        "example": {
+          "label": "Jonathan Hirschman Of Pcb",
+          "text": "Again, I'll make this a nameless, you know, company to protect the guilty. But, you know, we were dealing with a vendor who insisted that every document they se"
+        }
+      },
+      {
+        "file": "0371-an-interview-with-joe-bamberg",
+        "fused_turns": 12,
+        "turns": 251,
+        "rate": 0.048,
+        "example": {
+          "label": "Joe Bamberg",
+          "text": "This is The Amp Hour Podcast. Released December 10th, 2017. Episode 371. An interview with Joe Bamberg. Welcome to the Amp Hour. I'm Chris Gammell of Contextual"
+        }
+      },
+      {
+        "file": "0374-an-interview-with-claire-nee-clifford-wolf",
+        "fused_turns": 12,
+        "turns": 540,
+        "rate": 0.022,
+        "example": {
+          "label": "Clifford Wolf",
+          "text": "Yeah. No, it's... I mean, that community piece is really tough, right? I mean, like, even with the Amp Hour community, right? We are pretty scattered. There's a"
+        }
+      },
+      {
+        "file": "0392-an-interview-with-matt-duff",
+        "fused_turns": 12,
+        "turns": 161,
+        "rate": 0.075,
+        "example": {
+          "label": "Matt Duff",
+          "text": "This is The Amp Hour Podcast. Released May 13th, 2018. Episode 392. An interview with Matt Duff. Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electr"
+        }
+      },
+      {
+        "file": "0433-an-interview-with-sam-stranks",
+        "fused_turns": 12,
+        "turns": 174,
+        "rate": 0.069,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. Hi, I'm Sam Strengths. I'm a physicist at Cambridge University and I lead a research group"
+        }
+      },
+      {
+        "file": "0542-component-management-with-jan-rychter",
+        "fused_turns": 12,
+        "turns": 218,
+        "rate": 0.055,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Jan Richter from PartsBox. Welcome, Jan. How are you? I'm just fine. Thank you. It"
+        }
+      },
+      {
+        "file": "0557-generic-nodes-with-orkhan-amiraslanov",
+        "fused_turns": 12,
+        "turns": 204,
+        "rate": 0.059,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "I'm Chris Gammell of Contextual Electronics. Hello, my name is Orkin Amir-Slanov, and I'm a hardware developer from the Things Industries. Hey, Orkin, how are y"
+        }
+      },
+      {
+        "file": "0583-the-smart-grid-with-paul-zawada",
+        "fused_turns": 12,
+        "turns": 365,
+        "rate": 0.033,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to the Amp Hour. I'm Dave Jones from the EEV blog. And I'm Chris Gammell of Contextual Electronics."
+        }
+      },
+      {
+        "file": "0698-hardware-security-with-matt-brown",
+        "fused_turns": 12,
+        "turns": 123,
+        "rate": 0.098,
+        "example": {
+          "label": "Matt Brown",
+          "text": "I think that's a good point actually, and I think that actually drives some of the, the, it's really about like money, right? It's like, uh, okay. So we have to"
+        }
+      },
+      {
+        "file": "0254-an-interview-with-andreas-olofsson-adaptevas-ampliative-abacus",
+        "fused_turns": 11,
+        "turns": 207,
+        "rate": 0.053,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to the Amp Hour. I'm Dave Jones from the EEV blog. And I'm Chris Gammell of Contextual Electronics."
+        }
+      },
+      {
+        "file": "0320-an-interview-with-brent-of-oshstencils",
+        "fused_turns": 11,
+        "turns": 146,
+        "rate": 0.075,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Okay. Yeah. No, that makes a lot of sense. Had you ever done, like, the – because it's so, like – and what I'm really trying to get at is, like, I've known othe"
+        }
+      },
+      {
+        "file": "0577-product-lifecycle-management-with-michael-corr",
+        "fused_turns": 11,
+        "turns": 176,
+        "rate": 0.062,
+        "example": {
+          "label": "Michael",
+          "text": "This is The Amp Hour Podcast. Release February 13th, 2022. Episode 577. Product Lifecycle Maintenance with Michael Kaur. Welcome to the Amp Hour. I'm Chris Gamm"
+        }
+      },
+      {
+        "file": "0636-discovering-cursed-connectors",
+        "fused_turns": 11,
+        "turns": 511,
+        "rate": 0.022,
+        "example": {
+          "label": "Dave Jones",
+          "text": "I love this thing because I have it in my little portable kit, my little portable camera kit that I take out. And you just whack it on people. I was at the ham "
+        }
+      },
+      {
+        "file": "0703-building-wafer-space-with-tim-ansell",
+        "fused_turns": 11,
+        "turns": 108,
+        "rate": 0.102,
+        "example": {
+          "label": "Tim Ansell",
+          "text": "Well, like nobody asks whether Hello World is useful, right? That's right. Yeah, that's a good way. It's the first step in learning whether this is something yo"
+        }
+      },
+      {
+        "file": "0189-an-interview-with-marcus-schappi-kit-ketch-kenophobia",
+        "fused_turns": 10,
+        "turns": 445,
+        "rate": 0.022,
+        "example": {
+          "label": "Marcus Schaffe",
+          "text": "Yep. So, yeah. Out of Little Bird, we did Ninja Blocks and that came about from me Googling on the internet one day, you know, doing my Google AdWords. And they"
+        }
+      },
+      {
+        "file": "0260-an-interview-with-ariel-briner-of-cartesian-co",
+        "fused_turns": 10,
+        "turns": 419,
+        "rate": 0.024,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "And I'm Chris Gammell of Contextual Electronics. And I'm Ariel Bryner of Cartesian Co."
+        }
+      },
+      {
+        "file": "0263-an-interview-with-fran-blanche",
+        "fused_turns": 10,
+        "turns": 397,
+        "rate": 0.025,
+        "example": {
+          "label": "Fran Blanche",
+          "text": "Yeah, I'm probably most known for Frantone, but I've been doing that for 20, plus years now. Started in 94 doing Frantone. Is that before Chris was born? I wish"
+        }
+      },
+      {
+        "file": "0425-an-interview-with-chris-osterwood",
+        "fused_turns": 10,
+        "turns": 211,
+        "rate": 0.047,
+        "example": {
+          "label": "Chris Osterwood",
+          "text": "Well, I guess your, guess your house is going to flood. Sorry about that. But it's your fault. You shouldn't use that, that wifi name. Exactly. He's a null char"
+        }
+      },
+      {
+        "file": "0527-measuring-current-with-matt-liberty",
+        "fused_turns": 10,
+        "turns": 274,
+        "rate": 0.036,
+        "example": {
+          "label": "Matt Liberty",
+          "text": "Hey, Matt. How are you? Doing great. How about you, Chris? I'm real great. I'm excited to talk about the Julescope. In fact, this is really good timing because "
+        }
+      },
+      {
+        "file": "0531-footprints-and-symbols-with-natasha-baker",
+        "fused_turns": 10,
+        "turns": 276,
+        "rate": 0.036,
+        "example": {
+          "label": "Natasha Baker",
+          "text": "You know, I actually remember I was at my grandparents' house and I just remember like I was there and I wanted to spend time with them, but like, I was so focu"
+        }
+      },
+      {
+        "file": "0566-switching-converter-engineering-with-carmen-parisi",
+        "fused_turns": 10,
+        "turns": 184,
+        "rate": 0.054,
+        "example": {
+          "label": "Carmen",
+          "text": "Yeah, yeah, yeah. I think we can just focus on your improvement more than my lack of improvement if we want to do that. But yeah, you've been moving up in the r"
+        }
+      },
+      {
+        "file": "0573-mixed-signal-education-with-philip-salmony",
+        "fused_turns": 10,
+        "turns": 241,
+        "rate": 0.041,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Well, it started off as kind of, I just, I was looking into SM32, how to develop your own microcontroller board, going from Arduino to making something more pro"
+        }
+      },
+      {
+        "file": "0611-grad-school-time-capsule-with-joshua-and-zach",
+        "fused_turns": 10,
+        "turns": 317,
+        "rate": 0.032,
+        "example": {
+          "label": "Joshua And Za",
+          "text": "Yeah. I remember that. So like, I remember your demo, I think you had brought it to one of the other conferences where we saw each other. And I remember you sho"
+        }
+      },
+      {
+        "file": "0672-silicon-revolution-with-matt-venn",
+        "fused_turns": 10,
+        "turns": 269,
+        "rate": 0.037,
+        "example": {
+          "label": "Matt Venn",
+          "text": "they used Verilog. Yeah. Verilog. Okay. So, so what, what we kind of breaks down after maybe 20, 30 standard cells, I think maybe the biggest design I've seen i"
+        }
+      },
+      {
+        "file": "0699-circuithub-12-years-later-with-andrew-seddon",
+        "fused_turns": 10,
+        "turns": 131,
+        "rate": 0.076,
+        "example": {
+          "label": "Andrew Seddo",
+          "text": "So, yeah, it's an interesting problem. I mean, you know, semiconductor manufacturing has some pretty different requirements to board level assembly, right? I me"
+        }
+      },
+      {
+        "file": "0701-electric-propulsion-with-todd-bailey",
+        "fused_turns": 10,
+        "turns": 272,
+        "rate": 0.037,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Yeah. And I do think there's always the side thing. So, like, in the example – in the example, like, we're talking about with the Lockheed thing, I'm sure you w"
+        }
+      },
+      {
+        "file": "the-amp-hour-38-comical-keyzer-comes-a-callin",
+        "fused_turns": 10,
+        "turns": 348,
+        "rate": 0.029,
+        "example": {
+          "label": "Dave Jones",
+          "text": "I'm Dave Jones from the EEV blog. And I'm Chris Gammell from Chris Gammell's Analog Life."
+        }
+      },
+      {
+        "file": "0204-an-interview-with-noah-feehan-biloquistic-blinking-blush",
+        "fused_turns": 9,
+        "turns": 256,
+        "rate": 0.035,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to The Amp Hour. I'm Dave Jones from the EEV blog. And I'm Chris Gammell of Contextual Electronics."
+        }
+      },
+      {
+        "file": "0314-an-interview-with-josh-lifton",
+        "fused_turns": 9,
+        "turns": 299,
+        "rate": 0.03,
+        "example": {
+          "label": "Josh Lifton",
+          "text": "And I'm Chris Gammell of Contextual Electronics. And I'm Josh Lifton from CrowdSupply."
+        }
+      },
+      {
+        "file": "0327-an-interview-with-avidan-ross",
+        "fused_turns": 9,
+        "turns": 207,
+        "rate": 0.043,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "And I'm Chris Gammell of Contextual Electronics. And I'm Abidon Ross of Root Ventures. Thanks for joining us, Abidon. And we are now our third in-person intervi"
+        }
+      },
+      {
+        "file": "0359-an-interview-with-jeroen-domburg-sprite_tm",
+        "fused_turns": 9,
+        "turns": 194,
+        "rate": 0.046,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "And I'm Chris Gammell of Contextual Electronics. And I'm Jeroen Domburg of Espressif."
+        }
+      },
+      {
+        "file": "0505-hardware-revision-control-with-kyle-dumont",
+        "fused_turns": 9,
+        "turns": 271,
+        "rate": 0.033,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "So I'm curious about the circuit stuff. So was there, was there interest in the marketplace and that sort of thing? I mean, I, I hope we didn't disparage it her"
+        }
+      },
+      {
+        "file": "0522-high-power-supplies-with-fredrik-kensander",
+        "fused_turns": 9,
+        "turns": 233,
+        "rate": 0.039,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Frederick Kinsander of Kraft PowerCon. Welcome, Frederick. How are you doing? Yeah"
+        }
+      },
+      {
+        "file": "0538-missle-man-with-bruce-simson",
+        "fused_turns": 9,
+        "turns": 280,
+        "rate": 0.032,
+        "example": {
+          "label": "Bruce Simpson",
+          "text": "When I first wrote the book and I submitted it to Amazon, they said, thanks, but no thanks. It doesn't meet our criteria for acceptable content. Really? Yeah, b"
+        }
+      },
+      {
+        "file": "0588-siloed-engineering-with-leigh-brady",
+        "fused_turns": 9,
+        "turns": 234,
+        "rate": 0.038,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "I'm Chris Gammell of Contextual Electronics. Hi, and I'm Lee Brady. I'm an electrical engineer here in the Orlando, Florida area. Hello, Lee. How are you? Doing"
+        }
+      },
+      {
+        "file": "0593-publicly-traded-hobby-with-ben-jordan",
+        "fused_turns": 9,
+        "turns": 399,
+        "rate": 0.023,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to the Amp Hour. I'm Dave Jones from the EEV blog. And I'm Ben Jordan, once upon a time from Altium and once upon a time co-worker of Dave."
+        }
+      },
+      {
+        "file": "0640-software-defined-power-supplies-with-werner-johansson",
+        "fused_turns": 9,
+        "turns": 217,
+        "rate": 0.041,
+        "example": {
+          "label": "Werner",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Werner Johansson from Koitech. Hey, Werner. How are you? I'm doing well. How are y"
+        }
+      },
+      {
+        "file": "0689-a-jumperless-breadboard-with-kevin-cappuccio",
+        "fused_turns": 9,
+        "turns": 306,
+        "rate": 0.029,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Well, but why were you building in the first place? I mean, like a lot of people like look at a breadboard on their bench and they're like, oh, yeah, they're si"
+        }
+      },
+      {
+        "file": "0708-all-the-connectors-with-davide-andrea",
+        "fused_turns": 9,
+        "turns": 292,
+        "rate": 0.031,
+        "example": {
+          "label": "Davide Andrea",
+          "text": "Yeah. And it does kind of bring up the idea of like, just thinking back to my own history about like, how do we all learn about connectors, right? I feel like i"
+        }
+      },
+      {
+        "file": "the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk",
+        "fused_turns": 9,
+        "turns": 179,
+        "rate": 0.05,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Remco Stardustite of It's Only Audio. It's Only Audio, Remco. Do people say that? "
+        }
+      },
+      {
+        "file": "0437-an-interview-with-chrissy-meyer",
+        "fused_turns": 8,
+        "turns": 187,
+        "rate": 0.043,
+        "example": {
+          "label": "Chrissy Meyer",
+          "text": "Welcome, Chrissy. How are you doing? Good. How are you? I'm good. I'm good. People may remember Root Ventures. We've had Avidan on in the past. That was one of "
+        }
+      },
+      {
+        "file": "0452-an-interview-with-kieran-oleary",
+        "fused_turns": 8,
+        "turns": 87,
+        "rate": 0.092,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the App Hour. I'm Chris Gammell of Contextual Electronics. Hi, I'm Kieran O'Leary and my company is Mixed Signal Systems. I'm based in Edinburgh, Sco"
+        }
+      },
+      {
+        "file": "0661-blogging-electronics-with-pallav-aggarwal",
+        "fused_turns": 8,
+        "turns": 288,
+        "rate": 0.028,
+        "example": {
+          "label": "Pallav Aggarwal",
+          "text": "So I think I was looking at CH32 V003 since a couple of months, and then during August timeframe in 2023, I got some time free for a couple of weeks, and then I"
+        }
+      },
+      {
+        "file": "0316-an-interview-with-robert-feranec",
+        "fused_turns": 7,
+        "turns": 393,
+        "rate": 0.018,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to the Amp Hour. I'm Dave Jones from the EEV blog. And I'm Chris Gammell of Contextual Electronics."
+        }
+      },
+      {
+        "file": "0426-an-interview-with-dean-pick",
+        "fused_turns": 7,
+        "turns": 189,
+        "rate": 0.037,
+        "example": {
+          "label": "Dean Pick",
+          "text": "This is The Amp Hour Podcast. Released January 20th, 2019. Episode 426. An interview with Dean Pick. Welcome to the Amp Hour. I'm Chris Gammell of Contextual El"
+        }
+      },
+      {
+        "file": "0476-an-interview-with-kendall-castor-perry",
+        "fused_turns": 7,
+        "turns": 90,
+        "rate": 0.078,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. Hi, and I'm Kendall Castor Perry."
+        }
+      },
+      {
+        "file": "0503-fabless-chip-design-with-mohammed-kassem",
+        "fused_turns": 7,
+        "turns": 203,
+        "rate": 0.034,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Yeah. That's great. That's great. Before we dive into the flow, because it does sound like it'd be really interesting to kind of walk through the flow here. I m"
+        }
+      },
+      {
+        "file": "0575-new-life-skills-with-joe-grand",
+        "fused_turns": 7,
+        "turns": 126,
+        "rate": 0.056,
+        "example": {
+          "label": "Joe Grand",
+          "text": "Yeah. And you know, there's so many different aspects you can get into, whether you want to, you know, hack on hardware or hack on firmware or software and with"
+        }
+      },
+      {
+        "file": "0630-renewable-energy-policy-with-ari-gerstman",
+        "fused_turns": 7,
+        "turns": 330,
+        "rate": 0.021,
+        "example": {
+          "label": "Ari Gerstman",
+          "text": "Yeah, don't hang up yet, folks. Right. Give us like five minutes, a couple more dad jokes, and then hang up. There you go. There you go. Does it hang up for a p"
+        }
+      },
+      {
+        "file": "0647-dave-hanging-with-fran-blanche",
+        "fused_turns": 7,
+        "turns": 212,
+        "rate": 0.033,
+        "example": {
+          "label": "Fran Blanche",
+          "text": "I've... I've... Actually, I've got the tab. I can... I can actually pull it over now. And I will do... Sorry for those... We are recording video here. Quite a b"
+        }
+      },
+      {
+        "file": "0651-learning-computing-with-jeff-geerling",
+        "fused_turns": 7,
+        "turns": 194,
+        "rate": 0.036,
+        "example": {
+          "label": "Jeff Geerling",
+          "text": "Yeah, I did. I was thinking about like kind of the top, like I kind of think of like what you're describing here is like kind of top down software coming back t"
+        }
+      },
+      {
+        "file": "0663-motors-on-pcbs-with-carl-bugeja",
+        "fused_turns": 7,
+        "turns": 184,
+        "rate": 0.038,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. Hi, I'm Carl Bugea. I'm an engineer from Moala. Hey, Carl, how are you? Hi, Chris. It's go"
+        }
+      },
+      {
+        "file": "0442-an-interview-with-travis-goodspeed",
+        "fused_turns": 6,
+        "turns": 456,
+        "rate": 0.013,
+        "example": {
+          "label": "Travis Goodspeed",
+          "text": "Yeah. And then, like, if you get the wrong one, how do you know? Do you wait until, like, the guy wearing it has an allergic reaction? Oh, yeah. Or do you becom"
+        }
+      },
+      {
+        "file": "the-amp-hour-87-nascent-nonolith-numquid",
+        "fused_turns": 6,
+        "turns": 389,
+        "rate": 0.015,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Welcome to the Amp Hour. I'm Dave Jones from the EEV blog. And I'm Chris Gammell of Chris Gammell's Analog Life."
+        }
+      },
+      {
+        "file": "0405-an-interview-with-spencer-wright",
+        "fused_turns": 5,
+        "turns": 135,
+        "rate": 0.037,
+        "example": {
+          "label": "Spencer Wright",
+          "text": "Yeah. So, uh, you know, so I, I tell people about the, the, the, uh, newsletter a lot too. And I think it's, uh, it's a good, you know, I was, I was actually ta"
+        }
+      },
+      {
+        "file": "0429-an-interview-with-charles-alexanian",
+        "fused_turns": 5,
+        "turns": 245,
+        "rate": 0.02,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Charles Alexanian of Alextronics Controls. Hey Charles, how you doing? Doing prett"
+        }
+      },
+      {
+        "file": "0695-making-the-invisible-visible-with-sam-aldahar",
+        "fused_turns": 5,
+        "turns": 168,
+        "rate": 0.03,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gamel of Contextual Electronics. Hello, and I'm Sam Aldar, and I'm a Power Electronics Engineer and a 3D graphics designer. W"
+        }
+      },
+      {
+        "file": "0295-an-interview-with-omer-kilic",
+        "fused_turns": 4,
+        "turns": 270,
+        "rate": 0.015,
+        "example": {
+          "label": "Omer Kilic",
+          "text": "Actually, they were doing a little... Sorry, don't mean to step on your toes here. No, that's right. They were doing a little demo. They actually had phones and"
+        }
+      },
+      {
+        "file": "0381-interview-with-derek-kozel",
+        "fused_turns": 4,
+        "turns": 202,
+        "rate": 0.02,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Derek Kozell, electrical engineer and radio enthusiast. Welcome, Derek. How are yo"
+        }
+      },
+      {
+        "file": "0518-satellites-and-evs-with-joris-aerts",
+        "fused_turns": 4,
+        "turns": 371,
+        "rate": 0.011,
+        "example": {
+          "label": "Starlink",
+          "text": "Sorry. You got to listen. All right. I'll do it. Yeah. Get some feedback. What was he talking about? Yeah. So you introduced us to Martin and you're doing this "
+        }
+      },
+      {
+        "file": "0716-electronics-manufacturing-history-with-david-ray",
+        "fused_turns": 4,
+        "turns": 450,
+        "rate": 0.009,
+        "example": {
+          "label": "David Ray",
+          "text": "It looks like a, uh, it could be a problem. Okay. More than you gotta, you gotta, you gotta ask yourself, are you looking for a project or are you looking for a"
+        }
+      },
+      {
+        "file": "the-amp-hour-539-the-king-of-trash-with-big-clive",
+        "fused_turns": 4,
+        "turns": 342,
+        "rate": 0.012,
+        "example": {
+          "label": "Big Clive",
+          "text": "Right. So how do you edit with your finger? Or do you hook up a mouse to your bed? No. Is that even possible? I don't know."
+        }
+      },
+      {
+        "file": "0481-an-interview-with-paul-thompson",
+        "fused_turns": 3,
+        "turns": 302,
+        "rate": 0.01,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Do the agricultural ones, do they have more jewels behind them? For example, like does a big cow require, you know, a greater zap than a human? I would presume "
+        }
+      },
+      {
+        "file": "0485-an-interview-with-john-day",
+        "fused_turns": 3,
+        "turns": 178,
+        "rate": 0.017,
+        "example": {
+          "label": "John Day",
+          "text": "Yeah, yeah, yeah. Yeah, it's interesting, like hearing how all this kind of these changes kind of flow through. I mean, the corporation is generally like it's l"
+        }
+      },
+      {
+        "file": "0521-outdoor-laser-projection-object-mapping-with-daryl-tewksbury",
+        "fused_turns": 3,
+        "turns": 386,
+        "rate": 0.008,
+        "example": {
+          "label": "Daryl Tewksbury",
+          "text": "He worked with me. Like we worked together. I actually wanted someone, I was trying to get another programmer because doing all the work yourself is really taxi"
+        }
+      },
+      {
+        "file": "0568-youtube-to-consulting-with-florin-of-voltlog",
+        "fused_turns": 3,
+        "turns": 303,
+        "rate": 0.01,
+        "example": {
+          "label": "Florin Of Voltlog",
+          "text": "Yeah, certainly. But then to answer your other question, what is the electronics scene here in Romania? It's not as good as I would like it to be. I know, for e"
+        }
+      },
+      {
+        "file": "0590-finding-hardware-flaws-with-laura-abbott",
+        "fused_turns": 3,
+        "turns": 181,
+        "rate": 0.017,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Hello, Laura. How are you? I'm doing well today. How are you? Great. Yeah, I'm excited to talk to you. We got connected because you were giving a talk at the up"
+        }
+      },
+      {
+        "file": "0608-vapor-phase-with-saber-kaygusuz",
+        "fused_turns": 3,
+        "turns": 136,
+        "rate": 0.022,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Welcome to the Amp Hour. I'm Chris Gammell of Contextual Electronics. And I'm Saberkite Use Us from PCB Arts."
+        }
+      },
+      {
+        "file": "0338-an-interview-with-jorgen-jakobsen",
+        "fused_turns": 2,
+        "turns": 405,
+        "rate": 0.005,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "Yeah. I remember the first time I saw Bluetooth stuff, I was working on like these, I was at my co-op, and I was working on radios, and it was like 2004. And I "
+        }
+      },
+      {
+        "file": "0384-a-will-buy-again",
+        "fused_turns": 2,
+        "turns": 331,
+        "rate": 0.006,
+        "example": {
+          "label": "Dave Jones",
+          "text": "But the idea... Like, this is the thing, right? We want tools, especially when, you know, we have a guest on. That guest knows shit about podcasting, right? And"
+        }
+      },
+      {
+        "file": "0553-debunking-with-shahriar",
+        "fused_turns": 2,
+        "turns": 138,
+        "rate": 0.014,
+        "example": {
+          "label": "Dave Jones",
+          "text": "Thank you very much, Shariar, for joining us again. How long has it been? It's been a couple of years, hasn't it? Since the 5G episode? Yeah, we've done a few o"
+        }
+      },
+      {
+        "file": "0257-an-interview-with-fabienne-serriere-of-knityak",
+        "fused_turns": 1,
+        "turns": 541,
+        "rate": 0.002,
+        "example": {
+          "label": "Chris Gammell",
+          "text": "that threshold of... Yeah, yeah, it does. A lot of... Everybody knows what a scarf is as well. Like, right? I mean, like, there's some... That's true. It's like"
+        }
+      }
+    ]
+  }
+}

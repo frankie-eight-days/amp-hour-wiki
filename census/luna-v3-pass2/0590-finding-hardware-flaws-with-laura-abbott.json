@@ -1,0 +1,1789 @@
+{
+ "episode": 590,
+ "title": "Finding Hardware Flaws with Laura Abbott",
+ "url": "https://theamphour.com/590-finding-hardware-flaws-with-laura-abbott/",
+ "file": "0590-finding-hardware-flaws-with-laura-abbott.md",
+ "main_topics": [
+  "root-of-trust",
+  "hardware-security",
+  "vulnerability-research"
+ ],
+ "guest_name": "Laura Abbott",
+ "guest_affiliation": "Oxide Computer",
+ "notes": null,
+ "mentions": [
+  {
+   "concept": "hardware-io",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 3,
+   "char_start": 439,
+   "depth": "mention",
+   "context_snippet": "you were giving a talk at the upcoming Hardware I.O. conference"
+  },
+  {
+   "concept": "vulnerability-research",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 3,
+   "char_start": 735,
+   "depth": "mention",
+   "context_snippet": "I remembered vulnerability research and stuff like that"
+  },
+  {
+   "concept": "server",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 4,
+   "char_start": 1234,
+   "depth": "explains",
+   "context_snippet": "Oxide is thinking about how to make it overall better experience for those who are using it"
+  },
+  {
+   "concept": "hardware-security",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 4,
+   "char_start": 1331,
+   "depth": "explains",
+   "context_snippet": "one aspect of rebuilding the server is having a better hardware security model"
+  },
+  {
+   "concept": "root-of-trust",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 4,
+   "char_start": 1542,
+   "depth": "explains",
+   "context_snippet": "I accidentally stumbled upon a buffer overflow in the update mechanism for the chip we're trying to use for our root of trust"
+  },
+  {
+   "concept": "buffer-overflow",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 4,
+   "char_start": 1571,
+   "depth": "explains",
+   "context_snippet": "a buffer overflow in the update mechanism"
+  },
+  {
+   "concept": "trusted-platform-module",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 6,
+   "char_start": 1907,
+   "depth": "mention",
+   "context_snippet": "I'd say the word TPM"
+  },
+  {
+   "concept": "root-of-trust",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 6,
+   "char_start": 2197,
+   "depth": "explains",
+   "context_snippet": "if you have a chip or something that executes a known set of code"
+  },
+  {
+   "concept": "cryptographic-hash",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 6,
+   "char_start": 2322,
+   "depth": "explains",
+   "context_snippet": "if that can take something like a hash of another part of the system and then build up a series of hashes"
+  },
+  {
+   "concept": "software-measurement",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 6,
+   "char_start": 2429,
+   "depth": "explains",
+   "context_snippet": "that can give an answer to what exactly is running on the system"
+  },
+  {
+   "concept": "firmware-security",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 11,
+   "char_start": 4532,
+   "depth": "opinion",
+   "context_snippet": "it seems like it's down in the firmware these days"
+  },
+  {
+   "concept": "temperature-sensor",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 11,
+   "char_start": 4729,
+   "depth": "opinion",
+   "context_snippet": "the firmware should just work on the temperature sensor"
+  },
+  {
+   "concept": "supply-chain-security",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 12,
+   "char_start": 5161,
+   "depth": "explains",
+   "context_snippet": "increasing awareness as you've talked about here more and more about supply chain security for software"
+  },
+  {
+   "concept": "firmware-update",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 13,
+   "char_start": 5588,
+   "depth": "opinion",
+   "context_snippet": "how do I update this firmware?"
+  },
+  {
+   "concept": "rom",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 16,
+   "char_start": 5969,
+   "depth": "explains",
+   "context_snippet": "The vulnerability was in the ROM itself to be able to handle an update"
+  },
+  {
+   "concept": "firmware-update",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 16,
+   "char_start": 6044,
+   "depth": "explains",
+   "context_snippet": "it was designed to be able to potentially let people update the software on there"
+  },
+  {
+   "concept": "nxp",
+   "type": "company-product",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 18,
+   "char_start": 6401,
+   "depth": "mention",
+   "context_snippet": "It's the LPC 55 S69 from NXP"
+  },
+  {
+   "concept": "lpc55s69",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 18,
+   "char_start": 6401,
+   "depth": "mention",
+   "context_snippet": "It's the LPC 55 S69 from NXP"
+  },
+  {
+   "concept": "arm-cortex-m33",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 20,
+   "char_start": 6777,
+   "depth": "explains",
+   "context_snippet": "This is a Cortex M33"
+  },
+  {
+   "concept": "trustzone-m",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 22,
+   "char_start": 6981,
+   "depth": "mention",
+   "context_snippet": "this chip also has a trust zone M"
+  },
+  {
+   "concept": "root-of-trust",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 22,
+   "char_start": 7134,
+   "depth": "explains",
+   "context_snippet": "the root of trust is designed to be fairly limited"
+  },
+  {
+   "concept": "baseboard-management-controller",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 22,
+   "char_start": 7380,
+   "depth": "explains",
+   "context_snippet": "a spiritual replacement for a baseband management controller on a typical server"
+  },
+  {
+   "concept": "stm32h7",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 22,
+   "char_start": 7476,
+   "depth": "mention",
+   "context_snippet": "we're using an STM32H7 for this service processor"
+  },
+  {
+   "concept": "service-processor",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 22,
+   "char_start": 7530,
+   "depth": "explains",
+   "context_snippet": "our service processor is the one that's going to be responsible for temperature control"
+  },
+  {
+   "concept": "temperature-measurement",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 22,
+   "char_start": 7749,
+   "depth": "explains",
+   "context_snippet": "they were doing some temperature measurement and settings there"
+  },
+  {
+   "concept": "server-networking",
+   "type": "standard-protocol",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 24,
+   "char_start": 8553,
+   "depth": "mention",
+   "context_snippet": "it's certainly going to involve some sort of networking"
+  },
+  {
+   "concept": "flash-memory",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 24,
+   "char_start": 8811,
+   "depth": "mention",
+   "context_snippet": "possibly SPY or just flash storage for holding other details"
+  },
+  {
+   "concept": "amd",
+   "type": "company-product",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 24,
+   "char_start": 9008,
+   "depth": "mention",
+   "context_snippet": "big chips like, say, from AMD or Intel"
+  },
+  {
+   "concept": "intel",
+   "type": "company-product",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 24,
+   "char_start": 9008,
+   "depth": "mention",
+   "context_snippet": "big chips like, say, from AMD or Intel may have another of other processors in there"
+  },
+  {
+   "concept": "power-management",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 27,
+   "char_start": 9827,
+   "depth": "mention",
+   "context_snippet": "is there power management? Like, is there monitoring of power management as well?"
+  },
+  {
+   "concept": "pull-up-resistor",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 28,
+   "char_start": 10757,
+   "depth": "explains",
+   "context_snippet": "figuring out that a pull up resistor was not strong enough"
+  },
+  {
+   "concept": "open-source-hardware",
+   "type": "community-event",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 30,
+   "char_start": 11365,
+   "depth": "opinion",
+   "context_snippet": "The goal is to have as much stuff be public as possible"
+  },
+  {
+   "concept": "open-source-software",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 30,
+   "char_start": 11422,
+   "depth": "explains",
+   "context_snippet": "This includes making all of our code as open source"
+  },
+  {
+   "concept": "security-through-transparency",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 31,
+   "char_start": 11806,
+   "depth": "explains",
+   "context_snippet": "the cleansing power of sunlight sort of thing"
+  },
+  {
+   "concept": "hubris",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 32,
+   "char_start": 12259,
+   "depth": "explains",
+   "context_snippet": "the firmware that we're going to be running on the root of trust and our service processor is an open source operating system"
+  },
+  {
+   "concept": "operating-system",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 32,
+   "char_start": 12353,
+   "depth": "mention",
+   "context_snippet": "an open source operating system that we designed called Hubris"
+  },
+  {
+   "concept": "microcontroller-operating-system",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 36,
+   "char_start": 13628,
+   "depth": "explains",
+   "context_snippet": "we were doing a survey about what was available for operating systems for microcontrollers"
+  },
+  {
+   "concept": "custom-software-development",
+   "type": "engineering-practice",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 36,
+   "char_start": 14037,
+   "depth": "opinion",
+   "context_snippet": "it's possible for us to write our own, but it doesn't seem like it's a good idea or a good use of our time"
+  },
+  {
+   "concept": "microcontroller",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 36,
+   "char_start": 14316,
+   "depth": "mention",
+   "context_snippet": "the ideal operating system for a microcontroller he'd like to see"
+  },
+  {
+   "concept": "engineering-practice",
+   "type": "engineering-practice",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 38,
+   "char_start": 14851,
+   "depth": "opinion",
+   "context_snippet": "we're hopefully learning from all of our past mistakes about what did and didn't work"
+  },
+  {
+   "concept": "secure-element",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 39,
+   "char_start": 15130,
+   "depth": "mention",
+   "context_snippet": "with kind of secure elements and secure pieces of a system"
+  },
+  {
+   "concept": "inter-chip-communication",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 39,
+   "char_start": 15200,
+   "depth": "mention",
+   "context_snippet": "communication between different parts of the board as well"
+  },
+  {
+   "concept": "spi",
+   "type": "standard-protocol",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 40,
+   "char_start": 15596,
+   "depth": "mention",
+   "context_snippet": "most things are probably going to be using protocols you've heard of, say, spy"
+  },
+  {
+   "concept": "i2c",
+   "type": "standard-protocol",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 40,
+   "char_start": 15675,
+   "depth": "mention",
+   "context_snippet": "I squared C to be able to do things"
+  },
+  {
+   "concept": "root-of-trust",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 40,
+   "char_start": 15916,
+   "depth": "explains",
+   "context_snippet": "sending data back and forth between the root of trust, the surface processor and the host processor"
+  },
+  {
+   "concept": "host-processor",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 40,
+   "char_start": 15971,
+   "depth": "mention",
+   "context_snippet": "the surface processor and the host processor"
+  },
+  {
+   "concept": "encryption",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 40,
+   "char_start": 16238,
+   "depth": "explains",
+   "context_snippet": "anything related to encryption has a, it's possible to get it subtly wrong"
+  },
+  {
+   "concept": "open-compute-project",
+   "type": "community-event",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 44,
+   "char_start": 17480,
+   "depth": "explains",
+   "context_snippet": "some of the large cloud providers, like related to the open compute project"
+  },
+  {
+   "concept": "server-hardware",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 44,
+   "char_start": 17576,
+   "depth": "explains",
+   "context_snippet": "specifications for more modern hardware to be able to build some of these things"
+  },
+  {
+   "concept": "hyperscaler",
+   "type": "company-product",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 44,
+   "char_start": 17693,
+   "depth": "mention",
+   "context_snippet": "if you're not one of these large hyperscalers"
+  },
+  {
+   "concept": "facebook",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 45,
+   "char_start": 17941,
+   "depth": "mention",
+   "context_snippet": "the open, open compute started at Facebook"
+  },
+  {
+   "concept": "google-data-center",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 47,
+   "char_start": 18376,
+   "depth": "mention",
+   "context_snippet": "I remember seeing a tour of like a Google data center"
+  },
+  {
+   "concept": "server-rack",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 47,
+   "char_start": 18511,
+   "depth": "mention",
+   "context_snippet": "I kind of always imagine like, you know, full, full like fan racks"
+  },
+  {
+   "concept": "google",
+   "type": "company-product",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 48,
+   "char_start": 18839,
+   "depth": "mention",
+   "context_snippet": "Several of my colleagues at oxide had done previous work with, with Google"
+  },
+  {
+   "concept": "server-rack",
+   "type": "tool-equipment",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 50,
+   "char_start": 19523,
+   "depth": "explains",
+   "context_snippet": "our vision for a server actually looks like"
+  },
+  {
+   "concept": "aws",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 57,
+   "char_start": 20852,
+   "depth": "mention",
+   "context_snippet": "I'm just going to buy from an Amazon or AWS or an Azure"
+  },
+  {
+   "concept": "azure",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 57,
+   "char_start": 20870,
+   "depth": "mention",
+   "context_snippet": "buy from an Amazon or AWS or an Azure or something like that"
+  },
+  {
+   "concept": "on-premises-computing",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 58,
+   "char_start": 21304,
+   "depth": "explains",
+   "context_snippet": "there may be reasons for data integrity, data privacy laws, just a pure speed about not wanting to have things somewhere"
+  },
+  {
+   "concept": "data-privacy-law",
+   "type": "industry-economics",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 58,
+   "char_start": 21329,
+   "depth": "mention",
+   "context_snippet": "data integrity, data privacy laws"
+  },
+  {
+   "concept": "cloud-computing",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 58,
+   "char_start": 21681,
+   "depth": "explains",
+   "context_snippet": "in the early days of whatever your company is doing, it makes sense to be able to rent the cloud space"
+  },
+  {
+   "concept": "enterprise-security",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 59,
+   "char_start": 22217,
+   "depth": "explains",
+   "context_snippet": "if you're running some kind of like enterprise solution where you need to guarantee to your client that you're secure"
+  },
+  {
+   "concept": "nxp-lpc55s69",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 61,
+   "char_start": 23037,
+   "depth": "mention",
+   "context_snippet": "this NXP LPC 55 S6. Nine and you found something's wrong"
+  },
+  {
+   "concept": "rom",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 64,
+   "char_start": 23711,
+   "depth": "explains",
+   "context_snippet": "the ROM would be able to load as an update"
+  },
+  {
+   "concept": "bounds-checking",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 64,
+   "char_start": 24259,
+   "depth": "explains",
+   "context_snippet": "it doesn't seem like they were bounds checking something"
+  },
+  {
+   "concept": "proof-of-concept-exploit",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 64,
+   "char_start": 24321,
+   "depth": "explains",
+   "context_snippet": "I was able to turn that into a, you know, 50 proof of concept"
+  },
+  {
+   "concept": "nxp-isp-protocol",
+   "type": "standard-protocol",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 66,
+   "char_start": 24736,
+   "depth": "explains",
+   "context_snippet": "what NXP calls on the ISP protocol in system programming"
+  },
+  {
+   "concept": "uart",
+   "type": "standard-protocol",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 66,
+   "char_start": 24794,
+   "depth": "mention",
+   "context_snippet": "It can work across URs, I squared C"
+  },
+  {
+   "concept": "signed-firmware",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 66,
+   "char_start": 25089,
+   "depth": "mention",
+   "context_snippet": "the update is supposed to be signed and encrypted"
+  },
+  {
+   "concept": "encrypted-firmware",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 66,
+   "char_start": 25089,
+   "depth": "mention",
+   "context_snippet": "the update is supposed to be signed and encrypted"
+  },
+  {
+   "concept": "buffer-overflow",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 68,
+   "char_start": 26498,
+   "depth": "explains",
+   "context_snippet": "it would just, you know, happily continue copying past where I could"
+  },
+  {
+   "concept": "arbitrary-memory-write",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 69,
+   "char_start": 26710,
+   "depth": "opinion",
+   "context_snippet": "you can start to use that as your, uh, as your paintbrush to go rewrite memory"
+  },
+  {
+   "concept": "mask-rom",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 74,
+   "char_start": 27566,
+   "depth": "explains",
+   "context_snippet": "if it's true mask ROM, you use, you know, can't really fix it without actually getting new hardware"
+  },
+  {
+   "concept": "rom-patcher",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 76,
+   "char_start": 27983,
+   "depth": "explains",
+   "context_snippet": "I discovered this ROM patcher that it turns out can also be used to violate various security boundaries"
+  },
+  {
+   "concept": "security-boundary",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 76,
+   "char_start": 28031,
+   "depth": "explains",
+   "context_snippet": "can also be used to violate various security boundaries"
+  },
+  {
+   "concept": "root-of-trust",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 78,
+   "char_start": 28524,
+   "depth": "mention",
+   "context_snippet": "what we were looking for as the root of trust"
+  },
+  {
+   "concept": "silicon-availability",
+   "type": "manufacturing",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 78,
+   "char_start": 28910,
+   "depth": "explains",
+   "context_snippet": "the silicon wasn't actually still shipping"
+  },
+  {
+   "concept": "nxp-lpc55",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 78,
+   "char_start": 29043,
+   "depth": "opinion",
+   "context_snippet": "the LPC-55 at the time was, you know, the, the best, uh, really the best candidate we found"
+  },
+  {
+   "concept": "trustzone-m",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 79,
+   "char_start": 29198,
+   "depth": "mention",
+   "context_snippet": "having the, the trust M zone"
+  },
+  {
+   "concept": "trustzone-m",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 80,
+   "char_start": 29289,
+   "depth": "explains",
+   "context_snippet": "having the, uh, trust zone M available to be able to, uh, do more isolation"
+  },
+  {
+   "concept": "isolation",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 80,
+   "char_start": 29347,
+   "depth": "explains",
+   "context_snippet": "do more isolation for things"
+  },
+  {
+   "concept": "privilege-mode",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 82,
+   "char_start": 29757,
+   "depth": "explains",
+   "context_snippet": "processors as may have maybe having a, privilege, unprivileged mode"
+  },
+  {
+   "concept": "trustzone-m",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 82,
+   "char_start": 29826,
+   "depth": "explains",
+   "context_snippet": "trust zone gives as a secure, non-secure zone"
+  },
+  {
+   "concept": "secure-world",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 82,
+   "char_start": 29900,
+   "depth": "explains",
+   "context_snippet": "a code that's a secure and privilege, secure, non-privilege"
+  },
+  {
+   "concept": "secure-memory-region",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 84,
+   "char_start": 30697,
+   "depth": "explains",
+   "context_snippet": "declare specific registers as regions of memories as, uh, secure or non-secure"
+  },
+  {
+   "concept": "trustzone-transition",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 86,
+   "char_start": 31007,
+   "depth": "explains",
+   "context_snippet": "very specific sequences to be able to transition between secure and, uh, non-secure world"
+  },
+  {
+   "concept": "arm",
+   "type": "company-product",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 86,
+   "char_start": 31119,
+   "depth": "opinion",
+   "context_snippet": "well-designed, um, on ARM's part"
+  },
+  {
+   "concept": "memory-fault",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 88,
+   "char_start": 31784,
+   "depth": "explains",
+   "context_snippet": "It would probably end up being a fault"
+  },
+  {
+   "concept": "trustzone-gateway",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 88,
+   "char_start": 32013,
+   "depth": "explains",
+   "context_snippet": "trigger one of those gateways"
+  },
+  {
+   "concept": "nrf9160",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 91,
+   "char_start": 32638,
+   "depth": "mention",
+   "context_snippet": "I'm using a NRF 9160"
+  },
+  {
+   "concept": "cellular-chip",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 91,
+   "char_start": 32660,
+   "depth": "mention",
+   "context_snippet": "It's like a cellular chip"
+  },
+  {
+   "concept": "modem-firmware",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 91,
+   "char_start": 32957,
+   "depth": "opinion",
+   "context_snippet": "the modem firmware and stuff like that"
+  },
+  {
+   "concept": "secure-memory",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 91,
+   "char_start": 33005,
+   "depth": "opinion",
+   "context_snippet": "that lives in the more secured areas"
+  },
+  {
+   "concept": "rust",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 92,
+   "char_start": 33235,
+   "depth": "opinion",
+   "context_snippet": "we've been doing all of our work in Rust"
+  },
+  {
+   "concept": "trustzone-m",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 92,
+   "char_start": 33358,
+   "depth": "opinion",
+   "context_snippet": "support for especially TrustZoneM actually come into the tool chain"
+  },
+  {
+   "concept": "rust-toolchain",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 92,
+   "char_start": 33506,
+   "depth": "explains",
+   "context_snippet": "some of this also requires a compiler support"
+  },
+  {
+   "concept": "oxide-computer",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 93,
+   "char_start": 33656,
+   "depth": "mention",
+   "context_snippet": "everything in Oxide is using Rust"
+  },
+  {
+   "concept": "c",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 94,
+   "char_start": 34101,
+   "depth": "mention",
+   "context_snippet": "someone who did C for, who's done C"
+  },
+  {
+   "concept": "buffer-overflow",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 96,
+   "char_start": 34550,
+   "depth": "explains",
+   "context_snippet": "the classic buffer overflow"
+  },
+  {
+   "concept": "memory-safety",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 96,
+   "char_start": 34578,
+   "depth": "explains",
+   "context_snippet": "Rust has, Rust arrays are checked"
+  },
+  {
+   "concept": "unsafe-rust",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 96,
+   "char_start": 34743,
+   "depth": "opinion",
+   "context_snippet": "Assuming you're using the, you're not using any, doing anything unsafe"
+  },
+  {
+   "concept": "unsafe-rust",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 97,
+   "char_start": 35006,
+   "depth": "explains",
+   "context_snippet": "you put unsafe around it, then you're allowed to do it"
+  },
+  {
+   "concept": "unsafe-rust",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 98,
+   "char_start": 35164,
+   "depth": "explains",
+   "context_snippet": "using unsafe is not necessarily a bad thing"
+  },
+  {
+   "concept": "embedded-systems",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 98,
+   "char_start": 35738,
+   "depth": "opinion",
+   "context_snippet": "especially for things like you might do for embedded things"
+  },
+  {
+   "concept": "memory-mapped-register",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 98,
+   "char_start": 35803,
+   "depth": "explains",
+   "context_snippet": "even just running to a register might be considered unsafe"
+  },
+  {
+   "concept": "memory-model",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 98,
+   "char_start": 35862,
+   "depth": "explains",
+   "context_snippet": "just for, for how the memory model works"
+  },
+  {
+   "concept": "c",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 99,
+   "char_start": 36042,
+   "depth": "opinion",
+   "context_snippet": "when you're in C it's like, that's just kind of the, that's the path you're shown"
+  },
+  {
+   "concept": "memory-allocation",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 99,
+   "char_start": 36541,
+   "depth": "opinion",
+   "context_snippet": "allocating memory, deallocating memory"
+  },
+  {
+   "concept": "rust",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 100,
+   "char_start": 36719,
+   "depth": "opinion",
+   "context_snippet": "Russ does a fantastic job about being able to do manage it as much as you can behind the scenes"
+  },
+  {
+   "concept": "compiler-analysis",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 100,
+   "char_start": 36985,
+   "depth": "explains",
+   "context_snippet": "letting the compiler say, do the analysis to figure out how to do some of this"
+  },
+  {
+   "concept": "rust",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 101,
+   "char_start": 37362,
+   "depth": "mention",
+   "context_snippet": "if I wanted to go use Rust on just any generic part"
+  },
+  {
+   "concept": "hardware-abstraction-layer",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 101,
+   "char_start": 37415,
+   "depth": "explains",
+   "context_snippet": "there needs to already be like a HAL interface layer"
+  },
+  {
+   "concept": "lpc55s69",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 101,
+   "char_start": 37520,
+   "depth": "mention",
+   "context_snippet": "if Rust will work on a part like the LPC 55S 69"
+  },
+  {
+   "concept": "chip-architecture",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 102,
+   "char_start": 37737,
+   "depth": "explains",
+   "context_snippet": "what chip architecture are you actually running on"
+  },
+  {
+   "concept": "rust-toolchain",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 102,
+   "char_start": 37793,
+   "depth": "explains",
+   "context_snippet": "is there a tool chain support in general for that"
+  },
+  {
+   "concept": "arm",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 102,
+   "char_start": 37878,
+   "depth": "opinion",
+   "context_snippet": "the common ones out there for all the ARM"
+  },
+  {
+   "concept": "rust-crate",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 102,
+   "char_start": 38072,
+   "depth": "explains",
+   "context_snippet": "is there crate level access to be able to do all the, uh, register manipulation"
+  },
+  {
+   "concept": "rust-crate",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 104,
+   "char_start": 38267,
+   "depth": "explains",
+   "context_snippet": "crate is sort of like a, a Rust package"
+  },
+  {
+   "concept": "rust-crate",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 105,
+   "char_start": 38374,
+   "depth": "explains",
+   "context_snippet": "you can go and install a crate and it might be for this LPC"
+  },
+  {
+   "concept": "adc",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 105,
+   "char_start": 38590,
+   "depth": "mention",
+   "context_snippet": "where an ADC might be"
+  },
+  {
+   "concept": "register-manipulation",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 105,
+   "char_start": 38650,
+   "depth": "explains",
+   "context_snippet": "without having to go toggle some bits in a register"
+  },
+  {
+   "concept": "embedded-rust-community",
+   "type": "community-event",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 106,
+   "char_start": 38771,
+   "depth": "opinion",
+   "context_snippet": "the embedded Rust community is, is, is a fantastic"
+  },
+  {
+   "concept": "cortex-m",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 106,
+   "char_start": 38905,
+   "depth": "mention",
+   "context_snippet": "crate support out there for all the Cortex-Ms"
+  },
+  {
+   "concept": "register-abstraction",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 106,
+   "char_start": 39147,
+   "depth": "explains",
+   "context_snippet": "they've written the abstractions for, to be able to do, um, most of the manipulation"
+  },
+  {
+   "concept": "software-abstraction",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 107,
+   "char_start": 39482,
+   "depth": "opinion",
+   "context_snippet": "when there's abstractions, it's kind of slow stuff down"
+  },
+  {
+   "concept": "compiler-optimization",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 108,
+   "char_start": 39795,
+   "depth": "explains",
+   "context_snippet": "the compiler is fantastic about being able to figure out the optimizations"
+  },
+  {
+   "concept": "c-disassembly",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 108,
+   "char_start": 39988,
+   "depth": "mention",
+   "context_snippet": "if you were to look at, like I say, a C disassembly"
+  },
+  {
+   "concept": "array-bounds-checking",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 110,
+   "char_start": 40922,
+   "depth": "explains",
+   "context_snippet": "eliminate array out of bounds errors"
+  },
+  {
+   "concept": "memory-safety",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 110,
+   "char_start": 40981,
+   "depth": "opinion",
+   "context_snippet": "anything sort of that memory and safe areas"
+  },
+  {
+   "concept": "nxp",
+   "type": "company-product",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 112,
+   "char_start": 41549,
+   "depth": "mention",
+   "context_snippet": "the NXP, um, has, uh, it has, has plans to release a fixed version"
+  },
+  {
+   "concept": "hardware-bug",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 112,
+   "char_start": 41917,
+   "depth": "explains",
+   "context_snippet": "what exactly we would do if we ended up needing to, you know, potentially work with the buggy chip"
+  },
+  {
+   "concept": "firmware-update-code",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 112,
+   "char_start": 42057,
+   "depth": "explains",
+   "context_snippet": "we just have to try to, uh, not use, uh, the existing update code path"
+  },
+  {
+   "concept": "bootloader",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 115,
+   "char_start": 43248,
+   "depth": "mention",
+   "context_snippet": "you'll just have to kind of write your own, I guess, do you write your own bootloader"
+  },
+  {
+   "concept": "bootloader",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 116,
+   "char_start": 43409,
+   "depth": "explains",
+   "context_snippet": "I've been working on writing a bootloader"
+  },
+  {
+   "concept": "flash-memory-partitioning",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 116,
+   "char_start": 43514,
+   "depth": "explains",
+   "context_snippet": "figuring out how to divide the, uh, flash up into different spaces"
+  },
+  {
+   "concept": "robust-firmware-update",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 116,
+   "char_start": 43581,
+   "depth": "explains",
+   "context_snippet": "to be able to do robust image updates"
+  },
+  {
+   "concept": "firmware-rollback",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 116,
+   "char_start": 43717,
+   "depth": "explains",
+   "context_snippet": "if we want to do image rollback, how do we do versioning"
+  },
+  {
+   "concept": "firmware-rollback",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 117,
+   "char_start": 44044,
+   "depth": "opinion",
+   "context_snippet": "firmware updates and rollbacks and stuff like that"
+  },
+  {
+   "concept": "firmware-update",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 117,
+   "char_start": 44108,
+   "depth": "opinion",
+   "context_snippet": "what if it, what if the new image"
+  },
+  {
+   "concept": "firmware-testing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 117,
+   "char_start": 44209,
+   "depth": "explains",
+   "context_snippet": "you download this new image and everything, you do some tests on it"
+  },
+  {
+   "concept": "software-testing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 117,
+   "char_start": 44401,
+   "depth": "explains",
+   "context_snippet": "It only knows how to pass the tests that you've put in front of it"
+  },
+  {
+   "concept": "firmware-update-policy",
+   "type": "engineering-practice",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 118,
+   "char_start": 45011,
+   "depth": "explains",
+   "context_snippet": "only allow things to move forward, which might fix some bugs"
+  },
+  {
+   "concept": "bootloader",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 119,
+   "char_start": 45390,
+   "depth": "mention",
+   "context_snippet": "you have a bootloader on this, this chip that you're, you're writing"
+  },
+  {
+   "concept": "service-processor",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 120,
+   "char_start": 45850,
+   "depth": "explains",
+   "context_snippet": "the host processor will send everything from the service over to the service processor"
+  },
+  {
+   "concept": "root-of-trust",
+   "type": "component",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 120,
+   "char_start": 46138,
+   "depth": "explains",
+   "context_snippet": "the only connection the root of trust has is to the service processor"
+  },
+  {
+   "concept": "firmware-update-sequencing",
+   "type": "engineering-practice",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 122,
+   "char_start": 47004,
+   "depth": "explains",
+   "context_snippet": "what if you want to write the update, but then maybe not reboot yet"
+  },
+  {
+   "concept": "firmware-update",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 124,
+   "char_start": 47572,
+   "depth": "opinion",
+   "context_snippet": "for a lot of the major updates, it only seems to come out when there's, you know, some sort of catastrophic bug"
+  },
+  {
+   "concept": "host-processor",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 125,
+   "char_start": 47847,
+   "depth": "explains",
+   "context_snippet": "the host processor, that would be like the thing running Linux or windows"
+  },
+  {
+   "concept": "linux",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 125,
+   "char_start": 47886,
+   "depth": "mention",
+   "context_snippet": "the thing running Linux or windows"
+  },
+  {
+   "concept": "windows",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 125,
+   "char_start": 47896,
+   "depth": "mention",
+   "context_snippet": "running Linux or windows or whatever"
+  },
+  {
+   "concept": "hypervisor",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 126,
+   "char_start": 48141,
+   "depth": "explains",
+   "context_snippet": "the host processor is going to be running, um, what is essentially our, our, uh, hypervisor"
+  },
+  {
+   "concept": "virtual-machine",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 126,
+   "char_start": 48234,
+   "depth": "explains",
+   "context_snippet": "That's going to be able to host virtual machines for the customer"
+  },
+  {
+   "concept": "ethernet",
+   "type": "standard-protocol",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 128,
+   "char_start": 49088,
+   "depth": "mention",
+   "context_snippet": "There's a dedicated management network connection. I think it's ethernet"
+  },
+  {
+   "concept": "root-of-trust",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 129,
+   "char_start": 49469,
+   "depth": "mention",
+   "context_snippet": "we've been talking about the firmware update for the root of trust processor"
+  },
+  {
+   "concept": "hash",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 134,
+   "char_start": 51508,
+   "depth": "explains",
+   "context_snippet": "reading memory from part of a chip and then doing a hash"
+  },
+  {
+   "concept": "nxp-evaluation-board",
+   "type": "tool-equipment",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 140,
+   "char_start": 53222,
+   "depth": "mention",
+   "context_snippet": "worked a lot with the NXP evaluation boards"
+  },
+  {
+   "concept": "breadboard",
+   "type": "tool-equipment",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 142,
+   "char_start": 54796,
+   "depth": "opinion",
+   "context_snippet": "my perhaps a little bit janky breadboard setup"
+  },
+  {
+   "concept": "power-supply",
+   "type": "tool-equipment",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 146,
+   "char_start": 56825,
+   "depth": "mention",
+   "context_snippet": "invest in a proper power supply to be able to do work"
+  },
+  {
+   "concept": "fault-injection-attack",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 148,
+   "char_start": 57358,
+   "depth": "explains",
+   "context_snippet": "learn how to do those glitching attacks"
+  },
+  {
+   "concept": "computer-security",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 150,
+   "char_start": 57752,
+   "depth": "mention",
+   "context_snippet": "I'd always sort of had an interest in security"
+  },
+  {
+   "concept": "kernel-maintainer",
+   "type": "career",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 152,
+   "char_start": 58520,
+   "depth": "mention",
+   "context_snippet": "I spent some time as a kernel main kernel maintainer"
+  },
+  {
+   "concept": "device-driver",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 152,
+   "char_start": 58997,
+   "depth": "explains",
+   "context_snippet": "the kernel is also covers such a wide variety of things from drivers all the way to file systems"
+  },
+  {
+   "concept": "file-system",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 152,
+   "char_start": 59053,
+   "depth": "mention",
+   "context_snippet": "from drivers all the way to file systems"
+  },
+  {
+   "concept": "linux-kernel-community",
+   "type": "community-event",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 156,
+   "char_start": 60735,
+   "depth": "explains",
+   "context_snippet": "the Linux kernel community works a lot on, on trust"
+  },
+  {
+   "concept": "code-review",
+   "type": "engineering-practice",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 156,
+   "char_start": 60976,
+   "depth": "explains",
+   "context_snippet": "members of a company are getting a chance to say, do code review reporting bugs"
+  },
+  {
+   "concept": "bug-reporting",
+   "type": "engineering-practice",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 156,
+   "char_start": 61026,
+   "depth": "explains",
+   "context_snippet": "do code review reporting bugs"
+  },
+  {
+   "concept": "bug-testing",
+   "type": "engineering-practice",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 156,
+   "char_start": 61029,
+   "depth": "explains",
+   "context_snippet": "code review reporting bugs"
+  },
+  {
+   "concept": "vendor-relationship",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 157,
+   "char_start": 61481,
+   "depth": "opinion",
+   "context_snippet": "it's not just a one way vendor relationship"
+  },
+  {
+   "concept": "open-source-contribution",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 157,
+   "char_start": 61679,
+   "depth": "explains",
+   "context_snippet": "you may have donated some money to the foundation or you may have donated some code or some time"
+  },
+  {
+   "concept": "graphics-community",
+   "type": "community-event",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 158,
+   "char_start": 62028,
+   "depth": "opinion",
+   "context_snippet": "the graphics community"
+  },
+  {
+   "concept": "linux-kernel-development",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 159,
+   "char_start": 62544,
+   "depth": "mention",
+   "context_snippet": "work on Linux kernel stuff or Linux generally"
+  },
+  {
+   "concept": "linux-kernel-development",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 160,
+   "char_start": 62751,
+   "depth": "explains",
+   "context_snippet": "Linux kernel development can mean a lot of things"
+  },
+  {
+   "concept": "kubernetes",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 162,
+   "char_start": 63142,
+   "depth": "explains",
+   "context_snippet": "learning a little bit more about how Kubernetes or other things like that works at the kernel level"
+  },
+  {
+   "concept": "linux-kernel",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 162,
+   "char_start": 63324,
+   "depth": "explains",
+   "context_snippet": "testing newer kernels on that and being able to learn how to do a bisect"
+  },
+  {
+   "concept": "git-bisect",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 162,
+   "char_start": 63372,
+   "depth": "explains",
+   "context_snippet": "learn how to do a bisect when something doesn't work"
+  },
+  {
+   "concept": "bug-reporting",
+   "type": "engineering-practice",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 162,
+   "char_start": 63431,
+   "depth": "opinion",
+   "context_snippet": "to be able to help or help report bugs"
+  },
+  {
+   "concept": "documentation",
+   "type": "media-resource",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 164,
+   "char_start": 64178,
+   "depth": "explains",
+   "context_snippet": "There's also a documentation directory"
+  },
+  {
+   "concept": "linux-kernel-driver",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 165,
+   "char_start": 64365,
+   "depth": "mention",
+   "context_snippet": "in the kernel too, there's, there's like the driver's piece"
+  },
+  {
+   "concept": "networking",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 165,
+   "char_start": 64429,
+   "depth": "mention",
+   "context_snippet": "there's interfaces, networking and stuff like that"
+  },
+  {
+   "concept": "arm-architecture",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 166,
+   "char_start": 64718,
+   "depth": "explains",
+   "context_snippet": "I spent a lot of time doing work related to the ARM architecture"
+  },
+  {
+   "concept": "android",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 166,
+   "char_start": 64827,
+   "depth": "explains",
+   "context_snippet": "because I was working on Android, which ran mostly on the ARM processors"
+  },
+  {
+   "concept": "memory-management",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 166,
+   "char_start": 64910,
+   "depth": "explains",
+   "context_snippet": "I also did some stuff related to memory management"
+  },
+  {
+   "concept": "page-allocator",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 166,
+   "char_start": 64965,
+   "depth": "explains",
+   "context_snippet": "looking at things related to page allocators"
+  },
+  {
+   "concept": "contiguous-memory-allocator",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 166,
+   "char_start": 65019,
+   "depth": "explains",
+   "context_snippet": "CMA, the contiguous memory allocator"
+  },
+  {
+   "concept": "virtual-memory",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 168,
+   "char_start": 65398,
+   "depth": "explains",
+   "context_snippet": "a system with a virtual memory"
+  },
+  {
+   "concept": "memory-fragmentation",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 168,
+   "char_start": 65552,
+   "depth": "explains",
+   "context_snippet": "if you need anything larger than that, you end up into fragmentation problems"
+  },
+  {
+   "concept": "memory-reservation",
+   "type": "technique",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 168,
+   "char_start": 65690,
+   "depth": "explains",
+   "context_snippet": "if you need a large chunk of memory, you can reserve it"
+  },
+  {
+   "concept": "contiguous-memory-allocator",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 168,
+   "char_start": 65809,
+   "depth": "explains",
+   "context_snippet": "CMA was a technology developed by, I believe was originally came out of Samsung research"
+  },
+  {
+   "concept": "samsung-research",
+   "type": "company-product",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 168,
+   "char_start": 65858,
+   "depth": "mention",
+   "context_snippet": "originally came out of Samsung research"
+  },
+  {
+   "concept": "hardware-vulnerability",
+   "type": "concept-principle",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 170,
+   "char_start": 66606,
+   "depth": "opinion",
+   "context_snippet": "I hope we're done finding vulnerabilities with this chip"
+  },
+  {
+   "concept": "oxide-computer",
+   "type": "company-product",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 170,
+   "char_start": 66697,
+   "depth": "mention",
+   "context_snippet": "grateful to Oxide that they are, you know, supportive of finding these things"
+  },
+  {
+   "concept": "hardware-conference",
+   "type": "community-event",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 172,
+   "char_start": 67030,
+   "depth": "mention",
+   "context_snippet": "The conference is June 9th and June 10th"
+  },
+  {
+   "concept": "zephyr-developer-summit",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 173,
+   "char_start": 67149,
+   "depth": "mention",
+   "context_snippet": "the Zephyr developer summit at that same, same time"
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 174,
+   "char_start": 67244,
+   "depth": "mention",
+   "context_snippet": "I didn't realize Zephyr was at the same time"
+  },
+  {
+   "concept": "computer-history-museum",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 175,
+   "char_start": 67373,
+   "depth": "mention",
+   "context_snippet": "at the Computer History Museum"
+  },
+  {
+   "concept": "hardware-security",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 175,
+   "char_start": 67812,
+   "depth": "opinion",
+   "context_snippet": "it's very important and I'm very clueless about it"
+  },
+  {
+   "concept": "twitter",
+   "type": "software",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 178,
+   "char_start": 68298,
+   "depth": "mention",
+   "context_snippet": "I do Twitter"
+  },
+  {
+   "concept": "open-labbit",
+   "type": "person",
+   "speaker": "Laura Abbott",
+   "paragraph_index": 178,
+   "char_start": 68312,
+   "depth": "mention",
+   "context_snippet": "I am on Twitter at Open Labbit"
+  }
+ ]
+}

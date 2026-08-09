@@ -1,0 +1,890 @@
+{
+ "concept": "gdb",
+ "name": "GDB",
+ "type": "software",
+ "score": 57.455,
+ "rank_by_score": 615,
+ "cluster": {
+  "core": [
+   "gdb"
+  ],
+  "children": [
+   "debugger",
+   "interrupt-handler",
+   "j-link",
+   "openocd",
+   "text-editor",
+   "usb-interface",
+   "watchdog-timer"
+  ],
+  "neighbors": []
+ },
+ "stats": {
+  "episodes": 12,
+  "mentions": 60,
+  "explains": 32,
+  "opinions": 4,
+  "candidate_episode_count": 12,
+  "candidate_mention_count": 31,
+  "gated_out": 103,
+  "gated_out_by_concept": [
+   [
+    "debugger",
+    40
+   ],
+   [
+    "j-link",
+    21
+   ],
+   [
+    "watchdog-timer",
+    16
+   ],
+   [
+    "text-editor",
+    9
+   ],
+   [
+    "openocd",
+    8
+   ],
+   [
+    "usb-interface",
+    6
+   ],
+   [
+    "interrupt-handler",
+    3
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 0,
+  "speakers": [
+   [
+    "Piotr Esden-Tempski",
+    14
+   ],
+   [
+    "Chris Gammell",
+    6
+   ],
+   [
+    "Scott Shawcroft",
+    6
+   ],
+   [
+    "Uri Shaked",
+    3
+   ],
+   [
+    "Julia Desmazes",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 26,
+   "child": 4
+  },
+  "passages_by_depth": {
+   "explains": 27,
+   "opinion": 3
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 30,
+ "passages": [
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 136,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:openocd",
+    "core"
+   ],
+   "concepts": [
+    "gdb",
+    "openocd"
+   ],
+   "paragraph_text": "And, again, through that project, Gareth McMullen, who also was scratching his own itch, namely, that OpenOCD was not... Like, it was difficult for him to use because it couldn't detect the target itself. You had to dig through config files and then have the man in the middle and so on and so forth. And so on and so forth. And he decided, let me see how hard it would be to implement a JTEC debugger that has a GDB interface directly built in. And so he started writing that software and realized, oh, the specifications are all out there. It's not that complicated. Let me implement that. And he somehow decided to use LibOpenCM3 for it.",
+   "context_before": "Okay. Okay. Okay.",
+   "context_after": "Ah, interesting.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. Okay. Okay. And, again, through that project, Gareth McMullen, who also was scratching his own itch, namely, that OpenOCD was not... Like, it was difficult for him to use because it couldn't detect the target itself. You had to dig through config files and then have the man in the middle and so on and so forth. And so on and so forth. And he decided, let me see how hard it would be to implement a JTEC debugger that has a GDB interface directly built in. And so he started writing that software and realized, oh, the specifications are all out there. It's not that complicated. Let me implement that. And he somehow decided to use LibOpenCM3 for it. Ah, interesting."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 184,
+   "depth": "opinion",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:openocd",
+   "concept_sources": [
+    "child:openocd"
+   ],
+   "concepts": [
+    "openocd"
+   ],
+   "paragraph_text": "He wanted it to be open. He designed it from beginning to be open source because he sees it as a tool for himself. And that's how we continue seeing it and that it is a tool that we were using. That's why I started using it for all the autopilot stuff myself and then stopped making the Floss JTAG. Okay. Because it was better. It was easier to use. You just plug it in. You don't have to every few months send another patch that will take weeks to get incorporated into OpenOCD. And it just worked. That was the amazing part. Gareth did such an amazing job with his tool that I was amazed how easy to just plug it in and do your thing that you actually want to do, namely debug the thing that is not working.",
+   "context_before": "No, no, that's good. No, that's good. You met Gareth and he was working on this OpenOCD GDB stuff. I actually met \u2013 you had luckily had mentioned to Gareth that he should show up at the Auckland meetup. So I got to meet him as well. And I was like, oh, okay. Well, hello. That was great. Hello to all the Aucklanders, Aucklandites. But what is \u2013 so why is it better to use like the libopencm3 versus \u2013 it was just because it was faster and accessible? Is that kind of the thing or because it wanted to be open or what?",
+   "context_after": "Right, right.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "No, no, that's good. No, that's good. You met Gareth and he was working on this OpenOCD GDB stuff. I actually met \u2013 you had luckily had mentioned to Gareth that he should show up at the Auckland meetup. So I got to meet him as well. And I was like, oh, okay. Well, hello. That was great. Hello to all the Aucklanders, Aucklandites. But what is \u2013 so why is it better to use like the libopencm3 versus \u2013 it was just because it was faster and accessible? Is that kind of the thing or because it wanted to be open or what? He wanted it to be open. He designed it from beginning to be open source because he sees it as a tool for himself. And that's how we continue seeing it and that it is a tool that we were using. That's why I started using it for all the autopilot stuff myself and then stopped making the Floss JTAG. Okay. Because it was better. It was easier to use. You just plug it in. You don't have to every few months send another patch that will take weeks to get incorporated into OpenOCD. And it just worked. That was the amazing part. Gareth did such an amazing job with his tool that I was amazed how easy to just plug it in and do your thing that you actually want to do, namely debug the thing that is not working. Right, right."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 192,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:openocd",
+    "core"
+   ],
+   "concepts": [
+    "gdb",
+    "openocd"
+   ],
+   "paragraph_text": "Yeah. Yeah. So we are learning from them too. And yeah. So OpenOCD has its place and it's doing a great job. But if I have the choice between using OpenOCD or Blackmagic Probe, if Blackmagic Probe supports that specific tool, then I will go for Blackmagic Probe because I will plug it in, plug it into my computer. And I will just show two generic serial ports. I start GDB or some other tool that has GDB built in, the GNU debugger from the open source tool chain. And so just to clarify and go into GDB, say target extended remote, the first serial port and I'm in.",
+   "context_before": "I can complain about KiCat and yet still like, I mean, I'm worthless without it. So like, yeah, it still helps me every single day. So yeah, that's fine. Yeah. I just wanted to mention that. Got it. Yeah. You're so ungrateful, man. What up? What up with that?",
+   "context_after": "Oh, wow. Okay.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "I can complain about KiCat and yet still like, I mean, I'm worthless without it. So like, yeah, it still helps me every single day. So yeah, that's fine. Yeah. I just wanted to mention that. Got it. Yeah. You're so ungrateful, man. What up? What up with that? Yeah. Yeah. So we are learning from them too. And yeah. So OpenOCD has its place and it's doing a great job. But if I have the choice between using OpenOCD or Blackmagic Probe, if Blackmagic Probe supports that specific tool, then I will go for Blackmagic Probe because I will plug it in, plug it into my computer. And I will just show two generic serial ports. I start GDB or some other tool that has GDB built in, the GNU debugger from the open source tool chain. And so just to clarify and go into GDB, say target extended remote, the first serial port and I'm in. Oh, wow. Okay."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 236,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Yeah, yeah. You can use that for this really low power, low voltage systems. Also, it has a bunch of additional LEDs so you know what is going on on it. It has a function where you can power the target. So, you go in GDB and you run monitor t-power enable and it will power your target using the power reference pin of the JTAG interface. And it has a built-in UART to serial. So, USB to serial adapter on the back of the board. So, it's actually more useful than one would think to have it in one package. So, you can just plug it in and have serial while you also have JTAG or SWD. We support both.",
+   "context_before": "Oh, yeah. Right, right, right. Like the super sipping the power kind of project stuff.",
+   "context_after": "That's great.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Oh, yeah. Right, right, right. Like the super sipping the power kind of project stuff. Yeah, yeah. You can use that for this really low power, low voltage systems. Also, it has a bunch of additional LEDs so you know what is going on on it. It has a function where you can power the target. So, you go in GDB and you run monitor t-power enable and it will power your target using the power reference pin of the JTAG interface. And it has a built-in UART to serial. So, USB to serial adapter on the back of the board. So, it's actually more useful than one would think to have it in one package. So, you can just plug it in and have serial while you also have JTAG or SWD. We support both. That's great."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 240,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:debugger",
+   "concept_sources": [
+    "child:debugger"
+   ],
+   "concepts": [
+    "debugger"
+   ],
+   "paragraph_text": "Okay. So, the analogy I'm trying to make... So, if you have an Arduino project, you might run into some issue where you are not calculating the right thing and you don't know what is going on that is causing it. So, what you usually do, you add a print line somewhere or you blink an LED to measure or toggle a pin to connect to your oscilloscope or logic analyzer to try to figure out what this thing is doing. And this still is like tapping somewhere in the darkness, trying to realize what is going on inside the chip without actually seeing what the chip is doing. So, with the Blackmagic probe and you connect GDB to it, it will interrupt the program. So, stop it. Like basically stop the clock of the chip. And then you can step through it saying, please run one instruction more through the code and now tell me what is in this variable A, B, C, D. And then you run another step and you see how this variable starts changing or not. And then you see that, oh, my calculation was off by one.",
+   "context_before": "Well, let's talk through the actual process too. I mean, like so people who haven't done... So, I think the interesting thing for me is that a lot of people come from the world of Arduino, right? For better or worse, I think it's great that they start like stepping in it. They're like, all right, I want to make a more complex project. I need to peer into the processor like you're talking about. So, people that are just getting started from that step, what are they going to see when they start hooking up a Blackmagic probe? Like what are they peering into then? Okay.",
+   "context_after": "Oh, right. It's zero reference, not one reference. So, whatever other mistake that I always make.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Well, let's talk through the actual process too. I mean, like so people who haven't done... So, I think the interesting thing for me is that a lot of people come from the world of Arduino, right? For better or worse, I think it's great that they start like stepping in it. They're like, all right, I want to make a more complex project. I need to peer into the processor like you're talking about. So, people that are just getting started from that step, what are they going to see when they start hooking up a Blackmagic probe? Like what are they peering into then? Okay. Okay. So, the analogy I'm trying to make... So, if you have an Arduino project, you might run into some issue where you are not calculating the right thing and you don't know what is going on that is causing it. So, what you usually do, you add a print line somewhere or you blink an LED to measure or toggle a pin to connect to your oscilloscope or logic analyzer to try to figure out what this thing is doing. And this still is like tapping somewhere in the darkness, trying to realize what is going on inside the chip without actually seeing what the chip is doing. So, with the Blackmagic probe and you connect GDB to it, it will interrupt the program. So, stop it. Like basically stop the clock of the chip. And then you can step through it saying, please run one instruction more through the code and now tell me what is in this variable A, B, C, D. And then you run another step and you see how this variable starts changing or not. And then you see that, oh, my calculation was off by one. Oh, right. It's zero reference, not one reference. So, whatever other mistake that I always make."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 283,
+   "depth": "opinion",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Yeah. No. Yeah. Exactly. And you end up trying to learn how to use GDB the night before release of the thing you have to deliver or something. Oh, God. It's terrible. Right. Been there, done that.",
+   "context_before": "Yeah. Right. Exactly. And that's when you go learn it, which is always the wrong time to do it. But it's like you're going to do it anyways. Right. Yeah. Same thing with like learning debugging as a standalone skill. It's tough to do that when you should do it. When you should be doing it is before you're actually debugging. Most people learn it, learn it when they're like, oh, crap, I need to learn how to debug this thing right now.",
+   "context_after": "Oh, man. That's funny. Yeah. Yeah. So I had two questions about this. One is, you're doing all your development with make files and command line and stuff like that? Yeah. Yeah. Okay. So the next question is, how do you usually suggest that people go and start with this stuff? So you were doing a class at DEF CON, but how else should people get to know the Blackmagic probe and actually using this in a real world situation?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Right. Exactly. And that's when you go learn it, which is always the wrong time to do it. But it's like you're going to do it anyways. Right. Yeah. Same thing with like learning debugging as a standalone skill. It's tough to do that when you should do it. When you should be doing it is before you're actually debugging. Most people learn it, learn it when they're like, oh, crap, I need to learn how to debug this thing right now. Yeah. No. Yeah. Exactly. And you end up trying to learn how to use GDB the night before release of the thing you have to deliver or something. Oh, God. It's terrible. Right. Been there, done that. Oh, man. That's funny. Yeah. Yeah. So I had two questions about this. One is, you're doing all your development with make files and command line and stuff like that? Yeah. Yeah. Okay. So the next question is, how do you usually suggest that people go and start with this stuff? So you were doing a class at DEF CON, but how else should people get to know the Blackmagic probe and actually using this in a real world situation?"
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 325,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "And we wrote a board support file repository thingy to support OneBitC in platform I.O. Cool. So, that makes things a little bit easier because you have all the buttons and the shortcuts to run, make, just like in Eclipse. Yeah. And as far as I know, so, just until recently, there was no GDB debugging capability within the platform I.O. thing. But I think they added it not so long ago. Okay. We had, Gareth wrote actually a plugin for Atom to do GDB debugging with monitoring variables. This is where UI has. Oh, that's nice actually. Yeah. Yeah. This is where the UI has totally a place is being able to visualize the data.",
+   "context_before": "Yep.",
+   "context_after": "Multiple windows. Yeah, exactly. You're seeing like, oh, like, variable one is set to 13 currently when I do a breakpoint or when I'm stepping through code. You just kind of watch the value change.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yep. And we wrote a board support file repository thingy to support OneBitC in platform I.O. Cool. So, that makes things a little bit easier because you have all the buttons and the shortcuts to run, make, just like in Eclipse. Yeah. And as far as I know, so, just until recently, there was no GDB debugging capability within the platform I.O. thing. But I think they added it not so long ago. Okay. We had, Gareth wrote actually a plugin for Atom to do GDB debugging with monitoring variables. This is where UI has. Oh, that's nice actually. Yeah. Yeah. This is where the UI has totally a place is being able to visualize the data. Multiple windows. Yeah, exactly. You're seeing like, oh, like, variable one is set to 13 currently when I do a breakpoint or when I'm stepping through code. You just kind of watch the value change."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 327,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Yeah. Yeah. And there is a window that has all the watch variables. So, you run your code and you see the variables changing on the fly. And then you see all the breakpoints that you have set and so on and so forth. So, that's great. There is also some text interfaces for GDB that you can put on top of GDB that are really good, very powerful. There is also Radara 2 that we are working on getting support into to do live debugging. That's not fully finished, but we have a quite dedicated guy working on this. Then, also, Platform.io got support or has plugins for Visual Studio Code now. Okay. And yet, don't mistake it for Visual Studio. These are two different things.",
+   "context_before": "Multiple windows. Yeah, exactly. You're seeing like, oh, like, variable one is set to 13 currently when I do a breakpoint or when I'm stepping through code. You just kind of watch the value change.",
+   "context_after": "Is this like how Windows or, sorry, Microsoft open source some of the stuff?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Multiple windows. Yeah, exactly. You're seeing like, oh, like, variable one is set to 13 currently when I do a breakpoint or when I'm stepping through code. You just kind of watch the value change. Yeah. Yeah. And there is a window that has all the watch variables. So, you run your code and you see the variables changing on the fly. And then you see all the breakpoints that you have set and so on and so forth. So, that's great. There is also some text interfaces for GDB that you can put on top of GDB that are really good, very powerful. There is also Radara 2 that we are working on getting support into to do live debugging. That's not fully finished, but we have a quite dedicated guy working on this. Then, also, Platform.io got support or has plugins for Visual Studio Code now. Okay. And yet, don't mistake it for Visual Studio. These are two different things. Is this like how Windows or, sorry, Microsoft open source some of the stuff?"
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 340,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Okay. Oh, cool. At the end of the day, it's just talking. I mean, it's really just a pretty face on the same thing that's happening behind the scenes, right? Of doing new files, building, you know, calling these different functions or whatever's happening or scripts and then building up the stuff you need. Yeah, that's correct. Yeah. I had a question about the, so the actual physical thing that's happening as well. So when I started up GDB and it's talking to the Blackmagic probe and it's actually, you know, stepping through code, that's all happening through the JTAG interface? That's right?",
+   "context_before": "focused on Atom was the fact that you need a license and that it has the nag screens and it's not completely open source. It would be a little bit hypocritical if we said, oh, this is the way to go. Still, I know that people are using Sublime with the whole setup that OneBitC has. So this is the nice thing. At OneBitC, you can program it in so many ways because it is just requiring the low-level command line stuff. And so you want to use the, what is the Windows Text Editor to program your code? TextEdit. TextEdit. Notepad. Notepad. You're welcome to. And so you can use almost the tools that you want. And I did hear that the Eclipse stuff, people are having sometimes trouble with it, but we will eventually have that too. And I know that it works because several people managed to set it up.",
+   "context_after": "Yes. Or SWD.",
+   "context_before_speaker": "Piotr Esden-Tempski",
+   "context_after_speaker": "Piotr Esden-Tempski",
+   "text": "focused on Atom was the fact that you need a license and that it has the nag screens and it's not completely open source. It would be a little bit hypocritical if we said, oh, this is the way to go. Still, I know that people are using Sublime with the whole setup that OneBitC has. So this is the nice thing. At OneBitC, you can program it in so many ways because it is just requiring the low-level command line stuff. And so you want to use the, what is the Windows Text Editor to program your code? TextEdit. TextEdit. Notepad. Notepad. You're welcome to. And so you can use almost the tools that you want. And I did hear that the Eclipse stuff, people are having sometimes trouble with it, but we will eventually have that too. And I know that it works because several people managed to set it up. Okay. Oh, cool. At the end of the day, it's just talking. I mean, it's really just a pretty face on the same thing that's happening behind the scenes, right? Of doing new files, building, you know, calling these different functions or whatever's happening or scripts and then building up the stuff you need. Yeah, that's correct. Yeah. I had a question about the, so the actual physical thing that's happening as well. So when I started up GDB and it's talking to the Blackmagic probe and it's actually, you know, stepping through code, that's all happening through the JTAG interface? That's right? Yes. Or SWD."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 343,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Yeah, that's all happening over that interface. So GDB itself actually is issuing a lot of commands with every step that it is. So, and it is sending it to the remote target. So the interesting thing here is to understand what the like chain of command here is. So GDB is... That's a good way to say it. I like that. It is the driving force of the kind of everything. It's the general. It's the general, yeah. Well, depends on if you go to layer eight, the guy between chair and keyboard.",
+   "context_before": "Or SWD. So, but the question I had about it is, so you mentioned like watch variables and if I'm watching 10 different variables. Mm-hmm. And so it's actually going in and probing and saying, so when it's stepping to the next instruction or whatever's happening, right? It's saying I've got these 10 variables. It's actually going, looking those up in memory, pulling those back out and then doing all these other things. But that's all happening over JTAG or SWD?",
+   "context_after": "Poor lady. No, the pebcacable client that you're talking about there is... I don't know what it would be. The dunce or the joker? Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Or SWD. So, but the question I had about it is, so you mentioned like watch variables and if I'm watching 10 different variables. Mm-hmm. And so it's actually going in and probing and saying, so when it's stepping to the next instruction or whatever's happening, right? It's saying I've got these 10 variables. It's actually going, looking those up in memory, pulling those back out and then doing all these other things. But that's all happening over JTAG or SWD? Yeah, that's all happening over that interface. So GDB itself actually is issuing a lot of commands with every step that it is. So, and it is sending it to the remote target. So the interesting thing here is to understand what the like chain of command here is. So GDB is... That's a good way to say it. I like that. It is the driving force of the kind of everything. It's the general. It's the general, yeah. Well, depends on if you go to layer eight, the guy between chair and keyboard. Poor lady. No, the pebcacable client that you're talking about there is... I don't know what it would be. The dunce or the joker? Yeah."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 345,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Yeah. So basically GDB is generating commands. It is sending it over the serial interface to the Blackmagic probe. And the Blackmagic probe is taking those commands and converting them to JTAG commands. And this is, again, also a layered onion of stuff. JTAG is as much of a standard as XML is a standard.",
+   "context_before": "Poor lady. No, the pebcacable client that you're talking about there is... I don't know what it would be. The dunce or the joker? Yeah.",
+   "context_after": "Right. Is that saying that it is or it isn't? Because XML, I'm not sure if you're like being disparaging again.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Poor lady. No, the pebcacable client that you're talking about there is... I don't know what it would be. The dunce or the joker? Yeah. Yeah. So basically GDB is generating commands. It is sending it over the serial interface to the Blackmagic probe. And the Blackmagic probe is taking those commands and converting them to JTAG commands. And this is, again, also a layered onion of stuff. JTAG is as much of a standard as XML is a standard. Right. Is that saying that it is or it isn't? Because XML, I'm not sure if you're like being disparaging again."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 351,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Yes. Yes. Okay. So it has to know how to translate the commands from GDB, read memory address so-and-so into the correct ADF 5 commands to read out from the matrix or from the... Okay.",
+   "context_before": "Okay. So are you basically, did you have to then go and implement this ADF inside the processor on the Blackmagic Probe? Is that the idea?",
+   "context_after": "And so does that mean that the Blackmagic Probe is primarily acting as a translator between GDB and the commands that talk through the JTAG port? Is that... Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. So are you basically, did you have to then go and implement this ADF inside the processor on the Blackmagic Probe? Is that the idea? Yes. Yes. Okay. So it has to know how to translate the commands from GDB, read memory address so-and-so into the correct ADF 5 commands to read out from the matrix or from the... Okay. And so does that mean that the Blackmagic Probe is primarily acting as a translator between GDB and the commands that talk through the JTAG port? Is that... Yeah."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 362,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "So that means you guys have to actually speak both languages, quote unquote languages or command sets, I suppose, is the best way to say it. So like if someone puts a GDB command output in front of you, you kind of know what it's saying to do? Or is it actually readable enough?",
+   "context_before": "Uwe. Yeah. Uwe was library staff for the low-level staff. And Gareth is the genius who came up with the whole translation layer and the whole firmware for the Blackmagic Probe.",
+   "context_after": "It is quite readable. I personally have to admit that I'm not as fluent in that as Gareth is. But there is a special command in GDB where you tell it to print exactly what it is sending over the serial interface. This is very useful when you're debugging stuff and stuff doesn't do the right thing.",
+   "context_before_speaker": "Piotr Esden-Tempski",
+   "context_after_speaker": "Piotr Esden-Tempski",
+   "text": "Uwe. Yeah. Uwe was library staff for the low-level staff. And Gareth is the genius who came up with the whole translation layer and the whole firmware for the Blackmagic Probe. So that means you guys have to actually speak both languages, quote unquote languages or command sets, I suppose, is the best way to say it. So like if someone puts a GDB command output in front of you, you kind of know what it's saying to do? Or is it actually readable enough? It is quite readable. I personally have to admit that I'm not as fluent in that as Gareth is. But there is a special command in GDB where you tell it to print exactly what it is sending over the serial interface. This is very useful when you're debugging stuff and stuff doesn't do the right thing."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 363,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "It is quite readable. I personally have to admit that I'm not as fluent in that as Gareth is. But there is a special command in GDB where you tell it to print exactly what it is sending over the serial interface. This is very useful when you're debugging stuff and stuff doesn't do the right thing.",
+   "context_before": "So that means you guys have to actually speak both languages, quote unquote languages or command sets, I suppose, is the best way to say it. So like if someone puts a GDB command output in front of you, you kind of know what it's saying to do? Or is it actually readable enough?",
+   "context_after": "Or something?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So that means you guys have to actually speak both languages, quote unquote languages or command sets, I suppose, is the best way to say it. So like if someone puts a GDB command output in front of you, you kind of know what it's saying to do? Or is it actually readable enough? It is quite readable. I personally have to admit that I'm not as fluent in that as Gareth is. But there is a special command in GDB where you tell it to print exactly what it is sending over the serial interface. This is very useful when you're debugging stuff and stuff doesn't do the right thing. Or something?"
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 376,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Okay. So yeah. So, so walking down the chain against GDB, talking to Blackmagic, Blackmagic outputs, JTAG commands, JTAG commands are then probing internally to the registers that are on the chip and then pulling those data, the data back out, pushing it back up to GDB and then it shows it to you. That's kind of the idea.",
+   "context_before": "Just a side note. Haha. Okay.",
+   "context_after": "Yeah, that's, that's correct. And you can do magical things with this. It's, there is so-called semi-hosting, for example, and this is your application. Uh, triggering, uh, an exception within the chip, like a hardware exception and then GDB, uh, catching that and seeing and executing commands on the host computer. So for example, you can do print devs from the target into GDB by it basically making a system call into the host GDB or opening a file, reading a file. You can do these things. It's very useful and very powerful because then you can, for, for example, you are testing a device and you need a ton of data within your, your, uh, embedded device and you don't have an SD card, you don't have an interface, but you have JTAG that you just use to flash the firmware.",
+   "context_before_speaker": "Piotr Esden-Tempski",
+   "context_after_speaker": "Piotr Esden-Tempski",
+   "text": "Just a side note. Haha. Okay. Okay. So yeah. So, so walking down the chain against GDB, talking to Blackmagic, Blackmagic outputs, JTAG commands, JTAG commands are then probing internally to the registers that are on the chip and then pulling those data, the data back out, pushing it back up to GDB and then it shows it to you. That's kind of the idea. Yeah, that's, that's correct. And you can do magical things with this. It's, there is so-called semi-hosting, for example, and this is your application. Uh, triggering, uh, an exception within the chip, like a hardware exception and then GDB, uh, catching that and seeing and executing commands on the host computer. So for example, you can do print devs from the target into GDB by it basically making a system call into the host GDB or opening a file, reading a file. You can do these things. It's very useful and very powerful because then you can, for, for example, you are testing a device and you need a ton of data within your, your, uh, embedded device and you don't have an SD card, you don't have an interface, but you have JTAG that you just use to flash the firmware."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 377,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Yeah, that's, that's correct. And you can do magical things with this. It's, there is so-called semi-hosting, for example, and this is your application. Uh, triggering, uh, an exception within the chip, like a hardware exception and then GDB, uh, catching that and seeing and executing commands on the host computer. So for example, you can do print devs from the target into GDB by it basically making a system call into the host GDB or opening a file, reading a file. You can do these things. It's very useful and very powerful because then you can, for, for example, you are testing a device and you need a ton of data within your, your, uh, embedded device and you don't have an SD card, you don't have an interface, but you have JTAG that you just use to flash the firmware.",
+   "context_before": "Okay. So yeah. So, so walking down the chain against GDB, talking to Blackmagic, Blackmagic outputs, JTAG commands, JTAG commands are then probing internally to the registers that are on the chip and then pulling those data, the data back out, pushing it back up to GDB and then it shows it to you. That's kind of the idea.",
+   "context_after": "Right. So say you wanted to like have like a, uh, a small audio file or something.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. So yeah. So, so walking down the chain against GDB, talking to Blackmagic, Blackmagic outputs, JTAG commands, JTAG commands are then probing internally to the registers that are on the chip and then pulling those data, the data back out, pushing it back up to GDB and then it shows it to you. That's kind of the idea. Yeah, that's, that's correct. And you can do magical things with this. It's, there is so-called semi-hosting, for example, and this is your application. Uh, triggering, uh, an exception within the chip, like a hardware exception and then GDB, uh, catching that and seeing and executing commands on the host computer. So for example, you can do print devs from the target into GDB by it basically making a system call into the host GDB or opening a file, reading a file. You can do these things. It's very useful and very powerful because then you can, for, for example, you are testing a device and you need a ton of data within your, your, uh, embedded device and you don't have an SD card, you don't have an interface, but you have JTAG that you just use to flash the firmware. Right. So say you wanted to like have like a, uh, a small audio file or something."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 381,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Then you just, in your firmware and your target firmware, you just run open file name and this file is on the PC or on the computer where GDB is running. You open that file, read that data and execute your thing and you're done. Wow. So, uh, this is one of the many reasons and also GDB being, being possible to script a lot. It makes it an amazing tool for those people that are building test checks in factories.",
+   "context_before": "That makes a lot more sense. Yeah.",
+   "context_after": "Mm-hmm. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "That makes a lot more sense. Yeah. Then you just, in your firmware and your target firmware, you just run open file name and this file is on the PC or on the computer where GDB is running. You open that file, read that data and execute your thing and you're done. Wow. So, uh, this is one of the many reasons and also GDB being, being possible to script a lot. It makes it an amazing tool for those people that are building test checks in factories. Mm-hmm. Yeah."
+  },
+  {
+   "episode": 373,
+   "episode_title": "Pedantic or Andrantic",
+   "episode_url": "https://theamphour.com/373-pedantic-or-andrantic/",
+   "guest": null,
+   "stem": "0373-pedantic-or-andrantic",
+   "paragraph_index": 110,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:debugger",
+    "core"
+   ],
+   "concepts": [
+    "debugger",
+    "gdb"
+   ],
+   "paragraph_text": "I got a Jtrace Pro, which is a super fancy... What's that? So, you know, there are programmers like for Arduino where it just programs it and then you have to use printf or something to debug the chip. And then there are more proper debuggers like Jlinks or Stlinks or even the Blackmagic probes where you can download code, you can flash the code, and you can also use GDB or some other debugger in order to look inside and see what's going on. And the Jtrace, and there are a few other things like this, but the Jtrace not only does the flashing and the debugging, it stores a lot of extra information so that you can backtrace to where you were, you can backtrace everything. So, instead of saying, show me the current variable X, you can say, show me what X was 10 cycles ago or 1,000 cycles ago or 20,000 cycles ago.",
+   "context_before": "I was going to say the IRS would say what? Yeah.",
+   "context_after": "And how much memory is there? Is it like a ton?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "I was going to say the IRS would say what? Yeah. I got a Jtrace Pro, which is a super fancy... What's that? So, you know, there are programmers like for Arduino where it just programs it and then you have to use printf or something to debug the chip. And then there are more proper debuggers like Jlinks or Stlinks or even the Blackmagic probes where you can download code, you can flash the code, and you can also use GDB or some other debugger in order to look inside and see what's going on. And the Jtrace, and there are a few other things like this, but the Jtrace not only does the flashing and the debugging, it stores a lot of extra information so that you can backtrace to where you were, you can backtrace everything. So, instead of saying, show me the current variable X, you can say, show me what X was 10 cycles ago or 1,000 cycles ago or 20,000 cycles ago. And how much memory is there? Is it like a ton?"
+  },
+  {
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "guest": "Scott Shawcroft",
+   "stem": "0383-an-interview-with-scott-shawcroft",
+   "paragraph_index": 159,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Scott Shawcroft",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:j-link",
+    "core"
+   ],
+   "concepts": [
+    "gdb",
+    "j-link"
+   ],
+   "paragraph_text": "Yep. Sure. So, uh, we use make to compile, so I will make clean and then I will rebuild it. And I'll also start J link GDB server. Uh, so I have on my desk, uh, J link connected to the SWD port that's on a Metro. I'm just straight up looking at it. Um, I also have a nine volt, uh, barrel connector with a switch on it. So I turned that on as well. And then I, I'll fire up GDB with the, with the binary as an argument. And then I will connect to the J link and I will load reset and run the code I'm working on. Um, the code I'm working on right now actually is a spy flash code. So I actually have a salient hooked up to the spy flash that I just used to understand whether my code is working as I expect or not. Okay. Um, okay, cool.",
+   "context_before": "Um, can you walk us through some of your, some of your steps if you're firing it up for the, for the morning, in the morning?",
+   "context_after": "So yeah, the, is that what you're thinking? Yeah. Yeah. That was exactly what I was thinking. That's great. And I think the, so you and I were talking on email as well about like, so how do you, how do you explain what a debugger is in this case? Mm-hmm. And I was trying to say it's like, it's effective like a serial port into the processor, but you didn't like that.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Um, can you walk us through some of your, some of your steps if you're firing it up for the, for the morning, in the morning? Yep. Sure. So, uh, we use make to compile, so I will make clean and then I will rebuild it. And I'll also start J link GDB server. Uh, so I have on my desk, uh, J link connected to the SWD port that's on a Metro. I'm just straight up looking at it. Um, I also have a nine volt, uh, barrel connector with a switch on it. So I turned that on as well. And then I, I'll fire up GDB with the, with the binary as an argument. And then I will connect to the J link and I will load reset and run the code I'm working on. Um, the code I'm working on right now actually is a spy flash code. So I actually have a salient hooked up to the spy flash that I just used to understand whether my code is working as I expect or not. Okay. Um, okay, cool. So yeah, the, is that what you're thinking? Yeah. Yeah. That was exactly what I was thinking. That's great. And I think the, so you and I were talking on email as well about like, so how do you, how do you explain what a debugger is in this case? Mm-hmm. And I was trying to say it's like, it's effective like a serial port into the processor, but you didn't like that."
+  },
+  {
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "guest": "Scott Shawcroft",
+   "stem": "0383-an-interview-with-scott-shawcroft",
+   "paragraph_index": 160,
+   "depth": "explains",
+   "speaker_raw": "Scott Shawcroft",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:debugger",
+   "concept_sources": [
+    "child:debugger"
+   ],
+   "concepts": [
+    "debugger"
+   ],
+   "paragraph_text": "So yeah, the, is that what you're thinking? Yeah. Yeah. That was exactly what I was thinking. That's great. And I think the, so you and I were talking on email as well about like, so how do you, how do you explain what a debugger is in this case? Mm-hmm. And I was trying to say it's like, it's effective like a serial port into the processor, but you didn't like that.",
+   "context_before": "Yep. Sure. So, uh, we use make to compile, so I will make clean and then I will rebuild it. And I'll also start J link GDB server. Uh, so I have on my desk, uh, J link connected to the SWD port that's on a Metro. I'm just straight up looking at it. Um, I also have a nine volt, uh, barrel connector with a switch on it. So I turned that on as well. And then I, I'll fire up GDB with the, with the binary as an argument. And then I will connect to the J link and I will load reset and run the code I'm working on. Um, the code I'm working on right now actually is a spy flash code. So I actually have a salient hooked up to the spy flash that I just used to understand whether my code is working as I expect or not. Okay. Um, okay, cool.",
+   "context_after": "Yeah. I think, um, serial port, especially from the Arduino land means text back and forth. Oh, okay.",
+   "context_before_speaker": "Scott Shawcroft",
+   "context_after_speaker": "Scott Shawcroft",
+   "text": "Yep. Sure. So, uh, we use make to compile, so I will make clean and then I will rebuild it. And I'll also start J link GDB server. Uh, so I have on my desk, uh, J link connected to the SWD port that's on a Metro. I'm just straight up looking at it. Um, I also have a nine volt, uh, barrel connector with a switch on it. So I turned that on as well. And then I, I'll fire up GDB with the, with the binary as an argument. And then I will connect to the J link and I will load reset and run the code I'm working on. Um, the code I'm working on right now actually is a spy flash code. So I actually have a salient hooked up to the spy flash that I just used to understand whether my code is working as I expect or not. Okay. Um, okay, cool. So yeah, the, is that what you're thinking? Yeah. Yeah. That was exactly what I was thinking. That's great. And I think the, so you and I were talking on email as well about like, so how do you, how do you explain what a debugger is in this case? Mm-hmm. And I was trying to say it's like, it's effective like a serial port into the processor, but you didn't like that. Yeah. I think, um, serial port, especially from the Arduino land means text back and forth. Oh, okay."
+  },
+  {
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "guest": "Scott Shawcroft",
+   "stem": "0383-an-interview-with-scott-shawcroft",
+   "paragraph_index": 187,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Scott Shawcroft",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "So the, the ISR or the debugger in, in my mental model is just like, it can pause the CPU or it can tell the CPU like, Hey, when you reach this code, pause or stop. Right. And so when you set a break point, the GDB side of the debugger, the, the code on your, on your computer says, Hey, you wanted this like particular function. What, um, program counter is it at? And then the debugger says, Hey, CPU, when you hit this program counter, stop, please. Okay. Um, so it doesn't have anything to do with the ISR, although you could say when the program counter hits the, the address of the ISR, stop.",
+   "context_before": "Um, so, but, but the, the, in the case of the debugger though, is the debugger sitting in the ISR and looking at that or is it? No.",
+   "context_after": "Well, I guess the reason I asked about this too, is because I was, I was actually, so as I was troubleshooting my clock pin being plugged into the wrong pin, uh, when none of my debugger working.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Um, so, but, but the, the, in the case of the debugger though, is the debugger sitting in the ISR and looking at that or is it? No. So the, the ISR or the debugger in, in my mental model is just like, it can pause the CPU or it can tell the CPU like, Hey, when you reach this code, pause or stop. Right. And so when you set a break point, the GDB side of the debugger, the, the code on your, on your computer says, Hey, you wanted this like particular function. What, um, program counter is it at? And then the debugger says, Hey, CPU, when you hit this program counter, stop, please. Okay. Um, so it doesn't have anything to do with the ISR, although you could say when the program counter hits the, the address of the ISR, stop. Well, I guess the reason I asked about this too, is because I was, I was actually, so as I was troubleshooting my clock pin being plugged into the wrong pin, uh, when none of my debugger working."
+  },
+  {
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "guest": "Scott Shawcroft",
+   "stem": "0383-an-interview-with-scott-shawcroft",
+   "paragraph_index": 191,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Scott Shawcroft",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:j-link",
+    "core"
+   ],
+   "concepts": [
+    "gdb",
+    "j-link"
+   ],
+   "paragraph_text": "Well, so the, the debugger, like GDB on your computer is the thing that figures out. You said this function and I will interpret it into this number for the processor. And then you'll see that the, the processor, like the same D 21, the cortex M zero plus supports four hardware break points, which is four 32 bit numbers that represent the code that it's executing at any one point. And every time it executes, it's comparing against those four numbers. And if it hits that four numbers, it stops like the CPU will stop. And then the, the debugger software, like GDB through the J link can then understand that, Hey, I have stopped.",
+   "context_before": " and a data signal going back and forth with the debugger and like, they kind of, some of the stuff felt, you know, fell into place. So I do recommend plugging things into the wrong place sometimes. Excuse me. Um, like you have a choice. Right. Exactly. Uh, so, but in this case though, what I'm, what I'm really asking, I guess, is what is physically streaming back out of the processor and then who is controlling things? So, okay. So we're, let's go to that case where we're now setting a, a break point, right? Mm-hmm. Is it streaming where the code is like in a, in the counter? Is that what's streaming back out? I don't, I don't believe so. Okay. So how does it know when to stop though? That's what, that's what I'm really saying. Like who's the brain, who's the brains of the operation here?",
+   "context_after": "Okay. So it's not streaming back out. We're at line one. We're at line two. We're at line three. We're at line four. And then it gets to line 7,461 or something and says, Oh now, and now the computer says to stop. Right. It's more, it's counting internally and saying, I just said 761 or whatever they said.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": " and a data signal going back and forth with the debugger and like, they kind of, some of the stuff felt, you know, fell into place. So I do recommend plugging things into the wrong place sometimes. Excuse me. Um, like you have a choice. Right. Exactly. Uh, so, but in this case though, what I'm, what I'm really asking, I guess, is what is physically streaming back out of the processor and then who is controlling things? So, okay. So we're, let's go to that case where we're now setting a, a break point, right? Mm-hmm. Is it streaming where the code is like in a, in the counter? Is that what's streaming back out? I don't, I don't believe so. Okay. So how does it know when to stop though? That's what, that's what I'm really saying. Like who's the brain, who's the brains of the operation here? Well, so the, the debugger, like GDB on your computer is the thing that figures out. You said this function and I will interpret it into this number for the processor. And then you'll see that the, the processor, like the same D 21, the cortex M zero plus supports four hardware break points, which is four 32 bit numbers that represent the code that it's executing at any one point. And every time it executes, it's comparing against those four numbers. And if it hits that four numbers, it stops like the CPU will stop. And then the, the debugger software, like GDB through the J link can then understand that, Hey, I have stopped. Okay. So it's not streaming back out. We're at line one. We're at line two. We're at line three. We're at line four. And then it gets to line 7,461 or something and says, Oh now, and now the computer says to stop. Right. It's more, it's counting internally and saying, I just said 761 or whatever they said."
+  },
+  {
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "guest": "Scott Shawcroft",
+   "stem": "0383-an-interview-with-scott-shawcroft",
+   "paragraph_index": 199,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Scott Shawcroft",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Yeah. And that, I think that tends to occur if you don't have your entire source code, if your code goes in somewhere that it didn't know it could, like, uh, we have a bootloader on our boards and if you go into the bootloader, but the GDB didn't know about the bootloader that can get tricky. Okay. Okay. Interesting. Yeah. So there are like advanced J links where it does actually stream data back the J trace and all of that high end stuff. But, um, in general, that's not something I use day to day.",
+   "context_before": "Yeah. Yeah. Yeah. Break points are better for that. I know. I knew that one. Cause, uh, yeah, I've, I've definitely had problems with that in the past.",
+   "context_after": "Right. Well, and I was thinking even with, uh, I mean like this, like you could set how fast the, the serial can actually talk between like the, over the S the single wire debug SWD. Right. Right. You could say it's default four megahertz, you could say a hundred kilohertz and it won't care. Right. But it's, it's gonna, not gonna be able to stream data back as fast or at all really. Right. So, okay. So that, that makes a lot of sense actually. So then, so basically the GDB server is running on your computer. Yep. It's talking through this hardware chip, the SEGGER hardware chip on the J link. Yep. And that's basically translating it to some kind of serial thing. And then it's going in and saying, all right, I know where to talk to in these, through this quasi serial port. It's saying, go t",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Yeah. Yeah. Break points are better for that. I know. I knew that one. Cause, uh, yeah, I've, I've definitely had problems with that in the past. Yeah. And that, I think that tends to occur if you don't have your entire source code, if your code goes in somewhere that it didn't know it could, like, uh, we have a bootloader on our boards and if you go into the bootloader, but the GDB didn't know about the bootloader that can get tricky. Okay. Okay. Interesting. Yeah. So there are like advanced J links where it does actually stream data back the J trace and all of that high end stuff. But, um, in general, that's not something I use day to day. Right. Well, and I was thinking even with, uh, I mean like this, like you could set how fast the, the serial can actually talk between like the, over the S the single wire debug SWD. Right. Right. You could say it's default four megahertz, you could say a hundred kilohertz and it won't care. Right. But it's, it's gonna, not gonna be able to stream data back as fast or at all really. Right. So, okay. So that, that makes a lot of sense actually. So then, so basically the GDB server is running on your computer. Yep. It's talking through this hardware chip, the SEGGER hardware chip on the J link. Yep. And that's basically translating it to some kind of serial thing. And then it's going in and saying, all right, I know where to talk to in these, through this quasi serial port. It's saying, go t"
+  },
+  {
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "guest": "Scott Shawcroft",
+   "stem": "0383-an-interview-with-scott-shawcroft",
+   "paragraph_index": 213,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Scott Shawcroft",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Um, you can actually basically see the history of where you are. Um, and that guide includes links to a Python script that you can use in GDB to actually tell you like a line, like source code line numbers for all of those addresses.",
+   "context_before": "Okay.",
+   "context_after": "Okay, cool. All right. So let's, let's, let's zoom back up a little bit here. Yeah. So, so the good thing. Community at some point too. Oh, definitely that. Um, but on this side of things. So, so one of the things that, okay. So let me step back on my stuff. I came from the world of IDEs, right. And this was like, again, back to that episode with, uh, the BeagleBone guys. Um, like I, I just don't do like make file. I've not done make files and all that stuff. Yeah. And that's something I'd like to work towards for sure. Yeah. Um, but I come from the world of IDEs where you, you know, you basically, you download the whole tool chain from one vendor and you just hope to God it works and, you know, and if it doesn't, you call someone and they help you, right. Or you have coworkers. Yeah. Um, ",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. Um, you can actually basically see the history of where you are. Um, and that guide includes links to a Python script that you can use in GDB to actually tell you like a line, like source code line numbers for all of those addresses. Okay, cool. All right. So let's, let's, let's zoom back up a little bit here. Yeah. So, so the good thing. Community at some point too. Oh, definitely that. Um, but on this side of things. So, so one of the things that, okay. So let me step back on my stuff. I came from the world of IDEs, right. And this was like, again, back to that episode with, uh, the BeagleBone guys. Um, like I, I just don't do like make file. I've not done make files and all that stuff. Yeah. And that's something I'd like to work towards for sure. Yeah. Um, but I come from the world of IDEs where you, you know, you basically, you download the whole tool chain from one vendor and you just hope to God it works and, you know, and if it doesn't, you call someone and they help you, right. Or you have coworkers. Yeah. Um, "
+  },
+  {
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "guest": "Scott Shawcroft",
+   "stem": "0383-an-interview-with-scott-shawcroft",
+   "paragraph_index": 219,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Scott Shawcroft",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Well, there's the J link GDB server. And then I use GDB proper to connect to that. Um, which is just like the GDB prompt command line prompt thing. Okay. Which is, I think in the guide, you can see it there. Yeah.",
+   "context_before": "Yeah. So I tend not to use IDs. Right. But, but then what? Right. So then you start the, you start the server, the GDB server. Right. And open OCD as well.",
+   "context_after": "Okay. And we'll definitely link people there. But I guess, I guess the whole thing that I think about is like, so like even the IDE world, right? It, it, it kind of felt like, like FPJs do this a lot as well. You know, like there's all these command line tools underneath and the IDs are basically calling these tools. Yep. And, and, and. Yep. And The Amp Houring thing is like, you can call them yourself, right? Yes, totally. And in different orders. Yep. But that's also a little scary.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. So I tend not to use IDs. Right. But, but then what? Right. So then you start the, you start the server, the GDB server. Right. And open OCD as well. Well, there's the J link GDB server. And then I use GDB proper to connect to that. Um, which is just like the GDB prompt command line prompt thing. Okay. Which is, I think in the guide, you can see it there. Yeah. Okay. And we'll definitely link people there. But I guess, I guess the whole thing that I think about is like, so like even the IDE world, right? It, it, it kind of felt like, like FPJs do this a lot as well. You know, like there's all these command line tools underneath and the IDs are basically calling these tools. Yep. And, and, and. Yep. And The Amp Houring thing is like, you can call them yourself, right? Yes, totally. And in different orders. Yep. But that's also a little scary."
+  },
+  {
+   "episode": 460,
+   "episode_title": "Rubber Ducking",
+   "episode_url": "https://theamphour.com/460-rubber-ducking/",
+   "guest": null,
+   "stem": "0460-rubber-ducking",
+   "paragraph_index": 22,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "So it's like the, it's the command line debugger for just like Linux in general, like GNU debugger, I think is the GDB.",
+   "context_before": "GDB? What's GDB?",
+   "context_after": "No, I don't use Linux, so.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "GDB? What's GDB? So it's like the, it's the command line debugger for just like Linux in general, like GNU debugger, I think is the GDB. No, I don't use Linux, so."
+  },
+  {
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "guest": "Uri Shaked",
+   "stem": "0599-an-interview-with-uri-shaked-wokwi-com",
+   "paragraph_index": 40,
+   "depth": "opinion",
+   "speaker_raw": "Uri Shaked Wokwicom",
+   "speaker_repaired": "Uri Shaked",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:debugger",
+   "concept_sources": [
+    "child:debugger"
+   ],
+   "concepts": [
+    "debugger"
+   ],
+   "paragraph_text": "Yeah. But so now I'm trying to prioritize it by letting users vote so they can buy vote powers. And then use those vote powers to vote for features they care about. So right now the debugger is actually at the top of the list. And I've been working long nights to try to get LLDB, the LLVM debugger, to compile into WebAssembly so I can run it in the browser. Wow. Yeah. That's crazy. Yeah. It's, I mean, nobody does debuggers nowadays. I tried to contact some of the people who worked on LLDB and they told me, yeah, we would love to work in debuggers. But apparently nobody's interested in working on it. So we shifted to working on compilers.",
+   "context_before": "Good.",
+   "context_after": "Yeah. I can imagine there's not a lot of money in it. You know, like there's kind of the established players in the space and then there's GDB and all the, you know, those kind of things as well. And it's just like, I can't imagine there's a lot of greenfield happening there.",
+   "context_before_speaker": "Speaker ?",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Good. Yeah. But so now I'm trying to prioritize it by letting users vote so they can buy vote powers. And then use those vote powers to vote for features they care about. So right now the debugger is actually at the top of the list. And I've been working long nights to try to get LLDB, the LLVM debugger, to compile into WebAssembly so I can run it in the browser. Wow. Yeah. That's crazy. Yeah. It's, I mean, nobody does debuggers nowadays. I tried to contact some of the people who worked on LLDB and they told me, yeah, we would love to work in debuggers. But apparently nobody's interested in working on it. So we shifted to working on compilers. Yeah. I can imagine there's not a lot of money in it. You know, like there's kind of the established players in the space and then there's GDB and all the, you know, those kind of things as well. And it's just like, I can't imagine there's a lot of greenfield happening there."
+  },
+  {
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "guest": "Uri Shaked",
+   "stem": "0599-an-interview-with-uri-shaked-wokwi-com",
+   "paragraph_index": 42,
+   "depth": "explains",
+   "speaker_raw": "Uri Shaked Wokwicom",
+   "speaker_repaired": "Uri Shaked",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "So yeah, GDB was actually my first attempt to circumvent the need to create my own debugger. So I did something really crazy that should never be done. And that was taking GDB, compiling it as an x86 Linux binary, and then using a simulator for x86 that's called V86 to run a Linux distribution inside the browser. So there's GDB Linux binary that runs on a virtual machine inside a Linux simulator in the browser. And that talks to the Arduino or Raspberry Pi Pico simulator through WebSockets to like establish a GDB debugging session. Oh my gosh.",
+   "context_before": "Yeah. I can imagine there's not a lot of money in it. You know, like there's kind of the established players in the space and then there's GDB and all the, you know, those kind of things as well. And it's just like, I can't imagine there's a lot of greenfield happening there.",
+   "context_after": "Yeah, that's when I think Leonardo DiCaprio shows up and says, you know, you're too many levels deep. This is going to fall apart.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. I can imagine there's not a lot of money in it. You know, like there's kind of the established players in the space and then there's GDB and all the, you know, those kind of things as well. And it's just like, I can't imagine there's a lot of greenfield happening there. So yeah, GDB was actually my first attempt to circumvent the need to create my own debugger. So I did something really crazy that should never be done. And that was taking GDB, compiling it as an x86 Linux binary, and then using a simulator for x86 that's called V86 to run a Linux distribution inside the browser. So there's GDB Linux binary that runs on a virtual machine inside a Linux simulator in the browser. And that talks to the Arduino or Raspberry Pi Pico simulator through WebSockets to like establish a GDB debugging session. Oh my gosh. Yeah, that's when I think Leonardo DiCaprio shows up and says, you know, you're too many levels deep. This is going to fall apart."
+  },
+  {
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "guest": "Uri Shaked",
+   "stem": "0599-an-interview-with-uri-shaked-wokwi-com",
+   "paragraph_index": 75,
+   "depth": "explains",
+   "speaker_raw": "Uri Shaked Wokwicom",
+   "speaker_repaired": "Uri Shaked",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "gdb"
+   ],
+   "paragraph_text": "Thanks. The other side of that, there are already three, was just using GDB on the physical ESP32 chip. So whenever I got to a function that like indicated that a packet was received, I looked at the backtrace to see where it was, what caused that function to be called and where the packet, the frame was stored, the Wi-Fi frame was stored in memory. And I figured out it had like some weird header. So I could like record the stuff I got on the real device and replay it in the simulator and then see how it's get processed in the simulator and sort of look at the differences between the stack traces I got on the simulator and on the real device to find if a statement I was not hitting in the simulator, but hitting on the real device. It was a very, very stressful period.",
+   "context_before": "It's like picking up breadcrumbs and putting them on a map or something like that. You know, like you're basically kind of setting up yourself up for all of the mapped streets that you wanted to map in the first place by saying at the stop sign, go tell me where I just came from or something like that. I'm trying to think of an analogy. It's not very good, but... It's better than what I would come up with. It's impressive.",
+   "context_after": "Super, super iterative. A lot of repeat work, I'm guessing.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "It's like picking up breadcrumbs and putting them on a map or something like that. You know, like you're basically kind of setting up yourself up for all of the mapped streets that you wanted to map in the first place by saying at the stop sign, go tell me where I just came from or something like that. I'm trying to think of an analogy. It's not very good, but... It's better than what I would come up with. It's impressive. Thanks. The other side of that, there are already three, was just using GDB on the physical ESP32 chip. So whenever I got to a function that like indicated that a packet was received, I looked at the backtrace to see where it was, what caused that function to be called and where the packet, the frame was stored, the Wi-Fi frame was stored in memory. And I figured out it had like some weird header. So I could like record the stuff I got on the real device and replay it in the simulator and then see how it's get processed in the simulator and sort of look at the differences between the stack traces I got on the simulator and on the real device to find if a statement I was not hitting in the simulator, but hitting on the real device. It was a very, very stressful period. Super, super iterative. A lot of repeat work, I'm guessing."
+  },
+  {
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "guest": "Julia Desmazes",
+   "stem": "0721-chip-design-for-fun-and-waffles-with-julia-desmazes",
+   "paragraph_index": 118,
+   "depth": "explains",
+   "speaker_raw": "Julia Desmazes",
+   "speaker_repaired": "Julia Desmazes",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:openocd",
+    "core"
+   ],
+   "concepts": [
+    "gdb",
+    "openocd"
+   ],
+   "paragraph_text": "Absolutely. And this is why open source is so great is because when something inevitably goes bad I can actually go in and figure out what went wrong. So for example open OCD and the underlying libraries to talk to my very specific GTAC probe those are all visible to me and I have like compiled custom versions of them and I know that if I need anything I can put them in debug mode put the put a debugger on them like GDB and figure out what's going on and that level of transparency is absolutely necessary because things will go wrong eventually they always do. That's also true for the entire ASIC flow is when something goes wrong or when there's not documentation on like this very specific feature that I kind of want and there are three other people that are using it then I can go into the code and figure out how to make it work and that wouldn't be possible.",
+   "context_before": "Yeah. I love these kind of scenarios too because I am daily using things that I have no idea how they work under the hood. Right. And I'm just like depending on like you said JTAG the you know the SEGUR emulator SEGUR SEGUR debugger rather and just all the stuff all the stacks and stacks and stacks and stacks. So when you do something like this and you're just like you're literally splaying it out in your in your living room you're helping to expose all the things that are there and you're also modifying and making it new things as well.",
+   "context_after": "So I have a friend that takes things back to first principles and that's kind of like his default but then he kind of gets stuck in rabbit holes sometimes. He's so good at everything anyways it's just like you know to me it looks like magic but like do you do you get caught on rabbit holes as a result?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. I love these kind of scenarios too because I am daily using things that I have no idea how they work under the hood. Right. And I'm just like depending on like you said JTAG the you know the SEGUR emulator SEGUR SEGUR debugger rather and just all the stuff all the stacks and stacks and stacks and stacks. So when you do something like this and you're just like you're literally splaying it out in your in your living room you're helping to expose all the things that are there and you're also modifying and making it new things as well. Absolutely. And this is why open source is so great is because when something inevitably goes bad I can actually go in and figure out what went wrong. So for example open OCD and the underlying libraries to talk to my very specific GTAC probe those are all visible to me and I have like compiled custom versions of them and I know that if I need anything I can put them in debug mode put the put a debugger on them like GDB and figure out what's going on and that level of transparency is absolutely necessary because things will go wrong eventually they always do. That's also true for the entire ASIC flow is when something goes wrong or when there's not documentation on like this very specific feature that I kind of want and there are three other people that are using it then I can go into the code and figure out how to make it work and that wouldn't be possible. So I have a friend that takes things back to first principles and that's kind of like his default but then he kind of gets stuck in rabbit holes sometimes. He's so good at everything anyways it's just like you know to me it looks like magic but like do you do you get caught on rabbit holes as a result?"
+  }
+ ]
+}

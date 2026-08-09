@@ -1,0 +1,572 @@
+{
+ "concept": "multiplexer",
+ "name": "Multiplexer",
+ "type": "component",
+ "score": 92.75,
+ "rank_by_score": 411,
+ "cluster": {
+  "core": [
+   "multiplexer"
+  ],
+  "children": [
+   "analog-signal",
+   "career-choice",
+   "doom"
+  ],
+  "neighbors": []
+ },
+ "stats": {
+  "episodes": 20,
+  "mentions": 25,
+  "explains": 18,
+  "opinions": 0,
+  "candidate_episode_count": 18,
+  "candidate_mention_count": 21,
+  "gated_out": 46,
+  "gated_out_by_concept": [
+   [
+    "analog-signal",
+    24
+   ],
+   [
+    "career-choice",
+    15
+   ],
+   [
+    "doom",
+    7
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 2,
+  "speakers": [
+   [
+    "Chris Gammell",
+    4
+   ],
+   [
+    "Jean Rintoul",
+    3
+   ],
+   [
+    "Matt Venn",
+    2
+   ],
+   [
+    "Adam Wolf",
+    1
+   ],
+   [
+    "Clint Cole",
+    1
+   ],
+   [
+    "Jason Cerundolo",
+    1
+   ],
+   [
+    "Dave Jones",
+    1
+   ],
+   [
+    "Ken Burns",
+    1
+   ],
+   [
+    "Jeroen Domburg",
+    1
+   ],
+   [
+    "Tim Ansell",
+    1
+   ],
+   [
+    "Pete Staples",
+    1
+   ],
+   [
+    "James Adams",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 18
+  },
+  "passages_by_depth": {
+   "explains": 18
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 18,
+ "passages": [
+  {
+   "episode": 167,
+   "episode_title": "An Interview with Adam Wolf - Brick & Board Biuners",
+   "episode_url": "https://theamphour.com/167-an-interview-with-adam-wolf-brick-board-biuners/",
+   "guest": "Adam Wolfe",
+   "stem": "0167-an-interview-with-adam-wolf-brick-board-biuners",
+   "paragraph_index": 187,
+   "depth": "explains",
+   "speaker_raw": "Adam Wolfe",
+   "speaker_repaired": "Adam Wolf",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "It's like eight pins. They have actually SOIC and DIP and a few other smaller forms. But basically they have a new one out that's \u2013 I think it's like a quarter megabit, maybe half a megabit. So, I mean it's got quite a lot of space. And if your audio is 24-bit or 16-bit, they're just stackable on I2C. And you can \u2013 no, they may be spy. They may have both. But either way, but I mean like it's like one pin to throw another one on there. And once you've got a few, you put a multiplexer on it and you call it a day. And you've got an audio ring buffer that you can put a whole bunch of audio. And then once you've got that ring of audio, all your effects are pretty straightforward, right? You've got your delay and echo and \u2013",
+   "context_before": "Ah, okay.",
+   "context_after": "Right. You just grab different memory locations and then you kind of skip through the time effectively, right?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Ah, okay. It's like eight pins. They have actually SOIC and DIP and a few other smaller forms. But basically they have a new one out that's \u2013 I think it's like a quarter megabit, maybe half a megabit. So, I mean it's got quite a lot of space. And if your audio is 24-bit or 16-bit, they're just stackable on I2C. And you can \u2013 no, they may be spy. They may have both. But either way, but I mean like it's like one pin to throw another one on there. And once you've got a few, you put a multiplexer on it and you call it a day. And you've got an audio ring buffer that you can put a whole bunch of audio. And then once you've got that ring of audio, all your effects are pretty straightforward, right? You've got your delay and echo and \u2013 Right. You just grab different memory locations and then you kind of skip through the time effectively, right?"
+  },
+  {
+   "episode": 302,
+   "episode_title": "An Interview with Clint Cole of Digilent",
+   "episode_url": "https://theamphour.com/302-an-interview-with-clint-cole-of-digilent/",
+   "guest": "Clint Cole",
+   "stem": "0302-an-interview-with-clint-cole-of-digilent",
+   "paragraph_index": 394,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Clint Cole",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Yeah, I'll tell you, and I struggle with this exact topic all the time. Yeah, I'm going to go back and teach in the fall these kind of topics and I don't know what the right thing is to teach even today because, yeah, you've got this whole structural body of knowledge. You know, how AND gates and OR gates are formed and how they connect to each other to form larger circuits and like MUXs and decoders and how those things are connected into larger systems. There's this whole structural kind of blueprint-y way of looking at those kind of things. And then there's the, nah, don't care about that. I just want the function. And you can specify that with one line of high-level code. And what does an engineer have to know about that? I mean, does it matter to them that that one line of code just instantiated several thousand gates and just required 100 milliwatts of power? Doesn't matter until it doesn't fit in the part anymore. Or until it won't run at the speed that it needs to run. Yeah, exactly, exactly. And so if we're going to keep an awareness of the structural ramifications of the behavioral code people produce, if that needs to be a part of the educational and practical landscape, that does kind of put a speed limit on how fast we can educate people and how many we can educate.",
+   "context_before": "It kind of feels like the \u2013 I mean the skills that you need for FPGAs though too are like pretty low-level digital knowledge I feel like. I mean I know that with Verilog you can kind of make it more like C, but that's not really a \u2013 you know, like we're churning out a lot more JavaScript people I think than we are C programmers. And so it feels like getting back down towards the hardware level, which is what FPGAs kind of require is kind of like understanding how the blocks are put together. It feels like that's not necessarily being trained for.",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "It kind of feels like the \u2013 I mean the skills that you need for FPGAs though too are like pretty low-level digital knowledge I feel like. I mean I know that with Verilog you can kind of make it more like C, but that's not really a \u2013 you know, like we're churning out a lot more JavaScript people I think than we are C programmers. And so it feels like getting back down towards the hardware level, which is what FPGAs kind of require is kind of like understanding how the blocks are put together. It feels like that's not necessarily being trained for. Yeah, I'll tell you, and I struggle with this exact topic all the time. Yeah, I'm going to go back and teach in the fall these kind of topics and I don't know what the right thing is to teach even today because, yeah, you've got this whole structural body of knowledge. You know, how AND gates and OR gates are formed and how they connect to each other to form larger circuits and like MUXs and decoders and how those things are connected into larger systems. There's this whole structural kind of blueprint-y way of looking at those kind of things. And then there's the, nah, don't care about that. I just want the function. And you can specify that with one line of high-level code. And what does an engineer have to know about that? I mean, does it matter to them that that one line of code just instantiated several thousand gates and just required 100 milliwatts of power? Doesn't matter until it doesn't fit in the part anymore. Or until it won't run at the speed that it needs to run. Yeah, exactly, exactly. And so if we're going to keep an awareness of the structural ramifications of the behavioral code people produce, if that needs to be a part of the educational and practical landscape, that does kind of put a speed limit on how fast we can educate people and how many we can educate. Yeah."
+  },
+  {
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "guest": "David Kronstein",
+   "stem": "the-amp-hour-325-an-interview-with-david-kronstein-tesla500",
+   "paragraph_index": 298,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Yeah. There's basically the, as you read out the chip, there's some, you select which horizontal, uh, row you want to read out that gets put onto each. There is, in this case is the pixel, the imager is a hundred, is a thousand 24 pixels, sorry, 1280 pixels wide. Yeah. There's 1280 parallel lines. And you select, say you select the first row, those 1280 lines get driven with the different voltages for each of those pixels. Yeah. And then those are, there's MUXs that select groups of 16 to go off to the ADCs. Right. I think in this sensor there is, the ADCs run at 90 megahertz and there's 16 of them. Oh my God.",
+   "context_before": "Right. And that's why you get the, you know, the 600 by 96 resolution or whatever it is for your 21,000 frames per second. So it's that long landscape narrow thing. Now I've always wondered why, okay, you window it down, but why can't you have like separate windows and then separate clocks out? Is it just the architecture of how the sensor works or?",
+   "context_after": "Why can't they just increase the number of ADCs? Why can't they just have like a thousand ADCs on there and have a thousand separate lines coming out and you'd get a hundred thousand frames per second?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Right. And that's why you get the, you know, the 600 by 96 resolution or whatever it is for your 21,000 frames per second. So it's that long landscape narrow thing. Now I've always wondered why, okay, you window it down, but why can't you have like separate windows and then separate clocks out? Is it just the architecture of how the sensor works or? Yeah. There's basically the, as you read out the chip, there's some, you select which horizontal, uh, row you want to read out that gets put onto each. There is, in this case is the pixel, the imager is a hundred, is a thousand 24 pixels, sorry, 1280 pixels wide. Yeah. There's 1280 parallel lines. And you select, say you select the first row, those 1280 lines get driven with the different voltages for each of those pixels. Yeah. And then those are, there's MUXs that select groups of 16 to go off to the ADCs. Right. I think in this sensor there is, the ADCs run at 90 megahertz and there's 16 of them. Oh my God. Why can't they just increase the number of ADCs? Why can't they just have like a thousand ADCs on there and have a thousand separate lines coming out and you'd get a hundred thousand frames per second?"
+  },
+  {
+   "episode": 326,
+   "episode_title": "Magical Fire Bags",
+   "episode_url": "https://theamphour.com/326-magical-fire-bags/",
+   "guest": null,
+   "stem": "0326-magical-fire-bags",
+   "paragraph_index": 297,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Right. Right. But this is a little bit more like at the fundamental side of things. So like there, I mean, like I think they're all very interesting. I think what you and I came down to is that we didn't want to, but we're lazy anyways. So. Yep. We're probably not a good example. Right. I think it's interesting as like, uh, you know, if you're, if you're going to be doing this stuff anyways, it's good to have an idea of, you know, how multiplexers work, how, how data latches work, you know, all the different addressing and stuff like that, that actually does, it does make a lot of sense to have this. And I think this is, this is a good, a good starting point for this. So, um, yeah. Let's see.",
+   "context_before": "Yeah.",
+   "context_after": "Another story I like, um, this week is that it got all the rage a couple of months back. The, um, Samsung, um, Galaxy Note 7.",
+   "context_before_speaker": "Speaker ?",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah. Right. Right. But this is a little bit more like at the fundamental side of things. So like there, I mean, like I think they're all very interesting. I think what you and I came down to is that we didn't want to, but we're lazy anyways. So. Yep. We're probably not a good example. Right. I think it's interesting as like, uh, you know, if you're, if you're going to be doing this stuff anyways, it's good to have an idea of, you know, how multiplexers work, how, how data latches work, you know, all the different addressing and stuff like that, that actually does, it does make a lot of sense to have this. And I think this is, this is a good, a good starting point for this. So, um, yeah. Let's see. Another story I like, um, this week is that it got all the rage a couple of months back. The, um, Samsung, um, Galaxy Note 7."
+  },
+  {
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "guest": "Jason Cerundolo",
+   "stem": "0340-an-interview-with-jason-cerundolo",
+   "paragraph_index": 268,
+   "depth": "explains",
+   "speaker_raw": "Jason Cerundolo",
+   "speaker_repaired": "Jason Cerundolo",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Right. Yeah. So you have to add switches and MUXs internally, which you already have to do right now in certain circumstances for monitoring the cable flip. But that's kind of been the general strategy behind USB-C is make things easier for the user and push all that effort back on the engineers.",
+   "context_before": "Right. Because then you have to, like, broker that at some point on the circuit board and still do it relatively quickly and have all the power and signal integrity stuff pass all the way through, right?",
+   "context_after": "What about the... So it doesn't start delivering... What does it take to get to the 100-watt standpoint? So you said there's some kind of electronically mark in the cable. But, like, so can you walk us through the steps to kind of get to 100 watts? Sure.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. Because then you have to, like, broker that at some point on the circuit board and still do it relatively quickly and have all the power and signal integrity stuff pass all the way through, right? Right. Yeah. So you have to add switches and MUXs internally, which you already have to do right now in certain circumstances for monitoring the cable flip. But that's kind of been the general strategy behind USB-C is make things easier for the user and push all that effort back on the engineers. What about the... So it doesn't start delivering... What does it take to get to the 100-watt standpoint? So you said there's some kind of electronically mark in the cable. But, like, so can you walk us through the steps to kind of get to 100 watts? Sure."
+  },
+  {
+   "episode": 355,
+   "episode_title": "The Internet of Septage (with Akiba)",
+   "episode_url": "https://theamphour.com/355-the-internet-of-septage-with-akiba/",
+   "guest": "Akiba",
+   "stem": "0355-the-internet-of-septage-with-akiba",
+   "paragraph_index": 250,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "things like that. Yeah. Yeah. Yeah. Right. If you put like a mux on board or something, so you can actually switch or like an analog, uh, switches and stuff like that, you can make a little matrix board or something.",
+   "context_before": "Um, yeah, yeah. You just give them, and you have to give them the PCB because they'll measure it themselves. Yeah. Okay. And then use that to test it. But then, um, but yeah, and then you pay 50 bucks, like $50 and you get a test fixture and then that's a full text fixture with a, and just a bunch of wires coming out for each of the Poga pins. And then you connect those to whatever. And so I would probably connect it to either like sub, normally I connect it to a microcontroller and I'd have like a test routine going, but like if the analog discovery, um, like I think it'd be interesting to play around with the analog discovery because it might be interesting to check out like, uh, say, uh, like, uh, voltage levels and",
+   "context_after": "Yeah. Yeah. And just, just so people know, I have no affiliation with the analog discovery. I, you know, I, I, you know, I'm not sponsored by it. I'm not trying to pitch for it. I'm not either. It's a partnership. But it does sound interesting and, you know, and it is, it is an open, open source solution. So like,",
+   "context_before_speaker": "Akiba",
+   "context_after_speaker": "Akiba",
+   "text": "Um, yeah, yeah. You just give them, and you have to give them the PCB because they'll measure it themselves. Yeah. Okay. And then use that to test it. But then, um, but yeah, and then you pay 50 bucks, like $50 and you get a test fixture and then that's a full text fixture with a, and just a bunch of wires coming out for each of the Poga pins. And then you connect those to whatever. And so I would probably connect it to either like sub, normally I connect it to a microcontroller and I'd have like a test routine going, but like if the analog discovery, um, like I think it'd be interesting to play around with the analog discovery because it might be interesting to check out like, uh, say, uh, like, uh, voltage levels and things like that. Yeah. Yeah. Yeah. Right. If you put like a mux on board or something, so you can actually switch or like an analog, uh, switches and stuff like that, you can make a little matrix board or something. Yeah. Yeah. And just, just so people know, I have no affiliation with the analog discovery. I, you know, I, I, you know, I'm not sponsored by it. I'm not trying to pitch for it. I'm not either. It's a partnership. But it does sound interesting and, you know, and it is, it is an open, open source solution. So like,"
+  },
+  {
+   "episode": 380,
+   "episode_title": "Just Terrestrial and Space Things",
+   "episode_url": "https://theamphour.com/380-just-terrestrial-and-space-things/",
+   "guest": null,
+   "stem": "0380-just-terrestrial-and-space-things",
+   "paragraph_index": 100,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Well, just type it in. Oh, I think I found it, actually. Yeah. HY3131. It's just on Google. Okay. Yeah. I'll link that in, too. Yeah. Yeah. And there's a data sheet. And there's also an application note that goes along with it, which lists all the internal muxes in when you choose, you know, a particular range. This is how you should arrange the internal muxes. But you don't have to. There's lots of customization. You can, you know. There's got to be 50 internal muxes in this thing, you know, that can switch anything. Right, right, right. That's how you get the versatility.",
+   "context_before": "Okay.",
+   "context_after": "It's like a switch fabric almost, right? Yeah, yeah. Almost. Yeah. That's cool. Yeah, it's great. Yeah, it's got multiple internal. Are you and David actually pinging these registers or no?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. Well, just type it in. Oh, I think I found it, actually. Yeah. HY3131. It's just on Google. Okay. Yeah. I'll link that in, too. Yeah. Yeah. And there's a data sheet. And there's also an application note that goes along with it, which lists all the internal muxes in when you choose, you know, a particular range. This is how you should arrange the internal muxes. But you don't have to. There's lots of customization. You can, you know. There's got to be 50 internal muxes in this thing, you know, that can switch anything. Right, right, right. That's how you get the versatility. It's like a switch fabric almost, right? Yeah, yeah. Almost. Yeah. That's cool. Yeah, it's great. Yeah, it's got multiple internal. Are you and David actually pinging these registers or no?"
+  },
+  {
+   "episode": 448,
+   "episode_title": "An Interview with Jean Rintoul",
+   "episode_url": "https://theamphour.com/448-an-interview-with-jean-rintoul/",
+   "guest": "Jean Rintoul",
+   "stem": "0448-an-interview-with-jean-rintoul",
+   "paragraph_index": 91,
+   "depth": "explains",
+   "speaker_raw": "Gene",
+   "speaker_repaired": "Jean Rintoul",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Yeah. Yeah. So flex PCB. So yeah. So basically, yeah, the electrode cable, I thought about doing it a few different ways and, you know, for, for some applications you want like separate, separated, uh, electrodes in the sort of way you've probably think of, uh, EEG caps and things like that. Um, but for others, it's fine just to have it in a flex electrode array. In fact, it's kind of awesome because then you can control the spacing between the electrodes, which can help you with image reconstruction because you just need that, uh, geometry knowledge to be able to do, uh, make the best possible image reconstruction. Um, yeah, so basically that main MCU patches out to, um, a bunch of multiplexes, um, which, you know, multiplex in 32 different ways that are going out to the electrodes. Um, those multiplexes are connected back to the main MCU, uh, GPIOs so that you can, uh, control them and, uh, you know, control which one's reading and writing at different times. And those multiplexes then connect to the 32 electrodes, which are in the tank.",
+   "context_before": "So it looks like a flex PCB coming around. So like around the edges, flex PCB or what does that? Yeah.",
+   "context_after": "So, so would you select, so, okay. So, and I, it kind of looks like this is going to sound silly. It kind of reminds me like the bullet time rigs. Have you ever seen those things from like the matrix and like, you know, like it's circular and you're going to be sending stuff across. You're kind of like doing anyways. Um, like you're, you're basically, no, no, uh, I haven't, I haven't, I mean, I've seen",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So it looks like a flex PCB coming around. So like around the edges, flex PCB or what does that? Yeah. Yeah. Yeah. So flex PCB. So yeah. So basically, yeah, the electrode cable, I thought about doing it a few different ways and, you know, for, for some applications you want like separate, separated, uh, electrodes in the sort of way you've probably think of, uh, EEG caps and things like that. Um, but for others, it's fine just to have it in a flex electrode array. In fact, it's kind of awesome because then you can control the spacing between the electrodes, which can help you with image reconstruction because you just need that, uh, geometry knowledge to be able to do, uh, make the best possible image reconstruction. Um, yeah, so basically that main MCU patches out to, um, a bunch of multiplexes, um, which, you know, multiplex in 32 different ways that are going out to the electrodes. Um, those multiplexes are connected back to the main MCU, uh, GPIOs so that you can, uh, control them and, uh, you know, control which one's reading and writing at different times. And those multiplexes then connect to the 32 electrodes, which are in the tank. So, so would you select, so, okay. So, and I, it kind of looks like this is going to sound silly. It kind of reminds me like the bullet time rigs. Have you ever seen those things from like the matrix and like, you know, like it's circular and you're going to be sending stuff across. You're kind of like doing anyways. Um, like you're, you're basically, no, no, uh, I haven't, I haven't, I mean, I've seen"
+  },
+  {
+   "episode": 448,
+   "episode_title": "An Interview with Jean Rintoul",
+   "episode_url": "https://theamphour.com/448-an-interview-with-jean-rintoul/",
+   "guest": "Jean Rintoul",
+   "stem": "0448-an-interview-with-jean-rintoul",
+   "paragraph_index": 105,
+   "depth": "explains",
+   "speaker_raw": "Gene",
+   "speaker_repaired": "Jean Rintoul",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Um, no, well, no, it's not. Um, so it's doing a, like, so as you, as you mentioned, uh, what happens is that you're send something out on say electrode one, you read on all the other electrodes and you get your impedance measurements and then you shift and then you send something out on electrode two. Um, and this is all done with the multiplexes. So they're like fast switching analog multiplexes. So they will, um, you know, um, so for, you know, uh, a very, very split second, um, you know, switch over and stabilize and then you will start the impedance measurement sequence again. Um, yes. So you, uh, so there's different ways to do EIT architectures just to put that out there. This is just one of them. Um, I chose this one, um, because it was inexpensive. So the reason that, so, um, just to give you some sort of insight into other EIT systems. So I didn't invent EIT. It's been around since the nineties, um, in labs and, um, it has taken like a big cart of equipment. So you get your $40,000 EEG, you get your, um, $10,000 current source you get, um, and then you sort of join them all together with an expensive switching system. And, um, that they're like, there are all these like big messes of wires on a giant cart that they like wheel around. And that just seemed so big. And it's also kind of expensive. Um, and I was like, man, you know, I've, I've been doing all this like consumer wearable stuff. So my, my background is making things small. Um, and I was like, you know, I could make this smaller, like, like, cause I was reading about, um, electrical impedance tomography and I became really fascinated by it because it was like, wow, you can image the body, but you need all this really expensive equipment. Wait a second. Do you really? Um, and then I sort of like looked into it. You do need to be able to make precise measurements, precise analog measurements. Yes. But, you know, that's why it's got a few. And like, I mean, they're, I actually like the, the, the most expensive parts of the, the bomb are the, like is the main MCU, which has this like, uh, you know, analog devices, uh, you know, precision measurement system on it. Um, but still that's much, much cheaper than, um, the, the other systems out there. So it's, it's comparatively, um, you know, basically this is a cost effective way to do it by multiplexing the signal around.",
+   "context_before": "So then how do you, how do you actually then sample? So like, what is the sampling pattern for doing that? Cause I'm imagining like an AC waveform. Is it actually AC being pumped out continuously or is it like, uh, different levels being pumped out on a different basis? So like, so if I pump current to electrode one, it's like pump to current current electrode one, measure it 15, 16, 17 or all of them, and then move on and do a different level. Or like, what, what is the, is it actually like a continuous AC waveform, I guess that I'm asking?",
+   "context_after": "Yeah. Um, so I was wondering about the, because you had mentioned like an AC signal as well. So, uh, I'm imagining like a squirt of current going into electrode one and then it switches to, to, um, to electrode two or whatever, but is it, is it just a, uh, a short pulse of DC current or is there actually like a waveform that you, that you, um, program to go in there?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So then how do you, how do you actually then sample? So like, what is the sampling pattern for doing that? Cause I'm imagining like an AC waveform. Is it actually AC being pumped out continuously or is it like, uh, different levels being pumped out on a different basis? So like, so if I pump current to electrode one, it's like pump to current current electrode one, measure it 15, 16, 17 or all of them, and then move on and do a different level. Or like, what, what is the, is it actually like a continuous AC waveform, I guess that I'm asking? Um, no, well, no, it's not. Um, so it's doing a, like, so as you, as you mentioned, uh, what happens is that you're send something out on say electrode one, you read on all the other electrodes and you get your impedance measurements and then you shift and then you send something out on electrode two. Um, and this is all done with the multiplexes. So they're like fast switching analog multiplexes. So they will, um, you know, um, so for, you know, uh, a very, very split second, um, you know, switch over and stabilize and then you will start the impedance measurement sequence again. Um, yes. So you, uh, so there's different ways to do EIT architectures just to put that out there. This is just one of them. Um, I chose this one, um, because it was inexpensive. So the reason that, so, um, just to give you some sort of insight into other EIT systems. So I didn't invent EIT. It's been around since the nineties, um, in labs and, um, it has taken like a big cart of equipment. So you get your $40,000 EEG, you get your, um, $10,000 current source you get, um, and then you sort of join them all together with an expensive switching system. And, um, that they're like, there are all these like big messes of wires on a giant cart that they like wheel around. And that just seemed so big. And it's also kind of expensive. Um, and I was like, man, you know, I've, I've been doing all this like consumer wearable stuff. So my, my background is making things small. Um, and I was like, you know, I could make this smaller, like, like, cause I was reading about, um, electrical impedance tomography and I became really fascinated by it because it was like, wow, you can image the body, but you need all this really expensive equipment. Wait a second. Do you really? Um, and then I sort of like looked into it. You do need to be able to make precise measurements, precise analog measurements. Yes. But, you know, that's why it's got a few. And like, I mean, they're, I actually like the, the, the most expensive parts of the, the bomb are the, like is the main MCU, which has this like, uh, you know, analog devices, uh, you know, precision measurement system on it. Um, but still that's much, much cheaper than, um, the, the other systems out there. So it's, it's comparatively, um, you know, basically this is a cost effective way to do it by multiplexing the signal around. Yeah. Um, so I was wondering about the, because you had mentioned like an AC signal as well. So, uh, I'm imagining like a squirt of current going into electrode one and then it switches to, to, um, to electrode two or whatever, but is it, is it just a, uh, a short pulse of DC current or is there actually like a waveform that you, that you, um, program to go in there?"
+  },
+  {
+   "episode": 448,
+   "episode_title": "An Interview with Jean Rintoul",
+   "episode_url": "https://theamphour.com/448-an-interview-with-jean-rintoul/",
+   "guest": "Jean Rintoul",
+   "stem": "0448-an-interview-with-jean-rintoul",
+   "paragraph_index": 141,
+   "depth": "explains",
+   "speaker_raw": "Gene",
+   "speaker_repaired": "Jean Rintoul",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Um, they're all getting multiplexed. So, um, this is basically just an intricate dance of multiplexes going on. Um, so yeah, you send, receive, make that measurement, um, then multiplexer switch, send, receive, um, make the measurement, uh, multiplexer switch and, you know, wash, rinse, repeat around in your stimulation pattern.",
+   "context_before": "Okay. So, okay. So we had the, the, the 10, uh, 1048 or 1032, whatever you said it was. So then that goes through the broccoli. Is it like all of the other sensors are, is it each sensor has its own ADC as well? Or sorry. Yeah. Sorry. Each other sensor has an ADC or are those then also getting multiplexed in as data, data points?",
+   "context_after": "All right, cool. So then that gets then pulled back into the ADCs. You then have this data file of however many things that happened there. Um, and then, and then what, then it's like into, you said that's, so the DFT is an internal. Is that right? Like it's already, there's an engine in Silicon.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. So, okay. So we had the, the, the 10, uh, 1048 or 1032, whatever you said it was. So then that goes through the broccoli. Is it like all of the other sensors are, is it each sensor has its own ADC as well? Or sorry. Yeah. Sorry. Each other sensor has an ADC or are those then also getting multiplexed in as data, data points? Um, they're all getting multiplexed. So, um, this is basically just an intricate dance of multiplexes going on. Um, so yeah, you send, receive, make that measurement, um, then multiplexer switch, send, receive, um, make the measurement, uh, multiplexer switch and, you know, wash, rinse, repeat around in your stimulation pattern. All right, cool. So then that gets then pulled back into the ADCs. You then have this data file of however many things that happened there. Um, and then, and then what, then it's like into, you said that's, so the DFT is an internal. Is that right? Like it's already, there's an engine in Silicon."
+  },
+  {
+   "episode": 458,
+   "episode_title": "An Interview with Ken Burns",
+   "episode_url": "https://theamphour.com/458-an-interview-with-ken-burns/",
+   "guest": "Ken Burns",
+   "stem": "0458-an-interview-with-ken-burns",
+   "paragraph_index": 150,
+   "depth": "explains",
+   "speaker_raw": "Ken Burns",
+   "speaker_repaired": "Ken Burns",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Yeah. So in this case, um, basically we, so we, it's a five pin connector. So we've got, you know, 3.3 volts in ground and then also I squared C and an extra pin, which can be an analog input or it can be a digital pin. And actually the I squared C can be driven digital as well. But the nice thing with it, like the I squared C, like, so all our, our breakout boards for this have a mux on there. So you potentially, if you have, let's say a nine axis sensor and accelerometer or something that is on some set I squared C address, you can actually use four or actually in our case, like up to 16 of all these things on the exact same address. Um, because then there's a mux to select which one you're talking to. Um, you can, that's nice. And also again, it's not just I squared C so you can do much simpler things. So like a push button. Um, so again, if you're making, let's say an arcade cabinet, you can wire out a small joystick or a push button. Um, actually more in the case of like a push button. So it's just a digital input, uh, that can go to an interrupt on your micro. Um, so again, it doesn't have to, you don't have to have a processor in that overhead of doing the I squared C communication. But it, you know, we've got like 35 different boards, um, out for it again, most typical type sensors, whether it's a barometric pressure, nine axis color sensors, then, you know, output devices, like little vibrating motors, LRAs, um, buzzers, all sorts of fun stuff. And a lot of little screens too. So the cool thing is like, we've got these little I squared, I squared C screens. So like a 0.42 inch screen up to like a 0.95 inch screen. Um, and so you can kind of add these things really easily to your project. And again, the other thing that we kind of, cause again, our, our main product, you know, the tiny, do we know these stackable boards, it's kind of a niche type product. Um, so we tried to expand this beyond that. So that's why we have a pie hat for it as well, or just a standard Arduino shield. So you're not just stuck into this. And the other thing is it's just I squared C so you can easily hook up to anything if you want to. Right. Um, and it just uses small GST SH type connectors. So it's a nice small connector. The cables are super cheap and it's just. Yeah.",
+   "context_before": "Grove is, can be analog digital. I always thought that was kind of weird too. Cause like what happens if you plug into the wrong thing? But most of the time it's not a problem. Uh, I think they do analog, digital serial and I squared C.",
+   "context_after": "How much are the cables? Cause I always feel like that's the, that's the hidden cost of a lot of, a lot of these. Yeah.",
+   "context_before_speaker": "Ken Burns",
+   "context_after_speaker": "Ken Burns",
+   "text": "Grove is, can be analog digital. I always thought that was kind of weird too. Cause like what happens if you plug into the wrong thing? But most of the time it's not a problem. Uh, I think they do analog, digital serial and I squared C. Yeah. So in this case, um, basically we, so we, it's a five pin connector. So we've got, you know, 3.3 volts in ground and then also I squared C and an extra pin, which can be an analog input or it can be a digital pin. And actually the I squared C can be driven digital as well. But the nice thing with it, like the I squared C, like, so all our, our breakout boards for this have a mux on there. So you potentially, if you have, let's say a nine axis sensor and accelerometer or something that is on some set I squared C address, you can actually use four or actually in our case, like up to 16 of all these things on the exact same address. Um, because then there's a mux to select which one you're talking to. Um, you can, that's nice. And also again, it's not just I squared C so you can do much simpler things. So like a push button. Um, so again, if you're making, let's say an arcade cabinet, you can wire out a small joystick or a push button. Um, actually more in the case of like a push button. So it's just a digital input, uh, that can go to an interrupt on your micro. Um, so again, it doesn't have to, you don't have to have a processor in that overhead of doing the I squared C communication. But it, you know, we've got like 35 different boards, um, out for it again, most typical type sensors, whether it's a barometric pressure, nine axis color sensors, then, you know, output devices, like little vibrating motors, LRAs, um, buzzers, all sorts of fun stuff. And a lot of little screens too. So the cool thing is like, we've got these little I squared, I squared C screens. So like a 0.42 inch screen up to like a 0.95 inch screen. Um, and so you can kind of add these things really easily to your project. And again, the other thing that we kind of, cause again, our, our main product, you know, the tiny, do we know these stackable boards, it's kind of a niche type product. Um, so we tried to expand this beyond that. So that's why we have a pie hat for it as well, or just a standard Arduino shield. So you're not just stuck into this. And the other thing is it's just I squared C so you can easily hook up to anything if you want to. Right. Um, and it just uses small GST SH type connectors. So it's a nice small connector. The cables are super cheap and it's just. Yeah. How much are the cables? Cause I always feel like that's the, that's the hidden cost of a lot of, a lot of these. Yeah."
+  },
+  {
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "guest": "Sprite",
+   "stem": "0467-stories-from-supercon-2019",
+   "paragraph_index": 93,
+   "depth": "explains",
+   "speaker_raw": "Super Nintendo",
+   "speaker_repaired": "Jeroen Domburg",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Yeah, there's actually where you would normally, if you go back to the Z80 days and stuff, you would only have one bus, and that would be bi-directional. So if you read from a peripheral, the data goes over the same bus as if you write to a peripheral, which is really nice. But FPGAs, well, it needs tri-stating. Like, if the CPU speaks, then the peripherals should shut up and tri-state their bus. That's right. But FPGAs don't really do that, at least not nowadays. There used to be silenced processors way, way back that could do that. But because of a variety of reasons, they don't do that anymore. So a lot can only have an output or only have an input. So in order to make that work, you need two buses. Like, in one bus from the master to all the peripherals, and then from all the peripherals, there's like a separate bus that goes into a multiplexer that goes back into the master. Just because you can't do that. Got it. Got it. That's cool. Okay.",
+   "context_before": "So I remember something about, in that part you were talking about, there was something that felt like it was like two 32-bit... It was like two reads or two writes? I thought there was something in there. Is that out there talking on the bus, or is there a...",
+   "context_after": "So what else should we know about the badge? I mean, there's going to be obviously a lot of hacking that happens over this weekend. Sure.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So I remember something about, in that part you were talking about, there was something that felt like it was like two 32-bit... It was like two reads or two writes? I thought there was something in there. Is that out there talking on the bus, or is there a... Yeah, there's actually where you would normally, if you go back to the Z80 days and stuff, you would only have one bus, and that would be bi-directional. So if you read from a peripheral, the data goes over the same bus as if you write to a peripheral, which is really nice. But FPGAs, well, it needs tri-stating. Like, if the CPU speaks, then the peripherals should shut up and tri-state their bus. That's right. But FPGAs don't really do that, at least not nowadays. There used to be silenced processors way, way back that could do that. But because of a variety of reasons, they don't do that anymore. So a lot can only have an output or only have an input. So in order to make that work, you need two buses. Like, in one bus from the master to all the peripherals, and then from all the peripherals, there's like a separate bus that goes into a multiplexer that goes back into the master. Just because you can't do that. Got it. Got it. That's cool. Okay. So what else should we know about the badge? I mean, there's going to be obviously a lot of hacking that happens over this weekend. Sure."
+  },
+  {
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "guest": "Craig J Bishop",
+   "stem": "0469-an-interview-with-craig-j-bishop",
+   "paragraph_index": 114,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Yeah. So loosely typed languages, that is the case where, you know, a char is a byte or is a float. Sure. Whatever goes. And Verilog is like that. So, and this can, it can be good because it can actually help development speed and let you do things and see that you can't do otherwise. But when it comes to designing. It's going without the bumpers on though, right? Yeah, exactly. And designing FPGA hardware is hard enough already. So adding that complexity on top of it, where if you mess something up because you're tracking all these wires in your head and you connect two buses together and you forgot to put a converter or a MUX or something in the middle and it just silently does it anyway. And then you're stuck trying to figure out what it is.",
+   "context_before": "Right. You got to kind of keep the structures in your head almost, or well, I guess you have to state them somewhere. But at the end of the day, you're manipulating data. You know, a char is a byte is a, you know, whatever, right? And it's all, it can be converted. You're saying that does not the case in loosely typed?",
+   "context_after": "Usually there's a warning buried in the 550 other warnings that I had.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Right. You got to kind of keep the structures in your head almost, or well, I guess you have to state them somewhere. But at the end of the day, you're manipulating data. You know, a char is a byte is a, you know, whatever, right? And it's all, it can be converted. You're saying that does not the case in loosely typed? Yeah. So loosely typed languages, that is the case where, you know, a char is a byte or is a float. Sure. Whatever goes. And Verilog is like that. So, and this can, it can be good because it can actually help development speed and let you do things and see that you can't do otherwise. But when it comes to designing. It's going without the bumpers on though, right? Yeah, exactly. And designing FPGA hardware is hard enough already. So adding that complexity on top of it, where if you mess something up because you're tracking all these wires in your head and you connect two buses together and you forgot to put a converter or a MUX or something in the middle and it just silently does it anyway. And then you're stuck trying to figure out what it is. Usually there's a warning buried in the 550 other warnings that I had."
+  },
+  {
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "guest": "Tim Ansell",
+   "stem": "0501-discussing-the-open-source-pdk-with-tim-ansell",
+   "paragraph_index": 188,
+   "depth": "explains",
+   "speaker_raw": "Sean",
+   "speaker_repaired": "Tim Ansell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Yep. And, um, I would definitely like to see people describing, um, uh, best practices on how to deal with things like, actually we screwed up this part of the chip. How do we isolate that? Um, like I have actually no idea how, um, uh, you set up multiple power domains that you can easily isolate. However, one of the things we're trying to do with this is that, um, the silicon, uh, is probably going to be somewhere about four millimeters by four millimeters, but only 10 millimeters of that is going to be available to the user. The other six millimeters is going to be, um, what we're calling the harness and the harness is going to have a little risk five core in it. It's going to have some memory. It's going to have a couple of other things in it. And the idea is that, um, we've gone through the verification process of making sure that this risk five core actually, you know, works and boots and all these types of things. And it can be used to probe other parts of the chip and turn on and off other parts of the chip as a piece of software. And so you can kind of imagine that this, uh, harness risk five will have a bunch of virtual GPIO pins that you can connect to various things in your design to turn them on and off. Or, um, another thing we'd like to see is, um, 10 millimeters squared is actually quite a lot of silicon space. Um, you could probably fit, uh, 10 risk five processes on there fairly easily, but you don't have enough pins to effectively have, um, you know, each risk five have its own dedicated set of pins. So, um, what we want to do is people to put MUXs on the IO pins that let people select between the different projects, maybe that the, or the different designs that put inside.",
+   "context_before": "ass ERC, just like the board house, you know, you know, PCB way or Osh Park. They don't care. As long as I pass, as long as my, you know, via isn't too close to my, my trace, they don't care if the trace goes nowhere, right? They don't care about that. They just care that the, the things that they can check in the physical realm are checked and work, work as expected. And so it just, it's not a question of whether or not it's right or wrong. I'm just saying that there's, there is no check right now. And so I think it's more of a warning to listeners that it's like, if you're going to do this, the ERC is on you and there are tools for it. But again, this is an open, this is an open design notebook and you can, you can scribble all you want, but you better make sure your, your lines connect.",
+   "context_after": "Right.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "ass ERC, just like the board house, you know, you know, PCB way or Osh Park. They don't care. As long as I pass, as long as my, you know, via isn't too close to my, my trace, they don't care if the trace goes nowhere, right? They don't care about that. They just care that the, the things that they can check in the physical realm are checked and work, work as expected. And so it just, it's not a question of whether or not it's right or wrong. I'm just saying that there's, there is no check right now. And so I think it's more of a warning to listeners that it's like, if you're going to do this, the ERC is on you and there are tools for it. But again, this is an open, this is an open design notebook and you can, you can scribble all you want, but you better make sure your, your lines connect. Yep. And, um, I would definitely like to see people describing, um, uh, best practices on how to deal with things like, actually we screwed up this part of the chip. How do we isolate that? Um, like I have actually no idea how, um, uh, you set up multiple power domains that you can easily isolate. However, one of the things we're trying to do with this is that, um, the silicon, uh, is probably going to be somewhere about four millimeters by four millimeters, but only 10 millimeters of that is going to be available to the user. The other six millimeters is going to be, um, what we're calling the harness and the harness is going to have a little risk five core in it. It's going to have some memory. It's going to have a couple of other things in it. And the idea is that, um, we've gone through the verification process of making sure that this risk five core actually, you know, works and boots and all these types of things. And it can be used to probe other parts of the chip and turn on and off other parts of the chip as a piece of software. And so you can kind of imagine that this, uh, harness risk five will have a bunch of virtual GPIO pins that you can connect to various things in your design to turn them on and off. Or, um, another thing we'd like to see is, um, 10 millimeters squared is actually quite a lot of silicon space. Um, you could probably fit, uh, 10 risk five processes on there fairly easily, but you don't have enough pins to effectively have, um, you know, each risk five have its own dedicated set of pins. So, um, what we want to do is people to put MUXs on the IO pins that let people select between the different projects, maybe that the, or the different designs that put inside. Right."
+  },
+  {
+   "episode": 544,
+   "episode_title": "Standardizing Manufacturing with Pete Staples",
+   "episode_url": "https://theamphour.com/544-standardizing-manufacturing-with-pete-staples/",
+   "guest": "Pete Staples",
+   "stem": "0544-standardizing-manufacturing-with-pete-staples",
+   "paragraph_index": 127,
+   "depth": "explains",
+   "speaker_raw": "Pete Staples",
+   "speaker_repaired": "Pete Staples",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Yeah. Yeah. So I'm looking at the docs.pltcloud.com and the test plan reference. So this does have a bunch of the, the things on there, but you're saying like the connection type stuff that, so that is like internal to the PLT. It's translating that command into basically like a control of the MUX. Is that, is that right? Yeah.",
+   "context_before": "ng which signal you're looking at. Is this an analog test point? Is this a digital test point? And, and you have to configure the routing back to the PLT so that you can take the measurement that you want to. And then you may measure that there's a command called measure. And that may be measuring voltage, maybe measuring current. And you're just identifying which locations on the board you want to take that type of measurement. Programming is just program. And then the file name of the firmware image and what type of target. So you might say program NRF 52, and then the name of your hex file. So it's fairly fast to learn, but every, every line matters. So it's not trivial. Right, right. It doesn't write itself. I mean, you, you do have to know your product in order to write the test plan.",
+   "context_after": "Yeah. So it, it, the, the report then is just a regurgitation of that test plan and except with the result. And, uh, that makes it, you know, fairly predictable. You know what you're looking for. When we make a cassette, there also has to be a little bit of a conversation, which we call the test point matrix. So that matrix identifies what the meaning of those test points are. We don't have a AI way of doing that. You pretty, you pretty much have to tell us. It's like a cloud of test points. Like they have to be identified whether they're analog or digital and ground or VCC or whatever. Okay.",
+   "context_before_speaker": "Pete Staples",
+   "context_after_speaker": "Pete Staples",
+   "text": "ng which signal you're looking at. Is this an analog test point? Is this a digital test point? And, and you have to configure the routing back to the PLT so that you can take the measurement that you want to. And then you may measure that there's a command called measure. And that may be measuring voltage, maybe measuring current. And you're just identifying which locations on the board you want to take that type of measurement. Programming is just program. And then the file name of the firmware image and what type of target. So you might say program NRF 52, and then the name of your hex file. So it's fairly fast to learn, but every, every line matters. So it's not trivial. Right, right. It doesn't write itself. I mean, you, you do have to know your product in order to write the test plan. Yeah. Yeah. So I'm looking at the docs.pltcloud.com and the test plan reference. So this does have a bunch of the, the things on there, but you're saying like the connection type stuff that, so that is like internal to the PLT. It's translating that command into basically like a control of the MUX. Is that, is that right? Yeah. Yeah. So it, it, the, the report then is just a regurgitation of that test plan and except with the result. And, uh, that makes it, you know, fairly predictable. You know what you're looking for. When we make a cassette, there also has to be a little bit of a conversation, which we call the test point matrix. So that matrix identifies what the meaning of those test points are. We don't have a AI way of doing that. You pretty, you pretty much have to tell us. It's like a cloud of test points. Like they have to be identified whether they're analog or digital and ground or VCC or whatever. Okay."
+  },
+  {
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "guest": "Matt Venn",
+   "stem": "0672-silicon-revolution-with-matt-venn",
+   "paragraph_index": 30,
+   "depth": "explains",
+   "speaker_raw": "Matt Venn",
+   "speaker_repaired": "Matt Venn",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "Yeah, so there was a really big set of limitations made by my initial design choices about just trying to get something out there quickly, which was join all the designs together with a scan chain. So that's easy to execute, but you get massive latency if you've got a few hundred designs in there because you have to clock your inputs all the way through to the design that you want to be active and then clock the outputs all the way through to the end. So we ended up with a kind of sampled IO system that ran at about 10 kilohertz or so, pretty slow. And then I burnt nine IOs on the design selection parallel interface. So we had like a little dip switch on the board. You enable design 128. How many do you get? How many IOs total do you get on the MPW waiver? On the eFabulous pad ring, which is kind of the, you fit your design inside that, there's 39 IOs. Oh, okay. Yeah, so then... You're fairly limited. And you need some for, there's like a configuration firmware you need that needs like four pins of flash and then there's reset clock and power and stuff. So after I burnt the nine IOs on a parallel design selection, we only had basically eight ins and eight outs. Yeah. And yeah, Tiny Tape Out 2. So Tiny Tape Out 1 was like a free experimental one that we didn't guarantee. And then Tiny Tape Out 2 was the first one that people could pay for. So I think that was when we last spoke. And then three was the last one on the scan chain. But four, we were like, okay, this is happening. Let's go back and correct my bad initial design decisions. They weren't necessarily bad, but it was just like getting the job done and the time allowed. You know, now we're going to do this a bit more seriously. So let's switch everything out for a fast multiplexer and throw away the parallel design select and change it for a serial one and use those extra eight IOs for an additional eight IOs.",
+   "context_before": "Great. So now at that time, so basically you had 150 in the first one, you kind of started moving more and more and more, slots being filled, you said up to 512. But it seems like people are also doing more complex things as we kind of move along in the realm as well.",
+   "context_after": "That's good. And so that was actually, now it was you had to go and design kind of the dinner plate that everybody's dinner sitting on, right? That's kind of the idea.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Great. So now at that time, so basically you had 150 in the first one, you kind of started moving more and more and more, slots being filled, you said up to 512. But it seems like people are also doing more complex things as we kind of move along in the realm as well. Yeah, so there was a really big set of limitations made by my initial design choices about just trying to get something out there quickly, which was join all the designs together with a scan chain. So that's easy to execute, but you get massive latency if you've got a few hundred designs in there because you have to clock your inputs all the way through to the design that you want to be active and then clock the outputs all the way through to the end. So we ended up with a kind of sampled IO system that ran at about 10 kilohertz or so, pretty slow. And then I burnt nine IOs on the design selection parallel interface. So we had like a little dip switch on the board. You enable design 128. How many do you get? How many IOs total do you get on the MPW waiver? On the eFabulous pad ring, which is kind of the, you fit your design inside that, there's 39 IOs. Oh, okay. Yeah, so then... You're fairly limited. And you need some for, there's like a configuration firmware you need that needs like four pins of flash and then there's reset clock and power and stuff. So after I burnt the nine IOs on a parallel design selection, we only had basically eight ins and eight outs. Yeah. And yeah, Tiny Tape Out 2. So Tiny Tape Out 1 was like a free experimental one that we didn't guarantee. And then Tiny Tape Out 2 was the first one that people could pay for. So I think that was when we last spoke. And then three was the last one on the scan chain. But four, we were like, okay, this is happening. Let's go back and correct my bad initial design decisions. They weren't necessarily bad, but it was just like getting the job done and the time allowed. You know, now we're going to do this a bit more seriously. So let's switch everything out for a fast multiplexer and throw away the parallel design select and change it for a serial one and use those extra eight IOs for an additional eight IOs. That's good. And so that was actually, now it was you had to go and design kind of the dinner plate that everybody's dinner sitting on, right? That's kind of the idea."
+  },
+  {
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "guest": "Matt Venn",
+   "stem": "0672-silicon-revolution-with-matt-venn",
+   "paragraph_index": 190,
+   "depth": "explains",
+   "speaker_raw": "Matt Venn",
+   "speaker_repaired": "Matt Venn",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "I mean, it, it has its own strengths and weaknesses like every other verification technique, but yeah, there's some, you can do a lot in, in this, in a simple thing. Like we have formal verification on the tiny tape out multiplexer. And there's like just one or two assertions that basically say, so we instantiate the chip, we connect all the outputs to all the inputs. And then in a, in a design, we say assert that my inputs equal my outputs and allow the solver to set the outputs to be anything that they want. And then the solver can pick any designs in any of the multiplexer and set any of the outputs. But if the multiplexer is working, then the inputs are always going to be what the outputs are. If we've made a loop back on the outside of the chip. Huh. Whereas if, if one wire was missing in one MUX location, then that formal assertion would fail. But I didn't have to write a program that checked it in every position because the sat solver would find, if there was a place where it would fail, it would fail there.",
+   "context_before": "And it's not just doing brute force. No. Like just try all the things because that would take forever. Right. Yeah. It works a different way.",
+   "context_after": "Yeah. I think that just highlights to me, like the amount of helper software that's in, like you mentioned, that's in the CI loop. And now just enabling all this stuff. Are you also, are you seeing new tools? I mean, so open lane, open road, I think, oh, did we have someone on that was doing that stuff?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "And it's not just doing brute force. No. Like just try all the things because that would take forever. Right. Yeah. It works a different way. I mean, it, it has its own strengths and weaknesses like every other verification technique, but yeah, there's some, you can do a lot in, in this, in a simple thing. Like we have formal verification on the tiny tape out multiplexer. And there's like just one or two assertions that basically say, so we instantiate the chip, we connect all the outputs to all the inputs. And then in a, in a design, we say assert that my inputs equal my outputs and allow the solver to set the outputs to be anything that they want. And then the solver can pick any designs in any of the multiplexer and set any of the outputs. But if the multiplexer is working, then the inputs are always going to be what the outputs are. If we've made a loop back on the outside of the chip. Huh. Whereas if, if one wire was missing in one MUX location, then that formal assertion would fail. But I didn't have to write a program that checked it in every position because the sat solver would find, if there was a place where it would fail, it would fail there. Yeah. I think that just highlights to me, like the amount of helper software that's in, like you mentioned, that's in the CI loop. And now just enabling all this stuff. Are you also, are you seeing new tools? I mean, so open lane, open road, I think, oh, did we have someone on that was doing that stuff?"
+  },
+  {
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "guest": "James Adams, Luke Wren, Liam Fraser, Chris Boris",
+   "stem": "0687-the-rp2350-with-the-raspberry-pi-team",
+   "paragraph_index": 82,
+   "depth": "explains",
+   "speaker_raw": "James Adams",
+   "speaker_repaired": "James Adams",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "multiplexer"
+   ],
+   "paragraph_text": "It was 133 up to 150. Okay. So, you know, this chip is a little harder to get up to timing than RPA2040 was because you have more complex memory protection in the processors. You've got more memory. So more routing to do to get the addresses to the RAM from the processors. And you've got more bus managers, so more concurrent accesses on the bus. And so there's more MUX involved. So getting up to timing is hard. And we added a little bit of LVT cells during layout too. So you can, one of the options you have when you place down standard cells. Voltage timeout? Low threshold voltage.",
+   "context_before": "Yeah, it's pretty wild stuff. I mean, there's not like a, I remember looking at like the megahertz count didn't go, like it was like 120 to 140, something like that. What was the difference?",
+   "context_after": "Okay.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah, it's pretty wild stuff. I mean, there's not like a, I remember looking at like the megahertz count didn't go, like it was like 120 to 140, something like that. What was the difference? It was 133 up to 150. Okay. So, you know, this chip is a little harder to get up to timing than RPA2040 was because you have more complex memory protection in the processors. You've got more memory. So more routing to do to get the addresses to the RAM from the processors. And you've got more bus managers, so more concurrent accesses on the bus. And so there's more MUX involved. So getting up to timing is hard. And we added a little bit of LVT cells during layout too. So you can, one of the options you have when you place down standard cells. Voltage timeout? Low threshold voltage. Okay."
+  }
+ ]
+}

@@ -1,0 +1,1576 @@
+{
+ "concept": "jtag",
+ "name": "JTAG",
+ "type": "standard-protocol",
+ "score": 462.348,
+ "rank_by_score": 99,
+ "cluster": {
+  "core": [
+   "jtag"
+  ],
+  "children": [
+   "arm-trustzone",
+   "computer-engineering",
+   "electromagnetic-fault-injection",
+   "fault-injection",
+   "firmware-reverse-engineering",
+   "jtagulator",
+   "penetration-testing",
+   "private-key",
+   "social-engineering",
+   "swd",
+   "threat-model",
+   "timing-attack",
+   "voltage-glitching"
+  ],
+  "neighbors": []
+ },
+ "stats": {
+  "episodes": 52,
+  "mentions": 114,
+  "explains": 51,
+  "opinions": 5,
+  "candidate_episode_count": 48,
+  "candidate_mention_count": 83,
+  "gated_out": 122,
+  "gated_out_by_concept": [
+   [
+    "fault-injection",
+    20
+   ],
+   [
+    "computer-engineering",
+    17
+   ],
+   [
+    "swd",
+    17
+   ],
+   [
+    "penetration-testing",
+    11
+   ],
+   [
+    "social-engineering",
+    11
+   ],
+   [
+    "private-key",
+    9
+   ],
+   [
+    "threat-model",
+    9
+   ],
+   [
+    "firmware-reverse-engineering",
+    7
+   ],
+   [
+    "voltage-glitching",
+    7
+   ],
+   [
+    "electromagnetic-fault-injection",
+    4
+   ],
+   [
+    "jtagulator",
+    4
+   ],
+   [
+    "arm-trustzone",
+    3
+   ],
+   [
+    "timing-attack",
+    3
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 8,
+  "speakers": [
+   [
+    "Chris Gammell",
+    14
+   ],
+   [
+    "Dave Jones",
+    9
+   ],
+   [
+    "Piotr Esden-Tempski",
+    8
+   ],
+   [
+    "Joe Fitzpatrick",
+    5
+   ],
+   [
+    "Julia Desmazes",
+    5
+   ],
+   [
+    "Elecia White",
+    2
+   ],
+   [
+    "Joe Grand",
+    2
+   ],
+   [
+    "Colin O'Flynn",
+    2
+   ],
+   [
+    "Jeri Ellsworth",
+    1
+   ],
+   [
+    "SPEAKER_00",
+    1
+   ],
+   [
+    "Dmitry Nedospasov",
+    1
+   ],
+   [
+    "Zach Barth",
+    1
+   ],
+   [
+    "Jeroen Domburg",
+    1
+   ],
+   [
+    "Luke Valenty",
+    1
+   ],
+   [
+    "Charles Aylward",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 53,
+   "child": 1
+  },
+  "passages_by_depth": {
+   "explains": 49,
+   "opinion": 5
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 54,
+ "passages": [
+  {
+   "episode": null,
+   "episode_title": "Control loops & Flying probers - Quassating Quadcopter Quantophrenia",
+   "episode_url": "https://theamphour.com/quassating-quadcopter-quantophrenia/",
+   "guest": null,
+   "stem": "quassating-quadcopter-quantophrenia",
+   "paragraph_index": 144,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "It's interesting with those gold pads, too. I've seen them, too, where they actually, you know, they might have a JTAG header for programming, but then they'll actually have a different set of gold pins, and then they actually plug in Pogo pins to that thing, and then they program through that, and then they can just, they basically, like, make it into a slave board at that point, and you can just, you know, control the whole JTAG chain and program things and access different pins and check out different pin configurations. Ooh, cool stuff.",
+   "context_before": "Well, yeah. And if they're churning out mobile phones or something, that might be how they would do it. They would build a custom test jig. So, you know, if you've ever opened a product and you see all these gold pads on the bottom of the board, you know that's designed for a custom test jig. They've actually laid out those boards and they've put all these test points on there, and then that board sits down on a Pogo pin bed, a totally custom test bed, and then bang, it'll test it in one hit. Bang, bang, bang, bang. So, these Flying Pro machines are very common in assembly houses, so that they can test generic boards when they come out. Right, exactly. Yep. Exactly.",
+   "context_after": "Yeah. And the test electronics behind these Flying Pro machines is quite advanced, because not only can they do things like do JTAG programming and stuff, but they can, you know, they can test for shorts, they can measure capacitance, they can measure insulation resistance, they can measure, you know, or they can apply voltage, they can do all sorts of things. It's, they're really quite fascinating machines. Yeah, definitely. They're great. Yeah.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Well, yeah. And if they're churning out mobile phones or something, that might be how they would do it. They would build a custom test jig. So, you know, if you've ever opened a product and you see all these gold pads on the bottom of the board, you know that's designed for a custom test jig. They've actually laid out those boards and they've put all these test points on there, and then that board sits down on a Pogo pin bed, a totally custom test bed, and then bang, it'll test it in one hit. Bang, bang, bang, bang. So, these Flying Pro machines are very common in assembly houses, so that they can test generic boards when they come out. Right, exactly. Yep. Exactly. It's interesting with those gold pads, too. I've seen them, too, where they actually, you know, they might have a JTAG header for programming, but then they'll actually have a different set of gold pins, and then they actually plug in Pogo pins to that thing, and then they program through that, and then they can just, they basically, like, make it into a slave board at that point, and you can just, you know, control the whole JTAG chain and program things and access different pins and check out different pin configurations. Ooh, cool stuff. Yeah. And the test electronics behind these Flying Pro machines is quite advanced, because not only can they do things like do JTAG programming and stuff, but they can, you know, they can test for shorts, they can measure capacitance, they can measure insulation resistance, they can measure, you know, or they can apply voltage, they can do all sorts of things. It's, they're really quite fascinating machines. Yeah, definitely. They're great. Yeah."
+  },
+  {
+   "episode": 36,
+   "episode_title": "Big Business Buffoonery",
+   "episode_url": "https://theamphour.com/the-amp-hour-36-big-business-buffoonery/",
+   "guest": null,
+   "stem": "the-amp-hour-36-big-business-buffoonery",
+   "paragraph_index": 169,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "But they. Yeah. They decided to open source it. And. Yeah. And give you a. A developing kit for it. And the schematics. And you know. Yeah. Everything. It's. It's great. They open source their calculator. And there's a JTAG. They build a JTAG header into it. So you can just. You know. Yeah. Hook it up and. You know. And they. They'll sell you a little programming cable. That you can. Hook up and hack the thing. And. Yeah. It's just great. Yeah. Display. And I. I actually talked about this design. Back in. My. Fifth. Blog. Or fourth. Or fifth. Blog. Oh. It's that old. That's. It's. It's that old. Yeah. Exactly. And. Yeah. They. They use an Atmel arm. Processor. But unfortunately. Let's get into some electronics here. Yeah. They use it at. Yeah. Go figure. Right. They use an Atmel processor. But they. Clock it at 30 megahertz. And this is what I done. This is what I did my blog on. And you can look it up. And I do. Yeah. Yeah. And do all sorts of things. Yeah. But. They. Which. At the time surprised me. I thought. What the hell do you need. To run. Your processor at 30 megahertz. On a simple. Financial calculator for. I thought that was just nuts. And then I looked into the details. Of it. And. It's powered from. Two 2032. CR 2032. Coin cell batteries. Right. And they have a quite high. Internal resistance. Of about 10 ohms. Each. Or something. So that's about five. And they put them in parallel. So that's about five ohms. Internal resistance. When they're fresh. And of course. That ramps up. Yeah. You know. It's a curve that ramps up. With. As the battery. Ages. And every time. You take. You know. What they did. As soon as you. Actually hit a key. On the keyboard. The actual processor. Would power up. Run at 30 megahertz. Process it. And then shut back down. And. Which. Which. People all said. That. Oh. That's. That's fine. Because it draws. The same amount of power. Whether you do the processing. Instruction. In. You know. One. Microsecond. Or you do it in. You know. Whether you do it in 100 microseconds. At a slower speed.",
+   "context_before": "Yeah.",
+   "context_after": "Uh huh.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. But they. Yeah. They decided to open source it. And. Yeah. And give you a. A developing kit for it. And the schematics. And you know. Yeah. Everything. It's. It's great. They open source their calculator. And there's a JTAG. They build a JTAG header into it. So you can just. You know. Yeah. Hook it up and. You know. And they. They'll sell you a little programming cable. That you can. Hook up and hack the thing. And. Yeah. It's just great. Yeah. Display. And I. I actually talked about this design. Back in. My. Fifth. Blog. Or fourth. Or fifth. Blog. Oh. It's that old. That's. It's. It's that old. Yeah. Exactly. And. Yeah. They. They use an Atmel arm. Processor. But unfortunately. Let's get into some electronics here. Yeah. They use it at. Yeah. Go figure. Right. They use an Atmel processor. But they. Clock it at 30 megahertz. And this is what I done. This is what I did my blog on. And you can look it up. And I do. Yeah. Yeah. And do all sorts of things. Yeah. But. They. Which. At the time surprised me. I thought. What the hell do you need. To run. Your processor at 30 megahertz. On a simple. Financial calculator for. I thought that was just nuts. And then I looked into the details. Of it. And. It's powered from. Two 2032. CR 2032. Coin cell batteries. Right. And they have a quite high. Internal resistance. Of about 10 ohms. Each. Or something. So that's about five. And they put them in parallel. So that's about five ohms. Internal resistance. When they're fresh. And of course. That ramps up. Yeah. You know. It's a curve that ramps up. With. As the battery. Ages. And every time. You take. You know. What they did. As soon as you. Actually hit a key. On the keyboard. The actual processor. Would power up. Run at 30 megahertz. Process it. And then shut back down. And. Which. Which. People all said. That. Oh. That's. That's fine. Because it draws. The same amount of power. Whether you do the processing. Instruction. In. You know. One. Microsecond. Or you do it in. You know. Whether you do it in 100 microseconds. At a slower speed. Uh huh."
+  },
+  {
+   "episode": 52,
+   "episode_title": "An Interview with Jeri Ellsworth - Carnassial Chip Chemicals",
+   "episode_url": "https://theamphour.com/the-amp-hour-52-carnassial-chip-chemicals/",
+   "guest": "Jeri Ellsworth",
+   "stem": "the-amp-hour-52-carnassial-chip-chemicals",
+   "paragraph_index": 177,
+   "depth": "explains",
+   "speaker_raw": "Jerry Ellsworth",
+   "speaker_repaired": "Jeri Ellsworth",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "One of my chips I designed, this was actually a set of cheap mask sets, but I fixed it out in the field because I forgot to reset a flip-flop and it would power up randomly and it didn't show up in my simulations. And so there was a test pin on there for JTAG. So I just toggled the test pin before my master reset and I was able to get in there and reset that flip-flop to the state I needed. So I was sweating bullets over that. I wanted to run to Mexico because there was so much money on the line. Oh, my God.",
+   "context_before": "So a little more difficult than adding a resistor here or there, right? Exactly. That's the stuff I'm used to.",
+   "context_after": "Sweet.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Dave Jones",
+   "text": "So a little more difficult than adding a resistor here or there, right? Exactly. That's the stuff I'm used to. One of my chips I designed, this was actually a set of cheap mask sets, but I fixed it out in the field because I forgot to reset a flip-flop and it would power up randomly and it didn't show up in my simulations. And so there was a test pin on there for JTAG. So I just toggled the test pin before my master reset and I was able to get in there and reset that flip-flop to the state I needed. So I was sweating bullets over that. I wanted to run to Mexico because there was so much money on the line. Oh, my God. Sweet."
+  },
+  {
+   "episode": 125,
+   "episode_title": "An Interview with Ian Lesnet - Bus Buccaneer Builder",
+   "episode_url": "https://theamphour.com/the-amp-hour-125-bus-buccaneer-builder/",
+   "guest": "Ian Lesnet",
+   "stem": "the-amp-hour-125-bus-buccaneer-builder",
+   "paragraph_index": 134,
+   "depth": "explains",
+   "speaker_raw": "SPEAKER_00",
+   "speaker_repaired": "SPEAKER_00",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah. Okay, well, our number one thing is the Bus Pirate, and it's basically a tool for talking to chips. So you have a little terminal window, and you can type in the values you want to send to a chip, and it will send it and get any reply. That helps you avoid that development cycle where you write some code, program it to your microcontroller, you know, try it out. It doesn't work. So then you make some changes, compile again, program again, try again, and you go on this loop trying to learn how a new chip works. With the Bus Pirate, you just type a few commands. It sends it out. You know the protocols most likely correct and working. So if there's a problem, it's something to do with how the chip is working or how you've got it connected. So you're eliminating a lot of the problems you have with learning how a new chip works. Some of our other popular stuff is, like, the Bus Blaster is extremely popular. And this is a JTAG debugger. And JTAG is the programming interface for lots of modern chips. ARMS use it, but also field programmable gate arrays and CPLDs and things like that. Lots of chips have this standard programming connection. And there's lots of open source software out there to support JTAG, like OpenOCD is a full debugger for ARM chips. URJTAG is used to program field programmable gate arrays as well as CPLDs. But most of them are still using commercial programmers. Most of them support a range of commercial programmers and a few homebrew sort of hack kits. And I thought, you know, I'd really like to make open hardware to go with open source software. So I designed the Bus Blaster as sort of a universal JTAG debugger. And what we did was we took the same chip that's in every manufacturer's low-cost JTAG debugger, as well as most of the hobby debuggers, the FT2232. It's the bigger brother of the little FT232 that's on the older Arduino. And it does USB to serial conversion, but also USB to JTAG. And it has two JTAG channels. So we thought, well, the only difference amongst manufacturers' programmers that use this chip is the buffer logic on the front that translates voltage. What if we used a CPLD and made the buffer logic programmable? And then to one-up that, we'll connect the CPLD's JTAG connection to the secondary JTAG connection on the Bus Blaster on the FT2232. That way, you can, over USB, upload an entirely new programmer logic into the CPLD on the fly. So if you want a KT-Link programmer that supports the new two-wire debug protocol, you got it. Just upload it over USB. You want the classic JTAG key programmer that works with just about everything. You upload that buffer image. You got it. It's good to go. And along with that, I might add, that CPLD is able to help out with the self-test so that we know all of the things are functioning properly. Right. And that has been one of our most popular boards. And I might also say the one that requires the least amount of support. Probably. Since it's all dependent on the software and it's very much just a hardware design with a little bit of programmable logic, we hardly have to support that at all. So I'm a big fan of the Bus Blaster. Another one we did recently that was surprisingly popular is our ATX Power Supply Breakout.",
+   "context_before": "Or you should, like, wear it around your neck or something, you know, be like, this is the one. So what about some of your other projects? I mean, you have, I mean, I'm looking at the forum, and there's a really nice layout of all the different projects and stuff. But could you maybe give us some of your other favorite ones to work on and, you know, how other people helped contribute with all that stuff as well?",
+   "context_after": "Oh, yes.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Dave Jones",
+   "text": "Or you should, like, wear it around your neck or something, you know, be like, this is the one. So what about some of your other projects? I mean, you have, I mean, I'm looking at the forum, and there's a really nice layout of all the different projects and stuff. But could you maybe give us some of your other favorite ones to work on and, you know, how other people helped contribute with all that stuff as well? Yeah. Okay, well, our number one thing is the Bus Pirate, and it's basically a tool for talking to chips. So you have a little terminal window, and you can type in the values you want to send to a chip, and it will send it and get any reply. That helps you avoid that development cycle where you write some code, program it to your microcontroller, you know, try it out. It doesn't work. So then you make some changes, compile again, program again, try again, and you go on this loop trying to learn how a new chip works. With the Bus Pirate, you just type a few commands. It sends it out. You know the protocols most likely correct and working. So if there's a problem, it's something to do with how the chip is working or how you've got it connected. So you're eliminating a lot of the problems you have with learning how a new chip works. Some of our other popular stuff is, like, the Bus Blaster is extremely popular. And this is a JTAG debugger. And JTAG is the programming interface for lots of modern chips. ARMS use it, but also field programmable gate arrays and CPLDs and things like that. Lots of chips have this standard programming connection. And there's lots of open source software out there to support JTAG, like OpenOCD is a full debugger for ARM chips. URJTAG is used to program field programmable gate arrays as well as CPLDs. But most of them are still using commercial programmers. Most of them support a range of commercial programmers and a few homebrew sort of hack kits. And I thought, you know, I'd really like to make open hardware to go with open source software. So I designed the Bus Blaster as sort of a universal JTAG debugger. And what we did was we took the same chip that's in every manufacturer's low-cost JTAG debugger, as well as most of the hobby debuggers, the FT2232. It's the bigger brother of the little FT232 that's on the older Arduino. And it does USB to serial conversion, but also USB to JTAG. And it has two JTAG channels. So we thought, well, the only difference amongst manufacturers' programmers that use this chip is the buffer logic on the front that translates voltage. What if we used a CPLD and made the buffer logic programmable? And then to one-up that, we'll connect the CPLD's JTAG connection to the secondary JTAG connection on the Bus Blaster on the FT2232. That way, you can, over USB, upload an entirely new programmer logic into the CPLD on the fly. So if you want a KT-Link programmer that supports the new two-wire debug protocol, you got it. Just upload it over USB. You want the classic JTAG key programmer that works with just about everything. You upload that buffer image. You got it. It's good to go. And along with that, I might add, that CPLD is able to help out with the self-test so that we know all of the things are functioning properly. Right. And that has been one of our most popular boards. And I might also say the one that requires the least amount of support. Probably. Since it's all dependent on the software and it's very much just a hardware design with a little bit of programmable logic, we hardly have to support that at all. So I'm a big fan of the Bus Blaster. Another one we did recently that was surprisingly popular is our ATX Power Supply Breakout. Oh, yes."
+  },
+  {
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "guest": null,
+   "stem": "0174-motors-and-upgrading-sinclairs",
+   "paragraph_index": 204,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "I could do a J tag chain all the way through the board. That's one of the, uh, things, which I actually forgot to mention in the video, but yeah, you can do programming through the breakout of the board so you don't have to, you know, plug in. And, you know, pogo pins can be a pain in the ass because if you've got a big panel, right, and you've got, you know, 10 or 20 boards on there and you've got, you know, you could have hundreds of pogo pins. And if one of them doesn't make contact.",
+   "context_before": "Right. Right. But then you could do it. I mean, if it did, you could do like J tag chain, that kind of stuff. And actually.",
+   "context_after": "Yeah. One spring sticks, right? Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. Right. But then you could do it. I mean, if it did, you could do like J tag chain, that kind of stuff. And actually. I could do a J tag chain all the way through the board. That's one of the, uh, things, which I actually forgot to mention in the video, but yeah, you can do programming through the breakout of the board so you don't have to, you know, plug in. And, you know, pogo pins can be a pain in the ass because if you've got a big panel, right, and you've got, you know, 10 or 20 boards on there and you've got, you know, you could have hundreds of pogo pins. And if one of them doesn't make contact. Yeah. One spring sticks, right? Yeah."
+  },
+  {
+   "episode": 178,
+   "episode_title": "A 2013 Recap - Year-end Yarn Yakking",
+   "episode_url": "https://theamphour.com/178-a-2013-recap-year-end-yarn-yakking/",
+   "guest": null,
+   "stem": "0178-a-2013-recap-year-end-yarn-yakking",
+   "paragraph_index": 194,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "No, definitely not. Yeah, someone's been working on electronics for 10 years. This is, like, a whole other skill set, right? I mean, it's, like, at first I'm, like... At first I had to figure out what I was looking at, even. Yeah, exactly. Yeah, yeah. You know, like, there are a lot of methods where, you know, like, a lot of people will plug into JTAG chains and try and probe like that and figure out bit streams and get talkback from chips and stuff like that. And, yeah, so it's a whole other skill set from just soldering and debugging and that kind of thing. This is a whole other skill set, but as far as I can tell, this is a, you know, it's a cool instance of it, you know? Yep.",
+   "context_before": "How many people would get frustrated with it, though? You know, because usually reverse engineering is not easy. You need a lot of dedication. You know, usually you're not going to crack it in the first five minutes, right?",
+   "context_after": "But it requires patience, which I don't have much of, you know? So that's why I don't do reverse engineering for fun. You know, some people find it fun, you know? They love the thrill of the, you know, the hunt and they spend a month reverse engineering something that, well, you know, didn't really need to be a reverse engineer, but they just did it because it's a fun challenge. Right. Right.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "How many people would get frustrated with it, though? You know, because usually reverse engineering is not easy. You need a lot of dedication. You know, usually you're not going to crack it in the first five minutes, right? No, definitely not. Yeah, someone's been working on electronics for 10 years. This is, like, a whole other skill set, right? I mean, it's, like, at first I'm, like... At first I had to figure out what I was looking at, even. Yeah, exactly. Yeah, yeah. You know, like, there are a lot of methods where, you know, like, a lot of people will plug into JTAG chains and try and probe like that and figure out bit streams and get talkback from chips and stuff like that. And, yeah, so it's a whole other skill set from just soldering and debugging and that kind of thing. This is a whole other skill set, but as far as I can tell, this is a, you know, it's a cool instance of it, you know? Yep. But it requires patience, which I don't have much of, you know? So that's why I don't do reverse engineering for fun. You know, some people find it fun, you know? They love the thrill of the, you know, the hunt and they spend a month reverse engineering something that, well, you know, didn't really need to be a reverse engineer, but they just did it because it's a fun challenge. Right. Right."
+  },
+  {
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "guest": "Elecia White",
+   "stem": "0187-an-interview-with-elecia-white-wirewove-worshipping-wookieist",
+   "paragraph_index": 170,
+   "depth": "explains",
+   "speaker_raw": "Alicia White",
+   "speaker_repaired": "Elecia White",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Well, Arduino is so cheap, and it's so easy to get started with. And underneath the Arduino-ness, there's a beautiful processor. I mean, that Etmega is just a really cute little processor that I would use in products. And so if you realize, oh, wow, this is really fun, the Arduino, but, you know, I don't have enough space. I don't have enough time. I want to get further. I'm going to buy a JTAG. And now you've got a platform to do really cool stuff.",
+   "context_before": "Damn, too easy. All right, next question.",
+   "context_after": "I wouldn't have labeled it as cute.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Dave Jones",
+   "text": "Damn, too easy. All right, next question. Well, Arduino is so cheap, and it's so easy to get started with. And underneath the Arduino-ness, there's a beautiful processor. I mean, that Etmega is just a really cute little processor that I would use in products. And so if you realize, oh, wow, this is really fun, the Arduino, but, you know, I don't have enough space. I don't have enough time. I want to get further. I'm going to buy a JTAG. And now you've got a platform to do really cool stuff. I wouldn't have labeled it as cute."
+  },
+  {
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "guest": "Elecia White",
+   "stem": "0187-an-interview-with-elecia-white-wirewove-worshipping-wookieist",
+   "paragraph_index": 238,
+   "depth": "explains",
+   "speaker_raw": "Alicia White",
+   "speaker_repaired": "Elecia White",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "So you can dual debug, even without VMs, you can dual debug using two JTAG modules. But why use two of the same processor? At that point, just, you know, double the clock speed or whatever it was you needed.",
+   "context_before": "Well, then when you're frantically trying to recover something, he just clicks a button and it's backed up, right? And he laughs, yes. Yeah, it's great. Yeah, yeah. But he works. Right.",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "SPEAKER_01",
+   "text": "Well, then when you're frantically trying to recover something, he just clicks a button and it's backed up, right? And he laughs, yes. Yeah, it's great. Yeah, yeah. But he works. Right. So you can dual debug, even without VMs, you can dual debug using two JTAG modules. But why use two of the same processor? At that point, just, you know, double the clock speed or whatever it was you needed. Yeah."
+  },
+  {
+   "episode": 219,
+   "episode_title": "Get Smart About Automation - Caducous Cyborg Concerns",
+   "episode_url": "https://theamphour.com/219-get-smart-about-automation-caducous-cyborg-concerns/",
+   "guest": null,
+   "stem": "0219-get-smart-about-automation-caducous-cyborg-concerns",
+   "paragraph_index": 183,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "I'm not going to say that, Dave. But what I'm saying is the same kind of thing is going to happen, right? You could move it forward in the design cycle. You could move to the, you know, design for test or design for manufacturing where maybe you move it all to be on a JTAG chain, right? So maybe you don't need as many test points, right? You start to move in that direction, or everything moves on silicon, and it gets tested at the silicon level. That's going to be, like... I totally agree that, like, no... You're not going to have these super, you know, intricate tasks that are... Those are not going to go away, but they're going to get shifted forward in the design process. That's what electronics people are going to see, I think.",
+   "context_before": "No, you're right. No, don't buy into the hot.",
+   "context_after": "Well, yeah. But then you move into the physical handling side of things. You still have to connect up your test points and, you know, and your jigs and do everything and the manual handling of the boards and how that optimizes and how that flows through your production process and all that sort of jazz, you know?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "No, you're right. No, don't buy into the hot. I'm not going to say that, Dave. But what I'm saying is the same kind of thing is going to happen, right? You could move it forward in the design cycle. You could move to the, you know, design for test or design for manufacturing where maybe you move it all to be on a JTAG chain, right? So maybe you don't need as many test points, right? You start to move in that direction, or everything moves on silicon, and it gets tested at the silicon level. That's going to be, like... I totally agree that, like, no... You're not going to have these super, you know, intricate tasks that are... Those are not going to go away, but they're going to get shifted forward in the design process. That's what electronics people are going to see, I think. Well, yeah. But then you move into the physical handling side of things. You still have to connect up your test points and, you know, and your jigs and do everything and the manual handling of the boards and how that optimizes and how that flows through your production process and all that sort of jazz, you know?"
+  },
+  {
+   "episode": 303,
+   "episode_title": "An Interview with Dmitry Nedospasov",
+   "episode_url": "https://theamphour.com/303-an-interview-with-dmitry-nedospasov/",
+   "guest": "Dmitry Nedospasov",
+   "stem": "0303-an-interview-with-dmitry-nedospasov",
+   "paragraph_index": 230,
+   "depth": "explains",
+   "speaker_raw": "Dmitry Nedospasov",
+   "speaker_repaired": "Dmitry Nedospasov",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "The custom blocks. Right. Yeah. But I mean, if you've done like for, for the kind of a protocol analysis that I'm building at most, I'll use a couple FIFOs or something like that. I don't need, I don't need anything super complex. So anyway, but the workflow that I teach them is, uh, I, I teach them, uh, how to, so we use the Popelio board. The Popelio board for people who aren't familiar with it is, uh, Spartan six, uh, SLX nine and it has, uh, a two channel FTDI. So I think it's the 2232D if I'm not mistaken. So it's a dual channel, uh, 232. And basically one of the channels is connected as, uh, the JTAG programmer. So you don't need, uh, I mean, basically the same kind of stuff you guys had on, uh, when you were interviewing the digital guy that people hate it when you need, uh, to buy this stupid Xilinx programmer. Yeah. Yeah. To program the board. And, uh, yeah, so the Popelio is great for that. And so that's the board that I used in the training cause it's also cheap. And I let everyone, uh, keep the board that they used in the training afterwards. And, uh, basically, so we, we, we use the, the P so the PC speaks, uh, USB, you are to the FPGA. And then I basically teach people how to make their own, uh, protocol. I mean, so make their own, you know, transceivers of, uh, any protocol that you want. And then I give them little assignments, uh, that I've seen before, uh, you know, uh, from different hardware that I've hacked or seen other people work on over the years. And so I have a couple of sets of assignments. So like, uh, the assignment, so the first day they just do, uh, I teach them basically, I teach them HCL in one day, which impresses me to this day that I can teach people all the theory that we were taught in a semester of at the university. And by day three there, or by day three and day four, they're really proficient at it because I can see them solving the assignments without, you know, calling me over every five minutes asking what the syntax error means. Is it Verilog or VHDL? So I, I mean, yeah, I, this one I will pick sides on, uh, and I picked the side of, uh, Verilog because, uh, VHDL is the most obnoxious, verbose, uh, thing that I ever had.",
+   "context_before": "Oh, yeah.",
+   "context_after": "VHDL is pretty horrid. Yeah. I love it.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Oh, yeah. The custom blocks. Right. Yeah. But I mean, if you've done like for, for the kind of a protocol analysis that I'm building at most, I'll use a couple FIFOs or something like that. I don't need, I don't need anything super complex. So anyway, but the workflow that I teach them is, uh, I, I teach them, uh, how to, so we use the Popelio board. The Popelio board for people who aren't familiar with it is, uh, Spartan six, uh, SLX nine and it has, uh, a two channel FTDI. So I think it's the 2232D if I'm not mistaken. So it's a dual channel, uh, 232. And basically one of the channels is connected as, uh, the JTAG programmer. So you don't need, uh, I mean, basically the same kind of stuff you guys had on, uh, when you were interviewing the digital guy that people hate it when you need, uh, to buy this stupid Xilinx programmer. Yeah. Yeah. To program the board. And, uh, yeah, so the Popelio is great for that. And so that's the board that I used in the training cause it's also cheap. And I let everyone, uh, keep the board that they used in the training afterwards. And, uh, basically, so we, we, we use the, the P so the PC speaks, uh, USB, you are to the FPGA. And then I basically teach people how to make their own, uh, protocol. I mean, so make their own, you know, transceivers of, uh, any protocol that you want. And then I give them little assignments, uh, that I've seen before, uh, you know, uh, from different hardware that I've hacked or seen other people work on over the years. And so I have a couple of sets of assignments. So like, uh, the assignment, so the first day they just do, uh, I teach them basically, I teach them HCL in one day, which impresses me to this day that I can teach people all the theory that we were taught in a semester of at the university. And by day three there, or by day three and day four, they're really proficient at it because I can see them solving the assignments without, you know, calling me over every five minutes asking what the syntax error means. Is it Verilog or VHDL? So I, I mean, yeah, I, this one I will pick sides on, uh, and I picked the side of, uh, Verilog because, uh, VHDL is the most obnoxious, verbose, uh, thing that I ever had. VHDL is pretty horrid. Yeah. I love it."
+  },
+  {
+   "episode": 307,
+   "episode_title": "Call In Show #5",
+   "episode_url": "https://theamphour.com/307-call-in-show-5/",
+   "guest": null,
+   "stem": "0307-call-in-show-5",
+   "paragraph_index": 206,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "If I'm connecting to my computer, such as through JTAG or TT or serial to USB, the ground in that cable connects my computer to the board, but these same grounds are also connected at the wall, right? Correct. Is that good or bad? I've done a whole video on this. He simply needs to watch my video. It explains it in great depth with diagrams and everything.",
+   "context_before": "Yeah. You can read that one. I'm going to pull up the next question.",
+   "context_after": "Gotcha.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. You can read that one. I'm going to pull up the next question. If I'm connecting to my computer, such as through JTAG or TT or serial to USB, the ground in that cable connects my computer to the board, but these same grounds are also connected at the wall, right? Correct. Is that good or bad? I've done a whole video on this. He simply needs to watch my video. It explains it in great depth with diagrams and everything. Gotcha."
+  },
+  {
+   "episode": 332,
+   "episode_title": "An Interview with Zach Barth of Zachtronics",
+   "episode_url": "https://theamphour.com/332-an-interview-with-zach-barth-of-zachtronics/",
+   "guest": "Zach Barth",
+   "stem": "0332-an-interview-with-zach-barth-of-zachtronics",
+   "paragraph_index": 237,
+   "depth": "explains",
+   "speaker_raw": "Zach Barth Of Zachtronics",
+   "speaker_repaired": "Zach Barth",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "It's about reverse engineering. So there's only like four levels, but each level is a device that you have a voltage quote unquote. It's all like fake electronics, but it's probably the closest to any kind of real electronics that we've ever done. You have a voltage probe and you also have a thing that can generate voltage pulses. And then you have something that's kind of like a JTAG kind of thing where you connect it up and you can read and write registers inside the chip. And then you have a serial port where you can read and write serial data. And there's all these little test points in the boards and you hook up the probes and try to figure out what they are and what they do and how the device is working. And you try to like get it to, you hack it to get it to do something.",
+   "context_before": "Yeah, right. I remember because it was like, so it's like you're probing on a board for like security stuff, right? Or is that another one?",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah, right. I remember because it was like, so it's like you're probing on a board for like security stuff, right? Or is that another one? It's about reverse engineering. So there's only like four levels, but each level is a device that you have a voltage quote unquote. It's all like fake electronics, but it's probably the closest to any kind of real electronics that we've ever done. You have a voltage probe and you also have a thing that can generate voltage pulses. And then you have something that's kind of like a JTAG kind of thing where you connect it up and you can read and write registers inside the chip. And then you have a serial port where you can read and write serial data. And there's all these little test points in the boards and you hook up the probes and try to figure out what they are and what they do and how the device is working. And you try to like get it to, you hack it to get it to do something. Yeah."
+  },
+  {
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "guest": "Joe FitzPatrick",
+   "stem": "0346-an-interview-with-joe-fitzpatrick",
+   "paragraph_index": 109,
+   "depth": "explains",
+   "speaker_raw": "Joe Fitzpatrick",
+   "speaker_repaired": "Joe Fitzpatrick",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah. Yeah. So, so an example is, you know, I mentioned the PCI Express one. The other one, um, is like JTAG, right? We all know what JTAG is. You hook it up, you get debug control over a CPU. Um, it's, it's more complicated for a software person to understand JTAG than it is to like understand like a serial console. But, uh, you know, if, if I can use JTAG and I have a little, uh, device, like basically an Arduino that runs, uh, through a JTAG, uh, through a, an X, an SVF, a serial vector format file, which is a series of JTAG commands, right? I plug that into a system and either hit play or have it timed to like play back a series of JTAG commands after a certain amount of time. And that series of JTAG commands could modify memory to change a root password. It could, um, I have one example where I have a PLC, right? A programmable logic controller that, you know, is used to switch on and off like dams or, you know, other industrial machine equipment.",
+   "context_before": "And when you say pop a root shell, you also mean like, so it's connected to something else so that they could get to it. Right.",
+   "context_after": "Right, right, right.",
+   "context_before_speaker": "Joe Fitzpatrick",
+   "context_after_speaker": "Joe Fitzpatrick",
+   "text": "And when you say pop a root shell, you also mean like, so it's connected to something else so that they could get to it. Right. Yeah. Yeah. So, so an example is, you know, I mentioned the PCI Express one. The other one, um, is like JTAG, right? We all know what JTAG is. You hook it up, you get debug control over a CPU. Um, it's, it's more complicated for a software person to understand JTAG than it is to like understand like a serial console. But, uh, you know, if, if I can use JTAG and I have a little, uh, device, like basically an Arduino that runs, uh, through a JTAG, uh, through a, an X, an SVF, a serial vector format file, which is a series of JTAG commands, right? I plug that into a system and either hit play or have it timed to like play back a series of JTAG commands after a certain amount of time. And that series of JTAG commands could modify memory to change a root password. It could, um, I have one example where I have a PLC, right? A programmable logic controller that, you know, is used to switch on and off like dams or, you know, other industrial machine equipment. Right, right, right."
+  },
+  {
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "guest": "Joe FitzPatrick",
+   "stem": "0346-an-interview-with-joe-fitzpatrick",
+   "paragraph_index": 111,
+   "depth": "explains",
+   "speaker_raw": "Joe Fitzpatrick",
+   "speaker_repaired": "Joe Fitzpatrick",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "And it's got these little plugs on the front where you can put like upgrade modules in. So you can give like ethernet connectivity or a USB connectivity to this thing. But if you pop that out and you look inside from the opening, you can see a 10 pin arm JTAG header. So what I did is I, I made a little device, I plugged a little Arduino in it and I had a script so when I plug that in, it gets power from the connector. It turns on, it waits five seconds, it halts the CPU and writes to a GPIO to turn off your output. Right. And so like, that's, that's the extent of a proof of concept I need at this point to show like, this is an issue.",
+   "context_before": "Right, right, right.",
+   "context_after": "Right.",
+   "context_before_speaker": "Joe Fitzpatrick",
+   "context_after_speaker": "Speaker ?",
+   "text": "Right, right, right. And it's got these little plugs on the front where you can put like upgrade modules in. So you can give like ethernet connectivity or a USB connectivity to this thing. But if you pop that out and you look inside from the opening, you can see a 10 pin arm JTAG header. So what I did is I, I made a little device, I plugged a little Arduino in it and I had a script so when I plug that in, it gets power from the connector. It turns on, it waits five seconds, it halts the CPU and writes to a GPIO to turn off your output. Right. And so like, that's, that's the extent of a proof of concept I need at this point to show like, this is an issue. Right."
+  },
+  {
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "guest": "Joe FitzPatrick",
+   "stem": "0346-an-interview-with-joe-fitzpatrick",
+   "paragraph_index": 115,
+   "depth": "explains",
+   "speaker_raw": "Joe Fitzpatrick",
+   "speaker_repaired": "Joe Fitzpatrick",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Like an actual, yeah, well like, so once you have access to the JTAG port, I suppose, I mean, I know that you can, you have the chain and it'll identify devices, but then even still, what is your method for then going and saying, okay, well, I know this is, you know, a micro that's controlling a motor. Uh huh. Uh, you have to go like dump the firmware and like analyze it then, or what's the next step then?",
+   "context_before": "Oh, so you're saying like, how, how would I, how would I adapt that to a real system?",
+   "context_after": "Well, so from the PLC perspective, um, you know, I had a test system that I think I got off a digi-key, right? Um, I was able to open it up. I know exactly what CPU is inside. I can assume anything, the same model is going to have the same CPU, um, and the same base firmware. I didn't actually poke at the firmware at all. I mean, I just did the, the bare minimum of like, I have JTAG control. I can control GPIOs, right? I can reverse engineer the board and see where the GPIOs are connected to know what outputs of the PLC they're connected to. Um, so what I would have to do is, you know, let's say I, I go on a, a tour of like a dam or a power plant, you know, just look around and see what things are connected to. I'm not saying that I could figure it all out, but theoretically, you know. Rig",
+   "context_before_speaker": "Joe Fitzpatrick",
+   "context_after_speaker": "Joe Fitzpatrick",
+   "text": "Oh, so you're saying like, how, how would I, how would I adapt that to a real system? Like an actual, yeah, well like, so once you have access to the JTAG port, I suppose, I mean, I know that you can, you have the chain and it'll identify devices, but then even still, what is your method for then going and saying, okay, well, I know this is, you know, a micro that's controlling a motor. Uh huh. Uh, you have to go like dump the firmware and like analyze it then, or what's the next step then? Well, so from the PLC perspective, um, you know, I had a test system that I think I got off a digi-key, right? Um, I was able to open it up. I know exactly what CPU is inside. I can assume anything, the same model is going to have the same CPU, um, and the same base firmware. I didn't actually poke at the firmware at all. I mean, I just did the, the bare minimum of like, I have JTAG control. I can control GPIOs, right? I can reverse engineer the board and see where the GPIOs are connected to know what outputs of the PLC they're connected to. Um, so what I would have to do is, you know, let's say I, I go on a, a tour of like a dam or a power plant, you know, just look around and see what things are connected to. I'm not saying that I could figure it all out, but theoretically, you know. Rig"
+  },
+  {
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "guest": "Joe FitzPatrick",
+   "stem": "0346-an-interview-with-joe-fitzpatrick",
+   "paragraph_index": 208,
+   "depth": "explains",
+   "speaker_raw": "Joe Fitzpatrick",
+   "speaker_repaired": "Joe Fitzpatrick",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "What I see from the like consumer electronics embedded device realm is in the past five years, suddenly vendors have stopped obviously marking JTAG and UART test points. Um, they've started to, you know, have dead consoles. They've started to disable JTAG on their devices. Um, so there's progress even in the past five years. And so what can I see in like five to 10 years? Um, I see a situation where when I go to the store and I open up a device, right, it's going to be a PCB with one, maybe two pieces of silicon on it. Um, with no test points, no real understanding because, um, so much of the functionality is integrated into a single piece of silicon that anything except for silicon attacks are going to be, uh, very difficult. Um, so from a hardware perspective, I think that's where it's going. I think that the golden, uh, uh, the golden era of hardware hacking on embedded devices is, is going to not last that long. Um, well, that's not true. It's going to, it's going to be a few more years, which is long enough. Um, on top of that, we've also got, uh, software improvements, right? So as software gets better, as, as, uh, coding gets cleaner, um, we're going to have fewer and fewer software issues. And when software is harder to hack, you know, anybody who really wants to get into a system is going to look for the cheapest spot. And that might be hardware. That might be silicon. So it's just a, it's an ever-changing, uh, equilibrium. Uh, what people target is going to change over time. And, uh, we're going to slowly improve the hardware and, uh, probably slowly improve our, our, uh, attack capabilities as well.",
+   "context_before": "Yeah. Well, but you're still saying, I mean, it's still important, right? I mean, it's still like something that people should be thinking about. So I guess when I, you know, where do you see the future of hardware security going? Like in general, like with pen testing in general of like, like device testing, everything that's out there, like where, where do you, where, where is the, where's the general direction? Is it, is it happening more? Is it happening less? Is it, is there, is there more needed? What's your opinion there?",
+   "context_after": "And at the end of the day, it might end up being just go after the humans anyways, right?",
+   "context_before_speaker": "Joe Fitzpatrick",
+   "context_after_speaker": "Joe Fitzpatrick",
+   "text": "Yeah. Well, but you're still saying, I mean, it's still important, right? I mean, it's still like something that people should be thinking about. So I guess when I, you know, where do you see the future of hardware security going? Like in general, like with pen testing in general of like, like device testing, everything that's out there, like where, where do you, where, where is the, where's the general direction? Is it, is it happening more? Is it happening less? Is it, is there, is there more needed? What's your opinion there? What I see from the like consumer electronics embedded device realm is in the past five years, suddenly vendors have stopped obviously marking JTAG and UART test points. Um, they've started to, you know, have dead consoles. They've started to disable JTAG on their devices. Um, so there's progress even in the past five years. And so what can I see in like five to 10 years? Um, I see a situation where when I go to the store and I open up a device, right, it's going to be a PCB with one, maybe two pieces of silicon on it. Um, with no test points, no real understanding because, um, so much of the functionality is integrated into a single piece of silicon that anything except for silicon attacks are going to be, uh, very difficult. Um, so from a hardware perspective, I think that's where it's going. I think that the golden, uh, uh, the golden era of hardware hacking on embedded devices is, is going to not last that long. Um, well, that's not true. It's going to, it's going to be a few more years, which is long enough. Um, on top of that, we've also got, uh, software improvements, right? So as software gets better, as, as, uh, coding gets cleaner, um, we're going to have fewer and fewer software issues. And when software is harder to hack, you know, anybody who really wants to get into a system is going to look for the cheapest spot. And that might be hardware. That might be silicon. So it's just a, it's an ever-changing, uh, equilibrium. Uh, what people target is going to change over time. And, uh, we're going to slowly improve the hardware and, uh, probably slowly improve our, our, uh, attack capabilities as well. And at the end of the day, it might end up being just go after the humans anyways, right?"
+  },
+  {
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "guest": "Joe FitzPatrick",
+   "stem": "0346-an-interview-with-joe-fitzpatrick",
+   "paragraph_index": 209,
+   "depth": "opinion",
+   "speaker_raw": "Joe Fitzpatrick",
+   "speaker_repaired": "Joe Fitzpatrick",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "child:social-engineering",
+   "concept_sources": [
+    "child:social-engineering"
+   ],
+   "concepts": [
+    "social-engineering"
+   ],
+   "paragraph_text": "And at the end of the day, it might end up being just go after the humans anyways, right?",
+   "context_before": ", the golden era of hardware hacking on embedded devices is, is going to not last that long. Um, well, that's not true. It's going to, it's going to be a few more years, which is long enough. Um, on top of that, we've also got, uh, software improvements, right? So as software gets better, as, as, uh, coding gets cleaner, um, we're going to have fewer and fewer software issues. And when software is harder to hack, you know, anybody who really wants to get into a system is going to look for the cheapest spot. And that might be hardware. That might be silicon. So it's just a, it's an ever-changing, uh, equilibrium. Uh, what people target is going to change over time. And, uh, we're going to slowly improve the hardware and, uh, probably slowly improve our, our, uh, attack capabilities as well.",
+   "context_after": "Yeah, pretty much, you know, emails and, uh, you know, stuff like that.",
+   "context_before_speaker": "Joe Fitzpatrick",
+   "context_after_speaker": "Joe Fitzpatrick",
+   "text": ", the golden era of hardware hacking on embedded devices is, is going to not last that long. Um, well, that's not true. It's going to, it's going to be a few more years, which is long enough. Um, on top of that, we've also got, uh, software improvements, right? So as software gets better, as, as, uh, coding gets cleaner, um, we're going to have fewer and fewer software issues. And when software is harder to hack, you know, anybody who really wants to get into a system is going to look for the cheapest spot. And that might be hardware. That might be silicon. So it's just a, it's an ever-changing, uh, equilibrium. Uh, what people target is going to change over time. And, uh, we're going to slowly improve the hardware and, uh, probably slowly improve our, our, uh, attack capabilities as well. And at the end of the day, it might end up being just go after the humans anyways, right? Yeah, pretty much, you know, emails and, uh, you know, stuff like that."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 236,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah, yeah. You can use that for this really low power, low voltage systems. Also, it has a bunch of additional LEDs so you know what is going on on it. It has a function where you can power the target. So, you go in GDB and you run monitor t-power enable and it will power your target using the power reference pin of the JTAG interface. And it has a built-in UART to serial. So, USB to serial adapter on the back of the board. So, it's actually more useful than one would think to have it in one package. So, you can just plug it in and have serial while you also have JTAG or SWD. We support both.",
+   "context_before": "Oh, yeah. Right, right, right. Like the super sipping the power kind of project stuff.",
+   "context_after": "That's great.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Oh, yeah. Right, right, right. Like the super sipping the power kind of project stuff. Yeah, yeah. You can use that for this really low power, low voltage systems. Also, it has a bunch of additional LEDs so you know what is going on on it. It has a function where you can power the target. So, you go in GDB and you run monitor t-power enable and it will power your target using the power reference pin of the JTAG interface. And it has a built-in UART to serial. So, USB to serial adapter on the back of the board. So, it's actually more useful than one would think to have it in one package. So, you can just plug it in and have serial while you also have JTAG or SWD. We support both. That's great."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 340,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Okay. Oh, cool. At the end of the day, it's just talking. I mean, it's really just a pretty face on the same thing that's happening behind the scenes, right? Of doing new files, building, you know, calling these different functions or whatever's happening or scripts and then building up the stuff you need. Yeah, that's correct. Yeah. I had a question about the, so the actual physical thing that's happening as well. So when I started up GDB and it's talking to the Blackmagic probe and it's actually, you know, stepping through code, that's all happening through the JTAG interface? That's right?",
+   "context_before": "focused on Atom was the fact that you need a license and that it has the nag screens and it's not completely open source. It would be a little bit hypocritical if we said, oh, this is the way to go. Still, I know that people are using Sublime with the whole setup that OneBitC has. So this is the nice thing. At OneBitC, you can program it in so many ways because it is just requiring the low-level command line stuff. And so you want to use the, what is the Windows Text Editor to program your code? TextEdit. TextEdit. Notepad. Notepad. You're welcome to. And so you can use almost the tools that you want. And I did hear that the Eclipse stuff, people are having sometimes trouble with it, but we will eventually have that too. And I know that it works because several people managed to set it up.",
+   "context_after": "Yes. Or SWD.",
+   "context_before_speaker": "Piotr Esden-Tempski",
+   "context_after_speaker": "Piotr Esden-Tempski",
+   "text": "focused on Atom was the fact that you need a license and that it has the nag screens and it's not completely open source. It would be a little bit hypocritical if we said, oh, this is the way to go. Still, I know that people are using Sublime with the whole setup that OneBitC has. So this is the nice thing. At OneBitC, you can program it in so many ways because it is just requiring the low-level command line stuff. And so you want to use the, what is the Windows Text Editor to program your code? TextEdit. TextEdit. Notepad. Notepad. You're welcome to. And so you can use almost the tools that you want. And I did hear that the Eclipse stuff, people are having sometimes trouble with it, but we will eventually have that too. And I know that it works because several people managed to set it up. Okay. Oh, cool. At the end of the day, it's just talking. I mean, it's really just a pretty face on the same thing that's happening behind the scenes, right? Of doing new files, building, you know, calling these different functions or whatever's happening or scripts and then building up the stuff you need. Yeah, that's correct. Yeah. I had a question about the, so the actual physical thing that's happening as well. So when I started up GDB and it's talking to the Blackmagic probe and it's actually, you know, stepping through code, that's all happening through the JTAG interface? That's right? Yes. Or SWD."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 342,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Or SWD. So, but the question I had about it is, so you mentioned like watch variables and if I'm watching 10 different variables. Mm-hmm. And so it's actually going in and probing and saying, so when it's stepping to the next instruction or whatever's happening, right? It's saying I've got these 10 variables. It's actually going, looking those up in memory, pulling those back out and then doing all these other things. But that's all happening over JTAG or SWD?",
+   "context_before": "Yes. Or SWD.",
+   "context_after": "Yeah, that's all happening over that interface. So GDB itself actually is issuing a lot of commands with every step that it is. So, and it is sending it to the remote target. So the interesting thing here is to understand what the like chain of command here is. So GDB is... That's a good way to say it. I like that. It is the driving force of the kind of everything. It's the general. It's the general, yeah. Well, depends on if you go to layer eight, the guy between chair and keyboard.",
+   "context_before_speaker": "Piotr Esden-Tempski",
+   "context_after_speaker": "Piotr Esden-Tempski",
+   "text": "Yes. Or SWD. Or SWD. So, but the question I had about it is, so you mentioned like watch variables and if I'm watching 10 different variables. Mm-hmm. And so it's actually going in and probing and saying, so when it's stepping to the next instruction or whatever's happening, right? It's saying I've got these 10 variables. It's actually going, looking those up in memory, pulling those back out and then doing all these other things. But that's all happening over JTAG or SWD? Yeah, that's all happening over that interface. So GDB itself actually is issuing a lot of commands with every step that it is. So, and it is sending it to the remote target. So the interesting thing here is to understand what the like chain of command here is. So GDB is... That's a good way to say it. I like that. It is the driving force of the kind of everything. It's the general. It's the general, yeah. Well, depends on if you go to layer eight, the guy between chair and keyboard."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 345,
+   "depth": "opinion",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah. So basically GDB is generating commands. It is sending it over the serial interface to the Blackmagic probe. And the Blackmagic probe is taking those commands and converting them to JTAG commands. And this is, again, also a layered onion of stuff. JTAG is as much of a standard as XML is a standard.",
+   "context_before": "Poor lady. No, the pebcacable client that you're talking about there is... I don't know what it would be. The dunce or the joker? Yeah.",
+   "context_after": "Right. Is that saying that it is or it isn't? Because XML, I'm not sure if you're like being disparaging again.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Poor lady. No, the pebcacable client that you're talking about there is... I don't know what it would be. The dunce or the joker? Yeah. Yeah. So basically GDB is generating commands. It is sending it over the serial interface to the Blackmagic probe. And the Blackmagic probe is taking those commands and converting them to JTAG commands. And this is, again, also a layered onion of stuff. JTAG is as much of a standard as XML is a standard. Right. Is that saying that it is or it isn't? Because XML, I'm not sure if you're like being disparaging again."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 347,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah, no. In this case, I'm being disparaging, yes. Okay, yes. Because JTAG is mostly just a signal layer definition. Okay. And then you have the state machine of the, what is it called? DAP, debug access port. And there is a state machine where you shift in bits into like a shift register. Then you issue commands with and run the state machine inside the device. But the state machine, again, in itself, the amount of commands that the state machine then interprets is depending on the device that you have connected there. So the interesting thing is that the reason why Blackmagic Probe mostly supports only ARM Cortex strips, like Cortex-M mostly, and we have some alpha support for Cortex-A, is that all that stuff is defined by the ARM debug interface version 5, ADF 5.",
+   "context_before": "Right. Is that saying that it is or it isn't? Because XML, I'm not sure if you're like being disparaging again.",
+   "context_after": "Okay.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. Is that saying that it is or it isn't? Because XML, I'm not sure if you're like being disparaging again. Yeah, no. In this case, I'm being disparaging, yes. Okay, yes. Because JTAG is mostly just a signal layer definition. Okay. And then you have the state machine of the, what is it called? DAP, debug access port. And there is a state machine where you shift in bits into like a shift register. Then you issue commands with and run the state machine inside the device. But the state machine, again, in itself, the amount of commands that the state machine then interprets is depending on the device that you have connected there. So the interesting thing is that the reason why Blackmagic Probe mostly supports only ARM Cortex strips, like Cortex-M mostly, and we have some alpha support for Cortex-A, is that all that stuff is defined by the ARM debug interface version 5, ADF 5. Okay."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 349,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:swd",
+    "core"
+   ],
+   "concepts": [
+    "jtag",
+    "swd"
+   ],
+   "paragraph_text": "It's a pretty large document that is specifying more layers of the complexity how the JTAG interface works or the SWD interface works. Because whatever it is, JTAG or SWD, the commands that are running on top of that are pretty much the same.",
+   "context_before": "Okay.",
+   "context_after": "Okay. So are you basically, did you have to then go and implement this ADF inside the processor on the Blackmagic Probe? Is that the idea?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. It's a pretty large document that is specifying more layers of the complexity how the JTAG interface works or the SWD interface works. Because whatever it is, JTAG or SWD, the commands that are running on top of that are pretty much the same. Okay. So are you basically, did you have to then go and implement this ADF inside the processor on the Blackmagic Probe? Is that the idea?"
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 352,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "And so does that mean that the Blackmagic Probe is primarily acting as a translator between GDB and the commands that talk through the JTAG port? Is that... Yeah.",
+   "context_before": "Yes. Yes. Okay. So it has to know how to translate the commands from GDB, read memory address so-and-so into the correct ADF 5 commands to read out from the matrix or from the... Okay.",
+   "context_after": "That's kind of... Exactly right. So the easy thing to say would be it is a GDB remote protocol to JTAG converter.",
+   "context_before_speaker": "Piotr Esden-Tempski",
+   "context_after_speaker": "Piotr Esden-Tempski",
+   "text": "Yes. Yes. Okay. So it has to know how to translate the commands from GDB, read memory address so-and-so into the correct ADF 5 commands to read out from the matrix or from the... Okay. And so does that mean that the Blackmagic Probe is primarily acting as a translator between GDB and the commands that talk through the JTAG port? Is that... Yeah. That's kind of... Exactly right. So the easy thing to say would be it is a GDB remote protocol to JTAG converter."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 353,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "That's kind of... Exactly right. So the easy thing to say would be it is a GDB remote protocol to JTAG converter.",
+   "context_before": "And so does that mean that the Blackmagic Probe is primarily acting as a translator between GDB and the commands that talk through the JTAG port? Is that... Yeah.",
+   "context_after": "Okay.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "And so does that mean that the Blackmagic Probe is primarily acting as a translator between GDB and the commands that talk through the JTAG port? Is that... Yeah. That's kind of... Exactly right. So the easy thing to say would be it is a GDB remote protocol to JTAG converter. Okay."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 376,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Okay. So yeah. So, so walking down the chain against GDB, talking to Blackmagic, Blackmagic outputs, JTAG commands, JTAG commands are then probing internally to the registers that are on the chip and then pulling those data, the data back out, pushing it back up to GDB and then it shows it to you. That's kind of the idea.",
+   "context_before": "Just a side note. Haha. Okay.",
+   "context_after": "Yeah, that's, that's correct. And you can do magical things with this. It's, there is so-called semi-hosting, for example, and this is your application. Uh, triggering, uh, an exception within the chip, like a hardware exception and then GDB, uh, catching that and seeing and executing commands on the host computer. So for example, you can do print devs from the target into GDB by it basically making a system call into the host GDB or opening a file, reading a file. You can do these things. It's very useful and very powerful because then you can, for, for example, you are testing a device and you need a ton of data within your, your, uh, embedded device and you don't have an SD card, you don't have an interface, but you have JTAG that you just use to flash the firmware.",
+   "context_before_speaker": "Piotr Esden-Tempski",
+   "context_after_speaker": "Piotr Esden-Tempski",
+   "text": "Just a side note. Haha. Okay. Okay. So yeah. So, so walking down the chain against GDB, talking to Blackmagic, Blackmagic outputs, JTAG commands, JTAG commands are then probing internally to the registers that are on the chip and then pulling those data, the data back out, pushing it back up to GDB and then it shows it to you. That's kind of the idea. Yeah, that's, that's correct. And you can do magical things with this. It's, there is so-called semi-hosting, for example, and this is your application. Uh, triggering, uh, an exception within the chip, like a hardware exception and then GDB, uh, catching that and seeing and executing commands on the host computer. So for example, you can do print devs from the target into GDB by it basically making a system call into the host GDB or opening a file, reading a file. You can do these things. It's very useful and very powerful because then you can, for, for example, you are testing a device and you need a ton of data within your, your, uh, embedded device and you don't have an SD card, you don't have an interface, but you have JTAG that you just use to flash the firmware."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 377,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah, that's, that's correct. And you can do magical things with this. It's, there is so-called semi-hosting, for example, and this is your application. Uh, triggering, uh, an exception within the chip, like a hardware exception and then GDB, uh, catching that and seeing and executing commands on the host computer. So for example, you can do print devs from the target into GDB by it basically making a system call into the host GDB or opening a file, reading a file. You can do these things. It's very useful and very powerful because then you can, for, for example, you are testing a device and you need a ton of data within your, your, uh, embedded device and you don't have an SD card, you don't have an interface, but you have JTAG that you just use to flash the firmware.",
+   "context_before": "Okay. So yeah. So, so walking down the chain against GDB, talking to Blackmagic, Blackmagic outputs, JTAG commands, JTAG commands are then probing internally to the registers that are on the chip and then pulling those data, the data back out, pushing it back up to GDB and then it shows it to you. That's kind of the idea.",
+   "context_after": "Right. So say you wanted to like have like a, uh, a small audio file or something.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. So yeah. So, so walking down the chain against GDB, talking to Blackmagic, Blackmagic outputs, JTAG commands, JTAG commands are then probing internally to the registers that are on the chip and then pulling those data, the data back out, pushing it back up to GDB and then it shows it to you. That's kind of the idea. Yeah, that's, that's correct. And you can do magical things with this. It's, there is so-called semi-hosting, for example, and this is your application. Uh, triggering, uh, an exception within the chip, like a hardware exception and then GDB, uh, catching that and seeing and executing commands on the host computer. So for example, you can do print devs from the target into GDB by it basically making a system call into the host GDB or opening a file, reading a file. You can do these things. It's very useful and very powerful because then you can, for, for example, you are testing a device and you need a ton of data within your, your, uh, embedded device and you don't have an SD card, you don't have an interface, but you have JTAG that you just use to flash the firmware. Right. So say you wanted to like have like a, uh, a small audio file or something."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 419,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah. Different family or different manufacturer, but also cortex M three's and fours, uh, or zeros, depending on which one you get. Uh, so it, it is an awesome device. The problem is it doesn't have the JTAC interface exposed. Got it. Got it. I would probably not have made the one bit C if the teensy had the JTAC interface exposed.",
+   "context_before": "So, uh, and the teensy uses a free scale parts as well. Right. So it's using free scale.",
+   "context_after": "Interesting. Okay. And so, uh, if, if, so, uh, black magic probe could work on a teensy, but it just doesn't have that interface at all. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So, uh, and the teensy uses a free scale parts as well. Right. So it's using free scale. Yeah. Different family or different manufacturer, but also cortex M three's and fours, uh, or zeros, depending on which one you get. Uh, so it, it is an awesome device. The problem is it doesn't have the JTAC interface exposed. Got it. Got it. I would probably not have made the one bit C if the teensy had the JTAC interface exposed. Interesting. Okay. And so, uh, if, if, so, uh, black magic probe could work on a teensy, but it just doesn't have that interface at all. Yeah."
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 423,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "That's the bootloader chip. Right, right, right, right. So there is a tiny chip that is using the JTAC interface to, uh, load a little bit snippet of Ram executed code into the chip. This is what makes it, uh, work as well as it does because it doesn't occupy any memory on the target chip compared to some other arm based, uh, Arduino compatible stuff.",
+   "context_before": "So, oh, it's the bootloader chip, right?",
+   "context_after": "And then it's not like, it's not, uh, segmenting it all out. So it's not sharing even the memory space. There's no way to like overwrite one or the other, that kind of thing. No.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So, oh, it's the bootloader chip, right? That's the bootloader chip. Right, right, right, right. So there is a tiny chip that is using the JTAC interface to, uh, load a little bit snippet of Ram executed code into the chip. This is what makes it, uh, work as well as it does because it doesn't occupy any memory on the target chip compared to some other arm based, uh, Arduino compatible stuff. And then it's not like, it's not, uh, segmenting it all out. So it's not sharing even the memory space. There's no way to like overwrite one or the other, that kind of thing. No."
+  },
+  {
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "guest": "Jeroen Domburg",
+   "stem": "0359-an-interview-with-jeroen-domburg-sprite_tm",
+   "paragraph_index": 125,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Jeroen Domburg",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Um, it's, it's kind of sorta, um, I think we do a bit. Yeah. Well, um, how to get this stuff online as in how to use the SDK. We have a documentation team for that and they do an awesome job of, you know, um, if you look in the ESP IDF, um, tree itself, um, you can, uh, you can essentially see that there's not only like in all the function calls, et cetera, are well defined. There's also some information on, Hey, you bought our development board. How do you do stuff? Hey, you want to use J tech and what kind of J tech posts can you use? And how would you, for example, debug a, a sample application? And we essentially do that, um, you know, in our own documentation because, uh, we wanna, um, stuff like that may change. If we decide to change, for example, our J tech implementation and a bunch of commands you, you, you need to enter probably are different. And if you publish it anywhere else, then you essentially have an old article, which isn't up to date anymore, but which still turns up. So, um,",
+   "context_before": "with it. Yeah. Um, speaking of, do you, I mean, so do you guys, do you guys publish on like the, so I mean, there's a lot of stuff out there. Obviously you mentioned Hackaday, stuff like that and other blogs and forums and stuff like that. Do you, do, does Espressif ever publish stuff in terms of how to get this thing online or is it more community focused, that kind of thing?",
+   "context_after": "And then people go to production and they're like, Hey, my party can program. Okay, cool. Yeah, exactly. Exactly.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "with it. Yeah. Um, speaking of, do you, I mean, so do you guys, do you guys publish on like the, so I mean, there's a lot of stuff out there. Obviously you mentioned Hackaday, stuff like that and other blogs and forums and stuff like that. Do you, do, does Espressif ever publish stuff in terms of how to get this thing online or is it more community focused, that kind of thing? Um, it's, it's kind of sorta, um, I think we do a bit. Yeah. Well, um, how to get this stuff online as in how to use the SDK. We have a documentation team for that and they do an awesome job of, you know, um, if you look in the ESP IDF, um, tree itself, um, you can, uh, you can essentially see that there's not only like in all the function calls, et cetera, are well defined. There's also some information on, Hey, you bought our development board. How do you do stuff? Hey, you want to use J tech and what kind of J tech posts can you use? And how would you, for example, debug a, a sample application? And we essentially do that, um, you know, in our own documentation because, uh, we wanna, um, stuff like that may change. If we decide to change, for example, our J tech implementation and a bunch of commands you, you, you need to enter probably are different. And if you publish it anywhere else, then you essentially have an old article, which isn't up to date anymore, but which still turns up. So, um, And then people go to production and they're like, Hey, my party can program. Okay, cool. Yeah, exactly. Exactly."
+  },
+  {
+   "episode": 363,
+   "episode_title": "An interview with Alvaro and Jen from the URE Podcast",
+   "episode_url": "https://theamphour.com/363-an-interview-with-alvaro-and-jen-from-the-ure-podcast/",
+   "guest": "Alvaro Prieto and Jen",
+   "stem": "0363-an-interview-with-alvaro-and-jen-from-the-ure-podcast",
+   "paragraph_index": 268,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:jtagulator",
+    "core"
+   ],
+   "concepts": [
+    "jtag",
+    "jtagulator"
+   ],
+   "paragraph_text": "Well, so it sounds like some of the, uh, the, so, so if I was going to list out some of these things, like, like you're talking about the firmware dumps, that seems like that's a big skill that you need to have. Being able to read the hex files, stuff like that. Uh, knowing like what Joe Grand does, like JTAGulator, you know, finding the JTAG ports and being able to reprogram things. That's a big piece. Are there other skills in there that kind of cross over into the hacking world or what, what else is in there?",
+   "context_before": "It's sketchy, but it's great. Um, no, but something, some great talks happened. They're not recorded. Um, so people are a little more willing to say stuff. Let's just say that you're like, Whoa, what? And, and some really cool, cool stuff they talk about. So, um, yeah, it's, it's a cool resource for people in the Bay Area.",
+   "context_after": "I mean, uh, a lot of the skills to use in reverse engineering are also very useful for debugging. Okay. Oh, interesting. Your own product, right? Because, you know, you're trying to see how it works. Uh, you're probing around, you're looking, um, just how stuff is working. And I might be working my own product and stuff's failing, but I might look at it and be like, oh, I remember this time I was doing something like that and go do that. Also, you get to learn from other engineers' work. You might be opening a really fancy piece of equipment that, uh, someone made a long time ago and clearly spend a lot of time designing it. And you get to look at it and kind of take it all in and say, whoa, I never thought of doing stuff this way. Um, or this is really elegant design or, well, this is hor",
+   "context_before_speaker": "Alvaro Prieto",
+   "context_after_speaker": "Alvaro Prieto",
+   "text": "It's sketchy, but it's great. Um, no, but something, some great talks happened. They're not recorded. Um, so people are a little more willing to say stuff. Let's just say that you're like, Whoa, what? And, and some really cool, cool stuff they talk about. So, um, yeah, it's, it's a cool resource for people in the Bay Area. Well, so it sounds like some of the, uh, the, so, so if I was going to list out some of these things, like, like you're talking about the firmware dumps, that seems like that's a big skill that you need to have. Being able to read the hex files, stuff like that. Uh, knowing like what Joe Grand does, like JTAGulator, you know, finding the JTAG ports and being able to reprogram things. That's a big piece. Are there other skills in there that kind of cross over into the hacking world or what, what else is in there? I mean, uh, a lot of the skills to use in reverse engineering are also very useful for debugging. Okay. Oh, interesting. Your own product, right? Because, you know, you're trying to see how it works. Uh, you're probing around, you're looking, um, just how stuff is working. And I might be working my own product and stuff's failing, but I might look at it and be like, oh, I remember this time I was doing something like that and go do that. Also, you get to learn from other engineers' work. You might be opening a really fancy piece of equipment that, uh, someone made a long time ago and clearly spend a lot of time designing it. And you get to look at it and kind of take it all in and say, whoa, I never thought of doing stuff this way. Um, or this is really elegant design or, well, this is hor"
+  },
+  {
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "guest": "Scott Shawcroft",
+   "stem": "0383-an-interview-with-scott-shawcroft",
+   "paragraph_index": 202,
+   "depth": "explains",
+   "speaker_raw": "Scott Shawcroft",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah. So it's like, it's very integrated. Yeah. You get to like see everything. Uh, which is also why all the hackers are always looking for the J tag port. Oh yeah. I was just talking to Joe grand the other day with his J tagulator. Uh, uh, uh, yeah. So they love that stuff because it is your, you get to be right there and you can poke around.",
+   "context_before": "Like the debug hardware, if you've ever looked at a diagram for MCU, it's like right next to the actual processor.",
+   "context_after": "Yeah. You're, you're controlling the processor and you're able to read all the memory.",
+   "context_before_speaker": "Scott Shawcroft",
+   "context_after_speaker": "Scott Shawcroft",
+   "text": "Like the debug hardware, if you've ever looked at a diagram for MCU, it's like right next to the actual processor. Yeah. So it's like, it's very integrated. Yeah. You get to like see everything. Uh, which is also why all the hackers are always looking for the J tag port. Oh yeah. I was just talking to Joe grand the other day with his J tagulator. Uh, uh, uh, yeah. So they love that stuff because it is your, you get to be right there and you can poke around. Yeah. You're, you're controlling the processor and you're able to read all the memory."
+  },
+  {
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "guest": "Luke Valenty",
+   "stem": "0395-an-interview-with-luke-valenty",
+   "paragraph_index": 67,
+   "depth": "explains",
+   "speaker_raw": "FPGAs",
+   "speaker_repaired": "Luke Valenty",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah. In fact, I have a tiny little programmer board that I developed for the, the A series FPGA boards. The A series don't have a built-in USB. And I kind of wanted to be able to use an FPGA for that because I have my own USB bootloader, but it turned out that, you know, it would be far more complicated and more expensive to do that. So instead I have this PIC microcontroller, which the only external devices that it needs is a 3.3 volt regulator and a couple of decoupling capacitors. And that's it. And it can work on USB and, you know, implement my firmware for, for programming over JTAG. And that was the right choice because, you know, that micro had everything integrated. So that's, that's a big difference between FPGAs and micros. And it's something that I wish the smaller FPGAs had more of. I kind of wish they had more integrated voltage regulators and clocks that are more accurate. So the, the PIC microcontroller, you need a certain amount of accuracy for USB. And so this particular PIC microcontroller can adjust its clock based on the synchronization packets coming over the USB wires. Oh, nice. And so it actually will adjust its clock on the fly as it's operating in order to do that. But in FPGAs, at least all the ones that I've used, you don't have a fine enough adjustment of the clock to be able to do something like that. So you have to have an external clock.",
+   "context_before": "call back to that.",
+   "context_after": "I mean, I think that that, that's also kind of a, so like in my mind, FPGAs versus micros, like the micros started effectively with FPGAs, you know, it either started in the designers' minds or they started on a board as an FPGA in, you know, but eventually they, they just kept getting optimized for their situation and then people kind of pull them off the shelf and say, oh, well this will probably work for mine too. So what I'm trying to get at though is like, when, when should people think, I mean, obviously, you know, we talked at the beginning too, it's like, yes, it's okay to start at the beginning with an FPGA as well, but in the world of cheap micros, where does an FPGA stand out as a, as a, um, a situation? Like, especially because our listening audience probably already uses micro",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "call back to that. Yeah. In fact, I have a tiny little programmer board that I developed for the, the A series FPGA boards. The A series don't have a built-in USB. And I kind of wanted to be able to use an FPGA for that because I have my own USB bootloader, but it turned out that, you know, it would be far more complicated and more expensive to do that. So instead I have this PIC microcontroller, which the only external devices that it needs is a 3.3 volt regulator and a couple of decoupling capacitors. And that's it. And it can work on USB and, you know, implement my firmware for, for programming over JTAG. And that was the right choice because, you know, that micro had everything integrated. So that's, that's a big difference between FPGAs and micros. And it's something that I wish the smaller FPGAs had more of. I kind of wish they had more integrated voltage regulators and clocks that are more accurate. So the, the PIC microcontroller, you need a certain amount of accuracy for USB. And so this particular PIC microcontroller can adjust its clock based on the synchronization packets coming over the USB wires. Oh, nice. And so it actually will adjust its clock on the fly as it's operating in order to do that. But in FPGAs, at least all the ones that I've used, you don't have a fine enough adjustment of the clock to be able to do something like that. So you have to have an external clock. I mean, I think that that, that's also kind of a, so like in my mind, FPGAs versus micros, like the micros started effectively with FPGAs, you know, it either started in the designers' minds or they started on a board as an FPGA in, you know, but eventually they, they just kept getting optimized for their situation and then people kind of pull them off the shelf and say, oh, well this will probably work for mine too. So what I'm trying to get at though is like, when, when should people think, I mean, obviously, you know, we talked at the beginning too, it's like, yes, it's okay to start at the beginning with an FPGA as well, but in the world of cheap micros, where does an FPGA stand out as a, as a, um, a situation? Like, especially because our listening audience probably already uses micro"
+  },
+  {
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "guest": "Craig J Bishop",
+   "stem": "0469-an-interview-with-craig-j-bishop",
+   "paragraph_index": 29,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Oh, it's hilarious, too, because you have to look for signs of sandblasting. Wow. Wow. Yep. Anyway, so I got the five of these, and they arrived just fine. But in order to actually test them, you can't just power a few pins and throw a JTAG on there. It actually requires pretty much a whole board to be able to test it.",
+   "context_before": "Actually, yeah, that sounds like a great resource.",
+   "context_after": "Yeah, because FPJs always have, like... I think they've gotten better. But I remember they used to be, like, you have to, like, bring power supplies up at the same time. And you have to have, like... You know, it's a significant amount of current, too. Even at the... Especially for the low... Like, the 0.9-volt rail... Right. You know, things that are going to the core.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Actually, yeah, that sounds like a great resource. Oh, it's hilarious, too, because you have to look for signs of sandblasting. Wow. Wow. Yep. Anyway, so I got the five of these, and they arrived just fine. But in order to actually test them, you can't just power a few pins and throw a JTAG on there. It actually requires pretty much a whole board to be able to test it. Yeah, because FPJs always have, like... I think they've gotten better. But I remember they used to be, like, you have to, like, bring power supplies up at the same time. And you have to have, like... You know, it's a significant amount of current, too. Even at the... Especially for the low... Like, the 0.9-volt rail... Right. You know, things that are going to the core."
+  },
+  {
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "guest": "Craig J Bishop",
+   "stem": "0469-an-interview-with-craig-j-bishop",
+   "paragraph_index": 85,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Okay, so you got this thing up and running. That's great. And then, so then the JTAG was to, so you had to get the JTAG chain up and running to even talk to the A9, is that right?",
+   "context_before": "Yeah, not as is. Yeah. Even eBay pricing, the $80, $100 FPGA is still a little bit bomb busting. Yeah, it definitely is.",
+   "context_after": "Or is this to talk to the rest of the FPGA? Yeah, so the Zinc parts actually are different than other FPGAs, that they don't necessarily go out to a bitstream flash first. They actually boot up the dual Cortex-A9, and that ARM part of the chip actually controls bringing up the FPGA side. So you get JTAG access to the ARM side first, and boot up the ARM processors, and make sure those work. And then from there, you can do whatever you want to boot up the FPGA fabric. And so in my case, I worked out getting the debug UART to go through the STM32 over USB, creating a firmware for that. And then after I had debug out, then I worked on putting Uboot into the boot flash. So that way, the Zinc would boot up Uboot bootloader, and I had to port that. And then once you have Uboot, you can actually t",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah, not as is. Yeah. Even eBay pricing, the $80, $100 FPGA is still a little bit bomb busting. Yeah, it definitely is. Okay, so you got this thing up and running. That's great. And then, so then the JTAG was to, so you had to get the JTAG chain up and running to even talk to the A9, is that right? Or is this to talk to the rest of the FPGA? Yeah, so the Zinc parts actually are different than other FPGAs, that they don't necessarily go out to a bitstream flash first. They actually boot up the dual Cortex-A9, and that ARM part of the chip actually controls bringing up the FPGA side. So you get JTAG access to the ARM side first, and boot up the ARM processors, and make sure those work. And then from there, you can do whatever you want to boot up the FPGA fabric. And so in my case, I worked out getting the debug UART to go through the STM32 over USB, creating a firmware for that. And then after I had debug out, then I worked on putting Uboot into the boot flash. So that way, the Zinc would boot up Uboot bootloader, and I had to port that. And then once you have Uboot, you can actually t"
+  },
+  {
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "guest": null,
+   "stem": "0482-shine-a-light",
+   "paragraph_index": 279,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "I am Googling myself. What is JTAG and Boundary Scan? It's got 287,000 views and I did it six years ago. Holy crap. Yeah. Okay. Yep. Yeah. No, that's, that's very popular. I think if you just search JTAG, I might be number one. Yep. I'm yep. Search result. Number one.",
+   "context_before": "Dave is Googling himself.",
+   "context_after": "The reason I was going to bring this, this specific one up is because like, you know, we've, we've had Peter as in Tempski on the show before and he's does a black magic probe, which is like a hardware, you know, debugger stuff like that. And there's like, there's JTAG chain tools that are doing similar things. And I guess one thing I wanted to say is because I was, you know, even up till recently, I was very, very confused about what's happening there, but it's actually just like reading and writing registers in order to program a chip. Well, I don't know. I, for some reason, this was always very confusing to me. Like the, the idea of JTAG. Well, it's not just for programming a chip. Right. You realize that. Doing debug and.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Dave is Googling himself. I am Googling myself. What is JTAG and Boundary Scan? It's got 287,000 views and I did it six years ago. Holy crap. Yeah. Okay. Yep. Yeah. No, that's, that's very popular. I think if you just search JTAG, I might be number one. Yep. I'm yep. Search result. Number one. The reason I was going to bring this, this specific one up is because like, you know, we've, we've had Peter as in Tempski on the show before and he's does a black magic probe, which is like a hardware, you know, debugger stuff like that. And there's like, there's JTAG chain tools that are doing similar things. And I guess one thing I wanted to say is because I was, you know, even up till recently, I was very, very confused about what's happening there, but it's actually just like reading and writing registers in order to program a chip. Well, I don't know. I, for some reason, this was always very confusing to me. Like the, the idea of JTAG. Well, it's not just for programming a chip. Right. You realize that. Doing debug and."
+  },
+  {
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "guest": null,
+   "stem": "0482-shine-a-light",
+   "paragraph_index": 280,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "The reason I was going to bring this, this specific one up is because like, you know, we've, we've had Peter as in Tempski on the show before and he's does a black magic probe, which is like a hardware, you know, debugger stuff like that. And there's like, there's JTAG chain tools that are doing similar things. And I guess one thing I wanted to say is because I was, you know, even up till recently, I was very, very confused about what's happening there, but it's actually just like reading and writing registers in order to program a chip. Well, I don't know. I, for some reason, this was always very confusing to me. Like the, the idea of JTAG. Well, it's not just for programming a chip. Right. You realize that. Doing debug and.",
+   "context_before": "I am Googling myself. What is JTAG and Boundary Scan? It's got 287,000 views and I did it six years ago. Holy crap. Yeah. Okay. Yep. Yeah. No, that's, that's very popular. I think if you just search JTAG, I might be number one. Yep. I'm yep. Search result. Number one.",
+   "context_after": "It's for testing as well. Boundary, that's what boundary scan is. Boundary scan allows you to actually read the, directly read all the IO pins. Allows you to directly read all the pins.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "I am Googling myself. What is JTAG and Boundary Scan? It's got 287,000 views and I did it six years ago. Holy crap. Yeah. Okay. Yep. Yeah. No, that's, that's very popular. I think if you just search JTAG, I might be number one. Yep. I'm yep. Search result. Number one. The reason I was going to bring this, this specific one up is because like, you know, we've, we've had Peter as in Tempski on the show before and he's does a black magic probe, which is like a hardware, you know, debugger stuff like that. And there's like, there's JTAG chain tools that are doing similar things. And I guess one thing I wanted to say is because I was, you know, even up till recently, I was very, very confused about what's happening there, but it's actually just like reading and writing registers in order to program a chip. Well, I don't know. I, for some reason, this was always very confusing to me. Like the, the idea of JTAG. Well, it's not just for programming a chip. Right. You realize that. Doing debug and. It's for testing as well. Boundary, that's what boundary scan is. Boundary scan allows you to actually read the, directly read all the IO pins. Allows you to directly read all the pins."
+  },
+  {
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "guest": null,
+   "stem": "0482-shine-a-light",
+   "paragraph_index": 291,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "So yeah, no, it's really handy. Not, not, not everyone does that. It's like, you know, boundary scans are a thing that you can do, but you know, it's not, it's not hugely popular, I guess. It, it depends on the product, but it is possible. That's all part of the JTAG interface. You know, you can make sure it's connected. If you want to make sure if you don't have x-ray gear available and other stuff, you can make sure that your thousand pin BGA, that every one of those pins is actually connected to the ball by, by doing a boundary scan, make sure it's not shorted to the pins next to it.",
+   "context_before": "Yeah.",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. So yeah, no, it's really handy. Not, not, not everyone does that. It's like, you know, boundary scans are a thing that you can do, but you know, it's not, it's not hugely popular, I guess. It, it depends on the product, but it is possible. That's all part of the JTAG interface. You know, you can make sure it's connected. If you want to make sure if you don't have x-ray gear available and other stuff, you can make sure that your thousand pin BGA, that every one of those pins is actually connected to the ball by, by doing a boundary scan, make sure it's not shorted to the pins next to it. Yeah."
+  },
+  {
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "guest": null,
+   "stem": "0482-shine-a-light",
+   "paragraph_index": 297,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "So yeah, but it's possible and it's very cool. And it's all through the JTAG interface. Yeah. Um, because of the, hence, hence the name joint test and action group. That's right. Joint test and action group. I think T is test. Yeah. You know, that's, that's part of it. It's not program. It's not joint programming group. Yeah. It's joint test. You know.",
+   "context_before": "You're not going to control a DDR3 memory bus or something like that. Right. No, that's right.",
+   "context_after": "It's not JPEG.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "You're not going to control a DDR3 memory bus or something like that. Right. No, that's right. So yeah, but it's possible and it's very cool. And it's all through the JTAG interface. Yeah. Um, because of the, hence, hence the name joint test and action group. That's right. Joint test and action group. I think T is test. Yeah. You know, that's, that's part of it. It's not program. It's not joint programming group. Yeah. It's joint test. You know. It's not JPEG."
+  },
+  {
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "guest": null,
+   "stem": "0482-shine-a-light",
+   "paragraph_index": 304,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah. I mean, so what I was getting at is like, you know, I use JTAG mostly for programming and debugging and similar kinds of things. And, you know, usually there is singleware debug, which is, you know, it's usually a subset of the pins that are in JTAG as well. But I never really like understood what was going on there, I guess. You know, like, and. Watch my video. I will. I will, Dave. Maybe I should have done that six years ago, but I don't know. You should have, yeah. I think like, even if I would have watched it, I didn't quite get it in the context of like doing the firmware like I've been doing lately. And that's kind of like what I'm getting at. It's like, it's sending back.",
+   "context_before": "No. Okay. Right.",
+   "context_after": "Or you just didn't care until you needed it.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "No. Okay. Right. Yeah. I mean, so what I was getting at is like, you know, I use JTAG mostly for programming and debugging and similar kinds of things. And, you know, usually there is singleware debug, which is, you know, it's usually a subset of the pins that are in JTAG as well. But I never really like understood what was going on there, I guess. You know, like, and. Watch my video. I will. I will, Dave. Maybe I should have done that six years ago, but I don't know. You should have, yeah. I think like, even if I would have watched it, I didn't quite get it in the context of like doing the firmware like I've been doing lately. And that's kind of like what I'm getting at. It's like, it's sending back. Or you just didn't care until you needed it."
+  },
+  {
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "guest": null,
+   "stem": "0482-shine-a-light",
+   "paragraph_index": 308,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah. But I think that there's like, I don't think there's a use case where I'm going to go and like write some of the, write to the registers and like handle all the stuff that does all the debugging and things like that. But I think that understanding what's going on there might, you know, like, so even like selected your JTAG speed, you might be more or less willing to slow it down because you know, you need to get throughput, that kind of thing. So yeah, that's all. That's all.",
+   "context_before": "No, it's right.",
+   "context_after": "Yeah. No, JTAG is cool.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "No, it's right. Yeah. But I think that there's like, I don't think there's a use case where I'm going to go and like write some of the, write to the registers and like handle all the stuff that does all the debugging and things like that. But I think that understanding what's going on there might, you know, like, so even like selected your JTAG speed, you might be more or less willing to slow it down because you know, you need to get throughput, that kind of thing. So yeah, that's all. That's all. Yeah. No, JTAG is cool."
+  },
+  {
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "guest": null,
+   "stem": "0482-shine-a-light",
+   "paragraph_index": 309,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah. No, JTAG is cool.",
+   "context_before": "Yeah. But I think that there's like, I don't think there's a use case where I'm going to go and like write some of the, write to the registers and like handle all the stuff that does all the debugging and things like that. But I think that understanding what's going on there might, you know, like, so even like selected your JTAG speed, you might be more or less willing to slow it down because you know, you need to get throughput, that kind of thing. So yeah, that's all. That's all.",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. But I think that there's like, I don't think there's a use case where I'm going to go and like write some of the, write to the registers and like handle all the stuff that does all the debugging and things like that. But I think that understanding what's going on there might, you know, like, so even like selected your JTAG speed, you might be more or less willing to slow it down because you know, you need to get throughput, that kind of thing. So yeah, that's all. That's all. Yeah. No, JTAG is cool. Yeah."
+  },
+  {
+   "episode": 552,
+   "episode_title": "Shouting at chips with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/552-shouting-at-chips-with-colin-oflynn/",
+   "guest": "Colin O'Flynn",
+   "stem": "0552-shouting-at-chips-with-colin-oflynn",
+   "paragraph_index": 172,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Okay. Yeah. That makes sense then too. Cause you, so from a, from having J tag access, you can just go and peek and poke at memory and just pull it all out then.",
+   "context_before": "the timing, right. So normally there's like all this timing stuff. That's the thing with glitching. Like sometimes it's pretty easy. So it can be started, leanly easy. How this stuff works. It's like, you know, on boot. So a common one is right. When the device is booting up, you hit it with something. So it's like reading from memory, a configuration or fuse. And then based on that fuse, maybe it turns on or off a J tag lock. So if like at the right time you skip over, turning on the J tag lock, it just comes up on lock. So, so several of the like, you know, more interesting or, or I'd say more use glitches or stuff like that, where it's like, they're just trying to dump memory. So they get the device to come up and disable, not, not show it's J tags lock status or some lock status thing.",
+   "context_after": "Yeah, exactly. Right. Then it's pretty straightforward. Most of the time. So,",
+   "context_before_speaker": "Colin O'Flynn",
+   "context_after_speaker": "Colin O'Flynn",
+   "text": "the timing, right. So normally there's like all this timing stuff. That's the thing with glitching. Like sometimes it's pretty easy. So it can be started, leanly easy. How this stuff works. It's like, you know, on boot. So a common one is right. When the device is booting up, you hit it with something. So it's like reading from memory, a configuration or fuse. And then based on that fuse, maybe it turns on or off a J tag lock. So if like at the right time you skip over, turning on the J tag lock, it just comes up on lock. So, so several of the like, you know, more interesting or, or I'd say more use glitches or stuff like that, where it's like, they're just trying to dump memory. So they get the device to come up and disable, not, not show it's J tags lock status or some lock status thing. Okay. Yeah. That makes sense then too. Cause you, so from a, from having J tag access, you can just go and peek and poke at memory and just pull it all out then. Yeah, exactly. Right. Then it's pretty straightforward. Most of the time. So,"
+  },
+  {
+   "episode": 575,
+   "episode_title": "New Life Skills with Joe Grand",
+   "episode_url": "https://theamphour.com/575-new-life-skills-with-joe-grand/",
+   "guest": "Joe Grand",
+   "stem": "0575-new-life-skills-with-joe-grand",
+   "paragraph_index": 13,
+   "depth": "explains",
+   "speaker_raw": "Joe Grand",
+   "speaker_repaired": "Joe Grand",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah. So, so that tool is essentially a tool to help you identify the function of unknown test points or pinouts or say an unpopulated connector on a circuit board. And the intent there kind of came out of my hardware hacking classes where I talk about how to look at a board, you find test points, you find whatever and you need to trace them out to a microcontroller or trace them out where they go on the board. And then what to do once you found that. So say you identify some pins, you think it might be a J tag interface and then you can go and do something to exploit that J tag interface or take advantage of that or you are or SWD. Whatever it is. So the J tagulator kind of bridged that gap between visually seeing those interfaces on the board and then doing something with them. And I originally created that. Yeah. 2013, I made a hundred of them on my own to sell at DEF CON and I gave a talk at DEF CON and a talk at Black Hat about it. And really, I didn't think anything of it. I didn't think it was going to, you know, be a thing, but it turns out that it's still, still around, still kicking, fully open source. We use a propeller microcontroller, which, you know, I'm sure you've talked about on the show in the past, but a very unique kind of very unique core microprocessor. And sometimes I regret using that compared to like a more standard type of device because I think I'd have more community contributions if it wasn't such an arcane kind of thing. But the project kind of turned into this actual product that I had to support and add new features and all of these things. So, yeah, it's kind of become one of these tools that's worth having in your toolbox. And, of course, some people say, well, it's so expensive because there's a lot of costs that go into manufacturing and that's the beauty of the open source stuff is all, you know, all the files are online. Gerber plots, go make your own. You can assemble your own if you can actually find components these days and use it. So, it's just one of these handy tools to have. I'm at the point where I've kind of frozen the firmware. I'll make bug fixes if I have to, but I'm not planning on adding any more features. There are some really cool features in it that aren't just to identify debug interfaces. So, one in particular I just did as kind of one of the final features is, I call it the X-test scan. And that one will help you identify the physical pins on the chip and how they correspond to the actual boundary scan register inside the chip. So, as far as the position of the bit inside of the boundary scan register. So, that's more of kind of an advanced probing tool, but it also is handy from an engineering perspective. So, that's something I thought was kind of fun. But really, the core purpose, oh, it also has support for OpenOCD. So, once you discover an interface, you can use the same tool. But it's really slow. It's not really designed to be a multifunction printer. It's just, it originally was designed to find these interfaces and then some of these other bonus features will work. But really, once you find the interface, you'll want to end up using proper, faster, better tools. Get a J-Link",
+   "context_before": "Yeah. Well, another thing we talked about before the show that since the last time you've been on, you actually released a product back in 2013. So that was, it's been a while as well, but that is a tool that also makes it more accessible and it's called the J tagulator.",
+   "context_after": "or something. Yeah,",
+   "context_before_speaker": "Joe Grand",
+   "context_after_speaker": "Joe Grand",
+   "text": "Yeah. Well, another thing we talked about before the show that since the last time you've been on, you actually released a product back in 2013. So that was, it's been a while as well, but that is a tool that also makes it more accessible and it's called the J tagulator. Yeah. So, so that tool is essentially a tool to help you identify the function of unknown test points or pinouts or say an unpopulated connector on a circuit board. And the intent there kind of came out of my hardware hacking classes where I talk about how to look at a board, you find test points, you find whatever and you need to trace them out to a microcontroller or trace them out where they go on the board. And then what to do once you found that. So say you identify some pins, you think it might be a J tag interface and then you can go and do something to exploit that J tag interface or take advantage of that or you are or SWD. Whatever it is. So the J tagulator kind of bridged that gap between visually seeing those interfaces on the board and then doing something with them. And I originally created that. Yeah. 2013, I made a hundred of them on my own to sell at DEF CON and I gave a talk at DEF CON and a talk at Black Hat about it. And really, I didn't think anything of it. I didn't think it was going to, you know, be a thing, but it turns out that it's still, still around, still kicking, fully open source. We use a propeller microcontroller, which, you know, I'm sure you've talked about on the show in the past, but a very unique kind of very unique core microprocessor. And sometimes I regret using that compared to like a more standard type of device because I think I'd have more community contributions if it wasn't such an arcane kind of thing. But the project kind of turned into this actual product that I had to support and add new features and all of these things. So, yeah, it's kind of become one of these tools that's worth having in your toolbox. And, of course, some people say, well, it's so expensive because there's a lot of costs that go into manufacturing and that's the beauty of the open source stuff is all, you know, all the files are online. Gerber plots, go make your own. You can assemble your own if you can actually find components these days and use it. So, it's just one of these handy tools to have. I'm at the point where I've kind of frozen the firmware. I'll make bug fixes if I have to, but I'm not planning on adding any more features. There are some really cool features in it that aren't just to identify debug interfaces. So, one in particular I just did as kind of one of the final features is, I call it the X-test scan. And that one will help you identify the physical pins on the chip and how they correspond to the actual boundary scan register inside the chip. So, as far as the position of the bit inside of the boundary scan register. So, that's more of kind of an advanced probing tool, but it also is handy from an engineering perspective. So, that's something I thought was kind of fun. But really, the core purpose, oh, it also has support for OpenOCD. So, once you discover an interface, you can use the same tool. But it's really slow. It's not really designed to be a multifunction printer. It's just, it originally was designed to find these interfaces and then some of these other bonus features will work. But really, once you find the interface, you'll want to end up using proper, faster, better tools. Get a J-Link or something. Yeah,"
+  },
+  {
+   "episode": 575,
+   "episode_title": "New Life Skills with Joe Grand",
+   "episode_url": "https://theamphour.com/575-new-life-skills-with-joe-grand/",
+   "guest": "Joe Grand",
+   "stem": "0575-new-life-skills-with-joe-grand",
+   "paragraph_index": 106,
+   "depth": "explains",
+   "speaker_raw": "Joe Grand",
+   "speaker_repaired": "Joe Grand",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "That's it. Yep. Yep. Yep. Yep. I remember what it stands for, but, and it's like not being able to update your firmware or having easy physical access, like leaving your JTAG port just open and like, you know, after programming. So it's super easy to get to like, that kind of stuff is like bad.",
+   "context_before": "It was like an, an OWASP, OWASP list. Yeah. OWASP.",
+   "context_after": "Yeah. I mean, using, using a list, you know, there's common criteria certification. There's FIPS 140 certification, the OWASP list on my website. If you go to the security section of my website, there's a presentation called something about, uh, every cloud has a silver lining or something, which talks about security problems hacking, but then it has like a list of resources. I'm pretty sure it's still up there. If it's not, I'll put it back up. And at least it's a starting point where you can go and get lists of like what you, what you should try to do and what you shouldn't do. But implementation is always the problem. And that's the hardest thing is like, it's so easy to say, well, you should, you should, all of your content should be encrypted, you know? So, so somebody can't get to th",
+   "context_before_speaker": "Joe Grand",
+   "context_after_speaker": "Joe Grand",
+   "text": "It was like an, an OWASP, OWASP list. Yeah. OWASP. That's it. Yep. Yep. Yep. Yep. I remember what it stands for, but, and it's like not being able to update your firmware or having easy physical access, like leaving your JTAG port just open and like, you know, after programming. So it's super easy to get to like, that kind of stuff is like bad. Yeah. I mean, using, using a list, you know, there's common criteria certification. There's FIPS 140 certification, the OWASP list on my website. If you go to the security section of my website, there's a presentation called something about, uh, every cloud has a silver lining or something, which talks about security problems hacking, but then it has like a list of resources. I'm pretty sure it's still up there. If it's not, I'll put it back up. And at least it's a starting point where you can go and get lists of like what you, what you should try to do and what you shouldn't do. But implementation is always the problem. And that's the hardest thing is like, it's so easy to say, well, you should, you should, all of your content should be encrypted, you know? So, so somebody can't get to th"
+  },
+  {
+   "episode": 584,
+   "episode_title": "Software for Rockets with Charles Aylward",
+   "episode_url": "https://theamphour.com/584-software-for-rockets-with-charles-aylward/",
+   "guest": "Charles Aylward",
+   "stem": "0584-software-for-rockets-with-charles-aylward",
+   "paragraph_index": 94,
+   "depth": "explains",
+   "speaker_raw": "Charles Aylward",
+   "speaker_repaired": "Charles Aylward",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Right. Yeah. So a lot of these things come, come down to making the, the, the final system operate in the same way that you would be doing test or debug. Right. Sort of things. So, so like anytime, so like in the early bring up of your system, you encounter some problem. It might be very tempting to like very quickly, just sort of throw J tag on there, you know, dump some stuff over you are. And, you know, if I was working on a commercial system that like that, that's probably fine. Yeah. Because, you know, once it's in a plastic shell and on a shelf or whatever, you're way past where you're going to care about debug data, but that's not necessarily the case for something like a launch vehicle or something. Anytime you encounter some error or bug early on, figure out how you can get that data in the sort of data stream that you're already consuming. Right.",
+   "context_before": "Cause that's kind of important.",
+   "context_after": "Yeah. Yeah.",
+   "context_before_speaker": "Charles Aylward",
+   "context_after_speaker": "Charles Aylward",
+   "text": "Cause that's kind of important. Right. Yeah. So a lot of these things come, come down to making the, the, the final system operate in the same way that you would be doing test or debug. Right. Sort of things. So, so like anytime, so like in the early bring up of your system, you encounter some problem. It might be very tempting to like very quickly, just sort of throw J tag on there, you know, dump some stuff over you are. And, you know, if I was working on a commercial system that like that, that's probably fine. Yeah. Because, you know, once it's in a plastic shell and on a shelf or whatever, you're way past where you're going to care about debug data, but that's not necessarily the case for something like a launch vehicle or something. Anytime you encounter some error or bug early on, figure out how you can get that data in the sort of data stream that you're already consuming. Right. Yeah. Yeah."
+  },
+  {
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "guest": null,
+   "stem": "0614-reunion-impedance-matching-and-2023-predictions",
+   "paragraph_index": 176,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Alvaro, it's like you're in my brain right before I started recording. I was starting to plan out exactly how we're going to do that with one of our clients. So all I can say is what we've done to date, not what I would prefer we do, because I haven't quite figured that out yet. But what we've done to date when they have internal firmware teams is that we will just basically, you know, we'll finish the design. We'll help manage the fab and assembly. We'll get the boards sent. Usually we'll send like either all of them to us or a sample to us and the rest of the client. And then we'll just test the voltage rails test that we can JTAG scan the chips. That's it.",
+   "context_before": "How do you deal with board bring up with those clients where they're doing all the firmware and, and, you know, bring up as kind of a hybrid of the hardware engineer, you know, powering it up, but you also might need firmware support to do it. How do you deal with that?",
+   "context_after": "Right. And then, and then you solder your 30 gauge wire to this QFN over here.",
+   "context_before_speaker": "Alvaro Prieto",
+   "context_after_speaker": "Chris Gammell",
+   "text": "How do you deal with board bring up with those clients where they're doing all the firmware and, and, you know, bring up as kind of a hybrid of the hardware engineer, you know, powering it up, but you also might need firmware support to do it. How do you deal with that? Alvaro, it's like you're in my brain right before I started recording. I was starting to plan out exactly how we're going to do that with one of our clients. So all I can say is what we've done to date, not what I would prefer we do, because I haven't quite figured that out yet. But what we've done to date when they have internal firmware teams is that we will just basically, you know, we'll finish the design. We'll help manage the fab and assembly. We'll get the boards sent. Usually we'll send like either all of them to us or a sample to us and the rest of the client. And then we'll just test the voltage rails test that we can JTAG scan the chips. That's it. Right. And then, and then you solder your 30 gauge wire to this QFN over here."
+  },
+  {
+   "episode": 693,
+   "episode_title": "Small Scale Electronics Manufacturing with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/693-small-scale-electronics-manufacturing-with-colin-oflynn/",
+   "guest": "Colin O'Flynn",
+   "stem": "0693-small-scale-electronics-manufacturing-with-colin-oflynn",
+   "paragraph_index": 9,
+   "depth": "explains",
+   "speaker_raw": "Colin O'Flynn",
+   "speaker_repaired": "Colin O'Flynn",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "So it's basically continuing on with... Right now, side channel analysis was some of my more recent work. I mean, which was previous work, too. But especially looking at side channel over different ports. So one more interesting thing was like using... Basically using jitter measurements. So as data flows through devices, the time delay varies with voltage, which means you can actually get a really accurate measurement of power on a device, which then gives you information about secrets. And so what I did is I ran that through the JTAG port, which is funny because this is the oldest attack. Like, right? Joe Grant's been doing JTAGulator for years.",
+   "context_before": "Right. Right. They told me that, too. But it was more in an academic, probationary regard. Yeah. Chris, if you don't get those grades up, you can't come back. Everybody gets one. Yeah. Well, that's cool. So what is it... What are you publishing about these days?",
+   "context_after": "Yeah. Right.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. Right. They told me that, too. But it was more in an academic, probationary regard. Yeah. Chris, if you don't get those grades up, you can't come back. Everybody gets one. Yeah. Well, that's cool. So what is it... What are you publishing about these days? So it's basically continuing on with... Right now, side channel analysis was some of my more recent work. I mean, which was previous work, too. But especially looking at side channel over different ports. So one more interesting thing was like using... Basically using jitter measurements. So as data flows through devices, the time delay varies with voltage, which means you can actually get a really accurate measurement of power on a device, which then gives you information about secrets. And so what I did is I ran that through the JTAG port, which is funny because this is the oldest attack. Like, right? Joe Grant's been doing JTAGulator for years. Yeah. Right."
+  },
+  {
+   "episode": 693,
+   "episode_title": "Small Scale Electronics Manufacturing with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/693-small-scale-electronics-manufacturing-with-colin-oflynn/",
+   "guest": "Colin O'Flynn",
+   "stem": "0693-small-scale-electronics-manufacturing-with-colin-oflynn",
+   "paragraph_index": 83,
+   "depth": "explains",
+   "speaker_raw": "Colin O'Flynn",
+   "speaker_repaired": "Colin O'Flynn",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Um, but you know, to, to go back to an older one, like arm had their, um, PSA platform security architecture, right. Um, which was a level and they basically had several levels of, um, if you want to get your device secure, here's like what you can do. So the highest level involved actual side channel and fault injection testing. Um, I liked this one cause the lower levels were just kind of, um, checklist. Like, so you could do it yourself. I don't, you might have to pay money to get an actual PSA. I don't actually know what the system is for commercial, but, um, they did have a bunch of stuff you could download that would say, Hey, and you know, and it would be reasonable things. I liked it because they're big. Okay. Is the J take port locked unlocked, right? Like things that people actually mess up all the time. Right. Totally. So, so you could get like a different, and they had some, a few example threat models, um, where it's like, okay, here's if you're making a smart meter, I think was one.",
+   "context_before": "Oh yeah.",
+   "context_after": "And yeah, I'm looking at this page right now. It says smart meter asset tracker network camera. Yeah. TM, TMSAs, right? Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Oh yeah. Um, but you know, to, to go back to an older one, like arm had their, um, PSA platform security architecture, right. Um, which was a level and they basically had several levels of, um, if you want to get your device secure, here's like what you can do. So the highest level involved actual side channel and fault injection testing. Um, I liked this one cause the lower levels were just kind of, um, checklist. Like, so you could do it yourself. I don't, you might have to pay money to get an actual PSA. I don't actually know what the system is for commercial, but, um, they did have a bunch of stuff you could download that would say, Hey, and you know, and it would be reasonable things. I liked it because they're big. Okay. Is the J take port locked unlocked, right? Like things that people actually mess up all the time. Right. Totally. So, so you could get like a different, and they had some, a few example threat models, um, where it's like, okay, here's if you're making a smart meter, I think was one. And yeah, I'm looking at this page right now. It says smart meter asset tracker network camera. Yeah. TM, TMSAs, right? Yeah."
+  },
+  {
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "guest": "Julia Desmazes",
+   "stem": "0721-chip-design-for-fun-and-waffles-with-julia-desmazes",
+   "paragraph_index": 15,
+   "depth": "explains",
+   "speaker_raw": "Julia Desmazes",
+   "speaker_repaired": "Julia Desmazes",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah, of course. You hang it on the wall like this is your first chip. Right, right. First child. You never do that to your first child. Okay, now your first child comes back and it's dead. Now that that's out of the way, you need to figure out what went wrong in silicon. And it's not like software. You can't put breakpoints there. It's crystal. It's done. And so for that, you need in silicon observability debug infrastructure. And so the two weeks until tape-out was actually building that in silicon debugging infrastructure. But now that you've built the debug infrastructure and you can plug in a G tag and inspect internal registers, you need something to inspect. And so I was like, hey, I've got 10 days because two weeks actually I procrastinated. So I've got 10 days. What can I build in 10 days? One of us.",
+   "context_before": "But you still hang it on the wall, right?",
+   "context_after": "One of us.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "But you still hang it on the wall, right? Yeah, of course. You hang it on the wall like this is your first chip. Right, right. First child. You never do that to your first child. Okay, now your first child comes back and it's dead. Now that that's out of the way, you need to figure out what went wrong in silicon. And it's not like software. You can't put breakpoints there. It's crystal. It's done. And so for that, you need in silicon observability debug infrastructure. And so the two weeks until tape-out was actually building that in silicon debugging infrastructure. But now that you've built the debug infrastructure and you can plug in a G tag and inspect internal registers, you need something to inspect. And so I was like, hey, I've got 10 days because two weeks actually I procrastinated. So I've got 10 days. What can I build in 10 days? One of us. One of us."
+  },
+  {
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "guest": "Julia Desmazes",
+   "stem": "0721-chip-design-for-fun-and-waffles-with-julia-desmazes",
+   "paragraph_index": 81,
+   "depth": "explains",
+   "speaker_raw": "Julia Desmazes",
+   "speaker_repaired": "Julia Desmazes",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "No, no, I actually am plugging in a SEGGER debugger to the FGA emulating the chip. So yeah, totally, it's getting a SEGGER debugger on its ass. But there are open source JTAGs, hardware JTAGs out there that I could just take, use and plug them in and it would work. But at that point, I've not fully understood how to design a JTAG or I've not fully understood the spec and I'm not fully interested like how JTAG works and I've not fully understood the capabilities of how further I can push it. And so that's why I'm going to rebuild it myself in order to fully understand that. And then once I need the other thing that this existing hardware doesn't do, then I can easily add it on. So for example, the JTAG I built for C is a very good exercise in actually understanding how JTAGs work because you think you understand it.",
+   "context_before": "Well, I guess I was going to say the SEGGER debugger is probably not something you're going to plug into a silicon thing, but like you need something like that, right?",
+   "context_after": "I have no idea actually how it works. It's just magic. Every time I'm just like, yeah, it's probably talking to a register somewhere, you know?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Well, I guess I was going to say the SEGGER debugger is probably not something you're going to plug into a silicon thing, but like you need something like that, right? No, no, I actually am plugging in a SEGGER debugger to the FGA emulating the chip. So yeah, totally, it's getting a SEGGER debugger on its ass. But there are open source JTAGs, hardware JTAGs out there that I could just take, use and plug them in and it would work. But at that point, I've not fully understood how to design a JTAG or I've not fully understood the spec and I'm not fully interested like how JTAG works and I've not fully understood the capabilities of how further I can push it. And so that's why I'm going to rebuild it myself in order to fully understand that. And then once I need the other thing that this existing hardware doesn't do, then I can easily add it on. So for example, the JTAG I built for C is a very good exercise in actually understanding how JTAGs work because you think you understand it. I have no idea actually how it works. It's just magic. Every time I'm just like, yeah, it's probably talking to a register somewhere, you know?"
+  },
+  {
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "guest": "Julia Desmazes",
+   "stem": "0721-chip-design-for-fun-and-waffles-with-julia-desmazes",
+   "paragraph_index": 85,
+   "depth": "explains",
+   "speaker_raw": "Julia Desmazes",
+   "speaker_repaired": "Julia Desmazes",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Exactly. And I was kind of like that and I was like, okay, I already had a good understanding of like, this is how the JTAG protocol kind of works. And so I built my hardware and I built my test benches and my simulator and I simulated it and it's like, okay, this is how it's supposed to behave and everything works. And then I plugged the actual server. I plugged the actual JTAG probe there and it doesn't work. I'm like, ah, yes. Okay. Now I actually need to rethink about all of this because this preconception I had was wrong. So now I've got to fix it.",
+   "context_before": "There's all those pins like SWO trace. I'm just like, someone needs this. It's not me, you know?",
+   "context_after": "Yeah. Building and testing mental models effectively, right?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "There's all those pins like SWO trace. I'm just like, someone needs this. It's not me, you know? Exactly. And I was kind of like that and I was like, okay, I already had a good understanding of like, this is how the JTAG protocol kind of works. And so I built my hardware and I built my test benches and my simulator and I simulated it and it's like, okay, this is how it's supposed to behave and everything works. And then I plugged the actual server. I plugged the actual JTAG probe there and it doesn't work. I'm like, ah, yes. Okay. Now I actually need to rethink about all of this because this preconception I had was wrong. So now I've got to fix it. Yeah. Building and testing mental models effectively, right?"
+  },
+  {
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "guest": "Julia Desmazes",
+   "stem": "0721-chip-design-for-fun-and-waffles-with-julia-desmazes",
+   "paragraph_index": 89,
+   "depth": "explains",
+   "speaker_raw": "Julia Desmazes",
+   "speaker_repaired": "Julia Desmazes",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Yeah. So I've got my working JTAG and now I want to say, okay, now that I've deeply understood the JTAG spec, I know that I can add custom features to JTAG which are going to be useful for debugging my weird hardware carrying case. And so I can just like slap those in. And so now it's basically an iteration of like, what is the next weird feature I need on my JTAG to debug my hardware? I'm just going to slap that in.",
+   "context_before": "I've been trying. I'm going to continue to try to fight that one, but.",
+   "context_after": "So just to step back a little bit. So you said when you're testing it for reality as well, was that the flow where you're pushing your, so you've simulated on the machine, you've placed and routed it, you've put it into an FPGA and then you've tested the JTAG. Is that right?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "I've been trying. I'm going to continue to try to fight that one, but. Yeah. So I've got my working JTAG and now I want to say, okay, now that I've deeply understood the JTAG spec, I know that I can add custom features to JTAG which are going to be useful for debugging my weird hardware carrying case. And so I can just like slap those in. And so now it's basically an iteration of like, what is the next weird feature I need on my JTAG to debug my hardware? I'm just going to slap that in. So just to step back a little bit. So you said when you're testing it for reality as well, was that the flow where you're pushing your, so you've simulated on the machine, you've placed and routed it, you've put it into an FPGA and then you've tested the JTAG. Is that right?"
+  },
+  {
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "guest": "Julia Desmazes",
+   "stem": "0721-chip-design-for-fun-and-waffles-with-julia-desmazes",
+   "paragraph_index": 107,
+   "depth": "explains",
+   "speaker_raw": "Julia Desmazes",
+   "speaker_repaired": "Julia Desmazes",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "jtag"
+   ],
+   "paragraph_text": "Exactly. So in the case of the two weeks until tape out there was both the accelerator and the JTAG and so for example for verifying my JTAG then I stuck a second JTAG G-dink sorry so which is like the JTAG device on there and I was sending it data and making sure the communication was working as expected.",
+   "context_before": "Iterative process and all that back and forth. Yeah interesting. So in that case that actually is good context too of having the microcontroller having something that can like stimulate the design that sort of thing. So now we're talking about within that that blob that's inside the FPGA then so now there were two pieces in there is that right because there's the accelerator plus the JTAG piece?",
+   "context_after": "Got it. So that was in the FPGA context that would have just been like a secondary set of pins like you're routing that out to IO and then you're plugging that IO into the SEGR and that's how you validate that it's actually like seeing the data flowing through. Absolutely. Interesting.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Iterative process and all that back and forth. Yeah interesting. So in that case that actually is good context too of having the microcontroller having something that can like stimulate the design that sort of thing. So now we're talking about within that that blob that's inside the FPGA then so now there were two pieces in there is that right because there's the accelerator plus the JTAG piece? Exactly. So in the case of the two weeks until tape out there was both the accelerator and the JTAG and so for example for verifying my JTAG then I stuck a second JTAG G-dink sorry so which is like the JTAG device on there and I was sending it data and making sure the communication was working as expected. Got it. So that was in the FPGA context that would have just been like a secondary set of pins like you're routing that out to IO and then you're plugging that IO into the SEGR and that's how you validate that it's actually like seeing the data flowing through. Absolutely. Interesting."
+  }
+ ]
+}

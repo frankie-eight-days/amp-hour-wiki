@@ -1,0 +1,627 @@
+{
+ "concept": "power-supply",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "power-supply",
+  "census": "union",
+  "aliases": [
+   "power-supply"
+  ],
+  "children": [
+   "electronics-magazine",
+   "power-supply-design",
+   "rapid-iteration",
+   "repair-video"
+  ],
+  "neighbors": {
+   "linear-power-supply": 6,
+   "amplifier": 4,
+   "function-generator": 4,
+   "rigol": 4,
+   "signal-generator": 4
+  },
+  "pins_pre_cap": 102,
+  "pins_final": 102,
+  "pins_by_depth": {
+   "explains": 63,
+   "opinion": 39
+  },
+  "pins_by_role": {
+   "core": 91,
+   "neighbor": 5,
+   "child": 6
+  },
+  "capped": false,
+  "passages_yielding_claims": 49,
+  "passages_killed": 53
+ },
+ "claims": [
+  {
+   "claim_text": "Some bench instruments switch their supply off by pulling a control input on the supply to ground, disabling the output while the supply itself stays energised, rather than breaking the mains input.",
+   "quote_verbatim": "They use this big expensive mechanical switch to switch an input on the power supply to ground and that switches off the output of the power supply",
+   "speaker": "Dave Jones",
+   "episode": 39,
+   "episode_title": "Dan Pink, Dual Core, level translators - Mumble Mumbo Jumbo",
+   "episode_url": "https://theamphour.com/the-amp-hour-39-mumble-mumbo-jumbo/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Leaving the input capacitors charged and switching only the output avoids the inrush current surge that a mains switch produces at every power-on; repeated ten times a day that surge stresses the supply and shortens its life. The cost of the approach is continuous standby consumption.",
+   "quote_verbatim": "you don't get that big, you know, inrush surge of current when you do a big clunky main switch",
+   "speaker": "Dave Jones",
+   "episode": 39,
+   "episode_title": "Dan Pink, Dual Core, level translators - Mumble Mumbo Jumbo",
+   "episode_url": "https://theamphour.com/the-amp-hour-39-mumble-mumbo-jumbo/",
+   "depth_regraded": "explains",
+   "kind": "rationale"
+  },
+  {
+   "claim_text": "Energy-efficiency requirements have driven the standby consumption of small commercial switch-mode mains supplies to around 0.1 watt.",
+   "quote_verbatim": "0.1 watts is the typical standby consumption",
+   "speaker": "Dave Jones",
+   "episode": 39,
+   "episode_title": "Dan Pink, Dual Core, level translators - Mumble Mumbo Jumbo",
+   "episode_url": "https://theamphour.com/the-amp-hour-39-mumble-mumbo-jumbo/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The service life of a retrofit LED lamp is set by its integrated driver rather than by the LED: the dominant failure is the electrolytic capacitors in the driver, degraded by the heat trapped inside the lamp body.",
+   "quote_verbatim": "Most failures in those bulbs that you buy, um, are the capacitors",
+   "speaker": "John Edmond",
+   "episode": 71,
+   "episode_title": "An Interview with John Edmond - Luciferous LED Lucubrator",
+   "episode_url": "https://theamphour.com/the-amp-hour-71-luciferous-led-lucubrator/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A simple bench power supply board does not justify four layers; needing four layers for a design of that complexity indicates a layout failure rather than a requirement.",
+   "quote_verbatim": "for a simple power supply project, it doesn't need to go four layers",
+   "speaker": "Dave Jones",
+   "episode": 128,
+   "episode_title": "Layout, CAD & Raspberry Pi - Kedogenous Kinetic Knowledge",
+   "episode_url": "https://theamphour.com/the-amp-hour-128-kedogenous-kinetic-knowledge/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Where many high-power loads share one supply, an interlock built into the communication protocol can bound the worst-case draw: on an installation of roughly 100-watt panels, the protocol carried a single field naming which panel was lit, so no data fault could turn on more than one panel and trip the supply. The supply could then be sized for one panel instead of all of them.",
+   "quote_verbatim": "so that whatever happened data-wise, it could never turn more than one panel on and trip the power supply out",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A large supply feeding many loads over long thin cabling is a fire risk rather than merely a reliability risk: a short at the far end of a Cat5 drop backed by a kilowatt-class supply will burn the cable. The remedy is graded protection — heavy distribution wiring split through polyfuses so that every stage is individually protected.",
+   "quote_verbatim": "if you get a short at the end of that Cat5, you suddenly get an awful lot of smoke",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Low voltage is not by itself a safety argument; the available current from the supply, not the rail voltage, determines whether a fault starts a fire.",
+   "quote_verbatim": "A lot of people assume, oh, it's low voltage, therefore it's safe",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Supplies should be specified with headroom rather than to the calculated load: a 10-amp requirement is met with a 15- or 20-amp supply, on the design principle that anything that can go wrong will, so only pleasant surprises remain.",
+   "quote_verbatim": "Don't buy a 10-amp power supply. Buy a 15- or a 20-amp power supply",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "An amplifier's input offset voltage can depend on its supply rail without the data sheet documenting the dependence, producing an error that is only found by varying the rails during debugging.",
+   "quote_verbatim": "its offset voltage is power supply dependent. And they don't tell you that in the data sheet",
+   "speaker": "Dave Jones",
+   "episode": 146,
+   "episode_title": "Hamvention, Arduino and Intel - Burdensome Background Battology",
+   "episode_url": "https://theamphour.com/the-amp-hour-146-burdensome-background-battology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "On a densely integrated digital board the power supply can dominate the physical design: multi-rail supplies need a separate inductor per rail, and the inductors alone can occupy more board area than the FPGA or system-on-chip they feed, adding cost and efficiency loss with each rail.",
+   "quote_verbatim": "Just the inductors alone can be bigger than the entire FPGA",
+   "speaker": "Dave Jones",
+   "episode": 156,
+   "episode_title": "Tesla, FPGAs and DigiKey - Zesty Zippy Zynq",
+   "episode_url": "https://theamphour.com/the-amp-hour-156-zesty-zippy-zynq/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The proposal to build hardware from drop-in library blocks — a shared power supply block taking 120 volts in and delivering 5 volts out, reused unmodified — has been attempted commercially and does not hold up: the blocks that circulate are the mediocre designs, and real requirements diverge from any fixed block.",
+   "quote_verbatim": "it's not very practical in the real world",
+   "speaker": "Dave Jones",
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A processor changing power mode alters the current drawn from its supply, and that current change couples back as conducted emissions; a firmware-driven mode change can therefore be the cause of an EMC conducted-emissions failure.",
+   "quote_verbatim": "your processor could be switching into a different mode that causes, you know, increased current or whatever on your PSU, and that translates to more conducted emissions, and you fail the requirement",
+   "speaker": "Dave Jones",
+   "episode": 184,
+   "episode_title": "Chris Becomes Self Employed - Quixotic Quitting Quaere",
+   "episode_url": "https://theamphour.com/184-chris-becomes-self-employed-quixotic-quitting-quaere/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Nearly every circuit board carries one or more power supplies, yet supply design is commonly absent from undergraduate curricula; a course built to close the gap covers what a linear regulator, a voltage reference and a buck regulator are, how to specify one, how to hold the conversation with a vendor, and how the supply-chain decision is made.",
+   "quote_verbatim": "every circuit board that you make has a couple power supplies on it, just about",
+   "speaker": "Eric Van Wyk",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Building a bench supply is no longer justified by cost: a conventional 30-volt, 3-amp linear bench supply can be bought for around fifty dollars, so a self-built instrument is worth the effort only where the requirement is genuinely niche. This reverses the older situation in which home-built test equipment such as digital storage scope kits was the only affordable route.",
+   "quote_verbatim": "just a simple you know 30 volt 3 amp you know your regular 30 volt 3 amp linear bench supply you can get them for like 50 bucks on ebay",
+   "speaker": "Dave Jones",
+   "episode": 229,
+   "episode_title": "MightyHohm For The Holidays - Kaiser Keyzer's Kits",
+   "episode_url": "https://theamphour.com/229-mightyhohm-for-the-holidays-kaiser-keyzers-kits/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Each obstacle between unboxing a product and getting it working is estimated to cost about thirty percent of the people who would otherwise use it, so three small obstacles lose roughly ninety percent of users. Requiring an unusual supply the customer is unlikely to own — a 3.3-volt AC adapter, for instance — is exactly such an obstacle, and these are also the origin of most support calls.",
+   "quote_verbatim": "every slight bump in terms of getting from start to finish there costs you 30% of the people that would use it",
+   "speaker": "Dave Vandenbout",
+   "episode": 232,
+   "episode_title": "Impedance Matching\" with Davidson and Vandenbout - Presbytes Pushing Portfolios",
+   "episode_url": "https://theamphour.com/232-impedance-matching-with-davidson-and-vandenbout-presbytes-pushing-portfolios/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A large-installation power architecture runs one high-current supply into a splitter that re-distributes individually fused feeds: a 24-volt, 25-amp supply feeding twelve fused 5-metre drop cables, each carrying both 24-volt power and 100 kbaud TTL data to a load drawing about 2 amps.",
+   "quote_verbatim": "You've got this like 25-amp, 24-volt power supply going into a splitter. That splitter then provides fused power to each one.",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A bench supply output should be left isolated from earth by default and earthed only when a specific ground-system problem requires it, because an isolated output is the safer default when the supply is combined with earthed instruments such as an oscilloscope.",
+   "quote_verbatim": "By default, you want your power supply, whatever that may be, to be isolated",
+   "speaker": "Dave Jones",
+   "episode": 307,
+   "episode_title": "Call In Show #5",
+   "episode_url": "https://theamphour.com/307-call-in-show-5/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A single-board computer's USB ports cannot be treated as a supply for peripherals with real current draw: WiFi adapters that need roughly 900 milliamps will not run from a 500-milliamp port, and the peripherals must be powered separately.",
+   "quote_verbatim": "they always need like 900 milliamp like supplies too. They couldn't do it just off a straight 500 milliamp",
+   "speaker": "Samy Kamkar",
+   "episode": 308,
+   "episode_title": "An Interview with Samy Kamkar",
+   "episode_url": "https://theamphour.com/308-an-interview-with-samy-kamkar/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A power operational amplifier intended for audio output stages can serve as the pass element of a linear supply: a device rated for roughly 120 watts, paralleled and reconfigured, was used to reach about 700 watts of output.",
+   "quote_verbatim": "you can use that op amp for like 120 watt uh output but we've we've paralyzed them and reconfigured it so we can get like up to 700 watts out",
+   "speaker": "Parker Dillman",
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Pinning a design's maximum power consumption to an existing standard's envelope — the USB 3.0 power budget, for example — gives a defensible target even where the design does not implement that standard's data side.",
+   "quote_verbatim": "my, my kind of target, uh, maximum power consumption that I'm going for is basically, uh, USB 3.0 power",
+   "speaker": "Michael Ossmann",
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The available current from a host port has shifted upward with USB-C: 1.5 amps at 5 volts, or 7.5 watts, is advertised by laptop ports and has displaced 500 milliamps as the assumed baseline for peripheral power.",
+   "quote_verbatim": "1.5 amp is the new 500 milliamp",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The difficult part of designing an adjustable bench supply is the constant-current behaviour; a voltage-only output is straightforward by comparison.",
+   "quote_verbatim": "The main problem with designing power supplies like this is how do you do the constant current stuff",
+   "speaker": "Dave Jones",
+   "episode": 360,
+   "episode_title": "A Total 360",
+   "episode_url": "https://theamphour.com/360-a-total-360/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "No off-the-shelf integrated circuit provides an independently adjustable voltage and current bench-supply function that stays stable into all loads, which is why adjustable bench supplies are built discretely from operational amplifiers and transistors.",
+   "quote_verbatim": "That's why power supplies are all discrete design, you know? They're discrete op amps, transistors",
+   "speaker": "Dave Jones",
+   "episode": 362,
+   "episode_title": "Secret Squirrel",
+   "episode_url": "https://theamphour.com/362-secret-squirrel/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Parts designed for an unrelated purpose can sometimes be pressed into a supply role — a class-AB amplifier output driver, for instance, driving the pass transistors from the positive or negative rail with the remainder dissipated in the heat sink — but the substitution has to be breadboarded and measured rather than accepted from the data sheet.",
+   "quote_verbatim": "in theory, they might work and do what we want, but we have to actually breadboard them up and try them",
+   "speaker": "Dave Jones",
+   "episode": 362,
+   "episode_title": "Secret Squirrel",
+   "episode_url": "https://theamphour.com/362-secret-squirrel/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Micro-cracks in a ceramic capacitor, produced by board flexure, generally fail short rather than open; across a supply rail able to deliver substantial energy that failure produces flame rather than a quiet fault.",
+   "quote_verbatim": "generally, they can fail short. So the capacitor is a short circuit",
+   "speaker": "Dave Jones",
+   "episode": 367,
+   "episode_title": "Not Reely An Issue",
+   "episode_url": "https://theamphour.com/367-not-reely-an-issue/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The control loop is the central difficulty of a power supply design, and a rolled-own loop should be expected to ring before it is characterised and compensated.",
+   "quote_verbatim": "in a power supply, the main problem is the control loop",
+   "speaker": "Dave Jones",
+   "episode": 377,
+   "episode_title": "Debugger vs Printeffer",
+   "episode_url": "https://theamphour.com/377-debugger-vs-printeffer/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "High-end FPGA and processor vendors publish application notes running to a hundred pages on supply and bypassing for a single device, and still reduce their advice to a fixed ladder of capacitor values — 100 microfarad, 10 microfarad, 1 microfarad, 100 nanofarad, 10 nanofarad — per rail, because testing and modelling bypass networks properly is impractical outside specialised work.",
+   "quote_verbatim": "it is so ridiculously complex to actually test and model this sort of bypass stuff",
+   "speaker": "Dave Jones",
+   "episode": 488,
+   "episode_title": "Sowing Discord",
+   "episode_url": "https://theamphour.com/488-sowing-discord/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A large FPGA presents very large current steps at power-on as its internal SRAM is initialised, and with around twenty power pins the recommended per-rail capacitor ladder results in something like a hundred bypass capacitors beneath one device.",
+   "quote_verbatim": "a hundred bypass capacitors under a modern high-end fpga",
+   "speaker": "Dave Jones",
+   "episode": 488,
+   "episode_title": "Sowing Discord",
+   "episode_url": "https://theamphour.com/488-sowing-discord/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "In an audio digital-to-analogue converter the output is a digital fraction multiplied by a reference voltage, and that reference is overwhelmingly the supply rail itself, so supply quality sets converter performance directly rather than second order.",
+   "quote_verbatim": "overwhelmingly, that reference voltage is still the power supply",
+   "speaker": "Kendall Castor-Perry",
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Distortion faults in audio products are routinely traced back to the supply; a guitar interface accessory's distortion problem resolved to a supply issue rather than to the signal chain.",
+   "quote_verbatim": "They had a weird distortion problem, which turned out to be a power supply issue",
+   "speaker": "Kendall Castor-Perry",
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Supply voltages should be the first item on a troubleshooting list and are commonly skipped, because a lit power indicator is taken as evidence that the rails are correct.",
+   "quote_verbatim": "it should be the number one thing on a troubleshooting list",
+   "speaker": "Kendall Castor-Perry",
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Power integrity has become a first-order design concern as switching supplies are pushed to higher speeds and higher powers. The board is a component of the circuit, and its layout is a component too: the same schematic built by two designers can measure differently.",
+   "quote_verbatim": "the layout itself is a component",
+   "speaker": "Kendall Castor-Perry",
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Marginal regulator selection shows up as a population failure: a 5-volt regulator rated for 21 volts maximum input, fed from a 24-volt supply, ran outside its rating and failed in large numbers, and fitting a correctly rated part is the standard repair.",
+   "quote_verbatim": "The original five volt regulator on that is only rated to 21 volts DC input. And the power supply is 24.",
+   "speaker": "Ben Heckendorn",
+   "episode": 490,
+   "episode_title": "An Interview with Ben Heck(endorn)",
+   "episode_url": "https://theamphour.com/490-an-interview-with-ben-heckendorn/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A two-person rule governs first power-up of expensive prototypes: a second engineer verifies the bench supply settings before the board is energised, because a single mistaken setting destroys a board carrying six figures of parts.",
+   "quote_verbatim": "it's a two person rule for valuable boards like this. You've got to have somebody double check your settings on the power supply",
+   "speaker": "Dave Jones",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Board-level power management chips constrain what rails a design can offer: the power management IC on the Raspberry Pi 4 does not reach 3.3 volts. The earlier compute module deliberately exposed multiple separate supply inputs so the integrator could generate rails as needed, at the cost of a more complicated board.",
+   "quote_verbatim": "the original compute module was designed with this in mind, but that's why we had those multiple supplies",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "For most products the supply components should be chosen so that at least one part with a standard footprint is available from several manufacturers, which keeps a second source available when one part goes obsolete.",
+   "quote_verbatim": "most products that you can't put in at least something that's available with a standard footprint from several manufacturers",
+   "speaker": "Dave Jones",
+   "episode": 532,
+   "episode_title": "Recalling Recalls",
+   "episode_url": "https://theamphour.com/532-recalling-recalls/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Instrument enclosures intended to survive an internal fault use a deep case seam to contain flame; cheap mains-powered supplies omit it, and a failure inside one can vent burning material out of the case.",
+   "quote_verbatim": "You know that thing about how fluke meters and other posh meters have that nice deep seam to actually stop the flames? This one did not have a deep seam.",
+   "speaker": "Big Clive",
+   "episode": 539,
+   "episode_title": "The King of Trash with Big Clive",
+   "episode_url": "https://theamphour.com/the-amp-hour-539-the-king-of-trash-with-big-clive/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A supply that measures correctly on the bench can still be the fault: rails tested good throughout a methodical repair, and the defect was an intermittent bridge rectifier that only failed once it had heated up.",
+   "quote_verbatim": "I tested the power supplies. They're all fine. It turns out it was the power supply. It was just an intermittent problem with a diode bridge after it heated up.",
+   "speaker": "Dave Jones",
+   "episode": 551,
+   "episode_title": "Feed the Mouse",
+   "episode_url": "https://theamphour.com/551-feed-the-mouse/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Single-board computers brown out readily on marginal supplies. A Raspberry Pi Zero 2 draws roughly 275 milliamps idle and close to 600 milliamps under load, and the original Pi idled at around 2 to 2.5 watts, low enough to run from a 500-milliamp USB port.",
+   "quote_verbatim": "the Raspberry Pi two zero idols at about two 75 milliamps",
+   "speaker": "Chris Gammell",
+   "episode": 565,
+   "episode_title": "Here for a reason",
+   "episode_url": "https://theamphour.com/565-here-for-a-reason/",
+   "depth_regraded": "opinion",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Only a small overvoltage is needed to destroy an electrolytic capacitor: 20 volts across a 16-volt part builds internal pressure until it vents. A high-current supply accelerates the failure, though small capacitors need very little power to boil their electrolyte.",
+   "quote_verbatim": "If you just get a 16 volt cap and you put 20 volts across it, it'll just, the, uh, pressure will build up inside",
+   "speaker": "Dave Jones",
+   "episode": 580,
+   "episode_title": "Electrical Archeology",
+   "episode_url": "https://theamphour.com/580-electrical-archeology/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Extreme power density forces unrelated functions onto the supply board and creates failure paths that have nothing to do with the power path: on a 1-kilowatt, 12-phase brick supply the processor's main oscillator had been placed on the supply board, and that was the source of intermittent dropouts in a supercomputer rack.",
+   "quote_verbatim": "they put the main oscillator on there as well for the processor apparently or whatever. So they put it on the power supply board.",
+   "speaker": "Dave Jones",
+   "episode": 604,
+   "episode_title": "Robo Fry Guy",
+   "episode_url": "https://theamphour.com/604-robo-fry-guy/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "On second-hand bench instruments of a certain vintage the bulk electrolytics in the supply are universally degraded — one design used around twenty 1000-microfarad capacitors, all leaking. The only external symptom is rails drifting out of specification, and many of the leaking parts still measure in specification, so such an instrument should be recapped on acquisition before the escaping electrolyte damages the board.",
+   "quote_verbatim": "you won't know that they're leaking except that the rails will drift out of spec",
+   "speaker": "Jeff Keyzer",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A supply in constant-current mode connected to an electronic load in constant-resistance mode oscillates: the supply's current limit pulls the voltage down, the load responds by changing its draw, and the two fight each other in a hiccup cycle.",
+   "quote_verbatim": "the power supply goes into constant current mode and then the load goes into a constant resistance mode, but then the constant current mode drops the voltage, which then causes the load to go back up and they start fighting each other",
+   "speaker": "Dave Jones",
+   "episode": 623,
+   "episode_title": "Artisanal Crystals",
+   "episode_url": "https://theamphour.com/623-artisanal-crystals/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A conducted-emissions pass is weak evidence about a product powered from an off-the-shelf plug pack, because the adapter's own filtering masks the product's noise; radiated emissions measure what the product and its cabling actually emit.",
+   "quote_verbatim": "if you've got a plug pack off the shelf, it has a heap of filtering in it. So it kind of doesn't give you a good idea of your products emissions",
+   "speaker": "Scott Williams",
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "USB signalling is pseudo-differential, swinging between 0 and 3.3 volts rather than about zero, so the two edges do not cross at exactly the same instant; the skew at each transition produces a common-mode spike, which is why common-mode chokes are fitted on USB lines.",
+   "quote_verbatim": "It doesn't go around zero volts. It goes around zero to 3.3. You want to have common mode chokes cause the crossover is not exact.",
+   "speaker": "Scott Williams",
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A bought-in module with full compliance markings can be the radiated-emissions failure and cannot be predicted from its documentation: after a week of filtering the custom boards of a charging dock, the failure was a low-cost USB hub sourced outside distribution, which may itself have passed testing in a different configuration.",
+   "quote_verbatim": "we spent about a week on it and it was the USB hub",
+   "speaker": "Scott Williams",
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "An electron-beam column needs more than its high acceleration supply: auxiliary supplies deflect, focus and shape the beam through electrostatic and electromagnetic lenses, and noise on the acceleration voltage limits achievable resolution.",
+   "quote_verbatim": "there is not only the high voltage for rough acceleration there are some auxiliary power supplies to deflecting the beam or shaping the beam",
+   "speaker": "Petr Dvorak",
+   "episode": 669,
+   "episode_title": "Freelance PCB Design with Petr Dvorak",
+   "episode_url": "https://theamphour.com/669-freelance-pcb-design-with-petr-dvorak/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A programmable supply channel can be built as a digital-to-analogue converter followed by a power output stage: an I2C converter producing 0 to 4.96 volts feeding a power operational amplifier that scales and shifts it to plus and minus 8 volts and passes whatever current the upstream supply allows.",
+   "quote_verbatim": "I get like zero to 4.96 volts from the, you know, the I squared C DAC. And then that goes into one of those L two seven twos and it buffers them up to plus minus eight volts",
+   "speaker": "Kevin Cappuccio",
+   "episode": 689,
+   "episode_title": "A Jumperless Breadboard with Kevin Cappuccio",
+   "episode_url": "https://theamphour.com/689-a-jumperless-breadboard-with-kevin-cappuccio/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In an electric propulsion system the discharge converter — the supply that runs the ion beam — dominates the electronics board area and needs custom magnetics. One such converter runs from a 28-volt spacecraft bus, produces up to about 250 volts, and is throttleable across a 300 to 800 watt range because efficiency across the throttled range is the figure of merit.",
+   "quote_verbatim": "the discharge converter is the power supply that runs the ion beam",
+   "speaker": "Todd Bailey",
+   "episode": 701,
+   "episode_title": "Electric Propulsion with Todd Bailey",
+   "episode_url": "https://theamphour.com/701-electric-propulsion-with-todd-bailey/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A hard short is used as an acceptance test rather than avoided: a screwdriver is jammed across the finished supply's output repeatedly while the recovery is watched on an oscilloscope, and the unit must then pass its full test sequence again.",
+   "quote_verbatim": "when you build a power supply, you jam the screwdriver in the output and you put it on the scope a bunch of times and you watch what the recovery looks like, and then you should expect it to pass all of its tests again after you've done it",
+   "speaker": "Todd Bailey",
+   "episode": 701,
+   "episode_title": "Electric Propulsion with Todd Bailey",
+   "episode_url": "https://theamphour.com/701-electric-propulsion-with-todd-bailey/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Power system failures in otherwise digital designs are predominantly analogue and predominantly noise: buck converters generating switching noise couple into sensitive analogue front ends, or push radiated emissions past the FCC Part 15 limit. Powering a sensitive signal-processing front end from a switching converter is the classic instance of digital reasoning applied to an analogue problem.",
+   "quote_verbatim": "The things that fail are usually due to noise",
+   "speaker": "Jerry Twomey",
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "AC-to-DC conversion is a buy rather than build decision: thousands of qualified commercial options compete on price, so developing one internally rarely repays the time. The board-level task then begins at a 5, 12 or 24 volt input and steps down to the 3.3, 1.8 and 1.2 volt rails the logic families require.",
+   "quote_verbatim": "if you need an AC to DC converter, buy that commercially",
+   "speaker": "Jerry Twomey",
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A supply covering a wide output range — 3 to 48 volts at high efficiency across the full current range — is a hard design, because regulation must hold against dynamic loads and across the inductance of the output wiring.",
+   "quote_verbatim": "designing a power supply that's capable of, you know, three volts to 48 volts at, you know, high efficiency over the full current range",
+   "speaker": "Dave Jones",
+   "episode": 727,
+   "episode_title": "Boat Anchor Warehouse",
+   "episode_url": "https://theamphour.com/727-boat-anchor-warehouse/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Electronics kits are commonly shipped without a supply: wall-wart adapters are unusable by international recipients, batteries are heavy and restricted in shipping, so the recipient must determine the supply requirement themselves, which becomes part of what the kit teaches.",
+   "quote_verbatim": "we sort of avoid trying to do power supplies just because, you know, we do have a fair number of international subscribers and they can't use wall wart power supplies",
+   "speaker": "Joe Long",
+   "episode": 420,
+   "episode_title": "An Interview with Joe Long",
+   "episode_url": "https://theamphour.com/420-an-interview-with-joe-long/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Large laser installations still use linear supplies where the current regulation matters: a 7-kilowatt current-regulated linear supply is practical, and removing the resulting heat is the dominant engineering problem.",
+   "quote_verbatim": "supplying seven kilowatts of its current regulated",
+   "speaker": "Daryl Tewksbury",
+   "episode": 521,
+   "episode_title": "Outdoor Laser Projection & Object Mapping with Daryl Tewksbury",
+   "episode_url": "https://theamphour.com/521-outdoor-laser-projection-object-mapping-with-daryl-tewksbury/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Multi-rail linear supplies were mandatory in early microprocessor systems because the memory devices were not single-voltage: an EPROM-based machine needed plus 12, minus 12 and plus 5 volts at many amps distributed to one processor board.",
+   "quote_verbatim": "the power supply actually had to do things like minus 12 because, you know, the EPROMs of those days were not single voltage",
+   "speaker": "John Day",
+   "episode": 485,
+   "episode_title": "An Interview with John Day",
+   "episode_url": "https://theamphour.com/485-an-interview-with-john-day/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A source measure unit is a controllable power supply that sources and measures simultaneously, which makes tasks such as tracing transistor curves routine.",
+   "quote_verbatim": "It's a power supply that you can control",
+   "speaker": "Dave Jones",
+   "episode": 78,
+   "episode_title": "Alteritous Andy's Absquatulation",
+   "episode_url": "https://theamphour.com/the-amp-hour-alteritous-andys-absquatulation/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "ep 476: the bundle flags this episode's attribution as unreliable, but the content (a Burr-Brown then TI applications career in audio converters and filtering) identifies guest Kendall Castor-Perry unambiguously; content-attributed.",
+  "ep 645: labels in this episode are known to be swapped; the EMC-consultancy content (radiated emissions debugging, common-mode chokes, the USB hub failure) is guest Scott Williams, content-attributed.",
+  "ep 420, 539, 669: attribution flagged unreliable; claims are content-attributed to the guest whose project or channel the passage describes.",
+  "One passage in the bundle carries no episode number and was dropped rather than cited."
+ ],
+ "capped": false
+}

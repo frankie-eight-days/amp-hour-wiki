@@ -1,0 +1,372 @@
+{
+ "concept": "circuitpython",
+ "claims": [
+  {
+   "claim_text": "CircuitPython is a fork of MicroPython created by Adafruit; the fork was motivated by the absence of a consistent hardware API across the boards MicroPython supported.",
+   "quote_verbatim": "it wasn't clear to me that there was a consistent story across all of the boards that they supported",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The fork's stated goal was a uniform hardware foundation across every target platform.",
+   "quote_verbatim": "we wanted to ensure that we had a foundation that was uniform across all of the places we could bring circuit Python",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "MicroPython is a Python implementation for microcontrollers; Adafruit compiled it for the Atmel SAMD family and renamed the result, with a more hardware-specific focus.",
+   "quote_verbatim": "Adafruit took that and then specifically for the, the Atmel, SamD family started compiling it for that",
+   "speaker": "Chris Gammell",
+   "episode": 400,
+   "episode_title": "Once Every Couple Months",
+   "episode_url": "https://theamphour.com/400-once-every-couple-months/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "CircuitPython compiles source to bytecode once, up front, rather than reinterpreting source at runtime.",
+   "quote_verbatim": "CircuitPython will translate your source code to byte code up front",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The binary flashed to a board is machine code containing the virtual machine plus the board's pin data structures; per-board builds are published as GitHub releases.",
+   "quote_verbatim": "that will be the machine code that has all of the VM and, and all of the data structures to tell you what pin is what",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A CircuitPython board enumerates as a USB mass-storage device carrying editable example code; editing and saving the file runs it, with no separate flashing step.",
+   "quote_verbatim": "it will show up as a USB drive and it will have example code on it in a file called code.py",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The edit-save-run loop replaces the compile-and-upload cycle, with the board soft-rebooting on save.",
+   "quote_verbatim": "I open up the main.py. I, I edit it. I hit save. It's soft reboots",
+   "speaker": "Chris Gammell",
+   "episode": 377,
+   "episode_title": "Debugger vs Printeffer",
+   "episode_url": "https://theamphour.com/377-debugger-vs-printeffer/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Because code is interpreted on the device, iteration does not require erasing and reprogramming the chip.",
+   "quote_verbatim": "now you're not erasing the entire chip compiling and then uploading it all back",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The entry file is named code.py, and code.txt is also accepted, on the assumption that target users may not know what Python or a main function is.",
+   "quote_verbatim": "we call it code.py and we actually support calling the file code.text as well",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "CircuitPython deliberately accepts lower execution performance than MicroPython in exchange for closer CPython compatibility, so that existing Python documentation and idioms transfer.",
+   "quote_verbatim": "we've, we've explicitly chosen to be less performant than MicroPython in order to be more similar to Python",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The design optimises iteration time rather than execution speed, on the argument that short iteration is what beginners need.",
+   "quote_verbatim": "it may not be the fastest to execute, but it's really fast to iterate",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Code-generation wizards of the Atmel Start or STM32Cube type are unsuited to CircuitPython, because the runtime is dynamic and neither user code nor pin assignment is known at build time.",
+   "quote_verbatim": "we don't know the code that the user is going to write and we don't know what pin they're going to want to use for something",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Hardware support began with the Atmel SAMD21 and SAMD51 and extended to Nordic nRF51 and nRF52 parts.",
+   "quote_verbatim": "that's the Adafruit version of MicroPython specific to the, to the SAMD 2151 chipsets and now NRF 51, 52",
+   "speaker": "Chris Gammell",
+   "episode": 422,
+   "episode_title": "Stick 'Em On Whales",
+   "episode_url": "https://theamphour.com/422-stick-em-on-whales/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "CircuitPython libraries can run unmodified on a desktop host and then be redeployed to a Raspberry Pi or a CircuitPython board.",
+   "quote_verbatim": "you can use those same Python libraries without any modifications from your, you know, your desktop, your windows, your Mac, your, your Linux PC",
+   "speaker": "Jonathan Georgino",
+   "episode": 461,
+   "episode_title": "An Interview with Jonathan Georgino",
+   "episode_url": "https://theamphour.com/461-an-interview-with-jonathan-georgino/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "From 2018 the project was defined to include its guides, API reference documentation, driver support, Discord community and code of conduct, not only the installed runtime.",
+   "quote_verbatim": "It includes the guides, it includes the API reference docs, it includes the driver support",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Removing the IDE and driver installation eliminates the most common category of beginner support request, since installation and COM-port problems dominate vendor support email.",
+   "quote_verbatim": "software questions like instillation and comports are like number one questions you get",
+   "speaker": "Ken Burns",
+   "episode": 458,
+   "episode_title": "An Interview with Ken Burns",
+   "episode_url": "https://theamphour.com/458-an-interview-with-ken-burns/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The project targets people who have never programmed, and decisions are not optimised for users arriving from Arduino, MicroPython or C.",
+   "quote_verbatim": "our goal is to be an excellent experience for people who have never programmed in their life",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "mission-vs-hardware"
+  },
+  {
+   "claim_text": "Assumed before the interview that the fork was motivated by hardware focus rather than by audience mission.",
+   "quote_verbatim": "I thought it was because of the hardware focus of it all. But I actually like this mission based",
+   "speaker": "Chris Gammell",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "mission-vs-hardware"
+  },
+  {
+   "claim_text": "Dismissed CircuitPython on first mention as one more entrant in a crowded field of development platforms.",
+   "quote_verbatim": "This is just like the 50th. 50th different. Development platform. To come along in the last five years.",
+   "speaker": "Dave Jones",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "hosts-adoption"
+  },
+  {
+   "claim_text": "Declined to learn CircuitPython on the grounds that learning it would dissipate the enthusiasm that starts a project.",
+   "quote_verbatim": "I just want to do something while I'm excited. And that does not include learning circuit Python",
+   "speaker": "Dave Jones",
+   "episode": 530,
+   "episode_title": "Living Through Chipageddon",
+   "episode_url": "https://theamphour.com/530-living-through-chipageddon/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "hosts-adoption"
+  },
+  {
+   "claim_text": "Recommended CircuitPython while acknowledging it contradicted his own prior position against interpreted languages on hardware.",
+   "quote_verbatim": "Contradicts my whole thing about JavaScript on hardware",
+   "speaker": "Chris Gammell",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "hosts-adoption"
+  },
+  {
+   "claim_text": "By 2018 expressed confidence in CircuitPython and MicroPython for real work, a reversal from a year earlier.",
+   "quote_verbatim": "I am feeling relatively confident about circuit Python these days",
+   "speaker": "Chris Gammell",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "hosts-adoption"
+  },
+  {
+   "claim_text": "Revised a long-held dismissal of simplified programming interfaces, on the grounds that each new platform imposes a fresh learning cost.",
+   "quote_verbatim": "every time there's a new platform, you got to learn the new thing",
+   "speaker": "Chris Gammell",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "hosts-adoption"
+  },
+  {
+   "claim_text": "Supports CircuitPython as a market observation about non-engineer users rather than a personal preference, describing himself as an embedded developer who would choose C.",
+   "quote_verbatim": "again, the embedded guy",
+   "speaker": "Ken Burns",
+   "episode": 458,
+   "episode_title": "An Interview with Ken Burns",
+   "episode_url": "https://theamphour.com/458-an-interview-with-ken-burns/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "Characterised Adafruit's leadership as having committed to MicroPython and CircuitPython as the company's future platform.",
+   "quote_verbatim": "Lamore and Phil have really bet on MicroPython and, and CircuitPython as a platform for the future",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "Storing source on the device itself removes the loss mode in which an undo-less editing session leaves a previously working project unrecoverable.",
+   "quote_verbatim": "the thing that was working the first 30 times and on the 31st time I changed something that I don't remember",
+   "speaker": "Chris Gammell",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "The similarity between the MicroPython and CircuitPython names is a schedule risk in itself; confusing them cost a deadline on an RP2040 project.",
+   "quote_verbatim": "I didn't know circuit Python and micro Python were different. So I just blew my deadline",
+   "speaker": "Chris Gammell",
+   "episode": 550,
+   "episode_title": "Finishing Prototypes with Zack Freedman",
+   "episode_url": "https://theamphour.com/the-amp-hour-550-finishing-prototypes-with-zack-freedman/",
+   "depth_regraded": "explains",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "Reality Instruments' commercial boards were built on CircuitPython specifically so that end users would find them easy to program.",
+   "quote_verbatim": "I wanted to have circuit Python available for, for people. So it's just as easy for people using it",
+   "speaker": "Chris Gammell",
+   "episode": 441,
+   "episode_title": "Motivational Speaker",
+   "episode_url": "https://theamphour.com/441-motivational-speaker/",
+   "depth_regraded": "explains",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "By 2022 CircuitPython ran on Espressif's ESP32-S2 breakout boards, which also removed the need for an external USB-to-UART converter.",
+   "quote_verbatim": "It actually runs CircuitPython as well",
+   "speaker": "Chris Gammell",
+   "episode": 578,
+   "episode_title": "Histogrammic or Histomagraphical",
+   "episode_url": "https://theamphour.com/578-histogrammic-or-histomagraphical/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "By 2021 CircuitPython was in use in US middle-school technology teaching.",
+   "quote_verbatim": "he's using circuit Python, which is the Adafruit one, not micro Python",
+   "speaker": "Dave Jones",
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "The Adafruit Trinket M0 ships with CircuitPython preinstalled and was the board that prompted the hosts' first sustained use.",
+   "quote_verbatim": "So I do recommend trying it out at least",
+   "speaker": "Chris Gammell",
+   "episode": 377,
+   "episode_title": "Debugger vs Printeffer",
+   "episode_url": "https://theamphour.com/377-debugger-vs-printeffer/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  }
+ ],
+ "disagreements": [
+  {
+   "id": "hosts-adoption",
+   "question": "Should CircuitPython be adopted for real work?",
+   "positions": [
+    {
+     "speaker": "Dave Jones",
+     "episode": 364,
+     "stance": "against - platform proliferation fatigue"
+    },
+    {
+     "speaker": "Dave Jones",
+     "episode": 530,
+     "stance": "against - activation energy; refuses to learn it"
+    },
+    {
+     "speaker": "Chris Gammell",
+     "episode": 364,
+     "stance": "for, while conceding it contradicts his prior position"
+    },
+    {
+     "speaker": "Chris Gammell",
+     "episode": 389,
+     "stance": "for - confidence increased over the following year"
+    },
+    {
+     "speaker": "Chris Gammell",
+     "episode": 441,
+     "stance": "for - shipped commercial products on it"
+    }
+   ]
+  },
+  {
+   "id": "mission-vs-hardware",
+   "question": "Was the CircuitPython fork driven by hardware focus or by target audience?",
+   "positions": [
+    {
+     "speaker": "Chris Gammell",
+     "episode": 383,
+     "stance": "expected hardware focus to be the motive"
+    },
+    {
+     "speaker": "Scott Shawcroft",
+     "episode": 383,
+     "stance": "audience mission - beginners who have never programmed"
+    }
+   ]
+  }
+ ],
+ "capped": false
+}

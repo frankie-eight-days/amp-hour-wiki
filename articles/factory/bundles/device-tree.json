@@ -1,0 +1,1045 @@
+{
+ "concept": "device-tree",
+ "name": "Device Tree",
+ "type": "software",
+ "score": 173.133,
+ "rank_by_score": 231,
+ "cluster": {
+  "core": [
+   "device-tree"
+  ],
+  "children": [
+   "bare-metal-programming",
+   "memory-leak",
+   "misra-c",
+   "network-attached-storage",
+   "pin-multiplexing",
+   "yocto"
+  ],
+  "neighbors": []
+ },
+ "stats": {
+  "episodes": 18,
+  "mentions": 47,
+  "explains": 35,
+  "opinions": 3,
+  "candidate_episode_count": 18,
+  "candidate_mention_count": 37,
+  "gated_out": 76,
+  "gated_out_by_concept": [
+   [
+    "bare-metal-programming",
+    31
+   ],
+   [
+    "yocto",
+    17
+   ],
+   [
+    "network-attached-storage",
+    13
+   ],
+   [
+    "pin-multiplexing",
+    8
+   ],
+   [
+    "memory-leak",
+    4
+   ],
+   [
+    "misra-c",
+    3
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 8,
+  "speakers": [
+   [
+    "Chris Gammell",
+    7
+   ],
+   [
+    "Dave Jones",
+    6
+   ],
+   [
+    "Jay Carlson",
+    6
+   ],
+   [
+    "Tim Ansell",
+    2
+   ],
+   [
+    "Jason Kridner And Robert",
+    2
+   ],
+   [
+    "Eli Hughes",
+    2
+   ],
+   [
+    "Benjamin Cabe",
+    2
+   ],
+   [
+    "Michael Gielda",
+    2
+   ],
+   [
+    "Matt Richardson",
+    1
+   ],
+   [
+    "Jared Wolff",
+    1
+   ],
+   [
+    "Andreas Olofsson",
+    1
+   ],
+   [
+    "Jeff Geerling",
+    1
+   ],
+   [
+    "Shawn Hymel",
+    1
+   ],
+   [
+    "Mark Palmeri",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 34,
+   "child": 1
+  },
+  "passages_by_depth": {
+   "explains": 33,
+   "opinion": 2
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 35,
+ "passages": [
+  {
+   "episode": 235,
+   "episode_title": "An Interview with Matt Richardson - Raspberry Risorgimento Regent",
+   "episode_url": "https://theamphour.com/235-an-interview-with-matt-richardson-raspberry-risorgimento-regent/",
+   "guest": "Matt Richardson",
+   "stem": "0235-an-interview-with-matt-richardson-raspberry-risorgimento-regent",
+   "paragraph_index": 40,
+   "depth": "explains",
+   "speaker_raw": "Arduino",
+   "speaker_repaired": "Matt Richardson",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:pin-multiplexing",
+    "core"
+   ],
+   "concepts": [
+    "device-tree",
+    "pin-multiplexing"
+   ],
+   "paragraph_text": "The pins do have to be configured, and, you know, I don't... To be honest, like, I don't... I haven't dug into the whole spec yet myself. I am hoping to be able to do that during my time at Raspberry Pi to kind of figure out how that works. But there's... You may be familiar with, like, on the BeagleBone, there's a sort of device tree and device tree overlay where you can kind of, like, configure pins and set up how the... Because they're all multiplexed and how they'll work together.",
+   "context_before": "Although the Arduino thing is pretty simple, right? It's just you know what board you've plugged on there, so you just choose the library for it and bam. So what's the advantage of the E-squared PROM over that sort of manual system?",
+   "context_after": "So does that mean that if someone outside develops hardware, like a hat, does it have to get, like, registered with the Raspberry Pi Foundation folks? No.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Although the Arduino thing is pretty simple, right? It's just you know what board you've plugged on there, so you just choose the library for it and bam. So what's the advantage of the E-squared PROM over that sort of manual system? The pins do have to be configured, and, you know, I don't... To be honest, like, I don't... I haven't dug into the whole spec yet myself. I am hoping to be able to do that during my time at Raspberry Pi to kind of figure out how that works. But there's... You may be familiar with, like, on the BeagleBone, there's a sort of device tree and device tree overlay where you can kind of, like, configure pins and set up how the... Because they're all multiplexed and how they'll work together. So does that mean that if someone outside develops hardware, like a hat, does it have to get, like, registered with the Raspberry Pi Foundation folks? No."
+  },
+  {
+   "episode": 375,
+   "episode_title": "An Interview with Tim \"Mithro\" Ansell",
+   "episode_url": "https://theamphour.com/375-an-interview-with-tim-mithro-ansell/",
+   "guest": "Tim \"Mithro\" Ansell",
+   "stem": "0375-an-interview-with-tim-mithro-ansell",
+   "paragraph_index": 90,
+   "depth": "explains",
+   "speaker_raw": "Tim Mithro Ansell",
+   "speaker_repaired": "Tim Ansell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Yeah. And if you've got a poor method of communicating your register set, then like it's both the hardware and the software guy's fault, right? Like the software guy shouldn't care where in memory your register is, right? They should just write this, call this function or some type of interaction. That's true. Or like, if you think about modern ARM processes, there's things like device tree that just describe where your things are. And like, it doesn't matter if the next version of your chip has the register in a totally different location. If the device tree tells you where that location is, you can just, it just works. You don't need to, you can iterate. And that's something.",
+   "context_before": "Right. Like, right. I'm sure there's a heart. There's other, there's other FPGA designers out there listening right now being like, you know why we don't change these things, Tim? It's because of the software people. That's the thing though. It sounds like you're, you're writing the whole stack, right? So you're doing FPGA stuff and then writing software on top of it. You had mentioned before that you're doing like MicroPython and some of these FPGA cores, right? So if you control the whole stack, it's less of a problem than if you're throwing it over the wall to the software people and they're like, don't change anything. I need to write software for, for the existing register set.",
+   "context_after": "Great in theory. Great in theory. Yes. I think that's the thing. Like you're talking about changing workflows of different people and like, yeah, I think that you're totally right. But yeah, good luck in an organizational standpoint.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. Like, right. I'm sure there's a heart. There's other, there's other FPGA designers out there listening right now being like, you know why we don't change these things, Tim? It's because of the software people. That's the thing though. It sounds like you're, you're writing the whole stack, right? So you're doing FPGA stuff and then writing software on top of it. You had mentioned before that you're doing like MicroPython and some of these FPGA cores, right? So if you control the whole stack, it's less of a problem than if you're throwing it over the wall to the software people and they're like, don't change anything. I need to write software for, for the existing register set. Yeah. And if you've got a poor method of communicating your register set, then like it's both the hardware and the software guy's fault, right? Like the software guy shouldn't care where in memory your register is, right? They should just write this, call this function or some type of interaction. That's true. Or like, if you think about modern ARM processes, there's things like device tree that just describe where your things are. And like, it doesn't matter if the next version of your chip has the register in a totally different location. If the device tree tells you where that location is, you can just, it just works. You don't need to, you can iterate. And that's something. Great in theory. Great in theory. Yes. I think that's the thing. Like you're talking about changing workflows of different people and like, yeah, I think that you're totally right. But yeah, good luck in an organizational standpoint."
+  },
+  {
+   "episode": 375,
+   "episode_title": "An Interview with Tim \"Mithro\" Ansell",
+   "episode_url": "https://theamphour.com/375-an-interview-with-tim-mithro-ansell/",
+   "guest": "Tim \"Mithro\" Ansell",
+   "stem": "0375-an-interview-with-tim-mithro-ansell",
+   "paragraph_index": 230,
+   "depth": "explains",
+   "speaker_raw": "Tim Mithro Ansell",
+   "speaker_repaired": "Tim Ansell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Uh, yeah. And so we have Python code that generates Verilog, um, and it actually generates, um, C stubs and device tree as well. Um, and so, um, the idea is that if a peripheral moves, for example, or you add a new peripheral, um, these generated outputs, like the device tree just gets another definition for the new peripheral automatically. Um, and so it becomes very easy to iterate really quickly because, um, you don't have to worry about like, well, where do, what register location do I put this at? It just goes in the next one. Right, right.",
+   "context_before": "Like that's, and that's interesting too, because that is usually a tripping point for some people. Yeah. So you don't touch the Verilog at all. It's just all generated or what?",
+   "context_after": "I hard coded this address and now that the thing's not there anymore. Yeah. Well, that's why people shouldn't hard code addresses, but yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Like that's, and that's interesting too, because that is usually a tripping point for some people. Yeah. So you don't touch the Verilog at all. It's just all generated or what? Uh, yeah. And so we have Python code that generates Verilog, um, and it actually generates, um, C stubs and device tree as well. Um, and so, um, the idea is that if a peripheral moves, for example, or you add a new peripheral, um, these generated outputs, like the device tree just gets another definition for the new peripheral automatically. Um, and so it becomes very easy to iterate really quickly because, um, you don't have to worry about like, well, where do, what register location do I put this at? It just goes in the next one. Right, right. I hard coded this address and now that the thing's not there anymore. Yeah. Well, that's why people shouldn't hard code addresses, but yeah."
+  },
+  {
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "guest": "Jason Kridner and Robert Nelson",
+   "stem": "0378-an-interview-with-jason-kridner-and-robert-nelson",
+   "paragraph_index": 63,
+   "depth": "explains",
+   "speaker_raw": "Jason Kridner And Robert",
+   "speaker_repaired": "Jason Kridner And Robert",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Well, now most of the, so we've got so much working now and sort of a baseline that when people do derivatives of a beagle bone, right. For the most part, all they have to do is write this configuration text file called the device tree and, and they've got a new board.",
+   "context_before": "We start going down the list of like what you need first. And it's like, what do I really want from this project? And you, you try to get that thing working first for you.",
+   "context_after": "And so that would just be like adding on. So I, I want to add a new chip on there. It's on the spy bus or something. Basically just need to change the device tree to add that new chip on the spy bus or.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Chris Gammell",
+   "text": "We start going down the list of like what you need first. And it's like, what do I really want from this project? And you, you try to get that thing working first for you. Well, now most of the, so we've got so much working now and sort of a baseline that when people do derivatives of a beagle bone, right. For the most part, all they have to do is write this configuration text file called the device tree and, and they've got a new board. And so that would just be like adding on. So I, I want to add a new chip on there. It's on the spy bus or something. Basically just need to change the device tree to add that new chip on the spy bus or."
+  },
+  {
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "guest": "Jason Kridner and Robert Nelson",
+   "stem": "0378-an-interview-with-jason-kridner-and-robert-nelson",
+   "paragraph_index": 152,
+   "depth": "explains",
+   "speaker_raw": "Jason Kridner And Robert",
+   "speaker_repaired": "Jason Kridner And Robert",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "That's not a bad analogy, except you're using a text editor.",
+   "context_before": "Okay. So maybe I'm not understanding what the device tree is then. I'm thinking of, like, the Windows hardware manager type thing. That sounds stupid, but yeah.",
+   "context_after": "Right. Okay.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. So maybe I'm not understanding what the device tree is then. I'm thinking of, like, the Windows hardware manager type thing. That sounds stupid, but yeah. That's not a bad analogy, except you're using a text editor. Right. Okay."
+  },
+  {
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "guest": "Jason Kridner and Robert Nelson",
+   "stem": "0378-an-interview-with-jason-kridner-and-robert-nelson",
+   "paragraph_index": 154,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Yeah. It's essentially just a configuration file. You have a bunch of nodes in there and leafs, and you have the I2C device. And, like, I have, at this address, I have this accelerometer. And it uses this pin for GPIO and this pin for reset. And so it's abstracted out very well.",
+   "context_before": "Right. Okay.",
+   "context_after": "And so, okay, so if there's a new device on the device tree like that, and it already knows how to talk to that because it's an I2C, or basically you don't have any user code yet, so it doesn't even matter. It just has to know that it's there.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. Okay. Yeah. It's essentially just a configuration file. You have a bunch of nodes in there and leafs, and you have the I2C device. And, like, I have, at this address, I have this accelerometer. And it uses this pin for GPIO and this pin for reset. And so it's abstracted out very well. And so, okay, so if there's a new device on the device tree like that, and it already knows how to talk to that because it's an I2C, or basically you don't have any user code yet, so it doesn't even matter. It just has to know that it's there."
+  },
+  {
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "guest": "Jason Kridner and Robert Nelson",
+   "stem": "0378-an-interview-with-jason-kridner-and-robert-nelson",
+   "paragraph_index": 168,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Okay. Okay. Okay. Cool. So that's good to know. So it sounds like the default is if you're running BeagleBoard distros, you probably have access to a whole crap load of peripherals and stuff like that, which is great. You just got to go mess with the device tree, like Robert was saying. But then you actually have to go and write code for either you're writing scripts like in Python or you're writing drivers if you don't already have the kernel drivers, right? Is there any other situations in there? Or is it just mostly scripting these days?",
+   "context_before": "Well, if you stay in user space, you'll be prevented from doing anything like that that would actually shut the system down in any meaningful way.",
+   "context_after": "Or the third, fixing a driver. Oh, well. Yeah. A lot of times there's drivers that are close or you have a new device. It has little tweaks that need to be made.",
+   "context_before_speaker": "Jason Kridner And Robert",
+   "context_after_speaker": "Dave Jones",
+   "text": "Well, if you stay in user space, you'll be prevented from doing anything like that that would actually shut the system down in any meaningful way. Okay. Okay. Okay. Cool. So that's good to know. So it sounds like the default is if you're running BeagleBoard distros, you probably have access to a whole crap load of peripherals and stuff like that, which is great. You just got to go mess with the device tree, like Robert was saying. But then you actually have to go and write code for either you're writing scripts like in Python or you're writing drivers if you don't already have the kernel drivers, right? Is there any other situations in there? Or is it just mostly scripting these days? Or the third, fixing a driver. Oh, well. Yeah. A lot of times there's drivers that are close or you have a new device. It has little tweaks that need to be made."
+  },
+  {
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "guest": "Jason Kridner and Robert Nelson",
+   "stem": "0378-an-interview-with-jason-kridner-and-robert-nelson",
+   "paragraph_index": 359,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "But for new users, it's kind of nice because they don't have to recompile the device tree or configuration or change anything. They just log into the user space. Oh, a Config Pin, I want to pull up here.",
+   "context_before": "That sounds kind of, yeah. That, yeah. I mean, I feel like I'd like a million monkeys on a million typewriters kind of problem. Like if you send the right, if you send the right bit patterns enough times, you might put it in a bad state. Like a, yeah. But okay. But you could.",
+   "context_after": "That is, that is actually pretty nice. Okay, cool. I also assume that would be a big headache, but. Yeah, it's a huge headache. Right. Okay. But is there a, is there a way to visualize what it's actually set as right now? Is it just like you can go do a display of what's actually set to what?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "That sounds kind of, yeah. That, yeah. I mean, I feel like I'd like a million monkeys on a million typewriters kind of problem. Like if you send the right, if you send the right bit patterns enough times, you might put it in a bad state. Like a, yeah. But okay. But you could. But for new users, it's kind of nice because they don't have to recompile the device tree or configuration or change anything. They just log into the user space. Oh, a Config Pin, I want to pull up here. That is, that is actually pretty nice. Okay, cool. I also assume that would be a big headache, but. Yeah, it's a huge headache. Right. Okay. But is there a, is there a way to visualize what it's actually set as right now? Is it just like you can go do a display of what's actually set to what?"
+  },
+  {
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "guest": "Jason Kridner and Robert Nelson",
+   "stem": "0378-an-interview-with-jason-kridner-and-robert-nelson",
+   "paragraph_index": 365,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "One of the problems is when it's in the default mode, it'll actually say default. And then you have to look at the device tree. Oh, a default for this pin meant your.",
+   "context_before": "Okay.",
+   "context_after": "Got it. Okay. Well, you can look at the pin out for the main pin diagram, right? That's like the default.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. One of the problems is when it's in the default mode, it'll actually say default. And then you have to look at the device tree. Oh, a default for this pin meant your. Got it. Okay. Well, you can look at the pin out for the main pin diagram, right? That's like the default."
+  },
+  {
+   "episode": 466,
+   "episode_title": "An Interview with Ryan Cousins",
+   "episode_url": "https://theamphour.com/466-an-interview-with-ryan-cousins/",
+   "guest": "Ryan Cousins",
+   "stem": "0466-an-interview-with-ryan-cousins",
+   "paragraph_index": 87,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:bare-metal-programming",
+    "core"
+   ],
+   "concepts": [
+    "bare-metal-programming",
+    "device-tree"
+   ],
+   "paragraph_text": "Um, I, generally speaking, that's the impression I get, uh, you there. So the, the zinc book, that's literally the name of it. Um, it was originally written for, uh, one of these admit boards, but it's of course applicable to any zinc platform. Um, is a really good resource. Uh, you know, we've, we've, we've interacted quite a bit with the, some of the professors at university of Strathclyde originally wrote it. Um, and you know, so that's kind of a, uh, uh, an interesting place. They have a lot of good resources for doing like bare metal stuff. Um, which is like, you want something to actually work and you know, you're not going to sit and, you know, the rebuilding device trees and kernel modules and like drivers and like this 600 other things that you need to integrate with Linux. Um, you know, this isn't supported anymore. Now you have a different version of this. It doesn't work with that, you know?",
+   "context_before": "April and October. You're, you're doing more work. Oh yeah. For sure. Not before that, you know? Yeah. So the Linux side of things, what, I mean, what, what is the hard part of that? And, and, and what are other systems? I wanted to compare and contrast again for like what you guys are offering versus what other, other things that are out there. Right. So like you'd mentioned the Z board and things like that is Z, is the Z board running Linux or is it more bare metal or like what's, what are available to people if they're like, Oh, I need flexible fabric. Is it the go build Yocto?",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Ryan Cousins",
+   "context_after_speaker": "Chris Gammell",
+   "text": "April and October. You're, you're doing more work. Oh yeah. For sure. Not before that, you know? Yeah. So the Linux side of things, what, I mean, what, what is the hard part of that? And, and, and what are other systems? I wanted to compare and contrast again for like what you guys are offering versus what other, other things that are out there. Right. So like you'd mentioned the Z board and things like that is Z, is the Z board running Linux or is it more bare metal or like what's, what are available to people if they're like, Oh, I need flexible fabric. Is it the go build Yocto? Um, I, generally speaking, that's the impression I get, uh, you there. So the, the zinc book, that's literally the name of it. Um, it was originally written for, uh, one of these admit boards, but it's of course applicable to any zinc platform. Um, is a really good resource. Uh, you know, we've, we've, we've interacted quite a bit with the, some of the professors at university of Strathclyde originally wrote it. Um, and you know, so that's kind of a, uh, uh, an interesting place. They have a lot of good resources for doing like bare metal stuff. Um, which is like, you want something to actually work and you know, you're not going to sit and, you know, the rebuilding device trees and kernel modules and like drivers and like this 600 other things that you need to integrate with Linux. Um, you know, this isn't supported anymore. Now you have a different version of this. It doesn't work with that, you know? Yeah."
+  },
+  {
+   "episode": 509,
+   "episode_title": "Cellular IoT with Jared Wolff",
+   "episode_url": "https://theamphour.com/509-cellular-iot-with-jared-wolff/",
+   "guest": "Jared Wolff",
+   "stem": "0509-cellular-iot-with-jared-wolff",
+   "paragraph_index": 199,
+   "depth": "explains",
+   "speaker_raw": "Jared Wolff",
+   "speaker_repaired": "Jared Wolff",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Number one, it's not that big of a deal. And it's too, you can go to whatever level you want to. For instance, you can kind of implement your driver code within your app. If you really want to, that's kind of like the more traditional way. At least I've done it in the past, but Zephyr has a bunch of pre-determined kind of structures for different type of drivers. So the article that I wrote was based around a real time clock chip that I have on Anerf91 Feather. And they don't exactly have an API that matches it a hundred percent, but they did have a, I believe it was a timer API. So I went through and I kind of searched around. This is all like, once I got comfortable with the SDK, I was like, all right, well, I got to figure it out. I'm going to do this. So I started searching through the SDK and I was like, all right, if I have to use this structure, like how do I initialize it? And what they do is they, you create this structure as a driver and that driver, all the functions get pushed into a struct, like a struct constructors, like what's your init function? What's your write time function? What's your clear time function? And then what you do is you then access all those calls by using their, which I'm still trying to figure out a hundred percent, but they have a whole, I think it's a Linux idea of this device tree. So you look up a device by its name or by whatever you configure it as, and you pull it in and then it becomes a kind of this generic device. And then you can call certain calls from that device. And that's what happens. It's like your driver, that struct kind of gets turned into something you can access through a device in your, in your main code. And then you can swap out. Like for instance, if I wanted to use a different RTC, I don't have to go through and recode everything. I can go to the data sheet and I can create another driver using that same kind of structure. And then I can just start using with my code and just, and then it's just a, a defined in my project file.",
+   "context_before": "Yep. Yep. Huh? Okay. So then you've, you've, so you've written this post, the how to build drivers for Zephyr. And that does seem like it's kind of the hard thing. Cause now you have an RTOS, which are real time operating system. It's kind of like doing all the timing and all the task switching and all that other stuff. But now much like Linux, you need to like write a driver. So what does that look like for people that are interested in doing that sort of thing? Specifically me, I'm really worried about me, me here, Jared, you know, you can do it.",
+   "context_after": "Yeah. Yeah. That's, I mean, that's the magic of Linux, right? That's how Linux and I mean, Windows as well, right? Like these higher level operating systems, they, they know that they need a certain function and that is there, but then they don't really care what the hardware is underneath, which is pretty great. If, if,",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yep. Yep. Huh? Okay. So then you've, you've, so you've written this post, the how to build drivers for Zephyr. And that does seem like it's kind of the hard thing. Cause now you have an RTOS, which are real time operating system. It's kind of like doing all the timing and all the task switching and all that other stuff. But now much like Linux, you need to like write a driver. So what does that look like for people that are interested in doing that sort of thing? Specifically me, I'm really worried about me, me here, Jared, you know, you can do it. Number one, it's not that big of a deal. And it's too, you can go to whatever level you want to. For instance, you can kind of implement your driver code within your app. If you really want to, that's kind of like the more traditional way. At least I've done it in the past, but Zephyr has a bunch of pre-determined kind of structures for different type of drivers. So the article that I wrote was based around a real time clock chip that I have on Anerf91 Feather. And they don't exactly have an API that matches it a hundred percent, but they did have a, I believe it was a timer API. So I went through and I kind of searched around. This is all like, once I got comfortable with the SDK, I was like, all right, well, I got to figure it out. I'm going to do this. So I started searching through the SDK and I was like, all right, if I have to use this structure, like how do I initialize it? And what they do is they, you create this structure as a driver and that driver, all the functions get pushed into a struct, like a struct constructors, like what's your init function? What's your write time function? What's your clear time function? And then what you do is you then access all those calls by using their, which I'm still trying to figure out a hundred percent, but they have a whole, I think it's a Linux idea of this device tree. So you look up a device by its name or by whatever you configure it as, and you pull it in and then it becomes a kind of this generic device. And then you can call certain calls from that device. And that's what happens. It's like your driver, that struct kind of gets turned into something you can access through a device in your, in your main code. And then you can swap out. Like for instance, if I wanted to use a different RTC, I don't have to go through and recode everything. I can go to the data sheet and I can create another driver using that same kind of structure. And then I can just start using with my code and just, and then it's just a, a defined in my project file. Yeah. Yeah. That's, I mean, that's the magic of Linux, right? That's how Linux and I mean, Windows as well, right? Like these higher level operating systems, they, they know that they need a certain function and that is there, but then they don't really care what the hardware is underneath, which is pretty great. If, if,"
+  },
+  {
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "guest": "Eli Hughes",
+   "stem": "0511-brewing-electronics-with-eli-hughes",
+   "paragraph_index": 31,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Eli Hughes",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Well, so, yeah. I have another colleague at T0 who's a real Linux guy, and he teases me anytime I use an IDE, and really smart. And he makes good arguments of when you should and when you shouldn't. But he was already trying to get me into the CMake Ninja flow for some of our stuff we have to maintain. And once I kind of abandoned their other tool and just said, okay, I'm going to install in Linux according to their command line build, and just read through the Zephyr documentation, Nordic did a really good job of putting a tutorial together of, like, not only how to build their stuff, but they inserted little things about how Zephyr worked. Because Zephyr, I mean, it is an RTOS. At the end of the day, you can use it in a mode where all it does is it's like free RTOS. All it does, you can have threads, you can switch, you have some queues. But what Zephyr also adds, it standardizes the build process for all these different boards. In most of your hardware interface, you don't have to use it, but they kind of standardize how you talk to UARTs and SPY. And they brought in kconfig and the device tree concept from Linux, and that's where I got really scared.",
+   "context_before": "Yep. And by the way, this is exactly the advice that Eli gave me as well. So, it worked great.",
+   "context_after": "Yeah. So when we had Robert on the show, Robert Nelson from DigiKey and BeagleBoard, and Jason Kreidner was on the show then too, I remember them talking about some of the device tree stuff and just like, it literally, like, I literally, like, I was losing my breath because I was just like, oh, I have no idea what they're talking about right now. And they did a great job explaining it, you know, eventually, but I was just, it's a very scary concept at first. And same thing, I mean, just generally, like, building Linux, building these, you know, high level, higher level systems, it just, it feels like there's a, it feels like you're underwater because there's so much stuff above you.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yep. And by the way, this is exactly the advice that Eli gave me as well. So, it worked great. Well, so, yeah. I have another colleague at T0 who's a real Linux guy, and he teases me anytime I use an IDE, and really smart. And he makes good arguments of when you should and when you shouldn't. But he was already trying to get me into the CMake Ninja flow for some of our stuff we have to maintain. And once I kind of abandoned their other tool and just said, okay, I'm going to install in Linux according to their command line build, and just read through the Zephyr documentation, Nordic did a really good job of putting a tutorial together of, like, not only how to build their stuff, but they inserted little things about how Zephyr worked. Because Zephyr, I mean, it is an RTOS. At the end of the day, you can use it in a mode where all it does is it's like free RTOS. All it does, you can have threads, you can switch, you have some queues. But what Zephyr also adds, it standardizes the build process for all these different boards. In most of your hardware interface, you don't have to use it, but they kind of standardize how you talk to UARTs and SPY. And they brought in kconfig and the device tree concept from Linux, and that's where I got really scared. Yeah. So when we had Robert on the show, Robert Nelson from DigiKey and BeagleBoard, and Jason Kreidner was on the show then too, I remember them talking about some of the device tree stuff and just like, it literally, like, I literally, like, I was losing my breath because I was just like, oh, I have no idea what they're talking about right now. And they did a great job explaining it, you know, eventually, but I was just, it's a very scary concept at first. And same thing, I mean, just generally, like, building Linux, building these, you know, high level, higher level systems, it just, it feels like there's a, it feels like you're underwater because there's so much stuff above you."
+  },
+  {
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "guest": "Eli Hughes",
+   "stem": "0511-brewing-electronics-with-eli-hughes",
+   "paragraph_index": 33,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Eli Hughes",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Yeah, because at the end of the day, I'm like, okay, this has to turn into C files that bang a register. That's all it has to do. And it's all this stuff in front of it. And so the Nordic tutorial actually really helped because it explained some of the backstory of, like, why they chose Zephyr. And I'll get to why I think it's really important. But, you know, the device tree, how they use it kind of in a special way where it kind of static, you take all this stuff. At the end of the day, it makes, like, a header file that says, here's where all my registers. Here's my memory map. Here's where the UARTs are at. And it at least gets you to a point that it's pretty easy once you have Zephyr code that you can kind of move it between boards. And if you use things and they're some of their standard models for drivers, which are very thin, they're not nowhere near as complex as Linux. It was nice. And once I really got through the NRF 9.060, the value I see in it is that every time I do a free RTOS project, I'm writing the same. I'm coming up with a build system. I'm bringing in a file system. I'm bringing in all this stuff. That's what Zephyr does is you can optionally bring in all the boilerplate, like, some way to have, like, any parameters. There's always \u2013 you need to be able to, like, save parameters. You always have a couple things you need to do in code. And at least standardizes it with some decent documentation. So when you come back a couple years later, if you still remember Zephyr, you at least have \u2013 you remember what you did. And someone else is working on it as well.",
+   "context_before": "Yeah. So when we had Robert on the show, Robert Nelson from DigiKey and BeagleBoard, and Jason Kreidner was on the show then too, I remember them talking about some of the device tree stuff and just like, it literally, like, I literally, like, I was losing my breath because I was just like, oh, I have no idea what they're talking about right now. And they did a great job explaining it, you know, eventually, but I was just, it's a very scary concept at first. And same thing, I mean, just generally, like, building Linux, building these, you know, high level, higher level systems, it just, it feels like there's a, it feels like you're underwater because there's so much stuff above you.",
+   "context_after": "Yeah. Yeah, that's kind of nice. I mean, yeah. It is making it, like, an extensible ecosystem insofar as that goes, right? I mean, like, yeah, there's always going to be some porting, some customization. But if you can reduce that \u2013 I mean, as a \u2013 you know, so I'm a standalone engineer. You know, I'm hiring someone to help me with getting up and running on Zephyr and stuff like that. But, like, once that's done, I'm hoping that it's just like, oh, I could pull in a new thing, pull in this other thing. That's kind of the goal and the hope.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. So when we had Robert on the show, Robert Nelson from DigiKey and BeagleBoard, and Jason Kreidner was on the show then too, I remember them talking about some of the device tree stuff and just like, it literally, like, I literally, like, I was losing my breath because I was just like, oh, I have no idea what they're talking about right now. And they did a great job explaining it, you know, eventually, but I was just, it's a very scary concept at first. And same thing, I mean, just generally, like, building Linux, building these, you know, high level, higher level systems, it just, it feels like there's a, it feels like you're underwater because there's so much stuff above you. Yeah, because at the end of the day, I'm like, okay, this has to turn into C files that bang a register. That's all it has to do. And it's all this stuff in front of it. And so the Nordic tutorial actually really helped because it explained some of the backstory of, like, why they chose Zephyr. And I'll get to why I think it's really important. But, you know, the device tree, how they use it kind of in a special way where it kind of static, you take all this stuff. At the end of the day, it makes, like, a header file that says, here's where all my registers. Here's my memory map. Here's where the UARTs are at. And it at least gets you to a point that it's pretty easy once you have Zephyr code that you can kind of move it between boards. And if you use things and they're some of their standard models for drivers, which are very thin, they're not nowhere near as complex as Linux. It was nice. And once I really got through the NRF 9.060, the value I see in it is that every time I do a free RTOS project, I'm writing the same. I'm coming up with a build system. I'm bringing in a file system. I'm bringing in all this stuff. That's what Zephyr does is you can optionally bring in all the boilerplate, like, some way to have, like, any parameters. There's always \u2013 you need to be able to, like, save parameters. You always have a couple things you need to do in code. And at least standardizes it with some decent documentation. So when you come back a couple years later, if you still remember Zephyr, you at least have \u2013 you remember what you did. And someone else is working on it as well. Yeah. Yeah, that's kind of nice. I mean, yeah. It is making it, like, an extensible ecosystem insofar as that goes, right? I mean, like, yeah, there's always going to be some porting, some customization. But if you can reduce that \u2013 I mean, as a \u2013 you know, so I'm a standalone engineer. You know, I'm hiring someone to help me with getting up and running on Zephyr and stuff like that. But, like, once that's done, I'm hoping that it's just like, oh, I could pull in a new thing, pull in this other thing. That's kind of the goal and the hope."
+  },
+  {
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "guest": "Jay Carlson",
+   "stem": "0515-embedded-linux-with-jay-carlson",
+   "paragraph_index": 13,
+   "depth": "explains",
+   "speaker_raw": "Jay Carlson",
+   "speaker_repaired": "Jay Carlson",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Yeah, yeah, yeah, well, what's funny is I hope like one of the big takeaways is, you know, I've been working on this project on again, off again for, you know, six months. I designed 10 different boards. Generally, it took \u2013 for most of these parts, it took, I don't know, three hours on the software side to boot them up to a prompt, you know. So like I think one thing is like people need to understand that all this stuff \u2013 you know, I tweeted a few weeks ago, you know, the difference between, you know, bare metal C development and embedded Linux development is, you know, bare metal C, you spend all your time writing lots of code and, you know, reading documentation, right, reading register maps, reading, you know, whatever. On Linux, it's the opposite. I feel like all I do is read source code. Like, seriously, and it's super funny because you don't \u2013 you know, it doesn't matter. You know, I've got one project I'm working on basically getting this crazy MIPI camera sensor thing working, you know, 1080p, 60 hertz, streaming, you know, two-lane MIPI at 800 megabits per second. And I've got, you know, it's all 10-bit raw data, so it's got to go through ISP to demosaic it and do color correction and all this crap. And, you know, you're just reading through code. And, you know, I don't know that I've written really a single line of C code, right? It's more about just like reading code, configuring, you know, doing DTS stuff, device tree stuff.",
+   "context_before": "'t think about it. Like, you know, it's just like it works or it doesn't work. It's just this, you know, it's this thing that makes a screen go in it and then my brain turns around and I'm like, oh, look, you know, pretty pictures. And then like as long as it's working, I'm happy. But at a certain level, someone's writing that support for the next x86 or the AMD or whatever's out there and that's kind of what you're talking about here. You're talking about writing that interface down to the lower levels of hardware, right, and getting at the peripherals and getting at the display interfaces and the memory interfaces and all these things that are on every chip but now need to be customized for a non-traditional chip like \u2013 well, not even non-traditional, but like an embedded chip like this.",
+   "context_after": "And, yeah, I don't know. So \u2013 And that is where you actually do the hooking up, right? Is in the device tree. That's like kind of the \u2013 that's the answer key for, you know, needs to talk to spy or needs to talk to MIPI or whatever. Yeah, yeah, yeah.",
+   "context_before_speaker": "Jay Carlson",
+   "context_after_speaker": "Jay Carlson",
+   "text": "'t think about it. Like, you know, it's just like it works or it doesn't work. It's just this, you know, it's this thing that makes a screen go in it and then my brain turns around and I'm like, oh, look, you know, pretty pictures. And then like as long as it's working, I'm happy. But at a certain level, someone's writing that support for the next x86 or the AMD or whatever's out there and that's kind of what you're talking about here. You're talking about writing that interface down to the lower levels of hardware, right, and getting at the peripherals and getting at the display interfaces and the memory interfaces and all these things that are on every chip but now need to be customized for a non-traditional chip like \u2013 well, not even non-traditional, but like an embedded chip like this. Yeah, yeah, yeah, well, what's funny is I hope like one of the big takeaways is, you know, I've been working on this project on again, off again for, you know, six months. I designed 10 different boards. Generally, it took \u2013 for most of these parts, it took, I don't know, three hours on the software side to boot them up to a prompt, you know. So like I think one thing is like people need to understand that all this stuff \u2013 you know, I tweeted a few weeks ago, you know, the difference between, you know, bare metal C development and embedded Linux development is, you know, bare metal C, you spend all your time writing lots of code and, you know, reading documentation, right, reading register maps, reading, you know, whatever. On Linux, it's the opposite. I feel like all I do is read source code. Like, seriously, and it's super funny because you don't \u2013 you know, it doesn't matter. You know, I've got one project I'm working on basically getting this crazy MIPI camera sensor thing working, you know, 1080p, 60 hertz, streaming, you know, two-lane MIPI at 800 megabits per second. And I've got, you know, it's all 10-bit raw data, so it's got to go through ISP to demosaic it and do color correction and all this crap. And, you know, you're just reading through code. And, you know, I don't know that I've written really a single line of C code, right? It's more about just like reading code, configuring, you know, doing DTS stuff, device tree stuff. And, yeah, I don't know. So \u2013 And that is where you actually do the hooking up, right? Is in the device tree. That's like kind of the \u2013 that's the answer key for, you know, needs to talk to spy or needs to talk to MIPI or whatever. Yeah, yeah, yeah."
+  },
+  {
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "guest": "Jay Carlson",
+   "stem": "0515-embedded-linux-with-jay-carlson",
+   "paragraph_index": 14,
+   "depth": "explains",
+   "speaker_raw": "Jay Carlson",
+   "speaker_repaired": "Jay Carlson",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "And, yeah, I don't know. So \u2013 And that is where you actually do the hooking up, right? Is in the device tree. That's like kind of the \u2013 that's the answer key for, you know, needs to talk to spy or needs to talk to MIPI or whatever. Yeah, yeah, yeah.",
+   "context_before": "ocumentation, right, reading register maps, reading, you know, whatever. On Linux, it's the opposite. I feel like all I do is read source code. Like, seriously, and it's super funny because you don't \u2013 you know, it doesn't matter. You know, I've got one project I'm working on basically getting this crazy MIPI camera sensor thing working, you know, 1080p, 60 hertz, streaming, you know, two-lane MIPI at 800 megabits per second. And I've got, you know, it's all 10-bit raw data, so it's got to go through ISP to demosaic it and do color correction and all this crap. And, you know, you're just reading through code. And, you know, I don't know that I've written really a single line of C code, right? It's more about just like reading code, configuring, you know, doing DTS stuff, device tree stuff.",
+   "context_after": "Yeah. And we're like \u2013 we're bouncing all over the place. I mean, if we want to like talk about it from kind of like a logical perspective, right? Like if someone's like, you know, explain this to me from start to finish, right? First of all, what you have to think about is like Linux is \u2013 it's this operating system, right? Which is fundamentally not that different from, you know, free RTOS or Zephyr or anything like that. But one big difference with \u2013 well, okay. It would be more similar to Zephyr, I guess, in the sense that it has drivers for everything, right? Right. So, you know, let's take a really simple example. Let's say you've got an accelerometer hooked up to your I2C bus on a microcontroller. Well, you know, Chris, what code would you have to write to get that to work?",
+   "context_before_speaker": "Jay Carlson",
+   "context_after_speaker": "Jay Carlson",
+   "text": "ocumentation, right, reading register maps, reading, you know, whatever. On Linux, it's the opposite. I feel like all I do is read source code. Like, seriously, and it's super funny because you don't \u2013 you know, it doesn't matter. You know, I've got one project I'm working on basically getting this crazy MIPI camera sensor thing working, you know, 1080p, 60 hertz, streaming, you know, two-lane MIPI at 800 megabits per second. And I've got, you know, it's all 10-bit raw data, so it's got to go through ISP to demosaic it and do color correction and all this crap. And, you know, you're just reading through code. And, you know, I don't know that I've written really a single line of C code, right? It's more about just like reading code, configuring, you know, doing DTS stuff, device tree stuff. And, yeah, I don't know. So \u2013 And that is where you actually do the hooking up, right? Is in the device tree. That's like kind of the \u2013 that's the answer key for, you know, needs to talk to spy or needs to talk to MIPI or whatever. Yeah, yeah, yeah. Yeah. And we're like \u2013 we're bouncing all over the place. I mean, if we want to like talk about it from kind of like a logical perspective, right? Like if someone's like, you know, explain this to me from start to finish, right? First of all, what you have to think about is like Linux is \u2013 it's this operating system, right? Which is fundamentally not that different from, you know, free RTOS or Zephyr or anything like that. But one big difference with \u2013 well, okay. It would be more similar to Zephyr, I guess, in the sense that it has drivers for everything, right? Right. So, you know, let's take a really simple example. Let's say you've got an accelerometer hooked up to your I2C bus on a microcontroller. Well, you know, Chris, what code would you have to write to get that to work?"
+  },
+  {
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "guest": "Jay Carlson",
+   "stem": "0515-embedded-linux-with-jay-carlson",
+   "paragraph_index": 65,
+   "depth": "explains",
+   "speaker_raw": "Jay Carlson",
+   "speaker_repaired": "Jay Carlson",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "That's right. Yeah. And, and I mean, maybe talk through the process of enabling that I two S bus, right? What, what is then, what do you have to do to actually enable that in the device tree and like all the steps to do that? Cause it seems like it's pretty minimal. It's super complicated.",
+   "context_before": "now and then, but like proves out the idea. It proves out that, Hey, this is how you connect it up. You've got, you know, cute embedded running on this thing. You've got touchscreen stuff working and it's just, you've got a breakout board and all these kinds of modules. And it's, it's really just the next step. Like, I mean, if you've got your little Arduino and you've got a little accelerometer and these little modules and you breadboarded them together, it's just kind of one. You just turn up the volume knob a little bit. Now you've got, you know, a camera and you've got a parallel RGB LCD and you've got an ethernet Phi and you've got an I squared S codec. Right. You can do the same sort of stuff that you're already doing. If you're a microcontroller person, you just crank it up a notch.",
+   "context_after": "What you have to do is you have to open up the DTSI file for the processor. You have to find the I squared S line and where it says status equal disabled. You have to change that to status equals. Okay. That's, that's a lot.",
+   "context_before_speaker": "Jay Carlson",
+   "context_after_speaker": "Jay Carlson",
+   "text": "now and then, but like proves out the idea. It proves out that, Hey, this is how you connect it up. You've got, you know, cute embedded running on this thing. You've got touchscreen stuff working and it's just, you've got a breakout board and all these kinds of modules. And it's, it's really just the next step. Like, I mean, if you've got your little Arduino and you've got a little accelerometer and these little modules and you breadboarded them together, it's just kind of one. You just turn up the volume knob a little bit. Now you've got, you know, a camera and you've got a parallel RGB LCD and you've got an ethernet Phi and you've got an I squared S codec. Right. You can do the same sort of stuff that you're already doing. If you're a microcontroller person, you just crank it up a notch. That's right. Yeah. And, and I mean, maybe talk through the process of enabling that I two S bus, right? What, what is then, what do you have to do to actually enable that in the device tree and like all the steps to do that? Cause it seems like it's pretty minimal. It's super complicated. What you have to do is you have to open up the DTSI file for the processor. You have to find the I squared S line and where it says status equal disabled. You have to change that to status equals. Okay. That's, that's a lot."
+  },
+  {
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "guest": "Jay Carlson",
+   "stem": "0515-embedded-linux-with-jay-carlson",
+   "paragraph_index": 66,
+   "depth": "explains",
+   "speaker_raw": "Jay Carlson",
+   "speaker_repaired": "Jay Carlson",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "What you have to do is you have to open up the DTSI file for the processor. You have to find the I squared S line and where it says status equal disabled. You have to change that to status equals. Okay. That's, that's a lot.",
+   "context_before": "That's right. Yeah. And, and I mean, maybe talk through the process of enabling that I two S bus, right? What, what is then, what do you have to do to actually enable that in the device tree and like all the steps to do that? Cause it seems like it's pretty minimal. It's super complicated.",
+   "context_after": "I think I'll pass.",
+   "context_before_speaker": "Jay Carlson",
+   "context_after_speaker": "Jay Carlson",
+   "text": "That's right. Yeah. And, and I mean, maybe talk through the process of enabling that I two S bus, right? What, what is then, what do you have to do to actually enable that in the device tree and like all the steps to do that? Cause it seems like it's pretty minimal. It's super complicated. What you have to do is you have to open up the DTSI file for the processor. You have to find the I squared S line and where it says status equal disabled. You have to change that to status equals. Okay. That's, that's a lot. I think I'll pass."
+  },
+  {
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "guest": "Jay Carlson",
+   "stem": "0515-embedded-linux-with-jay-carlson",
+   "paragraph_index": 128,
+   "depth": "explains",
+   "speaker_raw": "Jay Carlson",
+   "speaker_repaired": "Jay Carlson",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Cause Zephyr, Zephyr uses K config. It uses a device tree system. Zephyr provides a hardware abstraction layer. That's very similar to Linux's. So, you know, I, I think, yeah, that's where things get really ooey gooey. And if you can see, if you can notice, I am skirting around the question because it's, it's tough. It's, it's really tough to figure.",
+   "context_before": "It'll, it'll, it'll rhyme. I think it'll rhyme with a lot of the stuff that you're talking about. There's K configs and DTS and all that other weirdness.",
+   "context_after": "Yeah. You were talking about not being able to figure out chips before, and now it's, you got to make these other decisions. It's like, yeah, you can do anything you want. And then now you got to go decide and that sucks.",
+   "context_before_speaker": "Jay Carlson",
+   "context_after_speaker": "Jay Carlson",
+   "text": "It'll, it'll, it'll rhyme. I think it'll rhyme with a lot of the stuff that you're talking about. There's K configs and DTS and all that other weirdness. Cause Zephyr, Zephyr uses K config. It uses a device tree system. Zephyr provides a hardware abstraction layer. That's very similar to Linux's. So, you know, I, I think, yeah, that's where things get really ooey gooey. And if you can see, if you can notice, I am skirting around the question because it's, it's tough. It's, it's really tough to figure. Yeah. You were talking about not being able to figure out chips before, and now it's, you got to make these other decisions. It's like, yeah, you can do anything you want. And then now you got to go decide and that sucks."
+  },
+  {
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "guest": "Jay Carlson",
+   "stem": "0515-embedded-linux-with-jay-carlson",
+   "paragraph_index": 233,
+   "depth": "explains",
+   "speaker_raw": "Jay Carlson",
+   "speaker_repaired": "Jay Carlson",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Uh, I don't know. They're, they're all fine. The, the ST one feels like it should be the best because it's like cube STM 32 cube. It's exactly the same interface and it feels like it should be good. Um, the problem is it doesn't actually generate all the stuff you need. Like it, it generates like the pin mux for like, it generates pin mux code. And then I think the peripheral init, init code, but there's like, other random crap in your DTS file, like your console, you are, and some other things like that. Um, and it doesn't generate that stuff. I don't know. There's like some technical details. I'd say maybe the NXP one. I don't know. They're, they're, they're fine. The TI one's fine as well. Here's the thing though, with DTS files, most of the time you're just going to uncomment out some existing DTS code. Right. Right. A lot of times it's fine.",
+   "context_before": "Yep. That's, I'm very excited to hear about that, uh, that online platform. That's going to be really great. That'll be great. Okay. Okay. Uh, let's keep going. Uh, which of the three pin mux tools, uh, NXPTI or ST, did you like the most?",
+   "context_after": "You're going to use a dev board and already has it there. And you're like, Oh, enable this, disable this. Right. You got it. Yep. Okay, cool. Since I, so this person has a IMX six ULL series and they've successfully brought a board to life. Since I now have a working base I can work upon after what complexity point should I consider using this embedded list of embedded living system in a project? Uh, I guess I'm not sure. So they, it sounds like they did a equivalent kind of thing where they brought it up. They've got it working. And now I think they're saying like, is this, is this verified enough to push it out in the world as a, as a product into a product that they're building?",
+   "context_before_speaker": "Jay Carlson",
+   "context_after_speaker": "Jay Carlson",
+   "text": "Yep. That's, I'm very excited to hear about that, uh, that online platform. That's going to be really great. That'll be great. Okay. Okay. Uh, let's keep going. Uh, which of the three pin mux tools, uh, NXPTI or ST, did you like the most? Uh, I don't know. They're, they're all fine. The, the ST one feels like it should be the best because it's like cube STM 32 cube. It's exactly the same interface and it feels like it should be good. Um, the problem is it doesn't actually generate all the stuff you need. Like it, it generates like the pin mux for like, it generates pin mux code. And then I think the peripheral init, init code, but there's like, other random crap in your DTS file, like your console, you are, and some other things like that. Um, and it doesn't generate that stuff. I don't know. There's like some technical details. I'd say maybe the NXP one. I don't know. They're, they're, they're fine. The TI one's fine as well. Here's the thing though, with DTS files, most of the time you're just going to uncomment out some existing DTS code. Right. Right. A lot of times it's fine. You're going to use a dev board and already has it there. And you're like, Oh, enable this, disable this. Right. You got it. Yep. Okay, cool. Since I, so this person has a IMX six ULL series and they've successfully brought a board to life. Since I now have a working base I can work upon after what complexity point should I consider using this embedded list of embedded living system in a project? Uh, I guess I'm not sure. So they, it sounds like they did a equivalent kind of thing where they brought it up. They've got it working. And now I think they're saying like, is this, is this verified enough to push it out in the world as a, as a product into a product that they're building?"
+  },
+  {
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "guest": "Mike Szczys",
+   "stem": "0622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys",
+   "paragraph_index": 39,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Yeah. So he is one of the people driving the project. He is employed by Nordic and they've grabbed onto Zephyr with both hands. It is their, their platform. So they've got a ton of people working on it, but Marty has been working on the, I don't even know. It's like the pre-processor that has all of the macros in it. And you and I went to that talk at ZDS last year called Macrobatics that explained like how all of this, like device tree stuff is getting, you know, compiled in, built into the project and like where to go when things don't go right, which happens to me a lot. And the way that he explains it and walks through it is really great. There was also a talk from the 2021 ZDS that I saw on YouTube that I watched that like was an aha moment in how your C code pulls in the parts of the device tree. So device tree is like a whole nother language that describes the hardware, like each module, what the address is. So for instance, you would say, I have a UART, the UART is at this address in the memory map of this specific chip. And those things are all built into like the, the tree for Zephyr because manufacturers make sure that their products are in there. And then when you add something to the UART, you say, all right, I have a device on the UART. That's not a good example. It's let's say I squared C, I have a device on I squared C two that is at this device address and it needs this specific driver. And then that file just lives in there. And when you get a different board, let's say you have a chip shortage and you're like, okay, now I have a different, you know, humidity sensor. You can just give it a different overlay file and everything in your C code will be the same because it kind of has like an alias or it has like a way to find, to walk through instances of this one type of sensor. And it kind of makes it so that your C code never has to deal with changes in hardware or minimally has to deal with it.",
+   "context_before": "Yeah. Yeah. Yes. Yes. Marty's amazing. Yes.",
+   "context_after": "To step back even further, I feel like Zephyr is a real-time operating system, right? So that means it has a scheduler that so we've had, oh shoot, free RTOS. I'm now blanking on his name. Brian Amos was on the show and I'll link that in. Brian's book is how I learned about RTOSs. It's about free RTOS, but it kind of applies to everything. And it's a great book. I highly recommend it. And basically, Zephyr is that, right? There is a scheduler. There's threads. There's queues and all of the semaphores and mutexes and all the things you read about every time you read about it in RTOS. But that's not really why most people are talking about Zephyr, I feel like. Most people talk about Zephyr because of the ecosystem aspect. And that's kind of what Mike has been alluding to as well, where all o",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Yeah. Yes. Yes. Marty's amazing. Yes. Yeah. So he is one of the people driving the project. He is employed by Nordic and they've grabbed onto Zephyr with both hands. It is their, their platform. So they've got a ton of people working on it, but Marty has been working on the, I don't even know. It's like the pre-processor that has all of the macros in it. And you and I went to that talk at ZDS last year called Macrobatics that explained like how all of this, like device tree stuff is getting, you know, compiled in, built into the project and like where to go when things don't go right, which happens to me a lot. And the way that he explains it and walks through it is really great. There was also a talk from the 2021 ZDS that I saw on YouTube that I watched that like was an aha moment in how your C code pulls in the parts of the device tree. So device tree is like a whole nother language that describes the hardware, like each module, what the address is. So for instance, you would say, I have a UART, the UART is at this address in the memory map of this specific chip. And those things are all built into like the, the tree for Zephyr because manufacturers make sure that their products are in there. And then when you add something to the UART, you say, all right, I have a device on the UART. That's not a good example. It's let's say I squared C, I have a device on I squared C two that is at this device address and it needs this specific driver. And then that file just lives in there. And when you get a different board, let's say you have a chip shortage and you're like, okay, now I have a different, you know, humidity sensor. You can just give it a different overlay file and everything in your C code will be the same because it kind of has like an alias or it has like a way to find, to walk through instances of this one type of sensor. And it kind of makes it so that your C code never has to deal with changes in hardware or minimally has to deal with it. To step back even further, I feel like Zephyr is a real-time operating system, right? So that means it has a scheduler that so we've had, oh shoot, free RTOS. I'm now blanking on his name. Brian Amos was on the show and I'll link that in. Brian's book is how I learned about RTOSs. It's about free RTOS, but it kind of applies to everything. And it's a great book. I highly recommend it. And basically, Zephyr is that, right? There is a scheduler. There's threads. There's queues and all of the semaphores and mutexes and all the things you read about every time you read about it in RTOS. But that's not really why most people are talking about Zephyr, I feel like. Most people talk about Zephyr because of the ecosystem aspect. And that's kind of what Mike has been alluding to as well, where all o"
+  },
+  {
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "guest": "Mike Szczys",
+   "stem": "0622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys",
+   "paragraph_index": 95,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "I forgot about that, but that brings the, the praises of device tree again. There you go. Actually of pin control in this case. Yeah. So the, uh, not on the, not on the actual device itself, but on where the sensors connect to the device, the click headers for that's the micro electronica click headers. There's an RX, TX line and the classic, like they're in the wrong place happened, which took me a while to figure out. I should have, I should have figured that out right away. Um, but you could just go into Zephyr's pin control and remap the pins. And so we didn't have to change anything. That's pretty magical.",
+   "context_before": "Yeah. Yeah. Like I switched RX and TX on all the hardware I send you. That's, that's pretty fun. That's pretty fun for me. Uh, oh yeah.",
+   "context_after": "I did put zero on resistors on there because I had anticipated I may have switched them around, but, um, but yeah. Um, why, why bodge some wires when you can just switch them in, in code? That's, that's much easier.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Yeah. Like I switched RX and TX on all the hardware I send you. That's, that's pretty fun. That's pretty fun for me. Uh, oh yeah. I forgot about that, but that brings the, the praises of device tree again. There you go. Actually of pin control in this case. Yeah. So the, uh, not on the, not on the actual device itself, but on where the sensors connect to the device, the click headers for that's the micro electronica click headers. There's an RX, TX line and the classic, like they're in the wrong place happened, which took me a while to figure out. I should have, I should have figured that out right away. Um, but you could just go into Zephyr's pin control and remap the pins. And so we didn't have to change anything. That's pretty magical. I did put zero on resistors on there because I had anticipated I may have switched them around, but, um, but yeah. Um, why, why bodge some wires when you can just switch them in, in code? That's, that's much easier."
+  },
+  {
+   "episode": 644,
+   "episode_title": "Garbage Ninjas",
+   "episode_url": "https://theamphour.com/644-garbage-ninjas/",
+   "guest": null,
+   "stem": "0644-garbage-ninjas",
+   "paragraph_index": 81,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "It's in the Zephyr device tree. There is a reason to use a part if you don't know. When it's in tree in Zephyr. Right. It's a friend of mine.",
+   "context_before": "Oh, okay. Right. Same one.",
+   "context_after": "Okay. Fair enough. Who else is using Zephyr? Who are the big customers? Who have you got? Hmm.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Oh, okay. Right. Same one. It's in the Zephyr device tree. There is a reason to use a part if you don't know. When it's in tree in Zephyr. Right. It's a friend of mine. Okay. Fair enough. Who else is using Zephyr? Who are the big customers? Who have you got? Hmm."
+  },
+  {
+   "episode": 650,
+   "episode_title": "Accessible ASICs with Andreas Olofsson",
+   "episode_url": "https://theamphour.com/650-accessible-asics-with-andreas-olofsson/",
+   "guest": "Andreas Olofsson",
+   "stem": "0650-accessible-asics-with-andreas-olofsson",
+   "paragraph_index": 172,
+   "depth": "explains",
+   "speaker_raw": "Parallela",
+   "speaker_repaired": "Andreas Olofsson",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Yeah. Yeah. So, so we kind of, we made our life a little bit easier by always having a risk five processor running there. Got it. So we have that as a base, but then the other chiplets, that's where we have the pretty cool auto device tree configuration. Right. So that we can actually, you know, basically build everything on the fly for whatever configuration people put in.",
+   "context_before": "Yeah. Is it running, is running Linux by default? Yeah. We use a Yocto. Yocto. Cool. Yeah. I guess it makes sense if you're. So then you, you have to dynamically configure based on the chiplet or is it like enough of a standardized interface? Like all of them have to have a CPU. So you're at least have that as the Yocto input.",
+   "context_after": "Yeah. That is, that is very cool. And then again, like thinking about how you'd expect people to utilize this sort of thing. So they could try it out. They can get in there, try out the ML models and things like that. The Verilog is not available or it is available. I'm not sure. Actually. Yeah. It wouldn't be able to replicate it locally. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Is it running, is running Linux by default? Yeah. We use a Yocto. Yocto. Cool. Yeah. I guess it makes sense if you're. So then you, you have to dynamically configure based on the chiplet or is it like enough of a standardized interface? Like all of them have to have a CPU. So you're at least have that as the Yocto input. Yeah. Yeah. So, so we kind of, we made our life a little bit easier by always having a risk five processor running there. Got it. So we have that as a base, but then the other chiplets, that's where we have the pretty cool auto device tree configuration. Right. So that we can actually, you know, basically build everything on the fly for whatever configuration people put in. Yeah. That is, that is very cool. And then again, like thinking about how you'd expect people to utilize this sort of thing. So they could try it out. They can get in there, try out the ML models and things like that. The Verilog is not available or it is available. I'm not sure. Actually. Yeah. It wouldn't be able to replicate it locally. Yeah."
+  },
+  {
+   "episode": 651,
+   "episode_title": "Learning Computing with Jeff Geerling",
+   "episode_url": "https://theamphour.com/651-learning-computing-with-jeff-geerling/",
+   "guest": "Jeff Geerling",
+   "stem": "0651-learning-computing-with-jeff-geerling",
+   "paragraph_index": 129,
+   "depth": "explains",
+   "speaker_raw": "Jeff Geerling",
+   "speaker_repaired": "Jeff Geerling",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "It's mostly, it's mostly like the, the bootloaders and the way that they initialize, they just don't, they don't have, they don't have them set up with, there's a thing in arm called system ready. They don't have them set up with UAFI or something like that, a standard to, to get the system to boot. So you have to put in the device tree and you have to put in all the special things for each board. And it's, to me, that's annoying. It's, it's a problem that I think stems from them being so low end that it was kind of a necessity to do that stuff. But now these boards all have enough memory and they have enough CPU to be able to do these things. I don't know. It's not a huge priority for Raspberry Pi because they sell everything for that they make right now. Yeah. But I think it could be a game changer. If you could just buy a Raspberry Pi and download windows for arm, which doesn't exist. You have to hack it to get that. But if you get download windows or download Linux or whatever.",
+   "context_before": "What is the restriction there? Just like the build, like who's building for these different systems?",
+   "context_after": "Oh, Jeff, don't do that. No, no windows for arm on, come on.",
+   "context_before_speaker": "Jeff Geerling",
+   "context_after_speaker": "Jeff Geerling",
+   "text": "What is the restriction there? Just like the build, like who's building for these different systems? It's mostly, it's mostly like the, the bootloaders and the way that they initialize, they just don't, they don't have, they don't have them set up with, there's a thing in arm called system ready. They don't have them set up with UAFI or something like that, a standard to, to get the system to boot. So you have to put in the device tree and you have to put in all the special things for each board. And it's, to me, that's annoying. It's, it's a problem that I think stems from them being so low end that it was kind of a necessity to do that stuff. But now these boards all have enough memory and they have enough CPU to be able to do these things. I don't know. It's not a huge priority for Raspberry Pi because they sell everything for that they make right now. Yeah. But I think it could be a game changer. If you could just buy a Raspberry Pi and download windows for arm, which doesn't exist. You have to hack it to get that. But if you get download windows or download Linux or whatever. Oh, Jeff, don't do that. No, no windows for arm on, come on."
+  },
+  {
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "guest": "Benjamin Cab\u00e9",
+   "stem": "0653-benjamin-cabe-nose-zephyr",
+   "paragraph_index": 20,
+   "depth": "explains",
+   "speaker_raw": "Benjamin Kabe",
+   "speaker_repaired": "Benjamin Cabe",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Yeah, that's a really good point. And that's actually a great segue into one sort of like technical detail of Zephyr that makes everyone's life mostly better. It comes with headaches sometimes, but usually it's actually really, really powerful. It's this whole notion of the device tree and just like, it actually comes from, oh yeah. Is this a good thing or a bad thing? No, it's a bad thing.",
+   "context_before": "I disagree with that because like if Espressif has their own boards, right? If they have like, I think maybe the vendor specific boards, but then I think what you're maybe saying is the boards are also outside of the vendor made boards, right? So like an Adafruit board might be supported within Zephyr, whereas like an Adafruit ESP32 board won't necessarily be, you could probably like glue it together or it looks kind of like in ESPIDF, but it's not going to be directly supported.",
+   "context_after": "It's mostly a good thing. This is painful. I mean, this is, what this is, is actually, so you and I got to hang out a little bit in Prague last year at the embedded open source summit. And the thing I keep talking about when I, there, right. So we were there talking about Zephyr. We love Zephyr. Zephyr had, there was like a mini conference there, but there was also all these embedded Linux folks and they all kept coming over and then be like, oh, I get all this. Right. I just, I get it. I know how it works. Cause like I'm in embedded Linux. I do device tree. I do all this stuff. And I know like all these different paradigms and I'm like, okay, well I'm a hardware person. So like I'm moving, you know, so going up the stack, I think is a lot harder than coming down the stack.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "I disagree with that because like if Espressif has their own boards, right? If they have like, I think maybe the vendor specific boards, but then I think what you're maybe saying is the boards are also outside of the vendor made boards, right? So like an Adafruit board might be supported within Zephyr, whereas like an Adafruit ESP32 board won't necessarily be, you could probably like glue it together or it looks kind of like in ESPIDF, but it's not going to be directly supported. Yeah, that's a really good point. And that's actually a great segue into one sort of like technical detail of Zephyr that makes everyone's life mostly better. It comes with headaches sometimes, but usually it's actually really, really powerful. It's this whole notion of the device tree and just like, it actually comes from, oh yeah. Is this a good thing or a bad thing? No, it's a bad thing. It's mostly a good thing. This is painful. I mean, this is, what this is, is actually, so you and I got to hang out a little bit in Prague last year at the embedded open source summit. And the thing I keep talking about when I, there, right. So we were there talking about Zephyr. We love Zephyr. Zephyr had, there was like a mini conference there, but there was also all these embedded Linux folks and they all kept coming over and then be like, oh, I get all this. Right. I just, I get it. I know how it works. Cause like I'm in embedded Linux. I do device tree. I do all this stuff. And I know like all these different paradigms and I'm like, okay, well I'm a hardware person. So like I'm moving, you know, so going up the stack, I think is a lot harder than coming down the stack."
+  },
+  {
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "guest": "Benjamin Cab\u00e9",
+   "stem": "0653-benjamin-cabe-nose-zephyr",
+   "paragraph_index": 21,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "It's mostly a good thing. This is painful. I mean, this is, what this is, is actually, so you and I got to hang out a little bit in Prague last year at the embedded open source summit. And the thing I keep talking about when I, there, right. So we were there talking about Zephyr. We love Zephyr. Zephyr had, there was like a mini conference there, but there was also all these embedded Linux folks and they all kept coming over and then be like, oh, I get all this. Right. I just, I get it. I know how it works. Cause like I'm in embedded Linux. I do device tree. I do all this stuff. And I know like all these different paradigms and I'm like, okay, well I'm a hardware person. So like I'm moving, you know, so going up the stack, I think is a lot harder than coming down the stack.",
+   "context_before": "Yeah, that's a really good point. And that's actually a great segue into one sort of like technical detail of Zephyr that makes everyone's life mostly better. It comes with headaches sometimes, but usually it's actually really, really powerful. It's this whole notion of the device tree and just like, it actually comes from, oh yeah. Is this a good thing or a bad thing? No, it's a bad thing.",
+   "context_after": "Hmm. Yep. Yep. Yep. But yeah, I was sort of like, yeah, thinking about what you just described. Well, say there is the official ESP32 S3 dev kit from Espressif. And then there's a small variation in the form of whatever Adafruit provides. They have a couple additional LEDs and a button, whatever. What the device tree makes really easy to do is basically just describe and pretty much in a declarative way. What's like, what's the mappings between the different pins. And it turns out that it might be just inheriting most of the stuff like the upstream ESP32 S3, SOC and reference dev kit. And just tweaking a few things. In most cases, you don't even have to do this tweaking because someone has done it for you and it's already available as a supported board in Zephyr. And you go to the document",
+   "context_before_speaker": "Benjamin Cabe",
+   "context_after_speaker": "Benjamin Cabe",
+   "text": "Yeah, that's a really good point. And that's actually a great segue into one sort of like technical detail of Zephyr that makes everyone's life mostly better. It comes with headaches sometimes, but usually it's actually really, really powerful. It's this whole notion of the device tree and just like, it actually comes from, oh yeah. Is this a good thing or a bad thing? No, it's a bad thing. It's mostly a good thing. This is painful. I mean, this is, what this is, is actually, so you and I got to hang out a little bit in Prague last year at the embedded open source summit. And the thing I keep talking about when I, there, right. So we were there talking about Zephyr. We love Zephyr. Zephyr had, there was like a mini conference there, but there was also all these embedded Linux folks and they all kept coming over and then be like, oh, I get all this. Right. I just, I get it. I know how it works. Cause like I'm in embedded Linux. I do device tree. I do all this stuff. And I know like all these different paradigms and I'm like, okay, well I'm a hardware person. So like I'm moving, you know, so going up the stack, I think is a lot harder than coming down the stack. Hmm. Yep. Yep. Yep. But yeah, I was sort of like, yeah, thinking about what you just described. Well, say there is the official ESP32 S3 dev kit from Espressif. And then there's a small variation in the form of whatever Adafruit provides. They have a couple additional LEDs and a button, whatever. What the device tree makes really easy to do is basically just describe and pretty much in a declarative way. What's like, what's the mappings between the different pins. And it turns out that it might be just inheriting most of the stuff like the upstream ESP32 S3, SOC and reference dev kit. And just tweaking a few things. In most cases, you don't even have to do this tweaking because someone has done it for you and it's already available as a supported board in Zephyr. And you go to the document"
+  },
+  {
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "guest": "Benjamin Cab\u00e9",
+   "stem": "0653-benjamin-cabe-nose-zephyr",
+   "paragraph_index": 22,
+   "depth": "explains",
+   "speaker_raw": "Benjamin Kabe",
+   "speaker_repaired": "Benjamin Cabe",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Hmm. Yep. Yep. Yep. But yeah, I was sort of like, yeah, thinking about what you just described. Well, say there is the official ESP32 S3 dev kit from Espressif. And then there's a small variation in the form of whatever Adafruit provides. They have a couple additional LEDs and a button, whatever. What the device tree makes really easy to do is basically just describe and pretty much in a declarative way. What's like, what's the mappings between the different pins. And it turns out that it might be just inheriting most of the stuff like the upstream ESP32 S3, SOC and reference dev kit. And just tweaking a few things. In most cases, you don't even have to do this tweaking because someone has done it for you and it's already available as a supported board in Zephyr. And you go to the documentation and you have everything you need.",
+   "context_before": "It's mostly a good thing. This is painful. I mean, this is, what this is, is actually, so you and I got to hang out a little bit in Prague last year at the embedded open source summit. And the thing I keep talking about when I, there, right. So we were there talking about Zephyr. We love Zephyr. Zephyr had, there was like a mini conference there, but there was also all these embedded Linux folks and they all kept coming over and then be like, oh, I get all this. Right. I just, I get it. I know how it works. Cause like I'm in embedded Linux. I do device tree. I do all this stuff. And I know like all these different paradigms and I'm like, okay, well I'm a hardware person. So like I'm moving, you know, so going up the stack, I think is a lot harder than coming down the stack.",
+   "context_after": "Yeah, it's just, it's very confusing at first. I mean, I think we should just be very clear about it. It is. So at least coming from, coming up the stack, like I said, I'm a hardware dummy. I'm coming up the stack. Like I was so, so confused at first. And in my context with this was like, I had talked about building a board with an ERP52 840. Everybody's like, oh, you should try this new thing, Zephyr. This was like three or four years ago. So Zephyr was a little bit less developed even than it is now, which has only been three or four years. And it's like, oh man, I had no idea what I was doing because I was used to like IDEs where it's like you're digging down, you know.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "It's mostly a good thing. This is painful. I mean, this is, what this is, is actually, so you and I got to hang out a little bit in Prague last year at the embedded open source summit. And the thing I keep talking about when I, there, right. So we were there talking about Zephyr. We love Zephyr. Zephyr had, there was like a mini conference there, but there was also all these embedded Linux folks and they all kept coming over and then be like, oh, I get all this. Right. I just, I get it. I know how it works. Cause like I'm in embedded Linux. I do device tree. I do all this stuff. And I know like all these different paradigms and I'm like, okay, well I'm a hardware person. So like I'm moving, you know, so going up the stack, I think is a lot harder than coming down the stack. Hmm. Yep. Yep. Yep. But yeah, I was sort of like, yeah, thinking about what you just described. Well, say there is the official ESP32 S3 dev kit from Espressif. And then there's a small variation in the form of whatever Adafruit provides. They have a couple additional LEDs and a button, whatever. What the device tree makes really easy to do is basically just describe and pretty much in a declarative way. What's like, what's the mappings between the different pins. And it turns out that it might be just inheriting most of the stuff like the upstream ESP32 S3, SOC and reference dev kit. And just tweaking a few things. In most cases, you don't even have to do this tweaking because someone has done it for you and it's already available as a supported board in Zephyr. And you go to the documentation and you have everything you need. Yeah, it's just, it's very confusing at first. I mean, I think we should just be very clear about it. It is. So at least coming from, coming up the stack, like I said, I'm a hardware dummy. I'm coming up the stack. Like I was so, so confused at first. And in my context with this was like, I had talked about building a board with an ERP52 840. Everybody's like, oh, you should try this new thing, Zephyr. This was like three or four years ago. So Zephyr was a little bit less developed even than it is now, which has only been three or four years. And it's like, oh man, I had no idea what I was doing because I was used to like IDEs where it's like you're digging down, you know."
+  },
+  {
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "guest": "Benjamin Cab\u00e9",
+   "stem": "0653-benjamin-cabe-nose-zephyr",
+   "paragraph_index": 47,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "I just, I have my vision of the person listening right now and it's, it's me. It's the lone wolf, Benjamin, the lone wolf hardware engineer struggling on the bench. They're, they're sitting there late. They're listening at two in the morning. They're soldering. They're swearing. They're drinking coffee, even though it's two in the morning. And they're like, I don't need device tree. I just, I just write to the register directly. Which is fair. It's, I mean. I know how to or stuff together. I could bit mask. Yeah. But I think that's actually, so that's another interesting point too, is that like, so there's all these layers of abstraction, but you don't have to use all of them either. Like that's another thing that I feel like is important to call out is that like, yes, you can use the Zephyr sensor driver ecosystem. What is it called? A subsystem. Right. Yep. But you can also do a raw I squared C read or write. And I do that kind of stuff all the time to just hack around something.",
+   "context_before": "Or when there's, and I get that this might not be always practical or might not reflect the reality of every development team out there. But another aspect is like, there might actually be several people involved in like building the full app. Like if you're building a smartwatch, I doubt that it's the same firmware engineer. That's going to be doing the like low level sensor integration, low power management, uh, crafting the, the fancy GUI with like really responsive GUI and God knows whatever else. Like communication with an IOT internet cloud platform. There might be several people involved. It might be nice to be able to sort of simulate, emulate some kind of minimal functionality for each component of the system. Right. And the software makes that pretty easy.",
+   "context_after": "Yeah. And either way is fine. And even if you start bypassing some of the subsystems and some of the higher level obstructions, because you feel like you don't need them, you will likely still benefit from things like power management, etc. Like even if you go like really low, there will probably still be some level of Zephyr abstraction that will still make things better than if you had like done like literally bare metal. If I'm making any sense, even if like the I squared C right thingy that you're describing, it's still going to be done the Zephyr way in that it might do some like fancy integrations with power management. And when you really don't need a square C anymore, you will maybe power off some, some peripherals and things like that.",
+   "context_before_speaker": "Benjamin Cabe",
+   "context_after_speaker": "Benjamin Cabe",
+   "text": "Or when there's, and I get that this might not be always practical or might not reflect the reality of every development team out there. But another aspect is like, there might actually be several people involved in like building the full app. Like if you're building a smartwatch, I doubt that it's the same firmware engineer. That's going to be doing the like low level sensor integration, low power management, uh, crafting the, the fancy GUI with like really responsive GUI and God knows whatever else. Like communication with an IOT internet cloud platform. There might be several people involved. It might be nice to be able to sort of simulate, emulate some kind of minimal functionality for each component of the system. Right. And the software makes that pretty easy. I just, I have my vision of the person listening right now and it's, it's me. It's the lone wolf, Benjamin, the lone wolf hardware engineer struggling on the bench. They're, they're sitting there late. They're listening at two in the morning. They're soldering. They're swearing. They're drinking coffee, even though it's two in the morning. And they're like, I don't need device tree. I just, I just write to the register directly. Which is fair. It's, I mean. I know how to or stuff together. I could bit mask. Yeah. But I think that's actually, so that's another interesting point too, is that like, so there's all these layers of abstraction, but you don't have to use all of them either. Like that's another thing that I feel like is important to call out is that like, yes, you can use the Zephyr sensor driver ecosystem. What is it called? A subsystem. Right. Yep. But you can also do a raw I squared C read or write. And I do that kind of stuff all the time to just hack around something. Yeah. And either way is fine. And even if you start bypassing some of the subsystems and some of the higher level obstructions, because you feel like you don't need them, you will likely still benefit from things like power management, etc. Like even if you go like really low, there will probably still be some level of Zephyr abstraction that will still make things better than if you had like done like literally bare metal. If I'm making any sense, even if like the I squared C right thingy that you're describing, it's still going to be done the Zephyr way in that it might do some like fancy integrations with power management. And when you really don't need a square C anymore, you will maybe power off some, some peripherals and things like that."
+  },
+  {
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "guest": "Benjamin Cab\u00e9",
+   "stem": "0653-benjamin-cabe-nose-zephyr",
+   "paragraph_index": 77,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Well, I actually grabbed a bunch of that stuff. And another point that I always make is that I always, when I'm searching for new parts that I put in, I usually go to the tree first and see what's in tree, because that's actually a benefit. Like, this is like a thing that I tell vendors too. I'm like, Hey, if you're in tree, I'm going to use your stuff. Right. So it's like getting new vendors in there, especially like sensor vendors. I feel like that, that's a thing.",
+   "context_before": "Yeah. So you were, and that was close enough to what you wanted to do. Yeah.",
+   "context_after": "One tip for you there and for the audience. One thing that you should do as well is not only looking at what's supported in the tree, but usually there's a pretty big pipeline of pull requests and contributions from the community that are probably going to make it really soon. Uh huh. And like every week there's a handful of new drivers that are supported by the community. So then how can I learn about these new drivers and new boards on a weekly basis?",
+   "context_before_speaker": "Benjamin Cabe",
+   "context_after_speaker": "Benjamin Cabe",
+   "text": "Yeah. So you were, and that was close enough to what you wanted to do. Yeah. Well, I actually grabbed a bunch of that stuff. And another point that I always make is that I always, when I'm searching for new parts that I put in, I usually go to the tree first and see what's in tree, because that's actually a benefit. Like, this is like a thing that I tell vendors too. I'm like, Hey, if you're in tree, I'm going to use your stuff. Right. So it's like getting new vendors in there, especially like sensor vendors. I feel like that, that's a thing. One tip for you there and for the audience. One thing that you should do as well is not only looking at what's supported in the tree, but usually there's a pretty big pipeline of pull requests and contributions from the community that are probably going to make it really soon. Uh huh. And like every week there's a handful of new drivers that are supported by the community. So then how can I learn about these new drivers and new boards on a weekly basis?"
+  },
+  {
+   "episode": 675,
+   "episode_title": "Changing Course with Shawn Hymel",
+   "episode_url": "https://theamphour.com/675-changing-course-with-shawn-hymel/",
+   "guest": "Shawn Hymel",
+   "stem": "0675-changing-course-with-shawn-hymel",
+   "paragraph_index": 70,
+   "depth": "explains",
+   "speaker_raw": "Shawn Hymel",
+   "speaker_repaired": "Shawn Hymel",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:bare-metal-programming",
+   "concept_sources": [
+    "child:bare-metal-programming"
+   ],
+   "concepts": [
+    "bare-metal-programming"
+   ],
+   "paragraph_text": "And I've been doing it a bunch, too, you know? Yeah, no. And that's actually one of the inspirations was that virtual course you gave that was intro to Zephyr with Goliath. You know, may help me understand both Zephyr, how you teach this stuff. And it's hard. Like you did it in like two hours. And it's so it's a huge project. There's so many things to cover in it. And so it's exactly like you said. This is the problem I ran into. I came from the bare metal world where it's everything is a super loop. I'm writing I squared C stuff by hand. And then suddenly you're like K config. What the hell is K config? And so if you're coming from the Linux world, great. But that's right. Yeah. Yeah. That's where I plan to go. It's like, oh, somebody probably has Arduino experience. You know, that that lower level. I'm used to like bare metal or Arduino. How do we get them to do this? And it's probably like, OK, we're going to introduce a device tree and we're going to write our own driver and plug it in and blah, blah, blah. So I'm going to probably do bottom up where, you know, maybe I'll start with the top down of like, oh, here's a board. Here's a board config. Here's how we blink and read a sensor. Now that you know how to do that, let's jump into writing your own stuff because using to me making something really useful means extensibility. And how do you teach that going beyond just the here's the demo board? Because not many people are going to deploy with just the demo board. Not going to happen.",
+   "context_before": "I don't care. No, this is all stuff that needs to be done. I mean, like it's yeah, it's like, oh, well, there's this one course. He solved it. You know, there is not that. That is not a thing, you know, and people need help on a lot of things. And it's such a specific with Zephyr. It's such a fast moving field. I don't know if you heard Carlos. He was on embedded.fm as well. You know, just hearing about like how first off, how they build Zephyr. Carlos is one of the leads at Nordic. And it's such a big project. And there's so much changing. And it's getting so much adoption. It's just there's it's such a big, big field that people can jump into it any at any space. So, yeah. Don't worry about me, Sean. I'm going to take your course. I need to get better at it.",
+   "context_after": "Yeah, I really did. I really liked your you did bottom up on the free RTOS. So that was one of your DigiKey series, right?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "I don't care. No, this is all stuff that needs to be done. I mean, like it's yeah, it's like, oh, well, there's this one course. He solved it. You know, there is not that. That is not a thing, you know, and people need help on a lot of things. And it's such a specific with Zephyr. It's such a fast moving field. I don't know if you heard Carlos. He was on embedded.fm as well. You know, just hearing about like how first off, how they build Zephyr. Carlos is one of the leads at Nordic. And it's such a big project. And there's so much changing. And it's getting so much adoption. It's just there's it's such a big, big field that people can jump into it any at any space. So, yeah. Don't worry about me, Sean. I'm going to take your course. I need to get better at it. And I've been doing it a bunch, too, you know? Yeah, no. And that's actually one of the inspirations was that virtual course you gave that was intro to Zephyr with Goliath. You know, may help me understand both Zephyr, how you teach this stuff. And it's hard. Like you did it in like two hours. And it's so it's a huge project. There's so many things to cover in it. And so it's exactly like you said. This is the problem I ran into. I came from the bare metal world where it's everything is a super loop. I'm writing I squared C stuff by hand. And then suddenly you're like K config. What the hell is K config? And so if you're coming from the Linux world, great. But that's right. Yeah. Yeah. That's where I plan to go. It's like, oh, somebody probably has Arduino experience. You know, that that lower level. I'm used to like bare metal or Arduino. How do we get them to do this? And it's probably like, OK, we're going to introduce a device tree and we're going to write our own driver and plug it in and blah, blah, blah. So I'm going to probably do bottom up where, you know, maybe I'll start with the top down of like, oh, here's a board. Here's a board config. Here's how we blink and read a sensor. Now that you know how to do that, let's jump into writing your own stuff because using to me making something really useful means extensibility. And how do you teach that going beyond just the here's the demo board? Because not many people are going to deploy with just the demo board. Not going to happen. Yeah, I really did. I really liked your you did bottom up on the free RTOS. So that was one of your DigiKey series, right?"
+  },
+  {
+   "episode": 683,
+   "episode_title": "Troubleshooting is the skill",
+   "episode_url": "https://theamphour.com/683-troubleshooting-is-the-skill/",
+   "guest": null,
+   "stem": "0683-troubleshooting-is-the-skill",
+   "paragraph_index": 14,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "No, it's great. I mean, that is one area that I, I mean, obviously, it's not like I'm like, oh, it's going to take my job. It's like, no competition there. For me, it was, I've been doing some Zephyr stuff, and the thing I'm not sure about is, like, Zephyr moves pretty fast, right? There's, like, a lot of, like, development on the project, and you don't really know if it's going to suggest something that's, like, not correct anymore. That's the only thing I've kind of, but the compiler tells you, you know, like, so that it's just, like, you might run into that sort of thing, but it helped me troubleshoot device tree stuff, which is, like, an ongoing issue of, like, how you connect stuff together, and that was a great use case of just, like, hey, you know, kind of, like, structure, like, checking structure, that sort of thing has been very, very useful.",
+   "context_before": "Yeah.",
+   "context_after": "Right. No, I thought it was fantastic. Like, for guys like me who don't code, like, I can code, but I do it so infrequently these days that I almost have to, oh, God, how do I code again? Like, it takes me, like, a day to get back into it or something for, you know, some dummy like me who, you know, just doesn't do it a lot, and I would use it as a first step just to get some base code of something running just so that I'm, you know, actually I have something to work with rather than just write it from scratch. You know, the old school days of just, like, starting from scratch",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah. No, it's great. I mean, that is one area that I, I mean, obviously, it's not like I'm like, oh, it's going to take my job. It's like, no competition there. For me, it was, I've been doing some Zephyr stuff, and the thing I'm not sure about is, like, Zephyr moves pretty fast, right? There's, like, a lot of, like, development on the project, and you don't really know if it's going to suggest something that's, like, not correct anymore. That's the only thing I've kind of, but the compiler tells you, you know, like, so that it's just, like, you might run into that sort of thing, but it helped me troubleshoot device tree stuff, which is, like, an ongoing issue of, like, how you connect stuff together, and that was a great use case of just, like, hey, you know, kind of, like, structure, like, checking structure, that sort of thing has been very, very useful. Right. No, I thought it was fantastic. Like, for guys like me who don't code, like, I can code, but I do it so infrequently these days that I almost have to, oh, God, how do I code again? Like, it takes me, like, a day to get back into it or something for, you know, some dummy like me who, you know, just doesn't do it a lot, and I would use it as a first step just to get some base code of something running just so that I'm, you know, actually I have something to work with rather than just write it from scratch. You know, the old school days of just, like, starting from scratch"
+  },
+  {
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "guest": "Michael Gielda",
+   "stem": "0691-system-designer-lets-you-try-everything-with-michael-gielda",
+   "paragraph_index": 5,
+   "depth": "explains",
+   "speaker_raw": "Michael Gieldo",
+   "speaker_repaired": "Michael Gielda",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:bare-metal-programming",
+    "core"
+   ],
+   "concepts": [
+    "bare-metal-programming",
+    "device-tree"
+   ],
+   "paragraph_text": "Yeah, oh, Zephyr has been pretty central to our story. We've been involved with the project since almost the very beginning. Because it just makes sense. It structures data. It makes microcontrollers a little bit more like Linux devices. For those of you who don't know, Zephyr is structured around device trees and data-driven flows that allow you to build your binaries and work with your hardware in a structured way. Which is kind of a difference from how some other operating systems do it or how people do it in the bare metal world. And because of that, we've always liked Zephyr and started using it many years ago for all of our projects. Whenever we can, of course, afford it, there are clients who want to use different things. But most of the time, if we can have a say, we're going to use Zephyr. And Zephyr...",
+   "context_before": "Yeah, that's great. Well, let's start right in there with Zephyr stuff. So you and I know each other from the Zephyr project. I think you were just re-elected as the chair, marketing chair. Is that right? Congratulations, Mr. Chairman. Thank you. Doing your work here in the AMP Hour, talking about marketing. And yeah, so how does AMP Micro kind of work with the Zephyr project? And what are some of the new things you've been working on in Zephyr?",
+   "context_after": "Also, we should say that some of the hardware engineers listening right now, they lament the fact that it's more like Linux. But it's actually, as a hardware person kind of coming up the stack, I always think like, man, this is so crappy to learn that stuff. But once you do, you start to kind of like, you're like, I see it now. Okay. All right. All right.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah, that's great. Well, let's start right in there with Zephyr stuff. So you and I know each other from the Zephyr project. I think you were just re-elected as the chair, marketing chair. Is that right? Congratulations, Mr. Chairman. Thank you. Doing your work here in the AMP Hour, talking about marketing. And yeah, so how does AMP Micro kind of work with the Zephyr project? And what are some of the new things you've been working on in Zephyr? Yeah, oh, Zephyr has been pretty central to our story. We've been involved with the project since almost the very beginning. Because it just makes sense. It structures data. It makes microcontrollers a little bit more like Linux devices. For those of you who don't know, Zephyr is structured around device trees and data-driven flows that allow you to build your binaries and work with your hardware in a structured way. Which is kind of a difference from how some other operating systems do it or how people do it in the bare metal world. And because of that, we've always liked Zephyr and started using it many years ago for all of our projects. Whenever we can, of course, afford it, there are clients who want to use different things. But most of the time, if we can have a say, we're going to use Zephyr. And Zephyr... Also, we should say that some of the hardware engineers listening right now, they lament the fact that it's more like Linux. But it's actually, as a hardware person kind of coming up the stack, I always think like, man, this is so crappy to learn that stuff. But once you do, you start to kind of like, you're like, I see it now. Okay. All right. All right."
+  },
+  {
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "guest": "Michael Gielda",
+   "stem": "0691-system-designer-lets-you-try-everything-with-michael-gielda",
+   "paragraph_index": 11,
+   "depth": "explains",
+   "speaker_raw": "Michael Gieldo",
+   "speaker_repaired": "Michael Gielda",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Yeah, exactly. And I think maybe to illustrate how this is good, we should look at the device tree aspect and the way we use it with Renode and the Zephyr dashboard and so on. So essentially what we do is we look at the entire ecosystem of hardware supported in Zephyr and not just Zephyr, by the way. We're also using Uboot and Linux in that way. But concentrating on Zephyr specifically, Zephyr has a really good data set about, you know, hundreds of platforms. It's like 800 maybe right now where all of them are described in one way. And everyone's trying to make sure that this description is correct, up to date, useful, easily parsable. There are tools to, you know, to process this data. So we can take that data and process it to output Renode simulation files. And so if we have support for specific cores and peripherals that are included in specific SoCs on specific boards, that means that the layout, like how these things are arranged on the system bus and, you know, what's where, which chip has how many UARTs and so on. All of this information we're getting from Zephyr and we can just generate that automatically. And assuming we have a model for a specific, let's say UART or I2C controller, that'll just work. And we can essentially run as many as, I think, 620 platforms in Renode now because of this. And of course, like we historically knew it was possible to do this, but it wasn't before we tried. And we actually built the Renode Zephyr dashboard where we take Zephyr, we build it across all the targets. We run simulation and a huge, massive CI with like thousands of, you know, because there's like 12 binaries across 800 boards. So it's what, 10,000 different binaries that we built. And then we run all of them in Renode and actually most of them do run, right? So it's like binary compatible firmware running in simulation. The scale is like impossible without automation. We used to do this by hand. Obviously, we never got anywhere, you know, near that number, right? We had like 50 demos and we're super happy. Oh, we have 50 demos, right? Now we have like, I don't know, 5,000 demos more.",
+   "context_before": "That, I feel like that, it sounds bad, but that was good for the Zephyr project. You know, like a lot of the chip vendors were calling in micro and other companies to be like, hey, how do we get in on this? Because we want to be able to not only like have this as an option because our customers are asking for it. They're also asking it because new customers were walking the door and being like, hey, I can't get my chips from other vendor. I'd love to switch to you. Can you, can you supply this? And they're like, yes, we can. If only we had the firmware and software, higher level tools tooling built on top of it.",
+   "context_after": "Yeah, that's wild. And when you say the binaries there, you mean like those are kind of the test programs or like the philosopher's table or whatever that's called? Like the test programs that are running actually on the core, interfacing with peripherals, like actually testing out the capabilities and showing that it's actually cross-compiling to all these different targets?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "That, I feel like that, it sounds bad, but that was good for the Zephyr project. You know, like a lot of the chip vendors were calling in micro and other companies to be like, hey, how do we get in on this? Because we want to be able to not only like have this as an option because our customers are asking for it. They're also asking it because new customers were walking the door and being like, hey, I can't get my chips from other vendor. I'd love to switch to you. Can you, can you supply this? And they're like, yes, we can. If only we had the firmware and software, higher level tools tooling built on top of it. Yeah, exactly. And I think maybe to illustrate how this is good, we should look at the device tree aspect and the way we use it with Renode and the Zephyr dashboard and so on. So essentially what we do is we look at the entire ecosystem of hardware supported in Zephyr and not just Zephyr, by the way. We're also using Uboot and Linux in that way. But concentrating on Zephyr specifically, Zephyr has a really good data set about, you know, hundreds of platforms. It's like 800 maybe right now where all of them are described in one way. And everyone's trying to make sure that this description is correct, up to date, useful, easily parsable. There are tools to, you know, to process this data. So we can take that data and process it to output Renode simulation files. And so if we have support for specific cores and peripherals that are included in specific SoCs on specific boards, that means that the layout, like how these things are arranged on the system bus and, you know, what's where, which chip has how many UARTs and so on. All of this information we're getting from Zephyr and we can just generate that automatically. And assuming we have a model for a specific, let's say UART or I2C controller, that'll just work. And we can essentially run as many as, I think, 620 platforms in Renode now because of this. And of course, like we historically knew it was possible to do this, but it wasn't before we tried. And we actually built the Renode Zephyr dashboard where we take Zephyr, we build it across all the targets. We run simulation and a huge, massive CI with like thousands of, you know, because there's like 12 binaries across 800 boards. So it's what, 10,000 different binaries that we built. And then we run all of them in Renode and actually most of them do run, right? So it's like binary compatible firmware running in simulation. The scale is like impossible without automation. We used to do this by hand. Obviously, we never got anywhere, you know, near that number, right? We had like 50 demos and we're super happy. Oh, we have 50 demos, right? Now we have like, I don't know, 5,000 demos more. Yeah, that's wild. And when you say the binaries there, you mean like those are kind of the test programs or like the philosopher's table or whatever that's called? Like the test programs that are running actually on the core, interfacing with peripherals, like actually testing out the capabilities and showing that it's actually cross-compiling to all these different targets?"
+  },
+  {
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "guest": "Mark Palmeri",
+   "stem": "0711-medical-electronics-education-with-mark-palmeri",
+   "paragraph_index": 39,
+   "depth": "explains",
+   "speaker_raw": "Mark Palmieri",
+   "speaker_repaired": "Mark Palmeri",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "Yeah. Tooling was like if you wanted to stay within an open source world, Eclipse would be your tool. And Eclipse had some stuff. But again, Eclipse was not designed just for doing that sort of thing. And it was a bit of a mess. Or you had to use a really proprietary tooling. When Zephyr came along, for me, it was the perfect balance from an educational standpoint and from a long-term performance standpoint. Because Zephyr has the day one mindset of solving this problem of like multiple chips in kind of a hardware landscape that needed to be addressed with a common firmware set. Meaning if I had a comms chip and a processing chip and something else and they were different manufacturers and different everything, I didn't want to write one firmware for one, one firmware for the other, and have to somehow marry them together in some complex tooling. And so with the Zephyr approach of kind of creating the device tree as a first-class citizen for hardware description, and then separating that from what would be kind of more of the operational logic of the actual source code, from a teaching standpoint, that was extremely valuable to me. Now, I will say device trees do not make the most sense to this student who has never heard of this. If you've never dabbled in the Linux world, I totally get it. Like that's that, but selling early on that, hey, cost-wise to a company doing a chip change is sometimes a highly draconian process. It is brutally expensive because when hardware description is integrated and embedded into the actual code itself, you just have a disaster unwrapping it and it's ripe for bugs and all sorts of unknown kind of corner cases you won't know about. So they kind of buy into that early on is then like, okay, I'm going to separate things like pin mappings and device controller specification from what I want to do with those entities.",
+   "context_before": "Tooling was often Eclipse.",
+   "context_after": "I think one thing you could even point out as well is just like pointing to, you could probably go crack open 30 medical devices and you're going to find chipsets from Nordic, big Zephyr, you know, proponent, NXP, big Zephyr proponent, Psylabs just got into the Zephyr game, you know, ST, they got into the Zephyr. But like, it's like you could very easily draw some lines and be like, look, you now have access to all of this stuff with some effort.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Tooling was often Eclipse. Yeah. Tooling was like if you wanted to stay within an open source world, Eclipse would be your tool. And Eclipse had some stuff. But again, Eclipse was not designed just for doing that sort of thing. And it was a bit of a mess. Or you had to use a really proprietary tooling. When Zephyr came along, for me, it was the perfect balance from an educational standpoint and from a long-term performance standpoint. Because Zephyr has the day one mindset of solving this problem of like multiple chips in kind of a hardware landscape that needed to be addressed with a common firmware set. Meaning if I had a comms chip and a processing chip and something else and they were different manufacturers and different everything, I didn't want to write one firmware for one, one firmware for the other, and have to somehow marry them together in some complex tooling. And so with the Zephyr approach of kind of creating the device tree as a first-class citizen for hardware description, and then separating that from what would be kind of more of the operational logic of the actual source code, from a teaching standpoint, that was extremely valuable to me. Now, I will say device trees do not make the most sense to this student who has never heard of this. If you've never dabbled in the Linux world, I totally get it. Like that's that, but selling early on that, hey, cost-wise to a company doing a chip change is sometimes a highly draconian process. It is brutally expensive because when hardware description is integrated and embedded into the actual code itself, you just have a disaster unwrapping it and it's ripe for bugs and all sorts of unknown kind of corner cases you won't know about. So they kind of buy into that early on is then like, okay, I'm going to separate things like pin mappings and device controller specification from what I want to do with those entities. I think one thing you could even point out as well is just like pointing to, you could probably go crack open 30 medical devices and you're going to find chipsets from Nordic, big Zephyr, you know, proponent, NXP, big Zephyr proponent, Psylabs just got into the Zephyr game, you know, ST, they got into the Zephyr. But like, it's like you could very easily draw some lines and be like, look, you now have access to all of this stuff with some effort."
+  },
+  {
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "guest": null,
+   "stem": "0713-rubber-duck-incarnate",
+   "paragraph_index": 198,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "device-tree"
+   ],
+   "paragraph_text": "I have been successfully vibe coding a little bit on a embedded device. And for the first time, that is the first time that's worked for me. And I have like a new guideline. So, this is like... I already had the hardware working. All of the hardware stuff is... This is in Zephyr. So, everything like all the device trees all kind of sussed out, whatever. I'm able to turn everything on and off. But I think the real differentiation in this use case, not saying it's broadly applicable. In the past, I've been like, oh, help me like to get this sensor going, whatever. It's crap. It's still crap as far as I could tell. But once you have it working, now it's like, okay, well, help me build a menu system with this, you know, LED display that I have. And, you know, help me utilize pieces of the real-time operating system to like improve timing and, you know, kind of user interaction and stuff like that. And like that has actually been quite solid. You know, I switched over using Cloud Code for that. And it's been good. Not like perfect, but good. Probably as good as a junior firmware engineer and probably better than, you know, I'm not that good. So, anything's better than me. Yeah.",
+   "context_before": "Because, yeah, the big news...",
+   "context_after": "Yeah. That'd be the same for me these days. Like, anything is better than my meager programming skills, you know.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Because, yeah, the big news... I have been successfully vibe coding a little bit on a embedded device. And for the first time, that is the first time that's worked for me. And I have like a new guideline. So, this is like... I already had the hardware working. All of the hardware stuff is... This is in Zephyr. So, everything like all the device trees all kind of sussed out, whatever. I'm able to turn everything on and off. But I think the real differentiation in this use case, not saying it's broadly applicable. In the past, I've been like, oh, help me like to get this sensor going, whatever. It's crap. It's still crap as far as I could tell. But once you have it working, now it's like, okay, well, help me build a menu system with this, you know, LED display that I have. And, you know, help me utilize pieces of the real-time operating system to like improve timing and, you know, kind of user interaction and stuff like that. And like that has actually been quite solid. You know, I switched over using Cloud Code for that. And it's been good. Not like perfect, but good. Probably as good as a junior firmware engineer and probably better than, you know, I'm not that good. So, anything's better than me. Yeah. Yeah. That'd be the same for me these days. Like, anything is better than my meager programming skills, you know."
+  }
+ ]
+}

@@ -1,0 +1,1176 @@
+{
+ "concept": "trace-width-and-spacing",
+ "name": "Trace Width and Spacing",
+ "type": "manufacturing",
+ "score": 86.277,
+ "rank_by_score": 438,
+ "cluster": {
+  "core": [
+   "trace-width-and-spacing"
+  ],
+  "children": [
+   "electrical-conductivity",
+   "model-rocket",
+   "test-vector",
+   "trace-spacing"
+  ],
+  "neighbors": []
+ },
+ "stats": {
+  "episodes": 27,
+  "mentions": 46,
+  "explains": 32,
+  "opinions": 9,
+  "candidate_episode_count": 19,
+  "candidate_mention_count": 28,
+  "gated_out": 35,
+  "gated_out_by_concept": [
+   [
+    "trace-spacing",
+    11
+   ],
+   [
+    "electrical-conductivity",
+    10
+   ],
+   [
+    "model-rocket",
+    7
+   ],
+   [
+    "test-vector",
+    7
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 1,
+  "speakers": [
+   [
+    "Dave Jones",
+    17
+   ],
+   [
+    "Chris Gammell",
+    14
+   ],
+   [
+    "Laen",
+    1
+   ],
+   [
+    "Mike Harrison",
+    1
+   ],
+   [
+    "Akiba",
+    1
+   ],
+   [
+    "Ariel Briner",
+    1
+   ],
+   [
+    "Jonathan Hirschman",
+    1
+   ],
+   [
+    "Luke Valenty",
+    1
+   ],
+   [
+    "Kyle Dumont",
+    1
+   ],
+   [
+    "Joris Aerts",
+    1
+   ],
+   [
+    "Lukas Henkel",
+    1
+   ],
+   [
+    "Stephen Hawes",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 41
+  },
+  "passages_by_depth": {
+   "explains": 32,
+   "opinion": 9
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 41,
+ "passages": [
+  {
+   "episode": null,
+   "episode_title": null,
+   "episode_url": null,
+   "guest": null,
+   "stem": "0706-leading-edge-analog-with-joren-vaes",
+   "paragraph_index": 13,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "It's a bit of both, right? So, we... Because we draw the transistor by drawing... Well, historically, you really draw where the openings in the mask would come. Now, there's a lot of post-processing we don't see, but that's another story. But we really do draw like, this is where the poly is going to come and this is where the fusion is going to come and so on. But we get huge rule books. I know when I did some PCB design, you had maybe a few hundred rules, right? But on our latest tape out in one of very high-end processes, we had a textbook that was 1,800 pages of rules, right? And that specifies like to a very granular level, like this you're allowed to do and this you're not. And it's not just like, oh, your minimum trace width is this much nanometers and your minimum spacing is that much nanometers. It goes like, if you draw a 10 nanometer trace, you need to keep a 10 nanometer space to the next trace. And otherwise, you have to draw a 12 nanometer trace and then you have to keep a 14 nanometer space. Or if you draw a 60 nanometer, then it's this much. And when you go above 25 nanometers, you can scale it in any intermediate size, right? And that's the kind of thing you would do. Or maybe you can put one via or you could put three vias. You're not allowed to put two vias. If your three vias are in this specific pattern, that's also not allowed unless there's a fourth via. So it gets incredibly complicated. But that's kind of the way that we then also ensure that, well, the foundry ensures that what we draw and what we can then simulate will actually behave the way it does because there's so much insane physics that goes on in these FinFed nodes and in nanosheet nodes to actually make this work.",
+   "context_before": "Well, okay. So, maybe we need to talk a little bit about... So, now I'm drawing from multiple experiences. One, my hateful experience of graph paper, but the other one being working in a fab and understanding a little bit about the process layers and stuff like that. So, like you get a PDK from a foundry and they are giving you these, you know, like a multiple choice kind of selection for a transistor. Is that right? Or is it more of multiple choice for where you're opening up a mask on a certain layer?",
+   "context_after": "You know, so you've been in the industry for a little while, but like, does the textbook get longer each successive node?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Well, okay. So, maybe we need to talk a little bit about... So, now I'm drawing from multiple experiences. One, my hateful experience of graph paper, but the other one being working in a fab and understanding a little bit about the process layers and stuff like that. So, like you get a PDK from a foundry and they are giving you these, you know, like a multiple choice kind of selection for a transistor. Is that right? Or is it more of multiple choice for where you're opening up a mask on a certain layer? It's a bit of both, right? So, we... Because we draw the transistor by drawing... Well, historically, you really draw where the openings in the mask would come. Now, there's a lot of post-processing we don't see, but that's another story. But we really do draw like, this is where the poly is going to come and this is where the fusion is going to come and so on. But we get huge rule books. I know when I did some PCB design, you had maybe a few hundred rules, right? But on our latest tape out in one of very high-end processes, we had a textbook that was 1,800 pages of rules, right? And that specifies like to a very granular level, like this you're allowed to do and this you're not. And it's not just like, oh, your minimum trace width is this much nanometers and your minimum spacing is that much nanometers. It goes like, if you draw a 10 nanometer trace, you need to keep a 10 nanometer space to the next trace. And otherwise, you have to draw a 12 nanometer trace and then you have to keep a 14 nanometer space. Or if you draw a 60 nanometer, then it's this much. And when you go above 25 nanometers, you can scale it in any intermediate size, right? And that's the kind of thing you would do. Or maybe you can put one via or you could put three vias. You're not allowed to put two vias. If your three vias are in this specific pattern, that's also not allowed unless there's a fourth via. So it gets incredibly complicated. But that's kind of the way that we then also ensure that, well, the foundry ensures that what we draw and what we can then simulate will actually behave the way it does because there's so much insane physics that goes on in these FinFed nodes and in nanosheet nodes to actually make this work. You know, so you've been in the industry for a little while, but like, does the textbook get longer each successive node?"
+  },
+  {
+   "episode": 33,
+   "episode_title": "Bob Widlar, Electronic Design, FIRST Robotics - Monday, Meta Monday",
+   "episode_url": "https://theamphour.com/the-amp-hour-33-monday-meta-monday/",
+   "guest": null,
+   "stem": "the-amp-hour-33-monday-meta-monday",
+   "paragraph_index": 149,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "The minimums are, um, 6,000, uh, trace.",
+   "context_before": "For all you non, uh, non-metrics out there, that's about three by three inches. Right. Okay. So that's, I mean, that is, you could fit a lot of crap on there. I mean, what are the minimum, what are the, I don't know, did we mention this last week, what the minimums are? Like the minimum, uh, line widths?",
+   "context_after": "Or 6 mil, if you're from, not, Dave's land.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "For all you non, uh, non-metrics out there, that's about three by three inches. Right. Okay. So that's, I mean, that is, you could fit a lot of crap on there. I mean, what are the minimum, what are the, I don't know, did we mention this last week, what the minimums are? Like the minimum, uh, line widths? The minimums are, um, 6,000, uh, trace. Or 6 mil, if you're from, not, Dave's land."
+  },
+  {
+   "episode": 33,
+   "episode_title": "Bob Widlar, Electronic Design, FIRST Robotics - Monday, Meta Monday",
+   "episode_url": "https://theamphour.com/the-amp-hour-33-monday-meta-monday/",
+   "guest": null,
+   "stem": "the-amp-hour-33-monday-meta-monday",
+   "paragraph_index": 151,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "6 mil, or 6,000. Um, trace and space. Yes, my board was actually 5,000, uh, cause it's really quite a tight layout. So I, I traditionally do it as a, like a real tight layout. I'll do as 5,500, but I actually redid this. Yeah. Cause I went to PCB cart to get a quote, uh, which they're the normal service I use. And I thought they're pretty cheap, but their tooling was like 80, $90 or something because I had like 0.3 millimeter holes and I had 5 mil, uh, 5,000 trace and space. And yeah, it, it crept up there. Yeah. Um, like 120 bucks. And so I thought I'd try it because somebody mentioned them on the forum. Yeah. And so I re re re jig my layout for 6,000, 6,000 and the smallest hole is 0.3 millimeters. Um, you know, pretty reasonably tight, uh, specs. Yeah. That's, that's good. It's, it's pretty good. Um, and there's, you know, there's no issue there at all. And, uh, basically it's a, it's a batch service, right? So they, they're always putting their own boards through. So, um, they just throw your design onto the next batch that goes through any spare space. They'll just whack it on there for you and up to those maximum sizes. Yeah. And, um, how long did it take then? Well, it took about three days before they said they shipped it. Okay. Um, but then it took about a week to get to me, um, from Hong Kong. That's not bad. That's not bad at all. But because I've heard that, um, there are a new Australian customs, um, laws where there are more inspecting packages from Hong Kong. Now it literally only started coincidentally last week. Um, they knew you had boards coming, huh? Yeah, where my boards come in. So I think that's where the catch up was, but yeah, they claim only like three, four days, but they don't make any rigid thing because it's when their next batch goes through. So, you know, it certainly won't be three weeks. It shouldn't be, you know, it should be days, not weeks. Um, and anyway, the quality is quite impressive. Um, I've seen some photos of other people's boards and they were slightly misaligned and mine are slightly misaligned. The holes are slightly misaligned on the pads on the bottom, but there were no, there were no, uh, breakouts at all. And this is a 0.3 millimeter hole on a 0.6 millimeter pad.",
+   "context_before": "Or 6 mil, if you're from, not, Dave's land.",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Or 6 mil, if you're from, not, Dave's land. 6 mil, or 6,000. Um, trace and space. Yes, my board was actually 5,000, uh, cause it's really quite a tight layout. So I, I traditionally do it as a, like a real tight layout. I'll do as 5,500, but I actually redid this. Yeah. Cause I went to PCB cart to get a quote, uh, which they're the normal service I use. And I thought they're pretty cheap, but their tooling was like 80, $90 or something because I had like 0.3 millimeter holes and I had 5 mil, uh, 5,000 trace and space. And yeah, it, it crept up there. Yeah. Um, like 120 bucks. And so I thought I'd try it because somebody mentioned them on the forum. Yeah. And so I re re re jig my layout for 6,000, 6,000 and the smallest hole is 0.3 millimeters. Um, you know, pretty reasonably tight, uh, specs. Yeah. That's, that's good. It's, it's pretty good. Um, and there's, you know, there's no issue there at all. And, uh, basically it's a, it's a batch service, right? So they, they're always putting their own boards through. So, um, they just throw your design onto the next batch that goes through any spare space. They'll just whack it on there for you and up to those maximum sizes. Yeah. And, um, how long did it take then? Well, it took about three days before they said they shipped it. Okay. Um, but then it took about a week to get to me, um, from Hong Kong. That's not bad. That's not bad at all. But because I've heard that, um, there are a new Australian customs, um, laws where there are more inspecting packages from Hong Kong. Now it literally only started coincidentally last week. Um, they knew you had boards coming, huh? Yeah, where my boards come in. So I think that's where the catch up was, but yeah, they claim only like three, four days, but they don't make any rigid thing because it's when their next batch goes through. So, you know, it certainly won't be three weeks. It shouldn't be, you know, it should be days, not weeks. Um, and anyway, the quality is quite impressive. Um, I've seen some photos of other people's boards and they were slightly misaligned and mine are slightly misaligned. The holes are slightly misaligned on the pads on the bottom, but there were no, there were no, uh, breakouts at all. And this is a 0.3 millimeter hole on a 0.6 millimeter pad. Yeah."
+  },
+  {
+   "episode": 33,
+   "episode_title": "Bob Widlar, Electronic Design, FIRST Robotics - Monday, Meta Monday",
+   "episode_url": "https://theamphour.com/the-amp-hour-33-monday-meta-monday/",
+   "guest": null,
+   "stem": "the-amp-hour-33-monday-meta-monday",
+   "paragraph_index": 177,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Yeah. And well \u2013 and where the key comes in there is you as a designer have got to know what is on those machines, right? You've got to have transparency with that stuff. And then you actually design and optimize your designs around what your manufacturer can do, like exactly what I did with these boards, right? I knew that they would do 6-6 minimum, so I went and I, you know, I will now do all my board \u2013 all my little small boards 6-6. Yeah. Spacing now, because I know that's what IT can do and they're cheap. Yeah. And, you know, so, yeah. So if you know that, you know, your favorite assembly house has got, you know, this type of, you know, 100N cap and, you know, all this sort of stuff and all this type of transistor already loaded on their machine or already in stock, then, you know, it pays to use that, pays to design that in, even if it might cost a little bit more.",
+   "context_before": "Well, no. You could even have \u2013 you could have like a 40 reel kind of setup, right? But you always have the reels loaded there, right? And then you would have the boards run through machine A, which might have, you know, 50% of the parts you need. And then it runs through machine B that has the other 20%. And then it would just be trying to group the maximum number of components onto the fastest machines, basically.",
+   "context_after": "Yeah. I was kind of imagining a whole new type of system, though, where you have like a program path, basically. So say you had 100 pick-and-place machines and then, you know, these boards \u2013 the A boards are going through machines 1, 4, and 6, right? And so it routes it all to those places. You'd have to have a really complicated setup. But once you finally had that in place, you could just program it in, have someone just there maintaining the reels, making sure they're always stocked, and then you could just run them through at high volume, high speed. That's the only way I can imagine the cost getting down enough to really \u2013 Yeah, right. \u2013 really take off. Because otherwise, it's a loading and unloading of reels.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Well, no. You could even have \u2013 you could have like a 40 reel kind of setup, right? But you always have the reels loaded there, right? And then you would have the boards run through machine A, which might have, you know, 50% of the parts you need. And then it runs through machine B that has the other 20%. And then it would just be trying to group the maximum number of components onto the fastest machines, basically. Yeah. And well \u2013 and where the key comes in there is you as a designer have got to know what is on those machines, right? You've got to have transparency with that stuff. And then you actually design and optimize your designs around what your manufacturer can do, like exactly what I did with these boards, right? I knew that they would do 6-6 minimum, so I went and I, you know, I will now do all my board \u2013 all my little small boards 6-6. Yeah. Spacing now, because I know that's what IT can do and they're cheap. Yeah. And, you know, so, yeah. So if you know that, you know, your favorite assembly house has got, you know, this type of, you know, 100N cap and, you know, all this sort of stuff and all this type of transistor already loaded on their machine or already in stock, then, you know, it pays to use that, pays to design that in, even if it might cost a little bit more. Yeah. I was kind of imagining a whole new type of system, though, where you have like a program path, basically. So say you had 100 pick-and-place machines and then, you know, these boards \u2013 the A boards are going through machines 1, 4, and 6, right? And so it routes it all to those places. You'd have to have a really complicated setup. But once you finally had that in place, you could just program it in, have someone just there maintaining the reels, making sure they're always stocked, and then you could just run them through at high volume, high speed. That's the only way I can imagine the cost getting down enough to really \u2013 Yeah, right. \u2013 really take off. Because otherwise, it's a loading and unloading of reels."
+  },
+  {
+   "episode": 79,
+   "episode_title": "Ludibrious Luxating Layout",
+   "episode_url": "https://theamphour.com/the-amp-hour-79-ludibrious-luxating-layout/",
+   "guest": null,
+   "stem": "the-amp-hour-79-ludibrious-luxating-layout",
+   "paragraph_index": 28,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Two layers. Yeah. What about the limits? Is it 6-6? Six-line, six-space?",
+   "context_before": "It's pretty good, and they do it in four days. That's their claim turnaround. How many layers? What's the layers of the... Oh, it's only two. You know, it's only a standard two-layer board.",
+   "context_after": "Yeah, it might be 6-6 or 5-5 or something like that. 0.3-millimeter hole, something like that. You know, fairly generic type stuff.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "It's pretty good, and they do it in four days. That's their claim turnaround. How many layers? What's the layers of the... Oh, it's only two. You know, it's only a standard two-layer board. Two layers. Yeah. What about the limits? Is it 6-6? Six-line, six-space? Yeah, it might be 6-6 or 5-5 or something like that. 0.3-millimeter hole, something like that. You know, fairly generic type stuff."
+  },
+  {
+   "episode": 79,
+   "episode_title": "Ludibrious Luxating Layout",
+   "episode_url": "https://theamphour.com/the-amp-hour-79-ludibrious-luxating-layout/",
+   "guest": null,
+   "stem": "the-amp-hour-79-ludibrious-luxating-layout",
+   "paragraph_index": 29,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Yeah, it might be 6-6 or 5-5 or something like that. 0.3-millimeter hole, something like that. You know, fairly generic type stuff.",
+   "context_before": "Two layers. Yeah. What about the limits? Is it 6-6? Six-line, six-space?",
+   "context_after": "Okay.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Two layers. Yeah. What about the limits? Is it 6-6? Six-line, six-space? Yeah, it might be 6-6 or 5-5 or something like that. 0.3-millimeter hole, something like that. You know, fairly generic type stuff. Okay."
+  },
+  {
+   "episode": 128,
+   "episode_title": "Layout, CAD & Raspberry Pi - Kedogenous Kinetic Knowledge",
+   "episode_url": "https://theamphour.com/the-amp-hour-128-kedogenous-kinetic-knowledge/",
+   "guest": null,
+   "stem": "the-amp-hour-128-kedogenous-kinetic-knowledge",
+   "paragraph_index": 57,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Everything was done in Imperial. Everything was done. Now, they did offer metric, but, you know, Imperial was just the given thing that you used. Everything you read, you know, all of the manufacturers, they gave you their manufacturing tolerances in Imperial. You know, we can do 8 thou track and space. So, that's what you set your limits to, you know?",
+   "context_before": "Yeah, yeah, yeah. Like how you got started on that.",
+   "context_after": "Yeah, yeah, yeah. Okay.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah, yeah, yeah. Like how you got started on that. Everything was done in Imperial. Everything was done. Now, they did offer metric, but, you know, Imperial was just the given thing that you used. Everything you read, you know, all of the manufacturers, they gave you their manufacturing tolerances in Imperial. You know, we can do 8 thou track and space. So, that's what you set your limits to, you know? Yeah, yeah, yeah. Okay."
+  },
+  {
+   "episode": 128,
+   "episode_title": "Layout, CAD & Raspberry Pi - Kedogenous Kinetic Knowledge",
+   "episode_url": "https://theamphour.com/the-amp-hour-128-kedogenous-kinetic-knowledge/",
+   "guest": null,
+   "stem": "the-amp-hour-128-kedogenous-kinetic-knowledge",
+   "paragraph_index": 60,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Yeah. Yeah, it's silly too because it's so arbitrary, right? It's like, yeah, they say 6 and 6, you know, space and trace, but, you know, you could just as easily say whatever the, what is the conversion, like 3.9 or something like that? So, it'd be like, you know, 23, you know, 23 space and trace kind of thing, you know, in millimeters. And it's like, okay, you know, I don't know.",
+   "context_before": "And that's still very common today. I'd say probably, oh, maybe a majority, I'm not sure, but, you know, it's probably half and half of the manufacturers out there will still specify their manufacturing tolerances in Imperial.",
+   "context_after": "And, well, yeah, and like, and of course, 0.2 millimeters is around about 8 thou, you know, give or take a couple of, you know, third decimal places or something. So, you know, I don't know. Yeah. It's just, yeah. It's a lot of convention, you know. Yeah.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "And that's still very common today. I'd say probably, oh, maybe a majority, I'm not sure, but, you know, it's probably half and half of the manufacturers out there will still specify their manufacturing tolerances in Imperial. Yeah. Yeah, it's silly too because it's so arbitrary, right? It's like, yeah, they say 6 and 6, you know, space and trace, but, you know, you could just as easily say whatever the, what is the conversion, like 3.9 or something like that? So, it'd be like, you know, 23, you know, 23 space and trace kind of thing, you know, in millimeters. And it's like, okay, you know, I don't know. And, well, yeah, and like, and of course, 0.2 millimeters is around about 8 thou, you know, give or take a couple of, you know, third decimal places or something. So, you know, I don't know. Yeah. It's just, yeah. It's a lot of convention, you know. Yeah."
+  },
+  {
+   "episode": 145,
+   "episode_title": "PCB Mills, SDR and Oscilloscopes - Flaunting Furbelow Fanciness",
+   "episode_url": "https://theamphour.com/the-amp-hour-145-flaunting-furbelow-fanciness/",
+   "guest": null,
+   "stem": "the-amp-hour-145-flaunting-furbelow-fanciness",
+   "paragraph_index": 408,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "I've done like six, six at home. Yeah. You know, you can, you can get down to, you know. Right.",
+   "context_before": "I mean, honestly, copper etching is still like in terms of accuracy. I think, you know, if you, if you have a good process for, for copper etching, you're still going to win. I think.",
+   "context_after": "And it's tough to get six, six for, for, um, mechanical because you start to get.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "I mean, honestly, copper etching is still like in terms of accuracy. I think, you know, if you, if you have a good process for, for copper etching, you're still going to win. I think. I've done like six, six at home. Yeah. You know, you can, you can get down to, you know. Right. And it's tough to get six, six for, for, um, mechanical because you start to get."
+  },
+  {
+   "episode": 145,
+   "episode_title": "PCB Mills, SDR and Oscilloscopes - Flaunting Furbelow Fanciness",
+   "episode_url": "https://theamphour.com/the-amp-hour-145-flaunting-furbelow-fanciness/",
+   "guest": null,
+   "stem": "the-amp-hour-145-flaunting-furbelow-fanciness",
+   "paragraph_index": 409,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "And it's tough to get six, six for, for, um, mechanical because you start to get.",
+   "context_before": "I've done like six, six at home. Yeah. You know, you can, you can get down to, you know. Right.",
+   "context_after": "Oh, yeah, yeah. Yeah. Yeah.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "I've done like six, six at home. Yeah. You know, you can, you can get down to, you know. Right. And it's tough to get six, six for, for, um, mechanical because you start to get. Oh, yeah, yeah. Yeah. Yeah."
+  },
+  {
+   "episode": 145,
+   "episode_title": "PCB Mills, SDR and Oscilloscopes - Flaunting Furbelow Fanciness",
+   "episode_url": "https://theamphour.com/the-amp-hour-145-flaunting-furbelow-fanciness/",
+   "guest": null,
+   "stem": "the-amp-hour-145-flaunting-furbelow-fanciness",
+   "paragraph_index": 411,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "You know, you get that rotational force on like a six mil trace, like whoo, or six mil space. Yeah.",
+   "context_before": "Oh, yeah, yeah. Yeah. Yeah.",
+   "context_after": "Oh no. And it tears it, it tears it straight off. Yeah. Yeah. No.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Oh, yeah, yeah. Yeah. Yeah. You know, you get that rotational force on like a six mil trace, like whoo, or six mil space. Yeah. Oh no. And it tears it, it tears it straight off. Yeah. Yeah. No."
+  },
+  {
+   "episode": 149,
+   "episode_title": "An Interview with Laen - Purple PCB Philosophy",
+   "episode_url": "https://theamphour.com/the-amp-hour-149-purple-pcb-philosophy/",
+   "guest": "James Neal",
+   "stem": "the-amp-hour-149-purple-pcb-philosophy",
+   "paragraph_index": 236,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Oh boy. I, back onto the, uh, Oz Park thing. Um, I noticed everything you do is except the layer of the bar, except the thickness of the board is all in Imperial measurements. It's true. Even your drill sizes, your angular rings, your, your track and space, which is okay. It's true. You bloody yanks.",
+   "context_before": "Go find Ian. Go find Ian and see if he's had his on. That's right. Yeah, exactly.",
+   "context_after": "It's, it's awful. And, uh, and like when I first started making boards and coming up with the, finding the, uh, the unit of measure of the mill, I was like, wow, that doesn't make any sense at all. 64 millimeter thick boards. That's, and that's huge. And, uh, yeah. It's like a sandwich. Right. A mill is a thou. It's a thou. It makes sense, doesn't it? Yeah. And a thou didn't mean anything to me either. So.",
+   "context_before_speaker": "Laen",
+   "context_after_speaker": "Laen",
+   "text": "Go find Ian. Go find Ian and see if he's had his on. That's right. Yeah, exactly. Oh boy. I, back onto the, uh, Oz Park thing. Um, I noticed everything you do is except the layer of the bar, except the thickness of the board is all in Imperial measurements. It's true. Even your drill sizes, your angular rings, your, your track and space, which is okay. It's true. You bloody yanks. It's, it's awful. And, uh, and like when I first started making boards and coming up with the, finding the, uh, the unit of measure of the mill, I was like, wow, that doesn't make any sense at all. 64 millimeter thick boards. That's, and that's huge. And, uh, yeah. It's like a sandwich. Right. A mill is a thou. It's a thou. It makes sense, doesn't it? Yeah. And a thou didn't mean anything to me either. So."
+  },
+  {
+   "episode": 149,
+   "episode_title": "An Interview with Laen - Purple PCB Philosophy",
+   "episode_url": "https://theamphour.com/the-amp-hour-149-purple-pcb-philosophy/",
+   "guest": "James Neal",
+   "stem": "the-amp-hour-149-purple-pcb-philosophy",
+   "paragraph_index": 240,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Well, no, the fab, the fabs in America, it is most other countries. Um, well, it's an interesting mix. I'll still use Imperial for track and space. Uh, sometimes like, you know, six, six thou, six thou track and space, but drills are all metric. Um, you know, board sizes, all metric, all that sort of stuff. So. And of course, when I, when I submit. It's a very interesting industry. It's a.",
+   "context_before": "It's just because that still seems to be the units of measure for, for circuit boards. And, um, it's never gone away.",
+   "context_after": "When I submit these things for manufacturer, they're going through, they're going into metric. Of course.",
+   "context_before_speaker": "Laen",
+   "context_after_speaker": "Laen",
+   "text": "It's just because that still seems to be the units of measure for, for circuit boards. And, um, it's never gone away. Well, no, the fab, the fabs in America, it is most other countries. Um, well, it's an interesting mix. I'll still use Imperial for track and space. Uh, sometimes like, you know, six, six thou, six thou track and space, but drills are all metric. Um, you know, board sizes, all metric, all that sort of stuff. So. And of course, when I, when I submit. It's a very interesting industry. It's a. When I submit these things for manufacturer, they're going through, they're going into metric. Of course."
+  },
+  {
+   "episode": 149,
+   "episode_title": "An Interview with Laen - Purple PCB Philosophy",
+   "episode_url": "https://theamphour.com/the-amp-hour-149-purple-pcb-philosophy/",
+   "guest": "James Neal",
+   "stem": "the-amp-hour-149-purple-pcb-philosophy",
+   "paragraph_index": 269,
+   "depth": "explains",
+   "speaker_raw": "Lane",
+   "speaker_repaired": "Laen",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Hmm. Got it. So your stuff is six, six right now. Is that right? Six mil, six space. Yeah.",
+   "context_before": "It's just, it's so nice to, um, they get this nice flat surface, uh, with, with, uh, the, the leaded solder or the solder thing where they have this hot air solder level, hot air hassle. Yeah. Hot air solder level. And, uh. Yes. So, um, uh, especially at small, uh, trace, um, clearances, that really opens you up to shorts. And I think that was the big reason that I was having problems at first with the, with, with the panels we're sending to China.",
+   "context_after": "The four layer order is, uh, is five, five. Okay. Yeah. The two layer is six, six.",
+   "context_before_speaker": "Laen",
+   "context_after_speaker": "Laen",
+   "text": "It's just, it's so nice to, um, they get this nice flat surface, uh, with, with, uh, the, the leaded solder or the solder thing where they have this hot air solder level, hot air hassle. Yeah. Hot air solder level. And, uh. Yes. So, um, uh, especially at small, uh, trace, um, clearances, that really opens you up to shorts. And I think that was the big reason that I was having problems at first with the, with, with the panels we're sending to China. Hmm. Got it. So your stuff is six, six right now. Is that right? Six mil, six space. Yeah. The four layer order is, uh, is five, five. Okay. Yeah. The two layer is six, six."
+  },
+  {
+   "episode": 210,
+   "episode_title": "Risky Components and Hardware Innovation - Slipshod Shack Shutdown",
+   "episode_url": "https://theamphour.com/210-risky-components-and-hardware-innovation-slipshod-shack-shutdown/",
+   "guest": null,
+   "stem": "0210-risky-components-and-hardware-innovation-slipshod-shack-shutdown",
+   "paragraph_index": 70,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Breadboardkiller.com or .au. I'm not sure whether it's .com. Breadboardkiller. Yep. Okay. Type in. This makes for good radio. Yeah. Yep. It's breadboardkiller.com. Yeah. Okay. You get three copies of your board, $5 per square inch. And I think it's fine, you know, and they can go down to six mil trace space, you know, it's pretty good. And you get free shipping with that. Like, wow. You know, like, hence the name, you know, you don't have to breadboard anything anymore. It's, you know, it's cheap enough just to spin a board.",
+   "context_before": "Yeah. Definitely. And I'll talk about them. You know what the Aussie boardhouse thing is called? Or no?",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Definitely. And I'll talk about them. You know what the Aussie boardhouse thing is called? Or no? Breadboardkiller.com or .au. I'm not sure whether it's .com. Breadboardkiller. Yep. Okay. Type in. This makes for good radio. Yeah. Yep. It's breadboardkiller.com. Yeah. Okay. You get three copies of your board, $5 per square inch. And I think it's fine, you know, and they can go down to six mil trace space, you know, it's pretty good. And you get free shipping with that. Like, wow. You know, like, hence the name, you know, you don't have to breadboard anything anymore. It's, you know, it's cheap enough just to spin a board. Yeah."
+  },
+  {
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "guest": "Mike Harrison",
+   "stem": "0224-meracious-mike-manuduction",
+   "paragraph_index": 235,
+   "depth": "explains",
+   "speaker_raw": "Mike Harrison",
+   "speaker_repaired": "Mike Harrison",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Because the nice thing about white is it's so much more efficient in terms of power drawing. The amount of light you get for the amount of power you put in for a white mono is like a factor of umpteen compared to RGB. But also, if you actually want white, RGB is rubbish anyway because the color mixing is always bad. Oh, yeah. No, it's awesome. But no, a lot of the stuff I've done recently has been white. So, I've done a few of these demo units. They've wanted a few more for their distributors. Yeah. And they're actually exhibiting. There's a UK show called Lux Live next week in London. Oh, okay. Which is a lighting exhibition. But there's also quite a lot of lighting components in there that they'll be using those, probably showing them there. But there's also, there are a few in Electronica as well. So, if you're wandering around Electronica and you see this nice little square, it might be on Mouser. I'm not sure which other distributors are out there, but maybe on Mouser you might actually see some of these things. So, that worked out quite well. I turned them around really quickly. So, I charged them. Obviously, as a company, they're not used to stuff being turned around really quickly because they're like a big industry company. So, they were quite impressed with how quickly I turned these things around. And I thought I had to get the PCBs from EuroCircuits because they're quite fine. They're like a 0.125mm track of space and a 0.15mm drill. Right, yeah.",
+   "context_before": "Just white. Okay. Right.",
+   "context_after": "That's something you can make in the house.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Speaker ?",
+   "text": "Just white. Okay. Right. Because the nice thing about white is it's so much more efficient in terms of power drawing. The amount of light you get for the amount of power you put in for a white mono is like a factor of umpteen compared to RGB. But also, if you actually want white, RGB is rubbish anyway because the color mixing is always bad. Oh, yeah. No, it's awesome. But no, a lot of the stuff I've done recently has been white. So, I've done a few of these demo units. They've wanted a few more for their distributors. Yeah. And they're actually exhibiting. There's a UK show called Lux Live next week in London. Oh, okay. Which is a lighting exhibition. But there's also quite a lot of lighting components in there that they'll be using those, probably showing them there. But there's also, there are a few in Electronica as well. So, if you're wandering around Electronica and you see this nice little square, it might be on Mouser. I'm not sure which other distributors are out there, but maybe on Mouser you might actually see some of these things. So, that worked out quite well. I turned them around really quickly. So, I charged them. Obviously, as a company, they're not used to stuff being turned around really quickly because they're like a big industry company. So, they were quite impressed with how quickly I turned these things around. And I thought I had to get the PCBs from EuroCircuits because they're quite fine. They're like a 0.125mm track of space and a 0.15mm drill. Right, yeah. That's something you can make in the house."
+  },
+  {
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "guest": "Mike Harrison",
+   "stem": "0224-meracious-mike-manuduction",
+   "paragraph_index": 240,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "That is tiny. Yeah. That is. Yep. Yeah. Usually, like 0.3mm, you know. Like a small house. Yeah.",
+   "context_before": "I think it was a 0.15mm drill. So, they were quite small and quite dense.",
+   "context_after": "0.3 is about the normal limit. Not quite laser drill. And again, there's a trade-off between the VIA ring size and the drill size. And the EuroCircuits are quite good, but they're really fussy. They've got this super automated process. But if one track is like 0.001 of a millimetre too wide, they'll bounce it back at you and you've got to redo it. Oh, really? Yeah. I hate it.",
+   "context_before_speaker": "Mike Harrison",
+   "context_after_speaker": "Mike Harrison",
+   "text": "I think it was a 0.15mm drill. So, they were quite small and quite dense. That is tiny. Yeah. That is. Yep. Yeah. Usually, like 0.3mm, you know. Like a small house. Yeah. 0.3 is about the normal limit. Not quite laser drill. And again, there's a trade-off between the VIA ring size and the drill size. And the EuroCircuits are quite good, but they're really fussy. They've got this super automated process. But if one track is like 0.001 of a millimetre too wide, they'll bounce it back at you and you've got to redo it. Oh, really? Yeah. I hate it."
+  },
+  {
+   "episode": 245,
+   "episode_title": "An interview with Akiba from Freaklabs - Dimissory Diagraphical Debt",
+   "episode_url": "https://theamphour.com/245-an-interview-with-akiba-from-freaklabs-dimissory-diagraphical-debt/",
+   "guest": "Akiba",
+   "stem": "0245-an-interview-with-akiba-from-freaklabs-dimissory-diagraphical-debt",
+   "paragraph_index": 38,
+   "depth": "explains",
+   "speaker_raw": "Akiba",
+   "speaker_repaired": "Akiba",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "It's, like, let's see. I normally, like, for PCB milling, I normally use, like, 8 mil, trace width, 8 mil spacing just because it's, it has, like, enough margin that I can guarantee, like, around, like, almost, like, a 90, 95% success rate or something.",
+   "context_before": "So, what kind of, I mean, what kind of tolerances do you get on yours?",
+   "context_after": "Yeah. Okay.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Dave Jones",
+   "text": "So, what kind of, I mean, what kind of tolerances do you get on yours? It's, like, let's see. I normally, like, for PCB milling, I normally use, like, 8 mil, trace width, 8 mil spacing just because it's, it has, like, enough margin that I can guarantee, like, around, like, almost, like, a 90, 95% success rate or something. Yeah. Okay."
+  },
+  {
+   "episode": 260,
+   "episode_title": "An interview with Ariel Briner of Cartesian Co",
+   "episode_url": "https://theamphour.com/260-an-interview-with-ariel-briner-of-cartesian-co/",
+   "guest": "Ariel Briner",
+   "stem": "0260-an-interview-with-ariel-briner-of-cartesian-co",
+   "paragraph_index": 263,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Ariel Briner",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Yep. Throw us some numbers. Yep. Come on. So, we're able to. It varies a little bit depending on what substrate you print on. Because the inks bleed differently. Of course. Yeah, of course. Well, let's go with best case scenario though. Yeah. Under best case scenario, we quote on the website, I believe, that we're able to achieve a 20,000. 20,000 track and a 20,000 gap. Okay. But I think we can actually, in reality, you can achieve slightly better than that. It's around about 15,000, 16,000 under perfect conditions.",
+   "context_before": "Yeah. So, one thing we haven't covered yet. I mean, so you mentioned, you know, we're still at hobby level. But what does that actually translate to in terms of specs and, you know, stuff like that?",
+   "context_after": "And what material is the perfect condition? Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah. So, one thing we haven't covered yet. I mean, so you mentioned, you know, we're still at hobby level. But what does that actually translate to in terms of specs and, you know, stuff like that? Yep. Throw us some numbers. Yep. Come on. So, we're able to. It varies a little bit depending on what substrate you print on. Because the inks bleed differently. Of course. Yeah, of course. Well, let's go with best case scenario though. Yeah. Under best case scenario, we quote on the website, I believe, that we're able to achieve a 20,000. 20,000 track and a 20,000 gap. Okay. But I think we can actually, in reality, you can achieve slightly better than that. It's around about 15,000, 16,000 under perfect conditions. And what material is the perfect condition? Yeah."
+  },
+  {
+   "episode": 275,
+   "episode_title": "No One Even Missed Us?",
+   "episode_url": "https://theamphour.com/275-no-one-even-missed-us/",
+   "guest": null,
+   "stem": "0275-no-one-even-missed-us",
+   "paragraph_index": 508,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "You know, it's just not quite the same board as you would get with a, you know, professionally \u2013 well, even like a head etched one. You know, I used to make my own double-sided boards, you know, and it wasn't that hard. You know, I'd expose both sides of the PCB. All you've got to do is \u2013 it's easy, trivial to line up the two masks for each side, the two photo masks, and then put it between \u2013 wedge it between some glass and then expose one side, expose the other, and etch it. And bingo, you've got this, you know, 8-8 thou easily professionally etched board. All you've got to do is actually drill the holes in it.",
+   "context_before": "Right. Yeah. Right, right.",
+   "context_after": "Right. That's it. And then attach if you've drilled the holes. If you're doing vias, right?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. Yeah. Right, right. You know, it's just not quite the same board as you would get with a, you know, professionally \u2013 well, even like a head etched one. You know, I used to make my own double-sided boards, you know, and it wasn't that hard. You know, I'd expose both sides of the PCB. All you've got to do is \u2013 it's easy, trivial to line up the two masks for each side, the two photo masks, and then put it between \u2013 wedge it between some glass and then expose one side, expose the other, and etch it. And bingo, you've got this, you know, 8-8 thou easily professionally etched board. All you've got to do is actually drill the holes in it. Right. That's it. And then attach if you've drilled the holes. If you're doing vias, right?"
+  },
+  {
+   "episode": 291,
+   "episode_title": "Artificially Intelligent Party Platform",
+   "episode_url": "https://theamphour.com/291-artificially-intelligent-party-platform/",
+   "guest": null,
+   "stem": "0291-artificially-intelligent-party-platform",
+   "paragraph_index": 430,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Yeah, I don't know. I should try that. I should try, like, a one-mil trace or something and see what happens.",
+   "context_before": "Okay.",
+   "context_after": "I mean, I know it'll happen, but... So, what happened when they pushed the limits?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Okay. Yeah, I don't know. I should try that. I should try, like, a one-mil trace or something and see what happens. I mean, I know it'll happen, but... So, what happened when they pushed the limits?"
+  },
+  {
+   "episode": 291,
+   "episode_title": "Artificially Intelligent Party Platform",
+   "episode_url": "https://theamphour.com/291-artificially-intelligent-party-platform/",
+   "guest": null,
+   "stem": "0291-artificially-intelligent-party-platform",
+   "paragraph_index": 434,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Oh, I think it was just... It was, like, four and a half mils instead of five. I think the limit on the service was, like, five. So...",
+   "context_before": "Down to what?",
+   "context_after": "Half a bee's dick.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Down to what? Oh, I think it was just... It was, like, four and a half mils instead of five. I think the limit on the service was, like, five. So... Half a bee's dick."
+  },
+  {
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "guest": "Jonathan Hirschman",
+   "stem": "0299-an-interview-with-jonathan-hirschman-of-pcbng",
+   "paragraph_index": 153,
+   "depth": "explains",
+   "speaker_raw": "Jonathan Hirschman Of Pcb",
+   "speaker_repaired": "Jonathan Hirschman",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Sunday, Sunday, Sunday. Well, if you think about it, you know, in order to get to scale, it's a lot easier if you follow the Model T. philosophy, any color. Of course, yeah. But the other thing is is that that goes to the finish. I mean, you can only get Enig. You can't get anything else. It goes to the \u2013 you know, our trace and space specifications and on and on. It's like \u2013 Which is what? For copper, it's 4 mil trace, 4 mil space. Nice.",
+   "context_before": "All today's low, low prices.",
+   "context_after": "Wow. That's nice.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Dave Jones",
+   "text": "All today's low, low prices. Sunday, Sunday, Sunday. Well, if you think about it, you know, in order to get to scale, it's a lot easier if you follow the Model T. philosophy, any color. Of course, yeah. But the other thing is is that that goes to the finish. I mean, you can only get Enig. You can't get anything else. It goes to the \u2013 you know, our trace and space specifications and on and on. It's like \u2013 Which is what? For copper, it's 4 mil trace, 4 mil space. Nice. Wow. That's nice."
+  },
+  {
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "guest": null,
+   "stem": "show-345-milling-about",
+   "paragraph_index": 279,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "How easy... Well, they're claiming with the other Mill Pro here is that, you know, it's simple. You just throw in your Gerber file and double-sided boards with six thou, you know, trace and space. You know.",
+   "context_before": "But most of the time... Most of the things that you and I care about is the interface and, like, the... Oh, yeah. The everyday kind of thing.",
+   "context_after": "Well, we won't know until we try it. I have not used a pro. I've used a regular one. I've also, like a genius... Let me tell you my story here. The first time I used one of these things... Yeah. So, they're, like, you know, so that if people don't know what they look like, they're, you know, like Dave said, they are kind of like a MakerBot, like a cupcake shape. And so, they've got these Lexan plastic covers on the front with, like, magnets to hold them on and then they're interlocked as well. And so... And they're on every side. And for some reason, my dumbass thought that I pulled it off and I saw there was a bunch of dust on it and I go... And I blow into the goddamn thing. It all comes right back out into my eyeballs. Like, I had copper and luckily FR1. So, that's something to know. Th",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "But most of the time... Most of the things that you and I care about is the interface and, like, the... Oh, yeah. The everyday kind of thing. How easy... Well, they're claiming with the other Mill Pro here is that, you know, it's simple. You just throw in your Gerber file and double-sided boards with six thou, you know, trace and space. You know. Well, we won't know until we try it. I have not used a pro. I've used a regular one. I've also, like a genius... Let me tell you my story here. The first time I used one of these things... Yeah. So, they're, like, you know, so that if people don't know what they look like, they're, you know, like Dave said, they are kind of like a MakerBot, like a cupcake shape. And so, they've got these Lexan plastic covers on the front with, like, magnets to hold them on and then they're interlocked as well. And so... And they're on every side. And for some reason, my dumbass thought that I pulled it off and I saw there was a bunch of dust on it and I go... And I blow into the goddamn thing. It all comes right back out into my eyeballs. Like, I had copper and luckily FR1. So, that's something to know. Th"
+  },
+  {
+   "episode": 362,
+   "episode_title": "Secret Squirrel",
+   "episode_url": "https://theamphour.com/362-secret-squirrel/",
+   "guest": null,
+   "stem": "0362-secret-squirrel",
+   "paragraph_index": 191,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Oh, yeah. Okay. So, yeah. So wide pitch. Yeah. Oh, it is that. Right. Okay. So it's bigger. So most of the BGA's these days is 0.8, right? So that's like- Right. And smaller. Obviously, the 0.4 is really tough. So what Greg was saying, though, is you can escape all 256 pins with a 6 mil space and trace. You can escape all pins on the top layer, which is like- On the top layer. That's crazy. That's great. That's great. That's a big deal. So now you have a Linux chip that runs on a four-layer board.",
+   "context_before": "It is a 1.27 millimeter pitch. That's huge.",
+   "context_after": "Boom. People don't realize what a big deal escaping BGA's is.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "It is a 1.27 millimeter pitch. That's huge. Oh, yeah. Okay. So, yeah. So wide pitch. Yeah. Oh, it is that. Right. Okay. So it's bigger. So most of the BGA's these days is 0.8, right? So that's like- Right. And smaller. Obviously, the 0.4 is really tough. So what Greg was saying, though, is you can escape all 256 pins with a 6 mil space and trace. You can escape all pins on the top layer, which is like- On the top layer. That's crazy. That's great. That's great. That's a big deal. So now you have a Linux chip that runs on a four-layer board. Boom. People don't realize what a big deal escaping BGA's is."
+  },
+  {
+   "episode": 362,
+   "episode_title": "Secret Squirrel",
+   "episode_url": "https://theamphour.com/362-secret-squirrel/",
+   "guest": null,
+   "stem": "0362-secret-squirrel",
+   "paragraph_index": 197,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "You're going to have an eight-layer board or you're going to need to do like a 3-3 space trace. Right? And it's like, and that starts to get, that gets really expensive. And obviously, there's a lot of other design issues. You know, like, it's just, it's crazy.",
+   "context_before": "No, of course. That's why I'm saying. Right. Yeah. Right? Because it's an important thing because it forces you. If you choose a chip with a specific pin count and a specific pitch, that forces you into using a specific number-layered board. Right. Right.",
+   "context_after": "So this could go on a single-sided board. Sorry. I stand a double-sided board.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "No, of course. That's why I'm saying. Right. Yeah. Right? Because it's an important thing because it forces you. If you choose a chip with a specific pin count and a specific pitch, that forces you into using a specific number-layered board. Right. Right. You're going to have an eight-layer board or you're going to need to do like a 3-3 space trace. Right? And it's like, and that starts to get, that gets really expensive. And obviously, there's a lot of other design issues. You know, like, it's just, it's crazy. So this could go on a single-sided board. Sorry. I stand a double-sided board."
+  },
+  {
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "guest": "Luke Valenty",
+   "stem": "0395-an-interview-with-luke-valenty",
+   "paragraph_index": 181,
+   "depth": "explains",
+   "speaker_raw": "FPGAs",
+   "speaker_repaired": "Luke Valenty",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "So I'm using PCB way and they can get down to four mil traces and spacing. And then the vias can go down to two millimeter drills with a overall diameter of 0.5 millimeter. And that's kind of their standard.",
+   "context_before": "And so what is, what is the constraint on your PCB process? What's the process you're using?",
+   "context_after": "Is it 0.2 millimeter drills? Yeah. You said two millimeter. Sorry. That would be way too big. Yes. 0.2 millimeter drills. I was just, yeah, just gotta, I, I, you know, I'm a little metric challenge myself. So, uh, got to double check.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "And so what is, what is the constraint on your PCB process? What's the process you're using? So I'm using PCB way and they can get down to four mil traces and spacing. And then the vias can go down to two millimeter drills with a overall diameter of 0.5 millimeter. And that's kind of their standard. Is it 0.2 millimeter drills? Yeah. You said two millimeter. Sorry. That would be way too big. Yes. 0.2 millimeter drills. I was just, yeah, just gotta, I, I, you know, I'm a little metric challenge myself. So, uh, got to double check."
+  },
+  {
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "guest": null,
+   "stem": "0462-boat-anchors",
+   "paragraph_index": 193,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Oh, I was doing eight, eight thou, eight thou track space. You know? Yeah. Yeah. It's, it's pretty good. It depends upon the, uh, the quality of your, uh, laser printed things. Often you get little pin marks. So often, yeah, often you'd have to go touch them up with a little Sharpie, you know, you'd have to like go through, oh, look, there's pinholes and, you know, I'll just make that one a bit darker, you know? And, and it was a bit of a trick. And sometimes you'd end up with, you know, spotty traces that had little pits, pit holes in them and stuff like that. But who cares? Right. It worked.",
+   "context_before": "Yeah. And I think the, I mean, like, what was the resolution you could get on that too? Like the trace width.",
+   "context_after": "I mean, this is just a miniaturization of the, uh, the fab process, honestly. Oh yeah. Yeah. Totally. Yeah. Yeah. You got double slit effects and you got to deal with those too, you know, diffraction and crazy stuff. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. And I think the, I mean, like, what was the resolution you could get on that too? Like the trace width. Oh, I was doing eight, eight thou, eight thou track space. You know? Yeah. Yeah. It's, it's pretty good. It depends upon the, uh, the quality of your, uh, laser printed things. Often you get little pin marks. So often, yeah, often you'd have to go touch them up with a little Sharpie, you know, you'd have to like go through, oh, look, there's pinholes and, you know, I'll just make that one a bit darker, you know? And, and it was a bit of a trick. And sometimes you'd end up with, you know, spotty traces that had little pits, pit holes in them and stuff like that. But who cares? Right. It worked. I mean, this is just a miniaturization of the, uh, the fab process, honestly. Oh yeah. Yeah. Totally. Yeah. Yeah. You got double slit effects and you got to deal with those too, you know, diffraction and crazy stuff. Yeah."
+  },
+  {
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "guest": null,
+   "stem": "0482-shine-a-light",
+   "paragraph_index": 238,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "It's a, yeah. So there's that one. And then the other one was, um, I'm sorry, the space and trace. So I'll just say it was JLC. It was space and trace to three and a half millimeters or sorry, three and a half mil.",
+   "context_before": "Yeah.",
+   "context_after": "And you're complaining that wasn't, are you complaining that's not good enough? That's insane.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah. It's a, yeah. So there's that one. And then the other one was, um, I'm sorry, the space and trace. So I'll just say it was JLC. It was space and trace to three and a half millimeters or sorry, three and a half mil. And you're complaining that wasn't, are you complaining that's not good enough? That's insane."
+  },
+  {
+   "episode": 502,
+   "episode_title": "Lowest Common Denominator Design",
+   "episode_url": "https://theamphour.com/502-lowest-common-denominator-design/",
+   "guest": null,
+   "stem": "0502-lowest-common-denominator-design",
+   "paragraph_index": 119,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "I also made the choice about the 3.5 millimeter thing. And what I've been trying to do is I'm using a NRF 52. 3.5 millimeter? 3.5 millimeter. Sorry. 3.5 mil. Thank you. Mil. Thou. Or thou. Yeah. 0.889 millimeter trace in space. Oh, come on.",
+   "context_before": "Yep.",
+   "context_after": "What? Give it to me in Imperial. Track and space is always Imperial.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yep. I also made the choice about the 3.5 millimeter thing. And what I've been trying to do is I'm using a NRF 52. 3.5 millimeter? 3.5 millimeter. Sorry. 3.5 mil. Thank you. Mil. Thou. Or thou. Yeah. 0.889 millimeter trace in space. Oh, come on. What? Give it to me in Imperial. Track and space is always Imperial."
+  },
+  {
+   "episode": 502,
+   "episode_title": "Lowest Common Denominator Design",
+   "episode_url": "https://theamphour.com/502-lowest-common-denominator-design/",
+   "guest": null,
+   "stem": "0502-lowest-common-denominator-design",
+   "paragraph_index": 143,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Yeah. And so mine is much, much like his is, is, is pretty extreme. Like it really is. It like goes from like, like circle to pill. Mine is like, goes from circle to oval. And so I can just basically a three mil space trace could get out, but a 3.5 couldn't. And I was like, well, it makes sense. And in order to be able to like iterate on boards, it makes sense cost wise to be able to do that. And so it was literally a $400 difference in terms of boards to be able to go from blind and buried to this slightly modified outer. And that's like the smallest thing. And so I was like, all right, well, it makes sense. Yeah.",
+   "context_before": "Yeah. Right.",
+   "context_after": "Yeah. Oh no. If you can save a huge amount of costs. Oh, once you go to blind buried for years, although it's, you know, it's still reasonable costs.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah. Right. Yeah. And so mine is much, much like his is, is, is pretty extreme. Like it really is. It like goes from like, like circle to pill. Mine is like, goes from circle to oval. And so I can just basically a three mil space trace could get out, but a 3.5 couldn't. And I was like, well, it makes sense. And in order to be able to like iterate on boards, it makes sense cost wise to be able to do that. And so it was literally a $400 difference in terms of boards to be able to go from blind and buried to this slightly modified outer. And that's like the smallest thing. And so I was like, all right, well, it makes sense. Yeah. Yeah. Oh no. If you can save a huge amount of costs. Oh, once you go to blind buried for years, although it's, you know, it's still reasonable costs."
+  },
+  {
+   "episode": 502,
+   "episode_title": "Lowest Common Denominator Design",
+   "episode_url": "https://theamphour.com/502-lowest-common-denominator-design/",
+   "guest": null,
+   "stem": "0502-lowest-common-denominator-design",
+   "paragraph_index": 150,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "And that's assembly. And once again, on bare board, bare PCB cost, you can save costs by, if you don't, if you don't need that six layer board, if you can get away, if you can escape your BGA on four layers, you do it because it's going to be cheaper. And if you can escape it using, as you said, a higher process, sorry, a lower quality process technology, like a 4,000, 4,000 instead of 3,000, 3,000 track space, bingo, you've instantly have available cheaper manufacturing process technology. So your bare board should in theory be, well, you could potentially source it cheaper than you did if you said, oh, I'm going to use 2,000 traces because I'm a real designer.",
+   "context_before": "Whereas, you know, it's like a filtering mechanism of like, okay, like you're on like a parametric search and you say, okay, I'm going to have all 805, everything, the world's your oyster. You can use any machine, but I'm going to use 0402. It's now down to 65% of all the machines and 0201, 30% of the machines and on and down from there.",
+   "context_after": "Right. Well, and I think the thing that popped out to me, so like I said, I've done a design with this chip on it before, and it was like a 100mm by 100mm board, 100mm by 100mm square board. Right? Yep. And I had to pay for all of that space, but the only chip that needed this was that tiny little one chip. And it's like, so everything else is basically carrying the cost of this one chip. And you could say, well, you could go to a, you know, and really this is why modules are a good idea sometimes too, is that the module, yeah, it might have, you know, super tight tolerance, you know, and then it's also pre-certified for FTC. There's other reasons to do it, but then you're paying that cost and you're carrying that across other things. And so, yeah, I don't know. I think it is a balance poi",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Whereas, you know, it's like a filtering mechanism of like, okay, like you're on like a parametric search and you say, okay, I'm going to have all 805, everything, the world's your oyster. You can use any machine, but I'm going to use 0402. It's now down to 65% of all the machines and 0201, 30% of the machines and on and down from there. And that's assembly. And once again, on bare board, bare PCB cost, you can save costs by, if you don't, if you don't need that six layer board, if you can get away, if you can escape your BGA on four layers, you do it because it's going to be cheaper. And if you can escape it using, as you said, a higher process, sorry, a lower quality process technology, like a 4,000, 4,000 instead of 3,000, 3,000 track space, bingo, you've instantly have available cheaper manufacturing process technology. So your bare board should in theory be, well, you could potentially source it cheaper than you did if you said, oh, I'm going to use 2,000 traces because I'm a real designer. Right. Well, and I think the thing that popped out to me, so like I said, I've done a design with this chip on it before, and it was like a 100mm by 100mm board, 100mm by 100mm square board. Right? Yep. And I had to pay for all of that space, but the only chip that needed this was that tiny little one chip. And it's like, so everything else is basically carrying the cost of this one chip. And you could say, well, you could go to a, you know, and really this is why modules are a good idea sometimes too, is that the module, yeah, it might have, you know, super tight tolerance, you know, and then it's also pre-certified for FTC. There's other reasons to do it, but then you're paying that cost and you're carrying that across other things. And so, yeah, I don't know. I think it is a balance poi"
+  },
+  {
+   "episode": 504,
+   "episode_title": "This Is Just A Tribute",
+   "episode_url": "https://theamphour.com/504-this-is-just-a-tribute/",
+   "guest": null,
+   "stem": "0504-this-is-just-a-tribute",
+   "paragraph_index": 79,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "3.54, but they rounded it to 3.5. So you, so you use that 3.5, you took that as gospel and you laid out your entire board. But then when you can output it to, when you output the Gerber in metric, it's going to be under that point. Yeah. Oh, that 0.9, that 0.9 millimeters.",
+   "context_before": "0.09 millimeters is 3.54 thou.",
+   "context_after": "So, yeah. So like, and don't get me wrong, like the JLC folks were very nice and very like, understanding with my thrashing and questions and everything else. And another thing they said is that they usually like to take up the, they usually like to actually, when they're doing cam, they'll widen the trace for you. And so, and that's for exposure, right? They basically want to expose a wider trace so that if it doesn't over-etch, then it's fine, right? It's not a big deal. But I, I was at the edge.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "0.09 millimeters is 3.54 thou. 3.54, but they rounded it to 3.5. So you, so you use that 3.5, you took that as gospel and you laid out your entire board. But then when you can output it to, when you output the Gerber in metric, it's going to be under that point. Yeah. Oh, that 0.9, that 0.9 millimeters. So, yeah. So like, and don't get me wrong, like the JLC folks were very nice and very like, understanding with my thrashing and questions and everything else. And another thing they said is that they usually like to take up the, they usually like to actually, when they're doing cam, they'll widen the trace for you. And so, and that's for exposure, right? They basically want to expose a wider trace so that if it doesn't over-etch, then it's fine, right? It's not a big deal. But I, I was at the edge."
+  },
+  {
+   "episode": 504,
+   "episode_title": "This Is Just A Tribute",
+   "episode_url": "https://theamphour.com/504-this-is-just-a-tribute/",
+   "guest": null,
+   "stem": "0504-this-is-just-a-tribute",
+   "paragraph_index": 87,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "But yeah, everyone's going to encounter that. It's, it's very common once you try and push it. It's like, and seriously, don't push it. If your house, your design house says it's five, five. Well, don't use five, five unless you absolutely have to.",
+   "context_before": "Yeah. Yeah. I mean, and that's really where that kind of, uh, you know, so in this case, right, they have people in the loop, right? I think they'd be better served, honestly, moving towards like Euro circuits type thing. I think, you know, I'm sure they're working on tooling like this, but like that kind of thing, like if I can get that feedback, I'll just go fix it myself. I want, I want to fix it myself. I don't want to wait 12 hours. Like, like. Yep. Yeah. So anyways, I'm going to try Euro circuits just for damn, like that tool was a life's a brain saver really. But, uh, yeah, that was, that was a stressful bit of time there. Yeah.",
+   "context_after": "Right. I think that's a, and that's really something that, you know, like, you know, I was doing this stuff for contextual electronics too. And I did a little postmortem and I said like, look, I should have set this at 3.75 mil instead of 3.5. Right. That, and then squeeze it, squeeze it down when you need to. Because the other thing is when I went to go and like start changing it now. Right. So you go do a replace based on, you know, the. The existing size. Yeah. Yeah. The type of net it is and stuff like that. Yeah. And I had 850, you know, DRC errors and like, it's so locked up. You try and do a push and shove and it's so over constrained now. It's, it's unused. It's literally unusable. I would have had to go and reroute the entire board. Uh, and so, or go to six layers or this or that,",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Yeah. I mean, and that's really where that kind of, uh, you know, so in this case, right, they have people in the loop, right? I think they'd be better served, honestly, moving towards like Euro circuits type thing. I think, you know, I'm sure they're working on tooling like this, but like that kind of thing, like if I can get that feedback, I'll just go fix it myself. I want, I want to fix it myself. I don't want to wait 12 hours. Like, like. Yep. Yeah. So anyways, I'm going to try Euro circuits just for damn, like that tool was a life's a brain saver really. But, uh, yeah, that was, that was a stressful bit of time there. Yeah. But yeah, everyone's going to encounter that. It's, it's very common once you try and push it. It's like, and seriously, don't push it. If your house, your design house says it's five, five. Well, don't use five, five unless you absolutely have to. Right. I think that's a, and that's really something that, you know, like, you know, I was doing this stuff for contextual electronics too. And I did a little postmortem and I said like, look, I should have set this at 3.75 mil instead of 3.5. Right. That, and then squeeze it, squeeze it down when you need to. Because the other thing is when I went to go and like start changing it now. Right. So you go do a replace based on, you know, the. The existing size. Yeah. Yeah. The type of net it is and stuff like that. Yeah. And I had 850, you know, DRC errors and like, it's so locked up. You try and do a push and shove and it's so over constrained now. It's, it's unused. It's literally unusable. I would have had to go and reroute the entire board. Uh, and so, or go to six layers or this or that,"
+  },
+  {
+   "episode": 504,
+   "episode_title": "This Is Just A Tribute",
+   "episode_url": "https://theamphour.com/504-this-is-just-a-tribute/",
+   "guest": null,
+   "stem": "0504-this-is-just-a-tribute",
+   "paragraph_index": 88,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Right. I think that's a, and that's really something that, you know, like, you know, I was doing this stuff for contextual electronics too. And I did a little postmortem and I said like, look, I should have set this at 3.75 mil instead of 3.5. Right. That, and then squeeze it, squeeze it down when you need to. Because the other thing is when I went to go and like start changing it now. Right. So you go do a replace based on, you know, the. The existing size. Yeah. Yeah. The type of net it is and stuff like that. Yeah. And I had 850, you know, DRC errors and like, it's so locked up. You try and do a push and shove and it's so over constrained now. It's, it's unused. It's literally unusable. I would have had to go and reroute the entire board. Uh, and so, or go to six layers or this or that, you know, like there's. Right. Yeah. And so at that point, I'm just going to go, I had done all this stuff to stay on the, you know, the low cost side so that people could following along could also get a board kind of cheap. Right. You know, and if I was going to do it for anyone else, I would have just been like, okay, well, I'm going to go get blind and buried vias. And you know, that's what the, the recommended layout is. That's what we talked about last, last time you and I chatted. Right. You know, so yeah, I guess you're damned if you do and damned if you don't. Right. So.",
+   "context_before": "But yeah, everyone's going to encounter that. It's, it's very common once you try and push it. It's like, and seriously, don't push it. If your house, your design house says it's five, five. Well, don't use five, five unless you absolutely have to.",
+   "context_after": "Oh no, you're not going to be damned if you're just, yeah. If you're aware of this stuff.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "But yeah, everyone's going to encounter that. It's, it's very common once you try and push it. It's like, and seriously, don't push it. If your house, your design house says it's five, five. Well, don't use five, five unless you absolutely have to. Right. I think that's a, and that's really something that, you know, like, you know, I was doing this stuff for contextual electronics too. And I did a little postmortem and I said like, look, I should have set this at 3.75 mil instead of 3.5. Right. That, and then squeeze it, squeeze it down when you need to. Because the other thing is when I went to go and like start changing it now. Right. So you go do a replace based on, you know, the. The existing size. Yeah. Yeah. The type of net it is and stuff like that. Yeah. And I had 850, you know, DRC errors and like, it's so locked up. You try and do a push and shove and it's so over constrained now. It's, it's unused. It's literally unusable. I would have had to go and reroute the entire board. Uh, and so, or go to six layers or this or that, you know, like there's. Right. Yeah. And so at that point, I'm just going to go, I had done all this stuff to stay on the, you know, the low cost side so that people could following along could also get a board kind of cheap. Right. You know, and if I was going to do it for anyone else, I would have just been like, okay, well, I'm going to go get blind and buried vias. And you know, that's what the, the recommended layout is. That's what we talked about last, last time you and I chatted. Right. You know, so yeah, I guess you're damned if you do and damned if you don't. Right. So. Oh no, you're not going to be damned if you're just, yeah. If you're aware of this stuff."
+  },
+  {
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "guest": "Kyle Dumont",
+   "stem": "0505-hardware-revision-control-with-kyle-dumont",
+   "paragraph_index": 40,
+   "depth": "explains",
+   "speaker_raw": "Kyle Dumont",
+   "speaker_repaired": "Kyle Dumont",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Well, I mean, that was one of the problems with the, the dev kit printer. We were still doing a FFF. So fused, uh, basically fused filament deposition. So it was, uh, you know, we had to basically print a plastic and then be able to fill that trough. So with that process, we were probably down to somewhere around eight, eight mils trace in space. And you, so certainly nothing that would even be industry standard, which is one of the reasons we ended up moving to, uh, to another industry as it happened. Yeah. But with the other process, we were able to get down to like a hundred microns.",
+   "context_before": "And then what was the resolution you could get on that sort of thing?",
+   "context_after": "Yeah. That's the milled, milled and like subtractive versus additive, that kind of thing.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "And then what was the resolution you could get on that sort of thing? Well, I mean, that was one of the problems with the, the dev kit printer. We were still doing a FFF. So fused, uh, basically fused filament deposition. So it was, uh, you know, we had to basically print a plastic and then be able to fill that trough. So with that process, we were probably down to somewhere around eight, eight mils trace in space. And you, so certainly nothing that would even be industry standard, which is one of the reasons we ended up moving to, uh, to another industry as it happened. Yeah. But with the other process, we were able to get down to like a hundred microns. Yeah. That's the milled, milled and like subtractive versus additive, that kind of thing."
+  },
+  {
+   "episode": 518,
+   "episode_title": "Satellites and EVs with Joris Aerts",
+   "episode_url": "https://theamphour.com/518-satellites-and-evs-with-joris-aerts/",
+   "guest": "Joris Aerts",
+   "stem": "0518-satellites-and-evs-with-joris-aerts",
+   "paragraph_index": 344,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Joris Aerts",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Yeah. Because you go on the website and you see like, oh, this is your track spacing and width. And that's what you type in your cat tool. So that's, I think, yeah, you're probably right. So maybe that's where we need to start, Chris.",
+   "context_before": "Yep. Specs. I think, I think the thing that'll actually drive it more is like, so if, if like the board houses, at least if the China board houses or the European board houses were like, yeah, we're just doing metrics from now on. Sorry. You just got to deal with it. Then I think that would actually drive the industry more than we'd expect. There would still be people that are like, wait, what's going on here? And they would do the conversion.",
+   "context_after": "Yeah. Well, and I think the connectors are honestly doing it too. It'd be, well, cause like the China, like all the connectors are made in China effectively. Not all of them, obviously, but a lot of them are. And it's like, it's hard. I am actually honestly shocked when I open a data sheet these days and a dimension is in not metric. Like a connector dimension. It just, it feels weird.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yep. Specs. I think, I think the thing that'll actually drive it more is like, so if, if like the board houses, at least if the China board houses or the European board houses were like, yeah, we're just doing metrics from now on. Sorry. You just got to deal with it. Then I think that would actually drive the industry more than we'd expect. There would still be people that are like, wait, what's going on here? And they would do the conversion. Yeah. Because you go on the website and you see like, oh, this is your track spacing and width. And that's what you type in your cat tool. So that's, I think, yeah, you're probably right. So maybe that's where we need to start, Chris. Yeah. Well, and I think the connectors are honestly doing it too. It'd be, well, cause like the China, like all the connectors are made in China effectively. Not all of them, obviously, but a lot of them are. And it's like, it's hard. I am actually honestly shocked when I open a data sheet these days and a dimension is in not metric. Like a connector dimension. It just, it feels weird."
+  },
+  {
+   "episode": 559,
+   "episode_title": "Occam's Engineering Razor",
+   "episode_url": "https://theamphour.com/559-occams-engineering-razor/",
+   "guest": null,
+   "stem": "0559-occams-engineering-razor",
+   "paragraph_index": 283,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Yeah. I think, I think hardware is, I think it's hard to remap a linear thing like hardware where it's very defined. It's like, you, you can try and work ahead and whatever, but like until your boards and your desk, you know, there is no effect. Like, you know, there's no, there's no way to do a three mil space trace, like high quality circuit board in your lab. I'm like, I know they keep trying it. And it's like, it's not, it's just like, send that out. And it's going to be great.",
+   "context_before": "Oh, I agree. Yeah. Yeah. Again, Gantt is bullshit. Use pert charts. Oh, we've got a pert fan boys. Jonathan man says, sadly. Yes. I thought full on Gantt charts full of every subtask are pretty unwieldy. He much prefers the roadmap really is a high, which is a high level. We're into methodologies and frameworks now. And sprints. Oh, sprints. There's another wank word. Bingo. That's the agile thing. Planning day to day task. Okay. Yep. Yep. So anyway, 66% of people have said, yes, Gantt charts are still a thing.",
+   "context_after": "I've done six, six. Yes. Right. Yes. And like, you know, there's a bit, how you do it?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Oh, I agree. Yeah. Yeah. Again, Gantt is bullshit. Use pert charts. Oh, we've got a pert fan boys. Jonathan man says, sadly. Yes. I thought full on Gantt charts full of every subtask are pretty unwieldy. He much prefers the roadmap really is a high, which is a high level. We're into methodologies and frameworks now. And sprints. Oh, sprints. There's another wank word. Bingo. That's the agile thing. Planning day to day task. Okay. Yep. Yep. So anyway, 66% of people have said, yes, Gantt charts are still a thing. Yeah. I think, I think hardware is, I think it's hard to remap a linear thing like hardware where it's very defined. It's like, you, you can try and work ahead and whatever, but like until your boards and your desk, you know, there is no effect. Like, you know, there's no, there's no way to do a three mil space trace, like high quality circuit board in your lab. I'm like, I know they keep trying it. And it's like, it's not, it's just like, send that out. And it's going to be great. I've done six, six. Yes. Right. Yes. And like, you know, there's a bit, how you do it?"
+  },
+  {
+   "episode": 681,
+   "episode_title": "Compact High Speed Design with Lukas Henkel",
+   "episode_url": "https://theamphour.com/681-compact-high-speed-design-with-lukas-henkel/",
+   "guest": "Lukas Henkel",
+   "stem": "0681-compact-high-speed-design-with-lukas-henkel",
+   "paragraph_index": 16,
+   "depth": "explains",
+   "speaker_raw": "Lukas Henkel",
+   "speaker_repaired": "Lukas Henkel",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Well, at the moment, it's really just a price limit, I would say. Price limit? Yeah, yeah. So at the moment, what we're trying to achieve, we have a product in mind. Their space is at a premium. So we really have to cram very, very much compute power in a small volume. And that's why we've looked into this open source SIP. And at the moment, we are using standard PCB technology. So the design that you can see or that I've shared online as well, it's just a standard board, standard in quad marks because it's still high density. So a trace width is 75 micron spacing as well. The vias are also quite small with 200 microns total diameter and 81 or 85 microns drill. So it's a very high tech PCB, but it's not at the substrate or interposer level. So that would be the next step. But this step is quite a leap in terms of price. So we tried for the open source SIP, we tried to use a standard PCB manufacturing process just to manage the price of the whole project, but also since it's open source to make it possible for other enthusiasts or other companies even to adjust and customize the module for their needs. And it would be a huge hurdle if we used some highly exotic process to manufacture this module. So we are still using somewhat standard-ish PCB processes. Got it.",
+   "context_before": " factors, relative, of course, to just for my fat fingers. Right? Like I have fat fingers. I need to be able to plug this thing to a computer. At some point, they existed because that was the technology node. But like everything is leapt past that. It's just, you know, like thinking about chip scale packaging and just the scale and the scale difference of, I don't know, like even the, what's actually triggering the cellular part of the modem on these packages that I use that are already miniaturized. Like they're always scaled up and up and up and up to make them usable to board level PCB designers like us. But you're starting to kind of just take it down in the other direction. So I guess my question is, where do you start running into the limitations, right? Like of this miniaturization?",
+   "context_after": "Yeah, so like off the shelf at the very least, I would say, right? The fact that it is still a PCB and it's not like, there's no chemical, well, I guess there's no direct chemical, I guess that's how they do PCBs as well. They do chemical etching. True, yeah. There's no CVD or dry etching happening.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": " factors, relative, of course, to just for my fat fingers. Right? Like I have fat fingers. I need to be able to plug this thing to a computer. At some point, they existed because that was the technology node. But like everything is leapt past that. It's just, you know, like thinking about chip scale packaging and just the scale and the scale difference of, I don't know, like even the, what's actually triggering the cellular part of the modem on these packages that I use that are already miniaturized. Like they're always scaled up and up and up and up to make them usable to board level PCB designers like us. But you're starting to kind of just take it down in the other direction. So I guess my question is, where do you start running into the limitations, right? Like of this miniaturization? Well, at the moment, it's really just a price limit, I would say. Price limit? Yeah, yeah. So at the moment, what we're trying to achieve, we have a product in mind. Their space is at a premium. So we really have to cram very, very much compute power in a small volume. And that's why we've looked into this open source SIP. And at the moment, we are using standard PCB technology. So the design that you can see or that I've shared online as well, it's just a standard board, standard in quad marks because it's still high density. So a trace width is 75 micron spacing as well. The vias are also quite small with 200 microns total diameter and 81 or 85 microns drill. So it's a very high tech PCB, but it's not at the substrate or interposer level. So that would be the next step. But this step is quite a leap in terms of price. So we tried for the open source SIP, we tried to use a standard PCB manufacturing process just to manage the price of the whole project, but also since it's open source to make it possible for other enthusiasts or other companies even to adjust and customize the module for their needs. And it would be a huge hurdle if we used some highly exotic process to manufacture this module. So we are still using somewhat standard-ish PCB processes. Got it. Yeah, so like off the shelf at the very least, I would say, right? The fact that it is still a PCB and it's not like, there's no chemical, well, I guess there's no direct chemical, I guess that's how they do PCBs as well. They do chemical etching. True, yeah. There's no CVD or dry etching happening."
+  },
+  {
+   "episode": 686,
+   "episode_title": "A Benchtop Pick and Place with Stephen Hawes",
+   "episode_url": "https://theamphour.com/686-a-benchtop-pick-and-place-with-stephen-hawes/",
+   "guest": "Stephen Hawes",
+   "stem": "0686-a-benchtop-pick-and-place-with-stephen-hawes",
+   "paragraph_index": 239,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "Controlled impedance, I'm sure. And like, you like three mil space trace. I'm sure. Right. Yeah.",
+   "context_before": "exactly it. Um, but, but yeah, so, so I would just like, I want to see different ways to make boards. Like the lumen's great for assembling them quickly. If I really want to like try a design, what's the quickest way? Yeah, exactly. So, you know, making them on an SLA printer, super cool. People have done it before. It works. You still got to deal with ferric chloride and all this stuff. Fiber lasers will actually ablate metal. You can like cut and like vaporize a voxel of metal using this laser. And I tried doing this with a fiber laser and it just works so well. I mean, it's just so cool. If you don't care about a solder mask and of course, huge asterisks here, one-sided boards. You're using FR1 and at FR4, there's definitely concessions you're making here. Um, but 10 minutes of no work.",
+   "context_after": "You can get, uh, you can get to six mil trace space.",
+   "context_before_speaker": "Stephen Hawes",
+   "context_after_speaker": "Stephen Hawes",
+   "text": "exactly it. Um, but, but yeah, so, so I would just like, I want to see different ways to make boards. Like the lumen's great for assembling them quickly. If I really want to like try a design, what's the quickest way? Yeah, exactly. So, you know, making them on an SLA printer, super cool. People have done it before. It works. You still got to deal with ferric chloride and all this stuff. Fiber lasers will actually ablate metal. You can like cut and like vaporize a voxel of metal using this laser. And I tried doing this with a fiber laser and it just works so well. I mean, it's just so cool. If you don't care about a solder mask and of course, huge asterisks here, one-sided boards. You're using FR1 and at FR4, there's definitely concessions you're making here. Um, but 10 minutes of no work. Controlled impedance, I'm sure. And like, you like three mil space trace. I'm sure. Right. Yeah. You can get, uh, you can get to six mil trace space."
+  },
+  {
+   "episode": 686,
+   "episode_title": "A Benchtop Pick and Place with Stephen Hawes",
+   "episode_url": "https://theamphour.com/686-a-benchtop-pick-and-place-with-stephen-hawes/",
+   "guest": "Stephen Hawes",
+   "stem": "0686-a-benchtop-pick-and-place-with-stephen-hawes",
+   "paragraph_index": 240,
+   "depth": "explains",
+   "speaker_raw": "Stephen Hawes",
+   "speaker_repaired": "Stephen Hawes",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "trace-width-and-spacing"
+   ],
+   "paragraph_text": "You can get, uh, you can get to six mil trace space.",
+   "context_before": "Controlled impedance, I'm sure. And like, you like three mil space trace. I'm sure. Right. Yeah.",
+   "context_after": "I know.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Speaker ?",
+   "text": "Controlled impedance, I'm sure. And like, you like three mil space trace. I'm sure. Right. Yeah. You can get, uh, you can get to six mil trace space. I know."
+  }
+ ]
+}

@@ -1,0 +1,992 @@
+{
+ "concept": "lidar",
+ "name": "LIDAR",
+ "type": "component",
+ "score": 109.472,
+ "rank_by_score": 355,
+ "cluster": {
+  "core": [
+   "lidar",
+   "lidar-sensor"
+  ],
+  "children": [
+   "autonomous-vehicle",
+   "optics",
+   "point-cloud",
+   "self-driving-car",
+   "tesla-model-s",
+   "time-of-flight-measurement"
+  ],
+  "neighbors": [
+   {
+    "concept": "autonomous-driving",
+    "weight": 4
+   }
+  ]
+ },
+ "stats": {
+  "episodes": 26,
+  "mentions": 63,
+  "explains": 23,
+  "opinions": 11,
+  "candidate_episode_count": 25,
+  "candidate_mention_count": 44,
+  "gated_out": 190,
+  "gated_out_by_concept": [
+   [
+    "self-driving-car",
+    85
+   ],
+   [
+    "autonomous-vehicle",
+    33
+   ],
+   [
+    "autonomous-driving",
+    28
+   ],
+   [
+    "optics",
+    22
+   ],
+   [
+    "tesla-model-s",
+    15
+   ],
+   [
+    "time-of-flight-measurement",
+    4
+   ],
+   [
+    "point-cloud",
+    3
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 5,
+  "speakers": [
+   [
+    "Chris Gammell",
+    10
+   ],
+   [
+    "Greg Charvat",
+    6
+   ],
+   [
+    "Dave Jones",
+    4
+   ],
+   [
+    "Eric Klein",
+    3
+   ],
+   [
+    "Claire Wolf",
+    2
+   ],
+   [
+    "Collin Kidder",
+    2
+   ],
+   [
+    "Chris Anderson",
+    1
+   ],
+   [
+    "David Ledger",
+    1
+   ],
+   [
+    "Shahriar Shahramian",
+    1
+   ],
+   [
+    "Ted Yapo",
+    1
+   ],
+   [
+    "Brandon Gilles",
+    1
+   ],
+   [
+    "Mike Harrison",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 28,
+   "child": 4,
+   "neighbor": 1
+  },
+  "passages_by_depth": {
+   "explains": 23,
+   "opinion": 10
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 33,
+ "passages": [
+  {
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "guest": "Chris Anderson",
+   "stem": "the-amp-hour-105-deambulatory-daedal-drones",
+   "paragraph_index": 146,
+   "depth": "explains",
+   "speaker_raw": "Chris Anderson",
+   "speaker_repaired": "Chris Anderson",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "When you think of like a Predator out there or one of these military UAVs, there's like 60 people on that crew. I mean, you know, with an airplane, there's \u2013 yeah, it's between the operators and the ground crew and the, you know, the kind of the system analysts or the mission analysts and the CIA, you know, analysts, et cetera. I mean, there's just tons of people working on those crews. So they're really \u2013 there's almost like no fewer people than a manned aircraft. And they're often actually, you know, not flying autonomous missions. They're doing the inner loop themselves, which is they're staying upright. But the outer loop as to where you're going is being actually point and clicked on a map. So the amateur stuff, you know, the Archercopter and Archerplane and others like it are basically fully autonomous in that respect, which is you give them a mission, automatic takeoff, you know, follow waypoints. They will avoid \u2013 they will kind of, you know, follow the topology, which is to say that, you know, they know \u2013 with Google Maps, they know the elevations of the various waypoints and you can maintain an elevation for that. Then it will finish its mission a little \u2013 you can program it to look at a certain point of interest, keep the camera focused on it, loiter at certain areas, you know, do various camera functions and then land. So that's a fully autonomous mission. But what it isn't doing is, you know, noticing that, oops, there's a telephone line, you know, in the way or, oops, the cloud came in and, you know, and now my camera can't see anything because you're over the clouds or all that kind of stuff. And that kind of, you know, adaptive mission, you know, control, you know, is the next big step. And it's going to start with \u2013 it's going to start with things like image processing, you know, optical or LiDAR. You know, as you probably heard, one of the big, you know, crises right now in the UAV world is GPS spoofing or just loss of GPS blocking. And you take GPS away from ours and they're dead. I mean they don't have any idea where they are. Now, there's a couple ways to solve that. I mean one is just dead reckoning, sort of saying, oh, I lost GPS. But, you know, still I kind of know which direction I'm going and where I came from and I can kind of backtrack through just kind of, you know, inertial, you know, data and make it more or less back into it like GPS again. The second is actually looking for other wireless sources and just sort of saying, well, you know, here's some kind of known frequencies, known radio signals out there. I can tell through Doppler effects and others and signal strength what's \u2013 you know, whether they're getting weaker or stronger, what direction I'm going. So let me just sort of fly along the gradients of the existing RF space. So that's really kind of interesting and very doable because there's RF everywhere. And the third is imaging of the ground beneath you with LiDAR or optical and sort of saying \u2013 and having a database on board that, you know, that knows what the ground looks like and sort of saying, whoa, okay. Well, I mean what would you do if you were a pilot and you lost \u2013 and you lost, you know, your radar, your compass or your GPS? You'd look down to the ground and sort of say, do I recognize anything? And, you know, the great thing about drones is that they can have, you know, an infinite database of terrain characteristics. So, you know, between LiDAR and optical and other kind of multispectral imaging, they should be able to kind of look down and kind of find their way home.",
+   "context_before": "I think they're way ahead.",
+   "context_after": "All right.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "I think they're way ahead. When you think of like a Predator out there or one of these military UAVs, there's like 60 people on that crew. I mean, you know, with an airplane, there's \u2013 yeah, it's between the operators and the ground crew and the, you know, the kind of the system analysts or the mission analysts and the CIA, you know, analysts, et cetera. I mean, there's just tons of people working on those crews. So they're really \u2013 there's almost like no fewer people than a manned aircraft. And they're often actually, you know, not flying autonomous missions. They're doing the inner loop themselves, which is they're staying upright. But the outer loop as to where you're going is being actually point and clicked on a map. So the amateur stuff, you know, the Archercopter and Archerplane and others like it are basically fully autonomous in that respect, which is you give them a mission, automatic takeoff, you know, follow waypoints. They will avoid \u2013 they will kind of, you know, follow the topology, which is to say that, you know, they know \u2013 with Google Maps, they know the elevations of the various waypoints and you can maintain an elevation for that. Then it will finish its mission a little \u2013 you can program it to look at a certain point of interest, keep the camera focused on it, loiter at certain areas, you know, do various camera functions and then land. So that's a fully autonomous mission. But what it isn't doing is, you know, noticing that, oops, there's a telephone line, you know, in the way or, oops, the cloud came in and, you know, and now my camera can't see anything because you're over the clouds or all that kind of stuff. And that kind of, you know, adaptive mission, you know, control, you know, is the next big step. And it's going to start with \u2013 it's going to start with things like image processing, you know, optical or LiDAR. You know, as you probably heard, one of the big, you know, crises right now in the UAV world is GPS spoofing or just loss of GPS blocking. And you take GPS away from ours and they're dead. I mean they don't have any idea where they are. Now, there's a couple ways to solve that. I mean one is just dead reckoning, sort of saying, oh, I lost GPS. But, you know, still I kind of know which direction I'm going and where I came from and I can kind of backtrack through just kind of, you know, inertial, you know, data and make it more or less back into it like GPS again. The second is actually looking for other wireless sources and just sort of saying, well, you know, here's some kind of known frequencies, known radio signals out there. I can tell through Doppler effects and others and signal strength what's \u2013 you know, whether they're getting weaker or stronger, what direction I'm going. So let me just sort of fly along the gradients of the existing RF space. So that's really kind of interesting and very doable because there's RF everywhere. And the third is imaging of the ground beneath you with LiDAR or optical and sort of saying \u2013 and having a database on board that, you know, that knows what the ground looks like and sort of saying, whoa, okay. Well, I mean what would you do if you were a pilot and you lost \u2013 and you lost, you know, your radar, your compass or your GPS? You'd look down to the ground and sort of say, do I recognize anything? And, you know, the great thing about drones is that they can have, you know, an infinite database of terrain characteristics. So, you know, between LiDAR and optical and other kind of multispectral imaging, they should be able to kind of look down and kind of find their way home. All right."
+  },
+  {
+   "episode": 324,
+   "episode_title": "Mapping Out Nerdery",
+   "episode_url": "https://theamphour.com/324-mapping-out-nerdery/",
+   "guest": null,
+   "stem": "0324-mapping-out-nerdery",
+   "paragraph_index": 351,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "So this is not... Like, LiDAR is going to get much bigger.",
+   "context_before": "But still, I mean, just this...",
+   "context_after": "Hang on, no, no, no. They're claiming peak optical output from the chip. This is like a hybrid module that the lasers are on the chip.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "But still, I mean, just this... So this is not... Like, LiDAR is going to get much bigger. Hang on, no, no, no. They're claiming peak optical output from the chip. This is like a hybrid module that the lasers are on the chip."
+  },
+  {
+   "episode": 324,
+   "episode_title": "Mapping Out Nerdery",
+   "episode_url": "https://theamphour.com/324-mapping-out-nerdery/",
+   "guest": null,
+   "stem": "0324-mapping-out-nerdery",
+   "paragraph_index": 357,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "Right. So... Boo. I think the main thing, too, is that, like, if people are... So, like, say someone in our listening audience is interested in LiDAR and putting it on drones or something like that. Yeah. You're probably still going to buy a finished LiDAR module, right? Like a spinning...",
+   "context_before": "It will be available from early summer 2017. Market launch plan for 2018. Oh, boom.",
+   "context_after": "Oh, of course. You're not going to... Don't roll, you know. You don't roll. Nobody rolls their own anymore.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "It will be available from early summer 2017. Market launch plan for 2018. Oh, boom. Right. So... Boo. I think the main thing, too, is that, like, if people are... So, like, say someone in our listening audience is interested in LiDAR and putting it on drones or something like that. Yeah. You're probably still going to buy a finished LiDAR module, right? Like a spinning... Oh, of course. You're not going to... Don't roll, you know. You don't roll. Nobody rolls their own anymore."
+  },
+  {
+   "episode": 342,
+   "episode_title": "Our first in-person show",
+   "episode_url": "https://theamphour.com/342-our-first-in-person-show/",
+   "guest": null,
+   "stem": "0342-our-first-in-person-show",
+   "paragraph_index": 205,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "All right. So we got that crap out of the way. Good. Yeah. Wasted half a show on that. Yeah. Yeah. Yeah. Just pissed away like we normally do. All right. What do we got? What do we want to talk about? Well, we got a lot of stuff on here. This was actually really... So actually, this is relevant to some of the stuff we saw today. There was Lemnos. The guys from Lemnos Labs were writing about robotic startups. And we've talked about this a lot in the past, right? About like, yes, the robotic revolution's coming. But it's probably better to start your own company, right? That's the thing you should be doing. But this is... The reason that they bring it up is because about LiDAR. And I've already seen in the past two days, I've seen like two or three different chipsets that are like breakout boards or just single chips. Like they're just everywhere. And I still don't... I don't know how to actually get the data off that. I think it goes into like robot operating system, Ross. Yep. But like that's like the... That is one of the key pieces for building things that can avoid obstacles and all that stuff. Yep. And like the cost they're talking about, like the... I think in the article they talk about like it might be 50% of your bomb cost now, but it's probably going to be closer to five in, you know, in five years.",
+   "context_before": "Cool.",
+   "context_after": "Whereas Wi-Fi was like that. Like it was so expensive to integrate Wi-Fi. Like it was half the cost of...",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Cool. All right. So we got that crap out of the way. Good. Yeah. Wasted half a show on that. Yeah. Yeah. Yeah. Just pissed away like we normally do. All right. What do we got? What do we want to talk about? Well, we got a lot of stuff on here. This was actually really... So actually, this is relevant to some of the stuff we saw today. There was Lemnos. The guys from Lemnos Labs were writing about robotic startups. And we've talked about this a lot in the past, right? About like, yes, the robotic revolution's coming. But it's probably better to start your own company, right? That's the thing you should be doing. But this is... The reason that they bring it up is because about LiDAR. And I've already seen in the past two days, I've seen like two or three different chipsets that are like breakout boards or just single chips. Like they're just everywhere. And I still don't... I don't know how to actually get the data off that. I think it goes into like robot operating system, Ross. Yep. But like that's like the... That is one of the key pieces for building things that can avoid obstacles and all that stuff. Yep. And like the cost they're talking about, like the... I think in the article they talk about like it might be 50% of your bomb cost now, but it's probably going to be closer to five in, you know, in five years. Whereas Wi-Fi was like that. Like it was so expensive to integrate Wi-Fi. Like it was half the cost of..."
+  },
+  {
+   "episode": 342,
+   "episode_title": "Our first in-person show",
+   "episode_url": "https://theamphour.com/342-our-first-in-person-show/",
+   "guest": null,
+   "stem": "0342-our-first-in-person-show",
+   "paragraph_index": 215,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "Oh, maybe. I don't know. I think that there's enough of a... So like with IoT, it's like, oh, throw Bluetooth on it. And then, you know, I'm a software developer. But it's like robotics still needs a lot of stuff, right? You still need a lot of, you know, motor control. And you need, you know, all the code to control it. And then all the interfacing things. So it's not like particularly easy to get it done. But I think there's just more accessible. Like to get like one of those LiDAR spinners that's on like a Boston Dynamics thing. You know, that was really hard, right? That was $10,000 or the ones that are on the self-driving cars. But now there's ones that are smaller. And so you can get kind of like smaller scale robots. Like so I saw there was a bunch of money that was just raised by another warehouse company. So you remember Kiva robots was the Amazon one that got bought by Amazon for like $750 million. So now there's others just entrants into the market kind of thing. So yeah, robots. I don't know. I don't have any idea.",
+   "context_before": "But will there be like a frenzy?",
+   "context_after": "Is the internet of things now dying away?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "But will there be like a frenzy? Oh, maybe. I don't know. I think that there's enough of a... So like with IoT, it's like, oh, throw Bluetooth on it. And then, you know, I'm a software developer. But it's like robotics still needs a lot of stuff, right? You still need a lot of, you know, motor control. And you need, you know, all the code to control it. And then all the interfacing things. So it's not like particularly easy to get it done. But I think there's just more accessible. Like to get like one of those LiDAR spinners that's on like a Boston Dynamics thing. You know, that was really hard, right? That was $10,000 or the ones that are on the self-driving cars. But now there's ones that are smaller. And so you can get kind of like smaller scale robots. Like so I saw there was a bunch of money that was just raised by another warehouse company. So you remember Kiva robots was the Amazon one that got bought by Amazon for like $750 million. So now there's others just entrants into the market kind of thing. So yeah, robots. I don't know. I don't have any idea. Is the internet of things now dying away?"
+  },
+  {
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "guest": "David Ledger",
+   "stem": "0354-a-meeting-of-the-davids",
+   "paragraph_index": 636,
+   "depth": "explains",
+   "speaker_raw": "David",
+   "speaker_repaired": "David Ledger",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:autonomous-vehicle",
+   "concept_sources": [
+    "child:autonomous-vehicle"
+   ],
+   "concepts": [
+    "autonomous-vehicle"
+   ],
+   "paragraph_text": "So there's a few different ways. They have. Actually they have lots of sensors. They have radars. They also have a LiDAR. Most of them use about the same LiDAR too. Yeah but. It's great for that company.",
+   "context_before": "Then how does it do it?",
+   "context_after": "There's just so many. There's just almost an infinite number of combinations and permutations of car parks and back alleys and side streets that have no signs and this and that. And it's like I just can't see them. Yeah okay they might be able to go from where it knows from a pre-programmed a nice street onto the highway and then get there. They can do that now. Right. But when they when it encounters anything remotely troublesome I like it's just going to throw up its hands.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Then how does it do it? So there's a few different ways. They have. Actually they have lots of sensors. They have radars. They also have a LiDAR. Most of them use about the same LiDAR too. Yeah but. It's great for that company. There's just so many. There's just almost an infinite number of combinations and permutations of car parks and back alleys and side streets that have no signs and this and that. And it's like I just can't see them. Yeah okay they might be able to go from where it knows from a pre-programmed a nice street onto the highway and then get there. They can do that now. Right. But when they when it encounters anything remotely troublesome I like it's just going to throw up its hands."
+  },
+  {
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "guest": "David Ledger",
+   "stem": "0354-a-meeting-of-the-davids",
+   "paragraph_index": 637,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:self-driving-car",
+   "concept_sources": [
+    "child:self-driving-car"
+   ],
+   "concepts": [
+    "self-driving-car"
+   ],
+   "paragraph_text": "There's just so many. There's just almost an infinite number of combinations and permutations of car parks and back alleys and side streets that have no signs and this and that. And it's like I just can't see them. Yeah okay they might be able to go from where it knows from a pre-programmed a nice street onto the highway and then get there. They can do that now. Right. But when they when it encounters anything remotely troublesome I like it's just going to throw up its hands.",
+   "context_before": "So there's a few different ways. They have. Actually they have lots of sensors. They have radars. They also have a LiDAR. Most of them use about the same LiDAR too. Yeah but. It's great for that company.",
+   "context_after": "So actually we're already at I think level three for Aldi. Aldi have already reached level three autonomy. What's that? So that means you don't need the driver. Aldi will take on if there's an accident. Aldi I believe this means Aldi are like we'll take it. That's us. You know they think their car is safer to drive all the time than their driver.",
+   "context_before_speaker": "David Ledger",
+   "context_after_speaker": "David Ledger",
+   "text": "So there's a few different ways. They have. Actually they have lots of sensors. They have radars. They also have a LiDAR. Most of them use about the same LiDAR too. Yeah but. It's great for that company. There's just so many. There's just almost an infinite number of combinations and permutations of car parks and back alleys and side streets that have no signs and this and that. And it's like I just can't see them. Yeah okay they might be able to go from where it knows from a pre-programmed a nice street onto the highway and then get there. They can do that now. Right. But when they when it encounters anything remotely troublesome I like it's just going to throw up its hands. So actually we're already at I think level three for Aldi. Aldi have already reached level three autonomy. What's that? So that means you don't need the driver. Aldi will take on if there's an accident. Aldi I believe this means Aldi are like we'll take it. That's us. You know they think their car is safer to drive all the time than their driver."
+  },
+  {
+   "episode": 374,
+   "episode_title": "An Interview with Claire (n\u00e9e 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "guest": "Clifford Wolf",
+   "stem": "0374-an-interview-with-claire-nee-clifford-wolf",
+   "paragraph_index": 109,
+   "depth": "opinion",
+   "speaker_raw": "Clifford Wolf",
+   "speaker_repaired": "Claire Wolf",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "I don't know. I don't know. I'm, I'm personally not a big, uh, believer in, in lighter for self-driving cars. Interesting. I think, uh, uh, passive technologies like just normal cameras, uh, uh, are probably much better, uh, because, uh, when you have an active technology, everyone is sending out their pulses. Uh, so now you don't only need to distinguish, uh, the pulses you sent from each other, but also from the pulses other people send with, with their devices and things like that.",
+   "context_before": "That's great. Well, that, I mean, obviously that stuff is super in vogue right now with all the driving, self-driving cars and just all the, the mapping technologies that are out there. So it sounds like, it sounds like you were ahead of the game on a bunch of things these days.",
+   "context_after": "Oh, it's almost like the opposite of a network effect where if you have more people in the system, it gets, it degrades the quality of that system.",
+   "context_before_speaker": "Claire Wolf",
+   "context_after_speaker": "Claire Wolf",
+   "text": "That's great. Well, that, I mean, obviously that stuff is super in vogue right now with all the driving, self-driving cars and just all the, the mapping technologies that are out there. So it sounds like, it sounds like you were ahead of the game on a bunch of things these days. I don't know. I don't know. I'm, I'm personally not a big, uh, believer in, in lighter for self-driving cars. Interesting. I think, uh, uh, passive technologies like just normal cameras, uh, uh, are probably much better, uh, because, uh, when you have an active technology, everyone is sending out their pulses. Uh, so now you don't only need to distinguish, uh, the pulses you sent from each other, but also from the pulses other people send with, with their devices and things like that. Oh, it's almost like the opposite of a network effect where if you have more people in the system, it gets, it degrades the quality of that system."
+  },
+  {
+   "episode": 374,
+   "episode_title": "An Interview with Claire (n\u00e9e 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "guest": "Clifford Wolf",
+   "stem": "0374-an-interview-with-claire-nee-clifford-wolf",
+   "paragraph_index": 113,
+   "depth": "opinion",
+   "speaker_raw": "Clifford Wolf",
+   "speaker_repaired": "Claire Wolf",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "And, and, and nowadays computer vision is really, really good. Uh, so, uh, and it's only getting better. Um, so, um, so I think, um, uh, lighter is very interesting for, for stuff like mapping where you have a car driving down the street once, and then you have like a very detailed 3d model of everything in that street. Um, but for actual self-driving cars, I'm, I'm not, I'm not convinced yet that lighter will actually be the technology for that. Okay.",
+   "context_before": "Yep. Yep.",
+   "context_after": "Well, I mean, you're working on it, so I, yeah, I'll take your word for it. You know?",
+   "context_before_speaker": "Claire Wolf",
+   "context_after_speaker": "Claire Wolf",
+   "text": "Yep. Yep. And, and, and nowadays computer vision is really, really good. Uh, so, uh, and it's only getting better. Um, so, um, so I think, um, uh, lighter is very interesting for, for stuff like mapping where you have a car driving down the street once, and then you have like a very detailed 3d model of everything in that street. Um, but for actual self-driving cars, I'm, I'm not, I'm not convinced yet that lighter will actually be the technology for that. Okay. Well, I mean, you're working on it, so I, yeah, I'll take your word for it. You know?"
+  },
+  {
+   "episode": 387,
+   "episode_title": "Microfichery",
+   "episode_url": "https://theamphour.com/387-microfichery/",
+   "guest": null,
+   "stem": "0387-microfichery",
+   "paragraph_index": 305,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "It looks like the LiDAR failed. It, it, it had a LiDAR, which is a laser ranging sensor thing, which maps in front of the car. Yeah. And it had a radar as well as the optical cameras and all three failed to pick up a person walking their bicycle in all practically ideal practical test conditions.",
+   "context_before": "The LiDAR, the LiDAR failed though, in this case.",
+   "context_after": "Right. It wasn't snowing. It wasn't raining. Cause it's Arizona.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "The LiDAR, the LiDAR failed though, in this case. It looks like the LiDAR failed. It, it, it had a LiDAR, which is a laser ranging sensor thing, which maps in front of the car. Yeah. And it had a radar as well as the optical cameras and all three failed to pick up a person walking their bicycle in all practically ideal practical test conditions. Right. It wasn't snowing. It wasn't raining. Cause it's Arizona."
+  },
+  {
+   "episode": 387,
+   "episode_title": "Microfichery",
+   "episode_url": "https://theamphour.com/387-microfichery/",
+   "guest": null,
+   "stem": "0387-microfichery",
+   "paragraph_index": 325,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "neighbor:autonomous-driving",
+   "concept_sources": [
+    "neighbor:autonomous-driving"
+   ],
+   "concepts": [
+    "autonomous-driving"
+   ],
+   "paragraph_text": "Anyway, so they, they know the only future for Uber is to get the drivers out of the loop. Got it. Right. So they want for, that's why they're betting, betting the farm.",
+   "context_before": "You gotta, you gotta pay those lobbyists something. You know? Right. Uh.",
+   "context_after": "So tell me more about the, the LiDAR. Cause I will, I will make a call back to the, uh, so when Clifford Wolf was on the show, uh, back in whenever the hell that was, uh, he was, so he used to work on LiDAR and he said that it's very unlikely that LiDAR would be the technology that enables self-driving cars because of interference from one car to the next. And obviously that's not the scenario, but I just think that's relevant.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "You gotta, you gotta pay those lobbyists something. You know? Right. Uh. Anyway, so they, they know the only future for Uber is to get the drivers out of the loop. Got it. Right. So they want for, that's why they're betting, betting the farm. So tell me more about the, the LiDAR. Cause I will, I will make a call back to the, uh, so when Clifford Wolf was on the show, uh, back in whenever the hell that was, uh, he was, so he used to work on LiDAR and he said that it's very unlikely that LiDAR would be the technology that enables self-driving cars because of interference from one car to the next. And obviously that's not the scenario, but I just think that's relevant."
+  },
+  {
+   "episode": 387,
+   "episode_title": "Microfichery",
+   "episode_url": "https://theamphour.com/387-microfichery/",
+   "guest": null,
+   "stem": "0387-microfichery",
+   "paragraph_index": 326,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:self-driving-car",
+    "core"
+   ],
+   "concepts": [
+    "lidar",
+    "self-driving-car"
+   ],
+   "paragraph_text": "So tell me more about the, the LiDAR. Cause I will, I will make a call back to the, uh, so when Clifford Wolf was on the show, uh, back in whenever the hell that was, uh, he was, so he used to work on LiDAR and he said that it's very unlikely that LiDAR would be the technology that enables self-driving cars because of interference from one car to the next. And obviously that's not the scenario, but I just think that's relevant.",
+   "context_before": "Anyway, so they, they know the only future for Uber is to get the drivers out of the loop. Got it. Right. So they want for, that's why they're betting, betting the farm.",
+   "context_after": "And I, I think that is, yeah, I would probably have to agree with that. Like you can't have a spinning laser on the roof of every single car driving on the road.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Anyway, so they, they know the only future for Uber is to get the drivers out of the loop. Got it. Right. So they want for, that's why they're betting, betting the farm. So tell me more about the, the LiDAR. Cause I will, I will make a call back to the, uh, so when Clifford Wolf was on the show, uh, back in whenever the hell that was, uh, he was, so he used to work on LiDAR and he said that it's very unlikely that LiDAR would be the technology that enables self-driving cars because of interference from one car to the next. And obviously that's not the scenario, but I just think that's relevant. And I, I think that is, yeah, I would probably have to agree with that. Like you can't have a spinning laser on the roof of every single car driving on the road."
+  },
+  {
+   "episode": 387,
+   "episode_title": "Microfichery",
+   "episode_url": "https://theamphour.com/387-microfichery/",
+   "guest": null,
+   "stem": "0387-microfichery",
+   "paragraph_index": 331,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "So they don't interfere. And then even then the sensors are still going to get swamped with the other stuff. Yes. You can discriminate, but then your update rates probably on a drop. Exactly. Right. From, you know, from 50, um, maps per second down to five maps per second and then bang, you know, you're going to smash, you know, you're going to drive into someone. Right. Right. Because your update rate wasn't quick enough to process.",
+   "context_before": "You'd have to like frequency hop or something weird. Yeah. Yeah. Yeah. Right. Right.",
+   "context_after": "Well, that's the other thing that's interesting about, about the laser stuff too. Like you don't really operate in the frequency, like you can do PWM in with a laser, right? But you can't, and you can, you know, frequency module in that way, but you can't modulate. I mean, I guess you could change the light frequency, like by changing the.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "You'd have to like frequency hop or something weird. Yeah. Yeah. Yeah. Right. Right. So they don't interfere. And then even then the sensors are still going to get swamped with the other stuff. Yes. You can discriminate, but then your update rates probably on a drop. Exactly. Right. From, you know, from 50, um, maps per second down to five maps per second and then bang, you know, you're going to smash, you know, you're going to drive into someone. Right. Right. Because your update rate wasn't quick enough to process. Well, that's the other thing that's interesting about, about the laser stuff too. Like you don't really operate in the frequency, like you can do PWM in with a laser, right? But you can't, and you can, you know, frequency module in that way, but you can't modulate. I mean, I guess you could change the light frequency, like by changing the."
+  },
+  {
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "guest": "Earl Sharpe and Colin Kidder",
+   "stem": "0388-an-interview-with-earl-sharpe-and-collin-kidder",
+   "paragraph_index": 206,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "So does that mean that the, so like if you had a LiDAR sensor on top of a car, then would that be on a completely different system? And then that whole computer system would talk through the CAN bus to the rest of the car for a retrofit or would it be like a LiDAR system puts data onto the bus as well?",
+   "context_before": "Yeah, no, I agree. Um, I think there'll always be brands and whatnot. Uh, I think Bob Lutz, you know, was it yesterday or something at, at SAE, he made the argument that, um, the brands will become sort of, you know, the Uber or the, uh, Lyft, you know, as they start to own and buy cars, they won't, you know, they won't want Mercedes branding on it. Um, but I agree. I don't think that Mercedes will ever, um, you know, completely disappear. They'll probably start, you know, competing services and that sort of thing. And, and there'll still be a luxury or whatever that people pay more for.",
+   "context_after": "I mean, we, we haven't really worked with a, one of those actual cars yet, but, um, okay. You know, I mean, even in, uh, I think we talked about a little bit, you know, there could definitely, there already are cars that have, you know, six CAN buses or something like that. So I'm sure it'll be something like that.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah, no, I agree. Um, I think there'll always be brands and whatnot. Uh, I think Bob Lutz, you know, was it yesterday or something at, at SAE, he made the argument that, um, the brands will become sort of, you know, the Uber or the, uh, Lyft, you know, as they start to own and buy cars, they won't, you know, they won't want Mercedes branding on it. Um, but I agree. I don't think that Mercedes will ever, um, you know, completely disappear. They'll probably start, you know, competing services and that sort of thing. And, and there'll still be a luxury or whatever that people pay more for. So does that mean that the, so like if you had a LiDAR sensor on top of a car, then would that be on a completely different system? And then that whole computer system would talk through the CAN bus to the rest of the car for a retrofit or would it be like a LiDAR system puts data onto the bus as well? I mean, we, we haven't really worked with a, one of those actual cars yet, but, um, okay. You know, I mean, even in, uh, I think we talked about a little bit, you know, there could definitely, there already are cars that have, you know, six CAN buses or something like that. So I'm sure it'll be something like that."
+  },
+  {
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "guest": "Earl Sharpe and Colin Kidder",
+   "stem": "0388-an-interview-with-earl-sharpe-and-collin-kidder",
+   "paragraph_index": 208,
+   "depth": "explains",
+   "speaker_raw": "Colin Kidder",
+   "speaker_repaired": "Collin Kidder",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "Well, also as well, uh, when they, with self-driving cars, they're going to faster buses. I think it was Earl mentioned FlexRay in passing. That's a competing standard to CAN bus, but FlexRay is a lot faster. I think 10 megabits per second. So it's, it's getting up there close to ethernet. So as you see self-driving cars and this autonomous systems, a lot of times the autonomous system is sending so much data so rapidly, you couldn't do that over a standard CAN bus where you have 50 kilobytes per second of transfer speed. So they're going to things like FlexRay and ethernet. And that's where you're seeing the autonomous systems. So there is kind of a transition in that respect to newer, faster buses that can handle the kind of load that say a LIDAR sensor puts out.",
+   "context_before": "I mean, we, we haven't really worked with a, one of those actual cars yet, but, um, okay. You know, I mean, even in, uh, I think we talked about a little bit, you know, there could definitely, there already are cars that have, you know, six CAN buses or something like that. So I'm sure it'll be something like that.",
+   "context_after": "Yeah, I guess, I guess right now, I mean, I, again, like my experience is only in distributed control systems, but it's all like human scale kind of stuff is pretty slow. Like, you know, you upstate something 10 times a second. It seems like it's real time to most humans, right? It's what 30, 30 milliseconds is like the light, the light window or sound window when you start to be able to hear delays. Um, so yeah, that's, it's not that fast. Whereas a computer is like,",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Chris Gammell",
+   "text": "I mean, we, we haven't really worked with a, one of those actual cars yet, but, um, okay. You know, I mean, even in, uh, I think we talked about a little bit, you know, there could definitely, there already are cars that have, you know, six CAN buses or something like that. So I'm sure it'll be something like that. Well, also as well, uh, when they, with self-driving cars, they're going to faster buses. I think it was Earl mentioned FlexRay in passing. That's a competing standard to CAN bus, but FlexRay is a lot faster. I think 10 megabits per second. So it's, it's getting up there close to ethernet. So as you see self-driving cars and this autonomous systems, a lot of times the autonomous system is sending so much data so rapidly, you couldn't do that over a standard CAN bus where you have 50 kilobytes per second of transfer speed. So they're going to things like FlexRay and ethernet. And that's where you're seeing the autonomous systems. So there is kind of a transition in that respect to newer, faster buses that can handle the kind of load that say a LIDAR sensor puts out. Yeah, I guess, I guess right now, I mean, I, again, like my experience is only in distributed control systems, but it's all like human scale kind of stuff is pretty slow. Like, you know, you upstate something 10 times a second. It seems like it's real time to most humans, right? It's what 30, 30 milliseconds is like the light, the light window or sound window when you start to be able to hear delays. Um, so yeah, that's, it's not that fast. Whereas a computer is like,"
+  },
+  {
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "guest": "Earl Sharpe and Colin Kidder",
+   "stem": "0388-an-interview-with-earl-sharpe-and-collin-kidder",
+   "paragraph_index": 210,
+   "depth": "explains",
+   "speaker_raw": "Colin Kidder",
+   "speaker_repaired": "Collin Kidder",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "I'll take all the data you can give me. So, yeah, you know, when you're talking about a LIDAR sensor or something, it could be updating the distance to objects a thousand times per second or 10,000 times per second. Right. And when you get up to that kind of data speed, you need something faster than can to send that kind of data to the system. Not to mention that, you know, like Tesla is actually doing autonomous driving by looking at video. So you obviously aren't sending video over a can link. Right, right. So you're, you're getting other bus systems in there that are much faster for that kind of data.",
+   "context_before": "Yeah, I guess, I guess right now, I mean, I, again, like my experience is only in distributed control systems, but it's all like human scale kind of stuff is pretty slow. Like, you know, you upstate something 10 times a second. It seems like it's real time to most humans, right? It's what 30, 30 milliseconds is like the light, the light window or sound window when you start to be able to hear delays. Um, so yeah, that's, it's not that fast. Whereas a computer is like,",
+   "context_after": "Okay. Yeah. So that's, and that was, that was my question too. So like, so even at like a, like a reverse camera right now, they, they would be, I guess infotainment's kind of a whole separate system anyways, but, uh, anything with a camera in a car right now, it's pretty, it's going to be",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah, I guess, I guess right now, I mean, I, again, like my experience is only in distributed control systems, but it's all like human scale kind of stuff is pretty slow. Like, you know, you upstate something 10 times a second. It seems like it's real time to most humans, right? It's what 30, 30 milliseconds is like the light, the light window or sound window when you start to be able to hear delays. Um, so yeah, that's, it's not that fast. Whereas a computer is like, I'll take all the data you can give me. So, yeah, you know, when you're talking about a LIDAR sensor or something, it could be updating the distance to objects a thousand times per second or 10,000 times per second. Right. And when you get up to that kind of data speed, you need something faster than can to send that kind of data to the system. Not to mention that, you know, like Tesla is actually doing autonomous driving by looking at video. So you obviously aren't sending video over a can link. Right, right. So you're, you're getting other bus systems in there that are much faster for that kind of data. Okay. Yeah. So that's, and that was, that was my question too. So like, so even at like a, like a reverse camera right now, they, they would be, I guess infotainment's kind of a whole separate system anyways, but, uh, anything with a camera in a car right now, it's pretty, it's going to be"
+  },
+  {
+   "episode": 407,
+   "episode_title": "Gregory Charvat and Three New Companies",
+   "episode_url": "https://theamphour.com/407-gregory-charvat-and-three-new-companies/",
+   "guest": "Gregory Charvat",
+   "stem": "0407-gregory-charvat-and-three-new-companies",
+   "paragraph_index": 296,
+   "depth": "explains",
+   "speaker_raw": "Gregory Charvat",
+   "speaker_repaired": "Greg Charvat",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "LiDAR is not navigation though. That's true. That's just object detection. That's object detection. Now, you could make a SLAM map just as you would with machine learning and vision with LiDAR data, but it has the same problem. Where that shelf of parts moves over here, then it gets all screwed up. So it \u2013 now it may be able to \u2013 it learns and adapts, but it's not at four nines. Okay? Okay. And so to get to four nines, which is the requirement in the industry, it needs to be very, very repeatable and accurate. Now, what is? Radio navigation, GPS, ORAN, and indoor GPS is \u2013 hits four nines. And that's why this is so valuable. Yeah. Everything else is a science project.",
+   "context_before": "So \u2013 Well, there's other systems out there too though, right? So there's also LiDAR that is on the device, right?",
+   "context_after": "Well, what about other systems though? Like, so like we've had the, you know, the valve folks on a bunch with the lighthouse, that kind of thing. So what about like that as well? Lighthouse.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So \u2013 Well, there's other systems out there too though, right? So there's also LiDAR that is on the device, right? LiDAR is not navigation though. That's true. That's just object detection. That's object detection. Now, you could make a SLAM map just as you would with machine learning and vision with LiDAR data, but it has the same problem. Where that shelf of parts moves over here, then it gets all screwed up. So it \u2013 now it may be able to \u2013 it learns and adapts, but it's not at four nines. Okay? Okay. And so to get to four nines, which is the requirement in the industry, it needs to be very, very repeatable and accurate. Now, what is? Radio navigation, GPS, ORAN, and indoor GPS is \u2013 hits four nines. And that's why this is so valuable. Yeah. Everything else is a science project. Well, what about other systems though? Like, so like we've had the, you know, the valve folks on a bunch with the lighthouse, that kind of thing. So what about like that as well? Lighthouse."
+  },
+  {
+   "episode": 407,
+   "episode_title": "Gregory Charvat and Three New Companies",
+   "episode_url": "https://theamphour.com/407-gregory-charvat-and-three-new-companies/",
+   "guest": "Gregory Charvat",
+   "stem": "0407-gregory-charvat-and-three-new-companies",
+   "paragraph_index": 324,
+   "depth": "explains",
+   "speaker_raw": "Gregory Charvat",
+   "speaker_repaired": "Greg Charvat",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "Well, it adds like a level of automation that doesn't exist today. Sure. And that's what we enable Tumax. That's what our focus is. And that's why you see both threads. So you've got the centimeter scale can get the material there. Or it can do \u2013 it can navigate all of the robots to the centimeters to do whatever they have to. And material handling is one example. And then the millimeter stuff allows you to instrument things, fixture things. We call it virtual fixturing. Now, that cart that's on wheels, it may as well be bolted to the ground and we measured it with a LiDAR because we know where it is to less than a millimeter. Now we could do machine operations to pick up stuff and mount things. So that's the theme of Humatics and that is our focus and that's what we're enabling.",
+   "context_before": "Yeah. You're talking about robots in general. And I think that's good.",
+   "context_after": "Nice. Yeah, I like that virtual fixturing thing. And I think \u2013 I mean, that played well at IMTS as well. I was walking around with a friend early on in the day who had not done a lot of machining stuff. And he was kind of like asking me, he was like, well, what is the hard part about machining? And not that I'm an expert in this even in the slightest. But I said one of the things that I always struggle with and it seems like a lot of the things that people when they're doing machining deal with is like what is the absolute reference, right? Where is 000 axis coordinates, right?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. You're talking about robots in general. And I think that's good. Well, it adds like a level of automation that doesn't exist today. Sure. And that's what we enable Tumax. That's what our focus is. And that's why you see both threads. So you've got the centimeter scale can get the material there. Or it can do \u2013 it can navigate all of the robots to the centimeters to do whatever they have to. And material handling is one example. And then the millimeter stuff allows you to instrument things, fixture things. We call it virtual fixturing. Now, that cart that's on wheels, it may as well be bolted to the ground and we measured it with a LiDAR because we know where it is to less than a millimeter. Now we could do machine operations to pick up stuff and mount things. So that's the theme of Humatics and that is our focus and that's what we're enabling. Nice. Yeah, I like that virtual fixturing thing. And I think \u2013 I mean, that played well at IMTS as well. I was walking around with a friend early on in the day who had not done a lot of machining stuff. And he was kind of like asking me, he was like, well, what is the hard part about machining? And not that I'm an expert in this even in the slightest. But I said one of the things that I always struggle with and it seems like a lot of the things that people when they're doing machining deal with is like what is the absolute reference, right? Where is 000 axis coordinates, right?"
+  },
+  {
+   "episode": 430,
+   "episode_title": "Shahriar Discusses 5G",
+   "episode_url": "https://theamphour.com/430-shahriar-discusses-5g/",
+   "guest": "Shahriar",
+   "stem": "0430-shahriar-discusses-5g",
+   "paragraph_index": 145,
+   "depth": "explains",
+   "speaker_raw": "Shariar",
+   "speaker_repaired": "Shahriar Shahramian",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "Yeah, so let's go back to the question you asked earlier. You asked about beamforming and phased arrays. And so the idea, like I said, is really simple. But the consequences are really interesting. So it turns out, as I was saying, if you put a bunch of antennas next to each other. And these antennas are spaced at, you know, a fraction, one-fourth or so or half of the wavelength of the antenna that's operating on. And then you connect them all together. And then you change the phase of the signal to each of the antennas in a unique way, in a predictable way, which you can compute. You can constructively and destructively interfere the waves in open space and tilt the beam in a particular direction. So this basically is called electronic beamforming. It's a foundation of how phased arrays work. And you can do this with light as well. Because light is an electromagnetic wave. It has phase information exactly the same way. And that's how solid state LIDAR is supposed to be built. It's exactly the same.",
+   "context_before": "People listen to this and they want to hear about the technology. But it's so important. I'm with you, you know. Yeah.",
+   "context_after": "It's supposed to work on this with underwater sonar. It works in water as well.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "People listen to this and they want to hear about the technology. But it's so important. I'm with you, you know. Yeah. Yeah, so let's go back to the question you asked earlier. You asked about beamforming and phased arrays. And so the idea, like I said, is really simple. But the consequences are really interesting. So it turns out, as I was saying, if you put a bunch of antennas next to each other. And these antennas are spaced at, you know, a fraction, one-fourth or so or half of the wavelength of the antenna that's operating on. And then you connect them all together. And then you change the phase of the signal to each of the antennas in a unique way, in a predictable way, which you can compute. You can constructively and destructively interfere the waves in open space and tilt the beam in a particular direction. So this basically is called electronic beamforming. It's a foundation of how phased arrays work. And you can do this with light as well. Because light is an electromagnetic wave. It has phase information exactly the same way. And that's how solid state LIDAR is supposed to be built. It's exactly the same. It's supposed to work on this with underwater sonar. It works in water as well."
+  },
+  {
+   "episode": 465,
+   "episode_title": "An Interview with Ted Yapo",
+   "episode_url": "https://theamphour.com/465-an-interview-with-ted-yapo/",
+   "guest": "Ted Yapo",
+   "stem": "0465-an-interview-with-ted-yapo",
+   "paragraph_index": 23,
+   "depth": "explains",
+   "speaker_raw": "Ted Yapo",
+   "speaker_repaired": "Ted Yapo",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "And then, and then later on I did, um, I went kind of, um, you know, after, after the networking startup, we, we, um, we were acquired by Cisco at some point. I stayed there for a little bit. And then after that did some consulting, uh, with a couple, a couple of guys from, that I worked with, uh, previously. We just did some consulting and embedded systems, you know, generally. And, um, then I decided I want to go back to graduate school. Oh, cool. Yeah. So I did some computer vision stuff there. Um, this was midlife, you know, mid thirties or so. And, um, did that for a while. And then, um, so it was, it was like LIDAR based computer vision stuff. Oh, yeah. LIDAR was, LIDAR was just kind of hitting the, um, hitting the scene at that point. And, uh, it was, you know, it's kind of scene analysis from LIDAR and not, not just, you know, the LIDAR, little LIDAR sensors you, you buy today are just distance sensors, really. I mean, and they're just used as, I just want to measure the distance. Uh, you know, I don't want my robot to roll down the stairs or whatever. Um, but, uh, you know, these are scanning LIDAR. So you could, you could get an image, a depth image of a scene, um, and doing analysis in there. One of the, um, papers I did was for finding, uh, and this, it didn't even actually get published, but this was, this was some of the most interesting work that, that I thought was finding, um, telephone wires. And power wires from LIDAR.",
+   "context_before": "So then that was the end under the vision type stuff or, or still. Yeah.",
+   "context_after": "Oh, yeah.",
+   "context_before_speaker": "Ted Yapo",
+   "context_after_speaker": "Ted Yapo",
+   "text": "So then that was the end under the vision type stuff or, or still. Yeah. And then, and then later on I did, um, I went kind of, um, you know, after, after the networking startup, we, we, um, we were acquired by Cisco at some point. I stayed there for a little bit. And then after that did some consulting, uh, with a couple, a couple of guys from, that I worked with, uh, previously. We just did some consulting and embedded systems, you know, generally. And, um, then I decided I want to go back to graduate school. Oh, cool. Yeah. So I did some computer vision stuff there. Um, this was midlife, you know, mid thirties or so. And, um, did that for a while. And then, um, so it was, it was like LIDAR based computer vision stuff. Oh, yeah. LIDAR was, LIDAR was just kind of hitting the, um, hitting the scene at that point. And, uh, it was, you know, it's kind of scene analysis from LIDAR and not, not just, you know, the LIDAR, little LIDAR sensors you, you buy today are just distance sensors, really. I mean, and they're just used as, I just want to measure the distance. Uh, you know, I don't want my robot to roll down the stairs or whatever. Um, but, uh, you know, these are scanning LIDAR. So you could, you could get an image, a depth image of a scene, um, and doing analysis in there. One of the, um, papers I did was for finding, uh, and this, it didn't even actually get published, but this was, this was some of the most interesting work that, that I thought was finding, um, telephone wires. And power wires from LIDAR. Oh, yeah."
+  },
+  {
+   "episode": 495,
+   "episode_title": "An Interview with Eric Klein",
+   "episode_url": "https://theamphour.com/495-an-interview-with-eric-klein/",
+   "guest": "Eric Klein",
+   "stem": "0495-an-interview-with-eric-klein",
+   "paragraph_index": 7,
+   "depth": "explains",
+   "speaker_raw": "Eric Klein",
+   "speaker_repaired": "Eric Klein",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "Yeah. We always learned one of the things we loved when we invest in an entrepreneur is one of the last things that we do is we go out and have dinner with them. And we just talk about the rest of our lives. And it's a great way to understand the individual you're about ready to go on a, you know, potentially a five or 10 year relationship with. So we're just getting back to that point, you know, underneath this difficult time we live in as a, you know, someone who loves hardware and invests in technology that involves hardware and software brought together. I tell you, it's incredibly exciting. I think the things that we've, that we're unlocking right now in terms of new markets and new opportunities is huge. If you go back to Chris Anderson and, you know, he always says that for the longest time we lived in the benefits of the iPhone revolution, right? With a low cost SOC, low cost accelerometer, all the things that we put into smartphones that we, you know, we brought the price down. The same thing is happening today, right? Right now in terms of robotics, right? The low, lower, as we, you know, massively decrease the cost of things like ESC controllers and battery technology for robotics. And we're opening up markets in the same way. Robots that used to cost, you know, robotic solutions that used to cost 50, $100,000, right? Think about how much LIDAR used to cost, a Velodyne LIDAR puck, right?",
+   "context_before": "Right, right. Yeah. Look them in the eye. Get a good feel for who they are. And like, I always hear about, you know, here, I think you have talked about this and other investors talk about, you know, you invest in the person. And it's like, yeah, if you can't be across to them, getting a good feel for who they are, how could you, how could you develop that picture and trust enough that it's not going to be like, well, $10 million down the hole and what's the big deal?",
+   "context_after": "Sure, right, right, right.",
+   "context_before_speaker": "Eric Klein",
+   "context_after_speaker": "Eric Klein",
+   "text": "Right, right. Yeah. Look them in the eye. Get a good feel for who they are. And like, I always hear about, you know, here, I think you have talked about this and other investors talk about, you know, you invest in the person. And it's like, yeah, if you can't be across to them, getting a good feel for who they are, how could you, how could you develop that picture and trust enough that it's not going to be like, well, $10 million down the hole and what's the big deal? Yeah. We always learned one of the things we loved when we invest in an entrepreneur is one of the last things that we do is we go out and have dinner with them. And we just talk about the rest of our lives. And it's a great way to understand the individual you're about ready to go on a, you know, potentially a five or 10 year relationship with. So we're just getting back to that point, you know, underneath this difficult time we live in as a, you know, someone who loves hardware and invests in technology that involves hardware and software brought together. I tell you, it's incredibly exciting. I think the things that we've, that we're unlocking right now in terms of new markets and new opportunities is huge. If you go back to Chris Anderson and, you know, he always says that for the longest time we lived in the benefits of the iPhone revolution, right? With a low cost SOC, low cost accelerometer, all the things that we put into smartphones that we, you know, we brought the price down. The same thing is happening today, right? Right now in terms of robotics, right? The low, lower, as we, you know, massively decrease the cost of things like ESC controllers and battery technology for robotics. And we're opening up markets in the same way. Robots that used to cost, you know, robotic solutions that used to cost 50, $100,000, right? Think about how much LIDAR used to cost, a Velodyne LIDAR puck, right? Sure, right, right, right."
+  },
+  {
+   "episode": 495,
+   "episode_title": "An Interview with Eric Klein",
+   "episode_url": "https://theamphour.com/495-an-interview-with-eric-klein/",
+   "guest": "Eric Klein",
+   "stem": "0495-an-interview-with-eric-klein",
+   "paragraph_index": 9,
+   "depth": "explains",
+   "speaker_raw": "Eric Klein",
+   "speaker_repaired": "Eric Klein",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "Now you've got folks working on solutions where they're trying to get that, you know, well under $1,000 and trying to head for 100. Yeah. All of a sudden we get LIDAR for you, LIDAR for you, right? Right, right. So that's, it's almost always happening and it's fun to, as a technologist and someone who loves hardware to go, oh my gosh, now we can incorporate that. What could we do that maybe, you know, we technically could have built before, but we couldn't have done it at a price point that would allow adoption by the mainstream.",
+   "context_before": "Sure, right, right, right.",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Eric Klein",
+   "context_after_speaker": "Eric Klein",
+   "text": "Sure, right, right, right. Now you've got folks working on solutions where they're trying to get that, you know, well under $1,000 and trying to head for 100. Yeah. All of a sudden we get LIDAR for you, LIDAR for you, right? Right, right. So that's, it's almost always happening and it's fun to, as a technologist and someone who loves hardware to go, oh my gosh, now we can incorporate that. What could we do that maybe, you know, we technically could have built before, but we couldn't have done it at a price point that would allow adoption by the mainstream. Yeah."
+  },
+  {
+   "episode": 495,
+   "episode_title": "An Interview with Eric Klein",
+   "episode_url": "https://theamphour.com/495-an-interview-with-eric-klein/",
+   "guest": "Eric Klein",
+   "stem": "0495-an-interview-with-eric-klein",
+   "paragraph_index": 29,
+   "depth": "explains",
+   "speaker_raw": "Eric Klein",
+   "speaker_repaired": "Eric Klein",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "child:point-cloud",
+   "concept_sources": [
+    "child:point-cloud"
+   ],
+   "concepts": [
+    "point-cloud"
+   ],
+   "paragraph_text": "Yeah, where I'm looking at a quarter inch piece of chrome steel going on to a, you know, a, you know, three eighths flat steel at a weird angle and I'm like, I think I could get those two welded together in a pinch. It may, you know, and I'm going to do it the right way, right? Welders take a look at imperfect conditions and make a perfect weld. That's their job. Right, right. And I, I can tell you that, you know, three or four years ago, those sort of problems, we started to look at advances in, again, computer vision, point cloud generation via LIDAR and then the fact that arms and stuff were already relatively inexpensive and getting less expensive and I go, wow, I think we, as an example, we could augment the work that, that welders do. Right. And, and across the board, robotics was coming into its own. So you, you say, all right, I'm going to invest more into that space and you start looking for entrepreneurs and solutions there.",
+   "context_before": "Not an assembly line where you have the exact same thing every time you're saying it's more of a flexible solution kind of idea.",
+   "context_after": "So it sounds like a lot, a lot of like Venn diagrams almost of like you have, Oh yeah. these different things like, Oh, crossover. I see it, you know,",
+   "context_before_speaker": "Eric Klein",
+   "context_after_speaker": "Eric Klein",
+   "text": "Not an assembly line where you have the exact same thing every time you're saying it's more of a flexible solution kind of idea. Yeah, where I'm looking at a quarter inch piece of chrome steel going on to a, you know, a, you know, three eighths flat steel at a weird angle and I'm like, I think I could get those two welded together in a pinch. It may, you know, and I'm going to do it the right way, right? Welders take a look at imperfect conditions and make a perfect weld. That's their job. Right, right. And I, I can tell you that, you know, three or four years ago, those sort of problems, we started to look at advances in, again, computer vision, point cloud generation via LIDAR and then the fact that arms and stuff were already relatively inexpensive and getting less expensive and I go, wow, I think we, as an example, we could augment the work that, that welders do. Right. And, and across the board, robotics was coming into its own. So you, you say, all right, I'm going to invest more into that space and you start looking for entrepreneurs and solutions there. So it sounds like a lot, a lot of like Venn diagrams almost of like you have, Oh yeah. these different things like, Oh, crossover. I see it, you know,"
+  },
+  {
+   "episode": 517,
+   "episode_title": "Depth and AI with Brandon Gilles and Brian Weinstein",
+   "episode_url": "https://theamphour.com/517-depth-and-ai-with-brandon-gilles-and-brian-weinstein/",
+   "guest": "Brandon Gillis and Brian Weinstein",
+   "stem": "0517-depth-and-ai-with-brandon-gilles-and-brian-weinstein",
+   "paragraph_index": 130,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Brandon Gilles",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "And in physical space. So Apple actually put a LIDAR for doing depth measurement in their latest phone, which is, has disadvantages. It doesn't do as well outside as disparity depth. So we have an advantage there, but, but there are these solutions that exist. So our niche is in this embedded, like if you're actually making your own product where you can't just put an iPhone in it. And in good examples of those, what we've seen so far, probably the one that's the coolest to me is a visual assistance, uh, for the visually impaired or the outright blind.",
+   "context_before": "And you're saying this is like the detection of things and for like autofocus and other type of applications. Is that what you mean?",
+   "context_after": "Oh yeah. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "And you're saying this is like the detection of things and for like autofocus and other type of applications. Is that what you mean? And in physical space. So Apple actually put a LIDAR for doing depth measurement in their latest phone, which is, has disadvantages. It doesn't do as well outside as disparity depth. So we have an advantage there, but, but there are these solutions that exist. So our niche is in this embedded, like if you're actually making your own product where you can't just put an iPhone in it. And in good examples of those, what we've seen so far, probably the one that's the coolest to me is a visual assistance, uh, for the visually impaired or the outright blind. Oh yeah. Yeah."
+  },
+  {
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "guest": "Mike Harrison",
+   "stem": "0524-leds-and-evs-with-mike-harrison",
+   "paragraph_index": 491,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Mike Harrison",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "So yeah, I had an interesting take on that in the, I think Tesla's attitude is that LIDAR is very much a stop gap. Right. For systems where they can't do it. Cause you think about it. What are the sensing things on a normal manual driven car? Two eyeballs. You, you don't have like LIDAR. So it clearly can be done with a, with optically. And LIDAR is almost like a stop gap for when you can't make the optics work as well as they could do.",
+   "context_before": "yone was tweeting that morning. And I even retweeted it myself because there was this Tesla that, that famously was fooled by a big advertisement of somebody's face on the back of the bus. And I thought, and I thought it was a person stepping out, you know, so the camera, and yeah, so he's, he's like, cause the Tesla records everything. So he's got the recorded data from it and yeah. Yeah. Oops. So, yeah, I, I think, yeah, in certain specific circumstances, yes, it's very valuable and it's going to work, but you, you take it in unusual situations, which around Sydney, you know, if you ever drive in cars around Sydney, holy crap, you know, especially at night and in the rain and all sorts of, you know, crap because the, the Tesla only has cameras. It doesn't have, you know, LIDAR and stuff.",
+   "context_after": "Yes.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "yone was tweeting that morning. And I even retweeted it myself because there was this Tesla that, that famously was fooled by a big advertisement of somebody's face on the back of the bus. And I thought, and I thought it was a person stepping out, you know, so the camera, and yeah, so he's, he's like, cause the Tesla records everything. So he's got the recorded data from it and yeah. Yeah. Oops. So, yeah, I, I think, yeah, in certain specific circumstances, yes, it's very valuable and it's going to work, but you, you take it in unusual situations, which around Sydney, you know, if you ever drive in cars around Sydney, holy crap, you know, especially at night and in the rain and all sorts of, you know, crap because the, the Tesla only has cameras. It doesn't have, you know, LIDAR and stuff. So yeah, I had an interesting take on that in the, I think Tesla's attitude is that LIDAR is very much a stop gap. Right. For systems where they can't do it. Cause you think about it. What are the sensing things on a normal manual driven car? Two eyeballs. You, you don't have like LIDAR. So it clearly can be done with a, with optically. And LIDAR is almost like a stop gap for when you can't make the optics work as well as they could do. Yes."
+  },
+  {
+   "episode": 585,
+   "episode_title": "Return of the Trade Show Jedi",
+   "episode_url": "https://theamphour.com/585-return-of-the-trade-show-jedi/",
+   "guest": null,
+   "stem": "0585-return-of-the-trade-show-jedi",
+   "paragraph_index": 308,
+   "depth": "opinion",
+   "speaker_raw": "Paul",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "Yeah. I've heard both. I've heard both sides of that. I've heard people saying like, well, the LIDAR is just not reliable enough and, you know, everything's moving to camera because of the costs and fewer moving parts and stuff like that. But I don't know.",
+   "context_before": "Yeah. But they could be hidden away somewhere. I don't know. Yeah. Because, you know, there's a big debate. Oh, didn't that come out? Did I see a tweet yesterday or something that Toyota have decided to go with Tesla's camera only system? That's a big deal. But there's a lot of people that are going the camera only system is, it's going to come a gutter. It's not going to be that good.",
+   "context_after": "Well, people always go back to the fallback argument is that, oh, humans just have eyeballs and that's it, right? Humans just have two cameras and that's it, right? That's true. Sure. You know, so therefore.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah. But they could be hidden away somewhere. I don't know. Yeah. Because, you know, there's a big debate. Oh, didn't that come out? Did I see a tweet yesterday or something that Toyota have decided to go with Tesla's camera only system? That's a big deal. But there's a lot of people that are going the camera only system is, it's going to come a gutter. It's not going to be that good. Yeah. I've heard both. I've heard both sides of that. I've heard people saying like, well, the LIDAR is just not reliable enough and, you know, everything's moving to camera because of the costs and fewer moving parts and stuff like that. But I don't know. Well, people always go back to the fallback argument is that, oh, humans just have eyeballs and that's it, right? Humans just have two cameras and that's it, right? That's true. Sure. You know, so therefore."
+  },
+  {
+   "episode": 729,
+   "episode_title": "The Terahertz Frontier with Greg Charvat of Teradar",
+   "episode_url": "https://theamphour.com/729-the-terahertz-frontier-greg-charvat-teradar/",
+   "guest": "Greg Charvat",
+   "stem": "0729-the-terahertz-frontier-greg-charvat-teradar",
+   "paragraph_index": 82,
+   "depth": "explains",
+   "speaker_raw": "Greg Charvat",
+   "speaker_repaired": "Greg Charvat",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "Greg? Well, the thing is, it's like, if you look at the, the sensors out there, you know, we have, um, our, our market is automotive sensing, long range automotive sensing, but that's, that's what we're, we're in. And so if you look at the sensors where, you know, there's a lidar and, and we have now imaging radar at 77 gigahertz. And so the terahertz right in between it's, it's a wavelength smack in between those. And it's interesting because it has the advantage of both. So it has, uh, the resolution comparable to lidar. And when you see the terahertz data, you'll be like, shit, that looks like, that looks like wider. Right. And so that's one of the fun parts about it. And then the second thing is it, it has the same or very similar electromagnetic properties to radar. So it, um, it goes through weather like the radar does. We see through pea soup fog, no problem. We see through pouring rain, no problem. Uh, we see through the bumper fascias on automobiles, no problem, stuff like that. Oh, really? Yes. The concepts, all the things that make radar really great. We have, except what's the bumper fascia.",
+   "context_before": "Okay. So speaking of things, I don't understand how in the, I, I told Greg before the show, I'm going to be a terahertz denier. I don't believe the terahertz actually exist. Cause I, I mean like I have such a hard time with gigahertz. You know, and I'm just like, how the hell does that work? And then now you are another couple of decades up and, uh, why terahertz,",
+   "context_after": "That's like the plastic cover. So you were saying behind a bumper instead of like having it exposed. That's right.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. So speaking of things, I don't understand how in the, I, I told Greg before the show, I'm going to be a terahertz denier. I don't believe the terahertz actually exist. Cause I, I mean like I have such a hard time with gigahertz. You know, and I'm just like, how the hell does that work? And then now you are another couple of decades up and, uh, why terahertz, Greg? Well, the thing is, it's like, if you look at the, the sensors out there, you know, we have, um, our, our market is automotive sensing, long range automotive sensing, but that's, that's what we're, we're in. And so if you look at the sensors where, you know, there's a lidar and, and we have now imaging radar at 77 gigahertz. And so the terahertz right in between it's, it's a wavelength smack in between those. And it's interesting because it has the advantage of both. So it has, uh, the resolution comparable to lidar. And when you see the terahertz data, you'll be like, shit, that looks like, that looks like wider. Right. And so that's one of the fun parts about it. And then the second thing is it, it has the same or very similar electromagnetic properties to radar. So it, um, it goes through weather like the radar does. We see through pea soup fog, no problem. We see through pouring rain, no problem. Uh, we see through the bumper fascias on automobiles, no problem, stuff like that. Oh, really? Yes. The concepts, all the things that make radar really great. We have, except what's the bumper fascia. That's like the plastic cover. So you were saying behind a bumper instead of like having it exposed. That's right."
+  },
+  {
+   "episode": 729,
+   "episode_title": "The Terahertz Frontier with Greg Charvat of Teradar",
+   "episode_url": "https://theamphour.com/729-the-terahertz-frontier-greg-charvat-teradar/",
+   "guest": "Greg Charvat",
+   "stem": "0729-the-terahertz-frontier-greg-charvat-teradar",
+   "paragraph_index": 95,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "Got it. And, and they're not, they're not scanning. They're not rotating like on a LIDAR, like a LIDAR actually is a laser that rotates or a string of lasers that rotates. Yeah. Yeah.",
+   "context_before": "looks like the hell 9,000 computer interface with the big, seriously, it's a big red sphere. And underneath that are the receive antenna, like three, I think it's like three or seven, it has one transmitter. So it's something like that linear FM radar. And so they, they actually had three beams to make sure they were tracking the thing in the middle. Yeah. It was really good stuff. Like no doubt about it. And then, so everyone kind of went up in frequency to get the finer beams and finer control. And now you're seeing the MIMO stuff is starting to come out. So, um, we've seen the, the, the lower res MIMO has been out for a while, but we're starting to see the high res MIMO coming out. And, uh, that's just the march of, of progress, right? Everything, uh, in that world is at that frequency.",
+   "context_after": "The LIDAR either will either have like a, a spinning mirror powered by a hard drive motor or, um, or like a, like a MEMS mirror, like those MEMS projectors. So they have some mechanical interface because they have to use a high power laser to go up to two, 300 meters to hit that link budget. So, um, they, they, um, at least the automotive grade LIDARs do that. There's like the, the, the shorter range ones don't need those things, but, um, the automotive ones need to go far, right? They need to hit the distance. Uh, yeah, yeah. Yeah. The, the, the, the 77 gigahertz stuff is monolithic. There's no moving parts. Uh, it's extremely reliable. There's, you know, you're, you're, you're those, those systems, um, you know, they're, they're very robust because of that. The, the, the lack of moving p",
+   "context_before_speaker": "Greg Charvat",
+   "context_after_speaker": "Greg Charvat",
+   "text": "looks like the hell 9,000 computer interface with the big, seriously, it's a big red sphere. And underneath that are the receive antenna, like three, I think it's like three or seven, it has one transmitter. So it's something like that linear FM radar. And so they, they actually had three beams to make sure they were tracking the thing in the middle. Yeah. It was really good stuff. Like no doubt about it. And then, so everyone kind of went up in frequency to get the finer beams and finer control. And now you're seeing the MIMO stuff is starting to come out. So, um, we've seen the, the, the lower res MIMO has been out for a while, but we're starting to see the high res MIMO coming out. And, uh, that's just the march of, of progress, right? Everything, uh, in that world is at that frequency. Got it. And, and they're not, they're not scanning. They're not rotating like on a LIDAR, like a LIDAR actually is a laser that rotates or a string of lasers that rotates. Yeah. Yeah. The LIDAR either will either have like a, a spinning mirror powered by a hard drive motor or, um, or like a, like a MEMS mirror, like those MEMS projectors. So they have some mechanical interface because they have to use a high power laser to go up to two, 300 meters to hit that link budget. So, um, they, they, um, at least the automotive grade LIDARs do that. There's like the, the, the shorter range ones don't need those things, but, um, the automotive ones need to go far, right? They need to hit the distance. Uh, yeah, yeah. Yeah. The, the, the, the 77 gigahertz stuff is monolithic. There's no moving parts. Uh, it's extremely reliable. There's, you know, you're, you're, you're those, those systems, um, you know, they're, they're very robust because of that. The, the, the lack of moving p"
+  },
+  {
+   "episode": 729,
+   "episode_title": "The Terahertz Frontier with Greg Charvat of Teradar",
+   "episode_url": "https://theamphour.com/729-the-terahertz-frontier-greg-charvat-teradar/",
+   "guest": "Greg Charvat",
+   "stem": "0729-the-terahertz-frontier-greg-charvat-teradar",
+   "paragraph_index": 136,
+   "depth": "opinion",
+   "speaker_raw": "Greg Charvat",
+   "speaker_repaired": "Greg Charvat",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "Well, at this point, I would say, I would say that, um, I think, I think that this is the last frontier in, in the electromagnetic spectrum, at least below visible light, right? Like, you know, I think this is the last one where, because you want to be able to, another thing, another aspect of like modern sensing technology and stuff like coming from my, my experience at Lincoln laboratory, we could pick almost any wavelength we wanted to operate at. Right. And we would then, because, because microwaves were mature, we could pick anything in the microwave to radio spectrum to sense, whatever problem we're trying to solve. And so, so we are closing the final frontier in terms of auto sensing at least. And that I would, I can't imagine choosing any other wavelength in my opinion, because it does have the best of both worlds of going through weather as well as LIDAR, um, image quality, right? Yeah. So that's, that's the sweet spot.",
+   "context_before": "Right. And, and eventually you would get to visible light, which is about, like you said, you, you said visible lights up the terahertz range, but you're basically sub infrared, right? Like that's, but you're, you're working your way up there, right? I mean, like without actually generating photons, right?",
+   "context_after": "Let's, let's talk a little bit more about the problem space as well. So, so we talked a little bit about before the show, I mentioned how much I love Waymo, but what I said is I grew up in Buffalo. I used to live in Chicago. I used to live in Cleveland. I just literally cannot imagine Waymo as it is today, operating in Buffalo, New York in the winter. It would just be like, what, what are you even trying here? Uh, similarly with, so then that's the LIDAR side. Those are all scanning light fields, point clouds, whatever. Um, on the other side, you'd said radars, you'd already said blobs once as well. So like radar blobs is kind of the lower end. So like, can you kind of box in where, why Teradar is in the middle of those two with, with application shortcomings of the, of the, of those. Well",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. And, and eventually you would get to visible light, which is about, like you said, you, you said visible lights up the terahertz range, but you're basically sub infrared, right? Like that's, but you're, you're working your way up there, right? I mean, like without actually generating photons, right? Well, at this point, I would say, I would say that, um, I think, I think that this is the last frontier in, in the electromagnetic spectrum, at least below visible light, right? Like, you know, I think this is the last one where, because you want to be able to, another thing, another aspect of like modern sensing technology and stuff like coming from my, my experience at Lincoln laboratory, we could pick almost any wavelength we wanted to operate at. Right. And we would then, because, because microwaves were mature, we could pick anything in the microwave to radio spectrum to sense, whatever problem we're trying to solve. And so, so we are closing the final frontier in terms of auto sensing at least. And that I would, I can't imagine choosing any other wavelength in my opinion, because it does have the best of both worlds of going through weather as well as LIDAR, um, image quality, right? Yeah. So that's, that's the sweet spot. Let's, let's talk a little bit more about the problem space as well. So, so we talked a little bit about before the show, I mentioned how much I love Waymo, but what I said is I grew up in Buffalo. I used to live in Chicago. I used to live in Cleveland. I just literally cannot imagine Waymo as it is today, operating in Buffalo, New York in the winter. It would just be like, what, what are you even trying here? Uh, similarly with, so then that's the LIDAR side. Those are all scanning light fields, point clouds, whatever. Um, on the other side, you'd said radars, you'd already said blobs once as well. So like radar blobs is kind of the lower end. So like, can you kind of box in where, why Teradar is in the middle of those two with, with application shortcomings of the, of the, of those. Well"
+  },
+  {
+   "episode": 729,
+   "episode_title": "The Terahertz Frontier with Greg Charvat of Teradar",
+   "episode_url": "https://theamphour.com/729-the-terahertz-frontier-greg-charvat-teradar/",
+   "guest": "Greg Charvat",
+   "stem": "0729-the-terahertz-frontier-greg-charvat-teradar",
+   "paragraph_index": 140,
+   "depth": "explains",
+   "speaker_raw": "Greg Charvat",
+   "speaker_repaired": "Greg Charvat",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "And, and, um, I think, uh, but that there's struggles, right. You know, you, when, when the weather comes, things become a struggle because if you want extremely safe, self driving, like Waymo does, you need all of the sensors seeing stuff, right. Because you, you don't want fatalities. You don't want to injure anyone. You don't want, you don't want to get an accident. So you can't have your sensor all messed up because the weather. Right. And so that's, that's sort of the, the trouble with, with laser radars. It struggles once, once you get into the rain and the snow and the, the fog and any sort of adverse conditions, or even just dried like road crap on the lens, like you're in trouble. Right. And so, so, um, you know, our system, you know, and the, the downside of, of radar, even the newer MIMO large MIMO systems coming out is, is, is 77 gigahertz radar is, has a resolution problem. And so it's, it's, you know, you're interpreting blobology, right. Or, or you need things to move fast enough. You can resolve them. So, uh, our system sits in the middle because we, but let me go back. The strength of, of radar is that it can punch through the weather, right. It doesn't care if there's dirt or film on the, the, it goes through bumpers, you know,",
+   "context_before": "it is, it is the best, like low cost way to experience the future. Like it's wild. Yeah. It is so cool. So like people in China have, you know, there's also tons of self driving in China too, whatever. Yeah. So like, yeah. Yep.",
+   "context_after": "you don't benefit from this on, uh, when we fly in airplanes and, you know, and other, of course we do, right.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "it is, it is the best, like low cost way to experience the future. Like it's wild. Yeah. It is so cool. So like people in China have, you know, there's also tons of self driving in China too, whatever. Yeah. So like, yeah. Yep. And, and, um, I think, uh, but that there's struggles, right. You know, you, when, when the weather comes, things become a struggle because if you want extremely safe, self driving, like Waymo does, you need all of the sensors seeing stuff, right. Because you, you don't want fatalities. You don't want to injure anyone. You don't want, you don't want to get an accident. So you can't have your sensor all messed up because the weather. Right. And so that's, that's sort of the, the trouble with, with laser radars. It struggles once, once you get into the rain and the snow and the, the fog and any sort of adverse conditions, or even just dried like road crap on the lens, like you're in trouble. Right. And so, so, um, you know, our system, you know, and the, the downside of, of radar, even the newer MIMO large MIMO systems coming out is, is, is 77 gigahertz radar is, has a resolution problem. And so it's, it's, you know, you're interpreting blobology, right. Or, or you need things to move fast enough. You can resolve them. So, uh, our system sits in the middle because we, but let me go back. The strength of, of radar is that it can punch through the weather, right. It doesn't care if there's dirt or film on the, the, it goes through bumpers, you know, you don't benefit from this on, uh, when we fly in airplanes and, you know, and other, of course we do, right."
+  },
+  {
+   "episode": 729,
+   "episode_title": "The Terahertz Frontier with Greg Charvat of Teradar",
+   "episode_url": "https://theamphour.com/729-the-terahertz-frontier-greg-charvat-teradar/",
+   "guest": "Greg Charvat",
+   "stem": "0729-the-terahertz-frontier-greg-charvat-teradar",
+   "paragraph_index": 162,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "When I think about LIDAR, I think about like a sweep of like a line of things and then you're shooting lasers out and you're getting little points back from the laser. And you had mentioned this is monolithic as well. So there's, there's no movement. There's no like motor that's cranking things around. How do you do that all at once? Right. Almost like the, almost like the same, you know, to go back to the Silicon side of things, thinking about like rastering with EUV versus like single shot, like through a mask, that sort of thing.",
+   "context_before": "it does the business as they say. It does the business.",
+   "context_after": "Well, I can't dive too deep into architecture, but I'll, I'll say this, you know, we're, we're imaging, we're imaging out to hundreds of meters at multiple hundreds of gigahertz. Okay. With a tear it's digital phased array. The whole thing, it sits in the palm of your hand.",
+   "context_before_speaker": "Greg Charvat",
+   "context_after_speaker": "Greg Charvat",
+   "text": "it does the business as they say. It does the business. When I think about LIDAR, I think about like a sweep of like a line of things and then you're shooting lasers out and you're getting little points back from the laser. And you had mentioned this is monolithic as well. So there's, there's no movement. There's no like motor that's cranking things around. How do you do that all at once? Right. Almost like the, almost like the same, you know, to go back to the Silicon side of things, thinking about like rastering with EUV versus like single shot, like through a mask, that sort of thing. Well, I can't dive too deep into architecture, but I'll, I'll say this, you know, we're, we're imaging, we're imaging out to hundreds of meters at multiple hundreds of gigahertz. Okay. With a tear it's digital phased array. The whole thing, it sits in the palm of your hand."
+  },
+  {
+   "episode": 729,
+   "episode_title": "The Terahertz Frontier with Greg Charvat of Teradar",
+   "episode_url": "https://theamphour.com/729-the-terahertz-frontier-greg-charvat-teradar/",
+   "guest": "Greg Charvat",
+   "stem": "0729-the-terahertz-frontier-greg-charvat-teradar",
+   "paragraph_index": 248,
+   "depth": "explains",
+   "speaker_raw": "Greg Charvat",
+   "speaker_repaired": "Greg Charvat",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:point-cloud",
+   "concept_sources": [
+    "child:point-cloud"
+   ],
+   "concepts": [
+    "point-cloud"
+   ],
+   "paragraph_text": "Oh yeah, definitely. Write it off on your taxes or something, you know? Yeah. Yeah. Yeah. Yeah. Yeah. I had to go to every meal, every like cocktail you drink on the beach, every bite. Just right on the card. Um, yep. Let's see what else we have data collection engineer. Okay. This is someone who's good at collecting gobs and gobs of like autonomous driving data. We're not in the business of autonomous driving, but you're collecting data like that, like point clouds and stuff like that. And knowing what you're looking at. Let's talk about that real quick.",
+   "context_before": "Cause I probably should go record some, some, uh, some record some shows out there, you know, and charge it to the empire credit card. You know what I mean? Yeah.",
+   "context_after": "So, so that, that was one question I had before we started was like, what is the output of the Teradar? And you said it's point cloud. Just, I mean, not just like, but like a Lidar does. Right. Yeah. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Cause I probably should go record some, some, uh, some record some shows out there, you know, and charge it to the empire credit card. You know what I mean? Yeah. Oh yeah, definitely. Write it off on your taxes or something, you know? Yeah. Yeah. Yeah. Yeah. Yeah. I had to go to every meal, every like cocktail you drink on the beach, every bite. Just right on the card. Um, yep. Let's see what else we have data collection engineer. Okay. This is someone who's good at collecting gobs and gobs of like autonomous driving data. We're not in the business of autonomous driving, but you're collecting data like that, like point clouds and stuff like that. And knowing what you're looking at. Let's talk about that real quick. So, so that, that was one question I had before we started was like, what is the output of the Teradar? And you said it's point cloud. Just, I mean, not just like, but like a Lidar does. Right. Yeah. Yeah."
+  },
+  {
+   "episode": 729,
+   "episode_title": "The Terahertz Frontier with Greg Charvat of Teradar",
+   "episode_url": "https://theamphour.com/729-the-terahertz-frontier-greg-charvat-teradar/",
+   "guest": "Greg Charvat",
+   "stem": "0729-the-terahertz-frontier-greg-charvat-teradar",
+   "paragraph_index": 249,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "lidar"
+   ],
+   "paragraph_text": "So, so that, that was one question I had before we started was like, what is the output of the Teradar? And you said it's point cloud. Just, I mean, not just like, but like a Lidar does. Right. Yeah. Yeah.",
+   "context_before": "Oh yeah, definitely. Write it off on your taxes or something, you know? Yeah. Yeah. Yeah. Yeah. Yeah. I had to go to every meal, every like cocktail you drink on the beach, every bite. Just right on the card. Um, yep. Let's see what else we have data collection engineer. Okay. This is someone who's good at collecting gobs and gobs of like autonomous driving data. We're not in the business of autonomous driving, but you're collecting data like that, like point clouds and stuff like that. And knowing what you're looking at. Let's talk about that real quick.",
+   "context_after": "And then there's additional things in the point clouds, like a velocity and whatever else you want. Amplitude loss. It's, it's a pretty nice, it's basically like a Lidar, but it has radar characteristics to the data too, that it's kind of like a, got a couple more dimensions than a normal Lidar data set. It's cool. Interesting.",
+   "context_before_speaker": "Greg Charvat",
+   "context_after_speaker": "Greg Charvat",
+   "text": "Oh yeah, definitely. Write it off on your taxes or something, you know? Yeah. Yeah. Yeah. Yeah. Yeah. I had to go to every meal, every like cocktail you drink on the beach, every bite. Just right on the card. Um, yep. Let's see what else we have data collection engineer. Okay. This is someone who's good at collecting gobs and gobs of like autonomous driving data. We're not in the business of autonomous driving, but you're collecting data like that, like point clouds and stuff like that. And knowing what you're looking at. Let's talk about that real quick. So, so that, that was one question I had before we started was like, what is the output of the Teradar? And you said it's point cloud. Just, I mean, not just like, but like a Lidar does. Right. Yeah. Yeah. And then there's additional things in the point clouds, like a velocity and whatever else you want. Amplitude loss. It's, it's a pretty nice, it's basically like a Lidar, but it has radar characteristics to the data too, that it's kind of like a, got a couple more dimensions than a normal Lidar data set. It's cool. Interesting."
+  }
+ ]
+}

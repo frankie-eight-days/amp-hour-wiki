@@ -1,0 +1,1870 @@
+{
+ "episode": 537,
+ "title": "Firmware Deployment and Troubleshooting with Akbar Dhanaliwala",
+ "url": "https://theamphour.com/537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala/",
+ "file": "0537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala.md",
+ "main_topics": [
+  "embedded-testing",
+  "remote-hardware-debugging",
+  "firmware-deployment"
+ ],
+ "guest_name": "Akbar Dinaliwala",
+ "guest_affiliation": "Logger Data",
+ "notes": null,
+ "mentions": [
+  {
+   "concept": "logger-data",
+   "type": "company-product",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 4,
+   "char_start": 411,
+   "depth": "mention",
+   "context_snippet": "Logger Data sounds like we're going to be talking about beer and data"
+  },
+  {
+   "concept": "testing-platform",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 5,
+   "char_start": 612,
+   "depth": "explains",
+   "context_snippet": "It's a testing platform. And initially it was like, our initial idea was going to be like a wireless serial logger"
+  },
+  {
+   "concept": "wireless-serial-logger",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 5,
+   "char_start": 664,
+   "depth": "explains",
+   "context_snippet": "our initial idea was going to be like a wireless serial logger"
+  },
+  {
+   "concept": "embedded-systems",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 7,
+   "char_start": 1629,
+   "depth": "opinion",
+   "context_snippet": "I've been doing embedded systems for a long time, about 15 years now"
+  },
+  {
+   "concept": "rust",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 9,
+   "char_start": 1936,
+   "depth": "mention",
+   "context_snippet": "The rust crowd doesn't jive completely"
+  },
+  {
+   "concept": "8-bit-pic",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 11,
+   "char_start": 2185,
+   "depth": "mention",
+   "context_snippet": "when I started with like, you know, 8-bit pics"
+  },
+  {
+   "concept": "led",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 11,
+   "char_start": 2247,
+   "depth": "mention",
+   "context_snippet": "getting that first LED blinking"
+  },
+  {
+   "concept": "embedded-testing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 11,
+   "char_start": 2546,
+   "depth": "explains",
+   "context_snippet": "once you get into, you know, like launching, you know, real products, you know, that's when you have to like actually have"
+  },
+  {
+   "concept": "uart",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 11,
+   "char_start": 3256,
+   "depth": "explains",
+   "context_snippet": "you need to, you know, find out where your UART pins are"
+  },
+  {
+   "concept": "soldering",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 11,
+   "char_start": 3336,
+   "depth": "opinion",
+   "context_snippet": "probably solder wires to it. And sometimes those wires break"
+  },
+  {
+   "concept": "debugger",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 11,
+   "char_start": 3773,
+   "depth": "mention",
+   "context_snippet": "Let me, let me get my debugger out"
+  },
+  {
+   "concept": "serial-terminal",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 11,
+   "char_start": 4043,
+   "depth": "mention",
+   "context_snippet": "whether it's a serial terminal or your oscilloscope"
+  },
+  {
+   "concept": "laptop",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 15,
+   "char_start": 5371,
+   "depth": "opinion",
+   "context_snippet": "laptops have really come, come into their own over the last 10 years"
+  },
+  {
+   "concept": "embedded-development",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 15,
+   "char_start": 5457,
+   "depth": "opinion",
+   "context_snippet": "embedded engineers don't really get the full, the full, you know, advantage of laptops"
+  },
+  {
+   "concept": "solar-panel-robot-cleaner",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 19,
+   "char_start": 6924,
+   "depth": "mention",
+   "context_snippet": "a solar panel robot cleaner"
+  },
+  {
+   "concept": "robot-controller",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 19,
+   "char_start": 7009,
+   "depth": "mention",
+   "context_snippet": "I was helping writing a controller for that"
+  },
+  {
+   "concept": "j-link",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 21,
+   "char_start": 7595,
+   "depth": "explains",
+   "context_snippet": "I had my J link, you know, via USB"
+  },
+  {
+   "concept": "usb",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 21,
+   "char_start": 7595,
+   "depth": "mention",
+   "context_snippet": "I had my J link, you know, via USB"
+  },
+  {
+   "concept": "test-harness",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 21,
+   "char_start": 8320,
+   "depth": "opinion",
+   "context_snippet": "worry about, you know, test harness, you know, wire harnesses"
+  },
+  {
+   "concept": "wireless-debugging",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 22,
+   "char_start": 8697,
+   "depth": "opinion",
+   "context_snippet": "why doesn't J link have like a wireless debug link or something similar?"
+  },
+  {
+   "concept": "ethernet",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 23,
+   "char_start": 8861,
+   "depth": "mention",
+   "context_snippet": "oscilloscopes have like, you can plug into the ethernet"
+  },
+  {
+   "concept": "ip-link",
+   "type": "standard-protocol",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 24,
+   "char_start": 9617,
+   "depth": "explains",
+   "context_snippet": "instead of a USB, it's like a IP endpoint, right? It's just like piping it over"
+  },
+  {
+   "concept": "raspberry-pi",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 26,
+   "char_start": 9985,
+   "depth": "mention",
+   "context_snippet": "even a Raspberry Pi is something like super"
+  },
+  {
+   "concept": "remote-hardware-debugging",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 29,
+   "char_start": 12333,
+   "depth": "explains",
+   "context_snippet": "you get this, you know, ability to like remotely talk to your hardware"
+  },
+  {
+   "concept": "firmware-deployment",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 29,
+   "char_start": 12567,
+   "depth": "explains",
+   "context_snippet": "getting it working one day is fine. And getting it working for your whole team forever"
+  },
+  {
+   "concept": "register",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 33,
+   "char_start": 13588,
+   "depth": "mention",
+   "context_snippet": "you're reading registers"
+  },
+  {
+   "concept": "qa-testing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 33,
+   "char_start": 13595,
+   "depth": "explains",
+   "context_snippet": "reading registers to like QA testing of like, Hey, like, okay, we're going to"
+  },
+  {
+   "concept": "factory-testing",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 33,
+   "char_start": 13859,
+   "depth": "mention",
+   "context_snippet": "actually introducing it to a factory"
+  },
+  {
+   "concept": "tightly-coupled-memory",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 35,
+   "char_start": 14500,
+   "depth": "mention",
+   "context_snippet": "with like tightly coupled memory"
+  },
+  {
+   "concept": "smart-home",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 35,
+   "char_start": 15147,
+   "depth": "mention",
+   "context_snippet": "I was really excited about smart homes"
+  },
+  {
+   "concept": "solarcity",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 35,
+   "char_start": 15429,
+   "depth": "mention",
+   "context_snippet": "one of our, our very first client was a solar city"
+  },
+  {
+   "concept": "solar-panel-monitoring",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 37,
+   "char_start": 16097,
+   "depth": "explains",
+   "context_snippet": "a way to, for the customers to see like real-time information on like solar generation"
+  },
+  {
+   "concept": "zigbee",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 39,
+   "char_start": 17553,
+   "depth": "explains",
+   "context_snippet": "called Zigbee, right. It was part of the whole home automation stuff"
+  },
+  {
+   "concept": "home-automation",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 39,
+   "char_start": 17575,
+   "depth": "mention",
+   "context_snippet": "It was part of the whole home automation stuff"
+  },
+  {
+   "concept": "inverter",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 39,
+   "char_start": 17828,
+   "depth": "mention",
+   "context_snippet": "there was, there was a bridge that lived in, which we designed and wrote the firmware, everything that lived in the inverter"
+  },
+  {
+   "concept": "firmware",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 39,
+   "char_start": 17879,
+   "depth": "explains",
+   "context_snippet": "we designed and wrote the firmware, everything that lived in the inverter"
+  },
+  {
+   "concept": "network-gateway",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 39,
+   "char_start": 18021,
+   "depth": "explains",
+   "context_snippet": "that bridge talked via Zigbee to a gateway that lived on the, on the user's network"
+  },
+  {
+   "concept": "zigbee-range",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 39,
+   "char_start": 18533,
+   "depth": "explains",
+   "context_snippet": "we were testing the Zigbee range"
+  },
+  {
+   "concept": "lora",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 41,
+   "char_start": 18932,
+   "depth": "mention",
+   "context_snippet": "I've done that test for some Laura"
+  },
+  {
+   "concept": "line-of-sight",
+   "type": "concept-principle",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 42,
+   "char_start": 19028,
+   "depth": "explains",
+   "context_snippet": "it's like line of sight, you wave and you estimate how far you are"
+  },
+  {
+   "concept": "reflashing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 45,
+   "char_start": 20443,
+   "depth": "explains",
+   "context_snippet": "I'd have to run back to the house, reflash it"
+  },
+  {
+   "concept": "solarcity",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 46,
+   "char_start": 20967,
+   "depth": "mention",
+   "context_snippet": "that's a big, I guess solar city was small at the time"
+  },
+  {
+   "concept": "elon-musk",
+   "type": "person",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 47,
+   "char_start": 21512,
+   "depth": "mention",
+   "context_snippet": "you could still say an Elon Musk company at the time"
+  },
+  {
+   "concept": "tesla",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 47,
+   "char_start": 21566,
+   "depth": "mention",
+   "context_snippet": "Now it really is right. Cause, cause Tesla bought it"
+  },
+  {
+   "concept": "pcb",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 49,
+   "char_start": 22486,
+   "depth": "opinion",
+   "context_snippet": "the PCB was still the same PCB"
+  },
+  {
+   "concept": "solar-panel",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 49,
+   "char_start": 22677,
+   "depth": "mention",
+   "context_snippet": "my wife's dad actually had solar city panels"
+  },
+  {
+   "concept": "graduate-school",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 53,
+   "char_start": 23244,
+   "depth": "mention",
+   "context_snippet": "I went to, I went to, uh, grad school, um, Stanford in California"
+  },
+  {
+   "concept": "stanford-university",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 53,
+   "char_start": 23270,
+   "depth": "mention",
+   "context_snippet": "grad school, um, Stanford in California"
+  },
+  {
+   "concept": "mechatronics",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 55,
+   "char_start": 24341,
+   "depth": "mention",
+   "context_snippet": "since we were all in this like mechatronics program"
+  },
+  {
+   "concept": "led",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 57,
+   "char_start": 24595,
+   "depth": "mention",
+   "context_snippet": "a shopping cart with like an led, like, you know, thing"
+  },
+  {
+   "concept": "circuit-board",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 57,
+   "char_start": 24656,
+   "depth": "mention",
+   "context_snippet": "some circuit board that we had made"
+  },
+  {
+   "concept": "magic-smoke",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 57,
+   "char_start": 24717,
+   "depth": "opinion",
+   "context_snippet": "the minute we plugged it in, we saw the magic smoke"
+  },
+  {
+   "concept": "robocop",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 57,
+   "char_start": 24989,
+   "depth": "mention",
+   "context_snippet": "one of those super inexpensive children's Robocop costumes"
+  },
+  {
+   "concept": "llc",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 61,
+   "char_start": 26909,
+   "depth": "explains",
+   "context_snippet": "we started this, you know, but on a side, we started the consulting company"
+  },
+  {
+   "concept": "pokeboard",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 61,
+   "char_start": 28027,
+   "depth": "mention",
+   "context_snippet": "the URL was available at pokeboard.com"
+  },
+  {
+   "concept": "jewel",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 63,
+   "char_start": 29503,
+   "depth": "mention",
+   "context_snippet": "before jewel was jewel, they were a company, they were called plume"
+  },
+  {
+   "concept": "plume",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 63,
+   "char_start": 29527,
+   "depth": "mention",
+   "context_snippet": "they were a company, they were called plume"
+  },
+  {
+   "concept": "technology-center",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 70,
+   "char_start": 31814,
+   "depth": "explains",
+   "context_snippet": "they open up these, the, basically the research centers"
+  },
+  {
+   "concept": "skunkworks",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 70,
+   "char_start": 31989,
+   "depth": "mention",
+   "context_snippet": "they basically like are doing like some very like skunk works"
+  },
+  {
+   "concept": "self-driving-car",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 72,
+   "char_start": 33595,
+   "depth": "mention",
+   "context_snippet": "the junior Stanford's like self-driving car"
+  },
+  {
+   "concept": "darpa-urban-challenge",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 74,
+   "char_start": 33881,
+   "depth": "mention",
+   "context_snippet": "the whole idea of like, you know, the DARPA, the DARPA thing"
+  },
+  {
+   "concept": "autonomous-driving",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 74,
+   "char_start": 33963,
+   "depth": "explains",
+   "context_snippet": "navigate out like a, an urban setting without completely autonomously"
+  },
+  {
+   "concept": "powertrain",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 76,
+   "char_start": 34787,
+   "depth": "explains",
+   "context_snippet": "there's obviously like the powertrain, which is, you know, consume the most"
+  },
+  {
+   "concept": "automotive-electrical-system",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 76,
+   "char_start": 34909,
+   "depth": "explains",
+   "context_snippet": "as more and more things run off, run off, you know, electrical system"
+  },
+  {
+   "concept": "subsystem",
+   "type": "component",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 79,
+   "char_start": 36256,
+   "depth": "explains",
+   "context_snippet": "when you're in a car, it's just subsystem on subsystem on subsystem"
+  },
+  {
+   "concept": "can-bus",
+   "type": "standard-protocol",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 79,
+   "char_start": 36518,
+   "depth": "mention",
+   "context_snippet": "the canvas or the Lynn bus or whatever"
+  },
+  {
+   "concept": "reliability-testing",
+   "type": "technique",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 79,
+   "char_start": 36579,
+   "depth": "explains",
+   "context_snippet": "they got, they just have to make sure and then getting into production and then doing all these things"
+  },
+  {
+   "concept": "manufacturing-yield",
+   "type": "manufacturing",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 79,
+   "char_start": 37094,
+   "depth": "opinion",
+   "context_snippet": "no one's going to be happy with a 50% yield"
+  },
+  {
+   "concept": "firmware-update",
+   "type": "software",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 79,
+   "char_start": 37152,
+   "depth": "opinion",
+   "context_snippet": "a thing that needs a firmware update every two days"
+  },
+  {
+   "concept": "resistor",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 80,
+   "char_start": 37412,
+   "depth": "mention",
+   "context_snippet": "a firmware update and the resistor value is wrong"
+  },
+  {
+   "concept": "embedded-system",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 80,
+   "char_start": 37483,
+   "depth": "mention",
+   "context_snippet": "Everything is like so tied together and hardware and like embedded systems"
+  },
+  {
+   "concept": "can-driver",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 82,
+   "char_start": 38166,
+   "depth": "mention",
+   "context_snippet": "one day I'm like writing, you know, a can driver"
+  },
+  {
+   "concept": "zigbee",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 82,
+   "char_start": 38231,
+   "depth": "mention",
+   "context_snippet": "the next day I'm working on Zigbee"
+  },
+  {
+   "concept": "led",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 82,
+   "char_start": 38270,
+   "depth": "mention",
+   "context_snippet": "one day I'm working on led"
+  },
+  {
+   "concept": "product-development",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 82,
+   "char_start": 38435,
+   "depth": "opinion",
+   "context_snippet": "you never get to like, you know, see it to completion"
+  },
+  {
+   "concept": "sex-toy-industry",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 82,
+   "char_start": 40317,
+   "depth": "explains",
+   "context_snippet": "this industry is like, it's, you know, it's basically built on people being too"
+  },
+  {
+   "concept": "bluetooth",
+   "type": "standard-protocol",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 83,
+   "char_start": 40791,
+   "depth": "mention",
+   "context_snippet": "there was a Bluetooth vibrator that came out like maybe 10 years ago"
+  },
+  {
+   "concept": "user-interface",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 84,
+   "char_start": 42368,
+   "depth": "opinion",
+   "context_snippet": "Is the UI intuitive?"
+  },
+  {
+   "concept": "av n",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 86,
+   "char_start": 43882,
+   "depth": "mention",
+   "context_snippet": "there's a, there's a, like a, I wouldn't call it, I don't think CS called it, CS would call it a sister show"
+  },
+  {
+   "concept": "business-model",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 86,
+   "char_start": 45184,
+   "depth": "explains",
+   "context_snippet": "we couldn't solve the marketing, the marketing part"
+  },
+  {
+   "concept": "social-media-advertising",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 86,
+   "char_start": 45311,
+   "depth": "explains",
+   "context_snippet": "things were really exploding on social, like Facebook ads and Instagram"
+  },
+  {
+   "concept": "premium-price-point",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 88,
+   "char_start": 47020,
+   "depth": "explains",
+   "context_snippet": "because we wanted to do it right and use good materials and actually have good design"
+  },
+  {
+   "concept": "sexual-health",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 92,
+   "char_start": 47988,
+   "depth": "mention",
+   "context_snippet": "we did kind of shift more to, to sexual health"
+  },
+  {
+   "concept": "new-york-tech-industry",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 94,
+   "char_start": 48640,
+   "depth": "opinion",
+   "context_snippet": "maybe New York's about to like, you know, ride that hardware wave"
+  },
+  {
+   "concept": "ringly",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 96,
+   "char_start": 49255,
+   "depth": "mention",
+   "context_snippet": "one of our very first clients was a startup called Ringly"
+  },
+  {
+   "concept": "firmware-development",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 96,
+   "char_start": 49395,
+   "depth": "mention",
+   "context_snippet": "helping them design their, their first, their first rings and write their firmware"
+  },
+  {
+   "concept": "wearable-device",
+   "type": "component",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 97,
+   "char_start": 49554,
+   "depth": "mention",
+   "context_snippet": "Ringly was the one that had like notifications on like a ring"
+  },
+  {
+   "concept": "battery",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 100,
+   "char_start": 50666,
+   "depth": "mention",
+   "context_snippet": "I mean, just a battery. And then it's metal"
+  },
+  {
+   "concept": "bluetooth-radio",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 100,
+   "char_start": 50812,
+   "depth": "explains",
+   "context_snippet": "putting, you know, a Bluetooth radio and a metal, metal, uh, piece of jewelry"
+  },
+  {
+   "concept": "ios",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 108,
+   "char_start": 55733,
+   "depth": "explains",
+   "context_snippet": "the iOS would update. Right. So the app wouldn't, wouldn't work anymore"
+  },
+  {
+   "concept": "app-recompilation",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 108,
+   "char_start": 55809,
+   "depth": "mention",
+   "context_snippet": "they wanted to like recompile the app for the newest iOS"
+  },
+  {
+   "concept": "precious-stone",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 110,
+   "char_start": 56612,
+   "depth": "mention",
+   "context_snippet": "We're using precious stones and we're doing like gold play"
+  },
+  {
+   "concept": "direct-to-consumer",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 110,
+   "char_start": 57335,
+   "depth": "explains",
+   "context_snippet": "we kind of knew that direct to consumer was the play"
+  },
+  {
+   "concept": "supply-chain",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 110,
+   "char_start": 59232,
+   "depth": "explains",
+   "context_snippet": "our supply chain was, was crazy, right? Cause you had fashion and consumer electronics"
+  },
+  {
+   "concept": "contract-manufacturer",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 110,
+   "char_start": 59466,
+   "depth": "mention",
+   "context_snippet": "consumer electronics is a very established, you probably know it very well. Factory CMs"
+  },
+  {
+   "concept": "bill-of-materials",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 112,
+   "char_start": 61581,
+   "depth": "opinion",
+   "context_snippet": "our bomb costs was, it was always higher than like, I think we thought it was going to be"
+  },
+  {
+   "concept": "flexible-pcb",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 112,
+   "char_start": 61726,
+   "depth": "explains",
+   "context_snippet": "our board was a, basically we called it the burrito. Cause it was a flex board"
+  },
+  {
+   "concept": "soldering-iron",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 112,
+   "char_start": 62075,
+   "depth": "mention",
+   "context_snippet": "with a soldering iron, like, you know, you know, you're not well"
+  },
+  {
+   "concept": "logger",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 113,
+   "char_start": 62671,
+   "depth": "mention",
+   "context_snippet": "let's get over to logger data again"
+  },
+  {
+   "concept": "testing-tool",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 114,
+   "char_start": 63740,
+   "depth": "opinion",
+   "context_snippet": "I wish I had better testing tools"
+  },
+  {
+   "concept": "b2b",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 114,
+   "char_start": 64181,
+   "depth": "explains",
+   "context_snippet": "B2B, you can kind of get away with like, Hey, this is going to save you money"
+  },
+  {
+   "concept": "value-based-marketing",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 114,
+   "char_start": 64343,
+   "depth": "explains",
+   "context_snippet": "the marketing is still challenges around value based"
+  },
+  {
+   "concept": "motion-artifact",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 116,
+   "char_start": 65249,
+   "depth": "explains",
+   "context_snippet": "your fingers are constantly moving. Right. Like you might be sitting, like tapping your finger"
+  },
+  {
+   "concept": "imu",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 66103,
+   "depth": "mention",
+   "context_snippet": "we had the IMU and everything"
+  },
+  {
+   "concept": "matlab",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 66306,
+   "depth": "mention",
+   "context_snippet": "run it through MATLAB"
+  },
+  {
+   "concept": "data-filtering",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 66395,
+   "depth": "explains",
+   "context_snippet": "figure out basically how, what's the algorithm so that we can properly filter"
+  },
+  {
+   "concept": "uart",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 66739,
+   "depth": "mention",
+   "context_snippet": "trying to get like UART wires"
+  },
+  {
+   "concept": "usb",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 66824,
+   "depth": "mention",
+   "context_snippet": "USB module"
+  },
+  {
+   "concept": "firmware-regression-testing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 67479,
+   "depth": "explains",
+   "context_snippet": "we had no automation at all and no, like, you know, no regression testing"
+  },
+  {
+   "concept": "device-firmware-update",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 67643,
+   "depth": "opinion",
+   "context_snippet": "sometimes we'd break like, you know, DFU"
+  },
+  {
+   "concept": "over-the-air-update",
+   "type": "technique",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 119,
+   "char_start": 67911,
+   "depth": "mention",
+   "context_snippet": "were you doing a over the air updates as well"
+  },
+  {
+   "concept": "device-firmware-update",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 122,
+   "char_start": 68573,
+   "depth": "opinion",
+   "context_snippet": "DFU was the biggest one that we worried about"
+  },
+  {
+   "concept": "device-firmware-update",
+   "type": "technique",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 123,
+   "char_start": 68700,
+   "depth": "explains",
+   "context_snippet": "that's device firmware update"
+  },
+  {
+   "concept": "apple-notification-center-service",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 124,
+   "char_start": 69099,
+   "depth": "explains",
+   "context_snippet": "there's a protocol, um, ANCS that you can use"
+  },
+  {
+   "concept": "c",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 124,
+   "char_start": 69240,
+   "depth": "mention",
+   "context_snippet": "we were writing the parser on C"
+  },
+  {
+   "concept": "continuous-delivery",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 124,
+   "char_start": 69731,
+   "depth": "explains",
+   "context_snippet": "you can deploy a website without even touching it"
+  },
+  {
+   "concept": "continuous-integration",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 124,
+   "char_start": 69793,
+   "depth": "explains",
+   "context_snippet": "because of CICD"
+  },
+  {
+   "concept": "bootloader",
+   "type": "software",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 125,
+   "char_start": 70340,
+   "depth": "mention",
+   "context_snippet": "were you building up like the bootloader as well"
+  },
+  {
+   "concept": "nordic-semiconductor",
+   "type": "company-product",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 125,
+   "char_start": 70410,
+   "depth": "mention",
+   "context_snippet": "it was like a Nordic chipset or something like that"
+  },
+  {
+   "concept": "continuous-integration",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 126,
+   "char_start": 70867,
+   "depth": "explains",
+   "context_snippet": "it's continuous integration, continuous deployments"
+  },
+  {
+   "concept": "continuous-deployment",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 126,
+   "char_start": 70872,
+   "depth": "explains",
+   "context_snippet": "continuous integration, continuous deployments"
+  },
+  {
+   "concept": "firmware-build-automation",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 128,
+   "char_start": 71474,
+   "depth": "explains",
+   "context_snippet": "when you push things get built automatically"
+  },
+  {
+   "concept": "automated-software-testing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 128,
+   "char_start": 71546,
+   "depth": "explains",
+   "context_snippet": "we also are going to run a bunch of tests that you've written"
+  },
+  {
+   "concept": "github",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 128,
+   "char_start": 71637,
+   "depth": "mention",
+   "context_snippet": "you push something to get hub"
+  },
+  {
+   "concept": "embedded-systems",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 130,
+   "char_start": 73833,
+   "depth": "opinion",
+   "context_snippet": "in our world"
+  },
+  {
+   "concept": "j-link",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 132,
+   "char_start": 74100,
+   "depth": "mention",
+   "context_snippet": "Or J link, J link already does that"
+  },
+  {
+   "concept": "raspberry-pi",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 132,
+   "char_start": 74202,
+   "depth": "mention",
+   "context_snippet": "I can just buy a raspberry pie"
+  },
+  {
+   "concept": "python",
+   "type": "software",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 133,
+   "char_start": 74752,
+   "depth": "mention",
+   "context_snippet": "one script is, you know, Python updates"
+  },
+  {
+   "concept": "hardware-gateway",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 134,
+   "char_start": 75482,
+   "depth": "explains",
+   "context_snippet": "there's a physical gateway and that's kind of how you like actually physically connect to the hardware"
+  },
+  {
+   "concept": "debug-probe",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 134,
+   "char_start": 75711,
+   "depth": "mention",
+   "context_snippet": "we have a debug pro built into the hardware"
+  },
+  {
+   "concept": "stm32cubeide",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 134,
+   "char_start": 76097,
+   "depth": "mention",
+   "context_snippet": "using like STs, a cube ID"
+  },
+  {
+   "concept": "arm-none-eabi-gcc",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 134,
+   "char_start": 76165,
+   "depth": "mention",
+   "context_snippet": "built on top of arm non GCC"
+  },
+  {
+   "concept": "spi",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 134,
+   "char_start": 76670,
+   "depth": "mention",
+   "context_snippet": "interact on your spy bus from the command line"
+  },
+  {
+   "concept": "stm32",
+   "type": "component",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 137,
+   "char_start": 76848,
+   "depth": "mention",
+   "context_snippet": "we've got an STM 32 part"
+  },
+  {
+   "concept": "dockerized-build-environment",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 138,
+   "char_start": 77214,
+   "depth": "explains",
+   "context_snippet": "the idea of, um, dockerized build environments"
+  },
+  {
+   "concept": "python",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 138,
+   "char_start": 77764,
+   "depth": "mention",
+   "context_snippet": "your build script relies on Python 3.6"
+  },
+  {
+   "concept": "docker",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 138,
+   "char_start": 78320,
+   "depth": "explains",
+   "context_snippet": "if you put it, if you put your build environment inside of a Docker container"
+  },
+  {
+   "concept": "arm-none-eabi-gcc",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 138,
+   "char_start": 78502,
+   "depth": "mention",
+   "context_snippet": "arm none, GCC, uh, 9.2"
+  },
+  {
+   "concept": "jtag",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 142,
+   "char_start": 80069,
+   "depth": "mention",
+   "context_snippet": "that gateway gives you access to, to your hardware via JTAG"
+  },
+  {
+   "concept": "gpio",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 142,
+   "char_start": 80124,
+   "depth": "mention",
+   "context_snippet": "JTAG, SDBD, GPIO, analog"
+  },
+  {
+   "concept": "unit-testing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 142,
+   "char_start": 80413,
+   "depth": "explains",
+   "context_snippet": "before I push it, actually, before I push this to, to get GitHub, I want to run all my unit tests"
+  },
+  {
+   "concept": "unity-test-framework",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 142,
+   "char_start": 80691,
+   "depth": "mention",
+   "context_snippet": "one that we've tested a lot with is one called unity"
+  },
+  {
+   "concept": "imu",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 144,
+   "char_start": 81099,
+   "depth": "mention",
+   "context_snippet": "you've got like an IMU on your board"
+  },
+  {
+   "concept": "quaternion",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 144,
+   "char_start": 81140,
+   "depth": "explains",
+   "context_snippet": "you're trying to convert it to a quaternion"
+  },
+  {
+   "concept": "orientation-estimation",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 144,
+   "char_start": 81704,
+   "depth": "explains",
+   "context_snippet": "it turns it into a, into a quaternion, which then tells you exactly like the orientation"
+  },
+  {
+   "concept": "unit-testing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 146,
+   "char_start": 82111,
+   "depth": "explains",
+   "context_snippet": "you write a bunch of test cases"
+  },
+  {
+   "concept": "host-based-testing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 150,
+   "char_start": 84031,
+   "depth": "explains",
+   "context_snippet": "do it on your, on your computer"
+  },
+  {
+   "concept": "target-based-testing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 150,
+   "char_start": 84417,
+   "depth": "explains",
+   "context_snippet": "unit tests on your target"
+  },
+  {
+   "concept": "hardware-abstraction-layer",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 152,
+   "char_start": 86166,
+   "depth": "explains",
+   "context_snippet": "anything that's hardware is like in a hardware layer"
+  },
+  {
+   "concept": "on-target-unit-testing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 152,
+   "char_start": 86342,
+   "depth": "explains",
+   "context_snippet": "we're also pushing for like on target unit testing"
+  },
+  {
+   "concept": "debugger-breakpoint",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 153,
+   "char_start": 88646,
+   "depth": "explains",
+   "context_snippet": "you go in, you set your break points"
+  },
+  {
+   "concept": "github-actions",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 155,
+   "char_start": 89433,
+   "depth": "mention",
+   "context_snippet": "GitHub actions"
+  },
+  {
+   "concept": "bitbucket-pipelines",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 155,
+   "char_start": 89449,
+   "depth": "mention",
+   "context_snippet": "Bitbucket pipelines"
+  },
+  {
+   "concept": "drone-io",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 155,
+   "char_start": 89470,
+   "depth": "mention",
+   "context_snippet": "drone.io"
+  },
+  {
+   "concept": "yaml",
+   "type": "software",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 156,
+   "char_start": 89664,
+   "depth": "explains",
+   "context_snippet": "YAML is like a script file that's used for like Dockerized containers"
+  },
+  {
+   "concept": "docker",
+   "type": "software",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 156,
+   "char_start": 89698,
+   "depth": "mention",
+   "context_snippet": "used for like Dockerized containers"
+  },
+  {
+   "concept": "embedded-system",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 157,
+   "char_start": 90345,
+   "depth": "opinion",
+   "context_snippet": "That's the crazy thing about embedded"
+  },
+  {
+   "concept": "bluetooth-low-energy",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 157,
+   "char_start": 90687,
+   "depth": "mention",
+   "context_snippet": "it's going to connect to BLE to my phone"
+  },
+  {
+   "concept": "unit-testing",
+   "type": "technique",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 158,
+   "char_start": 90991,
+   "depth": "opinion",
+   "context_snippet": "I'm used to running the unit test for me is I'm on my bench"
+  },
+  {
+   "concept": "hardware-testing",
+   "type": "technique",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 158,
+   "char_start": 91283,
+   "depth": "opinion",
+   "context_snippet": "that was the perceived only way to do it for, for a long time"
+  },
+  {
+   "concept": "github-actions",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 159,
+   "char_start": 91648,
+   "depth": "explains",
+   "context_snippet": "we use GitHub actions and like, oh yeah, how do you use it?"
+  },
+  {
+   "concept": "nightly-build",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 159,
+   "char_start": 91938,
+   "depth": "explains",
+   "context_snippet": "you should be doing nightly build"
+  },
+  {
+   "concept": "code-review",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 161,
+   "char_start": 93502,
+   "depth": "explains",
+   "context_snippet": "part of the code review is like, well, where are the tests?"
+  },
+  {
+   "concept": "continuous-integration",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 161,
+   "char_start": 94045,
+   "depth": "explains",
+   "context_snippet": "all these tests are getting run constantly via the gateway"
+  },
+  {
+   "concept": "system-testing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 161,
+   "char_start": 94776,
+   "depth": "explains",
+   "context_snippet": "you're writing unit tests, but you're also writing system tests"
+  },
+  {
+   "concept": "tapster",
+   "type": "company-product",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 162,
+   "char_start": 96799,
+   "depth": "mention",
+   "context_snippet": "past guest, Jason Huggins, who does tapster"
+  },
+  {
+   "concept": "robotic-finger",
+   "type": "tool-equipment",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 162,
+   "char_start": 96856,
+   "depth": "mention",
+   "context_snippet": "a robotic finger type of thing"
+  },
+  {
+   "concept": "shell",
+   "type": "software",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 162,
+   "char_start": 96977,
+   "depth": "opinion",
+   "context_snippet": "you could at least do some of the input output testing"
+  },
+  {
+   "concept": "hardware-in-the-loop-testing",
+   "type": "technique",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 162,
+   "char_start": 96977,
+   "depth": "explains",
+   "context_snippet": "you could at least do some of the input output testing"
+  },
+  {
+   "concept": "shell",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 163,
+   "char_start": 97295,
+   "depth": "explains",
+   "context_snippet": "you can simulate what the button does like via, via a shell"
+  },
+  {
+   "concept": "shell",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 165,
+   "char_start": 97867,
+   "depth": "explains",
+   "context_snippet": "why you should always include a shell in your embedded project"
+  },
+  {
+   "concept": "uart",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 165,
+   "char_start": 98247,
+   "depth": "explains",
+   "context_snippet": "build a lightweight shell over you are"
+  },
+  {
+   "concept": "github-actions",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 165,
+   "char_start": 98570,
+   "depth": "mention",
+   "context_snippet": "GitHub just does this for me"
+  },
+  {
+   "concept": "test-firmware",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 165,
+   "char_start": 98679,
+   "depth": "explains",
+   "context_snippet": "custom like test firmer images that you want to flash"
+  },
+  {
+   "concept": "rube-goldberg-machine",
+   "type": "other",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 166,
+   "char_start": 99037,
+   "depth": "opinion",
+   "context_snippet": "those really complicated machines called? Oh, Rube Goldberg"
+  },
+  {
+   "concept": "software-consulting",
+   "type": "career",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 166,
+   "char_start": 99708,
+   "depth": "mention",
+   "context_snippet": "I'm like you were with Pokeboard, like a small consultant"
+  },
+  {
+   "concept": "raspberry-pi",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 167,
+   "char_start": 100416,
+   "depth": "mention",
+   "context_snippet": "it's like, okay, someone could be like, okay, it's a raspberry pie"
+  },
+  {
+   "concept": "aws",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 167,
+   "char_start": 100483,
+   "depth": "mention",
+   "context_snippet": "and it's, you know, some AWS backend"
+  },
+  {
+   "concept": "python",
+   "type": "software",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 169,
+   "char_start": 100985,
+   "depth": "mention",
+   "context_snippet": "Python updates and then, then what"
+  },
+  {
+   "concept": "continuous-integration",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 170,
+   "char_start": 101514,
+   "depth": "explains",
+   "context_snippet": "the idea of, you know, continuous integration"
+  },
+  {
+   "concept": "github-actions",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 170,
+   "char_start": 101808,
+   "depth": "explains",
+   "context_snippet": "the GitHub, GitHub actions. Is that like replacing like a Jenkins server?"
+  },
+  {
+   "concept": "jenkins",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 170,
+   "char_start": 101849,
+   "depth": "mention",
+   "context_snippet": "replacing like a Jenkins server"
+  },
+  {
+   "concept": "software-pricing",
+   "type": "business-model",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 171,
+   "char_start": 102327,
+   "depth": "opinion",
+   "context_snippet": "pricing is still kind of up in the air, but it's not cheap"
+  },
+  {
+   "concept": "failed-build",
+   "type": "engineering-practice",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 171,
+   "char_start": 102465,
+   "depth": "opinion",
+   "context_snippet": "the money's going to save me from a failed build"
+  },
+  {
+   "concept": "printed-circuit-board",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 174,
+   "char_start": 103451,
+   "depth": "mention",
+   "context_snippet": "when I first started designing PCBs"
+  },
+  {
+   "concept": "eagle",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 174,
+   "char_start": 103488,
+   "depth": "opinion",
+   "context_snippet": "I was using Eagle and Eagle does a lot of things really well"
+  },
+  {
+   "concept": "four-layer-flex-pcb",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 174,
+   "char_start": 103690,
+   "depth": "mention",
+   "context_snippet": "four later flex"
+  },
+  {
+   "concept": "altium",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 174,
+   "char_start": 103801,
+   "depth": "opinion",
+   "context_snippet": "you start looking at things like, you know, Altium"
+  },
+  {
+   "concept": "bom-management",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 174,
+   "char_start": 104175,
+   "depth": "mention",
+   "context_snippet": "bomb management"
+  },
+  {
+   "concept": "gerber",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 174,
+   "char_start": 104208,
+   "depth": "mention",
+   "context_snippet": "Gerber generation"
+  },
+  {
+   "concept": "pcb-standardization",
+   "type": "engineering-practice",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 175,
+   "char_start": 105305,
+   "depth": "opinion",
+   "context_snippet": "And I think that standardization too"
+  },
+  {
+   "concept": "manufacturing-package",
+   "type": "manufacturing",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 175,
+   "char_start": 105409,
+   "depth": "opinion",
+   "context_snippet": "it's always like a manufacturing package"
+  },
+  {
+   "concept": "regression-testing",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 176,
+   "char_start": 105905,
+   "depth": "explains",
+   "context_snippet": "the regression testing isn't as powerful"
+  },
+  {
+   "concept": "software-development-kit",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 178,
+   "char_start": 106781,
+   "depth": "mention",
+   "context_snippet": "you download the SDK"
+  },
+  {
+   "concept": "build-system",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 178,
+   "char_start": 106803,
+   "depth": "explains",
+   "context_snippet": "you figure out your build system"
+  },
+  {
+   "concept": "cortex-m",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 178,
+   "char_start": 107042,
+   "depth": "mention",
+   "context_snippet": "Docker images for embedded development, you know, for Cortex M"
+  },
+  {
+   "concept": "test-driven-development",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 178,
+   "char_start": 107213,
+   "depth": "opinion",
+   "context_snippet": "if you're going to do TDD, like that should start on day one"
+  },
+  {
+   "concept": "product-shipping",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 180,
+   "char_start": 108127,
+   "depth": "opinion",
+   "context_snippet": "Anyone who wants to ship a product?"
+  },
+  {
+   "concept": "documentation",
+   "type": "media-resource",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 182,
+   "char_start": 108614,
+   "depth": "mention",
+   "context_snippet": "We've got a lot of documentation"
+  },
+  {
+   "concept": "resource-center",
+   "type": "media-resource",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 182,
+   "char_start": 108648,
+   "depth": "mention",
+   "context_snippet": "We'll be launching a resource center pretty soon"
+  },
+  {
+   "concept": "gdb",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 182,
+   "char_start": 108717,
+   "depth": "mention",
+   "context_snippet": "how do I remotely, you know, GDB, you know, into a, into a device?"
+  },
+  {
+   "concept": "github-actions",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 182,
+   "char_start": 108784,
+   "depth": "mention",
+   "context_snippet": "How, how do I, you know, write a GitHub action"
+  },
+  {
+   "concept": "logger",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 182,
+   "char_start": 109171,
+   "depth": "mention",
+   "context_snippet": "you can go to our current website"
+  },
+  {
+   "concept": "development-board",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 182,
+   "char_start": 109524,
+   "depth": "mention",
+   "context_snippet": "We have a lot of dev boards in the office now"
+  },
+  {
+   "concept": "continuous-integration",
+   "type": "engineering-practice",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 183,
+   "char_start": 110126,
+   "depth": "opinion",
+   "context_snippet": "I've heard about continuous integration in the past"
+  },
+  {
+   "concept": "embedded-testing",
+   "type": "technique",
+   "speaker": "Akbar Dinaliwala",
+   "paragraph_index": 183,
+   "char_start": 110212,
+   "depth": "explains",
+   "context_snippet": "I never understood how it would work for embedded"
+  }
+ ]
+}

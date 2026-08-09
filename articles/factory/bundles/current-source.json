@@ -1,0 +1,613 @@
+{
+ "concept": "current-source",
+ "name": "Current Source",
+ "type": "component",
+ "score": 86.91,
+ "rank_by_score": 434,
+ "cluster": {
+  "core": [
+   "current-source"
+  ],
+  "children": [
+   "differential-amplifier",
+   "direct-digital-synthesis"
+  ],
+  "neighbors": []
+ },
+ "stats": {
+  "episodes": 25,
+  "mentions": 45,
+  "explains": 20,
+  "opinions": 2,
+  "candidate_episode_count": 24,
+  "candidate_mention_count": 35,
+  "gated_out": 17,
+  "gated_out_by_concept": [
+   [
+    "differential-amplifier",
+    11
+   ],
+   [
+    "direct-digital-synthesis",
+    6
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 1,
+  "speakers": [
+   [
+    "Chris Gammell",
+    7
+   ],
+   [
+    "Dave Jones",
+    5
+   ],
+   [
+    "Mark Morin",
+    2
+   ],
+   [
+    "Ian Danaher",
+    1
+   ],
+   [
+    "Bob Simpson",
+    1
+   ],
+   [
+    "Sam Zeloof",
+    1
+   ],
+   [
+    "Jean Rintoul",
+    1
+   ],
+   [
+    "Paul Zawada",
+    1
+   ],
+   [
+    "Michal Zalewski",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 19,
+   "child": 1
+  },
+  "passages_by_depth": {
+   "explains": 18,
+   "opinion": 2
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 20,
+ "passages": [
+  {
+   "episode": 44,
+   "episode_title": "BASIC, Chip companies & Robots - Pernicious Projects, Puppies in Peril",
+   "episode_url": "https://theamphour.com/the-amp-hour-44-pernicious-projects-puppies-in-peril/",
+   "guest": null,
+   "stem": "the-amp-hour-44-pernicious-projects-puppies-in-peril",
+   "paragraph_index": 381,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "Yeah. So, it's been out a while, but this is the upgraded version, which goes to an amp. So, it's basically an LDO. It's a low dropout voltage regulator. Nothing fancy there, but it goes down to zero volts. It's not your traditional LDO. And really, you've got to, it's basically simply an op amp with a current source in it set by a single resistor. And that's the other good thing is that you set the output voltage with a single resistor. You don't need the traditional resistor divider on the output. So, you just put it to ground. Yeah. And you just put it to ground. And it's got a, it has an internal constant current source, which drives the constant current through that resistor, which then generates a reference voltage. And that's how it, and that's how it generates the thing. Anyway, you can look at the internal block diagram, too. It's very simple, and it's a very useful part. And what I've found is that because the internal constant current source is so small, it's only 10 microamps. Yep. You can actually override that and feed in onto the set pin. You can actually feed a voltage directly onto the set pin.",
+   "context_before": "Oh, yeah?",
+   "context_after": "Oh, so you can just use it as a programming zero to one amp.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Oh, yeah? Yeah. So, it's been out a while, but this is the upgraded version, which goes to an amp. So, it's basically an LDO. It's a low dropout voltage regulator. Nothing fancy there, but it goes down to zero volts. It's not your traditional LDO. And really, you've got to, it's basically simply an op amp with a current source in it set by a single resistor. And that's the other good thing is that you set the output voltage with a single resistor. You don't need the traditional resistor divider on the output. So, you just put it to ground. Yeah. And you just put it to ground. And it's got a, it has an internal constant current source, which drives the constant current through that resistor, which then generates a reference voltage. And that's how it, and that's how it generates the thing. Anyway, you can look at the internal block diagram, too. It's very simple, and it's a very useful part. And what I've found is that because the internal constant current source is so small, it's only 10 microamps. Yep. You can actually override that and feed in onto the set pin. You can actually feed a voltage directly onto the set pin. Oh, so you can just use it as a programming zero to one amp."
+  },
+  {
+   "episode": 87,
+   "episode_title": "An Interview with Ian Daniher - Nascent Nonolith Numquid",
+   "episode_url": "https://theamphour.com/the-amp-hour-87-nascent-nonolith-numquid/",
+   "guest": "Ian Danaher",
+   "stem": "the-amp-hour-87-nascent-nonolith-numquid",
+   "paragraph_index": 24,
+   "depth": "explains",
+   "speaker_raw": "Ian Danaher",
+   "speaker_repaired": "Ian Danaher",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "Sorry to disappoint there. No, I have ambitions, but they're not quite that long. Not right. So we went at it with a project description. We wanted to build a device that could source current, measure voltage, vice versa, and do it quickly and cheaply. And then we wanted to use it to, you know, charge cell phone batteries, figure out exactly what the capacity of those cheap Chinese LiPos is. Figure out what temperature light bulbs actually run at. And, of course, sort our junk bins.",
+   "context_before": "I was hoping you would say that we're not going to take on Keithley. We're going to bury them.",
+   "context_after": "Yeah, that's a good use. Actually, that plays near and dear to the hearts of our listeners. Yeah. What the heck do I have in my junk bin?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Ian Danaher",
+   "text": "I was hoping you would say that we're not going to take on Keithley. We're going to bury them. Sorry to disappoint there. No, I have ambitions, but they're not quite that long. Not right. So we went at it with a project description. We wanted to build a device that could source current, measure voltage, vice versa, and do it quickly and cheaply. And then we wanted to use it to, you know, charge cell phone batteries, figure out exactly what the capacity of those cheap Chinese LiPos is. Figure out what temperature light bulbs actually run at. And, of course, sort our junk bins. Yeah, that's a good use. Actually, that plays near and dear to the hearts of our listeners. Yeah. What the heck do I have in my junk bin?"
+  },
+  {
+   "episode": 112,
+   "episode_title": "An Interview with Bob Simpson - Ardent Automotive Artisan",
+   "episode_url": "https://theamphour.com/the-amp-hour-112-ardent-automotive-artisan/",
+   "guest": "Bob Simpson",
+   "stem": "the-amp-hour-112-ardent-automotive-artisan",
+   "paragraph_index": 121,
+   "depth": "explains",
+   "speaker_raw": "Bob Simpson",
+   "speaker_repaired": "Bob Simpson",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "The SAE 1772 is the world standard right now. Now, there are some exceptions, and the fast charging are the exceptions. Manufactured by Sony. Well, it's funny to mention that because a Japanese company started this one called CHADMO. It's kind of a long acronym of some stuff. But it's really a fast charger, and it's a level three. And it's a DC charger. It's putting out current right into your pack. No AC to then DC back to your DC pack inside your car. So it's a dump, huh? It's a fast dump. And in the handshake, in the pod, when you plug in, you handshake and say, give me 100 amps at 350 volts. Well, the voltage doesn't matter. It just says, give me 100 amps. It doesn't matter what the voltage is. It's a current source, huh? It's purely a current source. Wow. And it'll deliver 100 amps. So while the car is sitting there sucking up this 100 amps, and the pack voltage is going up pretty rapidly here, and as you know, when you have that kind of current going in, then you're pushing up to your maximum voltage earlier than you would if you were trickling it in, of course. And that's why you only go to the 80% point during a fast charge. Well, it turns out that your BMS is part of this equation, and it's looking at all the cells. In fact, it's looking at every single one of them individually. And the one that is the closest to your top limit is the one that's setting the pace. So it's a weakest link thing. You got it. Exactly. Yeah. So that very first one, it hits that certain threshold, predetermined threshold. Nothing bad about that. That's expected. And, you know, they're twinkling into that point, right? And as soon as they do that, well, then you do a combination of knocking that current request down. Okay, instead of giving me 100, give me 80. And at the same time, you could even start shunting on that cell if you so desire.",
+   "context_before": "Are all of the manufacturers using these standardized charging connectors? Right. Yes, absolutely. So they've all agreed we're to be stupid to try and do some proprietary things.",
+   "context_after": "I was going to say, can the battery management system detect that, oh, this cell is really dragging down the pack? We've got 200 cells here. We're not going to\u2014 Absolutely. Absolutely. You know, let's piss this cell off, short it out.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Are all of the manufacturers using these standardized charging connectors? Right. Yes, absolutely. So they've all agreed we're to be stupid to try and do some proprietary things. The SAE 1772 is the world standard right now. Now, there are some exceptions, and the fast charging are the exceptions. Manufactured by Sony. Well, it's funny to mention that because a Japanese company started this one called CHADMO. It's kind of a long acronym of some stuff. But it's really a fast charger, and it's a level three. And it's a DC charger. It's putting out current right into your pack. No AC to then DC back to your DC pack inside your car. So it's a dump, huh? It's a fast dump. And in the handshake, in the pod, when you plug in, you handshake and say, give me 100 amps at 350 volts. Well, the voltage doesn't matter. It just says, give me 100 amps. It doesn't matter what the voltage is. It's a current source, huh? It's purely a current source. Wow. And it'll deliver 100 amps. So while the car is sitting there sucking up this 100 amps, and the pack voltage is going up pretty rapidly here, and as you know, when you have that kind of current going in, then you're pushing up to your maximum voltage earlier than you would if you were trickling it in, of course. And that's why you only go to the 80% point during a fast charge. Well, it turns out that your BMS is part of this equation, and it's looking at all the cells. In fact, it's looking at every single one of them individually. And the one that is the closest to your top limit is the one that's setting the pace. So it's a weakest link thing. You got it. Exactly. Yeah. So that very first one, it hits that certain threshold, predetermined threshold. Nothing bad about that. That's expected. And, you know, they're twinkling into that point, right? And as soon as they do that, well, then you do a combination of knocking that current request down. Okay, instead of giving me 100, give me 80. And at the same time, you could even start shunting on that cell if you so desire. I was going to say, can the battery management system detect that, oh, this cell is really dragging down the pack? We've got 200 cells here. We're not going to\u2014 Absolutely. Absolutely. You know, let's piss this cell off, short it out."
+  },
+  {
+   "episode": 140,
+   "episode_title": "Project Management, Lasers & Robots - Staunch Specialty Sanctanimity",
+   "episode_url": "https://theamphour.com/the-amp-hour-140-staunch-specialty-sanctanimity/",
+   "guest": null,
+   "stem": "the-amp-hour-140-staunch-specialty-sanctanimity",
+   "paragraph_index": 310,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "That's been pissing me off recently with... I've been doing some SPICE stuff recently. And current sources... Using what package? LTSpice. I mean, this is just a generic thing, though. Right. Just plan, right? Yeah. Using... You know, I love... I love thinking of circuits and, you know, from a current perspective, right? I mean, I always... Making that switch was a very big deal for me, obviously. And I think everyone... Everyone hits that point of, oh, voltage... No, no, no. Current. Current is where it's at. Right. You know. You know what I'm talking about. And... Yeah, yeah. But programming in current sources into SPICE is dangerous, right? Because, you know, if you turn off a... So, if you have a current flowing through something... Like a switch or a transistor or something... If you turn off the switch or the transistor, then it spikes to, you know, kilovolts and stuff like that, right?",
+   "context_before": "Well, it has a voltage, yeah. I mean, current limits aren't just magic. They don't just, you know... There's not zero volts in your system, you know? Right. Kirchhoff's law must apply, you know? Yeah. So, yeah. They have a maximum voltage.",
+   "context_after": "It's going... Well, it spikes to the maximum voltage you've set.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Well, it has a voltage, yeah. I mean, current limits aren't just magic. They don't just, you know... There's not zero volts in your system, you know? Right. Kirchhoff's law must apply, you know? Yeah. So, yeah. They have a maximum voltage. That's been pissing me off recently with... I've been doing some SPICE stuff recently. And current sources... Using what package? LTSpice. I mean, this is just a generic thing, though. Right. Just plan, right? Yeah. Using... You know, I love... I love thinking of circuits and, you know, from a current perspective, right? I mean, I always... Making that switch was a very big deal for me, obviously. And I think everyone... Everyone hits that point of, oh, voltage... No, no, no. Current. Current is where it's at. Right. You know. You know what I'm talking about. And... Yeah, yeah. But programming in current sources into SPICE is dangerous, right? Because, you know, if you turn off a... So, if you have a current flowing through something... Like a switch or a transistor or something... If you turn off the switch or the transistor, then it spikes to, you know, kilovolts and stuff like that, right? It's going... Well, it spikes to the maximum voltage you've set."
+  },
+  {
+   "episode": 140,
+   "episode_title": "Project Management, Lasers & Robots - Staunch Specialty Sanctanimity",
+   "episode_url": "https://theamphour.com/the-amp-hour-140-staunch-specialty-sanctanimity/",
+   "guest": null,
+   "stem": "the-amp-hour-140-staunch-specialty-sanctanimity",
+   "paragraph_index": 312,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "Exactly. And it's just... Well, LTSpice doesn't have that limit in it. So, maybe that's the problem. There's no voltage limit built into the current source in LTSpice. At least, maybe not that I've found. So, usually I end up putting, like, a diode in peril... Or a zener in peril or something to try and mimic my system, right? Because if you have a current source, eventually it's going to run out of headroom on the voltage side of things, right? So, if you have a current source that you're using, usually, you know, 12 volts, 20 volts, whatever. Eventually it's going to run out of headroom in a voltage standpoint. And it's going to stop producing the current you need. Yep. Because current sources are a load of crap. I'm taking a stand here, folks. Current sources aren't real! There's a t-shirt slogan for you. Yeah, there it is, right? I will put that in. T-shirt slogan to remember. Current sources aren't real.",
+   "context_before": "It's going... Well, it spikes to the maximum voltage you've set.",
+   "context_after": "He's actually typing it, folks. Yeah. Yeah.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "It's going... Well, it spikes to the maximum voltage you've set. Exactly. And it's just... Well, LTSpice doesn't have that limit in it. So, maybe that's the problem. There's no voltage limit built into the current source in LTSpice. At least, maybe not that I've found. So, usually I end up putting, like, a diode in peril... Or a zener in peril or something to try and mimic my system, right? Because if you have a current source, eventually it's going to run out of headroom on the voltage side of things, right? So, if you have a current source that you're using, usually, you know, 12 volts, 20 volts, whatever. Eventually it's going to run out of headroom in a voltage standpoint. And it's going to stop producing the current you need. Yep. Because current sources are a load of crap. I'm taking a stand here, folks. Current sources aren't real! There's a t-shirt slogan for you. Yeah, there it is, right? I will put that in. T-shirt slogan to remember. Current sources aren't real. He's actually typing it, folks. Yeah. Yeah."
+  },
+  {
+   "episode": 140,
+   "episode_title": "Project Management, Lasers & Robots - Staunch Specialty Sanctanimity",
+   "episode_url": "https://theamphour.com/the-amp-hour-140-staunch-specialty-sanctanimity/",
+   "guest": null,
+   "stem": "the-amp-hour-140-staunch-specialty-sanctanimity",
+   "paragraph_index": 383,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "Although, I must say, in the defense of LT, I am trying to drive the set pin, which is not the \u2013 Ah. You know, which is not the mode of operation of this chip, right? I'm trying to override it. But, you know, it's got a pissy little 10-amp, 10-micro-amp current source on that pin, so I can drive over that, you know.",
+   "context_before": " recall, you are screwed. I mean, I can bank for businesses, right? I mean, like, it's a real thing. If you have a true recall, there is no \u2013 I mean, because it's not just your product getting \u2013 you know, you don't just have to replace it, right? Maybe you have to get 10,000 units back and you have to desolder a chip and resolder it and send it back out. There's cost to that. But then there's also \u2013 you know, then there's, like, the car manufacturers where they just recall the entire product line. And then there's the things like the Toyotas where they don't only recall the product line. They're hurting people and their brand name is hurt, right? I mean, like, there are so many levels of crap that can hit the fan. It's just unbelievable. So test your stuff. Absolutely, folks. Oh, you know.",
+   "context_after": "Right. And then marketing pops in. They say, well, we specced it that way, right? I mean, that's \u2013 and that's why people say they have specs, right? I mean, like, there's always that corner case where, you know, you're going to either get in a lawsuit or \u2013 in a worst case or in an argument or something like that. It's tough, man. So you're driving against the current source?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": " recall, you are screwed. I mean, I can bank for businesses, right? I mean, like, it's a real thing. If you have a true recall, there is no \u2013 I mean, because it's not just your product getting \u2013 you know, you don't just have to replace it, right? Maybe you have to get 10,000 units back and you have to desolder a chip and resolder it and send it back out. There's cost to that. But then there's also \u2013 you know, then there's, like, the car manufacturers where they just recall the entire product line. And then there's the things like the Toyotas where they don't only recall the product line. They're hurting people and their brand name is hurt, right? I mean, like, there are so many levels of crap that can hit the fan. It's just unbelievable. So test your stuff. Absolutely, folks. Oh, you know. Although, I must say, in the defense of LT, I am trying to drive the set pin, which is not the \u2013 Ah. You know, which is not the mode of operation of this chip, right? I'm trying to override it. But, you know, it's got a pissy little 10-amp, 10-micro-amp current source on that pin, so I can drive over that, you know. Right. And then marketing pops in. They say, well, we specced it that way, right? I mean, that's \u2013 and that's why people say they have specs, right? I mean, like, there's always that corner case where, you know, you're going to either get in a lawsuit or \u2013 in a worst case or in an argument or something like that. It's tough, man. So you're driving against the current source?"
+  },
+  {
+   "episode": 140,
+   "episode_title": "Project Management, Lasers & Robots - Staunch Specialty Sanctanimity",
+   "episode_url": "https://theamphour.com/the-amp-hour-140-staunch-specialty-sanctanimity/",
+   "guest": null,
+   "stem": "the-amp-hour-140-staunch-specialty-sanctanimity",
+   "paragraph_index": 385,
+   "depth": "opinion",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "Yeah, I'm driving against the current source. Yes, I'm overriding that current source.",
+   "context_before": "Right. And then marketing pops in. They say, well, we specced it that way, right? I mean, that's \u2013 and that's why people say they have specs, right? I mean, like, there's always that corner case where, you know, you're going to either get in a lawsuit or \u2013 in a worst case or in an argument or something like that. It's tough, man. So you're driving against the current source?",
+   "context_after": "I guess I didn't quite get that. Oh, man.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. And then marketing pops in. They say, well, we specced it that way, right? I mean, that's \u2013 and that's why people say they have specs, right? I mean, like, there's always that corner case where, you know, you're going to either get in a lawsuit or \u2013 in a worst case or in an argument or something like that. It's tough, man. So you're driving against the current source? Yeah, I'm driving against the current source. Yes, I'm overriding that current source. I guess I didn't quite get that. Oh, man."
+  },
+  {
+   "episode": 172,
+   "episode_title": "CAD courses and cross platform creation - Printing Propaedeutic Patterns",
+   "episode_url": "https://theamphour.com/172-cad-courses-and-cross-platform-creation-printing-propaedeutic-patterns/",
+   "guest": null,
+   "stem": "0172-cad-courses-and-cross-platform-creation-printing-propaedeutic-patterns",
+   "paragraph_index": 14,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "But yeah, so I sent you the link there. It's basically, it's ATX power supply that then goes to... Right. Watch out, we got lots of wank input here. So it's an Arduino controlled output, right? So you can have like a display and everything like that. And then basically there's a DAC that also drives a current source. There's an ADC that can measure high level or thermocouple inputs. There's a positive negative rail that's adjustable. Right. There's a relay circuit for like high voltage switching type stuff. Yep. And then there's an LED... I see it. LED driver, basically. The idea being that like kind of like everything you need to do, not everything, but you know, just kind of like a multi-tool for your bench. So measuring signals, outputting signals, outputting power, and doing it kind of cheap. I don't know.",
+   "context_before": "Yeah, yeah.",
+   "context_after": "The ATX power supply is a bit overkill, although I can see why you did it. I mean, it's not like you...",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah, yeah. But yeah, so I sent you the link there. It's basically, it's ATX power supply that then goes to... Right. Watch out, we got lots of wank input here. So it's an Arduino controlled output, right? So you can have like a display and everything like that. And then basically there's a DAC that also drives a current source. There's an ADC that can measure high level or thermocouple inputs. There's a positive negative rail that's adjustable. Right. There's a relay circuit for like high voltage switching type stuff. Yep. And then there's an LED... I see it. LED driver, basically. The idea being that like kind of like everything you need to do, not everything, but you know, just kind of like a multi-tool for your bench. So measuring signals, outputting signals, outputting power, and doing it kind of cheap. I don't know. The ATX power supply is a bit overkill, although I can see why you did it. I mean, it's not like you..."
+  },
+  {
+   "episode": 213,
+   "episode_title": "Travel Recaps and Altium Announcements - Artisinal Aussie Assemblage",
+   "episode_url": "https://theamphour.com/213-travel-recaps-and-altium-announcements-artisinal-aussie-assemblage/",
+   "guest": null,
+   "stem": "0213-travel-recaps-and-altium-announcements-artisinal-aussie-assemblage",
+   "paragraph_index": 168,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:differential-amplifier",
+   "concept_sources": [
+    "child:differential-amplifier"
+   ],
+   "concepts": [
+    "differential-amplifier"
+   ],
+   "paragraph_text": "Right, right. Let's wash that terrible taste out of our mouth with something that's actually pretty awesome. So, over at Evil Mad Scientist Labs, Lenore and Wendell's company, and then Eric, oh, crap, I forgot his last name. The guy who did the other discreet stuff. Basically, they have, they did this discreet 555 timer a while back, and now they have a discreet 741. Yep. Right. Which is great. I think this is a great way, you know, because especially, like, when you look at the structure, I mean, like, you know, a 741 op amp, they're leaky, but, you know, like, what, 10 millivolts of average of voltage offset and stuff like that. But, like, it's been around a long time, and it's built, you know, it's BJT process, and, like, but it's, like, the structure really doesn't change, right? You know, you have a differential balance on the front end, and then, you know, you have amplifier and stuff like that, and all the current sources and everything like that. Yeah. It's just a good way to learn about that stuff. And that's really the reason to do this kind of thing. And not only that, you know, we've talked about pattern matching before, like, how that's a big part of electronics is kind of seeing patterns, right? Every time you see an inverting op amp, it's pretty obvious, right? I mean, you start to just kind of see the matrix in that way. It doesn't look like a bunch of resistors. It's, you know, in a triangle, it's now inverting op amp, and it becomes a block. Same kind of thing here, right? When you start to see this, you see, you know, and then sometimes you'll see someone put, like, you know.",
+   "context_before": "Right. So, they, you know, like those companies who, I get emailed all the time, you know, oh, we'd like to do a sponsored blog post, you know? Yeah, boo. And, oh, boo. Yeah. Yeah. Oh. We'll create any content you like, you know, as long as you link back to us and I piss off.",
+   "context_after": "You see a current, there's a current mirror. There's a current source. Exactly.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Right. So, they, you know, like those companies who, I get emailed all the time, you know, oh, we'd like to do a sponsored blog post, you know? Yeah, boo. And, oh, boo. Yeah. Yeah. Oh. We'll create any content you like, you know, as long as you link back to us and I piss off. Right, right. Let's wash that terrible taste out of our mouth with something that's actually pretty awesome. So, over at Evil Mad Scientist Labs, Lenore and Wendell's company, and then Eric, oh, crap, I forgot his last name. The guy who did the other discreet stuff. Basically, they have, they did this discreet 555 timer a while back, and now they have a discreet 741. Yep. Right. Which is great. I think this is a great way, you know, because especially, like, when you look at the structure, I mean, like, you know, a 741 op amp, they're leaky, but, you know, like, what, 10 millivolts of average of voltage offset and stuff like that. But, like, it's been around a long time, and it's built, you know, it's BJT process, and, like, but it's, like, the structure really doesn't change, right? You know, you have a differential balance on the front end, and then, you know, you have amplifier and stuff like that, and all the current sources and everything like that. Yeah. It's just a good way to learn about that stuff. And that's really the reason to do this kind of thing. And not only that, you know, we've talked about pattern matching before, like, how that's a big part of electronics is kind of seeing patterns, right? Every time you see an inverting op amp, it's pretty obvious, right? I mean, you start to just kind of see the matrix in that way. It doesn't look like a bunch of resistors. It's, you know, in a triangle, it's now inverting op amp, and it becomes a block. Same kind of thing here, right? When you start to see this, you see, you know, and then sometimes you'll see someone put, like, you know. You see a current, there's a current mirror. There's a current source. Exactly."
+  },
+  {
+   "episode": 290,
+   "episode_title": "An Interview with Mark Morin of Nufern",
+   "episode_url": "https://theamphour.com/290-an-interview-with-mark-morin-of-nufern/",
+   "guest": "Mark Morin",
+   "stem": "0290-an-interview-with-mark-morin-of-nufern",
+   "paragraph_index": 169,
+   "depth": "explains",
+   "speaker_raw": "Mark Morin",
+   "speaker_repaired": "Mark Morin",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "And there's a bunch of challenges with switching on and off laser diodes. Like, when you cross the lasing thresholds, you get this relaxation oscillation. That creep makes a little spike, right? So if you just want to shoot a laser diode into a wall, it's really not that complicated. But if you want to start amplifying it in a fiber system, you can't have all these spikes coming out of the laser every time you turn it on and off, right? So you have to have a pretty well under control current source without overshoot or \u2013 Right.",
+   "context_before": "So electrical current turns into photons through this diode. Right. Yeah.",
+   "context_after": "Because it's basically a current source you're switching off and on. And when you switch a current source off and on, you can have issues, especially if it's a large current source. Oh, yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Dave Jones",
+   "text": "So electrical current turns into photons through this diode. Right. Yeah. And there's a bunch of challenges with switching on and off laser diodes. Like, when you cross the lasing thresholds, you get this relaxation oscillation. That creep makes a little spike, right? So if you just want to shoot a laser diode into a wall, it's really not that complicated. But if you want to start amplifying it in a fiber system, you can't have all these spikes coming out of the laser every time you turn it on and off, right? So you have to have a pretty well under control current source without overshoot or \u2013 Right. Because it's basically a current source you're switching off and on. And when you switch a current source off and on, you can have issues, especially if it's a large current source. Oh, yeah."
+  },
+  {
+   "episode": 290,
+   "episode_title": "An Interview with Mark Morin of Nufern",
+   "episode_url": "https://theamphour.com/290-an-interview-with-mark-morin-of-nufern/",
+   "guest": "Mark Morin",
+   "stem": "0290-an-interview-with-mark-morin-of-nufern",
+   "paragraph_index": 286,
+   "depth": "explains",
+   "speaker_raw": "Mark Morin",
+   "speaker_repaired": "Mark Morin",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "Yeah, yeah. And then there's a current source, right, to drive the laser diode, which would have an op amp as a control system. Maybe not in our particular systems, but I think most lasers you'd open up that you bought off of eBay would have that. Mm-hmm. There'd certainly be some kind of micro or FPGA in there kind of handling everything.",
+   "context_before": "Okay.",
+   "context_after": "Yeah. And then, like, is it like an ADC as well? I mean, just a...",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. Yeah, yeah. And then there's a current source, right, to drive the laser diode, which would have an op amp as a control system. Maybe not in our particular systems, but I think most lasers you'd open up that you bought off of eBay would have that. Mm-hmm. There'd certainly be some kind of micro or FPGA in there kind of handling everything. Yeah. And then, like, is it like an ADC as well? I mean, just a..."
+  },
+  {
+   "episode": 390,
+   "episode_title": "An Interview with Sam Zeloof",
+   "episode_url": "https://theamphour.com/390-an-interview-with-sam-zeloof/",
+   "guest": "Sam Zeloof",
+   "stem": "0390-an-interview-with-sam-zeloof",
+   "paragraph_index": 255,
+   "depth": "explains",
+   "speaker_raw": "Arduinos",
+   "speaker_repaired": "Sam Zeloof",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:differential-amplifier",
+    "core"
+   ],
+   "concepts": [
+    "current-source",
+    "differential-amplifier"
+   ],
+   "paragraph_text": "Okay. So in the very beginning, uh, when I was just making like discrete transistors, um, I don't really keep track of things as far as yields very well. I focus on other things. It might've been as low as one in 10 sometimes and as high as one in three other times, but overall pretty poor because there's a lot of handling it when you're making individual transistors. I wasn't doing lithography. I was masking it in the Jerry Ellsworth way, which is with, um, like a vinyl sign mask, like for vinyl stickers. And you can kind of cut it out with an X-Acto knife or a laser cutter. And there's a lot of fingerprints and a lot of handling. So that wasn't that great. But, um, now the yield's often about 25%. It really depends what the chip is. So if it's something that I've tried to make, um, many, many times before, and I'm familiar with how it etches and I'm familiar with what parts on the chip give me the most problems during the etching, then I'm more in tune with, you know, what's going on during the processing. If it's a new chip, um, for the first few runs, I might get zero. I might get, you know, nothing working. So it's, it's pretty highly variable. And right now, um, the chip, uh, that I made, you know, just last week, um, that was six transistors. So it was a dual differential amplifier. Uh, each differential amplifier was a long tailed pair. So it's your, um, traditional two fat amplifier. And then there's a third transistor that's, uh, wired up to be a resistor basically. And that's to give the, um, the current source or the load basically for the differential pair.",
+   "context_before": "Um, how many, how many transistors would you be making at a time? So like, if you started with, uh, you started at the very beginning and I saw you were doing pieces when you were doing a lot of this stuff. I mean, will you do 10 and then end up with one? Like what, what is your yield?",
+   "context_after": "It's awesome. Uh, okay. So like, but if you started with, you're saying if you started with four wafer pieces, like at what, at what point will, is it just like if your process messes up or is it just, you get to the end and you've run all the processes and all of the pieces and then only one works or only three work or whatever?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Um, how many, how many transistors would you be making at a time? So like, if you started with, uh, you started at the very beginning and I saw you were doing pieces when you were doing a lot of this stuff. I mean, will you do 10 and then end up with one? Like what, what is your yield? Okay. So in the very beginning, uh, when I was just making like discrete transistors, um, I don't really keep track of things as far as yields very well. I focus on other things. It might've been as low as one in 10 sometimes and as high as one in three other times, but overall pretty poor because there's a lot of handling it when you're making individual transistors. I wasn't doing lithography. I was masking it in the Jerry Ellsworth way, which is with, um, like a vinyl sign mask, like for vinyl stickers. And you can kind of cut it out with an X-Acto knife or a laser cutter. And there's a lot of fingerprints and a lot of handling. So that wasn't that great. But, um, now the yield's often about 25%. It really depends what the chip is. So if it's something that I've tried to make, um, many, many times before, and I'm familiar with how it etches and I'm familiar with what parts on the chip give me the most problems during the etching, then I'm more in tune with, you know, what's going on during the processing. If it's a new chip, um, for the first few runs, I might get zero. I might get, you know, nothing working. So it's, it's pretty highly variable. And right now, um, the chip, uh, that I made, you know, just last week, um, that was six transistors. So it was a dual differential amplifier. Uh, each differential amplifier was a long tailed pair. So it's your, um, traditional two fat amplifier. And then there's a third transistor that's, uh, wired up to be a resistor basically. And that's to give the, um, the current source or the load basically for the differential pair. It's awesome. Uh, okay. So like, but if you started with, you're saying if you started with four wafer pieces, like at what, at what point will, is it just like if your process messes up or is it just, you get to the end and you've run all the processes and all of the pieces and then only one works or only three work or whatever?"
+  },
+  {
+   "episode": 448,
+   "episode_title": "An Interview with Jean Rintoul",
+   "episode_url": "https://theamphour.com/448-an-interview-with-jean-rintoul/",
+   "guest": "Jean Rintoul",
+   "stem": "0448-an-interview-with-jean-rintoul",
+   "paragraph_index": 169,
+   "depth": "explains",
+   "speaker_raw": "Gene",
+   "speaker_repaired": "Jean Rintoul",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "Uh, ADG seven, three, two. Um, yeah. So, so we'd love, um, and, uh, differential amplifier as well from our devices. So it's using, um, you know, I, it's sort of quite a few analog devices parts. Um, and those are the major, major, major, major costs on the bomb there, uh, such as life. But, um, but that being said, they keep all the fancy stuff in silicon these days, you know, that's, that's the problem. Yeah. Yeah. And, and, you know, I can see why, um, I mean, it's sort of, you know, it does mean that you want to buy their MCUs, but if you look at like comparisons, so a comparative current source would be like, um, there's something called the Keith Lee 6 2 2 1. That would be the current source that I would recommend for people that wanted to go even deeper. Um, and, you know, I, I think that one costs about seven, $7,000 just for a current source.",
+   "context_before": "four of those is not, uh, it's not cheap then, huh? No. Sorry.",
+   "context_after": "So then you actually, uh, I used to work on that. I used to work on the supporting that, that piece of machinery at Keith Lee and I broke a couple of them and it was not good.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "four of those is not, uh, it's not cheap then, huh? No. Sorry. Uh, ADG seven, three, two. Um, yeah. So, so we'd love, um, and, uh, differential amplifier as well from our devices. So it's using, um, you know, I, it's sort of quite a few analog devices parts. Um, and those are the major, major, major, major costs on the bomb there, uh, such as life. But, um, but that being said, they keep all the fancy stuff in silicon these days, you know, that's, that's the problem. Yeah. Yeah. And, and, you know, I can see why, um, I mean, it's sort of, you know, it does mean that you want to buy their MCUs, but if you look at like comparisons, so a comparative current source would be like, um, there's something called the Keith Lee 6 2 2 1. That would be the current source that I would recommend for people that wanted to go even deeper. Um, and, you know, I, I think that one costs about seven, $7,000 just for a current source. So then you actually, uh, I used to work on that. I used to work on the supporting that, that piece of machinery at Keith Lee and I broke a couple of them and it was not good."
+  },
+  {
+   "episode": 486,
+   "episode_title": "Medical Kits, They're The Future",
+   "episode_url": "https://theamphour.com/486-medical-kits-theyre-the-future/",
+   "guest": null,
+   "stem": "0486-medical-kits-theyre-the-future",
+   "paragraph_index": 243,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "Yeah. Having like a current source. Or like a current load. You know. And just draw it down. So that it's consistent. And a high draw. And then. Then you know when it gets to the point. You know. One volt. Or point eight volts. Or whatever it is. Yep. Then you start. That's what I plan on doing. Yep. Yep. Yep. Yep. Yep. Yep. Yep. Yep. Yep. Yep.",
+   "context_before": "Oh no. Yeah. Yeah. No. That's. That's. I'm definitely going to do. Either 90% or 100%. Discharge first. All right. So. Oh you are. Okay. That's a given. Because I was just thinking like.",
+   "context_after": "Well I could. But it's like one photo every day. Kind of. You know. Time lapse. Yeah. Totally.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Oh no. Yeah. Yeah. No. That's. That's. I'm definitely going to do. Either 90% or 100%. Discharge first. All right. So. Oh you are. Okay. That's a given. Because I was just thinking like. Yeah. Having like a current source. Or like a current load. You know. And just draw it down. So that it's consistent. And a high draw. And then. Then you know when it gets to the point. You know. One volt. Or point eight volts. Or whatever it is. Yep. Then you start. That's what I plan on doing. Yep. Yep. Yep. Yep. Yep. Yep. Yep. Yep. Yep. Yep. Well I could. But it's like one photo every day. Kind of. You know. Time lapse. Yeah. Totally."
+  },
+  {
+   "episode": 491,
+   "episode_title": "The Almighty Dollarydoo",
+   "episode_url": "https://theamphour.com/491-the-almighty-dollarydoo/",
+   "guest": null,
+   "stem": "0491-the-almighty-dollarydoo",
+   "paragraph_index": 274,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "I'm not sure that makes a huge difference. I'm not sure that makes a huge difference. The difference is in, is in the components themselves. People are, and because the, the, the source of power for your problem, product is a battery, which has voltage. Right. And so people think everything's voltage driven. It's measurable. Sure. You know, and, and people don't, you know, so that's a big step for going to current voltage driven to current driven devices. But of course you can't teach a current source to a beginner because they don't work. What's a current source. I don't, I can't buy a battery. I can't buy a current source battery, you know, that actually produces 50 milliamps constant. Like it's, you can't buy one. Right.",
+   "context_before": "Yeah. Well, I think some of the problem as well is, is from looking at schematics, that is one of the biggest problems because the mental leap to like, see like a ground and like, like, I think like learning current and the importance of currents and current and devices rather would be easier if we didn't use ground symbols. You know what I mean? If we actually had to draw everything. Yeah. Cause if you're drawing everything, going back to the source, you're like, Hey, here's the loop. Here's the loop. And yeah, I know it's a mess, but we're going to do it anyways.",
+   "context_after": "Right.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Well, I think some of the problem as well is, is from looking at schematics, that is one of the biggest problems because the mental leap to like, see like a ground and like, like, I think like learning current and the importance of currents and current and devices rather would be easier if we didn't use ground symbols. You know what I mean? If we actually had to draw everything. Yeah. Cause if you're drawing everything, going back to the source, you're like, Hey, here's the loop. Here's the loop. And yeah, I know it's a mess, but we're going to do it anyways. I'm not sure that makes a huge difference. I'm not sure that makes a huge difference. The difference is in, is in the components themselves. People are, and because the, the, the source of power for your problem, product is a battery, which has voltage. Right. And so people think everything's voltage driven. It's measurable. Sure. You know, and, and people don't, you know, so that's a big step for going to current voltage driven to current driven devices. But of course you can't teach a current source to a beginner because they don't work. What's a current source. I don't, I can't buy a battery. I can't buy a current source battery, you know, that actually produces 50 milliamps constant. Like it's, you can't buy one. Right. Right."
+  },
+  {
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "guest": "Remco Stoutjesdijk",
+   "stem": "the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk",
+   "paragraph_index": 10,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "Yeah. So I literally learned electronics starting in, let's say, 1905. So the first things I built for myself were vacuum tube amplifiers. And that wasn't necessarily because I thought that was much better than transistors. But if you look at the circuit diagram, it literally is five components. So I could think through it before even doing any unique classes. And then later on, I made those better and better and better and started to see more and more the advantages of putting transistors everywhere just to stabilize a current source or make sure that the bias conditions were always perfect. And more and more, I started to understand what makes sound good and understand what people think is good. And these are not the same thing. So some people think something sounds great, but you can demonstrably prove that it sounds horrible. But if you understand why that happens, and I have a lot of, let's say, scar tissue on that, trying to find that out. And that's sort of how I got interested in DSP technology. But I was studying analog electronics at university. So I kind of figured out that maybe I made the wrong specialization in uni. And then I got a job offer from a company in Scotland, Wolfson Microelectronics, that I actually sent a letter to because I found a chip in a DVD player. And I thought, this is an interesting chip. It sounds very good. And I've never heard of this company. And they actually hired me and gave me sort of a dream position. Based on that letter. Is that right? Yeah, based on that letter.",
+   "context_before": "Yeah. Well, and you have taken it all the way down to the chips as well. So you've worked on stuff on chip, like DSP, like you're saying, analog, things like that. So how did that transition happen? I mean, it sounded like you were kind of at the tube level before your college days and then you worked into the silicon side of things. How was that transition into the silicon side of things?",
+   "context_after": "That's awesome.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Well, and you have taken it all the way down to the chips as well. So you've worked on stuff on chip, like DSP, like you're saying, analog, things like that. So how did that transition happen? I mean, it sounded like you were kind of at the tube level before your college days and then you worked into the silicon side of things. How was that transition into the silicon side of things? Yeah. So I literally learned electronics starting in, let's say, 1905. So the first things I built for myself were vacuum tube amplifiers. And that wasn't necessarily because I thought that was much better than transistors. But if you look at the circuit diagram, it literally is five components. So I could think through it before even doing any unique classes. And then later on, I made those better and better and better and started to see more and more the advantages of putting transistors everywhere just to stabilize a current source or make sure that the bias conditions were always perfect. And more and more, I started to understand what makes sound good and understand what people think is good. And these are not the same thing. So some people think something sounds great, but you can demonstrably prove that it sounds horrible. But if you understand why that happens, and I have a lot of, let's say, scar tissue on that, trying to find that out. And that's sort of how I got interested in DSP technology. But I was studying analog electronics at university. So I kind of figured out that maybe I made the wrong specialization in uni. And then I got a job offer from a company in Scotland, Wolfson Microelectronics, that I actually sent a letter to because I found a chip in a DVD player. And I thought, this is an interesting chip. It sounds very good. And I've never heard of this company. And they actually hired me and gave me sort of a dream position. Based on that letter. Is that right? Yeah, based on that letter. That's awesome."
+  },
+  {
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "guest": null,
+   "stem": "0574-bubblegum-tap-shoes",
+   "paragraph_index": 133,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "Oh, get a feel for it. Sure. And like, yeah, I mean, like I know how a regulator works in, you know, like in this abstract way. Yeah. But what I'm saying is like, I was like, oh, I know that it's got a 1.25 volt reference. Use a 1.25 volt reference. So I was like, okay, so we want the feedback node to be 1.25 volts. Right. Right. Wrong. That is wrong. I learned that. The, the feedback, because what it really was is I was trying to like explain like, oh, well you can use the 317 as a current source. Yes. That was like the. Yes, you can. That's the basis of all this.",
+   "context_before": "Yeah. But surely you've, you've looked at enough data sheets that have the internal diagram to just get a feel for it over time. Surely you've looked at enough of it.",
+   "context_after": "You tie the adjust pin to the output. Yeah. Yeah. It's nice. Via a series resistor. And then the, and then the voltage drop, then the 1.25 reference voltage drop divided by the series resistor gives you your output current.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah. But surely you've, you've looked at enough data sheets that have the internal diagram to just get a feel for it over time. Surely you've looked at enough of it. Oh, get a feel for it. Sure. And like, yeah, I mean, like I know how a regulator works in, you know, like in this abstract way. Yeah. But what I'm saying is like, I was like, oh, I know that it's got a 1.25 volt reference. Use a 1.25 volt reference. So I was like, okay, so we want the feedback node to be 1.25 volts. Right. Right. Wrong. That is wrong. I learned that. The, the feedback, because what it really was is I was trying to like explain like, oh, well you can use the 317 as a current source. Yes. That was like the. Yes, you can. That's the basis of all this. You tie the adjust pin to the output. Yeah. Yeah. It's nice. Via a series resistor. And then the, and then the voltage drop, then the 1.25 reference voltage drop divided by the series resistor gives you your output current."
+  },
+  {
+   "episode": 579,
+   "episode_title": "ADC Chip Design with Anthony Wall",
+   "episode_url": "https://theamphour.com/579-adc-chip-design-with-anthony-wall/",
+   "guest": "Anthony Wall",
+   "stem": "0579-adc-chip-design-with-anthony-wall",
+   "paragraph_index": 75,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "Yeah. And I mean, depending who you'll talk to, different people will have different explanations and definitions. Like you'll talk to an RF guy and, you know, they'll start telling you about Barkhausen criterions and 180 degree phase inversions. You talk to a digital person and they go, that shouldn't go there. And you know, I'm somewhere in the middle between those two, I suppose. Got it. Got it. Yeah. So, so the way I like to think about it is if you, if you simplify it right down and you imagine say like a, a current source charging a capacitor, and that's analogous to, uh, you know, like a tap feeding water into a bucket. Right. And how do you know how much water is flowing into that bucket? Well, one way of doing it is measuring how many times that bucket fills up in a given amount of time. Right. So if you look at it, if you look at the bucket for a minute and you've, and you're filling out water and you have to empty it three times, well then, you know, you have about, you know, three buckets worth of water per minute is coming out of that tap. Yep. So effectively your ring oscillator kind of automates that idea. So if you think now you, rather than you having to pick up the bucket and throw out the water, what if I were to put a, a ball cock on the top? So it, it basically detects when the water level reaches a certain level, right? So I'm pouring the water in and when the water level reaches, this ball cock triggers and it dumps the water out of the bottom of the bucket. Right. So you've got, you've got a ball cock and you've got a valve that, that kind of releases all of the water. So now you can kind of, you can measure how many times that, that ball cock triggers per minute. And that's the same thing, right? It's just automated. You can do that many, many, many times. The smaller your bucket, the more accurate you are in a given time period. So that's, that's the fundamental idea, right? That's what you call a relaxation oscillator in, in, in the technical terminology, right? You replace the water tap with a current source that you're trying to measure and you replace the bucket with a capacitor. So you're filling the capacitor with charge and you dump that charge when it fills up and you measure how many charge dumps happen per given time period. Right. Yep. So, so that's a relaxation oscillator. And then if you want to think about what a ring oscillator is, like if you look at the schematic for a ring oscillator, it looks like three inverters all connected in a loop together.",
+   "context_before": "Yeah. I remember there's like a feedback path. That's like, wait, why would you hook that there? I remember that with oscillators, but that's about it.",
+   "context_after": "Yeah. That's, that's the one I've, yeah, that's like a Jim Williams schematics always had those in there.",
+   "context_before_speaker": "Anthony Wall",
+   "context_after_speaker": "Anthony Wall",
+   "text": "Yeah. I remember there's like a feedback path. That's like, wait, why would you hook that there? I remember that with oscillators, but that's about it. Yeah. And I mean, depending who you'll talk to, different people will have different explanations and definitions. Like you'll talk to an RF guy and, you know, they'll start telling you about Barkhausen criterions and 180 degree phase inversions. You talk to a digital person and they go, that shouldn't go there. And you know, I'm somewhere in the middle between those two, I suppose. Got it. Got it. Yeah. So, so the way I like to think about it is if you, if you simplify it right down and you imagine say like a, a current source charging a capacitor, and that's analogous to, uh, you know, like a tap feeding water into a bucket. Right. And how do you know how much water is flowing into that bucket? Well, one way of doing it is measuring how many times that bucket fills up in a given amount of time. Right. So if you look at it, if you look at the bucket for a minute and you've, and you're filling out water and you have to empty it three times, well then, you know, you have about, you know, three buckets worth of water per minute is coming out of that tap. Yep. So effectively your ring oscillator kind of automates that idea. So if you think now you, rather than you having to pick up the bucket and throw out the water, what if I were to put a, a ball cock on the top? So it, it basically detects when the water level reaches a certain level, right? So I'm pouring the water in and when the water level reaches, this ball cock triggers and it dumps the water out of the bottom of the bucket. Right. So you've got, you've got a ball cock and you've got a valve that, that kind of releases all of the water. So now you can kind of, you can measure how many times that, that ball cock triggers per minute. And that's the same thing, right? It's just automated. You can do that many, many, many times. The smaller your bucket, the more accurate you are in a given time period. So that's, that's the fundamental idea, right? That's what you call a relaxation oscillator in, in, in the technical terminology, right? You replace the water tap with a current source that you're trying to measure and you replace the bucket with a capacitor. So you're filling the capacitor with charge and you dump that charge when it fills up and you measure how many charge dumps happen per given time period. Right. Yep. So, so that's a relaxation oscillator. And then if you want to think about what a ring oscillator is, like if you look at the schematic for a ring oscillator, it looks like three inverters all connected in a loop together. Yeah. That's, that's the one I've, yeah, that's like a Jim Williams schematics always had those in there."
+  },
+  {
+   "episode": 583,
+   "episode_title": "The Smart Grid with Paul Zawada",
+   "episode_url": "https://theamphour.com/583-the-smart-grid-with-paul-zawada/",
+   "guest": "Paul Zawada",
+   "stem": "0583-the-smart-grid-with-paul-zawada",
+   "paragraph_index": 94,
+   "depth": "explains",
+   "speaker_raw": "Paul Zawada",
+   "speaker_repaired": "Paul Zawada",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "current-source"
+   ],
+   "paragraph_text": "So, so most likely what you have, and I don't know for sure, but most likely what you have is what's called a grid following inverter. Yes. And it essentially functions, it follows the voltage and essentially is it, it functions as a current source. Okay. Right. And again, that's one of the challenges of the renewables is that we need more devices that have that synthetic inertia. Well, actually, so that's a different concept, but what would have inverters that have what's called dynamic response. And when you hear dynamic response in terms of an inverter, that means it can provide VARs. Got it. When called upon.",
+   "context_before": "Wow. Wow. So what does a solar, what does my home solar inverter act as? Because it's essentially a generator. What type of generator is it? Or does it vary?",
+   "context_after": "When needed or real power if needed.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Wow. Wow. So what does a solar, what does my home solar inverter act as? Because it's essentially a generator. What type of generator is it? Or does it vary? So, so most likely what you have, and I don't know for sure, but most likely what you have is what's called a grid following inverter. Yes. And it essentially functions, it follows the voltage and essentially is it, it functions as a current source. Okay. Right. And again, that's one of the challenges of the renewables is that we need more devices that have that synthetic inertia. Well, actually, so that's a different concept, but what would have inverters that have what's called dynamic response. And when you hear dynamic response in terms of an inverter, that means it can provide VARs. Got it. When called upon. When needed or real power if needed."
+  },
+  {
+   "episode": 725,
+   "episode_title": "The Secret Life of Circuits with lcamtuf / Micha\u0142 Zalewski",
+   "episode_url": "https://theamphour.com/725-the-secret-life-of-circuits-with-lcamtuf-michal-zalewski/",
+   "guest": "Micha\u0142 Zalewski",
+   "stem": "0725-the-secret-life-of-circuits-with-lcamtuf-michal-zalewski",
+   "paragraph_index": 77,
+   "depth": "explains",
+   "speaker_raw": "Michael Zalewski",
+   "speaker_repaired": "Michal Zalewski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:differential-amplifier",
+    "core"
+   ],
+   "concepts": [
+    "current-source",
+    "differential-amplifier"
+   ],
+   "paragraph_text": "I think it actually happens much sooner, right? It's probably the transistor where, you know, you, you, you can sort of, you know, like if you, if you go by the simplistic explanation of how it works, there's going to be a lot of things that are going to be mystifying, right? Like you're not going to be able to understand how a current source works. For example, if you don't understand the dynamics of a transistor beyond, oh, it's just, you know, like an electrically operated crank on a, on a pipe or like, you know, valve on a pipe, right? Because, you know, the, like the, the behavior of current sources really depends on the fact that a transistor is really like a current limiter most of the time within, you know, a certain operating regime. And then if you don't understand current sources, then you can't really understand op-amps, right? Like how does a differential amplifier work? Well, you need a current source kind of, right? It's not a single specific thing, but I think there's a lot of stumbling blocks very early on or like, you know, how understanding, like, you know, you can be given a formula for how an RC filter works or how an inductor works, but unless you can actually, unless you actually internalize what it is and what's going on inside. And I think it's, it's really difficult to make sense of a lot of other things you're going to see, like, you know, signal reflections or, or whatnot. So I really try to, you know, in the book, I really try to approach that from first principles and I actually spend maybe a bit too much time sort of, you know, building, building those foundations. That's one thing that always gave me a pause, right? Like, am I, am I, am I striking the right balance there? Because on one hand, you really need this on the other, you know, there's going to be readers who just want to get to the point where you hook up an LED to a battery and, and, and you see it light up. Right. But yeah, the first part of the book is really sort of, you know, building those foundations so that you can actually move more quickly down the line. Again, like, you know, if I were to pick a single culprit, it's probably the transistor, right? Like the, you know, if you, if you don't understand how a field effect transistor works, you're gonna, you're, you're, you're gonna have a really difficult time with everything else.",
+   "context_before": "Well, just going back to the book, I mean, and, and I guess your website as well. I mean, you're covering a lot of the, the classic things like off amps, like I mentioned. I mean, what, where do you, where do you usually see people stumbling and where are you trying to, to take, take people in a, in a more practical manner with, with your book?",
+   "context_after": "Yeah. You seem to focus on FETs as well. And that's actually, I think that's actually a simpler method at the beginning, right? Because I think a lot of people pick up on, you know, voltage controlled versus current controlled a little bit easier. Like it's a little bit more intuitive, I feel like. And so I think that's a good starting point.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Well, just going back to the book, I mean, and, and I guess your website as well. I mean, you're covering a lot of the, the classic things like off amps, like I mentioned. I mean, what, where do you, where do you usually see people stumbling and where are you trying to, to take, take people in a, in a more practical manner with, with your book? I think it actually happens much sooner, right? It's probably the transistor where, you know, you, you, you can sort of, you know, like if you, if you go by the simplistic explanation of how it works, there's going to be a lot of things that are going to be mystifying, right? Like you're not going to be able to understand how a current source works. For example, if you don't understand the dynamics of a transistor beyond, oh, it's just, you know, like an electrically operated crank on a, on a pipe or like, you know, valve on a pipe, right? Because, you know, the, like the, the behavior of current sources really depends on the fact that a transistor is really like a current limiter most of the time within, you know, a certain operating regime. And then if you don't understand current sources, then you can't really understand op-amps, right? Like how does a differential amplifier work? Well, you need a current source kind of, right? It's not a single specific thing, but I think there's a lot of stumbling blocks very early on or like, you know, how understanding, like, you know, you can be given a formula for how an RC filter works or how an inductor works, but unless you can actually, unless you actually internalize what it is and what's going on inside. And I think it's, it's really difficult to make sense of a lot of other things you're going to see, like, you know, signal reflections or, or whatnot. So I really try to, you know, in the book, I really try to approach that from first principles and I actually spend maybe a bit too much time sort of, you know, building, building those foundations. That's one thing that always gave me a pause, right? Like, am I, am I, am I striking the right balance there? Because on one hand, you really need this on the other, you know, there's going to be readers who just want to get to the point where you hook up an LED to a battery and, and, and you see it light up. Right. But yeah, the first part of the book is really sort of, you know, building those foundations so that you can actually move more quickly down the line. Again, like, you know, if I were to pick a single culprit, it's probably the transistor, right? Like the, you know, if you, if you don't understand how a field effect transistor works, you're gonna, you're, you're, you're gonna have a really difficult time with everything else. Yeah. You seem to focus on FETs as well. And that's actually, I think that's actually a simpler method at the beginning, right? Because I think a lot of people pick up on, you know, voltage controlled versus current controlled a little bit easier. Like it's a little bit more intuitive, I feel like. And so I think that's a good starting point."
+  }
+ ]
+}

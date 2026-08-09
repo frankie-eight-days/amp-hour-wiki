@@ -1,0 +1,1483 @@
+{
+ "concept": "pcb-layout",
+ "name": "PCB Layout",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "pcb-layout",
+  "name": "PCB Layout",
+  "type": "technique",
+  "score": 3321.99,
+  "rank_by_score": 15,
+  "cluster": {
+   "core": [
+    "circuit-board-layout",
+    "pcb-layout",
+    "printed-circuit-board-layout"
+   ],
+   "children": [
+    "ben-krasnow",
+    "electronic-circuit",
+    "engineering-specialization",
+    "feedback",
+    "firmware-development",
+    "grounding",
+    "innovators-dilemma",
+    "pcb-design-software",
+    "pcb-placement",
+    "power-integrity",
+    "schematic-design"
+   ],
+   "neighbors": [
+    {
+     "concept": "schematic-capture",
+     "weight": 6
+    },
+    {
+     "concept": "3d-model",
+     "weight": 4
+    },
+    {
+     "concept": "autorouter",
+     "weight": 4
+    },
+    {
+     "concept": "contextual-electronics",
+     "weight": 4
+    },
+    {
+     "concept": "osh-park",
+     "weight": 4
+    },
+    {
+     "concept": "pcb-designer",
+     "weight": 4
+    }
+   ]
+  },
+  "stats": {
+   "episodes": 229,
+   "mentions": 434,
+   "explains": 174,
+   "opinions": 108,
+   "candidate_episode_count": 200,
+   "candidate_mention_count": 313,
+   "gated_out": 788,
+   "gated_out_by_concept": [
+    [
+     "contextual-electronics",
+     248
+    ],
+    [
+     "osh-park",
+     86
+    ],
+    [
+     "pcb-design-software",
+     71
+    ],
+    [
+     "autorouter",
+     57
+    ],
+    [
+     "ben-krasnow",
+     47
+    ],
+    [
+     "grounding",
+     40
+    ],
+    [
+     "3d-model",
+     40
+    ],
+    [
+     "schematic-capture",
+     38
+    ],
+    [
+     "firmware-development",
+     35
+    ],
+    [
+     "pcb-designer",
+     26
+    ],
+    [
+     "feedback",
+     19
+    ],
+    [
+     "innovators-dilemma",
+     18
+    ],
+    [
+     "engineering-specialization",
+     17
+    ],
+    [
+     "pcb-placement",
+     16
+    ],
+    [
+     "schematic-design",
+     13
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 16,
+   "speakers": [
+    [
+     "Dave Jones",
+     106
+    ],
+    [
+     "Chris Gammell",
+     71
+    ],
+    [
+     "Sergiy Nesterenko",
+     6
+    ],
+    [
+     "Mike Harrison",
+     5
+    ],
+    [
+     "Jeff Keyzer",
+     3
+    ],
+    [
+     "Henry Ott",
+     3
+    ],
+    [
+     "Adam Wolf",
+     3
+    ],
+    [
+     "Hank Zumbahlen",
+     3
+    ],
+    [
+     "Robert Feranec",
+     3
+    ],
+    [
+     "Luke Beno",
+     3
+    ],
+    [
+     "Howard Johnson",
+     2
+    ],
+    [
+     "Andrew Seddon",
+     2
+    ],
+    [
+     "Ryan O'Hara",
+     2
+    ],
+    [
+     "Bunnie Huang",
+     2
+    ],
+    [
+     "Kieran O'Leary",
+     2
+    ],
+    [
+     "James Adams",
+     2
+    ],
+    [
+     "Carmen",
+     2
+    ],
+    [
+     "Ron Demcko",
+     2
+    ],
+    [
+     "Dave Young",
+     2
+    ],
+    [
+     "Sam Aldhaher",
+     2
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 245,
+    "child": 5
+   },
+   "passages_by_depth": {
+    "explains": 172,
+    "opinion": 78
+   }
+  },
+  "cap": 250,
+  "capped": true,
+  "total_available": 279
+ },
+ "claims": [
+  {
+   "claim_text": "Printed circuit board layout is dominated by component placement rather than by routing; the working rule among professional designers is that layout is ninety percent placement, so routing quality is largely decided before the first track is drawn.",
+   "quote_verbatim": "PCB layout is 90% placement",
+   "speaker": "Dave Jones",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The placement-dominates-routing rule is long established enough to be treated as an adage in the field, and it is the reason a board that looks unroutable in the rat's nest phase is usually judged by its placement rather than its unrouted state.",
+   "quote_verbatim": "old adage is that layout is 90% placement",
+   "speaker": "Dave Jones",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Within the wider task of turning a circuit into a board, layout rather than schematic capture consumes the bulk of the effort, to the point that PCB design is characterised as ninety percent layout.",
+   "quote_verbatim": "PCB design is 90% layout",
+   "speaker": "Dave Jones",
+   "episode": 410,
+   "episode_title": "Secret Buzzer Handshake",
+   "episode_url": "https://theamphour.com/410-secret-buzzer-handshake/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Traces that run the full width of a board are treated as a placement failure rather than a routing problem, because a long crossing trace obstructs every other net that must cross it; the correct response is to ask why the connected parts are not placed nearer each other.",
+   "quote_verbatim": "The last thing a PCB layout designer wants to do is have traces going right across the board. Because that screws your routing.",
+   "speaker": "Dave Jones",
+   "episode": 410,
+   "episode_title": "Secret Buzzer Handshake",
+   "episode_url": "https://theamphour.com/410-secret-buzzer-handshake/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Decisions taken at the very start of a layout constrain everything that follows, so early placement choices carry disproportionate weight compared with later routing choices.",
+   "quote_verbatim": "Decisions you make at the beginning matter.",
+   "speaker": "Chris Gammell",
+   "episode": 8,
+   "episode_title": "Layouts and Design-Outs",
+   "episode_url": "https://theamphour.com/the-amp-hour-8-layouts-and-design-outs/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Large isolated thermal pads, such as those used to conduct heat out of a package, act as routing keepouts that destroy local layout density and force other nets to detour around them.",
+   "quote_verbatim": "Those large thermal pads. It kills your. PCB layout.",
+   "speaker": "Dave Jones",
+   "episode": 516,
+   "episode_title": "Thermions Aren't A Thing",
+   "episode_url": "https://theamphour.com/516-thermions-arent-a-thing/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The exposed centre ground pad of a QFN package cannot be routed through, so it blocks an area of the board that a designer may otherwise have counted on for routing when estimating density.",
+   "quote_verbatim": "center ground pad in the middle that you can't route through",
+   "speaker": "Dave Jones",
+   "episode": 488,
+   "episode_title": "Sowing Discord",
+   "episode_url": "https://theamphour.com/488-sowing-discord/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "High-end PCB packages provide component and routing density heat maps that show where a board is becoming congested; the feature has long existed in professional tools.",
+   "quote_verbatim": "they all have uh heat maps available",
+   "speaker": "Dave Jones",
+   "episode": 488,
+   "episode_title": "Sowing Discord",
+   "episode_url": "https://theamphour.com/488-sowing-discord/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Choosing a passive package size for a given board is done by judgment from board area and part count rather than by calculation, with a dense design being identified as an 0402 design by eye at the start; no useful calculator exists because the variable space is too large and the outcome is only known at the end of the layout.",
+   "quote_verbatim": "this looks like an 0402 kind of design",
+   "speaker": "Dave Jones",
+   "episode": 488,
+   "episode_title": "Sowing Discord",
+   "episode_url": "https://theamphour.com/488-sowing-discord/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Board dimensions can be allowed to emerge from the mechanical and electrical constraints during layout rather than being fixed as a specification beforehand, and deliberately leaving spare board area preserves room to shuffle parts or add features later.",
+   "quote_verbatim": "you start mocking up your PCB layout and and a form factor just pops out",
+   "speaker": "Dave Jones",
+   "episode": 436,
+   "episode_title": "Downward Sloping Trace",
+   "episode_url": "https://theamphour.com/436-downward-sloping-trace/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Moving from two layers to four removes power distribution from the routing problem entirely, because supply nets go on internal planes; multiple supply rails on a four-layer board remain manageable for the same reason.",
+   "quote_verbatim": "You don't have to worry about power routing because you just know that's going to go on the inner layers.",
+   "speaker": "Chris Gammell",
+   "episode": 221,
+   "episode_title": "Warming Up To IoT - Tendentious Thermal Tools",
+   "episode_url": "https://theamphour.com/221-warming-up-to-iot-tendentious-thermal-tools/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Radiated emissions failures seen in electromagnetic compatibility consulting are usually caused by bad layout, specifically a poor understanding of ground planes, since the governing quantity is the impedance of the radio-frequency ground return.",
+   "quote_verbatim": "it's usually bad layout. It's usually a poor understanding of, uh, ground planes and how ground planes work.",
+   "speaker": "Julia Truchsess",
+   "episode": 424,
+   "episode_title": "An Interview with Julia Truchsess",
+   "episode_url": "https://theamphour.com/424-an-interview-with-julia-truchsess/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Going straight to a four-layer stack-up with a solid ground plane is used as insurance against compliance failure, on the reasoning that the extra board cost is smaller than the cost of failing an emissions test.",
+   "quote_verbatim": "these days I just go straight to four layer because like, it's not worth maybe failing",
+   "speaker": "Chris Gammell",
+   "episode": 424,
+   "episode_title": "An Interview with Julia Truchsess",
+   "episode_url": "https://theamphour.com/424-an-interview-with-julia-truchsess/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Keeping current loops tight, particularly high-current loops, is a primary emissions control in layout, and the same tight loop reduces the receiving area of the board, so immunity improves as a by-product of the emissions work.",
+   "quote_verbatim": "it's one of the big things in PCB layout to, you know, not emit too much is to keep your loops nice and tight",
+   "speaker": "Dave Jones",
+   "episode": 472,
+   "episode_title": "Keyzermas Vacation",
+   "episode_url": "https://theamphour.com/472-keyzermas-vacation/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A physically small board gains electromagnetic compatibility margin for free, because every current loop it can form is bounded by its dimensions.",
+   "quote_verbatim": "the board is so tiny. It's like two by one centimeters or something. So there's inherently any loop on there is going to be tiny.",
+   "speaker": "Andrew Witte",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The first step in laying out a mixed-signal board is to visualise where currents will flow and partition the board so that high-current, high-noise and high-frequency paths are kept out of sensitive analogue areas.",
+   "quote_verbatim": "you've got to kind of visualize where the currents are going to flow and you keep the heavy flow out of the sensitive areas",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "As clock rates rise, trace characteristic impedance, differential pair matching and trace length matching become real circuit elements that do not appear anywhere on the schematic, so they must be controlled during layout or not at all.",
+   "quote_verbatim": "those are all things that are non-schematic components",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Physical proximity of conductors is irrelevant in a logic schematic but has a large effect in the built circuit, which is the transition that digital engineers moving into board design have to make.",
+   "quote_verbatim": "in a logic schematic, it doesn't matter how close you put the wires in the drawing. It doesn't make any difference. But in a real circuit, it actually has a huge impact",
+   "speaker": "Howard Johnson",
+   "episode": 77,
+   "episode_title": "An Interview with Dr. Howard Johnson - Winsome Waveform Wizardry",
+   "episode_url": "https://theamphour.com/the-amp-hour-77-winsome-waveform-wizardry/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The board layout is itself a circuit component: the same schematic built by two designers can produce amplifiers that measure differently, which is why power integrity is treated as a design discipline rather than a layout detail.",
+   "quote_verbatim": "the layout itself is a component",
+   "speaker": "",
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Modern surface-mount capacitors reach equivalent series inductances of roughly twenty-five to forty picohenries, which is less than the inductance of the traces connecting them, so a poor layout can negate the performance of a high-specification capacitor.",
+   "quote_verbatim": "We can get inductances of a capacitor down to maybe about 25 to 40 picohenries",
+   "speaker": "Ron Demcko",
+   "episode": 596,
+   "episode_title": "Capacitor Schoopage with Ron Demcko from AVX",
+   "episode_url": "https://theamphour.com/596-capacitor-schoopage-with-ron-demcko-from-avx/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Placing a ceramic capacitor close to a mounting screw hole is a layout hazard, because flexing the board while screwing it to a chassis can crack the capacitor and produce a short circuit and a fire.",
+   "quote_verbatim": "If you put it too near to a screw point, for example, like a mounting point, for example, just screwing in your board into your chassis can cause a crack in your capacitor",
+   "speaker": "",
+   "episode": 596,
+   "episode_title": "Capacitor Schoopage with Ron Demcko from AVX",
+   "episode_url": "https://theamphour.com/596-capacitor-schoopage-with-ron-demcko-from-avx/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Capacitor terminations with a conductive epoxy sub-metallisation allow a printed circuit board to flex without a crack propagating into the capacitor body, and such parts are available from multiple manufacturers.",
+   "quote_verbatim": "that conductive epoxy, it will actually allow you to bend the printed circuit board and not have a crack propagate in the cap",
+   "speaker": "Ron Demcko",
+   "episode": 596,
+   "episode_title": "Capacitor Schoopage with Ron Demcko from AVX",
+   "episode_url": "https://theamphour.com/596-capacitor-schoopage-with-ron-demcko-from-avx/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A switching converter feedback path routed as a large loop from the output back through the feedback network to the controller is a layout defect; the feedback loop must be kept tight, and such errors are typical of a layout done at speed.",
+   "quote_verbatim": "you're supposed to keep that really tight there",
+   "speaker": "",
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Switch-mode power supplies are heavily layout dependent, so substituting a switching regulator forces a much larger requalification than substituting a linear regulator, which usually needs only local rearrangement to keep the decoupling capacitors close.",
+   "quote_verbatim": "especially for like switch mode power supplies where they're heavily layout dependent",
+   "speaker": "Dave Young",
+   "episode": 601,
+   "episode_title": "Rebuilding Projects with Dave Young",
+   "episode_url": "https://theamphour.com/601-rebuilding-projects-with-dave-young/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A forced switching-regulator substitution can cascade into new passive selection and a package change to QFN, BGA or wafer-level chip-scale, which in turn can force blind and buried vias and a fabrication class change for the whole board.",
+   "quote_verbatim": "the really small ones that trigger having to go to blind and buried vias",
+   "speaker": "Dave Young",
+   "episode": 601,
+   "episode_title": "Rebuilding Projects with Dave Young",
+   "episode_url": "https://theamphour.com/601-rebuilding-projects-with-dave-young/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A single part substitution forced by supply shortage can propagate well beyond layout: a one-letter change in a part number can alter memory size, peripheral set and package, requiring a layout change, firmware rewrite and revision of the system diagram together.",
+   "quote_verbatim": "It's a different package. So I'm already figuring I have to do a, you know, layout change.",
+   "speaker": "Chris Gammell",
+   "episode": 587,
+   "episode_title": "Biblical Broker Bucks",
+   "episode_url": "https://theamphour.com/587-biblical-broker-bucks/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Devices with swappable pin assignments, such as certain microcontrollers, make board layout easier because a pin allocation that routes badly can be changed after placement rather than forcing the traces to conform.",
+   "quote_verbatim": "it makes your board layouts easier too, because you're, you know, you can just like swap it later",
+   "speaker": "Dave Jones",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Professional tools provide automated fan-out for very large ball grid arrays: with the layer count and design rules defined, the tool escapes the pins outward just beyond the package and produces a reasonable starting point for a device of one thousand five hundred pins.",
+   "quote_verbatim": "you can put in a 1500 pin bga and go fan it out",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The pin-swap method for a programmable device is to route the surrounding circuitry inward to whichever escaped trace is nearest without connecting it, then run the tool's pin-swapping function, which pairs each near-touching trace with a pin and joins them; the swaps are recorded as reversible objects so the step can be undone.",
+   "quote_verbatim": "you route the traces in but you don't connect them up",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Automatic pin swapping on a large programmable device cannot be applied blindly, because signals are subject to constraints such as having to fall in a particular quadrant of the device to reach its local quadrant clocks.",
+   "quote_verbatim": "these pins have to be the correct one in the correct quadrant of the fpga",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A large, high pin-count professional board can take a month of layout work even with fan-out and pin-swapping automation available, because the special-case requirements accumulate faster than the tools remove them.",
+   "quote_verbatim": "laying out a professional large huge you know pcb can take a month",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Mechanical depanelling features have to be planned before layout begins: a V-groove encroaches on the board edge by roughly half a millimetre to a millimetre, so a board-level design rule keepout is set at that distance plus an extra millimetre of tolerance and everything is kept inside it.",
+   "quote_verbatim": "your V card is going to encroach on your board by half a millimeter or a millimeter",
+   "speaker": "Chris Gammell",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Discovering an edge-clearance problem after routing is complete leaves few options, which is why depanelling and mechanical clearances are decided before layout starts.",
+   "quote_verbatim": "you got to think about this stuff before you start your layout",
+   "speaker": "Chris Gammell",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A high-speed digital link can pass functional testing while a layout defect shows up only as a rare bit error, so bit error rate testing run continuously over hours is the measurement that exposes it.",
+   "quote_verbatim": "that was because you didn't lay out your PCB properly",
+   "speaker": "Dave Jones",
+   "episode": 668,
+   "episode_title": "50.0000 Ohms",
+   "episode_url": "https://theamphour.com/668-50-0000-ohms/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A widely reported laptop failure was traced to a library error rather than to layout or schematic work: the librarian numbered connector pins so that pin 1 and pin 43 appeared numerically distant while being physically adjacent, allowing a fifty-two volt backlight rail to be placed next to a low-voltage differential signal line.",
+   "quote_verbatim": "who incorrectly labeled pins one and 43 to be far apart numerically when physically they are close together",
+   "speaker": "Dave Jones",
+   "episode": 447,
+   "episode_title": "Voltnuts for Flashlights",
+   "episode_url": "https://theamphour.com/447-voltnuts-for-flashlights/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Drawing a connector symbol so that its pins are grouped to reflect the physical arrangement of the connector, rather than in numerical order, guards against adjacency errors that pin numbering alone conceals.",
+   "quote_verbatim": "they're physically grouped them to, to reflect the actual physical layout of the connector",
+   "speaker": "Dave Jones",
+   "episode": 447,
+   "episode_title": "Voltnuts for Flashlights",
+   "episode_url": "https://theamphour.com/447-voltnuts-for-flashlights/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Semiconductor vendors publish reference layouts and treat them as a condition of the quoted performance, so a design that departs from the recommended layout has no claim on the data sheet figures; asking whether the reference design was followed is the standard first question in applications support.",
+   "quote_verbatim": "if you don't follow our instructions for layout, you know, for the layout, then you're not going to get the same performance",
+   "speaker": "Dafydd Roche",
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Placing a large copper plane under a component that will later need to be desoldered makes rework difficult, because the plane conducts heat away from the joint; this is a placement decision whose cost appears only at rework time.",
+   "quote_verbatim": "why not put like a, a huge power plane underneath this thing that I'm going to want to desolder a lot",
+   "speaker": "Ryan O'Hara",
+   "episode": 153,
+   "episode_title": "An Interview with Ryan O'Hara - Keyed, Kerfed Kapton",
+   "episode_url": "https://theamphour.com/the-amp-hour-153-keyed-kerfed-kapton/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A power pin left unconnected by the layout produces a board that appears to work but is not robust, a failure class that is common enough to be recognised on sight.",
+   "quote_verbatim": "because the PCB layout guy forgot to put the \u2013 forgot to hook up the power pin",
+   "speaker": "Dave Jones",
+   "episode": 288,
+   "episode_title": "Call In Show #3",
+   "episode_url": "https://theamphour.com/288-call-in-show-3/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "When a circuit misbehaves on a new board, layout is a natural but frequently wrong suspect; building the same device onto an older board of known layout isolates the variable, and a fault that persists across both is not a layout fault.",
+   "quote_verbatim": "I even put it in an old layout board, the same chip, and it worked perfectly",
+   "speaker": "Dave Jones",
+   "episode": 146,
+   "episode_title": "Hamvention, Arduino and Intel - Burdensome Background Battology",
+   "episode_url": "https://theamphour.com/the-amp-hour-146-burdensome-background-battology/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Ball grid arrays at 0.25 to 0.4 millimetre pitch cannot be escaped using ordinary prototype fabrication capability, so the available fabrication class rather than the designer's skill sets the upper bound on usable part packages.",
+   "quote_verbatim": "0.25, 0.4 millimeter pitch BGAs. You just can't get the stuff out of those parts",
+   "speaker": "Dave Jones",
+   "episode": 520,
+   "episode_title": "Inductance and Stuff",
+   "episode_url": "https://theamphour.com/520-inductance-and-stuff/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Assigning symbols and footprints for a new design is a distinct phase that precedes layout and can consume around two weeks, and it is widely regarded as the least pleasant part of the process.",
+   "quote_verbatim": "you sit there for the next two weeks, getting all your symbols and your footprints in order",
+   "speaker": "Chris Gammell",
+   "episode": 131,
+   "episode_title": "An Interview with Andrew Seddon - Necessary Networked Novelty",
+   "episode_url": "https://theamphour.com/the-amp-hour-131-necessary-networked-novelty/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Tools differ in when footprint choice is made: Eagle binds a package to each library device variant, whereas Altium and KiCad place only the schematic symbol and defer package assignment to the point of moving into layout, which makes the designer the librarian at that moment.",
+   "quote_verbatim": "when you're pulling it into the layout side, you actually, that's when you assign the, the package type",
+   "speaker": "Andrew Seddon",
+   "episode": 131,
+   "episode_title": "An Interview with Andrew Seddon - Necessary Networked Novelty",
+   "episode_url": "https://theamphour.com/the-amp-hour-131-necessary-networked-novelty/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Professional-tier design flows assume a librarian has produced correct part data before schematic capture, giving a siloed sequence of library work, schematic and layout with discrete handoffs, while hobby-oriented tools allow the same decisions to be deferred and made more freely.",
+   "quote_verbatim": "they kind of work on this assumption that you're going to have a librarian",
+   "speaker": "Andrew Seddon",
+   "episode": 131,
+   "episode_title": "An Interview with Andrew Seddon - Necessary Networked Novelty",
+   "episode_url": "https://theamphour.com/the-amp-hour-131-necessary-networked-novelty/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Where a tool ships few usable footprints, footprint creation can dominate the layout task, taking a reported eighty percent of the time on a design using unfamiliar parts.",
+   "quote_verbatim": "it feels like I spend 80% of my time whenever I'm doing a layout creating the footprints for all the ICs",
+   "speaker": "Jeff Keyzer",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "An IPC footprint generator does not remove footprint work, because many companies mandate the manufacturer's recommended footprint, their own in-house standard, or the footprint supplied by their assembler in preference to the IPC one.",
+   "quote_verbatim": "a lot of companies actually won't use the IPC footprints",
+   "speaker": "Jeff Keyzer",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Bad footprints surface as assembly cost rather than design cost, with the assembler spending hours correcting land patterns such as an incorrect 0603 footprint; customers who have built their own prototypes tend to have already found and fixed these.",
+   "quote_verbatim": "we're spending hours fixing all these things because your footprint was horrible",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A design for manufacture review examines layout properties that affect assembly rather than function: whether there is clearance between parts for the pick and place head, and whether parts are on the correct side of the board.",
+   "quote_verbatim": "Is there, is there clearance between the parts so that the pick and place head",
+   "speaker": "Dave Jones",
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Heavy parts on the underside of a board force it through reflow twice and can require re-layout; at quantities of ten or twenty an assembler can jig around the problem, but at around five hundred units design for manufacture constraints become binding.",
+   "quote_verbatim": "you may have to relay out your board",
+   "speaker": "Dave Jones",
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Panelisation can be done by the fabricator's automatic array-and-rail tool or arranged by the designer; an 18 by 38 millimetre board was placed as a four by two array to reach a 70 by 70 millimetre panel with rails added, while spacing boards at the minimum gap leaves dead panel area.",
+   "quote_verbatim": "I basically did a four by two array in order to get to the 70 by 70 and then add rails to that",
+   "speaker": "Chris Gammell",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Turning off the substrate rendering in a three-dimensional board viewer and looking only at the vias and tracks is a way of building the mental model of how a multi-layer board connects, which is the hardest step for a designer moving from lines on a screen to physical copper.",
+   "quote_verbatim": "the 3d viewer is actually to turn off the FR4 visualization and just look at the vias",
+   "speaker": "Chris Gammell",
+   "episode": 512,
+   "episode_title": "Design For Longevity",
+   "episode_url": "https://theamphour.com/512-design-for-longevity/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Component height is a layout constraint set by the enclosure, since a tall capacitor placed without reference to the mechanical design will collide with plastics that are already fixed.",
+   "quote_verbatim": "it's like a really tall cap and then at some point that's going to run into the plastics that are already designed",
+   "speaker": "Chris Gammell",
+   "episode": 342,
+   "episode_title": "Our first in-person show",
+   "episode_url": "https://theamphour.com/342-our-first-in-person-show/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "In-house PCB milling constrains layout: a milled prototype has to be redrawn around the mill's minimum feature capability, and a design taken to a fabricator afterwards generally needs reworking because the choices made for the mill are not the choices made for production.",
+   "quote_verbatim": "he had to redo his board, even the layout around single chips",
+   "speaker": "",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Home-etched boards have no plated through holes, so a double-sided layout made this way requires a wire to be fed through each via and soldered on both sides; spreading the design out on one side is often the cheaper trade.",
+   "quote_verbatim": "you've got to feed each, you know, a wire through each via on there",
+   "speaker": "",
+   "episode": 32,
+   "episode_title": "Cores, Digikey, Electronic Design - The Commercial Competitor Commencement",
+   "episode_url": "https://theamphour.com/the-amp-hour-32-the-commercial-competition-commencement/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Two single-sided milled boards can be routed separately, flipped and laminated together to obtain a double-sided prototype in real copper.",
+   "quote_verbatim": "if you route two single-sided ones, you can flip them and just actually paste them together",
+   "speaker": "Dave Jones",
+   "episode": 236,
+   "episode_title": "Questioning Everyday Prototyping - Verrucose Vehicle Vitilitigation",
+   "episode_url": "https://theamphour.com/236-questioning-everyday-prototyping-verrucose-vehicle-vitilitigation/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Boards intended for hand assembly as kits are laid out with deliberately enlarged pads on the few surface-mount parts so that they remain solderable by hand.",
+   "quote_verbatim": "I'll make the pads nice and big",
+   "speaker": "Dave Jones",
+   "episode": 73,
+   "episode_title": "Horrisonous Holiday Habromania",
+   "episode_url": "https://theamphour.com/the-amp-hour-73-horrisonous-holiday-habromania/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Board fabrication historically used negative photoresist, so artwork taped up by hand had to be photographically converted to a negative before it could expose the panel, making artwork generation a two-step process.",
+   "quote_verbatim": "historically most of the PCB manufacturers done in the negative image",
+   "speaker": "Dave Jones",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Before computer-aided design, layouts were taped by hand on a light box using rolls of adhesive tape for tracks and pre-printed stick-down pad patterns for packages such as a 16-pin dual in-line device, cut with a knife; the routing term rip-up-and-retry is a direct description of physically removing and re-laying that tape.",
+   "quote_verbatim": "That's why. Rip up. And retry. Auto routing. Right. That's where the name comes from.",
+   "speaker": "Dave Jones",
+   "episode": 128,
+   "episode_title": "Layout, CAD & Raspberry Pi - Kedogenous Kinetic Knowledge",
+   "episode_url": "https://theamphour.com/the-amp-hour-128-kedogenous-kinetic-knowledge/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Dense professional artwork was often taped at twice final size and photographically reduced, which improved the achievable precision relative to hand-cut tape.",
+   "quote_verbatim": "if it's a really dense professional layout, you might do it at twice the size and then you photo reduce it",
+   "speaker": "Dave Jones",
+   "episode": 106,
+   "episode_title": "Tektronix, ChipReport.tv, & the Signal Path - Temperative Tegmen Temperature",
+   "episode_url": "https://theamphour.com/the-amp-hour-106-temperative-tegmen-temperature/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Some fabricators refused artwork containing right-angle track corners outright, so trace geometry conventions were once enforced at the fabrication house rather than by design rule checking.",
+   "quote_verbatim": "you put right angles on your traces",
+   "speaker": "Dave Jones",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Autorouters are used selectively rather than for a whole board, the working combination being the human designer plus the autorouter applied to specific regions.",
+   "quote_verbatim": "a good PCB designer will use an autorouter very selectively",
+   "speaker": "Dave Jones",
+   "episode": 219,
+   "episode_title": "Get Smart About Automation - Caducous Cyborg Concerns",
+   "episode_url": "https://theamphour.com/219-get-smart-about-automation-caducous-cyborg-concerns/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The niche in which autorouting pays is a block of purely digital nets with no length or matching requirements; outside that, setting up the autorouter correctly takes as long as routing the section by hand.",
+   "quote_verbatim": "to do a proper auto-routing thing, it takes you just as long to set it up",
+   "speaker": "Dave Jones",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A commercial automated layout service offered in 2018 quoted three thousand dollars for a board in twenty-four hours within stated limits of roughly fifty components, twenty unique parts, three amps, five hundred megahertz and twenty watts, a scope that omits the iteration a prototype normally undergoes.",
+   "quote_verbatim": "less than 3 amps, less than 500 megahertz, less than 20 watts total",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Automated layout that starts from a schematic treats the board as a compilation target: the constraints taken as input are mechanical ones such as board size and connector positions, while the placement of ordinary integrated circuits, passives and traces is left to the tool under the sole constraint that the result works.",
+   "quote_verbatim": "the constraint is it has to work, not it has to go in a certain place",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An automated layout engine can be run over a partially hand-laid board: regions the designer has laid out are left untouched and the tool routes around them, a mode used when a customer cares about specific sections such as a vendor-recommended switching regulator layout.",
+   "quote_verbatim": "We don't touch it. We just go around it and finish everything else.",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "One automated layout implementation normalises the input by deleting all existing copper and reducing the board to two layers, then branches into two-layer and four-layer variants, generating and calculating the plane pours itself.",
+   "quote_verbatim": "we start off by just deleting everything and converting it to a two-layer",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The stated function of a printed circuit board is to execute the schematic faithfully, so an ideal board would have zero trace length and no parasitic resistance, inductance or capacitance; every real board is an approximation of that ideal.",
+   "quote_verbatim": "The job of a PCB is to faithfully execute the schematic",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Automated layout results were validated by re-laying-out open-source boards including an Arduino Uno, a stepper motor driver, an MP3 player and a machine vision camera board, buying the originals and testing the generated versions, with a commitment that no human touched the output.",
+   "quote_verbatim": "We made the commitment to have no human touch anything on the board after the output.",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "On a reduced-density version of a machine vision camera board, an engineer with more than twenty years of layout experience took a day or two while the automated system finished in under an hour; customer boards estimated at two to four engineer days were also produced in about an hour.",
+   "quote_verbatim": "boards that take like two to four engineer days that we were again able to do in about an hour",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Board layout tends to sit at the tail end of a hardware programme, after actuators, sensors and mechanical constraints are settled, which makes it a critical path item and delays the point at which the design can be tested in physical form.",
+   "quote_verbatim": "the PCB kind of starts to come closer to the end, which means it becomes a critical path item",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Simultaneous multi-user PCB layout was implemented commercially and worked technically, but is reported to be essentially unused, because splitting a design between people adds interface overhead that is only amortised on teams of roughly five or more engineers.",
+   "quote_verbatim": "I don't think anyone actually uses that feature",
+   "speaker": "Dave Jones",
+   "episode": 336,
+   "episode_title": "An Interview with Bunnie Huang (2nd)",
+   "episode_url": "https://theamphour.com/the-amp-hour-336-an-interview-with-bunnie-huang-2nd/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Collaborative board layout with two engineers at different companies each taking half of the same PCB was being practised as early as the mid-1990s.",
+   "quote_verbatim": "I would work on one half of the PCB layout and somebody else at a different company would work on the other half",
+   "speaker": "Dave Jones",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Once the schematic is finished and parts and footprints are downloaded, routing requires little network access, which makes layout the part of the design flow that can be done offline and the part that a cloud-based tool most needs to support locally.",
+   "quote_verbatim": "generally you don't need to access the net much when you're actually laying out a board",
+   "speaker": "Dave Jones",
+   "episode": 219,
+   "episode_title": "Get Smart About Automation - Caducous Cyborg Concerns",
+   "episode_url": "https://theamphour.com/219-get-smart-about-automation-caducous-cyborg-concerns/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A common working order is to solve the routing problem first and defer footprint detail, on the basis that around ninety percent of a layout can be completed without settled details and the remainder is a tidying step; a wrong footprint is recoverable later unless the pinout itself was mirrored.",
+   "quote_verbatim": "I don't fuss over the details at start. I go, no, I just want to solve the routing problem.",
+   "speaker": "Dave Jones",
+   "episode": 219,
+   "episode_title": "Get Smart About Automation - Caducous Cyborg Concerns",
+   "episode_url": "https://theamphour.com/219-get-smart-about-automation-caducous-cyborg-concerns/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Before hardware version control was available, long layouts were protected by dated subdirectory snapshots taken several times a day and specifically before any strategic change such as a re-route or a large placement move, a discipline that made four- to six-month layouts recoverable.",
+   "quote_verbatim": "I know this is a big chain, so I'm going to back this up first",
+   "speaker": "Dave Jones",
+   "episode": 317,
+   "episode_title": "A Decoupled Episode",
+   "episode_url": "https://theamphour.com/317-a-decoupled-episode/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Layout changes are made reviewable by committing them in functional blocks with descriptive messages, so that a graphical difference shows a bounded region such as the power supply area rather than the whole board changing at once.",
+   "quote_verbatim": "you kind of learn to break it up in the way that you think will be most digestible to somebody or yourself looking back on it",
+   "speaker": "",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Under severe time pressure the schematic can be removed from the critical path altogether: a board layout and its components are the irreducible requirements, and the bill of materials can be exported from the layout, since component type and value are already held there.",
+   "quote_verbatim": "You need a board layout. You need components. You don't actually need a schematic.",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "For designs such as large multiplexed LED arrays, the net assignment is determined by the physical arrangement rather than the other way round, so the work necessarily starts from the layout and derives which devices connect to which drivers.",
+   "quote_verbatim": "you've got to start from the layout and figure out which LEDs need to go to which drivers",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Keeping library footprint orientations aligned with the orientation of parts in the pick and place feeders removes a class of assembly error and shortens the path from finished layout to assembled board.",
+   "quote_verbatim": "I know that my library matches the orientation in the feeders",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Concentrating layout in one person or one department produces consistency: shared libraries, consistent layout technique, consistent bed-of-nails test point practice, and reuse of parts already held in inventory.",
+   "quote_verbatim": "they're going to use consistent layout techniques",
+   "speaker": "Dave Jones",
+   "episode": 195,
+   "episode_title": "Guns and Mobile Labs - Nuanced Nomadic Non-essentials",
+   "episode_url": "https://theamphour.com/195-guns-and-mobile-labs-nuanced-nomadic-non-essentials/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The counter-argument to a dedicated layout group is that having one engineer carry a project from schematic through layout removes handoffs, a structure adopted by organisations that value turnaround over layout optimisation.",
+   "quote_verbatim": "the engineer just does the schematic and then you, the term is throwing over the wall, the board layout to a board layout specialist",
+   "speaker": "Dave Jones",
+   "episode": 157,
+   "episode_title": "An Interview with the SparkFun Team - Efficacious Engineering Ensemble",
+   "episode_url": "https://theamphour.com/the-amp-hour-157-efficacious-engineering-ensemble/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Contract manufacturers commonly do not lay out boards in house and subcontract layout work along with enclosure design, since their specialisation is assembly.",
+   "quote_verbatim": "They don't lay out boards in-house, you know, usually.",
+   "speaker": "Dave Jones",
+   "episode": 114,
+   "episode_title": "Kickstarter, Manufacturing, Open Hardware - Judging Jurisdictional Junctures",
+   "episode_url": "https://theamphour.com/the-amp-hour-114-judging-jurisdictional-junctures/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Handing a design to a separate layout engineer loses information that is not captured in the netlist, such as which device pins may be reassigned, leaving the designer dependent on the layout engineer reading the accompanying notes.",
+   "quote_verbatim": "these pins are not swappable",
+   "speaker": "Shrouk El Attar",
+   "episode": 549,
+   "episode_title": "Creative Engineering with Shrouk El-Attar",
+   "episode_url": "https://theamphour.com/549-creative-engineering-with-shrouk-el-attar/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Board layout engineers are brought into silicon programmes before tape-out so that the ballout can be checked for routability, because a pinout optimised for the die can produce a package that cannot be escaped on a printed circuit board.",
+   "quote_verbatim": "I simply cannot route that out",
+   "speaker": "Kieran O'Leary",
+   "episode": 452,
+   "episode_title": "An Interview with Kieran O'Leary",
+   "episode_url": "https://theamphour.com/452-an-interview-with-kieran-oleary/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Pinouts are sometimes still unfinalised when a board design must begin, because bonding decisions can be deferred late in a compressed silicon schedule; the review sequence that contains the resulting risk is schematic review followed by layout review.",
+   "quote_verbatim": "hopefully do a schematic review, do your layout review",
+   "speaker": "Kieran O'Leary",
+   "episode": 452,
+   "episode_title": "An Interview with Kieran O'Leary",
+   "episode_url": "https://theamphour.com/452-an-interview-with-kieran-oleary/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The Raspberry Pi Pico was produced by co-designing the chip pinout and the board layout together, so that pin ordering suited both the module and other users' boards; the result is a cost-engineered two-layer board with single-sided surface mount assembly and a dual in-line form factor.",
+   "quote_verbatim": "we sort of co-designed the board layout and the chip pinout",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The recurring vendor vision of modular electronics, in which pre-laid-out functional blocks are dropped into a design so that no custom board layout is needed, has been promoted repeatedly and has not displaced custom layout.",
+   "quote_verbatim": "Why redo the layout for a switching power supply when you can simply take it, that module and drop it in",
+   "speaker": "Dave Jones",
+   "episode": 565,
+   "episode_title": "Here for a reason",
+   "episode_url": "https://theamphour.com/565-here-for-a-reason/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A standardised pre-laid-out switching block only transfers between designs if the controller's behaviour is identical to microsecond accuracy, because any behavioural difference propagates through the rest of the design.",
+   "quote_verbatim": "your switching controller has the exact same behavior",
+   "speaker": "Dave Jones",
+   "episode": 541,
+   "episode_title": "Chip Shortage Denier",
+   "episode_url": "https://theamphour.com/541-chip-shortage-denier/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Electromagnetic compatibility training treats board layout as one topic among cabling, grounding, shielding, decoupling and filtering, with digital layout and grounding and mixed-signal PCB layout taught as distinct subjects.",
+   "quote_verbatim": "digital layout and grounding, high-speed digital decoupling",
+   "speaker": "Henry Ott",
+   "episode": 165,
+   "episode_title": "An Interview with Henry Ott - Forced FCC Filtering",
+   "episode_url": "https://theamphour.com/165-an-interview-with-henry-ott-forced-fcc-filtering/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Board layout and stack-up is substantial enough as an electromagnetic compatibility subject to occupy a full chapter comparing layer combinations and their advantages and disadvantages in a reference text of nearly nine hundred pages.",
+   "quote_verbatim": "I have a whole chapter in there on PCB layout and stack up",
+   "speaker": "Henry Ott",
+   "episode": 165,
+   "episode_title": "An Interview with Henry Ott - Forced FCC Filtering",
+   "episode_url": "https://theamphour.com/165-an-interview-with-henry-ott-forced-fcc-filtering/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Field simulation and visualisation are used to build intuition rather than as routine design steps: once the intuition exists, a designer can inspect a layout and identify where a problem will occur without running the simulation, skipping the first iteration loop.",
+   "quote_verbatim": "you can take a look at the layout and say well I know where the problem will be",
+   "speaker": "Lukas Henkel",
+   "episode": 681,
+   "episode_title": "Compact High Speed Design with Lukas Henkel",
+   "episode_url": "https://theamphour.com/681-compact-high-speed-design-with-lukas-henkel/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An open-source electromagnetic simulation flow for a board antenna consists of exporting the layout geometry with its copper as an STL file into the field solver and then defining a mesh that is deliberately dense in the region of the antenna.",
+   "quote_verbatim": "please make my mesh dense in this location because that's where my antenna is",
+   "speaker": "Sam Aldhaher",
+   "episode": 695,
+   "episode_title": "Making The Invisible, Visible with Sam Aldhaher",
+   "episode_url": "https://theamphour.com/695-making-the-invisible-visible-with-sam-aldahar/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A monolithic class D amplifier needs little layout work beyond two second-order LC output filters, but those filters are where the failures appear: an imbalance in the inductor and capacitor configuration, so that the impedances at each end do not match and fluxes do not cancel, produces a startup click or pop and shows up on radiated emission scans.",
+   "quote_verbatim": "that big imbalance is what causes a click or a pop on a startup",
+   "speaker": "Nash Reilly",
+   "episode": 474,
+   "episode_title": "An Interview with Nash Reilly",
+   "episode_url": "https://theamphour.com/474-an-interview-with-nash-reilly/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "In a multi-phase buck converter the input and output ripple reduction obtained from paralleling phases depends on the quality of the layout, alongside the topology's ability to slew current faster with less output capacitance.",
+   "quote_verbatim": "which is dependent on how good your layout is",
+   "speaker": "",
+   "episode": 566,
+   "episode_title": "Switching Converter Engineering with Carmen Parisi",
+   "episode_url": "https://theamphour.com/566-switching-converter-engineering-with-carmen-parisi/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Star earthing was learned in audio design as the direct consequence of layout on measurable output, since a wrong grounding layout in an audio amplifier produces audible hum.",
+   "quote_verbatim": "if you don't get the layout right, you get nothing but hum",
+   "speaker": "",
+   "episode": 481,
+   "episode_title": "An Interview with Paul Thompson",
+   "episode_url": "https://theamphour.com/481-an-interview-with-paul-thompson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Microcontroller immunity to a nearby electrical discharge was qualified by striking an arc directly above the device on the assembled board and requiring that it not reset; the outcome depends on the device chosen and then on layout and decoupling.",
+   "quote_verbatim": "we had to make that arc above the microcontroller on the circuit board and, and not have it reset",
+   "speaker": "",
+   "episode": 481,
+   "episode_title": "An Interview with Paul Thompson",
+   "episode_url": "https://theamphour.com/481-an-interview-with-paul-thompson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Integrating the two switching transistors of a buck converter into one package with the source of one internally connected to the drain of the other simplifies the layout and reduces losses between the devices.",
+   "quote_verbatim": "helps with the layout and, um, also helps with the efficiency",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Unused microcontroller pins can be used as routing feedthroughs: on a densely charlieplexed array of 0201 LEDs with the microcontroller on the reverse side, nets were carried through pins of the device that were not otherwise in use.",
+   "quote_verbatim": "I can just wire it through the pins of the microcontroller that I'm not using",
+   "speaker": "",
+   "episode": 697,
+   "episode_title": "LEDs Everywhere with Tim from Mitxela",
+   "episode_url": "https://theamphour.com/697-leds-everywhere-with-tim-from-mitxela/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Marking ground pins with square pads rather than round ones is used as a layout convention that makes a supply net identifiable from the artwork alone.",
+   "quote_verbatim": "they have square ends on them",
+   "speaker": "Dave Jones",
+   "episode": 528,
+   "episode_title": "New Year, New Gear",
+   "episode_url": "https://theamphour.com/528-new-year-new-gear/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Layout is conventionally done with the schematic and the board visible at once on separate screens, on the reasoning that maximum viewing area for both is a working requirement rather than a comfort.",
+   "quote_verbatim": "I've got two screens, you know, I've got the schematic on one, I've got the PCB on the other",
+   "speaker": "Dave Jones",
+   "episode": 106,
+   "episode_title": "Tektronix, ChipReport.tv, & the Signal Path - Temperative Tegmen Temperature",
+   "episode_url": "https://theamphour.com/the-amp-hour-106-temperative-tegmen-temperature/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "KiCad 7 added a database-backed part library, allowing a librarian role and revision control over parts instead of per-file libraries, and a scalable bitmap import that lets an existing board photograph be traced over to recreate a layout without any schematic symbols.",
+   "quote_verbatim": "You can actually build a part database for yourself now",
+   "speaker": "Chris Gammell",
+   "episode": 621,
+   "episode_title": "The Magic of Calipers",
+   "episode_url": "https://theamphour.com/621-the-magic-of-calipers/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Browser-based electronic design tools moved from schematic sharing into board layout around 2012, with Upverter adding layout and export toward established CAD formats, and Circuits.io appearing at the same time.",
+   "quote_verbatim": "this week Upverter also included layout",
+   "speaker": "Chris Gammell",
+   "episode": 122,
+   "episode_title": "Processors, CEOs & Soldering irons - Plentiful Perfunctory Programs",
+   "episode_url": "https://theamphour.com/the-amp-hour-122-plentiful-perfunctory-programs/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Semiconductor vendors began pushing designs from their online circuit selection tools straight out to PCB packages, which is most useful for switching regulators because their layout is sensitive to high-frequency noise.",
+   "quote_verbatim": "having the layout suggestions can be very helpful for that kind of thing",
+   "speaker": "Chris Gammell",
+   "episode": 203,
+   "episode_title": "Tesla, Checklists and Bullies - Emerging External Eupsychics",
+   "episode_url": "https://theamphour.com/203-tesla-checklists-and-bullies-emerging-external-eupsychics/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Scripted board generation, in which placement information and a board outline file are supplied as inputs and the artwork is emitted as vector output, exists as an alternative to interactive layout.",
+   "quote_verbatim": "you put in placement information and you put in like a weird, weird looking board outline file",
+   "speaker": "Chris Gammell",
+   "episode": 130,
+   "episode_title": "Boeing, PCBs & Startups - Awful Airplane Aeration",
+   "episode_url": "https://theamphour.com/the-amp-hour-130-awful-airplane-aeration/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The cost barrier to board design collapsed over three decades: PCB layout software that cost about five thousand dollars in the 1980s has free equivalents, and prototype fabrication that carried around a thousand dollars of setup cost is available for tens of dollars.",
+   "quote_verbatim": "I need PCB layout software, so that'll be, like, five grand",
+   "speaker": "Adam Wolf",
+   "episode": 167,
+   "episode_title": "An Interview with Adam Wolf - Brick & Board Biuners",
+   "episode_url": "https://theamphour.com/167-an-interview-with-adam-wolf-brick-board-biuners/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The standard open-source flow runs schematic capture, then a step tying schematic symbols to footprints, then module placement, routing, and export of fabrication files.",
+   "quote_verbatim": "then you place your modules and then you route and then you export out, out your files to get fabbed",
+   "speaker": "Adam Wolf",
+   "episode": 167,
+   "episode_title": "An Interview with Adam Wolf - Brick & Board Biuners",
+   "episode_url": "https://theamphour.com/167-an-interview-with-adam-wolf-brick-board-biuners/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Above roughly ten megahertz, or where sampling rates make trace parasitics significant, breadboard and flying-lead prototyping stops representing the circuit and a laid-out board becomes the only realistic prototype; many modern packages are not breadboardable at all without first laying out a breakout board.",
+   "quote_verbatim": "you have to lay out a board in order to plug it into a breadboard",
+   "speaker": "Dave Jones",
+   "episode": 110,
+   "episode_title": "Armstrong, Camenzind & Museums - Outstanding Oneirophoros Obituaries",
+   "episode_url": "https://theamphour.com/the-amp-hour-110-outstanding-oneirophoros-obituaries/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Layout duration scales sharply with complexity: a simple microcontroller board of Arduino size can be laid out in a day or hours, an experienced designer typically reaches the layout stage within a couple of days of starting a design, and an advanced multi-page design can take one to two months of schematic work followed by two to four months of layout.",
+   "quote_verbatim": "Any, any decent, simple Arduino-y size board you can lay out in a day.",
+   "speaker": "Dave Jones",
+   "episode": 470,
+   "episode_title": "Just Add Salt",
+   "episode_url": "https://theamphour.com/470-just-add-salt/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "For an advanced board developed as a teaching reference, the schematic ran to many pages and required one to two months, and the layout took between two and four months depending on board size and difficulty.",
+   "quote_verbatim": "It can be anywhere between two to four months.",
+   "speaker": "Robert Feranec",
+   "episode": 316,
+   "episode_title": "An Interview with Robert Feranec",
+   "episode_url": "https://theamphour.com/316-an-interview-with-robert-feranec/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Individual layouts of six months are recorded for very intricate single-board designs; the driver is the intricacy and the decision to put everything on one board rather than the layer count alone, though high layer counts accompany such designs.",
+   "quote_verbatim": "I have spent six months working on a layout",
+   "speaker": "Dave Jones",
+   "episode": 316,
+   "episode_title": "An Interview with Robert Feranec",
+   "episode_url": "https://theamphour.com/316-an-interview-with-robert-feranec/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "On a large design the routing effort is set by the total pin count that must be connected, and a schematic of around fifty dense pages cannot be laid out in weeks; re-routing after being boxed into a corner remains expensive even with push-and-shove routing available.",
+   "quote_verbatim": "you might have to reshuffle the layout",
+   "speaker": "Chris Gammell",
+   "episode": 316,
+   "episode_title": "An Interview with Robert Feranec",
+   "episode_url": "https://theamphour.com/316-an-interview-with-robert-feranec/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A month spent on a single layout is used as the informal threshold for having encountered a genuinely complex board.",
+   "quote_verbatim": "unless you've worked a month on it, you don't know what a complex board is",
+   "speaker": "Dave Jones",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Free and professional PCB packages are separated by efficiency rather than capability: boards of any complexity can be completed in a free tool, but tooling support thins out as complexity rises, so the paid seat buys time rather than reach.",
+   "quote_verbatim": "It's, it's more to do with the efficiency of the tool",
+   "speaker": "Dave Jones",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "opinion",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Layout is treated as a skill requiring sustained deliberate practice on the order of the ten thousand hour scale, and it is repetition on real projects finished end to end rather than reading that develops it.",
+   "quote_verbatim": "PCB layout is a skill",
+   "speaker": "",
+   "episode": 669,
+   "episode_title": "Freelance PCB Design with Petr Dvorak",
+   "episode_url": "https://theamphour.com/669-freelance-pcb-design-with-petr-dvorak/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Layout speed and efficiency decay when the work is not done daily: a former full-time PCB designer reports being substantially slower after moving away from the role while retaining the underlying capability, with recovery estimated in days or weeks.",
+   "quote_verbatim": "i probably wouldn't be as efficient at pcb layout now as i used to be when i was a full-time pcb designer",
+   "speaker": "Dave Jones",
+   "episode": 342,
+   "episode_title": "Our first in-person show",
+   "episode_url": "https://theamphour.com/342-our-first-in-person-show/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Layout is a task that requires long uninterrupted blocks, because reloading the mental state of a partially placed board is expensive; a scheme allotting a few hours a week to a hardware project is reported not to work for this reason, and practitioners describe needing half a day rather than ten minutes to enter layout work.",
+   "quote_verbatim": "I can't just get into layout mode for 10 minutes. I have to get into layout mode for half a day.",
+   "speaker": "Parker Dillman",
+   "episode": 564,
+   "episode_title": "Pavlovian Cheapskates",
+   "episode_url": "https://theamphour.com/564-pavlovian-cheapskates/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Interruption in the middle of a layout is described as costing most of a working day, which is the argument against splitting hardware work into short recurring slots.",
+   "quote_verbatim": "If you're interrupted in the middle of a layout though, you're screwed.",
+   "speaker": "Jeff Keyzer",
+   "episode": 82,
+   "episode_title": "Vecordious Vacation Variorum",
+   "episode_url": "https://theamphour.com/theamphour-82-vecordious-vacation-variorum/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A rough working split for a modest board is a day of schematic and bill of materials work followed by at least a day of layout, giving two full working days as the minimum realistic figure.",
+   "quote_verbatim": "laying out a new board will take you two days",
+   "speaker": "Dave Jones",
+   "episode": 127,
+   "episode_title": "FPGA, Xess, 32 Bit - Quirky Qualitative Questions",
+   "episode_url": "https://theamphour.com/the-amp-hour-127-quirky-qualitative-questions/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Quoting layout work is done by experience: an experienced layout engineer working from a completed schematic can estimate the job accurately and may hold a standard rate for it, while unfamiliar parts justify additional padding in the estimate.",
+   "quote_verbatim": "if you're an experienced PCB layout person, you might know how long it's estimate",
+   "speaker": "Dave Jones",
+   "episode": 70,
+   "episode_title": "Idiorhythmic IPC Inconcinnity",
+   "episode_url": "https://theamphour.com/the-amp-hour-70-idiorhythmic-ipc-inconcinnity/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In teaching layout the board routing is deliberately withheld from students while schematic files and part libraries are supplied, because deciding via placement and trace widths for oneself is the part that transfers and watching it done does not.",
+   "quote_verbatim": "Where do I put my VAs? What traces do I use? Just watching will not teach you anything.",
+   "speaker": "",
+   "episode": 573,
+   "episode_title": "Mixed Signal Education with Philip Salmony",
+   "episode_url": "https://theamphour.com/573-mixed-signal-education-with-philip-salmony/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Beginners are advised to build layout skill on two-layer boards and on the specific technique currently being learned, rather than measuring themselves against an eight-layer design.",
+   "quote_verbatim": "you start with focusing on like a two-layer pcb",
+   "speaker": "Chris Gammell",
+   "episode": 436,
+   "episode_title": "Downward Sloping Trace",
+   "episode_url": "https://theamphour.com/436-downward-sloping-trace/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Teaching layout to a group is far slower than doing it: a structured online course took around six weeks to reach the layout stage, covering part selection and footprint association first.",
+   "quote_verbatim": "there might only be a couple of days working getting to the PCB layout stage",
+   "speaker": "Dave Jones",
+   "episode": 186,
+   "episode_title": "Someone is watching...we think - Horme Hostility Hypochondriac",
+   "episode_url": "https://theamphour.com/186-someone-is-watching-we-think-horme-hostility-hypochondriac/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Tearing down an existing product and reverse engineering it to schematic and component values is used as a route into layout judgment, because it exposes the trade-offs behind component selection and physical arrangement that first-principles teaching omits.",
+   "quote_verbatim": "figure something out in terms of component selection and layout",
+   "speaker": "Kent Lundberg",
+   "episode": 119,
+   "episode_title": "An Interview with Dr. Kent Lundberg - Luculent Linear Legacy",
+   "episode_url": "https://theamphour.com/the-amp-hour-119-luculent-linear-legacy/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Time spent placing and routing a design is what builds the mental model of how the circuit works, and that model is what makes later hard debugging possible; a layout delegated entirely to a tool leaves the engineer without it.",
+   "quote_verbatim": "it's soaking into your brain how this thing works",
+   "speaker": "Luke Beno",
+   "episode": 722,
+   "episode_title": "AI Tooling with Matt Liberty and Luke Beno",
+   "episode_url": "https://theamphour.com/722-ai-tooling-with-matt-liberty-and-luke-beno/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  }
+ ],
+ "attribution_notes": [
+  "ep 476: attribution flagged unreliable; the power-integrity and layout-as-a-component material is the guest's, not the labelled host's. Name dropped, claim left unattributed.",
+  "ep 596: attribution flagged unreliable. Capacitor-internal figures (25-40 pH ESL, conductive-epoxy terminations) are unmistakably the AVX applications guest and are attributed to Ron Demcko; the screw-hole board-flex cracking passage is labelled Ron Demcko but its content (I've done a video on this) is the host, so that claim is left unattributed.",
+  "ep 505: attribution flagged unreliable; the revision-control answer about breaking layout commits into digestible blocks is the guest's, but the labels are not trustworthy, so the claim is unattributed.",
+  "ep 566: attribution flagged unreliable; multi-phase buck layout-dependence claim left unattributed.",
+  "ep 669: attribution flagged unreliable; the layout-is-a-skill material is the freelance-designer guest's, left unattributed.",
+  "ep 481: labels read as reliable but are clearly offset - the audio/star-earthing and arc-immunity story belongs to the interviewee, not the labelled host. Both claims left unattributed.",
+  "ep 573: labelled Chris Gammell, but the course author withholding the board layout files is the guest. Claim left unattributed.",
+  "ep 697: labelled Dave Jones, but the charlieplexed 0201 LED board and the routing-through-unused-GPIO trick are the guest's. Claim left unattributed.",
+  "ep 561: labelled Dave Jones, but the boost-converter feedback-loop error is the other speaker's own board (the labelled speaker asks who laid it out). Left unattributed.",
+  "ep 454: the LPKF milling anecdote inside a passage labelled Mike Grover is the host relaying a third party's experience; left unattributed.",
+  "ep 412: passage labelled Mike Harrison contains the former full-time PCB designer's account of autorouter setup cost; content-attributed to Dave Jones. The automated-layout-service figures in the adjacent passage remain Mike Harrison's.",
+  "ep 316: the six-month layout is the host's answer inside a passage labelled Chris Gammell; content-attributed to Dave Jones.",
+  "ep 32: the plated-through-hole limitation of home-etched boards sits in a passage whose labels alternate mid-turn; left unattributed.",
+  "ep 626: labels in this interview are offset by one turn throughout; all automated-layout claims are content-attributed to the guest, Sergiy Nesterenko."
+ ],
+ "capped": true
+}

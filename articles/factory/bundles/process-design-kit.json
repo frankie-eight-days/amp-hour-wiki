@@ -1,0 +1,1196 @@
+{
+ "concept": "process-design-kit",
+ "name": "Process Design Kit",
+ "type": "software",
+ "score": 147.989,
+ "rank_by_score": 269,
+ "cluster": {
+  "core": [
+   "pdk",
+   "process-design-kit",
+   "process-development-kit"
+  ],
+  "children": [
+   "chip-designer",
+   "deposition",
+   "open-pdk",
+   "silicon-artwork",
+   "synopsys"
+  ],
+  "neighbors": [
+   {
+    "concept": "cadence",
+    "weight": 5
+   },
+   {
+    "concept": "tsmc",
+    "weight": 4
+   }
+  ]
+ },
+ "stats": {
+  "episodes": 26,
+  "mentions": 74,
+  "explains": 38,
+  "opinions": 4,
+  "candidate_episode_count": 19,
+  "candidate_mention_count": 35,
+  "gated_out": 232,
+  "gated_out_by_concept": [
+   [
+    "tsmc",
+    129
+   ],
+   [
+    "cadence",
+    69
+   ],
+   [
+    "synopsys",
+    14
+   ],
+   [
+    "chip-designer",
+    13
+   ],
+   [
+    "deposition",
+    3
+   ],
+   [
+    "silicon-artwork",
+    3
+   ],
+   [
+    "open-pdk",
+    1
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 2,
+  "speakers": [
+   [
+    "Chris Gammell",
+    18
+   ],
+   [
+    "Dave Jones",
+    4
+   ],
+   [
+    "Tim Ansell",
+    4
+   ],
+   [
+    "Mohamed Kassem",
+    4
+   ],
+   [
+    "Jake Baker",
+    3
+   ],
+   [
+    "Matt Venn",
+    3
+   ],
+   [
+    "Shahriar Shahramian",
+    2
+   ],
+   [
+    "SPEAKER_00",
+    1
+   ],
+   [
+    "Adrian Tang",
+    1
+   ],
+   [
+    "Julia Desmazes",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 28,
+   "neighbor": 2,
+   "child": 11
+  },
+  "passages_by_depth": {
+   "explains": 38,
+   "opinion": 3
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 41,
+ "passages": [
+  {
+   "episode": null,
+   "episode_title": null,
+   "episode_url": null,
+   "guest": null,
+   "stem": "0706-leading-edge-analog-with-joren-vaes",
+   "paragraph_index": 7,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-development-kit"
+   ],
+   "paragraph_text": "Yeah. So, indeed, I think what you mentioned there is kind of the real biggest step that I had to make when I went into IC design is the difference between hardware design, PCB-level design, and IC design is the level of simulation and modeling that we can do in the design stage for analog and for high speed. Digital designers do this in a different way. But for analog, we have these models for each transistor that are extremely complicated, hundreds of parameters inside of the model that's provided by the foundry in the process development kit, as they call it. And so, when we're designing, we can really get a very high degree of confidence in that what we are designing will work the way we intend, because we can do extremely in-depth simulation on the individual transistor level. And in a lot of cases, if you do your job well, we can get within a few percent in the real silicon if you really model everything. Even with the parasitics, we have tools that will extract. So, you do the design on a transistor level in the schematic, right? And then you have to actually, like on a PCB, do the layout, connect everything up. But in silicon, especially in the newer nodes where you have 14, 15, 18 metal layers, you'll have a lot of metal parasitics, a lot of additional capacitance, a lot of additional resistance. And all of this also impacts your circuit performance. But again, we have like very complicated tools that will think about this very hard on very big servers. And they will come up with parasitic models of add a lot of transistors. You go from a schematic that might have had 30, 40 transistor devices to schematics that without exaggerating have 2 million, 3 million devices, just because you have so much parasitics in these very complicated networks. And then you can, again, simulate them and really get a good idea of what we will get when we get the silicon back from the foundry.",
+   "context_before": "That's right. Yeah. I mean, the thing I don't really get from the silicon side of things is you get these tools from the foundries, but then you have to do all this magical math in between. And it seems really tough. And it seems like there's a lot of simulation and kind of figuring out as you go along and trusting in the tools. And then at the end, yeah, they make what you tell them to. But you have to make sense of all the output that you've put into these shapes on planer. Yeah.",
+   "context_after": "Okay. So, I did very, very poorly in my analog chip design class in university, which is 20 plus years ago now. But my teacher at the time, who I've talked about on the show, I've been angry with him. He insisted, he insisted that we use colored pencils and graph paper and draw transistor shapes. So, how much of your day-to-day work is drawing boxes with colored pencils? More than I would like to admit, I think. Ah, damn it. That was not the answer I hoped for. Oh, man. Well, it also depends on who you talk to in our field. I thought it was just going to be computer tools all day long. Really?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "That's right. Yeah. I mean, the thing I don't really get from the silicon side of things is you get these tools from the foundries, but then you have to do all this magical math in between. And it seems really tough. And it seems like there's a lot of simulation and kind of figuring out as you go along and trusting in the tools. And then at the end, yeah, they make what you tell them to. But you have to make sense of all the output that you've put into these shapes on planer. Yeah. Yeah. So, indeed, I think what you mentioned there is kind of the real biggest step that I had to make when I went into IC design is the difference between hardware design, PCB-level design, and IC design is the level of simulation and modeling that we can do in the design stage for analog and for high speed. Digital designers do this in a different way. But for analog, we have these models for each transistor that are extremely complicated, hundreds of parameters inside of the model that's provided by the foundry in the process development kit, as they call it. And so, when we're designing, we can really get a very high degree of confidence in that what we are designing will work the way we intend, because we can do extremely in-depth simulation on the individual transistor level. And in a lot of cases, if you do your job well, we can get within a few percent in the real silicon if you really model everything. Even with the parasitics, we have tools that will extract. So, you do the design on a transistor level in the schematic, right? And then you have to actually, like on a PCB, do the layout, connect everything up. But in silicon, especially in the newer nodes where you have 14, 15, 18 metal layers, you'll have a lot of metal parasitics, a lot of additional capacitance, a lot of additional resistance. And all of this also impacts your circuit performance. But again, we have like very complicated tools that will think about this very hard on very big servers. And they will come up with parasitic models of add a lot of transistors. You go from a schematic that might have had 30, 40 transistor devices to schematics that without exaggerating have 2 million, 3 million devices, just because you have so much parasitics in these very complicated networks. And then you can, again, simulate them and really get a good idea of what we will get when we get the silicon back from the foundry. Okay. So, I did very, very poorly in my analog chip design class in university, which is 20 plus years ago now. But my teacher at the time, who I've talked about on the show, I've been angry with him. He insisted, he insisted that we use colored pencils and graph paper and draw transistor shapes. So, how much of your day-to-day work is drawing boxes with colored pencils? More than I would like to admit, I think. Ah, damn it. That was not the answer I hoped for. Oh, man. Well, it also depends on who you talk to in our field. I thought it was just going to be computer tools all day long. Really?"
+  },
+  {
+   "episode": null,
+   "episode_title": null,
+   "episode_url": null,
+   "guest": null,
+   "stem": "0706-leading-edge-analog-with-joren-vaes",
+   "paragraph_index": 93,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "Right. Of course you have to, right? Yeah. And it's kind of like beta software, right? So it's a version zero point whatever, right? Everything can still change. But that way we can already start playing around. We do some very basic blocks to get a feel of the technology. And then we, like on an architectural level, start thinking, like, how are we going to solve this problem? Because we now see as we go to the next generation, to the 100 gigahertz applications, this new effect is going to come in. So we need a way to get around that. And the standard dictates that we need this response. So we need to come up with this new circuit that might have more gain at 100 gigahertz. So then we look at literature, look at our experience to try and come up with solutions to do this.",
+   "context_before": "Yeah.",
+   "context_after": "So you get, like, these process kits and kind of like the early process kits and then the release process kits or something like that, I imagine. Are there ever changes that flow down from that as well? Like, how characterized is it when it actually shows up on your doorstep? Because I'm sure they're also simulating, but they're also doing test runs. And it just kind of, like, again, it just steps down. Are there ever, like, things like, oh, we thought you could place, you know, a two nanometer wire here, but it actually has to be a three nanometer? Like, does that do those changes? Are those super dynamic changes as well?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Right. Of course you have to, right? Yeah. And it's kind of like beta software, right? So it's a version zero point whatever, right? Everything can still change. But that way we can already start playing around. We do some very basic blocks to get a feel of the technology. And then we, like on an architectural level, start thinking, like, how are we going to solve this problem? Because we now see as we go to the next generation, to the 100 gigahertz applications, this new effect is going to come in. So we need a way to get around that. And the standard dictates that we need this response. So we need to come up with this new circuit that might have more gain at 100 gigahertz. So then we look at literature, look at our experience to try and come up with solutions to do this. So you get, like, these process kits and kind of like the early process kits and then the release process kits or something like that, I imagine. Are there ever changes that flow down from that as well? Like, how characterized is it when it actually shows up on your doorstep? Because I'm sure they're also simulating, but they're also doing test runs. And it just kind of, like, again, it just steps down. Are there ever, like, things like, oh, we thought you could place, you know, a two nanometer wire here, but it actually has to be a three nanometer? Like, does that do those changes? Are those super dynamic changes as well?"
+  },
+  {
+   "episode": null,
+   "episode_title": null,
+   "episode_url": null,
+   "guest": null,
+   "stem": "0706-leading-edge-analog-with-joren-vaes",
+   "paragraph_index": 95,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "Absolutely. Especially in the early stages of PDK development, that happens a lot, right? And it can be very frustrating because you have a thing that works great. And then there's an update. There's a newer beta version and suddenly everything's broken. But even after PDK has its full release for years, there might still be updates because they found one customer that did this one thing that the design rulebook said was actually okay. But they now see that when they try to do this in mass production, they actually run into this issue. So they say, like, yeah, this rule that used to be 50 nanometers, it's 70 nanometers now, just to give us that, right? So that still happens.",
+   "context_before": "So you get, like, these process kits and kind of like the early process kits and then the release process kits or something like that, I imagine. Are there ever changes that flow down from that as well? Like, how characterized is it when it actually shows up on your doorstep? Because I'm sure they're also simulating, but they're also doing test runs. And it just kind of, like, again, it just steps down. Are there ever, like, things like, oh, we thought you could place, you know, a two nanometer wire here, but it actually has to be a three nanometer? Like, does that do those changes? Are those super dynamic changes as well?",
+   "context_after": "Right. Yeah. And I'm sure there's other things you can do, too. Like, it's like, oh, I already have a design halfway through production that's doing 50 nanometers. You're just like, okay, but check this, this, and this. Yeah. Like, it's like a lot of that kind of push-pull design. It's really interesting how tied together the industry sounds in this way.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So you get, like, these process kits and kind of like the early process kits and then the release process kits or something like that, I imagine. Are there ever changes that flow down from that as well? Like, how characterized is it when it actually shows up on your doorstep? Because I'm sure they're also simulating, but they're also doing test runs. And it just kind of, like, again, it just steps down. Are there ever, like, things like, oh, we thought you could place, you know, a two nanometer wire here, but it actually has to be a three nanometer? Like, does that do those changes? Are those super dynamic changes as well? Absolutely. Especially in the early stages of PDK development, that happens a lot, right? And it can be very frustrating because you have a thing that works great. And then there's an update. There's a newer beta version and suddenly everything's broken. But even after PDK has its full release for years, there might still be updates because they found one customer that did this one thing that the design rulebook said was actually okay. But they now see that when they try to do this in mass production, they actually run into this issue. So they say, like, yeah, this rule that used to be 50 nanometers, it's 70 nanometers now, just to give us that, right? So that still happens. Right. Yeah. And I'm sure there's other things you can do, too. Like, it's like, oh, I already have a design halfway through production that's doing 50 nanometers. You're just like, okay, but check this, this, and this. Yeah. Like, it's like a lot of that kind of push-pull design. It's really interesting how tied together the industry sounds in this way."
+  },
+  {
+   "episode": null,
+   "episode_title": null,
+   "episode_url": null,
+   "guest": null,
+   "stem": "0706-leading-edge-analog-with-joren-vaes",
+   "paragraph_index": 117,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "Yes, it is getting better, especially with the newer technologies. There's a kind of move being made to support this. And the tool vendors also work actively on this, right? Because they want PDKs to be supported by their tools, because it's an important feature for them. But there's been situations where indeed a customer might come to us and they have a specific technology that doesn't work on our internal tools. And then we have to use, we remote connect to their systems to do a design on their tools. That happens.",
+   "context_before": "So that would be problematic for you guys as an IP vendor, because you have to work across foundries, you have to work across tools, you have to kind of do it all, I imagine.",
+   "context_after": "So you had said the output, you've got to take it to tape out. You've done all your checking. You're feeling some high percentage of confidence in it. Does it ever get to the point where you actually will develop this and put it on a test wafer? Or is it always handed to a customer and they're the ones who push it through and then they give you feedback on how it performs?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So that would be problematic for you guys as an IP vendor, because you have to work across foundries, you have to work across tools, you have to kind of do it all, I imagine. Yes, it is getting better, especially with the newer technologies. There's a kind of move being made to support this. And the tool vendors also work actively on this, right? Because they want PDKs to be supported by their tools, because it's an important feature for them. But there's been situations where indeed a customer might come to us and they have a specific technology that doesn't work on our internal tools. And then we have to use, we remote connect to their systems to do a design on their tools. That happens. So you had said the output, you've got to take it to tape out. You've done all your checking. You're feeling some high percentage of confidence in it. Does it ever get to the point where you actually will develop this and put it on a test wafer? Or is it always handed to a customer and they're the ones who push it through and then they give you feedback on how it performs?"
+  },
+  {
+   "episode": 129,
+   "episode_title": "An Interview with Brett Fox and Dr Jeroen Fonderie - Device Doubling Decretum",
+   "episode_url": "https://theamphour.com/the-amp-hour-129-device-doubling-decretum/",
+   "guest": "Brett Fox and Jeroen Fonderie",
+   "stem": "the-amp-hour-129-device-doubling-decretum",
+   "paragraph_index": 42,
+   "depth": "explains",
+   "speaker_raw": "SPEAKER_00",
+   "speaker_repaired": "SPEAKER_00",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "That's definitely part of it. The part of the support that a foundry needs to give you is to have a PDK, a process design kit, of that technology that you can work with and that has all these analog features. And they do.",
+   "context_before": "Have the CAD tools changed at all? Have they improved? Yes. Out of sight. Is that another reason why that you can, you know, easily start up a, well, I'm saying easily in quote marks, you know?",
+   "context_after": "Ah, so it's almost building block type. You can just, right. Would you only use those building blocks they supply? Or would you go to them and say, hey, guys, we've got this weird idea for a chip. We need you to, we need to figure out how to make this work.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Have the CAD tools changed at all? Have they improved? Yes. Out of sight. Is that another reason why that you can, you know, easily start up a, well, I'm saying easily in quote marks, you know? That's definitely part of it. The part of the support that a foundry needs to give you is to have a PDK, a process design kit, of that technology that you can work with and that has all these analog features. And they do. Ah, so it's almost building block type. You can just, right. Would you only use those building blocks they supply? Or would you go to them and say, hey, guys, we've got this weird idea for a chip. We need you to, we need to figure out how to make this work."
+  },
+  {
+   "episode": 152,
+   "episode_title": "Firmware, Netburner and Semiconductors - Chris's Capitalism Colloquy",
+   "episode_url": "https://theamphour.com/the-amp-hour-152-chriss-capitalism-colloquy/",
+   "guest": null,
+   "stem": "the-amp-hour-152-chriss-capitalism-colloquy",
+   "paragraph_index": 339,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "Right, if you remember Flying Flux, he was a blogger for a while. And, yeah, so him and I used to talk a lot about his stuff. He designed a lot of analog stuff. And, you know, just hearing about the flow there, because I was relatively naive about it, too. But, you know, it's a lot of physics knowledge and really actually tweaking the tools, too. Because when you think about these chip companies are actually working with, like, a mentor graphics or someone, they have these models that are from the fab, right? And then, so there's all these different layers of abstraction. And knowing, like, the parameters and being able to basically tweak stuff and then test it on the bench then eventually, right? You know, it's like, and simulation, simulation, simulation. So, yeah, once I learned what it really was, it's like, eh, maybe I don't want to do that. But there's no reason to discourage people from it. Obviously, there's a lot of interesting stuff there.",
+   "context_before": "Well, you generally, well, it generally is less risk of that, for example, if you're developing a, you know, purely just a digital chip, for example, right? There is less chance of going wrong. But if you think you're going to score a job, you know, that's a totally different world to say working for linear technology or something, developing the latest, you know, ultra low offset op amp. Right. Or something, right? Or, you know, ultra gigahertz bandwidth, you know, amplifier or something. Yeah, yeah, I've talked to you. And with that, analog domain is totally different world.",
+   "context_after": "No, no, no, if you want to. No, I highly encourage you to get in through the back door, you know, learn some Verilog or something like that and learn some test benching. And, you know, you can probably get a test bench job somewhere at some company. You know, they're always looking for people, I think, for stuff like that, aren't they?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Well, you generally, well, it generally is less risk of that, for example, if you're developing a, you know, purely just a digital chip, for example, right? There is less chance of going wrong. But if you think you're going to score a job, you know, that's a totally different world to say working for linear technology or something, developing the latest, you know, ultra low offset op amp. Right. Or something, right? Or, you know, ultra gigahertz bandwidth, you know, amplifier or something. Yeah, yeah, I've talked to you. And with that, analog domain is totally different world. Right, if you remember Flying Flux, he was a blogger for a while. And, yeah, so him and I used to talk a lot about his stuff. He designed a lot of analog stuff. And, you know, just hearing about the flow there, because I was relatively naive about it, too. But, you know, it's a lot of physics knowledge and really actually tweaking the tools, too. Because when you think about these chip companies are actually working with, like, a mentor graphics or someone, they have these models that are from the fab, right? And then, so there's all these different layers of abstraction. And knowing, like, the parameters and being able to basically tweak stuff and then test it on the bench then eventually, right? You know, it's like, and simulation, simulation, simulation. So, yeah, once I learned what it really was, it's like, eh, maybe I don't want to do that. But there's no reason to discourage people from it. Obviously, there's a lot of interesting stuff there. No, no, no, if you want to. No, I highly encourage you to get in through the back door, you know, learn some Verilog or something like that and learn some test benching. And, you know, you can probably get a test bench job somewhere at some company. You know, they're always looking for people, I think, for stuff like that, aren't they?"
+  },
+  {
+   "episode": 228,
+   "episode_title": "An Interview with Shahriar from The Signal Path - Quisquous Quivering Quadripole",
+   "episode_url": "https://theamphour.com/228-an-interview-with-shahriar-from-the-signal-path-quisquous-quivering-quadripole/",
+   "guest": "Shahriar",
+   "stem": "0228-an-interview-with-shahriar-from-the-signal-path-quisquous-quivering-quadripole",
+   "paragraph_index": 94,
+   "depth": "explains",
+   "speaker_raw": "Shariar",
+   "speaker_repaired": "Shahriar Shahramian",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "Yeah. The fab will provide you with a design kit. And after you've signed the appropriate NDAs, then they give you the design kit. And then, you know, as a designer who's, let's say, hasn't used this new technology, you start experimenting with the devices to see how fast they are, you know, measure, simulate their FD and their FMAX and look at their layout and how complex they look, simulate some of their critical analog and RF performances. And then you start creating blocks that you want to, you know, do certain things with. Let's say I want to make an LNA, a low noise amplifier, or I want to make a PA. Then I go ahead and put together one and then start tweaking it and playing around with it. But when you start doing things in millimeter wave design at 90 or 100 gigahertz or even above that, then you're starting to run into some really weird things that devices do. All their imperfections are now right there. And you have to, if you don't model them. So, one of the things I did when I was a student a while back is that I designed this 160 gigahertz PLL. It's a phase lock loop that has an output at 160 gigahertz. It's intended for use for medical imaging.",
+   "context_before": "That comes from, like, a fab? That's like a design kit?",
+   "context_after": "Okay.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "That comes from, like, a fab? That's like a design kit? Yeah. The fab will provide you with a design kit. And after you've signed the appropriate NDAs, then they give you the design kit. And then, you know, as a designer who's, let's say, hasn't used this new technology, you start experimenting with the devices to see how fast they are, you know, measure, simulate their FD and their FMAX and look at their layout and how complex they look, simulate some of their critical analog and RF performances. And then you start creating blocks that you want to, you know, do certain things with. Let's say I want to make an LNA, a low noise amplifier, or I want to make a PA. Then I go ahead and put together one and then start tweaking it and playing around with it. But when you start doing things in millimeter wave design at 90 or 100 gigahertz or even above that, then you're starting to run into some really weird things that devices do. All their imperfections are now right there. And you have to, if you don't model them. So, one of the things I did when I was a student a while back is that I designed this 160 gigahertz PLL. It's a phase lock loop that has an output at 160 gigahertz. It's intended for use for medical imaging. Okay."
+  },
+  {
+   "episode": 297,
+   "episode_title": "An Interview with Jake Baker",
+   "episode_url": "https://theamphour.com/297-an-interview-with-jake-baker/",
+   "guest": "Jake Baker",
+   "stem": "0297-an-interview-with-jake-baker",
+   "paragraph_index": 169,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Jake Baker",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "So that's a good question. So if you try to do commercial tools, which if you're doing the real smaller designs, you have to use because the process design kits, the PDKs are only set up for the commercial tools. It's really expensive.",
+   "context_before": "Well, both, you know, A, is it possible? And B, you know, how much, like, what are the tools you use to do it?",
+   "context_after": "As in the commercial tools, Cadence and whatnot.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Well, both, you know, A, is it possible? And B, you know, how much, like, what are the tools you use to do it? So that's a good question. So if you try to do commercial tools, which if you're doing the real smaller designs, you have to use because the process design kits, the PDKs are only set up for the commercial tools. It's really expensive. As in the commercial tools, Cadence and whatnot."
+  },
+  {
+   "episode": 297,
+   "episode_title": "An Interview with Jake Baker",
+   "episode_url": "https://theamphour.com/297-an-interview-with-jake-baker/",
+   "guest": "Jake Baker",
+   "stem": "0297-an-interview-with-jake-baker",
+   "paragraph_index": 171,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Jake Baker",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "neighbor:cadence",
+   "concept_sources": [
+    "neighbor:cadence"
+   ],
+   "concepts": [
+    "cadence"
+   ],
+   "paragraph_text": "Yeah, yeah. Now, having said that, Cadence has a program where they will sell you time on their server, which makes it much, much more reasonable for someone that, say, was interested in doing a startup. So you run the tools on their server. They charge you per hour and, you know, it makes it so you can do something. They set up the PDK for you. And so it's really reasonable. I have another, on my website, I have another set of tools, which are called Electric VLSI. Yeah. Yeah. They're really nice. And they are free. And they run on any platform, Unix or Mac or Windows.",
+   "context_before": "As in the commercial tools, Cadence and whatnot.",
+   "context_after": "Yeah, the Java base, right?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Chris Gammell",
+   "text": "As in the commercial tools, Cadence and whatnot. Yeah, yeah. Now, having said that, Cadence has a program where they will sell you time on their server, which makes it much, much more reasonable for someone that, say, was interested in doing a startup. So you run the tools on their server. They charge you per hour and, you know, it makes it so you can do something. They set up the PDK for you. And so it's really reasonable. I have another, on my website, I have another set of tools, which are called Electric VLSI. Yeah. Yeah. They're really nice. And they are free. And they run on any platform, Unix or Mac or Windows. Yeah, the Java base, right?"
+  },
+  {
+   "episode": 297,
+   "episode_title": "An Interview with Jake Baker",
+   "episode_url": "https://theamphour.com/297-an-interview-with-jake-baker/",
+   "guest": "Jake Baker",
+   "stem": "0297-an-interview-with-jake-baker",
+   "paragraph_index": 173,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Jake Baker",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "Yeah, Java. And I've designed probably, I used to just use these for, use electric only for research and Cadence. I've probably designed, me and my students, I shouldn't say me, have designed more than 20 chips using the electric flow. So the problem with that, with that tool, I mean, it's a great tool. The issue is if you go to the smaller technologies, it doesn't have the PDK. Right. And so you're forced to go to Cadence. The other issue for me is someone that's trying to educate students and make them marketable and attractive to potential employers is they don't use electric in industry. They use Cadence. Of course.",
+   "context_before": "Yeah, the Java base, right?",
+   "context_after": "Yeah. Right.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah, the Java base, right? Yeah, Java. And I've designed probably, I used to just use these for, use electric only for research and Cadence. I've probably designed, me and my students, I shouldn't say me, have designed more than 20 chips using the electric flow. So the problem with that, with that tool, I mean, it's a great tool. The issue is if you go to the smaller technologies, it doesn't have the PDK. Right. And so you're forced to go to Cadence. The other issue for me is someone that's trying to educate students and make them marketable and attractive to potential employers is they don't use electric in industry. They use Cadence. Of course. Yeah. Right."
+  },
+  {
+   "episode": 430,
+   "episode_title": "Shahriar Discusses 5G",
+   "episode_url": "https://theamphour.com/430-shahriar-discusses-5g/",
+   "guest": "Shahriar",
+   "stem": "0430-shahriar-discusses-5g",
+   "paragraph_index": 36,
+   "depth": "explains",
+   "speaker_raw": "Shariar",
+   "speaker_repaired": "Shahriar Shahramian",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "So there are some indium phosphide 35 labs that we still have and they make specialized optic components. But we don't make silicon integrated circuits from our own fab. That's just that that wouldn't be practical because it's almost impossible to compete with the state-of-the-art silicon foundry. Whether it's silicon germanium or just CMOS or anything of the variants, we always send those out to, you know, those famous big fabs around the world. Around the world, we send them to those. Yeah. We design in their design kit and then we submit it to them for fabrication.",
+   "context_before": "Of course. So do you guys, like, because you're involved in, like, the silicon side of things, do you have your own, like, little mini fab where you can fab your own silicon or what's the deal?",
+   "context_after": "Got it. So what sort of priority do they give you? Because they've got to produce, have they got lines that just produce, like, prototype, like, short-run silicons or do you get them produced on the main production line and you've got to slot in with other, you know, like, large, you know, the apples and whatnot of the world?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Of course. So do you guys, like, because you're involved in, like, the silicon side of things, do you have your own, like, little mini fab where you can fab your own silicon or what's the deal? So there are some indium phosphide 35 labs that we still have and they make specialized optic components. But we don't make silicon integrated circuits from our own fab. That's just that that wouldn't be practical because it's almost impossible to compete with the state-of-the-art silicon foundry. Whether it's silicon germanium or just CMOS or anything of the variants, we always send those out to, you know, those famous big fabs around the world. Around the world, we send them to those. Yeah. We design in their design kit and then we submit it to them for fabrication. Got it. So what sort of priority do they give you? Because they've got to produce, have they got lines that just produce, like, prototype, like, short-run silicons or do you get them produced on the main production line and you've got to slot in with other, you know, like, large, you know, the apples and whatnot of the world?"
+  },
+  {
+   "episode": 459,
+   "episode_title": "An Interview with Tom Lee",
+   "episode_url": "https://theamphour.com/459-an-interview-with-tom-lee/",
+   "guest": "Tom Lee",
+   "stem": "0459-an-interview-with-tom-lee",
+   "paragraph_index": 69,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "Well, at that time we didn't really have PDKs. And so we had, so we had a list of design rules. And so I fought with the primitive CAD tools that we had available at that time. And it took me, I remember about a week to just lay out a single transistor and have it pass all the design rules.",
+   "context_before": "That'll happen. So, so then you were working with a kit then, like a design kit or whatever they call those.",
+   "context_after": "Wow.",
+   "context_before_speaker": "Tom Lee",
+   "context_after_speaker": "Speaker ?",
+   "text": "That'll happen. So, so then you were working with a kit then, like a design kit or whatever they call those. Well, at that time we didn't really have PDKs. And so we had, so we had a list of design rules. And so I fought with the primitive CAD tools that we had available at that time. And it took me, I remember about a week to just lay out a single transistor and have it pass all the design rules. Wow."
+  },
+  {
+   "episode": 483,
+   "episode_title": "An Interview with Adrian Tang",
+   "episode_url": "https://theamphour.com/483-an-interview-with-adrian-tang/",
+   "guest": "Adrian Tang",
+   "stem": "0483-an-interview-with-adrian-tang",
+   "paragraph_index": 205,
+   "depth": "explains",
+   "speaker_raw": "Adrian Tang",
+   "speaker_repaired": "Adrian Tang",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "Okay. Yeah. That makes sense. Yeah. So you have like the packages that you can download and use their standard process.",
+   "context_before": "ur power level and your gain and everything that you want. Then you start drawing it. You start laying it out. On the ADC side, kind of the same. On the digital side, you're writing Verilog code. And you're going through placelet, synthesis, all that. Optimization, timing flow, power flow, cross-clock stuff, domain, IO, all the usual. And you get a chip. You wrap it together. You spend some time integrating it. You get through verification, caliber, venture graphics stuff, whatever. Check the DRC. Check the LVS. Check the timing, usual stuff. Make sure the power supply is okay. Look for signal integrity. Ansys has nice tools. Pathfinder, check the ESD. Totem and Redhawk, check the thermal. Once you sign it all off, you send it out for fab. The CMOS we don't do at JPL. The CMOS we use TSMC.",
+   "context_after": "Yeah. We use their process, but we usually make our own cells for everything. We don't trust anything here.",
+   "context_before_speaker": "Adrian Tang",
+   "context_after_speaker": "Adrian Tang",
+   "text": "ur power level and your gain and everything that you want. Then you start drawing it. You start laying it out. On the ADC side, kind of the same. On the digital side, you're writing Verilog code. And you're going through placelet, synthesis, all that. Optimization, timing flow, power flow, cross-clock stuff, domain, IO, all the usual. And you get a chip. You wrap it together. You spend some time integrating it. You get through verification, caliber, venture graphics stuff, whatever. Check the DRC. Check the LVS. Check the timing, usual stuff. Make sure the power supply is okay. Look for signal integrity. Ansys has nice tools. Pathfinder, check the ESD. Totem and Redhawk, check the thermal. Once you sign it all off, you send it out for fab. The CMOS we don't do at JPL. The CMOS we use TSMC. Okay. Yeah. That makes sense. Yeah. So you have like the packages that you can download and use their standard process. Yeah. We use their process, but we usually make our own cells for everything. We don't trust anything here."
+  },
+  {
+   "episode": 500,
+   "episode_title": "Two and a Half Orders of Magnitude",
+   "episode_url": "https://theamphour.com/500-two-and-a-half-orders-of-magnitude/",
+   "guest": null,
+   "stem": "0500-two-and-a-half-orders-of-magnitude",
+   "paragraph_index": 90,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:open-pdk",
+   "concept_sources": [
+    "child:open-pdk"
+   ],
+   "concepts": [
+    "open-pdk"
+   ],
+   "paragraph_text": "Yeah. And I, so like some of it, I think like, you know, people can do amazing things at home and on their own as well. And like, I think I'd like to bring up some of the tools that are, are doing these kind of, that are like enabling these things. But like, like I said, it's still tough to do that. It's still tough to get motivated to actually go out and want to learn these things. But like, it is kind of amazing on the flip side, I suppose. It's kind of amazing what's now available. And so we're going to talk about more about this next week. So Tim Ansell is going to be on the show again next week. But one of the big stories is that Google is the new open source PDK. And then Google's offering free fabbing for 130 nanometer chips. So next week, we're going to talk to Tim about that. What did you think about this whole thing, Dave?",
+   "context_before": "So no, it could be, and maybe it's elsewhere as well, but yeah, I do. I just, I don't know if the article, how accurate the article is, you know, the guardian that's like, you know, I don't know, but, um, but yeah, that's, that's really remarkable. So please, if you're a PhD student, leave it in the comments down below. Like, do you know other students struggling to make ends meet?",
+   "context_after": "Can we repeat that? Google is offering free semiconductor wafer fabbing for 130 nanometer technology. Free for open source chips. It has to be an open source chip.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "So no, it could be, and maybe it's elsewhere as well, but yeah, I do. I just, I don't know if the article, how accurate the article is, you know, the guardian that's like, you know, I don't know, but, um, but yeah, that's, that's really remarkable. So please, if you're a PhD student, leave it in the comments down below. Like, do you know other students struggling to make ends meet? Yeah. And I, so like some of it, I think like, you know, people can do amazing things at home and on their own as well. And like, I think I'd like to bring up some of the tools that are, are doing these kind of, that are like enabling these things. But like, like I said, it's still tough to do that. It's still tough to get motivated to actually go out and want to learn these things. But like, it is kind of amazing on the flip side, I suppose. It's kind of amazing what's now available. And so we're going to talk about more about this next week. So Tim Ansell is going to be on the show again next week. But one of the big stories is that Google is the new open source PDK. And then Google's offering free fabbing for 130 nanometer chips. So next week, we're going to talk to Tim about that. What did you think about this whole thing, Dave? Can we repeat that? Google is offering free semiconductor wafer fabbing for 130 nanometer technology. Free for open source chips. It has to be an open source chip."
+  },
+  {
+   "episode": 500,
+   "episode_title": "Two and a Half Orders of Magnitude",
+   "episode_url": "https://theamphour.com/500-two-and-a-half-orders-of-magnitude/",
+   "guest": null,
+   "stem": "0500-two-and-a-half-orders-of-magnitude",
+   "paragraph_index": 102,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-development-kit"
+   ],
+   "paragraph_text": "Which is the fab itself, the foundry rather. So Skywater foundry, the PDK is the process development kit. And so basically we've talked about this a little bit on the show in the past, not the open source nature of it. But basically once you get access to the PDK, that gives you like, oh, here are the standard cell transistors you have access to. And then, you know, you can start to tweak some parameters as far as I understand, at least.",
+   "context_before": "Yeah. It's called the Skywater PDK, which is. Yep.",
+   "context_after": "Again, so what software is. Does it come with the software to actually lay out the, you know, components or like, I just don't know. I've never designed a chip. Like I've never actually did the silicon level. I don't know the tools. Is there another tool that is this just like the library and you have to then use your silicon CAD tool of choice or.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah. It's called the Skywater PDK, which is. Yep. Which is the fab itself, the foundry rather. So Skywater foundry, the PDK is the process development kit. And so basically we've talked about this a little bit on the show in the past, not the open source nature of it. But basically once you get access to the PDK, that gives you like, oh, here are the standard cell transistors you have access to. And then, you know, you can start to tweak some parameters as far as I understand, at least. Again, so what software is. Does it come with the software to actually lay out the, you know, components or like, I just don't know. I've never designed a chip. Like I've never actually did the silicon level. I don't know the tools. Is there another tool that is this just like the library and you have to then use your silicon CAD tool of choice or."
+  },
+  {
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "guest": "Tim Ansell",
+   "stem": "0501-discussing-the-open-source-pdk-with-tim-ansell",
+   "paragraph_index": 0,
+   "depth": "explains",
+   "speaker_raw": "Tim Ans",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:open-pdk",
+   "concept_sources": [
+    "child:open-pdk"
+   ],
+   "concepts": [
+    "open-pdk"
+   ],
+   "paragraph_text": "This is The Amp Hour Podcast, released July 19th, 2020. Episode 501, discussing the open source PDK with Tim Ansell. Welcome to The Amp Hour. I'm Chris Gammell of Contextual Electronics. Hi, I'm Tim Ansell from Google. Hey, Tim. Welcome back. This is your third appearance on The Amp Hour. I believe so. Yeah. So the first time we talked just kind of about you and your projects and the Tomu and the USB to HDMI and some of the other projects you've been working on. Last time we talked, it was at Chaos Camp in 2019, and that was when Sean Cross was also there, or Zobs. And that was about the FOMU and you guys working on that together. And now we're talking about something that's exciting. We mentioned last week on the show, and we've been seeing headlines about it. There is big news that is Google, who's your employer, and Skywater, not Skywalker, is doing an open source PDK. So what's up with that?",
+   "context_before": "",
+   "context_after": "There's actually kind of a really interesting connection to the other kind of reasons I've been on The Amp Hour here. If you kind of look at it, the first time I was here, I was talking about taking a microcontroller and making a device out of that. And then the second time I was on here, we were talking about doing an FPGA-based system, which had a microcontroller running inside it. And now I've gone even another step lower and started looking at how do we create a ESIC or a FPGA from transistor level stuff.",
+   "context_before_speaker": null,
+   "context_after_speaker": "Tim Ansell",
+   "text": "This is The Amp Hour Podcast, released July 19th, 2020. Episode 501, discussing the open source PDK with Tim Ansell. Welcome to The Amp Hour. I'm Chris Gammell of Contextual Electronics. Hi, I'm Tim Ansell from Google. Hey, Tim. Welcome back. This is your third appearance on The Amp Hour. I believe so. Yeah. So the first time we talked just kind of about you and your projects and the Tomu and the USB to HDMI and some of the other projects you've been working on. Last time we talked, it was at Chaos Camp in 2019, and that was when Sean Cross was also there, or Zobs. And that was about the FOMU and you guys working on that together. And now we're talking about something that's exciting. We mentioned last week on the show, and we've been seeing headlines about it. There is big news that is Google, who's your employer, and Skywater, not Skywalker, is doing an open source PDK. So what's up with that? There's actually kind of a really interesting connection to the other kind of reasons I've been on The Amp Hour here. If you kind of look at it, the first time I was here, I was talking about taking a microcontroller and making a device out of that. And then the second time I was on here, we were talking about doing an FPGA-based system, which had a microcontroller running inside it. And now I've gone even another step lower and started looking at how do we create a ESIC or a FPGA from transistor level stuff."
+  },
+  {
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "guest": "Tim Ansell",
+   "stem": "0501-discussing-the-open-source-pdk-with-tim-ansell",
+   "paragraph_index": 15,
+   "depth": "explains",
+   "speaker_raw": "Tim Ans",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:open-pdk",
+   "concept_sources": [
+    "child:open-pdk"
+   ],
+   "concepts": [
+    "open-pdk"
+   ],
+   "paragraph_text": "Okay. Yeah, we'll try and find that talk and link it in. That'd be great. That seems like a great, great topic. Yep. So on the, so the news itself though, is that there's an open source PDK now. What, what does that actually mean? So someone's listening to it. They're like, okay, I like open source. That first half sounds good. But what is, what is a PDK and how does it actually impact people that might be listening to this?",
+   "context_before": "I got it.",
+   "context_after": "So I'm only new to the kind of IC design world. And when coming into IC design, what I discovered is that there's kind of three main components to building an IC. The first thing was the stuff I was most familiar with from the FPGA world, which was the actual design. This is kind of, if you're in the software world, you can kind of think of as the code. It's the RTL, the stuff you write in kind of Verilog or VHDL or my case, MeGen and the Python based stuff. So there's that, the kind of design of what you want the thing to do. Then there's the tools, which in the software world would be considered things like the compiler or the interpreter that take your design and convert it into something that can be executed on whatever system you're running on. And in the software world and FPGA world",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Tim Ansell",
+   "text": "I got it. Okay. Yeah, we'll try and find that talk and link it in. That'd be great. That seems like a great, great topic. Yep. So on the, so the news itself though, is that there's an open source PDK now. What, what does that actually mean? So someone's listening to it. They're like, okay, I like open source. That first half sounds good. But what is, what is a PDK and how does it actually impact people that might be listening to this? So I'm only new to the kind of IC design world. And when coming into IC design, what I discovered is that there's kind of three main components to building an IC. The first thing was the stuff I was most familiar with from the FPGA world, which was the actual design. This is kind of, if you're in the software world, you can kind of think of as the code. It's the RTL, the stuff you write in kind of Verilog or VHDL or my case, MeGen and the Python based stuff. So there's that, the kind of design of what you want the thing to do. Then there's the tools, which in the software world would be considered things like the compiler or the interpreter that take your design and convert it into something that can be executed on whatever system you're running on. And in the software world and FPGA world"
+  },
+  {
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "guest": "Tim Ansell",
+   "stem": "0501-discussing-the-open-source-pdk-with-tim-ansell",
+   "paragraph_index": 16,
+   "depth": "explains",
+   "speaker_raw": "Sean",
+   "speaker_repaired": "Tim Ansell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "So I'm only new to the kind of IC design world. And when coming into IC design, what I discovered is that there's kind of three main components to building an IC. The first thing was the stuff I was most familiar with from the FPGA world, which was the actual design. This is kind of, if you're in the software world, you can kind of think of as the code. It's the RTL, the stuff you write in kind of Verilog or VHDL or my case, MeGen and the Python based stuff. So there's that, the kind of design of what you want the thing to do. Then there's the tools, which in the software world would be considered things like the compiler or the interpreter that take your design and convert it into something that can be executed on whatever system you're running on. And in the software world and FPGA world, that's kind of where you stop. But it turns out in the IC world, there's an actual third part you need, which is how does the physics and the devices actually work? Because ultimately you have to convert this into something that's manufacturable. People listening to your show is probably fairly familiar with a lot of things around PCB design. There's a lot of parallels with that around how does your PCB board perform? Yeah. And how is it kind of made? What is like the layers? What are the connections? What is the metal? What are the minimum distances between metal? It's like another really important thing. And in the ASIC design world, this is called the PDK, the Process Design Kit. And this contains all that information in machine readable form. Unlike PCB design, where you can mostly for most of the time not worry about the fact that your traces are actually, you know, capacitive plates.",
+   "context_before": "Okay. Yeah, we'll try and find that talk and link it in. That'd be great. That seems like a great, great topic. Yep. So on the, so the news itself though, is that there's an open source PDK now. What, what does that actually mean? So someone's listening to it. They're like, okay, I like open source. That first half sounds good. But what is, what is a PDK and how does it actually impact people that might be listening to this?",
+   "context_after": "Well, yeah, I mean, no, that's not really true, though. But I think that as it becomes more important, right? So as you go up in speed, you're starting to do RF or high-speed digital or something like that, you definitely, you can't just send it to just any old fab, you know, to board, fab house, rather, for the PCB. You need to know the stack up and you need to know the material capabilities and things like that. And that sounds like that actually is the parallel to the PDK. It's not like published in a machine readable format, but it is a, you know, you might care that it's, you know, if it's an RF thing, you might be like, oh, it needs to be Rogers type material. And I need to have this thickness of the stack up. And then you specify that. It seems like in this case, the fab is instead ",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. Yeah, we'll try and find that talk and link it in. That'd be great. That seems like a great, great topic. Yep. So on the, so the news itself though, is that there's an open source PDK now. What, what does that actually mean? So someone's listening to it. They're like, okay, I like open source. That first half sounds good. But what is, what is a PDK and how does it actually impact people that might be listening to this? So I'm only new to the kind of IC design world. And when coming into IC design, what I discovered is that there's kind of three main components to building an IC. The first thing was the stuff I was most familiar with from the FPGA world, which was the actual design. This is kind of, if you're in the software world, you can kind of think of as the code. It's the RTL, the stuff you write in kind of Verilog or VHDL or my case, MeGen and the Python based stuff. So there's that, the kind of design of what you want the thing to do. Then there's the tools, which in the software world would be considered things like the compiler or the interpreter that take your design and convert it into something that can be executed on whatever system you're running on. And in the software world and FPGA world, that's kind of where you stop. But it turns out in the IC world, there's an actual third part you need, which is how does the physics and the devices actually work? Because ultimately you have to convert this into something that's manufacturable. People listening to your show is probably fairly familiar with a lot of things around PCB design. There's a lot of parallels with that around how does your PCB board perform? Yeah. And how is it kind of made? What is like the layers? What are the connections? What is the metal? What are the minimum distances between metal? It's like another really important thing. And in the ASIC design world, this is called the PDK, the Process Design Kit. And this contains all that information in machine readable form. Unlike PCB design, where you can mostly for most of the time not worry about the fact that your traces are actually, you know, capacitive plates. Well, yeah, I mean, no, that's not really true, though. But I think that as it becomes more important, right? So as you go up in speed, you're starting to do RF or high-speed digital or something like that, you definitely, you can't just send it to just any old fab, you know, to board, fab house, rather, for the PCB. You need to know the stack up and you need to know the material capabilities and things like that. And that sounds like that actually is the parallel to the PDK. It's not like published in a machine readable format, but it is a, you know, you might care that it's, you know, if it's an RF thing, you might be like, oh, it needs to be Rogers type material. And I need to have this thickness of the stack up. And then you specify that. It seems like in this case, the fab is instead "
+  },
+  {
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "guest": "Tim Ansell",
+   "stem": "0501-discussing-the-open-source-pdk-with-tim-ansell",
+   "paragraph_index": 95,
+   "depth": "explains",
+   "speaker_raw": "Sean",
+   "speaker_repaired": "Tim Ansell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:open-pdk",
+   "concept_sources": [
+    "child:open-pdk"
+   ],
+   "concepts": [
+    "open-pdk"
+   ],
+   "paragraph_text": "Yeah. And so, um, this is kind of why we're looking at ASICs and why we're looking at a lot more ability to make it easier to move between the two. Like, um, and the only way to do that is to have a thriving open source ecosystem that, um, happens in, uh, both the design and the tooling and how you can make it. Um, and so that kind of what's driving this open source PDK effort is how do we get to a world where, uh, people can make these decisions, uh, dynamically as needed for their application rather than having to just choose off the shelf. Um, whatever was thought to be the good mix five years ago.",
+   "context_before": "Yeah.",
+   "context_after": "Right.",
+   "context_before_speaker": "Speaker ?",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Yeah. And so, um, this is kind of why we're looking at ASICs and why we're looking at a lot more ability to make it easier to move between the two. Like, um, and the only way to do that is to have a thriving open source ecosystem that, um, happens in, uh, both the design and the tooling and how you can make it. Um, and so that kind of what's driving this open source PDK effort is how do we get to a world where, uh, people can make these decisions, uh, dynamically as needed for their application rather than having to just choose off the shelf. Um, whatever was thought to be the good mix five years ago. Right."
+  },
+  {
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "guest": "Tim Ansell",
+   "stem": "0501-discussing-the-open-source-pdk-with-tim-ansell",
+   "paragraph_index": 238,
+   "depth": "explains",
+   "speaker_raw": "Tim Ans",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "Yeah, exactly. Yeah. You know, that's, it is interesting. It feels like right now this would be, so again, if we're going to equate the silicon process to like the PCB process, it feels like right now this would be, you go through, you make your, your schematic, you make your layout. And then, you know, it's, it's a very, very expensive process to go and get the quote unquote boards made. Google's picking up, you know, the first 40 that are out there. That's nice. But even still there's, you know, it's, it's also going to take months to get your board, your quote unquote boards back. Yep. But when Adrian Tang was on the show, Adrian was the NASA designer who was doing chip design. It was interesting hearing him talk about the, the level of, he was talking about the different tool set. I think, I think he was talking about cadence, but he was saying that if you have the PDK and if you're using tools that are well-known, that basically the simulation just doesn't really differ that much. And that's an interesting idea to me, like that it is such a controlled environment and that like these PDK process variables are so, so well characterized that like you could get a, get away with just simulating and then expecting very similar behavior. It's not like you're going to get a chip back and be like, well, the simulation said it was going to be, you know, 1 milliamp and it ended up being 4,000 milliamps, you know, or something like that. It's like that it does match it well. And so in terms of like the flow and moving people towards doing this sort of thing, it, it seems like if people are comfortable simulating, if the tooling set up so that you could validate your, the process that it could move us towards a scenario where the hobbyist or someone who's just on their own could potentially make a design that just works now, you know, as far as that phrase.",
+   "context_before": "Yeah.",
+   "context_after": "Yep. It's kind of interesting because these things are so small, um, frequently physics works, uh, much more ideally at that space.",
+   "context_before_speaker": "Speaker ?",
+   "context_after_speaker": "Tim Ansell",
+   "text": "Yeah. Yeah, exactly. Yeah. You know, that's, it is interesting. It feels like right now this would be, so again, if we're going to equate the silicon process to like the PCB process, it feels like right now this would be, you go through, you make your, your schematic, you make your layout. And then, you know, it's, it's a very, very expensive process to go and get the quote unquote boards made. Google's picking up, you know, the first 40 that are out there. That's nice. But even still there's, you know, it's, it's also going to take months to get your board, your quote unquote boards back. Yep. But when Adrian Tang was on the show, Adrian was the NASA designer who was doing chip design. It was interesting hearing him talk about the, the level of, he was talking about the different tool set. I think, I think he was talking about cadence, but he was saying that if you have the PDK and if you're using tools that are well-known, that basically the simulation just doesn't really differ that much. And that's an interesting idea to me, like that it is such a controlled environment and that like these PDK process variables are so, so well characterized that like you could get a, get away with just simulating and then expecting very similar behavior. It's not like you're going to get a chip back and be like, well, the simulation said it was going to be, you know, 1 milliamp and it ended up being 4,000 milliamps, you know, or something like that. It's like that it does match it well. And so in terms of like the flow and moving people towards doing this sort of thing, it, it seems like if people are comfortable simulating, if the tooling set up so that you could validate your, the process that it could move us towards a scenario where the hobbyist or someone who's just on their own could potentially make a design that just works now, you know, as far as that phrase. Yep. It's kind of interesting because these things are so small, um, frequently physics works, uh, much more ideally at that space."
+  },
+  {
+   "episode": 502,
+   "episode_title": "Lowest Common Denominator Design",
+   "episode_url": "https://theamphour.com/502-lowest-common-denominator-design/",
+   "guest": null,
+   "stem": "0502-lowest-common-denominator-design",
+   "paragraph_index": 69,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:open-pdk",
+   "concept_sources": [
+    "child:open-pdk"
+   ],
+   "concepts": [
+    "open-pdk"
+   ],
+   "paragraph_text": "I think that's the thing at the end of the day, I prefer to mix and match. I don't want like, like, I think that the answer for having analog, you know, in the open PDK thing, it's like, yeah, some people are going to want integrated analog. Okay, great. But yeah, I don't think that's the answer for me because I'm not making custom chips either. You know, like I'm, I'm going to be mixing and matching for as long as they're available. It's just that I, I don't like that there's fewer available now. Oh, well. I believe at this point enough, I think. Let's talk about sourcing stuff. So this was a, someone actually wrote in. Oh shoot. I forgot who wrote in. We'll get his email up here, but there's actually an email. So we were talking about like lead times from Maxim, right? Like 40 at 44 weeks. But apparently microchip sent out an email and a letter to all their customers. They're like, Hey guys, what you're doing is not cool. That's kind of how it read to me. I don't know.",
+   "context_before": "And even then the specs are a bit loosey goosey. I think. Please correct. I'm sure.",
+   "context_after": "How dare you order parts from us? Right. That's not cool.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "And even then the specs are a bit loosey goosey. I think. Please correct. I'm sure. I think that's the thing at the end of the day, I prefer to mix and match. I don't want like, like, I think that the answer for having analog, you know, in the open PDK thing, it's like, yeah, some people are going to want integrated analog. Okay, great. But yeah, I don't think that's the answer for me because I'm not making custom chips either. You know, like I'm, I'm going to be mixing and matching for as long as they're available. It's just that I, I don't like that there's fewer available now. Oh, well. I believe at this point enough, I think. Let's talk about sourcing stuff. So this was a, someone actually wrote in. Oh shoot. I forgot who wrote in. We'll get his email up here, but there's actually an email. So we were talking about like lead times from Maxim, right? Like 40 at 44 weeks. But apparently microchip sent out an email and a letter to all their customers. They're like, Hey guys, what you're doing is not cool. That's kind of how it read to me. I don't know. How dare you order parts from us? Right. That's not cool."
+  },
+  {
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "guest": "Mohamed Kassem",
+   "stem": "0503-fabless-chip-design-with-mohammed-kassem",
+   "paragraph_index": 94,
+   "depth": "explains",
+   "speaker_raw": "Mohamed Kassem",
+   "speaker_repaired": "Mohamed Kassem",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "And unless you want to address it now, we can talk about it. And the second aspect is a technical part, which is the PDK is represented in a set of files that are compatible with the commercial EDA infrastructure or tools today. So generally a foundry would, when you ask them for the PDK, they don't give you something that works out of the box with an open source tool. Right. They'll give you, yeah. Yeah.",
+   "context_before": "Yeah.",
+   "context_after": "Right. Cause they're basically, I'm sure that the, you know, the, the large scale ADA companies are helping to develop this stuff because it's in their best interest to be completely integrated into a foundry business.",
+   "context_before_speaker": "Speaker ?",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. And unless you want to address it now, we can talk about it. And the second aspect is a technical part, which is the PDK is represented in a set of files that are compatible with the commercial EDA infrastructure or tools today. So generally a foundry would, when you ask them for the PDK, they don't give you something that works out of the box with an open source tool. Right. They'll give you, yeah. Yeah. Right. Cause they're basically, I'm sure that the, you know, the, the large scale ADA companies are helping to develop this stuff because it's in their best interest to be completely integrated into a foundry business."
+  },
+  {
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "guest": "Mohamed Kassem",
+   "stem": "0503-fabless-chip-design-with-mohammed-kassem",
+   "paragraph_index": 98,
+   "depth": "explains",
+   "speaker_raw": "Mohamed Kassem",
+   "speaker_repaired": "Mohamed Kassem",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "And partially that existed in, like in the layout, GDS is a standard. I can read GDS with any tool, any of the commercial tools. Yeah. Spice knit list or timing models. Some of these things are like, however, there are not uncommon things that are enough to make, to create the stickiness, meaning that you're, you're going to use a certain flow, you stay with it. So now what we did to avoid, to be completely clean, we went to the foundry and said, give us the information, the process information, not even the PDK. Okay. And we will take it and produce the same thing that is produced for the commercial system to, to work with the competitive, with the open source tools. Yeah. And, and we take it from the foundry directly. They take the, the, the information, the process information. We don't even, cause we don't want to even, you know, be in our way to do any. Yeah.",
+   "context_before": "I mean, I, to, to make a, to make a, a, a crude comparison would be, you know, like I've talked to all these assembly houses. They're like, yeah, you know, we use all these different formats and we work really well with like Altium and, you know, Allegro and all these cadence things. It's like, well, thank God for spreadsheets and basically spreadsheets and Gerbers are the only reason that Kaikad can, you know, operate in that space is because there is that standardized format. And it sounds like now the chip industry is kind of starting to move in that way as well because now there's going to be open PDK and it's going to get a little easier to integrate new things.",
+   "context_after": "Cause it's like interpretation almost of like data and how it all fits together. And PDK is like an abstraction of what's actually happening on the floor of the fab. Right.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "I mean, I, to, to make a, to make a, a, a crude comparison would be, you know, like I've talked to all these assembly houses. They're like, yeah, you know, we use all these different formats and we work really well with like Altium and, you know, Allegro and all these cadence things. It's like, well, thank God for spreadsheets and basically spreadsheets and Gerbers are the only reason that Kaikad can, you know, operate in that space is because there is that standardized format. And it sounds like now the chip industry is kind of starting to move in that way as well because now there's going to be open PDK and it's going to get a little easier to integrate new things. And partially that existed in, like in the layout, GDS is a standard. I can read GDS with any tool, any of the commercial tools. Yeah. Spice knit list or timing models. Some of these things are like, however, there are not uncommon things that are enough to make, to create the stickiness, meaning that you're, you're going to use a certain flow, you stay with it. So now what we did to avoid, to be completely clean, we went to the foundry and said, give us the information, the process information, not even the PDK. Okay. And we will take it and produce the same thing that is produced for the commercial system to, to work with the competitive, with the open source tools. Yeah. And, and we take it from the foundry directly. They take the, the, the information, the process information. We don't even, cause we don't want to even, you know, be in our way to do any. Yeah. Cause it's like interpretation almost of like data and how it all fits together. And PDK is like an abstraction of what's actually happening on the floor of the fab. Right."
+  },
+  {
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "guest": "Mohamed Kassem",
+   "stem": "0503-fabless-chip-design-with-mohammed-kassem",
+   "paragraph_index": 99,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "Cause it's like interpretation almost of like data and how it all fits together. And PDK is like an abstraction of what's actually happening on the floor of the fab. Right.",
+   "context_before": "read GDS with any tool, any of the commercial tools. Yeah. Spice knit list or timing models. Some of these things are like, however, there are not uncommon things that are enough to make, to create the stickiness, meaning that you're, you're going to use a certain flow, you stay with it. So now what we did to avoid, to be completely clean, we went to the foundry and said, give us the information, the process information, not even the PDK. Okay. And we will take it and produce the same thing that is produced for the commercial system to, to work with the competitive, with the open source tools. Yeah. And, and we take it from the foundry directly. They take the, the, the information, the process information. We don't even, cause we don't want to even, you know, be in our way to do any. Yeah.",
+   "context_after": "Exactly. In different views. Some of them are physical views represent the layout and some of their simulation views represent the best basically functional and parametric simulation. Huh.",
+   "context_before_speaker": "Mohamed Kassem",
+   "context_after_speaker": "Mohamed Kassem",
+   "text": "read GDS with any tool, any of the commercial tools. Yeah. Spice knit list or timing models. Some of these things are like, however, there are not uncommon things that are enough to make, to create the stickiness, meaning that you're, you're going to use a certain flow, you stay with it. So now what we did to avoid, to be completely clean, we went to the foundry and said, give us the information, the process information, not even the PDK. Okay. And we will take it and produce the same thing that is produced for the commercial system to, to work with the competitive, with the open source tools. Yeah. And, and we take it from the foundry directly. They take the, the, the information, the process information. We don't even, cause we don't want to even, you know, be in our way to do any. Yeah. Cause it's like interpretation almost of like data and how it all fits together. And PDK is like an abstraction of what's actually happening on the floor of the fab. Right. Exactly. In different views. Some of them are physical views represent the layout and some of their simulation views represent the best basically functional and parametric simulation. Huh."
+  },
+  {
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "guest": "Mohamed Kassem",
+   "stem": "0503-fabless-chip-design-with-mohammed-kassem",
+   "paragraph_index": 100,
+   "depth": "explains",
+   "speaker_raw": "Mohamed Kassem",
+   "speaker_repaired": "Mohamed Kassem",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "Exactly. In different views. Some of them are physical views represent the layout and some of their simulation views represent the best basically functional and parametric simulation. Huh.",
+   "context_before": "Cause it's like interpretation almost of like data and how it all fits together. And PDK is like an abstraction of what's actually happening on the floor of the fab. Right.",
+   "context_after": "So then, so what is, so what is, what is, what is the work then that you have to do? So you take process information that's basically like what measurement of gate sizes and variants and statistical process control or what?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Cause it's like interpretation almost of like data and how it all fits together. And PDK is like an abstraction of what's actually happening on the floor of the fab. Right. Exactly. In different views. Some of them are physical views represent the layout and some of their simulation views represent the best basically functional and parametric simulation. Huh. So then, so what is, so what is, what is, what is the work then that you have to do? So you take process information that's basically like what measurement of gate sizes and variants and statistical process control or what?"
+  },
+  {
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "guest": "Mohamed Kassem",
+   "stem": "0503-fabless-chip-design-with-mohammed-kassem",
+   "paragraph_index": 117,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "Yeah. This, so this is interesting to me because I used to always wonder, like, you know, I talked to like TI, like factory application engineers who came through and they'd be talking about, oh, well, or, you know, we're moving to 180 nanometer. And this was like, you know, I guess probably 10 plus years ago when I was talking to them. And like, they were just, they were just getting to there as well. And I was like, well, you know, I'm reading news stories about 45 nanometer or whatever is the newest thing. Why are you guys on 180? And they're like, well, it's qualified for analog now. And I never really got it. I always just kind of figured it was just like a trailing edge thing. But it really sounds like now it's like the fact that it's validating over and over again, especially when you want to tweak things a little bit at a time, right? If you're doing an analog design and you want to change the gate width by a small amount or you want to do some kind of weird process step that is non-standard, you would want all these designs like you're talking about to validate it. And so it sounds like now having the open source stuff, it's just going to fast forward a lot of things because it's not just, you can't, I'm guessing here, but I'm guessing in the past you couldn't have gotten access to a lot of designs outside your company to go and validate a design kit. You'd have to sign a bunch of waivers or something.",
+   "context_before": "Yeah. Yeah. But keep in mind that there is one thing that if the process is stable, like something that's already been used for 10 years, you're very unlikely to have that happen. Because there's a lot of customers and a lot of users that are already used to certain rules. Right. If you change the rule on them, then you immediately invalidate their, whatever, depending on the rule, what the rule was. Right. So in this case, you justify the effort. You see, okay, the rule, if we change this rule, we're going to make the process more efficient. The tape out more efficient, for example.",
+   "context_after": "And if someone didn't experience that collaboration intensity and the quality of outcome that the open source community delivers, you won't understand how this happens. It's crazy. You would think it's unreliable. You'd think it's not going to work. No, these guys are no politics, blunt. They figure out a problem. They tell you what it is. And sometimes they come with a solution as well. So having that is a great thing. Now you mentioned 180 is a failing thing. Any technology has a lifetime. You develop it and then you use it for many products and then you sunset it. So the 180 nanometer and 130, these things, they didn't get sunsets. This has continued forever because first of all, one of the things, if I try to iterate on some new architecture over and over with the $10,000 versus $100,0",
+   "context_before_speaker": "Mohamed Kassem",
+   "context_after_speaker": "Mohamed Kassem",
+   "text": "Yeah. Yeah. But keep in mind that there is one thing that if the process is stable, like something that's already been used for 10 years, you're very unlikely to have that happen. Because there's a lot of customers and a lot of users that are already used to certain rules. Right. If you change the rule on them, then you immediately invalidate their, whatever, depending on the rule, what the rule was. Right. So in this case, you justify the effort. You see, okay, the rule, if we change this rule, we're going to make the process more efficient. The tape out more efficient, for example. Yeah. This, so this is interesting to me because I used to always wonder, like, you know, I talked to like TI, like factory application engineers who came through and they'd be talking about, oh, well, or, you know, we're moving to 180 nanometer. And this was like, you know, I guess probably 10 plus years ago when I was talking to them. And like, they were just, they were just getting to there as well. And I was like, well, you know, I'm reading news stories about 45 nanometer or whatever is the newest thing. Why are you guys on 180? And they're like, well, it's qualified for analog now. And I never really got it. I always just kind of figured it was just like a trailing edge thing. But it really sounds like now it's like the fact that it's validating over and over again, especially when you want to tweak things a little bit at a time, right? If you're doing an analog design and you want to change the gate width by a small amount or you want to do some kind of weird process step that is non-standard, you would want all these designs like you're talking about to validate it. And so it sounds like now having the open source stuff, it's just going to fast forward a lot of things because it's not just, you can't, I'm guessing here, but I'm guessing in the past you couldn't have gotten access to a lot of designs outside your company to go and validate a design kit. You'd have to sign a bunch of waivers or something. And if someone didn't experience that collaboration intensity and the quality of outcome that the open source community delivers, you won't understand how this happens. It's crazy. You would think it's unreliable. You'd think it's not going to work. No, these guys are no politics, blunt. They figure out a problem. They tell you what it is. And sometimes they come with a solution as well. So having that is a great thing. Now you mentioned 180 is a failing thing. Any technology has a lifetime. You develop it and then you use it for many products and then you sunset it. So the 180 nanometer and 130, these things, they didn't get sunsets. This has continued forever because first of all, one of the things, if I try to iterate on some new architecture over and over with the $10,000 versus $100,0"
+  },
+  {
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "guest": "Mohamed Kassem",
+   "stem": "0503-fabless-chip-design-with-mohammed-kassem",
+   "paragraph_index": 133,
+   "depth": "explains",
+   "speaker_raw": "Mohamed Kassem",
+   "speaker_repaired": "Mohamed Kassem",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "They, they, they, they, they, they try and the, and then over time, the foundry, when they sell to more customers, the quality of the output of the PDK, for example, increases because of the several, you know, loops of, of trials and errors. Yeah. Yeah.",
+   "context_before": "In a, in a sense. More, more fluid. The one last thing that happens here is that the foundry. Uh, so it's interesting that, uh, uh, there's a process that people always, when the foundry comes up with a new thing, the customers, the first customers become the guinea pigs. Okay. Yeah.",
+   "context_after": "Yeah. Yeah. That's a serial process to a certain extent. If it's a new thing, when you do it with the open source community, I mean, I saw an example for the Skywater, even though it's an already established process. We have in a couple of days, 200 people joined the Slack channel, at least 10 of them saying, I am here. I want to help test it.",
+   "context_before_speaker": "Mohamed Kassem",
+   "context_after_speaker": "Mohamed Kassem",
+   "text": "In a, in a sense. More, more fluid. The one last thing that happens here is that the foundry. Uh, so it's interesting that, uh, uh, there's a process that people always, when the foundry comes up with a new thing, the customers, the first customers become the guinea pigs. Okay. Yeah. They, they, they, they, they, they try and the, and then over time, the foundry, when they sell to more customers, the quality of the output of the PDK, for example, increases because of the several, you know, loops of, of trials and errors. Yeah. Yeah. Yeah. Yeah. That's a serial process to a certain extent. If it's a new thing, when you do it with the open source community, I mean, I saw an example for the Skywater, even though it's an already established process. We have in a couple of days, 200 people joined the Slack channel, at least 10 of them saying, I am here. I want to help test it."
+  },
+  {
+   "episode": 579,
+   "episode_title": "ADC Chip Design with Anthony Wall",
+   "episode_url": "https://theamphour.com/579-adc-chip-design-with-anthony-wall/",
+   "guest": "Anthony Wall",
+   "stem": "0579-adc-chip-design-with-anthony-wall",
+   "paragraph_index": 139,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "You can like, I mean, so, so when, when TSMC gives you a PDK, the understanding is that firstly, you know, when TSMC gives you a PDK, really it's for the digital guys and the analog guys, you know, they can play with the transistors too, but this is for the digital guys, right? So, right. So they'll give you a number of flavors of transistor. So you might have a low threshold voltage transistor, a regular threshold voltage transistor and a high threshold voltage transistor. And what that's really far is for the digital logic to consume, you know, less power and go slower or more power and go faster. It's to kind of, you know, right. It's to tweak your digital logic, but obviously that has analog, you know, the analog guys can use that to create slightly different effects too. Right. You'll be given different flavors of these parameterized cells and you need to, you know, decide which threshold voltage I want. And then I need to decide how big do I want the transistor? And they're the knobs that you really have. Got it. Yeah. Oh yeah. Yeah. Okay. Yes. So, you know, the vast majority of time.",
+   "context_before": "Wait, so do some chips actually change the doping or, or is it just like.",
+   "context_after": "I'm just thinking about my, again, like my knowledge is about 15 years out of date now, but what I do remember is that at different stages throughout the semiconductor process, there is a mask layer that's all very, very thick mask layer that also goes towards the implantation steps and like, you know, different parts of the circuit are going to get different levels of doping and things like that. And so someone's doing that, but it sounds like it's, that piece is already set. In the PDK or pretty much set if, if nothing else like you. So you're saying that it's very tough to actually then go and open up part of a mask so that it gets more doping than, you know, like in a, in a wide swath of area, even in analog designs.",
+   "context_before_speaker": "Anthony Wall",
+   "context_after_speaker": "Anthony Wall",
+   "text": "Wait, so do some chips actually change the doping or, or is it just like. You can like, I mean, so, so when, when TSMC gives you a PDK, the understanding is that firstly, you know, when TSMC gives you a PDK, really it's for the digital guys and the analog guys, you know, they can play with the transistors too, but this is for the digital guys, right? So, right. So they'll give you a number of flavors of transistor. So you might have a low threshold voltage transistor, a regular threshold voltage transistor and a high threshold voltage transistor. And what that's really far is for the digital logic to consume, you know, less power and go slower or more power and go faster. It's to kind of, you know, right. It's to tweak your digital logic, but obviously that has analog, you know, the analog guys can use that to create slightly different effects too. Right. You'll be given different flavors of these parameterized cells and you need to, you know, decide which threshold voltage I want. And then I need to decide how big do I want the transistor? And they're the knobs that you really have. Got it. Yeah. Oh yeah. Yeah. Okay. Yes. So, you know, the vast majority of time. I'm just thinking about my, again, like my knowledge is about 15 years out of date now, but what I do remember is that at different stages throughout the semiconductor process, there is a mask layer that's all very, very thick mask layer that also goes towards the implantation steps and like, you know, different parts of the circuit are going to get different levels of doping and things like that. And so someone's doing that, but it sounds like it's, that piece is already set. In the PDK or pretty much set if, if nothing else like you. So you're saying that it's very tough to actually then go and open up part of a mask so that it gets more doping than, you know, like in a, in a wide swath of area, even in analog designs."
+  },
+  {
+   "episode": 579,
+   "episode_title": "ADC Chip Design with Anthony Wall",
+   "episode_url": "https://theamphour.com/579-adc-chip-design-with-anthony-wall/",
+   "guest": "Anthony Wall",
+   "stem": "0579-adc-chip-design-with-anthony-wall",
+   "paragraph_index": 157,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "I think so. I think so. Like, I mean, there are, you know, there's, there's the cadence tool flow, like in terms of what, what people use and what people pay for largely there's the cadence tool flow and there's the synopsis tool flow. So if you're a foundry and your tools, your PDK doesn't support cadence or synopsis, like nobody's designing you. It's not possible to design that chip. Duopoly. Right. Exactly. So it's in their best interests to make sure that, you know, they're, they're very, very well integrated. And I think that's changing. And I certainly hope so in terms of, you know, that the open source IC design movement. Oh yeah. Really, really exciting.",
+   "context_before": "Is that because the, the, the CAD software for chips is more integrated from the layout stage, the schematic stage, the layout stage that is just inherently more connected? Or is it because?",
+   "context_after": "Maybe it's making a little movement, but I think it's going to be a very small dent for a little while yet. So yeah.",
+   "context_before_speaker": "Anthony Wall",
+   "context_after_speaker": "Anthony Wall",
+   "text": "Is that because the, the, the CAD software for chips is more integrated from the layout stage, the schematic stage, the layout stage that is just inherently more connected? Or is it because? I think so. I think so. Like, I mean, there are, you know, there's, there's the cadence tool flow, like in terms of what, what people use and what people pay for largely there's the cadence tool flow and there's the synopsis tool flow. So if you're a foundry and your tools, your PDK doesn't support cadence or synopsis, like nobody's designing you. It's not possible to design that chip. Duopoly. Right. Exactly. So it's in their best interests to make sure that, you know, they're, they're very, very well integrated. And I think that's changing. And I certainly hope so in terms of, you know, that the open source IC design movement. Oh yeah. Really, really exciting. Maybe it's making a little movement, but I think it's going to be a very small dent for a little while yet. So yeah."
+  },
+  {
+   "episode": 598,
+   "episode_title": "Best way to find a leak",
+   "episode_url": "https://theamphour.com/598-best-way-to-find-a-leak/",
+   "guest": null,
+   "stem": "0598-best-way-to-find-a-leak",
+   "paragraph_index": 306,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:open-pdk",
+   "concept_sources": [
+    "child:open-pdk"
+   ],
+   "concepts": [
+    "open-pdk"
+   ],
+   "paragraph_text": "Uh, Mohammed from, uh, eFabless has been on the show. So basically all the people working with the kind of the open PDK. And so Skywater open, uh, had an open PDK and Tim's been working on the, from the Google side to do this sort of thing. They're now moving from one 80 down to 90, which is pretty exciting.",
+   "context_before": "Yep.",
+   "context_after": "Yep.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yep. Uh, Mohammed from, uh, eFabless has been on the show. So basically all the people working with the kind of the open PDK. And so Skywater open, uh, had an open PDK and Tim's been working on the, from the Google side to do this sort of thing. They're now moving from one 80 down to 90, which is pretty exciting. Yep."
+  },
+  {
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "guest": "Matthew Venn",
+   "stem": "0616-open-source-tapeout-with-matthew-venn",
+   "paragraph_index": 44,
+   "depth": "explains",
+   "speaker_raw": "Matthew Venn",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:open-pdk",
+   "concept_sources": [
+    "child:open-pdk"
+   ],
+   "concepts": [
+    "open-pdk"
+   ],
+   "paragraph_text": "Yeah. That's awesome. So it sounds like kind of a confluence of the evolution of these open source tools. It sounds like the Google sponsoring the shuttle runs and then also driving some of the open PDKs as well. Because I remember when Tim was on the show, he was talking about the Skywater thing. And I didn't really, at the time, I didn't really grok what the deal was. I was like, oh, well, can't anyone get access to these PDKs? And the answer was not, not really. You used to work in a, in a foundry, didn't you? I worked at, not a foundry at, at Samsung. I used to work at Samsung, but I never had any exposure to the masks or any of the design. I was, I was a, basically just a process engineer. So I just worked in the fab.",
+   "context_before": "Yeah. Yeah. I'm careful to make it different. There's a company called Zero ASIC, which has got nothing to do with the Zero to ASIC course. Got it. Got to be careful there. Although. Right. They do a lot of good stuff. They're in the same domain. Oh, interesting. One of their main things is a, another RTL to GDS flow. So you put in your design and outcomes to GDS ready to send to the factory.",
+   "context_after": "Yeah. Which is cool when it sounds right, but very different. All of that stuff they don't want to share, you know, so they do this huge amount of R&D development on the next process. And then that is part of their intellectual property and their advantage in the market. So they want to keep that secret, but they still need to let people design chips for their process. So traditionally you have to sign an NDA, then you get given the PDK. Right.",
+   "context_before_speaker": "Matt Venn",
+   "context_after_speaker": "Matt Venn",
+   "text": "Yeah. Yeah. I'm careful to make it different. There's a company called Zero ASIC, which has got nothing to do with the Zero to ASIC course. Got it. Got to be careful there. Although. Right. They do a lot of good stuff. They're in the same domain. Oh, interesting. One of their main things is a, another RTL to GDS flow. So you put in your design and outcomes to GDS ready to send to the factory. Yeah. That's awesome. So it sounds like kind of a confluence of the evolution of these open source tools. It sounds like the Google sponsoring the shuttle runs and then also driving some of the open PDKs as well. Because I remember when Tim was on the show, he was talking about the Skywater thing. And I didn't really, at the time, I didn't really grok what the deal was. I was like, oh, well, can't anyone get access to these PDKs? And the answer was not, not really. You used to work in a, in a foundry, didn't you? I worked at, not a foundry at, at Samsung. I used to work at Samsung, but I never had any exposure to the masks or any of the design. I was, I was a, basically just a process engineer. So I just worked in the fab. Yeah. Which is cool when it sounds right, but very different. All of that stuff they don't want to share, you know, so they do this huge amount of R&D development on the next process. And then that is part of their intellectual property and their advantage in the market. So they want to keep that secret, but they still need to let people design chips for their process. So traditionally you have to sign an NDA, then you get given the PDK. Right."
+  },
+  {
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "guest": "Matthew Venn",
+   "stem": "0616-open-source-tapeout-with-matthew-venn",
+   "paragraph_index": 68,
+   "depth": "opinion",
+   "speaker_raw": "Matthew Venn",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:open-pdk",
+   "concept_sources": [
+    "child:open-pdk"
+   ],
+   "concepts": [
+    "open-pdk"
+   ],
+   "paragraph_text": "That would be a great idea. I think the, the thing that I always come to there though, is the, is the volume problem, right? This, this always kind of like everything in the chip industry, every, every industry really is like customization is great, but the, the volume is really what's going to smack you in the face. I feel like, and so when I look at like the, the open PDKs and these tools and really just the thought of, you know, just getting the activation energy to even try this out. I think to myself, well, I don't have anything that needs the volume here. So why should I build something custom? It's better for me to spend my time going and like learning what's in the marketplace already.",
+   "context_before": "I don't have a name for it, but I've been thinking I should mock something up like that.",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Matt Venn",
+   "context_after_speaker": "Matt Venn",
+   "text": "I don't have a name for it, but I've been thinking I should mock something up like that. That would be a great idea. I think the, the thing that I always come to there though, is the, is the volume problem, right? This, this always kind of like everything in the chip industry, every, every industry really is like customization is great, but the, the volume is really what's going to smack you in the face. I feel like, and so when I look at like the, the open PDKs and these tools and really just the thought of, you know, just getting the activation energy to even try this out. I think to myself, well, I don't have anything that needs the volume here. So why should I build something custom? It's better for me to spend my time going and like learning what's in the marketplace already. Yeah."
+  },
+  {
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "guest": "Matthew Venn",
+   "stem": "0616-open-source-tapeout-with-matthew-venn",
+   "paragraph_index": 149,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Matt Venn",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:open-pdk",
+   "concept_sources": [
+    "child:open-pdk"
+   ],
+   "concepts": [
+    "open-pdk"
+   ],
+   "paragraph_text": "And so they do these things with these little route of trust authentication chips. Yep. And it doesn't matter if those are old or big. What matters is that you trust them. If there was like an open source design for a route of trust chip that everyone could inspect and then it was made, the GDS was made with an open source inspectable tool chain, and then it was taped out on a, on like an open source PDK. And then someone even like imaged a few of the chips to prove that they were the same thing that was sent in. Then you've got, you've really got like a level of trust and inspectability that is difficult to get otherwise. And that kind of thing might be a good, like one of the niches where open source chips will actually start to have a market share.",
+   "context_before": "Right.",
+   "context_after": "Yeah. That's really interesting. That's, I mean, the route of trust stuff, that's what we had Laura from Oxide talking",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. And so they do these things with these little route of trust authentication chips. Yep. And it doesn't matter if those are old or big. What matters is that you trust them. If there was like an open source design for a route of trust chip that everyone could inspect and then it was made, the GDS was made with an open source inspectable tool chain, and then it was taped out on a, on like an open source PDK. And then someone even like imaged a few of the chips to prove that they were the same thing that was sent in. Then you've got, you've really got like a level of trust and inspectability that is difficult to get otherwise. And that kind of thing might be a good, like one of the niches where open source chips will actually start to have a market share. Yeah. That's really interesting. That's, I mean, the route of trust stuff, that's what we had Laura from Oxide talking"
+  },
+  {
+   "episode": 668,
+   "episode_title": "50.0000 Ohms",
+   "episode_url": "https://theamphour.com/668-50-0000-ohms/",
+   "guest": null,
+   "stem": "0668-50-0000-ohms",
+   "paragraph_index": 318,
+   "depth": "opinion",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:open-pdk",
+   "concept_sources": [
+    "child:open-pdk"
+   ],
+   "concepts": [
+    "open-pdk"
+   ],
+   "paragraph_text": "I thought they were a rebrand of the Open PDK. I could be wrong about that. Open PDK. High voltage semiconductors. Because I know that one's in Minnesota.",
+   "context_before": "So what do Polar Semiconductor, what's their range got? I thought Polar was tied.",
+   "context_after": "Okay. Right. I thought they were into, they were into high voltage.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "So what do Polar Semiconductor, what's their range got? I thought Polar was tied. I thought they were a rebrand of the Open PDK. I could be wrong about that. Open PDK. High voltage semiconductors. Because I know that one's in Minnesota. Okay. Right. I thought they were into, they were into high voltage."
+  },
+  {
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "guest": "Matt Venn",
+   "stem": "0672-silicon-revolution-with-matt-venn",
+   "paragraph_index": 20,
+   "depth": "explains",
+   "speaker_raw": "Matt Venn",
+   "speaker_repaired": "Matt Venn",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "child:open-pdk",
+   "concept_sources": [
+    "child:open-pdk"
+   ],
+   "concepts": [
+    "open-pdk"
+   ],
+   "paragraph_text": "Yeah. Okay. So if you're a big firm, then you design a chip and you tile as many of them as you can across a reticle, which is the mask used to project onto the wafers. And then those are stepped across an entire wafer. And then the wafers diced and you get however many chips you get off a wafer. So if it's a small chip, like an RFID chip, you might get 150,000 chips. And if it's a big chip, you might just get 20 or 30. But to do that, you need to buy those masks. And there's like 50 masks. And the ones that pattern the MOSFETs, they have the smallest features, they're the most expensive. And a whole mask set for Sky 130, which is an open source, manufacturable PDK that we have access to. It's 20 years old. The masks are still $200,000 for a whole set. So you pay up your 200 grand, you get your masks, and then you're paying about $2,000 or $3,000 per wafer with however many chips are on it. But if you're wanting to prototype, you'd like to save money. So instead, you hook up with another 39 people on what's called a multi-project wafer. So in our case, eFabless is the company that runs the Skywater multi-project wafer. They take 40 designs, combine them into the one reticle, step that across the wafer, and then you get maybe 20 or 30 of your chips off each wafer. They run just five wafers. So you get about 100 chips in total. But you only have to pay $10,000 for that. So if you want to do that now, you can just go to eFabless, send them your stuff, pay 10 grand, you get 100. 100 QFN package chips six to nine months later. But that's still a lot of money. And the Google-sponsored free lottery hadn't ended at the time of Tiny Taper. But the lottery aspect of it was fairly annoying for me, at least. Other people as well, because you put a lot of effort into the design, and then you don't know whether it's going to get made. And I was always working with like 16 people at once, say. Everybody would be working. We'd all put it together into one design that we would then send to eFabless. So I was already concentrating multiple projects onto the die at that point. And I just thought, what if we just bought an eFabless chip Ignite slot, and then divided it up into 150 or 300 or 400 tiny slots and sold each of them?",
+   "context_before": "You never know, Matt. We have so many new listeners just, you know, they're just rushing the exit, they're rushing the entrance, you know, like they just want to get here.",
+   "context_after": "And so this is the $10,000 product that now you're subdividing again to 150.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "You never know, Matt. We have so many new listeners just, you know, they're just rushing the exit, they're rushing the entrance, you know, like they just want to get here. Yeah. Okay. So if you're a big firm, then you design a chip and you tile as many of them as you can across a reticle, which is the mask used to project onto the wafers. And then those are stepped across an entire wafer. And then the wafers diced and you get however many chips you get off a wafer. So if it's a small chip, like an RFID chip, you might get 150,000 chips. And if it's a big chip, you might just get 20 or 30. But to do that, you need to buy those masks. And there's like 50 masks. And the ones that pattern the MOSFETs, they have the smallest features, they're the most expensive. And a whole mask set for Sky 130, which is an open source, manufacturable PDK that we have access to. It's 20 years old. The masks are still $200,000 for a whole set. So you pay up your 200 grand, you get your masks, and then you're paying about $2,000 or $3,000 per wafer with however many chips are on it. But if you're wanting to prototype, you'd like to save money. So instead, you hook up with another 39 people on what's called a multi-project wafer. So in our case, eFabless is the company that runs the Skywater multi-project wafer. They take 40 designs, combine them into the one reticle, step that across the wafer, and then you get maybe 20 or 30 of your chips off each wafer. They run just five wafers. So you get about 100 chips in total. But you only have to pay $10,000 for that. So if you want to do that now, you can just go to eFabless, send them your stuff, pay 10 grand, you get 100. 100 QFN package chips six to nine months later. But that's still a lot of money. And the Google-sponsored free lottery hadn't ended at the time of Tiny Taper. But the lottery aspect of it was fairly annoying for me, at least. Other people as well, because you put a lot of effort into the design, and then you don't know whether it's going to get made. And I was always working with like 16 people at once, say. Everybody would be working. We'd all put it together into one design that we would then send to eFabless. So I was already concentrating multiple projects onto the die at that point. And I just thought, what if we just bought an eFabless chip Ignite slot, and then divided it up into 150 or 300 or 400 tiny slots and sold each of them? And so this is the $10,000 product that now you're subdividing again to 150."
+  },
+  {
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "guest": "Matt Venn",
+   "stem": "0672-silicon-revolution-with-matt-venn",
+   "paragraph_index": 75,
+   "depth": "explains",
+   "speaker_raw": "Matt Venn",
+   "speaker_repaired": "Matt Venn",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "I, I think in my opinion, anything that is purely digital, you would like, I don't see any realistic reason why you would do those chips, at least with the PDKs that I play with. Cause I'm, I'm also like, you know, the, the PDK that I have access to is 20 years old. Sure. So if I want, if I'm doing a digital project, then I would just use a microcontroller. Oh, okay. So where do you see the, the kind of the overlapping? I think the analog and mixed signal is the, the, the unique selling points of a low volume custom ASICs, because you can do stuff that you can't do in any other process. So if you concentrate extremely high performance analog with some radio, say, or a risk five core on a single die, then you're potentially making something that is really unique, that is hitting a niche in the market that hasn't been exploited yet, because it's too expensive to do with the traditional tools. Got it. Okay. The other thing is like, bear in mind, also for everyone that's listening, that I am really focused on the open source side of things. Like I haven't even used the proprietary tools. I don't have access to them. I don't have access to the NDA PDKs. So my viewpoint is going to be biased towards what you can do with the open source tools and what you can do with these older, cheaper nodes.",
+   "context_before": "Yeah. I mean, if we were to, to, to, uh, then Venn diagram, sorry, of like the, I think about the things that actually drive people to want to do, you know, like tiny tape of being one thing, like just a MPW wafer from the fabulous or, you know, just shuttle service type stuff in general, the reason people want to do custom silicon, I think about like things like power kind of ad hoc security, maybe even having additional security stuff that wouldn't, you know, be on general compute, uh, size capabilities that maybe aren't, aren't bog standard from like a chip maker, you know, like for some reason you need 16 serial ports or something weird like that. That's what I think about. Are there other ones in there in that diagram?",
+   "context_after": "Yeah. But I don't know. I just feel like the industry, you know, you go to something like DAC, like design automation conference, and it's not like, you know, you basically need to be at a big company in order to be there, afford that sort of, you know, like there's a lot of money in the industry because there are big companies doing this sort of thing, but they're expected input into the, you know, like the kind of the hopper of students and, you know, potential people that could do that sort of work. It's just, it doesn't feel like they're aside from, you know, they do have university programs and they, they, they do have like low cost tools for university programs. It doesn't seem like there's as much of a general kind of entrance for other people.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. I mean, if we were to, to, to, uh, then Venn diagram, sorry, of like the, I think about the things that actually drive people to want to do, you know, like tiny tape of being one thing, like just a MPW wafer from the fabulous or, you know, just shuttle service type stuff in general, the reason people want to do custom silicon, I think about like things like power kind of ad hoc security, maybe even having additional security stuff that wouldn't, you know, be on general compute, uh, size capabilities that maybe aren't, aren't bog standard from like a chip maker, you know, like for some reason you need 16 serial ports or something weird like that. That's what I think about. Are there other ones in there in that diagram? I, I think in my opinion, anything that is purely digital, you would like, I don't see any realistic reason why you would do those chips, at least with the PDKs that I play with. Cause I'm, I'm also like, you know, the, the PDK that I have access to is 20 years old. Sure. So if I want, if I'm doing a digital project, then I would just use a microcontroller. Oh, okay. So where do you see the, the kind of the overlapping? I think the analog and mixed signal is the, the, the unique selling points of a low volume custom ASICs, because you can do stuff that you can't do in any other process. So if you concentrate extremely high performance analog with some radio, say, or a risk five core on a single die, then you're potentially making something that is really unique, that is hitting a niche in the market that hasn't been exploited yet, because it's too expensive to do with the traditional tools. Got it. Okay. The other thing is like, bear in mind, also for everyone that's listening, that I am really focused on the open source side of things. Like I haven't even used the proprietary tools. I don't have access to them. I don't have access to the NDA PDKs. So my viewpoint is going to be biased towards what you can do with the open source tools and what you can do with these older, cheaper nodes. Yeah. But I don't know. I just feel like the industry, you know, you go to something like DAC, like design automation conference, and it's not like, you know, you basically need to be at a big company in order to be there, afford that sort of, you know, like there's a lot of money in the industry because there are big companies doing this sort of thing, but they're expected input into the, you know, like the kind of the hopper of students and, you know, potential people that could do that sort of work. It's just, it doesn't feel like they're aside from, you know, they do have university programs and they, they, they do have like low cost tools for university programs. It doesn't seem like there's as much of a general kind of entrance for other people."
+  },
+  {
+   "episode": 685,
+   "episode_title": "Data Provenance in the Home, Server, and Fab",
+   "episode_url": "https://theamphour.com/685-data-provenance-in-the-home-server-and-fab/",
+   "guest": null,
+   "stem": "0685-data-provenance-in-the-home-server-and-fab",
+   "paragraph_index": 264,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "neighbor:tsmc",
+   "concept_sources": [
+    "neighbor:tsmc"
+   ],
+   "concepts": [
+    "tsmc"
+   ],
+   "paragraph_text": "They did. Well, yes. Um, and I don't think they're giving up the foundry business, like, but like foundry, not the foundry, like, uh, not the actual fab, right? Like they are building new fabs, but the foundry business being like making, so basically like being a dominant process player, right? So like TSMC is a, is a foundry where they will, you show up, you buy their, you know, capability and they will make the top notch stuff. That is if they can squeeze you in after NVIDIA. Yeah. Right. Right. And it's like, okay, uh, they are foundry. They're the best example of a foundry. Samsung has some foundry capabilities, but they, that's not their main focus. Uh, AMD really, they spun off, they spun off global foundries, which is still an operation. Yeah. And many of the things that are around, even the ones that are like Skywater, the Skywater PDK that runs with the, I forget the name of the, the fab that's up North that runs all the open source stuff. That's also a foundry where it's, you know, you're basically fabulous chip companies are coming to you and doing that sort of thing. So like Intel started to get into that as opposed to famously for, you know, most of their existence was like, okay, we're doing our own thing. We're keeping all of our stuff secret. We're, you know, all of our, all of the best process stuff goes to us because we're bleeding edge and they've just fallen behind on all things. So like there are some documentaries out there about Intel and really just a lot of news stories about it. But the big story is that now their, their leader, uh, he, he gone, uh, and, uh, and now they have, uh, done the thing that really shows, uh, they have no idea what they're going to do, which is appointing dual CEOs, which means there's no CEO. That's, that's, that's always my take on that thing. It's like, Oh, dual CEOs. You mean you couldn't decide, or there was a fight in the boardroom?",
+   "context_before": "But aren't they, aren't they building new foundries? Didn't they just get some new uncle, uncle sandbox to.",
+   "context_after": "Yeah, right.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "But aren't they, aren't they building new foundries? Didn't they just get some new uncle, uncle sandbox to. They did. Well, yes. Um, and I don't think they're giving up the foundry business, like, but like foundry, not the foundry, like, uh, not the actual fab, right? Like they are building new fabs, but the foundry business being like making, so basically like being a dominant process player, right? So like TSMC is a, is a foundry where they will, you show up, you buy their, you know, capability and they will make the top notch stuff. That is if they can squeeze you in after NVIDIA. Yeah. Right. Right. And it's like, okay, uh, they are foundry. They're the best example of a foundry. Samsung has some foundry capabilities, but they, that's not their main focus. Uh, AMD really, they spun off, they spun off global foundries, which is still an operation. Yeah. And many of the things that are around, even the ones that are like Skywater, the Skywater PDK that runs with the, I forget the name of the, the fab that's up North that runs all the open source stuff. That's also a foundry where it's, you know, you're basically fabulous chip companies are coming to you and doing that sort of thing. So like Intel started to get into that as opposed to famously for, you know, most of their existence was like, okay, we're doing our own thing. We're keeping all of our stuff secret. We're, you know, all of our, all of the best process stuff goes to us because we're bleeding edge and they've just fallen behind on all things. So like there are some documentaries out there about Intel and really just a lot of news stories about it. But the big story is that now their, their leader, uh, he, he gone, uh, and, uh, and now they have, uh, done the thing that really shows, uh, they have no idea what they're going to do, which is appointing dual CEOs, which means there's no CEO. That's, that's, that's always my take on that thing. It's like, Oh, dual CEOs. You mean you couldn't decide, or there was a fight in the boardroom? Yeah, right."
+  },
+  {
+   "episode": 703,
+   "episode_title": "Building wafer.space with Tim Ansell",
+   "episode_url": "https://theamphour.com/703-building-wafer-space-with-tim-ansell/",
+   "guest": "Tim Ansell",
+   "stem": "0703-building-wafer-space-with-tim-ansell",
+   "paragraph_index": 5,
+   "depth": "explains",
+   "speaker_raw": "Tim Ansell",
+   "speaker_repaired": "Tim Ansell",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "child:open-pdk",
+    "core"
+   ],
+   "concepts": [
+    "open-pdk",
+    "process-development-kit"
+   ],
+   "paragraph_text": "Yes, it definitely does. The last time we were talking about open source Silicon Space and the fact that I was at Google at the time and we just released a open source PDK that was actually manufacturable.",
+   "context_before": "I know. Yeah, five years or so. Time flies, huh?",
+   "context_after": "Yes. Remind people what a PDK is?",
+   "context_before_speaker": "Tim Ansell",
+   "context_after_speaker": "Tim Ansell",
+   "text": "I know. Yeah, five years or so. Time flies, huh? Yes, it definitely does. The last time we were talking about open source Silicon Space and the fact that I was at Google at the time and we just released a open source PDK that was actually manufacturable. Yes. Remind people what a PDK is?"
+  },
+  {
+   "episode": 703,
+   "episode_title": "Building wafer.space with Tim Ansell",
+   "episode_url": "https://theamphour.com/703-building-wafer-space-with-tim-ansell/",
+   "guest": "Tim Ansell",
+   "stem": "0703-building-wafer-space-with-tim-ansell",
+   "paragraph_index": 7,
+   "depth": "explains",
+   "speaker_raw": "Tim Ansell",
+   "speaker_repaired": "Tim Ansell",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-development-kit"
+   ],
+   "paragraph_text": "PDK stands for Process Development Kit. And it's basically like the fundamental information you need to create silicon chips or integrated circuits.",
+   "context_before": "Yes. Remind people what a PDK is?",
+   "context_after": "Yeah, and that was part of your broader push at Google to just do open source silicon. And that really, between that and then like all the open lane that was part of the CIA did some of that stuff, not DARPA. I don't know who was doing open lane, but Andreas was on the show talking about it at one point.",
+   "context_before_speaker": "Tim Ansell",
+   "context_after_speaker": "Tim Ansell",
+   "text": "Yes. Remind people what a PDK is? PDK stands for Process Development Kit. And it's basically like the fundamental information you need to create silicon chips or integrated circuits. Yeah, and that was part of your broader push at Google to just do open source silicon. And that really, between that and then like all the open lane that was part of the CIA did some of that stuff, not DARPA. I don't know who was doing open lane, but Andreas was on the show talking about it at one point."
+  },
+  {
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "guest": "Julia Desmazes",
+   "stem": "0721-chip-design-for-fun-and-waffles-with-julia-desmazes",
+   "paragraph_index": 13,
+   "depth": "explains",
+   "speaker_raw": "Julia Desmazes",
+   "speaker_repaired": "Julia Desmazes",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "Yet we use it every day. And I think it's interesting to take a step back and where we are in open source silicon for listeners here. Right now, we have access to the tooling, which has been started and really provided with something called the Open Road Project, funded by DARPA. Thank you very much, DARPA. And with people like Andreas Olsen really contributing to pushing that forward, we have Google's work with Tim Ansell that has provided us with PDKs, which are the cell libraries that allow us to say, okay, like this is an AND gate for a certain process node. So process node is like, if I go to this fab and I want these type of registers, I need the cell library to express like, okay, these are all the AND gates and these are all the OR gates and these are what the flip-flops looks like. And then a third part is actually being able to send that to the fab. And so for that, we have the tiny tape-out program with MadThern, but also the newer wafer space with Tim Ansell again, which both allows you to tape out chips, the wafer space being full chips and tiny tape-outs being like, hey, I don't want to commit to a full chip, but like the cheaper part of it. So now it's possible, but now we need some actual infrastructure to make it possible. There's a secret of chip design is that your first chip is always broken. It doesn't matter. It doesn't matter how much work you put into the verification. Everyone's first chip is a bust.",
+   "context_before": "but... And yet we use it every day.",
+   "context_after": "But you still hang it on the wall, right?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "but... And yet we use it every day. Yet we use it every day. And I think it's interesting to take a step back and where we are in open source silicon for listeners here. Right now, we have access to the tooling, which has been started and really provided with something called the Open Road Project, funded by DARPA. Thank you very much, DARPA. And with people like Andreas Olsen really contributing to pushing that forward, we have Google's work with Tim Ansell that has provided us with PDKs, which are the cell libraries that allow us to say, okay, like this is an AND gate for a certain process node. So process node is like, if I go to this fab and I want these type of registers, I need the cell library to express like, okay, these are all the AND gates and these are all the OR gates and these are what the flip-flops looks like. And then a third part is actually being able to send that to the fab. And so for that, we have the tiny tape-out program with MadThern, but also the newer wafer space with Tim Ansell again, which both allows you to tape out chips, the wafer space being full chips and tiny tape-outs being like, hey, I don't want to commit to a full chip, but like the cheaper part of it. So now it's possible, but now we need some actual infrastructure to make it possible. There's a secret of chip design is that your first chip is always broken. It doesn't matter. It doesn't matter how much work you put into the verification. Everyone's first chip is a bust. But you still hang it on the wall, right?"
+  },
+  {
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "guest": "Julia Desmazes",
+   "stem": "0721-chip-design-for-fun-and-waffles-with-julia-desmazes",
+   "paragraph_index": 183,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "process-design-kit"
+   ],
+   "paragraph_text": "In our last bit here, can you just explain the, so then you've kind of, you walked us through really well of like the testing all the way through the FPGA with the PICO, you know, stimulating the design and stuff like that. The PDK piece, right? The translation to gate logic. Oh, I always forget the name of, there's an acronym there, right? The, whatever the gate logic is, like the actual file they send to the fab. It's great. How, how is that for you as a user? Is it kind of just, is it just a click a button or is it like a more than that?",
+   "context_before": "So I'm kind of dragging my feet on it and be like, actually, like tiny tape out is pretty good right now. Also, the fact that 20, the wafer space gives you a lot of silicon area to work with. And unless I just massively scale the systolic array, I'm not going to be able to use that much space. But if I scale the systolic array, then it's going to starve. And so I need to figure out the IO bottleneck. So a couple of constraints there.",
+   "context_after": "There's actually an entire job category, which is called physical implementation, who specializes in this. And it's a very, very deep expertise. The tools that actually do like the flow, there, there are actually many smaller tools. So you've got open road, which is the heart of it, call it the, the one that actually does like placing on the ASICs. Then you've got YoSysh, which is like the synthesizer, which takes your logic and says, okay, this is going to be translated into these logic cells that correspond to this PDK. And then basically open road takes it and places it and like checks your timing and everything. And then maybe you're going to have like other issues, which are going to pop up. So let's say I can, I can run the tool suite by pressing a button, but that doesn't mean that ",
+   "context_before_speaker": "Julia Desmazes",
+   "context_after_speaker": "Julia Desmazes",
+   "text": "So I'm kind of dragging my feet on it and be like, actually, like tiny tape out is pretty good right now. Also, the fact that 20, the wafer space gives you a lot of silicon area to work with. And unless I just massively scale the systolic array, I'm not going to be able to use that much space. But if I scale the systolic array, then it's going to starve. And so I need to figure out the IO bottleneck. So a couple of constraints there. In our last bit here, can you just explain the, so then you've kind of, you walked us through really well of like the testing all the way through the FPGA with the PICO, you know, stimulating the design and stuff like that. The PDK piece, right? The translation to gate logic. Oh, I always forget the name of, there's an acronym there, right? The, whatever the gate logic is, like the actual file they send to the fab. It's great. How, how is that for you as a user? Is it kind of just, is it just a click a button or is it like a more than that? There's actually an entire job category, which is called physical implementation, who specializes in this. And it's a very, very deep expertise. The tools that actually do like the flow, there, there are actually many smaller tools. So you've got open road, which is the heart of it, call it the, the one that actually does like placing on the ASICs. Then you've got YoSysh, which is like the synthesizer, which takes your logic and says, okay, this is going to be translated into these logic cells that correspond to this PDK. And then basically open road takes it and places it and like checks your timing and everything. And then maybe you're going to have like other issues, which are going to pop up. So let's say I can, I can run the tool suite by pressing a button, but that doesn't mean that "
+  }
+ ]
+}

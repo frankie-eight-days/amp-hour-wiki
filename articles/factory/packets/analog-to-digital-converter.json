@@ -1,0 +1,1179 @@
+{
+ "concept": "analog-to-digital-converter",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "analog-to-digital-converter",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "adc",
+   "adcs",
+   "analog-to-digital-converter",
+   "custom-analog-to-digital-converter"
+  ],
+  "children": [
+   "analog-devices",
+   "anti-aliasing-filter",
+   "auto-ranging",
+   "burden-voltage",
+   "bus",
+   "coaxial-cable",
+   "decoupling",
+   "delta-sigma-adc",
+   "downconversion",
+   "fiber-optic-communication",
+   "fixed-point-arithmetic",
+   "intersil",
+   "mixed-signal-design",
+   "motorola",
+   "noise-floor",
+   "operational-amplifier",
+   "power-measurement",
+   "programmable-gain-amplifier",
+   "rc-filter",
+   "resistance-measurement",
+   "return-current",
+   "second-sourcing",
+   "silicon-labs",
+   "timer",
+   "timing-constraint",
+   "vga"
+  ],
+  "neighbors": {
+   "effective-number-of-bits": 5,
+   "linear-technology": 5,
+   "input-impedance": 4,
+   "instrumentation-amplifier": 4,
+   "oversampling": 4
+  },
+  "episodes_with_kept_mentions": 195,
+  "mentions_kept": 315,
+  "pins_pre_cap": 242,
+  "pins_final": 242,
+  "pins_by_depth": {
+   "explains": 212,
+   "opinion": 30
+  },
+  "pins_by_role": {
+   "core": 212,
+   "child": 23,
+   "neighbor": 7
+  },
+  "speakers": [
+   [
+    "Dave Jones",
+    80
+   ],
+   [
+    "Chris Gammell",
+    73
+   ],
+   [
+    "Matt Duff",
+    6
+   ],
+   [
+    "Dafydd Roche",
+    4
+   ],
+   [
+    "Adrian Tang",
+    4
+   ],
+   [
+    "Dave Young",
+    4
+   ],
+   [
+    "Werner Johansson",
+    4
+   ],
+   [
+    "Ian Danaher",
+    3
+   ],
+   [
+    "Kent Lundberg",
+    3
+   ],
+   [
+    "Kieran O'Leary",
+    3
+   ],
+   [
+    "Nash Reilly",
+    3
+   ],
+   [
+    "Matt Liberty",
+    3
+   ],
+   [
+    "Michael Ossmann",
+    2
+   ],
+   [
+    "Vincent Himpe",
+    2
+   ],
+   [
+    "Eric Van Wyk",
+    2
+   ],
+   [
+    "Leigh Brady",
+    2
+   ],
+   [
+    "Kevin Cappuccio",
+    2
+   ],
+   [
+    "Philip Frieden",
+    1
+   ],
+   [
+    "Greg Charvat",
+    1
+   ],
+   [
+    "SPEAKER_00",
+    1
+   ]
+  ],
+  "capped": false,
+  "gated_out_by_concept": [
+   [
+    "analog-devices",
+    177
+   ],
+   [
+    "linear-technology",
+    101
+   ],
+   [
+    "operational-amplifier",
+    93
+   ],
+   [
+    "motorola",
+    68
+   ],
+   [
+    "coaxial-cable",
+    33
+   ],
+   [
+    "silicon-labs",
+    29
+   ],
+   [
+    "instrumentation-amplifier",
+    29
+   ],
+   [
+    "timer",
+    26
+   ],
+   [
+    "vga",
+    26
+   ],
+   [
+    "intersil",
+    18
+   ],
+   [
+    "fiber-optic-communication",
+    17
+   ],
+   [
+    "noise-floor",
+    16
+   ],
+   [
+    "bus",
+    14
+   ],
+   [
+    "second-sourcing",
+    14
+   ],
+   [
+    "fixed-point-arithmetic",
+    13
+   ]
+  ],
+  "gated_out_total": 795
+ },
+ "claims": [
+  {
+   "claim_text": "The bit count on a converter's part number is not the number of usable bits. A 24-bit converter in a handheld power-measurement instrument returned roughly 18 effective bits at its highest sample rate and a little over 19 when slowed down.",
+   "quote_verbatim": "a 24 bit ADC doesn't actually give you 24 usable bits out",
+   "speaker": "Dave Jones",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A simple relation ties the jitter of a converter's sampling clock to the maximum effective number of bits achievable, so clock jitter sets a hard floor on a sampling system's resolution regardless of the converter itself.",
+   "quote_verbatim": "if you don't have the jitter, you don't have the bits",
+   "speaker": "Shahriar Shahramian",
+   "episode": 228,
+   "episode_title": "An Interview with Shahriar from The Signal Path - Quisquous Quivering Quadripole",
+   "episode_url": "https://theamphour.com/228-an-interview-with-shahriar-from-the-signal-path-quisquous-quivering-quadripole/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Dynamic range in decibels is approximately six times the number of bits; the 16-bit compact disc standard therefore corresponds to about 96 dB.",
+   "quote_verbatim": "you could typically multiply the number of bits by six to give you the dynamic range",
+   "speaker": null,
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Even the best 24-bit converters restricted to about 2 kHz of bandwidth reach only around a -130 dB noise floor, so the full 24 bits are never available in practice; at that level the thermal noise of the surrounding resistors becomes the limit.",
+   "quote_verbatim": "130 dB, minus 130 dB noise floor",
+   "speaker": null,
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A 12-bit converter embedded in an FPGA may deliver only about eight effective bits, because the digital process the part is built on constrains analog performance.",
+   "quote_verbatim": "It's got a 12-bit ADC in it that probably only has eight effective bits",
+   "speaker": null,
+   "episode": 219,
+   "episode_title": "Get Smart About Automation - Caducous Cyborg Concerns",
+   "episode_url": "https://theamphour.com/219-get-smart-about-automation-caducous-cyborg-concerns/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The 12-bit converter inside a Bluetooth Low Energy system-on-chip was measured at three effective bits, adequate only for confirming whether a load is on.",
+   "quote_verbatim": "the little like 12 bit A to D built into it that has three bits effective",
+   "speaker": null,
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A common outcome on real boards is that a 20-bit converter yields 12-bit performance, the missing eight bits having been lost to the surrounding design rather than to the part.",
+   "quote_verbatim": "you paid for a 20 bit ADC and you're only getting 12 bit performance",
+   "speaker": "Kieran O'Leary",
+   "episode": 492,
+   "episode_title": "More Electronics Consultant Impedance Matching",
+   "episode_url": "https://theamphour.com/492-more-electronics-consultant-impedance-matching/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Integrating a usable analog-to-digital converter into a microcontroller is comparatively easy; integrating a good digital-to-analog converter on the same die is hard, and the difficulty rises as the microcontroller's cost falls.",
+   "quote_verbatim": "it's not hard to get a good analog-to-digital converter inside a micro, but it is hard to get a good DAC",
+   "speaker": "Dave Jones",
+   "episode": 87,
+   "episode_title": "An Interview with Ian Daniher - Nascent Nonolith Numquid",
+   "episode_url": "https://theamphour.com/the-amp-hour-87-nascent-nonolith-numquid/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Pricing of integrated converters is not proportional to their performance: a microcontroller with a 12-bit converter on board can cost less than half the price of a standalone converter of similar specification.",
+   "quote_verbatim": "the ADC inside the XMega is cheaper than an ADC costing twice as much as the XMega itself",
+   "speaker": null,
+   "episode": 87,
+   "episode_title": "An Interview with Ian Daniher - Nascent Nonolith Numquid",
+   "episode_url": "https://theamphour.com/the-amp-hour-87-nascent-nonolith-numquid/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Most oscilloscopes use an 8-bit converter and recover extra resolution in a high-resolution mode that averages adjacent samples, producing an effective 10 to 12 bits from 8-bit hardware.",
+   "quote_verbatim": "you can get an effective 12-bit res from an 8-bit converter",
+   "speaker": null,
+   "episode": 106,
+   "episode_title": "Tektronix, ChipReport.tv, & the Signal Path - Temperative Tegmen Temperature",
+   "episode_url": "https://theamphour.com/the-amp-hour-106-temperative-tegmen-temperature/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "High-resolution mode is a boxcar, or rolling-average, filter applied after the sampling stage and before processing; some instruments expose it as a menu choice of 8, 9, 10, 11 or 12 bits from converter hardware that is only 8 bits wide.",
+   "quote_verbatim": "by averaging your samples, you can get a higher effective number of bits",
+   "speaker": null,
+   "episode": 455,
+   "episode_title": "Bill and Dave's Excellent Equipment",
+   "episode_url": "https://theamphour.com/455-bill-and-daves-excellent-equipment/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "High-speed real-time oscilloscopes used for HDMI and DisplayPort compliance work oversample by little more than two times, which is adequate for mask testing but glosses over fine detail that a general-purpose measurement would need.",
+   "quote_verbatim": "they are absolutely not oversampling more than two times for some of the really high speed stuff",
+   "speaker": "Jeff Keyzer",
+   "episode": 570,
+   "episode_title": "Keyzermas All The Way",
+   "episode_url": "https://theamphour.com/570-keyzermas-all-the-way/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Nyquist governs aliasing, but faithful waveform reconstruction is a separate requirement: about 2.3 times oversampling with sin(x)/x interpolation guarantees the displayed sine wave is legitimate on a Gaussian-response instrument, and a non-Gaussian roll-off changes the figure.",
+   "quote_verbatim": "2.3 times to reconstruct using sine X on X interpolation",
+   "speaker": "Dave Jones",
+   "episode": 570,
+   "episode_title": "Keyzermas All The Way",
+   "episode_url": "https://theamphour.com/570-keyzermas-all-the-way/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "In a sampling oscilloscope the bandwidth is set entirely by the front-end sample-and-hold, which captures the signal in a picosecond-scale window and then holds it; conversion can then be done arbitrarily slowly, so a 10 GHz-bandwidth instrument can use the converter inside a 30-cent microcontroller.",
+   "quote_verbatim": "you can just use a 10 cent ADC in your bloody PIC",
+   "speaker": null,
+   "episode": 178,
+   "episode_title": "A 2013 Recap - Year-end Yarn Yakking",
+   "episode_url": "https://theamphour.com/178-a-2013-recap-year-end-yarn-yakking/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A sampling front end of that kind has no attenuator and only a 50-ohm input, so probing a high-impedance source requires an active probe that can cost many times the instrument.",
+   "quote_verbatim": "it's 50 ohm input, you know, SMA connectors, 50 ohm only",
+   "speaker": null,
+   "episode": 178,
+   "episode_title": "A 2013 Recap - Year-end Yarn Yakking",
+   "episode_url": "https://theamphour.com/178-a-2013-recap-year-end-yarn-yakking/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Resolution and sample rate trade against each other in an oscilloscope front end: high bit counts are readily available at low speed, and the engineering difficulty is achieving them at high sample rates.",
+   "quote_verbatim": "you put a 24-bit ADC in the scope if you want",
+   "speaker": null,
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Anti-aliasing filtering ahead of the converter is mandatory rather than optional: content beyond the Nyquist frequency folds into the band of interest at sampling and cannot be removed afterwards.",
+   "quote_verbatim": "you have to do some sort of anti-aliasing before your ADC",
+   "speaker": null,
+   "episode": 392,
+   "episode_title": "An Interview with Matt Duff",
+   "episode_url": "https://theamphour.com/392-an-interview-with-matt-duff/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Filtering discards information, so filtering in the analog domain before conversion lowers the sample rate and dynamic range the converter must provide, often permitting a 12-bit part in place of a more expensive one, and it reduces the processing load on the FPGA or microcontroller behind it.",
+   "quote_verbatim": "if you can do the filtering before your ADC in the analog domain, then, then a lot of times you can get away with like a 12 bit ADC",
+   "speaker": null,
+   "episode": 392,
+   "episode_title": "An Interview with Matt Duff",
+   "episode_url": "https://theamphour.com/392-an-interview-with-matt-duff/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A reference design's front end is valid only for the sample rate it was drawn for; changing the sample rate changes the required anti-aliasing filter, so copying the recommended circuit at a different rate silently invalidates it.",
+   "quote_verbatim": "if you're using a different sample rate, bingo, your anti-aliasing filter is going to be different",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A successive-approximation converter presents a switched capacitor of roughly 20 to 30 picofarads at its input on every sample, and that capacitance must settle within the sample period; a sensor with 10 to 50 kilohms of source impedance cannot settle it to 16-bit accuracy, which is why a driving amplifier is required.",
+   "quote_verbatim": "there's no way that it's going to be able to, to drive that capacitance to 16 bit settling",
+   "speaker": null,
+   "episode": 392,
+   "episode_title": "An Interview with Matt Duff",
+   "episode_url": "https://theamphour.com/392-an-interview-with-matt-duff/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The RC network between the driving amplifier and the converter input has a two-sided constraint: too much series resistance increases converter distortion, too little and the amplifier cannot drive the load.",
+   "quote_verbatim": "if you do things like set the resistance of the RC filter too high, then it increases your distortion for your ADC",
+   "speaker": null,
+   "episode": 392,
+   "episode_title": "An Interview with Matt Duff",
+   "episode_url": "https://theamphour.com/392-an-interview-with-matt-duff/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Datasheet performance figures are quoted with the best available driving amplifier, which can consume as much power as the converter or more; where the application does not need every specification, a driver of a quarter the capability may be the better system choice.",
+   "quote_verbatim": "you have to have a driver that consumes just as much or more power than the ADC does itself",
+   "speaker": null,
+   "episode": 392,
+   "episode_title": "An Interview with Matt Duff",
+   "episode_url": "https://theamphour.com/392-an-interview-with-matt-duff/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Before delta-sigma converters became routine, data acquisition systems built on sampling converters needed a front end of gain, transducer interfacing and steep anti-aliasing filtering, and that requirement supported a market for purpose-built analog filters supplied in thousands or tens of thousands of channels at a time.",
+   "quote_verbatim": "in the days when you had to put anti-aliasing filtering in front of an ATD converter to get good results",
+   "speaker": "Kendall Castor-Perry",
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Delta-sigma converters need very little front-end filtering. The residual case is a very wideband front end producing noise high enough in frequency that even the converter's oversampling folds it back into the baseband, and a small RC network suffices to remove it rather than a brick-wall filter.",
+   "quote_verbatim": "the only residual reason you need to filter at the front end of a Delta Sigma converter is if you're interested in the very lowest noise",
+   "speaker": "Kendall Castor-Perry",
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Convert as close to the sensor as possible, so that the signal spends the shortest possible path in the analog domain where it can pick up noise.",
+   "quote_verbatim": "you obviously want your ADC as close as humanly possible to your sensor",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "System designers push the conversion point ever closer to the sensor or antenna, and that pressure is what forces converter performance upward; the analog front end between the real-world interface and the first converter remains a distinct engineering discipline.",
+   "quote_verbatim": "they want to convert closer and closer to the front-end",
+   "speaker": "Kent Lundberg",
+   "episode": 119,
+   "episode_title": "An Interview with Dr. Kent Lundberg - Luculent Linear Legacy",
+   "episode_url": "https://theamphour.com/the-amp-hour-119-luculent-linear-legacy/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The older prescription of separate analog and digital ground planes joined at a single point beneath the converter has been superseded by the discipline of tracing where return currents actually flow and partitioning the board accordingly, keeping sensitive analog away from switching circuitry.",
+   "quote_verbatim": "just understand where your return currents are going and partition your system sensibly",
+   "speaker": null,
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "At 115 to 130 dB of system dynamic range, a 1 V RMS signal implies a noise budget in the low nanovolts, so routing a power amplifier's ground return past the converter modulates its ground reference and destroys the dynamic range the converter was bought for.",
+   "quote_verbatim": "You send that ground current the wrong way past the DAC, and it pushes the ground reference up",
+   "speaker": null,
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Application notes and reference designs show how to make one device perform well in isolation; system performance instead requires asking, for each part of the circuit in turn, how everything else in the system can interfere with it, including switching supply rates beating against converter and PWM rates.",
+   "quote_verbatim": "they worry about the entire system, you know, from the switch mode power supply switching rate",
+   "speaker": null,
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Placing a digital isolator immediately after the converter guarantees that no return current from downstream digital circuitry can flow through the analog front end, an alternative to controlling that current by layout alone.",
+   "quote_verbatim": "there was absolutely no chance of having return currents flow",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Wide parallel buses out of video converters, where three 12-bit colour channels plus clock and sync can total 36 or more signals, are ruined by misplaced termination: a series or source termination belongs at the driver, an end termination at the far end of the line, and an unterminated line reflects until its energy dissipates, corrupting clock edges and causing sampling at the wrong instant. The error cannot be corrected after layout.",
+   "quote_verbatim": "Termination resistors in the wrong place",
+   "speaker": "Kieran O'Leary",
+   "episode": 452,
+   "episode_title": "An Interview with Kieran O'Leary",
+   "episode_url": "https://theamphour.com/452-an-interview-with-kieran-oleary/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A small series resistor and capacitor to ground is a legitimate way to bandwidth-limit energy leaving a board on a cable, but designers who confuse that filter with a termination resistor and fit a 27 or 33 ohm part alongside a large capacitor roll off the bandwidth the signal actually needs.",
+   "quote_verbatim": "they were a bit too aggressive with the value of the RC filter",
+   "speaker": "Kieran O'Leary",
+   "episode": 452,
+   "episode_title": "An Interview with Kieran O'Leary",
+   "episode_url": "https://theamphour.com/452-an-interview-with-kieran-oleary/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "An instrument input left open in a high-impedance mode accumulates charge on the front-end input capacitance, so a converter reads a drifting or implausible voltage with nothing connected.",
+   "quote_verbatim": "capacitive input charging on the ADC front end",
+   "speaker": "Dave Jones",
+   "episode": 293,
+   "episode_title": "Call In Show #4",
+   "episode_url": "https://theamphour.com/293-call-in-show-4/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "In an ultra-high-performance converter signal chain the AC-coupling and sampling capacitors are selected for their analog behaviour, not their tolerance, because dielectric performance rather than value error sets the achievable distortion.",
+   "quote_verbatim": "these were AC coupling capacitors and sampling capacitors in a 24, in a ultra high end 24 bit analog to digital converter",
+   "speaker": null,
+   "episode": 502,
+   "episode_title": "Lowest Common Denominator Design",
+   "episode_url": "https://theamphour.com/502-lowest-common-denominator-design/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Converters embedded in FPGAs and processors are generally modest 12-bit delta-sigma designs because the leading-edge digital process the die uses tolerates that and no more; reaching 24-bit performance requires a different process or external devices.",
+   "quote_verbatim": "they'll just throw in A to Ds, because they're just Sigma Delta, you know, small-time 12-bit A to Ds, because the process can handle it",
+   "speaker": null,
+   "episode": 156,
+   "episode_title": "Tesla, FPGAs and DigiKey - Zesty Zippy Zynq",
+   "episode_url": "https://theamphour.com/the-amp-hour-156-zesty-zippy-zynq/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Integrating an excitation circuit, converter and power stage on one die forces a single process choice, so highly integrated sensor front ends carry limited specifications: a process optimised for converters will not also give low-resistance power FETs. Precision work still needs the discrete excitation and normalisation circuitry the integrated part replaces.",
+   "quote_verbatim": "if you have like a higher power circuit on board, you might not be able to use the right process to get a good DAC or a good ADC",
+   "speaker": null,
+   "episode": 216,
+   "episode_title": "Last Minute Decisions - Obdurate Onepercenter Obstacles",
+   "episode_url": "https://theamphour.com/216-last-minute-decisions-obdurate-onepercenter-obstacles/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Twelve bits is the routine specification for a converter integrated on a microcontroller, but linearity and performance near the bottom of the range are typically poor, which is what distinguishes it from a standalone converter of the same nominal resolution.",
+   "quote_verbatim": "you can get 12 bits pretty standard, but you're not going to get great linearity",
+   "speaker": null,
+   "episode": 264,
+   "episode_title": "The Cost Of Doing Business",
+   "episode_url": "https://theamphour.com/264-the-cost-of-doing-business/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Some microcontrollers can run the converter as an autonomous peripheral: a timer triggers a conversion, the result is stored, and the processor core is woken only when the result FIFO fills, which removes the core's power draw from the sampling loop entirely.",
+   "quote_verbatim": "takes a measurement and goes back to sleep and stores it without the actual processor waking up",
+   "speaker": "Dave Jones",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A direct-memory-access path from the converter to RAM that runs without powering up the processor core makes a complete data logger out of the peripherals alone.",
+   "quote_verbatim": "direct memory transfer from an analog to digital converter straight to the memory without even using the",
+   "speaker": "Dave Jones",
+   "episode": 95,
+   "episode_title": "An Interview with Øyvind Janbu - Feracious Fabless Facilitator",
+   "episode_url": "https://theamphour.com/the-amp-hour-95-feracious-fabless-facilitator/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In real-time control the sampling instant matters as much as the sample: linking the PWM compare events to the conversion trigger fixes the sample at the same point in every switching cycle, making the control loop deterministic. Converters in this class of part run to about 12 bits and several megasamples per second across several channels.",
+   "quote_verbatim": "those events can also trigger the ADC so that you always sample that reference point at a fixed time in your cycle",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A software-controlled switching power supply was built around a microcontroller chosen specifically for a 2 megasample-per-second 12-bit successive-approximation converter, because a short lag between sampling and the regulation decision is what makes closed-loop control in firmware viable.",
+   "quote_verbatim": "a two mega sample SAR ADC",
+   "speaker": "Werner Johansson",
+   "episode": 640,
+   "episode_title": "Software Defined Power Supplies with Werner Johansson",
+   "episode_url": "https://theamphour.com/640-software-defined-power-supplies-with-werner-johansson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Raising a measurement instrument's sample rate from about 4 kilosamples per second to 250 kilosamples per second was done with two four-channel simultaneous-sampling converters rather than one multiplexed part, so that all eight channels represent the same instant.",
+   "quote_verbatim": "it's simultaneous sampling ADC so we have eight ADCs well it's two four channel AD converters",
+   "speaker": "Werner Johansson",
+   "episode": 640,
+   "episode_title": "Software Defined Power Supplies with Werner Johansson",
+   "episode_url": "https://theamphour.com/640-software-defined-power-supplies-with-werner-johansson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The ESP8266 was designed as a Wi-Fi chip for cheap tablets with standalone operation added as an afterthought, which is why it has so few peripherals and only a single converter channel; its successor was designed for connected devices first.",
+   "quote_verbatim": "the ESP 8266 has so few peripherals and only has one ADC channel",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Silicon defects in integrated converters are documented deep in errata rather than in the datasheet body, so a part can be selected on its headline specification and only later found not to deliver it.",
+   "quote_verbatim": "There's a silicon bug in the ADC",
+   "speaker": "Dave Jones",
+   "episode": 432,
+   "episode_title": "Check The Dummy Box",
+   "episode_url": "https://theamphour.com/432-check-the-dummy-box/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Converter non-linearity that a vendor's own testing never provoked was found by a customer stressing the part harder; the results were reproduced with the designers, traced in simulation, fixed in a silicon revision that became a new part suffix, and published as errata against the old one.",
+   "quote_verbatim": "identified some areas of the ADC, some ADC like non-linearity performance",
+   "speaker": null,
+   "episode": 485,
+   "episode_title": "An Interview with John Day",
+   "episode_url": "https://theamphour.com/485-an-interview-with-john-day/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A survey of the converter market counted 2,412 devices from 24 manufacturers, averaging about a hundred parts per manufacturer, with some vendors offering more than 500 and several offering only one or two.",
+   "quote_verbatim": "There's 2,412 ADC devices on the market from 24 different manufacturers",
+   "speaker": "Dave Jones",
+   "episode": 49,
+   "episode_title": "Analog Devices, Design Spark - Unusual Usenet Usurpation",
+   "episode_url": "https://theamphour.com/the-amp-hour-49-unusual-usenet-ursurpation/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Distributor parametric search is inadequate for selecting a converter; the manufacturers' own parametric tools carry the parameters that decide the choice.",
+   "quote_verbatim": "You've got to go direct to the manufacturer's website",
+   "speaker": "Dave Jones",
+   "episode": 49,
+   "episode_title": "Analog Devices, Design Spark - Unusual Usenet Usurpation",
+   "episode_url": "https://theamphour.com/the-amp-hour-49-unusual-usenet-ursurpation/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A workable selection method across thousands of candidate parts is to pull the field into a spreadsheet and eliminate whole manufacturers and families at a time rather than compare parts individually.",
+   "quote_verbatim": "I created a smallish spreadsheet",
+   "speaker": "Dave Jones",
+   "episode": 191,
+   "episode_title": "Chairs, Sparks and Devices - Optional Olent Obreption",
+   "episode_url": "https://theamphour.com/191-chairs-sparks-and-devices-optional-olent-obreption/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Low-power 16-bit converters are readily available at a few hundred samples per second, and only a handful of the thousands of parts on the market combine low power with kilohertz-rate sampling; the part selected in one such search consumed 108 microwatts at an 8 kHz sample rate and delivered 18 bits.",
+   "quote_verbatim": "it takes 108 microwatts at 8 kilohertz sample rate",
+   "speaker": "Dave Jones",
+   "episode": 191,
+   "episode_title": "Chairs, Sparks and Devices - Optional Olent Obreption",
+   "episode_url": "https://theamphour.com/191-chairs-sparks-and-devices-optional-olent-obreption/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "At the top of the performance range the supply is a duopoly: for a world-leading 24-bit converter behind a charge amplifier front end there were two viable parts, one holding about 90 percent of the market. Independent design teams therefore converge on the same front end, because they select the same converter and then follow its application notes.",
+   "quote_verbatim": "There's only like. Two chips on the market. You can use. One or the other",
+   "speaker": "Dave Jones",
+   "episode": 36,
+   "episode_title": "Big Business Buffoonery",
+   "episode_url": "https://theamphour.com/the-amp-hour-36-big-business-buffoonery/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Leading-edge low-data-rate 24-bit converters were made by about three companies worldwide and cost a couple of hundred US dollars each; customers of the finished instrument formed views about which brand of converter was acceptable inside it, so the choice was not purely technical.",
+   "quote_verbatim": "three companies in the world that made these leading edge 24",
+   "speaker": "Dave Jones",
+   "episode": 335,
+   "episode_title": "When the TV watches you",
+   "episode_url": "https://theamphour.com/335-when-the-tv-watches-you/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Converters at the extreme of performance can be designed for a single industry: one part was made for underwater seismic survey work with perhaps five customers worldwide and no distributor listing.",
+   "quote_verbatim": "They sort of like custom design this analog to digital converter for us",
+   "speaker": "Dave Jones",
+   "episode": 567,
+   "episode_title": "The Rodeo Drive of Electronics",
+   "episode_url": "https://theamphour.com/567-the-rodeo-drive-of-electronics/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A seismic acquisition system ran to 10,000 channels with the converter alone costing about one hundred dollars per channel, so converter selection at that scale is a system cost decision rather than a component one.",
+   "quote_verbatim": "each channel was $100",
+   "speaker": "Dave Jones",
+   "episode": 65,
+   "episode_title": "Silego, ADCs & Seismic Detection - Dave's Dingo Dystocia",
+   "episode_url": "https://theamphour.com/the-amp-hour-65-daves-dingo-dystocia/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A 20-bit successive-approximation converter running at 500 kilosamples per second is an unusual combination of resolution and speed and priced above twenty dollars, which places it outside all but precision-market designs.",
+   "quote_verbatim": "20-bit SAR 500 ks per second converter",
+   "speaker": null,
+   "episode": 150,
+   "episode_title": "Solar, FPGAs and Maxim Integrated - Solar Shopper Sickness",
+   "episode_url": "https://theamphour.com/the-amp-hour-150-solar-shopper-sickness/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Converter capability that once had to be designed in-house at a test and measurement company is now bought as a twenty-dollar catalogue part in small quantities; the surrounding engineering does not disappear, since a high-performance converter still gives poor results behind poor cabling.",
+   "quote_verbatim": "it's available now in small quantities for $20",
+   "speaker": "Dave Young",
+   "episode": 601,
+   "episode_title": "Rebuilding Projects with Dave Young",
+   "episode_url": "https://theamphour.com/601-rebuilding-projects-with-dave-young/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Consolidation has left essentially two suppliers for precision analog building blocks such as instrumentation amplifiers, and the surviving vendors increasingly package the amplifier, converter and microcontroller as one application-specific measurement device rather than selling the blocks separately.",
+   "quote_verbatim": "there are very few places you can buy instrumentation amps",
+   "speaker": "Dave Young",
+   "episode": 601,
+   "episode_title": "Rebuilding Projects with Dave Young",
+   "episode_url": "https://theamphour.com/601-rebuilding-projects-with-dave-young/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Comparing an integrated measurement part against discrete equivalents must include the parts the converter implies. A dollar power-monitor device combining a programmable gain amplifier, a 12-bit converter, shunt and calibration registers and an I2C interface, with 10 microvolts typical and 40 microvolts maximum offset, is difficult to beat on cost or board area once the external reference and amplifier are counted.",
+   "quote_verbatim": "you need a voltage reference for your ADC",
+   "speaker": "Dave Jones",
+   "episode": 88,
+   "episode_title": "Yonderly Yodeling Yobbos",
+   "episode_url": "https://theamphour.com/the-amp-hour-88-yonderly-yodeling-yobbos/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Successive-approximation converters have moved into resolutions of 18 to 20 bits that were formerly delta-sigma territory, and have absorbed the integration that characterised delta-sigma parts: internal references and reference buffers, programmable gain amplifiers and excitation current sources. Size and power have fallen in parallel.",
+   "quote_verbatim": "now SAR converters are 20, you know, 20 bits",
+   "speaker": "Art Kay",
+   "episode": 348,
+   "episode_title": "An Interview with Art Kay",
+   "episode_url": "https://theamphour.com/348-an-interview-with-art-kay/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The latency of a delta-sigma converter is high but constant and predictable because the conversion is largely digital, so it can be planned around wherever synchronisation is not required. The architecture suits low-bandwidth work such as DC to 20 kHz audio, and oversampling ratios of 64 or 256 times are ordinary.",
+   "quote_verbatim": "they do have high latency, but since they're largely digital, that latency is constant and you can anticipate it",
+   "speaker": "Nash Reilly",
+   "episode": 474,
+   "episode_title": "An Interview with Nash Reilly",
+   "episode_url": "https://theamphour.com/474-an-interview-with-nash-reilly/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Audio-grade delta-sigma parts reach total harmonic distortion around -110 dB, equivalent to roughly three microvolts RMS across the audio bandwidth.",
+   "quote_verbatim": "THD total harmonic distortion at like negative 110 dB",
+   "speaker": "Nash Reilly",
+   "episode": 474,
+   "episode_title": "An Interview with Nash Reilly",
+   "episode_url": "https://theamphour.com/474-an-interview-with-nash-reilly/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "For low-frequency measurement work, resolution rather than speed is usually the binding requirement, and a delta-sigma converter integrates high-frequency noise away as part of its operation.",
+   "quote_verbatim": "If there's super high speed noise, you know, if I'm using a SAR ADC... Or not a SAR, sorry. Sigma Delta ADC in the first place, I'm integrating all that noise out",
+   "speaker": null,
+   "episode": 199,
+   "episode_title": "The 2014 Maker Faire Show - Traveling Technology Trangam",
+   "episode_url": "https://theamphour.com/199-the-2014-maker-faire-show-traveling-technology-trangam/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A single signal path cannot deliver 32 bits of dynamic range, however heavily a delta-sigma converter is oversampled, because amplifying a very quiet signal amplifies the front-end noise with it; recorders that claim such range use two amplification paths and stitch the results together, in the manner of a multi-range meter.",
+   "quote_verbatim": "You don't get 32 bits of dynamic range on the one circuit",
+   "speaker": null,
+   "episode": 658,
+   "episode_title": "Uncle Al's Eating Garbage Again",
+   "episode_url": "https://theamphour.com/658-uncle-als-eating-garbage-again/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Audio product specifications routinely exceed what the application needs, with 24-bit converters running near 200 kHz sample rates where much lower figures are sufficient; matching converter and driver cost to the specification actually required is the design problem.",
+   "quote_verbatim": "24 bit analog digital converters running at almost 200 kilohertz of a sample rate",
+   "speaker": null,
+   "episode": 573,
+   "episode_title": "Mixed Signal Education with Philip Salmony",
+   "episode_url": "https://theamphour.com/573-mixed-signal-education-with-philip-salmony/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Measuring the current of a modern device means covering an active current in milliamps or amps and a sleep current in microamps in the same record, a span that exceeds what a single affordable converter can resolve.",
+   "quote_verbatim": "That huge range is very difficult to measure",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "An instrument revision moved from a 14-bit converter with 12.1 effective bits to a 16-bit converter with 15.1 effective bits, an improvement of about eight times, achieved alongside changes to the amplification, filtering and supply noise rather than by changing the converter alone.",
+   "quote_verbatim": "we go from a 14-bit ADC that has 12.1 effective number bits, ENOB, up to something that has 16 bits with 15.1 effective number bits",
+   "speaker": "Matt Liberty",
+   "episode": 607,
+   "episode_title": "The Joulescope Upgrade with Matt Liberty",
+   "episode_url": "https://theamphour.com/607-the-joulescope-upgrade-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Most auto-ranging instruments stop measuring during a range change, for milliseconds or longer, while the analog path resets, and continue to display a reading throughout. Measuring continuously across a range change requires a second converter channel held permanently at the widest range so the switched channel can be reconstructed.",
+   "quote_verbatim": "when it switches ranges, it's blank for milliseconds or even more",
+   "speaker": "Matt Liberty",
+   "episode": 607,
+   "episode_title": "The Joulescope Upgrade with Matt Liberty",
+   "episode_url": "https://theamphour.com/607-the-joulescope-upgrade-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Burden voltage across the sense resistor sets the limit on how wide a current range a single shunt can cover; twenty millivolts of burden voltage over a million-to-one range leaves only tens of nanovolts at the bottom, which is why range switching is unavoidable.",
+   "quote_verbatim": "the Julescope has 20 millivolts of burden voltage",
+   "speaker": "Matt Liberty",
+   "episode": 607,
+   "episode_title": "The Joulescope Upgrade with Matt Liberty",
+   "episode_url": "https://theamphour.com/607-the-joulescope-upgrade-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "When a target device's current jumps from microamps to an amp in under a hundred microseconds, a slow range change causes a burden-voltage drop large enough to brown out the device under test; sub-microsecond auto-ranging avoids it, and an FPGA rather than a microcontroller is used to hold two converters in sync and meet that deadline.",
+   "quote_verbatim": "it auto-ranges in less than 1.2 microseconds",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Covering five orders of magnitude of current without range switching requires a 24-bit converter, a low-noise environment, and wider supply rails: the fixed-gain amplifier on the shunt can only swing within its rails, so moving from a few volts to plus and minus fifteen volt rails buys a corresponding increase in usable dynamic range.",
+   "quote_verbatim": "have a very fast high bit converter and with a big voltage range",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Converter resolution cannot rescue a shunt chosen for the wrong range: a 0.1 ohm shunt sized for 10 amps leaves microamp currents below the noise regardless of whether a 12-bit or 16-bit converter follows it.",
+   "quote_verbatim": "you can't get microamps because your, your opt that is that current shunts optimized for the 10 amp range",
+   "speaker": "Dave Jones",
+   "episode": 623,
+   "episode_title": "Artisanal Crystals",
+   "episode_url": "https://theamphour.com/623-artisanal-crystals/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "An isolated Hall-effect current sensor centred at half its supply, combined with a converter offering programmable upper and lower thresholds, flags an out-of-range current on either half cycle of an AC waveform without firmware in the loop, allowing the drive to be cut before a MOSFET is destroyed. A comparator alternative would require switching polarity every half cycle.",
+   "quote_verbatim": "it's got a thresholding ATD converter",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An integrated power monitor measures bus voltage and shunt current through an input switch and computes power internally from a programmed shunt value, returning voltage, current or power over I2C.",
+   "quote_verbatim": "it's basically designed for use with an external shunt, current shunt, and a high-side current shunt",
+   "speaker": "Dave Jones",
+   "episode": 88,
+   "episode_title": "Yonderly Yodeling Yobbos",
+   "episode_url": "https://theamphour.com/the-amp-hour-88-yonderly-yodeling-yobbos/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Nearly every handheld multimeter below the highest price tier is built on a dedicated multimeter chipset that integrates the converters, range switching, auto-ranging and the capacitance, diode, continuity, resistance, voltage and current modes, because implementing that switching and timing from scratch is a substantial design in itself.",
+   "quote_verbatim": "almost any handheld multimeter will use one of these multimeter chipsets",
+   "speaker": "Dave Jones",
+   "episode": 370,
+   "episode_title": "Alternate Info Sources",
+   "episode_url": "https://theamphour.com/370-alternate-info-sources/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Building a multimeter from a microcontroller's converter and discrete range-switching transistors instead of a multimeter chipset is possible but transfers the whole burden of switching, timing and mode handling to the designer, and instruments have been shipped that got it wrong.",
+   "quote_verbatim": "we'll just use a microcontroller with an ADC, which is okay, fine. But you've got to know what the hell you're doing",
+   "speaker": null,
+   "episode": 455,
+   "episode_title": "Bill and Dave's Excellent Equipment",
+   "episode_url": "https://theamphour.com/455-bill-and-daves-excellent-equipment/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Displaying 10,000 counts at one microvolt resolution requires the noise to be held to half a count, which no processor-integrated converter achieved; separating the processor from the delta-sigma converter reached roughly 19 flicker-free bits.",
+   "quote_verbatim": "I ended up separating the processor from the sigma-delta converter",
+   "speaker": "Dave Taylor",
+   "episode": 180,
+   "episode_title": "An Interview with Dave Taylor - Multi-talented Meter Maker",
+   "episode_url": "https://theamphour.com/180-an-interview-with-dave-taylor-multi-talented-meter-maker/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Characterising a converter by sweeping it and reading the result with a bench multimeter produces artefacts from the measuring instrument: auto-ranging introduces a step in the INL and DNL plot at each range change because accuracy differs per range, and the meter's own multi-slope conversion adds further structure. The defect appears to be in the device under test and is not.",
+   "quote_verbatim": "did you have your multimeter in auto ranging",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A through-wall radar was architected to convert to a 10.7 MHz intermediate frequency so an off-the-shelf crystal filter could be used, with the local oscillator set so the wall return fell into the noise and the targets passed; the signal was then brought to baseband and digitised with a 200 kilosample-per-second 16-bit converter. A deliberately low-bandwidth converter is how large dynamic range is obtained cheaply.",
+   "quote_verbatim": "digitized with the 200 kilo kilo samples per second 16 bit a to d",
+   "speaker": "Greg Charvat",
+   "episode": 115,
+   "episode_title": "An Interview with Dr Greg Charvat - Watcher of Wraithlike Walls",
+   "episode_url": "https://theamphour.com/the-amp-hour-115-watcher-of-wraithlike-walls/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Wide-bandwidth radio astronomy instruments must down-convert because no converter covers the bandwidth directly; the received band is heterodyned to an intermediate frequency and digitised a few gigahertz at a time, then windowed and processed with an FFT, with thousands of spectra averaged to bring signals out of the noise.",
+   "quote_verbatim": "you can't build an ADC, which is the key to the whole thing that has a hundred gigahertz bandwidth",
+   "speaker": "Adrian Tang",
+   "episode": 483,
+   "episode_title": "An Interview with Adrian Tang",
+   "episode_url": "https://theamphour.com/483-an-interview-with-adrian-tang/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "At millimetre-wave frequencies the converters, not the radio, set the usable bandwidth, and the power cost of high conversion rates is what rules them out of mobile equipment rather than any radio limitation.",
+   "quote_verbatim": "it's not the radio that limits the bandwidth. It's the ADC and the DAC",
+   "speaker": "Adrian Tang",
+   "episode": 483,
+   "episode_title": "An Interview with Adrian Tang",
+   "episode_url": "https://theamphour.com/483-an-interview-with-adrian-tang/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Moving data out of converters running at hundreds of megasamples per second drove a dedicated multi-gigabit serial standard, JESD204, and the FPGA primitives to receive it; modern high-speed converters use such serial links in place of wide parallel buses.",
+   "quote_verbatim": "a very high-speed serial communication to A to D converters that moves data in and out of the A to D converters at 3 gigabit per second",
+   "speaker": "Philip Freidin",
+   "episode": 103,
+   "episode_title": "An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee",
+   "episode_url": "https://theamphour.com/the-amp-hour-103-xenodochial-xilinx-ex-employee/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "High-speed image sensor readout multiplexes columns down to a fixed bank of converters, in one case sixteen converters at 90 MHz fed by multiplexers selecting groups of sixteen of the 1280 column lines; frame rate is traded against window height because that bank is the bottleneck.",
+   "quote_verbatim": "the ADCs run at 90 megahertz and there's 16 of them",
+   "speaker": null,
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "CMOS image sensors are made on standard semiconductor processes and allow the control logic and converters to be integrated on the sensor die, which CCD processes do not.",
+   "quote_verbatim": "you can also integrate all your control electronics, control logic, and ADCs right on the chip",
+   "speaker": null,
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A software radio's first generation used a single analog device combining dual converters in each direction, giving a very sparse board; higher sample rates and precision were only available as separate parts, so the later generation used six chips with far more pins, and the pin count is why the newer boards carry one antenna each and multiple-antenna operation is done by tying boards together.",
+   "quote_verbatim": "where, where one chip on the USARP one became, uh, six chips on the USARP two",
+   "speaker": null,
+   "episode": 101,
+   "episode_title": "An Interview with Matt Ettus - Quality Quadrature Quidam",
+   "episode_url": "https://theamphour.com/the-amp-hour-101-quality-quadrature-quidam/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A VGA capture dongle is three high-speed converters, one per colour channel, which is why such devices can be repurposed as multi-channel software radio front ends.",
+   "quote_verbatim": "A VGA to USB converter is basically some high, three high speed ADCs",
+   "speaker": "Dave Jones",
+   "episode": 391,
+   "episode_title": "Only A Transmitter",
+   "episode_url": "https://theamphour.com/391-only-a-transmitter/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The noise floor of built-in PC and laptop audio chipsets is poor enough to make them unusable for quality capture; putting the preamplifier and converter together in a shielded, separately regulated box at the microphone, and sending the result over USB, removes the analog run through the noisy computer entirely.",
+   "quote_verbatim": "the preamp is built right at the microphone input",
+   "speaker": "Dave Jones",
+   "episode": 27,
+   "episode_title": "555 Contest, Computer Museum, Octopart - The Green Pen Hornswoggle",
+   "episode_url": "https://theamphour.com/the-amp-hour-27-the-green-pen-hornswoggle/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A digital sensor is only as trustworthy as its converter, so an attack against the conversion step generalises across every sensor type built on the same approach rather than being specific to one device.",
+   "quote_verbatim": "if you figure out how to defeat an analog to digital converter, then you figured out how to defeat a huge range of sensors",
+   "speaker": "Dave Jones",
+   "episode": 352,
+   "episode_title": "Conning with Michael Ossmann",
+   "episode_url": "https://theamphour.com/352-conning-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Power-analysis measurement uses a low-noise amplifier ahead of a 10-bit converter at about 105 megasamples per second; the quantity of interest is a fluctuation of the order of ten millivolts across a small series resistor, and the required sample rate follows the clock frequency of the device under test because the interesting events occur at clock edges.",
+   "quote_verbatim": "you've got a 10-bit analog to digital converter at 105 meg samples per second",
+   "speaker": "Dave Jones",
+   "episode": 239,
+   "episode_title": "An Interview with Colin O'Flynn - Aspirated Adamantine Attacks",
+   "episode_url": "https://theamphour.com/239-an-interview-with-colin-oflynn-aspirated-adamantine-attacks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Feeding an analog sensor into the converter of a wireless microcontroller couples transmitter energy into the measurement, and the function built on it stops working while transmitting. Additional decoupling and a pi filter improved the result substantially but did not remove the disturbance during active transmission.",
+   "quote_verbatim": "when the radio is transmitting, uh, especially when it's transmitting the, the nice smooth little analog signal looks like someone took a jackhammer to a sidewalk",
+   "speaker": "Keith Burzinski",
+   "episode": 657,
+   "episode_title": "Automating the Home with Keith Burzinski",
+   "episode_url": "https://theamphour.com/657-automating-the-home-with-keith-burzinski/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The internal comparators of an FPGA can be operated as a converter, removing a separate part from the bill of materials where the required performance is modest.",
+   "quote_verbatim": "how to use the internal comparators of the FPGAs and sort of turn that into an ADC instead of having a separate ADC",
+   "speaker": "Shrouk El-Attar",
+   "episode": 549,
+   "episode_title": "Creative Engineering with Shrouk El-Attar",
+   "episode_url": "https://theamphour.com/549-creative-engineering-with-shrouk-el-attar/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Impedance can be measured by taking the forward and reflected waves into a detector chip that outputs one voltage proportional to magnitude and another proportional to phase, digitising both, and computing the complex reflection coefficient from which impedance follows directly.",
+   "quote_verbatim": "I would just ADC those lines and get like essentially the, you know, the value for the complex, uh, reflection coefficient",
+   "speaker": null,
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Maximum power point tracking is implemented by measuring panel voltage and current with the charger's internal converter, stepping the presented input impedance, and repeating until the power peak is passed, then re-running as illumination changes. A part advertised as supporting the technique may only document it as an application note requiring an external microcontroller rather than performing it internally.",
+   "quote_verbatim": "you have an internal ADC, you measure the voltage, you, uh, you see what the voltage is, you see what the current is",
+   "speaker": null,
+   "episode": 512,
+   "episode_title": "Design For Longevity",
+   "episode_url": "https://theamphour.com/512-design-for-longevity/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Designing for self-test means reserving converter channels and spare pins to measure the voltages and logic levels that the test needs to check. Choosing a microcontroller with more pins than the function requires, and connecting the spares to points of interest, allows tests to be added in firmware later instead of by modifying boards.",
+   "quote_verbatim": "have some spare analog to digital converters so you can measure voltages",
+   "speaker": null,
+   "episode": 125,
+   "episode_title": "An Interview with Ian Lesnet - Bus Buccaneer Builder",
+   "episode_url": "https://theamphour.com/the-amp-hour-125-bus-buccaneer-builder/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Medical and defence practice treats a converter's datasheet specification as a claim to be verified on the finished board with recorded analysis, where a startup selects a part that meets the specification on paper and proceeds.",
+   "quote_verbatim": "pick an ADC and it's got a spec on the data sheet, but we're going to test it and make sure that we're getting the spec that's on the data sheet",
+   "speaker": "Leigh Brady",
+   "episode": 588,
+   "episode_title": "Siloed Engineering with Leigh Brady",
+   "episode_url": "https://theamphour.com/588-siloed-engineering-with-leigh-brady/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Underwater seismic streamers 100 metres long carry some of the quietest converters made, with noise floors around -136 dB, and a rise of a fraction of that figure is enough to ruin the survey data.",
+   "quote_verbatim": "the noise floor is like minus 136 dB",
+   "speaker": "Dave Jones",
+   "episode": 532,
+   "episode_title": "Recalling Recalls",
+   "episode_url": "https://theamphour.com/532-recalling-recalls/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Converter research is mature enough that new architectures rarely have a unique application to justify them, so results are argued on energy per conversion or on speed rather than on capability no other part offers.",
+   "quote_verbatim": "ADC research is so mature at this point that most things have been done",
+   "speaker": null,
+   "episode": 579,
+   "episode_title": "ADC Chip Design with Anthony Wall",
+   "episode_url": "https://theamphour.com/579-adc-chip-design-with-anthony-wall/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Because an integrated circuit cannot be probed or modified with bodge wires after fabrication, on-die converters for internal voltage and current measurement are the equivalent of test points, letting a designer establish why a design failed and iterate rather than treating a tape-out as final.",
+   "quote_verbatim": "we also want to have things like internal ADC sensors",
+   "speaker": "Tim Ansell",
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "ep 476: raw labels put the filter-company history and the delta-sigma front-end material on Dave Jones; the content is guest Kendall Castor-Perry and is content-attributed to him.",
+  "ep 527, 607: labels are flagged unreliable and alternate incorrectly; the Joulescope design content is guest Matt Liberty and is content-attributed to him.",
+  "ep 392: labels are flagged unreliable and collapse both speakers onto Matt Duff; the converter-driving and filtering material is the guest's and is used without in-text attribution.",
+  "ep 250, 325, 483, 579, 101, 199, 264, 446, 512, 658, 673: labels are flagged unreliable or swap host and guest; all claims from these episodes are stated without named attribution.",
+  "ep 455, 485, 640: labels are flagged unreliable; the multimeter-teardown and errata material is content-attributed or left unattributed rather than assigned to the raw label."
+ ],
+ "capped": false
+}

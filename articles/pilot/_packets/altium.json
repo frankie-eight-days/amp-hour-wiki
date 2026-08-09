@@ -1,0 +1,697 @@
+{
+ "concept": "altium",
+ "claims": [
+  {
+   "claim_text": "Altium's intended workflow places all part, supplier and fit/no-fit data in the schematic and propagates it forward to generated bills of materials; partial adoption of the method yields none of its benefit.",
+   "quote_verbatim": "unless you commit 100% to do it that way, it doesn't work",
+   "speaker": "Dave Jones",
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "An OutJob is a scripted output definition that produces identical manufacturing file sets across projects, making fabrication output reproducible.",
+   "quote_verbatim": "it generates exactly the same format files every time",
+   "speaker": "Dave Jones",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Because output is scripted, a misconfigured OutJob fails silently: one exported two layers of a four-layer board without error.",
+   "quote_verbatim": "it took us a while to figure out that he screwed up his out job",
+   "speaker": "Dave Jones",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Altium renders internal plane layers as negative images, which some fabricators reject; the workaround is to implement inner planes as flooded signal layers instead.",
+   "quote_verbatim": "if you do it as a plane in Altium, then it produces an inverse image",
+   "speaker": "Dave Jones",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "KiCad generates positive images for plane layers, so the same fabricator issue does not arise.",
+   "quote_verbatim": "I used KiCad and it generates positive, uh, images",
+   "speaker": "Dave Jones",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Altium's board outline layer differs from other tools' conception of an outline and is typically not contiguous, which fabricators must accommodate.",
+   "quote_verbatim": "their outline layers are actually typically not actually contiguous",
+   "speaker": "Jonathan Hirschman",
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Schematic and PCB differencing is built into the tool and highlights changes, which is presented as the requirement for version control on hardware.",
+   "quote_verbatim": "Altium have their own built-in diff things",
+   "speaker": "Dave Jones",
+   "episode": 67,
+   "episode_title": "BeagleBoard successors, CAD & Robots - Haussmannized Halloween Hypostrophe",
+   "episode_url": "https://theamphour.com/the-amp-hour-67-haussmannized-halloween-hypostrophe/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Files created in newer versions can be opened in older versions, a property described as essential for professional PCB work.",
+   "quote_verbatim": "you can actually pull in newer versions into older software",
+   "speaker": "Dave Jones",
+   "episode": 555,
+   "episode_title": "Timing is Everything",
+   "episode_url": "https://theamphour.com/555-timing-is-everything/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The file format proved robust across unstable daily builds, with no corruption of saved work.",
+   "quote_verbatim": "you would never break it",
+   "speaker": "Dave Jones",
+   "episode": 543,
+   "episode_title": "Cassette decks have browsers?",
+   "episode_url": "https://theamphour.com/543-cassette-decks-have-browsers/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Altium supports several incompatible approaches to library management and never settled on one, leaving the choice to each user group.",
+   "quote_verbatim": "there were multiple ways to do libraries",
+   "speaker": "Dave Jones",
+   "episode": 543,
+   "episode_title": "Cassette decks have browsers?",
+   "episode_url": "https://theamphour.com/543-cassette-decks-have-browsers/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Altium and KiCad both decouple symbol, footprint and 3D model, in contrast to an atomic model that binds them to a single manufacturer part number.",
+   "quote_verbatim": "the Altium or the KiCad way of doing it where they're decoupled from one another",
+   "speaker": "Chris Gammell",
+   "episode": 508,
+   "episode_title": "Doomed To The Flatland",
+   "episode_url": "https://theamphour.com/508-doomed-to-the-flatland/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The panelisation tool works but is imprecise enough that manual copy-paste is often preferred.",
+   "quote_verbatim": "It's a little janky",
+   "speaker": "Chris Gammell",
+   "episode": 415,
+   "episode_title": "Ergs Per Second",
+   "episode_url": "https://theamphour.com/415-ergs-per-second/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Manual copy-paste panelisation is used in preference to the built-in tool even when the tool is licensed.",
+   "quote_verbatim": "even though I've got the panelization tool, I'm not going to do it",
+   "speaker": "Dave Jones",
+   "episode": 415,
+   "episode_title": "Ergs Per Second",
+   "episode_url": "https://theamphour.com/415-ergs-per-second/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Keyboard shortcuts and commands were preserved from the 1985 DOS-era Protel releases for roughly three decades.",
+   "quote_verbatim": "it's the same since 1985 DOS version. I am not kidding.",
+   "speaker": "Dave Jones",
+   "episode": 523,
+   "episode_title": "A Keyzermas Story",
+   "episode_url": "https://theamphour.com/523-a-keyzermas-story/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Argues the decisive property of an EDA package is switching cost: adoption is effectively a ten-year commitment because the existing design corpus is locked into the format, and vendors are aware of this.",
+   "quote_verbatim": "the transaction cost of switching away from it is super high",
+   "speaker": "Chris Gammell",
+   "episode": 154,
+   "episode_title": "Arduino, IndiGoGo and Hack-a-Day - Doodad Dealer Dancing",
+   "episode_url": "https://theamphour.com/the-amp-hour-154-doodad-dealer-dancing/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "switching-costs"
+  },
+  {
+   "claim_text": "Characterises EDA tool choice as a matter of allegiance rather than evaluation, and attempts to convert users as unproductive.",
+   "quote_verbatim": "it's choosing a religion",
+   "speaker": "Jeff Keyzer",
+   "episode": 472,
+   "episode_title": "Keyzermas Vacation",
+   "episode_url": "https://theamphour.com/472-keyzermas-vacation/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "switching-costs"
+  },
+  {
+   "claim_text": "Abandoned advocating tool changes, on the grounds that the decision is made on willingness to pay rather than features.",
+   "quote_verbatim": "I've just kind of given up on converting people because it's not worth it",
+   "speaker": "Chris Gammell",
+   "episode": 298,
+   "episode_title": "Don't Turn It On, Don't Take It Apart",
+   "episode_url": "https://theamphour.com/298-dont-turn-it-on-dont-take-it-apart/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "switching-costs"
+  },
+  {
+   "claim_text": "Holds that tool changes require an external trigger such as leaving a job and its licence, and notes the circularity of learning a tool speculatively to win contracts that require it.",
+   "quote_verbatim": "Unless you have some kind of change agent in your life",
+   "speaker": "Chris Gammell",
+   "episode": 306,
+   "episode_title": "Catalyzing Change Agents",
+   "episode_url": "https://theamphour.com/306-catalyzing-change-agents/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "switching-costs"
+  },
+  {
+   "claim_text": "Describes migrating to Altium when Eagle moved to subscription licensing and Altium halved its price to capture the displaced users.",
+   "quote_verbatim": "they cut the price of Altium basically in half",
+   "speaker": "Charles Alexanian",
+   "episode": 429,
+   "episode_title": "An Interview with Charles Alexanian",
+   "episode_url": "https://theamphour.com/429-an-interview-with-charles-alexanian/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "switching-costs"
+  },
+  {
+   "claim_text": "Declines to buy a licence at five to six thousand dollars, having ceased daily layout work.",
+   "quote_verbatim": "I'm not going to go out and pay five, six grand for Altium",
+   "speaker": "Dave Jones",
+   "episode": 277,
+   "episode_title": "Interconnectorama",
+   "episode_url": "https://theamphour.com/277-interconnectorama/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "is-it-worth-the-money"
+  },
+  {
+   "claim_text": "States he will not purchase a full licence because he does not need one.",
+   "quote_verbatim": "I won't buy a full Altium license. I don't need it.",
+   "speaker": "Dave Jones",
+   "episode": 306,
+   "episode_title": "Catalyzing Change Agents",
+   "episode_url": "https://theamphour.com/306-catalyzing-change-agents/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "is-it-worth-the-money"
+  },
+  {
+   "claim_text": "Sets board complexity as the test, holding that Raspberry Pi-class designs do not require the tool.",
+   "quote_verbatim": "then it's like, meh, like you don't need Altium",
+   "speaker": "Dave Jones",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "is-it-worth-the-money"
+  },
+  {
+   "claim_text": "Reports pricing of roughly 5,000 dollars initially with 1,500 to 2,000 dollars annually for maintenance.",
+   "quote_verbatim": "5,000 the first time, 2,000 a year after that",
+   "speaker": "Chris Gammell",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "is-it-worth-the-money"
+  },
+  {
+   "claim_text": "Justifies the cost by billable time, having migrated from Eagle when fighting the tool began consuming hours; a single day of output-generation trouble avoided repays the difference.",
+   "quote_verbatim": "I'm spending a lot of time fighting Eagle",
+   "speaker": "Chris Gammell",
+   "episode": 537,
+   "episode_title": "Firmware Deployment and Troubleshooting with Akbar Dhanaliwala",
+   "episode_url": "https://theamphour.com/537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "is-it-worth-the-money"
+  },
+  {
+   "claim_text": "Notes the licence is unaffordable without an employer, and frames open-source alternatives as an accessibility requirement.",
+   "quote_verbatim": "If I, if I didn't work at a company, I probably wouldn't be able to afford to buy it",
+   "speaker": "Shrouk El Attar",
+   "episode": 549,
+   "episode_title": "Creative Engineering with Shrouk El-Attar",
+   "episode_url": "https://theamphour.com/549-creative-engineering-with-shrouk-el-attar/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "is-it-worth-the-money"
+  },
+  {
+   "claim_text": "Holds that KiCad is not yet a professional-grade tool and remains far from challenging Altium in high-end PCB work.",
+   "quote_verbatim": "it's still not a pro-level tool",
+   "speaker": "Dave Jones",
+   "episode": 555,
+   "episode_title": "Timing is Everything",
+   "episode_url": "https://theamphour.com/555-timing-is-everything/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "kicad-threat"
+  },
+  {
+   "claim_text": "Responds that the assessment rests on outdated familiarity, while allowing it may have been correct when formed.",
+   "quote_verbatim": "Dave's working from old knowledge",
+   "speaker": "Chris Gammell",
+   "episode": 555,
+   "episode_title": "Timing is Everything",
+   "episode_url": "https://theamphour.com/555-timing-is-everything/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "kicad-threat"
+  },
+  {
+   "claim_text": "Estimates market share at roughly 30 percent Altium and 25 percent Eagle, with KiCad, OrCAD and Allegro near 15 percent each.",
+   "quote_verbatim": "Altium is probably like 30%. Eagle is probably like 25%",
+   "speaker": "Natasha Baker",
+   "episode": 531,
+   "episode_title": "Footprints and Symbols with Natasha Baker",
+   "episode_url": "https://theamphour.com/531-footprints-and-symbols-with-natasha-baker/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "Segments the market by company size: larger and older firms run Cadence, while Altium holds the small and medium segment.",
+   "quote_verbatim": "Altium really has that, that small and medium size company segment",
+   "speaker": "Kyle Dumont",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "Describes Altium as effectively the only option for small consumer-hardware companies.",
+   "quote_verbatim": "If you're a small company and consumer, it's like, yeah. Okay. Altium is it.",
+   "speaker": "Chris Gammell",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "Characterises the competitive landscape as Altium and everyone else.",
+   "quote_verbatim": "it's Altium and everyone else",
+   "speaker": "Dave Jones",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "Notes Altium's decades-long dominance of Australian student licensing, and the resulting cost problem when hiring.",
+   "quote_verbatim": "Altium just practically owns the student thing here",
+   "speaker": "Dave Jones",
+   "episode": 231,
+   "episode_title": "Supply Chain Woes And Wares - Nonplussed Neotechnic Nithing",
+   "episode_url": "https://theamphour.com/231-supply-chain-woes-and-wares-nonplussed-neotechnic-nithing/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "Argues the modular-block and all-FPGA vision failed because engineering does not compose that way.",
+   "quote_verbatim": "Everything's going to be modular block design. You'll never have to lay out boards anymore.",
+   "speaker": "Dave Jones",
+   "episode": 267,
+   "episode_title": "Standing With Ahmed",
+   "episode_url": "https://theamphour.com/267-standing-with-ahmed/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "fpga-vision"
+  },
+  {
+   "claim_text": "Credits the same FPGA toolchain as technically effective at a high level, being vendor-agnostic with drag-in processor cores and C-to-HDL synthesis, while failing on serious projects.",
+   "quote_verbatim": "you could drag in a processor core and it would just work",
+   "speaker": "Dave Jones",
+   "episode": 449,
+   "episode_title": "Pulled From A Working Environment",
+   "episode_url": "https://theamphour.com/449-pulled-from-a-working-environment/",
+   "depth_regraded": "opinion",
+   "kind": "opinion",
+   "disagreement_group": "fpga-vision"
+  },
+  {
+   "claim_text": "Describes uniformly high technical staff quality at Altium, in contrast to previous employers.",
+   "quote_verbatim": "I've never worked at a company where everyone there knew what they were doing",
+   "speaker": "Ben Jordan",
+   "episode": 593,
+   "episode_title": "Publicly Traded Hobby with Ben Jordan",
+   "episode_url": "https://theamphour.com/593-publicly-traded-hobby-with-ben-jordan/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "Characterises the founder's approach as running the company as a hobby rather than to maximise returns.",
+   "quote_verbatim": "he didn't really care if it made huge amounts of money",
+   "speaker": "Ben Jordan",
+   "episode": 593,
+   "episode_title": "Publicly Traded Hobby with Ben Jordan",
+   "episode_url": "https://theamphour.com/593-publicly-traded-hobby-with-ben-jordan/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "Concurs, describing the company as a publicly traded hobby.",
+   "quote_verbatim": "this is a publicly traded hobby",
+   "speaker": "Dave Jones",
+   "episode": 593,
+   "episode_title": "Publicly Traded Hobby with Ben Jordan",
+   "episode_url": "https://theamphour.com/593-publicly-traded-hobby-with-ben-jordan/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "States a loss of interest in the company after fourteen years of commentary.",
+   "quote_verbatim": "I don't care that much about the Autium system anymore",
+   "speaker": "Dave Jones",
+   "episode": 546,
+   "episode_title": "Thousands Of Dependencies",
+   "episode_url": "https://theamphour.com/546-thousands-of-dependencies/",
+   "depth_regraded": "opinion",
+   "kind": "opinion"
+  },
+  {
+   "claim_text": "Version-locked Altium 12 for the duration of the Steam Controller project, importing a semiconductor-industry practice of freezing tool versions across long programmes to prevent CAD defects from disrupting schedule.",
+   "quote_verbatim": "we're going to settle on Altium 12",
+   "speaker": "Jeff Keyzer",
+   "episode": 523,
+   "episode_title": "A Keyzermas Story",
+   "episode_url": "https://theamphour.com/523-a-keyzermas-story/",
+   "depth_regraded": "explains",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "Reports that the Altium 17/18 interface overhaul destroyed accumulated expertise, describing the experience of returning to a tool as a former expert and being ineffective.",
+   "quote_verbatim": "being an expert in a tool",
+   "speaker": "Jeff Keyzer",
+   "episode": 523,
+   "episode_title": "A Keyzermas Story",
+   "episode_url": "https://theamphour.com/523-a-keyzermas-story/",
+   "depth_regraded": "opinion",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "Judges much of the interface change unjustified, and questions the aggregate productivity cost to established users.",
+   "quote_verbatim": "a lot of the change seemed unnecessary",
+   "speaker": "Jeff Keyzer",
+   "episode": 523,
+   "episode_title": "A Keyzermas Story",
+   "episode_url": "https://theamphour.com/523-a-keyzermas-story/",
+   "depth_regraded": "opinion",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "Learned of the relocation to China, and his own redundancy, when handed his final pay.",
+   "quote_verbatim": "I didn't know Altium were moving to China until they handed over my paycheck",
+   "speaker": "Dave Jones",
+   "episode": 59,
+   "episode_title": "An Interview with Jeff Keyzer and Jason Kridner - Bonafide BeagleBoard Bionomics",
+   "episode_url": "https://theamphour.com/the-amp-hour-59-bonafide-beagleboard-bionomics/",
+   "depth_regraded": "opinion",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "Notes shares fell to ten cents during his employment, a position that would later have been worth 13.7 million dollars.",
+   "quote_verbatim": "I could have made $13.7 million",
+   "speaker": "Dave Jones",
+   "episode": 659,
+   "episode_title": "Altium...Acquired!",
+   "episode_url": "https://theamphour.com/659-altium-acquired/",
+   "depth_regraded": "opinion",
+   "kind": "war-story"
+  },
+  {
+   "claim_text": "Altium was founded in Tasmania in 1985 by Nick Martin as Protel.",
+   "quote_verbatim": "They were founded in Tasmania, of all places, the Map of Tassie, in 1985 by Nick Martin",
+   "speaker": "Dave Jones",
+   "episode": 659,
+   "episode_title": "Altium...Acquired!",
+   "episode_url": "https://theamphour.com/659-altium-acquired/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "Protel 99 SE remained the industry standard for around twenty years and was near-universal in Chinese development houses, to the point that satisfied users would not buy upgrades.",
+   "quote_verbatim": "it was incredibly difficult for the salespeople to sell new licenses",
+   "speaker": "Dave Jones",
+   "episode": 659,
+   "episode_title": "Altium...Acquired!",
+   "episode_url": "https://theamphour.com/659-altium-acquired/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "The Altium name followed a merger of the internally competing Protel and PCAD products, combining PCAD's PCB strengths with Protel's schematic strengths, and was a rebranding of the company in the early 2000s.",
+   "quote_verbatim": "Protel eventually became Altium",
+   "speaker": "Matt Berggren",
+   "episode": 471,
+   "episode_title": "An Interview with Matt Berggren",
+   "episode_url": "https://theamphour.com/471-an-interview-with-matt-berggren/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "The name itself came from a trademark portfolio acquired with IBM-originated technology, chosen because the trademark was already owned.",
+   "quote_verbatim": "no one knows what it means, but they went, I like that",
+   "speaker": "Dave Jones",
+   "episode": 164,
+   "episode_title": "Agilent's New Name, Molex's New Owner and PCB artwork - Nonsensical Naming Neolatry",
+   "episode_url": "https://theamphour.com/164-agilents-new-name-molexs-new-owner-and-pcb-artwork-nonsensical-naming-neolatry/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "Founder Nick Martin was removed by the board.",
+   "quote_verbatim": "He was just booted out by the board",
+   "speaker": "Dave Jones",
+   "episode": 118,
+   "episode_title": "Kickstarter, Open Source RC & Modelsource - Facinorous Financial Foulness",
+   "episode_url": "https://theamphour.com/the-amp-hour-118-facinorous-financial-foulness/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "The successor strategy was a return to core EDA functionality and away from Internet of Things work.",
+   "quote_verbatim": "they are getting back into core, in quote marks, core EDA functionality",
+   "speaker": "Dave Jones",
+   "episode": 124,
+   "episode_title": "SpaceX, Enclosures & Startups - Urging Unemployment Ullagone",
+   "episode_url": "https://theamphour.com/the-amp-hour-124-urging-unemployment-ullagone/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "The 2014 relocation to San Diego was accompanied by an admission that the Internet of Things strategy had failed, and followed an earlier unsuccessful move to San Jose in the 1990s; US military business was reported lost over China-based R&D.",
+   "quote_verbatim": "they came back to Sydney with their tail between their legs",
+   "speaker": "Dave Jones",
+   "episode": 197,
+   "episode_title": "Spacing Out On Space - Dave's Dongle Designing",
+   "episode_url": "https://theamphour.com/197-spacing-out-on-space-daves-dongle-designing/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "Predicted CircuitMaker would fail, the free tool being cloud-only with no local file saving.",
+   "quote_verbatim": "I can't help but think it's more likely to fail than not",
+   "speaker": "Dave Jones",
+   "episode": 216,
+   "episode_title": "Last Minute Decisions - Obdurate Onepercenter Obstacles",
+   "episode_url": "https://theamphour.com/216-last-minute-decisions-obdurate-onepercenter-obstacles/",
+   "depth_regraded": "opinion",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "Declined to adopt CircuitMaker, citing KiCad as a permanently free alternative.",
+   "quote_verbatim": "I will not be switching",
+   "speaker": "Chris Gammell",
+   "episode": 216,
+   "episode_title": "Last Minute Decisions - Obdurate Onepercenter Obstacles",
+   "episode_url": "https://theamphour.com/216-last-minute-decisions-obdurate-onepercenter-obstacles/",
+   "depth_regraded": "opinion",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "Identified the abandonment risk in a free cloud tool with no revenue model.",
+   "quote_verbatim": "what's to stop the board of directors just going, no, let's just scrap this",
+   "speaker": "Dave Jones",
+   "episode": 251,
+   "episode_title": "Shifting Away From DIY - Pedetentious PnP Progress",
+   "episode_url": "https://theamphour.com/251-shifting-away-from-diy-pedetentious-pnp-progress/",
+   "depth_regraded": "opinion",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "Rates Circuit Studio good value at its price point while noting deliberate incompatibility with Altium Designer to prevent firms substituting cheap seats.",
+   "quote_verbatim": "They want to make it as hard as possible.",
+   "speaker": "Robert Feranec",
+   "episode": 316,
+   "episode_title": "An Interview with Robert Feranec",
+   "episode_url": "https://theamphour.com/316-an-interview-with-robert-feranec/",
+   "depth_regraded": "opinion",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "Reports Altium publicly signalling willingness to be acquired, with long-standing unfixed defects cited as the one argued benefit of an Autodesk takeover.",
+   "quote_verbatim": "Altium's famously had the same bugs for 20 years",
+   "speaker": "Dave Jones",
+   "episode": 546,
+   "episode_title": "Thousands Of Dependencies",
+   "episode_url": "https://theamphour.com/546-thousands-of-dependencies/",
+   "depth_regraded": "opinion",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "The company was acquired at 68 dollars per share, an increase deflated against a float price of a few dollars roughly 24 years earlier.",
+   "quote_verbatim": "24 years later is not a big increase",
+   "speaker": "Dave Jones",
+   "episode": 659,
+   "episode_title": "Altium...Acquired!",
+   "episode_url": "https://theamphour.com/659-altium-acquired/",
+   "depth_regraded": "explains",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "Noted that acquisitions of this kind are frequently blocked by regulators.",
+   "quote_verbatim": "This kind of stuff gets blocked by regulators all the time, man.",
+   "speaker": "Chris Gammell",
+   "episode": 659,
+   "episode_title": "Altium...Acquired!",
+   "episode_url": "https://theamphour.com/659-altium-acquired/",
+   "depth_regraded": "opinion",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "Reports that Altium delayed a product launch after a critical video, revising its direction.",
+   "quote_verbatim": "they went, yeah, we're probably not quite on the right track. So, they held off.",
+   "speaker": "Dave Jones",
+   "episode": 213,
+   "episode_title": "Travel Recaps and Altium Announcements - Artisinal Aussie Assemblage",
+   "episode_url": "https://theamphour.com/213-travel-recaps-and-altium-announcements-artisinal-aussie-assemblage/",
+   "depth_regraded": "opinion",
+   "kind": "moment"
+  },
+  {
+   "claim_text": "States he no longer receives a licence from the company.",
+   "quote_verbatim": "Altium don't want to give me a. Freaking license anymore.",
+   "speaker": "Dave Jones",
+   "episode": 627,
+   "episode_title": "Works on my machine",
+   "episode_url": "https://theamphour.com/627-works-on-my-machine/",
+   "depth_regraded": "opinion",
+   "kind": "moment"
+  }
+ ],
+ "disagreements": [
+  {
+   "id": "switching-costs",
+   "question": "What actually determines EDA tool choice?",
+   "positions": [
+    {
+     "speaker": "Chris Gammell",
+     "episode": 154,
+     "stance": "switching cost - adoption is a ~10-year lock-in and vendors know it"
+    },
+    {
+     "speaker": "Jeff Keyzer",
+     "episode": 472,
+     "stance": "allegiance, not evaluation; converting users is unproductive"
+    },
+    {
+     "speaker": "Chris Gammell",
+     "episode": 306,
+     "stance": "requires an external trigger, e.g. leaving a job and its licence"
+    },
+    {
+     "speaker": "Charles Alexanian",
+     "episode": 429,
+     "stance": "a competitor's licensing change plus a price cut moved his shop"
+    }
+   ]
+  },
+  {
+   "id": "is-it-worth-the-money",
+   "question": "Is an Altium licence worth its price?",
+   "positions": [
+    {
+     "speaker": "Dave Jones",
+     "episode": 277,
+     "stance": "no - not at 5-6k without daily layout work"
+    },
+    {
+     "speaker": "Dave Jones",
+     "episode": 574,
+     "stance": "no for Raspberry Pi-class board complexity"
+    },
+    {
+     "speaker": "Chris Gammell",
+     "episode": 537,
+     "stance": "yes - repaid by billable hours not spent fighting a cheaper tool"
+    },
+    {
+     "speaker": "Shrouk El Attar",
+     "episode": 549,
+     "stance": "unaffordable without an employer; open source is an accessibility requirement"
+    }
+   ]
+  },
+  {
+   "id": "kicad-threat",
+   "question": "Does KiCad threaten Altium's professional market?",
+   "positions": [
+    {
+     "speaker": "Dave Jones",
+     "episode": 555,
+     "stance": "no - not yet a professional-grade tool"
+    },
+    {
+     "speaker": "Chris Gammell",
+     "episode": 555,
+     "stance": "the assessment rests on outdated familiarity"
+    }
+   ]
+  },
+  {
+   "id": "fpga-vision",
+   "question": "Was Altium's FPGA and modular-block strategy sound?",
+   "positions": [
+    {
+     "speaker": "Dave Jones",
+     "episode": 267,
+     "stance": "no - engineering does not compose from blocks"
+    },
+    {
+     "speaker": "Dave Jones",
+     "episode": 449,
+     "stance": "technically effective at a high level; failed on serious projects"
+    }
+   ]
+  }
+ ],
+ "capped": true
+}

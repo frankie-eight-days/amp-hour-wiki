@@ -1,0 +1,962 @@
+{
+ "concept": "internet-of-things",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "internet-of-things",
+  "census": "union",
+  "aliases": [
+   "internet-of-things",
+   "iot"
+  ],
+  "children": [
+   "battery-powered-device",
+   "cellular-communication",
+   "cellular-connectivity",
+   "cellular-modem",
+   "ces",
+   "cloud-service",
+   "connected-device",
+   "database",
+   "device-security",
+   "hardware-company",
+   "http",
+   "industrial-iot",
+   "internet-connected-device",
+   "internet-connection",
+   "iot-security",
+   "low-earth-orbit",
+   "nest",
+   "network-stack",
+   "particle",
+   "product-strategy",
+   "recurring-revenue",
+   "sensor-network",
+   "smart-light-bulb",
+   "supply-frame",
+   "television",
+   "vulnerability-disclosure"
+  ],
+  "neighbors": {
+   "amazon": 7,
+   "hardware": 5,
+   "mqtt": 5,
+   "zigbee": 5,
+   "aws": 4,
+   "internet": 4,
+   "ninja-blocks": 4,
+   "radio": 4
+  },
+  "pins_pre_cap": 252,
+  "pins_final": 250,
+  "pins_by_depth": {
+   "opinion": 165,
+   "explains": 85
+  },
+  "pins_by_role": {
+   "core": 199,
+   "child": 40,
+   "neighbor": 11
+  },
+  "capped": true,
+  "passages_yielding_claims": 84,
+  "passages_killed": 166
+ },
+ "claims": [
+  {
+   "claim_text": "Putting every sensor directly on the internet is the wrong architecture for most deployments; the workable pattern is a local sensor network reporting to a gateway device that handles the internet-facing communication, as used in a wine-grape vineyard installation.",
+   "quote_verbatim": "you have your local sensor network and then a gateway device of some sort",
+   "speaker": "Bob Davidson",
+   "episode": 232,
+   "episode_title": "Impedance Matching\" with Davidson and Vandenbout - Presbytes Pushing Portfolios",
+   "episode_url": "https://theamphour.com/232-impedance-matching-with-davidson-and-vandenbout-presbytes-pushing-portfolios/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Addressing is a scaling constraint: the number of directly addressable devices under IPv4 is limited, so wide deployment of connected devices depends on IPv6 uptake.",
+   "quote_verbatim": "one of the big issues is that for the Internet of Things to take off and work, it actually needs IP version 6 take up",
+   "speaker": "Dave Jones",
+   "episode": 213,
+   "episode_title": "Travel Recaps and Altium Announcements - Artisinal Aussie Assemblage",
+   "episode_url": "https://theamphour.com/213-travel-recaps-and-altium-announcements-artisinal-aussie-assemblage/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The enabling component is the integrated radio system-on-chip: an ARM core, SRAM, baseband, encoding and radio circuitry on one small, low-cost part that a sensor board can be built around, drawing single-digit milliamps in receive and transmit.",
+   "quote_verbatim": "It's got baseband type stuff. It's got encoding. It's got radio circuitry and everything like that",
+   "speaker": "Chris Gammell",
+   "episode": 152,
+   "episode_title": "Firmware, Netburner and Semiconductors - Chris's Capitalism Colloquy",
+   "episode_url": "https://theamphour.com/the-amp-hour-152-chriss-capitalism-colloquy/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Processing that can be done locally should be done locally; sending data to a cloud service, processing it there and returning the result to the device adds layers without benefit, and a lost connection then costs the local function entirely.",
+   "quote_verbatim": "If you, if you want to do something locally, you do it locally. You don't spit it out to the internet of things cloud and then do the processing in the cloud and then spit it back to your device.",
+   "speaker": "Luke Beno",
+   "episode": 272,
+   "episode_title": "An Interview With Luke Beno of Analog.io",
+   "episode_url": "https://theamphour.com/272-an-interview-with-luke-beno-of-analog-io/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Safety-critical local functions such as a house alarm should be built standalone rather than routed through a central server, because the network dependency adds a failure mode the standalone product does not have.",
+   "quote_verbatim": "If you're going to have a house alarm. Just make it standalone.",
+   "speaker": "Dave Jones",
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "MQTT is a lightweight publish-and-subscribe protocol widely used for machines to publish information, chosen for connected devices because of its small memory footprint.",
+   "quote_verbatim": "a protocol that a lot of the machines can use as like a publishing of information",
+   "speaker": "Chris Gammell",
+   "episode": 200,
+   "episode_title": "SolidCon and Traveling Tech - Joined Junk Jocularity",
+   "episode_url": "https://theamphour.com/200-solidcon-and-traveling-tech-joined-junk-jocularity/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "CoAP takes the concepts of HTTP — visiting an endpoint, talking to a server — and rebuilds them for constrained devices, optimising for low power, low bandwidth and ease of programming.",
+   "quote_verbatim": "imagine if someone took like HTTP. So all the simple concepts, you know how to like visit a website or build, talk to a web server, but made it for constrained devices",
+   "speaker": "Jonathan Beri",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "HTTP was designed for browsers talking to web servers and therefore assumes RAM and MTU sizes that constrained devices do not have; CoAP, formalised around 2014, keeps the HTTP model while sizing its packets for cellular links and 802.15.4, and is used inside cellular networks for provisioning and roaming.",
+   "quote_verbatim": "the design of HTTP was designed for web browsers and talking to web servers",
+   "speaker": "Jonathan Beri",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Thread is a self-healing wireless mesh built on 802.15.4 at 2.4 GHz in which every device can talk to every other, optimised for power and aiming at wired-network reliability. It was deliberately specified to reuse radios already available off the shelf for Zigbee, and an open implementation, OpenThread, lets any hardware developer build on it.",
+   "quote_verbatim": "it's optimized for power, it's pretty good bandwidth, so you can actually do some interesting things and it's self-healing",
+   "speaker": "Jonathan Beri",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A gateway with a cellular backhaul talking to many low-power sensors needs a mesh, not point-to-point Bluetooth: a Bluetooth radio can reach one device at a time, whereas Thread over 802.15.4 at 2.4 GHz extends across a set of sensors.",
+   "quote_verbatim": "point-to-point Bluetooth like that wouldn't have been the right option",
+   "speaker": "Chris Gammell",
+   "episode": 587,
+   "episode_title": "Biblical Broker Bucks",
+   "episode_url": "https://theamphour.com/587-biblical-broker-bucks/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A single standard covering every connected application is the wrong target; standards scoped to one application — temperature sensing, or home automation alone — are achievable, and a de facto standard can emerge from adoption once a few visible players use it. Radio is the hard part because transmission is regulated.",
+   "quote_verbatim": "they should just have, like, a specific standard for, like, temperature sensing",
+   "speaker": "Akiba",
+   "episode": 245,
+   "episode_title": "An interview with Akiba from Freaklabs - Dimissory Diagraphical Debt",
+   "episode_url": "https://theamphour.com/245-an-interview-with-akiba-from-freaklabs-dimissory-diagraphical-debt/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Competing short-range radio standards proliferated without convergence, so a home gateway intended to bridge devices has to carry every radio; an open plug-in interface is what makes such a hub useful rather than another closed island.",
+   "quote_verbatim": "there's all these different ways to talk, but there's no standardization",
+   "speaker": "Chris Gammell",
+   "episode": 172,
+   "episode_title": "CAD courses and cross platform creation - Printing Propaedeutic Patterns",
+   "episode_url": "https://theamphour.com/172-cad-courses-and-cross-platform-creation-printing-propaedeutic-patterns/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Communication between distributed energy hardware and utilities is standardised by SunSpec, developed jointly with inverter manufacturers, utilities and security specialists.",
+   "quote_verbatim": "there is a standard for that communication. And it's being done by an entity called SunSpec",
+   "speaker": "Paul Zawada",
+   "episode": 583,
+   "episode_title": "The Smart Grid with Paul Zawada",
+   "episode_url": "https://theamphour.com/583-the-smart-grid-with-paul-zawada/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "On a bandwidth-starved link the useful trick is to encode composite state rather than transmit raw data: a single byte carries 255 possible encodings, enough to say that a person entered a zone and which items of safety equipment they were wearing, which fits a LoRa link with no internet connection at all.",
+   "quote_verbatim": "you have 255 possible encodings in a single byte",
+   "speaker": "Brandon Gilles",
+   "episode": 517,
+   "episode_title": "Depth and AI with Brandon Gilles and Brian Weinstein",
+   "episode_url": "https://theamphour.com/517-depth-and-ai-with-brandon-gilles-and-brian-weinstein/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A device with no user interface cannot be handed network credentials directly, so the common solution is for it to host its own WiFi access point on first power-up; the installer joins that network, supplies the router credentials, and the device then leaves its own network and joins the house one.",
+   "quote_verbatim": "it has an internal, it has a self-hosted wifi network that you have to connect to in order to first configure it",
+   "speaker": "Chris Gammell",
+   "episode": 182,
+   "episode_title": "Manufacturing By Wire And Skipping Testing - Calefacient Cuculine Cash",
+   "episode_url": "https://theamphour.com/182-manufacturing-by-wire-and-skipping-testing-calefacient-cuculine-cash/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Credential changes are a hidden lifetime cost. When a homeowner replaces a router the device silently stops reporting, and the loss may not be noticed for months. Re-provisioning that required an installer visit with a professional commissioning app consumed half a day that would otherwise have gone to installing a new system.",
+   "quote_verbatim": "they have to do a truck roll to update wi-fi credentials",
+   "speaker": "Kerry Scharfglass",
+   "episode": 487,
+   "episode_title": "An Interview with Kerry Scharfglass",
+   "episode_url": "https://theamphour.com/487-an-interview-with-kerry-scharfglass/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The image flashed into a product at manufacture is typically three to four months old by the time a user powers it on, so the day-zero requirement is that the gold master boots, reaches the backend and updates itself to current firmware — and that this path is solid before anything else.",
+   "quote_verbatim": "my gold master, which gets flashed into a product three to four months ahead of when we actually have the product land in someone's hands, can boot up, connect to the backend server somehow, and get updated",
+   "speaker": "Alvaro Prieto",
+   "episode": 363,
+   "episode_title": "An interview with Alvaro and Jen from the URE Podcast",
+   "episode_url": "https://theamphour.com/363-an-interview-with-alvaro-and-jen-from-the-ure-podcast/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Fleet management is a distinct product requirement: a console reporting how many units are deployed, how many are active and which firmware revision each carries, with migrations managed rather than pushed blind.",
+   "quote_verbatim": "You can look at all of the. Activated devices",
+   "speaker": "Dave Jones",
+   "episode": 310,
+   "episode_title": "Mergers and Acquiescence",
+   "episode_url": "https://theamphour.com/310-mergers-and-acquiescence/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Firmware distribution costs scale with the fleet: pushing an update to ten thousand devices is unremarkable, but the same operation against a million or a billion devices is a different engineering problem, with security layers on top.",
+   "quote_verbatim": "At 10,000, that's not a big deal. If you sold a million of these.",
+   "speaker": "Chris Gammell",
+   "episode": 271,
+   "episode_title": "Amazon Moves In, Dave Says Run",
+   "episode_url": "https://theamphour.com/271-amazon-moves-in-dave-says-run/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "On a commercial IoT back end the device authenticates itself with a certificate before it is allowed to publish; it then writes to a verified MQTT endpoint at a web address that is reachable but not open.",
+   "quote_verbatim": "it has to certify itself with the AWS network",
+   "speaker": "Chris Gammell",
+   "episode": 432,
+   "episode_title": "Check The Dummy Box",
+   "episode_url": "https://theamphour.com/432-check-the-dummy-box/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The platform model splits an application in two: server-side code the developer writes that runs in the vendor's cloud, and device-side code checking in over WiFi, with handlers passing events between them.",
+   "quote_verbatim": "there's a server running on the cloud and it's sitting there and it's just spinning its wheel",
+   "speaker": "Dave Jones",
+   "episode": 271,
+   "episode_title": "Amazon Moves In, Dave Says Run",
+   "episode_url": "https://theamphour.com/271-amazon-moves-in-dave-says-run/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A connected product carries a recurring server cost against what is usually a single payment from the customer, so a product plan that does not define an end of service will lose money over the product's life.",
+   "quote_verbatim": "you have a recurring expense of keeping those servers, you know, keeping the lights on",
+   "speaker": "Luke Beno",
+   "episode": 272,
+   "episode_title": "An Interview With Luke Beno of Analog.io",
+   "episode_url": "https://theamphour.com/272-an-interview-with-luke-beno-of-analog-io/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Service longevity, not hardware life, sets the usable life of a cloud-dependent product: a temperature logger tied to a large hosted service stopped working within about two years when the company was sold, went out of business or changed its protocol.",
+   "quote_verbatim": "But the other issue is longevity of service. Will it still be there in five years' time, 10 years' time?",
+   "speaker": "Dave Jones",
+   "episode": 272,
+   "episode_title": "An Interview With Luke Beno of Analog.io",
+   "episode_url": "https://theamphour.com/272-an-interview-with-luke-beno-of-analog-io/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Any product whose function depends on a service on the internet should be assumed to outlive that service; light bulbs that need a remote service to switch will eventually stop switching. Self-hosted or clonable server images are the mitigation, and are rare.",
+   "quote_verbatim": "if it's cloud-based, right, it relies on a service on the Internet to work",
+   "speaker": "Dave Jones",
+   "episode": 296,
+   "episode_title": "Gotta Update My Dog",
+   "episode_url": "https://theamphour.com/296-gotta-update-my-dog/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Back-end reliability is the hardest part of a connected product, and the failure is silent: hosted services go down without the vendor knowing immediately, and the customer, who has no visibility of the layers, reports the device as broken.",
+   "quote_verbatim": "a lot of these servers, they go down quite frequently. And the problem is you don't know almost immediately if it happens",
+   "speaker": "Luke Beno",
+   "episode": 272,
+   "episode_title": "An Interview With Luke Beno of Analog.io",
+   "episode_url": "https://theamphour.com/272-an-interview-with-luke-beno-of-analog-io/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A connected-hardware company that runs out of money still carries an obligation to its installed base: one such company stopped product development and went quiet specifically to preserve enough money to keep its cloud services running.",
+   "quote_verbatim": "We can no longer keep developing Sphere. We're going dark so we can continue to keep the cloud services running.",
+   "speaker": "Dave Jones",
+   "episode": 249,
+   "episode_title": "Wearables Might Have Limited Fashion Options - Lachrymogenic Lane Language",
+   "episode_url": "https://theamphour.com/249-wearables-might-have-limited-fashion-options-lachrymogenic-lane-language/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Buying into a vendor ecosystem trades control for not having to write a mesh stack, an operating system and a firmware loader; the price is that the vendor sets the schedule, and features such as network management can be discontinued under the buyer.",
+   "quote_verbatim": "you're buying into an ecosystem. The ecosystem, you don't have as much agency in it",
+   "speaker": "Chris Gammell",
+   "episode": 477,
+   "episode_title": "EcoWoke and Going Broke",
+   "episode_url": "https://theamphour.com/ecowoke-and-going-broke/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Connected consumer hardware is difficult to sustain on hardware margin alone: a thermostat retailing at 250 dollars returned only about 60 dollars to the company. Shifting the recovery to back-end services lowers the hardware price but makes the customer's product dependent on the vendor continuing to operate.",
+   "quote_verbatim": "they're selling it for 250 bucks, but you know, only 60 of that is going towards the company",
+   "speaker": "Dave Jones",
+   "episode": 324,
+   "episode_title": "Mapping Out Nerdery",
+   "episode_url": "https://theamphour.com/324-mapping-out-nerdery/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Hardware by itself is a poor venture business at twenty to thirty points of gross margin, which is why hardware startups were historically underfunded. What changed the assessment was the redefinition of hardware as the mechanism for delivering software into a user's life away from a screen.",
+   "quote_verbatim": "selling a widget for, you know, 20, 30 points of, of, of gross margin dollars, uh, is, is really challenging as a business",
+   "speaker": "Ben Einstein",
+   "episode": 402,
+   "episode_title": "An Interview with Ben Einstein",
+   "episode_url": "https://theamphour.com/402-an-interview-with-ben-einstein/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "In a connected-device company the durable business is in the software and the platform rather than in the hardware itself.",
+   "quote_verbatim": "software is king",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The commercial value of connecting equipment is the maintained relationship with the customer after the box ships — continuing feedback about whether the thing is working — which survives even multi-tier distribution chains that otherwise sever the vendor from the user.",
+   "quote_verbatim": "instead of just building boxes and throwing them over the wall, maintaining a connection to the customer",
+   "speaker": "Ray Ozzie",
+   "episode": 603,
+   "episode_title": "An Interview with Ray Ozzie (Blues Wireless)",
+   "episode_url": "https://theamphour.com/603-an-interview-with-ray-ozzie-blues-wireless/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The easiest connected-device sale is one denominated in money saved or made, and it supports a higher price than a proposition framed as convenience or novelty.",
+   "quote_verbatim": "there's no easier sale than like saving someone money",
+   "speaker": "Chris Gammell",
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Deployments whose payback is directly tied to money already being lost — municipal parking, for instance — sell far more readily than ones offering a twenty-year payback period with an uncertain return.",
+   "quote_verbatim": "any kind of system where this is like automatically tied to money",
+   "speaker": "Greg Charvat",
+   "episode": 179,
+   "episode_title": "Greg Charvat Returns With A Book! - Laboratory Literature Laureate",
+   "episode_url": "https://theamphour.com/179-greg-charvat-returns-with-a-book-laboratory-literature-laureate/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The value case that holds up is preventing an expensive mistake rather than adding a feature: detecting a water leak in a house before it becomes damage pays for the instrumentation.",
+   "quote_verbatim": "If you could actually detect a leak in your home before it becomes a really bad situation",
+   "speaker": "Luke Beno",
+   "episode": 272,
+   "episode_title": "An Interview With Luke Beno of Analog.io",
+   "episode_url": "https://theamphour.com/272-an-interview-with-luke-beno-of-analog-io/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The industrial proposition is access to a system that is hard to reach or far away: a sensor on a tower reporting back removes the need to climb it in a snowstorm to collect data or troubleshoot.",
+   "quote_verbatim": "IOT is giving somebody, uh, data or access to a system that is not hard or that is hard to get to or not nearby",
+   "speaker": "John Davis",
+   "episode": 385,
+   "episode_title": "An Interview with John Davis",
+   "episode_url": "https://theamphour.com/385-an-interview-with-john-davis/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The value of instrumenting equipment in the field is removing the technician trip to push a button or take a reading, which is why the industrial sector adopted it ahead of the consumer one.",
+   "quote_verbatim": "the value proposition of like IOT generally is, is to remove the need to have a technician going out in the field",
+   "speaker": "Eric Klein",
+   "episode": 495,
+   "episode_title": "An Interview with Eric Klein",
+   "episode_url": "https://theamphour.com/495-an-interview-with-eric-klein/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "An industrial deployment puts intelligent wireless sensor nodes on manufacturing equipment, extracts information from them and watches for changes suggesting a current or developing fault, alerting plant personnel to act before the equipment causes downtime.",
+   "quote_verbatim": "we put intelligent wireless sensor nodes on pieces of manufacturing equipment",
+   "speaker": "Gerry Roston",
+   "episode": 334,
+   "episode_title": "An Interview with Gerry Roston",
+   "episode_url": "https://theamphour.com/334-an-interview-with-gerry-roston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Large industrial facilities are a genuine big-data case — five hundred to a thousand nodes recording data continuously — and the useful application is predictive maintenance rather than firefighting after a failure; the obstacle is that the pattern-recognition analytics are tedious and time consuming to run.",
+   "quote_verbatim": "you have, you know, a 500, a thousand sometimes of nodes",
+   "speaker": "Dean Pick",
+   "episode": 426,
+   "episode_title": "An Interview with Dean Pick",
+   "episode_url": "https://theamphour.com/426-an-interview-with-dean-pick/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Trend data from deployed sensors supports statistical process control: watching a monitored quantity over time shows when a process has gone out of control, which is the same discipline already used inside manufacturing.",
+   "quote_verbatim": "SPC, like statistical process control. You can see when something's out of control",
+   "speaker": "Chris Gammell",
+   "episode": 355,
+   "episode_title": "The Internet of Septage (with Akiba)",
+   "episode_url": "https://theamphour.com/355-the-internet-of-septage-with-akiba/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Searching for a single consumer application that sells millions of units is the wrong search; the applications that work are niche and industrial, where a specific process can be optimised.",
+   "quote_verbatim": "there's so many kind of niche applications that it'd be really useful",
+   "speaker": "Akiba",
+   "episode": 355,
+   "episode_title": "The Internet of Septage (with Akiba)",
+   "episode_url": "https://theamphour.com/355-the-internet-of-septage-with-akiba/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Market segmentation for remote monitoring is middle-out: large growers will not trust tens of millions of dollars of crop to a 300-dollar irrigation controller driven by a phone app and often already run proprietary systems, while the smallest operators live on the property and do not need remote visibility. The demand is from the operator who has another job and cannot be on site all day.",
+   "quote_verbatim": "they're generally speaking, not going to trust their tens of millions of dollars of crops to a $300 irrigation controller",
+   "speaker": "Charles Alexanian",
+   "episode": 429,
+   "episode_title": "An Interview with Charles Alexanian",
+   "episode_url": "https://theamphour.com/429-an-interview-with-charles-alexanian/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Cellular carriers advise against building telemetry on SMS and want everything as internet traffic, because they do not want to carry voice or SMS for these devices; the resulting practice is to get on the internet by whatever modality is available — WiFi, Ethernet or a cell modem — and publish MQTT, which is also how the service cost is kept down.",
+   "quote_verbatim": "the general consensus with all of them was don't do that. Get, get, get on the internet.",
+   "speaker": "Charles Alexanian",
+   "episode": 429,
+   "episode_title": "An Interview with Charles Alexanian",
+   "episode_url": "https://theamphour.com/429-an-interview-with-charles-alexanian/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Retrofitting connectivity onto electromechanical equipment: an irrigation system was modernised with battery-powered smart sprinklers configured over Bluetooth Low Energy from a phone, plus WiFi-to-BLE and cellular-to-BLE gateways so the schedule could also be driven from the cloud. The gateways themselves had to be offered in a battery-powered variant because a garden pole has no mains.",
+   "quote_verbatim": "we built these smart sprinklers which are battery powered with the bluetooth energy interface",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Distributed air-quality measurement was built on low-cost metal-oxide semiconductor sensors rather than the instrumentation used at government monitoring sites, with the data pooled globally so it could be analysed together.",
+   "quote_verbatim": "these metal oxide semiconductor, um, sensors, uh, that were, uh, locally, you know, they were relatively low cost",
+   "speaker": "Vic Aprea",
+   "episode": 250,
+   "episode_title": "An Interview with Vic Aprea - Federated Firmware Functionalism",
+   "episode_url": "https://theamphour.com/250-an-interview-with-vic-aprea-federated-firmware-functionalism/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Whether laboratory equipment gets instrumented is decided by the lab, not by the engineering: biology labs freeze a protocol and the equipment it was validated on for years, because a failed experiment costs thousands of dollars in reagents and weeks of time, so the barrier is getting the first lab to accept a new instrument and publish with it.",
+   "quote_verbatim": "the real challenge is not building it and doing it, but getting someone to actually adopt it as a protocol in their lab",
+   "speaker": "Bunnie Huang",
+   "episode": 336,
+   "episode_title": "An Interview with Bunnie Huang (2nd)",
+   "episode_url": "https://theamphour.com/the-amp-hour-336-an-interview-with-bunnie-huang-2nd/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "What the operator wants from a monitoring product is a state, not a plot: a platform that opens on a graph has misread the user, who wants to know whether the thing is in trouble right now.",
+   "quote_verbatim": "People want to know, like, is my thing good or not?",
+   "speaker": "Eli Hughes",
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "One brewing product deliberately reduced its display to a tank that is either bubbling or not, so a customer checking a phone from a fishing boat gets the answer immediately, with the acoustic sensing and embedded detail available only to whoever wants it.",
+   "quote_verbatim": "what we want to show is a bubbly tank. It's going or it's not.",
+   "speaker": "Eli Hughes",
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Embedded products historically relied on obscurity or on simply having no external interface; adding a WiFi or Bluetooth module and an IP address removes that protection entirely and makes the device reachable from anywhere in the world.",
+   "quote_verbatim": "for years, you know, embedded has just kind of gotten away with security by obscurity or by having no interface to it",
+   "speaker": "Colin O'Flynn",
+   "episode": 239,
+   "episode_title": "An Interview with Colin O'Flynn - Aspirated Adamantine Attacks",
+   "episode_url": "https://theamphour.com/239-an-interview-with-colin-oflynn-aspirated-adamantine-attacks/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The attack surface of a connected product is not only the device: once many devices share a platform, the platform is the target, and compromising it reaches every device behind it.",
+   "quote_verbatim": "You don't hack the device. Once you hack the platform.",
+   "speaker": "Chris Gammell",
+   "episode": 211,
+   "episode_title": "Design Reviews Are Important - Habitual Hype Hebetude",
+   "episode_url": "https://theamphour.com/211-design-reviews-are-important-habitual-hype-hebetude/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Certification blocks the security update cycle in regulated products: where the software and the full stack are certified together, firmware cannot be updated without recertification. The recommended baseline is a locked-down bootloader with proper cryptography so malicious updates cannot be pushed, followed by regular, tested updates.",
+   "quote_verbatim": "you need to have a certified USB bootloader that you can lock down and use some sort of decent cryptography",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Vendors get the disclosure behaviour their process earns: if reporting a vulnerability means a flight, an NDA and no compensation while a grey market pays cash, researchers will take the cash. A funded, easy bug-bounty path changes that calculus.",
+   "quote_verbatim": "if you make, you know, reporting bugs to you both worthwhile for the researcher and easy, then it's something that they'll do versus selling it on the black market",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Defence is asymmetric — a single hole compromises a system — and connected devices add classes of attack that are not about the network: exploiting one radio protocol to reach another on a device carrying both, glitching a microcontroller to dump flash and recover keys, and side-channel attacks that recover a key from the sound or power draw of the machine performing the operation.",
+   "quote_verbatim": "it's only one hole that you need to find to exploit an entire system",
+   "speaker": "Samy Kamkar",
+   "episode": 308,
+   "episode_title": "An Interview with Samy Kamkar",
+   "episode_url": "https://theamphour.com/308-an-interview-with-samy-kamkar/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Putting an account-bearing interface on an appliance imports the account's risk into the appliance: a refrigerator with a screen that needed the owner's credentials to reach a calendar and send mail became a route to extracting those credentials.",
+   "quote_verbatim": "you could essentially steal Gmail credentials out of Google credentials",
+   "speaker": "Chris Gammell",
+   "episode": 308,
+   "episode_title": "An Interview with Samy Kamkar",
+   "episode_url": "https://theamphour.com/308-an-interview-with-samy-kamkar/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Consumer connected products are routinely found storing private keys in flash, where they can be extracted from the device.",
+   "quote_verbatim": "they had the private keys stored in flash",
+   "speaker": "Matt Brown",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Abandoned connected products create an indefinite patching liability, because devices that never receive another update stay deployed and reachable long after the vendor stops maintaining them.",
+   "quote_verbatim": "the sheer amount of abandoned IoT stuff that could leak forever",
+   "speaker": "Chris Gammell",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Permanently embedding networked electronics into walls and ceiling fixtures is both a fire hazard and a long-lived attack surface, since the hardware outlasts anyone's willingness to maintain its software.",
+   "quote_verbatim": "it's a fire hazard. And B, it's a hacker's playground",
+   "speaker": "Big Clive",
+   "episode": 539,
+   "episode_title": "The King of Trash with Big Clive",
+   "episode_url": "https://theamphour.com/the-amp-hour-539-the-king-of-trash-with-big-clive/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The end of a vendor's service is not always the end of the hardware: devices bricked when a back end goes offline can sometimes be recovered by hardware attack, and some vendors are content for that to happen to products they no longer wish to support.",
+   "quote_verbatim": "Recovered that have been made end of life because with all the IOT stuff, right. If the server, you see these",
+   "speaker": "Colin O'Flynn",
+   "episode": 552,
+   "episode_title": "Shouting at chips with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/552-shouting-at-chips-with-colin-oflynn/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Battery replacement scales with fleet size and becomes the dominant field cost: a thousand deployed devices whose batteries last a year means replacing about three batteries every day, which is a different proposition from a phone that returns to a charging stand each night.",
+   "quote_verbatim": "if you have a thousand things and the battery lasts for a year, on average, you're going to be replacing three batteries a day",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A two-year battery life is a common target for wireless connected devices, and the architectural question that precedes it is whether the device needs to be battery powered at all — mains power removes the battery as a reliability variable.",
+   "quote_verbatim": "do you really need this thing to be battery powered?",
+   "speaker": "Jerry Twomey",
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Battery life in a connected device is set by the wake, connect, transmit and sleep cycle rather than by processor efficiency, so that path is what a low-power design optimises.",
+   "quote_verbatim": "that kind of stuff is from an IOT perspective. That seems like that's the most important thing for battery life",
+   "speaker": "Chris Gammell",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The ESP8266 was not designed as an IoT part. Espressif built WiFi silicon for cheap Chinese tablets, whose makers used a WiFi module because carrying 2.4 GHz signals on a cheap PCB is difficult; integrating the radio with auto-calibration so it tolerates a poor board eliminated the module and its roughly 50 cents of cost.",
+   "quote_verbatim": "if you make a, uh, a wifi chip that is cheap and doesn't require any external components",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The ESP8266 was a variant of that tablet WiFi chip given the ability to run its own program from external flash, with the connected-device market added almost as an afterthought — which is why it has very few peripherals and only one ADC channel. The ESP32 reversed the priority and was designed for connected devices first.",
+   "quote_verbatim": "the entire chip itself actually was designed as a wifi chip for tablets with the IOT bit only thrown in as almost an afterthought",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The ESP32 pairs two 240 MHz 32-bit processors running FreeRTOS with Bluetooth classic, Bluetooth Low Energy and WiFi including access-point and scanning modes, on a single low-cost part.",
+   "quote_verbatim": "it's a pair of, um, what 240 megahertz, 32 bit processors that run free, free RTOS",
+   "speaker": "Zach Fredin",
+   "episode": 330,
+   "episode_title": "An Interview with Zach Fredin",
+   "episode_url": "https://theamphour.com/330-an-interview-with-zach-fredin/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A cellular module combining LTE-M and NB-IoT with GPS in a package around 20 by 10 millimetres listed at roughly fifteen dollars, which put low-power cellular within reach of small designs without being commodity-priced.",
+   "quote_verbatim": "It can do GPS and cellular for like, I think the list price is like 15 bucks",
+   "speaker": "Chris Gammell",
+   "episode": 432,
+   "episode_title": "Check The Dummy Box",
+   "episode_url": "https://theamphour.com/432-check-the-dummy-box/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A cellular modem on a board is only one third of the problem: the design also needs a carrier contract, the translation from modem to server, and the server infrastructure behind it. Those three pieces — hardware, connectivity and software services — are separable, and a design can take any one of them from a vendor.",
+   "quote_verbatim": "There's three pieces. So, there's hardware, there's connectivity, and then there's software services",
+   "speaker": "Chris Gammell",
+   "episode": 373,
+   "episode_title": "Pedantic or Andrantic",
+   "episode_url": "https://theamphour.com/373-pedantic-or-andrantic/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A SIM that can attach to many providers and towers rather than one carrier's network lets a device built by a small team be deployed wherever there is coverage without negotiating separate carrier agreements.",
+   "quote_verbatim": "It's a SIM card that allows you to connect to lots of different providers and towers",
+   "speaker": "Chris Gammell",
+   "episode": 358,
+   "episode_title": "Mergers and People Acquisitions",
+   "episode_url": "https://theamphour.com/358-mergers-and-people-acquisitions/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Adding networking is the point at which a firmware design moves up the stack: a bare-metal build against a vendor SDK stops being the right approach once the device has to talk to the internet.",
+   "quote_verbatim": "if it's going to have networking, if it's going to try and talk to the internet, it's just like, you, you kind of start moving up the stack",
+   "speaker": "Chris Gammell",
+   "episode": 548,
+   "episode_title": "The Last Line of Defense",
+   "episode_url": "https://theamphour.com/548-the-last-line-of-defense/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Connectivity drags in threading, encryption and queuing, and writing that stack was previously only affordable for a large company that could staff a team per subsystem. A maintained real-time operating system such as Zephyr or FreeRTOS moves that work off a small team, at the cost of an initial steep climb.",
+   "quote_verbatim": "you need an RTOS because you're dealing with connectivity and connectivity is going to have threading and probably encryption",
+   "speaker": "Dave Jones",
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Zephyr's network stack can be compiled and run on a PC, so protocol code can be exercised and abused off-target with a reasonable expectation that it behaves the same on the device; Nordic's cellular library uses the same network calls, which extends the technique to cellular work.",
+   "quote_verbatim": "they have a way you can run Zephyr code with all the network and all this stuff and just run it on a PC",
+   "speaker": "Eli Hughes",
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A vendor's reference solution is a head start only while the design stays on the exact supported part; moving to a neighbouring device in the same family puts the team back into integration work with none of the advantage. The related trap is a proof of concept approved on a development kit, after which a cost or memory requirement forces a different part and months of schedule.",
+   "quote_verbatim": "If you don't, if you want to, if you want to, you know, integrate your one special thing or use that really unique processor, well, good luck",
+   "speaker": "Chris Gammell",
+   "episode": 370,
+   "episode_title": "Alternate Info Sources",
+   "episode_url": "https://theamphour.com/370-alternate-info-sources/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A connected product is hard to ship even for a company that already has electrical, mechanical, embedded and cloud engineers on staff; a couple of years to get such a product out of the door is normal, before security is considered.",
+   "quote_verbatim": "if you're a company that's well-staffed with electrical engineers, mechanical engineers, embedded developers, and cloud engineers, it's still a struggle",
+   "speaker": "Jonathan Beri",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The corporate IT organisation that inherits a deployed device cares about three things the device engineering does not address: setting up and installing it, managing and decommissioning it, and integrating its data into a business process such as building management or customer records.",
+   "quote_verbatim": "set up and installing the device, managing the device and, you know, taking devices offline and security or whatever, and then integrating into some sort of business process",
+   "speaker": "Jonathan Beri",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Local control is an alternative to the cloud-dependent model: a home automation controller run on a single-board computer keeps automation working without a subscription or handing data to a provider, and a declarative firmware tool lets a device be described — this board, a switch on these pins — instead of written in C with API calls.",
+   "quote_verbatim": "So I can automate things without having to pay for cloud service or give my information to one of the cloud providers",
+   "speaker": "Jeff Geerling",
+   "episode": 651,
+   "episode_title": "Learning Computing with Jeff Geerling",
+   "episode_url": "https://theamphour.com/651-learning-computing-with-jeff-geerling/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A hosted firmware distribution service lets a device call home on reset and fetch a newer build, with the device deciding whether it needs the update, which removes the need for a remote collaborator to hold the whole development environment.",
+   "quote_verbatim": "he just has to press the reset button and then it calls home and gets a new version",
+   "speaker": "Chris Gammell",
+   "episode": 435,
+   "episode_title": "An Interview with Andreas Spiess",
+   "episode_url": "https://theamphour.com/435-an-interview-with-andreas-spiess/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A community long-range radio network puts a node's readings through a gateway that authenticates it onto the network before the data reaches a server, and the low duty-cycle radios draw far less than 3G or GSM, so solar-powered nodes distributed across a country are practical at a per-node cost around fifteen dollars.",
+   "quote_verbatim": "Now is, so is this a way way to get sensors and internet of things, things on the internet, but being lower power than say, just go in 3G, you know, GSM kind of stuff. It's definitely lower power.",
+   "speaker": "Chris Gammell",
+   "episode": 380,
+   "episode_title": "Just Terrestrial and Space Things",
+   "episode_url": "https://theamphour.com/380-just-terrestrial-and-space-things/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Low Earth orbit changes what satellite connectivity can serve: at a small fraction of the roughly 36,000 kilometre altitude of broadcast satellites, a spacecraft circles fast enough that a single satellite passes over every part of the Earth at least once a day. That gives worldwide reach at the cost of intermittent rather than real-time service.",
+   "quote_verbatim": "These satellites are much closer to Earth, and they also go around the Earth much faster",
+   "speaker": "Maarten Engelen",
+   "episode": 427,
+   "episode_title": "An Interview with Maarten Engelen",
+   "episode_url": "https://theamphour.com/427-an-interview-with-maarten-engelen/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The applications that fit intermittent satellite connectivity are those without terrestrial coverage and without a latency requirement: logistics tracking of containers and rail cars, and agriculture — soil moisture and yield management — on farms whose scale defeats local infrastructure.",
+   "quote_verbatim": "logistics is an interesting one to tracking stuff, containers, rail cars",
+   "speaker": "Maarten Engelen",
+   "episode": 427,
+   "episode_title": "An Interview with Maarten Engelen",
+   "episode_url": "https://theamphour.com/427-an-interview-with-maarten-engelen/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A high-bandwidth satellite internet constellation is not a substitute for satellite sensor connectivity: its ground segment is a phased-array terminal sized for internet service, not something to put on a stake in a field to report humidity.",
+   "quote_verbatim": "I don't think you'll see that sort of on a poke in the ground to monitor humidity or something",
+   "speaker": "Chris Gammell",
+   "episode": 518,
+   "episode_title": "Satellites and EVs with Joris Aerts",
+   "episode_url": "https://theamphour.com/518-satellites-and-evs-with-joris-aerts/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Satellite constellations for low-rate device connectivity became possible only when launch costs and small, capable spacecraft made deploying dozens of satellites affordable; the same economics could not have supported the service under earlier launch pricing.",
+   "quote_verbatim": "You couldn't have done that in sort of old space because you could never afford to launch the dozens of spacecraft they need to provide coverage",
+   "speaker": "Dan Esparon",
+   "episode": 679,
+   "episode_title": "Satellite Design Engineering with Dan Esparon",
+   "episode_url": "https://theamphour.com/679-satellite-design-engineering-with-dan-esparon/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Remote meter reading predates the term and the standards: a utility-meter product used plain radio to relay readings to access points before cellular coverage existed, an architecture since re-implemented with standardised parts and wider availability.",
+   "quote_verbatim": "you put it on your gas meter and then it would, that was just using a plain radio",
+   "speaker": "Chris Gammell",
+   "episode": 238,
+   "episode_title": "Old Books, New Tricks - Iterant Inscription Irrationality",
+   "episode_url": "https://theamphour.com/238-old-books-new-tricks-iterant-inscription-irrationality/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Home automation over house wiring existed long before wireless: the X10 system, developed by BSR and later carried by RadioShack, was supplanted by radio-based systems such as Z-Wave and Zigbee, though installations remain in service.",
+   "quote_verbatim": "It was originally developed by BSR, I think, and then RadioShack picked it up",
+   "speaker": "Julia Truchsess",
+   "episode": 424,
+   "episode_title": "An Interview with Julia Truchsess",
+   "episode_url": "https://theamphour.com/424-an-interview-with-julia-truchsess/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Intel withdrew from the connected-device development board market, discontinuing the Joule, Galileo and Edison lines.",
+   "quote_verbatim": "Intel killed all their Internet of Things dev boards",
+   "speaker": "Dave Jones",
+   "episode": 351,
+   "episode_title": "The Automation Amish",
+   "episode_url": "https://theamphour.com/351-the-automation-amish/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Unlimited configurability is a liability rather than a feature: every additional adjustable parameter raises the chance the user ends up with a configuration they are unhappy with, which is why an on-off control often beats a programmable one.",
+   "quote_verbatim": "having infinite configurability is often not actually an asset",
+   "speaker": "Jeff Keyzer",
+   "episode": 114,
+   "episode_title": "Kickstarter, Manufacturing, Open Hardware - Judging Jurisdictional Junctures",
+   "episode_url": "https://theamphour.com/the-amp-hour-114-judging-jurisdictional-junctures/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Rule engines that pipe one event straight to one action are too simple for real automation. Turning on lights when motion is detected at night requires the rule to carry conditions and durations — whether it is night, how long the lights stay on — and a service built on one-to-one piping cannot express that.",
+   "quote_verbatim": "you have to make the rule a little bit more complex than that",
+   "speaker": "Marcus Schappi",
+   "episode": 189,
+   "episode_title": "An Interview with Marcus Schappi - Kit Ketch Kenophobia",
+   "episode_url": "https://theamphour.com/189-an-interview-with-marcus-schappi-kit-ketch-kenophobia/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Two trends underlie the category: local computation approaching free, and connectivity that is effectively ubiquitous through WiFi in buildings, Bluetooth on people and cellular between. The failure mode they create is fitting a radio because it is possible rather than establishing the value first.",
+   "quote_verbatim": "people aren't thinking about the value first",
+   "speaker": "Avidan Ross",
+   "episode": 327,
+   "episode_title": "An Interview with Avidan Ross",
+   "episode_url": "https://theamphour.com/327-an-interview-with-avidan-ross/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A connected-device startup typically carries no science risk — the modules exist and are assembled — which allows very fast iteration, in contrast with a company that must solve an unsolved physical problem before it has a product at all.",
+   "quote_verbatim": "You start a startup once the technology has already been de-scienced",
+   "speaker": "Ariel Briner",
+   "episode": 260,
+   "episode_title": "An interview with Ariel Briner of Cartesian Co",
+   "episode_url": "https://theamphour.com/260-an-interview-with-ariel-briner-of-cartesian-co/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A wireless sensor node designed for retrofit is shaped by the installation: small enough for light switches and confined spaces yet breadboard friendly, and wireless because an existing house cannot practically be rewired.",
+   "quote_verbatim": "I don't have luxury to rewire my house to make it all wired for anything",
+   "speaker": "Felix Rusu",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A crowdfunding campaign for a connected light bulb was deliberately ended early after raising about one and a half million dollars in five days, because the team had a prototype and no manufacturing plan and did not want to owe delivery to a still larger backer base.",
+   "quote_verbatim": "they had to finish the kickstarter early",
+   "speaker": "Chris Gammell",
+   "episode": 382,
+   "episode_title": "The Toggle Boggle",
+   "episode_url": "https://theamphour.com/382-the-toggle-boggle/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Distributing 24 volts DC around a lighting installation from a modular, power-factor-corrected supply would make dimming straightforward by pulse modulation, whereas traditional phase-angle dimmers are incompatible with modern electronic loads and produce spiky, flickering results.",
+   "quote_verbatim": "dimming would be so much easier because pulsed modulation would be much easier as opposed to the phase angle control",
+   "speaker": "Big Clive",
+   "episode": 539,
+   "episode_title": "The King of Trash with Big Clive",
+   "episode_url": "https://theamphour.com/the-amp-hour-539-the-king-of-trash-with-big-clive/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "Reception, hype-cycle and host-sentiment passages dominate this bundle and were dropped wholesale; only transferable engineering and decision-relevant market knowledge is kept.",
+  "Three passages in the bundle carry no episode number and were dropped rather than cited.",
+  "eps 245, 250, 295, 327, 471, 495, 527, 539, 544, 568, 651, 669, 698: attribution flagged unreliable. Each claim is content-attributed to the guest whose stated project, employer or research the passage describes, or left unattributed where the content is general."
+ ],
+ "capped": true
+}

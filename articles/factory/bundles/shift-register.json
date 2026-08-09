@@ -1,0 +1,665 @@
+{
+ "concept": "shift-register",
+ "name": "Shift Register",
+ "type": "component",
+ "score": 93.968,
+ "rank_by_score": 405,
+ "cluster": {
+  "core": [
+   "shift-register"
+  ],
+  "children": [],
+  "neighbors": []
+ },
+ "stats": {
+  "episodes": 25,
+  "mentions": 39,
+  "explains": 23,
+  "opinions": 0,
+  "candidate_episode_count": 21,
+  "candidate_mention_count": 29,
+  "gated_out": 0,
+  "gated_out_by_concept": [],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 1,
+  "speakers": [
+   [
+    "Dave Jones",
+    14
+   ],
+   [
+    "Chris Gammell",
+    2
+   ],
+   [
+    "Greg Davill",
+    2
+   ],
+   [
+    "CNLohr",
+    2
+   ],
+   [
+    "Jason Cerundolo",
+    1
+   ],
+   [
+    "Piotr Esden-Tempski",
+    1
+   ],
+   [
+    "Jay Carlson",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 23
+  },
+  "passages_by_depth": {
+   "explains": 23
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 23,
+ "passages": [
+  {
+   "episode": 16,
+   "episode_title": "LED Designs, Last Minute Designs and Board Designs",
+   "episode_url": "https://theamphour.com/the-amp-hour-16-led-designs-last-minute-designs-and-board-designs/",
+   "guest": null,
+   "stem": "the-amp-hour-16-led-designs-last-minute-designs-and-board-designs",
+   "paragraph_index": 74,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "You buy the RGB module, which has the matrix of the RGB leads in there, but there's no circuitry. They're just interconnected in the row column matrix thing. And then you've got to put some sort of... Wrap some sort of driver around that. Usually it's a microcontroller with some shift registers or something like that. A lot of people do it with shift registers. Okay. And then... That's because, I don't know, they don't want to use a big microcontroller. But I think a better way to do it is just to use a big-ass pin count microcontroller to drive the... What is it? 24 RGB columns plus the eight rows as well. So yeah. And there's many different ways. You can buy dedicated driver chips, but they're generally hard to get. So you want to avoid those from the likes of Maxima or whoever make these dedicated chips. And they're really nice, but they're like $8 a pop and you can't buy them. So yeah. Yeah.",
+   "context_before": "Can you explain how the... So you buy the actual panels themselves, is that correct?",
+   "context_after": "Well, that's actually what I'm working... I'm designing with those because I'm doing a higher power situation. But I was going to ask you about those modules a little bit more. So explain to me the anode cathode. Like what's the hookup of those? I mean, like, so you'd be driving an individual single LED with a micro pin then with your idea?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Can you explain how the... So you buy the actual panels themselves, is that correct? You buy the RGB module, which has the matrix of the RGB leads in there, but there's no circuitry. They're just interconnected in the row column matrix thing. And then you've got to put some sort of... Wrap some sort of driver around that. Usually it's a microcontroller with some shift registers or something like that. A lot of people do it with shift registers. Okay. And then... That's because, I don't know, they don't want to use a big microcontroller. But I think a better way to do it is just to use a big-ass pin count microcontroller to drive the... What is it? 24 RGB columns plus the eight rows as well. So yeah. And there's many different ways. You can buy dedicated driver chips, but they're generally hard to get. So you want to avoid those from the likes of Maxima or whoever make these dedicated chips. And they're really nice, but they're like $8 a pop and you can't buy them. So yeah. Yeah. Well, that's actually what I'm working... I'm designing with those because I'm doing a higher power situation. But I was going to ask you about those modules a little bit more. So explain to me the anode cathode. Like what's the hookup of those? I mean, like, so you'd be driving an individual single LED with a micro pin then with your idea?"
+  },
+  {
+   "episode": 16,
+   "episode_title": "LED Designs, Last Minute Designs and Board Designs",
+   "episode_url": "https://theamphour.com/the-amp-hour-16-led-designs-last-minute-designs-and-board-designs/",
+   "guest": null,
+   "stem": "the-amp-hour-16-led-designs-last-minute-designs-and-board-designs",
+   "paragraph_index": 80,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "These modules, which I did, don't. They're purely just a shift register-based thing, and it's all controlled via the one main CPU, which has to do everything. But as you'll eventually learn with these sort of things, if you've just got the one processor trying to drive 50 of these modules, it doesn't work. Yeah, it'll brown out. The bandwidth requirements are just so massive that you just can't do it. I think that's where I'm confused. It's better to have a local CPU just dedicated to that one 8x8 LED matrix, and then the CPUs talk to each other and share the data and all that sort of stuff.",
+   "context_before": "So are you throwing actual digital signals to the module and then the module has its own internal drivers? Or are you actually pushing current?",
+   "context_after": "See, I guess that's where I'm confused because I'm not sure. So you're not driving, though, the individual LEDs with the current output of the micro, are you?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So are you throwing actual digital signals to the module and then the module has its own internal drivers? Or are you actually pushing current? These modules, which I did, don't. They're purely just a shift register-based thing, and it's all controlled via the one main CPU, which has to do everything. But as you'll eventually learn with these sort of things, if you've just got the one processor trying to drive 50 of these modules, it doesn't work. Yeah, it'll brown out. The bandwidth requirements are just so massive that you just can't do it. I think that's where I'm confused. It's better to have a local CPU just dedicated to that one 8x8 LED matrix, and then the CPUs talk to each other and share the data and all that sort of stuff. See, I guess that's where I'm confused because I'm not sure. So you're not driving, though, the individual LEDs with the current output of the micro, are you?"
+  },
+  {
+   "episode": 16,
+   "episode_title": "LED Designs, Last Minute Designs and Board Designs",
+   "episode_url": "https://theamphour.com/the-amp-hour-16-led-designs-last-minute-designs-and-board-designs/",
+   "guest": null,
+   "stem": "the-amp-hour-16-led-designs-last-minute-designs-and-board-designs",
+   "paragraph_index": 82,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "Well, you're actually driving them with the current output from the shift register. Okay, yeah. Well, I'm not doing that in this particular design, but the design I'll do personally, I think I will actually do that. I will drive it directly with the microcontroller because you'll only have to turn like 8 on at once, and if you've got 30 milliamps per LED, that's probably just within the maximum total pin current specification of the micro. So you can actually drive them directly from the micro or from the 7.4 HC 595 driver or something like that.",
+   "context_before": "See, I guess that's where I'm confused because I'm not sure. So you're not driving, though, the individual LEDs with the current output of the micro, are you?",
+   "context_after": "Okay, yeah, that makes sense then. Yeah, that's a cool idea. I kind of like that. Yep.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "See, I guess that's where I'm confused because I'm not sure. So you're not driving, though, the individual LEDs with the current output of the micro, are you? Well, you're actually driving them with the current output from the shift register. Okay, yeah. Well, I'm not doing that in this particular design, but the design I'll do personally, I think I will actually do that. I will drive it directly with the microcontroller because you'll only have to turn like 8 on at once, and if you've got 30 milliamps per LED, that's probably just within the maximum total pin current specification of the micro. So you can actually drive them directly from the micro or from the 7.4 HC 595 driver or something like that. Okay, yeah, that makes sense then. Yeah, that's a cool idea. I kind of like that. Yep."
+  },
+  {
+   "episode": 293,
+   "episode_title": "Call In Show #4",
+   "episode_url": "https://theamphour.com/293-call-in-show-4/",
+   "guest": null,
+   "stem": "0293-call-in-show-4",
+   "paragraph_index": 108,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "So, my suggestion, because I deal with this as well, is, there's ortho home defense, which is actually indoor-outdoor. I thought it wouldn't be safe indoors, but if you look on some of those things, you can just spray indoors. And, basically, I got rid of all the bugs in my, in my basement. And, you know, awesome. Dude, I wouldn't be spraying that shit indoors. I don't spray a lot of it. I spray it once a year. I mean, it's not like I'm, like, huffing this stuff, right? Hosing it down. Yeah. Or, you just spray it on the floor. I don't know. Like, ventilate. You shouldn't, labs should be ventilated anyways, right? So, yeah. Just soldering. Oh, and Chris is going to get a kick out of this. I bought my first PCBs from Osh Park today. Hey, congratulations. That is a great feeling when you'll get that back. So, good for you. That's going to be great when you get it back. I heard, just the other day. I didn't know about this product. Apparently, they're as common as mud. Not spiders, but you can get ultrasonic cockroach repellers that you plug into your PowerPoint or something. I have ultrasonic sensors. And it pumps out ultrasound or something. And it gets rid of cockroaches or something. I don't know. I don't know if it's BS or not. I haven't seen cockroaches. Well, we should call up Greg and Tim from Backyard Brains. I bet those guys would know. Which was a former show, if anyone doesn't remember. Yeah. Yeah. Yeah. All right. I've sent you. Thanks for calling in, man. Good luck with the spiders. All right. No problem. Great talking to you guys. See you, mate. Bye. Have we got time for one more? I think we have actually maybe two more. Let's see. Oh, people are punning in the little chat box here. Right, right. Callers who are, they're all punning. Yes. You seem to have a high reluctance. I don't know if I have the capacitance for this. Like the electronics pun hour. Hey, what's your name? Where are you calling from? Hi, this is Chris Kessler. I'm calling from Greenville, South Carolina. Hey, Chris. Welcome. Hey, Chris. Hey, guys. Thanks for taking my call. No problem. What's going on? What's your question? So I'm working on a pretty simple controller board. It's for an RC boat, but I'm using an ATtiny84 to read standard hobby RC receiver signals, and then using two daisy-chained power logic 8-bit shift registers to control the 14 outputs. Three of them are mechanical relays, four of them are solid-state relays, and then the other seven are LEDs for status and whatnot. So everything's battery-powered, and it's regulated to five volts on board this board, and that also goes then to power the receiver. So in the last revision of this, I replaced the linear voltage regulator with a DC power converter. It was an off-the-shelf part that I found online. Like a module? Yeah, because I tried to build one, and I don't know enough about electronics to build one myself. Yeah, no, it's easy just to buy one. Yep. Right. And the park cost was cheaper to buy one anyway, so I'll reinvent the wheel. Exactly. And then I also added some P-channel MOSFETs for reverse voltage protection, and then a pull-up on the enable line for the 595s, which are active low, just to get positive control, because I don't want the stuff that the outputs are controlling to go hot when I start up the circuit. So anyways... Oh, good thinking. Yep. Well, that was the plan, but after I made all these changes, when I power on the board maybe one in every four or five times, one of the 595s will just spontaneously burn up. Like, burn a hole through the top of it and burn up, you know? That's SCR latch-up. That's SCR latch-up phenomenon. No doubt. No doubt. If your logic chip just blows up and the magic smoke escapes, it's SCR latch-up. I guarantee you. What that means is that... Fix that. Oh, okay. Well, I have done a video on this. Sorry, Chris. It means... Yeah. Just press 4 on your phone now, and that'll send a payment to Dave, and then we... What it means is that one of the inputs has gone above the rail, or the inputs are powering up before the rail has time to power up. That's what I was going to actually say. So if you've got a DC to DC converter, it may be taking some time to start up, and the inputs to your chip are already high, that can cause SCR latch-up. So, Chris, can you walk us through the sequencing as well? So you have this... You have a battery, and then a switcher, and then basically you have 5 volts out of the switcher. Correct. That goes to everything, you're saying, right? Correct, yes. Well, yeah. It effectively goes to everything. The relays, the solid state relays are getting switched straight battery voltage, but that's kind of a side circuit on the board. So what you could do is you could enable, you know, with an end-channel MOSFET or something, you could basically hold the end-channel MOSFET input weak low, basically, like put a 10k pulldown on the gate there. Put the power from the switcher directly to the micro, make sure the micro's up first, and then have the micro turn on the power to the rest of the circuit. That should help. I don't know if that'll do all of your sequencing problems, but if your micro's in control, then it should be able to sequence things as needed. Right. Okay. So... You don't have anything like that now, right? No, I don't. No, I don't. So power sequencing is a really big issue, right? And you often see this with like FPGA circuits where you have to like sometimes even ramp them at the same rate and all this crazy stuff. Have you scoped the... Have you looked at your... How it actually starts up? No, and that's actually... That's... I don't have a scope, and that's... I figured it was something to do with the power startup, because as soon as I added this module, it started happening, and it's fine with the linear voltage regulator, but that's... I'm trying to get a little bit more current capacity out of it to run on the receiver, and there should be another server or two on the receiver that are actually going to draw some current. So... Right. So... I don't know anything about power startup or anything like that, and I figured there was something crazy that I was doing just out of ignorance, basically. Well, is it a 7.4HC 595 that's actually blowing up? No, it's a STPIC 6D 595. It's a high power version to get enough current capability on each of the channels. Okay. For the mechanical relays that I'm switching. Gotcha. Interesting. What about... Yeah, so one of the other things I would say is that if you're buying, like, a cheap power module... Mm-hmm. Not to say that you're being cheap, but what you could have is if it's not properly in regulation. So if it is actually... So when you see it, if you see an in-control DC to DC power module, you should see a nice smooth ramp, you know, from whatever the input is up to 5 volts, right? Sure. And what is the input? What are the batteries? And slow ramp-in, too. Slow ramp-in can also cause SCR latch-up in various devices, so you've got to be careful. Right. So what is the battery? The batteries right now, I'm trying to get it to work on anything from basically 6.6 or 2-lif, you know, 2-lithium to 4, so 13-ish. So anything in that range is kind of the goal. Okay, but it's only doing a buck. So it's not doing buck boost or boost or anything like that on the switching controller. It's never going below 5 volts on the input. Correct. Okay. Right. So, yeah, I think, you know, Dave, this actually might be an interesting... We could do the oscilloscope test for a lot of these issues. So, Chris, why don't you have an oscilloscope? Since we just talked to Arsenio and he just was super pleased with his purchase. Because I haven't had the intestinal fortitude to put out the $400 or whatever to get one yet. Ah, I see. Yep. Yeah, no, I understand that. That's basically what it is. I have a logic analyzer and that's been able to solve the overwhelming majority of my problems up to this point. And this is, I guess, the first real thing I've run into that an oscilloscope would maybe help better with. Absolutely. How many dollars of parts have you blown up so far? 150 probably. 100. No, really? A lot. Oh, yeah. Oh, yeah. Wow. Okay, man. Yeah, that's... The board with everything on it is about 60 bucks. Yeah, it's time. I mean, you don't have to spend 400 bucks to get a scope. That's true. I mean, you can buy, you know, a bloody Handtec or, you know, one of those... Yeah, the USB crappers. ...really cheapy ones. They're like 250 or something. But if you're going to spend 250, just spend 400. I'm sorry. I just, I've stopped suggesting lower than that. I know it's not a small amount of money. I know that. No, no. I don't have a problem getting decent tools. That's... But, you know, it's... There is a line that's any tool under $100. Okay, sure, fine, whatever. But if it's over that, it's kind of like, well... Yeah. Yeah, you think to us. Do I really need it? Yada, yada, yada. Yep. But that's... Well, anyway, that's... Yeah, I would love to hear about the resolution of this, to be honest, what it actually is. So... Okay, yeah, I'll definitely... I'd love to be able to sit there and actually play with it. ...or call into a later show or something and let you know if I can get it solved. Okay, great. Yes, please. All right, appreciate the help. Thanks for calling, Chris. Awesome. Thanks, mate. Bye. Bye. Yeah, that's going to be an interesting test over time, I think. Yep. Because it's a big... I mean, it's a big deal, right? I mean, you get scopes sent to you every week. It's not a big deal for you. But you remember what it was like, your first scope. Exactly. You talked about your pocket money scope, right? Yeah, yeah. Well, it was 800 bucks. I've done a video of this. That's true, yeah. That's true, yeah. Right? The average... 800 bucks in some distant time ago that was worth even more now, right? What's that in today's dollars? It wasn't until about 2008, 2009, when Rigol actually cut the price. No, yeah, it was 2009. They cut the price of the 1052e from 800 bucks to 400 bucks. And it was like, holy crap. Yeah. Right? You can actually get a scope for 400 bucks. For the last... You know, ever since I was born, right? Scopes of all... You know, a half-decent 20 meg dual-channel scope was like 800 bucks. That was the entry-level price to get you a reasonable... You know, a decent scope. Yep. And back then, 800 bucks was worth a hell of a lot more than it is now. Right, right. Exactly. Yeah, exactly. But now you can get someone for half that. Yep. You know, a really kick-ass one for half that. And, well, you know... Thank you, Moore's Law. And it's not worth as much. I know. It's like... It's brilliant. But that, yeah. We should mention, actually, speaking of more, even though it's not more, Andy Grove passed away. And that actually... That guy... Man, that guy was pretty awesome. I'm sure that everybody read about that in the news, but you haven't... Go read about Andy Grove. That guy was groundbreaking. And now they say, Moore's Law, Intel has accepted that Moore's Law is dead. That's also true. Yeah, that was crazy. So... Yeah. We will talk about that in future weeks, I'm sure. Yeah. We have to do it... There's a t-shirt in that. Moore's Law. Moore's Law is Dev. Long live Moore's Law. Or Moore's Law, I still believe. You know what I think? I like that. Yeah. Yeah. Yep. Gotta do it. I might have to create a shirt. I think that's good. That'll be a good one. Yep. All right. Here we go. Last caller. Last caller. Make it quick. Oh, yeah. You're so busy. Oh, I'm so busy, dude. You don't know what the date is. Mm-hmm. Mm-hmm. Hey, what's your name? Where are you calling from?",
+   "context_before": "Yeah.",
+   "context_after": "Hey. William calling from California. Welcome, William.",
+   "context_before_speaker": "Speaker ?",
+   "context_after_speaker": "Arduinos",
+   "text": "Yeah. So, my suggestion, because I deal with this as well, is, there's ortho home defense, which is actually indoor-outdoor. I thought it wouldn't be safe indoors, but if you look on some of those things, you can just spray indoors. And, basically, I got rid of all the bugs in my, in my basement. And, you know, awesome. Dude, I wouldn't be spraying that shit indoors. I don't spray a lot of it. I spray it once a year. I mean, it's not like I'm, like, huffing this stuff, right? Hosing it down. Yeah. Or, you just spray it on the floor. I don't know. Like, ventilate. You shouldn't, labs should be ventilated anyways, right? So, yeah. Just soldering. Oh, and Chris is going to get a kick out of this. I bought my first PCBs from Osh Park today. Hey, congratulations. That is a great feeling when you'll get that back. So, good for you. That's going to be great when you get it back. I heard, just the other day. I didn't know about this product. Apparently, they're as common as mud. Not spiders, but you can get ultrasonic cockroach repellers that you plug into your PowerPoint or something. I have ultrasonic sensors. And it pumps out ultrasound or something. And it gets rid of cockroaches or something. I don't know. I don't know if it's BS or not. I haven't seen cockroaches. Well, we should call up Greg and Tim from Backyard Brains. I bet those guys would know. Which was a former show, if anyone doesn't remember. Yeah. Yeah. Yeah. All right. I've sent you. Thanks for calling in, man. Good luck with the spiders. All right. No problem. Great talking to you guys. See you, mate. Bye. Have we got time for one more? I think we have actually maybe two more. Let's see. Oh, people are punning in the little chat box here. Right, right. Callers who are, they're all punning. Yes. You seem to have a high reluctance. I don't know if I have the capacitance for this. Like the electronics pun hour. Hey, what's your name? Where are you calling from? Hi, this is Chris Kessler. I'm calling from Greenville, South Carolina. Hey, Chris. Welcome. Hey, Chris. Hey, guys. Thanks for taking my call. No problem. What's going on? What's your question? So I'm working on a pretty simple controller board. It's for an RC boat, but I'm using an ATtiny84 to read standard hobby RC receiver signals, and then using two daisy-chained power logic 8-bit shift registers to control the 14 outputs. Three of them are mechanical relays, four of them are solid-state relays, and then the other seven are LEDs for status and whatnot. So everything's battery-powered, and it's regulated to five volts on board this board, and that also goes then to power the receiver. So in the last revision of this, I replaced the linear voltage regulator with a DC power converter. It was an off-the-shelf part that I found online. Like a module? Yeah, because I tried to build one, and I don't know enough about electronics to build one myself. Yeah, no, it's easy just to buy one. Yep. Right. And the park cost was cheaper to buy one anyway, so I'll reinvent the wheel. Exactly. And then I also added some P-channel MOSFETs for reverse voltage protection, and then a pull-up on the enable line for the 595s, which are active low, just to get positive control, because I don't want the stuff that the outputs are controlling to go hot when I start up the circuit. So anyways... Oh, good thinking. Yep. Well, that was the plan, but after I made all these changes, when I power on the board maybe one in every four or five times, one of the 595s will just spontaneously burn up. Like, burn a hole through the top of it and burn up, you know? That's SCR latch-up. That's SCR latch-up phenomenon. No doubt. No doubt. If your logic chip just blows up and the magic smoke escapes, it's SCR latch-up. I guarantee you. What that means is that... Fix that. Oh, okay. Well, I have done a video on this. Sorry, Chris. It means... Yeah. Just press 4 on your phone now, and that'll send a payment to Dave, and then we... What it means is that one of the inputs has gone above the rail, or the inputs are powering up before the rail has time to power up. That's what I was going to actually say. So if you've got a DC to DC converter, it may be taking some time to start up, and the inputs to your chip are already high, that can cause SCR latch-up. So, Chris, can you walk us through the sequencing as well? So you have this... You have a battery, and then a switcher, and then basically you have 5 volts out of the switcher. Correct. That goes to everything, you're saying, right? Correct, yes. Well, yeah. It effectively goes to everything. The relays, the solid state relays are getting switched straight battery voltage, but that's kind of a side circuit on the board. So what you could do is you could enable, you know, with an end-channel MOSFET or something, you could basically hold the end-channel MOSFET input weak low, basically, like put a 10k pulldown on the gate there. Put the power from the switcher directly to the micro, make sure the micro's up first, and then have the micro turn on the power to the rest of the circuit. That should help. I don't know if that'll do all of your sequencing problems, but if your micro's in control, then it should be able to sequence things as needed. Right. Okay. So... You don't have anything like that now, right? No, I don't. No, I don't. So power sequencing is a really big issue, right? And you often see this with like FPGA circuits where you have to like sometimes even ramp them at the same rate and all this crazy stuff. Have you scoped the... Have you looked at your... How it actually starts up? No, and that's actually... That's... I don't have a scope, and that's... I figured it was something to do with the power startup, because as soon as I added this module, it started happening, and it's fine with the linear voltage regulator, but that's... I'm trying to get a little bit more current capacity out of it to run on the receiver, and there should be another server or two on the receiver that are actually going to draw some current. So... Right. So... I don't know anything about power startup or anything like that, and I figured there was something crazy that I was doing just out of ignorance, basically. Well, is it a 7.4HC 595 that's actually blowing up? No, it's a STPIC 6D 595. It's a high power version to get enough current capability on each of the channels. Okay. For the mechanical relays that I'm switching. Gotcha. Interesting. What about... Yeah, so one of the other things I would say is that if you're buying, like, a cheap power module... Mm-hmm. Not to say that you're being cheap, but what you could have is if it's not properly in regulation. So if it is actually... So when you see it, if you see an in-control DC to DC power module, you should see a nice smooth ramp, you know, from whatever the input is up to 5 volts, right? Sure. And what is the input? What are the batteries? And slow ramp-in, too. Slow ramp-in can also cause SCR latch-up in various devices, so you've got to be careful. Right. So what is the battery? The batteries right now, I'm trying to get it to work on anything from basically 6.6 or 2-lif, you know, 2-lithium to 4, so 13-ish. So anything in that range is kind of the goal. Okay, but it's only doing a buck. So it's not doing buck boost or boost or anything like that on the switching controller. It's never going below 5 volts on the input. Correct. Okay. Right. So, yeah, I think, you know, Dave, this actually might be an interesting... We could do the oscilloscope test for a lot of these issues. So, Chris, why don't you have an oscilloscope? Since we just talked to Arsenio and he just was super pleased with his purchase. Because I haven't had the intestinal fortitude to put out the $400 or whatever to get one yet. Ah, I see. Yep. Yeah, no, I understand that. That's basically what it is. I have a logic analyzer and that's been able to solve the overwhelming majority of my problems up to this point. And this is, I guess, the first real thing I've run into that an oscilloscope would maybe help better with. Absolutely. How many dollars of parts have you blown up so far? 150 probably. 100. No, really? A lot. Oh, yeah. Oh, yeah. Wow. Okay, man. Yeah, that's... The board with everything on it is about 60 bucks. Yeah, it's time. I mean, you don't have to spend 400 bucks to get a scope. That's true. I mean, you can buy, you know, a bloody Handtec or, you know, one of those... Yeah, the USB crappers. ...really cheapy ones. They're like 250 or something. But if you're going to spend 250, just spend 400. I'm sorry. I just, I've stopped suggesting lower than that. I know it's not a small amount of money. I know that. No, no. I don't have a problem getting decent tools. That's... But, you know, it's... There is a line that's any tool under $100. Okay, sure, fine, whatever. But if it's over that, it's kind of like, well... Yeah. Yeah, you think to us. Do I really need it? Yada, yada, yada. Yep. But that's... Well, anyway, that's... Yeah, I would love to hear about the resolution of this, to be honest, what it actually is. So... Okay, yeah, I'll definitely... I'd love to be able to sit there and actually play with it. ...or call into a later show or something and let you know if I can get it solved. Okay, great. Yes, please. All right, appreciate the help. Thanks for calling, Chris. Awesome. Thanks, mate. Bye. Bye. Yeah, that's going to be an interesting test over time, I think. Yep. Because it's a big... I mean, it's a big deal, right? I mean, you get scopes sent to you every week. It's not a big deal for you. But you remember what it was like, your first scope. Exactly. You talked about your pocket money scope, right? Yeah, yeah. Well, it was 800 bucks. I've done a video of this. That's true, yeah. That's true, yeah. Right? The average... 800 bucks in some distant time ago that was worth even more now, right? What's that in today's dollars? It wasn't until about 2008, 2009, when Rigol actually cut the price. No, yeah, it was 2009. They cut the price of the 1052e from 800 bucks to 400 bucks. And it was like, holy crap. Yeah. Right? You can actually get a scope for 400 bucks. For the last... You know, ever since I was born, right? Scopes of all... You know, a half-decent 20 meg dual-channel scope was like 800 bucks. That was the entry-level price to get you a reasonable... You know, a decent scope. Yep. And back then, 800 bucks was worth a hell of a lot more than it is now. Right, right. Exactly. Yeah, exactly. But now you can get someone for half that. Yep. You know, a really kick-ass one for half that. And, well, you know... Thank you, Moore's Law. And it's not worth as much. I know. It's like... It's brilliant. But that, yeah. We should mention, actually, speaking of more, even though it's not more, Andy Grove passed away. And that actually... That guy... Man, that guy was pretty awesome. I'm sure that everybody read about that in the news, but you haven't... Go read about Andy Grove. That guy was groundbreaking. And now they say, Moore's Law, Intel has accepted that Moore's Law is dead. That's also true. Yeah, that was crazy. So... Yeah. We will talk about that in future weeks, I'm sure. Yeah. We have to do it... There's a t-shirt in that. Moore's Law. Moore's Law is Dev. Long live Moore's Law. Or Moore's Law, I still believe. You know what I think? I like that. Yeah. Yeah. Yep. Gotta do it. I might have to create a shirt. I think that's good. That'll be a good one. Yep. All right. Here we go. Last caller. Last caller. Make it quick. Oh, yeah. You're so busy. Oh, I'm so busy, dude. You don't know what the date is. Mm-hmm. Mm-hmm. Hey, what's your name? Where are you calling from? Hey. William calling from California. Welcome, William."
+  },
+  {
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "guest": "David Kronstein",
+   "stem": "the-amp-hour-325-an-interview-with-david-kronstein-tesla500",
+   "paragraph_index": 465,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "So those get. Serial. Yeah, serial. And they're converted to parallel. Yeah, those get clocked into a shift register that converts them to parallel. Then they go into some FIFO buffers. And that gets dumped.",
+   "context_before": "Screw you, lattice. David, what kind of stuff is actually inside then? I mean, so you have 16 parallel paths of data coming in. Yep.",
+   "context_after": "How big are the buffers?",
+   "context_before_speaker": "David Kronstein",
+   "context_after_speaker": "Dave Jones",
+   "text": "Screw you, lattice. David, what kind of stuff is actually inside then? I mean, so you have 16 parallel paths of data coming in. Yep. So those get. Serial. Yeah, serial. And they're converted to parallel. Yeah, those get clocked into a shift register that converts them to parallel. Then they go into some FIFO buffers. And that gets dumped. How big are the buffers?"
+  },
+  {
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "guest": "Jason Cerundolo",
+   "stem": "0340-an-interview-with-jason-cerundolo",
+   "paragraph_index": 149,
+   "depth": "explains",
+   "speaker_raw": "Jason Cerundolo",
+   "speaker_repaired": "Jason Cerundolo",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "Yeah. It's a three millimeter pitch. Okay. One of the smaller pitches. And then these are little panels that you can buy on AliExpress or Alibaba. Adafruit sells them as well in various pitches. And so what I did to address all these LEDs, the panels themselves come with a shift register interface. And so I programmed up a CPLD to convert a SPY packet from the microcontroller into this parallel shift register interface that the panels use. Mm-hmm. And then that way I can just do a DMA transfer from the microcontroller out over SPY and then leave most of the CPU time available for doing whatever else you want to do. Hmm.",
+   "context_before": "Oh, okay. So still pretty spaced out though.",
+   "context_after": "Wait. So are you building the panels itself? Are you sourcing the panels and then building the drivers? Or how does this all work?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Oh, okay. So still pretty spaced out though. Yeah. It's a three millimeter pitch. Okay. One of the smaller pitches. And then these are little panels that you can buy on AliExpress or Alibaba. Adafruit sells them as well in various pitches. And so what I did to address all these LEDs, the panels themselves come with a shift register interface. And so I programmed up a CPLD to convert a SPY packet from the microcontroller into this parallel shift register interface that the panels use. Mm-hmm. And then that way I can just do a DMA transfer from the microcontroller out over SPY and then leave most of the CPU time available for doing whatever else you want to do. Hmm. Wait. So are you building the panels itself? Are you sourcing the panels and then building the drivers? Or how does this all work?"
+  },
+  {
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "guest": "Piotr Esden-Tempski",
+   "stem": "0356-an-interview-with-piotr-esden-tempski",
+   "paragraph_index": 347,
+   "depth": "explains",
+   "speaker_raw": "Piotr Ezdintensky",
+   "speaker_repaired": "Piotr Esden-Tempski",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "Yeah, no. In this case, I'm being disparaging, yes. Okay, yes. Because JTAG is mostly just a signal layer definition. Okay. And then you have the state machine of the, what is it called? DAP, debug access port. And there is a state machine where you shift in bits into like a shift register. Then you issue commands with and run the state machine inside the device. But the state machine, again, in itself, the amount of commands that the state machine then interprets is depending on the device that you have connected there. So the interesting thing is that the reason why Blackmagic Probe mostly supports only ARM Cortex strips, like Cortex-M mostly, and we have some alpha support for Cortex-A, is that all that stuff is defined by the ARM debug interface version 5, ADF 5.",
+   "context_before": "Right. Is that saying that it is or it isn't? Because XML, I'm not sure if you're like being disparaging again.",
+   "context_after": "Okay.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. Is that saying that it is or it isn't? Because XML, I'm not sure if you're like being disparaging again. Yeah, no. In this case, I'm being disparaging, yes. Okay, yes. Because JTAG is mostly just a signal layer definition. Okay. And then you have the state machine of the, what is it called? DAP, debug access port. And there is a state machine where you shift in bits into like a shift register. Then you issue commands with and run the state machine inside the device. But the state machine, again, in itself, the amount of commands that the state machine then interprets is depending on the device that you have connected there. So the interesting thing is that the reason why Blackmagic Probe mostly supports only ARM Cortex strips, like Cortex-M mostly, and we have some alpha support for Cortex-A, is that all that stuff is defined by the ARM debug interface version 5, ADF 5. Okay."
+  },
+  {
+   "episode": 436,
+   "episode_title": "Downward Sloping Trace",
+   "episode_url": "https://theamphour.com/436-downward-sloping-trace/",
+   "guest": null,
+   "stem": "0436-downward-sloping-trace",
+   "paragraph_index": 123,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "So in 96 this wasn't available. So we both chose the parallel port and then we both chose the same number of lattice chips and broke them down in the same thing. We had one chip devoted to a mine was a 16. Sorry. Mine was an eight channel sampling front end. I think his was a 16 channel sampling front end. And so that did all the masking logic and all that sort of stuff. So if you look at it if you look at the schematics the internal schematics of the both of our input sampling you know chips input masking and all that they're basically identical. How do you do that? You feed data via a shift register into a mask array and then you have a big number of XOR gates and then you feed each signal in and you can even mask it. You can trigger on high low or don't care conditions for each of your channels. So it turned out to be an almost identical schematic when you look at it and you go these people must have these guys must have copied each other. And it's like no it's just you know it's just a natural progression. Sometimes there's only so many ways to do a thing.",
+   "context_before": "It's awesome. But it's crazy.",
+   "context_after": "Yeah. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "It's awesome. But it's crazy. So in 96 this wasn't available. So we both chose the parallel port and then we both chose the same number of lattice chips and broke them down in the same thing. We had one chip devoted to a mine was a 16. Sorry. Mine was an eight channel sampling front end. I think his was a 16 channel sampling front end. And so that did all the masking logic and all that sort of stuff. So if you look at it if you look at the schematics the internal schematics of the both of our input sampling you know chips input masking and all that they're basically identical. How do you do that? You feed data via a shift register into a mask array and then you have a big number of XOR gates and then you feed each signal in and you can even mask it. You can trigger on high low or don't care conditions for each of your channels. So it turned out to be an almost identical schematic when you look at it and you go these people must have these guys must have copied each other. And it's like no it's just you know it's just a natural progression. Sometimes there's only so many ways to do a thing. Yeah. Yeah."
+  },
+  {
+   "episode": 473,
+   "episode_title": "An Interview with Greg Davill",
+   "episode_url": "https://theamphour.com/473-an-interview-with-greg-davill/",
+   "guest": "Greg Davill",
+   "stem": "0473-an-interview-with-greg-davill",
+   "paragraph_index": 43,
+   "depth": "explains",
+   "speaker_raw": "Icebreaker FPGA",
+   "speaker_repaired": "Greg Davill",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "Yeah. So in order to keep everything, uh, synchronous logic, um, I provide the clock to the camera and it then like, basically it acts like a shift register back out to the FPGA. Um, and I'm using some Verilog code by that David Williams wrote. So he made a cartridge for his Supercom badge that had a camera on it. And so he's already written some of the low level LCD frame buffer kind of logic. And then I've replaced it with the, the front end for the camera interface I'm using.",
+   "context_before": "Yeah. I always think data, data flow and yeah. Streaming type stuff like that. Yeah. Hmm. So internal, internal on the FPGA then. So what does that, what does that look like? Um, so, so you had to basically translate this one bit output. Um, you said the FPGA was sending a clock out or a bit out and then the camera was sending the, the, the serialized bit stream back.",
+   "context_after": "So like when you send a clock to a little, a little camera like that, so you're sending a clock out to it, it's shifting back just a bit stream. How do you tell it? How big is it? Like the camera is limited in terms of how much it has anyways. It's like a, what a two megapixel camera or something like that.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. I always think data, data flow and yeah. Streaming type stuff like that. Yeah. Hmm. So internal, internal on the FPGA then. So what does that, what does that look like? Um, so, so you had to basically translate this one bit output. Um, you said the FPGA was sending a clock out or a bit out and then the camera was sending the, the, the serialized bit stream back. Yeah. So in order to keep everything, uh, synchronous logic, um, I provide the clock to the camera and it then like, basically it acts like a shift register back out to the FPGA. Um, and I'm using some Verilog code by that David Williams wrote. So he made a cartridge for his Supercom badge that had a camera on it. And so he's already written some of the low level LCD frame buffer kind of logic. And then I've replaced it with the, the front end for the camera interface I'm using. So like when you send a clock to a little, a little camera like that, so you're sending a clock out to it, it's shifting back just a bit stream. How do you tell it? How big is it? Like the camera is limited in terms of how much it has anyways. It's like a, what a two megapixel camera or something like that."
+  },
+  {
+   "episode": 473,
+   "episode_title": "An Interview with Greg Davill",
+   "episode_url": "https://theamphour.com/473-an-interview-with-greg-davill/",
+   "guest": "Greg Davill",
+   "stem": "0473-an-interview-with-greg-davill",
+   "paragraph_index": 73,
+   "depth": "explains",
+   "speaker_raw": "Icebreaker FPGA",
+   "speaker_repaired": "Greg Davill",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "Uh, so that was a project I created initially just to, after I'd created a, uh, my LED cube, which is about Rubik's cube sized, basically LED panels on every side. I thought, how can we make this more interesting? Cubes are, cubes are nice, but there are other polyhedra. So the nice thing about the icosahedron is every side is triangular. So it's basically 20 triangles, um, create this, this polyhedra. So it means you get by with less circuit board design, basically. It means I only have to design one triangular LED matrix panel, and then I could just make 20 of them and I'll have myself an icosahedron. Nice. So this is a project born out of laziness I'm hearing. Well, not quite. I'm just, yeah. I mean, uh, optimizing the problem. There's other shapes you could make, but they, some of them would require pentagons and octagons and, you know, different sizes. So basically decided on the icosahedron, had to work out how to model an icosahedron in Fusion 360, uh, which is a bit of a non-trivial task. I ended up watching a YouTube video that, that walked through and basically followed exactly the steps that this guy took. Um, and once I had a model, I worked out what size panels I'd need for an object about the size of a tennis ball was what I was going for. Uh-huh. Um, and so what that ended up being is 20 circuit boards with 120 LEDs on each of them. Uh, and then some LED drivers on the back. Uh, and then the drivers are constructed in a shift register format. And so the 20 panels, uh, essentially a daisy chain together. Uh, and then there's a controller on the inside that has a little FPGA on it. Um, cause I'm reusing work from Peter Esden and other people that are made LED cubes. The code is already written for that FPGA. So I could just take that and reuse it on my project. I don't have to, don't have to make my own code to drive the LEDs. Yeah. Uh, and using that, I created a little custom circuit board that fit on the inside and the whole thing fit into a 3D printed enclosure. So how big is this shift register? So is it just single shift register? It must be multiples. So every panel essentially architecturally looks like an array of 16 by 16 LEDs. Okay. Except that only half of them are populated. You can imagine a square of 16 by 16. If you cut that diagonally, I basically threw out the top half of that triangle. And the bottom half is what was, is populated on the circuit board. Oh, okay. But the LEDs are multiplexed with shift registers that we've got 16 bits multiplied by three because there are RGB LEDs. Um, and then we have a 16 bit kind of row driver. So with the shift registers, they are all cascaded in a single, basically in a single chain. Um, so we have, uh, uh, sync drivers, 16 bit sync drivers that drive red, green, and blue channels. And then there's another set of two 74 series, uh, 595 shift registers that drive the, uh, anodes of the LEDs. And basically that just looks like a single 64 bit shift register with, um, uh, you know, clock data latch and blank signals.",
+   "context_before": "We haven't, we haven't jumped the proverbial badge shark. No, not yet. Okay. Well, we'll get there. I'm sure we will. Let's talk about your, uh, iso, how do you say it? Isoquahedron? Uh, icosahedron. Icosahedron. Okay. Icosahedron. So, so what, what is it and, and how, how is it constructed?",
+   "context_after": "And so how fast can, how fast can you clock something like that then?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "We haven't, we haven't jumped the proverbial badge shark. No, not yet. Okay. Well, we'll get there. I'm sure we will. Let's talk about your, uh, iso, how do you say it? Isoquahedron? Uh, icosahedron. Icosahedron. Okay. Icosahedron. So, so what, what is it and, and how, how is it constructed? Uh, so that was a project I created initially just to, after I'd created a, uh, my LED cube, which is about Rubik's cube sized, basically LED panels on every side. I thought, how can we make this more interesting? Cubes are, cubes are nice, but there are other polyhedra. So the nice thing about the icosahedron is every side is triangular. So it's basically 20 triangles, um, create this, this polyhedra. So it means you get by with less circuit board design, basically. It means I only have to design one triangular LED matrix panel, and then I could just make 20 of them and I'll have myself an icosahedron. Nice. So this is a project born out of laziness I'm hearing. Well, not quite. I'm just, yeah. I mean, uh, optimizing the problem. There's other shapes you could make, but they, some of them would require pentagons and octagons and, you know, different sizes. So basically decided on the icosahedron, had to work out how to model an icosahedron in Fusion 360, uh, which is a bit of a non-trivial task. I ended up watching a YouTube video that, that walked through and basically followed exactly the steps that this guy took. Um, and once I had a model, I worked out what size panels I'd need for an object about the size of a tennis ball was what I was going for. Uh-huh. Um, and so what that ended up being is 20 circuit boards with 120 LEDs on each of them. Uh, and then some LED drivers on the back. Uh, and then the drivers are constructed in a shift register format. And so the 20 panels, uh, essentially a daisy chain together. Uh, and then there's a controller on the inside that has a little FPGA on it. Um, cause I'm reusing work from Peter Esden and other people that are made LED cubes. The code is already written for that FPGA. So I could just take that and reuse it on my project. I don't have to, don't have to make my own code to drive the LEDs. Yeah. Uh, and using that, I created a little custom circuit board that fit on the inside and the whole thing fit into a 3D printed enclosure. So how big is this shift register? So is it just single shift register? It must be multiples. So every panel essentially architecturally looks like an array of 16 by 16 LEDs. Okay. Except that only half of them are populated. You can imagine a square of 16 by 16. If you cut that diagonally, I basically threw out the top half of that triangle. And the bottom half is what was, is populated on the circuit board. Oh, okay. But the LEDs are multiplexed with shift registers that we've got 16 bits multiplied by three because there are RGB LEDs. Um, and then we have a 16 bit kind of row driver. So with the shift registers, they are all cascaded in a single, basically in a single chain. Um, so we have, uh, uh, sync drivers, 16 bit sync drivers that drive red, green, and blue channels. And then there's another set of two 74 series, uh, 595 shift registers that drive the, uh, anodes of the LEDs. And basically that just looks like a single 64 bit shift register with, um, uh, you know, clock data latch and blank signals. And so how fast can, how fast can you clock something like that then?"
+  },
+  {
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "guest": "Jay Carlson",
+   "stem": "0515-embedded-linux-with-jay-carlson",
+   "paragraph_index": 74,
+   "depth": "explains",
+   "speaker_raw": "Jay Carlson",
+   "speaker_repaired": "Jay Carlson",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "Yeah. Yeah. Yeah. That has, it has a internal, I think 64 or 128 megabytes of DDR two, DDR one memory, whatever. Some, some sort of dram. And, uh, you know, so what's funny is like, he's, he's going through the process of, you know, he's, he's kind of up against the wall because, you know, he, he, he wants to get this working. Right. He's got this Nixie tube clock. He's, he's, uh, he's got shift registers. He's to control the digits, high voltage shift registers. And, uh, he, he put on some WS2812, the little NeoPixel, you know, individually addressable RGB LEDs. And I don't know, have you ever tried to drive those with a microcontroller?",
+   "context_before": "And that's one of the ones you'd written about that has a SIP as well. Right. So that actually has memory.",
+   "context_after": "Yeah. They're super tight, super tight timing.",
+   "context_before_speaker": "Jay Carlson",
+   "context_after_speaker": "Jay Carlson",
+   "text": "And that's one of the ones you'd written about that has a SIP as well. Right. So that actually has memory. Yeah. Yeah. Yeah. That has, it has a internal, I think 64 or 128 megabytes of DDR two, DDR one memory, whatever. Some, some sort of dram. And, uh, you know, so what's funny is like, he's, he's going through the process of, you know, he's, he's kind of up against the wall because, you know, he, he, he wants to get this working. Right. He's got this Nixie tube clock. He's, he's, uh, he's got shift registers. He's to control the digits, high voltage shift registers. And, uh, he, he put on some WS2812, the little NeoPixel, you know, individually addressable RGB LEDs. And I don't know, have you ever tried to drive those with a microcontroller? Yeah. They're super tight, super tight timing."
+  },
+  {
+   "episode": 598,
+   "episode_title": "Best way to find a leak",
+   "episode_url": "https://theamphour.com/598-best-way-to-find-a-leak/",
+   "guest": null,
+   "stem": "0598-best-way-to-find-a-leak",
+   "paragraph_index": 69,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "I'm starting the project and I don't know where it's going to go. So I'm going to release part one, hopefully today, and then we'll see what people want. Do they want me to do it as a microcontroller based solution? Because we've, we've, we've already got the lead board, right? We've already got the board with the five digit lead display. I've, I've, I've reversed engineered the flat flex interface for it. So we know the pin out and the functionality and how it works. So now we can drive this display because it's already, it's already designed to build and it fits in there and it's got a nice little gasket on it and stuff. So it already fits in there nicely. So I don't want to redesign that. So I'm just going to design a board, which plugs into it. Now, of course, there's two ways that you can drive this sort of thing. You can do it using a, a discrete logic solution. So I can like, you know, have a discrete counter, like a five digit counter and then shift, then latch and shift that because it's a shift register based thing. Spoiler alert. Yeah. Right. So you've got to shift in the serial data to drive all the five digits. Right. So I can then latch counters and shift in and do it all in discrete 7.4 series logic, or maybe do it in a PLD or an FPGA or something like that. Or I can do it, of course, in a microcontroller grown. Yeah. Go with the micro.",
+   "context_before": "There's your homework for tonight. So that's, this is the thing you're building now is going to be that display. That's what you're doing.",
+   "context_after": "Come on, man. Because then you can also get like a, you can get an accelerometer plugged into it. Then you can say when you shake it, it says like. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "There's your homework for tonight. So that's, this is the thing you're building now is going to be that display. That's what you're doing. I'm starting the project and I don't know where it's going to go. So I'm going to release part one, hopefully today, and then we'll see what people want. Do they want me to do it as a microcontroller based solution? Because we've, we've, we've already got the lead board, right? We've already got the board with the five digit lead display. I've, I've, I've reversed engineered the flat flex interface for it. So we know the pin out and the functionality and how it works. So now we can drive this display because it's already, it's already designed to build and it fits in there and it's got a nice little gasket on it and stuff. So it already fits in there nicely. So I don't want to redesign that. So I'm just going to design a board, which plugs into it. Now, of course, there's two ways that you can drive this sort of thing. You can do it using a, a discrete logic solution. So I can like, you know, have a discrete counter, like a five digit counter and then shift, then latch and shift that because it's a shift register based thing. Spoiler alert. Yeah. Right. So you've got to shift in the serial data to drive all the five digits. Right. So I can then latch counters and shift in and do it all in discrete 7.4 series logic, or maybe do it in a PLD or an FPGA or something like that. Or I can do it, of course, in a microcontroller grown. Yeah. Go with the micro. Come on, man. Because then you can also get like a, you can get an accelerometer plugged into it. Then you can say when you shake it, it says like. Yeah."
+  },
+  {
+   "episode": 598,
+   "episode_title": "Best way to find a leak",
+   "episode_url": "https://theamphour.com/598-best-way-to-find-a-leak/",
+   "guest": null,
+   "stem": "0598-best-way-to-find-a-leak",
+   "paragraph_index": 132,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "This is the one that's built in to the Banshee brand gas, ultrasonic gas leak detector. Right. So I'm reverse engineering this thing. It's got five, seven segment displays. Right. And then it's got a 74HC161 shift, shift register drivers. Okay. Fine. You know, shift in the data and, you know, Bob's your uncle. Right. And they're cascaded together. I wouldn't have done it that way. Anyway, they're all cascaded together. And then there's no lead dropper resistors. Right. So I thought, so I thought what's going on here. Right. There's that, you know, normally if you, if you're designing a seven segment display properly, you have individual lead dropper resistors on each segment. So, you know, so you can calculate exactly how much current is going to flow through each segment. Right.",
+   "context_before": "So just so we're clear, this isn't a third party. This is the one that's actually built in currently.",
+   "context_after": "So you probably broaden that out to when you're designing anything with LEDs and you're driving with voltage, you probably have a resistor somewhere.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So just so we're clear, this isn't a third party. This is the one that's actually built in currently. This is the one that's built in to the Banshee brand gas, ultrasonic gas leak detector. Right. So I'm reverse engineering this thing. It's got five, seven segment displays. Right. And then it's got a 74HC161 shift, shift register drivers. Okay. Fine. You know, shift in the data and, you know, Bob's your uncle. Right. And they're cascaded together. I wouldn't have done it that way. Anyway, they're all cascaded together. And then there's no lead dropper resistors. Right. So I thought, so I thought what's going on here. Right. There's that, you know, normally if you, if you're designing a seven segment display properly, you have individual lead dropper resistors on each segment. So, you know, so you can calculate exactly how much current is going to flow through each segment. Right. So you probably broaden that out to when you're designing anything with LEDs and you're driving with voltage, you probably have a resistor somewhere."
+  },
+  {
+   "episode": 600,
+   "episode_title": "The Custodial Arts",
+   "episode_url": "https://theamphour.com/600-the-custodial-arts/",
+   "guest": null,
+   "stem": "0600-the-custodial-arts",
+   "paragraph_index": 218,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "So, I've got to have all these counters, which then go into shift registers, right? And then you've got to shift register that out to a single bit stream, right? So, I've got to convert five digits counted. This is why I need 15 chips minimum, right? Because I need a decade counter. I need a BCD to seven-segment decoder, seven-segment decoder chip. And I need an eight-bit shift register. And then I've got to cascade all those to get my individual bit output, right? So, it's like, yeah.",
+   "context_before": "Oh, that's right. I forgot those chips on that. Yeah, yeah.",
+   "context_after": "This doesn't sound fun to me.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Oh, that's right. I forgot those chips on that. Yeah, yeah. So, I've got to have all these counters, which then go into shift registers, right? And then you've got to shift register that out to a single bit stream, right? So, I've got to convert five digits counted. This is why I need 15 chips minimum, right? Because I need a decade counter. I need a BCD to seven-segment decoder, seven-segment decoder chip. And I need an eight-bit shift register. And then I've got to cascade all those to get my individual bit output, right? So, it's like, yeah. This doesn't sound fun to me."
+  },
+  {
+   "episode": 600,
+   "episode_title": "The Custodial Arts",
+   "episode_url": "https://theamphour.com/600-the-custodial-arts/",
+   "guest": null,
+   "stem": "0600-the-custodial-arts",
+   "paragraph_index": 257,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "All right. Just make sure those tax breaks come on in. Come on in. Get on down to Texas. Anyway, I think the, this is an automotive part and it can drive a bunch of current per pin, 250 milliamps per channel. So it's a 595 shift register. But then if you want to drive some beefy current, I think.",
+   "context_before": "Okay.",
+   "context_after": "Oh, hang on. Show me. I'm trying to look, I'm trying to find the link for it here. Where is it? Ah, chip of the week. There it is. Got it. Got it. Got it. Yeah. Yeah.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Okay. All right. Just make sure those tax breaks come on in. Come on in. Get on down to Texas. Anyway, I think the, this is an automotive part and it can drive a bunch of current per pin, 250 milliamps per channel. So it's a 595 shift register. But then if you want to drive some beefy current, I think. Oh, hang on. Show me. I'm trying to look, I'm trying to find the link for it here. Where is it? Ah, chip of the week. There it is. Got it. Got it. Got it. Yeah. Yeah."
+  },
+  {
+   "episode": 600,
+   "episode_title": "The Custodial Arts",
+   "episode_url": "https://theamphour.com/600-the-custodial-arts/",
+   "guest": null,
+   "stem": "0600-the-custodial-arts",
+   "paragraph_index": 262,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "Oh, a 595 with 250 milliamps per channel. This is life changing.",
+   "context_before": "I think so. Yep.",
+   "context_after": "This is a big one. This is a big one. I have to imagine like, so that means, so this is an automotive part, which means there's probably cars on the road, like just cranking current through these things right now. Yeah. It's interesting. I don't think there's any stuff.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "I think so. Yep. Oh, a 595 with 250 milliamps per channel. This is life changing. This is a big one. This is a big one. I have to imagine like, so that means, so this is an automotive part, which means there's probably cars on the road, like just cranking current through these things right now. Yeah. It's interesting. I don't think there's any stuff."
+  },
+  {
+   "episode": 600,
+   "episode_title": "The Custodial Arts",
+   "episode_url": "https://theamphour.com/600-the-custodial-arts/",
+   "guest": null,
+   "stem": "0600-the-custodial-arts",
+   "paragraph_index": 284,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "I can tell you a million bloody applications for this. It's combined in a 595 shift register with the ULN 2802 003. The number of times I've seen, I've seen 595s or done it myself, 595 shift registers with latched shift registers.",
+   "context_before": "Is there an application section? No power consumption.",
+   "context_after": "You're just tying them together to the output.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Is there an application section? No power consumption. I can tell you a million bloody applications for this. It's combined in a 595 shift register with the ULN 2802 003. The number of times I've seen, I've seen 595s or done it myself, 595 shift registers with latched shift registers. You're just tying them together to the output."
+  },
+  {
+   "episode": 621,
+   "episode_title": "The Magic of Calipers",
+   "episode_url": "https://theamphour.com/621-the-magic-of-calipers/",
+   "guest": null,
+   "stem": "0621-the-magic-of-calipers",
+   "paragraph_index": 374,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "And, and then I was going to show how, okay, you need like 30 chips or something. And then I was going to show how you convert that into a single eight pin micro. Right. And, uh, but then I thought, no, why can't I just get, Hey, it'd be more interesting and get AI to actually see if it can drive this display because it's an interesting thing. What I'm trying to do is drive five, seven segment displays connected to five shift, shift registers, right? 7,400 series shift registers, seven, four, one, six, fours. Right. And so it's got a serial clock in, it's got a serial data in. And, you know, so I thought this is like an interesting experiment for chat GPT AI to see if it can, like, I, I know that chat GPT can write code, right? Can you write code for almost anything?",
+   "context_before": "Mm.",
+   "context_after": "Arduino code. For Arduino, somebody said it can even write code for that PDUK. Oh, really? Three set microcontroller. Yeah. Somebody said it even does that. So it just, I don't know, it just trawls GitHub and finds all this code and just magically, you know, learns it. Right. So it can do practically any language. It can generate assembler for pick. I think somebody said, you know, it can do like.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Dave Jones",
+   "text": "Mm. And, and then I was going to show how, okay, you need like 30 chips or something. And then I was going to show how you convert that into a single eight pin micro. Right. And, uh, but then I thought, no, why can't I just get, Hey, it'd be more interesting and get AI to actually see if it can drive this display because it's an interesting thing. What I'm trying to do is drive five, seven segment displays connected to five shift, shift registers, right? 7,400 series shift registers, seven, four, one, six, fours. Right. And so it's got a serial clock in, it's got a serial data in. And, you know, so I thought this is like an interesting experiment for chat GPT AI to see if it can, like, I, I know that chat GPT can write code, right? Can you write code for almost anything? Arduino code. For Arduino, somebody said it can even write code for that PDUK. Oh, really? Three set microcontroller. Yeah. Somebody said it even does that. So it just, I don't know, it just trawls GitHub and finds all this code and just magically, you know, learns it. Right. So it can do practically any language. It can generate assembler for pick. I think somebody said, you know, it can do like."
+  },
+  {
+   "episode": 621,
+   "episode_title": "The Magic of Calipers",
+   "episode_url": "https://theamphour.com/621-the-magic-of-calipers/",
+   "guest": null,
+   "stem": "0621-the-magic-of-calipers",
+   "paragraph_index": 387,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "So anyway, and the, and the other bug was that it didn't realize that the Arduino had a 16 bit integer and not a 32 bit integer. So I was, I was playing with a five digit number that exceeded the integer value of 32,768. Right. So it exceeded that. So that's why it actually failed. It actually compiled fine, but there were two bugs that made it didn't work. And, and it did ultimately require a human, i.e. me to fix those bugs. But geez, it was, I couldn't believe that it actually understood the function of shift registers. It understood the mapping of seven segment displays. It got the mapping all correct. I would like to think that's because of my prompt engineering skills. I actually described it in an adequate detail. I'm sure that played a role, but, but it understood that a seven segment display and understood that it had a decimal point and understood that it had to generate a routine to map all of these segments to the digits. And then it needed to shift them out in the correct order in the correct thing. And it was just, bam, it nailed all that. So it actually understood hardware and then translated it into software to drive the hardware. It's really quite something. This is different to just writing code.",
+   "context_before": "Yeah. Oh boy.",
+   "context_after": "Here's an interesting question. I mean, that's, that is impressive. Like, yeah, both on the prompt side, like that's, that's non-trivial. And so I'm excited to watch this actually. Here's a question for you. If you hired another helper like David too.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Oh boy. So anyway, and the, and the other bug was that it didn't realize that the Arduino had a 16 bit integer and not a 32 bit integer. So I was, I was playing with a five digit number that exceeded the integer value of 32,768. Right. So it exceeded that. So that's why it actually failed. It actually compiled fine, but there were two bugs that made it didn't work. And, and it did ultimately require a human, i.e. me to fix those bugs. But geez, it was, I couldn't believe that it actually understood the function of shift registers. It understood the mapping of seven segment displays. It got the mapping all correct. I would like to think that's because of my prompt engineering skills. I actually described it in an adequate detail. I'm sure that played a role, but, but it understood that a seven segment display and understood that it had a decimal point and understood that it had to generate a routine to map all of these segments to the digits. And then it needed to shift them out in the correct order in the correct thing. And it was just, bam, it nailed all that. So it actually understood hardware and then translated it into software to drive the hardware. It's really quite something. This is different to just writing code. Here's an interesting question. I mean, that's, that is impressive. Like, yeah, both on the prompt side, like that's, that's non-trivial. And so I'm excited to watch this actually. Here's a question for you. If you hired another helper like David too."
+  },
+  {
+   "episode": 652,
+   "episode_title": "For a couple weeks there...",
+   "episode_url": "https://theamphour.com/652-for-a-couple-weeks-there/",
+   "guest": null,
+   "stem": "0652-for-a-couple-weeks-there",
+   "paragraph_index": 238,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "have because you're pumping so much data into it like yeah i mean it's like a it's like a store and forward kind of like thing but it's but it's the yeah because they're a shift they're a shift register it's basically forms one gigantic million lead long you know chain it's a train because this pin basically these these lead chips have power ground data in data data out and they're just whoop all in series yeah exactly yep and they've all got like an individual ran is it a random address or do i i don't know i've never set them up how do you assign them you don't it's it's",
+   "context_before": "from mage oh ben henke is supposed to be on the show at some point um uh he mage not mage i want to say mage well but it's not uh electro mage so he does the uh the and i can't think of any of these pixel blaze pixel blaze first off is an awesome board so if you're like in the market to do these sort of things basically it's like a esp32 on a small pcb breakout and you can wire into like apa 102s i think is the one thing sk9822s right ws2012 so there are a bunch of different things there and and honestly the the writing your own driver for these things is actually if you're not using the library if you'd like try and do that yourself it's like oh yeah from scratch it'd be yeah yeah yeah it's really tight timing it's it's like basically like the one the one versus the zero is you you got to",
+   "context_after": "basically like you have to count so like if you had like a hundred in a chain and you wanted to turn on number 55 you basically say like oh send 55 pulses and then you will hit number 55 so you could send like 54 blanks okay and then a 55 but you have to do that manually and so like right so you",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "from mage oh ben henke is supposed to be on the show at some point um uh he mage not mage i want to say mage well but it's not uh electro mage so he does the uh the and i can't think of any of these pixel blaze pixel blaze first off is an awesome board so if you're like in the market to do these sort of things basically it's like a esp32 on a small pcb breakout and you can wire into like apa 102s i think is the one thing sk9822s right ws2012 so there are a bunch of different things there and and honestly the the writing your own driver for these things is actually if you're not using the library if you'd like try and do that yourself it's like oh yeah from scratch it'd be yeah yeah yeah it's really tight timing it's it's like basically like the one the one versus the zero is you you got to have because you're pumping so much data into it like yeah i mean it's like a it's like a store and forward kind of like thing but it's but it's the yeah because they're a shift they're a shift register it's basically forms one gigantic million lead long you know chain it's a train because this pin basically these these lead chips have power ground data in data data out and they're just whoop all in series yeah exactly yep and they've all got like an individual ran is it a random address or do i i don't know i've never set them up how do you assign them you don't it's it's basically like you have to count so like if you had like a hundred in a chain and you wanted to turn on number 55 you basically say like oh send 55 pulses and then you will hit number 55 so you could send like 54 blanks okay and then a 55 but you have to do that manually and so like right so you"
+  },
+  {
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "guest": "Charles Lohr",
+   "stem": "0667-long-distance-with-cnlohr-a",
+   "paragraph_index": 47,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "CNLohr",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "Okay. So I don't know. You just sit there and you play with code and you play with generating certain types of signals and you just play with it for a while. You get a feeling for what kinds of things generate what. I actually have a tool online, which is it's sort of like an emulator for the airwaves where you can write JavaScript code and that JavaScript code will create a bit stream. And then the demo will simulate that. Well, what actually is being transmitted on the spectrum? If you were to take the signal and output a GPIO port now, it ignores all of the sort of like, you know, parasitic capacitance. It ignores all of these things. But like, it's just much more like if you want to just simplify it and get down to like what, what is theoretically being sent? I don't have an intuitive mathematical construct of understanding of how all that works. But what I have found is if you sample a signal and, and what I mean by samples, I mean, like if you just like look at a bit and you turn a GPIO on or off at that time. So you can use like a shift register for that or just, you know, whatever you're end up using, you can then sort of look at what that does in the spectrum and sort of like write code and play with it and understand how that works. And one of the tricks that I found was if you just pretend you're sending a 903.9 megahertz signal and then at a much lower frequency. So 80 megahertz or 40 megahertz or something like that. You say right now, if I were to look at that, that high frequency signal and I were to say like, like say, is it above zero or is it below zero right now at this time? And then in one 40 millionth of a second, I'll look at it again. And one 40 millionth of a second, I'll look at it again. So if you, if you read that, you save that table and then you shift that table out. So you output whether it was high or low at one time, you output whether it was higher low at the next time you output this higher low at the next time. You'll get this like noise that gets spread all over the spectrum. But the magic is you will get a little bit of signal exactly where the signal was that you were sampling. And it's even cooler than that. So if you want to generate like two signals right next to each other up at 900 megahertz, you know, something like that. And you sample those like you just add them together and you sample that. When you look at the output signal, there will be one signal here and one signal there. And they will exactly match what you were, what you were synthesizing, even though you were only sampling at like 40 megahertz. It's able to this, this shortcut basically is able to synthesize these exactly where they're supposed to be. These signals up at 900 megahertz. And so if you generate a sweeping tone at 900 megahertz and you sample that at 40, 70, whatever it is, megahertz that you're able to output on your hardware, then when you hook that up to a GPIO, there's going to be just a tiny little signal exactly where you wanted it.",
+   "context_before": "Yeah, right. Exactly. Cool. Okay. So we've gotten to the point where now we have had these uptones, we have these downtones, we have this kind of framing around it. So then how do you then implement that with just a GPIO? That's wild to me.",
+   "context_after": "Wow.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Speaker ?",
+   "text": "Yeah, right. Exactly. Cool. Okay. So we've gotten to the point where now we have had these uptones, we have these downtones, we have this kind of framing around it. So then how do you then implement that with just a GPIO? That's wild to me. Okay. So I don't know. You just sit there and you play with code and you play with generating certain types of signals and you just play with it for a while. You get a feeling for what kinds of things generate what. I actually have a tool online, which is it's sort of like an emulator for the airwaves where you can write JavaScript code and that JavaScript code will create a bit stream. And then the demo will simulate that. Well, what actually is being transmitted on the spectrum? If you were to take the signal and output a GPIO port now, it ignores all of the sort of like, you know, parasitic capacitance. It ignores all of these things. But like, it's just much more like if you want to just simplify it and get down to like what, what is theoretically being sent? I don't have an intuitive mathematical construct of understanding of how all that works. But what I have found is if you sample a signal and, and what I mean by samples, I mean, like if you just like look at a bit and you turn a GPIO on or off at that time. So you can use like a shift register for that or just, you know, whatever you're end up using, you can then sort of look at what that does in the spectrum and sort of like write code and play with it and understand how that works. And one of the tricks that I found was if you just pretend you're sending a 903.9 megahertz signal and then at a much lower frequency. So 80 megahertz or 40 megahertz or something like that. You say right now, if I were to look at that, that high frequency signal and I were to say like, like say, is it above zero or is it below zero right now at this time? And then in one 40 millionth of a second, I'll look at it again. And one 40 millionth of a second, I'll look at it again. So if you, if you read that, you save that table and then you shift that table out. So you output whether it was high or low at one time, you output whether it was higher low at the next time you output this higher low at the next time. You'll get this like noise that gets spread all over the spectrum. But the magic is you will get a little bit of signal exactly where the signal was that you were sampling. And it's even cooler than that. So if you want to generate like two signals right next to each other up at 900 megahertz, you know, something like that. And you sample those like you just add them together and you sample that. When you look at the output signal, there will be one signal here and one signal there. And they will exactly match what you were, what you were synthesizing, even though you were only sampling at like 40 megahertz. It's able to this, this shortcut basically is able to synthesize these exactly where they're supposed to be. These signals up at 900 megahertz. And so if you generate a sweeping tone at 900 megahertz and you sample that at 40, 70, whatever it is, megahertz that you're able to output on your hardware, then when you hook that up to a GPIO, there's going to be just a tiny little signal exactly where you wanted it. Wow."
+  },
+  {
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "guest": "Charles Lohr",
+   "stem": "0667-long-distance-with-cnlohr-a",
+   "paragraph_index": 101,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "CNLohr",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "It's not, it's not a hundred percent of that because for instance, on the ESP 82 66, when we use the direct synthesis with the bit stream, remember how I mentioned that if you have, if you're generating a frequency that when it aliases down, you end up getting very few transitions, it's very low power. Uh, sometimes by reducing that speed in which you're outputting the signal, you can end up putting the signal you're trying to generate right in the sweet spot, right in the middle where it's going to get a ton of transitions versus if you go up in the frequency that you're shifting out. Now all of a sudden it's putting that frequency you're trying to transmit in a sort of no man's land. And then, then you actually lose, lose quality. Got it. Got it. Also total side note. One of the fun things that you can do with an ESP 82 66 is control its clock tree. Exactly. And that's the, the Espressif doesn't document their clock trees anywhere, but the clock tree in the ESP 82 66 was simple enough that people have been able to completely reverse engineer it. And so what you can do with that is it means like now all of a sudden most SPI like outputs on things or shift registers, they top out at, you know, 10 megahertz, 20 megahertz, something like that on the, um, on the ESP 82 66, you can gotta get my calculator out of hex mode. Uh, you can actually output a shift registered around 190 megahertz on an ESP 82 66, that older chip. But that's just because people have been able to completely reverse engineer the whole clock tree. So if you want to get like the absolute best shot you could possibly get it outputting signals with direct synthesis, which is what this is where you're just turning a signal on and off ESP 82 66 is actually are surprisingly basically the best you can get right now.",
+   "context_before": "Okay. Yeah. The higher you start, the better off you're going to be right. That's, that's the word I'm really getting at is like, you start at a higher frequency coming out of the pin, the better off you're going to be because you have to be clear.",
+   "context_after": "Interesting. 82 66. Huh?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Okay. Yeah. The higher you start, the better off you're going to be right. That's, that's the word I'm really getting at is like, you start at a higher frequency coming out of the pin, the better off you're going to be because you have to be clear. It's not, it's not a hundred percent of that because for instance, on the ESP 82 66, when we use the direct synthesis with the bit stream, remember how I mentioned that if you have, if you're generating a frequency that when it aliases down, you end up getting very few transitions, it's very low power. Uh, sometimes by reducing that speed in which you're outputting the signal, you can end up putting the signal you're trying to generate right in the sweet spot, right in the middle where it's going to get a ton of transitions versus if you go up in the frequency that you're shifting out. Now all of a sudden it's putting that frequency you're trying to transmit in a sort of no man's land. And then, then you actually lose, lose quality. Got it. Got it. Also total side note. One of the fun things that you can do with an ESP 82 66 is control its clock tree. Exactly. And that's the, the Espressif doesn't document their clock trees anywhere, but the clock tree in the ESP 82 66 was simple enough that people have been able to completely reverse engineer it. And so what you can do with that is it means like now all of a sudden most SPI like outputs on things or shift registers, they top out at, you know, 10 megahertz, 20 megahertz, something like that on the, um, on the ESP 82 66, you can gotta get my calculator out of hex mode. Uh, you can actually output a shift registered around 190 megahertz on an ESP 82 66, that older chip. But that's just because people have been able to completely reverse engineer the whole clock tree. So if you want to get like the absolute best shot you could possibly get it outputting signals with direct synthesis, which is what this is where you're just turning a signal on and off ESP 82 66 is actually are surprisingly basically the best you can get right now. Interesting. 82 66. Huh?"
+  },
+  {
+   "episode": 683,
+   "episode_title": "Troubleshooting is the skill",
+   "episode_url": "https://theamphour.com/683-troubleshooting-is-the-skill/",
+   "guest": null,
+   "stem": "0683-troubleshooting-is-the-skill",
+   "paragraph_index": 11,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "shift-register"
+   ],
+   "paragraph_text": "Yeah, I got you. Yes. Yeah, timer. So I gave it a hardware description. Got it. Like, a description of shift. Like, because I needed to drive shift registers and seven-segment display. So I gave it the description of the hardware, just the hardware, and it wrote the code, and it was almost, there was only one error in it. That's pretty cool. It was, like, I was absolutely blown away, and that was, like, I don't know, a year and a half ago or something. Yeah.",
+   "context_before": "Was this the BOM? BOM. This was it, yes, the BOM.",
+   "context_after": "Yeah, and this keeps getting better. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Was this the BOM? BOM. This was it, yes, the BOM. Yeah, I got you. Yes. Yeah, timer. So I gave it a hardware description. Got it. Like, a description of shift. Like, because I needed to drive shift registers and seven-segment display. So I gave it the description of the hardware, just the hardware, and it wrote the code, and it was almost, there was only one error in it. That's pretty cool. It was, like, I was absolutely blown away, and that was, like, I don't know, a year and a half ago or something. Yeah. Yeah, and this keeps getting better. Yeah."
+  }
+ ]
+}

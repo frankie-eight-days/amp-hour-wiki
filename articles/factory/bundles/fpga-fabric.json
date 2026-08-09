@@ -1,0 +1,687 @@
+{
+ "concept": "fpga-fabric",
+ "name": "FPGA Fabric",
+ "type": "component",
+ "score": 74.185,
+ "rank_by_score": 498,
+ "cluster": {
+  "core": [
+   "fpga-fabric"
+  ],
+  "children": [
+   "fpga-programmer",
+   "nonvolatile-memory",
+   "xilinx-tools"
+  ],
+  "neighbors": []
+ },
+ "stats": {
+  "episodes": 24,
+  "mentions": 33,
+  "explains": 22,
+  "opinions": 1,
+  "candidate_episode_count": 21,
+  "candidate_mention_count": 25,
+  "gated_out": 19,
+  "gated_out_by_concept": [
+   [
+    "xilinx-tools",
+    9
+   ],
+   [
+    "nonvolatile-memory",
+    6
+   ],
+   [
+    "fpga-programmer",
+    4
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 1,
+  "speakers": [
+   [
+    "Dave Jones",
+    10
+   ],
+   [
+    "Chris Gammell",
+    6
+   ],
+   [
+    "Luke Valenty",
+    2
+   ],
+   [
+    "Philip Frieden",
+    1
+   ],
+   [
+    "Ryan Cousins",
+    1
+   ],
+   [
+    "Greg Davill",
+    1
+   ],
+   [
+    "Brian Faith",
+    1
+   ],
+   [
+    "Jason Kridner",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 23
+  },
+  "passages_by_depth": {
+   "explains": 22,
+   "opinion": 1
+  }
+ },
+ "cap": 250,
+ "capped": false,
+ "total_available": 23,
+ "passages": [
+  {
+   "episode": 98,
+   "episode_title": "Proemial Passive Poiesis",
+   "episode_url": "https://theamphour.com/the-amp-hour-98-proemial-passive-poiesis/",
+   "guest": null,
+   "stem": "the-amp-hour-98-proemial-passive-poiesis",
+   "paragraph_index": 250,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Basically, they're throwing IP at everything, right? Exactly. This is the thing that chip companies do. They say, oh, well, we have this big bucket of IP. Which is also known as intellectual property. And it's basically a prepacketed version of all these different cores. Or in the case of ARM, it's a core. Or maybe it's a memory controller or other types of peripheral controllers, that kind of thing. And so, Zinc is this new thing where they're throwing... I should have looked at that first. Sorry. They're calling it the extensible processing platformer. God, bleh. Whatever. Whatever. But what it really is, it's a dual-core A9, which is an ARM-based processor. And I believe the A8 is what's in iPhones and iPads. I think that's the core. And then they rolled that into... I don't know. It's a very powerful processor. That's the important thing, right? And then what they're doing, basically, is they're wrapping it in logic, right? And then they also put a DDR RAM controller out there so you can put some external memory. Because that's another downside to FPGAs is that when you use block RAM or internal RAM, it's usually limited, right? You can run out of that, but it's... Yeah, it's only a few K, usually. Right. If you have some kind of internal micro, usually you have to have some kind of external memory, right? So it actually is more like a processor in that respect. So... But this is hard-coded now. So the idea is, whereas, you know, like... You could buy a Xilinx part today or an Altera part or a lot of other parts, and you can put a core in there, but the thing is, it's in the fabric, right? It's actually... Yeah. Each time you recompile your design... It's in the dynamic fabric.",
+   "context_before": "We've talked about this before. It is the industry move back to hard-coded silicon. Right. Because the FPGA concept, you know, didn't take off as the industry thought. They thought, oh, everyone will be using FPGAs for everything. You'll be able to buy them for 10 cents. They'll be cheap as chips, and they'll do everything, and microcontrollers will go the way of the Dodo. Wah! Sorry, didn't happen. So, they've had to go back to hard silicon. So, they're embedding ARM processors in FPGAs now. They're embedding transceivers. They're embedding UARTs. They're embedding all the peripherals you get in microcontrollers now.",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "We've talked about this before. It is the industry move back to hard-coded silicon. Right. Because the FPGA concept, you know, didn't take off as the industry thought. They thought, oh, everyone will be using FPGAs for everything. You'll be able to buy them for 10 cents. They'll be cheap as chips, and they'll do everything, and microcontrollers will go the way of the Dodo. Wah! Sorry, didn't happen. So, they've had to go back to hard silicon. So, they're embedding ARM processors in FPGAs now. They're embedding transceivers. They're embedding UARTs. They're embedding all the peripherals you get in microcontrollers now. Basically, they're throwing IP at everything, right? Exactly. This is the thing that chip companies do. They say, oh, well, we have this big bucket of IP. Which is also known as intellectual property. And it's basically a prepacketed version of all these different cores. Or in the case of ARM, it's a core. Or maybe it's a memory controller or other types of peripheral controllers, that kind of thing. And so, Zinc is this new thing where they're throwing... I should have looked at that first. Sorry. They're calling it the extensible processing platformer. God, bleh. Whatever. Whatever. But what it really is, it's a dual-core A9, which is an ARM-based processor. And I believe the A8 is what's in iPhones and iPads. I think that's the core. And then they rolled that into... I don't know. It's a very powerful processor. That's the important thing, right? And then what they're doing, basically, is they're wrapping it in logic, right? And then they also put a DDR RAM controller out there so you can put some external memory. Because that's another downside to FPGAs is that when you use block RAM or internal RAM, it's usually limited, right? You can run out of that, but it's... Yeah, it's only a few K, usually. Right. If you have some kind of internal micro, usually you have to have some kind of external memory, right? So it actually is more like a processor in that respect. So... But this is hard-coded now. So the idea is, whereas, you know, like... You could buy a Xilinx part today or an Altera part or a lot of other parts, and you can put a core in there, but the thing is, it's in the fabric, right? It's actually... Yeah. Each time you recompile your design... It's in the dynamic fabric. Yeah."
+  },
+  {
+   "episode": 102,
+   "episode_title": "Gouging Green Gardyloo",
+   "episode_url": "https://theamphour.com/the-amp-hour-102-gouging-green-gardyloo/",
+   "guest": null,
+   "stem": "the-amp-hour-102-gouging-green-gardyloo",
+   "paragraph_index": 279,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "It does such a gap even exist. You've got to, you know... Well, yeah. You've got to ask. Because there's already that blur. The FPGAs now have hard silicon on them to do the, you know, to do the microcontroller type stuff. So you've got the crossover there. And likewise, the microcontrollers are coming with little embedded sort of, you know, FPGA fabric in them. So they... Both, you know, you're being forced from both sides. You know, both sides are crossing over into each other. Right. And it's not just another territory. So where does that leave XMOS if it is a bridge in technology? I guess you could call it.",
+   "context_before": "So it's the idea of like a software-defined silicon. I was just researching a little bit and I had never used one. But, you know, I've used FPGAs before. And Dave, I know you've used FPGAs before. And I think they're supposed to like kind of fill that gap in between FPGAs and processors. And...",
+   "context_after": "Well, I was looking at it on... It's definitely multi-threaded. I was looking at it just on Wikipedia and on their own site. And that's kind of the main crux behind it is, you know, you develop these threads and you have multiple of them going on. And some of our listeners actually talked about it a little bit on the discussion server. And, you know, Casbahs used it, he said. That's one of the guys on the server. Right. But he didn't end up using it in the final product. And basically, though, it is that idea of, you know, like a multi-threaded application. You know, like if you have many things going on at once. And that is usually where processors break down, right? And if you're, you know, you have to context switch usually if you're doing something in a processor versus if you had some",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So it's the idea of like a software-defined silicon. I was just researching a little bit and I had never used one. But, you know, I've used FPGAs before. And Dave, I know you've used FPGAs before. And I think they're supposed to like kind of fill that gap in between FPGAs and processors. And... It does such a gap even exist. You've got to, you know... Well, yeah. You've got to ask. Because there's already that blur. The FPGAs now have hard silicon on them to do the, you know, to do the microcontroller type stuff. So you've got the crossover there. And likewise, the microcontrollers are coming with little embedded sort of, you know, FPGA fabric in them. So they... Both, you know, you're being forced from both sides. You know, both sides are crossing over into each other. Right. And it's not just another territory. So where does that leave XMOS if it is a bridge in technology? I guess you could call it. Well, I was looking at it on... It's definitely multi-threaded. I was looking at it just on Wikipedia and on their own site. And that's kind of the main crux behind it is, you know, you develop these threads and you have multiple of them going on. And some of our listeners actually talked about it a little bit on the discussion server. And, you know, Casbahs used it, he said. That's one of the guys on the server. Right. But he didn't end up using it in the final product. And basically, though, it is that idea of, you know, like a multi-threaded application. You know, like if you have many things going on at once. And that is usually where processors break down, right? And if you're, you know, you have to context switch usually if you're doing something in a processor versus if you had some"
+  },
+  {
+   "episode": 103,
+   "episode_title": "An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee",
+   "episode_url": "https://theamphour.com/the-amp-hour-103-xenodochial-xilinx-ex-employee/",
+   "guest": "Philip Frieden",
+   "stem": "the-amp-hour-103-xenodochial-xilinx-ex-employee",
+   "paragraph_index": 152,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Right. Yeah. So, maybe even to take a step back from there for some of our younger listeners or people who haven't worked with FPGAs before, the way to think about the fabric is like a matrix, right? I mean, it's like a crosshatch of connections.",
+   "context_before": "So, how many wires do we run up and down each channel? Where do we put the switches? The term in Xilinx technology is called a PIP, which is a programmable interconnect point where if you take one wire traveling in X and the other one traveling in Y, if you want them to join, then there has to be a pass transistor and a memory cell to turn it on. Yep.",
+   "context_after": "Right.",
+   "context_before_speaker": "Philip Frieden",
+   "context_after_speaker": "Philip Frieden",
+   "text": "So, how many wires do we run up and down each channel? Where do we put the switches? The term in Xilinx technology is called a PIP, which is a programmable interconnect point where if you take one wire traveling in X and the other one traveling in Y, if you want them to join, then there has to be a pass transistor and a memory cell to turn it on. Yep. Right. Yeah. So, maybe even to take a step back from there for some of our younger listeners or people who haven't worked with FPGAs before, the way to think about the fabric is like a matrix, right? I mean, it's like a crosshatch of connections. Right."
+  },
+  {
+   "episode": 103,
+   "episode_title": "An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee",
+   "episode_url": "https://theamphour.com/the-amp-hour-103-xenodochial-xilinx-ex-employee/",
+   "guest": "Philip Frieden",
+   "stem": "the-amp-hour-103-xenodochial-xilinx-ex-employee",
+   "paragraph_index": 330,
+   "depth": "explains",
+   "speaker_raw": "Philip Frieden",
+   "speaker_repaired": "Philip Frieden",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Right. And, you know, it works more than well enough in the fabric. But a dual-port memory \u2013 a dual-port memory is like an element, right?",
+   "context_before": "And slow speed.",
+   "context_after": "Which we should mention that Philip has a patent for as well, right? Yeah. Weren't you one of the first ones on \u2013",
+   "context_before_speaker": "Speaker ?",
+   "context_after_speaker": "Chris Gammell",
+   "text": "And slow speed. Right. And, you know, it works more than well enough in the fabric. But a dual-port memory \u2013 a dual-port memory is like an element, right? Which we should mention that Philip has a patent for as well, right? Yeah. Weren't you one of the first ones on \u2013"
+  },
+  {
+   "episode": 150,
+   "episode_title": "Solar, FPGAs and Maxim Integrated - Solar Shopper Sickness",
+   "episode_url": "https://theamphour.com/the-amp-hour-150-solar-shopper-sickness/",
+   "guest": null,
+   "stem": "the-amp-hour-150-solar-shopper-sickness",
+   "paragraph_index": 198,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Well, not everything. FPGAs are turning into processors with a bit of FPGA fabric. That's where it's headed.",
+   "context_before": "Yeah.",
+   "context_after": "I agree with that. I think that is the future. I always thought that Intel was going to push some stuff into there, like that a different chip vendor was going to buy IP from like a Xilinx or an Altera, but, or maybe they did at one point. I don't remember. But. I don't know. I always, yeah, I think that that was going to be a bigger thing too, because I got really excited when Actel did that. They had, they had said that, oh, you know, we're, we're making microprocessors that just happen to have programmable logic, right? Because that's. Right. Yep. Yeah. I mean, because the real benefit of the logic, the programmable logic is doing, it's doing the custom fast functions. So.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. Well, not everything. FPGAs are turning into processors with a bit of FPGA fabric. That's where it's headed. I agree with that. I think that is the future. I always thought that Intel was going to push some stuff into there, like that a different chip vendor was going to buy IP from like a Xilinx or an Altera, but, or maybe they did at one point. I don't remember. But. I don't know. I always, yeah, I think that that was going to be a bigger thing too, because I got really excited when Actel did that. They had, they had said that, oh, you know, we're, we're making microprocessors that just happen to have programmable logic, right? Because that's. Right. Yep. Yeah. I mean, because the real benefit of the logic, the programmable logic is doing, it's doing the custom fast functions. So."
+  },
+  {
+   "episode": 150,
+   "episode_title": "Solar, FPGAs and Maxim Integrated - Solar Shopper Sickness",
+   "episode_url": "https://theamphour.com/the-amp-hour-150-solar-shopper-sickness/",
+   "guest": null,
+   "stem": "the-amp-hour-150-solar-shopper-sickness",
+   "paragraph_index": 202,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Yeah. You know, you might, you might need a serializer or something, you know, and bam. Okay, great. I've got a little bit of FPGA fabric I can do that in and, you know, yeah.",
+   "context_before": "Right.",
+   "context_after": "I think it's cool. But yeah. So FPGAs. I don't know. I still, so anyways, I, I think the, the, my HDL, I think that's cool. I, I'd like to try it eventually. It's all open source. It's a, there's a good, good bit of documentation. So if people are Python programmers. Sure. They can jump in.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. Yeah. You know, you might, you might need a serializer or something, you know, and bam. Okay, great. I've got a little bit of FPGA fabric I can do that in and, you know, yeah. I think it's cool. But yeah. So FPGAs. I don't know. I still, so anyways, I, I think the, the, my HDL, I think that's cool. I, I'd like to try it eventually. It's all open source. It's a, there's a good, good bit of documentation. So if people are Python programmers. Sure. They can jump in."
+  },
+  {
+   "episode": 156,
+   "episode_title": "Tesla, FPGAs and DigiKey - Zesty Zippy Zynq",
+   "episode_url": "https://theamphour.com/the-amp-hour-156-zesty-zippy-zynq/",
+   "guest": null,
+   "stem": "the-amp-hour-156-zesty-zippy-zynq",
+   "paragraph_index": 199,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "It's a system on chip. It's a system on chip. Yeah, it's a kitchen sink, you know. So it's got an ARM processor with FPGA, you know, around it and it's got, you know. Yeah. And it's got, well, it's a dual, it's a dual ARM one gig processor, A9 processor. Yeah, the A9, you know. Right. And plus with FPGA fabric around it. I don't know what other goodness it's got in there, but yeah.",
+   "context_before": "Oh, yeah, well, we can do that. We can hang with that. I was really excited about this chip when it came out because it's kind of like the holy grail of, you know, like embedded processor plus flexible fabric plus everything else.",
+   "context_after": "It's got, I think it depends on the model. You know how like usually the FPGAs have like a big bunch of models. Oh, of course, yeah. There's 20 different models, yeah. Like, so they have transmit, you know, the high speed service transmitters. Of course. They've got hard logic memory controllers for, you know, for use of the DDR2 and 3.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Oh, yeah, well, we can do that. We can hang with that. I was really excited about this chip when it came out because it's kind of like the holy grail of, you know, like embedded processor plus flexible fabric plus everything else. It's a system on chip. It's a system on chip. Yeah, it's a kitchen sink, you know. So it's got an ARM processor with FPGA, you know, around it and it's got, you know. Yeah. And it's got, well, it's a dual, it's a dual ARM one gig processor, A9 processor. Yeah, the A9, you know. Right. And plus with FPGA fabric around it. I don't know what other goodness it's got in there, but yeah. It's got, I think it depends on the model. You know how like usually the FPGAs have like a big bunch of models. Oh, of course, yeah. There's 20 different models, yeah. Like, so they have transmit, you know, the high speed service transmitters. Of course. They've got hard logic memory controllers for, you know, for use of the DDR2 and 3."
+  },
+  {
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "guest": "Dave Vandenbout",
+   "stem": "0181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue",
+   "paragraph_index": 67,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": false,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Is that the \u2013 is that always going to be the problem with FPGAs? I possibly think so because by their very \u2013 you know, ignoring the ones with the hard silicon on them, right, but just FPGA fabrics trying to do something. By their very nature, they are dumb. They're a sea of gates. They don't do anything. So you're always \u2013 They're only as dumb as the guy programming them do. Exactly. So if \u2013 but if you want to put a soft processor into that, well, it's code. You know, it's not that hard silicon that's guaranteed to work. You know, you've got all these massively complex, you know, software tools behind it to compile it all. But even if your soft core comes pre-compiled, there's so many, you know, layers of that onion that can go wrong.",
+   "context_before": "ou could understand all the things that were going on with it. And I don't program the Commodore anymore. But there are a lot of people who still do. And that's because it's a system that you can get into and understand what's going wrong and find it and fix it. But with a lot of these systems that we have now that have such great capabilities, if anything goes wrong down in there somewhere, it's multiple days trying to figure out exactly why it is. Because it's hidden under so many layers of abstraction. And it could happen in so many different places. You have to, like, open up a box. Look inside. There's another box in there. Open that box. Oh, there's another box. And you look in there and that's not the box. You close that one up. You go, you know, you're saying, where is the problem?",
+   "context_after": "Well, I mean, there is that, but I think that the problem \u2013 that problem still exists with hard-coded processors that you put on a board. I mean \u2013 It can do. I mean, you still put things around it.",
+   "context_before_speaker": "Dave Vandenbout",
+   "context_after_speaker": "Dave Vandenbout",
+   "text": "ou could understand all the things that were going on with it. And I don't program the Commodore anymore. But there are a lot of people who still do. And that's because it's a system that you can get into and understand what's going wrong and find it and fix it. But with a lot of these systems that we have now that have such great capabilities, if anything goes wrong down in there somewhere, it's multiple days trying to figure out exactly why it is. Because it's hidden under so many layers of abstraction. And it could happen in so many different places. You have to, like, open up a box. Look inside. There's another box in there. Open that box. Oh, there's another box. And you look in there and that's not the box. You close that one up. You go, you know, you're saying, where is the problem? Is that the \u2013 is that always going to be the problem with FPGAs? I possibly think so because by their very \u2013 you know, ignoring the ones with the hard silicon on them, right, but just FPGA fabrics trying to do something. By their very nature, they are dumb. They're a sea of gates. They don't do anything. So you're always \u2013 They're only as dumb as the guy programming them do. Exactly. So if \u2013 but if you want to put a soft processor into that, well, it's code. You know, it's not that hard silicon that's guaranteed to work. You know, you've got all these massively complex, you know, software tools behind it to compile it all. But even if your soft core comes pre-compiled, there's so many, you know, layers of that onion that can go wrong. Well, I mean, there is that, but I think that the problem \u2013 that problem still exists with hard-coded processors that you put on a board. I mean \u2013 It can do. I mean, you still put things around it."
+  },
+  {
+   "episode": 264,
+   "episode_title": "The Cost Of Doing Business",
+   "episode_url": "https://theamphour.com/264-the-cost-of-doing-business/",
+   "guest": null,
+   "stem": "0264-the-cost-of-doing-business",
+   "paragraph_index": 205,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "That's, see, that's the thing. That's, you know, the dream of FPGAs was shattered once they started doing that. Oh, you know, yeah, okay. People are doing this. Oh, we better actually build some hard silicon into FPGAs because we don't want to piss away our FPGA fabric with a generic CPU by people, you know, whacking in a soft arm core. We may as well whack in a hard arm core. Oh, we may as well whack in a hard Ethernet decoder as well. Oh, we may as well whack in a, you know, a hard, you know, serial interface, blah, blah, blah.",
+   "context_before": "Oh, I meant, I just meant memory. But yeah, you're right. There are also a bunch of the arm cores in there too, so.",
+   "context_after": "Yeah. Well, apparently that's one of the things that the PSOC does pretty well where it's, it is that, you know, kind of everything in the kitchen sink, but then also there's some reconfigurable fabric and stuff like that. I keep hearing good things about the PSOC 5, PSOC 4, stuff like that. So, I get to try it.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Oh, I meant, I just meant memory. But yeah, you're right. There are also a bunch of the arm cores in there too, so. That's, see, that's the thing. That's, you know, the dream of FPGAs was shattered once they started doing that. Oh, you know, yeah, okay. People are doing this. Oh, we better actually build some hard silicon into FPGAs because we don't want to piss away our FPGA fabric with a generic CPU by people, you know, whacking in a soft arm core. We may as well whack in a hard arm core. Oh, we may as well whack in a hard Ethernet decoder as well. Oh, we may as well whack in a, you know, a hard, you know, serial interface, blah, blah, blah. Yeah. Well, apparently that's one of the things that the PSOC does pretty well where it's, it is that, you know, kind of everything in the kitchen sink, but then also there's some reconfigurable fabric and stuff like that. I keep hearing good things about the PSOC 5, PSOC 4, stuff like that. So, I get to try it."
+  },
+  {
+   "episode": 277,
+   "episode_title": "Interconnectorama",
+   "episode_url": "https://theamphour.com/277-interconnectorama/",
+   "guest": null,
+   "stem": "0277-interconnectorama",
+   "paragraph_index": 212,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Yeah, it sets cells with inside the FPGA, both IO around plus the FPGA fabric itself and all the hardcore peripherals, you know, the hard peripherals and everything. It's, each chip is unique. Yeah. Let alone each vendor. You know, each chip has its own bitstream format. And that's why the tools are so complicated.",
+   "context_before": "You know, I've never ever operated that level. No, no. I barely understand it, to be honest. The things that I understand about the bitstream level is basically you're serially programming around the edge of the chip, right? And then you're telling, and then that ends up flipping gates that ends up.",
+   "context_after": "Well, I think that the interesting question would be, okay, say, so say it got to the point where it was actually like something that affected FPGA company's business. Would they go for broke and just like change future bitstreams? You know what I mean? Like, because then it would end up affecting their older parts as well.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "You know, I've never ever operated that level. No, no. I barely understand it, to be honest. The things that I understand about the bitstream level is basically you're serially programming around the edge of the chip, right? And then you're telling, and then that ends up flipping gates that ends up. Yeah, it sets cells with inside the FPGA, both IO around plus the FPGA fabric itself and all the hardcore peripherals, you know, the hard peripherals and everything. It's, each chip is unique. Yeah. Let alone each vendor. You know, each chip has its own bitstream format. And that's why the tools are so complicated. Well, I think that the interesting question would be, okay, say, so say it got to the point where it was actually like something that affected FPGA company's business. Would they go for broke and just like change future bitstreams? You know what I mean? Like, because then it would end up affecting their older parts as well."
+  },
+  {
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "guest": "David Kronstein",
+   "stem": "the-amp-hour-325-an-interview-with-david-kronstein-tesla500",
+   "paragraph_index": 442,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "For those who don't know, FPGA's typically have a CERTA's, which is a serializer, deserializer hardware embedded on some of the IO pins, not all of them. So if you've got a serial input that you want to convert into parallel, then it can do that for you in its own dedicated hardware block without you having to do it in your FPGA fabric.",
+   "context_before": "In this case, there's not enough CERTA's channels. We just use the input buffers on the FPGA. But you could use CERTA's as well if the FPGA has enough of them. Also, because of the format, the data format, it doesn't really line up with CERTA's. So you have to do some bit of deserialization logic in the fabric to get the proper, to sync up the data. I gotcha.",
+   "context_after": "Yes. And it's also usually much faster.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "In this case, there's not enough CERTA's channels. We just use the input buffers on the FPGA. But you could use CERTA's as well if the FPGA has enough of them. Also, because of the format, the data format, it doesn't really line up with CERTA's. So you have to do some bit of deserialization logic in the fabric to get the proper, to sync up the data. I gotcha. For those who don't know, FPGA's typically have a CERTA's, which is a serializer, deserializer hardware embedded on some of the IO pins, not all of them. So if you've got a serial input that you want to convert into parallel, then it can do that for you in its own dedicated hardware block without you having to do it in your FPGA fabric. Yes. And it's also usually much faster."
+  },
+  {
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "guest": "David Kronstein",
+   "stem": "the-amp-hour-325-an-interview-with-david-kronstein-tesla500",
+   "paragraph_index": 452,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "And on the FPGA front with all this integrated hardware, for those who don't know, I think we've talked about it before, the dream of FPGA was that it was just a fabric, a sea of gates. And that was it. And you could do whatever you want. You could include the CERTA's in there. You could include a processor. You could throw in any hardware, UART, any hardware you wanted into this thing. And then they realized it doesn't work so well, especially at high speed. So we'll put dedicated hardware blocks of real silicon in there for these CERTA's and other processors. Yeah. And ARM processor, it's not very quick when you implement it in the FPGA fabric. Yeah. Just as an example. You could put in an ARM core.",
+   "context_before": "Yeah. As long as you follow the guidelines, it seems to be okay.",
+   "context_after": "When I had the old version of the camera had a soft core. And that was taking up nearly 40 or 50% of the FPGA. But on this current one, where it uses a separate CPU.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Yeah. As long as you follow the guidelines, it seems to be okay. And on the FPGA front with all this integrated hardware, for those who don't know, I think we've talked about it before, the dream of FPGA was that it was just a fabric, a sea of gates. And that was it. And you could do whatever you want. You could include the CERTA's in there. You could include a processor. You could throw in any hardware, UART, any hardware you wanted into this thing. And then they realized it doesn't work so well, especially at high speed. So we'll put dedicated hardware blocks of real silicon in there for these CERTA's and other processors. Yeah. And ARM processor, it's not very quick when you implement it in the FPGA fabric. Yeah. Just as an example. You could put in an ARM core. When I had the old version of the camera had a soft core. And that was taking up nearly 40 or 50% of the FPGA. But on this current one, where it uses a separate CPU."
+  },
+  {
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "guest": "Luke Valenty",
+   "stem": "0395-an-interview-with-luke-valenty",
+   "paragraph_index": 121,
+   "depth": "explains",
+   "speaker_raw": "FPGAs",
+   "speaker_repaired": "Luke Valenty",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Lattice mock XO2. And those are kind of like a CPLD replacement. So they kind of, they kind of fit where CPLDs would have fit. And they use a FPGA fabric with LUT4s and routing matrix, um, with some distributed RAM. No, no DSP blocks. Um, but besides that, they're, they're pretty nice for doing embedded things and connecting up different IOs.",
+   "context_before": "So that those were both XO2. I actually don't know this family. Sorry. So, so it's a lattice. Yeah.",
+   "context_after": "Is it, is it large enough to put a micro into those?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "So that those were both XO2. I actually don't know this family. Sorry. So, so it's a lattice. Yeah. Lattice mock XO2. And those are kind of like a CPLD replacement. So they kind of, they kind of fit where CPLDs would have fit. And they use a FPGA fabric with LUT4s and routing matrix, um, with some distributed RAM. No, no DSP blocks. Um, but besides that, they're, they're pretty nice for doing embedded things and connecting up different IOs. Is it, is it large enough to put a micro into those?"
+  },
+  {
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "guest": "Luke Valenty",
+   "stem": "0395-an-interview-with-luke-valenty",
+   "paragraph_index": 282,
+   "depth": "explains",
+   "speaker_raw": "FPGAs",
+   "speaker_repaired": "Luke Valenty",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "And I was scared of doing a crowdfunding campaign starting out because I knew I had no experience in doing this. And so I was afraid that, you know, I would get this project funded and then I would ship a thousand boards out and then I would get a thousand complaints coming back, you know, for different things not working. Right. The, the, the B series boards, I implemented a USB device in the FPGA fabric. That's how you program it.",
+   "context_before": "And it's, it's actually a great perspective. Evolution for a engineer, huh? Yeah. Yeah. Kind of that. People don't have to have it, but I think the idea is like, if you're kind of doing a side project or out on your own, yeah, that, that is kind of the currency that other, other people work in. Yeah.",
+   "context_after": "Oh, really? I didn't know that. Okay.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "And it's, it's actually a great perspective. Evolution for a engineer, huh? Yeah. Yeah. Kind of that. People don't have to have it, but I think the idea is like, if you're kind of doing a side project or out on your own, yeah, that, that is kind of the currency that other, other people work in. Yeah. And I was scared of doing a crowdfunding campaign starting out because I knew I had no experience in doing this. And so I was afraid that, you know, I would get this project funded and then I would ship a thousand boards out and then I would get a thousand complaints coming back, you know, for different things not working. Right. The, the, the B series boards, I implemented a USB device in the FPGA fabric. That's how you program it. Oh, really? I didn't know that. Okay."
+  },
+  {
+   "episode": 466,
+   "episode_title": "An Interview with Ryan Cousins",
+   "episode_url": "https://theamphour.com/466-an-interview-with-ryan-cousins/",
+   "guest": "Ryan Cousins",
+   "stem": "0466-an-interview-with-ryan-cousins",
+   "paragraph_index": 107,
+   "depth": "explains",
+   "speaker_raw": "Dave Jones",
+   "speaker_repaired": "Dave Jones",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Exactly. And like, you could selectively use certain percentages of the fabric. You turn off pieces, parts of the fabric you're not using. So that that's literally sitting idle while you're doing work in another area. So it's, there's all these different, uh, architectures for that, but because of this microcontroller we have on board, um, we're able to, uh, put this pretty high powered FPGA module and like deep sleep mode. So basically turning everything effectively off, um, with a couple different external triggers or internal timers or whatever, however you want to set that up and have the board stand by at, you know, sub 10 milliwatts kind of thing, um, until an event happens. And then when that happens, it triggers this whole suite of sensors to this hardcore signal processing. Um, while that event's being triggered. And then once the activity stops, put the thing back into a deep sleep. So you could have this thing sitting in the field for weeks at a time or running on a little, uh, little like, uh, solar panels or battery or whatever. Um, so there's some interesting, like kind of these, these high performance, but low power applications, um, you know, that we have a pretty wide input range. Like, so you can use like a single cell lithium, uh, ion battery or lithium polymer battery that you can plug in there. And so there's, there's, uh, there's also stuff that's a little bit more consumer facing, um, working with a company on, um, building a, uh, a pinball accessory. Um, the base, he takes these old pinball machines and, um, brings them into the 21st century. It probably can't go too far into the description of what that exactly is doing, but you probably make some guesses.",
+   "context_before": "So, and yeah, cause GPUs are just scaling. It's just going parallel, but they're, you got a ton of them and they're still going in a linear fashion, right? Instead of making it a parallel actual algorithm.",
+   "context_after": "But that is a lot of inputs, right? Like a lot of those have like discrete components and, you know, each light is a light and each switch is a switch and you can't really gang them to get, you know, you can use expanders and stuff, but you can also hook them into FPGA fabric and stuff. Yeah.",
+   "context_before_speaker": "Ryan Cousins",
+   "context_after_speaker": "Ryan Cousins",
+   "text": "So, and yeah, cause GPUs are just scaling. It's just going parallel, but they're, you got a ton of them and they're still going in a linear fashion, right? Instead of making it a parallel actual algorithm. Exactly. And like, you could selectively use certain percentages of the fabric. You turn off pieces, parts of the fabric you're not using. So that that's literally sitting idle while you're doing work in another area. So it's, there's all these different, uh, architectures for that, but because of this microcontroller we have on board, um, we're able to, uh, put this pretty high powered FPGA module and like deep sleep mode. So basically turning everything effectively off, um, with a couple different external triggers or internal timers or whatever, however you want to set that up and have the board stand by at, you know, sub 10 milliwatts kind of thing, um, until an event happens. And then when that happens, it triggers this whole suite of sensors to this hardcore signal processing. Um, while that event's being triggered. And then once the activity stops, put the thing back into a deep sleep. So you could have this thing sitting in the field for weeks at a time or running on a little, uh, little like, uh, solar panels or battery or whatever. Um, so there's some interesting, like kind of these, these high performance, but low power applications, um, you know, that we have a pretty wide input range. Like, so you can use like a single cell lithium, uh, ion battery or lithium polymer battery that you can plug in there. And so there's, there's, uh, there's also stuff that's a little bit more consumer facing, um, working with a company on, um, building a, uh, a pinball accessory. Um, the base, he takes these old pinball machines and, um, brings them into the 21st century. It probably can't go too far into the description of what that exactly is doing, but you probably make some guesses. But that is a lot of inputs, right? Like a lot of those have like discrete components and, you know, each light is a light and each switch is a switch and you can't really gang them to get, you know, you can use expanders and stuff, but you can also hook them into FPGA fabric and stuff. Yeah."
+  },
+  {
+   "episode": 466,
+   "episode_title": "An Interview with Ryan Cousins",
+   "episode_url": "https://theamphour.com/466-an-interview-with-ryan-cousins/",
+   "guest": "Ryan Cousins",
+   "stem": "0466-an-interview-with-ryan-cousins",
+   "paragraph_index": 130,
+   "depth": "explains",
+   "speaker_raw": "Ryan Cousins",
+   "speaker_repaired": "Ryan Cousins",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Yeah. Yeah. But you know, it's tough to roll around in all that cash. Yeah. Yeah. It must be. Yeah. Yeah. Make it out the door. Yeah. Yeah. Well, I can imagine like, even if you did have a Linux, uh, you know, say, so you said there's two processors on the zinc, right? There's a two, two, uh, a nine cores, whatever. Um, and even if one of them is running Linux and the other is running real time OS, and then it's talking to some custom peripheral, I can imagine some safety critical stuff going from custom peripheral in the fabric up to a micro that's doing, you know, some kind of processing on it in bare metal, handing it over to Linux and then acting on it, pushing it back down. Like that's still a decent amount of timing to get all the way up and all the way back down. If you need some kind of higher level intelligence doing its thing on it. So I could, I could, I could see how that would also impact, you know, the use case of, of a Linux or any, really any operating system at that point.",
+   "context_before": "Yeah. They're really struggling over there at Microsoft. They're here.",
+   "context_after": "No, for sure. I mean, cause then of course, then you got to consider like what your buffer size is, like how frequency is Linux serving this servicing this thing? What happens if like that call never comes, you know, you're stuck with all this data you got to dump. Like, I mean, yeah, there, there's, there's a lot of, uh, a lot of different considerations there. I mean, you know, it's, it's one of those things you're never going to really. Get away from, cause that's going to be a factor in any embedded system. What's, what's nice is, uh, you're dealing with a single architecture, you know, it's, it's just like a very tightly integrated SOC. So communication bandwidth is never an issue between the FPGA and the ARM cores cause they're",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Yeah. They're really struggling over there at Microsoft. They're here. Yeah. Yeah. But you know, it's tough to roll around in all that cash. Yeah. Yeah. It must be. Yeah. Yeah. Make it out the door. Yeah. Yeah. Well, I can imagine like, even if you did have a Linux, uh, you know, say, so you said there's two processors on the zinc, right? There's a two, two, uh, a nine cores, whatever. Um, and even if one of them is running Linux and the other is running real time OS, and then it's talking to some custom peripheral, I can imagine some safety critical stuff going from custom peripheral in the fabric up to a micro that's doing, you know, some kind of processing on it in bare metal, handing it over to Linux and then acting on it, pushing it back down. Like that's still a decent amount of timing to get all the way up and all the way back down. If you need some kind of higher level intelligence doing its thing on it. So I could, I could, I could see how that would also impact, you know, the use case of, of a Linux or any, really any operating system at that point. No, for sure. I mean, cause then of course, then you got to consider like what your buffer size is, like how frequency is Linux serving this servicing this thing? What happens if like that call never comes, you know, you're stuck with all this data you got to dump. Like, I mean, yeah, there, there's, there's a lot of, uh, a lot of different considerations there. I mean, you know, it's, it's one of those things you're never going to really. Get away from, cause that's going to be a factor in any embedded system. What's, what's nice is, uh, you're dealing with a single architecture, you know, it's, it's just like a very tightly integrated SOC. So communication bandwidth is never an issue between the FPGA and the ARM cores cause they're"
+  },
+  {
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "guest": "Craig J Bishop",
+   "stem": "0469-an-interview-with-craig-j-bishop",
+   "paragraph_index": 86,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Or is this to talk to the rest of the FPGA? Yeah, so the Zinc parts actually are different than other FPGAs, that they don't necessarily go out to a bitstream flash first. They actually boot up the dual Cortex-A9, and that ARM part of the chip actually controls bringing up the FPGA side. So you get JTAG access to the ARM side first, and boot up the ARM processors, and make sure those work. And then from there, you can do whatever you want to boot up the FPGA fabric. And so in my case, I worked out getting the debug UART to go through the STM32 over USB, creating a firmware for that. And then after I had debug out, then I worked on putting Uboot into the boot flash. So that way, the Zinc would boot up Uboot bootloader, and I had to port that. And then once you have Uboot, you can actually think about booting something like Linux. And that part actually ended up being okay, because I had already tried all that on the Zinc dev board. And it was just a bunch of fiddling with configs and stuff to get it ported over to the new board. Yeah.",
+   "context_before": "Okay, so you got this thing up and running. That's great. And then, so then the JTAG was to, so you had to get the JTAG chain up and running to even talk to the A9, is that right?",
+   "context_after": "So the Uboot, you had to, so Uboot was, was that in, any of those steps were in logic, or were those all software still?",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "Okay, so you got this thing up and running. That's great. And then, so then the JTAG was to, so you had to get the JTAG chain up and running to even talk to the A9, is that right? Or is this to talk to the rest of the FPGA? Yeah, so the Zinc parts actually are different than other FPGAs, that they don't necessarily go out to a bitstream flash first. They actually boot up the dual Cortex-A9, and that ARM part of the chip actually controls bringing up the FPGA side. So you get JTAG access to the ARM side first, and boot up the ARM processors, and make sure those work. And then from there, you can do whatever you want to boot up the FPGA fabric. And so in my case, I worked out getting the debug UART to go through the STM32 over USB, creating a firmware for that. And then after I had debug out, then I worked on putting Uboot into the boot flash. So that way, the Zinc would boot up Uboot bootloader, and I had to port that. And then once you have Uboot, you can actually think about booting something like Linux. And that part actually ended up being okay, because I had already tried all that on the Zinc dev board. And it was just a bunch of fiddling with configs and stuff to get it ported over to the new board. Yeah. So the Uboot, you had to, so Uboot was, was that in, any of those steps were in logic, or were those all software still?"
+  },
+  {
+   "episode": 473,
+   "episode_title": "An Interview with Greg Davill",
+   "episode_url": "https://theamphour.com/473-an-interview-with-greg-davill/",
+   "guest": "Greg Davill",
+   "stem": "0473-an-interview-with-greg-davill",
+   "paragraph_index": 13,
+   "depth": "opinion",
+   "speaker_raw": "Icebreaker FPGA",
+   "speaker_repaired": "Greg Davill",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Not at this stage, but the part was only released less than a month ago. Okay, okay. It's a work in progress. I think Dave Shah's taking a look at the NX parts that he has. And I think from a surface level, it's very similar architecturally to the ECP5. So hopefully we'll see some movement on that this year.",
+   "context_before": "And so is this possible to use this with the open tools like LightX and MyGen and all of the IOSIS and the synthesis tools?",
+   "context_after": "I'm surprised actually that they would have like a mobile phone kind of like targeted one. Do you know that like the market segment there, I mean, are they actually going for mobile phones with FPGAs in them?",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "And so is this possible to use this with the open tools like LightX and MyGen and all of the IOSIS and the synthesis tools? Not at this stage, but the part was only released less than a month ago. Okay, okay. It's a work in progress. I think Dave Shah's taking a look at the NX parts that he has. And I think from a surface level, it's very similar architecturally to the ECP5. So hopefully we'll see some movement on that this year. I'm surprised actually that they would have like a mobile phone kind of like targeted one. Do you know that like the market segment there, I mean, are they actually going for mobile phones with FPGAs in them?"
+  },
+  {
+   "episode": 500,
+   "episode_title": "Two and a Half Orders of Magnitude",
+   "episode_url": "https://theamphour.com/500-two-and-a-half-orders-of-magnitude/",
+   "guest": null,
+   "stem": "0500-two-and-a-half-orders-of-magnitude",
+   "paragraph_index": 365,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Exactly. And so like, it's like specified to be like for like machine learning type of thing. So if you had like a microphone, it has like a microphone input for it. Right. And that goes into a, a bit of, I think hard logic. Then then you can then connect to with the FPGA fabric. And basically, so it's like a design that this company had made. The basically is they bought the arm court, they bought the arm car, they core, they put some flexible logic around it and they built these custom blocks that do a bunch of different things. It's meant to be like a, it handles different functions for, you know, IOT type devices and stuff like that. Edge AI and ML, blah, blah, blah, blah. And we're giving one away. Are we? We're giving one away. How do we do that? I'm going to come up with a, a, a questionnaire. And if you fill it out, one person will be sent one of these things. So it'll probably be about learning or something like that. We've done that in the past, but I did say I give one away and we can ship anywhere in the world. So that's not a, that's not a problem. And yeah, it looks like, it looks like a cool board. It's also like a, I think they're on it. This is, I'm interacting with the crowd supply folks. So the crowd supply.",
+   "context_before": "so the quick logic, it's the quick logic EOS S3 chip. That's right. So it's a system on chip. Okay. So they've done their own. Right. Okay.",
+   "context_after": "Yes. It's on a crowd supply. Yep. It got funded. Yep. Yes.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "so the quick logic, it's the quick logic EOS S3 chip. That's right. So it's a system on chip. Okay. So they've done their own. Right. Okay. Exactly. And so like, it's like specified to be like for like machine learning type of thing. So if you had like a microphone, it has like a microphone input for it. Right. And that goes into a, a bit of, I think hard logic. Then then you can then connect to with the FPGA fabric. And basically, so it's like a design that this company had made. The basically is they bought the arm court, they bought the arm car, they core, they put some flexible logic around it and they built these custom blocks that do a bunch of different things. It's meant to be like a, it handles different functions for, you know, IOT type devices and stuff like that. Edge AI and ML, blah, blah, blah, blah. And we're giving one away. Are we? We're giving one away. How do we do that? I'm going to come up with a, a, a questionnaire. And if you fill it out, one person will be sent one of these things. So it'll probably be about learning or something like that. We've done that in the past, but I did say I give one away and we can ship anywhere in the world. So that's not a, that's not a problem. And yeah, it looks like, it looks like a cool board. It's also like a, I think they're on it. This is, I'm interacting with the crowd supply folks. So the crowd supply. Yes. It's on a crowd supply. Yep. It got funded. Yep. Yes."
+  },
+  {
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "guest": "Brian Faith",
+   "stem": "0525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic",
+   "paragraph_index": 50,
+   "depth": "explains",
+   "speaker_raw": "FPGAs",
+   "speaker_repaired": "Brian Faith",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Yeah. So we focus on areas where power is important. It doesn't have to be battery powered, but ideally it's battery powered, or at least, uh, systems that do care about power consumption. We've been focused in that market for quite some time. And so the, the arrays that we have, the FPGA fabrics that we have tend to be on the lower density side and very low power, able to implement things like different IO interfaces. You can do some lightweight processing in there. That's typically the, the markets that we focus on. There are other markets for FPJs that are very data centers, data center centric, very high performance, high density. Um, in those markets, you really have to chase the process technology curve. And so, uh, those are the ones where you're going to hear, you know, seven nanometer, 10 nanometer. Those are the ones where the mass mass sets alone are hugely expensive, like millions of dollars each. Those are really where the big players go. I think if you look at just in terms of the computing spectrum, um, there's the data center and then there's the edge. We tend to focus very much at the edge where you do want customization. You do want computing, but you want to do it within the power envelope of something. Not where power is essentially free. Right.",
+   "context_before": "Right. Or, or when they, when their mailing list is, you know, 50% software people complaining about something, you know, it's like, okay, well, Ooh, yeah, we should probably do something, you know? Yeah, exactly. Yeah. Hmm. Okay. Interesting. Interesting. Can we talk a little bit more about the actual, uh, FPGA world? I suppose. I mean, like what, what is your place in the FPGA realm? I mean, you mentioned that you're a smaller company, but like, what, what does it take to kind of play in that market? Like, uh, in terms of technology stacks and, and like things, I guess areas you're targeting and, and, you know, market segments you plan.",
+   "context_after": "Yeah. I don't traditionally think of FPGAs and low power. I mean, like they're, yeah, obviously you guys do. There's a couple other players that are, you know, like trying to target low power, but even then it's, it's a, it's a tough thing because you're not, you don't have like, you know, you have to start having targeted silicon blocks to really have power down states and things like that to, to make it worthwhile on a battery. Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Chris Gammell",
+   "text": "Right. Or, or when they, when their mailing list is, you know, 50% software people complaining about something, you know, it's like, okay, well, Ooh, yeah, we should probably do something, you know? Yeah, exactly. Yeah. Hmm. Okay. Interesting. Interesting. Can we talk a little bit more about the actual, uh, FPGA world? I suppose. I mean, like what, what is your place in the FPGA realm? I mean, you mentioned that you're a smaller company, but like, what, what does it take to kind of play in that market? Like, uh, in terms of technology stacks and, and like things, I guess areas you're targeting and, and, you know, market segments you plan. Yeah. So we focus on areas where power is important. It doesn't have to be battery powered, but ideally it's battery powered, or at least, uh, systems that do care about power consumption. We've been focused in that market for quite some time. And so the, the arrays that we have, the FPGA fabrics that we have tend to be on the lower density side and very low power, able to implement things like different IO interfaces. You can do some lightweight processing in there. That's typically the, the markets that we focus on. There are other markets for FPJs that are very data centers, data center centric, very high performance, high density. Um, in those markets, you really have to chase the process technology curve. And so, uh, those are the ones where you're going to hear, you know, seven nanometer, 10 nanometer. Those are the ones where the mass mass sets alone are hugely expensive, like millions of dollars each. Those are really where the big players go. I think if you look at just in terms of the computing spectrum, um, there's the data center and then there's the edge. We tend to focus very much at the edge where you do want customization. You do want computing, but you want to do it within the power envelope of something. Not where power is essentially free. Right. Yeah. I don't traditionally think of FPGAs and low power. I mean, like they're, yeah, obviously you guys do. There's a couple other players that are, you know, like trying to target low power, but even then it's, it's a, it's a tough thing because you're not, you don't have like, you know, you have to start having targeted silicon blocks to really have power down states and things like that to, to make it worthwhile on a battery. Yeah."
+  },
+  {
+   "episode": 532,
+   "episode_title": "Recalling Recalls",
+   "episode_url": "https://theamphour.com/532-recalling-recalls/",
+   "guest": null,
+   "stem": "0532-recalling-recalls",
+   "paragraph_index": 48,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Yeah. And then you do, you know, you also turn on the security features, but you know, even if you do that, you can start to separate yourself from, from the pack with the algorithm differences, feature differences. I mean, at this point, like you could literally get a new firmware build that has new FPGA fabric in it that does something else interesting. Yeah. Yeah. Of course. Maybe it could do 4k mixing instead of 10k, 10, 1080p, that sort of thing. So it's just a matter of efficiency over time. And, you know, when I think about it, I also think about like, you know, software burndown charts, it's like, okay, we've got this thing working. It's out the door. Let's go and update it so that we can add another feature, like a software feature, a true software feature. And yet something that could up the cost or up the selling price rather, because it can do more.",
+   "context_before": "No. I think. With actually writing their own software. Yeah. Right. Exactly. That's right. Yeah. From scratch because it's just, yeah, it requires a development team of.",
+   "context_after": "Yep.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Chris Gammell",
+   "text": "No. I think. With actually writing their own software. Yeah. Right. Exactly. That's right. Yeah. From scratch because it's just, yeah, it requires a development team of. Yeah. And then you do, you know, you also turn on the security features, but you know, even if you do that, you can start to separate yourself from, from the pack with the algorithm differences, feature differences. I mean, at this point, like you could literally get a new firmware build that has new FPGA fabric in it that does something else interesting. Yeah. Yeah. Of course. Maybe it could do 4k mixing instead of 10k, 10, 1080p, that sort of thing. So it's just a matter of efficiency over time. And, you know, when I think about it, I also think about like, you know, software burndown charts, it's like, okay, we've got this thing working. It's out the door. Let's go and update it so that we can add another feature, like a software feature, a true software feature. And yet something that could up the cost or up the selling price rather, because it can do more. Yep."
+  },
+  {
+   "episode": 639,
+   "episode_title": "Daaaamn We're Duuuummmb",
+   "episode_url": "https://theamphour.com/639-daaaamn-were-duuuummmb/",
+   "guest": null,
+   "stem": "0639-daaaamn-were-duuuummmb",
+   "paragraph_index": 252,
+   "depth": "explains",
+   "speaker_raw": "Chris Gammell",
+   "speaker_repaired": "Chris Gammell",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "Well, Dave, if you search, if you search on the amp hour for chiplet, you will find, uh, episode 469, episode 499, episode 519, episode 535, episode 616. Yes, chiplets have been, although none of them were, I don't think they were talking about the standard. So that's actually interesting. Right. I would say the most, probably the closest one is, uh, Ming Zhang, who was on the show. He was at a, the now defunct Z-Glue where they were basically, instead of using a standard, they were basically making like a, kind of like an FPGA fabric where the chiplets went under that. Right. It wasn't FPGA though. No, it's right. Smart fabric. So it was like reconfigurable.",
+   "context_before": "ial interface. So basically in major companies like NVIDIA, AMD, Intel, Microsoft, Meta, Qualcomm, Samsung, TSMC, geez, they're all in it. Right. So all these companies are sort of like agreed to this universal chiplet interconnect express interface, right? U-C-E-I. And, uh, it was, uh, it was only released in March 22. So it's relatively recent. And I think, uh, chips are coming out now that use these chiplets. So the idea is, okay, you've, you know, Intel's got a, a, a CPU. Okay. I'll use that. And, uh, Qualcomm's got, you know, some sort of, you know, what a Qualcomm do that, you know, the, uh, Siri, you know, the comms stuff, right? So it's got some comms thing over here. So you join all these together so you can make an ASIC using off the shelf chiplets and it reduces the design time.",
+   "context_after": "Well, that's a different way to do it. There's, there's many ways to do it. Yeah.",
+   "context_before_speaker": "Dave Jones",
+   "context_after_speaker": "Dave Jones",
+   "text": "ial interface. So basically in major companies like NVIDIA, AMD, Intel, Microsoft, Meta, Qualcomm, Samsung, TSMC, geez, they're all in it. Right. So all these companies are sort of like agreed to this universal chiplet interconnect express interface, right? U-C-E-I. And, uh, it was, uh, it was only released in March 22. So it's relatively recent. And I think, uh, chips are coming out now that use these chiplets. So the idea is, okay, you've, you know, Intel's got a, a, a CPU. Okay. I'll use that. And, uh, Qualcomm's got, you know, some sort of, you know, what a Qualcomm do that, you know, the, uh, Siri, you know, the comms stuff, right? So it's got some comms thing over here. So you join all these together so you can make an ASIC using off the shelf chiplets and it reduces the design time. Well, Dave, if you search, if you search on the amp hour for chiplet, you will find, uh, episode 469, episode 499, episode 519, episode 535, episode 616. Yes, chiplets have been, although none of them were, I don't think they were talking about the standard. So that's actually interesting. Right. I would say the most, probably the closest one is, uh, Ming Zhang, who was on the show. He was at a, the now defunct Z-Glue where they were basically, instead of using a standard, they were basically making like a, kind of like an FPGA fabric where the chiplets went under that. Right. It wasn't FPGA though. No, it's right. Smart fabric. So it was like reconfigurable. Well, that's a different way to do it. There's, there's many ways to do it. Yeah."
+  },
+  {
+   "episode": 723,
+   "episode_title": "BeagleBoard's Back with Jason Kridner",
+   "episode_url": "https://theamphour.com/723-beagleboards-back-with-jason-kridner/",
+   "guest": "Jason Kridner",
+   "stem": "0723-beagleboards-back-with-jason-kridner",
+   "paragraph_index": 67,
+   "depth": "explains",
+   "speaker_raw": "Jason Kridner",
+   "speaker_repaired": "Jason Kridner",
+   "attribution_reliable": true,
+   "fused_turns": false,
+   "concept_source": "core",
+   "concept_sources": [
+    "core"
+   ],
+   "concepts": [
+    "fpga-fabric"
+   ],
+   "paragraph_text": "You have to make sure to say the SOC because it includes the RISC-V cores in it. Okay. Not just the FPGA fabric, which serves mostly to confuse FPGA developers because they're like, well, like, where's JTAG connection? You know, and it's there, but, you know, it's like, no, you just boot it up and you make a Debian. Like you go to our continuous integration servers, you push your fork to the gateway and you download the .deb. And you install the .deb and there's your gateway, right? Yeah.",
+   "context_before": "The Makership one? Yeah.",
+   "context_after": "Yeah.",
+   "context_before_speaker": "Chris Gammell",
+   "context_after_speaker": "Speaker ?",
+   "text": "The Makership one? Yeah. You have to make sure to say the SOC because it includes the RISC-V cores in it. Okay. Not just the FPGA fabric, which serves mostly to confuse FPGA developers because they're like, well, like, where's JTAG connection? You know, and it's there, but, you know, it's like, no, you just boot it up and you make a Debian. Like you go to our continuous integration servers, you push your fork to the gateway and you download the .deb. And you install the .deb and there's your gateway, right? Yeah. Yeah."
+  }
+ ]
+}

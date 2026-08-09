@@ -1,0 +1,2806 @@
+{
+ "episode": 534,
+ "title": "Firmware Update Capabilities",
+ "url": "https://theamphour.com/534-firmware-update-capabilities/",
+ "file": "0534-firmware-update-capabilities.md",
+ "main_topics": [
+  "firmware",
+  "software-toolchain",
+  "analog-vs-digital-design"
+ ],
+ "guest_name": null,
+ "guest_affiliation": null,
+ "notes": null,
+ "mentions": [
+  {
+   "concept": "firmware",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 2,
+   "char_start": 351,
+   "depth": "opinion",
+   "context_snippet": "building stuff, writing firmware, stuff that you don't want to talk about usually"
+  },
+  {
+   "concept": "analog-vs-digital-design",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 4,
+   "char_start": 805,
+   "depth": "opinion",
+   "context_snippet": "I think there's benefits to it if you can"
+  },
+  {
+   "concept": "power-supply",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 4,
+   "char_start": 873,
+   "depth": "mention",
+   "context_snippet": "power supplies with, like, you know, like, maybe an input's like a"
+  },
+  {
+   "concept": "microcontroller",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 5,
+   "char_start": 1178,
+   "depth": "opinion",
+   "context_snippet": "oh, do I have to put a micro in it?"
+  },
+  {
+   "concept": "auto-ranging",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 5,
+   "char_start": 1298,
+   "depth": "explains",
+   "context_snippet": "some auto-ranging stuff I'm thinking about doing"
+  },
+  {
+   "concept": "comparator",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 5,
+   "char_start": 1460,
+   "depth": "explains",
+   "context_snippet": "I have a bunch of comparators and I have some, you know, logic in there"
+  },
+  {
+   "concept": "resistor",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 6,
+   "char_start": 1622,
+   "depth": "opinion",
+   "context_snippet": "your troubleshooting method is swapping out resistors"
+  },
+  {
+   "concept": "dead-bug-construction",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 7,
+   "char_start": 1747,
+   "depth": "mention",
+   "context_snippet": "putting in chips and dead bugging them"
+  },
+  {
+   "concept": "microcontroller",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 9,
+   "char_start": 2011,
+   "depth": "opinion",
+   "context_snippet": "put in a little 10-cent micro and program it"
+  },
+  {
+   "concept": "auto-ranging",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 10,
+   "char_start": 2200,
+   "depth": "mention",
+   "context_snippet": "the auto-ranging was also, you know, it had indicators there"
+  },
+  {
+   "concept": "arduino",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 12,
+   "char_start": 2629,
+   "depth": "mention",
+   "context_snippet": "you write some Arduino stuff"
+  },
+  {
+   "concept": "software-toolchain",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 14,
+   "char_start": 3058,
+   "depth": "opinion",
+   "context_snippet": "I've got the latest tool chain going"
+  },
+  {
+   "concept": "integrated-development-environment",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 14,
+   "char_start": 3116,
+   "depth": "mention",
+   "context_snippet": "or the latest IDE"
+  },
+  {
+   "concept": "virtual-machine",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 16,
+   "char_start": 3615,
+   "depth": "explains",
+   "context_snippet": "I've been playing around with having like a virtual machine"
+  },
+  {
+   "concept": "vmware",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 16,
+   "char_start": 3687,
+   "depth": "explains",
+   "context_snippet": "I actually pay for VMware now because I was like really good low level connections"
+  },
+  {
+   "concept": "virtualbox",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 16,
+   "char_start": 3776,
+   "depth": "opinion",
+   "context_snippet": "I used to use VirtualBox and like, eh, I didn't like it"
+  },
+  {
+   "concept": "usb-to-uart",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 16,
+   "char_start": 3904,
+   "depth": "explains",
+   "context_snippet": "a USB to UART kind of chip or similar"
+  },
+  {
+   "concept": "docker",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 16,
+   "char_start": 4134,
+   "depth": "mention",
+   "context_snippet": "there's other things like Docker and all that other stuff"
+  },
+  {
+   "concept": "software-complexity",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 20,
+   "char_start": 5155,
+   "depth": "explains",
+   "context_snippet": "the complexity goes up. And so like more points of failure too."
+  },
+  {
+   "concept": "assembly-language",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 23,
+   "char_start": 5561,
+   "depth": "mention",
+   "context_snippet": "20 year old, you know, assembly source code"
+  },
+  {
+   "concept": "pic",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 23,
+   "char_start": 5610,
+   "depth": "mention",
+   "context_snippet": "I simply installed for a pick"
+  },
+  {
+   "concept": "mplab-x",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 23,
+   "char_start": 5654,
+   "depth": "explains",
+   "context_snippet": "installed the latest version of, you know, pick, you know, MP lab X"
+  },
+  {
+   "concept": "source-code-compatibility",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 23,
+   "char_start": 5815,
+   "depth": "explains",
+   "context_snippet": "that existing source code, cut and pasted"
+  },
+  {
+   "concept": "programmer",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 25,
+   "char_start": 6567,
+   "depth": "mention",
+   "context_snippet": "then I used a programmer. I programmed the binary"
+  },
+  {
+   "concept": "binary",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 25,
+   "char_start": 6593,
+   "depth": "mention",
+   "context_snippet": "I programmed the binary and boom"
+  },
+  {
+   "concept": "rtos",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 27,
+   "char_start": 6858,
+   "depth": "mention",
+   "context_snippet": "especially if you're running like an RTOS or something like that"
+  },
+  {
+   "concept": "software-stack",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 27,
+   "char_start": 6934,
+   "depth": "explains",
+   "context_snippet": "you're running and all these, you know, stacks and layers of things"
+  },
+  {
+   "concept": "zephyr",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 28,
+   "char_start": 7082,
+   "depth": "explains",
+   "context_snippet": "When I'm doing Zephyr stuff"
+  },
+  {
+   "concept": "software-development-kit",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 28,
+   "char_start": 7274,
+   "depth": "mention",
+   "context_snippet": "it pulls in all of these different like SDKs from different vendors"
+  },
+  {
+   "concept": "long-term-support-release",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 30,
+   "char_start": 7873,
+   "depth": "explains",
+   "context_snippet": "Zephyr does have like a long-term stable release"
+  },
+  {
+   "concept": "project-manager",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 36,
+   "char_start": 8769,
+   "depth": "opinion",
+   "context_snippet": "You become like a project manager at that point"
+  },
+  {
+   "concept": "gary-johnston",
+   "type": "person",
+   "speaker": "Dave Jones",
+   "paragraph_index": 39,
+   "char_start": 9348,
+   "depth": "mention",
+   "context_snippet": "Gary Johnston, you may not know the name"
+  },
+  {
+   "concept": "jaycar",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 39,
+   "char_start": 9415,
+   "depth": "mention",
+   "context_snippet": "Gary Johnston, founder and CEO of Jaycar"
+  },
+  {
+   "concept": "electronics-store",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 39,
+   "char_start": 9475,
+   "depth": "explains",
+   "context_snippet": "there's only two remaining electronic stores, like ones where you can actually go in and actually buy parts"
+  },
+  {
+   "concept": "cole-von-moller",
+   "type": "person",
+   "speaker": "Dave Jones",
+   "paragraph_index": 43,
+   "char_start": 10527,
+   "depth": "mention",
+   "context_snippet": "Cole von, von Moller. Oh, okay. Did a big interview with him"
+  },
+  {
+   "concept": "jaycar",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 45,
+   "char_start": 11022,
+   "depth": "opinion",
+   "context_snippet": "I've got my, I go down to my local J-car store when I need, you know, a transistor or a chip"
+  },
+  {
+   "concept": "transistor",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 45,
+   "char_start": 11069,
+   "depth": "mention",
+   "context_snippet": "when I need, you know, a transistor or a chip"
+  },
+  {
+   "concept": "novelty-gadget",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 45,
+   "char_start": 11246,
+   "depth": "mention",
+   "context_snippet": "they've got the farty novelty gadgets and everything else"
+  },
+  {
+   "concept": "led-display",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 45,
+   "char_start": 11371,
+   "depth": "mention",
+   "context_snippet": "the flashy lead displays and all that sort of stuff"
+  },
+  {
+   "concept": "4000-series-cmos",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 45,
+   "char_start": 11527,
+   "depth": "mention",
+   "context_snippet": "you can get your 4,000 series CMOS chip"
+  },
+  {
+   "concept": "fries-electronics",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 48,
+   "char_start": 11921,
+   "depth": "mention",
+   "context_snippet": "we talked about fries two weeks ago, right? Fries is gone now"
+  },
+  {
+   "concept": "micro-center",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 50,
+   "char_start": 12056,
+   "depth": "mention",
+   "context_snippet": "my micro center is probably my only real thing that I have"
+  },
+  {
+   "concept": "one-megohm-resistor",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 55,
+   "char_start": 12858,
+   "depth": "mention",
+   "context_snippet": "you will still find a one meg resistor on the shelves at Jcar"
+  },
+  {
+   "concept": "altronics",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 55,
+   "char_start": 13153,
+   "depth": "opinion",
+   "context_snippet": "Altronics is technically better because they do more surface mount stuff as well"
+  },
+  {
+   "concept": "rs-components",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 55,
+   "char_start": 13444,
+   "depth": "mention",
+   "context_snippet": "we've got RS components and Farnell"
+  },
+  {
+   "concept": "farnell",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 55,
+   "char_start": 13454,
+   "depth": "mention",
+   "context_snippet": "RS components and Farnell, of course. I still call them Farnell"
+  },
+  {
+   "concept": "population-density",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 56,
+   "char_start": 13545,
+   "depth": "explains",
+   "context_snippet": "I think it all comes down to, to, to density, population density"
+  },
+  {
+   "concept": "jaycar",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 57,
+   "char_start": 14294,
+   "depth": "mention",
+   "context_snippet": "They've only got like 10 stores"
+  },
+  {
+   "concept": "satellite-dealer",
+   "type": "business-model",
+   "speaker": "Dave Jones",
+   "paragraph_index": 57,
+   "char_start": 14442,
+   "depth": "explains",
+   "context_snippet": "you could be like a Jcar satellite dealer or whatever the term was where you could order stuff"
+  },
+  {
+   "concept": "internet-retail",
+   "type": "business-model",
+   "speaker": "Dave Jones",
+   "paragraph_index": 57,
+   "char_start": 14595,
+   "depth": "mention",
+   "context_snippet": "that was before the internet and then the internet came along"
+  },
+  {
+   "concept": "potentiometer",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 61,
+   "char_start": 15112,
+   "depth": "mention",
+   "context_snippet": "you can buy your 10 K pot"
+  },
+  {
+   "concept": "connector",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 61,
+   "char_start": 15233,
+   "depth": "mention",
+   "context_snippet": "There's all the connectors, all in the little drawers"
+  },
+  {
+   "concept": "radio-shack",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 65,
+   "char_start": 15587,
+   "depth": "mention",
+   "context_snippet": "they're still around versus a radio shock, which is not"
+  },
+  {
+   "concept": "jaycar",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 66,
+   "char_start": 15824,
+   "depth": "opinion",
+   "context_snippet": "Jaycar is the, like people know they've done branding fairly well"
+  },
+  {
+   "concept": "sports-sponsorship",
+   "type": "business-model",
+   "speaker": "Dave Jones",
+   "paragraph_index": 66,
+   "char_start": 15905,
+   "depth": "explains",
+   "context_snippet": "especially by sponsoring, you know, football teams"
+  },
+  {
+   "concept": "australian-rules-football",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 67,
+   "char_start": 16069,
+   "depth": "mention",
+   "context_snippet": "Australian rules football"
+  },
+  {
+   "concept": "tandy",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 76,
+   "char_start": 16555,
+   "depth": "mention",
+   "context_snippet": "Tandy had that name and then Dick Smith had that name"
+  },
+  {
+   "concept": "dick-smith",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 76,
+   "char_start": 16610,
+   "depth": "mention",
+   "context_snippet": "Dick Smith gave up parts like early two thousands"
+  },
+  {
+   "concept": "radio-shack",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 77,
+   "char_start": 16932,
+   "depth": "mention",
+   "context_snippet": "they were closer to a, like a radio shack"
+  },
+  {
+   "concept": "radio-shack",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 78,
+   "char_start": 17046,
+   "depth": "mention",
+   "context_snippet": "Tandy radio shack"
+  },
+  {
+   "concept": "tandy",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 78,
+   "char_start": 17077,
+   "depth": "mention",
+   "context_snippet": "it was Tandy here"
+  },
+  {
+   "concept": "blister-pack",
+   "type": "manufacturing",
+   "speaker": "Dave Jones",
+   "paragraph_index": 78,
+   "char_start": 17169,
+   "depth": "mention",
+   "context_snippet": "you get the little blister packs and stuff like that from, from Tandy"
+  },
+  {
+   "concept": "connector",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 78,
+   "char_start": 17456,
+   "depth": "mention",
+   "context_snippet": "Joe average might need, you know, the connectors broken on their widget"
+  },
+  {
+   "concept": "soldering-iron",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 78,
+   "char_start": 17540,
+   "depth": "mention",
+   "context_snippet": "Joe average might have a soldering iron at home"
+  },
+  {
+   "concept": "barrel-jack",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 79,
+   "char_start": 17708,
+   "depth": "mention",
+   "context_snippet": "a 2.5 diameter, a barrel jack"
+  },
+  {
+   "concept": "barrel-jack",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 80,
+   "char_start": 17798,
+   "depth": "opinion",
+   "context_snippet": "buy their 2.5 mil barrel jack"
+  },
+  {
+   "concept": "artronics",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 82,
+   "char_start": 18044,
+   "depth": "opinion",
+   "context_snippet": "I don't know how our tronics still do it"
+  },
+  {
+   "concept": "jaycar",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 82,
+   "char_start": 18092,
+   "depth": "opinion",
+   "context_snippet": "they've technically got a much better range than Jaycar"
+  },
+  {
+   "concept": "retail-electronics-store",
+   "type": "business-model",
+   "speaker": "Dave Jones",
+   "paragraph_index": 82,
+   "char_start": 18199,
+   "depth": "explains",
+   "context_snippet": "there's one store here in Sydney and there's like one store in every major capital city"
+  },
+  {
+   "concept": "brand-recognition",
+   "type": "business-model",
+   "speaker": "Dave Jones",
+   "paragraph_index": 84,
+   "char_start": 18452,
+   "depth": "opinion",
+   "context_snippet": "they don't have the same branding as Jaycar do"
+  },
+  {
+   "concept": "mips",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 87,
+   "char_start": 18905,
+   "depth": "explains",
+   "context_snippet": "MIPS is the, they make the core that was in like a bunch of microchip stuff"
+  },
+  {
+   "concept": "mips-architecture",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 88,
+   "char_start": 19029,
+   "depth": "opinion",
+   "context_snippet": "The Pika 32 is based on the MIPS architecture"
+  },
+  {
+   "concept": "pic32",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 88,
+   "char_start": 19029,
+   "depth": "mention",
+   "context_snippet": "The Pika 32 is based on the MIPS architecture"
+  },
+  {
+   "concept": "arm-architecture",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 88,
+   "char_start": 19076,
+   "depth": "opinion",
+   "context_snippet": "They famously chose the MIPS architecture over the ARM architecture"
+  },
+  {
+   "concept": "risc-v",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 89,
+   "char_start": 19622,
+   "depth": "explains",
+   "context_snippet": "we will be basing on the open source risk five processor standard"
+  },
+  {
+   "concept": "instruction-set-architecture",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 89,
+   "char_start": 19689,
+   "depth": "explains",
+   "context_snippet": "the ISA in this case"
+  },
+  {
+   "concept": "risc-v",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 94,
+   "char_start": 19969,
+   "depth": "opinion",
+   "context_snippet": "Risk five is based on MIPS"
+  },
+  {
+   "concept": "instruction-set-architecture",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 97,
+   "char_start": 20326,
+   "depth": "explains",
+   "context_snippet": "the ISA is not"
+  },
+  {
+   "concept": "reduced-instruction-set",
+   "type": "concept-principle",
+   "speaker": "Dave Jones",
+   "paragraph_index": 98,
+   "char_start": 20449,
+   "depth": "explains",
+   "context_snippet": "Reduced instruction set. That's what risk stands for"
+  },
+  {
+   "concept": "mips",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 102,
+   "char_start": 21098,
+   "depth": "opinion",
+   "context_snippet": "they're doing what a risk five now. So, okay. But under the MIPS branding"
+  },
+  {
+   "concept": "compiler",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 21348,
+   "depth": "explains",
+   "context_snippet": "all the compiler support that's already there for risk five stuff"
+  },
+  {
+   "concept": "compiler-toolchain",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 21621,
+   "depth": "explains",
+   "context_snippet": "all these people are building out tool chains that support it"
+  },
+  {
+   "concept": "instruction-set",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 103,
+   "char_start": 21739,
+   "depth": "explains",
+   "context_snippet": "because they have a different instruction set"
+  },
+  {
+   "concept": "standardization",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 105,
+   "char_start": 22257,
+   "depth": "opinion",
+   "context_snippet": "It's, you know, there's a standardization piece"
+  },
+  {
+   "concept": "vertical-integration",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 105,
+   "char_start": 22556,
+   "depth": "opinion",
+   "context_snippet": "instead of like these vertically integrated companies"
+  },
+  {
+   "concept": "pic32",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 106,
+   "char_start": 22751,
+   "depth": "mention",
+   "context_snippet": "what happens to the, what happens to the microchip, uh, pick 32"
+  },
+  {
+   "concept": "microchip-technology",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 106,
+   "char_start": 22919,
+   "depth": "mention",
+   "context_snippet": "I might actually, uh, contact microchip"
+  },
+  {
+   "concept": "architecture-licensing",
+   "type": "business-model",
+   "speaker": "Dave Jones",
+   "paragraph_index": 108,
+   "char_start": 23465,
+   "depth": "explains",
+   "context_snippet": "we're licensing your architecture. We want it forever"
+  },
+  {
+   "concept": "arm-architecture",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 109,
+   "char_start": 23681,
+   "depth": "opinion",
+   "context_snippet": "I felt like MIPS was closest to ARM"
+  },
+  {
+   "concept": "intellectual-property-licensing",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 109,
+   "char_start": 23814,
+   "depth": "explains",
+   "context_snippet": "in terms of licensing and generating IP that was being used elsewhere"
+  },
+  {
+   "concept": "forrest-mims",
+   "type": "person",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 111,
+   "char_start": 24157,
+   "depth": "mention",
+   "context_snippet": "when Forrest Mims was on the show"
+  },
+  {
+   "concept": "mits",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 113,
+   "char_start": 24438,
+   "depth": "mention",
+   "context_snippet": "Oh no. MITS. Oh, MITS"
+  },
+  {
+   "concept": "ed-roberts",
+   "type": "person",
+   "speaker": "Dave Jones",
+   "paragraph_index": 114,
+   "char_start": 24568,
+   "depth": "mention",
+   "context_snippet": "He designed the. Ed Roberts"
+  },
+  {
+   "concept": "mits",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 118,
+   "char_start": 25169,
+   "depth": "mention",
+   "context_snippet": "No, MITS."
+  },
+  {
+   "concept": "mits",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 119,
+   "char_start": 25196,
+   "depth": "explains",
+   "context_snippet": "MITS stood for, um, something instrumentation and telemetry systems."
+  },
+  {
+   "concept": "mits",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 120,
+   "char_start": 25305,
+   "depth": "explains",
+   "context_snippet": "Micro instrumentation and telemetry systems."
+  },
+  {
+   "concept": "bill-gates",
+   "type": "person",
+   "speaker": "Dave Jones",
+   "paragraph_index": 121,
+   "char_start": 25566,
+   "depth": "explains",
+   "context_snippet": "technically Bill Gates was not an employee of MITS"
+  },
+  {
+   "concept": "microsoft",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 121,
+   "char_start": 25626,
+   "depth": "explains",
+   "context_snippet": "Paul Allen, co-founder of Microsoft"
+  },
+  {
+   "concept": "paul-allen",
+   "type": "person",
+   "speaker": "Dave Jones",
+   "paragraph_index": 121,
+   "char_start": 25626,
+   "depth": "explains",
+   "context_snippet": "Paul Allen, co-founder of Microsoft, he, he technically was an employee of MITS"
+  },
+  {
+   "concept": "mits",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 121,
+   "char_start": 25842,
+   "depth": "explains",
+   "context_snippet": "they basically moved to Albuquerque to be next door to MITS because that was their one big customer"
+  },
+  {
+   "concept": "altair",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 122,
+   "char_start": 26022,
+   "depth": "mention",
+   "context_snippet": "were you refurbing an Altair recently"
+  },
+  {
+   "concept": "compact-portable-computer",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 127,
+   "char_start": 26345,
+   "depth": "mention",
+   "context_snippet": "that was an old, uh, compact portable"
+  },
+  {
+   "concept": "microsoft",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 135,
+   "char_start": 27052,
+   "depth": "mention",
+   "context_snippet": "Microsoft moved their head headquarters to Albuquerque"
+  },
+  {
+   "concept": "technology-history",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 135,
+   "char_start": 27204,
+   "depth": "mention",
+   "context_snippet": "there's many books on the history of, of all of this stuff"
+  },
+  {
+   "concept": "silicon-valley",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 141,
+   "char_start": 27934,
+   "depth": "explains",
+   "context_snippet": "when the action was in a Silicon Valley, you know, before it was even coined Silicon Valley"
+  },
+  {
+   "concept": "mits",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 141,
+   "char_start": 28050,
+   "depth": "mention",
+   "context_snippet": "If the action was in Albuquerque with, uh, mitts and the Altair"
+  },
+  {
+   "concept": "altair",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 141,
+   "char_start": 28083,
+   "depth": "mention",
+   "context_snippet": "with, uh, mitts and the Altair"
+  },
+  {
+   "concept": "silicon-valley",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 143,
+   "char_start": 28529,
+   "depth": "opinion",
+   "context_snippet": "What is the future of Silicon Valley?"
+  },
+  {
+   "concept": "silicon-valley",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 144,
+   "char_start": 28651,
+   "depth": "opinion",
+   "context_snippet": "where will be the next Silicon Valley?"
+  },
+  {
+   "concept": "rocket-lab",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 149,
+   "char_start": 29159,
+   "depth": "mention",
+   "context_snippet": "you've got rocket labs. They're in New Zealand"
+  },
+  {
+   "concept": "new-zealand",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 149,
+   "char_start": 29183,
+   "depth": "mention",
+   "context_snippet": "They're in New Zealand, you know, launching rockets"
+  },
+  {
+   "concept": "spacex",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 149,
+   "char_start": 29261,
+   "depth": "mention",
+   "context_snippet": "they don't have to be in near SpaceX in bloody California"
+  },
+  {
+   "concept": "technology-distribution",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 150,
+   "char_start": 29393,
+   "depth": "opinion",
+   "context_snippet": "there is a general distribution of technology"
+  },
+  {
+   "concept": "technology-startup",
+   "type": "business-model",
+   "speaker": "Dave Jones",
+   "paragraph_index": 151,
+   "char_start": 29697,
+   "depth": "opinion",
+   "context_snippet": "if you're a startup in the U S you simply went to Silicon Valley"
+  },
+  {
+   "concept": "silicon-valley",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 151,
+   "char_start": 29763,
+   "depth": "opinion",
+   "context_snippet": "If you're a tech startup, right. You wanted your presence to be in Silicon Valley."
+  },
+  {
+   "concept": "talent-base",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 154,
+   "char_start": 30067,
+   "depth": "explains",
+   "context_snippet": "it all comes down to like talent bases"
+  },
+  {
+   "concept": "sand-hill-road",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 154,
+   "char_start": 30286,
+   "depth": "mention",
+   "context_snippet": "I don't think Sand Hill road is going anywhere"
+  },
+  {
+   "concept": "investment-capital",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 154,
+   "char_start": 30490,
+   "depth": "opinion",
+   "context_snippet": "there's tons of investment capital everywhere"
+  },
+  {
+   "concept": "startup-valuation",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 154,
+   "char_start": 30627,
+   "depth": "opinion",
+   "context_snippet": "if you want to really get frothy, like valuation craziness"
+  },
+  {
+   "concept": "starlink",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 158,
+   "char_start": 31485,
+   "depth": "mention",
+   "context_snippet": "using his, uh, star link and he was like in rural Missouri"
+  },
+  {
+   "concept": "rural-connectivity",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 158,
+   "char_start": 31585,
+   "depth": "opinion",
+   "context_snippet": "people like Caleb can get much better connectivity than kind of being more further out"
+  },
+  {
+   "concept": "remote-work",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 158,
+   "char_start": 31673,
+   "depth": "opinion",
+   "context_snippet": "So I think there will be more normalized, um, remote work"
+  },
+  {
+   "concept": "young-talent",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 158,
+   "char_start": 31862,
+   "depth": "opinion",
+   "context_snippet": "if people are chasing young talent, young talent still wants to be where other young people are"
+  },
+  {
+   "concept": "silicon-valley",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 159,
+   "char_start": 32216,
+   "depth": "opinion",
+   "context_snippet": "if you really don't want to have an office in Silicon Valley, you don't have to be successful"
+  },
+  {
+   "concept": "san-jose",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 160,
+   "char_start": 32392,
+   "depth": "mention",
+   "context_snippet": "you know, San Jose airport to go visit some of the money bags"
+  },
+  {
+   "concept": "texas",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 161,
+   "char_start": 32496,
+   "depth": "mention",
+   "context_snippet": "Well, they're all moving to Texas now, aren't they?"
+  },
+  {
+   "concept": "silicon-valley",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 162,
+   "char_start": 32624,
+   "depth": "opinion",
+   "context_snippet": "I think, uh, Silicon Valley is, it's a terribly laid out area too"
+  },
+  {
+   "concept": "car-dependent-city",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 166,
+   "char_start": 33525,
+   "depth": "opinion",
+   "context_snippet": "cars are kind of the, the, the name of the game"
+  },
+  {
+   "concept": "lewis-rossman",
+   "type": "person",
+   "speaker": "Dave Jones",
+   "paragraph_index": 173,
+   "char_start": 37316,
+   "depth": "mention",
+   "context_snippet": "a friend and guest of the show, Lewis Rossman"
+  },
+  {
+   "concept": "real-estate",
+   "type": "business-model",
+   "speaker": "Dave Jones",
+   "paragraph_index": 175,
+   "char_start": 37993,
+   "depth": "mention",
+   "context_snippet": "He does his famous real estate rants"
+  },
+  {
+   "concept": "right-to-repair",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 175,
+   "char_start": 38223,
+   "depth": "opinion",
+   "context_snippet": "I'm going to spend the next two years fighting for the right to repair"
+  },
+  {
+   "concept": "right-to-repair",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 178,
+   "char_start": 38819,
+   "depth": "opinion",
+   "context_snippet": "the biggest impact you could have is to go and, like, lobby the EU"
+  },
+  {
+   "concept": "european-union",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 178,
+   "char_start": 38859,
+   "depth": "mention",
+   "context_snippet": "go and, like, lobby the EU"
+  },
+  {
+   "concept": "usb",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 178,
+   "char_start": 38979,
+   "depth": "opinion",
+   "context_snippet": "like the USB standard stuff"
+  },
+  {
+   "concept": "charger-standardization",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 178,
+   "char_start": 39149,
+   "depth": "opinion",
+   "context_snippet": "every phone having, like, just a separate charger standard"
+  },
+  {
+   "concept": "usb-c",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 181,
+   "char_start": 39417,
+   "depth": "mention",
+   "context_snippet": "is it USB-C? Is it USB-C or is it USB micro?"
+  },
+  {
+   "concept": "usb-micro",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 181,
+   "char_start": 39430,
+   "depth": "mention",
+   "context_snippet": "Is it USB-C or is it USB micro?"
+  },
+  {
+   "concept": "hardware-standardization",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 182,
+   "char_start": 39681,
+   "depth": "opinion",
+   "context_snippet": "just that, that kind of, like, driving standardization"
+  },
+  {
+   "concept": "canon-camcorder",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 183,
+   "char_start": 40010,
+   "depth": "mention",
+   "context_snippet": "my old Canon camcorder"
+  },
+  {
+   "concept": "barrel-jack-diameter",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 186,
+   "char_start": 40341,
+   "depth": "mention",
+   "context_snippet": "a 0.5 millimeter inner diameter or something crazy"
+  },
+  {
+   "concept": "right-to-repair",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 187,
+   "char_start": 41221,
+   "depth": "opinion",
+   "context_snippet": "he wants to make it more formal so it's beyond him"
+  },
+  {
+   "concept": "movement-building",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 187,
+   "char_start": 41273,
+   "depth": "opinion",
+   "context_snippet": "He wants to make it like a big formal movement kind of thing"
+  },
+  {
+   "concept": "right-to-repair",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 188,
+   "char_start": 41560,
+   "depth": "opinion",
+   "context_snippet": "you have to make it an idea instead of a person"
+  },
+  {
+   "concept": "right-to-repair",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 191,
+   "char_start": 42071,
+   "depth": "opinion",
+   "context_snippet": "we should damn well demand this of all of our products"
+  },
+  {
+   "concept": "open-hardware",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 193,
+   "char_start": 42825,
+   "depth": "opinion",
+   "context_snippet": "there's a minimum bar that you need to jump over to call yourself open hardware"
+  },
+  {
+   "concept": "right-to-repair",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 195,
+   "char_start": 42954,
+   "depth": "opinion",
+   "context_snippet": "It's the same, same for right to repair"
+  },
+  {
+   "concept": "schematic",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 195,
+   "char_start": 43030,
+   "depth": "opinion",
+   "context_snippet": "having, having the schematic available"
+  },
+  {
+   "concept": "serial-number-parts",
+   "type": "manufacturing",
+   "speaker": "Dave Jones",
+   "paragraph_index": 195,
+   "char_start": 43181,
+   "depth": "explains",
+   "context_snippet": "you actually tie parts into serial numbers so that you can't even salvage a part"
+  },
+  {
+   "concept": "part-serialization",
+   "type": "manufacturing",
+   "speaker": "Dave Jones",
+   "paragraph_index": 195,
+   "char_start": 43181,
+   "depth": "explains",
+   "context_snippet": "you actually tie parts into serial numbers so that you can't even salvage a part"
+  },
+  {
+   "concept": "software-lockout",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 195,
+   "char_start": 43328,
+   "depth": "explains",
+   "context_snippet": "it won't work because it's been serialized. Right. And it's baked into the software"
+  },
+  {
+   "concept": "software",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 195,
+   "char_start": 43350,
+   "depth": "mention",
+   "context_snippet": "it's been serialized. Right. And it's baked into the software"
+  },
+  {
+   "concept": "custom-asic",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 195,
+   "char_start": 43502,
+   "depth": "opinion",
+   "context_snippet": "you can't buy the chips because they're customized"
+  },
+  {
+   "concept": "custom-integrated-circuit",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 195,
+   "char_start": 43502,
+   "depth": "opinion",
+   "context_snippet": "you can't buy the chips because they're customized"
+  },
+  {
+   "concept": "texas-instruments",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 195,
+   "char_start": 43579,
+   "depth": "mention",
+   "context_snippet": "TI or something. Apple will use a TI charger chip"
+  },
+  {
+   "concept": "apple",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 195,
+   "char_start": 43596,
+   "depth": "mention",
+   "context_snippet": "Apple will use a TI charger chip or whatever"
+  },
+  {
+   "concept": "charger-ic",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 195,
+   "char_start": 43596,
+   "depth": "mention",
+   "context_snippet": "Apple will use a TI charger chip or whatever"
+  },
+  {
+   "concept": "schematic",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 199,
+   "char_start": 43824,
+   "depth": "opinion",
+   "context_snippet": "even if Apple actually released the schematics"
+  },
+  {
+   "concept": "part-availability",
+   "type": "manufacturing",
+   "speaker": "Dave Jones",
+   "paragraph_index": 199,
+   "char_start": 43872,
+   "depth": "opinion",
+   "context_snippet": "if you can't buy the parts"
+  },
+  {
+   "concept": "footprint-standardization",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 200,
+   "char_start": 44121,
+   "depth": "explains",
+   "context_snippet": "standardization on footprints too"
+  },
+  {
+   "concept": "pcb-footprint",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 200,
+   "char_start": 44185,
+   "depth": "explains",
+   "context_snippet": "a default fallback footprint that everything had"
+  },
+  {
+   "concept": "market-pressure",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 205,
+   "char_start": 45193,
+   "depth": "explains",
+   "context_snippet": "put enough pressure on companies that, Hey, we won't buy your product unless I can repair it myself"
+  },
+  {
+   "concept": "schematic",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 205,
+   "char_start": 45369,
+   "depth": "mention",
+   "context_snippet": "we released the schematic"
+  },
+  {
+   "concept": "digi-key",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 205,
+   "char_start": 45417,
+   "depth": "mention",
+   "context_snippet": "you can buy them from digi key or whatever"
+  },
+  {
+   "concept": "right-to-repair",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 206,
+   "char_start": 45497,
+   "depth": "opinion",
+   "context_snippet": "It could be a differentiator in the marketplace"
+  },
+  {
+   "concept": "market-differentiation",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 206,
+   "char_start": 45509,
+   "depth": "opinion",
+   "context_snippet": "a differentiator in the marketplace"
+  },
+  {
+   "concept": "right-to-repair",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 207,
+   "char_start": 45654,
+   "depth": "opinion",
+   "context_snippet": "The market can do it, but ultimately no"
+  },
+  {
+   "concept": "right-to-repair",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 209,
+   "char_start": 46361,
+   "depth": "explains",
+   "context_snippet": "it will require a combination of government. Government legislation"
+  },
+  {
+   "concept": "government-regulation",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 209,
+   "char_start": 46455,
+   "depth": "explains",
+   "context_snippet": "the EU coming in and mandating that, yes, all new mobile phones must use a USB for charging"
+  },
+  {
+   "concept": "european-union",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 209,
+   "char_start": 46455,
+   "depth": "mention",
+   "context_snippet": "the EU coming in and mandating"
+  },
+  {
+   "concept": "usb",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 209,
+   "char_start": 46497,
+   "depth": "mention",
+   "context_snippet": "all new mobile phones must use a USB for charging"
+  },
+  {
+   "concept": "proprietary-interface",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 209,
+   "char_start": 46548,
+   "depth": "opinion",
+   "context_snippet": "None of this, none of this proprietary rubbish anymore"
+  },
+  {
+   "concept": "right-to-repair",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 210,
+   "char_start": 47163,
+   "depth": "opinion",
+   "context_snippet": "We should give away our IP"
+  },
+  {
+   "concept": "intellectual-property",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 210,
+   "char_start": 47220,
+   "depth": "opinion",
+   "context_snippet": "whether or not the fact that we believe that a schematic is truly IP"
+  },
+  {
+   "concept": "intellectual-property",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 212,
+   "char_start": 47333,
+   "depth": "opinion",
+   "context_snippet": "It is still IP. Right. I mean, like it's, at least it's perceived as IP internally"
+  },
+  {
+   "concept": "product-copying",
+   "type": "manufacturing",
+   "speaker": "Dave Jones",
+   "paragraph_index": 215,
+   "char_start": 47950,
+   "depth": "explains",
+   "context_snippet": "these factories in China can just copy your product anyway"
+  },
+  {
+   "concept": "china",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 215,
+   "char_start": 47950,
+   "depth": "mention",
+   "context_snippet": "these factories in China"
+  },
+  {
+   "concept": "source-file",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 215,
+   "char_start": 48136,
+   "depth": "opinion",
+   "context_snippet": "releasing the original source files"
+  },
+  {
+   "concept": "pcb-file",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 215,
+   "char_start": 48216,
+   "depth": "mention",
+   "context_snippet": "release, you know, the PCB files"
+  },
+  {
+   "concept": "open-source-hardware",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 217,
+   "char_start": 48420,
+   "depth": "explains",
+   "context_snippet": "that's the open source hardware debate as well"
+  },
+  {
+   "concept": "pdf-schematic",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 217,
+   "char_start": 48512,
+   "depth": "mention",
+   "context_snippet": "Is a PDF schematic enough?"
+  },
+  {
+   "concept": "pcb-file",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 217,
+   "char_start": 48577,
+   "depth": "mention",
+   "context_snippet": "the original schematic and files, schematic and PCB files"
+  },
+  {
+   "concept": "bill-of-materials",
+   "type": "manufacturing",
+   "speaker": "Dave Jones",
+   "paragraph_index": 217,
+   "char_start": 48636,
+   "depth": "mention",
+   "context_snippet": "What do you do about the bomb?"
+  },
+  {
+   "concept": "supplier-information",
+   "type": "manufacturing",
+   "speaker": "Dave Jones",
+   "paragraph_index": 217,
+   "char_start": 48667,
+   "depth": "mention",
+   "context_snippet": "What do you do about your supplier information?"
+  },
+  {
+   "concept": "open-source-hardware-summit",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 218,
+   "char_start": 49001,
+   "depth": "mention",
+   "context_snippet": "open source hardware summit is coming up on April 9th"
+  },
+  {
+   "concept": "virtual-event",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 218,
+   "char_start": 49056,
+   "depth": "mention",
+   "context_snippet": "Virtual. I'm sure."
+  },
+  {
+   "concept": "evblog-meetup",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 225,
+   "char_start": 49549,
+   "depth": "mention",
+   "context_snippet": "I could start up the EV blog meetup again"
+  },
+  {
+   "concept": "prototype",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 232,
+   "char_start": 50461,
+   "depth": "mention",
+   "context_snippet": "on my recent prototypes"
+  },
+  {
+   "concept": "wire-to-board-connector",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 232,
+   "char_start": 50494,
+   "depth": "opinion",
+   "context_snippet": "I designed in wire to board connectors"
+  },
+  {
+   "concept": "hand-soldering",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 232,
+   "char_start": 50592,
+   "depth": "mention",
+   "context_snippet": "I was like soldering wires directly to the"
+  },
+  {
+   "concept": "pin-header",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 232,
+   "char_start": 50603,
+   "depth": "mention",
+   "context_snippet": "soldering wires directly to the, like to just like some pin headers"
+  },
+  {
+   "concept": "custom-assembly",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 234,
+   "char_start": 50829,
+   "depth": "mention",
+   "context_snippet": "The thing that I always get scared off about though is the custom, the custom."
+  },
+  {
+   "concept": "custom-assembly",
+   "type": "manufacturing",
+   "speaker": "Dave Jones",
+   "paragraph_index": 235,
+   "char_start": 50937,
+   "depth": "opinion",
+   "context_snippet": "The custom assembly. You don't want to have to have a custom little crimping tool"
+  },
+  {
+   "concept": "crimping-tool",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 235,
+   "char_start": 50989,
+   "depth": "opinion",
+   "context_snippet": "a custom little crimping tool to make the little crimpy things"
+  },
+  {
+   "concept": "crimp-connector",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 235,
+   "char_start": 51056,
+   "depth": "mention",
+   "context_snippet": "then push them into the connector"
+  },
+  {
+   "concept": "pcb-hole",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 235,
+   "char_start": 51140,
+   "depth": "opinion",
+   "context_snippet": "Just put a hole in the board with a pad."
+  },
+  {
+   "concept": "pre-crimped-cable",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 236,
+   "char_start": 51333,
+   "depth": "explains",
+   "context_snippet": "you can buy pre-crimped cable from distributors now"
+  },
+  {
+   "concept": "cable-assembly",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 236,
+   "char_start": 51553,
+   "depth": "mention",
+   "context_snippet": "I just like assemble little cables and I can, you know, do a little, a splice."
+  },
+  {
+   "concept": "cable-assembly",
+   "type": "manufacturing",
+   "speaker": "Dave Jones",
+   "paragraph_index": 237,
+   "char_start": 51704,
+   "depth": "mention",
+   "context_snippet": "the company that just announced that they're doing cable assemblies"
+  },
+  {
+   "concept": "jlcpcb",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 237,
+   "char_start": 51829,
+   "depth": "mention",
+   "context_snippet": "JLC. I think it was JLC."
+  },
+  {
+   "concept": "cable-service",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 238,
+   "char_start": 52008,
+   "depth": "mention",
+   "context_snippet": "I think seed has a cable service too."
+  },
+  {
+   "concept": "cable-sample",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 238,
+   "char_start": 52117,
+   "depth": "explains",
+   "context_snippet": "it's not that hard to actually get like cable samples made."
+  },
+  {
+   "concept": "low-volume-manufacturing",
+   "type": "manufacturing",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 238,
+   "char_start": 52177,
+   "depth": "opinion",
+   "context_snippet": "It's usually the low volume stuff sucks"
+  },
+  {
+   "concept": "alibaba",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 238,
+   "char_start": 52238,
+   "depth": "explains",
+   "context_snippet": "go on Ali, Alibaba, find someone who's making something that looks relatively similar"
+  },
+  {
+   "concept": "pre-crimped-cable",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 240,
+   "char_start": 52636,
+   "depth": "opinion",
+   "context_snippet": "buying those pre-crimps is like real great"
+  },
+  {
+   "concept": "ribbon-cable",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 243,
+   "char_start": 52894,
+   "depth": "mention",
+   "context_snippet": "use like 0.1 inch ribbon cable and headers"
+  },
+  {
+   "concept": "header-connector",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 243,
+   "char_start": 52903,
+   "depth": "mention",
+   "context_snippet": "0.1 inch ribbon cable and headers"
+  },
+  {
+   "concept": "test-fixture",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 244,
+   "char_start": 53039,
+   "depth": "explains",
+   "context_snippet": "building out a test stand for this board that I'm building"
+  },
+  {
+   "concept": "peripheral",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 244,
+   "char_start": 53117,
+   "depth": "opinion",
+   "context_snippet": "having these peripherals that are just able to like clip in super easy"
+  },
+  {
+   "concept": "soldering",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 244,
+   "char_start": 53348,
+   "depth": "opinion",
+   "context_snippet": "I've de-soldered that ribbon cable a couple of times"
+  },
+  {
+   "concept": "connector",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 244,
+   "char_start": 53473,
+   "depth": "explains",
+   "context_snippet": "it's just a much more reliable, reliable connection"
+  },
+  {
+   "concept": "hardwiring",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 245,
+   "char_start": 53773,
+   "depth": "opinion",
+   "context_snippet": "Do you go for an all connector solution? Do you hardwiring?"
+  },
+  {
+   "concept": "product-teardown",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 245,
+   "char_start": 53838,
+   "depth": "explains",
+   "context_snippet": "when I'm doing a tear down of a product"
+  },
+  {
+   "concept": "sony",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 245,
+   "char_start": 53932,
+   "depth": "mention",
+   "context_snippet": "look, Sony, the bastards."
+  },
+  {
+   "concept": "board-to-board-interconnect",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 245,
+   "char_start": 54444,
+   "depth": "opinion",
+   "context_snippet": "half board, nice board to board interconnect"
+  },
+  {
+   "concept": "manufacturing-engineer",
+   "type": "career",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 246,
+   "char_start": 54570,
+   "depth": "mention",
+   "context_snippet": "I want to talk to my manufacturing engineer here"
+  },
+  {
+   "concept": "listener-survey",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 251,
+   "char_start": 54818,
+   "depth": "mention",
+   "context_snippet": "Let's talk about the listener survey"
+  },
+  {
+   "concept": "joel-dunsmore",
+   "type": "person",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 251,
+   "char_start": 54911,
+   "depth": "mention",
+   "context_snippet": "with Joel Dunsmore"
+  },
+  {
+   "concept": "technical-book",
+   "type": "media-resource",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 251,
+   "char_start": 55027,
+   "depth": "mention",
+   "context_snippet": "we're giving away copies of his book"
+  },
+  {
+   "concept": "audience-survey",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 256,
+   "char_start": 55835,
+   "depth": "mention",
+   "context_snippet": "I have to do another survey for my channel"
+  },
+  {
+   "concept": "audience-feedback",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 263,
+   "char_start": 56618,
+   "depth": "opinion",
+   "context_snippet": "we love hearing from all of you"
+  },
+  {
+   "concept": "unboxing-video",
+   "type": "media-resource",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 267,
+   "char_start": 57024,
+   "depth": "mention",
+   "context_snippet": "I did an unboxing video, Dave."
+  },
+  {
+   "concept": "product-teardown",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 268,
+   "char_start": 57157,
+   "depth": "mention",
+   "context_snippet": "It's also a teardown. It's also a teardown. Mailbag."
+  },
+  {
+   "concept": "dual-oscilloscope",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 271,
+   "char_start": 57313,
+   "depth": "mention",
+   "context_snippet": "It's a dual scope."
+  },
+  {
+   "concept": "oscilloscope",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 273,
+   "char_start": 57468,
+   "depth": "mention",
+   "context_snippet": "I got a new one. So mine broke."
+  },
+  {
+   "concept": "current-measurement",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 279,
+   "char_start": 58151,
+   "depth": "mention",
+   "context_snippet": "Measuring current. Like it's my job."
+  },
+  {
+   "concept": "cellular-board",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 281,
+   "char_start": 58291,
+   "depth": "mention",
+   "context_snippet": "doing current measurements on my, my cellular board"
+  },
+  {
+   "concept": "current-consumption",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 281,
+   "char_start": 58482,
+   "depth": "explains",
+   "context_snippet": "the current will go down to nothing. Cause I'm using this tiny little processor"
+  },
+  {
+   "concept": "idle-current",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 281,
+   "char_start": 58597,
+   "depth": "explains",
+   "context_snippet": "20 milliamps, 25 milliamps. And like, like, you know, idle state"
+  },
+  {
+   "concept": "nrf52",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 283,
+   "char_start": 58873,
+   "depth": "opinion",
+   "context_snippet": "like a hundred microamps, you know, like the NRF 52"
+  },
+  {
+   "concept": "power-optimization",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 283,
+   "char_start": 58994,
+   "depth": "mention",
+   "context_snippet": "I have some room to, to optimize still"
+  },
+  {
+   "concept": "op-amp",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 283,
+   "char_start": 59061,
+   "depth": "explains",
+   "context_snippet": "I have an op amp just kind of like turned on and sitting there"
+  },
+  {
+   "concept": "sensor-power-management",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 283,
+   "char_start": 59214,
+   "depth": "explains",
+   "context_snippet": "the sensors aren't turned off right"
+  },
+  {
+   "concept": "bipolar-transistor",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 284,
+   "char_start": 59303,
+   "depth": "mention",
+   "context_snippet": "What is a, one of those bipolar jobbies?"
+  },
+  {
+   "concept": "jfet",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 287,
+   "char_start": 59447,
+   "depth": "mention",
+   "context_snippet": "J-fed, I think"
+  },
+  {
+   "concept": "high-speed-low-power-tradeoff",
+   "type": "concept-principle",
+   "speaker": "Dave Jones",
+   "paragraph_index": 288,
+   "char_start": 59582,
+   "depth": "explains",
+   "context_snippet": "you usually can't get high speed and low noise with low power consumption"
+  },
+  {
+   "concept": "thermal-dissipation",
+   "type": "concept-principle",
+   "speaker": "Dave Jones",
+   "paragraph_index": 291,
+   "char_start": 59810,
+   "depth": "mention",
+   "context_snippet": "all the boxes are warm when you, you know, turn them all on"
+  },
+  {
+   "concept": "vacuum-tube",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 294,
+   "char_start": 60155,
+   "depth": "mention",
+   "context_snippet": "Tubes. We should go back to tubes"
+  },
+  {
+   "concept": "firmware",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 295,
+   "char_start": 60290,
+   "depth": "mention",
+   "context_snippet": "a product that, you know, doesn't have any firmware on it"
+  },
+  {
+   "concept": "stm32",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 297,
+   "char_start": 60674,
+   "depth": "mention",
+   "context_snippet": "It's got like an STM 32"
+  },
+  {
+   "concept": "digital-clock",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 300,
+   "char_start": 60881,
+   "depth": "mention",
+   "context_snippet": "my, my clock design"
+  },
+  {
+   "concept": "cmos-4000-series",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 300,
+   "char_start": 60902,
+   "depth": "mention",
+   "context_snippet": "All 4,000 series CMOS"
+  },
+  {
+   "concept": "hardware-meetup",
+   "type": "community-event",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 305,
+   "char_start": 61280,
+   "depth": "opinion",
+   "context_snippet": "into a hardware meetup that I get to see other people's work"
+  },
+  {
+   "concept": "covid-19-vaccination",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 309,
+   "char_start": 61732,
+   "depth": "mention",
+   "context_snippet": "The vaccine is going well"
+  },
+  {
+   "concept": "johnson-and-johnson-vaccine",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 309,
+   "char_start": 61944,
+   "depth": "mention",
+   "context_snippet": "the new Johnson & Johnson"
+  },
+  {
+   "concept": "new-york-times",
+   "type": "media-resource",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 309,
+   "char_start": 62094,
+   "depth": "mention",
+   "context_snippet": "a New York Times, uh, calculator"
+  },
+  {
+   "concept": "vaccine-prioritization",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 309,
+   "char_start": 62138,
+   "depth": "explains",
+   "context_snippet": "you put in like your health conditions, you know, everything that, and then it tells you where you are online"
+  },
+  {
+   "concept": "covid-19-vaccine",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 314,
+   "char_start": 62593,
+   "depth": "mention",
+   "context_snippet": "it's free if you want it, you can have it, but you're on a waiting list"
+  },
+  {
+   "concept": "vaccination-prioritization",
+   "type": "industry-economics",
+   "speaker": "Dave Jones",
+   "paragraph_index": 318,
+   "char_start": 63411,
+   "depth": "explains",
+   "context_snippet": "highest risk is eighties plus, you know, so they're like high priority"
+  },
+  {
+   "concept": "covid-19",
+   "type": "concept-principle",
+   "speaker": "Dave Jones",
+   "paragraph_index": 320,
+   "char_start": 63826,
+   "depth": "mention",
+   "context_snippet": "There's our weekly COVID update on The Amp Hour"
+  },
+  {
+   "concept": "mars-helicopter",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 320,
+   "char_start": 64018,
+   "depth": "mention",
+   "context_snippet": "they're about to fly the helicopter on Mars"
+  },
+  {
+   "concept": "mars-helicopter",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 323,
+   "char_start": 64560,
+   "depth": "mention",
+   "context_snippet": "how long it's been like in development and also like the constraint"
+  },
+  {
+   "concept": "veritasium",
+   "type": "media-resource",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 323,
+   "char_start": 64629,
+   "depth": "mention",
+   "context_snippet": "I was watching the Veritasium video on it"
+  },
+  {
+   "concept": "rotor-speed",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 325,
+   "char_start": 64773,
+   "depth": "explains",
+   "context_snippet": "the speeds that the rotors have to spin at is like really nuts"
+  },
+  {
+   "concept": "mars-atmosphere",
+   "type": "concept-principle",
+   "speaker": "Dave Jones",
+   "paragraph_index": 326,
+   "char_start": 64863,
+   "depth": "explains",
+   "context_snippet": "Cause there's bugger all air there"
+  },
+  {
+   "concept": "radiation-shielding",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 331,
+   "char_start": 65643,
+   "depth": "mention",
+   "context_snippet": "gold foil stuff that they use for like radiation shielding"
+  },
+  {
+   "concept": "control-circuitry",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 331,
+   "char_start": 65739,
+   "depth": "explains",
+   "context_snippet": "all of the control circuitry is mounted on the outside of the battery pack"
+  },
+  {
+   "concept": "thermal-management",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 331,
+   "char_start": 65831,
+   "depth": "explains",
+   "context_snippet": "any residual heat from the battery is then also used to help heat the board up"
+  },
+  {
+   "concept": "resistive-heating",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 331,
+   "char_start": 66052,
+   "depth": "explains",
+   "context_snippet": "just resistive elements and stuff"
+  },
+  {
+   "concept": "mars-temperature",
+   "type": "concept-principle",
+   "speaker": "Dave Jones",
+   "paragraph_index": 332,
+   "char_start": 66374,
+   "depth": "explains",
+   "context_snippet": "there are some spots on Mars that can actually get into the 20 degree range"
+  },
+  {
+   "concept": "control-algorithm",
+   "type": "software",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 337,
+   "char_start": 67288,
+   "depth": "explains",
+   "context_snippet": "the control algorithm on this thing is like really, really complex"
+  },
+  {
+   "concept": "flight-testing",
+   "type": "engineering-practice",
+   "speaker": "Dave Jones",
+   "paragraph_index": 340,
+   "char_start": 67904,
+   "depth": "opinion",
+   "context_snippet": "they've done their test"
+  },
+  {
+   "concept": "communication-latency",
+   "type": "standard-protocol",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 343,
+   "char_start": 68344,
+   "depth": "explains",
+   "context_snippet": "they don't know for a couple of minutes"
+  },
+  {
+   "concept": "mars-communication-delay",
+   "type": "concept-principle",
+   "speaker": "Dave Jones",
+   "paragraph_index": 344,
+   "char_start": 68468,
+   "depth": "explains",
+   "context_snippet": "12 minute delay or 14 minutes or something"
+  },
+  {
+   "concept": "digital-multimeter",
+   "type": "tool-equipment",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 347,
+   "char_start": 68709,
+   "depth": "mention",
+   "context_snippet": "How was your, uh, build your DMM build?"
+  },
+  {
+   "concept": "digital-multimeter",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 350,
+   "char_start": 68991,
+   "depth": "mention",
+   "context_snippet": "I've got, I've got a new multimeter"
+  },
+  {
+   "concept": "micro-supply",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 358,
+   "char_start": 69969,
+   "depth": "mention",
+   "context_snippet": "today I am probably going to shoot an update video on the micro supply"
+  },
+  {
+   "concept": "sunken-cost-fallacy",
+   "type": "concept-principle",
+   "speaker": "Dave Jones",
+   "paragraph_index": 362,
+   "char_start": 70585,
+   "depth": "explains",
+   "context_snippet": "the sunken cost fallacy kind of thing"
+  },
+  {
+   "concept": "usb-power-supply",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 362,
+   "char_start": 70699,
+   "depth": "mention",
+   "context_snippet": "this USB power supply"
+  },
+  {
+   "concept": "micro-supply",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 364,
+   "char_start": 71178,
+   "depth": "opinion",
+   "context_snippet": "the little power supply"
+  },
+  {
+   "concept": "thermal-testing",
+   "type": "technique",
+   "speaker": "Dave Jones",
+   "paragraph_index": 366,
+   "char_start": 71443,
+   "depth": "mention",
+   "context_snippet": "It needs proper thermal testing"
+  },
+  {
+   "concept": "small-batch-manufacturing",
+   "type": "manufacturing",
+   "speaker": "Dave Jones",
+   "paragraph_index": 366,
+   "char_start": 71628,
+   "depth": "opinion",
+   "context_snippet": "We were going to actually manufacture like 10 or 20 of them"
+  },
+  {
+   "concept": "personal-project",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 367,
+   "char_start": 72221,
+   "depth": "opinion",
+   "context_snippet": "when it's like a personal project project"
+  },
+  {
+   "concept": "sunk-cost-fallacy",
+   "type": "concept-principle",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 369,
+   "char_start": 73595,
+   "depth": "explains",
+   "context_snippet": "the real cost in the future is the work you still have to do"
+  },
+  {
+   "concept": "project-abandonment",
+   "type": "engineering-practice",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 369,
+   "char_start": 73824,
+   "depth": "explains",
+   "context_snippet": "just put it aside and move on to the next thing"
+  },
+  {
+   "concept": "source-code",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 372,
+   "char_start": 75236,
+   "depth": "mention",
+   "context_snippet": "I've already released the source code"
+  },
+  {
+   "concept": "schematic",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 372,
+   "char_start": 75369,
+   "depth": "mention",
+   "context_snippet": "I don't think I've released the latest schematic though"
+  },
+  {
+   "concept": "github",
+   "type": "software",
+   "speaker": "Dave Jones",
+   "paragraph_index": 372,
+   "char_start": 75473,
+   "depth": "mention",
+   "context_snippet": "dump it, you know, on the Githubs"
+  },
+  {
+   "concept": "usb-power-supply",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 377,
+   "char_start": 76256,
+   "depth": "opinion",
+   "context_snippet": "it's a cute little power supply"
+  },
+  {
+   "concept": "usb",
+   "type": "standard-protocol",
+   "speaker": "Dave Jones",
+   "paragraph_index": 379,
+   "char_start": 76703,
+   "depth": "explains",
+   "context_snippet": "it took power from a USB input and gave you an adjustable power supply"
+  },
+  {
+   "concept": "adjustable-power-supply",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 379,
+   "char_start": 76738,
+   "depth": "explains",
+   "context_snippet": "gave you an adjustable power supply"
+  },
+  {
+   "concept": "display",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 379,
+   "char_start": 76890,
+   "depth": "mention",
+   "context_snippet": "it's got a big, nice display on it"
+  },
+  {
+   "concept": "keypad",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 379,
+   "char_start": 76929,
+   "depth": "mention",
+   "context_snippet": "a custom keypad"
+  },
+  {
+   "concept": "product-form-factor",
+   "type": "engineering-practice",
+   "speaker": "Dave Jones",
+   "paragraph_index": 379,
+   "char_start": 76960,
+   "depth": "opinion",
+   "context_snippet": "it's a nice, sexy case and form factor and everything"
+  },
+  {
+   "concept": "altium",
+   "type": "company-product",
+   "speaker": "Dave Jones",
+   "paragraph_index": 381,
+   "char_start": 77572,
+   "depth": "mention",
+   "context_snippet": "I was still working at Altium at the time"
+  },
+  {
+   "concept": "silicon-chip",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 381,
+   "char_start": 77735,
+   "depth": "mention",
+   "context_snippet": "Leo Simpson from Silicon Chip magazine came in"
+  },
+  {
+   "concept": "prototype",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 381,
+   "char_start": 78142,
+   "depth": "mention",
+   "context_snippet": "I showed him my little prototype and everything"
+  },
+  {
+   "concept": "technical-article-publication",
+   "type": "media-resource",
+   "speaker": "Dave Jones",
+   "paragraph_index": 381,
+   "char_start": 78323,
+   "depth": "opinion",
+   "context_snippet": "I was actually reasonably close to getting that published too"
+  },
+  {
+   "concept": "thermaltronics",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 390,
+   "char_start": 79740,
+   "depth": "mention",
+   "context_snippet": "People have been buying the Thermaltronics thing I recommended"
+  },
+  {
+   "concept": "jbc-soldering-station",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 395,
+   "char_start": 80006,
+   "depth": "mention",
+   "context_snippet": "I've got a JBC and a pace."
+  },
+  {
+   "concept": "pace-soldering-station",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 395,
+   "char_start": 80054,
+   "depth": "opinion",
+   "context_snippet": "I'm, I'm actually using the pace more than the JBC now."
+  },
+  {
+   "concept": "soldering-iron",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 399,
+   "char_start": 80203,
+   "depth": "explains",
+   "context_snippet": "Need two soldier and irons, by the way. You shouldn't just have one."
+  },
+  {
+   "concept": "dual-wield-soldering",
+   "type": "technique",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 400,
+   "char_start": 80312,
+   "depth": "mention",
+   "context_snippet": "So then you can dual wield"
+  },
+  {
+   "concept": "integrated-circuit",
+   "type": "component",
+   "speaker": "Dave Jones",
+   "paragraph_index": 401,
+   "char_start": 80380,
+   "depth": "mention",
+   "context_snippet": "Flip little chips off"
+  },
+  {
+   "concept": "product-refresh",
+   "type": "business-model",
+   "speaker": "Dave Jones",
+   "paragraph_index": 404,
+   "char_start": 80549,
+   "depth": "opinion",
+   "context_snippet": "about like releasing a new model oh like a new rev"
+  },
+  {
+   "concept": "fluke-87",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 404,
+   "char_start": 80605,
+   "depth": "explains",
+   "context_snippet": "the fluke 87 has changed right originally came out in 1988"
+  },
+  {
+   "concept": "multimeter",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 404,
+   "char_start": 80842,
+   "depth": "explains",
+   "context_snippet": "the fluke 87 5 came out in 2004 i believe or even slightly earlier"
+  },
+  {
+   "concept": "fluke-87",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 406,
+   "char_start": 81190,
+   "depth": "mention",
+   "context_snippet": "so people keep buying the old one"
+  },
+  {
+   "concept": "product-refresh",
+   "type": "business-model",
+   "speaker": "Dave Jones",
+   "paragraph_index": 406,
+   "char_start": 81256,
+   "depth": "opinion",
+   "context_snippet": "they do release new models"
+  },
+  {
+   "concept": "product-refresh",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 407,
+   "char_start": 81508,
+   "depth": "opinion",
+   "context_snippet": "why spend it if you're making money on the old one"
+  },
+  {
+   "concept": "fluke-87-5",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 408,
+   "char_start": 81749,
+   "depth": "explains",
+   "context_snippet": "let's say they sell a hundred thousand multi fluke 87s a year"
+  },
+  {
+   "concept": "fluke-87",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 408,
+   "char_start": 81870,
+   "depth": "explains",
+   "context_snippet": "the industry it's as industry standard as you get"
+  },
+  {
+   "concept": "multimeter",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 408,
+   "char_start": 81926,
+   "depth": "explains",
+   "context_snippet": "everyone compares a multimeter with with with the 87 5"
+  },
+  {
+   "concept": "product-refresh",
+   "type": "business-model",
+   "speaker": "Dave Jones",
+   "paragraph_index": 408,
+   "char_start": 82070,
+   "depth": "explains",
+   "context_snippet": "if they release a new new model is everyone who owns an 87 5 going to rush out and buy the new model"
+  },
+  {
+   "concept": "standard-equipment-list",
+   "type": "business-model",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 409,
+   "char_start": 82514,
+   "depth": "explains",
+   "context_snippet": "people who have it on a standard like a standard list somewhere"
+  },
+  {
+   "concept": "government-contract",
+   "type": "industry-economics",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 409,
+   "char_start": 82633,
+   "depth": "opinion",
+   "context_snippet": "the big money comes from government contracts"
+  },
+  {
+   "concept": "multimeter-enthusiast",
+   "type": "community-event",
+   "speaker": "Dave Jones",
+   "paragraph_index": 410,
+   "char_start": 82971,
+   "depth": "opinion",
+   "context_snippet": "there's not enough multimeter enthusiasts so excited to spend a thousand bucks"
+  },
+  {
+   "concept": "fluke-87-5",
+   "type": "tool-equipment",
+   "speaker": "Dave Jones",
+   "paragraph_index": 410,
+   "char_start": 83382,
+   "depth": "explains",
+   "context_snippet": "all of your big buyers they're all happy to buy the existing model and they have been for 20 years"
+  },
+  {
+   "concept": "product-refresh",
+   "type": "business-model",
+   "speaker": "Dave Jones",
+   "paragraph_index": 410,
+   "char_start": 83530,
+   "depth": "explains",
+   "context_snippet": "one of the reasons not to rock the boat and actually release a new model"
+  },
+  {
+   "concept": "ethics",
+   "type": "company-product",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 413,
+   "char_start": 83969,
+   "depth": "mention",
+   "context_snippet": "sammy from ethnics"
+  },
+  {
+   "concept": "fpga",
+   "type": "component",
+   "speaker": "Chris Gammell",
+   "paragraph_index": 413,
+   "char_start": 83988,
+   "depth": "mention",
+   "context_snippet": "which is an fbga company"
+  }
+ ]
+}
