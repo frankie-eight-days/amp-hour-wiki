@@ -133,9 +133,13 @@ def call_kimi(prompt, model="k3", max_tokens=32000, timeout=1800, retries=2):
             return resp, round(time.monotonic() - t0, 3), attempt + 1
         except (urllib.error.URLError, TimeoutError) as exc:
             last = exc
-            print(f"  kimi call failed ({exc}); attempt {attempt + 1}", file=sys.stderr)
+            code = getattr(exc, "code", None)
+            print(f"  kimi call failed ({exc}); attempt {attempt + 1}"
+                  + (f"; status {code}" if code else ""), file=sys.stderr)
+    code = getattr(last, "code", None)
     raise SystemExit(f"kimi call failed after {retries + 1} attempts "
-                     f"in {time.monotonic() - t0:.1f}s: {last}")
+                     f"in {time.monotonic() - t0:.1f}s"
+                     + (f" [status {code}]" if code else "") + f": {last}")
 
 
 def build_prompt(packet, further, spec_text, title, concept, model):
@@ -166,6 +170,11 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--no-timing", action="store_true",
                     help="skip the _timing.jsonl append")
+    ap.add_argument("--retries", type=int, default=2,
+                    help="API retries after the first attempt (default 2, so "
+                         "3 requests per invocation). Use --retries 0 for a "
+                         "single-request canary: a 403 then costs one request "
+                         "against the rate limit instead of three.")
     a = ap.parse_args()
 
     packet = json.load(open(a.packet))
@@ -193,7 +202,8 @@ def main():
 
     ts_start = datetime.datetime.now().astimezone().isoformat()
     resp, t_kimi_s, attempts = call_kimi(prompt, model=a.model,
-                                         max_tokens=a.max_tokens)
+                                         max_tokens=a.max_tokens,
+                                         retries=a.retries)
     txt = "".join(b.get("text", "") for b in resp.get("content", [])
                   if b.get("type") == "text").strip()
     if not txt:

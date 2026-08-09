@@ -133,3 +133,12 @@
   requests). Last night's clean reopen came only after ~1h of total silence.
   Policy: when the window trips, go COMPLETELY silent (no probes, no drips)
   and re-enter with a single canary write after the projected aging time.
+- **FINAL KIMI MODEL (2026-08-09 10:06, confirmed from console screenshot)**:
+  the binding constraint is the WEEKLY usage quota (resets weekly; console
+  showed 100% used, reset Mon evening). The "billing cycle" 403 text was
+  accurate. The 5h "window" behavior we modeled was actually the weekly quota
+  running down — early trips recovered because headroom remained; the final
+  exhaustion is hard until reset or a plan upgrade/extra-usage purchase.
+  Budget planning for future batches: ~250 article-writes consumed one week's
+  Allegro-tier quota (batches 1-3 + revisions + retries). The separate rate
+  limit (5h) sat at only 3%. Keep --retries 0 during constrained periods.
