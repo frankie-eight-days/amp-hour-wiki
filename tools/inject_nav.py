@@ -18,10 +18,11 @@ NAV = """<nav class="amp-topbar"><a class="amp-brand" href="/">The Amp Hour <spa
   font-family: Verdana, sans-serif; font-size: 12px; letter-spacing: .08em;
   text-transform: uppercase; }
 /* Quartz's rails are sticky at top:0, which parks them under this bar and
-   permanently clips their headings. Offset every sticky thing by the bar. */
+   clips their headings. The left rail stays sticky on mobile too, so the
+   offset must apply at EVERY width — only the height clamp is desktop-only. */
+#quartz-body > .sidebar { top: var(--amp-nav) !important; }
 @media (min-width: 800px) {
-  #quartz-body > .sidebar { top: var(--amp-nav) !important;
-    height: calc(100vh - var(--amp-nav)) !important; }
+  #quartz-body > .sidebar { height: calc(100vh - var(--amp-nav)) !important; }
 }
 html { scroll-padding-top: calc(var(--amp-nav) + 12px); }
 .amp-brand { font-weight: bold; color: var(--dark) !important;
@@ -74,29 +75,61 @@ html { scroll-padding-top: calc(var(--amp-nav) + 12px); }
 })();
 (function () {
   var REPO = "https://github.com/frankie-eight-days/amp-hour-wiki";
-  var btn = document.createElement("button");
-  btn.id = "amp-report";
-  btn.textContent = "\\u26a0 Report an issue";
-  document.addEventListener("DOMContentLoaded", function () {
-    document.body.appendChild(btn);
-  });
   var lastText = "";
-  document.addEventListener("mouseup", function () {
-    setTimeout(function () {
-      var sel = window.getSelection();
-      var text = sel ? sel.toString().trim() : "";
-      if (text.length < 8 || text.length > 1200 ||
-          !document.querySelector("article, .center")) {
-        btn.style.display = "none"; return;
-      }
-      var rect = sel.getRangeAt(0).getBoundingClientRect();
-      lastText = text;
-      btn.style.left = Math.max(8, rect.left + window.scrollX) + "px";
-      btn.style.top = (rect.bottom + window.scrollY + 8) + "px";
-      btn.style.display = "block";
-    }, 10);
+
+  // Quartz is an SPA: its router swaps document.body on every internal
+  // navigation, which detaches a button appended once at load and leaves any
+  // saved reference pointing at a dead node. So look the button up (and
+  // recreate it) on demand, and delegate clicks off document, which survives.
+  function reportButton() {
+    var b = document.getElementById("amp-report");
+    if (!b || !document.body.contains(b)) {
+      b = document.createElement("button");
+      b.id = "amp-report";
+      b.type = "button";
+      b.textContent = "\\u26a0 Report an issue";
+      document.body.appendChild(b);
+    }
+    return b;
+  }
+
+  function hide() {
+    var b = document.getElementById("amp-report");
+    if (b) b.style.display = "none";
+  }
+
+  function onSelect() {
+    var sel = window.getSelection();
+    var text = sel ? sel.toString().trim() : "";
+    if (!sel || sel.rangeCount === 0 || text.length < 8 || text.length > 1200) {
+      return hide();
+    }
+    // only offer it for article prose, not nav/sidebar/UI text
+    var node = sel.anchorNode;
+    node = node && node.nodeType === 3 ? node.parentElement : node;
+    if (!node || !node.closest || !node.closest("article, .center, .hb")) {
+      return hide();
+    }
+    var rect = sel.getRangeAt(0).getBoundingClientRect();
+    if (!rect || (rect.width === 0 && rect.height === 0)) return hide();
+    lastText = text;
+    var b = reportButton();
+    b.style.display = "block";
+    var left = Math.min(rect.left + window.scrollX,
+                        window.scrollX + document.documentElement.clientWidth
+                        - b.offsetWidth - 10);
+    b.style.left = Math.max(8, left) + "px";
+    b.style.top = (rect.bottom + window.scrollY + 8) + "px";
+  }
+
+  document.addEventListener("mouseup", function () { setTimeout(onSelect, 10); });
+  document.addEventListener("keyup", function (e) {
+    if (e.shiftKey || e.key === "Shift") setTimeout(onSelect, 10);
   });
-  btn.addEventListener("mousedown", function (e) {
+
+  document.addEventListener("mousedown", function (e) {
+    var b = e.target && e.target.closest && e.target.closest("#amp-report");
+    if (!b) return;
     e.preventDefault(); e.stopPropagation();
     var slug = location.pathname.replace(/^\\/|\\/$/g, "") || "index";
     var title = "[report] " + slug + ": \\u201c" +
@@ -109,8 +142,8 @@ html { scroll-padding-top: calc(var(--amp-nav) + 12px); }
       "e.g. the extraction misunderstood the speaker. Say what you think was meant.)\\n\\n";
     window.open(REPO + "/issues/new?labels=report&title=" +
       encodeURIComponent(title) + "&body=" + encodeURIComponent(body), "_blank");
-    btn.style.display = "none";
-  });
+    hide();
+  }, true);
 })();
 </script>"""
 
