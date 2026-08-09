@@ -142,3 +142,37 @@
   Budget planning for future batches: ~250 article-writes consumed one week's
   Allegro-tier quota (batches 1-3 + revisions + retries). The separate rate
   limit (5h) sat at only 3%. Keep --retries 0 during constrained periods.
+
+## Theme lane (batch 4, 2026-08-09)
+
+New lane for editorially curated experiential topics the frequency ranking is
+structurally blind to — the census grades `explains` only when the concept
+itself is explained, so story-shaped knowledge never clears the floor.
+Manifest: `_themes.json`. Gatherer: `tools/build_theme_bundles.py`.
+
+Validation: `broadcast-and-big-installs` had **1** graded `explains` in the
+whole census and produced 78 verified claims; `the-teardown-tradition` 27
+explains → 46 claims; `defense-and-mil-spec` 12 → 56. The lane recovers real
+knowledge from material the topic pipeline scored as barely there.
+
+Lessons:
+
+- **Unpunctuated ASR runs are uncitable.** Some passages are a single unbroken
+  run with no sentence boundaries, so no short verbatim span can be sliced out
+  of them. They can be read but not cited, and the claim has to be dropped.
+  Cost a good pocketcube/watchdog passage in space-electronics. If this
+  recurs, the fix is a sentence-repair pass over the transcripts, not a change
+  to the slicing helper.
+- **Shared scratchpad collides across agents.** Five extractors independently
+  wrote `build.py` / `dump.py` / `theme_lib.py` and were overwriting each
+  other. Per-agent prefixes (`t3_build.py`) are mandatory when a lane runs
+  more than one agent. This is the second time this has bitten.
+- **Delegate completions do not wake the parent.** An agent that delegates to
+  subagents must self-poll the filesystem for its output files; it will
+  otherwise report idle and sit there forever while its children finish. Stat
+  directly, trust no push.
+- **Guest-episode gathering needs own-paragraph matching.** Matching the ±1
+  context window pulls in whatever was said either side of a single on-topic
+  word, which is mostly banter — it cut Mike Harrison's bundle from 726
+  passages to 146 with no loss of real material. Also: under `re.I`, `LED`
+  matches the verb "led" and `show` matches "the show" in every episode.

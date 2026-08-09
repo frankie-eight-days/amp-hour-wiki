@@ -1,0 +1,594 @@
+{
+ "concept": "retrocomputing",
+ "name": "Retrocomputing and Electronics Archaeology",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": "Commodore bring-up, ROM recovery, why the old tricks still teach",
+ "claims": [
+  {
+   "claim_text": "The Commodore 128 and the earlier TED machines shipped with a full ROM monitor built in, so the machine carried its own assembly-level development environment; the same feature was seen internally as making the machine easy to copy software on.",
+   "quote_verbatim": "So you had your whole development environment with you",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Sync polarity was used as a deliberate lock-in mechanism on 1980s home computers: contemporary third-party monitors expected either two positive-going syncs or two negative-going syncs, so specifying one of each forced buyers onto the manufacturer's own monitor.",
+   "quote_verbatim": "he told me to make one positive going sync for, like, horizontal and one negative going sync so that they had to buy a Commodore monitor",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Commodore's design culture under Jack Tramiel imposed a hard chip-count budget, expressed internally as a rule of no more than nine chips, which shaped how much function had to be pushed into custom silicon rather than glue logic.",
+   "quote_verbatim": "thou shall not have more than nine chips",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Digital signals are best debugged as analogue events: a logic one is a waveform that attempted to reach a threshold and rang on the way, and treating it that way rather than as an abstract bit is what makes marginal timing and integrity faults visible.",
+   "quote_verbatim": "It's not a one or a zero. It's a signal that tried to get to a one, and along the way it did some ringing and stuff like that. But at the heart of it, it's analog. And if you think like that, then you'll be a better troubleshooter",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Piece-rate consumer repair economics reward pattern recognition over analysis: paid roughly ten dollars per set repaired, an hour of genuine troubleshooting loses money while recognising a previously seen fault and fixing it in ten minutes is profitable.",
+   "quote_verbatim": "If you fix a TV set, if you actually have to fix it, which takes an hour, if you have to troubleshoot a problem you've never seen, you don't make any money",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A large fraction of production board faults are visible rather than electrical: about half of a box of failed boards could be repaired on visual inspection alone, without ever powering them, by learning what a bad joint or misplaced part looks like.",
+   "quote_verbatim": "I could go to the box of boards, fix 50% of them without ever turning them on",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Digital scales built around a 6502 with a load-cell front end resolved one part in 50,000, a resolution at which ground loops must actually be understood and eliminated rather than worked around.",
+   "quote_verbatim": "we were doing one part in 50,000. And you really did have to fix things like ground loops",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Battery-backed static RAM in the pre-flash era was built from a cell battery and a diode on the supply rail, and the choice of which chip-enable line is used to deselect the part materially affects whether data survives the power transition; using the wrong one corrupts the contents.",
+   "quote_verbatim": "One chip enable was better for RAM backup than the other one",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Holding a product's mains input at the voltage where its reset circuit oscillates, by parking a Variac at that point, is a destructive stress test for battery-backed memory designs, and revealed that the whole population could be corrupted at that supply level.",
+   "quote_verbatim": "if you took like a Variac, you know, the variable transformer and put it right at 93 so the reset circuits turning on and off",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The Commodore 64's marginal timing came from an inadequate master clock frequency: there was no high enough frequency to divide down into the short RAS pulse and the row-to-column address switch that DRAM access requires, so the design barely worked in production.",
+   "quote_verbatim": "it's because we didn't have a high enough frequency to start from to create all of our signals",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Production floors under shipping pressure will patch marginal designs themselves, in this case adding capacitors on the RAS and CAS lines to make units pass, and may actively keep engineering from seeing it; metastability in a custom chip whose designer had not accounted for it was the underlying cause.",
+   "quote_verbatim": "what they were doing in production, they actually had a, the security guards were told to not let the engineers down there because they didn't want us to know they were doing stuff like putting caps on the RAS and CAS",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A semiconductor process recipe as written does not by itself give yield; process engineers deliberately varied one parameter by a percent on each otherwise good run and plotted pairs of variables against each other, keeping any change that improved the result, so that the recipe drifted toward the yield optimum.",
+   "quote_verbatim": "if you cooked it exactly like it's written, you wouldn't get yield",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The central problem of early video chips was memory contention: any processor access to display memory while the video chip is fetching puts visible dots on the screen, so early designs confined processor access to the retrace intervals.",
+   "quote_verbatim": "if you talk to it while it's displaying, you get dots on the screen",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Confining processor access to blanking intervals gave a design only about ten to thirteen microseconds during horizontal retrace, plus a longer window at vertical retrace, in which to touch display memory.",
+   "quote_verbatim": "you get like 10, 11, 13 microseconds",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The VIC chip avoided display contention by exploiting the 6502's fixed two-phase cycle: the bus is handed to the video chip during the first half of every cycle and taken back for the second, so the processor runs at full speed while the video chip gets nearly all the DRAM bandwidth it needs.",
+   "quote_verbatim": "during the first part of that, we gave up the bus. And we said, video processor, go have at it",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The term sprite was a Texas Instruments trademark at the time, so Commodore documentation had to call the same hardware feature a movable object block.",
+   "quote_verbatim": "We weren't supposed to say sprite. We were supposed to say movable object block",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The Commodore 64 sold about 27 million units over roughly five years, a figure that stood as the record for a single computer model until tablet-class devices reached comparable volumes.",
+   "quote_verbatim": "the Commodore 64 sold 27 million. And it was the highest selling",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The TED line was positioned deliberately below the Commodore 64 rather than against it, targeting a 79 dollar price for the complete unit less television and drive, and its video chip offered 121 distinct colours, short of a nominal 128 because eight shades of black are indistinguishable.",
+   "quote_verbatim": "the text display was supposed to sell for $79",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The economics of early-1980s home computers were dominated by DRAM: a 49 dollar 16K machine was viable at a time when a tube of 64K DRAMs alone cost 99 dollars, which is why so much function was pushed into a single custom chip.",
+   "quote_verbatim": "it was a $49. 16K back in the days when a tube of 64K DRAMs cost you $99 just for the DRAMs",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The Commodore 128 was taken from concept to a CES demonstration in about five months with four or five custom chips being developed in parallel, each of which failed at least once during that period.",
+   "quote_verbatim": "we did the C128, we did that in about five months",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The Commodore 128 carried one of the first memory management units in a home computer, but it was specified without a supervisor mode, so the mapping registers were writable by user code and the system had no way to protect its own configuration.",
+   "quote_verbatim": "Except I screwed up and left out the supervisor mode",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The 1-2-3 half-lot technique shortened custom chip turnaround: half a wafer lot was run all the way through, and the other half stopped after the first three diffusion layers and put into storage, so a fix confined to the upper layers could be applied to the stored half and returned quickly instead of restarting a lot costing around 300,000 dollars.",
+   "quote_verbatim": "they would take the other half, which only had layers 1, 2, and 3, which are the diffusion slugs and all the stuff that's at the bottom of the chip, and they would put that in storage",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A reverse-engineered PLA used in the Commodore 64 suffered a passivation defect visible under a microscope as a purple creeping corrosion under the passivation layer, and was a significant cause of field failures.",
+   "quote_verbatim": "That was the chip then that had bad passivation. And for a while, that's one of the reasons the C64s were failing",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "NMOS parts of that era were built in about seven layers including passivation, against the twenty or thirty layers of modern processes, which is part of why layer-level patching of a design was practical at all.",
+   "quote_verbatim": "there's only seven layers to those",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A back-bias generator added to a video chip made it worse rather than better: the on-chip voltage doubler drifted during intervals when the chip was not being accessed, producing a display whose leftmost character column was dark and which brightened progressively across the screen.",
+   "quote_verbatim": "It changed its voltage during the time you weren't talking to the chip. It would drift",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The pin-one indicator slot in the middle of an old ceramic package is connected to the die substrate, which gave a way to salvage a bad chip revision: soldering a wire into that slot and grounding it held the substrate bias steady and restored the previous revision's behaviour.",
+   "quote_verbatim": "So I took a wire and I soldered it to the substrate",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A marginal custom chip can be masked by cooling it, and a software author demonstrating on a chip cooled with an ice cube concealed the fact that the 80-column path did not actually work at temperature.",
+   "quote_verbatim": "he would put an ice cube in this little cup and set it on the chip, and that's how he got the chip to work",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The fix for a marginal 80-column video chip was to phase-lock it to the main 14.318 MHz colour clock instead of running it from its own 16 MHz source, then shift the shift-register clock edge earlier or later, tuning each unit individually to the sweet spot where it worked.",
+   "quote_verbatim": "instead of being at 16 megahertz, we phase locked it to the 14.318 and then took a shift register clock",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The Commodore 128 was the company's first CAD-produced printed circuit board, laid out on a Sci-Cards system driven from a VAX; the immediately preceding machines, the TED, Plus/4 and 116, were still hand-taped, and boards designed in the United States were re-laid-out by Commodore Japan for auto-insertion in production.",
+   "quote_verbatim": "the C128 was our first CAD produced PC board",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Adding a reset switch to a machine whose video chip performs DMA is not trivial: resetting mid-DMA leaves the processor unable to start. The C128 solved it with back-to-back open-collector gates forming a latch that held the processor off until the DMA completed.",
+   "quote_verbatim": "if you reset it and the VIC chip's in a DMA, the processor will try and start and it will crash",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Late fixes were constrained by regulatory approval, not just by schedule: the change had to be made from leftover logic parts already on the board so it qualified as a class 1 permissive change and did not force a new FCC submission, since a machine shown at CES in January had to ship by May to reach retailers for Christmas.",
+   "quote_verbatim": "we don't want to start over on FCC because we'll miss",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Moving a hot custom chip's heat into the shielding can was done by specifying a beryllium copper lead frame, which conducted the die's heat out through the package into the metalwork already present for emissions reasons.",
+   "quote_verbatim": "they put in a beryllium copper lead frame to get the heat out better",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An aperture in a shield does more than let frequencies through the hole: a dipole forms in the metal immediately alongside the opening and radiates, which is why aperture placement and size, rather than the shield material, dominate emissions performance.",
+   "quote_verbatim": "if you have an aperture in a shield",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Emissions from a 1980s machine running a 16 MHz clock were still a problem at 180 MHz, because what radiates is set by the edge rate rather than the clock rate, and bus contention between devices fighting for the same bus adds its own noise signature.",
+   "quote_verbatim": "it's all about the edge, right? It's the rate, the radian frequency",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A cheap AM radio left running quietly beside a prototype is a usable diagnostic: the machine's emissions are audible and characteristic enough that a failed ROM test can be recognised by ear before anything is on screen.",
+   "quote_verbatim": "one of the things I used to do was I'd keep an AM radio on in the room, just real quiet. But I knew what the computer was doing. I could hear it",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Before cheap tools and a secondhand market existed, entering microprocessor work required a development system costing ten to twenty thousand 1970s dollars plus an oscilloscope nobody could personally afford, which is why the work was confined to people whose employer bought the equipment.",
+   "quote_verbatim": "to get started in a microprocessor controlled thing, you had to buy a development system",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Halting a Z80 sharing a 6502 bus at the wrong point in its clock and pause pattern leaves the output buffers enabled while the internal bus floats, so the pin drives an amplified intermediate level near a volt that cannot be pulled either way; one brand of address multiplexer read that as a low while another oscillated, which made the fault look like a parts speed problem.",
+   "quote_verbatim": "the buffers turn on. But internal to the Z80, the internal bus is floating. So now it's putting out an amplified one volt",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Integrating a function rather than shipping it on a cartridge changed the power budget by an order of magnitude: the CP/M cartridge drew about 0.6 A where the built-in version needed roughly 100 mA, which mattered because the C128 used a switching supply that shuts down when overloaded, whereas the C64's potted linear supply merely sagged.",
+   "quote_verbatim": "the CPM cartridge took like 0.6 amps",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A peripheral that seized the bus at the reset vector prevented the machine starting at all, and the fix was architectural: the Z80 was made to run first out of reset as a bootstrap that established the correct mode before handing control to the 6502.",
+   "quote_verbatim": "we used the Z80 as kind of a booter to see if there was something that was going to interfere with the 6502 booting",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The TI-99 had a field safety failure in which transformer insulation broke down as the unit heated, energising the chassis to mains-derived potential, and production had to stop while it was corrected.",
+   "quote_verbatim": "when the transformer got hot, the insulation would leak out and the, the frame would get energized",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Backward compatibility can be broken by cosmetic changes: cleaning up a character-generator ROM moved the dot on the letter i, and a paint program that scaled glyphs straight out of that ROM then filled the wrong region and painted the whole background.",
+   "quote_verbatim": "it missed the dot on the eye because the eye had moved",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The compatibility fix was to double the size of the character ROM, hold both the old and the corrected font, and select between them with a single address line driven high in 64 mode and low in 128 mode, initially by brick-laying a second ROM on top of the first.",
+   "quote_verbatim": "You just have another ROM right on top and",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Removing a legacy register is riskier than hiding it: if the register failed to reappear after a reset the machine would be unrecoverable, so the C128's 2 MHz speed registers were left present but placed where software was not supposed to write, and a game that incremented through 256 register values instead of decrementing through 24 duly wrote garbage across them.",
+   "quote_verbatim": "I decided to leave them in there in an area where you're not supposed to write to, um, rather than make them go away",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Cost reduction at the bottom of the range went as far as a single-sided printed circuit board with wire jumpers, chosen because it saved about a dollar per unit and the jumpers could be fitted by the auto-insertion machinery already in the line.",
+   "quote_verbatim": "There's this thing called a C16, which is a one-sided PCB",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A reset circuit built from a plain non-Schmitt inverter is unreliable on a slow supply ramp, and adding the tenth chip to fix it was worth breaking the company's nine-chip rule over.",
+   "quote_verbatim": "they tried to do it with just a non, uh, non-schmitted 7406",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Running processor data lines straight to a membrane keyboard and joystick ports exposes the bus at the connector: plugging in a joystick produced sparkles on the display and, held near the monitor, crashed the processor outright.",
+   "quote_verbatim": "they had used the data lines directly into the keyboard",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Long-term stock of bare semiconductor parts has storage requirements: chips that were not kept under nitrogen degraded in storage and were unusable when the remaining inventory changed hands.",
+   "quote_verbatim": "there was like some chips not being kept in storage correctly that went with it. So they were actually no good. You know, they weren't in nitrogen",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Keeping an obsolete analogue function alive does not force a choice between digital emulation and scavenged secondhand parts; the middle path is re-engineering the function from available parts at a higher component count, or committing to a custom ASIC or an FPGA that behaves like the original.",
+   "quote_verbatim": "you can be creative and re-engineer a circuit that's not as convenient. It's probably got a lot more parts in it because you can't get a dedicated chip",
+   "speaker": "Fran Blanche",
+   "episode": 263,
+   "episode_title": "An Interview with Fran Blanche",
+   "episode_url": "https://theamphour.com/263-an-interview-with-fran-blanche/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Analogue signal paths persist in battery-powered audio equipment for concrete reasons rather than nostalgia: a microcontroller costs battery life and injects switching and clock noise into a circuit whose whole purpose is a low-noise, wide dynamic range path.",
+   "quote_verbatim": "if you're talking about a 9-volt battery-powered pedal, you know, you don't want to have a computer in there",
+   "speaker": "Fran Blanche",
+   "episode": 263,
+   "episode_title": "An Interview with Fran Blanche",
+   "episode_url": "https://theamphour.com/263-an-interview-with-fran-blanche/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The characteristic smell of vintage electronics has identifiable chemistry behind it: beeswax used to coat coils in radios, phenols outgassing from phenolic boards, and the plasticiser used in PVC insulation, which is the same compound responsible for the green goo that attacks copper and nickel as it ages.",
+   "quote_verbatim": "they used beeswax to coat a lot of the coils",
+   "speaker": "Fran Blanche",
+   "episode": 540,
+   "episode_title": "The Space Time Continuum with Fran Blanche",
+   "episode_url": "https://theamphour.com/540-the-space-time-continuum-with-fran-blanche/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Seven-segment LED displays of the 1970s and early 1980s were extremely dim for their power: 20 to 30 milliamps per segment produced barely visible output, and early Hewlett-Packard modules with the decoder bonded into the display ran hot enough to be alarming while delivering less light than a comparable filament lamp.",
+   "quote_verbatim": "you're pumping 20, 30 milliamps through each segment and they're barely lighting up",
+   "speaker": "Fran Blanche",
+   "episode": 540,
+   "episode_title": "The Space Time Continuum with Fran Blanche",
+   "episode_url": "https://theamphour.com/540-the-space-time-continuum-with-fran-blanche/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Incandescent displays remained in production well into the 1980s and 1990s long after LEDs were available, for the specific reason that a filament display was the only technology readable in daylight.",
+   "quote_verbatim": "these, uh, incandescent displays where they were used strangely late",
+   "speaker": "Fran Blanche",
+   "episode": 540,
+   "episode_title": "The Space Time Continuum with Fran Blanche",
+   "episode_url": "https://theamphour.com/540-the-space-time-continuum-with-fran-blanche/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Material shot on film in the 1980s can be rescanned at 4K, while 1990s television shot on standard-definition videotape has no higher-resolution original to return to, so an entire decade of production is permanently limited to its original interlaced resolution.",
+   "quote_verbatim": "Everything like all TV shows, they were shot on, uh, tape at like 570 P",
+   "speaker": "Fran Blanche",
+   "episode": 540,
+   "episode_title": "The Space Time Continuum with Fran Blanche",
+   "episode_url": "https://theamphour.com/540-the-space-time-continuum-with-fran-blanche/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Archive quality is usually limited by generation loss rather than by format: two-inch quad masters were routinely wiped and reused, leaving three-quarter-inch syndication copies of copies as the surviving source, and upscaling only works well when the source generation is genuinely clean.",
+   "quote_verbatim": "they don't have the original, uh, two inch masters anymore. Cause those would get recorded over",
+   "speaker": "Fran Blanche",
+   "episode": 540,
+   "episode_title": "The Space Time Continuum with Fran Blanche",
+   "episode_url": "https://theamphour.com/540-the-space-time-continuum-with-fran-blanche/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Matching amplifier valves requires burn-in first, because transconductance does not settle until the tube has run for something like eight to twelve hours; measuring a fresh tube gives a match that will not hold.",
+   "quote_verbatim": "with amplifier tubes, you have to put some hours on them for them to stabilize their transconductance",
+   "speaker": "Fran Blanche",
+   "episode": 647,
+   "episode_title": "Dave hanging with Fran Blanche",
+   "episode_url": "https://theamphour.com/647-dave-hanging-with-fran-blanche/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A production burn-in rig for valve matching kept every heater on continuously and cycled the racks under load in turn on a timer overnight, after which the tubes moved to a separate automated tester that ran each one through measurement cycles and sorted them into matched sets.",
+   "quote_verbatim": "it would put the racks under load for a measured period of time",
+   "speaker": "Fran Blanche",
+   "episode": 647,
+   "episode_title": "Dave hanging with Fran Blanche",
+   "episode_url": "https://theamphour.com/647-dave-hanging-with-fran-blanche/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The industrial computing market still supports obsolete operating systems as a product line, including PC/104 form factor boards with DOS in ROM for instant boot, because installed equipment depends on them.",
+   "quote_verbatim": "There are still industrial computer companies that make machines designed for DOS and Windows 3.11",
+   "speaker": "Fran Blanche",
+   "episode": 647,
+   "episode_title": "Dave hanging with Fran Blanche",
+   "episode_url": "https://theamphour.com/647-dave-hanging-with-fran-blanche/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Prices for obscure vintage display devices on the secondhand market are extremely sensitive to publicity: tubes that changed hands for tens of dollars have moved to hundreds or thousands once documented publicly, which is a real sourcing risk for anyone planning a restoration around a specific part.",
+   "quote_verbatim": "10 years ago, if a new, if a Nemo tube were to come on eBay, you probably could get it for 20 bucks",
+   "speaker": "Fran Blanche",
+   "episode": 586,
+   "episode_title": "Fran Blanche Version 3",
+   "episode_url": "https://theamphour.com/586-fran-blanche-version-3/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  }
+ ],
+ "attribution_notes": [
+  "ep222 (Bil Herd): attribution_reliable is false throughout this bundle and speaker_repaired alternates between Chris Gammell, Dave Jones and Bil Herd across the +/-1 paragraph windows. Every claim taken from this episode is a first-person account of Bil Herd's own work at Commodore and MOS, so it is attributed to Bil Herd on content grounds.",
+  "ep540, ep586, ep647 (Fran Blanche): attribution_reliable is false on several of these passages. Claims are attributed to Fran Blanche only where the passage is her own first-person account (the EHX tube burn-in rack, her restoration and archive work, her parts buying); passages where the load-bearing statement could have come from Dave Jones were dropped rather than guessed.",
+  "ep263: passages are labelled Fran Blanche with attribution_reliable true, and the two claims kept are her own statements about analogue audio design; no override was needed."
+ ],
+ "capped": false
+}

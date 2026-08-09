@@ -1,0 +1,385 @@
+{
+ "concept": "medical-devices",
+ "name": "Medical Device Development",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": "The FDA gauntlet, why a thermometer takes three years, liability-shaped design",
+ "claims": [
+  {
+   "claim_text": "Failing safe means different things by industry. A test instrument may fail safe by carbonising inside its own case, but a medical device that fails must actively warn the user that care has been interrupted rather than simply stopping.",
+   "quote_verbatim": "In a medical device, when it fails, uh, you typically need to warn the user",
+   "speaker": "Eric Van Wyk",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Safety qualification of a medical device includes a dielectric withstand test of 5,400 volts AC RMS, roughly 7,600 volts peak, applied across the housing, in addition to the impulse tests used on measurement equipment.",
+   "quote_verbatim": "5,400 volts AC RMS. So, that's 7,600 volts peak, uh, somewhere in that range, uh, across the housing",
+   "speaker": "Eric Van Wyk",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Class II medical devices are fail-safe devices: any single component in the circuit may be faulted in any way, and the requirement is not that care continues but that the device stops delivering care safely.",
+   "quote_verbatim": "we were working primarily with class two medical devices, which are fail safe devices. Um, which means that any one component in your circuit can be faulted in, in whatever way. And you need to continue to, you don't have to continue delivering care to the patient, but you need to make sure that you stop delivering care in a safe manner",
+   "speaker": "Chris Gammell",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "On a medical device programme the regulator, rather than the design work, is the dominant consumer of an engineer's schedule.",
+   "quote_verbatim": "So the FDA is what took more time out of my schedule",
+   "speaker": "Chris Gammell",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "EMC competence does not transfer across industries. A medical device and a consumer device are governed by different regulations, different limits and different import and export rules, so EMC expertise is held in narrow per-sector niches rather than as a general skill.",
+   "quote_verbatim": "if you're building a medical device, there's one set of things you need to know. And if you're building a consumer electronics device, it's totally different. The laws are different or the regulations are different. The import-export stuff is different. The limits are different",
+   "speaker": "Chris Gammell",
+   "episode": 229,
+   "episode_title": "MightyHohm For The Holidays - Kaiser Keyzer's Kits",
+   "episode_url": "https://theamphour.com/229-mightyhohm-for-the-holidays-kaiser-keyzers-kits/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "In medical devices the software and full stack are certified together, so a firmware update cannot be rolled out without recertification. That makes routine security patching impractical and forces the security design toward a locked, cryptographically verified bootloader established before certification.",
+   "quote_verbatim": "especially with medical devices, it's even worse because a lot of times the software and the full stack gets certified. So they even can't roll firmware updates without getting recertified",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Qualification, not development, sets the release cadence of a certified medical device: a one-line code change requires the full qualification process, which on one large device took three months per release.",
+   "quote_verbatim": "Every time they do a release of this device, which is quite large, it takes three months to get it through the qualification process. So you make a one line change to the code and you want to do a release. It's a three month cycle",
+   "speaker": "Jack Ganssle",
+   "episode": 489,
+   "episode_title": "An Interview with Jack Ganssle (2nd)",
+   "episode_url": "https://theamphour.com/489-an-interview-with-jack-ganssle-2nd/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A medical device programme that repeatedly failed and drew an FDA investigation had no design phase at all: a domain expert wrote and adjusted code experimentally until behaviour looked right, and the result was then frozen. The underlying error is conflating research with development, which have different processes and different exit criteria.",
+   "quote_verbatim": "I looked into the processes and there was no design at all. And I asked why. And they said, well, we don't really understand the mechanical interaction with things. We have to have a domain expert actually writing code and playing with it to figure out what's supposed to happen. And then once it seems to work right, then we lock down the code",
+   "speaker": "Jack Ganssle",
+   "episode": 489,
+   "episode_title": "An Interview with Jack Ganssle (2nd)",
+   "episode_url": "https://theamphour.com/489-an-interview-with-jack-ganssle-2nd/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Medical device software must meet the applicable IEC and ISO safety standards along with coding standards such as MISRA-C. General mainline Linux carries none of that evidence, so a safety-critical Linux system must be built on a commercial distribution from a vendor such as Wind River that supplies the certification package.",
+   "quote_verbatim": "everything's got to be ISO 61976341 compliant with, you know, right? Your MISRA-C and all this sort of stuff. That's fun. And Linux, uh, uh, like general Linux doesn't have that stuff. You can go to like, I think like Wind River, some of those other companies that make like commercial Linux that had, that carries those certifications if you want it",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The FDA independently audits medical device and medical instrumentation companies, and the design process itself must be arranged so that it produces evidence of the diligence performed, not merely a working device.",
+   "quote_verbatim": "the FDA independently audits medical device companies and medical, um, instrumentation companies. And, uh, the way in which you design the devices has to be done such that you can, uh, provide the evidence. To the FDA that you've done your diligence",
+   "speaker": "Leigh Brady",
+   "episode": 588,
+   "episode_title": "Siloed Engineering with Leigh Brady",
+   "episode_url": "https://theamphour.com/588-siloed-engineering-with-leigh-brady/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Medical design is deliberately conservative in component selection: the newest part is usually not the chosen part, because the evidence burden favours devices with established behaviour.",
+   "quote_verbatim": "You might not be on the hottest new part. You might not have the hottest new thing",
+   "speaker": "Leigh Brady",
+   "episode": 588,
+   "episode_title": "Siloed Engineering with Leigh Brady",
+   "episode_url": "https://theamphour.com/588-siloed-engineering-with-leigh-brady/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The FDA does not prescribe which components or technologies a device must use; it prescribes the diligence the manufacturer must perform and document to demonstrate that the device is safe. This is why regulated design resembles an audited quality process more than a technical rulebook.",
+   "quote_verbatim": "they're much more interested in prescribing to you the kind of diligence you have to do to prove that your device is safe",
+   "speaker": "Leigh Brady",
+   "episode": 588,
+   "episode_title": "Siloed Engineering with Leigh Brady",
+   "episode_url": "https://theamphour.com/588-siloed-engineering-with-leigh-brady/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Regulatory scrutiny is directed at the manufacturer's implementation rather than at component specifications: the questions asked are whether a part was implemented correctly and whether it was used in the conditions under which its data sheet was characterised.",
+   "quote_verbatim": "you take a component and you implement it. Did your implementation cause a problem? Did you implement it correctly? Did you implement it in a way that wasn't quite how it was implemented and tested when the data sheet was written",
+   "speaker": null,
+   "episode": 588,
+   "episode_title": "Siloed Engineering with Leigh Brady",
+   "episode_url": "https://theamphour.com/588-siloed-engineering-with-leigh-brady/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Certified medical software must have every line of code reviewed, and the industry rule of thumb prices that review at about one dollar per line, so ten thousand lines of code carries roughly ten thousand dollars of review cost.",
+   "quote_verbatim": "every line of code has to be vetted and reviewed. Yeah. Literally. And, and you pay per line of code. It's like, I think the industry rule of thumb is like one, $1 per line of code. So if you've got 10,000 lines of code to have it reviewed, it's like 10 grand to pay someone to do it",
+   "speaker": "Chris Gammell",
+   "episode": 486,
+   "episode_title": "Medical Kits, They're The Future",
+   "episode_url": "https://theamphour.com/486-medical-kits-theyre-the-future/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Because every change reopens the approval burden, medical device companies change nothing unless forced to. The practical consequence is that engineers on mature medical products spend their time on obsolescence management, with six months of work to qualify a replacement for a single discontinued transistor.",
+   "quote_verbatim": "we figure out when we have to change things and then we change things, but otherwise we don't change anything. Everyone becomes an obsolescence engineer. Yeah. Pretty. Yeah. I think that's right. Yeah. It's, it's, it's maintenance obsolescence. Yeah. This part's gone obsolete. Oh, let's spend the six months sourcing this new transistor",
+   "speaker": "Chris Gammell",
+   "episode": 486,
+   "episode_title": "Medical Kits, They're The Future",
+   "episode_url": "https://theamphour.com/486-medical-kits-theyre-the-future/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Component lot control and build traceability, optional elsewhere, are a legal requirement when building medical devices, so the build system must record which specific ordered lot supplied each part in each unit.",
+   "quote_verbatim": "for some, it's a legal necessity. Like when you're building medical devices, for example, you're required to do this",
+   "speaker": "Jan Rychter",
+   "episode": 542,
+   "episode_title": "Component Management with Jan Rychter",
+   "episode_url": "https://theamphour.com/542-component-management-with-jan-rychter/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Traceability obligations for a US medical startup begin at the start of design, not at market entry, because the first prototype may itself be tested or form part of the FDA evaluation. Startups that discover this late must reconstruct the paperwork retrospectively.",
+   "quote_verbatim": "when you're a medical startup in the US, for example, you're supposed to be doing that stuff very, very early on. Not when you're ready to go to market. When you're starting to design something. Your first prototype might also be tested or might end up in your evaluation for the FDA",
+   "speaker": "Jan Rychter",
+   "episode": 542,
+   "episode_title": "Component Management with Jan Rychter",
+   "episode_url": "https://theamphour.com/542-component-management-with-jan-rychter/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Most of the back-and-forth with the FDA or the MHRA comes from submitting against requirements that were never read carefully; establishing exactly what the submission must show before writing it removes those cycles.",
+   "quote_verbatim": "Really just know what you need to do, what you need to pass. And then, you know, submit your submission. I think a lot of people don't really read it properly. And I think that's where sort of you get the back and forth with FDA or, or MHRA or whatever buddy you're trying to pass this with",
+   "speaker": "Shrouk El Attar",
+   "episode": 549,
+   "episode_title": "Creative Engineering with Shrouk El-Attar",
+   "episode_url": "https://theamphour.com/549-creative-engineering-with-shrouk-el-attar/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Design for test has to account for regulatory testing: burying an antenna on the far side of the PCB left no way to attach a BNC for compliance measurement without physically drilling into the finished product.",
+   "quote_verbatim": "worked with something that had the antenna basically buried the other side of the PCB. So I'd have to literally drill into the product for the BNC to be accessible",
+   "speaker": "Shrouk El Attar",
+   "episode": 549,
+   "episode_title": "Creative Engineering with Shrouk El-Attar",
+   "episode_url": "https://theamphour.com/549-creative-engineering-with-shrouk-el-attar/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The MHRA plays the role in the United Kingdom that the FDA plays in the United States. A UK exemption that removed most of the applicable regulations from a device materially shortened its development timeline, so the applicable regulatory class is itself a schedule variable.",
+   "quote_verbatim": "we had an exemption. We didn't have to basically fit every single regulation, only, only a very, very few. So it made timelines a bit easier",
+   "speaker": "Chris Gammell",
+   "episode": 549,
+   "episode_title": "Creative Engineering with Shrouk El-Attar",
+   "episode_url": "https://theamphour.com/549-creative-engineering-with-shrouk-el-attar/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Because every revision, down to changes in code, requires approval and extensive documentation, technology fielded in regulated medical products lags the state of the art considerably.",
+   "quote_verbatim": "even with lines of code, the FDA, the Food and Drug Administration, has to approve every revision. And you have to have huge amounts of documentation. And so what you end up getting is, like, this technology that's very, very behind the ties because it's very stringent",
+   "speaker": "Chris Gammell",
+   "episode": 151,
+   "episode_title": "Google Glass, Lean Startup and VotC - Initializing Instructed Interviews",
+   "episode_url": "https://theamphour.com/the-amp-hour-151-initializing-instructed-interviews/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "In regulated markets including medical, source code falls under stricter verification rules than schematics, so FPGA designs were entered as schematics that generate HDL in order to keep the design out of the source-code regime.",
+   "quote_verbatim": "especially in other regulated markets like medical and, you know, stuff like that. Source code comes under different rules. So if you do it in schematic and it generates the HDL, then that's fine",
+   "speaker": "Dave Jones",
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Some semiconductor makers run a deliberate business model of not advancing process nodes, serving medical and automotive customers from older equipment and 8-inch rather than 12-inch wafers, because those parts do not need billions of transistors and their customers value continuity.",
+   "quote_verbatim": "a business model of not advancing to the newer technologies, but rather providing technologies for medical and automotive and, you know, parts that don't need to have billions of transistors. Yep. Right. Yeah, like stay on that old node, use the old equipment, stay on the 8-inch wafer instead of 12-inch",
+   "speaker": "Jake Baker",
+   "episode": 297,
+   "episode_title": "An Interview with Jake Baker",
+   "episode_url": "https://theamphour.com/297-an-interview-with-jake-baker/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Minneapolis is a concentration point for the medical device industry, hosting Medtronic, St. Jude Medical and Boston Scientific, and local contract manufacturers are correspondingly oriented toward medical work.",
+   "quote_verbatim": "is a hotbed of like the medical device industry. So, you know, like St. Jude Medical and Medtronic and a bunch of other ones. I'll bet you have listeners that are employed by the other ones and I'm forgetting them. Boston Scientific",
+   "speaker": "Zach Fredin",
+   "episode": 330,
+   "episode_title": "An Interview with Zach Fredin",
+   "episode_url": "https://theamphour.com/330-an-interview-with-zach-fredin/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Medical device volumes span a wide range and include electronic products built at a million units a year, so medical work is not inherently low volume.",
+   "quote_verbatim": "medical devices nowadays have a pretty wide range of quantity requirements. I mean, there's definitely electronic medical devices that like, they're going to make a million of them a year",
+   "speaker": "Zach Fredin",
+   "episode": 330,
+   "episode_title": "An Interview with Zach Fredin",
+   "episode_url": "https://theamphour.com/330-an-interview-with-zach-fredin/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A regulated hardware startup must stand up product lifecycle management and a quality management system alongside external design review and compliance testing, infrastructure that unregulated startups never build.",
+   "quote_verbatim": "we're definitely going through external design review and very rigid like process of um you know compliance testing and regulatory approvals and stuff so in that vein um we've been recently uh starting to you know set up our product life cycle management and associated with our quality management um you know these are the sort of things that most startups really don't need or have to deal with",
+   "speaker": "Omer Kilic",
+   "episode": 295,
+   "episode_title": "An Interview with Omer Kilic",
+   "episode_url": "https://theamphour.com/295-an-interview-with-omer-kilic/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "When a device can kill its user, the prototype being developed is not the product that ships: several rounds of external design review and full regulatory approval sit between them, and that gap has to be planned into the schedule.",
+   "quote_verbatim": "you are designing devices that can literally kill someone that's why you have to go through approvals and all that other stuff and yeah i mean that's stressful what we're developing right now is surely not going to be what we're producing when we get to volume stage it's going to have to go through several external design reviews and then ultimately go through all the regulatory approvals",
+   "speaker": "Omer Kilic",
+   "episode": 295,
+   "episode_title": "An Interview with Omer Kilic",
+   "episode_url": "https://theamphour.com/295-an-interview-with-omer-kilic/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A wearable that monitors a patient without being invasive and without claiming to diagnose can reach market without FDA testing, which is a decisive commercial advantage over an equivalent device that makes a clinical claim.",
+   "quote_verbatim": "someone like that doesn't have to actually get, um, FDA testing, which is a big deal",
+   "speaker": "Simone Giertz",
+   "episode": 331,
+   "episode_title": "An Interview with Simone Giertz",
+   "episode_url": "https://theamphour.com/331-an-interview-with-simone-giertz/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Regulatory burden attaches to the clinical claim rather than to the measurement technique: an instrument using an identical bio-impedance spectroscopy method escapes the approval process as long as it does not assert a diagnosis.",
+   "quote_verbatim": "although Spectra is doing exactly the same thing, like the technique is the same. It's not saying it can diagnose cervical cancer",
+   "speaker": "Jean Rintoul",
+   "episode": 448,
+   "episode_title": "An Interview with Jean Rintoul",
+   "episode_url": "https://theamphour.com/448-an-interview-with-jean-rintoul/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Turning a measurement technique into an approved diagnostic requires clinical trial data and an algorithm built over that data to establish accuracy, followed by FDA clearance or a CE mark; the underlying technique is the small part of that work.",
+   "quote_verbatim": "they would also have all the data from clinical trials and they would have done, made an algorithm over that data to try to, you know, up their accuracy",
+   "speaker": "Jean Rintoul",
+   "episode": 448,
+   "episode_title": "An Interview with Jean Rintoul",
+   "episode_url": "https://theamphour.com/448-an-interview-with-jean-rintoul/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Safety-critical systems under FDA, FAA or space rules favour an external watchdog paired with a voltage supervisor over an on-chip one, because an external device cannot be disabled by the processor's own software and fires regardless of firmware state.",
+   "quote_verbatim": "a lot of them are coupled with voltage supervisors so um ah okay i've used one of those and you those are nice because it doesn't depend on anything you're doing in the processor your software can't disable it it happens whether you like it or not so if you have a safety critical system that you don't want any dependence on software for like faa or fda or space systems an external one has some good advantages",
+   "speaker": "Elecia White",
+   "episode": 281,
+   "episode_title": "Crossovers and Call-ins",
+   "episode_url": "https://theamphour.com/281-crossovers-and-call-ins/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Debugging on a medical device programme is usually driven by the regulatory test house's report rather than by discovery at the bench: the compliance failures become the lab data the team works from, and board turns are planned as remedial actions against that report.",
+   "quote_verbatim": "the testing shop came back with all the regulatory testing results. And because of the failures to pass on all of that stuff, that is your lab data that you then have to sit down and address together",
+   "speaker": null,
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Medical clients commonly route documentation, integration testing and design records through a specialist regulatory firm that reviews and returns them until the format matches what the FDA submission requires.",
+   "quote_verbatim": "this client also works with like, uh, another company who does all of the, the medical requirements for the FDA. So a lot of the things that I worked on with documentation and integration testing and all that stuff, all those documents get sent to them and they can look at it and they've been giving feedback and, you know, I have to fix to make the document exactly how they want. So the FDA approves the submission",
+   "speaker": "Jeremiah Gillis",
+   "episode": 492,
+   "episode_title": "More Electronics Consultant Impedance Matching",
+   "episode_url": "https://theamphour.com/492-more-electronics-consultant-impedance-matching/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A practitioner with over a decade in biosensor wearables judged the regulatory path, though necessary, to be the binding constraint on bioelectronics innovation, and built an open-source research instrument outside the regulated path rather than through it.",
+   "quote_verbatim": "it's really hard to actually get things through the regulatory process, which things should go through. But it stifles innovation",
+   "speaker": "Jean Rintoul",
+   "episode": 448,
+   "episode_title": "An Interview with Jean Rintoul",
+   "episode_url": "https://theamphour.com/448-an-interview-with-jean-rintoul/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "On a medical device the final twenty percent of work, the regulatory and practical completion rather than the innovation, is what determines whether the device can be used in a healthcare setting at all.",
+   "quote_verbatim": "that 80-20 rule, except the 20 in a medical device really matters of what you need to do to push it over the finish line to be something that actually is signed, sealed, and delivered to use in a healthcare setting",
+   "speaker": "Mark Palmeri",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Reworking an established clinical instrument for low-resource settings meant adding two constraints to a known design: cost, and the removal of the trained specialist from the interpretation step, which was solved by moving classification to a machine learning model running on a phone fed over Bluetooth.",
+   "quote_verbatim": "our mission was, could we make this device lower cost and make it so that a lay person, like a school teacher, could use in a large environment where there's lots of children, do it quickly and be able to do these screenings",
+   "speaker": "Mark Palmeri",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Medical products aimed at consumers remain FDA regulated, and the regulatory work stays a significant part of the business even when the device is not a clinical instrument.",
+   "quote_verbatim": "most of which are on the consumer side of medical, but they're still FDA regulated, uh, and it's still an important part of their business",
+   "speaker": "Ben Einstein",
+   "episode": 402,
+   "episode_title": "An Interview with Ben Einstein",
+   "episode_url": "https://theamphour.com/402-an-interview-with-ben-einstein/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  }
+ ],
+ "attribution_notes": [
+  "Episode 588: for the claim on implementation scrutiny the passage is labelled Chris Gammell but the substance is plainly the interviewee's answer; speaker set to null.",
+  "Episode 704: the passage is labelled Dave Jones but the content is the guest describing his own medical device practice; speaker set to null.",
+  "Episodes 295 and 542: attribution_reliable is false, but each speaker is describing his own company's practice, so the guest labels are retained.",
+  "Episode 181: attribution_reliable is false; the speaker identifies himself through his Altium employment, so the Dave Jones label is retained."
+ ],
+ "capped": false
+}

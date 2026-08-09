@@ -1,0 +1,795 @@
+{
+ "concept": "broadcast-and-big-installs",
+ "name": "Stage, Broadcast, and Giant Installations",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": "Mike Harrison territory: very big, very public electronics and its odd physics",
+ "claims": [
+  {
+   "claim_text": "Installation and event work occasionally compresses a board design into a two-day cycle: for a customer whose pinball solenoid control board had failed, the whole sequence of layout, PCB fabrication, assembly and delivery ran to roughly two days.",
+   "quote_verbatim": "from being asked to do it to delivering two finished boards was about 24 hours",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "On a severely compressed timescale the schematic can be dropped from the critical path: a board layout and a parts list are what physically block fabrication, and the schematic is not needed to get boards made.",
+   "quote_verbatim": "You need a board layout. You need components. You don't actually need a schematic",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A large LED array with irregular matrixing cannot sensibly be entered as a schematic first, because which LED connects to which driver channel is decided by the physical layout; the design has to start from the board and the netlist falls out of it.",
+   "quote_verbatim": "you've got to start from the layout and figure out which LEDs need to go to which drivers because that's how the PCB layout works",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Keeping the CAD footprint library orientation matched to the part orientation in the pick-and-place feeders removes a whole class of rotation errors on repeat parts, and exporting the bill of materials straight out of the PCB layout turns the layout into the shopping list.",
+   "quote_verbatim": "I know that my library matches the orientation in the feeders",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "One-off installation work and volume production work sit badly together in a small consultancy: production jobs go quiet for months between design and manufacturing support, by which time the designer has cycled through many other jobs and lost the context.",
+   "quote_verbatim": "I'm pretty much nowadays turned down anything which is for production",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Plessey entered the LED market from a semiconductor foundry background using a gallium-nitride-on-silicon process, which lowered the cost of blue LEDs relative to conventional substrates and produced parts as small as 0402.",
+   "quote_verbatim": "they developed this process for doing gallium nitride on silicon, which basically means they can make blue LEDs cheaper than everyone else",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A monochrome white LED delivers far more light per watt than an RGB device driven to produce white, and RGB mixing gives poor white anyway, so installations that only need white should use white parts.",
+   "quote_verbatim": "The amount of light you get for the amount of power you put in for a white mono is like a factor of umpteen compared to RGB",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Dense LED matrix boards can push a European PCB house to its finest design rules, in one case 0.125 mm track and space with a 0.15 mm drill, which is beyond what can be made in-house.",
+   "quote_verbatim": "They're like a 0.125mm track of space and a 0.15mm drill",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A fabricator's annular ring specification has to be read together with its hole-size tolerance: an extra 0.1 mm of drill tolerance forces visibly oversized via pads, and the fix is to shrink the specified hole so the annular ring is still met at the tolerance extreme.",
+   "quote_verbatim": "they give you a spec for the annular ring, but they add a 0.1mm tolerance on the hole size as well",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A 500 mm diameter LED display was split into four quadrant PCBs of about 250 mm square specifically so each board would fit the pick-and-place machine, with the board split chosen by machine capacity rather than by the artwork.",
+   "quote_verbatim": "It was like 250mm square board so I could run it on my pick and place",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "For a four-off build, mirroring a board by mounting the driver ICs rotated 180 degrees and only re-laying-out the few parts that genuinely cannot be flipped, such as MOSFETs and connectors, costs far less engineering time than producing a second mirrored layout.",
+   "quote_verbatim": "I'll just mount all the drivers upside down. Because I was only making four of these boards",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "When a rectangular LED grid is cut into a circle, whole driver blocks fall outside the outline, so LEDs on the curve must be reassigned to drivers from other rows; the resulting pixel map took about a day to derive by lighting one LED at a time and marking its position on tracing paper laid over the display.",
+   "quote_verbatim": "you have to start stealing the cutoff drivers from the other bits of the curve",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Monochrome LED displays need gamma correction to look like a smooth grey scale, which requires at least 12-bit drive resolution; a practical implementation takes 8-bit source data through a correction lookup table, with squaring as a good first approximation of the curve.",
+   "quote_verbatim": "You basically need to apply gamma correction. So, you need a minimum of 12-bit control",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Looking directly at bare LED points saturates the eye and flattens perceived grey scale, so a display can look uniform until a diffuser is added, at which point differences in colour temperature between individual LEDs become obvious.",
+   "quote_verbatim": "if you're looking at LEDs rather than LEDs through a diffuser, because you're looking at small points, the eye tends to saturate",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Sizing an LED board's DC-DC converter for the theoretical all-on current wastes money and space, because a display with thousands of LEDs is almost never run at full brightness; the required current is not known until the assembled board is seen at the intended brightness.",
+   "quote_verbatim": "if in theory these LEDs run at full blast could pull 20 amps, chances are you're not going to need that",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A 500 mm diameter board carrying several thousand LEDs drew roughly 40 A at 5 V at full brightness yet did not run hot, because the dissipation was spread over the whole area of the board.",
+   "quote_verbatim": "it pulls about 40 amps at 5 volts",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Installation LED systems are commonly driven over RS-485 or TTL serial at rates up to about 6 megabaud, with a host-side tool that takes an ordinary video file and applies the pixel mapping before sending it to the array.",
+   "quote_verbatim": "I tend to use like RS485 or TTL. Right. Serial, like, you know, up to 6 megaboard to drive these things",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Ceramic capacitors on a PWM-driven LED board are piezoelectric enough to audibly buzz at the PWM rate, which is a reason to choose a different decoupling technology on quiet installations.",
+   "quote_verbatim": "if you've got PWM ceramics, the things buzz",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Large-screen CRT projection was limited by the brightness obtainable from the tube face, and pushing the EHT voltage high enough to gain brightness produced significant X-ray emission; the Eidophor oil-film projector, developed in the 1950s, worked around this and dominated large-screen video projection for several decades.",
+   "quote_verbatim": "they're pretty limited as to how big they can go because of things like how much brightness you can get out of a CRT plate",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A large shopping-centre Christmas installation was built entirely from PCB: roughly 200 mm strips carrying three RGBW LEDs on each side plus a six-pin microcontroller, assembled into hexagonal star modules on a jig.",
+   "quote_verbatim": "about 200-millimeter long strip with three RGBW LEDs on each side and a little six-pin pick",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Physical position can be assigned at assembly rather than by wiring: a locating jig fitted with pogo pins at each module position programs each strip's ID as it is dropped in, so the strip knows where it sits in the structure, and the jig itself is built to be reconfigured for a different shape.",
+   "quote_verbatim": "the jig actually has pogo pins at each strip location. So the jig then programs the IDs onto all the strips",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Plastic push rivets are quick to install but awkward to remove, since the centre pin must be driven back out from the underside before the rivet can be extracted, which matters when an installation is intended to be dismantled and reused.",
+   "quote_verbatim": "They're really easy to get in, but they're a bit of a pain in the butt to take out again",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Assigning bus addresses is easy; the hard problem in a large lit structure is making each node know its physical position. A handheld probe that both sends the address command and senses contact can auto-increment after each touch, so the installer only sets a starting address and then touches each node in order.",
+   "quote_verbatim": "the tricky bit is where that thing needs to know its physical position as opposed to just being on the bus",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Installation lighting protocols are usually specified one-way with no return path, because adding a return path forces error handling into a system that otherwise does not need it.",
+   "quote_verbatim": "It's almost always one way. Just keep things simple",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "RS-485 fails in a misleading way when one of the differential lines is not connected: depending on how the floating line settles, the link can appear to work. Every RS-485 installation should therefore be checked end to end from one end for the presence of the far termination.",
+   "quote_verbatim": "If one of the lines isn't connected, it will sometimes work",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "In a three-dimensional installation that is winched up in layers, anything at the top becomes effectively unreachable once the layers below are fitted, so every drop cable and splitter is tested with a go/no-go plug-in tester before assembly begins.",
+   "quote_verbatim": "before we put any stars on, literally go around and plug in each of these cables to a tester",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Purpose-made pocket test boxes that light a strip at low brightness from a small battery let an installer verify a part in seconds without meters or bench supplies, and building the jigs and one-off tools pays for itself whenever the same operation is repeated hundreds of times.",
+   "quote_verbatim": "I made a little box that you just plug in, it'll light up all the LEDs, but not very bright",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Lighting-class white LEDs of a few millimetres square fell to under one cent each in reel quantities, and are extremely bright; long thin formats and multi-die parts intended to run directly from 12 V are also standard.",
+   "quote_verbatim": "If you buy a reel of those, they're under one cent each",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Marketplace-sourced LEDs are acceptable for experiments but not for permanent installations; competition has made brand-name parts such as Osram cheap enough that there is little reason to take the risk on a fixed install.",
+   "quote_verbatim": "I wouldn't tend to use that for things I permanently install. I tend to go use Osram or Evergo",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "White LEDs vary in colour by bin, and a single reel carries one bin code, so a matrix panel can be kept visually uniform by sizing it to consume whole reels; a display was deliberately trimmed slightly in size so that boards never straddled two reels.",
+   "quote_verbatim": "one reel is always going to be the same bin code. So we didn't have to mix reels on the bin",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Very high volume luminaire manufacturers handle LED bin spread by deliberately mixing reels so each fixture contains a random distribution of bins, which averages the variation out; smaller buyers cannot do this and instead negotiate with distributors for the closest matched bins available.",
+   "quote_verbatim": "they get all the leads in and they just mix them all up so that in any given fixture, they've got a random distribution of these binning codes",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "For a Hong Kong installation with about 28,000 assembled LED strips, shipping from the UK would have cost roughly 3,500 pounds, which drove local assembly even though the assembly cost itself was not very different; logistics and part sourcing, not labour rate, decided where the work was done.",
+   "quote_verbatim": "it would have been like three and a half thousand quid just in shipping",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Physical security measures are worthless if the electrical interface is left open: one car phone riveted its serial-number EEPROM into the chassis, but the cable plug to the main board carried the same eight-pin DIL pinout as the memory itself, so the part could simply be unplugged and reprogrammed.",
+   "quote_verbatim": "the plug that went onto the main board was actually an eight-pin dill in the same pinout as the E-squared prom",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Rules such as always fitting decoupling on every device or never paralleling LEDs carry an unstated context: high-reliability industrial design fits them everywhere by default, while cost-driven toy design starts from none and adds only what testing shows is needed.",
+   "quote_verbatim": "in the industry, you stick decarping caps everywhere. On the toy, you start off with none and put one at a time in until the thing works",
+   "speaker": "Mike Harrison",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The one-wire WS2812 offers only eight bits per colour and no global dimming, so dimming the whole array eats into the available intensity levels. The two-wire APA102 adds about five bits of global control and is easier to drive over SPI, but the PWM rate drops as global dimming is applied and the part is not constant current, so brightness follows the supply rail.",
+   "quote_verbatim": "the one wire is fine, but the problem is you've only got eight bits per color, which means you don't really have any global dimming",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Because the APA102 is not constant current, a supply sag from about 4.5 V to 4 V along a long run visibly changes LED intensity, which makes power distribution part of the visual design rather than just an electrical concern.",
+   "quote_verbatim": "if your supply voltage drops from, like, four and a half to four volts, your intensity drops",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Gamma correction originates in the non-linear response of CRT phosphors, which cameras pre-correct for. For LEDs the perceptual relationship is empirically close to a square law, so doubling apparent brightness needs about four times the drive.",
+   "quote_verbatim": "It's a roughly square law. So, for example, if you want double the brightness, you have to give it four times as much power",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "White LEDs with improved colour rendering generally achieve it by adding extra red or orange emitters alongside the phosphor-converted die rather than by using a better phosphor alone.",
+   "quote_verbatim": "All the ones I've ever seen just have some additional LEDs. Either red or orange or whatever",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A transparent LCD panel loses at least half the light passing through it because of its polarisers even in the fully clear state, so installations built from clear LCDs depend entirely on having strong ambient or architectural backlighting to work.",
+   "quote_verbatim": "because you've got the polarizers, even when it's totally clear, you're losing 50% of the light",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Maintenance exposure depends on installation geometry: a single dead pixel in a regular array is immediately visible, while an irregular cluster of light points hides individual failures, which is worth weighing at concept stage for a permanent piece nobody will service often.",
+   "quote_verbatim": "The other stations I like are the ones which are like a random cluster of things. So if the other thing isn't working, you don't really notice",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Carrier tape quality is a real yield risk in machine assembly: a batch of white LEDs supplied on unusually thin tape bounced out of the pockets as the feeder indexed, and even after modifying the feeder the loss stayed around 10 percent of a 22,000-piece build, which was only recoverable because the distributor had one more reel in stock.",
+   "quote_verbatim": "the tape they came on was really, really thin. So, that when my machine fed it, the tape would advance and the LED would just bounce straight out of the tape",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Very thin flexible-feeling LED boards can be made in 0.1 mm FR4, which is not an exotic material but the ordinary prepreg that fabricators already stock for the inner layers of multilayer boards.",
+   "quote_verbatim": "I found a company that will make 0.1 millimeter FR4 boards",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "OLED displays cannot cover the military temperature range, which is why some ruggedised optical instruments still use LED dies deposited directly onto a substrate; the smallest standard parts, such as a 0.8 mm high seven-segment display, require a wire bonder to use at all.",
+   "quote_verbatim": "you can't do OLEDs over the military temperature range",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A field failure that killed the first LED driver on each strip was traced not to ESD but to a substituted connector housing: the non-Molex part's keying was slightly undersized, so a keyed Micro-Fit connector that should have been impossible to reverse could be forced in backwards, and one reversed orientation destroyed the first driver.",
+   "quote_verbatim": "the connector housings they used, which weren't Molex, were much easier to plug into the connector the wrong way around. Because the keying was just a little bit smaller",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The lesson drawn from a reversed-connector failure was that keying alone should not be trusted as the only protection when assembly is subcontracted and done remotely; a series protection resistor on the vulnerable input would have made the failure impossible for negligible cost.",
+   "quote_verbatim": "if we'd have seen that you could actually insert this connector the wrong way, I could have easily just put a protection resistor on that strip",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Mains dimming products are polarised between stage-lighting racks rated around a kilowatt per channel and nothing suitable for many small mains LED loads, which leaves a gap for eight- and sixteen-channel dimmers of a few hundred milliamps per channel for GU10 lamps and mains LED tape.",
+   "quote_verbatim": "there isn't really anything on the market at the moment aimed at low pain. Now, you can get these massive dimmer racks of stage lighting with like one kilowatt per channel",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A traditional triac dimmer is leading-edge: it waits past the mains zero crossing, then latches on for the rest of the half cycle. Dimmable mains LED lamps prefer trailing-edge phase cutting, because their front end is a rectifier and electrolytic capacitor that draws a large surge if switched on partway up the sine wave, which is also why conventional dimmers contain a sizeable choke to slow the turn-on edge.",
+   "quote_verbatim": "mains lead bulbs, the dimmable ones, and they are fairly specific, much prefer a trailing edge",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Trailing-edge dimming interrupts current abruptly, and when the supply comes through a transformer the leakage inductance turns that interruption into a large spike: switching about 4 A off through an isolating transformer produced an 800 V transient that destroyed the internal PCB-mount mains supply. The fix is either not to feed such a dimmer from a transformer or to place a few microfarads across the transformer output.",
+   "quote_verbatim": "I was getting this, like, 800 volt spike. It was just annihilating the power supply",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Where a component is rated only for basic rather than reinforced insulation, a second independent isolation barrier can be added instead of replacing it; in one mains dimmer this meant an isolated DMX receiver in series with the isolated gate drive, giving two separate barriers.",
+   "quote_verbatim": "they say it offers basic rather than reinforced insulation. I'm actually doing a second isolation bar",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In a multi-channel mains dimmer each channel's MOSFET source floats independently even though all channels share one live feed, so every channel needs its own isolated gate-drive reference. This is trivial at one or two channels and becomes the dominant packaging problem at sixteen, since a separate DC-DC converter per channel does not fit.",
+   "quote_verbatim": "the reference point for your MOSFET, which is basically halfway between your supply and your load, could be flying all over the place separately per channel",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Integrated-driver LED parts have been avoided on permanent installations on reliability grounds, with discrete Texas Instruments drivers plus brand-name LEDs used instead; the integrated parts get specified when a project is tight enough on cost that the client accepts the failure risk.",
+   "quote_verbatim": "all there is is the race to the bottom Chinese stuff, which in the past I've had issues with",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Serviceability in a permanent lit structure means designing so a failed strip can be pulled and replaced without dismantling the installation around it, since replacement rather than repair is the realistic maintenance path.",
+   "quote_verbatim": "assemble it in such a way that you can just pull a whole strip out, plug another one in relatively easily without dismantling the entire installation",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Prototypes that work at a couple of hundred LEDs routinely fail to scale to tens of thousands, and the two things that break first are power distribution and data bandwidth rather than the microcontroller itself.",
+   "quote_verbatim": "okay, we've baked these things with sort of 200 LEDs. Okay, this installation is just 20,000. And things, you know, things like power, you know, power management is the first thing and bandwidth",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Replicating a development-board prototype a hundred times over is usually worse than consolidating onto one purpose-built PCB, because the cabling and connector count of the replicated approach becomes the dominant cost and failure surface.",
+   "quote_verbatim": "it's going to be much easier to stick everything on one PCB and sort out all the connectors and everything. Then get a hundred Arblinos and put cables everywhere",
+   "speaker": null,
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Museum clients commonly require full design information for anything installed, so they can repair it or have replacement hardware built themselves; commercial art clients, by contrast, have generally shown no interest in owning the intellectual property in the hardware.",
+   "quote_verbatim": "the museum had a policy of anything like that. They needed to have all the information they needed to do repairs themselves",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Short-circuit protection is hard on a mains dimmer because fault currents are large enough that the switching MOSFET fails before the fuse does; current sensing that acts faster than the fuse is needed instead of relying on the fuse.",
+   "quote_verbatim": "it's rather difficult to short, protect them against short circuits because you get rather high fault currents",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "When a client's own staff must extend the firmware, a single-vendor toolchain has a practical advantage over a general one: the client installs one IDE, opens one project and starts writing content code, instead of assembling a specific IDE version plus plugins.",
+   "quote_verbatim": "I can just give them one project. They just install MPLABX, load my project, and they're away",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A significant share of large UK architectural light installations was funded by Section 106 planning conditions, under which a developer had to devote a percentage of a large development to public benefit, one qualifying category being public art.",
+   "quote_verbatim": "in the UK there was a thing called Section 106 Planning Permission, which basically meant that if you want to do some big development, part of the conditions on getting permission to do it meant that you had to give a certain percentage of that development",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Installation electronics inverts the usual prototype-then-production sequence: there is one build of a couple of hundred boards, no budget for a prototype run and no schedule for a respin, so the design must work first time or every board has to be reworked by hand.",
+   "quote_verbatim": "It's a one-off job. We have no time or money to do a prototype run. We have to do a run of, let's say, 200 boards. And we cannot get these wrong",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Installation sites impose hard scheduling constraints that the electronics has to absorb: a shopping centre may only be accessible at night, an immovable opening date fixes the delivery, and access equipment such as a cherry picker has to be negotiated with site management rather than assumed.",
+   "quote_verbatim": "you may have like a fixed install date where it might be something like a shopping center where you can only get in there at night",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Even a modest bespoke light installation readily costs ten to twenty thousand pounds or more, because it combines specialist contractor time with one-off PCBs and large LED counts.",
+   "quote_verbatim": "It can easily cost, you know, 10, 20 grand or more for, you know, just one little art installation",
+   "speaker": null,
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Spares on an installation are budgeted primarily for the install itself, since a dropped or damaged connector on site with no replacement stops the job; boards are also rounded up to the next panel so that badly reworked units can simply be set aside instead of repaired under time pressure.",
+   "quote_verbatim": "you budget for spares to some extent",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Above roughly 5 kVA, portable generators are diesel and substantially heavier than petrol units, so a large suspended structure was powered by four 3 kVA petrol generators distributed around it rather than one large set, to avoid concentrating a heavy point load.",
+   "quote_verbatim": "The problem with generators is once you get above about 5kVA, they tend to be diesel, which are a lot heavier than petrol generators",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A generic 48-channel DMX dimmer at one amp per channel implies a 50 A supply feeding one box, and the channel count was chosen because it factors cleanly into 16 RGB, 12 RGBW or 48 monochrome strips, letting one product serve many jobs.",
+   "quote_verbatim": "if you're producing 48 channels at one amp per channel, well, this thing's going to be hooked up to a 50 amp power supply",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Automotive high-side driver ICs that shut down within about 20 microseconds on a short allow a compact multi-channel dimmer to be fully short-circuit protected on a one-kilowatt supply, without fitting a MOSFET per output large enough to survive the fault.",
+   "quote_verbatim": "I actually found these really nice automotive drivers that will like turn off in like about 20 microseconds if they get a short",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Helicopter lifting can be cheaper than crane hire for rooftop and large-structure installation work, because a crane requires closing the street and shutting the site down for a couple of days while the helicopter completes the lift in well under an hour.",
+   "quote_verbatim": "that often works out cheaper than the cranks. If you have a big crane, you've got to close the street off",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A six-pin PIC10F322 at about 25 pence in thousand-up quantities has interrupts, self-programming and PWM channels, and can be made to receive the 250 kbit DMX serial stream directly, which makes one microcontroller per one to three LEDs economically plausible.",
+   "quote_verbatim": "I saw the microchip PIC 10F322, which is a six-pin device, dirt cheap, like 25p in like 1,000 up",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Putting a tiny microcontroller behind every one to three LEDs converts an irregular LED structure from a routing problem into a copy-and-paste one, because every node needs only power, ground and a single shared data line; the alternative, 16-channel drivers, forces tedious individual routing on any shape that is not a regular grid.",
+   "quote_verbatim": "You connect them all in parallel. So your PCB routing is like, I've done some four-layer stuff where you literally just cut and paste",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The per-LED microcontroller approach costs a little under 30 pence per node in parts, which is more than a shared multi-channel driver, but is chosen because it collapses the layout and turnaround time on a one-off; Microchip's programming service loads the firmware for about two pence a part, avoiding thousands of manual programming operations.",
+   "quote_verbatim": "the actual unit cost is a little bit more. It works out at probably a little bit under 30p per PIC",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Compliance practice differs sharply between temporary and permanent installations: a one-event temporary piece may simply reuse a chip vendor's reference design without formal approval, while permanent installations are treated much more carefully.",
+   "quote_verbatim": "We take a bit more care on the permanent installations, but for my temporary installs, it's just got to be done",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A teardown of radio-controlled audience wristbands found a Silicon Labs radio paired with a Silicon Labs microcontroller costing well over a dollar in thousand-off quantities, for a job of listening for a signal and flashing LEDs that a thirty pence microcontroller could do; buying a whole solution from one silicon vendor tends to carry that kind of bill-of-materials penalty.",
+   "quote_verbatim": "there is no way on earth that that microcontroller, unless they got it at a ridiculous discount, was the cheapest part they could have used",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Designing installations for reliability means assuming every failure mode will occur and derating accordingly; a load needing ten amps is given a fifteen or twenty amp supply, and clients are told up front which parts may fail so spares are bought before the install.",
+   "quote_verbatim": "if it's a 10 – you need 10 amps. Don't buy a 10-amp power supply. Buy a 15- or a 20-amp power supply",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The dominant lesson of installation work is to move everything possible off site: pre-assemble and pre-test so on-site work is screwing down and plugging in, because access, light, power and tools cannot be relied upon and other trades may block the work area for hours.",
+   "quote_verbatim": "you don't want to be soldering on site. You don't want to be programming on site",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Art commissions produce requirements that are arbitrary from an engineering standpoint, such as rejecting a motor for its sound or a heatsink for its appearance, but those requirements are as binding as functional ones and act as genuine design constraints.",
+   "quote_verbatim": "the set of requirements you get don't necessarily make functional sense. Uh, but they're just as valid",
+   "speaker": "Todd Bailey",
+   "episode": 194,
+   "episode_title": "An Interview With Todd Bailey - Embedded Embrasure Engineering",
+   "episode_url": "https://theamphour.com/194-an-interview-with-todd-bailey-embedded-embrasure-engineering/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The Panasonic Grid-EYE is an 8 by 8 thermal camera with a per-pixel thermal resolution around 0.025 degrees Celsius, cheap enough to build into a battery-powered handheld with an OLED screen and a Bluetooth link.",
+   "quote_verbatim": "The thermal resolution per pixel is, I think, 0.025 degrees Celsius",
+   "speaker": "Noah Feehan",
+   "episode": 204,
+   "episode_title": "An Interview with Noah Feehan - Biloquistic Blinking Blush",
+   "episode_url": "https://theamphour.com/204-an-interview-with-noah-feehan-biloquistic-blinking-blush/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Installing in a museum brings conservation approval into the engineering schedule: a piece that involved cooking in a natural history collection had to be demonstrated on a surrogate specimen not to leave a permanent odour before the installation was permitted.",
+   "quote_verbatim": "I had to go through a bunch of different tests to prove that I wasn't going to permanently imbue these animals with the smell of steak",
+   "speaker": "Noah Feehan",
+   "episode": 204,
+   "episode_title": "An Interview with Noah Feehan - Biloquistic Blinking Blush",
+   "episode_url": "https://theamphour.com/204-an-interview-with-noah-feehan-biloquistic-blinking-blush/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Pick-and-place nozzle Z-height is a per-part calibration, and a machine that happens to work on one component can fling later parts off the board when the height is wrong; solder paste tack is not enough to hold a part that is being struck rather than placed.",
+   "quote_verbatim": "the Z height was calibrated wrong. And so it started just hitting the board and like these things were like ping, ping, ping, ping",
+   "speaker": "Chris Gammell",
+   "episode": 415,
+   "episode_title": "Ergs Per Second",
+   "episode_url": "https://theamphour.com/415-ergs-per-second/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "It is often faster to machine-place only the high-count parts, such as hundreds of LEDs, and hand-solder the few large packages, since the stencil has already deposited paste for them and setting up a feeder for a handful of parts costs more than it saves.",
+   "quote_verbatim": "you don't have to pick and place every component",
+   "speaker": null,
+   "episode": 415,
+   "episode_title": "Ergs Per Second",
+   "episode_url": "https://theamphour.com/415-ergs-per-second/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "ep135, ep224, ep294, ep412, ep524: the bundle's speaker_repaired label alternates between Dave Jones and Mike Harrison across the +/-1 paragraph windows, and frequently labels Mike's own first-person accounts as Dave Jones. Claims describing Mike Harrison's own installations, clients, workshop, products and website are attributed to Mike Harrison on content grounds; where the substance could equally have come from a host, speaker is null.",
+  "ep135 passage 76 (Arduino replication) and passage 90 (cost of a small installation): the exchange is shared between host and guest and the load-bearing sentence cannot be assigned, so speaker is null.",
+  "ep415 passage 137: the point about not machine-placing every component is made jointly by both hosts in the window, so speaker is null.",
+  "ep194, ep204: attribution_reliable is false in the bundle, but the claims kept are first-person accounts of the guest's own work (Todd Bailey on art commissions, Noah Feehan on Grid-EYE and the museum installation), so the guest is named."
+ ],
+ "capped": false
+}
