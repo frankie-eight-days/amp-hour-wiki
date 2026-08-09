@@ -1,5 +1,5 @@
 ---
-title: Kicad
+title: KiCad
 concept: kicad
 generated: 2026-08-08
 model: k3

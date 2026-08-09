@@ -1,5 +1,5 @@
 ---
-title: Pcb Fabrication
+title: PCB Fabrication
 concept: pcb-fabrication
 generated: 2026-08-08
 model: k3

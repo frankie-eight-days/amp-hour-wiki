@@ -1,5 +1,5 @@
 ---
-title: Pwm
+title: PWM
 concept: pwm
 generated: 2026-08-08
 model: k3
