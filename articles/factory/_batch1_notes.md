@@ -127,3 +127,9 @@
   drains only work ~5h after a big write block (e.g., a 50-write burst frees
   ~5h later at the burst's own rate). Plan batch pacing around this: steady
   ~1 write/3-4 min sustained beats bursts.
+- **HYPOTHESIS (2026-08-09 09:30): rejected requests may count against the
+  rolling window.** The 9:00-10:05 trickle harvest produced ZERO successes
+  while probes and drip attempts continued (each kimi_write = 3 internal
+  requests). Last night's clean reopen came only after ~1h of total silence.
+  Policy: when the window trips, go COMPLETELY silent (no probes, no drips)
+  and re-enter with a single canary write after the projected aging time.
