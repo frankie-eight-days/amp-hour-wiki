@@ -13,13 +13,44 @@ PLANNED = 412
 
 DST.mkdir(parents=True, exist_ok=True)
 
+def linkify(raw: str) -> str:
+    """Make [NNN] citations clickable and the References table a real link table."""
+    parts = re.split(r"\n## References\s*\n", raw, maxsplit=1)
+    prose, refs_md = parts[0], (parts[1] if len(parts) > 1 else "")
+
+    def cite(m):
+        nums = re.findall(r"\[(\d+)\]", m.group(0))
+        return "".join(f'<sup><a href="#ref-{n}">[{n}]</a></sup>' for n in nums)
+
+    prose = re.sub(r"(?:\[\d+\]){1,}", cite, prose)
+
+    rows = []
+    for line in refs_md.splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) >= 3 and cells[0].isdigit():
+            n, title, url = cells[0], cells[1], cells[2]
+            date = cells[3] if len(cells) > 3 else ""
+            rows.append(
+                f'<tr id="ref-{n}"><td>{n}</td>'
+                f'<td><a href="{url}" target="_blank" rel="noopener">{title}</a></td>'
+                f"<td>{date}</td></tr>"
+            )
+    if rows:
+        table = (
+            "<table><thead><tr><th>Episode</th><th>Title</th><th>Date</th></tr></thead>"
+            "<tbody>" + "".join(rows) + "</tbody></table>"
+        )
+        return prose + "\n## References\n\n" + table + "\n"
+    return raw if not refs_md else prose + "\n## References\n\n" + refs_md
+
+
 articles = []
 for md in sorted(SRC.glob("*.md")):
     raw = md.read_text()
     m = re.search(r"^title:\s*(.+)$", raw, re.M)
     title = m.group(1).strip() if m else md.stem
     articles.append((md.stem, title))
-    shutil.copy2(md, DST / md.name)
+    (DST / md.name).write_text(linkify(raw))
 
 # prune articles removed upstream (never prune index.md)
 present = {a[0] for a in articles}

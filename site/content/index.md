@@ -6,7 +6,7 @@ A topic-first distillation of the tribal engineering knowledge in **719 episodes
 
 Articles are AI-generated syntheses built from the show's official transcripts through a verified extraction pipeline; every bracketed citation traces to a verbatim transcript passage. A full *How this wiki was built* page documenting the pipeline, verification rules, and known limitations is coming with the complete build.
 
-**Status: batch 1 of the article factory — 46 of 412 planned articles published so far. The factory is running; this page updates as articles land.**
+**Status: batch 1 of the article factory — 47 of 412 planned articles published so far. The factory is running; this page updates as articles land.**
 
 ## Articles
 
@@ -43,6 +43,7 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 
 ### F
 
+- [[firmware|Firmware]]
 - [[firmware-update|Firmware Update]]
 - [[flash-memory|Flash Memory]]
 - [[fpga|Fpga]]
