@@ -1,0 +1,575 @@
+{
+ "concept": "accelerometer",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "accelerometer",
+  "census": "union",
+  "aliases": [
+   "accelerometer"
+  ],
+  "children": [
+   "capacitive-sensing",
+   "gyroscope",
+   "imu",
+   "magnetometer",
+   "mems",
+   "neopixel",
+   "online-business"
+  ],
+  "neighbors": {
+   "pressure-sensor": 4
+  },
+  "pins_pre_cap": 58,
+  "pins_final": 58,
+  "pins_by_depth": {
+   "opinion": 10,
+   "explains": 48
+  },
+  "pins_by_role": {
+   "core": 53,
+   "child": 5
+  },
+  "capped": false,
+  "passages_yielding_claims": 45,
+  "passages_killed": 13
+ },
+ "claims": [
+  {
+   "claim_text": "The sensing element is a capacitive structure in a CMOS process whose capacitance changes by amounts measured in zeptofarads, and that change is converted to a voltage. Because the signal starts that small, Gaussian noise in the electronics sets a floor on how accurately mechanical motion can be resolved.",
+   "quote_verbatim": "It's working with zeptofarads",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The unfamiliar part for most engineers is the conversion itself: voltages and amplifiers are well understood, whereas turning gravity and tilt into an electrical number is not, and the understanding comes from having done it.",
+   "quote_verbatim": "when you start talking about measuring gravity and tilt and those types of things and converting that into an electrical number, that's kind of confusing",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The reading is dominated by gravity: acceleration measured by a stationary device is almost entirely the pull downward, which is why the simplest demonstration of the sensor is one that shows which way is down.",
+   "quote_verbatim": "acceleration is almost always gravity",
+   "speaker": "Elecia White",
+   "episode": 256,
+   "episode_title": "Is This A Show?",
+   "episode_url": "https://theamphour.com/256-is-this-a-show/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A gyroscope answers a different question and shows nothing while the device is still, because it responds to motion and gesture rather than to orientation.",
+   "quote_verbatim": "gyros are boring unless you're moving",
+   "speaker": "Elecia White",
+   "episode": 256,
+   "episode_title": "Is This A Show?",
+   "episode_url": "https://theamphour.com/256-is-this-a-show/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "The technology was a genuine discontinuity rather than an incremental improvement: before micro-electromechanical parts existed there was no practical way to make these measurements at all.",
+   "quote_verbatim": "before that existed, there was really no way to do that kind of stuff",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "What that replaced was bulky: an accelerometer meant an electromechanical assembly and a compass meant coils, with the mathematics left to the designer and no libraries to draw on.",
+   "quote_verbatim": "you put a gyroscope and, you know, electromechanical solution",
+   "speaker": "Dave Jones",
+   "episode": 221,
+   "episode_title": "Warming Up To IoT - Tendentious Thermal Tools",
+   "episode_url": "https://theamphour.com/221-warming-up-to-iot-tendentious-thermal-tools/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Where those parts were unavailable, designers substituted a different physical principle entirely: a flight controller built from infrared thermopiles on each wingtip and the nose inferred bank and pitch from the sky being a different temperature to the ground, which still worked at night with the temperature relationship reversed.",
+   "quote_verbatim": "the sky is a different temperature to the ground",
+   "speaker": "Bruce Simson",
+   "episode": 538,
+   "episode_title": "Missle Man with Bruce Simson",
+   "episode_url": "https://theamphour.com/538-missle-man-with-bruce-simson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A sensor can also be improvised from an unrelated part: replacing condenser microphones that suffered crosstalk and feedback, an electret microphone potted in epoxy inside a machined housing screwed directly to the instrument became, in effect, a purpose-built accelerometer.",
+   "quote_verbatim": "I made an accelerometer out of an electric microphone",
+   "speaker": "Julia Truchsess",
+   "episode": 424,
+   "episode_title": "An Interview with Julia Truchsess",
+   "episode_url": "https://theamphour.com/424-an-interview-with-julia-truchsess/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Recovering position from acceleration requires integrating twice, and any jitter in the acceleration signal is magnified enormously by that double integration, which is why dead reckoning from an accelerometer alone does not work.",
+   "quote_verbatim": "accelerometers, you need to basically integrate them twice",
+   "speaker": "Chris Gammell",
+   "episode": 147,
+   "episode_title": "An interview with Jeri Ellsworth - Absorptive Augmented Actuality",
+   "episode_url": "https://theamphour.com/the-amp-hour-147-absorptive-augmented-actuality/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The direction of the calculation matters: differentiation is a mathematically noisy operation and integration is not, which is why integrating an accelerometer toward velocity and position behaves better than differentiating a position measurement would.",
+   "quote_verbatim": "differentiation is a mathematically noisy process versus integration, which isn't",
+   "speaker": "Gerry Roston",
+   "episode": 334,
+   "episode_title": "An Interview with Gerry Roston",
+   "episode_url": "https://theamphour.com/334-an-interview-with-gerry-roston/",
+   "depth_regraded": "explains",
+   "kind": "rationale"
+  },
+  {
+   "claim_text": "It is still not good enough to navigate with: an attempt to track how far a boat had drifted by integrating acceleration ended with the position unknown.",
+   "quote_verbatim": "I'm going to use an accelerometer to know how far my boat drifted",
+   "speaker": "Gerry Roston",
+   "episode": 334,
+   "episode_title": "An Interview with Gerry Roston",
+   "episode_url": "https://theamphour.com/334-an-interview-with-gerry-roston/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The same limit bounds fine position tracking on a person: the double integration can be made to work only if the subject stays completely still, so anything mounted on a moving head defeats it.",
+   "quote_verbatim": "the subject would have to be standing completely still",
+   "speaker": "Chris Gammell",
+   "episode": 660,
+   "episode_title": "My Toothbrush Is Broadcasting",
+   "episode_url": "https://theamphour.com/the-amp-hour-660-my-toothbrush-is-broadcasting/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Consumer activity metrics are inferences rather than measurements: an interrupt indicates movement, the change between successive readings is interpreted as a step, and filtering does the rest — accurate enough to be useful and not the direct measurement it appears to be.",
+   "quote_verbatim": "It's all, you know, there's algorithms and there's all this stuff, but they're not, they're not super accurate",
+   "speaker": "Chris Gammell",
+   "episode": 644,
+   "episode_title": "Garbage Ninjas",
+   "episode_url": "https://theamphour.com/644-garbage-ninjas/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Combining a three-axis accelerometer and a three-axis gyroscope into one digital part replaced two separate breakout boards, and the feature that mattered was the processor inside it fusing the raw readings into orientation on the chip.",
+   "quote_verbatim": "combined six axis accelerometer and gyroscope",
+   "speaker": "Jeff Roberg",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "On-chip fusion matters most where the host is small: doing the orientation mathematics in the sensor saves processing time and power on a low-power microcontroller that should be asleep as much as possible.",
+   "quote_verbatim": "that's a big deal because it saves you a lot of time, processing time and power",
+   "speaker": "Jeff Roberg",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "rationale"
+  },
+  {
+   "claim_text": "The vendor documented access to the raw accelerometer and gyroscope readings but published nothing about the fusion processor that was the part's main selling point, leaving the register map with no description of it at all.",
+   "quote_verbatim": "And that's the part that was not explained in the register map at all",
+   "speaker": "Jeff Roberg",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The way in was the vendor's own evaluation kit: its companion board shipped with firmware that configured the processor correctly, so capturing the bus traffic between the two recovered the initialisation sequence.",
+   "quote_verbatim": "plugs in his, his, uh, logic analyzer and just sniffs the traffic",
+   "speaker": "Jeff Roberg",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The same pattern recurred on a nine-axis part combining gyroscope, magnetometer and accelerometer, where the interface to the motion processor had to be reverse engineered because the register map was withheld.",
+   "quote_verbatim": "here's our magical chip, but we're not going to show you how to interface to it",
+   "speaker": "Ryan O'Hara",
+   "episode": 153,
+   "episode_title": "An Interview with Ryan O'Hara - Keyed, Kerfed Kapton",
+   "episode_url": "https://theamphour.com/the-amp-hour-153-keyed-kerfed-kapton/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A gyroscope costs roughly ten times the power of an accelerometer, so leaving it out is worth real battery life if the application can manage without it.",
+   "quote_verbatim": "gyros take like 10 times the power of an accelerometer",
+   "speaker": "Brian Faith",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "That trade can be tested rather than assumed: removing the gyroscope data from a gesture-classification problem left the accuracy unchanged, which eliminated a dollar part, its power draw and potentially a move from six axes to three.",
+   "quote_verbatim": "the accuracy of the gesture detection didn't change if we removed the gyro from the equation",
+   "speaker": "Brian Faith",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Two features decide whether a part is usable in a low-power design: an interrupt output, so a free-fall or motion event wakes the processor instead of being polled for, and lines such as shutdown and reset brought out so the device can be controlled and recovered.",
+   "quote_verbatim": "you want to like interrupt the micro and say, Hey, take a reading right now",
+   "speaker": "Chris Gammell",
+   "episode": 602,
+   "episode_title": "Rigorous engineering stuff may be out the window",
+   "episode_url": "https://theamphour.com/602-rigorous-engineering-stuff-may-be-out-the-window/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Assembling the sensing hardware is the easy part of an inertial measurement project — the parts are catalogue items — and the point of getting the basics working quickly is to free the effort for the algorithms.",
+   "quote_verbatim": "how fast can we get the basics working so that we can go back to working on algorithms",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Firmware should be written against a generic sensor interface rather than the specific part fitted, so that the code has as few dependencies on the rest of the system as possible.",
+   "quote_verbatim": "I want to talk to a generic accelerometer interface, not the specific STIMU part on the board",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Under Linux the sensor is presented as files: acceleration in each axis appears as a virtual file that is read when a value is wanted, through a subsystem built for this class of device.",
+   "quote_verbatim": "Linux turns everything into files",
+   "speaker": "Chris Gammell",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The driver is what bridges the two: it translates the vendor's register map into that abstraction, so that reading a named file returns the value from a documented register address.",
+   "quote_verbatim": "that is the driver piece, right, where it's basically abstracting that register set",
+   "speaker": "Chris Gammell",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Once the driver probes correctly the hardware work is finished and the sensor is reachable from ordinary application code in any language, which is what the separation between kernel and user space buys.",
+   "quote_verbatim": "once you're in user space, you're done with hardware",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Cable movement generates its own charge. Insulation moving against the conductor produces a charge on the cable, and since a typical vibration accelerometer is itself a charge-output device, a test jig whose cabling flexes injects error directly into the measurement.",
+   "quote_verbatim": "It can actually generate a charge in your cable when, when you move it",
+   "speaker": "Dave Jones",
+   "episode": 215,
+   "episode_title": "Wrong Hardware, Wrong Software - Fugacious Fan Funding",
+   "episode_url": "https://theamphour.com/215-wrong-hardware-wrong-software-fugacious-fan-funding/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Calibrated equipment does not rescue a badly built test: a calibrated accelerometer, charge amplifier and shaker will still produce meaningless vibration results if the fixture is wrong, and the check that reveals it is the coherence measurement.",
+   "quote_verbatim": "It's because you didn't set up your jig properly. You didn't measure your coherence.",
+   "speaker": "Dave Jones",
+   "episode": 570,
+   "episode_title": "Keyzermas All The Way",
+   "episode_url": "https://theamphour.com/570-keyzermas-all-the-way/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Coherence is not taught as part of a normal course, which is why the failure is common: engineers reach vibration testing without the concept and read the resulting garbage as a fault in the apparatus.",
+   "quote_verbatim": "you don't learn about coherence",
+   "speaker": "Dave Jones",
+   "episode": 570,
+   "episode_title": "Keyzermas All The Way",
+   "episode_url": "https://theamphour.com/570-keyzermas-all-the-way/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The physical method for board-level vibration work is to glue a miniature accelerometer directly to the assembly, usually in several places and orientations, and to mount the board in different configurations across successive shakes.",
+   "quote_verbatim": "You get an accelerometer, a little miniature one. And you would super glue it to your PCB",
+   "speaker": "Dave Jones",
+   "episode": 631,
+   "episode_title": "A Noisy Rude Bus",
+   "episode_url": "https://theamphour.com/631-a-noisy-rude-bus/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The instrument for this work is a dynamic signal analyser rather than a network analyser: designed for audio-band measurement, it takes accelerometer inputs and produces the vibration and seismic spectra.",
+   "quote_verbatim": "you hook up accelerometers to them and you measure, you know, all sorts of vibrations",
+   "speaker": "Chris Gammell",
+   "episode": 25,
+   "episode_title": "NASA, WOTW & Modular Design - The NASA Nostalgia",
+   "episode_url": "https://theamphour.com/the-amp-hour-25-the-nasa-nostagia/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Some quantities are settled empirically rather than derived: fitting accelerometers and observing what happens is the engineering answer where calculation would be the scientific one.",
+   "quote_verbatim": "We have accelerometers on there. Let's throw it out and see what happens.",
+   "speaker": "Alvaro Prieto",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Active noise cancellation in a car takes its reference from accelerometers mounted on the suspension, which pick up the vibration that will later become audible after travelling through the chassis into the cabin.",
+   "quote_verbatim": "we are using accelerometers that are sitting on the car suspension",
+   "speaker": "Dave Jones",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The cancellation itself depends on estimating the acoustic transfer function from the noise source to the listener's position, passing the measured noise through that estimate and inverting it — so the quality of the result follows directly from the quality of the estimate.",
+   "quote_verbatim": "The, the more accurate your estimation of the transfer function from the noise source to the listener is, the better your cancellation is",
+   "speaker": "Dave Jones",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "rationale"
+  },
+  {
+   "claim_text": "Head-mounted displays need a fast sensor specifically because of latency: if the image does not follow a quick head movement, the mismatch makes the wearer motion sick.",
+   "quote_verbatim": "if you turn your head real quick and the screen doesn't move with you, you get super seasick",
+   "speaker": "Chris Gammell",
+   "episode": 164,
+   "episode_title": "Agilent's New Name, Molex's New Owner and PCB artwork - Nonsensical Naming Neolatry",
+   "episode_url": "https://theamphour.com/164-agilents-new-name-molexs-new-owner-and-pcb-artwork-nonsensical-naming-neolatry/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A sensor fitted for one purpose often supplies a second: the accelerometer detecting that a laser had been moved also sensed its angle, so tilting the unit downward switched the laser off — a safety interlock with no extra hardware.",
+   "quote_verbatim": "The same accelerometer that detects the laser being moved also has an angle center",
+   "speaker": "Dave Jones",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Free-fall detection is a standard use of the interrupt output: a device thrown into the air woke, connected to the network and returned to sleep before it was caught again.",
+   "quote_verbatim": "it would wake up, connect to the internet and go back to sleep before you caught it again",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The same reference design taped to a garage door and wired to a messaging service produced a notification whenever the door stayed open more than five minutes — a real problem solved in a couple of hours with parts already to hand.",
+   "quote_verbatim": "had it send me a text message. If my garage door was open for more than five minutes",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The signal carries more identity than expected: machine learning applied to accelerometer data alone can identify which person is wearing the sensor from their walking pattern, without a camera being involved.",
+   "quote_verbatim": "just using an accelerometer to find or to detect the person who is wearing the sensor",
+   "speaker": "Chris Gammell",
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Clinical problems often reduce to adding a few standard sensors to an instrument already in use: assessing how steady a surgeon's hands are meant adding galvanic skin response, an accelerometer and time recording to the existing probe.",
+   "quote_verbatim": "Add gilbionic skin response, add accelerometer, you know, add time recording",
+   "speaker": "Shrouk El Attar",
+   "episode": 549,
+   "episode_title": "Creative Engineering with Shrouk El-Attar",
+   "episode_url": "https://theamphour.com/549-creative-engineering-with-shrouk-el-attar/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Orientation can be used as a data source rather than a control input: sampling the three axes once a minute and mapping them to colour produced a continuous record of what position a device — and by extension its owner — had been in through the day.",
+   "quote_verbatim": "it linearly just maps the XYZ accelerometer values to RGB color values",
+   "speaker": "Noah Feehan",
+   "episode": 204,
+   "episode_title": "An Interview with Noah Feehan - Biloquistic Blinking Blush",
+   "episode_url": "https://theamphour.com/204-an-interview-with-noah-feehan-biloquistic-blinking-blush/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A levelling instrument can be built entirely from the sensor and indicators: an outer ring of twelve LEDs for coarse level and an inner ring of four around the sensor for fine, with all sixteen lit once the device is level.",
+   "quote_verbatim": "outer ring is kind of like a coarse leveling thing. Inner ring is like a fine leveling thing.",
+   "speaker": "Chris Gammell",
+   "episode": 727,
+   "episode_title": "Boat Anchor Warehouse",
+   "episode_url": "https://theamphour.com/727-boat-anchor-warehouse/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A wearable camera used the sensor for a control gesture rather than for measurement: placing the device face down was detected as an orientation and used to switch it off.",
+   "quote_verbatim": "the way you turn it off is you basically put it face down",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In a security application the sensor's job is to qualify an event rather than to measure motion — confirming the vehicle is stationary before anything is triggered.",
+   "quote_verbatim": "an accelerometer to make sure that the car is stationary at the time",
+   "speaker": "Dave Jones",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Balancing machines combine the sensor with the mechanics: a body sitting on rollers above a ball, driven by high-torque motors, balances using the accelerometer for its attitude reference.",
+   "quote_verbatim": "It's got an accelerometer there, and it just balances on top",
+   "speaker": "Dave Jones",
+   "episode": 246,
+   "episode_title": "Robots are coming - Ominous Operational Overhaul",
+   "episode_url": "https://theamphour.com/246-robots-are-coming-ominous-operational-overhaul/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Not every balancing product contains one: a self-balancing board that appears to sense lean turned out to use a switch, which is a simpler control problem than the two-wheeled vehicle it resembles.",
+   "quote_verbatim": "I don't think it's actually an accelerometer in there",
+   "speaker": "Chris Gammell",
+   "episode": 305,
+   "episode_title": "An Interview With Dave Young",
+   "episode_url": "https://theamphour.com/305-an-interview-with-dave-young/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The cost collapse is what changed the design space: measuring ten of them at once became routine, and parts are cheap enough that using several is unremarkable.",
+   "quote_verbatim": "it's just so cheap and easy to, you know, measure 10 different accelerometers at once",
+   "speaker": "Dave Jones",
+   "episode": 246,
+   "episode_title": "Robots are coming - Ominous Operational Overhaul",
+   "episode_url": "https://theamphour.com/246-robots-are-coming-ominous-operational-overhaul/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The same balancing machine would have needed a ten-thousand-dollar sensor a decade earlier, which is why the applications rather than the technique are what is new.",
+   "quote_verbatim": "it would have been with a, you know, a $10,000 accelerometer",
+   "speaker": "Chris Gammell",
+   "episode": 246,
+   "episode_title": "Robots are coming - Ominous Operational Overhaul",
+   "episode_url": "https://theamphour.com/246-robots-are-coming-ominous-operational-overhaul/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Cheapness produces uses the part was never intended for: a researcher measuring balance for Parkinson's work used off-the-shelf consumer hardware rather than instrumentation.",
+   "quote_verbatim": "accelerometers are used in a lot of ways that weren't initially intended",
+   "speaker": "Chris Gammell",
+   "episode": 249,
+   "episode_title": "Wearables Might Have Limited Fashion Options - Lachrymogenic Lane Language",
+   "episode_url": "https://theamphour.com/249-wearables-might-have-limited-fashion-options-lachrymogenic-lane-language/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The origin of the technology was aviation, which is some distance from where the parts are now used.",
+   "quote_verbatim": "accelerometers used to be used for airplanes",
+   "speaker": "Chris Gammell",
+   "episode": 249,
+   "episode_title": "Wearables Might Have Limited Fashion Options - Lachrymogenic Lane Language",
+   "episode_url": "https://theamphour.com/249-wearables-might-have-limited-fashion-options-lachrymogenic-lane-language/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Production test can depend on the platform the sensor was designed for: a motion-sensing controller intended to be played with a phone needed a test application running on those devices, which meant supplying them to everyone on the factory line.",
+   "quote_verbatim": "we had to supply iPod touches to everyone in the factory",
+   "speaker": "Colin",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "As a teaching device the sensor works better shared out than explained: each student takes one sensor from a board, researches what it does and why it would be used, and presents that to the others rather than sitting through an exhaustive account of how it works.",
+   "quote_verbatim": "I'll have the kids each like pick a sensor and they'll research it",
+   "speaker": "Charlie Larrabee",
+   "episode": 572,
+   "episode_title": "Technology Instruction with Charlie Larrabee",
+   "episode_url": "https://theamphour.com/572-technology-instruction-with-charlie-larrabee/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Gesture interfaces built on these sensors are easy to propose and mostly do not survive contact with use: shaking or flicking a device to trigger an action is a neat concept that is rarely practical.",
+   "quote_verbatim": "it's not very practical, I guess",
+   "speaker": "Dave Jones",
+   "episode": 3,
+   "episode_title": "HP, IEEE, and Human Interface",
+   "episode_url": "https://theamphour.com/3-hp-ieee-and-human-interface/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  }
+ ],
+ "attribution_notes": [
+  "One passage carries no episode number and was dropped rather than cited.",
+  "eps 204, 515, 538, 560, 572: attribution flagged unreliable. Claims are content-attributed to the guest whose project, product or teaching the passage describes.",
+  "ep 560: the noise-cancellation description is the guest's account of his own automotive work; the bundle's speaker label names the host and is not relied on.",
+  "ep 155: the interviewee describes work done partly by a collaborator; claims are attributed to the interviewee as the person recounting the method."
+ ],
+ "capped": false
+}

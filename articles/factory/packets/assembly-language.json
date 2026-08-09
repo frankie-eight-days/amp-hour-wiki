@@ -1,0 +1,640 @@
+{
+ "concept": "assembly-language",
+ "name": "Assembly Language",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": "Assembly Language",
+ "claims": [
+  {
+   "claim_text": "A compiled language reaches machine code through assembly: the compiler emits assembler, which the assembler then converts into machine code.",
+   "quote_verbatim": "it compiles to assembler and then the assembler converts it into machine code",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The recommended way to acquire assembly is not to study it directly but to read what the compiler produces from one's own high-level code.",
+   "quote_verbatim": "I wouldn't learn assembly directly. I would look at what your C is doing and learn assembly that way.",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Opening the generated assembly alongside the source is the practical remedy when an engineer believes the code is correct but performance is not improving, because a single line of high-level source can expand into a great many instructions.",
+   "quote_verbatim": "don't be afraid of opening up the assembly with the C code",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "What that inspection reveals is the true cost of operations that look cheap in source form: a floating-point division pulls in a library routine costing hundreds of instructions, which is frequently the explanation for an interrupt that takes far too long.",
+   "quote_verbatim": "When you do a floating point divide, oh, look, there's a whole library out there, and it takes a couple more hundred instructions.",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Division in general, and floating-point division inside an interrupt handler in particular, is a recognised error, as is any form of waiting inside an interrupt.",
+   "quote_verbatim": "when you type wait millisecond in interrupt, you're doing it wrong",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Writing in assembly does not by itself produce efficient code: a good compiler will beat a poor assembly programmer, so the language choice guarantees nothing about the result.",
+   "quote_verbatim": "A good compiler will, will beat a crappy assembler programmer any day of the week",
+   "speaker": "Dave Jones",
+   "episode": 267,
+   "episode_title": "Standing With Ahmed",
+   "episode_url": "https://theamphour.com/267-standing-with-ahmed/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The belief that assembly is automatically an order of magnitude faster and lower power is mistaken; it is not a magic bullet, and a compiler carries most designs most of the way.",
+   "quote_verbatim": "It's not a magic bullet.",
+   "speaker": "Dave Jones",
+   "episode": 267,
+   "episode_title": "Standing With Ahmed",
+   "episode_url": "https://theamphour.com/267-standing-with-ahmed/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Hand-written assembly earns its place only at the asymptote, where the last increments of performance are being extracted from a part that cannot be changed.",
+   "quote_verbatim": "if you're going towards trying to get squeezed more and more and more out of the same part, that's when you have to really, you know, start digging in there",
+   "speaker": null,
+   "episode": 267,
+   "episode_title": "Standing With Ahmed",
+   "episode_url": "https://theamphour.com/267-standing-with-ahmed/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Contemporary compilers are good enough that the claim of writing better assembly by hand is heard less often, and the genuine remaining cases are narrow \u2014 single-instruction multiple-data operations, for instance, which high-level source provides no reliable way to trigger.",
+   "quote_verbatim": "there is still situations where you want to write assembly, for example, to do the SIMD instructions",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Startup and bootstrapping code has traditionally been written in assembly, but modern processor families are designed so that it can be written in a high-level language instead.",
+   "quote_verbatim": "They are nice in that respect that you can actually write that stuff in C.",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "A productive use of assembly knowledge is to disassemble the compiler's output, judge it, and then rewrite the high-level source so that the compiler produces the intended instructions, rather than replacing the compiler's work by hand.",
+   "quote_verbatim": "even rewrite the C in order to get the compiler to do what he actually wanted in assembly",
+   "speaker": "Chris Gammell",
+   "episode": 275,
+   "episode_title": "No One Even Missed Us?",
+   "episode_url": "https://theamphour.com/275-no-one-even-missed-us/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Waiting for cheaper and faster silicon is frequently a better use of time than optimising, given how quickly processor cost and performance move.",
+   "quote_verbatim": "it is a little easier to just wait six months",
+   "speaker": "Dave Jones",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Fitting an application into the smallest available part is a false economy at low volume: a hand-coded program occupying all but a byte or two of a one-kilobyte device leaves no room to add anything later.",
+   "quote_verbatim": "I just fitted my entire application in with a couple of bytes to spare. And it was just stupid",
+   "speaker": "Dave Jones",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The calculation reverses at volume, where the few cents saved by choosing the smaller part outweighs the engineering time spent squeezing into it.",
+   "quote_verbatim": "If you're making a million, yes, it can matter. Then 15 cents matters a lot.",
+   "speaker": "Dave Jones",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "That constraint was once unavoidable rather than chosen: with a one-kilobyte part as the standard option, a compiled language consumed most of the available space in overhead alone, so assembly was the only way to fit.",
+   "quote_verbatim": "if you try and do something in C, well, you've pissed away most of that",
+   "speaker": null,
+   "episode": 267,
+   "episode_title": "Standing With Ahmed",
+   "episode_url": "https://theamphour.com/267-standing-with-ahmed/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Throwing processing capability at a problem rather than optimising it is sound engineering when it is the practical method, and does not need to be the most difficult or impressive approach available.",
+   "quote_verbatim": "engineering is about using the, using the most practical method",
+   "speaker": null,
+   "episode": 267,
+   "episode_title": "Standing With Ahmed",
+   "episode_url": "https://theamphour.com/267-standing-with-ahmed/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The converse is poor engineering: hand-coding a vision-capable robot in assembly to fit a four-kilobyte part, purely as a challenge, is doing it wrong.",
+   "quote_verbatim": "just because you can, and it's an engineering challenge, you're doing it wrong",
+   "speaker": "Dave Jones",
+   "episode": 267,
+   "episode_title": "Standing With Ahmed",
+   "episode_url": "https://theamphour.com/267-standing-with-ahmed/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Deliberately constraining a design to an eight-bit part is defended on the opposite ground, that the limits force the design to cover only what is needed and push the engineer toward more inventive solutions, with assembly reserved for the places extra performance is required.",
+   "quote_verbatim": "I like the constraints of an 8-bit device because it forces me not only to design just for what I need",
+   "speaker": "Joe Grand",
+   "episode": 60,
+   "episode_title": "An Interview with Joe Grand - Pancyclopaedic Prototyping Polymath",
+   "episode_url": "https://theamphour.com/the-amp-hour-60-pancyclopaedic-prototyping-polymath/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Assembly remains the tool where every cycle is accounted for, as in a fixed-point mathematics library for motor control, which required a large quantity of assembly precisely because it had to be optimised.",
+   "quote_verbatim": "Because it needed to be optimized, obviously.",
+   "speaker": "Eric Van Wyk",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "opinion",
+   "kind": "case"
+  },
+  {
+   "claim_text": "An audio signal-processing design was written first in a high-level language and later converted to assembly when every remaining cycle was needed, alongside a move to fixed-point arithmetic in the absence of hardware floating point.",
+   "quote_verbatim": "I changed it all to, to assembly just because I needed every single cycle",
+   "speaker": null,
+   "episode": 513,
+   "episode_title": "Audio DSP with Shannon Parks",
+   "episode_url": "https://theamphour.com/513-audio-dsp-with-shannon-parks/",
+   "depth_regraded": "opinion",
+   "kind": "case"
+  },
+  {
+   "claim_text": "Generating a video signal directly from a microcontroller depends on assembly loops timed by hand, since the output waveform is produced by instruction timing rather than by a peripheral.",
+   "quote_verbatim": "it had very carefully timed assembly loops to spit out the NTSC signal",
+   "speaker": "Chris Gammell",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "Writing an entire product in assembly was economically rational where the alternative was a larger part: spending tens of thousands of dollars of engineering to save a few cents on each of a million units was the standard trade.",
+   "quote_verbatim": "it made much more sense to, you know, save a few cents on every part because you were going to sell a million of them",
+   "speaker": "Ted Yapo",
+   "episode": 465,
+   "episode_title": "An Interview with Ted Yapo",
+   "episode_url": "https://theamphour.com/465-an-interview-with-ted-yapo/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Custom processors of that era also obliged their users to build the tool chains, since no established compiler existed for a bespoke parallel architecture.",
+   "quote_verbatim": "at some point I graduated to writing the tool chains for that stuff",
+   "speaker": "Ted Yapo",
+   "episode": 465,
+   "episode_title": "An Interview with Ted Yapo",
+   "episode_url": "https://theamphour.com/465-an-interview-with-ted-yapo/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Self-modifying code is the most efficient technique available where every cycle counts and simultaneously among the best ways to make a system unmaintainable.",
+   "quote_verbatim": "self-modifying code is the absolute most efficient way to do things",
+   "speaker": "Gerry Roston",
+   "episode": 334,
+   "episode_title": "An Interview with Gerry Roston",
+   "episode_url": "https://theamphour.com/334-an-interview-with-gerry-roston/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A vendor's documented workaround for a silicon defect can require a register to be written from assembly, which is a legitimate reason for a single assembly routine to exist in an otherwise high-level project.",
+   "quote_verbatim": "the only assembly code that is in the good watch is to set the time to work around a hardware bug",
+   "speaker": null,
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "Widely used libraries can depend on hand-optimised instruction timing, so a simulator has to be cycle accurate to run them: driving addressable LED strings relies on assembly whose timing must be exact or the devices do not respond.",
+   "quote_verbatim": "it somehow translates to very specific hand-optimized assembly instructions",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Instruction timing is visible at the simulation level because instructions differ in the number of clock cycles they consume, which is what makes cycle-accurate emulation both possible and necessary.",
+   "quote_verbatim": "You are using some instructions takes only one clock cycle. Some instruction takes multiple clock cycle.",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Assembly can be generated at run time rather than written: one circuit simulator authors an assembly program tailored to the specific circuit being solved, assembles it, links it and calls the result as a function, gaining a factor of three in speed.",
+   "quote_verbatim": "it actually authors an assembly language program to solve that particular circuit",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "The reason that produces a gain is indirection: with dynamic memory allocation a reference in a high-level language resolves through the address of an address, and for a workload dominated by repeatedly assembling and solving matrices it takes longer to move operands into the arithmetic unit than to perform the arithmetic.",
+   "quote_verbatim": "it takes longer to address, get your memory into the math floating point unit than to actually do the math",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "An interpreted language on a microcontroller can accommodate assembly directly: one implementation lets a function be marked with a decorator so its body is written in processor assembly and compiled to a native routine when the firmware is built.",
+   "quote_verbatim": "this is actually assembly language and you can write arm assembly language inside of that function",
+   "speaker": "Tony DiCola",
+   "episode": 323,
+   "episode_title": "An Interview with Tony DiCola",
+   "episode_url": "https://theamphour.com/323-an-interview-with-tony-dicola/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Interpreted firmware on a small part carries a measurable but modest overhead, with one implementation reserving half of a thirty-two kilobyte memory as heap and using only a few kilobytes of it.",
+   "quote_verbatim": "we have 32K of memory. We took 16K of that for the heap",
+   "speaker": "Chris Gammell",
+   "episode": 323,
+   "episode_title": "An Interview with Tony DiCola",
+   "episode_url": "https://theamphour.com/323-an-interview-with-tony-dicola/",
+   "depth_regraded": "opinion",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Even a high-performance interpreted environment cannot match assembly or a compiled language on speed, since the abstraction has a cost that has to be paid somewhere.",
+   "quote_verbatim": "It's not free, but the advantage is",
+   "speaker": "Chris Gammell",
+   "episode": 323,
+   "episode_title": "An Interview with Tony DiCola",
+   "episode_url": "https://theamphour.com/323-an-interview-with-tony-dicola/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Writing assembly means working from the register model published in the device's documentation: which registers exist, what they are used for, which instructions act on which of them, and how many clock cycles each takes.",
+   "quote_verbatim": "here's the register model of this thing",
+   "speaker": "Ben Eater",
+   "episode": 444,
+   "episode_title": "An Interview with Ben Eater",
+   "episode_url": "https://theamphour.com/444-an-interview-with-ben-eater/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The programmer at that level need not reason about the micro-instructions beneath each operation, though the cycle counts in the documentation indirectly expose them along with any pipelining the implementation performs.",
+   "quote_verbatim": "You might not think the next level down in terms of, okay, what are the actual micro instructions",
+   "speaker": "Ben Eater",
+   "episode": 444,
+   "episode_title": "An Interview with Ben Eater",
+   "episode_url": "https://theamphour.com/444-an-interview-with-ben-eater/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Programming in a compiled language still involves thinking in terms of registers and register transfers, so an understanding of what happens in the hardware carries over even when no assembly is written.",
+   "quote_verbatim": "you are thinking, um, or at least occasionally about registers and register transfers",
+   "speaker": "Ben Eater",
+   "episode": 444,
+   "episode_title": "An Interview with Ben Eater",
+   "episode_url": "https://theamphour.com/444-an-interview-with-ben-eater/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "An assembly background is what makes reverse engineering approachable, since reading disassembled firmware is the core activity and the tools assume that fluency.",
+   "quote_verbatim": "It helps if you already know assembly.",
+   "speaker": "Chris Gammell",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Assembly source is unusually durable: code written for a microcontroller some twenty-five years earlier was pasted into a current version of the vendor's tools, assembled without modification and programmed into a part successfully.",
+   "quote_verbatim": "I pasted the assembler code in and I hit assemble and it just. It, it worked",
+   "speaker": "Dave Jones",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "That durability depends on the part remaining popular rather than on the language, so the real compatibility risk lies in designing with a device that falls out of use.",
+   "quote_verbatim": "the bigger concern is if the chip becomes unpopular",
+   "speaker": "Chris Gammell",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Modern tools reassembling old source will warn about practices such as manual bank switching that were necessary when fitting a program into a kilobyte of program memory.",
+   "quote_verbatim": "it came up with these error messages saying, you know, are you sure you",
+   "speaker": "Dave Jones",
+   "episode": 565,
+   "episode_title": "Here for a reason",
+   "episode_url": "https://theamphour.com/565-here-for-a-reason/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "The corresponding practical risk is the tool chain rather than the code, which is why an engineer supporting a client project will install the vendor's development environment into a virtual machine and freeze it.",
+   "quote_verbatim": "I'm going to go install all this stuff onto a VM so that it's like locked down forever",
+   "speaker": "Dave Jones",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Assembly persists in legacy products where there is no choice about the language, independently of whether it would be chosen for new work.",
+   "quote_verbatim": "If you're working on legacy products, you don't have a choice always.",
+   "speaker": "Dave Jones",
+   "episode": 267,
+   "episode_title": "Standing With Ahmed",
+   "episode_url": "https://theamphour.com/267-standing-with-ahmed/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "An older architecture can stay in use partly because its patents have expired and no licence fee is owed, and partly because a body of people still write assembly for it and the tooling burden is lighter than for a newer part.",
+   "quote_verbatim": "there's people out there that write assembly for it and you know, it's, it's workable",
+   "speaker": "Chris Gammell",
+   "episode": 326,
+   "episode_title": "Magical Fire Bags",
+   "episode_url": "https://theamphour.com/326-magical-fire-bags/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Programmable input-output blocks are programmed in an assembly-like language and let simple pin manipulation be offloaded from the processor core, so combining or conditioning signals costs no processor cycles at all.",
+   "quote_verbatim": "there's like assembly language to go and program the you know like small arithmetic style interfacing to these chips",
+   "speaker": "Chris Gammell",
+   "episode": 528,
+   "episode_title": "New Year, New Gear",
+   "episode_url": "https://theamphour.com/528-new-year-new-gear/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The same idea appears as small dedicated processors alongside the main core, programmed in assembly for a custom interface block and doing nothing but processing input and output.",
+   "quote_verbatim": "you can write assembly code for a custom block interfacing",
+   "speaker": "Chris Gammell",
+   "episode": 595,
+   "episode_title": "Trade Show or Conference?",
+   "episode_url": "https://theamphour.com/595-trade-show-or-conference/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Code generation from a modelling environment exists because nobody wants to hand-translate a validated simulation into assembly, and converting the model to a compiled language without introducing errors is what shortens time to market.",
+   "quote_verbatim": "you want to convert those without error into C code to run on your micros",
+   "speaker": "Dave Jones",
+   "episode": 39,
+   "episode_title": "Dan Pink, Dual Core, level translators - Mumble Mumbo Jumbo",
+   "episode_url": "https://theamphour.com/the-amp-hour-39-mumble-mumbo-jumbo/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Every layer of abstraction has attracted the same objection, with assembly programmers having argued that the compiled language destroyed the discipline by hiding the architecture.",
+   "quote_verbatim": "There's all the Assembler diehards out there saying C killed programming",
+   "speaker": "Dave Jones",
+   "episode": 39,
+   "episode_title": "Dan Pink, Dual Core, level translators - Mumble Mumbo Jumbo",
+   "episode_url": "https://theamphour.com/the-amp-hour-39-mumble-mumbo-jumbo/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Starting in whatever language a newcomer already knows is defensible because the endpoint of optimisation is the compiled language or assembly regardless, and the intermediate learning happens along the way.",
+   "quote_verbatim": "C is your end point or assembly is your end point anyways",
+   "speaker": "Chris Gammell",
+   "episode": 235,
+   "episode_title": "An Interview with Matt Richardson - Raspberry Risorgimento Regent",
+   "episode_url": "https://theamphour.com/235-an-interview-with-matt-richardson-raspberry-risorgimento-regent/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Teaching bare-metal assembly on a single widely owned board removes platform variation from the exercise, which is what makes such courses practical to follow.",
+   "quote_verbatim": "It just, you know, here's how to do it with your Raspberry Pi.",
+   "speaker": "Matt Richardson",
+   "episode": 235,
+   "episode_title": "An Interview with Matt Richardson - Raspberry Risorgimento Regent",
+   "episode_url": "https://theamphour.com/235-an-interview-with-matt-richardson-raspberry-risorgimento-regent/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Simulators that step through assembly while displaying the processor registers, address and data buses, memory and program counter make the relationship between instructions and hardware directly observable.",
+   "quote_verbatim": "you can run assembly in a split screen and see what happens",
+   "speaker": "Chris Gammell",
+   "episode": 528,
+   "episode_title": "New Year, New Gear",
+   "episode_url": "https://theamphour.com/528-new-year-new-gear/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Assembly optimisation is characterised by one practitioner as far more entertaining than it is useful.",
+   "quote_verbatim": "assembly language, far more fun than useful",
+   "speaker": "Elecia White",
+   "episode": 256,
+   "episode_title": "Is This A Show?",
+   "episode_url": "https://theamphour.com/256-is-this-a-show/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "If processor performance stops improving, the economics of hand-optimisation change: spending years on optimising compilers and hand-coded assembly routines starts to make sense because the performance cannot be obtained by waiting.",
+   "quote_verbatim": "hand, hand coded assembly routines actually start making sense now because you get, you know, big performance gains out of it",
+   "speaker": "Bunnie Huang",
+   "episode": 84,
+   "episode_title": "An Interview with Bunnie Huang - Bunnie's Bibelot Bonification",
+   "episode_url": "https://theamphour.com/the-amp-hour-84-bunnies-bibelot-bonification/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Writing a major application entirely in the assembly of one processor has been a deliberate commercial bet: a spreadsheet was written from the ground up in assembly for a single hardware platform, and its success followed from that platform winning.",
+   "quote_verbatim": "they wrote it from the ground up in 8086 assembly language just for the IBM PC",
+   "speaker": "Dave Jones",
+   "episode": 122,
+   "episode_title": "Processors, CEOs & Soldering irons - Plentiful Perfunctory Programs",
+   "episode_url": "https://theamphour.com/the-amp-hour-122-plentiful-perfunctory-programs/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "That approach was recognised at the time as the gamble it was, tying the product to a single machine in exchange for the performance the language afforded.",
+   "quote_verbatim": "They took the gamble to write it in assembly language for only the PC",
+   "speaker": "Dave Jones",
+   "episode": 241,
+   "episode_title": "An Interview With Chuck Peddle - Charismatic Chipmaking Coryphaeus",
+   "episode_url": "https://theamphour.com/241-an-interview-with-chuck-peddle-charismatic-chipmaking-coryphaeus/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Applications of that era reached substantial scale in assembly, with one integrated product amounting to roughly a quarter of a million lines written by three people in nine months.",
+   "quote_verbatim": "It was about a quarter million lines of assembly language.",
+   "speaker": "Ray Ozzie",
+   "episode": 603,
+   "episode_title": "An Interview with Ray Ozzie (Blues Wireless)",
+   "episode_url": "https://theamphour.com/603-an-interview-with-ray-ozzie-blues-wireless/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Early microprocessor work had no operating system beneath it, so everything was assembly and the machine was bootstrapped by hand.",
+   "quote_verbatim": "Of course it was all assembly language.",
+   "speaker": "Ray Ozzie",
+   "episode": 603,
+   "episode_title": "An Interview with Ray Ozzie (Blues Wireless)",
+   "episode_url": "https://theamphour.com/603-an-interview-with-ray-ozzie-blues-wireless/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A practitioner who works in assembly by preference gives proximity to the hardware as the reason, valuing the freedom to generate video and audio signals in real time and the sense that the result is entirely their own rather than something a tool produced.",
+   "quote_verbatim": "when I use assembler, I'm pretty close to that hardware. And I feel better.",
+   "speaker": null,
+   "episode": 247,
+   "episode_title": "An Interview with Voja Antonic - Gerontogenous Galaksija Genesis",
+   "episode_url": "https://theamphour.com/247-an-interview-with-voja-antonic-gerontogenous-galaksija-genesis/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "An engineer working on time-critical signal processing may reject a compiler on the grounds that they cannot know what it will generate and need direct control of the processor.",
+   "quote_verbatim": "I don't know what that compiler is going to make if I write high-level code",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The absence of an affordable compiler has itself forced the choice, with one project written entirely in assembly because the vendor's compiler was unaffordable and no open-source alternative was known.",
+   "quote_verbatim": "I couldn't afford the pick C code, um, compiler at the time",
+   "speaker": "Tim Ansell",
+   "episode": 375,
+   "episode_title": "An Interview with Tim \"Mithro\" Ansell",
+   "episode_url": "https://theamphour.com/375-an-interview-with-tim-mithro-ansell/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Inefficient generated code is invisible until the device is nearly full, at which point the relationship between source and the resulting instruction count becomes the thing that has to be understood.",
+   "quote_verbatim": "it might not be a big deal until you're at the end of, you know, like you're, you're, you're filling your, your chips filled up 96%",
+   "speaker": "Chris Gammell",
+   "episode": 541,
+   "episode_title": "Chip Shortage Denier",
+   "episode_url": "https://theamphour.com/541-chip-shortage-denier/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Assembly is the practical floor for a programmer: machine code beneath it is an academic exercise, and assemblers themselves offer higher-level constructs such as macros and loop directives that substitute the underlying jump instructions.",
+   "quote_verbatim": "there is high level assembly language. There's like macros and stuff like that",
+   "speaker": "Dave Jones",
+   "episode": 468,
+   "episode_title": "The Tiny Lab Movement",
+   "episode_url": "https://theamphour.com/468-the-tiny-lab-movement/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Library code supplied by a vendor can be startlingly expensive in space terms, with a serial port routine costing ten kilobytes, which is what motivates working closer to the hardware.",
+   "quote_verbatim": "it's like, oh, I need a UART. And they're like, okay, here's 10K of code for a UART.",
+   "speaker": "Dave Jones",
+   "episode": 490,
+   "episode_title": "An Interview with Ben Heck(endorn)",
+   "episode_url": "https://theamphour.com/490-an-interview-with-ben-heckendorn/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Assembly is used where a system must make very fast decisions from sensor input rather than perform complicated computation, with the whole of a custom controller coded that way to get the most from the part.",
+   "quote_verbatim": "it was all coded in, in assembly",
+   "speaker": null,
+   "episode": 568,
+   "episode_title": "YouTube to Consulting with Florin of Voltlog",
+   "episode_url": "https://theamphour.com/568-youtube-to-consulting-with-florin-of-voltlog/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "Where a supplied library exists for a signal-processing function, the sensible practice is to call it and let the compiler map it onto the processor's specialised instructions, rather than writing the routine at instruction level.",
+   "quote_verbatim": "you're not going to write your own, you know, fur filter from scratch",
+   "speaker": "Dave Jones",
+   "episode": 213,
+   "episode_title": "Travel Recaps and Altium Announcements - Artisinal Aussie Assemblage",
+   "episode_url": "https://theamphour.com/213-travel-recaps-and-altium-announcements-artisinal-aussie-assemblage/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  }
+ ],
+ "capped": false,
+ "attribution_notes": "Episodes on the speaker-map unreliable list are attributed by content or left unattributed."
+}

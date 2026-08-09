@@ -1,0 +1,655 @@
+{
+ "concept": "logic-analyzer",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "logic-analyzer",
+  "census": "union",
+  "aliases": [
+   "logic-analyzer"
+  ],
+  "children": [
+   "bus-pirate",
+   "privilege-escalation",
+   "saleae",
+   "software-interface",
+   "timing-analysis"
+  ],
+  "neighbors": {
+   "analog-discovery": 5,
+   "debugger": 4,
+   "protocol-analyzer": 4
+  },
+  "pins_pre_cap": 94,
+  "pins_final": 94,
+  "pins_by_depth": {
+   "explains": 68,
+   "opinion": 26
+  },
+  "pins_by_role": {
+   "core": 83,
+   "child": 6,
+   "neighbor": 5
+  },
+  "capped": false,
+  "passages_yielding_claims": 54,
+  "passages_killed": 40
+ },
+ "claims": [
+  {
+   "claim_text": "Timing analysis is the mode almost everyone means by the instrument: it works like an oscilloscope, sampling at a fixed rate from its own free-running clock and drawing the result as square edges on a screen.",
+   "quote_verbatim": "It works like an oscilloscope. It just samples. At a fixed sample rate.",
+   "speaker": "Dave Jones",
+   "episode": 436,
+   "episode_title": "Downward Sloping Trace",
+   "episode_url": "https://theamphour.com/436-downward-sloping-trace/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "State analysis takes its clock from the system under test instead, so each sample corresponds to a clock edge in the circuit rather than to an arbitrary instant. That synchronisation is why the specified maximum rate in state mode is lower than in timing mode.",
+   "quote_verbatim": "state mode uses an external clock from your system under test",
+   "speaker": "Chris Gammell",
+   "episode": 62,
+   "episode_title": "Op amps, Microchips & Mergers - Narquois Nerd Nescience - Narquois Nerd Nescience",
+   "episode_url": "https://theamphour.com/the-amp-hour-62-narquois-nerd-nescience/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The state mode is what allows setup and hold to be examined directly: with the instrument sampling in step with the product's own clock, an input that changes on the same edge as the clock is visible as such, rather than being an artefact of when the instrument happened to sample.",
+   "quote_verbatim": "You can really. Properly see setup. And hold times.",
+   "speaker": "Dave Jones",
+   "episode": 436,
+   "episode_title": "Downward Sloping Trace",
+   "episode_url": "https://theamphour.com/436-downward-sloping-trace/",
+   "depth_regraded": "explains",
+   "kind": "rationale"
+  },
+  {
+   "claim_text": "The reason state mode is rated slower is that the capability is spent on the synchronisation rather than on raw throughput.",
+   "quote_verbatim": "Will be a lower. Sampling rate. Spec. Than the timing.",
+   "speaker": "Dave Jones",
+   "episode": 436,
+   "episode_title": "Downward Sloping Trace",
+   "episode_url": "https://theamphour.com/436-downward-sloping-trace/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Sampling four times faster than the signal is not enough to resolve timing relationships. Examining setup and hold, or diagnosing metastability, needs a much higher oversample rate before the differences between two signals become visible at all.",
+   "quote_verbatim": "You really need a very high oversample rate",
+   "speaker": "Dave Jones",
+   "episode": 436,
+   "episode_title": "Downward Sloping Trace",
+   "episode_url": "https://theamphour.com/436-downward-sloping-trace/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Two free-running clocks also drift against each other, which produces a characteristic false symptom: the captured design looks correct for a minute and then appears to misbehave as the sampling instant slides relative to the product's clock.",
+   "quote_verbatim": "It might drift out. Of the sample window.",
+   "speaker": "Dave Jones",
+   "episode": 436,
+   "episode_title": "Downward Sloping Trace",
+   "episode_url": "https://theamphour.com/436-downward-sloping-trace/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Correct logic thresholds are not a guarantee either. The real switching threshold moves with temperature and part grade, so a runt pulse that only just reaches the nominal level can be invisible to the instrument while being real in the circuit — a difference capable of costing weeks.",
+   "quote_verbatim": "you've got this little runt pulse. That just goes up. And just meets the threshold. Whereas your logic analyzer doesn't see it.",
+   "speaker": "Dave Jones",
+   "episode": 436,
+   "episode_title": "Downward Sloping Trace",
+   "episode_url": "https://theamphour.com/436-downward-sloping-trace/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The instrument answers a narrow question: it tells you which word was on the bus, and it tells you that reliably only when the signal is already clean. Everything happening between those levels is outside what it can show.",
+   "quote_verbatim": "that works when you need to know, like, what word you have when the signal's clean",
+   "speaker": "Henry Ott",
+   "episode": 165,
+   "episode_title": "An Interview with Henry Ott - Forced FCC Filtering",
+   "episode_url": "https://theamphour.com/165-an-interview-with-henry-ott-forced-fcc-filtering/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The resulting rule is to look at the analogue waveform first and reach for the digital view second, rather than starting from the decoded picture.",
+   "quote_verbatim": "You don't use the logic analyzer off the bat",
+   "speaker": "Dave Jones",
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The complementary error is stopping at the waveform: a signal can look exactly like the signal it is supposed to be while carrying the wrong content, and only decoding it reveals that a device is repeatedly retrying the same address without ever being acknowledged.",
+   "quote_verbatim": "it just kept retrying the same address because it wasn't getting any knowledge",
+   "speaker": "Chris Gammell",
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The order that works on a misbehaving two-wire bus is to scope the lines first for pull-up value and edge quality, then confirm the device is being addressed and enabled, and only then question the protocol and whether the library driving it has ever been proven.",
+   "quote_verbatim": "The first thing I'm going to do is actually get the scope out and just probe it",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Connecting the instrument can itself change the behaviour of a marginal bus: a device that failed to respond with the analyser attached answered about eighty percent of the time once it was disconnected.",
+   "quote_verbatim": "So, I disconnect the logic analyzer. I run it again. It queries.",
+   "speaker": "Chris Gammell",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Setting up a protocol decoder is a skill in its own right, and getting it wrong manufactures a fault that is not there: the wrong baud rate, parity or inversion produces garbage on the screen and sends the engineer looking for a defect in a design that is working.",
+   "quote_verbatim": "setting up your scope slash logic analyzer protocol decoder is an art in itself",
+   "speaker": "Dave Jones",
+   "episode": 391,
+   "episode_title": "Only A Transmitter",
+   "episode_url": "https://theamphour.com/391-only-a-transmitter/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "For asynchronous timing problems the channel count is what matters. A two-channel oscilloscope is better than nothing but not adequate, where a sixteen-channel instrument makes the relationships visible.",
+   "quote_verbatim": "my most frequently used tool for that is the sale logic pro 16",
+   "speaker": "Eric Schlaepfer",
+   "episode": 609,
+   "episode_title": "Open Circuits with Eric Schlaepfer and Windell Oskay",
+   "episode_url": "https://theamphour.com/609-open-circuits-with-eric-schlaepfer-and-windell-oskay/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Channel count is also what separates a useful instrument from a cheap one: an eight-channel unit gives little more than a protocol capture would, because the value is in the relative timing between many signals at once.",
+   "quote_verbatim": "the problem is all the super cheap logic analysers are only about 8-bit",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Sixteen-channel units cost several times what the eight-channel ones do and are still an order of magnitude cheaper than the high-end oscilloscope that would otherwise be needed.",
+   "quote_verbatim": "They're just not nearly as cheap as the 8-channel ones",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Before buying oscilloscope bandwidth to chase a fast microcontroller, the question worth asking is whether the analogue waveform is needed at all or whether a digital capture answers the question.",
+   "quote_verbatim": "Are you sure you can't get away with a digital, you know, a logic, a logic analyzer?",
+   "speaker": "Chris Gammell",
+   "episode": 606,
+   "episode_title": "Professional Scooter Charger",
+   "episode_url": "https://theamphour.com/606-professional-scooter-charger/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The capability cannot be retrofitted to an oscilloscope that lacks it, but it can be supplemented: a separate USB instrument covers the same need, which is the trade against paying more for a mixed-signal model at purchase.",
+   "quote_verbatim": "You can't upgrade there, but you could always supplement that",
+   "speaker": "Chris Gammell",
+   "episode": 606,
+   "episode_title": "Professional Scooter Charger",
+   "episode_url": "https://theamphour.com/606-professional-scooter-charger/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A constrained instrument covers most of the people who will ever use one, and the expensive instrument is bought at the point where the need is real rather than in anticipation of it.",
+   "quote_verbatim": "oftentimes, it covers 80% of the people that are going to use it in the first place",
+   "speaker": "Chris Gammell",
+   "episode": 199,
+   "episode_title": "The 2014 Maker Faire Show - Traveling Technology Trangam",
+   "episode_url": "https://theamphour.com/199-the-2014-maker-faire-show-traveling-technology-trangam/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "For work on programmable logic and radio the instrument sits in a set of three — spectrum analyser, signal generator and logic analyser — with the oscilloscope useful mainly for the power supplies.",
+   "quote_verbatim": "The three tools for me are the spectrum analyzer, the signal generator, and, um, the logic analyzer",
+   "speaker": "Matt Ettus",
+   "episode": 101,
+   "episode_title": "An Interview with Matt Ettus - Quality Quadrature Quidam",
+   "episode_url": "https://theamphour.com/the-amp-hour-101-quality-quadrature-quidam/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Triggering exists because storage does not scale to the problem: capturing an event that happens somewhere within days at a resolution of a thousand samples a second produces more data than can be kept, so the buffer must discard what has been determined to be irrelevant.",
+   "quote_verbatim": "That's the reason triggering exists",
+   "speaker": "Chris Gammell",
+   "episode": 510,
+   "episode_title": "Knob and Tube Wiring",
+   "episode_url": "https://theamphour.com/510-knob-and-tube-wiring/",
+   "depth_regraded": "explains",
+   "kind": "rationale"
+  },
+  {
+   "claim_text": "Both oscilloscopes and logic analysers default to placing the trigger in the middle of the buffer, because what happened immediately before the event is usually as informative as what happened after it.",
+   "quote_verbatim": "every scope by default has 50% pre and post triggering",
+   "speaker": "Chris Gammell",
+   "episode": 510,
+   "episode_title": "Knob and Tube Wiring",
+   "episode_url": "https://theamphour.com/510-knob-and-tube-wiring/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The streaming architecture puts almost nothing in the instrument: the hardware samples the pins and immediately sends the data over USB, and the desktop software holds the capture, provides the interface and does the analysis, which is where the value of the product actually sits.",
+   "quote_verbatim": "the hardware is very, very simple",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In that architecture the sample buffer is host memory rather than instrument memory, and the trigger is implemented by searching the incoming stream in software — which works well until the data rate approaches the limit of the link.",
+   "quote_verbatim": "we even actually do the trigger algorithm in software",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Software triggering does not match how people who have used these instruments think: being told to capture everything and search it afterwards is not a substitute for triggering on the protocol event itself.",
+   "quote_verbatim": "you couldn't trigger off that I squared C packet",
+   "speaker": "Dave Jones",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Instrument-side memory is the alternative and it is a cost decision: static RAM is simple to interface and expensive enough to limit the buffer to tens or hundreds of megabytes, whereas the DDR memory that would remove the constraint needs a controller — which modern FPGAs now provide as hard blocks, taking most of that work away.",
+   "quote_verbatim": "SRAM is expensive",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The problem looks trivial from outside — record the state of eight pins and draw it on a screen — and the software is the reason such a product is worth anything at all.",
+   "quote_verbatim": "it's just something that records data on eight pins and shows it on the screen",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "That is what differentiates in a crowded category: the price of the instrument buys the software development rather than the FPGA and converters inside it, which is also what supports moving up-market over time.",
+   "quote_verbatim": "You're paying for the software development",
+   "speaker": "Chris Gammell",
+   "episode": 554,
+   "episode_title": "PLEASE be a die shrink",
+   "episode_url": "https://theamphour.com/554-please-be-a-die-shrink/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Cloning at the hardware level is straightforward when the design is a standard USB interface chip: copies are built around the same part with the same EEPROM contents so that they identify themselves as the original to the host software.",
+   "quote_verbatim": "putting the same EEPROM contents as we put in ours",
+   "speaker": "Joe Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "One vendor responded by detecting the copies from the host side and disabling them by writing nonsense into the EEPROM.",
+   "quote_verbatim": "break the device basically by like writing like gibberish to the EEPROM",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A subtler probe measured how engaged the copiers were: changing the register map between the software and the FPGA in a beta release meant the copies had to be changed to match, and the fact that they were corrected within about forty-eight hours established that the operation was actively maintained rather than distributors selling old work.",
+   "quote_verbatim": "it took them like, I think they had a fixed in 48 hours after our beta release",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The distinction that matters is between modifying a product one has bought, which is legitimate, and reproducing it for resale under the original brand, which is not.",
+   "quote_verbatim": "it's okay to hack the product that you've bought",
+   "speaker": "Dave Jones",
+   "episode": 74,
+   "episode_title": "Younker Youtube Yarling",
+   "episode_url": "https://theamphour.com/the-amp-hour-74-younker-youtube-yarling/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The category itself was transformed by the host connection: instruments that once meant a large dedicated box now do a serviceable job as something small attached to a computer.",
+   "quote_verbatim": "these silly logic analyzers that you can hook onto your PC now",
+   "speaker": "Bob Davidson",
+   "episode": 144,
+   "episode_title": "An Interview with Bob Davidson - Hoodied HP Hijinks",
+   "episode_url": "https://theamphour.com/the-amp-hour-144-hoodied-hp-hijinks/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The earlier generation was correspondingly heavyweight: an early instrument was a large unit that effectively arrived with its own support engineer.",
+   "quote_verbatim": "this giant thing from HP that probably came with a personal support engineer",
+   "speaker": "Chris Gammell",
+   "episode": 373,
+   "episode_title": "Pedantic or Andrantic",
+   "episode_url": "https://theamphour.com/373-pedantic-or-andrantic/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Cheap programmable logic is what first put the instrument within reach of a magazine project: in 1995 two designers independently picked the same new low-cost programmable device and set out to build an analyser with it.",
+   "quote_verbatim": "what's a hard project to do that we can use this cool new low-cost PLD for?",
+   "speaker": "Dave Jones",
+   "episode": 504,
+   "episode_title": "This Is Just A Tribute",
+   "episode_url": "https://theamphour.com/504-this-is-just-a-tribute/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Their designs converged almost exactly, because the part choice constrained everything downstream: the pin count fixed the channels per device, which made a separate control device and trigger device the obvious division, and the trigger implementations ended up essentially identical.",
+   "quote_verbatim": "it sort of goes down a funnel",
+   "speaker": "Dave Jones",
+   "episode": 504,
+   "episode_title": "This Is Just A Tribute",
+   "episode_url": "https://theamphour.com/504-this-is-just-a-tribute/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "An instrument built for simplicity gets used: more capable equipment ends up sitting in the lab while the simple one stays on the desk. The corollary is that measurements which are naturally scripted suit a computer-attached instrument, where the tactile control of an oscilloscope suits the bench.",
+   "quote_verbatim": "those pieces of equipment end up sitting in the lab and Julescope sits on their desk and gets used",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Configurable triggering is normally built as a trigger unit inside the FPGA that the user's conditions are loaded into — a reconfigurable architecture implemented inside a reconfigurable architecture, which wastes resources and is slower and less flexible than the underlying fabric.",
+   "quote_verbatim": "you just build a reconfigurable architecture in a reconfigurable architecture",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The alternative would be to synthesise the trigger condition itself into logic when the user presses acquire, which the vendor toolchains cannot support because they are built for large designs and take minutes merely to start.",
+   "quote_verbatim": "we take the trigger condition, uh, translate it into a logic circuit, synthesize the logic circuit",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A capture engine can also be instantiated inside the device under test, and on a large FPGA that is a reasonable way to see internal signals. On a small one it consumes a significant share of the resources, whereas simulation costs nothing and exposes every signal at every instant.",
+   "quote_verbatim": "on some bigger FPGA, you can actually instantiate like an internal logic analyzer",
+   "speaker": "Sylvain Minot",
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The simulation equivalent is a value change dump loaded into a waveform viewer, which presents the same picture the instrument would; formal tools produce very short traces that run from a working state directly to the failing one.",
+   "quote_verbatim": "So you run your simulation and it dumps like a VCD file, value change dump",
+   "speaker": "Chris Gammell",
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The instrument can be built from a general-purpose board's peripherals: a fourteen-channel, hundred-megasample capture implemented on the real-time units of an application processor doing software DMA, with open-source software for the analysis.",
+   "quote_verbatim": "it's a project that makes a 14 channel, a hundred mega sample per second logic analyzer",
+   "speaker": "Dave Jones",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A programmable I/O block does the same job on a microcontroller: it samples whatever pins are configured and streams the data over USB into standard analysis software.",
+   "quote_verbatim": "it just hoovers up whatever pins you configure and puts the data over USB",
+   "speaker": "Liam Fraser",
+   "episode": 648,
+   "episode_title": "The RP1 and beyond with the Raspberry Pi Hardware team",
+   "episode_url": "https://theamphour.com/648-the-rp1-and-beyond-with-the-raspberry-pi-hardware-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The productive habit during system integration is to instrument the processor permanently rather than for one measurement: bring out everything significant on spare pins and leave the analyser connected for the duration.",
+   "quote_verbatim": "just instrument the crap out of everything significant coming off of that processor and just leave it there",
+   "speaker": "Chris Gammell",
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Left connected, the display becomes a status readout for the system: the periodic accesses that should be there are visible as regular activity, and toggling a spare pin at the entry and exit of an interrupt routine gives a high-resolution picture of when it actually runs.",
+   "quote_verbatim": "it's like the pulse of the system",
+   "speaker": "Chris Gammell",
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A debug probe answers a different question. Toggling a pin to observe behaviour is inference from outside; attaching a debugger stops the processor's clock and steps one instruction at a time while showing the contents of variables, which is how an off-by-one is found rather than guessed at.",
+   "quote_verbatim": "this still is like tapping somewhere in the darkness",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Capture and stimulus are complementary in an automated setup: one instrument puts the embedded system into a given state or provides the stimulus, and the analyser records how it responds.",
+   "quote_verbatim": "this is a perfect tool to put your embedded system in a given state",
+   "speaker": "Jonathan Georgino",
+   "episode": 461,
+   "episode_title": "An Interview with Jonathan Georgino",
+   "episode_url": "https://theamphour.com/461-an-interview-with-jonathan-georgino/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The instrument is also a profiler: timing the cycles of hand-optimised signal-processing code is done by watching it rather than by reasoning about it.",
+   "quote_verbatim": "getting out your logic analyzer and timing your cycles",
+   "speaker": "Dave Jones",
+   "episode": 513,
+   "episode_title": "Audio DSP with Shannon Parks",
+   "episode_url": "https://theamphour.com/513-audio-dsp-with-shannon-parks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A recurring beginner trap is connecting after the system has booted. An embedded target emits its traffic at start-up and then idles, so the screen stays empty until the reset button is pressed.",
+   "quote_verbatim": "by the time they connect the logic analyzer, everything's idling",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Used as a teaching device the instrument is handed over with a target board and no stated assignment, so the exercise is to find the signals, work out how to interface to them, and then meet a timing requirement a microcontroller could not.",
+   "quote_verbatim": "I give them a logic analyzer so they can analyze the signals on the board",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 303,
+   "episode_title": "An Interview with Dmitry Nedospasov",
+   "episode_url": "https://theamphour.com/303-an-interview-with-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Undocumented protocols are recovered by capture: a proprietary addressable light string with no published interface was driven from a microcontroller after its data stream was recorded and decoded with a borrowed instrument.",
+   "quote_verbatim": "I borrowed that from a friend and then cut it and figured out the data stream",
+   "speaker": "Samy Kamkar",
+   "episode": 308,
+   "episode_title": "An Interview with Samy Kamkar",
+   "episode_url": "https://theamphour.com/308-an-interview-with-samy-kamkar/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The legal position stated for that kind of work is that producing a device which emits the same signal is emulation rather than copying, since no source code has been taken.",
+   "quote_verbatim": "Because you didn't steal the source code",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 303,
+   "episode_title": "An Interview with Dmitry Nedospasov",
+   "episode_url": "https://theamphour.com/303-an-interview-with-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A secure element's bus traffic is fully visible to an instrument, and that is not itself the vulnerability: the private key is generated on the chip and never leaves it, so what can be observed is the challenge and response rather than the secret.",
+   "quote_verbatim": "You can, you can hook up a logic analyzer and you can see all the communications",
+   "speaker": "Matt Brown",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Reverse engineering a vehicle bus starts by narrowing to one identifier and one bit position within the payload, helped by tools that infer which bits are least significant from how quickly they change.",
+   "quote_verbatim": "you've got to kind of like focus on a particular ID",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A decoder with enough timing resolution can go further and identify which physical node sent a frame: impedance mismatches produce reflections that shift the rise and fall times by an amount determined by position on the bus, so measuring bit duration precisely maps frames to the units transmitting them.",
+   "quote_verbatim": "you can then start saying which physical device, uh, the can frame came from",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In failure analysis of returns that test good at the factory, the method is to bring in the engineers who wrote the code that talks to the failing part, write test code that exercises it the way the application does, and attach an instrument with a deep enough buffer to catch the event.",
+   "quote_verbatim": "we'll connect a very deep logic analyzer to it",
+   "speaker": "John Day",
+   "episode": 485,
+   "episode_title": "An Interview with John Day",
+   "episode_url": "https://theamphour.com/485-an-interview-with-john-day/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Recording real hardware once turns a slow manual test into a fast automated one: forty test cases that took two to three minutes each by hand were captured on hardware with the instrument, then replayed against a simulator, which compressed a half-day feedback cycle to about five seconds.",
+   "quote_verbatim": "the feedback cycle went from half a day to a few seconds",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "That approach also exposes where the model and the world disagree: the simulator and the instrument agreed on the timing of the real part, and the discrepancy turned out to be physical devices tolerating timings outside their published specification, which meant the simulation had to be loosened rather than corrected.",
+   "quote_verbatim": "I measured the timings with my Salae on a physical ATtiny and in the simulator, and they were the same",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A generic decoder is enough to verify software against a device the simulator does not model: watching the expected sequence of register writes and read-backs on the simulated bus confirms the driver without a model of that specific sensor.",
+   "quote_verbatim": "I could go stick in a logic analyzer on the I2C",
+   "speaker": "Chris Gammell",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In a browser-based simulator the instrument is attached to the simulated wires in the same way as to real ones, recording the protocol traffic passing between the simulated parts.",
+   "quote_verbatim": "there is also like a logic analyzer that you can hook to these signals",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In routine use the instrument is a protocol decoder more than a timing tool, covering the two-wire bus, the vehicle bus, the industrial serial standards and the synchronous serial bus from one capture.",
+   "quote_verbatim": "we use a lot of times for I2C, can RS 45, basically Modbus",
+   "speaker": "Pallav Aggarwal",
+   "episode": 661,
+   "episode_title": "Blogging Electronics with Pallav Aggarwal",
+   "episode_url": "https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "eps 181, 247, 374, 485, 513, 527, 575, 581, 698: attribution flagged unreliable. Claims are content-attributed to the guest whose training, product or investigation the passage describes.",
+  "ep 237: the two founders are interviewed together and the diarisation alternates between them; claims about the product architecture and the cloning response are content-attributed to the founder describing that work.",
+  "Comparative commentary about particular instrument vendors' marketing was dropped; what is kept is acquisition-mode behaviour, triggering, instrument architecture and measurement procedure."
+ ],
+ "capped": false
+}

@@ -1,0 +1,589 @@
+{
+ "concept": "solder-mask",
+ "name": "Solder Mask",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "solder-mask",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "solder-mask",
+   "solder-mask-ink",
+   "solder-mask-substrate"
+  ],
+  "children": [
+   "parallax-propeller",
+   "pcb-cleaning"
+  ],
+  "neighbors": {
+   "plated-through-hole": 11,
+   "double-sided-pcb": 4,
+   "pcb-milling-machine": 4
+  },
+  "episodes_with_kept_mentions": 74,
+  "mentions_kept": 154,
+  "pins_final": 94,
+  "capped": false,
+  "total_available": 94
+ },
+ "claims": [
+  {
+   "claim_text": "The board house enforces exactly one rule on the solder mask layer, the minimum width of the strip of mask left between adjacent pads, which is the mirror image of the minimum trace width rule applied to copper.",
+   "quote_verbatim": "when they're manufacturing your solder mask layer, that's the only thing they care about is how narrow that slither, that trace of solder mask is between each pad",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "The mask layer is the inverse of a copper layer, an opening cut where each pad sits and material left everywhere between, and mask that does not survive between the pins is not doing the job it exists for.",
+   "quote_verbatim": "It's useless having a solder mask if you don't have it between your pins",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Being told by the fab that the mask is too narrow is one of the most common queries a designer will receive back on a job.",
+   "quote_verbatim": "Solder mask is too narrow. Very common problem",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Low-cost fabs carry a large minimum sliver rule that nearly every fine-pitch leadless footprint falls below, which is why boards routinely come back with no mask at all between those pins.",
+   "quote_verbatim": "fab houses will have a pretty big solder mask sliver rule, minimum design rule, and almost all QFNs will fall below that",
+   "speaker": "Jeff Keyzer",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Insisting on mask below the fab's minimum produces slivers that chip off in processing, and some board houses silently alter the layer rather than telling you, which is unsettling even on the occasions when their change is the right one.",
+   "quote_verbatim": "some board houses will change it without even telling you",
+   "speaker": "Jeff Keyzer",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Hand-pasting a fine-pitch package does not require dabbing each pad: a single line of paste drawn across all the pins reflows correctly because surface tension together with the mask between the pins keeps the solder on the pads, and the usual mistake is applying too much.",
+   "quote_verbatim": "You just do a line across. And the solder mask takes care of it. Like, the surface tension and the solder mask take care of everything. You don't end up with shorts.",
+   "speaker": "Dave Jones",
+   "episode": 259,
+   "episode_title": "No More Naming",
+   "episode_url": "https://theamphour.com/259-no-more-names/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Bridging is a real possibility whenever paste is applied through a stencil, and what prevents it is the mask between pads combined with getting the paste volume right.",
+   "quote_verbatim": "that's the magic of soda mask and the amount of paste you put on",
+   "speaker": "Dave Jones",
+   "episode": 153,
+   "episode_title": "An Interview with Ryan O'Hara - Keyed, Kerfed Kapton",
+   "episode_url": "https://theamphour.com/the-amp-hour-153-keyed-kerfed-kapton/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Creepage and the withstanding voltage between two traces depend on whether mask is present, because mask keeps moisture and surface contamination off the copper; a proper board calculator takes its presence into account when giving a spacing for a given voltage.",
+   "quote_verbatim": "it keeps contamination off your actual traces",
+   "speaker": "Dave Jones",
+   "episode": 447,
+   "episode_title": "Voltnuts for Flashlights",
+   "episode_url": "https://theamphour.com/447-voltnuts-for-flashlights/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Salt water contamination is unrepairable rather than merely dirty: it works its way under the mask and begins consuming the copper from underneath.",
+   "quote_verbatim": "once you know salt water has contaminated your board, then it gets under the solder mask and then just starts eating away the copper",
+   "speaker": "Dave Jones",
+   "episode": 312,
+   "episode_title": "Aussie Bound!",
+   "episode_url": "https://theamphour.com/312-aussie-bound/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Guard traces covered over with mask are a recurring design error that removes the reason the guard was added in the first place.",
+   "quote_verbatim": "they put guard traces in, but then they cover them over with solder mask. They missed the whole point",
+   "speaker": "Dave Taylor",
+   "episode": 180,
+   "episode_title": "An Interview with Dave Taylor - Multi-talented Meter Maker",
+   "episode_url": "https://theamphour.com/180-an-interview-with-dave-taylor-multi-talented-meter-maker/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Mask is applied as a negative process because the early chemistry hardened under ultraviolet light, so the exposed regions survived while the unexposed material was washed away, and the traditional green is an inheritance from that chemistry rather than a choice.",
+   "quote_verbatim": "it hardened when exposed to UV light. So therefore, when you exposed it, the parts that were exposed on the negative image went hard and they wouldn't be removed by the etchant",
+   "speaker": "Dave Jones",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Colour choice remains constrained to a handful of stock options rather than an arbitrary specification, even though the palette is far wider than it once was.",
+   "quote_verbatim": "you've only got like eight colors to choose from or something",
+   "speaker": "Dave Jones",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Early mask chemistry shifted colour during processing and fabs told customers nothing could be done about it, until industry pressure produced chemistries that hold their colour, a problem nobody encounters today.",
+   "quote_verbatim": "that was common to get your Sardomask back and it had changed colour",
+   "speaker": "Dave Jones",
+   "episode": 170,
+   "episode_title": "What defines an engineer? - Job Judging Jeremiad",
+   "episode_url": "https://theamphour.com/170-what-defines-an-engineer-job-judging-jeremiad/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Modern boards put mask directly over bare copper, whereas older boards applied it over roll-tinned copper, which is why boards from that era show wrinkled and peeling mask.",
+   "quote_verbatim": "These days, it's solder mask over bare copper",
+   "speaker": "Dave Jones",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The roll-tinning step left small solder deposits that shorted closely spaced traces, and tracing those down was a routine and unpleasant part of bringing up a board.",
+   "quote_verbatim": "it was very common to get a little solder dag between two fine traces that were next to each other",
+   "speaker": "Dave Jones",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Film-based exposure made contamination a manufacturing hazard: a speck of dust settling on the film was exposed into the board and appeared as a hairline short between adjacent tracks.",
+   "quote_verbatim": "you get a bit of dust comes in on the film sheet, settles on the film sheet. And that actually gets exposed on the board. And you get a little hairline short",
+   "speaker": "Dave Jones",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Every Gerber layer submitted becomes a photographic transparency, one per copper layer plus one per side for the mask, so a typical job consumes ten or a dozen of them.",
+   "quote_verbatim": "Every layer that I send as a Gerber becomes a transparency or part of one",
+   "speaker": "Scotty Allen",
+   "episode": 414,
+   "episode_title": "An Interview with Scotty Allen (Strangeparts)",
+   "episode_url": "https://theamphour.com/414-an-interview-with-scotty-allen-strangeparts/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "A non-standard mask colour is not something fabs stock: keeping redundant board houses meant buying the ink in for the ones that did not carry it and absorbing that cost.",
+   "quote_verbatim": "The other ones that I had to add in did not carry the purple, and I've had to order it for them",
+   "speaker": "Laen",
+   "episode": 149,
+   "episode_title": "An Interview with Laen - Purple PCB Philosophy",
+   "episode_url": "https://theamphour.com/the-amp-hour-149-purple-pcb-philosophy/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "More than one mask colour can be printed on a single panel, but it requires an entirely separate set of screens and adds roughly fifty percent to the panel price.",
+   "quote_verbatim": "it adds about 50% to the price of the panels",
+   "speaker": "Laen",
+   "episode": 149,
+   "episode_title": "An Interview with Laen - Purple PCB Philosophy",
+   "episode_url": "https://theamphour.com/the-amp-hour-149-purple-pcb-philosophy/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A pooled prototype service running through United States fabs measured a failure rate of about one board in forty thousand, with the failures being annular ring breakout, shorts and mask that was not quite right.",
+   "quote_verbatim": "my failure rate through the US fabs is about one in 40,000 boards",
+   "speaker": "Laen",
+   "episode": 149,
+   "episode_title": "An Interview with Laen - Purple PCB Philosophy",
+   "episode_url": "https://theamphour.com/the-amp-hour-149-purple-pcb-philosophy/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A front panel can be made from a board by flooding the area with copper and opening the legend through the mask layer, so the lettering appears in the plating finish against the mask colour.",
+   "quote_verbatim": "put a, a copper fill across the entire thing and then you, you expose the text out through the solder mask layer",
+   "speaker": "Laen",
+   "episode": 149,
+   "episode_title": "An Interview with Laen - Purple PCB Philosophy",
+   "episode_url": "https://theamphour.com/the-amp-hour-149-purple-pcb-philosophy/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "For a cosmetically uniform top surface, vias are tented with mask and then covered again with silkscreen so they disappear into the artwork.",
+   "quote_verbatim": "So you've got solder masks. So you've got tinted vias and then you've got silk screen over the top of that",
+   "speaker": "Dave Jones",
+   "episode": 600,
+   "episode_title": "The Custodial Arts",
+   "episode_url": "https://theamphour.com/600-the-custodial-arts/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Before mask over bare copper became standard, designers deliberately left mask off a thermal pad so the wave process would plate tin onto it, adding thermal mass and a better heat transfer path, which is the same reason people deliberately solder-coat pads today.",
+   "quote_verbatim": "you used to rely on the fact that your board was wave soldered so you just leave your solder mask off and then you'd get all your wave tin plate on top of your uh big you know your thermal pad",
+   "speaker": "Dave Jones",
+   "episode": 436,
+   "episode_title": "Downward Sloping Trace",
+   "episode_url": "https://theamphour.com/436-downward-sloping-trace/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Using mask to blank off unwanted pads under a ball grid array was considered and rejected because of the risk to the reflow process, and mask cannot be relied on as an insulator in that role.",
+   "quote_verbatim": "I had considered using solder paste, not solder paste, the solder mask to block some of the pads, but I rejected that idea because I was too worried about it messing with the BGA reflow process",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Counting on mask to insulate a pad invites intermittent faults rather than a clean failure.",
+   "quote_verbatim": "you can't really count on solder mask to completely insulate",
+   "speaker": "Chris Gammell",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The route actually taken for power and ground escape was to gang four adjacent pads around a single large via placed between them, with the annular ring touching all four and enough mask remaining between each pad and the via barrel.",
+   "quote_verbatim": "I used a via and I would gang together four pads and I would put the via in the middle of those four pads",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A large thermal pad is broken into segments rather than left as one opening so the part does not float on molten solder, and one production practice is a cross of mask and paste through the middle of the component.",
+   "quote_verbatim": "the IPC recommends breaking that into chunks, right. So that you don't get a floating component right on top of your board",
+   "speaker": "Natasha Baker",
+   "episode": 531,
+   "episode_title": "Footprints and Symbols with Natasha Baker",
+   "episode_url": "https://theamphour.com/531-footprints-and-symbols-with-natasha-baker/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A rendered view of the bare board with components hidden is used to check mask expansion around pads and whether silkscreen is landing on top of them, which the flat layout view conceals.",
+   "quote_verbatim": "So I can see, like, the solder mask expansion. I can see exactly what the silk screen is going to look like. Is it overlaying pads?",
+   "speaker": "Dave Jones",
+   "episode": 34,
+   "episode_title": "AD620, DesignSpark, Instrumentation Amplifier - The Rant Rhetorical",
+   "episode_url": "https://theamphour.com/the-amp-hour-34-the-rant-rhetorical/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Online board previews render mask expansion and silkscreen well but commonly ignore the drill file, so the holes are missing from the picture you are checking.",
+   "quote_verbatim": "you can see your solder mask expansion, which is one of the main things",
+   "speaker": "Dave Jones",
+   "episode": 96,
+   "episode_title": "Senseless Saccadic Shemozzle",
+   "episode_url": "https://theamphour.com/the-amp-hour-96-senseless-saccadic-shemozzle/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Ball pitch drives board cost through mask and etch tolerance, which is why an open hardware design moved from 0.4 millimetre to 0.8 millimetre pitch parts so that people could actually have their own versions made.",
+   "quote_verbatim": "your boards are more expensive to manufacture because the tolerances are all tighter on the solder mass",
+   "speaker": "Dave Jones",
+   "episode": 67,
+   "episode_title": "BeagleBoard successors, CAD & Robots - Haussmannized Halloween Hypostrophe",
+   "episode_url": "https://theamphour.com/the-amp-hour-67-haussmannized-halloween-hypostrophe/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The home process for mask is a UV-curable compound spread over the board and exposed through a printed transparency carrying the inverse image, after which the uncured material over the pads is washed off with alcohol and the rest fully cured; it works but is messy and the alignment is the hard part.",
+   "quote_verbatim": "you print out the inverse of what you want to cure",
+   "speaker": "Mike Grover",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Milling the mask off instead needs vertical resolution around a hundredth of a millimetre, but a board is never flat to that degree and the copper is only half an ounce to an ounce thick, so the same depth setting exposes copper in one region and not another.",
+   "quote_verbatim": "the board itself is never perfectly flat to that degree of granularity",
+   "speaker": "Mike Grover",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The fix was a spring-loaded drag tip fitted with very light springs so depth becomes pressure rather than position: the mask is soft enough that the tip cuts straight through it and then rides on the copper, which restores a usable margin for error.",
+   "quote_verbatim": "you've got a lot more margin of error because the solder mask is way softer",
+   "speaker": "Mike Grover",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Cure time depends on the colour of the mask, with black slow because it absorbs the curing light and white also poor because it is far from transparent.",
+   "quote_verbatim": "Black is a pain to cure",
+   "speaker": "Mike Grover",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "A fibre laser can ablate the copper directly to produce a single-sided board in about ten minutes of unattended time, with mask adding roughly five minutes of hands-on work and twenty minutes of processing, at the cost of giving up controlled impedance and fine geometry.",
+   "quote_verbatim": "solder mask is another five minutes of personal work, 20 minutes of etching time",
+   "speaker": "Stephen Hawes",
+   "episode": 686,
+   "episode_title": "A Benchtop Pick and Place with Stephen Hawes",
+   "episode_url": "https://theamphour.com/686-a-benchtop-pick-and-place-with-stephen-hawes/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Milled boards lack plating, mask and silkscreen entirely, so a board made that way still has to be remade properly and the time is only justified when the design genuinely cannot wait.",
+   "quote_verbatim": "These things aren't plated through. They've got no solder mask, no silk screen",
+   "speaker": "Dave Jones",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "opinion",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "The case where milling does pay is simple single-sided analog work, where a board can be turned around in about two hours.",
+   "quote_verbatim": "if you're doing a simple op amp circuit, you know, I can crank out a board in two hours",
+   "speaker": "Dave Jones",
+   "episode": 176,
+   "episode_title": "Funding New/Manufacturing Old Projects - Radical Robotic Requisition",
+   "episode_url": "https://theamphour.com/176-funding-newmanufacturing-old-projects-radical-robotic-requisition/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Reflowing paste on a bare board without mask leaves only the flux to keep solder where it belongs, with nothing to guide it back onto the pads.",
+   "quote_verbatim": "even when you reflow you don't have you don't have the the solder mask then to kind of help guide it along",
+   "speaker": "Chris Gammell",
+   "episode": 233,
+   "episode_title": "Glass and Gongkai GSM - Unzymotic Ursidae Upbuilding",
+   "episode_url": "https://theamphour.com/233-glass-and-gongkai-gsm-unzymotic-ursidae-upbuilding/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Printed silver-ink boards survive without mask because silver forms a sulphide tarnish rather than rusting, and that tarnish is self-limiting so it never penetrates the conductor.",
+   "quote_verbatim": "it just forms a tarnished skin and then doesn't penetrate further down into the board",
+   "speaker": "Ariel Briner",
+   "episode": 260,
+   "episode_title": "An interview with Ariel Briner of Cartesian Co",
+   "episode_url": "https://theamphour.com/260-an-interview-with-ariel-briner-of-cartesian-co/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "That protection is only cosmetic in engineering terms: the surface becomes unsolderable after a couple of months, so an unmasked printed board has a shelf life for assembly.",
+   "quote_verbatim": "You won't be able to solder it after like a couple of months",
+   "speaker": "Ariel Briner",
+   "episode": 260,
+   "episode_title": "An interview with Ariel Briner of Cartesian Co",
+   "episode_url": "https://theamphour.com/260-an-interview-with-ariel-briner-of-cartesian-co/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Tombstoning is a reflow failure in which surface tension on one land pulls the component upright off the other, and a mass-produced board with a resistor in that state can still function, which is what makes the defect easy to ship.",
+   "quote_verbatim": "tombstoning is where during the reflow process, one pad of the resistor or one terminal of the resistor lifts up",
+   "speaker": "Jeff Keyzer",
+   "episode": 11,
+   "episode_title": "Ardui...no Dave This Week?",
+   "episode_url": "https://theamphour.com/the-amp-hour-11-ardui-no-dave-this-week/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Photorealistic board rendering is defeated by the mask surface itself, which at the right angle reflects enough light to read as white while the plated pads still show as gold, so material models can only get so close.",
+   "quote_verbatim": "the surface of the actual soda mask is reflecting all the light. If you get the angle just right. And it might just appear white",
+   "speaker": "Greg Davill",
+   "episode": 473,
+   "episode_title": "An Interview with Greg Davill",
+   "episode_url": "https://theamphour.com/473-an-interview-with-greg-davill/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Solder balls lodged under the mask are the visible sign that a paste application went wrong and needs to be wiped off and repeated.",
+   "quote_verbatim": "you get little solder balls stuck under the solder mask",
+   "speaker": "Greg Davill",
+   "episode": 473,
+   "episode_title": "An Interview with Greg Davill",
+   "episode_url": "https://theamphour.com/473-an-interview-with-greg-davill/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Using a board as its own reflow heater is not reusable: after around five cycles at the roughly 200 degrees Celsius needed to melt the solder, the damage shows in the mask.",
+   "quote_verbatim": "after like, five times, you, you could see like, the solder mask",
+   "speaker": "Carl Bugeja",
+   "episode": 663,
+   "episode_title": "Motors on PCBs with Carl Bugeja",
+   "episode_url": "https://theamphour.com/663-motors-on-pcbs-with-carl-bugeja/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Leaving mask off a region lets light pass through the laminate itself, so the board substrate can be made to glow rather than needing a separate diffuser.",
+   "quote_verbatim": "you can remove the solder mask and you can have the FR4 actually light up",
+   "speaker": "Dave Jones",
+   "episode": 642,
+   "episode_title": "Sad Violins for Superconductors",
+   "episode_url": "https://theamphour.com/642-sad-violins-for-superconductors/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Combining mask, silkscreen and deliberately exposed copper gives a wide range of colours, textures and translucency from an entirely standard fabrication process, controlled purely by what is placed on each Gerber layer.",
+   "quote_verbatim": "there's many different techniques you can use with PCB manufacturing to get lots of different colors and textures and layers and transparent, you know, leaving off solder mask",
+   "speaker": "Dave Jones",
+   "episode": 145,
+   "episode_title": "PCB Mills, SDR and Oscilloscopes - Flaunting Furbelow Fanciness",
+   "episode_url": "https://theamphour.com/the-amp-hour-145-flaunting-furbelow-fanciness/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Mask relief can be applied asymmetrically to a via so that the same connection is exposed for contact on one face of the board and covered on the other.",
+   "quote_verbatim": "I didn't relieve the solder mask around the via on the front side, but I did around the back side",
+   "speaker": "Chris Gammell",
+   "episode": 275,
+   "episode_title": "No One Even Missed Us?",
+   "episode_url": "https://theamphour.com/275-no-one-even-missed-us/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Stripping cured mask off a finished board to expose the copper underneath is possible but only with aggressive chemistry.",
+   "quote_verbatim": "if you can actually etch off the, the mask, if you can actually etch off the solar mask, and there are some nasty chemicals that can do it",
+   "speaker": "Dave Jones",
+   "episode": 68,
+   "episode_title": "Radiation Chips & Old Package Types - Technocratic Toilet Troubleshooting",
+   "episode_url": "https://theamphour.com/the-amp-hour-68-technocratic-toilet-troubleshooting/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Board appearance is three independent choices stacked, the plating finish, the mask colour and the silkscreen colour, and each additional silkscreen colour means another pass through the process and another charge.",
+   "quote_verbatim": "They just put it through multiple processes and they charge you",
+   "speaker": "Dave Jones",
+   "episode": 587,
+   "episode_title": "Biblical Broker Bucks",
+   "episode_url": "https://theamphour.com/587-biblical-broker-bucks/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Mask makes hand assembly far easier because flux and solder are steered onto the pads instead of wandering, which is a large part of why fabricated boards displaced home-etched ones.",
+   "quote_verbatim": "you can just throw some flux on there and the solder flows so nice and it just gets where it's supposed to",
+   "speaker": "Dave Jones",
+   "episode": 28,
+   "episode_title": "Bowie and The Brown Note",
+   "episode_url": "https://theamphour.com/the-amp-hour-28-bowie-and-the-brown-noise/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "The silkscreen matters as much as the mask when building a board by hand, because it tells you where each part goes.",
+   "quote_verbatim": "having the solder mask there is, you know, it just makes it so much easier to solder",
+   "speaker": "Dave Jones",
+   "episode": 32,
+   "episode_title": "Cores, Digikey, Electronic Design - The Commercial Competitor Commencement",
+   "episode_url": "https://theamphour.com/the-amp-hour-32-the-commercial-competition-commencement/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Fixed-price prototype services reached the point of offering ten double-sided plated-through boards with mask and silkscreen on both sides for twelve dollars including tooling, which removed most of the reason to make boards at home.",
+   "quote_verbatim": "for $12. That's a pretty good price. That includes tooling",
+   "speaker": "Dave Jones",
+   "episode": 33,
+   "episode_title": "Bob Widlar, Electronic Design, FIRST Robotics - Monday, Meta Monday",
+   "episode_url": "https://theamphour.com/the-amp-hour-33-monday-meta-monday/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Within living memory a tinned single-sided board counted as a high-quality kit and a double-sided board was unheard of, where masked, screened, plated-through double-sided boards are now the baseline everyone gets.",
+   "quote_verbatim": "if you got a board that was tinned, a single-sided board that was tinned instead of bare copper, that was a high-quality kit",
+   "speaker": "Dave Jones",
+   "episode": 143,
+   "episode_title": "PCBs, Tektronix & Ham Radio - Habitual Handicraft Hangups",
+   "episode_url": "https://theamphour.com/the-amp-hour-143-habitual-handicraft-hangups/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The prototype board houses of two and three decades ago supplied double-sided tin-plated boards with no mask at all, and that was what a designer expected to work with.",
+   "quote_verbatim": "they made like really you know bare bones like none of the solder mask rubbish right but if you wanted a double-sided board made",
+   "speaker": "Dave Jones",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Mask colour can be chosen as the artwork itself, with a white mask supplying the base image and component colours picked to complete it.",
+   "quote_verbatim": "I'll do white solder mask and then put red and blue LEDs on there",
+   "speaker": "Mike Szczys",
+   "episode": 403,
+   "episode_title": "An Interview with Mike Szczys",
+   "episode_url": "https://theamphour.com/403-an-interview-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "Several transcripts render the term as \"soda mask\", \"solar mask\", \"solder mass\" or \"Sardomask\"; quotes are reproduced exactly as transcribed.",
+  "ep162: the explanation of fab sliver rules is the guest's; the bundle labels the turn Chris Gammell. Attributed to Jeff Keyzer by content.",
+  "ep531, ep663, ep471: episodes flagged attribution_reliable: false; content-attributed to the guest where the first person is unambiguous, otherwise null.",
+  "ep393, ep434, ep682: the process and history explanations are Dave Jones's and are labelled to him consistently.",
+  "ep149: the fab-side answers are the guest's; two turns are labelled Dave Jones and are attributed to Laen by content."
+ ],
+ "capped": false
+}

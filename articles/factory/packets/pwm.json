@@ -1,0 +1,588 @@
+{
+ "concept": "pwm",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "pwm",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "pulse-width-modulation",
+   "pwm"
+  ],
+  "children": [
+   "model-aircraft"
+  ],
+  "neighbors": {},
+  "episodes_with_kept_mentions": 60,
+  "mentions_kept": 74,
+  "pins_pre_cap": 58,
+  "pins_final": 58,
+  "pins_by_depth": {
+   "explains": 54,
+   "opinion": 4
+  },
+  "pins_by_role": {
+   "core": 58
+  },
+  "speakers": [
+   [
+    "Chris Gammell",
+    14
+   ],
+   [
+    "Dave Jones",
+    11
+   ],
+   [
+    "Trey German",
+    3
+   ],
+   [
+    "Mike Harrison",
+    3
+   ],
+   [
+    "Fredrik Kensander",
+    3
+   ],
+   [
+    "Zach Fredin",
+    2
+   ],
+   [
+    "Uri Shaked",
+    2
+   ],
+   [
+    "Bob Simpson",
+    1
+   ],
+   [
+    "Adam Wolf",
+    1
+   ],
+   [
+    "Brandon Harris",
+    1
+   ],
+   [
+    "Noah Feehan",
+    1
+   ],
+   [
+    "Dave Vandenbout",
+    1
+   ],
+   [
+    "Chris White",
+    1
+   ],
+   [
+    "Elecia White",
+    1
+   ],
+   [
+    "Jørgen Jakobsen",
+    1
+   ],
+   [
+    "Jason Kridner And Robert",
+    1
+   ],
+   [
+    "James Bruton",
+    1
+   ],
+   [
+    "Ted Yapo",
+    1
+   ],
+   [
+    "Paul Thompson",
+    1
+   ],
+   [
+    "Jay Carlson",
+    1
+   ]
+  ],
+  "capped": false,
+  "gated_out_by_concept": [
+   [
+    "model-aircraft",
+    5
+   ]
+  ],
+  "gated_out_total": 5
+ },
+ "claims": [
+  {
+   "claim_text": "A PWM output through a resistor-capacitor filter substitutes for a digital-to-analog converter on parts that do not have one: varying the duty cycle from zero to one hundred percent and low-pass filtering the result recovers a proportional analog voltage.",
+   "quote_verbatim": "you have a pwm signal that just kind of varies from zero to a hundred percent uh basically chopping up a standard clock signal and then you put it through an rc filter",
+   "speaker": "Chris Gammell",
+   "episode": 281,
+   "episode_title": "Crossovers and Call-ins",
+   "episode_url": "https://theamphour.com/281-crossovers-and-call-ins/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The filtered PWM output is a voltage reference, not a drive: an op-amp after the filter both scales it — output nought to 2.5 volts and multiply by four, for example — and supplies the current the processor pin cannot.",
+   "quote_verbatim": "your processor may not have it might not have enough current to drive things directly but with an op amp you should be good",
+   "speaker": "Chris Gammell",
+   "episode": 281,
+   "episode_title": "Crossovers and Call-ins",
+   "episode_url": "https://theamphour.com/281-crossovers-and-call-ins/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Buffering a PWM output into the set pin of an adjustable regulator turns a fixed supply into a digitally programmable one, which is how a microcontroller gets a controllable voltage or current source out of a part that was never advertised as programmable.",
+   "quote_verbatim": "all you've got to do is have your pulse width modulation output that sets a voltage, buffer it, drive it directly into the set pin",
+   "speaker": "Dave Jones",
+   "episode": 44,
+   "episode_title": "BASIC, Chip companies & Robots - Pernicious Projects, Puppies in Peril",
+   "episode_url": "https://theamphour.com/the-amp-hour-44-pernicious-projects-puppies-in-peril/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A PWM pin plus a couple of diodes makes a charge-pump voltage doubler good enough to run an LCD bias rail, removing a dedicated doubler part and its cost from the bill of materials.",
+   "quote_verbatim": "it's got a voltage doubler in there that just used as a PWM output and a couple of diodes and I got my voltage doubler to drive the LCD",
+   "speaker": "Dave Jones",
+   "episode": 9,
+   "episode_title": "From Boston In Boxers?",
+   "episode_url": "https://theamphour.com/the-amp-hour-9-from-boston-in-boxers/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Generating a supply rail from a microcontroller pin has two hidden costs: efficiency is poor compared with a purpose-built converter, and the processor can no longer enter its low-power modes because it has to keep switching.",
+   "quote_verbatim": "just, uh, generate a PWM signal on one of the, uh, micro pins and just use that as a doubler",
+   "speaker": "Dave Jones",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "An analog panel meter needs no converter at all — driving it with PWM lets the movement's own inertia settle at an intermediate position, which is why meter-face clocks are electrically trivial.",
+   "quote_verbatim": "you can just do PWM and you don't even need to use digital to analog converters",
+   "speaker": "Michal Zalewski",
+   "episode": 725,
+   "episode_title": "The Secret Life of Circuits with lcamtuf / Michał Zalewski",
+   "episode_url": "https://theamphour.com/725-the-secret-life-of-circuits-with-lcamtuf-michal-zalewski/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A PWM waveform is not equivalent to the DC voltage its RMS value suggests: a load may respond to the peaks of the switching waveform in ways it would not respond to the same average applied as a steady voltage.",
+   "quote_verbatim": "your PWM's RMS comes out to 0.8 volts, the device still might do something. But if you give it 0.8 volts DC, it might not",
+   "speaker": "Chris White",
+   "episode": 329,
+   "episode_title": "Work on it for 10 years...",
+   "episode_url": "https://theamphour.com/329-work-on-it-for-10-years/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Three parameters have to be specified independently — the switching voltage, the frequency and the duty cycle — and a discussion that conflates them will produce a circuit that is right in only one of the three.",
+   "quote_verbatim": "there's voltage, then there's frequency, and then there's duty cycle",
+   "speaker": "Chris Gammell",
+   "episode": 329,
+   "episode_title": "Work on it for 10 years...",
+   "episode_url": "https://theamphour.com/329-work-on-it-for-10-years/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A switching supply operated outside its intended load range drops into very low duty-cycle behaviour and can start whining audibly, with a loosely wound inductor's ferrite the usual mechanical source and ceramic capacitor microphonics a further one.",
+   "quote_verbatim": "was just running it out of the zone it was supposed to be running in. And I'm guessing that it was probably moving into like a PWM mode where it was a very low duty cycle",
+   "speaker": "Chris Gammell",
+   "episode": 127,
+   "episode_title": "FPGA, Xess, 32 Bit - Quirky Qualitative Questions",
+   "episode_url": "https://theamphour.com/the-amp-hour-127-quirky-qualitative-questions/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Ceramic capacitors sing audibly when the current through them is pulse-width modulated, which is why LED dimming circuits buzz; the low-ESR electrolytics that avoid it cost several dollars each rather than pennies.",
+   "quote_verbatim": "if you've got PWM ceramics, the things buzz",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A part without a hardware PWM peripheral has to bit-bang it, and the resulting LED flicker is plainly visible against a hardware-driven channel side by side — which was reason enough to lay out a custom controller rather than accept an off-the-shelf module built on the cheaper part.",
+   "quote_verbatim": "the SP 82 66 has to bit bang. If it wants to PWM, it doesn't have hardware to do that",
+   "speaker": "Keith Burzinski",
+   "episode": 657,
+   "episode_title": "Automating the Home with Keith Burzinski",
+   "episode_url": "https://theamphour.com/657-automating-the-home-with-keith-burzinski/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Closing a power supply loop in software rather than around an analog control IC changes the cost of being wrong: a miscalculated filter value becomes recompile and reflash in five minutes instead of recalculating a resistor-capacitor network, desoldering parts and possibly reordering components.",
+   "quote_verbatim": "you recalculate the coefficients for your filter, and you just change the code. You recompile it, you flash it",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The two big application families sit an order of magnitude apart in switching frequency: motor control typically runs PWM in the ten to thirty kilohertz range while digital power supplies run at a hundred kilohertz and above.",
+   "quote_verbatim": "for motor control, I think they typically run their PWMs in, you know, the kilohertz range, you know, anywhere from like 10 to 30",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Deterministic sampling comes from linking the peripherals in silicon: PWM compare events both drive the output pin and trigger the analog-to-digital conversion, so the feedback point is always sampled at the same instant within the switching cycle rather than whenever the software gets round to it.",
+   "quote_verbatim": "we set these trigger points on the PWM. We call them compare values",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Centre-aligned PWM with the converter sampling motor current mid-pulse for field-oriented control at twenty kilohertz leaves no room for an operating system or a network stack to steal the processor; that class of loop rules out the architecture rather than merely straining it.",
+   "quote_verbatim": "if you're doing like motor control and you're trying to do like center line PWM where you're, you know, sampling your ADC on the middle of that",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Running two PID regulators in parallel — one on voltage, one on current — and letting whichever demands the narrower pulse win gives a supply that limits on both simultaneously, which is what keeps it stable when the load resistance changes underneath it, as it does when parts enter and leave a plating bath.",
+   "quote_verbatim": "we run two regulators in parallel, one for voltage and one for current",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The control loop responds on the next pulse, so the entire sense, calculate and regulate sequence has to fit inside one switching period — on the order of twenty-odd microseconds at a switching frequency of 47 kilohertz.",
+   "quote_verbatim": "if the switching frequency is 47 kilohertz, kilohertz, you have like 27 microseconds",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Dead time between complementary switch pulses is the difference between a working bridge and a destroyed one: configure it in the timer block, then verify it on a scope at maximum duty cycle rather than trusting the configuration.",
+   "quote_verbatim": "you must measure like the dead time between the switch pulses, because if they're on at the same time, they will go boom",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Measuring switch timing on a high-voltage bridge requires high-voltage probes plus either isolated probes or an isolation transformer on the instrument, because the reference point on the switching node is not ground.",
+   "quote_verbatim": "you can also put the oscilloscope directly on the IGBTs with some high voltage probes",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Electric-vehicle charging negotiates current over a PWM signal — the vehicle sets its charge rate from the duty cycle the supply equipment presents — and the resulting control loop settles over a couple of seconds, which matters when the setpoint is being driven by fluctuating surplus solar generation.",
+   "quote_verbatim": "the car adjusts its charging level based on the PWM output of the thing",
+   "speaker": "Dave Jones",
+   "episode": 612,
+   "episode_title": "Slapping Industries",
+   "episode_url": "https://theamphour.com/612-slapping-industries/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An LED has one current at which it converts electricity into light most efficiently, set by die size and device physics; above it efficiency falls away as droop, and — less widely appreciated — efficiency also collapses at very low currents.",
+   "quote_verbatim": "with modern LEDs, they're extremely efficient at, at a specific current",
+   "speaker": "Ted Yapo",
+   "episode": 465,
+   "episode_title": "An Interview with Ted Yapo",
+   "episode_url": "https://theamphour.com/465-an-interview-with-ted-yapo/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The obvious way to build a long-life dim indicator — a large series resistor from a battery — wastes most of the energy, because it parks the LED far below its efficient operating current; pulsing at the efficient current and letting the eye average is the efficient equivalent.",
+   "quote_verbatim": "if you just take a, um, a normal LED and use a very big resistor and a battery to try and make a dim LED that will last a long time, the LED is very inefficient",
+   "speaker": "Ted Yapo",
+   "episode": 465,
+   "episode_title": "An Interview with Ted Yapo",
+   "episode_url": "https://theamphour.com/465-an-interview-with-ted-yapo/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A very low duty-cycle driver can be built from an eight-pin microcontroller asleep most of the time: its PWM peripheral fires a one-shot, the short current pulse energises an inductor, and the LED sits across the inductor running off the flyback kick — the same energy a catch diode would otherwise absorb — with brightness set by how long the inductor is energised.",
+   "quote_verbatim": "the PWM triggers a one shot that produces a very small pulse of current. That pulse energizes an inductor",
+   "speaker": "Ted Yapo",
+   "episode": 465,
+   "episode_title": "An Interview with Ted Yapo",
+   "episode_url": "https://theamphour.com/465-an-interview-with-ted-yapo/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Multiplexed LED brightness need not cost continuous processor time: precalculate each LED's on-time, fire them all at the start of the frame and let each turn off at its own moment, and with 0201 parts the whole frame's duty cycles fit inside a few microseconds.",
+   "quote_verbatim": "if you pre-calculate how much each one needs to be on at the beginning and you instantaneously flash all of them on at the start of the frame",
+   "speaker": "Dave Jones",
+   "episode": 697,
+   "episode_title": "LEDs Everywhere with Tim from Mitxela",
+   "episode_url": "https://theamphour.com/697-leds-everywhere-with-tim-from-mitxela/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The watchdog timer at its maximum prescaler wakes the processor every 16 milliseconds, which is 60 times a second — exactly a video frame rate — so the processor can sleep between frames and contribute essentially nothing to the power budget.",
+   "quote_verbatim": "the 80 tiny has a watchdog timer, which, um, uh, you can add its max prescaler. It's 16 milliseconds",
+   "speaker": "Dave Jones",
+   "episode": 697,
+   "episode_title": "LEDs Everywhere with Tim from Mitxela",
+   "episode_url": "https://theamphour.com/697-leds-everywhere-with-tim-from-mitxela/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Eight bits per colour in a smart LED leaves no headroom for global dimming: dimming the whole array means giving up the low end of every channel's range at once.",
+   "quote_verbatim": "you've only got eight bits per color, which means you don't really have any global dimming",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The two-wire smart LED is easier to drive over SPI and adds several bits of global control, but using that control slows its PWM, and the part is not constant-current — intensity falls as the supply sags from 4.5 to 4 volts, which shows up immediately across a large installation.",
+   "quote_verbatim": "the APA 102, which is the two wire one, is better in it. You know, you've got SPI, it's much easier to drive",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A physical LED has effectively unlimited refresh rate while a display refreshes at 60 to 200 hertz, so mapping a PWM-driven LED straight to a pixel reproduces the switching as flicker rather than as brightness.",
+   "quote_verbatim": "a physical LED has an infinite refresh rate. And people actually use this to create PWM",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Rendering a simulated LED correctly means integrating rather than sampling: take a moving average of on-time over each display frame, then apply gamma before setting the drawn opacity, so thirty percent duty appears at roughly seventy percent opacity — the same perceptual correction the eye applies to real hardware.",
+   "quote_verbatim": "it sort of takes a moving average of how much time the LED was on for each frame of the screen",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Colour mixing and brightness control are separate mechanisms stacked on one another: without PWM an RGB module gives only the fixed mixtures its three channels produce, and graded intensity means running multiplexing and modulation simultaneously.",
+   "quote_verbatim": "if you want multicolors, because then you've got to do multiplexing and PWM at the same time",
+   "speaker": "Dave Jones",
+   "episode": 16,
+   "episode_title": "LED Designs, Last Minute Designs and Board Designs",
+   "episode_url": "https://theamphour.com/the-amp-hour-16-led-designs-last-minute-designs-and-board-designs/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "When sizing an indicator LED's series resistor, err on the bright side and dim it back with PWM in firmware, because the modulation is free to change later while the resistor value is not.",
+   "quote_verbatim": "think it's better to go a little bit up",
+   "speaker": "Chris Gammell",
+   "episode": 724,
+   "episode_title": "All Heat, No Useful Work",
+   "episode_url": "https://theamphour.com/724-all-heat-no-useful-work/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Channel count, not processing power, is what typically exhausts a small microcontroller: needing eight modulated outputs for RGB indicators exceeded the hardware channels available and forced the modulation into software.",
+   "quote_verbatim": "which is more PWM channels than the AT tiny has. So it's done in software",
+   "speaker": "Zach Fredin",
+   "episode": 330,
+   "episode_title": "An Interview with Zach Fredin",
+   "episode_url": "https://theamphour.com/330-an-interview-with-zach-fredin/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Bit-banging sixteen modulated channels in software on a mid-range microcontroller costs roughly fifty percent interrupt loading — acceptable when the part has no other job, which is a legitimate design position rather than a failure to specify properly.",
+   "quote_verbatim": "doing sort of 16 PWN channels or bit bashed in software using some like 50% interrupt loading",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Once microcontrollers cost a few cents, dedicating a whole part to generating one modulated output is cheaper than contorting the main processor's peripheral allocation to produce it.",
+   "quote_verbatim": "you can just offload a simple PWM to this 3-cent micro",
+   "speaker": "Dave Jones",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Programmable real-time units fill in the peripherals a system-on-chip ran out of: firmware on them provides additional outputs that behave like hardware PWM, a fourth quadrature encoder where the silicon has three, and software UARTs where an earlier design had too few — the same trick that let the Lego Mindstorms EV3 talk to all its sensors.",
+   "quote_verbatim": "a firmware load that comes with the BeagleBone Blue to use the PRUs or the programmer real-time units to generate some additional hardware PWMs",
+   "speaker": "Jason Kridner And Robert",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Programmable IO blocks are tiny deterministic processors good only at high-speed bit banging: push the timing-critical part of a software peripheral onto them, then talk to them through DMA and FIFOs exactly as if they were a fixed peripheral. That buys interfaces nobody would commit to silicon — driving WS2812 LEDs with their pulse-width-coded serial protocol at zero processor overhead.",
+   "quote_verbatim": "you take the timing sensitive part of a software peripheral. You push that onto the PIO cores",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A part list that shows no PWM peripheral is not the end of the question: an advanced timer can usually be configured to produce it, so the timer complement rather than the feature bullet is what determines whether a cheap part can do the job.",
+   "quote_verbatim": "only one 16 bit advanced timer, one 16 bit general purpose timer",
+   "speaker": "Dave Jones",
+   "episode": 610,
+   "episode_title": "Picking a Pick and Place Pickiness",
+   "episode_url": "https://theamphour.com/610-picking-a-pick-and-place-pickiness/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Microcontroller line proliferation traces directly to lost designs over exactly this kind of gap — one PWM channel short, or the right peripheral set on the wrong pin count — and the obvious remedy of one part carrying everything fails too, because loading a die with unused peripherals loses the design on cost instead.",
+   "quote_verbatim": "we didn't have a PWM on the chip and somebody else did",
+   "speaker": "Steve Sanghi",
+   "episode": 632,
+   "episode_title": "Steve Sanghi - Microchip CEO for 31 Years!",
+   "episode_url": "https://theamphour.com/632-steve-sanghi-microchip-ceo-for-31-years/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A class D amplifier is pulse width modulation applied to audio: compare the input against a sawtooth to produce a modulated square wave, switch the output stage with it, and let the load and filter recover the waveform — which is why these amplifiers are efficient rather than linear.",
+   "quote_verbatim": "you bring in an audio signal, you chop it up with a sawtooth wave, and then it becomes effectively a PWM signal",
+   "speaker": "Chris Gammell",
+   "episode": 285,
+   "episode_title": "Something's Serially Wrong Here",
+   "episode_url": "https://theamphour.com/285-somethings-serially-wrong-here/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The output stage only ever presents the supply rail or zero volts, and the analog waveform at the speaker exists only as the average of that switching — which is why the modulation scheme, not the output devices, sets the achievable fidelity.",
+   "quote_verbatim": "you would have 12 volts or you have zero volts. Right. And switching between that with different modulation type",
+   "speaker": "Jørgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with Jørgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Low-voltage DC lighting distribution would make dimming a modulation problem rather than a mains-waveform problem; traditional phase-angle dimmers are electrically nasty and are what makes modern electronic lamps flicker and misbehave on legacy dimmer circuits.",
+   "quote_verbatim": "dimming would be so much easier because pulsed modulation would be much easier as opposed to the phase angle control",
+   "speaker": "Big Clive",
+   "episode": 539,
+   "episode_title": "The King of Trash with Big Clive",
+   "episode_url": "https://theamphour.com/the-amp-hour-539-the-king-of-trash-with-big-clive/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Bidirectional motor drive from a signed command is handled by taking the absolute value for the duty cycle and using the sign to select which of two pins the modulation comes out of — a two-line idea simple enough to teach to children and sufficient for real robot drive.",
+   "quote_verbatim": "turn the negatives positive to drive the PWM positive but out of separate pins",
+   "speaker": "James Bruton",
+   "episode": 416,
+   "episode_title": "An Interview with James Bruton",
+   "episode_url": "https://theamphour.com/416-an-interview-with-james-bruton/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Driving a probe tip with PWM turns a logic probe into a node-impedance test: a point held high through a wire swallows the modulation, while a floating node follows it, which distinguishes the two states a passive probe reads identically.",
+   "quote_verbatim": "the older probe also outputs PWM. So like it would know the difference between, you know, something just held high with a wire versus, it can tell if it's floating",
+   "speaker": "Kevin Cappuccio",
+   "episode": 689,
+   "episode_title": "A Jumperless Breadboard with Kevin Cappuccio",
+   "episode_url": "https://theamphour.com/689-a-jumperless-breadboard-with-kevin-cappuccio/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A passive bug can carry no transmitter at all: modulate a square wave onto a passive element, illuminate the device with an external radar, and read the information off the modulated return.",
+   "quote_verbatim": "actually pulse width modulates a square wave, and then they fire a radar at it",
+   "speaker": "Dave Jones",
+   "episode": 182,
+   "episode_title": "Manufacturing By Wire And Skipping Testing - Calefacient Cuculine Cash",
+   "episode_url": "https://theamphour.com/182-manufacturing-by-wire-and-skipping-testing-calefacient-cuculine-cash/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Dropping below the convenient PWM abstraction trades a specified period for counter frequencies, count totals and bookkeeping the developer now owns; go there when you can articulate why the higher-level approach is the limiting factor, not before.",
+   "quote_verbatim": "instead of specifying a nice period, I'm doing this based on counter frequencies and count totals",
+   "speaker": "Mark Palmeri",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "On a high-level platform a pin is configured as a modulated output in a single line of code, with the slowest available period reaching one cycle per sixty seconds — a range that covers indicator blinking as readily as motor drive.",
+   "quote_verbatim": "the minimum frequency on PWM is, uh, uh, uh, every 60 seconds",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  }
+ ],
+ "attribution_notes": [
+  "attribution_reliable was not trusted. ep412 and ep224 are among the episodes known to carry swapped labels; claims are assigned by content — Mike Harrison speaks about his own large LED installations and part choices, Dave Jones about the three-cent microcontroller offload.",
+  "ep515 (Jay Carlson) and ep539 (Big Clive) label every turn with the guest's name including the host's questions; only material unambiguously the guest's own was used.",
+  "ep329 has three participants and the transcript alternates cleanly enough to attribute by content between Chris Gammell, Chris White and Elecia White.",
+  "ep378 appears in the bundle under a merged speaker label covering both BeagleBoard guests and is left as recorded.",
+  "The 47 kHz switching period quoted in ep522 works out closer to twenty-one microseconds than the twenty-seven stated; the claim is phrased so it does not depend on the arithmetic."
+ ],
+ "capped": false
+}

@@ -1,0 +1,449 @@
+{
+ "concept": "radio-frequency",
+ "name": "Radio Frequency",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "radio-frequency",
+  "census": "union",
+  "passages_in": 102,
+  "capped": false
+ },
+ "claims": [
+  {
+   "claim_text": "The boundary between low-frequency and high-frequency design sits somewhere between 10 and 100 MHz and is not sharply defined. Below about a megahertz the treatment is straightforward; above about 100 MHz every aspect has to be reconsidered, and that is roughly the same threshold at which a circuit starts to radiate appreciably.",
+   "quote_verbatim": "generally it's someplace between 10 and 100 meg",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "The behaviour that changes with frequency is where the return current flows. At low frequency it spreads through the whole ground plane and the plane can be treated as an equipotential; as frequency rises the current takes the path of least inductance and concentrates directly beneath the forward trace to minimise the loop area. The underlying principles are unchanged, but that detail governs high-frequency layout.",
+   "quote_verbatim": "The return path tends to congregate directly under the forward path in traces",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Physical length is the governing variable at radio frequency in a way it is not at low frequency. A comb-line filter works because a conductor shorted to the body at exactly the right length forms a shorted half-wave resonator that generates a field, and each comb element is a resonator coupled to that field and to its neighbours. The intuition for it comes from knowing the antenna size at the frequency of interest, since anything a large fraction of a wavelength long will affect the signal.",
+   "quote_verbatim": "the length means everything in RF",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Radio frequency work is in one respect easier than fast digital work, because a radio signal occupies a single fundamental frequency while a fast digital edge is broadband and spreads energy across the spectrum. The difficulty in modern boards is therefore concentrated in fast digital rather than in the radio section.",
+   "quote_verbatim": "what is hard is digital is really fast digital because it's broadband",
+   "speaker": "Dave Jones",
+   "episode": 260,
+   "episode_title": "An interview with Ariel Briner of Cartesian Co",
+   "episode_url": "https://theamphour.com/260-an-interview-with-ariel-briner-of-cartesian-co/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Digital designers are radio-frequency designers whether they recognise it or not, because what determines the spectral content of a signal is the transition rate rather than the clock rate.",
+   "quote_verbatim": "digital designers are RF designers and don't know it",
+   "speaker": "Henry Ott",
+   "episode": 165,
+   "episode_title": "An Interview with Henry Ott - Forced FCC Filtering",
+   "episode_url": "https://theamphour.com/165-an-interview-with-henry-ott-forced-fcc-filtering/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The characteristic mixed-signal problem is a receiver looking at signals around minus 100 dB sitting on the same board as a clock. A 32 MHz clock sounds harmless until its rise time is considered: an edge of 100 picoseconds carries content out to roughly 3 GHz, which lands directly on a 2.5 GHz receive band. The design responses are to use the lowest clock frequency the design can tolerate and the longest rise time that still works, and to treat signal integrity seriously once clocks pass about 30 MHz in a mixed-signal board.",
+   "quote_verbatim": "if it's got 100 picoseconds, you've got, you know, 3 gigahertz bandwidth signals there",
+   "speaker": null,
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Design rules that work at one speed do not scale. A two-layer development board whose power distribution wanders across the board is entirely adequate for an eight megahertz processor and is built that way deliberately to hit a low price, but the same rules do not survive past ten or twenty megahertz, while a modest set of additional rules will carry a design to around 100 MHz.",
+   "quote_verbatim": "it's not a set of design rules that's scalable",
+   "speaker": null,
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Practices imported from low-frequency analog design can actively harm a radio design. A cutout in a ground plane intended to steer low-frequency noise becomes an antenna once a radio-frequency signal meets it, so converter guidance written for low frequencies and radio-frequency practice cannot both be followed on the same board without resolving the contradiction.",
+   "quote_verbatim": "It just becomes an antenna effectively",
+   "speaker": "Chris Gammell",
+   "episode": 457,
+   "episode_title": "Dotty Ernest Annty Frost",
+   "episode_url": "https://theamphour.com/457-dotty-ernest-annty-frost/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The concept of ground is of little use at radio frequency, and low noise performance does not follow from grounding practice; the point is made by asking where ground is on a satellite, which has none and still achieves low-noise operation.",
+   "quote_verbatim": "ground is where the potatoes live",
+   "speaker": "Eli Hughes",
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Compliance outcomes cannot be predicted with confidence even by experienced practitioners, because the interactions are numerous: the cable with the chassis, the chassis with the board, the clocks with each other, and the ground plane itself radiating when current flows across it between two connectors, since its inductance produces a voltage difference between the two sides of the board. Good stack-up design and filtering on every power and signal line improve the odds without settling the result.",
+   "quote_verbatim": "the ground plane can be the thing radiating",
+   "speaker": null,
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Confidence about compliance follows a curve with experience. Someone who knows nothing expects to fail; someone who has learned a grounding technique and filtered every line expects to pass; someone who has taken a hundred products through full testing accepts that the outcome cannot be predicted, because a pragmatic product cannot always have a metal chassis, 360-degree bonding to its connectors or shielded cables.",
+   "quote_verbatim": "you just can't predict with absolute certainty",
+   "speaker": null,
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Anechoic chambers are expensive because of what lines them rather than their size: the absorber cones are normally too short to work alone, so the room must also be lined with ferrite tiles. A chamber large enough for cones of about 2.2 metres does not need the tiles at all, which is what makes such a chamber unusual as well as large.",
+   "quote_verbatim": "they're so deep, they don't need the ferrite tiles on the back of them",
+   "speaker": "Dave Jones",
+   "episode": 61,
+   "episode_title": "Moore's Law, GaN and SiC devices - Gallimaufry GaN Gabble",
+   "episode_url": "https://theamphour.com/the-amp-hour-61-gallimaufry-gan-gabble/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Radio-frequency instrumentation assumes a matched 50 ohm system throughout, with no attenuator ahead of the input, which is what makes an inexpensive analyser usable for looking at a carrier: the signal is repetitive and the loads are matched, which is the environment such an instrument was designed for.",
+   "quote_verbatim": "it's straight in, you know, it's bang, 50 ohm system, straight in, no attenuator",
+   "speaker": "Dave Jones",
+   "episode": 178,
+   "episode_title": "A 2013 Recap - Year-end Yarn Yakking",
+   "episode_url": "https://theamphour.com/178-a-2013-recap-year-end-yarn-yakking/",
+   "depth_regraded": "opinion",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "The lower frequency limit of a low-cost analyser usually reveals its architecture: an instrument built by repurposing a modern radio-frequency chipset inherits that chipset's design assumptions and cannot reach down towards direct current, which is why such instruments start at hundreds of megahertz rather than at kilohertz.",
+   "quote_verbatim": "They're probably co-opting one of these modern RF chipsets",
+   "speaker": "Dave Jones",
+   "episode": 347,
+   "episode_title": "Re-scoping the problem",
+   "episode_url": "https://theamphour.com/347-re-scoping-the-problem/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "A spectrum analyser function built into an oscilloscope is bounded by the oscilloscope's own bandwidth licence, so buying the 100 MHz model yields a 100 MHz analyser. That is adequate for switching power supply work and effectively useless for radio-frequency work, which is a purchasing trap where the capability appears to be present in the hardware.",
+   "quote_verbatim": "if you buy the hundred megahertz model, your spectrum analyzer is only a hundred megahertz",
+   "speaker": "Dave Jones",
+   "episode": 184,
+   "episode_title": "Chris Becomes Self Employed - Quixotic Quitting Quaere",
+   "episode_url": "https://theamphour.com/184-chris-becomes-self-employed-quixotic-quitting-quaere/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The licence-free bands are where most product radio work happens, principally 2.4 GHz and the sub-gigahertz bands around 900 MHz, the latter favoured in building automation for its better coverage. In such systems the radio is generally not the hard part; the networking is, because users who already struggle with a home network will not manage a network of light fittings.",
+   "quote_verbatim": "the RF isn't really the hard part. The hard part, really, is the networking aspect",
+   "speaker": "Akiba",
+   "episode": 245,
+   "episode_title": "An interview with Akiba from Freaklabs - Dimissory Diagraphical Debt",
+   "episode_url": "https://theamphour.com/245-an-interview-with-akiba-from-freaklabs-dimissory-diagraphical-debt/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Sub-gigahertz spectrum allocation is regional, with long-range links using bands from around 160 MHz up through 315, 433, 868 and 915 MHz depending on jurisdiction, which is why a product intended for several markets must either carry variants or use a chipset whose band is set by a register.",
+   "quote_verbatim": "Down from 160 megahertz in the US, I guess, to 315, 433 megahertz, 868 megahertz, and 915 megahertz",
+   "speaker": "Chris Gammell",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Sub-gigahertz radio modules expose a register set and handle the radio work internally, so a driver library with sound default settings reduces the designer's task to naming a centre frequency and an encryption key. That abstraction is what allows engineers without radio experience to build working links, at the cost of not learning what the parameters do.",
+   "quote_verbatim": "they handle the RF part. You just play with the parameters",
+   "speaker": "Dave Jones",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Supporting users of radio products is harder than supporting wired ones, because the standard debugging advice does not apply: a customer cannot be told to put an oscilloscope on the problem, so support falls back on shared community knowledge and direct contact.",
+   "quote_verbatim": "with RF, it seems like there's a lot more that can go wrong",
+   "speaker": "Chris Gammell",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Frequency selection changes propagation behaviour in ways that matter for a specific application: video links operate at 1.3, 2.4 and 5.2 GHz, and the bands bounce differently around obstacles, so a link that works in the open may drop out when the path bends around a corner.",
+   "quote_verbatim": "different frequencies bounce in different ways around corners",
+   "speaker": "Dave Jones",
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "depth_regraded": "opinion",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Radio does not work underwater, being absorbed within a couple of feet, which is why underwater links use sound instead. That constraint can be designed around by moving the processing to the sensor: compressing a high-bandwidth video feed down to a few bytes of results allows the data to travel kilometres over an acoustic channel with bandwidth comparable to an early telephone modem.",
+   "quote_verbatim": "you can't just use RF, you know, it gets absorbed in like two feet of water",
+   "speaker": "Brandon Gilles",
+   "episode": 517,
+   "episode_title": "Depth and AI with Brandon Gilles and Brian Weinstein",
+   "episode_url": "https://theamphour.com/517-depth-and-ai-with-brandon-gilles-and-brian-weinstein/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Higher-frequency cellular service is inherently short range, on the order of hundreds of metres, which is what makes it incompatible with satellite delivery and forces dense ground infrastructure.",
+   "quote_verbatim": "you can't do with satellite because it's only, you know, hundreds of meters range",
+   "speaker": "Chris Gammell",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Radio modules of different frequency variants can be visually indistinguishable, differing only by a part-number suffix, which makes them a dangerous class of part. An entire production run was built with the wrong regional variant, could not be reworked without damaging the boards, and went straight from the line into the bin. The root cause was a part number corrupted while exporting data between systems through a spreadsheet.",
+   "quote_verbatim": "Visually they were indiscernible, but there was just a suffix in the part number that was wrong frequency",
+   "speaker": null,
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Potting is used where the operating environment attacks the electronics, and a tyre pressure sensor is the extreme case: sulfur from the rubber vulcanisation process combines with moisture condensing out of the fill air to produce sulfuric acid inside the tyre. The cost is that potting adds hours to the manufacturing cycle, so the rule is to pot only when the environment requires it.",
+   "quote_verbatim": "They use sulfur during the vulcanization process of making the rubber",
+   "speaker": null,
+   "episode": 93,
+   "episode_title": "An Interview with Tom LeMense - Cacaesthestic Chronometric Carriwitchet",
+   "episode_url": "https://theamphour.com/the-amp-hour-93-cacaesthestic-chronometric-carriwitchet/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Milled prototype boards suit radio and analog iteration because those designs need frequent tweaking and cannot absorb a two-week fabrication cycle each time. The compromise is real: a milled board has no plated through-holes, no solder mask and no silkscreen, and its impedances differ from the production board, so the layout must be drawn in the knowledge that it will be milled and then redone properly for production.",
+   "quote_verbatim": "if you're doing anything like RF-based, all of your impedances are different",
+   "speaker": "Chris Gammell",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The absence of plated holes on a milled board forces via stitching by hand, and the wire through each hole must be soldered on both sides and then cut and shaved flush, because the residual height prevents a surface-mount component from seating.",
+   "quote_verbatim": "you've got to put an individual wire through each one",
+   "speaker": "Chris Gammell",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The description of radio-frequency work as black magic is misleading, since the physics is the same physics operating throughout electronics. What the field requires is an appreciation of the physical properties in play, and a great deal can be done without any advanced qualification in electromagnetics.",
+   "quote_verbatim": "the physics doesn't change",
+   "speaker": "Kieran O'Leary",
+   "episode": 492,
+   "episode_title": "More Electronics Consultant Impedance Matching",
+   "episode_url": "https://theamphour.com/492-more-electronics-consultant-impedance-matching/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Practitioners describe learning radio frequency by acquiring an instrument, struggling to use it, consulting people who know more and returning to it, rather than by studying theory first; the field is deep in the same way firmware is deep, and depth is reached incrementally.",
+   "quote_verbatim": "usually I buy something and then I struggle to use it",
+   "speaker": "Chris Gammell",
+   "episode": 500,
+   "episode_title": "Two and a Half Orders of Magnitude",
+   "episode_url": "https://theamphour.com/500-two-and-a-half-orders-of-magnitude/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Radio-frequency test equipment carries a disproportionate cost, and the accessories are part of it: cabling for a second-hand analyser cost as much again as the instrument, and a vector network analyser reaching 40 GHz is priced in the tens of thousands. Equipping a general laboratory to a good standard costs a fraction of entering radio work.",
+   "quote_verbatim": "If you want to spend a lot of money, get into RF",
+   "speaker": "Chris Gammell",
+   "episode": 567,
+   "episode_title": "The Rodeo Drive of Electronics",
+   "episode_url": "https://theamphour.com/567-the-rodeo-drive-of-electronics/",
+   "depth_regraded": "opinion",
+   "kind": "sourcing"
+  },
+  {
+   "claim_text": "Losing access to instruments is a real cost of leaving an organisation: having a high-frequency network analyser on the desk encourages measuring everything out of curiosity, and that habit of investigation disappears with the equipment rather than with the skill.",
+   "quote_verbatim": "if you have like a 40 gigahertz VNA sitting on your desk, you throw everything at it",
+   "speaker": "Jeff Keyzer",
+   "episode": 472,
+   "episode_title": "Keyzermas Vacation",
+   "episode_url": "https://theamphour.com/472-keyzermas-vacation/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Measuring impedance at radio frequency means measuring the reflected wave, since the two are related by a fixed equation for a given line impedance. Extracting the reflected energy from the same line requires a bidirectional coupler, and making that work across a wide bandwidth is the hard part of building a network analyser and the substance of what a good instrument is selling.",
+   "quote_verbatim": "you have to have a thing called a bi-directional coupler",
+   "speaker": "Chris Gammell",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "PIN diodes present a low impedance to radio-frequency signals when a direct current is passed through them, which makes them switching elements used throughout transceivers, and because the switched power can exceed the control power they can provide gain. Ordinary rectifier diodes behave as crude PIN diodes at some frequencies, and together with common switching diodes they are sufficient to build any logic gate, a working digital clock having been built from diodes alone with a radio-frequency supply.",
+   "quote_verbatim": "you pass a DC current through them and then all of a sudden they have a low, uh, impedance to RF",
+   "speaker": "Ted Yapo",
+   "episode": 465,
+   "episode_title": "An Interview with Ted Yapo",
+   "episode_url": "https://theamphour.com/465-an-interview-with-ted-yapo/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "The earliest radio transmitters worked by charging an antenna against a spark gap, the gap width setting the voltage at which the charge jumps, with each discharge radiating energy. Radar was then found by accident rather than sought: researchers experimenting with radio noticed interference as an aircraft passed and recognised the effect could be used.",
+   "quote_verbatim": "you charge up an antenna and then you have a spark gap",
+   "speaker": "Chris Gammell",
+   "episode": 62,
+   "episode_title": "Op amps, Microchips & Mergers - Narquois Nerd Nescience - Narquois Nerd Nescience",
+   "episode_url": "https://theamphour.com/the-amp-hour-62-narquois-nerd-nescience/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Radio sections in high-performance instruments are physically partitioned, with machined aluminium enclosures over each functional block on both sides of the board, specifically to stop the front-end amplifier coupling to the local oscillator or to neighbouring stages. An instrument of that class can contain twenty-five or more separately shielded blocks in a traceable signal chain.",
+   "quote_verbatim": "you don't want coupling between different sections",
+   "speaker": "Dave Jones",
+   "episode": 304,
+   "episode_title": "Alexa joins the fray",
+   "episode_url": "https://theamphour.com/304-alexa-joins-the-fray/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "A cheap software-defined receiver is what makes the spectrum comprehensible, because seeing a spectrum change over time conveys in moments what is hard to grasp from mathematics alone; the same insight had to be built from drawings and chalkboards in the era before such instruments existed.",
+   "quote_verbatim": "when you see like a, you know, a spectrum changing over time",
+   "speaker": "Chris Gammell",
+   "episode": 172,
+   "episode_title": "CAD courses and cross platform creation - Printing Propaedeutic Patterns",
+   "episode_url": "https://theamphour.com/172-cad-courses-and-cross-platform-creation-printing-propaedeutic-patterns/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A spectrum measurement settles disputes that assertion cannot: a claim that a wireless system would interfere with existing microphones was answered on the spot by showing the microphones at around 850 MHz and the equipment transmitting at 920 MHz.",
+   "quote_verbatim": "they pulled out their spectrum analyzer",
+   "speaker": "Akiba",
+   "episode": 245,
+   "episode_title": "An interview with Akiba from Freaklabs - Dimissory Diagraphical Debt",
+   "episode_url": "https://theamphour.com/245-an-interview-with-akiba-from-freaklabs-dimissory-diagraphical-debt/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Radio-frequency competence is treated as a distinct pillar of expertise rather than a subdivision of analog design, and practitioners describe their careers in those terms, with the radio specialism as the deep vertical and other domains held only to the depth needed to be useful.",
+   "quote_verbatim": "my pillar there is RF and then kind of a smattering of other stuff",
+   "speaker": null,
+   "episode": 93,
+   "episode_title": "An Interview with Tom LeMense - Cacaesthestic Chronometric Carriwitchet",
+   "episode_url": "https://theamphour.com/the-amp-hour-93-cacaesthestic-chronometric-carriwitchet/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Once a radio design is working and certified, subsequent products reuse the board with only the sensors and interfaces changed, which is why building a wireless product does not require radio expertise so long as nobody disturbs the radio section.",
+   "quote_verbatim": "you don't have to be an RF guru, you know, to make something with an NRF on it",
+   "speaker": "Shrouk El Attar",
+   "episode": 549,
+   "episode_title": "Creative Engineering with Shrouk El-Attar",
+   "episode_url": "https://theamphour.com/549-creative-engineering-with-shrouk-el-attar/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Parasitic effects dominate at radio frequency in a way that changes how components must be regarded: nothing behaves as its schematic symbol suggests, and every parasitic element matters, which is the same lesson that makes simulation models useless when they omit the path through which current actually flows.",
+   "quote_verbatim": "every, every, every parasitic, every, everything really matters",
+   "speaker": null,
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Shielding leaks in predictable ways: energy at radio frequency couples onto the ground and supply wiring leaving a shielded enclosure and re-radiates from them as a passive radiator, so a design that relies on attenuation with distance rather than on containment is relying on a real but incomplete mechanism.",
+   "quote_verbatim": "you're going to have the RF actually jumping onto the ground and positive wires",
+   "speaker": "Dave Jones",
+   "episode": 612,
+   "episode_title": "Slapping Industries",
+   "episode_url": "https://theamphour.com/612-slapping-industries/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Stack-up is one of the few areas a designer can ignore for an entire career unless the work demands it, and radio frequency is one of the cases that does demand it, alongside high-speed signalling, non-standard board thickness and heavy copper for high-current designs.",
+   "quote_verbatim": "you definitely need it for RF",
+   "speaker": "Chris Gammell",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Printed conductors on additively manufactured boards have perhaps a fifth to a tenth of the conductivity of copper, which can be compensated simply by printing them thicker; what matters more for radio work is knowing the dielectric constant of the material between layers, which such a process controls directly rather than through ordering standard laminate.",
+   "quote_verbatim": "you can print it 10 times thicker and you know, you wouldn't even notice it",
+   "speaker": null,
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "opinion",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Signal-integrity and radio-frequency knowledge sit adjacent to physics research rather than to conventional circuit design: work on laser physics amounts to electromagnetics combined with quantum mechanics, and the modelling skills transfer directly into radio design, which is why some practitioners arrive at radio frequency first rather than last.",
+   "quote_verbatim": "You're basically doing RF plus quantum mechanics",
+   "speaker": "Zachariah Peterson",
+   "episode": 718,
+   "episode_title": "Layout Review with Zachariah Peterson",
+   "episode_url": "https://theamphour.com/718-layout-review-with-zachariah/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  }
+ ],
+ "attribution_notes": [
+  "ep 93, 252, 476, 505, 577 and 645 sit on the unreliable-attribution list; those claims carry speaker: null and are attributed by content.",
+  "Five bundle passages carry no episode number and were dropped, since an uncitable passage cannot support a claim.",
+  "Amateur-radio hobby narrative and career anecdote were excluded under the knowledge-only rule."
+ ],
+ "capped": false
+}

@@ -1,0 +1,543 @@
+{
+ "concept": "digital-to-analog-converter",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "digital-to-analog-converter",
+  "census": "union",
+  "aliases": [
+   "dac",
+   "digital-to-analog-converter"
+  ],
+  "children": [
+   "audio-amplifier",
+   "automatic-gain-control",
+   "comparator",
+   "loudspeaker",
+   "sponsorship"
+  ],
+  "neighbors": {
+   "texas-instruments": 6
+  },
+  "pins_pre_cap": 57,
+  "pins_final": 57,
+  "pins_by_depth": {
+   "explains": 47,
+   "opinion": 10
+  },
+  "pins_by_role": {
+   "core": 54,
+   "child": 3
+  },
+  "capped": false,
+  "passages_yielding_claims": 41,
+  "passages_killed": 16
+ },
+ "claims": [
+  {
+   "claim_text": "An arbitrary waveform generator is a fast converter playing samples out of memory: the waveform, even a plain sine, is stored as an explicit sequence of values and read back repeatedly.",
+   "quote_verbatim": "It's a high-performance, high-speed DAC",
+   "speaker": "Dave Jones",
+   "episode": 278,
+   "episode_title": "Our Second Callin Show(ish)",
+   "episode_url": "https://theamphour.com/278-our-second-callin-showish/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The difficulty is not the conversion but the memory architecture. One stored cycle has to be repeated at any requested frequency, which means segmenting the sample memory and controlling how it is read — and a large memory can instead be preloaded with many cycles of the waveform.",
+   "quote_verbatim": "how you control the memory and segment it based on different frequencies",
+   "speaker": "Dave Jones",
+   "episode": 278,
+   "episode_title": "Our Second Callin Show(ish)",
+   "episode_url": "https://theamphour.com/278-our-second-callin-showish/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Resolution constrains where amplitude can be set. With eight bits, scaling the output down in the stored data is not possible — a full-scale ten-millivolt output would leave about two bits — so the amplitude control has to be analogue and sit after the converter.",
+   "quote_verbatim": "you can't do... You can't adjust your vertical in the sample memory",
+   "speaker": "Dave Jones",
+   "episode": 278,
+   "episode_title": "Our Second Callin Show(ish)",
+   "episode_url": "https://theamphour.com/278-our-second-callin-showish/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "That is why an instrument described as purely digital still contains a substantial analogue output section: DC offset, attenuators, amplifiers and filters all sit between the converter and the connector.",
+   "quote_verbatim": "There's a lot of stuff on the analog output side of things",
+   "speaker": "Chris Gammell",
+   "episode": 278,
+   "episode_title": "Our Second Callin Show(ish)",
+   "episode_url": "https://theamphour.com/278-our-second-callin-showish/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The immediate stage after the converter is a reconstruction filter and then a buffer, because the converter itself will not drive the load it is being asked to feed.",
+   "quote_verbatim": "the DAC would be followed by an LC filter as an anti-aliasing filter",
+   "speaker": "Chris Gammell",
+   "episode": 278,
+   "episode_title": "Our Second Callin Show(ish)",
+   "episode_url": "https://theamphour.com/278-our-second-callin-showish/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Wide, fast output swings force a discrete output stage: getting plus and minus twenty volts at speed from an operational amplifier is difficult, and any real output current makes it harder again.",
+   "quote_verbatim": "you're probably going to want to go with a discrete thing",
+   "speaker": "Dave Jones",
+   "episode": 278,
+   "episode_title": "Our Second Callin Show(ish)",
+   "episode_url": "https://theamphour.com/278-our-second-callin-showish/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Sample rate is not output bandwidth: a converter rated for thirty megasamples intended for video gives usable analogue bandwidth in the region of five megahertz.",
+   "quote_verbatim": "if 30 MHz is a sample rate, then the output analog bandwidth might be, like, 5 MHz",
+   "speaker": "Dave Jones",
+   "episode": 278,
+   "episode_title": "Our Second Callin Show(ish)",
+   "episode_url": "https://theamphour.com/278-our-second-callin-showish/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The build order that avoids compound problems is to start with an eight-bit converter and get the system working end to end, then move to twelve or sixteen bits once the behaviour is understood.",
+   "quote_verbatim": "I would start with the 8-bit DAC",
+   "speaker": "Dave Jones",
+   "episode": 278,
+   "episode_title": "Our Second Callin Show(ish)",
+   "episode_url": "https://theamphour.com/278-our-second-callin-showish/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Instruments do not necessarily filter their output to a clean sine: the waveform from expensive equipment is often a visible staircase, because the steps are removed by the sampling and filtering that follow rather than at the source.",
+   "quote_verbatim": "It's just a step, you know, a step approximation",
+   "speaker": "Dave Jones",
+   "episode": 570,
+   "episode_title": "Keyzermas All The Way",
+   "episode_url": "https://theamphour.com/570-keyzermas-all-the-way/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The headline linearity figure and the guaranteed figure are different numbers: a part advertising integral non-linearity of about plus or minus two counts specifies plus or minus twelve over temperature.",
+   "quote_verbatim": "It advertises an INL of plus minus two bits or something",
+   "speaker": "Dave Jones",
+   "episode": 80,
+   "episode_title": "Otiose Ontocyclic Opiniasters",
+   "episode_url": "https://theamphour.com/the-amp-hour-80-otiose-ontocyclic-opiniasters/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Measuring several parts is what settles it: three samples of the same converter showed the spread between devices directly, rather than leaving the data sheet's limits as the only information.",
+   "quote_verbatim": "I measured three different chips, and, you know, and I could see the spread across the three chips",
+   "speaker": "Dave Jones",
+   "episode": 80,
+   "episode_title": "Otiose Ontocyclic Opiniasters",
+   "episode_url": "https://theamphour.com/the-amp-hour-80-otiose-ontocyclic-opiniasters/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Choosing fewer bits from the same family can improve real accuracy, because the parts come from one die that is sorted: the ten-bit version can be tighter within its range than the twelve-bit version is within its own.",
+   "quote_verbatim": "here's an application where it could be beneficial to go back from 12 bits to 10 bits",
+   "speaker": "Dave Jones",
+   "episode": 80,
+   "episode_title": "Otiose Ontocyclic Opiniasters",
+   "episode_url": "https://theamphour.com/the-amp-hour-80-otiose-ontocyclic-opiniasters/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The converter is often the weakest element in an otherwise precise chain: using 0.1 percent resistors and a 0.25 percent reference around an ordinary converter puts the error where the cheap part is.",
+   "quote_verbatim": "I'm using 0.1% resistors, and I'm using a 0.25% voltage reference",
+   "speaker": "Dave Jones",
+   "episode": 80,
+   "episode_title": "Otiose Ontocyclic Opiniasters",
+   "episode_url": "https://theamphour.com/the-amp-hour-80-otiose-ontocyclic-opiniasters/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Reasons to fit an external converter rather than use the one inside the microcontroller are lower noise and flexibility: an external part can be substituted for a better one without changing the rest of the design.",
+   "quote_verbatim": "It's lower noise, and because it's a better educational thing",
+   "speaker": "Dave Jones",
+   "episode": 80,
+   "episode_title": "Otiose Ontocyclic Opiniasters",
+   "episode_url": "https://theamphour.com/the-amp-hour-80-otiose-ontocyclic-opiniasters/",
+   "depth_regraded": "explains",
+   "kind": "rationale"
+  },
+  {
+   "claim_text": "The asymmetry inside a microcontroller is consistent: a usable analogue-to-digital converter is not hard to integrate, and a good digital-to-analogue converter is.",
+   "quote_verbatim": "it's not hard to get a good analog-to-digital converter inside a micro, but it is hard to get a good DAC",
+   "speaker": "Dave Jones",
+   "episode": 87,
+   "episode_title": "An Interview with Ian Daniher - Nascent Nonolith Numquid",
+   "episode_url": "https://theamphour.com/the-amp-hour-87-nascent-nonolith-numquid/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Discrete converters carry a price premium and there is no jelly-bean part at the bottom of the market.",
+   "quote_verbatim": "It's not like you can get a 20-cent DAC",
+   "speaker": "Dave Jones",
+   "episode": 80,
+   "episode_title": "Otiose Ontocyclic Opiniasters",
+   "episode_url": "https://theamphour.com/the-amp-hour-80-otiose-ontocyclic-opiniasters/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "On microcontrollers the peripheral does not appear at all until a certain price: an inexpensive part will have an analogue input and a comparator but no output converter.",
+   "quote_verbatim": "I feel like you don't see a DAC until you're up in the, you know, 50 cent plus range",
+   "speaker": "Dave Jones",
+   "episode": 610,
+   "episode_title": "Picking a Pick and Place Pickiness",
+   "episode_url": "https://theamphour.com/610-picking-a-pick-and-place-pickiness/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Integration is bounded by the process the die is made on. Putting a converter alongside higher-power circuitry forces one process to serve both, so a die optimised for the converter will not also give low-resistance switches, and the published specifications narrow accordingly.",
+   "quote_verbatim": "if you have like a higher power circuit on board, you might not be able to use the right process to get a good DAC or a good ADC",
+   "speaker": "Chris Gammell",
+   "episode": 216,
+   "episode_title": "Last Minute Decisions - Obdurate Onepercenter Obstacles",
+   "episode_url": "https://theamphour.com/216-last-minute-decisions-obdurate-onepercenter-obstacles/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The same compromise shows in reconfigurable mixed-signal parts, where the converters top out around twelve bits and the analogue blocks are adequate rather than good.",
+   "quote_verbatim": "the best they could do was like a 12 bit A to D, 12 bit DAC",
+   "speaker": "Chris Gammell",
+   "episode": 12,
+   "episode_title": "Dave Is Back And Blogging!",
+   "episode_url": "https://theamphour.com/the-amp-hour-12-dave-is-back-and-blogging/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Integration also has a ceiling in performance. A single package containing both dual converters made for a very sparse board, but no higher-rate, higher-precision version of that part existed, so the next generation used separate converters — one chip became six.",
+   "quote_verbatim": "there isn't a sort of a higher sampling rate, higher, uh, precision version of it",
+   "speaker": "Matt Ettus",
+   "episode": 101,
+   "episode_title": "An Interview with Matt Ettus - Quality Quadrature Quidam",
+   "episode_url": "https://theamphour.com/the-amp-hour-101-quality-quadrature-quidam/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "That change propagated into the system architecture: the separate high-end converters brought so many more pins that two channels no longer fitted on one board, and multiple-antenna operation became a matter of tying boards together.",
+   "quote_verbatim": "there's just so many more pins when you have the higher end converters",
+   "speaker": "Matt Ettus",
+   "episode": 101,
+   "episode_title": "An Interview with Matt Ettus - Quality Quadrature Quidam",
+   "episode_url": "https://theamphour.com/the-amp-hour-101-quality-quadrature-quidam/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Clocking the converters from an external source rather than from the microcontroller's own clock generator keeps the sampling instants free of the jitter that generator would add.",
+   "quote_verbatim": "we're clocking in and out samples from the microcontroller with an external clock",
+   "speaker": "Michael Ossmann",
+   "episode": 265,
+   "episode_title": "A Security Update with Michael Ossmann",
+   "episode_url": "https://theamphour.com/265-a-security-update-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A small programmable logic device is often present purely as interface glue between the converters and the processor rather than to do any processing of its own.",
+   "quote_verbatim": "It is simply interface glue between the analog to digital converters and, and digital analog converters and the microcontroller",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Configurable mixed-signal parts make the converter a routing choice: a device can offer several converters that can be switched to any pin, alongside the digital logic.",
+   "quote_verbatim": "you can get parts that have multiple DACs that you can switch into any pin",
+   "speaker": "Dave Jones",
+   "episode": 352,
+   "episode_title": "Conning with Michael Ossmann",
+   "episode_url": "https://theamphour.com/352-conning-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The density available in a purpose-built part is considerable: four channels of conversion together with two channels of amplification reaching seventy watts, in a nine-by-nine-millimetre package.",
+   "quote_verbatim": "four channels of, uh, D to D to a conversion, uh, and two channels of audio amplification up to 70 Watts",
+   "speaker": "Jørgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with Jørgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "An audio codec packages the pair together with what is needed around them — a good converter in each direction plus enough to drive a microphone and headphones from one chip.",
+   "quote_verbatim": "a pretty good audio DAC and ADC on a chip",
+   "speaker": "Adam Wolf",
+   "episode": 167,
+   "episode_title": "An Interview with Adam Wolf - Brick & Board Biuners",
+   "episode_url": "https://theamphour.com/167-an-interview-with-adam-wolf-brick-board-biuners/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "At millimetre-wave frequencies the radio is not what limits usable bandwidth — the converters are. Wide spectrum is of no use if only a fifty-megahertz slice can be digitised.",
+   "quote_verbatim": "The problem is it's not the radio that limits the bandwidth. It's the ADC and the DAC.",
+   "speaker": "Adrian Tang",
+   "episode": 483,
+   "episode_title": "An Interview with Adrian Tang",
+   "episode_url": "https://theamphour.com/483-an-interview-with-adrian-tang/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The reason that limit holds is power rather than ingenuity: converting and processing at those rates costs on the order of a watt, which a handheld device cannot spend without becoming uncomfortable to hold.",
+   "quote_verbatim": "Those high data rates don't come at low power",
+   "speaker": "Adrian Tang",
+   "episode": 483,
+   "episode_title": "An Interview with Adrian Tang",
+   "episode_url": "https://theamphour.com/483-an-interview-with-adrian-tang/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "In audio the converter is usually not the limiting element. A loudspeaker runs at something between half a percent and one percent distortion, and room acoustics contribute more error than even a poor speaker.",
+   "quote_verbatim": "your poor speaker is running at, like, a half a percent or 1% THD",
+   "speaker": "Dafydd Roche",
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Published audio specifications are routinely far beyond the requirement — twenty-four bits at nearly two hundred kilohertz — and the engineering task is tying the choice back to what the application actually needs.",
+   "quote_verbatim": "24 bit analog digital converters running at almost 200 kilohertz of a sample rate when it actually comes down to it",
+   "speaker": "Philip Salmony",
+   "episode": 573,
+   "episode_title": "Mixed Signal Education with Philip Salmony",
+   "episode_url": "https://theamphour.com/573-mixed-signal-education-with-philip-salmony/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "That makes converter selection a cost optimisation rather than a specification hunt: the question is whether a two-dollar part can be made to sound right rather than whether a thirty-dollar part meets a number.",
+   "quote_verbatim": "can you optimize so that you can spend $2 on a DAC",
+   "speaker": "Chris Gammell",
+   "episode": 573,
+   "episode_title": "Mixed Signal Education with Philip Salmony",
+   "episode_url": "https://theamphour.com/573-mixed-signal-education-with-philip-salmony/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Either way the analogue circuitry around the converter has to be designed, and that boundary between the two domains is the mixed-signal skill worth acquiring.",
+   "quote_verbatim": "for any ADC or DAC, you're going to have to design the analog circuitry around it",
+   "speaker": "Philip Salmony",
+   "episode": 573,
+   "episode_title": "Mixed Signal Education with Philip Salmony",
+   "episode_url": "https://theamphour.com/573-mixed-signal-education-with-philip-salmony/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A practical processing chain puts an adjustable gain stage ahead of the input converter so the signal lands in that converter's usable range, then returns the processed result through the output converter.",
+   "quote_verbatim": "there is a, an adjustable gain stage, uh, before the ADC, just so you, you get in a sweet spot",
+   "speaker": "Dave Jones",
+   "episode": 513,
+   "episode_title": "Audio DSP with Shannon Parks",
+   "episode_url": "https://theamphour.com/513-audio-dsp-with-shannon-parks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A successive-approximation converter contains a digital-to-analogue converter: the input is captured on a sample-and-hold capacitor, and the internal converter is stepped through voltages that a comparator weighs against that stored value, with the sequence of comparisons forming the result.",
+   "quote_verbatim": "you have a DAC, um, and the other input of the capacitor and it's, um, surveying through different voltages",
+   "speaker": "Art Kay",
+   "episode": 348,
+   "episode_title": "An Interview with Art Kay",
+   "episode_url": "https://theamphour.com/348-an-interview-with-art-kay/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The constraint that follows is at the input: the front-end switch has to stay closed long enough for the internal capacitor to charge through its own series resistance, which is what makes driving that input the hard part.",
+   "quote_verbatim": "you have to make sure that switch is closed long enough for that internal sample and hold capacitor to charge up",
+   "speaker": "Art Kay",
+   "episode": 348,
+   "episode_title": "An Interview with Art Kay",
+   "episode_url": "https://theamphour.com/348-an-interview-with-art-kay/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Sweeping the codes and measuring the output with a bench meter is the obvious characterisation, and auto-ranging invalidates it: the meter changes accuracy at each range boundary, producing steps in the plot that are read as converter defects.",
+   "quote_verbatim": "You do realize when that thing changes ranges, it's changes accuracy",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Turning auto-ranging off does not end the problem. A precision meter using a multi-slope integrating converter has behaviour of its own that appears as step-to-step error scattered across the linearity plot, which again is not the part under test.",
+   "quote_verbatim": "The INL, DNL films, the step to step error, is all over the place",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "When the output values are wrong, the reference is worth checking before the code: a converter producing implausible values turned out to have a slightly incorrect reference, and the cause was an analogue ground connected to three capacitors and nothing else.",
+   "quote_verbatim": "I better check the reference on this thing",
+   "speaker": "Chris Gammell",
+   "episode": 474,
+   "episode_title": "An Interview with Nash Reilly",
+   "episode_url": "https://theamphour.com/474-an-interview-with-nash-reilly/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Testing a converter can be a larger problem than building it: developing a sixteen-bit converter clocked around seventeen megahertz in 1995 required building a programmable pattern generator to feed it, because the data arrived on a time-interleaved four-bit bus carrying both samples and opcodes.",
+   "quote_verbatim": "I'm going to make myself an ISA board, stick it into one of these PCs here",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Video can be generated from a microcontroller with a resistor-ladder converter of only a few bits, because a monochrome signal has no colour burst to reproduce.",
+   "quote_verbatim": "you could do it with just, uh, I think three bit DAC made of resistors",
+   "speaker": "Chris Gammell",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Colour video needs both the converter and the clock: a parallel output driving a resistor ladder produced the signal, and generating it at the correct rate depended on a phase-locked clock source that later revisions of the part removed along with the built-in converters.",
+   "quote_verbatim": "It was able to output parallel data that were like a R2R resistor, ladder, DAC",
+   "speaker": "Bitluni",
+   "episode": 673,
+   "episode_title": "Lifelong Learning with Bitluni",
+   "episode_url": "https://theamphour.com/673-lifelong-learning-with-bitluni/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where audio quality is the point, the converter can be avoided entirely: rather than an input and output converter for each of hundreds of channels, a motor drives the physical fader so the signal path stays analogue throughout.",
+   "quote_verbatim": "they actually put a little motor in there, which drives the stem of the slider pot",
+   "speaker": "Dave Jones",
+   "episode": 27,
+   "episode_title": "555 Contest, Computer Museum, Octopart - The Green Pen Hornswoggle",
+   "episode_url": "https://theamphour.com/the-amp-hour-27-the-green-pen-hornswoggle/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In software radio the converters are indifferent to what produced the signal, so the same hardware serves ultrasound research as readily as radio, and the architecture reduces to a front end, an input converter, processing, and an output converter back to a front end.",
+   "quote_verbatim": "the analog to digital and digital to analog converters in these radios in the end don't really care what's generating that",
+   "speaker": "Chris Gammell",
+   "episode": 381,
+   "episode_title": "An Interview with Derek Kozel",
+   "episode_url": "https://theamphour.com/381-interview-with-derek-kozel/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A programmable supply is built the same way: an inexpensive converter on a serial bus produces zero to about five volts, and a power operational amplifier scales and shifts that to the required rails while supplying the current.",
+   "quote_verbatim": "I get like zero to 4.96 volts from the, you know, the I squared C DAC",
+   "speaker": "Kevin Cappuccio",
+   "episode": 689,
+   "episode_title": "A Jumperless Breadboard with Kevin Cappuccio",
+   "episode_url": "https://theamphour.com/689-a-jumperless-breadboard-with-kevin-cappuccio/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The converter can also be the source in a measurement: driving a known voltage through a current sensor and measuring the drop turns the same hardware into a resistance meter.",
+   "quote_verbatim": "one of the DACs is also like hardwired to, uh, a current sensor. So you can measure resistance.",
+   "speaker": "Kevin Cappuccio",
+   "episode": 689,
+   "episode_title": "A Jumperless Breadboard with Kevin Cappuccio",
+   "episode_url": "https://theamphour.com/689-a-jumperless-breadboard-with-kevin-cappuccio/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A programmable bench supply used two sixteen-bit converters to set the positive and negative rails independently across a wide range, with sixteen-bit current measurement returning the output current.",
+   "quote_verbatim": "we actually have two 16-bit uh dax which control everything",
+   "speaker": "Parker Dillman",
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Adding a converter for programmable calibration brings the whole support structure with it, which is the argument for parts accurate enough that no per-unit trimming is needed.",
+   "quote_verbatim": "it would be putting a DAC on board and doing it programmatically",
+   "speaker": "Chris Gammell",
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Peripheral count drives part selection directly: a microcontroller was chosen because it offered four output converters, which the application required.",
+   "quote_verbatim": "I wanted the four Dax",
+   "speaker": "Chris Gammell",
+   "episode": 564,
+   "episode_title": "Pavlovian Cheapskates",
+   "episode_url": "https://theamphour.com/564-pavlovian-cheapskates/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The direction of travel is toward making that irrelevant: newer parts offer many general-purpose pins each of which can be configured as an input or output converter.",
+   "quote_verbatim": "each one can be a DAC or an ADC",
+   "speaker": "Stephen Craig",
+   "episode": 564,
+   "episode_title": "Pavlovian Cheapskates",
+   "episode_url": "https://theamphour.com/564-pavlovian-cheapskates/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The device belongs to a choice of approach rather than being obligatory: comparing a voltage and acting on the result can be done with a comparator directly, or by digitising it, comparing in software and driving an output converter — and which one an engineer reaches for tends to follow what they were trained on.",
+   "quote_verbatim": "outputting it to a DAC",
+   "speaker": "Chris Gammell",
+   "episode": 2,
+   "episode_title": "Critical Mass",
+   "episode_url": "https://theamphour.com/show-2-critical-mass/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  }
+ ],
+ "attribution_notes": [
+  "One passage carries no episode number and was dropped rather than cited.",
+  "eps 381, 513: attribution flagged unreliable. Claims are content-attributed to the guest whose product or field the passage describes.",
+  "Where the bundle's speaker label conflicts with the content — an interviewer describing the guest's own hardware, or the reverse — the claim is attributed to whoever the content identifies, and left unattributed where that is ambiguous."
+ ],
+ "capped": false
+}

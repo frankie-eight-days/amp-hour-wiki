@@ -1,0 +1,675 @@
+{
+ "concept": "can-bus",
+ "name": "CAN Bus",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "can-bus",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "can-bus",
+   "can-bus-protocol"
+  ],
+  "children": [
+   "abs",
+   "automotive-sensor",
+   "bosch",
+   "can-transceiver",
+   "car-hacking",
+   "car-security",
+   "drive-by-wire",
+   "ecu",
+   "embedded-electronics",
+   "fuzzing",
+   "high-side-switch",
+   "jet-engine",
+   "lead-screw",
+   "lin-bus",
+   "obd2",
+   "rs-485",
+   "software-design"
+  ],
+  "neighbors": {
+   "automotive-electronics": 4,
+   "freescale": 4
+  },
+  "episodes_with_kept_mentions": 48,
+  "mentions_kept": 179,
+  "pins_final": 95,
+  "capped": false,
+  "total_available": 95
+ },
+ "claims": [
+  {
+   "claim_text": "Before CAN settled the market in the mid-2000s in the United States, the SAE automotive bus was an umbrella over incompatible manufacturer-specific implementations that happened to share a bit rate, so it was not a standard in any useful sense.",
+   "quote_verbatim": "it was kind of this umbrella thing that sat over the Ford way and the GM way and the Chrysler way. And they're all totally different, but they all had the same speed",
+   "speaker": "Tom LeMense",
+   "episode": 93,
+   "episode_title": "An Interview with Tom LeMense - Cacaesthestic Chronometric Carriwitchet",
+   "episode_url": "https://theamphour.com/the-amp-hour-93-cacaesthestic-chronometric-carriwitchet/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "CAN displaced the manufacturer buses largely on silicon economics: the proprietary variants needed standalone licensed interface chips implementing both physical layer and MAC, while CAN had broad support from chip makers.",
+   "quote_verbatim": "those were standalone kind of bus interface chips, not just the physical layer, but also like the Mac",
+   "speaker": "Tom LeMense",
+   "episode": 93,
+   "episode_title": "An Interview with Tom LeMense - Cacaesthestic Chronometric Carriwitchet",
+   "episode_url": "https://theamphour.com/the-amp-hour-93-cacaesthestic-chronometric-carriwitchet/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Classic CAN tops out around one megabit per second, which is why faster automotive buses such as FlexRay and the optical MOST exist alongside it.",
+   "quote_verbatim": "it pretty much tops, it tops out at about a megabit",
+   "speaker": "Tom LeMense",
+   "episode": 93,
+   "episode_title": "An Interview with Tom LeMense - Cacaesthestic Chronometric Carriwitchet",
+   "episode_url": "https://theamphour.com/the-amp-hour-93-cacaesthestic-chronometric-carriwitchet/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Arbitration sits in the physical layer rather than above it, so a multi-drop CAN bus has no collisions to recover from, unlike Ethernet where collisions cost throughput.",
+   "quote_verbatim": "built into the physical layer is arbitration",
+   "speaker": "Tom LeMense",
+   "episode": 93,
+   "episode_title": "An Interview with Tom LeMense - Cacaesthestic Chronometric Carriwitchet",
+   "episode_url": "https://theamphour.com/the-amp-hour-93-cacaesthestic-chronometric-carriwitchet/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Every node is required to be able to take itself off the bus if it detects that it is transmitting continuously, which keeps one faulty module from destroying the network.",
+   "quote_verbatim": "every CAN node has to be able to shut itself off if it thinks it's babbling on the bus",
+   "speaker": "Tom LeMense",
+   "episode": 93,
+   "episode_title": "An Interview with Tom LeMense - Cacaesthestic Chronometric Carriwitchet",
+   "episode_url": "https://theamphour.com/the-amp-hour-93-cacaesthestic-chronometric-carriwitchet/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A car is partitioned into several buses rather than one: a high-speed one-megabit powertrain bus carries the engine and transmission controllers and reaches the rest of the vehicle through a gateway at the instrument cluster, with as many as a hundred modules in a complex vehicle.",
+   "quote_verbatim": "you've got a high speed CAN, that's your one megabit and that's your powertrain bus",
+   "speaker": "Tom LeMense",
+   "episode": 93,
+   "episode_title": "An Interview with Tom LeMense - Cacaesthestic Chronometric Carriwitchet",
+   "episode_url": "https://theamphour.com/the-amp-hour-93-cacaesthestic-chronometric-carriwitchet/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A CAN transceiver costs on the order of fifty cents in volume, which is enough to justify pushing minor modules onto cheaper UART-based sub-buses and keeping the node count on the CAN bus itself low.",
+   "quote_verbatim": "you're going to spend, you know, like, you know, 50, 50 cents or so to get, to get a can transceiver right in high volume",
+   "speaker": "Tom LeMense",
+   "episode": 93,
+   "episode_title": "An Interview with Tom LeMense - Cacaesthestic Chronometric Carriwitchet",
+   "episode_url": "https://theamphour.com/the-amp-hour-93-cacaesthestic-chronometric-carriwitchet/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Safety-critical actuation does not depend on the network: the airbag charge fires autonomously and the bus connection exists so the module can report status for the warning lamp.",
+   "quote_verbatim": "Even if the can bus interface fails, right? The airbag would still work.",
+   "speaker": "Tom LeMense",
+   "episode": 93,
+   "episode_title": "An Interview with Tom LeMense - Cacaesthestic Chronometric Carriwitchet",
+   "episode_url": "https://theamphour.com/the-amp-hour-93-cacaesthestic-chronometric-carriwitchet/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The onboard diagnostics connector is nothing more than a standardised, deliberately accessible drop onto the vehicle's CAN bus, with a fixed pinout and a defined set of messages, which is why an inexpensive generic code reader works across makes.",
+   "quote_verbatim": "a set of standard messages then that appear on that",
+   "speaker": "Tom LeMense",
+   "episode": 93,
+   "episode_title": "An Interview with Tom LeMense - Cacaesthestic Chronometric Carriwitchet",
+   "episode_url": "https://theamphour.com/the-amp-hour-93-cacaesthestic-chronometric-carriwitchet/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "In an electric-drive conversion every subsystem sits on CAN, with battery packs daisy-chained through small latching four-wire connectors and only the high-current cables running separately.",
+   "quote_verbatim": "they have a little four-wire, a nice little latching CAN bus connector in and out if you're daisy chaining them up",
+   "speaker": "Bob Simpson",
+   "episode": 112,
+   "episode_title": "An Interview with Bob Simpson - Ardent Automotive Artisan",
+   "episode_url": "https://theamphour.com/the-amp-hour-112-ardent-automotive-artisan/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "What the bus actually delivers to an inverter is how much torque and in which direction, so regenerative braking is the same command with a sign change rather than a separate subsystem.",
+   "quote_verbatim": "torque either direction is really just a minus sign on software",
+   "speaker": "Bob Simpson",
+   "episode": 112,
+   "episode_title": "An Interview with Bob Simpson - Ardent Automotive Artisan",
+   "episode_url": "https://theamphour.com/the-amp-hour-112-ardent-automotive-artisan/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Driving a donor car's existing instruments after a conversion is a matter of tapping the bus, capturing traffic, identifying which value moves with which gauge, then transmitting on that same address.",
+   "quote_verbatim": "I just simply tap into the CAN bus, look at the data going by, you capture it, and you decode it",
+   "speaker": "Bob Simpson",
+   "episode": 112,
+   "episode_title": "An Interview with Bob Simpson - Ardent Automotive Artisan",
+   "episode_url": "https://theamphour.com/the-amp-hour-112-ardent-automotive-artisan/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The published Toyota work required physical access to the bus, and the follow-up research deliberately reproduced the same degree of control remotely to answer the objection that physical access made the result uninteresting.",
+   "quote_verbatim": "they were able to totally take control of a Toyota via physical access",
+   "speaker": "Michael Ossmann",
+   "episode": 265,
+   "episode_title": "A Security Update with Michael Ossmann",
+   "episode_url": "https://theamphour.com/265-a-security-update-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Vehicle internal networks are effectively open once entered: going from control of a single device to control of many on the same bus takes very little, because the bus carries no meaningful access control.",
+   "quote_verbatim": "it doesn't take much to go from a foothold or control of one device on that CAN bus to gaining access or control over many devices on that CAN bus",
+   "speaker": "Michael Ossmann",
+   "episode": 265,
+   "episode_title": "A Security Update with Michael Ossmann",
+   "episode_url": "https://theamphour.com/265-a-security-update-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The attack surface is every microcontroller attached to the bus, and a modern car has hundreds of them, down to sensors nobody thinks of as computers.",
+   "quote_verbatim": "There are hundreds and hundreds of micros in a modern car",
+   "speaker": null,
+   "episode": 265,
+   "episode_title": "A Security Update with Michael Ossmann",
+   "episode_url": "https://theamphour.com/265-a-security-update-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Tyre-pressure monitors turned out not to be a route onto the vehicle bus precisely because their radio packets are a short fixed-format frame into a simple receiver rather than a complete CAN frame; had they carried full frames the exposure would have been severe.",
+   "quote_verbatim": "It's not like the tire pressure monitor is transmitting a complete CAN bus packet",
+   "speaker": "Michael Ossmann",
+   "episode": 265,
+   "episode_title": "A Security Update with Michael Ossmann",
+   "episode_url": "https://theamphour.com/265-a-security-update-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Arbitration is by identifier: every node has a unique ID, all nodes start transmitting in sync after the start bit, each reads back what appears on the bus, and the numerically lowest identifier wins while the others back off and retry.",
+   "quote_verbatim": "every sensor will have his own unique ID and basically the one with the lowest bit value for the ID wins",
+   "speaker": "Ronald Sousa",
+   "episode": 266,
+   "episode_title": "An Interview with Ronald Sousa of Hash Define Electronics",
+   "episode_url": "https://theamphour.com/266-an-interview-with-ronald-sousa-of-hash-define-electronics/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Bus bandwidth is easy to exhaust by accident: a single node transmitting on a short period with no allowance for others will starve the rest of the network, and because it wins arbitration it is the low-numbered node that does the starving.",
+   "quote_verbatim": "if you've got one sensor who's sending data every millisecond or however quick you've got the CAN set up, if you don't give enough time for other, uh, nodes to talk",
+   "speaker": "Ronald Sousa",
+   "episode": 266,
+   "episode_title": "An Interview with Ronald Sousa of Hash Define Electronics",
+   "episode_url": "https://theamphour.com/266-an-interview-with-ronald-sousa-of-hash-define-electronics/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A polled design in which a controller broadcasts every 500 milliseconds and each sensor answers within that window behaved well; the later redesign, where every node fired its own one-second interrupt and simply gave up when it could not transmit, produced permanent starvation of the higher-numbered nodes.",
+   "quote_verbatim": "every 500 milliseconds, I would sample the network",
+   "speaker": "Ronald Sousa",
+   "episode": 266,
+   "episode_title": "An Interview with Ronald Sousa of Hash Define Electronics",
+   "episode_url": "https://theamphour.com/266-an-interview-with-ronald-sousa-of-hash-define-electronics/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "CAN was created by Bosch in 1985 but only became universal in cars once it was mandated, from around 2009.",
+   "quote_verbatim": "developed by Bosch in 1985",
+   "speaker": "Collin Kidder",
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The mandate is what guarantees a modern vehicle speaks CAN at the diagnostic connector at all.",
+   "quote_verbatim": "it was mandated in cars only starting in 2009",
+   "speaker": "Collin Kidder",
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "CAN FD keeps the arbitration phase at the classic rate, commonly 250 or 500 kilobits, then switches to as much as 8 megabits for the data field with larger payloads; the motivating application is flashing megabyte-sized ECU images, where the classic rate is painful.",
+   "quote_verbatim": "it can start out sending at say 500 kilobits. And then when it starts transmitting actual data and not just metadata, it can kick up to 8 megabits per second",
+   "speaker": "Collin Kidder",
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "CAN is differential; the single-wire variant is the same protocol using one line of the pair and leaving the other unused.",
+   "quote_verbatim": "single-wire CAN is basically just one wire from the differential CAN",
+   "speaker": "Collin Kidder",
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "A 500 kilobit bus carries roughly 4,700 messages per second, which is the practical ceiling on how much vehicle data can be published.",
+   "quote_verbatim": "on 500 kilobit bus, you can send about 4,700 messages per second",
+   "speaker": "Collin Kidder",
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "What the frames mean is manufacturer-specific and is changed freely between models and model years, so a third party supporting a range of vehicles is maintaining a separate decoding effort per vehicle.",
+   "quote_verbatim": "the car companies feel free to switch that between model years, between models of cars",
+   "speaker": "Collin Kidder",
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Engine transplants between makes became hard once the ECU stopped being an island: it waits on messages from other modules, for example a traction control module telling it to cap torque during wheel slip, and those messages do not exist in a different manufacturer's car.",
+   "quote_verbatim": "it might be looking for a message from the ABS or traction control module so that if the traction control module detects that you're slipping, it tells the ECU to not let you have any more torque than a certain limit",
+   "speaker": "Collin Kidder",
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Autonomous sensing exceeds what CAN can carry: a LiDAR reporting distances thousands of times a second, or camera video, needs FlexRay at around 10 megabits or Ethernet, while CAN stays as the command-and-control path telling those sensors what to do.",
+   "quote_verbatim": "you obviously aren't sending video over a can link",
+   "speaker": "Collin Kidder",
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Vehicles segment their buses so that critical systems are not on a user-accessible network, but the segmentation always requires a gateway node that speaks on both sides, and that gateway is the weak point; the Jeep work entered through the radio and crossed to the important bus.",
+   "quote_verbatim": "there's always going to have to be a gateway system somewhere that can talk on both buses at the same time",
+   "speaker": "Collin Kidder",
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The recommended way to start on a vehicle bus is passive: an inexpensive Arduino-class adapter running SavvyCAN to watch traffic and become familiar with it before transmitting anything.",
+   "quote_verbatim": "using Arduino and putting Collins Savvy can on there just to kind of see what's going on with your, with the can bus",
+   "speaker": null,
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Modern motorcycles carry the same architecture as cars in a far smaller space: an ECU handling fuelling and ignition talking over CAN to a fly-by-wire throttle, an ABS module and an active suspension module.",
+   "quote_verbatim": "a modern, uh, motorcycle has a, has a whole suite of typically can bus connected modules",
+   "speaker": "Dean Pick",
+   "episode": 426,
+   "episode_title": "An Interview with Dean Pick",
+   "episode_url": "https://theamphour.com/426-an-interview-with-dean-pick/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The protocol says nothing about message semantics, timing or identifier assignment; those are decided by whoever designs the network, and messaging may be periodic or event-driven, so a module cannot simply be dropped onto an existing bus and expected to work.",
+   "quote_verbatim": "you can't just drop, drop in a canvas module into the, into the bus and expect everything to work",
+   "speaker": "Dean Pick",
+   "episode": 426,
+   "episode_title": "An Interview with Dean Pick",
+   "episode_url": "https://theamphour.com/426-an-interview-with-dean-pick/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A distributed bus architecture removes the single bottleneck: any module can fail and the rest keeps operating, and where the command radio is only a packet router the ground station can still reach the battery module after the onboard computer dies.",
+   "quote_verbatim": "any module is down, then you can, everything else can still continue to operate",
+   "speaker": "Joris Aerts",
+   "episode": 518,
+   "episode_title": "Satellites and EVs with Joris Aerts",
+   "episode_url": "https://theamphour.com/518-satellites-and-evs-with-joris-aerts/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Routing everything through one bus instead of discrete I/O saves protection circuitry, test coverage, board area and connector pins, and it collapses the production test rig down to a CAN dongle and a programmable supply.",
+   "quote_verbatim": "in terms of test equipment, you really just need a can dongle and usually a programmable power supply and that's it",
+   "speaker": "Joris Aerts",
+   "episode": 518,
+   "episode_title": "Satellites and EVs with Joris Aerts",
+   "episode_url": "https://theamphour.com/518-satellites-and-evs-with-joris-aerts/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "LIN is cheaper than CAN on two counts: it runs on the UART peripheral any microcontroller already has, and it uses a single wire instead of a pair.",
+   "quote_verbatim": "you can, can run it on a UR peripheral of any microcontroller and only uses one wire, which is half the cost of two wires",
+   "speaker": "Joris Aerts",
+   "episode": 518,
+   "episode_title": "Satellites and EVs with Joris Aerts",
+   "episode_url": "https://theamphour.com/518-satellites-and-evs-with-joris-aerts/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "The two DC fast-charge standards made opposite protocol choices for the same simple negotiation of volts and amps: one carries it over CAN with dedicated pins for dedicated functions and already supports exporting power from the vehicle, while the other layers it on a power-line-communication protocol with heavy modulation and encryption.",
+   "quote_verbatim": "Chadimo does it using, using can bus. It's really simple, but this green fire protocol has got, you know, ridiculous modulation. It's got encryption",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Dealer software updates are still pushed through the diagnostic connector over a half-megabit CAN link, which is why four updates occupied four hours at the dealership.",
+   "quote_verbatim": "chug through a half megabit can bus through the OBD thing",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A microcontroller with an integrated CAN controller still needs an external transceiver to drive the bus at the correct line voltages.",
+   "quote_verbatim": "The ESP32 does have a CAN interface, but it needs an external transceiver",
+   "speaker": "Florin (Voltlog)",
+   "episode": 568,
+   "episode_title": "YouTube to Consulting with Florin of Voltlog",
+   "episode_url": "https://theamphour.com/568-youtube-to-consulting-with-florin-of-voltlog/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A board intended to live in a vehicle needs an automotive-grade DC-DC converter and protected high-side switches rather than ordinary parts, because the 12 volt line carries transients that will eventually kill a typical converter.",
+   "quote_verbatim": "there are a lot of transients on the, like the 12 volt line on a typical car",
+   "speaker": "Florin (Voltlog)",
+   "episode": 568,
+   "episode_title": "YouTube to Consulting with Florin of Voltlog",
+   "episode_url": "https://theamphour.com/568-youtube-to-consulting-with-florin-of-voltlog/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Receiving every frame on the bus is trivial; knowing what any byte means is the hard part, since manufacturers keep their message definitions private and sometimes split a value across several frames under a private transport layer of their own.",
+   "quote_verbatim": "they sometimes split their data across multiple CAN transmissions and they kind of add their own protocol on top of CAN bus",
+   "speaker": "Florin (Voltlog)",
+   "episode": 568,
+   "episode_title": "YouTube to Consulting with Florin of Voltlog",
+   "episode_url": "https://theamphour.com/568-youtube-to-consulting-with-florin-of-voltlog/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Replacing per-switch wiring with a message per device made validation a matter of reading the bus: with an oscilloscope on the pair, pressing a switch shows the expected bit changing at its known position in the frame.",
+   "quote_verbatim": "you can actually see like if the door is, is locked and you know, at this bit position",
+   "speaker": "Don Wilcher",
+   "episode": 620,
+   "episode_title": "Engineering Education with Dr Don Wilcher",
+   "episode_url": "https://theamphour.com/620-engineering-education-with-dr-don-wilcher/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "CAN was designed as a multiplex bus to stop the wiring harness growing without limit, replacing bundles of individual PWM- or analogue-encoded signal wires with one twisted pair.",
+   "quote_verbatim": "the car becomes less made of steel and more made of copper",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The programming model is publish-subscribe rather than addressed messaging: a node broadcasts its sensor values and any node that needs them picks them up and acts on them.",
+   "quote_verbatim": "So you publish all your sensor values, and then subscribers pick up them if they want them",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "The bus behaves as a wired AND: transceivers float both lines to a common level for a recessive one, and a node sending a dominant zero pulls the pair together, so the electrical medium itself resolves contention.",
+   "quote_verbatim": "the bus works like a giant and gate",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Arbitration proceeds bit by bit through the identifier: every contending node transmits and reads back, and a node that reads a value different from the one it sent knows a lower-numbered frame is present, stops, and waits for the next frame; surviving to the end of the identifier field means winning the bus.",
+   "quote_verbatim": "if you read back something different to what you sent, you can't be the highest priority",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "The identifier field, eleven bits by default, does double duty as both the frame's content identifier and its priority, and overloading one field with two meanings is a standing source of confusion for people learning the protocol.",
+   "quote_verbatim": "when you have one thing used for two purposes, everyone gets confused",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "LIN came out of a Volvo platform's need for something cheaper than CAN for trivial nodes such as button packs: one wire, very slow, and bit-banged entirely in software on a microcontroller stripped down to the point of having no UART.",
+   "quote_verbatim": "you bitbang the entire protocol in software in a microcontroller that is so cheap and small, everything's been stripped out, even the UART",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "CAN provides atomic delivery, which most systems built on it rely on without realising: a transmitted frame must be acknowledged by at least one other node pulling the acknowledgement bit dominant.",
+   "quote_verbatim": "can is providing this atomicity",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Error signalling exploits bit stuffing: because six consecutive bits of the same polarity cannot occur in a valid frame, any node detecting an error asserts six dominant bits, every controller recognises the impossible pattern, all nodes discard the frame and resynchronise, and the sender retries.",
+   "quote_verbatim": "a bit stuffing protocol in can, uh, that basically doesn't allow six bits of the same sign to appear",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Because that atomicity is invisible while it is working, systems ported from CAN to a faster bus without it break in ways that look inexplicable, surfacing as race conditions that were never possible before.",
+   "quote_verbatim": "they go and move it to some higher speed bus, like Ethan or something. And then it all starts to fall apart with really weird race conditions",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The Bosch team began from an RS-485 multi-drop bus with an addressing scheme, exactly the design engineers keep reinventing, and moved arbitration into hardware only because the software approach cost too much CPU time.",
+   "quote_verbatim": "it turned out to be too much CPU load",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A commercial vehicle-theft tool was built into a Bluetooth speaker with its apparent charging cable actually carrying the twisted pair, so that being caught with it is not itself incriminating.",
+   "quote_verbatim": "what appears to be the USB cable is actually a twisted pair can bus",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Teardown of that device found roughly ten dollars of parts, a PIC18F with an on-chip CAN controller plus a transceiver and a small add-on circuit, potted in resin and sold for thousands.",
+   "quote_verbatim": "it's about $10 worth of electronics inside",
+   "speaker": "Ken Tindell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The injection technique works by first preventing the legitimate nodes from transmitting and then asserting the unlock message, with the bus reached through wiring exposed behind a headlight.",
+   "quote_verbatim": "they block other devices from transmitting",
+   "speaker": "Chris Gammell",
+   "episode": 633,
+   "episode_title": "Engineering Optimization",
+   "episode_url": "https://theamphour.com/633-engineering-optimization/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Moving a multi-axis robot from several microcontrollers strung together on serial links to a single controller on CAN became possible only when the motor drives themselves gained CAN support.",
+   "quote_verbatim": "then I can throw away all my three megas with lots of serial ports and go to one teensy with CAN bus straight down all the O-Drives",
+   "speaker": "James Bruton",
+   "episode": 416,
+   "episode_title": "An Interview with James Bruton",
+   "episode_url": "https://theamphour.com/416-an-interview-with-james-bruton/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Bit-banging CAN on programmable I/O is harder than it appears: it is not a shift register but a state machine with many distinct paths through its flow.",
+   "quote_verbatim": "if you draw out the whole flow chart, there are lots of different paths through it",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "CAN was put on a hobby autopilot for dependable communication between subsystems years before standardised UAV bus specifications existed.",
+   "quote_verbatim": "having a CAN bus on the aircraft or on the autopilot because they want a secure communication between the subsystems",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "CAN turns up wherever there is a motor controller and a battery, not only in cars, so the same bus appears in mobile industrial equipment and in robots.",
+   "quote_verbatim": "anything that has like a motor controller and a battery system as well. It's probably going to have a CAN bus",
+   "speaker": "Chris Gammell",
+   "episode": 631,
+   "episode_title": "A Noisy Rude Bus",
+   "episode_url": "https://theamphour.com/631-a-noisy-rude-bus/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A safety rule for bus-based systems is to make every message globally unique, so that a command frame intended for one actuator has no effect if it arrives at any other node.",
+   "quote_verbatim": "if you took that packet and you sent it to any other node on your network, it would have no effect",
+   "speaker": "Charles Aylward",
+   "episode": 584,
+   "episode_title": "Software for Rockets with Charles Aylward",
+   "episode_url": "https://theamphour.com/584-software-for-rockets-with-charles-aylward/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Aftermarket fuel-saving dongles sold for the diagnostic port have been found not to be connected to the bus at all, amounting to a blinking light in a plastic case.",
+   "quote_verbatim": "It's not even connected to the CAN bus",
+   "speaker": null,
+   "episode": 538,
+   "episode_title": "Missle Man with Bruce Simson",
+   "episode_url": "https://theamphour.com/538-missle-man-with-bruce-simson/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Because the diagnostic connector is standardised, tuning tools reach the engine control module through it to remap fuel tables, alter boost pressure on turbocharged engines and change spark timing.",
+   "quote_verbatim": "you can actually kind of reprogram the main engine control module. So remap the fuel tables, change, you know, boost pressures if it's a turbocharged car, mess with spark timings",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The diagnostic port does sit on the vehicle bus, but access to full traffic is gated: a command or passphrase must be sent first before the connector yields everything.",
+   "quote_verbatim": "you have to send like, uh, some sort of passphrase, uh, or some sort of command to say, open her up",
+   "speaker": null,
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "From the programmer's side CAN presents as publish-subscribe over a set of attributes that are updated continuously and watched, the same abstraction that appears in unrelated distributed systems.",
+   "quote_verbatim": "publish subscribe i've got this set of attributes and i'm gonna dynamically update them and then you watch them",
+   "speaker": "Andrew Witte",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  }
+ ],
+ "attribution_notes": [
+  "ep93: whole episode flagged attribution_reliable: false and host/guest labels are systematically swapped. The automotive-history and architecture answers are the guest's and are attributed to Tom LeMense by content.",
+  "ep265: labels swapped across the exchange; the car-security answers are attributed to Michael Ossmann by content, and turns where the speaker is genuinely ambiguous are left null.",
+  "ep388: two guests appear under one label. Answers about protocol mechanics and vehicle architecture are attributed to Collin Kidder by content.",
+  "ep518: the LIN cost explanation is the guest answering; bundle labels the turn Chris Gammell. Attributed to Joris Aerts by content.",
+  "ep568: episode flagged attribution_reliable: false; the CAN hardware and reverse-engineering answers are unambiguously the guest's and are attributed to Florin (Voltlog) by content.",
+  "ep620: the bus-validation account is the guest's own work history; bundle labels the turn Dave Jones. Attributed to Don Wilcher by content.",
+  "ep634: protocol answers are attributed to Ken Tindell by content; several are labelled Dave Jones in the bundle but are plainly the guest explaining his own field.",
+  "ep538, ep584: episodes flagged attribution_reliable: false; speaker left null where the content does not settle it."
+ ],
+ "capped": false
+}

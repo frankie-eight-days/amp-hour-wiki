@@ -1,0 +1,562 @@
+{
+ "concept": "gpio",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "gpio",
+  "census": "union",
+  "aliases": [
+   "general-purpose-input-output",
+   "gpio"
+  ],
+  "children": [
+   "bash",
+   "chip-select",
+   "discrete-cosine-transform",
+   "source-file"
+  ],
+  "neighbors": {
+   "javascript": 4
+  },
+  "pins_pre_cap": 53,
+  "pins_final": 53,
+  "pins_by_depth": {
+   "explains": 48,
+   "opinion": 5
+  },
+  "pins_by_role": {
+   "core": 52,
+   "neighbor": 1
+  },
+  "capped": false,
+  "passages_yielding_claims": 46,
+  "passages_killed": 7
+ },
+ "claims": [
+  {
+   "claim_text": "The organising idea behind the whole subject is that peripherals are memory mapped, and a general-purpose pin is the simplest instance of it: a location that is written to make a pin high or low.",
+   "quote_verbatim": "the fundamental theorem of embedded systems is peripherals are memory mapped",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Teaching it well means returning to it repeatedly rather than covering it once: first as the way digital signals get in and out, then as the mechanics of making a pin change on a real device, and only later as output and input impedance and the difference between push-pull and open-drain drive.",
+   "quote_verbatim": "later on in the semester, we'll actually talk about like output impedance",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The most direct demonstration of what a processor is doing skips the toolchain entirely: six bytes typed into a hex editor and programmed into an eight-bit part blink an LED, and those bytes are the instruction that moves a value into the pin peripheral.",
+   "quote_verbatim": "the six bytes that I wrote out are the instructions for move, you know, move a value into some GPIO peripheral",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "That is also the argument for writing the register directly: assigning to the output register puts a bit on a known pin and nothing else happens, whereas a portable write function may do a great deal — which it does in order to support many different targets.",
+   "quote_verbatim": "if you write, you know, output register equals one, and then one appears on the GPIO",
+   "speaker": "Dave Jones",
+   "episode": 697,
+   "episode_title": "LEDs Everywhere with Tim from Mitxela",
+   "episode_url": "https://theamphour.com/697-leds-everywhere-with-tim-from-mitxela/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A vendor library sits between the two, naming the port bank and the pin rather than requiring a mask to be composed and ORed into a register by hand.",
+   "quote_verbatim": "GPIO set then brackets GPIO a bank and GPIO 13 for the pin",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Learning to toggle one pin is worth doing for its own sake, because it establishes how the parts of the system engage with each other — the same relationship holds for far more complicated peripherals, with more code around it.",
+   "quote_verbatim": "learn at least the part, how do you toggle a GPIO",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "rationale"
+  },
+  {
+   "claim_text": "In a teaching sequence it is the natural first step on any new framework: the student already knows what a pin is, so the lesson is how this particular system expresses it, after which the same pattern extends to a serial bus and then to writing device drivers.",
+   "quote_verbatim": "You probably know what a GPIO is. So let's talk about how we do this in Zephyr.",
+   "speaker": "Shawn Hymel",
+   "episode": 675,
+   "episode_title": "Changing Course with Shawn Hymel",
+   "episode_url": "https://theamphour.com/675-changing-course-with-shawn-hymel/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "On a Linux board a great deal of bring-up needs no code at all: reading and setting pins through the filesystem interface, alongside command-line utilities for the buses, covers much of board-level debug from a shell prompt.",
+   "quote_verbatim": "You're just, you know, going to sysfs entries and like reading a GPIO, setting a GPIO line",
+   "speaker": "Jason Kridner And Robert",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "That interface cannot meet tight timing. A processor running at hundreds of megahertz is fast enough to drive a demanding protocol, but not from a script in user space, because the timing depends on when the operating system gets round to it.",
+   "quote_verbatim": "a 300 megahertz processor is plenty fast to wiggle those GPIOs, but you can't do it from like a Python script up in user space",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The fix is to move the same few operations into a kernel module, which is short and gives access to high-resolution delays measured in nanoseconds rather than to the scheduler's timing.",
+   "quote_verbatim": "he wrote a little kernel module that wiggles the GPIOs and it's super simple",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Latency is worse where the pins are not on the processor. Bit-banging from an application processor is already slow, and when the I/O sits behind an external bus every change must be sent across that bus first, which breaks protocols with tight timing windows.",
+   "quote_verbatim": "send your messages over before it can go and twiddle the pin",
+   "speaker": "James Adams",
+   "episode": 648,
+   "episode_title": "The RP1 and beyond with the Raspberry Pi Hardware team",
+   "episode_url": "https://theamphour.com/648-the-rp1-and-beyond-with-the-raspberry-pi-hardware-team/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A declarative layer removes the code entirely for simple sensing: a short configuration file naming the board and stating that a switch is connected to particular pins replaces writing the firmware and the interface code by hand.",
+   "quote_verbatim": "I have a switch connected to these GPIO lines. And that's it.",
+   "speaker": "Jeff Geerling",
+   "episode": 651,
+   "episode_title": "Learning Computing with Jeff Geerling",
+   "episode_url": "https://theamphour.com/651-learning-computing-with-jeff-geerling/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An interpreted environment on the target serves the same purpose for test and manufacturing: a read-eval-print loop over the serial connection gives a way to toggle pins from a script on the host without building anything.",
+   "quote_verbatim": "you have a way of toggling GPIOs with a MicroPython",
+   "speaker": "Matt Liberty",
+   "episode": 607,
+   "episode_title": "The Joulescope Upgrade with Matt Liberty",
+   "episode_url": "https://theamphour.com/607-the-joulescope-upgrade-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The performance needed for this work is modest: most tasks that use these pins do not need the speed of a recent laptop, so a smaller and lower-power board is usually the better choice.",
+   "quote_verbatim": "for the things that you might use GPIO for most of the time, you don't need, you know, a 2016 era laptop speed",
+   "speaker": "Jeff Geerling",
+   "episode": 651,
+   "episode_title": "Learning Computing with Jeff Geerling",
+   "episode_url": "https://theamphour.com/651-learning-computing-with-jeff-geerling/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The pins are also the route by which software developers enter hardware: a library exposing them from a familiar high-level language lets someone build something real inside their existing comfort zone, and the performance gap against C does not matter for that purpose.",
+   "quote_verbatim": "if there's a library that lets them access the GPIO",
+   "speaker": "Matt Richardson",
+   "episode": 235,
+   "episode_title": "An Interview with Matt Richardson - Raspberry Risorgimento Regent",
+   "episode_url": "https://theamphour.com/235-an-interview-with-matt-richardson-raspberry-risorgimento-regent/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The drive capability of a pin is often underestimated: a part sourcing fifty milliamps can switch a MOSFET gate directly with no driver between them.",
+   "quote_verbatim": "It's got 50 milliamps of drive current",
+   "speaker": "CNLohr",
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "That is enough to build a switching supply out of almost nothing: in a two-hundred-volt flyback the entire control loop was one pin reading feedback and another driving the transistor.",
+   "quote_verbatim": "using one of its GPIOs for feedback and one of its GPIOs for controlling a MOSFET",
+   "speaker": "CNLohr",
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A bidirectional protocol can be implemented on ordinary pins by changing direction in software: the pins sit as inputs waiting for a packet, the checksum is verified as it arrives, and they are then switched to outputs to send the reply.",
+   "quote_verbatim": "just switch it around, be output, and then start sending the same sort of looking thing back at the host",
+   "speaker": "Chris Gammell",
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Two apparently unrelated feats are the same move: implementing a serial bus without its transceiver and radiating a signal without a radio transceiver both replace specialised silicon with a pin driven by software.",
+   "quote_verbatim": "using GPIO to interface with a high speed interface",
+   "speaker": "Chris Gammell",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Radio from a digital pin works by sampling: the intended high-frequency waveform is evaluated as a series of above-or-below-zero decisions at whatever rate the pin can be updated, and shifting that table out produces broadband noise with a genuine signal sitting exactly where the sampled one was.",
+   "quote_verbatim": "if you just like look at a bit and you turn a GPIO on or off at that time",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The method composes: adding two intended signals together before sampling reproduces both of them at their correct frequencies, even though the pin is being updated far below either.",
+   "quote_verbatim": "you just add them together and you sample that",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "What cannot be recovered is power. There is no transmit amplifier to turn up, so spreading the energy across more bandwidth takes an already minute signal and makes it smaller.",
+   "quote_verbatim": "we only have a GPIO, we can't just like turn up transmit power",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A protocol library built this way needs very little from the platform: a delay function and the means to drive the pin high, low and to high impedance, with the rest of the stack sitting above that.",
+   "quote_verbatim": "you basically like have to give it like a delay function and to turn this pin on, turn this pin off and turn this pin into high Z state",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Unused pins can be resources rather than waste. Several lines accidentally tied together during layout allowed their internal pull-ups to be enabled in parallel, which lowered the effective pull-up resistance and raised the achievable data rate from a photo-transistor that had been too slow.",
+   "quote_verbatim": "I could turn all of all of the pullups on in parallel and then increase the throughput",
+   "speaker": "Dave Jones",
+   "episode": 697,
+   "episode_title": "LEDs Everywhere with Tim from Mitxela",
+   "episode_url": "https://theamphour.com/697-leds-everywhere-with-tim-from-mitxela/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A spare output driving an indicator is worth the pin: an LED that lights when it should not immediately reveals faults such as a single I/O pin inadvertently powering the whole part, which is otherwise slow to find.",
+   "quote_verbatim": "One of the IOPins is powering the entire part",
+   "speaker": "Chris Gammell",
+   "episode": 287,
+   "episode_title": "Pull The Trigger",
+   "episode_url": "https://theamphour.com/287-pull-the-trigger/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Toggling a spare pin to mark firmware state turns an external power measurement into something segmentable: the analyser records which state the device was in, so the charge or energy consumed in that state can be integrated separately.",
+   "quote_verbatim": "you can toggle a GPIO line, and that will tell you, when you look at the JouleScope waveform, which state your device is in",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "From those per-state figures and the number of times each state occurs per hour or per day, a power model can be assembled that predicts consumption rather than merely measuring it.",
+   "quote_verbatim": "You know how many times you're going to be in a state per unit times",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The pins are the interface a test plan is written against: which lines should be inputs and which outputs is exactly the kind of thing worth stating explicitly, since a signal named as an output in the schematic may not be an output of the processor.",
+   "quote_verbatim": "I want to know GPIOs, should they be inputs or outputs?",
+   "speaker": "Chris Gammell",
+   "episode": 373,
+   "episode_title": "Pedantic or Andrantic",
+   "episode_url": "https://theamphour.com/373-pedantic-or-andrantic/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "With debug access to the processor the pins become an attack surface: halting the CPU and writing to a pin changes a physical output, which is enough of a proof of concept to demonstrate that a controller is exposed.",
+   "quote_verbatim": "it halts the CPU and writes to a GPIO to turn off your output",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "What makes that meaningful is tracing the board: reverse engineering which pin connects to which output tells the attacker what each controlled line actually does in the installation.",
+   "quote_verbatim": "I can reverse engineer the board and see where the GPIOs are connected",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "An abstraction over the pins is what makes firmware portable: moving lines around on a new board changes only the mapping layer, and changing processor changes only the routines that touch the registers, while the drivers written above both stay as they are.",
+   "quote_verbatim": "you can very easily write drivers for an IC and have them map across, you know, chips, boards, architectures",
+   "speaker": "Chris Gammell",
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A vendor configuration tool is best used once, to establish which registers and bits have to be set; that knowledge is then brought into the project behind one's own interface and the tool is not returned to.",
+   "quote_verbatim": "Let's bring all that in and make it, you know, let's make it our own and then put an interface",
+   "speaker": "Chris Gammell",
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Alternate functions are allocated rather than free, and the allocation rule can be unobvious: a part may offer several serial, SPI and two-wire instances while forbidding the same instance number being used twice, and the same vendor's other families may not share that restriction.",
+   "quote_verbatim": "you can't use the same base number more than once",
+   "speaker": "Chris Gammell",
+   "episode": 654,
+   "episode_title": "Pseudo Code...Pseudo Good",
+   "episode_url": "https://theamphour.com/654-pseudo-code-pseudo-good/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Multiple functions on one pin are switchable at run time, which is part of what direct hardware access offers — along with the ability to go down to bare metal or up to a scripting language on the same device.",
+   "quote_verbatim": "some of the chip, for example, is double, two or three functions on the same output pins",
+   "speaker": "Gerald Friedland",
+   "episode": 258,
+   "episode_title": "An Interview with Bertrand Irrisou and Gerald Friedland of Audeme",
+   "episode_url": "https://theamphour.com/258-an-interview-with-bertrand-and-gerald-of-audeme/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where the pins are matters as much as how many: giving a secondary processor its own pins to act on directly avoids routing everything through a communication loop with the main processor, which is what costs update rate as the main loop grows.",
+   "quote_verbatim": "i like the idea of being able to offload gpio",
+   "speaker": "Parker Dillman",
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Pin count on a low-cost board is limited by escape routing rather than by the die: getting more signals out of a ball grid array conflicts with keeping the printed circuit board simple, so additional pins are held back as a possible later revision.",
+   "quote_verbatim": "the signal escape on the BGA is obviously a tricky thing given we've gone for a fairly low tech PCB",
+   "speaker": "Eben Upton",
+   "episode": 97,
+   "episode_title": "An Interview with Eben Upton - Morbus Moilsome MakerFaire",
+   "episode_url": "https://theamphour.com/the-amp-hour-97-morbus-moilsome-makerfaire/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The header itself becomes a fixed interface once expansion boards depend on it: a forty-pin arrangement carrying general-purpose pins alongside the serial and two-wire buses, enlarged from twenty-six, is what every add-on board now plugs into.",
+   "quote_verbatim": "the headers were now on a 40 pin header",
+   "speaker": "Matt Richardson",
+   "episode": 235,
+   "episode_title": "An Interview with Matt Richardson - Raspberry Risorgimento Regent",
+   "episode_url": "https://theamphour.com/235-an-interview-with-matt-richardson-raspberry-risorgimento-regent/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "One die can serve two package sizes through an internal selection pin, but the mapping cannot be a simple truncation: taking a contiguous range of pins around the perimeter of the smaller package would twist the bond wires impossibly, so alternate pads are used and the numbering is remapped in hardware so the pins still appear as a contiguous range to software.",
+   "quote_verbatim": "you end up twisting the bond wires, and it's impossible to manufacture",
+   "speaker": "Liam Fraser",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "That remapping has to be hidden consistently: a pin that is one number in the large package is a different number in the small one, and there are on the order of a hundred places in the design where the difference has to be concealed.",
+   "quote_verbatim": "there are about 100 different places we have to hide this from you in hardware",
+   "speaker": "Liam Fraser",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Adding pins is not free but it is not purely a cost either: more pins means more perimeter, which gives more die area inside for logic, and the pads are large because the part is wire bonded rather than flip chipped.",
+   "quote_verbatim": "we gave ourselves more space because we added more pins",
+   "speaker": "Liam Fraser",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The pin logic constrains the architecture. Every pin is wired to be able to interrupt either of two processors, so adding further cores would mean reworking all of that, on top of the bus fabric becoming harder to synthesise and meet timing with more masters.",
+   "quote_verbatim": "all the GPIO pins are designed to be able to interrupt processor zero or processor one",
+   "speaker": "Liam Fraser",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "At that scale the instances are generated rather than drawn: fifty or so pins, twenty clocks and a bus fabric of ninety connections are stamped out from a scripted description that also emits the software headers and the documentation.",
+   "quote_verbatim": "we basically just stamp out several instances of the same thing",
+   "speaker": "Liam Fraser",
+   "episode": 648,
+   "episode_title": "The RP1 and beyond with the Raspberry Pi Hardware team",
+   "episode_url": "https://theamphour.com/648-the-rp1-and-beyond-with-the-raspberry-pi-hardware-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The pins participate in the lowest power states: a sleep-enable register selects what keeps running, while the deepest mode stops every clock on the chip and needs an external event — an edge on a pin — to start them again.",
+   "quote_verbatim": "So a GPIO edge or going high, that kind of thing",
+   "speaker": "Liam Fraser",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "At the low end the pin count is what a part is bought for: an inexpensive processor offering eighteen pins along with serial, two-wire and analogue inputs is essentially a familiar eight-bit part with a modern instruction set and its mature toolchain.",
+   "quote_verbatim": "It's got, it's got 18 GPIOs",
+   "speaker": "Dave Jones",
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Below a certain price the packages themselves set the limit: the parts at ten cents come in eight or ten pins, which bounds what can be connected before anything else is considered.",
+   "quote_verbatim": "that does limit you on GPIO and stuff like that",
+   "speaker": "Chris Gammell",
+   "episode": 619,
+   "episode_title": "Super Tecmo Bug",
+   "episode_url": "https://theamphour.com/619-super-tecmo-bug/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "At the other extreme, getting the pins out is the design problem: on a wafer-level package at 0.35 millimetre pitch, around forty of the available pins were escaped using via-in-pad at the process minimum, which required the layout grid to match that minimum exactly.",
+   "quote_verbatim": "i got like 40 of them out of there",
+   "speaker": "Chris Gammell",
+   "episode": 692,
+   "episode_title": "Like a steam engine in your house",
+   "episode_url": "https://theamphour.com/692-like-a-steam-engine-in-your-house/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where pins are genuinely scarce they have to be multiplexed: attaching external memory to a very small design means splitting a sixteen-bit address across a narrow interface with external latches, and writing that memory interface is the substantial part of the work.",
+   "quote_verbatim": "just writing the memory interface was so challenging",
+   "speaker": "Bitluni",
+   "episode": 673,
+   "episode_title": "Lifelong Learning with Bitluni",
+   "episode_url": "https://theamphour.com/673-lifelong-learning-with-bitluni/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Routing the pins through a switch matrix changes what they are: a set of general-purpose lines becomes arbitrarily connectable to points on the board, with those lines left unbuffered between the processor and the matrix while everything else is scaled down.",
+   "quote_verbatim": "That's the only one that's like raw, like no buffering between the microcontroller and the board",
+   "speaker": "Kevin Cappuccio",
+   "episode": 689,
+   "episode_title": "A Jumperless Breadboard with Kevin Cappuccio",
+   "episode_url": "https://theamphour.com/689-a-jumperless-breadboard-with-kevin-cappuccio/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A matrix also permits measurements that would otherwise need extra wiring: powering indicator lamps through a current sensor and observing which line draws the current identifies which of two positions a four-wire probe is in, with no dedicated sense connection.",
+   "quote_verbatim": "powers the LEDs through the current sensor and knows whichever one is drawing current",
+   "speaker": "Kevin Cappuccio",
+   "episode": 689,
+   "episode_title": "A Jumperless Breadboard with Kevin Cappuccio",
+   "episode_url": "https://theamphour.com/689-a-jumperless-breadboard-with-kevin-cappuccio/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "On a single-board computer the same pins sit alongside a full desktop operating system, so the machine can be used as a computer while still exposing lines that single commands will toggle.",
+   "quote_verbatim": "you can still get to all those IO pins",
+   "speaker": "Jeff Keyzer",
+   "episode": 59,
+   "episode_title": "An Interview with Jeff Keyzer and Jason Kridner - Bonafide BeagleBoard Bionomics",
+   "episode_url": "https://theamphour.com/the-amp-hour-59-bonafide-beagleboard-bionomics/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A module can hide a whole subsystem behind a handful of them: a radio module the size of a microcontroller package exposes transmit, receive and keying as simple inputs, with one antenna connection.",
+   "quote_verbatim": "It's just like simple GPI inputs and a single antenna",
+   "speaker": "Florin Of Voltlo",
+   "episode": 568,
+   "episode_title": "YouTube to Consulting with Florin of Voltlog",
+   "episode_url": "https://theamphour.com/568-youtube-to-consulting-with-florin-of-voltlog/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A single pin plus a transistor is often the whole of an output stage: a line driving a MOSFET gate through a resistor is enough to fire a physical mechanism.",
+   "quote_verbatim": "it was another GPIO penny, essentially, that would, you know, open up that gate",
+   "speaker": "Mike Grover",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "eps 258, 346, 515, 527, 568, 581, 607, 651: attribution flagged unreliable. Claims are content-attributed to the guest whose course, product or investigation the passage describes; where the content does not identify a speaker the claim is left with the bundle's label.",
+  "ep 378: the two guests are diarised under a single combined label; the Linux bring-up claims are attributed to that label as the bundle carries it.",
+  "eps 529, 648, 687: several members of the same hardware team speak in turn; silicon and package claims are attributed to the engineer the content identifies as answering."
+ ],
+ "capped": false
+}

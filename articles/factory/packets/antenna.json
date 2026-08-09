@@ -1,0 +1,609 @@
+{
+ "concept": "antenna",
+ "name": "Antenna",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "antenna",
+  "census": "union",
+  "passages_in": 149,
+  "capped": false
+ },
+ "claims": [
+  {
+   "claim_text": "Antenna size is set by wavelength and cannot be designed around. The working target is a total dimension of about half a wavelength shared between the radiating element and the ground plane, so at the low cellular bands of 600 to 700 MHz roughly 180 millimetres is required. A device smaller than that simply has a less efficient antenna, and no design technique, fractal geometry included, recovers what the physics removes.",
+   "quote_verbatim": "This is just physics. There is no way around that",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "The radiating element is only part of the antenna: it does not work unless it is connected to the printed circuit board or ground plane, which participates in the radiation. That is why the ground plane must carry at least a quarter wavelength when the element carries the other quarter.",
+   "quote_verbatim": "it will never work without being connected to PCB or like ground plane",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "A dipole is half the physical size of a monopole for the same frequency, while a monopole radiates around itself and requires a feed point. Consumer antennas are shrunk below either figure by meandering the conductor or using only a fraction of a wavelength in the space available, at a cost in efficiency.",
+   "quote_verbatim": "dipole is twice smaller than monopole",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "A quarter-wave wire monopole is both simple and highly effective: a length of wire cut to a quarter of the transmitting wavelength. Link performance depends on both ends using matching antennas oriented the same way, since orthogonal orientation degrades the path substantially.",
+   "quote_verbatim": "the length of the wire is a quarter wave of the actual transmitting frequency",
+   "speaker": "Dave Jones",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Regulatory limits below 30 MHz are framed the way they are because most products are not physically large enough to be efficient antennas at those wavelengths, so the emission risk is bounded by geometry rather than by design intent.",
+   "quote_verbatim": "most products are not big enough to be efficient antennas below 30 megahertz",
+   "speaker": "Henry Ott",
+   "episode": 165,
+   "episode_title": "An Interview with Henry Ott - Forced FCC Filtering",
+   "episode_url": "https://theamphour.com/165-an-interview-with-henry-ott-forced-fcc-filtering/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "The energy a receiver can capture is bounded by the area of its antenna relative to the sphere over which the transmitted power has spread, which grows as four pi r squared. That, together with the inverse-square fall-off, sets a theoretical ceiling on received power at a given distance that no amount of transmitter design changes.",
+   "quote_verbatim": "it has to do with the capture area, right, of your antenna",
+   "speaker": "Dave Jones",
+   "episode": 211,
+   "episode_title": "Design Reviews Are Important - Habitual Hype Hebetude",
+   "episode_url": "https://theamphour.com/211-design-reviews-are-important-habitual-hype-hebetude/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Everything except antenna size argues for using lower frequencies: semiconductors are cheaper, gain is easier to obtain, power consumption is lower and propagation is better. The willingness to accept an antenna the size of a cigar box is what makes a low-frequency design viable, and the same propagation advantage is why bidders compete hardest for the lower spectrum bands.",
+   "quote_verbatim": "Everything screams lower frequencies",
+   "speaker": "Larry Sears",
+   "episode": 109,
+   "episode_title": "An Interview with Larry Sears - Hexagram Hardware Holism",
+   "episode_url": "https://theamphour.com/the-amp-hour-109-hexagram-hardware-holism/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Antenna gain is obtained by concentrating radiation into a narrower beam using more elements, which is necessary at long range because transmitting omnidirectionally wastes too much energy. That is why long-distance and high-frequency systems are built as phased arrays that must locate the receiver and steer the beam onto it.",
+   "quote_verbatim": "You can't afford to transmit energy omnidirectionally",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Beam steering works by adding and cancelling signals across an array so that energy is directed without anything moving, and the difficulty is not the principle but the digital processing: fourth-generation cellular equipment manages perhaps six beams per sector, while fifth-generation systems produce hundreds, each tracked to a separate user.",
+   "quote_verbatim": "these 5G stuff are going to have hundreds of beams per sector",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Multiple-input multiple-output systems use spatially separated antennas so that each receives a differently reflected version of the signal. Because the probability of two well-separated antennas being in a fade simultaneously is uncorrelated, the arrangement buys reliability, which can then be traded for lower transmit power or higher data rate.",
+   "quote_verbatim": "it's probability of the also being in a fade is uncorrelated",
+   "speaker": "Chris Gammell",
+   "episode": 101,
+   "episode_title": "An Interview with Matt Ettus - Quality Quadrature Quidam",
+   "episode_url": "https://theamphour.com/the-amp-hour-101-quality-quadrature-quidam/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Antenna count drives board architecture in software-defined radio hardware: an early design fitted two daughter boards and therefore two antennas on one motherboard, while later designs using higher-precision separate converters had too many pins to fit two, so multiple-antenna operation moved to linking several motherboards together.",
+   "quote_verbatim": "each daughter board gives you one antenna",
+   "speaker": "Chris Gammell",
+   "episode": 101,
+   "episode_title": "An Interview with Matt Ettus - Quality Quadrature Quidam",
+   "episode_url": "https://theamphour.com/the-amp-hour-101-quality-quadrature-quidam/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "A mobile handset needs far more antennas than its radio count suggests. Cellular operation requires polarisation diversity so the device works however it is held, plus a backup path when one antenna is blocked by a hand, plus additional elements for multiple-input operation, and then separate provision for wireless networking, satellite positioning, ultra-wideband and near-field communication, the last of which is still an antenna even though it works in the near field.",
+   "quote_verbatim": "you need polarization diversity to connect with to base station antenna in every like position of your device",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "The design sequence for a multi-antenna device starts by treating the product as a bare ground plane of its finished dimensions and placing the cellular antennas first, because the low bands are the most constrained and therefore dictate what space remains for everything else.",
+   "quote_verbatim": "you start to think first with the cellular antennas because they are the most challenging",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Antenna work must be complete and signed off before a prototype build, with the switching arrangement, band coverage and element locations fixed. Discovering during prototyping that another switch is needed indicates the antenna was not designed, and adding it at that point is a process failure rather than an iteration.",
+   "quote_verbatim": "antenna design should be fully signed off before they start like going to like a proto build",
+   "speaker": "Chris Gammell",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The recurring failure is leaving the antenna until last, which produces a bad location, insufficient clearance and metal in the wrong places. By the time a specialist is consulted the design is fixed, because the money has already been spent and the client will not fund changes, so the specialist inherits constraints rather than a problem.",
+   "quote_verbatim": "if you come in the beginning if you think about antenna in the beginning you take that into account",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Antennas at 2.4 GHz are forgiving enough that a competent board designer without antenna training can integrate one successfully by following the reference footprint and the vendor's guidelines on clearance and keep-out. Anything more complex than a 2.4 GHz inverted-F warrants an antenna engineer, because designing rather than placing an element requires simulation.",
+   "quote_verbatim": "2.4 is very forgiving",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The mistakes seen most often in submitted designs are placing the antenna in the middle of the board, providing no clearance area, and leaving metal below and around it. Where two antennas are present, the usual corrections are rotating one through ninety degrees and moving it to the shorter side of the board so that the two do not couple.",
+   "quote_verbatim": "The antenna is placed in the middle of the PCB and there is no clearance area",
+   "speaker": "Chris Gammell",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Simulation of a handheld product must model the user, since a hand or body absorbs signal and changes the antenna's behaviour, which makes the mechanical design and the way the device is held part of the antenna problem rather than context around it.",
+   "quote_verbatim": "we need to model you know a piece of meat on the back of this phone",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The fundamental integration rules are short enough to state: aim for a half-wavelength dimension and keep metal away from behind the element. Most practitioners arrive at antenna work through a specific problem such as fitting a short-range radio into a product, and are better served working that problem than studying the theory in general.",
+   "quote_verbatim": "having a halfway length is good. Don't put metal right behind your antenna",
+   "speaker": "Chris Gammell",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where two radio systems must operate simultaneously, the analysis is done from data sheets rather than from theory: take the two frequencies, find the transmitter's roll-off and the other receiver's sensitivity, determine the filtering needed between them, and then search a distributor catalogue for a filter with those parameters.",
+   "quote_verbatim": "figure out like what the roll off of the transmitter is from your data sheet and what the sensitivity is on the other side",
+   "speaker": "Chris Gammell",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Complexity in a matching network is itself a cost, adding loss and difficulty, so the value an experienced antenna engineer provides is keeping the arrangement simple rather than elaborating it.",
+   "quote_verbatim": "you pay people a lot of money to keep things simple",
+   "speaker": "Chris Gammell",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Wireless products are commonly tiered by how much radio work the customer is expected to do: a removable card form for prototyping, a solder-down module with an integrated antenna for customers with no radio experience, and a smaller, cheaper bare device for customers who will provide their own external radio front end and antenna and carry their own certification.",
+   "quote_verbatim": "It's got an integrated antenna, things like that",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Integrating a radio into a very small form factor is dominated by the antenna rather than the electronics: the antenna occupied roughly a third of the total area of a wireless memory card, alongside the processor and radio.",
+   "quote_verbatim": "Our antenna takes up like a third of the total area",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "The board layout for a wireless module is undemanding: the device with a few passive components around it, stitched to a large ground plane, and a single controlled-impedance trace out to the antenna. The practical rule for the connector is to keep that trace as short as possible.",
+   "quote_verbatim": "It's a chip with a couple of passive parts around it stitched down to ground",
+   "speaker": "Dave Jones",
+   "episode": 453,
+   "episode_title": "Vertically Integrated Design Engineering",
+   "episode_url": "https://theamphour.com/453-vertically-integrated-design-engineering/",
+   "depth_regraded": "opinion",
+   "kind": "design"
+  },
+  {
+   "claim_text": "For a designer without radio experience, the reliable method for a short-range antenna is to copy the vendor's application note exactly rather than adapt it, since the shapes in a reference design encode work the copier is not in a position to redo.",
+   "quote_verbatim": "you just follow the app note, you know, like you just do it exactly the same",
+   "speaker": "Dave Jones",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Once a radio section is working and certified, the productive approach is to leave it untouched and change only the sensors and interfaces around it, which preserves the compliance position across a family of products without repeating the radio work.",
+   "quote_verbatim": "once you find a working design, you just don't touch the antenna section",
+   "speaker": "Chris Gammell",
+   "episode": 549,
+   "episode_title": "Creative Engineering with Shrouk El-Attar",
+   "episode_url": "https://theamphour.com/549-creative-engineering-with-shrouk-el-attar/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Antennas must be designed for testability as well as performance: burying one on the far side of the board so that the product has to be drilled to reach the test connector makes compliance measurement impractical and limits how many units can be measured at all.",
+   "quote_verbatim": "So I'd have to literally drill into the product for the BNC to be accessible",
+   "speaker": "Shrouk El Attar",
+   "episode": 549,
+   "episode_title": "Creative Engineering with Shrouk El-Attar",
+   "episode_url": "https://theamphour.com/549-creative-engineering-with-shrouk-el-attar/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Antennas, like inductors and transformers, can be etched into the copper that is being fabricated anyway, so the component itself is free and the only cost is board area.",
+   "quote_verbatim": "You can do antennas on PCBs",
+   "speaker": "Dave Jones",
+   "episode": 76,
+   "episode_title": "Fremescent Floccose Fortification",
+   "episode_url": "https://theamphour.com/the-amp-hour-76-fremescent-floccose-fortification/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Printed log-periodic antennas made as bare circuit boards give good performance for their cost and size across a wide range, one hand-sized design covering 850 MHz to 6.5 GHz, which makes them a practical default for wideband receiving work.",
+   "quote_verbatim": "his log periodic antenna that's from 850 megahertz to 6500 megahertz",
+   "speaker": "Michael Ossmann",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "A built-in printed antenna can be the wrong choice even where it works: one was included on a development board only so that testers without antennas could use it out of the box, and was removed from the production design along with unused development pads to shrink the board by about a third.",
+   "quote_verbatim": "Jawbreaker has a built-in PCB antenna, which was kind of stupid",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "A wire antenna that mounts into the board and rises into three-dimensional space above it is an alternative to a module, and shrinks the footprint substantially because the module carries regulation, an oscillator and other parts the bare design does not need.",
+   "quote_verbatim": "It's a physical wire antenna. It mounts into the board, but then it comes up in 3D space",
+   "speaker": "Chris Gammell",
+   "episode": 370,
+   "episode_title": "Alternate Info Sources",
+   "episode_url": "https://theamphour.com/370-alternate-info-sources/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Some designs use a passive radiator: a floating piece of copper that is not electrically connected to the transmitter and radiates by coupling to it, which allows the radiating structure to be placed where a connected element could not go.",
+   "quote_verbatim": "It's basically a floating piece of copper",
+   "speaker": "Dave Jones",
+   "episode": 639,
+   "episode_title": "Daaaamn We're Duuuummmb",
+   "episode_url": "https://theamphour.com/639-daaaamn-were-duuuummmb/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Two instruments cover almost all antenna verification: a vector network analyser for impedance, and an anechoic chamber for efficiency and radiation pattern, with the chamber also giving the isolation between elements in a multi-antenna system. Simulation tools are an addition rather than a substitute.",
+   "quote_verbatim": "VNA and, uh, a chamber is fundamentally all you need",
+   "speaker": "Chris Gammell",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A network analyser measures impedance by measuring the reflected wave, since the two are related by a fixed equation for a given line impedance. The difficult component is the bidirectional coupler that separates the reflected energy from the forward energy on the same line, and getting that right across a wide bandwidth is what a good instrument is really selling.",
+   "quote_verbatim": "impedance and what's reflected from the antenna are the exact same thing",
+   "speaker": "Chris Gammell",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Radiation pattern measurement is a mechanical scan: the device is rotated through angles in a chamber and measured at each step, so the cost of a full three-dimensional pattern is measurement time proportional to the angular resolution wanted. A characterised reference antenna receives, and the device under test is judged against it.",
+   "quote_verbatim": "you need turn every degree or so and measure",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Passive measurement, meaning network analysis plus chamber measurement without the radio actually operating, is sufficient to confirm an antenna works in roughly ninety-nine percent of cases; active measurement with the device transmitting and receiving is reserved for the rare cellular case that needs it.",
+   "quote_verbatim": "99% you can do everything with the passive measurements",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Multiport network analysers exist because measurement count scales badly with switching: testing every path between N ports one pair at a time requires N times N minus one over two measurements, so a 32-port device implies hundreds of sequential measurements. An instrument that drives one port and measures all the others simultaneously collapses that, which matters when an automotive antenna must be tested in a second rather than ten minutes.",
+   "quote_verbatim": "it's exactly N times N minus one over two",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Antenna engineering requires rework skill as well as design skill, since impedance matching is tuned by soldering and replacing 0201 components on the board.",
+   "quote_verbatim": "if you're an antenna engineer, you need to be able to solder O2O1s and such for your impedance matching",
+   "speaker": "Chris Gammell",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Capable radio design tools are available without the professional packages: a general-purpose circuit simulator handles filter synthesis and impedance matching networks, method-of-moments antenna codes simulate printed antennas with results good enough to trust, and measured S-parameter files can be exported from an instrument and imported into those tools to synthesise a matching network directly.",
+   "quote_verbatim": "you could totally do like filters synthesis impedance matching networks all that kind of stuff using free tools",
+   "speaker": "Chris Gammell",
+   "episode": 229,
+   "episode_title": "MightyHohm For The Holidays - Kaiser Keyzer's Kits",
+   "episode_url": "https://theamphour.com/229-mightyhohm-for-the-holidays-kaiser-keyzers-kits/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Simulating a printed antenna from the actual layout means exporting the board geometry with its copper as a 3D model and defining the mesh by hand, telling the solver to concentrate mesh density where the antenna is; that meshing step is the part that takes the time rather than the simulation setup.",
+   "quote_verbatim": "the difficulty with it is doing the meshing",
+   "speaker": "Sam Aldhaher",
+   "episode": 695,
+   "episode_title": "Making The Invisible, Visible with Sam Aldhaher",
+   "episode_url": "https://theamphour.com/695-making-the-invisible-visible-with-sam-aldahar/",
+   "depth_regraded": "opinion",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Unintentional antennas are the main electromagnetic compliance problem, and the classic case is a signal trace crossing a split in an adjacent plane. Because return current must follow the signal, a clock routed over the boundary between two supply planes on the neighbouring layer radiates remarkably strongly, and finding signals crossing splits is the first thing to check when a board is emitting.",
+   "quote_verbatim": "If your clock signal passes over a split",
+   "speaker": "Kieran O'Leary",
+   "episode": 452,
+   "episode_title": "An Interview with Kieran O'Leary",
+   "episode_url": "https://theamphour.com/452-an-interview-with-kieran-oleary/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Techniques that help at low frequency actively hurt at radio frequency: a cutout in a ground plane intended to control low-frequency noise becomes an antenna once a radio-frequency signal encounters it, so low-frequency converter practice and radio practice cannot be applied together without contradiction.",
+   "quote_verbatim": "It just becomes an antenna effectively",
+   "speaker": "Chris Gammell",
+   "episode": 457,
+   "episode_title": "Dotty Ernest Annty Frost",
+   "episode_url": "https://theamphour.com/457-dotty-ernest-annty-frost/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Cabling turns into an antenna as readily as a trace: a long run from an amplifier out to a remote speaker radiates the switching edges driving it, and that becomes the obstacle when the product is taken for compliance testing rather than a problem visible on the bench.",
+   "quote_verbatim": "That will act as an antenna and that will actually be the troubles that you run into when you try to go to market",
+   "speaker": "Jørgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with Jørgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Emissions problems are found with near-field probes, either a loop responding to magnetic field or a stub responding to electric field, waved across the board with a spectrum analyser to localise the source. A usable probe can be improvised from an oscilloscope probe by shorting its ground lead to the tip, and modern practice adds recording radio-frequency behaviour over time alongside other signals.",
+   "quote_verbatim": "near-field probes called E-field or H-field probes, which are either like a loop or a stub type of antenna",
+   "speaker": "Alan Wolke",
+   "episode": 117,
+   "episode_title": "An Interview with Alan Wolke (Re-broadcast)",
+   "episode_url": "https://theamphour.com/117-an-interview-with-alan-wolke-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "An emissions defect found late in hardware has no equivalent of a software patch. A wireless product in a plastic enclosure cannot simply be shielded, because the thing that must radiate and the thing that must not are in the same box, so the remedy is another board revision, which is the argument for considering the problem at the start of a hardware project.",
+   "quote_verbatim": "The same isn't true in hardware",
+   "speaker": "Kieran O'Leary",
+   "episode": 452,
+   "episode_title": "An Interview with Kieran O'Leary",
+   "episode_url": "https://theamphour.com/452-an-interview-with-kieran-oleary/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Designing a custom antenna rather than using a pre-certified module means running your own certification programme, which can still be justified on unit cost at sufficient volume.",
+   "quote_verbatim": "because we designed our own antenna, we had to go through our own certification process",
+   "speaker": "Andrew Witte",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A module vendor can absorb radio certification across several regions on the customer's behalf, so the customer buys the module and transmits legally. What does not transfer is the per-country landing and licensing framework, which is separate paperwork in every jurisdiction and requires a substantial legal effort rather than an engineering one.",
+   "quote_verbatim": "the goal is that you don't need to certify anything. We're doing it for you",
+   "speaker": "Dave Jones",
+   "episode": 427,
+   "episode_title": "An Interview with Maarten Engelen",
+   "episode_url": "https://theamphour.com/427-an-interview-with-maarten-engelen/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The reverse-polarity connector convention on consumer radio equipment exists for regulatory reasons rather than technical ones: regulators objected that a user could unscrew a supplied antenna and fit a high-gain one, so manufacturers commissioned connectors with the pin and socket swapped. The measure was defeated as soon as antennas with the reversed connector became available to consumers.",
+   "quote_verbatim": "we can just swap the pin in the socket and they won't fit",
+   "speaker": null,
+   "episode": 708,
+   "episode_title": "All the Connectors with Davide Andrea",
+   "episode_url": "https://theamphour.com/708-all-the-connectors-with-davide-andrea/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Low-cost receiver hardware often ships with a connector chosen for the market it was originally sold into rather than for radio work, so an adapter to a standard radio connector is what makes the wider antenna ecosystem usable with it.",
+   "quote_verbatim": "find a PAL to SMA or PAL to BNC adapter",
+   "speaker": "Michael Ossmann",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Propagation is a condition rather than a design parameter. A modest station with a simple wire antenna fifteen or twenty feet up and a few watts can reach the other side of the world when conditions allow, and when the solar cycle turns the same equipment will not, requiring materially more power or a larger antenna to compensate.",
+   "quote_verbatim": "If the radio wave doesn't want to go there, I can't make it go there",
+   "speaker": "Jeff Keyzer",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Location can outweigh equipment: operating from elevation, in the open and away from sources of electrical noise improves what can be heard more than a better antenna would, and proximity to salt water improves propagation, so a poor antenna in a quiet location outperforms a good one in a noisy urban environment.",
+   "quote_verbatim": "even with a pretty bad antenna, you can hear a lot",
+   "speaker": "Jeff Keyzer",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Range results in the laboratory mislead in both directions. A low-power link that struggled at a few inches on the bench, once genuine protocol defects were fixed, reached several hundred feet, then thousands, and eventually about 2.5 kilometres from a pair of wires on a development board, partly because forward error correction had been masking encoding errors as poor signal.",
+   "quote_verbatim": "there was enough error correction that the receiver was able to kind of figure out what I was trying to say",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Antenna work is approachable by experiment rather than only by analysis: practitioners routinely calculate the wavelength, build something close, then trim it while measuring, and derive the mathematics afterwards if at all.",
+   "quote_verbatim": "I need this wavelength, blah, blah, blah. I'll experiment here. I'll get my plyo. I'll chop a bit off here",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Copying a reference antenna from a published image, by tracing it into a vector drawing, is a legitimate if crude starting point when no reference design exists for the band in question; the outcome is often a plain monopole that could have been made from a cut length of wire of the calculated quarter-wave length.",
+   "quote_verbatim": "pull in the grainy Google image and then trace over it in Inkscape and make an SVG",
+   "speaker": "Chris Gammell",
+   "episode": 464,
+   "episode_title": "KonnectorPanik",
+   "episode_url": "https://theamphour.com/464-konnectorpanik/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Antenna design is a distinct specialism that competent digital engineers do not possess, and the appropriate response in a small company is to recognise the gap and bring in someone who does, particularly where the product is difficult, such as a device to be installed inside a wall with metal behind it acting as an unintended ground plane.",
+   "quote_verbatim": "as a digital engineer i do not understand antenna design",
+   "speaker": null,
+   "episode": 295,
+   "episode_title": "An Interview with Omer Kilic",
+   "episode_url": "https://theamphour.com/295-an-interview-with-omer-kilic/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Knowing how to design an antenna does not make it the right decision. At low volumes the effort is not repaid, and buying a prefabricated module is the better engineering choice even for someone capable of doing the controlled-impedance and antenna work themselves.",
+   "quote_verbatim": "it's a dumb idea for like the volume that I'm doing",
+   "speaker": "Chris Gammell",
+   "episode": 604,
+   "episode_title": "Robo Fry Guy",
+   "episode_url": "https://theamphour.com/604-robo-fry-guy/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "An antenna designed to be tolerant rather than optimal can be a deliberate product decision: a satellite service built to work with whatever printed omnidirectional antenna of around fifty percent efficiency a device already has, on the reasoning that requiring customers to change their hardware would prevent anyone taking it up at all, leaving efficiency improvements as an optional later gain.",
+   "quote_verbatim": "your standard PCB trace, omni directional, and you know, 50% efficiency antenna",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Millimetre-wave operation is not an incremental change to an existing radio design: the frequencies, the antennas and even the cabling are all different, and the infrastructure implication of very short range, effectively requiring a node on every light pole, is why the earlier enthusiasm for it subsided.",
+   "quote_verbatim": "it's completely different technology it's completely different frequencies",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A frequency-agile front end is genuinely hard on the transmitting side, because building power amplifiers that stay efficient across a broad range is difficult, and the same is true of making antennas efficient over a wide band. Both remain open problems rather than solved engineering.",
+   "quote_verbatim": "making antennas that are efficient over a broad frequency range is hard",
+   "speaker": "Jeff Keyzer",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  }
+ ],
+ "attribution_notes": [
+  "ep 295, 636 and 708 sit on the unreliable-attribution list; those claims carry speaker: null and are attributed by content.",
+  "ep 446, 464, 678: several passages label the host where the content is the guest's, and vice versa; where the label could not be relied on the claim is stated without personal attribution or attributed to the labelled speaker only where the content matches their stated role.",
+  "Amateur-radio anecdote and equipment-collection material was excluded under the knowledge-only rule."
+ ],
+ "capped": false
+}

@@ -1,0 +1,630 @@
+{
+ "concept": "pcb-footprint",
+ "name": "PCB Footprint",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": "PCB Footprint",
+ "claims": [
+  {
+   "claim_text": "Library preparation is front-loaded work that precedes layout: the schematic must be complete and annotated with design notes, and every footprint and library component verified correct, before routing begins.",
+   "quote_verbatim": "you have to ensure that you have all your footprints right",
+   "speaker": "Dave Jones",
+   "episode": 16,
+   "episode_title": "LED Designs, Last Minute Designs and Board Designs",
+   "episode_url": "https://theamphour.com/the-amp-hour-16-led-designs-last-minute-designs-and-board-designs/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "That preparation is measured in weeks rather than hours, with a month spent on schematic and library work before layout on a substantial design.",
+   "quote_verbatim": "you might spend a month doing that",
+   "speaker": "Dave Jones",
+   "episode": 16,
+   "episode_title": "LED Designs, Last Minute Designs and Board Designs",
+   "episode_url": "https://theamphour.com/the-amp-hour-16-led-designs-last-minute-designs-and-board-designs/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Footprint creation dominates layout effort, with one practitioner estimating eighty percent of layout time spent building footprints for integrated circuits, and creating close to all of them by hand.",
+   "quote_verbatim": "I end up creating probably almost a hundred percent of my footprints by hand",
+   "speaker": "Jeff Keyzer",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The industry standards body publishes land pattern guidelines specifying pad geometry for each package type, and professional tools include generators that produce a compliant footprint from dimensions typed out of the data sheet.",
+   "quote_verbatim": "Type in the data from the data sheet and it generates the footprint for you to IPC standards.",
+   "speaker": "Jeff Keyzer",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Those standards are not the final authority they are often taken for: many companies mandate the manufacturer's footprint instead, or their own in-house standard, or the footprint supplied by whoever assembles their boards.",
+   "quote_verbatim": "there's this myth that the IPC footprints are the be all end all, but they're not",
+   "speaker": "Dave Jones",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The assembler's preferred footprint carries weight because that company has optimised it for the specific machine that will place the part, which is what makes it the version most likely to yield well.",
+   "quote_verbatim": "they're the ones who have optimized that footprint for their particular machine",
+   "speaker": "Dave Jones",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The question that settles the disagreement is empirical rather than doctrinal: what matters is finding out what actually works in the process that will build the board.",
+   "quote_verbatim": "you just have to find out what actually works in your process",
+   "speaker": "Dave Jones",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The relationship can run the other way, with a company imposing its own standard footprints on the assembler, who generally accepts them and produces acceptable results.",
+   "quote_verbatim": "our company standard is IPC normal size. And you force that upon the assembler",
+   "speaker": "Dave Jones",
+   "episode": 70,
+   "episode_title": "Idiorhythmic IPC Inconcinnity",
+   "episode_url": "https://theamphour.com/the-amp-hour-70-idiorhythmic-ipc-inconcinnity/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The standards define more than one land pattern per package \u2014 least, nominal and most material conditions, commonly described as small, medium and large \u2014 to be chosen according to the density of the board.",
+   "quote_verbatim": "a least, most, and normal footprint size for every footprint based on the density of your board",
+   "speaker": "Chris Gammell",
+   "episode": 70,
+   "episode_title": "Idiorhythmic IPC Inconcinnity",
+   "episode_url": "https://theamphour.com/the-amp-hour-70-idiorhythmic-ipc-inconcinnity/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "A design taken to extreme density cannot use the standard land patterns at all, because they are simply too large for the space available.",
+   "quote_verbatim": "the IPC footprints just don't cut it. Um, because they're too big.",
+   "speaker": "Jeff Keyzer",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Even a tool shipping a complete standards-based library does not eliminate the work, because new and obscure packages keep appearing, a part may or may not need a thermal pad, pads may need extending to accept test probes, and the pattern may need adapting for a particular assembler.",
+   "quote_verbatim": "you want to extend them out because you want some test probe points",
+   "speaker": "Dave Jones",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Opinion divides sharply on manufacturer-supplied footprints, with some designers finding them generally poor and others finding that they, rather than the standard patterns, are what works with their assembly line.",
+   "quote_verbatim": "the IPC ones are crap and the manufacturers ones are the ones that work with my particular board loader",
+   "speaker": "Dave Jones",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The land pattern for a simple chip component is derived from a published formula combining the component's own geometry with the statistical variation in placement accuracy, which is specific enough to be reverse engineered into a spreadsheet.",
+   "quote_verbatim": "it's based on the geometry of the components as well as like statistical variations in placing accuracy",
+   "speaker": "Jeff Keyzer",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The footprints bundled with entry-level tools are widely regarded as inadequate, being noticeably oversized relative to what a reasonable design would use.",
+   "quote_verbatim": "the footprints that come with Eagle are almost useless",
+   "speaker": "Jeff Keyzer",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The library workload falls off once the common passives and standard packages are built, but essentially every project introduces at least one part needing a new footprint or a modification of an existing one.",
+   "quote_verbatim": "there's always some obscure. I found always every project I've worked on, there's some obscure chip",
+   "speaker": "Jeff Keyzer",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "A footprint obtained from someone else generally gets taken apart and rebuilt anyway, so the notional saving does not materialise.",
+   "quote_verbatim": "if I ever use someone else's footprint, I need to tear it apart and redo it anyway",
+   "speaker": "Dave Jones",
+   "episode": 29,
+   "episode_title": "DJ and Jazzy Jeff",
+   "episode_url": "https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A shared library service can avoid being siloed by tool if symbols and footprints are authored in a neutral editor on the service and converted to each design tool's format on the back end, so every part is available in every tool.",
+   "quote_verbatim": "we then convert that to all of the different EDA formats on the back end",
+   "speaker": "Andrew Seddon",
+   "episode": 131,
+   "episode_title": "An Interview with Andrew Seddon - Necessary Networked Novelty",
+   "episode_url": "https://theamphour.com/the-amp-hour-131-necessary-networked-novelty/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The cost of that approach is that existing libraries cannot simply be uploaded, since each part has to be entered once in the neutral form before it becomes available to everyone.",
+   "quote_verbatim": "one person has to put in an 0603 resistor, and then once that's in there, it's then available to everyone",
+   "speaker": "Andrew Seddon",
+   "episode": 131,
+   "episode_title": "An Interview with Andrew Seddon - Necessary Networked Novelty",
+   "episode_url": "https://theamphour.com/the-amp-hour-131-necessary-networked-novelty/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Shared library services struggle commercially because companies verify every part regardless: a service correct on 99.9 percent of parts still leaves an error that could cost hundreds of thousands or millions of dollars.",
+   "quote_verbatim": "even if it works 99.9% of the time",
+   "speaker": "Chris Gammell",
+   "episode": 118,
+   "episode_title": "Kickstarter, Open Source RC & Modelsource - Facinorous Financial Foulness",
+   "episode_url": "https://theamphour.com/the-amp-hour-118-facinorous-financial-foulness/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Companies check internally even where the statistics would favour trusting the source, and that checking can cost more time and money than building the footprint from scratch would have.",
+   "quote_verbatim": "it can cost more time and money to check it than it does to produce the footprint in the first place",
+   "speaker": "Chris Gammell",
+   "episode": 118,
+   "episode_title": "Kickstarter, Open Source RC & Modelsource - Facinorous Financial Foulness",
+   "episode_url": "https://theamphour.com/the-amp-hour-118-facinorous-financial-foulness/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Most established companies maintain their own libraries as a matter of policy, using neither the manufacturer's parts nor those supplied with the design tool.",
+   "quote_verbatim": "We do our own libraries. We do not use the manufacturers.",
+   "speaker": "Chris Gammell",
+   "episode": 70,
+   "episode_title": "Idiorhythmic IPC Inconcinnity",
+   "episode_url": "https://theamphour.com/the-amp-hour-70-idiorhythmic-ipc-inconcinnity/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "A component librarian's job is to verify the footprint dimensions against the data sheet, follow the land pattern standard, obtain the three-dimensional model, confirm every pin on the symbol, and then maintain the library over time.",
+   "quote_verbatim": "verify the footprint was absolutely right in terms of, you know, matching the dimensions on the data sheet",
+   "speaker": "Chris Gammell",
+   "episode": 358,
+   "episode_title": "Mergers and People Acquisitions",
+   "episode_url": "https://theamphour.com/358-mergers-and-people-acquisitions/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Outsourcing that role is defensible on cost: paying fifty or a hundred dollars for a part looks expensive until it is compared against the two hours a footprint can take to build properly.",
+   "quote_verbatim": "if it takes two hours to build a footprint, which is possible sometimes, it's worth it",
+   "speaker": "Chris Gammell",
+   "episode": 358,
+   "episode_title": "Mergers and People Acquisitions",
+   "episode_url": "https://theamphour.com/358-mergers-and-people-acquisitions/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The real value of an approved-parts database is that a defect found on one project propagates to every other project, since a part that has been signed off, given an internal part number and proven in a previous design carries a footprint known to be correct.",
+   "quote_verbatim": "the result of that goof should make its way, flow onto all the other projects so that they can't make the same mistake again",
+   "speaker": "Dave Jones",
+   "episode": 408,
+   "episode_title": "Tronnort Software Rises Again!",
+   "episode_url": "https://theamphour.com/408-tronnort-software-rises-again/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Assigning internal part numbers to approved components is long-established practice at large manufacturers rather than a modern process innovation.",
+   "quote_verbatim": "Once a part is approved and signed off. Internal part numbers.",
+   "speaker": "Dave Jones",
+   "episode": 408,
+   "episode_title": "Tronnort Software Rises Again!",
+   "episode_url": "https://theamphour.com/408-tronnort-software-rises-again/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The number of library entries for a nominally simple component multiplies as a tree: schematic symbol style, then tolerance, then temperature coefficient, then the small, medium or large land pattern, so a single resistance value can occupy twenty entries in the system.",
+   "quote_verbatim": "you'd end up with, you know, 20 10K resistors in the system",
+   "speaker": "Dave Jones",
+   "episode": 445,
+   "episode_title": "Ludicrously High Frequency Interference",
+   "episode_url": "https://theamphour.com/the-amp-hour-445-ludicrously-high-frequency-interference/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The immediate consequence of that proliferation is picking the wrong variant, since the entries differ only in attributes not visible on the schematic.",
+   "quote_verbatim": "And then you grab the wrong one sometimes, right?",
+   "speaker": "Dave Jones",
+   "episode": 445,
+   "episode_title": "Ludicrously High Frequency Interference",
+   "episode_url": "https://theamphour.com/the-amp-hour-445-ludicrously-high-frequency-interference/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Requesting a new library part through a formal process is slow enough to change behaviour: submitting the specification, an example data sheet, an approved manufacturer part number and the required footprint variant, and waiting for it to be tied back into the database, consumed hours on a single resistor.",
+   "quote_verbatim": "At the end of the day, it's like four hours later.",
+   "speaker": "Chris Gammell",
+   "episode": 445,
+   "episode_title": "Ludicrously High Frequency Interference",
+   "episode_url": "https://theamphour.com/the-amp-hour-445-ludicrously-high-frequency-interference/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "Where getting a footprint defined takes weeks, engineers route around the official tool entirely and lay out small boards in whatever package they can access themselves.",
+   "quote_verbatim": "it takes two weeks to get a footprint defined",
+   "speaker": "Jeff Keyzer",
+   "episode": 472,
+   "episode_title": "Keyzermas Vacation",
+   "episode_url": "https://theamphour.com/472-keyzermas-vacation/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Dedicated librarians can be a separate function in another location, producing footprints on request while the design engineers tie the parts together at a higher level.",
+   "quote_verbatim": "We had dedicated librarians in Tasmania",
+   "speaker": "Dave Jones",
+   "episode": 445,
+   "episode_title": "Ludicrously High Frequency Interference",
+   "episode_url": "https://theamphour.com/the-amp-hour-445-ludicrously-high-frequency-interference/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Storing each footprint and each symbol as its own file rather than as entries inside a monolithic library makes the collection tractable under revision control and allows parts to be moved individually.",
+   "quote_verbatim": "each schematic symbol is now its own file",
+   "speaker": "Chris Gammell",
+   "episode": 370,
+   "episode_title": "Alternate Info Sources",
+   "episode_url": "https://theamphour.com/370-alternate-info-sources/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Editing a footprint in place on the board is convenient and correspondingly dangerous, since a stray action can change the placed part's package without any separate step to catch it.",
+   "quote_verbatim": "you could access the footprint as it stood on the board and modify it in place",
+   "speaker": "Parker Dillman",
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The purpose of the board design is to have the board assembled, which is why the machine's expectations govern footprint decisions.",
+   "quote_verbatim": "the whole driver behind designing a circuit board is to get it assembled",
+   "speaker": "Dave Jones",
+   "episode": 408,
+   "episode_title": "Tronnort Software Rises Again!",
+   "episode_url": "https://theamphour.com/408-tronnort-software-rises-again/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Placing the pin one marker directly over the pin one pad \u2014 a common default in supplied libraries \u2014 makes it useless to the assembler, who must then correct the reference and centroid point for every component by hand.",
+   "quote_verbatim": "the pick and place people just have to program that they've just got to go in there and every single component they've, well, they've got to change the reference point, the centroid point",
+   "speaker": "Dave Jones",
+   "episode": 408,
+   "episode_title": "Tronnort Software Rises Again!",
+   "episode_url": "https://theamphour.com/408-tronnort-software-rises-again/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Package dimension tables in data sheets use letter designations that are standardised across manufacturers, so the same letters map directly onto the fields of a footprint creation wizard.",
+   "quote_verbatim": "all these like letters and stuff that they use are kind of standardized",
+   "speaker": "Dave Jones",
+   "episode": 408,
+   "episode_title": "Tronnort Software Rises Again!",
+   "episode_url": "https://theamphour.com/408-tronnort-software-rises-again/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A single universal component library is described as the perennial question in the design-tool industry and as something that works only in principle, because every tool has its own conventions and every company its own requirements.",
+   "quote_verbatim": "why don't it? Why isn't there just one component library and everyone contributes parts to that?",
+   "speaker": "Dave Jones",
+   "episode": 408,
+   "episode_title": "Tronnort Software Rises Again!",
+   "episode_url": "https://theamphour.com/408-tronnort-software-rises-again/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Standardisation across tools is characterised as the industry's unattained goal, with an open interchange format seen as the route to shared libraries.",
+   "quote_verbatim": "That's the holy grail of, of CAD, of the CAD industry. Yes. It's standardization.",
+   "speaker": "Chris Gammell",
+   "episode": 70,
+   "episode_title": "Idiorhythmic IPC Inconcinnity",
+   "episode_url": "https://theamphour.com/the-amp-hour-70-idiorhythmic-ipc-inconcinnity/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Extending pads past the edge of a leadless package, against the manufacturer's advice, is what makes such a part hand-solderable, because heat has to be applied to the pad from outside the body of the chip.",
+   "quote_verbatim": "if you don't bring the footprint out past the edge of the package, even though they tell you not to",
+   "speaker": "Chris Gammell",
+   "episode": 154,
+   "episode_title": "Arduino, IndiGoGo and Hack-a-Day - Doodad Dealer Dancing",
+   "episode_url": "https://theamphour.com/the-amp-hour-154-doodad-dealer-dancing/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The central thermal pad of such a package can itself be used as the heat path: with vias placed under the pad, the joint is soldered from the underside of the board and the heat travels up through the part to the perimeter pads.",
+   "quote_verbatim": "you put vias underneath the pads, and then you actually solder from the bottom side of the board",
+   "speaker": "Chris Gammell",
+   "episode": 154,
+   "episode_title": "Arduino, IndiGoGo and Hack-a-Day - Doodad Dealer Dancing",
+   "episode_url": "https://theamphour.com/the-amp-hour-154-doodad-dealer-dancing/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Footprint errors differ enormously in severity: a slightly wrong pitch or body width is recoverable in a way that a transposed pin assignment is not.",
+   "quote_verbatim": "if pins 1 and 20 are swapped, it's a lot different than if your pitch is slightly different",
+   "speaker": "Dave Jones",
+   "episode": 201,
+   "episode_title": "Cheap Respins And A Time Machine - Multiscience Mercenary Marketplace",
+   "episode_url": "https://theamphour.com/201-cheap-respins-and-a-time-machine-multiscience-mercenary-marketplace/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "A thorough check assumes nothing: every pin on the schematic is cross-referenced against the data sheet, and the footprint's pitch, dimensions and pin mapping are each checked against the schematic in turn.",
+   "quote_verbatim": "a good thorough check, you assume nothing",
+   "speaker": "Dave Jones",
+   "episode": 201,
+   "episode_title": "Cheap Respins And A Time Machine - Multiscience Mercenary Marketplace",
+   "episode_url": "https://theamphour.com/201-cheap-respins-and-a-time-machine-multiscience-mercenary-marketplace/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Verifying the footprint tends to be the last thing anyone looks at, which is why a footprint fault can absorb days of debugging directed at everything else.",
+   "quote_verbatim": "It's like it's like checking a footprint. Right. It's like the last thing you look at.",
+   "speaker": "Chris Gammell",
+   "episode": 137,
+   "episode_title": "Mars, System Design & NAND - Mercurial Mars Mission",
+   "episode_url": "https://theamphour.com/the-amp-hour-137-mercurial-mars-mission/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A wrong footprint compounds the diagnosis, producing soldering difficulties that then absorb the attention while the actual fault lies elsewhere entirely.",
+   "quote_verbatim": "I had a lot of soldering problems with it as well. Cause I had put the wrong footprint down",
+   "speaker": "Chris Gammell",
+   "episode": 203,
+   "episode_title": "Tesla, Checklists and Bullies - Emerging External Eupsychics",
+   "episode_url": "https://theamphour.com/203-tesla-checklists-and-bullies-emerging-external-eupsychics/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Bottom-view package drawings in data sheets are a recurring source of transposed pins, and the three-dimensional package views that manufacturers have begun including remove the ambiguity.",
+   "quote_verbatim": "It was a bottom view footprint, which always gets me.",
+   "speaker": "Chris Gammell",
+   "episode": 367,
+   "episode_title": "Not Reely An Issue",
+   "episode_url": "https://theamphour.com/367-not-reely-an-issue/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The working rule that prevents such errors is to check the part against the data sheet first, rather than trusting that a footprint already present in one's own library is the right one.",
+   "quote_verbatim": "just check against the data sheet first",
+   "speaker": "Chris Gammell",
+   "episode": 339,
+   "episode_title": "Look at nature and meet nerds",
+   "episode_url": "https://theamphour.com/339-look-at-nature-and-meet-nerds/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The specific trap is a package that exists in narrow and wide body variants distinguished only by a suffix, where the library already holds a correct footprint for the other one.",
+   "quote_verbatim": "you didn't look to see that it was a wide footprint",
+   "speaker": "Chris Gammell",
+   "episode": 339,
+   "episode_title": "Look at nature and meet nerds",
+   "episode_url": "https://theamphour.com/339-look-at-nature-and-meet-nerds/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A footprint error that survives to production is expensive at scale, in one case leaving fifteen thousand switches unusable because the pattern was wrong.",
+   "quote_verbatim": "where the footprint was wrong",
+   "speaker": "Chris Gammell",
+   "episode": 337,
+   "episode_title": "Fake it till you make it",
+   "episode_url": "https://theamphour.com/337-fake-it-till-you-make-it/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "Documentation aimed at manufacturing needs different content from documentation aimed at software: the manufacturing engineer wants to know which parts are awkward and which footprints cause components to tombstone during assembly.",
+   "quote_verbatim": "the footprint on this is really bad. This one always flips up, you know, tombstones in, in assembly",
+   "speaker": "Chris Gammell",
+   "episode": 373,
+   "episode_title": "Pedantic or Andrantic",
+   "episode_url": "https://theamphour.com/373-pedantic-or-andrantic/",
+   "depth_regraded": "opinion",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Shared part libraries offer little value to an experienced designer because the footprint is essentially the whole content, and building it oneself is the only way to know it is right; the obstacle is trust rather than effort.",
+   "quote_verbatim": "I could create the footprint and then I know the footprint is correct",
+   "speaker": "Tim Ansell",
+   "episode": 375,
+   "episode_title": "An Interview with Tim \"Mithro\" Ansell",
+   "episode_url": "https://theamphour.com/375-an-interview-with-tim-mithro-ansell/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The reason a component distributor acquires a design tool is to sell components, which is why the goal is a library in which every part carries its footprint, symbol and data sheet linked to the catalogue.",
+   "quote_verbatim": "They want to sell parts, right? That's the sole reason.",
+   "speaker": "Chris Gammell",
+   "episode": 21,
+   "episode_title": "More Freeagle, More Benches and More Engineers on Twitter",
+   "episode_url": "https://theamphour.com/the-amp-hour-21-more-freeagle-more-benches-and-more-engineers-on-twitter/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Distributor-linked libraries with parametric search built into the design tool were expected to become universal, though early implementations were incomplete and frequently lacked footprints for less common parts such as connectors.",
+   "quote_verbatim": "I expect every CAD tool in five years' time will have complete DigiKey integration",
+   "speaker": "Chris Gammell",
+   "episode": 145,
+   "episode_title": "PCB Mills, SDR and Oscilloscopes - Flaunting Furbelow Fanciness",
+   "episode_url": "https://theamphour.com/the-amp-hour-145-flaunting-furbelow-fanciness/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Breakout boards that convert a surface-mount package to a through-hole footprint are cheap to produce and are sold as panels carrying many different patterns, so a single inexpensive panel covers most packages a designer will meet.",
+   "quote_verbatim": "you buy a whole panel worth and they've got all the different footprints on there",
+   "speaker": "Dave Jones",
+   "episode": 18,
+   "episode_title": "Transistor Types and Where To Get Electronic Gear",
+   "episode_url": "https://theamphour.com/the-amp-hour-18-transistor-types-and-where-to-get-electronic-gear/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Modern package footprints have grown too fine for in-house board milling, so a breakout is needed regardless, which is an argument for manufacturers supplying samples already mounted on carriers.",
+   "quote_verbatim": "footprints aren't getting bigger. So, you at least need to have a breakout then.",
+   "speaker": "Chris Gammell",
+   "episode": 275,
+   "episode_title": "No One Even Missed Us?",
+   "episode_url": "https://theamphour.com/275-no-one-even-missed-us/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The solder paste layer is part of the footprint and can be modified so that a part intended for hand placement is excluded from the stencil.",
+   "quote_verbatim": "Go in and modify a part to not show up on the, uh, on the stencil.",
+   "speaker": "Dave Jones",
+   "episode": 415,
+   "episode_title": "Ergs Per Second",
+   "episode_url": "https://theamphour.com/415-ergs-per-second/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A component can be out of specification for its own nominal package size, with a supposedly standard chip capacitor from a major manufacturer arriving physically narrower than the package definition allows.",
+   "quote_verbatim": "the cap was out of spec for the physical size",
+   "speaker": "Jonathan Hirschman",
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Patents covering package and footprint technology are part of why straightforward second sourcing has become rare, since two manufacturers' equivalent parts no longer share a land pattern.",
+   "quote_verbatim": "because of patents on footprint technology or on packaging technology and footprints are different",
+   "speaker": "Dave Jones",
+   "episode": 104,
+   "episode_title": "Ceramic capacitors & High end scopes - Kempt Kickstarter Kakorrhaphiophobia",
+   "episode_url": "https://theamphour.com/the-amp-hour-104-kempt-kickstarter-kakorrhaphiophobia/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Some design tools bind a package to each device variant in the library, while others place only the schematic symbol at capture time and assign the footprint when the design moves to layout.",
+   "quote_verbatim": "you're actually just putting in the schematic symbol. And then at the time when you're pulling it into the layout side, you actually, that's when you assign the, the package type",
+   "speaker": "Andrew Seddon",
+   "episode": 131,
+   "episode_title": "An Interview with Andrew Seddon - Necessary Networked Novelty",
+   "episode_url": "https://theamphour.com/the-amp-hour-131-necessary-networked-novelty/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Getting the parts drafted \u2014 symbols and footprints in order \u2014 is the painful phase that follows component selection and precedes any visible progress on the board, and it can consume a fortnight.",
+   "quote_verbatim": "you sit there for the next two weeks, getting all your symbols and your footprints in order",
+   "speaker": "Andrew Seddon",
+   "episode": 131,
+   "episode_title": "An Interview with Andrew Seddon - Necessary Networked Novelty",
+   "episode_url": "https://theamphour.com/the-amp-hour-131-necessary-networked-novelty/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Verifying whether a part is already in the library is the step designers routinely skip and then regret, and the presence of ready-made parts is what makes a simple demonstration board misleading as a measure of layout time.",
+   "quote_verbatim": "verifying if they're already in there, which is a big step that everybody skips",
+   "speaker": "Chris Gammell",
+   "episode": 172,
+   "episode_title": "CAD courses and cross platform creation - Printing Propaedeutic Patterns",
+   "episode_url": "https://theamphour.com/172-cad-courses-and-cross-platform-creation-printing-propaedeutic-patterns/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Routing can proceed before the footprints are finalised, since the layout problem is largely about where the large parts go and how they connect; correcting footprint details afterwards is a tidying step that rarely disturbs that work unless a pin assignment is wrong.",
+   "quote_verbatim": "you can probably do 90% of your board layout, you know, just standalone",
+   "speaker": "Dave Jones",
+   "episode": 219,
+   "episode_title": "Get Smart About Automation - Caducous Cyborg Concerns",
+   "episode_url": "https://theamphour.com/219-get-smart-about-automation-caducous-cyborg-concerns/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Choosing the footprint for the specific model of assembly machine that will build the board means the design is tied to that manufacturer and that line, since yield depends on the match between pattern and equipment.",
+   "quote_verbatim": "choosing the right footprint for your particular assembler's type and model of machine",
+   "speaker": "Dave Jones",
+   "episode": 143,
+   "episode_title": "PCBs, Tektronix & Ham Radio - Habitual Handicraft Hangups",
+   "episode_url": "https://theamphour.com/the-amp-hour-143-habitual-handicraft-hangups/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "That coupling is accepted rather than hedged: boards are designed for one manufacturer and one assembly machine, instead of maintaining alternative outputs for different suppliers.",
+   "quote_verbatim": "we would design the footprints and the boards specifically for that manufacturer and that assembly machine",
+   "speaker": "Dave Jones",
+   "episode": 143,
+   "episode_title": "PCBs, Tektronix & Ham Radio - Habitual Handicraft Hangups",
+   "episode_url": "https://theamphour.com/the-amp-hour-143-habitual-handicraft-hangups/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "capped": false,
+ "attribution_notes": "Episodes on the speaker-map unreliable list are attributed by content or left unattributed."
+}

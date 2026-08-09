@@ -1,0 +1,566 @@
+{
+ "concept": "transformer",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "transformer",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "transformer"
+  ],
+  "children": [
+   "ac-power",
+   "copper",
+   "magnetic-coupling",
+   "no-starch-press"
+  ],
+  "neighbors": {},
+  "episodes_with_kept_mentions": 74,
+  "mentions_kept": 116,
+  "pins_pre_cap": 90,
+  "pins_final": 90,
+  "pins_by_depth": {
+   "explains": 68,
+   "opinion": 22
+  },
+  "pins_by_role": {
+   "core": 90
+  },
+  "speakers": [
+   [
+    "Chris Gammell",
+    41
+   ],
+   [
+    "Dave Jones",
+    37
+   ],
+   [
+    "Paul Zawada",
+    3
+   ],
+   [
+    "Ben Krasnow",
+    2
+   ],
+   [
+    "Vincent Himpe",
+    1
+   ],
+   [
+    "Ken Shirriff",
+    1
+   ],
+   [
+    "Fredrik Kensander",
+    1
+   ],
+   [
+    "Mike Harrison",
+    1
+   ],
+   [
+    "Big Clive",
+    1
+   ],
+   [
+    "Philip Salmony",
+    1
+   ],
+   [
+    "Alex Lidow",
+    1
+   ]
+  ],
+  "capped": false,
+  "gated_out_by_concept": [
+   [
+    "copper",
+    50
+   ],
+   [
+    "ac-power",
+    9
+   ],
+   [
+    "no-starch-press",
+    8
+   ],
+   [
+    "magnetic-coupling",
+    5
+   ]
+  ],
+  "gated_out_total": 72
+ },
+ "claims": [
+  {
+   "claim_text": "Transformer efficiency can be bounded by argument rather than looked up: assume a large unit is only 95 percent efficient, work out the resulting dissipation, and it becomes obvious the device would destroy itself — so real ones must be far above 99 percent.",
+   "quote_verbatim": "let's assume it's only 95% efficient transformer. What's the energy loss in that transformer",
+   "speaker": "Dave Jones",
+   "episode": 583,
+   "episode_title": "The Smart Grid with Paul Zawada",
+   "episode_url": "https://theamphour.com/583-the-smart-grid-with-paul-zawada/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Transformer losses appear as heat inside the windings, so an efficiency shortfall of even a few percent in a multi-megawatt unit melts the wire insulation and shorts the winding — the loss figure is a survival limit, not a running cost.",
+   "quote_verbatim": "would melt the insulation on the wires in the transformer. It would just melt and short out",
+   "speaker": "Dave Jones",
+   "episode": 639,
+   "episode_title": "Daaaamn We're Duuuummmb",
+   "episode_url": "https://theamphour.com/639-daaaamn-were-duuuummmb/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Proposals to drop solid-state transformers into existing distribution understate what they are replacing: conventional units run around 99 percent efficient and are extremely reliable, so a 96 percent solid-state substitute gives back several percent as heat across every megawatt that passes through it.",
+   "quote_verbatim": "are like 99% efficient and they're super reliable",
+   "speaker": "Dave Jones",
+   "episode": 717,
+   "episode_title": "Back on the road in '26",
+   "episode_url": "https://theamphour.com/717-back-on-the-road-in-26/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Alternating current was adopted for distribution because transformers make raising and lowering voltage easy; almost everything else about AC — reactive power in particular — is harder than the DC equivalent.",
+   "quote_verbatim": "the reason we use AC is basically because of transformers",
+   "speaker": "Paul Zawada",
+   "episode": 583,
+   "episode_title": "The Smart Grid with Paul Zawada",
+   "episode_url": "https://theamphour.com/583-the-smart-grid-with-paul-zawada/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "High-voltage DC transmission has to convert at both ends and take the conversion losses, whereas AC transmission at 500 kV between major plants uses transformers that are already extremely efficient on generation that is already alternating — which is why the DC case has to be won on distance rather than on efficiency alone.",
+   "quote_verbatim": "transformers are massively efficient and you're generating AC anyway",
+   "speaker": "Dave Jones",
+   "episode": 205,
+   "episode_title": "Solar Factories and HVDC Lines - Pollent Power Pushing",
+   "episode_url": "https://theamphour.com/205-solar-factories-and-hvdc-lines-pollent-power-pushing/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The HVDC trade is explicit: accept conversion losses at each end in exchange for lower losses over the distance in between, which makes it a length-dependent decision rather than a general improvement over the transformers on a distribution pole.",
+   "quote_verbatim": "we're going to take some losses at the, at the transition from, you know, the, the high voltage point",
+   "speaker": "Chris Gammell",
+   "episode": 717,
+   "episode_title": "Back on the road in '26",
+   "episode_url": "https://theamphour.com/717-back-on-the-road-in-26/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Line voltage can be read off the hardware: counting the skirts on an insulator gives roughly a kilovolt scale — six skirts suggests 66 kV, three suggests 33 kV — which is how a passer-by identifies what a given line is carrying.",
+   "quote_verbatim": "one of the tricks with insulators, if you count the number of rings, you can kind of get a rough idea of the voltage",
+   "speaker": "Toby Robb",
+   "episode": 641,
+   "episode_title": "Power Transmission with Toby Robb",
+   "episode_url": "https://theamphour.com/641-power-transmission-with-toby-robb/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Distribution steps down in stages: a zone substation per suburb takes 66 kV to 11 kV onto a bus, distribution breakers hanging off that bus feed the street, and pole-mounted or pad-mounted transformers make the final low voltage.",
+   "quote_verbatim": "that's when we take the 66 and there might be a couple of transformers hooked up to a bar",
+   "speaker": "Toby Robb",
+   "episode": 641,
+   "episode_title": "Power Transmission with Toby Robb",
+   "episode_url": "https://theamphour.com/641-power-transmission-with-toby-robb/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Substation measurement runs entirely on instrument transformers: a voltage transformer scales the bus voltage down to about a hundred volts, and a current transformer gives a proportional current at ratios such as 200 to 5 or 800 to 5.",
+   "quote_verbatim": "of those breakers will have a VT, a voltage transformer, which takes a proportion of the voltage and takes it down to about a hundred volts",
+   "speaker": "Toby Robb",
+   "episode": 641,
+   "episode_title": "Power Transmission with Toby Robb",
+   "episode_url": "https://theamphour.com/641-power-transmission-with-toby-robb/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Protection commissioning uses a programmable source good for a thousand volts at any frequency and current, with logic inputs to watch the result: wrapping its output through the current transformer several times multiplies the injected current, and the instrument times the breaker's contacts opening in milliseconds so the trip curves can be verified rather than assumed.",
+   "quote_verbatim": "wrap the output around the CT a few times to double up or quadruple up the current, inject some current and see if the breaker trips",
+   "speaker": "Toby Robb",
+   "episode": 641,
+   "episode_title": "Power Transmission with Toby Robb",
+   "episode_url": "https://theamphour.com/641-power-transmission-with-toby-robb/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Substations are built with standby capacity and bus-tie breakers so that a transformer locking out closes a tie and either brings in the spare or transfers the load onto the remaining units.",
+   "quote_verbatim": "if a transformer fails and locks out, the bus tie breaker might close and bring in the standby transformer",
+   "speaker": "Toby Robb",
+   "episode": 641,
+   "episode_title": "Power Transmission with Toby Robb",
+   "episode_url": "https://theamphour.com/641-power-transmission-with-toby-robb/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Power-line communication signals do not pass through a distribution transformer, so the network a given scheme can reach is bounded by the transformer rather than by the wiring — which is why the approach suits regions with large low-voltage networks per transformer.",
+   "quote_verbatim": "a lot of those signals don't travel through the transformer",
+   "speaker": "Paul Zawada",
+   "episode": 583,
+   "episode_title": "The Smart Grid with Paul Zawada",
+   "episode_url": "https://theamphour.com/583-the-smart-grid-with-paul-zawada/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The distribution transformer, not the individual inverter, sets how much a group of connected houses can export, which is the physical reason coordinating rooftop generation has to happen above the level of the house.",
+   "quote_verbatim": "the individual transformers will govern how much, say, a group of houses connected to that transformer can generate",
+   "speaker": "Paul Zawada",
+   "episode": 583,
+   "episode_title": "The Smart Grid with Paul Zawada",
+   "episode_url": "https://theamphour.com/583-the-smart-grid-with-paul-zawada/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Large transformers have become genuinely hard to source, so a failure is a schedule problem measured in months rather than a purchase — and the usual fallback of buying from a large overseas supplier competes against that supplier's own domestic demand.",
+   "quote_verbatim": "when you blow out even a transformer these days, it's hard to source new transformers",
+   "speaker": "Chris Gammell",
+   "episode": 724,
+   "episode_title": "All Heat, No Useful Work",
+   "episode_url": "https://theamphour.com/724-all-heat-no-useful-work/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Grid infrastructure is physically vulnerable in a way that is rarely designed for: one 2013 attack deliberately destroyed seventeen large transformers at a single substation by targeting the mechanics rather than firing at random.",
+   "quote_verbatim": "destroying 17 of the substation's large transformers",
+   "speaker": "Chris Gammell",
+   "episode": 612,
+   "episode_title": "Slapping Industries",
+   "episode_url": "https://theamphour.com/612-slapping-industries/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Mains hum from a transformer is mechanical: the laminations vibrate under the magnetic field when they are not bonded tightly enough or have lost their bonding, and the whole assembly can also vibrate against the chassis it is bolted to.",
+   "quote_verbatim": "you hear that 50 hertz hum from the transformer, that can be vibration in the laminate material",
+   "speaker": "Dave Jones",
+   "episode": 127,
+   "episode_title": "FPGA, Xess, 32 Bit - Quirky Qualitative Questions",
+   "episode_url": "https://theamphour.com/the-amp-hour-127-quirky-qualitative-questions/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A transformer failure can propagate backwards: a secondary-side fuse clearing reflected back to the primary and pushed it into thermal runaway, which is the argument for protecting the primary rather than trusting secondary-side protection alone.",
+   "quote_verbatim": "the secondary side fuse actually popped. So maybe that had some kickback effect",
+   "speaker": "Dave Jones",
+   "episode": 419,
+   "episode_title": "Feels over reals",
+   "episode_url": "https://theamphour.com/419-feels-over-reals/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A transformer manufacturer will build a thermal fuse in line with the winding on request, set high enough that ordinary use and small surges never reach it; the trade is that it is a one-time device and the transformer is scrap once it operates.",
+   "quote_verbatim": "can ask your transformer manufacturer to include an inline embedded fuse",
+   "speaker": "Dave Jones",
+   "episode": 419,
+   "episode_title": "Feels over reals",
+   "episode_url": "https://theamphour.com/419-feels-over-reals/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "High-frequency noise passes straight through a mains transformer via the interwinding capacitance, so a linear supply is not automatically quiet at high frequency just because it has no switching stage.",
+   "quote_verbatim": "high frequency stuff will just go right, right through your transformer",
+   "speaker": "Dave Jones",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Designing a transformer for a specific application — trading efficiency, cost and size simultaneously — is genuinely specialised knowledge that most electronics engineers do not have and rarely need, because off-the-shelf parts and complete converter modules cover the normal cases.",
+   "quote_verbatim": "it's a pretty specialized knowledge actually designing, you know, a transformer for your custom app",
+   "speaker": "Dave Jones",
+   "episode": 5,
+   "episode_title": "Girl Power",
+   "episode_url": "https://theamphour.com/the-amp-hour-5-girl-power/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A mains-frequency transformer can be operated at other frequencies and voltages if it is derated appropriately, which makes a stock 50 or 60 Hz part usable well outside its nameplate conditions.",
+   "quote_verbatim": "using a 60 hertz transformer or a 50 hertz transformer at different frequencies and then the D rating you can do",
+   "speaker": "Chris Gammell",
+   "episode": 88,
+   "episode_title": "Yonderly Yodeling Yobbos",
+   "episode_url": "https://theamphour.com/the-amp-hour-88-yonderly-yodeling-yobbos/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A transformer imposes no current limit of its own, and a fuse in the circuit does not make the secondary safe to touch — enough current passes before it clears to be lethal, which is what makes salvaged microwave oven transformers dangerous.",
+   "quote_verbatim": "transformers in general, you know, they're not current-limited. Even if you have a fuse in there, enough current can slip through to really mess you up",
+   "speaker": "Chris Gammell",
+   "episode": 88,
+   "episode_title": "Yonderly Yodeling Yobbos",
+   "episode_url": "https://theamphour.com/the-amp-hour-88-yonderly-yodeling-yobbos/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "In a linear supply the transformer and the enclosure carry most of the cost — a good 80-watt transformer is a substantial piece of iron — which is why a cost reduction on such a product almost always targets the magnetics first.",
+   "quote_verbatim": "most of the cost in something like this goes into, like, the transformer and the case",
+   "speaker": "Dave Jones",
+   "episode": 122,
+   "episode_title": "Processors, CEOs & Soldering irons - Plentiful Perfunctory Programs",
+   "episode_url": "https://theamphour.com/the-amp-hour-122-plentiful-perfunctory-programs/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A planar transformer took several revisions with the manufacturer to meet specification, but ends up cheaper than a comparable quality custom-wound part as well as lighter — good transformers are not cheap, which is what makes the planar route worth the development effort.",
+   "quote_verbatim": "we are saving by going to this planar transformer",
+   "speaker": "Dave Jones",
+   "episode": 432,
+   "episode_title": "Check The Dummy Box",
+   "episode_url": "https://theamphour.com/432-check-the-dummy-box/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Switching tens of thousands of times a second is what shrank the transformer, and with it the whole supply: the same power that needed a wall-wart in the 1980s now fits a phone charger the size of a cubic inch.",
+   "quote_verbatim": "these high frequencies, they can use a very tiny transformer",
+   "speaker": "Ken Shirriff",
+   "episode": 361,
+   "episode_title": "An Interview with Ken Shirriff",
+   "episode_url": "https://theamphour.com/361-an-interview-with-ken-shirriff/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Inductors, transformers and antennas can all be formed from board traces, and they cost nothing beyond the area they occupy because the copper is being etched anyway.",
+   "quote_verbatim": "can do transformers on PCBs. You can do antennas on PCBs",
+   "speaker": "Dave Jones",
+   "episode": 76,
+   "episode_title": "Fremescent Floccose Fortification",
+   "episode_url": "https://theamphour.com/the-amp-hour-76-fremescent-floccose-fortification/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Wireless power transfer is inefficient for a structural reason rather than an engineering shortfall: the two coils are loosely coupled where a transformer's windings are tightly coupled, and the efficiency follows the coupling.",
+   "quote_verbatim": "wireless power transfers are inefficient because they're not coupled together",
+   "speaker": "Dave Jones",
+   "episode": 172,
+   "episode_title": "CAD courses and cross platform creation - Printing Propaedeutic Patterns",
+   "episode_url": "https://theamphour.com/172-cad-courses-and-cross-platform-creation-printing-propaedeutic-patterns/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Treating a transformer as an inductor with a second winding coupled to it means an ordinary buck converter can drive one directly, which opens up isolated and multiple-output topologies without a dedicated controller.",
+   "quote_verbatim": "a transformer is just an inductor with another inductor coupled to it, you actually can use this as a",
+   "speaker": "Chris Gammell",
+   "episode": 108,
+   "episode_title": "Mars, Makerbot & Power Outages - Reprobate Replicator Replication",
+   "episode_url": "https://theamphour.com/the-amp-hour-108-reprobate-replicator-replication/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Replacing a buck converter's inductor with a coupled one gets a second output for very little: the primary still functions as the buck inductor while a secondary tapped off it behaves like a flyback, giving two rails from one magnetic component.",
+   "quote_verbatim": "instead of using just an inductor, they're coupling that and using it as a transformer as well, which then gives you the flyback",
+   "speaker": "Dave Jones",
+   "episode": 210,
+   "episode_title": "Risky Components and Hardware Innovation - Slipshod Shack Shutdown",
+   "episode_url": "https://theamphour.com/210-risky-components-and-hardware-innovation-slipshod-shack-shutdown/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Isolated converters can regulate either through an optocoupler carrying feedback across the barrier or by primary-side sensing, where what the primary winding sees during the flyback interval is enough to drive the control loop — removing the optocoupler and its aging characteristics from the design.",
+   "quote_verbatim": "a couple now that have primary side sense",
+   "speaker": "Chris Gammell",
+   "episode": 210,
+   "episode_title": "Risky Components and Hardware Innovation - Slipshod Shack Shutdown",
+   "episode_url": "https://theamphour.com/210-risky-components-and-hardware-innovation-slipshod-shack-shutdown/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Measuring a converter's loop response rigorously means injecting a swept signal into the feedback divider through a small transformer and reading the result on a network analyser, which is what turns loop stability from an assumption into a measurement.",
+   "quote_verbatim": "you put a little transformer into the feedback resistor network",
+   "speaker": "Dave Jones",
+   "episode": 377,
+   "episode_title": "Debugger vs Printeffer",
+   "episode_url": "https://theamphour.com/377-debugger-vs-printeffer/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A half bridge ties the primary's midpoint between two DC-link capacitors so the winding sees half the link voltage, where a full bridge would apply all of it; the half bridge therefore trades higher primary current for lower switch voltage stress.",
+   "quote_verbatim": "the midpoint of the transformer on the primary side is into two caps",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Multi-channel mains dimming needs an independent floating reference per channel, and neither answer scales: one DC-DC converter per channel becomes absurd at sixteen, and a custom switch-mode supply with one secondary winding per channel hits the same wall from the transformer side.",
+   "quote_verbatim": "don't really want to have 16 DC to DC converters",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A high-voltage supply can be built from a 10-to-1 transformer in a package a few millimetres across by treating one winding as a plain inductor — clamp it to ground while it charges from the low rail, release it, and the secondary delivers ten times the flyback voltage through a diode into a capacitor.",
+   "quote_verbatim": "you use one leg of the transformer and pretend it's an inductor",
+   "speaker": "Chris Gammell",
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "At data-centre power levels the transformer, not the semiconductor, sets the topology: an 800-volt bus could in principle be switched down to 12 volts with a 1200-volt silicon carbide device, but only through a transformer too large to fit on the board, which is what forces the multi-stage conversion architecture instead.",
+   "quote_verbatim": "the answer is only if you have a transformer that big, which doesn't fit",
+   "speaker": "Alex Lidow",
+   "episode": 719,
+   "episode_title": "Inventing the Power MOSFET with Alex Lidow",
+   "episode_url": "https://theamphour.com/719-inventing-the-power-mosfet-with-alex-lidow/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Efficiency and spectral cleanliness trade directly against each other in power conversion: driving a clean sinusoid through a transformer with transistors held in their linear region can leave you around twenty percent efficient, while switching hard gets the efficiency back and produces harmonics to deal with instead.",
+   "quote_verbatim": "if you look at, like, a sinusoidal converter, right, where you're actually, you know, putting transistors in the linear region and actually driving a sinusoid through a transformer, you are burning tons of power",
+   "speaker": "Chris Gammell",
+   "episode": 151,
+   "episode_title": "Google Glass, Lean Startup and VotC - Initializing Instructed Interviews",
+   "episode_url": "https://theamphour.com/the-amp-hour-151-initializing-instructed-interviews/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The push-pull arrangement alternates two transistors to drive a transformer or inductor from a DC rail, and rectification on the far side gives a stepped-up or stepped-down output — the basic pattern behind most isolated converters, with dedicated controller chips available to drive the discrete devices.",
+   "quote_verbatim": "you can transfer power through a transformer or an inductor and then you can step it up, step it down, and then you can rectify it on the other side",
+   "speaker": "Chris Gammell",
+   "episode": 9,
+   "episode_title": "From Boston In Boxers?",
+   "episode_url": "https://theamphour.com/the-amp-hour-9-from-boston-in-boxers/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Digital isolators work by putting two coils between two dies inside one package — a transformer small enough to be part of the packaging — which is how isolated USB and similar interfaces are built without an optocoupler.",
+   "quote_verbatim": "they have two chips in there. And then, in between, they put two coils. And basically, it's a transformer",
+   "speaker": "Chris Gammell",
+   "episode": 94,
+   "episode_title": "Gnomic Gazumping Gobemouche",
+   "episode_url": "https://theamphour.com/the-amp-hour-94-gnomic-gazumping-gobemouche/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A classic application-note thermocouple circuit sends data across an isolation barrier by driving one side of a transformer with logic gates, and it still holds up electrically — but with integrated parts now matching or beating that performance, reproducing it from discretes is hard to justify on a commercial design however instructive it is.",
+   "quote_verbatim": "it's got like a digital drive circuit with like some logic gates to drive one side of a transformer to send data",
+   "speaker": "Philip Salmony",
+   "episode": 573,
+   "episode_title": "Mixed Signal Education with Philip Salmony",
+   "episode_url": "https://theamphour.com/573-mixed-signal-education-with-philip-salmony/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Transcranial magnetic stimulation is built as one half of a transformer with the body as the other: a current rising at roughly five thousand amps per second produces a field change fast enough to induce current locally in tissue.",
+   "quote_verbatim": "you basically got one half of a transformer. And you have something about 5,000 amps per second rise time",
+   "speaker": "Ben Krasnow",
+   "episode": 75,
+   "episode_title": "An Interview with Ben Krasnow - Sprauncy Saccadic Spintherism",
+   "episode_url": "https://theamphour.com/the-amp-hour-75-sprauncy-saccadic-spintherism/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Inductive coupling through a barrier is usable at surprising distances — a through-window power link designed by an RF engineer works across about thirty centimetres of glass, far more than the millimetre-scale gaps people associate with the technique.",
+   "quote_verbatim": "he's just basically just passing power through a window up to 30 centimeters",
+   "speaker": "Chris Gammell",
+   "episode": 664,
+   "episode_title": "Simulating doors falling off",
+   "episode_url": "https://theamphour.com/664-simulating-doors-falling-off/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A commodity ATX supply is a cheap source of raw power for bench work: the 5-volt rail carries twenty to thirty amps, and boosting or push-pulling that through a transformer produces a bipolar rail at high current for a fraction of the cost of a laboratory supply.",
+   "quote_verbatim": "take a 5-volt, which has, like, 20 or 30 amps behind it",
+   "speaker": "Chris Gammell",
+   "episode": 199,
+   "episode_title": "The 2014 Maker Faire Show - Traveling Technology Trangam",
+   "episode_url": "https://theamphour.com/199-the-2014-maker-faire-show-traveling-technology-trangam/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A converter described as transformerless usually means only its main conversion path: a hybrid inverter still carries a transformer for the battery side, and every transformer is inherently bidirectional whether or not the datasheet says so.",
+   "quote_verbatim": "transformless if you just got that. But because this is a hybrid inverter",
+   "speaker": "Dave Jones",
+   "episode": 671,
+   "episode_title": "NDA Sideshow",
+   "episode_url": "https://theamphour.com/671-nda-sideshow/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Bidirectionality is exploitable: a salvaged distribution transformer run backwards steps a wall outlet up to hundreds of thousands of volts, which with a voltage multiplier behind it is how improvised high-voltage supplies are built.",
+   "quote_verbatim": "he used it in the opposite direction. So, you know, transformers work in both directions and he was stepping up voltage",
+   "speaker": "Dave Jones",
+   "episode": 14,
+   "episode_title": "China, Entrepreneurs and Blue Collar Reality",
+   "episode_url": "https://theamphour.com/the-amp-hour-14-china-entrepreneurs-and-blue-collar-reality/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An induction motor can be modelled as a set of transformers whose secondary sweeps past the primary, coupling energy magnetically as it goes — which is also why the same machine recovers energy during regenerative braking rather than needing separate hardware.",
+   "quote_verbatim": "the simplified model is basically, like, having three transformers and basically you're sweeping something past a transformer",
+   "speaker": "Chris Gammell",
+   "episode": 168,
+   "episode_title": "Specialized and/or Open Source Test Gear and Dev Boards - Vacation Videography Vorboten",
+   "episode_url": "https://theamphour.com/168-specialized-and-open-source-test-gear-and-dev-boards-vacation-videography-vorboten/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Custom magnetics are where a nearly finished power product stalls: missing the efficiency target meant redesigning both the converter and its custom transformer, and that cost landed on top of a bill of materials that already looked too high for the market.",
+   "quote_verbatim": "have to redesign the custom transformer in it because we weren't meeting the efficiency targets",
+   "speaker": "Dave Jones",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  }
+ ],
+ "attribution_notes": [
+  "attribution_reliable was not trusted. ep641 labels the guest's detailed account of substation practice as 'Chris Gammell'; the content is unambiguously the working power engineer and is attributed to Toby Robb.",
+  "ep220 similarly labels the guest's own anecdote with the host's name; no claims were taken from it.",
+  "ep539 (Big Clive), ep607 and ep71 carry the same single-speaker pattern; only unambiguous guest material was used.",
+  "One passage in the bundle carries episode: null and was dropped as uncitable. It contained the only material on on-chip interstage matching transformers at millimetre-wave frequencies, which is therefore absent from this article.",
+  "Reception, product enthusiasm and running jokes about the weight of large transformers were excluded."
+ ],
+ "capped": false
+}

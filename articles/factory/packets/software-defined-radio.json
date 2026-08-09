@@ -1,0 +1,579 @@
+{
+ "concept": "software-defined-radio",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "software-defined-radio",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "software-controlled-radio",
+   "software-defined-radio"
+  ],
+  "children": [
+   "fm-radio",
+   "fourier-transform",
+   "gnu-radio",
+   "hardware-hacking-village",
+   "lime-sdr",
+   "modulation",
+   "security-by-obscurity",
+   "spectrum-analysis"
+  ],
+  "neighbors": {
+   "ham-radio": 6,
+   "great-scott-gadgets": 4
+  },
+  "episodes_with_kept_mentions": 60,
+  "mentions_kept": 126,
+  "pins_pre_cap": 91,
+  "pins_final": 91,
+  "pins_by_depth": {
+   "explains": 79,
+   "opinion": 12
+  },
+  "pins_by_role": {
+   "core": 88,
+   "child": 2,
+   "neighbor": 1
+  },
+  "speakers": [
+   [
+    "Chris Gammell",
+    37
+   ],
+   [
+    "Michael Ossmann",
+    14
+   ],
+   [
+    "Dave Jones",
+    12
+   ],
+   [
+    "Jeff Keyzer",
+    8
+   ],
+   [
+    "Greg Charvat",
+    3
+   ],
+   [
+    "Andreas Olofsson",
+    2
+   ],
+   [
+    "Luke Valenty",
+    2
+   ],
+   [
+    "Travis Goodspeed",
+    2
+   ],
+   [
+    "Sylvain Minot",
+    2
+   ],
+   [
+    "Jeri Ellsworth",
+    1
+   ],
+   [
+    "Andrew Seddon",
+    1
+   ],
+   [
+    "SPEAKER_01",
+    1
+   ],
+   [
+    "Richard Ginus",
+    1
+   ],
+   [
+    "Brent And Bryce Salmi",
+    1
+   ],
+   [
+    "Joris Aerts",
+    1
+   ],
+   [
+    "Jeff Geerling",
+    1
+   ],
+   [
+    "CNLohr",
+    1
+   ],
+   [
+    "Matt Brown",
+    1
+   ]
+  ],
+  "capped": false,
+  "gated_out_by_concept": [
+   [
+    "ham-radio",
+    140
+   ],
+   [
+    "gnu-radio",
+    23
+   ],
+   [
+    "great-scott-gadgets",
+    16
+   ],
+   [
+    "security-by-obscurity",
+    15
+   ],
+   [
+    "fm-radio",
+    13
+   ],
+   [
+    "fourier-transform",
+    11
+   ],
+   [
+    "modulation",
+    11
+   ],
+   [
+    "hardware-hacking-village",
+    9
+   ],
+   [
+    "spectrum-analysis",
+    7
+   ],
+   [
+    "lime-sdr",
+    3
+   ]
+  ],
+  "gated_out_total": 248
+ },
+ "claims": [
+  {
+   "claim_text": "The defining split is an analog front end with everything after it done digitally, which is what allows filtering, demodulation and mixing to be changed without touching hardware — one board becomes many radios through a recompile.",
+   "quote_verbatim": "you have an analog front end and then you do everything else digitally",
+   "speaker": "Chris Gammell",
+   "episode": 48,
+   "episode_title": "Bob Pease, Jim Williams - Posthumous Pease Porridge",
+   "episode_url": "https://theamphour.com/the-amp-hour-48-posthumous-pease-porridge/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Rather than fixing the local oscillator in hardware, the mixing frequency is left as an input and supplied digitally, which is what makes frequency-hopping schemes such as cellular practical to implement and change on the fly.",
+   "quote_verbatim": "you need to pipe in some kind of mixing frequency basically you leave that hanging and then you pipe that in digitally",
+   "speaker": "Chris Gammell",
+   "episode": 48,
+   "episode_title": "Bob Pease, Jim Williams - Posthumous Pease Porridge",
+   "episode_url": "https://theamphour.com/the-amp-hour-48-posthumous-pease-porridge/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Direct-conversion architecture removes the front-end amplifier and often the front-end bandpass filter entirely, which eliminates the insertion loss those stages contribute.",
+   "quote_verbatim": "software-defined radio, you don't have to have a front-end amplifier at all. Sometimes you don't even need to have a front-end bandpass filter",
+   "speaker": "Jeri Ellsworth",
+   "episode": 52,
+   "episode_title": "An Interview with Jeri Ellsworth - Carnassial Chip Chemicals",
+   "episode_url": "https://theamphour.com/the-amp-hour-52-carnassial-chip-chemicals/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Converting straight from RF to a very low intermediate frequency moves the whole signal chain into territory served by ordinary op-amps and instrumentation amplifiers, with filtering done in plain resistors and capacitors — cheaper parts and far less power than an RF chain, with the cost shifted to whether the processor can keep up after digitisation.",
+   "quote_verbatim": "you go directly from RF down to a very low intermediate frequency. So that means that you're using amplifiers, which are just off-the-shelf op-amps and instrumentation amplifiers that work in the kilohertz range",
+   "speaker": "Jeri Ellsworth",
+   "episode": 52,
+   "episode_title": "An Interview with Jeri Ellsworth - Carnassial Chip Chemicals",
+   "episode_url": "https://theamphour.com/the-amp-hour-52-carnassial-chip-chemicals/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The conventional implementation stack is an integrated RF transceiver chip, an FPGA-plus-ARM device to absorb the sample stream, and a Linux host doing the higher-level processing.",
+   "quote_verbatim": "your typical SDR setup with one of those analog devices chips. Then a Zinc to take all the data in. And then, then we process that on a Linux computer",
+   "speaker": "Joris Aerts",
+   "episode": 518,
+   "episode_title": "Satellites and EVs with Joris Aerts",
+   "episode_url": "https://theamphour.com/518-satellites-and-evs-with-joris-aerts/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Modern cellular base stations split the radio physically: the software-defined radio sits as a radio head mounted at the antenna, connected by fibre to a baseband unit that handles the protocol, so only encoded data travels the long path.",
+   "quote_verbatim": "in modern cell networks, you will have a, what's called the radio head, which is basically the software defined radio that you're going to Mount near the antenna",
+   "speaker": "Sylvain Minot",
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Digitising close to the antenna with little or no analog filtering makes a receiver acutely vulnerable to out-of-band interference: a strong signal well away from the wanted one overloads the converter and jams the receiver, which is a measurable regression against 1980s and 1990s receiver front ends.",
+   "quote_verbatim": "that whole architecture of going RF antenna to A to D with no analog filtering or minimal analog filtering means that those radios are extremely sensitive to things like out-of-band interference",
+   "speaker": "Jeff Keyzer",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The trade made across the whole consumer radio industry was integration, power and cost against front-end robustness, and it was made on the buyer's behalf rather than offered as a choice.",
+   "quote_verbatim": "they have made the compromise that they've gotten better integration, lower power, lower cost, and they do as much digital processing in silicon as they can",
+   "speaker": "Jeff Keyzer",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Transmit is where the architecture strains: a power amplifier that stays efficient across a broad frequency range is genuinely hard, exactly as broadband antennas are, so the agility the digital side promises is limited by the analog output stage.",
+   "quote_verbatim": "one of the major weaknesses of software defined radios is on the transmitting side and making RF power amplifiers that are agile in frequency is very hard",
+   "speaker": "Jeff Keyzer",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Receiving is forgiving of an incomplete grasp of RF — the result is merely worse sensitivity — while transmitting without understanding what the hardware is emitting has regulatory consequences, so the two sides of the same board carry very different risk.",
+   "quote_verbatim": "you're still going to be able to receive just, yeah, maybe not as well. Or especially you definitely don't want to be transmitting without having some sense of what you're doing",
+   "speaker": "Jeff Keyzer",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The power budget rules the architecture out of battery-powered devices outright; the everyday evidence is that a laptop's fans spin up as soon as an SDR is running on it.",
+   "quote_verbatim": "cannot do SDR for power budget reasons",
+   "speaker": "Travis Goodspeed",
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Using an SDR in a system that also transmits runs into timing and synchronisation as the hard problem, because the platforms are built for continuous streaming rather than for holding a deterministic relationship with an external transmitter.",
+   "quote_verbatim": "it's timing, it's synchronization. It's how do you synchronize your transmitter with the software to find, uh, radio. They're meant for streaming applications",
+   "speaker": "Greg Charvat",
+   "episode": 179,
+   "episode_title": "Greg Charvat Returns With A Book! - Laboratory Literature Laureate",
+   "episode_url": "https://theamphour.com/179-greg-charvat-returns-with-a-book-laboratory-literature-laureate/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A half-duplex transceiver cannot both transmit and receive at once, so a radar-style application needs either two units with their clocks synchronised or a small add-on board carrying the transmit chirp generator alongside a single SDR.",
+   "quote_verbatim": "the obvious way is to use two HackRFs since it's a, a, uh, half duplex transceiver",
+   "speaker": "Michael Ossmann",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Very low transmit power still reaches long range through pulse compression: send long linear-FM pulses and recover range resolution in the Fourier transform, which is precisely the kind of processing software-defined techniques make available cheaply.",
+   "quote_verbatim": "they use pulse compression. They use linear FM and they use the 4A transform. They send long pulses",
+   "speaker": "Greg Charvat",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A software-defined radio solves the modulation problem and nothing else: it gets bits in and bits out, leaving routing, store-and-forward, the application layer and everything that makes the data useful still to be built — which is why large radio products carry whole teams downstream of the radio itself.",
+   "quote_verbatim": "just solve one part of the problem. That's the, like really just the modulation",
+   "speaker": null,
+   "episode": 401,
+   "episode_title": "An Interview with Brent and Bryce Salmi",
+   "episode_url": "https://theamphour.com/401-an-interview-with-brent-and-bryce-salmi/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "When the requirement is a known modulation at tens to hundreds of kilobits, a fixed-function radio chip is the right answer: choosing flexibility you do not need spends the whole schedule re-solving modulation instead of on the part of the problem that is actually unsolved.",
+   "quote_verbatim": "just need a GMSK or something that basically can get tens to hundreds of kilobits",
+   "speaker": null,
+   "episode": 401,
+   "episode_title": "An Interview with Brent and Bryce Salmi",
+   "episode_url": "https://theamphour.com/401-an-interview-with-brent-and-bryce-salmi/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Much low-speed digital RF work — remote keyless entry, garage doors, smart meters, home automation, industrial control — is better served by a wireless microcontroller on a USB dongle than by an SDR, and conflating the two leads people to reach for far more capability than the job needs.",
+   "quote_verbatim": "the number one thing I have to tell people about Yardstick 1 is it's not software-defined radio",
+   "speaker": "Michael Ossmann",
+   "episode": 265,
+   "episode_title": "A Security Update with Michael Ossmann",
+   "episode_url": "https://theamphour.com/265-a-security-update-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Building an SDR from scratch is not a short project; starting from a plug-in board for an existing digital platform avoids laying out a 600-pin BGA FPGA to get to the same experiment.",
+   "quote_verbatim": "if you started your own, you know, software defined radio from scratch, you're not going to get it done in two months",
+   "speaker": "Dave Jones",
+   "episode": 337,
+   "episode_title": "Fake it till you make it",
+   "episode_url": "https://theamphour.com/337-fake-it-till-you-make-it/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Implementing the signal processing in FPGA logic is the harder path — the algorithms are tricky and iteration in C is far faster than in Verilog — so a good platform is heterogeneous, offering an application processor, FPGA fabric and a parallel processor array so each piece of the chain lands where it is cheapest to develop.",
+   "quote_verbatim": "not everybody wants to do an SDR in FPGA logic. It's just, it's just hard",
+   "speaker": "Andreas Olofsson",
+   "episode": 254,
+   "episode_title": "An Interview with Andreas Olofsson - Adapteva's Ampliative Abacus",
+   "episode_url": "https://theamphour.com/254-an-interview-with-andreas-olofsson-adaptevas-ampliative-abacus/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Spectrum analysis and demodulation of common signals — broadcast FM, land mobile and public safety radio in both analog and digital form, and the standard amateur modes — are available from existing applications with no code written; the framework only becomes necessary beyond that.",
+   "quote_verbatim": "can do some things without code, like spectrum analysis and demodulation of common things like FM radio stations",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "GNU Radio is the recommended framework for anything beyond the prepackaged applications, and it accepts either C++ or Python, so the language is not a barrier to entry.",
+   "quote_verbatim": "radio is the framework that I recommend people use",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In the graphical companion the radio appears as a source block emitting a stream of samples, and processing is assembled by dragging in blocks — from an addition of two signals up to a complete cellular receiver — which is what turns signal processing into something composable rather than something written from scratch.",
+   "quote_verbatim": "i stream this data into gnu radio which is this framework and i end up with just a radio source block",
+   "speaker": "Derek Kozel",
+   "episode": 381,
+   "episode_title": "An Interview with Derek Kozel",
+   "episode_url": "https://theamphour.com/381-interview-with-derek-kozel/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Frequency-domain analysis is computationally expensive but heavily optimised: a Fourier transform can be run over several hundred million samples per second, particularly with a graphics card doing the work, and the data is streamed and discarded rather than stored.",
+   "quote_verbatim": "you can pretty much do that to you know several hundred uh million samples per second especially if you start throwing a graphics card at it",
+   "speaker": "Derek Kozel",
+   "episode": 381,
+   "episode_title": "An Interview with Derek Kozel",
+   "episode_url": "https://theamphour.com/381-interview-with-derek-kozel/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Documentation that exists but is not surfaced inside the tool goes unused: a lead on the project itself had not built the habit of consulting it after two years, because it was not present in the graphical environment where the work happens.",
+   "quote_verbatim": "gnu radio has a huge amount of documentation that even after two years of me using it i haven't built the habit of accessing it because it's not right",
+   "speaker": "Derek Kozel",
+   "episode": 381,
+   "episode_title": "An Interview with Derek Kozel",
+   "episode_url": "https://theamphour.com/381-interview-with-derek-kozel/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Driving an SDR as a spectrum analyser through rapid sweeping is mostly a host-software problem with some device firmware behind it, rather than a different radio — the same hardware becomes a survey instrument.",
+   "quote_verbatim": "using a software defined radio platform more like a spectrum analyzer",
+   "speaker": "Michael Ossmann",
+   "episode": 352,
+   "episode_title": "Conning with Michael Ossmann",
+   "episode_url": "https://theamphour.com/352-conning-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The cheap television-tuner dongles are receive-only with a narrower tuning range than a purpose-built platform, but they run the same host software, so the low-cost path is a genuine subset rather than a separate ecosystem.",
+   "quote_verbatim": "they're receive only, whereas HackRF can also transmit. And they have a more limited operating frequency range",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A purpose-built low-cost receiver project — an ARM with an external converter and a television tuner — was made irrelevant by the repurposed twenty-dollar dongle: the deliberate design had the better receiver, but the price-performance ratio was not close.",
+   "quote_verbatim": "that kind of made the Osmo SDR project a little bit irrelevant because there was no way we were going to compete in price",
+   "speaker": "Sylvain Minot",
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "An open transmit-capable platform of that generation covered 30 MHz to 6 GHz for about $275, which is the point where building an equivalent yourself stops being economic.",
+   "quote_verbatim": "it goes from 30 you can uh transmit or receive anything from 30 megahertz to 6 gig",
+   "speaker": "Dave Jones",
+   "episode": 158,
+   "episode_title": "Hyperloop, Upverter and Soldering - Unbelievable USB Ustulater",
+   "episode_url": "https://theamphour.com/the-amp-hour-158-unbelievable-usb-ustulater/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "An early low-cost receiver covering roughly 150 MHz to 1.3 GHz for around $200 was general-purpose in the sense that matters: the modulation format is irrelevant to the hardware as long as a decoder exists in software, which is what let people pull weather-satellite imagery off the same board built for a student satellite downlink.",
+   "quote_verbatim": "a radio that can tune in any frequency from, it's like 150 megahertz up to 1.3 gigahertz",
+   "speaker": "Chris Gammell",
+   "episode": 73,
+   "episode_title": "Horrisonous Holiday Habromania",
+   "episode_url": "https://theamphour.com/the-amp-hour-73-horrisonous-holiday-habromania/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The design goal for a general-purpose platform was explicitly not to be the best tool for any single job but to be usable across many, which is the deliberate opposite of how a purpose-built radio is specified.",
+   "quote_verbatim": "don't see HackerRF being the best tool for any one job, but it's a great tool that can be used for a huge variety of jobs",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A cheap dongle plus a spectrum display makes filtering and bandwidth concrete in a way that working the mathematics alone does not — seeing that a filter is narrowing onto the region where the signal actually sits is the shift that a signals course usually fails to deliver.",
+   "quote_verbatim": "looking at a spectrum and realizing that when you're doing a filter, you're just narrowing in on like this little part that's darker where the signal actually is",
+   "speaker": "Chris Gammell",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Toggling a pin from a shift register at a chosen rate while watching the result on an SDR builds an intuition for what a circuit radiates — the fastest way to develop a feel for both intentional transmission and the unintentional emissions coming off the traces on a board.",
+   "quote_verbatim": "if you just generally like write some code to turn it up in on and off at a certain speed using like a strip register and you have a software defined radio and you're looking at the signal",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The first open HDTV receiver was built by recording samples off the air and post-processing them to MPEG rather than in real time, on a $1,500 data acquisition card paired with an evaluation board from a cancelled product line — the hardware gap, not the software, was what limited early work.",
+   "quote_verbatim": "that was done with a $1,500 data acquisition card and a TV tuner evaluation board from a company that had actually already gone out",
+   "speaker": "Matt Ettus",
+   "episode": 101,
+   "episode_title": "An Interview with Matt Ettus - Quality Quadrature Quidam",
+   "episode_url": "https://theamphour.com/the-amp-hour-101-quality-quadrature-quidam/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Wide bandwidth, MIMO and FPGA-side signal processing had no path below tens of thousands of dollars, and the USRP began as a block diagram drawn by someone who wanted to use such a thing and could not persuade anyone else to build it.",
+   "quote_verbatim": "there was no practical way to do that for less than tens of thousands of dollars",
+   "speaker": "Matt Ettus",
+   "episode": 101,
+   "episode_title": "An Interview with Matt Ettus - Quality Quadrature Quidam",
+   "episode_url": "https://theamphour.com/the-amp-hour-101-quality-quadrature-quidam/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Low-cost transmit-capable hardware did not exist fifteen years ago, which is why end-to-end tutorials remain scarce relative to receive-only material — the teaching lags the hardware availability rather than the theory.",
+   "quote_verbatim": "transmit capable low cost uh sdrs were totally non-existent 15 years ago",
+   "speaker": "Derek Kozel",
+   "episode": 381,
+   "episode_title": "An Interview with Derek Kozel",
+   "episode_url": "https://theamphour.com/381-interview-with-derek-kozel/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The strongest product argument is post-deployment change: with every ground device a software-defined radio, the waveform, congestion control and transmission scheduling can all be reconfigured on units already in the field.",
+   "quote_verbatim": "they're all software defined radios. So if you want to change the waveform or change how to, how the system integrates or how the congestion control is done",
+   "speaker": "Maarten Engelen",
+   "episode": 427,
+   "episode_title": "An Interview with Maarten Engelen",
+   "episode_url": "https://theamphour.com/427-an-interview-with-maarten-engelen/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Regulators require equipment going through authorisation to implement a mechanism stopping the user from altering the radio's parameters, a requirement that cannot be met and be open source at the same time; the same rule was later extended from SDR products to any radio under software control, which is what brought it to the attention of people reflashing wireless routers.",
+   "quote_verbatim": "they wanted software-defined radios that were going through equipment authorization. They wanted them to implement some kind of security measure to prevent users from modifying the radio parameters",
+   "speaker": "Michael Ossmann",
+   "episode": 265,
+   "episode_title": "A Security Update with Michael Ossmann",
+   "episode_url": "https://theamphour.com/265-a-security-update-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Any unencrypted link should be designed on the assumption that it is being captured, because standing up a receiver to record the traffic is now cheap; what protects most low-value links is that nobody considers the contents worth the effort.",
+   "quote_verbatim": "could set up an SDR and you could just capture all this traffic too",
+   "speaker": "Chris Gammell",
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Cellular and combination wireless chips are already software-defined radios internally, so the practical integration limits sit in the multiplexing and the antenna — whether a recommended cellular antenna is wideband enough to be useful at 2.4 GHz as well — rather than in the radio itself.",
+   "quote_verbatim": "internal of these chips, like they're all SDRs internally",
+   "speaker": "Chris Gammell",
+   "episode": 509,
+   "episode_title": "Cellular IoT with Jared Wolff",
+   "episode_url": "https://theamphour.com/509-cellular-iot-with-jared-wolff/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The technology did not make RF engineers obsolete, it changed the problems they solve: a general-purpose SDR schematic is full of switches, up and down converters and mixers, and someone has to get all of it right.",
+   "quote_verbatim": "if you look at the HackRF, there's a ton of RF circuitry in there. I mean, I was poking around in the schematics a couple of weeks ago and there are switches and up converters, down converters, mixers",
+   "speaker": "Jeff Keyzer",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Published receiver code exists for the public pager networks, where the wide-area systems use FLEX and short-range applications such as restaurant pagers use POCSAG — a useful reminder that legacy unencrypted protocols remain in daily service.",
+   "quote_verbatim": "there are people who, um, have published like software defined radio code to sniff the public pager networks",
+   "speaker": "Travis Goodspeed",
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "attribution_reliable was not trusted. ep101 labels the guest's entire career and USRP origin story as 'Chris Gammell'; the content is unambiguously Matt Ettus and is attributed to him.",
+  "ep265, ep318 and ep352 similarly label Michael Ossmann's first-person material (his NTIA work, the HackRF and Jawbreaker projects, his classes) as the hosts; those claims are content-attributed to Michael Ossmann.",
+  "ep381 labels Derek Kozel's answers as 'Chris Gammell'; the GNU Radio and Ettus Research material is content-attributed to Derek Kozel.",
+  "ep427 labels the Hiber guest's description of his own system as 'Dave Jones'; content-attributed to Maarten Engelen.",
+  "ep401 could not be resolved between the two Salmi brothers who appear as a single speaker label, so those claims carry speaker: null.",
+  "Host sentiment and audience-response material — enthusiasm for particular products, Kickstarter totals, conference travel and who bought what — was excluded."
+ ],
+ "capped": false
+}

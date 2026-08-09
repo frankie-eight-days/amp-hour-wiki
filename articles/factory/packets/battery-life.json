@@ -1,0 +1,1164 @@
+{
+ "concept": "battery-life",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "battery-life",
+    "battery-lifespan",
+    "battery-longevity",
+    "battery-runtime"
+   ],
+   "children": [
+    "aa-battery",
+    "amazon-echo",
+    "battery-testing",
+    "coin-cell-battery",
+    "kindle",
+    "low-power-sleep-mode",
+    "lpc",
+    "mp3-player",
+    "ti-e2e",
+    "wearable-device"
+   ],
+   "neighbors": [
+    {
+     "concept": "smartwatch",
+     "weight": 6
+    },
+    {
+     "concept": "e-ink-display",
+     "weight": 5
+    },
+    {
+     "concept": "smartphone",
+     "weight": 5
+    },
+    {
+     "concept": "android",
+     "weight": 4
+    }
+   ]
+  },
+  "stats": {
+   "episodes": 86,
+   "mentions": 168,
+   "explains": 94,
+   "opinions": 48,
+   "candidate_episode_count": 69,
+   "candidate_mention_count": 99,
+   "gated_out": 615,
+   "gated_out_by_concept": [
+    [
+     "smartphone",
+     157
+    ],
+    [
+     "android",
+     143
+    ],
+    [
+     "smartwatch",
+     60
+    ],
+    [
+     "kindle",
+     50
+    ],
+    [
+     "aa-battery",
+     39
+    ],
+    [
+     "coin-cell-battery",
+     38
+    ],
+    [
+     "wearable-device",
+     35
+    ],
+    [
+     "e-ink-display",
+     31
+    ],
+    [
+     "amazon-echo",
+     21
+    ],
+    [
+     "battery-testing",
+     11
+    ],
+    [
+     "lpc",
+     10
+    ],
+    [
+     "mp3-player",
+     8
+    ],
+    [
+     "low-power-sleep-mode",
+     7
+    ],
+    [
+     "ti-e2e",
+     5
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 6,
+   "speakers": [
+    [
+     "Dave Jones",
+     56
+    ],
+    [
+     "Chris Gammell",
+     37
+    ],
+    [
+     "Greg Charvat",
+     3
+    ],
+    [
+     "Jørgen Jakobsen",
+     3
+    ],
+    [
+     "Richard Ginus",
+     3
+    ],
+    [
+     "Bob Simpson",
+     2
+    ],
+    [
+     "SPEAKER_01",
+     2
+    ],
+    [
+     "Andrew Witte",
+     2
+    ],
+    [
+     "Ben Einstein",
+     2
+    ],
+    [
+     "Matt Liberty",
+     2
+    ],
+    [
+     "Aedan Cullen",
+     2
+    ],
+    [
+     "Pallav Aggarwal",
+     2
+    ],
+    [
+     "Jeff Keyzer",
+     1
+    ],
+    [
+     "Oyvind Janbu",
+     1
+    ],
+    [
+     "Scott Driscoll",
+     1
+    ],
+    [
+     "Brandon Harris",
+     1
+    ],
+    [
+     "Eric Van Wyk",
+     1
+    ],
+    [
+     "Dafydd Roche",
+     1
+    ],
+    [
+     "Gerry Roston",
+     1
+    ],
+    [
+     "Jason Cerundolo",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 125,
+    "neighbor": 4,
+    "child": 4
+   },
+   "passages_by_depth": {
+    "explains": 90,
+    "opinion": 43
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 133
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "A single AA alkaline cell holds roughly 2,800 mAh, so dividing a product's advertised runtime into the cell capacity it carries is a quick sanity check on whether a stated battery life is plausible for the electronics inside.",
+   "quote_verbatim": "there's like 1400 milliamp hours or something like that. Uh, whatever a double A is. And a double A is 2,800",
+   "speaker": "Chris Gammell",
+   "episode": 10,
+   "episode_title": "Open Hardware and Self Publishing",
+   "episode_url": "https://theamphour.com/the-amp-hour-10-open-hardware-and-self-publishing/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Indicator LEDs are routinely driven far harder than a battery-powered product can afford; raising the series resistor to run the part at a couple of milliamps, and specifying a higher-brightness die to recover the visibility, cuts a continuous load out of the energy budget.",
+   "quote_verbatim": "you can up that resistor, run them at a couple of milliamps. Get a high brightness version if you have to",
+   "speaker": "Dave Jones",
+   "episode": 10,
+   "episode_title": "Open Hardware and Self Publishing",
+   "episode_url": "https://theamphour.com/the-amp-hour-10-open-hardware-and-self-publishing/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Pulsing an indicator LED rather than driving it continuously delivers a perceived average brightness at a fraction of the average current, since the eye integrates the flashes.",
+   "quote_verbatim": "you can pulse the LED as well",
+   "speaker": "Dave Jones",
+   "episode": 10,
+   "episode_title": "Open Hardware and Self Publishing",
+   "episode_url": "https://theamphour.com/the-amp-hour-10-open-hardware-and-self-publishing/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The habitual 10 k pull-up wastes current continuously whenever the line is held low, so in a battery design the resistor should be raised toward the largest value the input's leakage current still allows.",
+   "quote_verbatim": "if you're using a 10K pull-up, you know, everyone uses like a standard 10K pull-up. Well, you're pissing away current there too. So, you know, up it to, up it to its maximum value, but watch your input leakage currents",
+   "speaker": "Dave Jones",
+   "episode": 10,
+   "episode_title": "Open Hardware and Self Publishing",
+   "episode_url": "https://theamphour.com/the-amp-hour-10-open-hardware-and-self-publishing/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A pull-up raised too far relative to the input leakage current leaves the pin floating, producing an intermittent fault that disappears when a probe is touched to the pin, because the probe itself changes the node impedance.",
+   "quote_verbatim": "when you start touching, start touching things to the, the pins, you know, you start affecting the pins by probing them and your problem goes away",
+   "speaker": "Dave Jones",
+   "episode": 10,
+   "episode_title": "Open Hardware and Self Publishing",
+   "episode_url": "https://theamphour.com/the-amp-hour-10-open-hardware-and-self-publishing/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Restricting a lithium cell to roughly the 30 to 80 percent state-of-charge window, avoiding both a full charge and a deep discharge, extends its useful health by years, at the cost of the capacity held in reserve at each end.",
+   "quote_verbatim": "if you stay within like 30 to 80% charging, so not completely charged and not completely drained. Right. The health of the batteries is extended for years",
+   "speaker": null,
+   "episode": 38,
+   "episode_title": "An Interview with Jeff Keyzer - Comical Keyzer Comes a-Callin'",
+   "episode_url": "https://theamphour.com/the-amp-hour-38-comical-keyzer-comes-a-callin/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A load averaging around forty microamps runs roughly 70,000 hours from a pair of AA cells, which is the arithmetic that makes multi-year operation from ordinary primary cells feasible.",
+   "quote_verbatim": "That's 70,000 hours on two AA's",
+   "speaker": "Chris Gammell",
+   "episode": 49,
+   "episode_title": "Analog Devices, Design Spark - Unusual Usenet Usurpation",
+   "episode_url": "https://theamphour.com/the-amp-hour-49-unusual-usenet-ursurpation/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Seventy thousand hours is about 2,900 days, or eight years, which is roughly the shelf life of the cell itself; past that point self-discharge rather than the circuit's draw sets the limit, so lowering the average current further buys nothing.",
+   "quote_verbatim": "That's 2,900 days or 365 equals eight years. Eight years is basically the shelf life of the battery",
+   "speaker": "Chris Gammell",
+   "episode": 191,
+   "episode_title": "Chairs, Sparks and Devices - Optional Olent Obreption",
+   "episode_url": "https://theamphour.com/191-chairs-sparks-and-devices-optional-olent-obreption/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Clocking a modern processor at tens of megahertz from a coin cell draws current in gulps that the cell's internal resistance cannot supply efficiently; a calculator redesign that emulated the original instruction set on a 30 MHz ARM part lost most of the original product's battery life for exactly this reason.",
+   "quote_verbatim": "they ran the thing at 30 megahertz and it's powered from a coin cell battery and it takes gulps of current from the battery and it's very inefficient",
+   "speaker": "Dave Jones",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Typical datasheet supply currents are the correct basis for a typical battery-life estimate, while the guaranteed maximum figures, usually quoted at the temperature extremes, are what a power supply must be sized against; using the worst-case numbers for runtime gives a needlessly pessimistic answer.",
+   "quote_verbatim": "You would use your typical figure to maybe determine battery, you know, life and, you know, a typical battery life",
+   "speaker": "Dave Jones",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Energy budgets across several supply rails must be summed as power, not current, because adding milliamps drawn at different voltages produces a meaningless total; working in current is only safe within one fixed rail.",
+   "quote_verbatim": "it's not current from a power supply. It's always power. A lot of people forget that. They go, oh, you know, they'll add up their currents, but they don't realize a couple of things are working at different voltages and things like that. So always work in power when you're doing power supply stuff",
+   "speaker": "Dave Jones",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Peripheral autonomy, such as transferring analogue-to-digital conversion results straight into memory by DMA without waking the processor core, turns a microcontroller into a complete data logger that never runs code between reads.",
+   "quote_verbatim": "you can do direct memory transfer from an analog to digital converter straight to the memory without even using the – without even powering up the ARM core",
+   "speaker": null,
+   "episode": 95,
+   "episode_title": "An Interview with Øyvind Janbu - Feracious Fabless Facilitator",
+   "episode_url": "https://theamphour.com/the-amp-hour-95-feracious-fabless-facilitator/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Autonomous peripheral operation can cut energy consumption by around three orders of magnitude in applications that fit the pattern, and saves nothing at all in applications that do not, so the benefit is entirely workload-dependent.",
+   "quote_verbatim": "if you actually have the use for this, then it could save you a thousand times",
+   "speaker": "Oyvind Janbu",
+   "episode": 95,
+   "episode_title": "An Interview with Øyvind Janbu - Feracious Fabless Facilitator",
+   "episode_url": "https://theamphour.com/the-amp-hour-95-feracious-fabless-facilitator/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An electric-vehicle pack is treated as having reached the end of its first life when it has lost twenty percent of its original capacity; the remaining eighty percent is still serviceable in less demanding second-life applications.",
+   "quote_verbatim": "One lifetime is the active use of the cell, and the 80% level is considered the first lifetime. So in an EV, when you lose 20%, that's considered a full-life usage",
+   "speaker": "Bob Simpson",
+   "episode": 112,
+   "episode_title": "An Interview with Bob Simpson - Ardent Automotive Artisan",
+   "episode_url": "https://theamphour.com/the-amp-hour-112-ardent-automotive-artisan/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Whether a vehicle pack reaches that eighty percent point in five years or in ten is determined by cell stress, operating temperature and the management strategy rather than by the cell chemistry alone.",
+   "quote_verbatim": "it comes down to the cell stress and temperature and the management",
+   "speaker": "Bob Simpson",
+   "episode": 112,
+   "episode_title": "An Interview with Bob Simpson - Ardent Automotive Artisan",
+   "episode_url": "https://theamphour.com/the-amp-hour-112-ardent-automotive-artisan/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Hybrid manufacturers hold nickel metal hydride packs within plus or minus twenty percent around a fifty percent state of charge, which yields hundreds of thousands of cycles; the same cells cycled to full depth deliver far fewer, fewer even than lithium-ion.",
+   "quote_verbatim": "They go centered 50% point, plus or minus 20%. That's how you get hundreds of thousands of cycles out of nickel metal hydride. If you did full discharge cycles out of nickel metal hydride, far, far less than that",
+   "speaker": "Bob Simpson",
+   "episode": 112,
+   "episode_title": "An Interview with Bob Simpson - Ardent Automotive Artisan",
+   "episode_url": "https://theamphour.com/the-amp-hour-112-ardent-automotive-artisan/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The first generation of energy-dense lithium cells was rated at only about 300 to 400 cycles, because they were built for consumer goods replaced every year or two where cycle longevity was not a requirement.",
+   "quote_verbatim": "they're only rated at about 300 to 400 cycles. And those are good energy-dense cells, but they're not really meant for longevity",
+   "speaker": "Bob Simpson",
+   "episode": 112,
+   "episode_title": "An Interview with Bob Simpson - Ardent Automotive Artisan",
+   "episode_url": "https://theamphour.com/the-amp-hour-112-ardent-automotive-artisan/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Radio choice sets the floor of a connected product's energy budget: Wi-Fi is generally excluded from battery-powered designs, Bluetooth Low Energy trades bandwidth away for energy, and a classic Bluetooth link that must stay connected continuously costs far more than either.",
+   "quote_verbatim": "Bluetooth low energy is low bandwidth. Bluetooth is relatively high bandwidth if it has to be connected all the time",
+   "speaker": "Dave Jones",
+   "episode": 145,
+   "episode_title": "PCB Mills, SDR and Oscilloscopes - Flaunting Furbelow Fanciness",
+   "episode_url": "https://theamphour.com/the-amp-hour-145-flaunting-furbelow-fanciness/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Running a microcontroller at a 32 kHz watch crystal rate where the application demands no more throughput is the crudest and most effective lever on average current, and is what allows a calculator-class wristwatch to target two years on a cell.",
+   "quote_verbatim": "The processor will be running at 32 kilohertz, you know, because it doesn't need to go any quicker",
+   "speaker": "Dave Jones",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A processor-based smartwatch of the mid-2010s reached about a week between charges, against three years or more for a quartz analogue watch, a gap of two orders of magnitude that comes from the display, radio and processor rather than from the cell.",
+   "quote_verbatim": "you can get a week out of a pebble. But yeah, it's not the same as an analog watch where you can go three years or more",
+   "speaker": "Andrew Witte",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Feature scope and runtime are the same decision: adding media playback to a wearable whose central requirement is multi-day operation forfeits that requirement, so the runtime specification has to be settled before the feature list.",
+   "quote_verbatim": "There's the crowd that wants it to be an MP3 player and then it won't last for days",
+   "speaker": "Chris Gammell",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Cell sourcing determines product life independently of the electronics; unbranded lithium cells in cheap wearables have been found to give four hours when new and to lose the ability to take a charge at all within about a week of use.",
+   "quote_verbatim": "it lasts a week, you know, like, before the battery actually dies completely and you can't recharge it",
+   "speaker": null,
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Achieved power consumption is dominated by firmware rather than by the schematic; a wearable design that runs four hours with everything on the board powered up reaches days once the firmware sequences subsystems off.",
+   "quote_verbatim": "the firmware is a huge huge um contributor as far as what the actual power consumption is i mean i think if everything if everything on the board is powered up the battery life is like four hours",
+   "speaker": "Andrew Witte",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Building an internal development variant of the hardware with every rail broken out to test points and current-sense shunts is what makes per-subsystem current measurement possible; the production board rarely permits it.",
+   "quote_verbatim": "broke everything out to test points and current probes shunts",
+   "speaker": null,
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In-pavement parking sensors are hermetically sealed pucks running on internal cells that must last five years, because once they are glued into the road surface they cannot be serviced; power consumption is therefore the governing system constraint.",
+   "quote_verbatim": "you have these pucks, and they have their own batteries, and they have to last for five years",
+   "speaker": "Greg Charvat",
+   "episode": 179,
+   "episode_title": "Greg Charvat Returns With A Book! - Laboratory Literature Laureate",
+   "episode_url": "https://theamphour.com/179-greg-charvat-returns-with-a-book-laboratory-literature-laureate/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Cell capacity varies both with temperature and from unit to unit, so a runtime characterised on one sample can be days out on another; cold conditions such as immersion in sea water reduce the available capacity further, which makes deployed endurance a distribution rather than a number.",
+   "quote_verbatim": "there's variability in, in any battery capacity at a certain temperature, you know, you characterize one, well, that may not be how the one other one operates. It might be, you know, five days less battery life or something",
+   "speaker": "Dave Jones",
+   "episode": 190,
+   "episode_title": "Let's Hear It For The Buoys - Vanishing Vessel Vexation",
+   "episode_url": "https://theamphour.com/190-lets-hear-it-for-the-buoys-vanishing-vessel-vexation/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A bulk electrolytic capacitor across the cell supplies the short current pulses that the cell's own output impedance cannot, and measurably extends battery life in pulsed battery-powered designs such as periodic radio transmitters.",
+   "quote_verbatim": "we recommend, uh, electrolytics for battery powered applications",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The gain from a bulk capacitor is largest with alkaline cells, whose output impedance is high and rises as they discharge, and much smaller with nickel metal hydride or lithium primary cells, whose output impedance is low and roughly constant across the discharge.",
+   "quote_verbatim": "The output impedance is so much lower on those that you're not. And it's, it's more or less constant across the entire battery life",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An instrument budgeted at about a hundred microwatts while idle and waiting for user attention reaches years of standby on two AA cells, because the standby state rather than the active state dominates the integrated energy.",
+   "quote_verbatim": "the number that I like to, to work with is a hundred microwatts. Um, so at that point, if, if all you're doing is waiting for someone to come back and pay attention to it, um, then you can actually get into the years",
+   "speaker": "Eric Van Wyk",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The same two-AA hardware falls to roughly ten days when every subsystem is enabled and sampling continuously; a single design can therefore span three orders of magnitude of runtime depending only on duty cycle.",
+   "quote_verbatim": "if you turn on everything and set it to yes, please vary, uh, it gets down into the, to about a 10 day battery life if it's going continuous",
+   "speaker": "Eric Van Wyk",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "An electrophoretic display holds its image without power and consumes energy only when the image is changed, so an e-reader's runtime scales with the number of page turns rather than with the time the screen is visible.",
+   "quote_verbatim": "it only needs power when you're changing pages. When you're changing the screen",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "For portable recording devices the binding design constraint moved from storage capacity to energy; memory became cheap and plentiful enough that what a device can capture is now limited by what it can afford to power.",
+   "quote_verbatim": "the constraints are not storage, right? Storage is super easy these days",
+   "speaker": "Dave Jones",
+   "episode": 233,
+   "episode_title": "Glass and Gongkai GSM - Unzymotic Ursidae Upbuilding",
+   "episode_url": "https://theamphour.com/233-glass-and-gongkai-gsm-unzymotic-ursidae-upbuilding/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A smartwatch drawing on the order of 600 microamps average is not a heavy load by any absolute standard; its week-long runtime is set by the small cell the case permits, so the form factor rather than the current consumption is the binding constraint.",
+   "quote_verbatim": "it's drawing 600 microamps or something, you know, which isn't much. Yeah. But you can only fit a tiny battery",
+   "speaker": "Dave Jones",
+   "episode": 238,
+   "episode_title": "Old Books, New Tricks - Iterant Inscription Irrationality",
+   "episode_url": "https://theamphour.com/238-old-books-new-tricks-iterant-inscription-irrationality/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Battery-sensitive devices need explicit shutdown and low-power states under direct firmware control; placing a general-purpose operating system on every class of device forfeits that control and with it the achievable runtime.",
+   "quote_verbatim": "for battery-sensitive devices, you still need to be able to shut down and have low-power processes",
+   "speaker": "Chris Gammell",
+   "episode": 253,
+   "episode_title": "Consolidate All The Things - Zonked Zelotic Zaitech",
+   "episode_url": "https://theamphour.com/253-consolidate-all-the-things-zonked-zelotic-zaitech/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Mainstream phone cells top out at around 3,500 mAh, so improvements in runtime have to be found in the load rather than in more stored energy.",
+   "quote_verbatim": "I don't see many batteries that are bigger than like 3,500 milliamp hours and phones or anything like that. That's kind of the high end I've seen",
+   "speaker": "Chris Gammell",
+   "episode": 269,
+   "episode_title": "Be Tidy",
+   "episode_url": "https://theamphour.com/269-be-tidy/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "There are only three levers on a portable device's runtime once the cell size is fixed: reduce the energy per operation through a smaller process node, turn more of the silicon off more of the time, or write software that does less work.",
+   "quote_verbatim": "you either got to have less heat generated. So you can do that with like better process, lower technology nodes, you know, smaller and smaller, uh, or you can turn more stuff off or write better software too",
+   "speaker": "Chris Gammell",
+   "episode": 269,
+   "episode_title": "Be Tidy",
+   "episode_url": "https://theamphour.com/269-be-tidy/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Required runtime is a specification to be fixed before design begins, alongside range and physical size; it determines the price, the size, the weight and the schedule, and revising it afterwards is a change order rather than a tweak.",
+   "quote_verbatim": "how long does the battery need to last for? Right. Do you want to charge it every four hours or every eight",
+   "speaker": "Chris Gammell",
+   "episode": 292,
+   "episode_title": "An Interview with Timothy Lamb",
+   "episode_url": "https://theamphour.com/292-an-interview-with-timothy-lamb/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A runtime slightly longer than a day is worse in use than exactly one day: daily charging attaches itself to an existing nightly habit, whereas a two or three day interval breaks the routine and the device goes flat unexpectedly.",
+   "quote_verbatim": "if it lasts for a couple of days, then you get a bit complacent and you forget about it. And then, you know, you like lose track of when you have to charge it and bingo, it goes flat on you",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Aftermarket battery-extender sleeves are boost converters that exploit the gap between a product's cut-off voltage and the cell's true end of discharge; the energy recoverable that way is modest, far short of the several-hundred-percent improvements such products claim.",
+   "quote_verbatim": "So is this one of those devices that tries to exploit that a lot of products have, like, a cutoff voltage that's above? Yes, a cutoff voltage, yes. So it's a boost converter. It's a boost converter",
+   "speaker": "Dave Jones",
+   "episode": 328,
+   "episode_title": "The Ghost of Keyzermas Past",
+   "episode_url": "https://theamphour.com/328-the-ghost-of-keyzermas-past/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Report interval is normally the dominant term in a telemetry device's energy budget: moving from six transmissions an hour to one an hour is what takes such a device to five years or more on its cells.",
+   "quote_verbatim": "right now we're at six times an hour. Right. And once things settle, we'll probably go to once an hour. But yeah. And at that point, we have battery life of five plus years",
+   "speaker": "Gerry Roston",
+   "episode": 334,
+   "episode_title": "An Interview with Gerry Roston",
+   "episode_url": "https://theamphour.com/334-an-interview-with-gerry-roston/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Battery-powered always-listening devices run keyword detection on a small always-on coprocessor and keep the main processor and the network link asleep, since streaming audio continuously would be prohibitive; mains-powered devices face no such limit and can send everything upstream.",
+   "quote_verbatim": "there's a secondary processor that's just in a low power mode, just listening for the keyword, which I'm not going to say to kick my phone off again. But you know, like that it's, it's low bandwidth to actually, you know, it's not, it's not always piping your audio back",
+   "speaker": "Chris Gammell",
+   "episode": 335,
+   "episode_title": "When the TV watches you",
+   "episode_url": "https://theamphour.com/335-when-the-tv-watches-you/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Moving hearing aids from primary cells to rechargeable chemistry lowered the available energy density substantially, turning a single day of continuous operation into the hard design target and forcing high-efficiency switching conversion into the signal chain.",
+   "quote_verbatim": "when you start to use rechargeable battery, the density of, of that material went down a lot. So it was a fight to have a system that actually could survive one day of, uh, of continuous working without having to charge it by the end of the day",
+   "speaker": "Jørgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with Jørgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Portable audio runtime should be characterised at the medium and low listening levels customers actually use rather than at full output, because the sound pressure people listen at needs only a small fraction of the amplifier's peak power.",
+   "quote_verbatim": "They use the device for, uh, medium, low, uh, listening levels",
+   "speaker": "Jørgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with Jørgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A retroreflective projection surface returns almost all of the emitted light to the viewer's eye, which allows a wearable projector to operate at roughly one lumen rather than the hundreds a conventional projector needs; the resulting saving carries the battery and thermal design, removing the need for fans.",
+   "quote_verbatim": "because we have the retroreflective surface, so all that light or like 99.9% of that light comes right back at the user's eyes. So we don't actually need to be too terribly bright",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A solar-recharged lithium-ion sensor node uploading over 3G once an hour was sized to carry two to three weeks without sun, so the hold-up energy is dimensioned against the worst expected weather rather than against average insolation.",
+   "quote_verbatim": "with the 3G kind of uploading, like maybe once per hour, then it should have a, uh, a lifetime of maybe two to three weeks of no sun",
+   "speaker": "Akiba",
+   "episode": 355,
+   "episode_title": "The Internet of Septage (with Akiba)",
+   "episode_url": "https://theamphour.com/355-the-internet-of-septage-with-akiba/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Much of the price of a packaged home storage battery buys battery management that maximises pack life; a self-assembled pack of comparable cells can work initially and be unusable within three or four years because nothing is controlling how the cells are charged and balanced.",
+   "quote_verbatim": "they do the battery management properly, right, to ensure that you get optimum life out of this thing. Yeah, it may work now, but this thing may be completely cactus in three, four years' time",
+   "speaker": "Dave Jones",
+   "episode": 358,
+   "episode_title": "Mergers and People Acquisitions",
+   "episode_url": "https://theamphour.com/358-mergers-and-people-acquisitions/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The wake, connect, transmit and return-to-sleep cycle dominates the energy budget of a connected sensor, so how quickly a stack completes that sequence matters more to runtime than its steady-state currents.",
+   "quote_verbatim": "like the wake up, get online, go to sleep, that kind of stuff is from an IOT perspective. That seems like that's the most important thing for battery life",
+   "speaker": "Chris Gammell",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A design carrying a cellular modem alongside its microcontroller settles at a sleep current on the order of half a milliamp, which is high in absolute terms but ordinary for cellular hardware, and is one to two orders above what the microcontroller alone would idle at.",
+   "quote_verbatim": "It's actually half a milliamp, which is, like, seems high, but with cell modems, it's not great",
+   "speaker": "Dave Jones",
+   "episode": 362,
+   "episode_title": "Secret Squirrel",
+   "episode_url": "https://theamphour.com/362-secret-squirrel/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "At a half-milliamp sleep current a set of AA cells lasts about 5,000 hours even if the device never transmits, so the sleep floor caps the achievable life before any activity energy is added to the budget.",
+   "quote_verbatim": "So, it's 5,000 hours. 5,000? 5,000? So, it's 5,000 hours if it slept the whole time",
+   "speaker": "Dave Jones",
+   "episode": 362,
+   "episode_title": "Secret Squirrel",
+   "episode_url": "https://theamphour.com/362-secret-squirrel/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A coin cell's internal resistance can be too high to supply the current pulse a radio transmission demands, which is why long-life sensor nodes move up to pen-light cells even when the average current would suit a coin cell.",
+   "quote_verbatim": "just cause the internal resistance and stuff? Yes. Exactly. Got it. Yep. Uh, but if you have like a few pen light cells, uh, then you have enough",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Lithium thionyl chloride primary cells are the usual choice where a decade of field life is required, being selected for very low self-discharge rather than for high capacity alone.",
+   "quote_verbatim": "we usually use, uh, lithium, uh, chloride cells, and then you can get, uh, really, really long lifetimes of 10 years",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A Bluetooth Low Energy button device on a single CR2032 coin cell reaches about a year of service, which places the commonly requested two-week runtime for such products far below what the hardware can deliver.",
+   "quote_verbatim": "even with a tiny CR2032 battery, you're still going to get a year's life",
+   "speaker": "Dave Jones",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The energy budget for an event-driven wireless device follows from four questions: how often the event occurs, how often the device must poll or announce itself, how quickly it must respond, and whether messages can be stored and forwarded instead of sent immediately.",
+   "quote_verbatim": "how often is he going to be pushing the button? How often are you going to be pushing? How often does it have to ping? How fast does it need to respond? Right. Can it store and forward",
+   "speaker": "Dave Jones",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Moving from a CR2032 to a thicker coin cell of the same diameter class multiplies the available capacity by about four, which is the simplest route from roughly one year to five years of service in a low-duty-cycle radio device.",
+   "quote_verbatim": "you will get five years battery life. If you use something bigger than a CR 2032. So you use a CR, you know, 30, 40 or something like a thicker version of that coin cell, which has like four times the capacity. Then you'll, then you should be able to get your five years",
+   "speaker": "Dave Jones",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Where no prototype measurements exist yet, a battery-powered design proceeds from requirements: fix the physical size, fit the largest cell it will take, then drive the average resting current down through sleep modes until the required runtime falls out of the arithmetic.",
+   "quote_verbatim": "you could start to try and optimize for, well, like average, average resting current. Right. So that would be like sleep modes and stuff like that",
+   "speaker": "Dave Jones",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Sub-gigahertz links around 900 MHz penetrate obstacles better than 2.4 GHz and need substantially less transmit power for the same reach, which is why battery-powered sensor nodes gravitate to the lower band.",
+   "quote_verbatim": "Yeah, better penetration. Of obstacles. Much lower power",
+   "speaker": "Felix Rusu",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The rational low-power target is the servicing interval rather than the lowest current physically achievable; a node whose battery outlasts the interval at which it will be visited anyway gains nothing from further optimisation.",
+   "quote_verbatim": "having a node in my mailbox that's going to last one to two years is probably going to be beyond my servicing interval for that node",
+   "speaker": "Felix Rusu",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "In a battery sensor node the sensor rather than the radio frequently dominates the sleep budget: a passive infrared motion detector drawing 50 to 60 microamps continuously swamps a microcontroller and radio that together sit below 7 microamps asleep.",
+   "quote_verbatim": "It uses about 50 to 60 microamps, whereas the Motino itself and the radio use less than about 7 microamps, you know, in sleep mode using a watchdog timer",
+   "speaker": "Felix Rusu",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The watchdog timer used to schedule wake-ups accounts for roughly 4 microamps of a microcontroller's sleep current, a meaningful share once the rest of the node is below 7 microamps.",
+   "quote_verbatim": "We could eliminate the watchdog timer and save another 4-ish microamps",
+   "speaker": "Felix Rusu",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Passive infrared sensors drawing about 2 microamps exist and are made by Panasonic, but cost on the order of thirty dollars apiece, so a twenty-five-fold reduction in the dominant sleep current is bought with an order-of-magnitude increase in component cost.",
+   "quote_verbatim": "I found different sensors that can use 2 microamps. Still motion sensors, they're made by Panasonic. They're far more expensive, like 30 bucks a piece",
+   "speaker": "Felix Rusu",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Optimisation effort belongs where the return is largest: confirming that every sensor and peripheral on a node actually enters its sleep state returns far more than selecting a marginally lower-power radio variant.",
+   "quote_verbatim": "spend my time trying to make sure that I sleep all my sensors and all the extra hardware that I have on a node rather than try to squeeze out a couple extra micro amps",
+   "speaker": "Felix Rusu",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A long-range low-power radio running at roughly 600 bits per second in its lowest-power mode and sending once an hour or once a day supports ten-year battery lifetimes, trading throughput for both range and energy.",
+   "quote_verbatim": "it's like 600 bytes per second or bits per second rather in the lowest power, uh, mode and, um, and you might do it once, uh, you know, once every hour or day. Um, so, but you can have a thing that runs for 10, 10 years on a battery",
+   "speaker": "Chris Gammell",
+   "episode": 422,
+   "episode_title": "Stick 'Em On Whales",
+   "episode_url": "https://theamphour.com/422-stick-em-on-whales/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A deep sleep state of roughly a hundred nanoamps is achievable when only a real-time clock remains running, which is two to three orders of magnitude below the sleep current of a device that leaves a modem powered.",
+   "quote_verbatim": "the deep sleep is, uh, you know, around a hundred nano amps and that is, uh, basically just a real time clock that's still working",
+   "speaker": "Maarten Engelen",
+   "episode": 427,
+   "episode_title": "An Interview with Maarten Engelen",
+   "episode_url": "https://theamphour.com/427-an-interview-with-maarten-engelen/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A satellite uplink burst radiates around 1.5 W and draws roughly 3 W, close to an amp of peak current once power-amplifier efficiency is counted, so the design needs a dedicated power path or a supercapacitor to keep that peak from collapsing the cells that otherwise see only nanoamps.",
+   "quote_verbatim": "the transmission goes up to like 1.5 Watts. Um, so you're using about three Watts in peak now, if you include the PA efficiency",
+   "speaker": "Maarten Engelen",
+   "episode": 427,
+   "episode_title": "An Interview with Maarten Engelen",
+   "episode_url": "https://theamphour.com/427-an-interview-with-maarten-engelen/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Multi-year battery life in remote telemetry is a commercial requirement rather than an engineering preference: a single site visit consumes the entire margin on that device and typically on about ten others.",
+   "quote_verbatim": "you lose all the margin on that device completely by, you know, just going there once. And usually you lose the margin on 10 devices if you need to service one",
+   "speaker": "Maarten Engelen",
+   "episode": 427,
+   "episode_title": "An Interview with Maarten Engelen",
+   "episode_url": "https://theamphour.com/427-an-interview-with-maarten-engelen/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A poorly matched or detuned antenna can waste half the transmitted RF power, which must be recovered either as lost range or as increased transmit power; the latter comes straight out of the battery, making antenna quality a non-obvious but large term in a wireless node's energy budget.",
+   "quote_verbatim": "If your antenna is bad, you can easily, very, very fast, lose 50% of your RF power. Which means that you lose either range or you have to increase your power, which drains your battery",
+   "speaker": "Andreas Spiess",
+   "episode": 435,
+   "episode_title": "An Interview with Andreas Spiess",
+   "episode_url": "https://theamphour.com/435-an-interview-with-andreas-spiess/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "At 2.4 GHz and above a millimetre of mechanical movement is enough to shift antenna performance, so an antenna etched into or onto the housing gives a far more stable match than one that can flex relative to the enclosure.",
+   "quote_verbatim": "if you are on high-frequency microwaves like 2.4 gigahertz or higher, then one millimeter is a lot. Yeah, right. And if something moves, you always get troubles with antenna performance",
+   "speaker": "Andreas Spiess",
+   "episode": 435,
+   "episode_title": "An Interview with Andreas Spiess",
+   "episode_url": "https://theamphour.com/435-an-interview-with-andreas-spiess/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A 16-bit microcontroller with an integrated sub-gigahertz radio, measured at around three microamps in its low-power state, supports years of operation from a single coin cell in a wristwatch-sized device.",
+   "quote_verbatim": "it also gives you a 16-bit microcontroller that costs almost no power. I believe I'm measuring three microamps. So I get years of battery life on a coin cell",
+   "speaker": "Travis Goodspeed",
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "An LED driven well below full brightness from a CR2032 coin cell can be kept continuously lit for about ten years, since the useful visual output at night needs only a small fraction of the current a normally driven indicator takes.",
+   "quote_verbatim": "how far can I go? You know, with a, with a small coin cell, lithium coin cell, like a CR 2032, um, and a, and an led. And it turns out you can, you can light it for 10 years",
+   "speaker": "Ted Yapo",
+   "episode": 465,
+   "episode_title": "An Interview with Ted Yapo",
+   "episode_url": "https://theamphour.com/465-an-interview-with-ted-yapo/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Repeated high-rate DC charging is the largest single determinant of electric vehicle pack degradation; manufacturers implement step-based charging algorithms and warn in the manual against habitual fast charging for exactly this reason.",
+   "quote_verbatim": "the biggest risk to an electric car battery pack or an electric bus or whatever it is, electric truck, is fast charging. That really damage it. If you fast charge every day, your pack's not going to last very long at all. And they actually warn you in the manual, you know, look, you can fast charge this, but don't do it all the time because you'll just, yeah, shorten your battery life",
+   "speaker": "Dave Jones",
+   "episode": 512,
+   "episode_title": "Design For Longevity",
+   "episode_url": "https://theamphour.com/512-design-for-longevity/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A gyroscope draws on the order of ten times the current of an accelerometer, so dropping the gyroscope from a motion-sensing product is one of the larger single savings available in a wearable sensor budget.",
+   "quote_verbatim": "hardware engineers know gyros take like 10 times the power of an accelerometer",
+   "speaker": "Brian Faith",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Testing whether a sensor actually contributes to the required result before designing it in can remove both its cost and its power: a gesture classifier lost no accuracy when the gyroscope data was withheld, eliminating a dollar of bill of materials and its current draw together.",
+   "quote_verbatim": "the accuracy of the gesture detection didn't change if we removed the gyro from the equation",
+   "speaker": "Brian Faith",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Sleep-current failures are usually sneak paths rather than device specifications: a subsystem that has been shut down is back-powered through an input pin, a divider is left partly turned on, or a pull-up remains engaged, and the resulting leakage has to be traced by hand once an instrument shows that it exists.",
+   "quote_verbatim": "it's really easy to make very simple mistakes like backpowering a pin. You know, you shut down a subsystem and now you're, you're leaking a little current through a pin. You have a resistor that's slightly turned on or a pull-up that is engaged",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The term low power spans several orders of magnitude in practice, from a Linux-class system regarded as frugal at 150 milliamps to a coin-cell sensor measured in microamps, so a power target is meaningless without the current figure attached.",
+   "quote_verbatim": "low power means different things to different people. So if you're in Linux and you're running something that is low power. Only 150 milliamps",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Any pull-up resistor left active during sleep rules out multi-year battery life on its own, so low-power systems place pull-ups on a switchable rail that the firmware can collapse along with the rest of the sleeping hardware.",
+   "quote_verbatim": "if you have any pull-up resistors that are active in your sleep mode and you're thinking about battery life in terms of years, you're out of luck, right? You can't be powering any type of resistor in a sleep mode",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Power consumption should be measured on a regular cadence throughout development rather than at the end; discovering near release that battery life is a quarter of the specification leaves only a schedule slip or shipping spare cells as remedies.",
+   "quote_verbatim": "it's better to like measure that kind of stuff on a regular cadence and, you know, make sure you're actually looking at it rather than being surprised later down the line",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "For devices specified at ten years of service the cell rather than the electronics ends the product's life, so the design question becomes matching the cell's own shelf life rather than reducing current further.",
+   "quote_verbatim": "the battery will be dead long before the device itself",
+   "speaker": "Chris Gammell",
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A ten-year field life is attainable with careful design provided the transmission rate is held to roughly one message a day; the claim is a statement about duty cycle as much as about hardware.",
+   "quote_verbatim": "you can achieve it if you do a careful design. Mm-hmm. And if you transfer maybe once a day or so, and then you can achieve that kind of long battery life",
+   "speaker": "Orkhan Amiraslanov",
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A node sleeping at 1.8 microamps on two AA cells has a theoretical ceiling beyond ten years, which is the upper bound against which the transmit energy is then subtracted.",
+   "quote_verbatim": "So at 1.8 microamps, theoretical max, if it was just sleeping the whole time, what would that get it? If it's just sleeping, you would get more than 10 years",
+   "speaker": "Orkhan Amiraslanov",
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Adding a single 20 to 25 byte packet an hour to a node sleeping at microamps brings its expected life down from over ten years to three to five, showing that once sleep current is low enough the transmissions become the entire budget.",
+   "quote_verbatim": "If it's just sending one packet of, let's say, 20, 25 bytes every hour, and you can get, expect three or four, maybe even five years of battery life",
+   "speaker": "Orkhan Amiraslanov",
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Home storage installations are commonly configured to use only about eighty percent of nameplate capacity in order to extend pack life, so the usable energy figure a system is sized around is lower than the capacity printed on it.",
+   "quote_verbatim": "25 kilowatt hour battery at 80% because I'm only using, I've only set it to use 80% of that capacity just to extend its life",
+   "speaker": "Dave Jones",
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The current drawn by a modern battery device spans an enormous dynamic range, from nanoamps or microamps asleep to milliamps or amps while sensing and transmitting, and capturing both ends accurately in one measurement is the central difficulty in characterising an energy budget.",
+   "quote_verbatim": "Modern electronics has a huge dynamic range of current. A lot of times they'll go to sleep and consume microamps, sometimes even nanoamps, and then turn on and often do sensing and radios, whatever they need to do at milliamps or even amps. That high dynamic range is very challenging to measure accurately",
+   "speaker": "Matt Liberty",
+   "episode": 607,
+   "episode_title": "The Joulescope Upgrade with Matt Liberty",
+   "episode_url": "https://theamphour.com/607-the-joulescope-upgrade-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An energy-measuring instrument integrates current and voltage into power, energy and accumulated charge over time, which is the quantity that maps onto battery life; a spot current reading cannot answer how long a duty-cycled device will run.",
+   "quote_verbatim": "It measures current and voltage and then computes power, energy, charge. From there, you see either a multimeter view or a waveform view of your consumption over time, which allows you to measure and then optimize",
+   "speaker": "Matt Liberty",
+   "episode": 607,
+   "episode_title": "The Joulescope Upgrade with Matt Liberty",
+   "episode_url": "https://theamphour.com/607-the-joulescope-upgrade-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Fixed industrial gas monitors run on batteries and are specified in some applications for ten years without a battery change, which makes power consumption a headline requirement rather than an optimisation.",
+   "quote_verbatim": "they have to last like 10 years without replacing the battery in some application so in power consumption is a hot topic",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A defensible architecture for a wearable spends its energy only on functions the user perceives, namely the display and the data link, and drives local processing toward zero, since computation delivers nothing the user can see.",
+   "quote_verbatim": "my goal now is for most of the power consumption to be in things like the display and wifi. So I want to try to minimize power consumption in processing",
+   "speaker": "Aedan Cullen",
+   "episode": 638,
+   "episode_title": "Building AR Headsets with Aedan Cullen",
+   "episode_url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An application-class processor with external DDR memory running Linux consumes more than an all-day wearable budget allows even before the display and radio are counted, which pushes such designs back onto microcontroller-class parts.",
+   "quote_verbatim": "running that chip with the DDR and running Linux and power management for the risk five core, all that stuff consumes more power than I would like",
+   "speaker": "Aedan Cullen",
+   "episode": 638,
+   "episode_title": "Building AR Headsets with Aedan Cullen",
+   "episode_url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "OLED power consumption scales with lit content because unlit pixels draw nothing, so a sparse interface floating on a dark screen costs a small fraction of a fully white display; runtime for such a device depends on what is shown, not merely on how long it is on.",
+   "quote_verbatim": "if most of the pixels on the display are off, you know, in these OLEDs, then those pixels are not consuming power. So if you just have some small UI, you know, floating in the center of the screen where those pixels are, then the display consumption is pretty low compared to the maximum if all the pixels were white",
+   "speaker": "Aedan Cullen",
+   "episode": 638,
+   "episode_title": "Building AR Headsets with Aedan Cullen",
+   "episode_url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Offloading computation over a wireless link moves energy consumption to the companion device rather than removing it from the system; the wearable's saving is partly paid for out of the phone's battery.",
+   "quote_verbatim": "you consume some extra power on whatever device is transmitting this data, you know, so you're saving power on the actual wearable device, you know, by doing this concept of transmission over Wi-Fi, but then, you know, your phone's battery life is going to have to take a bit of a hit",
+   "speaker": "Aedan Cullen",
+   "episode": 638,
+   "episode_title": "Building AR Headsets with Aedan Cullen",
+   "episode_url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A pendant-format personal tracker specified at six months on a single charge, with a battery constrained by the pendant form factor, forces aggressive duty cycling of the satellite receiver rather than continuous position fixing.",
+   "quote_verbatim": "the ask was single charge six months. It should work. Okay. Right. Nice. With, within a, you know, constrained. Reasonable size battery as well",
+   "speaker": "Pallav Aggarwal",
+   "episode": 661,
+   "episode_title": "Blogging Electronics with Pallav Aggarwal",
+   "episode_url": "https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Verbose text payload formats such as JSON are convenient on the phone side of a link but every additional byte costs transmit energy, so devices targeting ten-year lifetimes encode compactly and abbreviate their fields.",
+   "quote_verbatim": "If you need battery life, you have to do the way it is really required. You are talking about 10 year life and you are talking about that, you know, I want to send via JSON and I want to write my name, full name",
+   "speaker": "Pallav Aggarwal",
+   "episode": 661,
+   "episode_title": "Blogging Electronics with Pallav Aggarwal",
+   "episode_url": "https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Cells can be charged well beyond their rated C rate, so a cell rated for 5C charging will accept 10C; the test simply passes at the cost of the cell's service life, which is why passing a stress test proves less than it appears to.",
+   "quote_verbatim": "you can exceed their maximum charge ratings, their C rate, right? You can do it. It's rated, okay, maximum charge is only 5C, but you can charge it at 10C. It's just that you're going to ruin the life of it",
+   "speaker": "Dave Jones",
+   "episode": 717,
+   "episode_title": "Back on the road in '26",
+   "episode_url": "https://theamphour.com/717-back-on-the-road-in-26/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A twenty degree Celsius temperature rise during a charge test indicates internal losses that shorten cell life, so temperature rise is a more informative result from a charging trial than whether the cell survived it.",
+   "quote_verbatim": "it did seem to increase 20 degrees Celsius, which is not great for longevity",
+   "speaker": "Dave Jones",
+   "episode": 717,
+   "episode_title": "Back on the road in '26",
+   "episode_url": "https://theamphour.com/717-back-on-the-road-in-26/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Computing an endpoint's position from angle of arrival at the receiving satellite lets the device drop both its GPS receiver and its cellular modem and carry only a Bluetooth radio, removing the two largest energy consumers along with their bill-of-materials cost.",
+   "quote_verbatim": "you can actually remove the GPS chip from your device as well. So you no longer need a cellular modem, you no longer need a GPS chip, and you can just use a Bluetooth chip",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Pushing the signal-processing burden onto the receiving infrastructure allows an asset tag to report once an hour and last multiple years on a single coin cell, which is what makes deployments viable where sending someone to change batteries would destroy the economics.",
+   "quote_verbatim": "with a single coin cell battery reporting, you know, once per hour, you can literally create devices that last for multiple years on a coin cell",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  }
+ ],
+ "attribution_notes": [
+  "ep 398 (labelled Dave Jones, attribution_reliable true): every claim here is the guest describing his own Moteino nodes, his mailbox sensor and his own servicing interval, so all six are attributed to Felix Rusu.",
+  "ep 427 (labelled Dave Jones): the deep-sleep, transmit-power and service-economics figures are the guest describing his own satellite IoT product, so they are attributed to Maarten Engelen.",
+  "ep 435 (labelled Dave Jones): the antenna-loss and housing-integrated-antenna material is the guest speaking about his own company's product and his own videos, so it is attributed to Andreas Spiess.",
+  "ep 557: passage 115 is labelled Chris Gammell, but the sleep-current and packet-rate answers are the guest's, so they are attributed to Orkhan Amiraslanov.",
+  "ep 38 (attribution_reliable false): the 30-80 percent charge-window exchange alternates between host and guest within one passage and the statement of the window cannot be assigned to either with confidence, so speaker is null.",
+  "ep 95: the description of ADC-to-memory DMA running with the ARM core unpowered is spoken by the host describing the guest's part, and the guest only confirms it, so that claim carries speaker null; the thousand-fold saving figure is the guest's own answer and stays with Oyvind Janbu.",
+  "ep 175: the passage labelled Dave Jones contains the Pebble runtime comparison ('we try to at least do a little better than a phone'), which is unmistakably the Pebble engineer speaking about his own product, so that claim is attributed to Andrew Witte.",
+  "ep 175: the cheap-wearable four-hour battery and week-to-failure cells are traded between host and guest inside one passage with no clear owner, so speaker is null; likewise the development-board-with-shunts practice is stated in the host's question and only confirmed by the guest.",
+  "ep 442 (attribution_reliable false): the CC430 three-microamp measurement is the guest describing his own GoodWatch, so it is attributed to Travis Goodspeed.",
+  "ep 527 (attribution_reliable false): the sleep-mode pull-up rule is the instrument designer answering a question about low-power system design, so it is attributed to Matt Liberty; the sneak-path passage carries his label already.",
+  "ep 557: passage 114 is labelled Chris Gammell, but the answer that a ten-year life is achievable with careful design and roughly one transfer a day is the guest's, so it is attributed to Orkhan Amiraslanov; the adjacent observation that the battery outlives the device stays with the labelled host.",
+  "ep 607 (attribution_reliable false, labelled Chris Gammell): the dynamic-range explanation and the description of what the instrument computes are the guest answering 'what is the Joulescope and what's it meant for', so both are attributed to Matt Liberty."
+ ]
+}

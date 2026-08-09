@@ -13,6 +13,18 @@
   SF6 content was covered from eps 134/120 instead). Multiple other bundles
   also showed a single null-episode passage 0. Check the bundle builder for
   the null-episode hole before batch 2.
+- **ROOT CAUSE FOUND (transistor extractor)**: the null-episode passages come
+  from transcript stem `0706-leading-edge-analog-with-joren-vaes` — episode
+  706's episode/title/URL join fails in the bundle builder, so EVERY bundle
+  drawing on ep 706 silently loses those passages (they had good material:
+  foundry PDK models with hundreds of parameters, parasitic extraction
+  inflating a 30-device schematic to 2–3M devices). Fix the join before
+  batch 3 and consider a rebuild pass for affected bundles.
+- **attribution_reliable: true is not trustworthy** (worst cases: ep 18
+  hosts flatly transposed; ep 542 Dave Jones credited on an episode he isn't
+  on; battery-life bundle would have credited Dave Jones with 11 claims that
+  are four different guests' own product measurements). Consider a
+  speaker-repair v2 pass before batch 3.
 
 ## Kimi API behavior (learned 2026-08-08 night)
 

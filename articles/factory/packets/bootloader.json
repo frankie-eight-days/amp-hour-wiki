@@ -1,0 +1,600 @@
+{
+ "concept": "bootloader",
+ "name": "Bootloader",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": "Bootloader",
+ "claims": [
+  {
+   "claim_text": "A bootloader is a small program resident in the device's program storage that runs first at power-up, checks the application image for validity, and transfers execution to it when the image is good.",
+   "quote_verbatim": "You'll have a little bootloader, which is a small program that resides in Flash. And when the device boots up, it runs this bootloader first.",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Updating requires a route for the running application to re-enter the bootloader, after which a replacement image arrives over whatever communication channel the product already has \u2014 a vehicle bus, USB or a plain serial link all serve equally.",
+   "quote_verbatim": "Really, any way that you can get information into a chip, you can use to load applications into it.",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The mechanism exists because the alternative is physical access: a microcontroller buried in a product cannot be removed, opened and reprogrammed through its debug header when a defect is found.",
+   "quote_verbatim": "You can't really pull those things out of the car and open them up, plug into the JTAG header, and reprogram them.",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The bootloader should be written first and then used as the means of loading code throughout development, so that by the time the product ships it has been exercised thousands of times and is known to be sound.",
+   "quote_verbatim": "Do the bootloader first, and use that as the method you use during development to program your code.",
+   "speaker": "Dave Jones",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The reason to sequence it that way is that the bootloader is the one component that has to be beyond doubt, and writing it last leaves it the least tested part of the product.",
+   "quote_verbatim": "The one thing you want to be rock solid is the bootloader.",
+   "speaker": "Dave Jones",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A bootloader should be kept as simple as it can possibly be, because every additional capability is another way for the one irrecoverable component to fail.",
+   "quote_verbatim": "the whole idea of bootloaders is you want them to be as dumb and as simple as possible",
+   "speaker": "Dave Jones",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "On one instrument that principle produced a bootloader containing only four things: code to read the memory card, the display routines, simple button reading for the key combination that triggers an update, and nothing else.",
+   "quote_verbatim": "it's got some simple code to read the, uh, the, uh, buttons",
+   "speaker": "Dave Jones",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "The standard to aim at is that nothing can go wrong with the bootloader once the product has shipped and that it remains compatible with every future release.",
+   "quote_verbatim": "you want the bootloader to be so simple that nothing can ever go wrong with it",
+   "speaker": "Dave Jones",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Changing the bootloader on a shipped product is the dangerous operation: it requires the vendor's development kit and an internal fine-pitch header, and a failed write bricks the unit outright.",
+   "quote_verbatim": "To change the bootloader code, you've got to have the ST arm development kit.",
+   "speaker": "Dave Jones",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Even a well-scoped bootloader can need revision once: on that product a display contrast fault caused by incorrectly set registers had to be fixed in the bootloader because the display code lived there.",
+   "quote_verbatim": "We, we did have to change it once during, only once during the development of this. And that was for the LCD contrast.",
+   "speaker": "Dave Jones",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "Omitting the bootloader from a shipped firmware image is unrecoverable: once the image was loaded the devices could not be reloaded at all.",
+   "quote_verbatim": "they left out the bootloader in the image. So once they loaded it, they couldn't reload it",
+   "speaker": "Dave Jones",
+   "episode": 215,
+   "episode_title": "Wrong Hardware, Wrong Software - Fugacious Fan Funding",
+   "episode_url": "https://theamphour.com/215-wrong-hardware-wrong-software-fugacious-fan-funding/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Microcontrollers commonly provide a separate, segregated and protected region of program memory for the bootloader, which is limited in size \u2014 on the order of a couple of kilobytes \u2014 and cannot simply be extended when more is wanted.",
+   "quote_verbatim": "they'll have, like, a separate segregated section, a safe area of bootloader memory, and that will be limited",
+   "speaker": "Dave Jones",
+   "episode": 516,
+   "episode_title": "Thermions Aren't A Thing",
+   "episode_url": "https://theamphour.com/516-thermions-arent-a-thing/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Everything needed for recovery must live inside that protected region: putting the radio routines there is what allows a device with a completely broken application to still be recovered wirelessly.",
+   "quote_verbatim": "even if you goof it up completely, it's still, you can still recover via the Bluetooth",
+   "speaker": "Chris Gammell",
+   "episode": 516,
+   "episode_title": "Thermions Aren't A Thing",
+   "episode_url": "https://theamphour.com/516-thermions-arent-a-thing/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "On such a part the vendor's radio stack occupies a reserved block at the bottom of the address space and the bootloader sits at the very top, with both required to be protected memory.",
+   "quote_verbatim": "the bootloader is actually at the very, very top of the memory",
+   "speaker": "Chris Gammell",
+   "episode": 516,
+   "episode_title": "Thermions Aren't A Thing",
+   "episode_url": "https://theamphour.com/516-thermions-arent-a-thing/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Placing the received image in an external flash before committing it makes the transfer atomic: the bootloader looks for a complete image and does nothing if the transfer broke off partway, which matters because a wireless transfer can be interrupted by collisions or anything else.",
+   "quote_verbatim": "if it breaks up in the middle, then your bootloader is not going to see a completed image and is not going to do anything",
+   "speaker": "Chris Gammell",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The sequence in that arrangement is that the running application receives the image into external storage and reboots, after which the bootloader detects a new image, erases the old application, writes the new one and jumps to it.",
+   "quote_verbatim": "it's going to see there's a new flash image or new program to be flashed on the Atmega",
+   "speaker": "Dave Jones",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A comparable design derived its bootloader from an existing open-source one, expanded the reserved bootloader region on a part chosen for having space, and taught the bootloader to boot from an external serial flash into which the application downloads a hex file that the bootloader parses directly.",
+   "quote_verbatim": "I made it so that that bootloader can also boot from the spy flash",
+   "speaker": null,
+   "episode": 250,
+   "episode_title": "An Interview with Vic Aprea - Federated Firmware Functionalism",
+   "episode_url": "https://theamphour.com/250-an-interview-with-vic-aprea-federated-firmware-functionalism/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A bootloader can decide what to do from its environment: one board's bootloader stays resident and waits for a command when it detects a connected host, and automatically boots the previously loaded user configuration when it finds only a power supply.",
+   "quote_verbatim": "the boot loader will detect that it's not connected to a computer and it'll automatically reboot into the, the previously loaded user configuration",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Keeping the bootloader in a separate serial flash preserves a recovery path, so a hard reset can always bring the device back up even after a user configuration has replaced it in the running device.",
+   "quote_verbatim": "The, the boot loader still stored in the spy flash though, right? So if you needed to do a hard reset, you could still bring it up.",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Implementing the loading interface in the device itself rather than adding a dedicated programming chip removed cost from the board, making the finished product substantially cheaper for the buyer.",
+   "quote_verbatim": "this means that the boards are probably $20 cheaper for the user to buy",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A bootloader can be the mechanism by which software intellectual property is protected: the encrypted bootloader is programmed into the part at a secure facility with no network access, after which the programmed part is consigned to the assembly factory.",
+   "quote_verbatim": "our clients use a bootloader and then have that bootloader encryption programmed at a secure facility",
+   "speaker": null,
+   "episode": 113,
+   "episode_title": "An Interview with Scott Miller - Sudden SinoAmerican Synthesis",
+   "episode_url": "https://theamphour.com/the-amp-hour-113-sudden-sinoamerican-synthesis/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "That arrangement also controls the supply chain, because a factory issued with a counted number of programmed parts cannot run an unauthorised extra production shift, and it allows subsequent images to be sent as encrypted files rather than delivered physically.",
+   "quote_verbatim": "you know that they can't run a ghost shift having a product come out the back door",
+   "speaker": null,
+   "episode": 113,
+   "episode_title": "An Interview with Scott Miller - Sudden SinoAmerican Synthesis",
+   "episode_url": "https://theamphour.com/the-amp-hour-113-sudden-sinoamerican-synthesis/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Encrypting the bootloader is not a checkbox: an implementation on real embedded hardware leaks through power consumption, because driving more lines high costs measurably more current than driving them low, and those differences can be measured and used to recover the key.",
+   "quote_verbatim": "it takes a certain amount of power to set more lines high than it does to set them low",
+   "speaker": "Colin O'Flynn",
+   "episode": 239,
+   "episode_title": "An Interview with Colin O'Flynn - Aspirated Adamantine Attacks",
+   "episode_url": "https://theamphour.com/239-an-interview-with-colin-oflynn-aspirated-adamantine-attacks/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The standard was defined without an attacker holding the device in mind, and the countermeasures are largely at the hardware level, such as balanced registers that set one line high whenever another goes low so no net switching is visible.",
+   "quote_verbatim": "you can have balanced registers. So, it sets one line high at the same time it sets one line low.",
+   "speaker": "Dave Jones",
+   "episode": 239,
+   "episode_title": "An Interview with Colin O'Flynn - Aspirated Adamantine Attacks",
+   "episode_url": "https://theamphour.com/239-an-interview-with-colin-oflynn-aspirated-adamantine-attacks/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "A common structural weakness is that a failed check falls into an infinite loop rather than halting the processor, so an attacker who can skip past that loop finds the remaining code sitting there ready to run.",
+   "quote_verbatim": "if you skip over that loop, if you can get out of the loop, then it's actually the rest of the code is, is sitting right there",
+   "speaker": "Colin O'Flynn",
+   "episode": 552,
+   "episode_title": "Shouting at chips with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/552-shouting-at-chips-with-colin-oflynn/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The three established ways of disrupting logic to defeat a secure boot process are voltage glitching, which perturbs the whole supply rail; laser fault injection, which reaches very small regions of logic because silicon is relatively transparent in the infrared; and electromagnetic injection through a small coil, which is localised but less precise than a laser.",
+   "quote_verbatim": "there's sort of three different ways of disrupting the logic",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "In a public challenge against one such implementation, the practical breaks included faulting the signature check with a laser, injecting a fault into the USB bootloader by disturbing the supply, and extracting the one-time-programmable secret directly by imaging the die.",
+   "quote_verbatim": "USB bootloader, single injection fault with supply voltage injection",
+   "speaker": "Chris Gammell",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "The recurring design failure in secure boot is disproportionate attention: enormous effort goes into resisting fault injection while a crafted flash image or a crafted packet arriving over the update interface opens the device without needing physical access at all.",
+   "quote_verbatim": "you kind of leave the front door open cause you've locked the back door too hard",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Key material can be held in one-time-programmable antifuse memory with hardware able to permanently disable reads or writes to part of the array, or to disable access until the next reset; the intended pattern is that an early bootloader reads the key, uses it, wipes its own memory and then locks the key away for the rest of the session.",
+   "quote_verbatim": "you make those available to an early bootloader at boot, and then the bootloader uses it and then wipes its memory",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A root of trust boots an otherwise untrusted system by verifying each stage in turn: an unchangeable first-stage bootloader in read-only memory validates and starts the next, which validates the one after, and the same component subsequently governs signing and firmware updates so a malicious image is rejected.",
+   "quote_verbatim": "the first stage bootloader is in ROM and normally can never be changed",
+   "speaker": "Colin O'Flynn",
+   "episode": 693,
+   "episode_title": "Small Scale Electronics Manufacturing with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/693-small-scale-electronics-manufacturing-with-colin-oflynn/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Such a root of trust is isolated by construction, with its only connection being to a service processor that is responsible for delivering update data to it securely.",
+   "quote_verbatim": "the only connection the root of trust has is to the service processor",
+   "speaker": "Laura Abbott",
+   "episode": 590,
+   "episode_title": "Finding Hardware Flaws with Laura Abbott",
+   "episode_url": "https://theamphour.com/590-finding-hardware-flaws-with-laura-abbott/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Writing a bootloader in house means deciding how to divide the program storage into regions that support robust image updates, and settling the versioning scheme and whether rollback to an earlier image is permitted at all.",
+   "quote_verbatim": "figuring out how to divide the, uh, flash up into different spaces to be able to do robust image updates",
+   "speaker": "Laura Abbott",
+   "episode": 590,
+   "episode_title": "Finding Hardware Flaws with Laura Abbott",
+   "episode_url": "https://theamphour.com/590-finding-hardware-flaws-with-laura-abbott/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "On a system with memory management the bootloader's task is to read the kernel image from storage into memory at some address and set the program counter to it, after which the kernel takes over.",
+   "quote_verbatim": "it reads it into RAM at some location and it literally just sets the program counter",
+   "speaker": null,
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Porting such a system to a new board requires a bootloader that knows how to load the kernel for that architecture before any of the kernel's hardware abstraction becomes useful.",
+   "quote_verbatim": "the first part's actually the bootloader. So you have to get a bootloader up that knows how to load the Linux kernel.",
+   "speaker": null,
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Because the bootloader is part of the storage image rather than the kernel, supporting a variant board that needs a different bootloader means patching the disc image rather than booting the same card unmodified.",
+   "quote_verbatim": "you essentially have to pass, patch the disc image with a different bootloader",
+   "speaker": null,
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Parts can be bought pre-programmed from the manufacturer against a minimum order of about a hundred and fifty pieces, adding roughly two days of setup and two days to the order lead time, which is worth it at volumes where programming thousands of leadless packages on the board would be impractical.",
+   "quote_verbatim": "it adds about two days to the order time, and it's about two days setup time",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Loading only a bootloader at that stage is sufficient, since the application can then be written while the parts are in transit and blown down the serial bus in production.",
+   "quote_verbatim": "even if all that's in there is a bootloader, that's all you need, because you can then bulk program them in production",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Production programming can be delegated cheaply by handing a subcontractor an inexpensive programmer with the code preloaded, so the operation reduces to connecting it, pressing a button and waiting for a green light.",
+   "quote_verbatim": "I can give them a 30-quid pick-it-3 with the code preloaded",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "High-volume consumer production tends toward pre-programmed parts because there may be no room on the board for a programming header, which forces the firmware \u2014 or at least the bootloader \u2014 to be ready earlier than a low-volume product would require.",
+   "quote_verbatim": "you just want the chips pre-programmed or program the factory before it goes out",
+   "speaker": "Alvaro Prieto",
+   "episode": 363,
+   "episode_title": "An interview with Alvaro and Jen from the URE Podcast",
+   "episode_url": "https://theamphour.com/363-an-interview-with-alvaro-and-jen-from-the-ure-podcast/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Even where every subsequent release arrives over the air, the device has to be programmed once physically, and that first programming step is the critical one.",
+   "quote_verbatim": "it's gotta get programmed once somewhere",
+   "speaker": null,
+   "episode": 544,
+   "episode_title": "Standardizing Manufacturing with Pete Staples",
+   "episode_url": "https://theamphour.com/544-standardizing-manufacturing-with-pete-staples/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Shipping a first-generation product before the software is finished means the only thing that can be loaded at the factory is the bootloader, with everything else arriving later.",
+   "quote_verbatim": "So all I can put in there is a bootloader and pray that it all still works when you open it.",
+   "speaker": "Elecia White",
+   "episode": 256,
+   "episode_title": "Is This A Show?",
+   "episode_url": "https://theamphour.com/256-is-this-a-show/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Multiple processors in one product multiply the problem, since one must pass code to another and a power loss during that transfer is unrecoverable; good bootloaders can be designed for it, but it remains an argument for keeping the number of separately updatable firmware images down.",
+   "quote_verbatim": "usually one of the processors has to pass the code to the other processor. Please don't lose power during that time.",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Bootloader code is largely reusable across products, so a practitioner accumulates bootloader libraries in which the high-level update protocol is shared and only a platform-specific portion has to be adapted.",
+   "quote_verbatim": "at some point you just build up a bunch of bootloader libraries",
+   "speaker": "Chris Gammell",
+   "episode": 518,
+   "episode_title": "Satellites and EVs with Joris Aerts",
+   "episode_url": "https://theamphour.com/518-satellites-and-evs-with-joris-aerts/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Silicon vendors increasingly supply the pieces, with storage-card and firmware-loading code already written, which removes the need to implement the bootloader from scratch.",
+   "quote_verbatim": "they've already written the bootloader stuff for loading firmware",
+   "speaker": "Dave Jones",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Writing a bootloader has a reputation that exceeds its difficulty: one that a team had been trying to hire out was written over a weekend once someone simply attempted it.",
+   "quote_verbatim": "we needed a new bootloader. We were trying to find someone to write a bootloader, and that sounded like the most scary thing in the world.",
+   "speaker": null,
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "A compact bootloader can avoid acknowledgements entirely by determining the baud rate from a preamble and relying on the sender to insert padding bytes calculated so that the flash write has completed before the next frame arrives, which makes the transfer a strictly one-way stream.",
+   "quote_verbatim": "it doesn't have any acknowledgement, uh, messages. It's just pre-calculated the right times of the flash memory.",
+   "speaker": "Tim",
+   "episode": 697,
+   "episode_title": "LEDs Everywhere with Tim from Mitxela",
+   "episode_url": "https://theamphour.com/697-leds-everywhere-with-tim-from-mitxela/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Because such a loader needs only a single wire, pairing it with an infrared receiver turns it into a wireless update path on a part with no radio at all.",
+   "quote_verbatim": "I put that with an infrared photo transistor",
+   "speaker": "Tim",
+   "episode": 697,
+   "episode_title": "LEDs Everywhere with Tim from Mitxela",
+   "episode_url": "https://theamphour.com/697-leds-everywhere-with-tim-from-mitxela/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Some very low-cost parts reserve a dedicated boot area separate from the main program storage \u2014 on one ten-cent processor, roughly nineteen hundred bytes alongside sixteen kilobytes of flash \u2014 and fitting a USB stack into that area makes the part programmable over USB with no external programmer.",
+   "quote_verbatim": "It's 16 kilobytes of flash plus this 1920 by special boot area.",
+   "speaker": "CNLohr",
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "A bootloader pre-programmed at the factory so that a part can be loaded through an ordinary serial port, with no dedicated programmer required, is what made early accessible microcontroller boards possible and remains the pattern used today.",
+   "quote_verbatim": "it had the bootloader in there actually pre-programmed in and you can hook it up to a serial port",
+   "speaker": "Dave Jones",
+   "episode": 570,
+   "episode_title": "Keyzermas All The Way",
+   "episode_url": "https://theamphour.com/570-keyzermas-all-the-way/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The equivalent standard circuit on contemporary modules uses a pair of cross-wired transistors driven from the serial adapter to assert the boot pin and then reset the part, putting it into bootloader mode automatically.",
+   "quote_verbatim": "it like holds down the boot and then it resets and then it that's puts it into bootloader mode",
+   "speaker": "Chris Gammell",
+   "episode": 702,
+   "episode_title": "Test Point Accupuncture",
+   "episode_url": "https://theamphour.com/702-test-point-accupuncture/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Firmware update over a USB connection requires at least a bootloader resident on the microcontroller, which is part of why a plain serial interface is simpler for a product that only needs to move console data.",
+   "quote_verbatim": "you'll have to have a bootloader on the micro, at least",
+   "speaker": "Chris Gammell",
+   "episode": 551,
+   "episode_title": "Feed the Mouse",
+   "episode_url": "https://theamphour.com/551-feed-the-mouse/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "A proprietary bootloader can be the commercial mechanism by which a module vendor protects its work, so designing that module into a product means buying the board or a separately sold pre-programmed part rather than the bare processor.",
+   "quote_verbatim": "But you need to buy the bootloader.",
+   "speaker": "Chris Gammell",
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "In that case the restriction followed from a non-disclosure agreement covering the chip's security features, which is also what made a lockable variant offering encrypted firmware and a secure update process possible at all.",
+   "quote_verbatim": "The chip security features are the main thing covered by the NDA.",
+   "speaker": "Dave Jones",
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "depth_regraded": "opinion",
+   "kind": "case"
+  },
+  {
+   "claim_text": "A bootloader interferes with debugging: a debugger that has no symbols for it loses track when execution enters it, and one project found its debug session only worked once the bootloader was removed.",
+   "quote_verbatim": "if you go into the bootloader, but the GDB didn't know about the bootloader that can get tricky",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The same effect appeared with a widely used open bootloader, where debugging failed until it was taken out, so anyone debugging on a system with one initialised should expect to do extra work.",
+   "quote_verbatim": "I had issues debugging and I, I removed the bootloader. I'm like, Oh, it's working all of a sudden.",
+   "speaker": "Jared Wolff",
+   "episode": 509,
+   "episode_title": "Cellular IoT with Jared Wolff",
+   "episode_url": "https://theamphour.com/509-cellular-iot-with-jared-wolff/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Where no bootloader is present, loading code requires access to the debug pins and a hardware programmer, which is the alternative the bootloader exists to avoid.",
+   "quote_verbatim": "if you want to, you know, not use a bootloader on this thing, then you need to be able to like access the single wire debug",
+   "speaker": "Chris Gammell",
+   "episode": 589,
+   "episode_title": "Mute Button Discipline",
+   "episode_url": "https://theamphour.com/589-mute-button-discipline/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Booting the entire firmware from a removable card removes the bricking risk, since a bad image is replaced by swapping the card rather than by recovering the device.",
+   "quote_verbatim": "There's no brick in your SD card. No, you can't brick this one.",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Boot code kept in an ordinary serial flash alongside a server's processor is straightforward to modify, which makes it a far cheaper route for an attacker than fabricating custom hardware.",
+   "quote_verbatim": "these servers have a spy flash on them to keep some of the bootloader",
+   "speaker": null,
+   "episode": 418,
+   "episode_title": "An Interview with Josh Datko",
+   "episode_url": "https://theamphour.com/418-an-interview-with-josh-datko/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The limited space in a protected boot region shapes product features directly: an intended design in which stored data would be transferred wirelessly was abandoned because the storage access code would have had to live in the bootloader and there was no room for it.",
+   "quote_verbatim": "it had to be in the bootloader code to access all that and it was just harder to do and didn't have space",
+   "speaker": "Dave Jones",
+   "episode": 690,
+   "episode_title": "Clap on, clap off, lights flicker",
+   "episode_url": "https://theamphour.com/690-clap-on-clap-off-lights-flicker/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  }
+ ],
+ "capped": false,
+ "attribution_notes": "Episodes on the speaker-map unreliable list are attributed by content or left unattributed."
+}

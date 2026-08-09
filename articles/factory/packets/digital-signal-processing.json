@@ -1,0 +1,579 @@
+{
+ "concept": "digital-signal-processing",
+ "name": "Digital Signal Processing",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "digital-signal-processing",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "digital-signal-processing"
+  ],
+  "children": [
+   "audio",
+   "downsampling",
+   "fir-filter",
+   "floating-point-unit",
+   "mandarin"
+  ],
+  "neighbors": {
+   "c-programming-language": 4
+  },
+  "episodes_with_kept_mentions": 74,
+  "mentions_kept": 124,
+  "pins_final": 67,
+  "capped": false,
+  "total_available": 67
+ },
+ "claims": [
+  {
+   "claim_text": "Getting a signal into the digital domain early removes the phase errors that accumulate through analog stages, so the processing that follows can be done exactly rather than approximately.",
+   "quote_verbatim": "once you get everything into the digital domain, there's very little phase errors",
+   "speaker": "Jeri Ellsworth",
+   "episode": 52,
+   "episode_title": "An Interview with Jeri Ellsworth - Carnassial Chip Chemicals",
+   "episode_url": "https://theamphour.com/the-amp-hour-52-carnassial-chip-chemicals/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "There is a choice of where to work: transform to the frequency domain, operate there and transform back to time-domain audio, or use a simpler time-domain method that is easier to implement but less flexible.",
+   "quote_verbatim": "I did a Fourier transform and I converted all this data into the frequency domain. Then I did my work on it. Then I transferred it back into the time domain as audio",
+   "speaker": "Jeri Ellsworth",
+   "episode": 52,
+   "episode_title": "An Interview with Jeri Ellsworth - Carnassial Chip Chemicals",
+   "episode_url": "https://theamphour.com/the-amp-hour-52-carnassial-chip-chemicals/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A hobbyist constraint drove a radio platform's silicon choice: the part selected was the largest FPGA available in a package that could still be hand-reworked, which meant accepting a device with no hard multipliers.",
+   "quote_verbatim": "I got the biggest FPGA you can get without a ball grid",
+   "speaker": "Matt Ettus",
+   "episode": 101,
+   "episode_title": "An Interview with Matt Ettus - Quality Quadrature Quidam",
+   "episode_url": "https://theamphour.com/the-amp-hour-101-quality-quadrature-quidam/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Without hard multipliers the choice is to build multipliers out of scarce logic fabric or to restructure the algorithms so they never need one; the second was chosen, and only later generations moved to parts with multiply-accumulate blocks.",
+   "quote_verbatim": "come up with algorithms that did not require that",
+   "speaker": "Matt Ettus",
+   "episode": 101,
+   "episode_title": "An Interview with Matt Ettus - Quality Quadrature Quidam",
+   "episode_url": "https://theamphour.com/the-amp-hour-101-quality-quadrature-quidam/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A software radio was deliberately shipped without an FPGA, aiming instead at the cheapest design that could sustain samples in and out at the maximum high-speed USB rate, on the reasoning that the host laptop already has far more signal-processing capability than the board would.",
+   "quote_verbatim": "we didn't really care if we had digital signal processing capability on board because the DSP capability in everybody's laptop is, is so impressive these days",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The unintended on-board capability turned out to be substantial: an add-on with a screen ran standalone wideband spectrum analysis at roughly a thousand transforms per second, faster than the author typically ran on a host machine.",
+   "quote_verbatim": "get that running at, I think a thousand FFTs per second",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The programmable logic on that design is glue rather than compute: it does jobs such as converting unsigned samples to signed integers, and is nowhere near enough to do signal processing.",
+   "quote_verbatim": "it isn't enough to do DSP, but it's a little bit of logic, a little bit of glue logic that lets us do things like convert a, convert an unsigned, uh, into a signed integer",
+   "speaker": "Michael Ossmann",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The working rule is to avoid an FPGA if the design can be met without one, because getting one working properly is an enormous time commitment.",
+   "quote_verbatim": "I think that's the way to go is to try your best to avoid the FPGA. I mean, it's, they're, they're an enormous amount of time commitment to make them work properly",
+   "speaker": "Michael Ossmann",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Even on platforms that include FPGA signal-processing capability, the overwhelming majority of users never touch it, while continuing to assume they will one day.",
+   "quote_verbatim": "90% of the people who use those platforms never really use those capabilities",
+   "speaker": "Michael Ossmann",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The mathematics that makes signal processing look forbidding is made of simple parts; understanding the Fourier kernel and a handful of other ideas is enough to do real work, and the difficulty is mostly in meeting those parts in the right order.",
+   "quote_verbatim": "as long as you understand the Fourier kernel and a few other things, you can do a lot of damage in signal processing",
+   "speaker": "Michael Ossmann",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The standard free reference is Steven Smith's guide, available online, with Oppenheim as the theoretical textbook; the field covers transforms, discrete Fourier methods and convolution, and is specialised enough to need a dedicated text.",
+   "quote_verbatim": "It's the Scientist and Engineer's Guide to Digital Signal Processing by Stephen W. Smith",
+   "speaker": "Chris Gammell",
+   "episode": 293,
+   "episode_title": "Call In Show #4",
+   "episode_url": "https://theamphour.com/293-call-in-show-4/",
+   "depth_regraded": "explains",
+   "kind": "reference"
+  },
+  {
+   "claim_text": "Two different things share the abbreviation and are worth keeping apart: digital signal processing as a technique, and digital signal processors as devices.",
+   "quote_verbatim": "You're talking about DSPs, the device, right? Digital signal processors.",
+   "speaker": "Chris Gammell",
+   "episode": 293,
+   "episode_title": "Call In Show #4",
+   "episode_url": "https://theamphour.com/293-call-in-show-4/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Students who have taken a signal-processing course routinely define decimation as discarding samples, missing that it is downsampling and therefore requires an anti-aliasing filter, implemented digitally, before the samples are thrown away.",
+   "quote_verbatim": "you throw out K minus one samples",
+   "speaker": "Jake Baker",
+   "episode": 297,
+   "episode_title": "An Interview with Jake Baker",
+   "episode_url": "https://theamphour.com/297-an-interview-with-jake-baker/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The correction is the same rule that governs any sampling operation, applied inside the digital domain rather than at the input.",
+   "quote_verbatim": "you need an anti-aliasing filter",
+   "speaker": "Jake Baker",
+   "episode": 297,
+   "episode_title": "An Interview with Jake Baker",
+   "episode_url": "https://theamphour.com/297-an-interview-with-jake-baker/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Teaching the subject from bilinear and biquadratic transfer functions implemented digitally, down to the adders and delays that realise them in silicon, gives a different and more concrete understanding than the multiply-accumulate framing most people carry.",
+   "quote_verbatim": "I teach like taking the bilinear transfer function, implementing it digitally",
+   "speaker": "Jake Baker",
+   "episode": 297,
+   "episode_title": "An Interview with Jake Baker",
+   "episode_url": "https://theamphour.com/297-an-interview-with-jake-baker/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A digital control loop changes the iteration cost of tuning: a wrong filter value means recomputing coefficients, recompiling and reflashing in minutes, where the analog equivalent means recalculating a resistor and capacitor network, desoldering parts and possibly ordering new ones.",
+   "quote_verbatim": "you recalculate the coefficients for your filter, and you just change the code. You recompile it, you flash it",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "The counter-argument is maintenance cost: for a static, ordinary supply rail the burden of carrying another firmware image outweighs the flexibility, and a fixed resistor and capacitor is the better answer.",
+   "quote_verbatim": "the cost of maintaining another firmware image is not worth it compared to a low-cost switching regulator",
+   "speaker": null,
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Silicon vendors ship assembly-level building blocks rather than expecting users to write the mathematics: filter and transform routines alongside motor-control transforms, digital power, solar and power-line communication libraries.",
+   "quote_verbatim": "they develop libraries for everything from, you know, DSP math, and like I was saying, the different filters, FFTs",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A modern hearing aid carries one or two microphones per ear used for noise cancellation and directional beamforming, then converts to the digital domain where the primary job is equalisation compensating for the bands the wearer has lost.",
+   "quote_verbatim": "typically two microphones there on each hearing aid. So these will do a noise cancellation. They will do a directional",
+   "speaker": "J\u00f8rgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with J\u00f8rgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Active loudspeaker design replaces the passive crossover with one amplifier per driver and moves the crossover and equalisation into processing earlier in the audio chain.",
+   "quote_verbatim": "instead of having a passive filter in your speaker, you will put one amplifier in front of each of your speakers",
+   "speaker": "J\u00f8rgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with J\u00f8rgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An always-listening device cannot save power by gating its input: an activation filter that shuts the circuit down until an impulse arrives will clip the beginning of the word that woke it.",
+   "quote_verbatim": "unless you have some kind of activation filter where you turn off the circuit until you get some impulse that, and then that you might miss the beginning of a word",
+   "speaker": "Dave Jones",
+   "episode": 335,
+   "episode_title": "When the TV watches you",
+   "episode_url": "https://theamphour.com/335-when-the-tv-watches-you/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Audio in a vehicle can be corrected far more aggressively than domestic audio because the acoustic environment is fully known, down to which seats are occupied via the seat sensors, whereas a loudspeaker sold to a customer will be placed in an unknown room.",
+   "quote_verbatim": "If you sell somebody a loudspeaker, you don't know what room they're going to put it in. And in a car, you know that exactly",
+   "speaker": "Remco Stoutjesdijk",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "That knowledge is now used to deliver different audio to different seats simultaneously without headphones, so navigation, a hands-free call and entertainment can coexist in one cabin.",
+   "quote_verbatim": "employed a lot of DSP to, to even make it possible to send different sounds to different occupants",
+   "speaker": "Remco Stoutjesdijk",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The best-known dedicated audio processor performs a 32-bit floating-point operation per clock but costs more than twenty dollars in small quantities, which rules it out of any product retailing for a few hundred.",
+   "quote_verbatim": "It's, it does 32 bit floating point operations in one clock cycle. But these things cost upwards of $20 in, in small quantities",
+   "speaker": "Remco Stoutjesdijk",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A framework built instead on an ordinary Cortex-M4 does 32-bit floating-point audio at a lower rate per clock but still enough filtering throughput for an active loudspeaker or a four-channel noise-cancellation system.",
+   "quote_verbatim": "we still get a fairly impressive number of filtering operations done",
+   "speaker": "Remco Stoutjesdijk",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Automotive qualification is brutal in a way consumer audio is not: amplifiers were held at 75 degrees Celsius and 80 percent relative humidity under vibration for three months, and half emerged with a coil coating turned to powder.",
+   "quote_verbatim": "we had our amplifiers in a thermal chamber at, at 75 degrees centigrade, 80%, uh, relative humidity",
+   "speaker": "Remco Stoutjesdijk",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Qualification limits are not negotiated against plausibility: a failure after thirty-six hours under a sun-simulating lamp counted as a failure even though no location on earth receives thirty-six consecutive hours of sun.",
+   "quote_verbatim": "can you name a country where the sun shines 36 hours nonstop? But that wasn't relevant for Audi",
+   "speaker": "Remco Stoutjesdijk",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A single-precision floating-point unit on a mid-range microcontroller is what makes audio processing tractable for a small product, removing the effort of working in fixed point.",
+   "quote_verbatim": "the FPU on those M4s are just, it's just wonderful. It makes life a lot easier than dealing with fixed",
+   "speaker": "Shannon Parks",
+   "episode": 513,
+   "episode_title": "Audio DSP with Shannon Parks",
+   "episode_url": "https://theamphour.com/513-audio-dsp-with-shannon-parks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "High-inductance moving-magnet phono cartridges have a resonant peak close to ten kilohertz that classic designs exhibit and lower-inductance types do not; back-calculating that response lets the peak be emulated or corrected digitally and applied to any source.",
+   "quote_verbatim": "it really all to adjust that resonance really only happens with high inductance, uh, moving magnet cartridges",
+   "speaker": "Shannon Parks",
+   "episode": 513,
+   "episode_title": "Audio DSP with Shannon Parks",
+   "episode_url": "https://theamphour.com/513-audio-dsp-with-shannon-parks/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Direct-sampling receivers gained integration, lower power and lower cost, but taking the antenna almost straight to a converter with minimal analog filtering made them badly vulnerable to strong out-of-band signals overloading the converter, a respect in which they are objectively worse than designs from the 1980s and 1990s.",
+   "quote_verbatim": "those radios are extremely sensitive to things like out-of-band interference where you have like a strong signal that's away from the signal you're trying to receive that actually overloads the A to D",
+   "speaker": "Jeff Keyzer",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Modern instruments digitise everything and throw processing at the measurement, replacing specialised analog instruments such as the modulation domain analyser that a jitter measurement once required.",
+   "quote_verbatim": "It's got huge amounts of processing and you can just, you know, throw processing and software and sampling power at a problem these days",
+   "speaker": "Dave Jones",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Working with transform-based instruments forces the user to understand window functions, since the common choices cover most measurements but the wrong window will mislead you in the remainder.",
+   "quote_verbatim": "you kind of have to understand how window functions work and what window functions are the right ones versus the wrong ones",
+   "speaker": "Jeff Keyzer",
+   "episode": 570,
+   "episode_title": "Keyzermas All The Way",
+   "episode_url": "https://theamphour.com/570-keyzermas-all-the-way/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Silent tool bugs are worst in signal processing work, because any error at all, however small, turns the output into garbage rather than degrading it visibly; reducing one such bug to a minimal test case took two months while preserving the incorrect behaviour.",
+   "quote_verbatim": "with DSP, it's usually, um, any mistake, no matter how small you just get garbage out",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (n\u00e9e 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A framework's speed can come from a library of hand-optimised kernels selected at run time for the host processor, so the same array operation dispatches to whichever instruction set the machine actually has.",
+   "quote_verbatim": "depending on what machine you're on it'll hand you hand optimized code",
+   "speaker": "Derek Kozel",
+   "episode": 381,
+   "episode_title": "An Interview with Derek Kozel",
+   "episode_url": "https://theamphour.com/381-interview-with-derek-kozel/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "That approach does not extend to heterogeneous hardware, and the open problem is getting a framework to route data to a GPU, FPGA or dedicated processor without the user selecting it by hand every time.",
+   "quote_verbatim": "how do we end up with gnu radio or whatever framework you're using being able to make the decision to send the code to send the data there for processing without you having to hand select it every time",
+   "speaker": "Derek Kozel",
+   "episode": 381,
+   "episode_title": "An Interview with Derek Kozel",
+   "episode_url": "https://theamphour.com/381-interview-with-derek-kozel/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Parallel hardware is an unambiguous win for signal processing, which is why the field has moved toward GPUs as the problems have grown.",
+   "quote_verbatim": "for digital signal processing that is that is just a win",
+   "speaker": "Derek Kozel",
+   "episode": 381,
+   "episode_title": "An Interview with Derek Kozel",
+   "episode_url": "https://theamphour.com/381-interview-with-derek-kozel/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Plotting the same signal at several stages of the processing chain at once is what makes the trade-offs visible: filter too hard and part of the signal disappears, too little and the occupied bandwidth balloons, which is the same trade real radio systems make.",
+   "quote_verbatim": "you can look at your signal at different stages of the the demodulation",
+   "speaker": "Derek Kozel",
+   "episode": 381,
+   "episode_title": "An Interview with Derek Kozel",
+   "episode_url": "https://theamphour.com/381-interview-with-derek-kozel/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Optical fibre in ordinary use does not preserve polarisation, so information placed on separate polarisations arrives mixed together and the receiver must recover all of it at once and unravel it computationally.",
+   "quote_verbatim": "there's really advanced DSP algorithms that go into figuring out how to unravel the polarization",
+   "speaker": "Shahriar Shahramian",
+   "episode": 430,
+   "episode_title": "Shahriar Discusses 5G",
+   "episode_url": "https://theamphour.com/430-shahriar-discusses-5g/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "The phantom channel carries far less than the twisted pair it rides on, because common-mode interference degrades the channel quality that sets its capacity.",
+   "quote_verbatim": "the capacity of the phantom channel is so much less than the twisted pair because the quality of the channel is so much worse",
+   "speaker": "Shahriar Shahramian",
+   "episode": 430,
+   "episode_title": "Shahriar Discusses 5G",
+   "episode_url": "https://theamphour.com/430-shahriar-discusses-5g/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "Earlier attempts at integrated ultrasound put many analog parts on the chip, which gave large phase variation from part to part across a wafer; the modern approach digitises early and does the work in the digital domain instead.",
+   "quote_verbatim": "they ended up putting a lot of analog parts onto a chip that, you know, have a lot of phase variants",
+   "speaker": "Greg Charvat",
+   "episode": 407,
+   "episode_title": "Gregory Charvat and Three New Companies",
+   "episode_url": "https://theamphour.com/407-gregory-charvat-and-three-new-companies/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Complex signal-processing products are developed and verified in a numerical environment for months before any code is ported to the target, rather than being written directly in assembly.",
+   "quote_verbatim": "you sit there for six months engineering this thing and simulate it in MATLAB to make sure it does exactly what you want and then port that over",
+   "speaker": "Dave Jones",
+   "episode": 39,
+   "episode_title": "Dan Pink, Dual Core, level translators - Mumble Mumbo Jumbo",
+   "episode_url": "https://theamphour.com/the-amp-hour-39-mumble-mumbo-jumbo/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The distinction between the two implementations is parallelism: a dedicated signal processor is largely a fast microcontroller with hardware for those operations, whereas programmable logic can lay the operations out side by side and run them at once.",
+   "quote_verbatim": "those are often just micros that are running really, really fast that have dedicated hardware to that kind of thing",
+   "speaker": "Chris Gammell",
+   "episode": 141,
+   "episode_title": "FPGAs, Robots & Thermocouples - Wampum's Wavering Worth",
+   "episode_url": "https://theamphour.com/the-amp-hour-141-wampums-wavering-worth/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "On modern programmable logic the signal-processing blocks and block memory are hard resources at fixed positions, so once the clock rate reaches several hundred megahertz where a function is placed on the die starts to matter.",
+   "quote_verbatim": "even the DSP and the block ram that are spread throughout the chip, if you're pushing the clock rates, you know, to several hundred megahertz, you do start to care where things are",
+   "speaker": "Ryan Brown",
+   "episode": 138,
+   "episode_title": "An Interview with Ryan Brown - Effortless Equipment Extensibility",
+   "episode_url": "https://theamphour.com/the-amp-hour-138-effortless-equipment-extensibility/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Higher-level languages that compile to hardware exist because hand-writing math-heavy processing in a hardware description language every time is impractical, even though the low-level control is what makes programmable logic attractive in the first place.",
+   "quote_verbatim": "when you're trying to do higher level functions, right? Like, really math-heavy stuff, like DSP type of stuff inside of FPGAs",
+   "speaker": "Chris Gammell",
+   "episode": 150,
+   "episode_title": "Solar, FPGAs and Maxim Integrated - Solar Shopper Sickness",
+   "episode_url": "https://theamphour.com/the-amp-hour-150-solar-shopper-sickness/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Echo is extremely hard to remove from a recording after the fact, which is why treating the room matters more than the microphone: an expensive microphone in a reflective room still sounds bad.",
+   "quote_verbatim": "you may have your super \u2013 you know, you may have a $1,000 microphone, but it's going to be no good if you're sitting in a crap room",
+   "speaker": "Chris Gammell",
+   "episode": 6,
+   "episode_title": "Open Hardware and The Creative Economy",
+   "episode_url": "https://theamphour.com/the-amp-hour-6-open-hardware-and-the-creative-economy/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The first commercial signal-processing device series in 1983 marked the point at which this kind of processing moved out of general software and into dedicated hardware.",
+   "quote_verbatim": "the first TMS 32,000 series DSP, 1983",
+   "speaker": "Dave Jones",
+   "episode": 24,
+   "episode_title": "Solar Cells, SparkFun, TSMC - The Detroit Debunking",
+   "episode_url": "https://theamphour.com/the-amp-hour-24-the-detroit-debunking/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A dual-core microcontroller designed so both cores can run at full throughput without contending for memory turns out to be good at moving data and doing simple signal-processing work, at roughly 0.9 Dhrystone MIPS per megahertz per core.",
+   "quote_verbatim": "in terms of shoveling data around and doing simple DSP type things, we're pretty fast",
+   "speaker": "Luke Renn",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The classical method is to choose mathematical functions and check whether the output separates the cases you care about, which is guess and check; machine-learning methods invert the direction by starting from the desired answer and deriving the detector.",
+   "quote_verbatim": "You're a DSP engineer, you have the signals and you start applying all these different functions to it to see if the output is going to give you good results",
+   "speaker": "Brian Faith",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "The general pattern is to convert to digital as early as possible and do the rest in software, because software iterates far faster than hardware.",
+   "quote_verbatim": "we can iterate on software much faster than we can iterate in hardware",
+   "speaker": "Tim \"Mithro\" Ansell",
+   "episode": 375,
+   "episode_title": "An Interview with Tim \"Mithro\" Ansell",
+   "episode_url": "https://theamphour.com/375-an-interview-with-tim-mithro-ansell/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The cost of that choice is latency, and the tolerance differs sharply by medium: a video frame is about 33 milliseconds and one frame of delay is unremarkable, while the same offset in audio is plainly audible.",
+   "quote_verbatim": "one frame latency is not a big problem",
+   "speaker": "Tim \"Mithro\" Ansell",
+   "episode": 375,
+   "episode_title": "An Interview with Tim \"Mithro\" Ansell",
+   "episode_url": "https://theamphour.com/375-an-interview-with-tim-mithro-ansell/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Integrated parts combining an analog front end, programmable gain and real-time filtering with a microcontroller in a small ball-grid package are hard to beat with a discrete front end, microcontroller and separate processor.",
+   "quote_verbatim": "it's got other DSP filtering built in. So you can filter the signal in real time",
+   "speaker": "Dave Jones",
+   "episode": 184,
+   "episode_title": "Chris Becomes Self Employed - Quixotic Quitting Quaere",
+   "episode_url": "https://theamphour.com/184-chris-becomes-self-employed-quixotic-quitting-quaere/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A practical curriculum in the area spans IIR and FIR filter design, sensor fusion, extended Kalman filters, state estimation and control system design, chosen because those are what personal projects actually demand.",
+   "quote_verbatim": "how do you design IR or FIR filters, mainly digital signal processing, and then also stuff like sensor fusion, extended Kalman filters",
+   "speaker": "Philip Salmony",
+   "episode": 573,
+   "episode_title": "Mixed Signal Education with Philip Salmony",
+   "episode_url": "https://theamphour.com/573-mixed-signal-education-with-philip-salmony/",
+   "depth_regraded": "explains",
+   "kind": "reference"
+  },
+  {
+   "claim_text": "The plug-and-play metering blocks from the major vendors are bandwidth-limited to roughly three to six kilohertz, which is the constraint that pushes anyone needing more toward sampling the waveform themselves at rates up to a megasample per second.",
+   "quote_verbatim": "they're somewhere between, uh, a three and six kilohertz bandwidth",
+   "speaker": "Joe Bamberg",
+   "episode": 371,
+   "episode_title": "An Interview With Joe Bamberg",
+   "episode_url": "https://theamphour.com/371-an-interview-with-joe-bamberg/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "In a retroreflective head-up display the image-tracking processing dominates the power budget rather than the illumination, because the retroreflective surface is around ninety percent efficient and the projector therefore needs very few photons.",
+   "quote_verbatim": "the retroflective surface is 90% efficient",
+   "speaker": "Jeri Ellsworth",
+   "episode": 147,
+   "episode_title": "An interview with Jeri Ellsworth - Absorptive Augmented Actuality",
+   "episode_url": "https://theamphour.com/the-amp-hour-147-absorptive-augmented-actuality/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  }
+ ],
+ "attribution_notes": [
+  "ep101: the FPGA-selection answer is the guest's account of his own product; bundle labels the turn Chris Gammell. Attributed to Matt Ettus by content.",
+  "ep138: the hard-block placement answer is the guest's; bundle labels the turn Dave Jones. Attributed to Ryan Brown by content.",
+  "ep212: the case for digital control loops is the guest's and the counter-argument is the interviewer's; attributed separately, with the interviewer's turn left null because the labels interleave.",
+  "ep371, ep374, ep381, ep513, ep560, ep593: episodes flagged attribution_reliable: false. Where the first person unambiguously identifies the guest the claim is content-attributed; otherwise speaker is null.",
+  "ep297: the decimation exchange is the guest describing his own teaching; one turn is labelled Chris Gammell. Attributed to Jake Baker by content.",
+  "ep529: the core-throughput answer is attributed to Luke Wren as labelled."
+ ],
+ "capped": false
+}

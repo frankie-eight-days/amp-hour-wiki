@@ -1,0 +1,116 @@
+---
+title: Digital Signal Processing
+concept: digital-signal-processing
+generated: 2026-08-08
+model: k3
+spec: knowledge-only-v4-cluster
+---
+
+Digital signal processing (DSP) is the technique of operating on signals after they have been converted into the digital domain, where the processing that follows can be carried out exactly rather than approximately.[52] The abbreviation is used for two distinct things that are worth keeping apart: digital signal processing as a technique, and digital signal processors as physical devices.[293] The field covers transforms, discrete Fourier methods and convolution, and is specialised enough to require dedicated texts rather than being absorbed into general engineering education.[293] Its practical significance rests on a recurring engineering pattern: convert a signal to digital as early as possible and do the rest in software, because software can be iterated far faster than hardware.[375]
+
+## Rationale for digitising early
+
+Moving a signal into the digital domain at the earliest practical point removes the phase errors that accumulate through cascaded analog stages, so downstream processing operates on exact data.[52] This principle appears across application areas. Earlier attempts at integrated ultrasound placed many analog parts on a chip, which produced large part-to-part phase variation across a wafer; the modern approach digitises early and performs the work digitally instead.[407] Modern test instruments likewise digitise everything and apply processing to the measurement, displacing specialised analog instruments such as the modulation domain analysers that jitter measurements once required.[613] The cost of digitising early is latency, and tolerance for it varies sharply by medium: a video frame is about 33 milliseconds and one frame of delay is unremarkable, while the same offset in audio is plainly audible.[375]
+
+Direct-sampling receivers illustrate the trade-off's other side. They gain integration, lower power and lower cost, but taking the antenna almost directly to a converter with minimal analog filtering leaves them badly vulnerable to strong out-of-band signals overloading the converter — a respect in which they are objectively worse than receiver designs of the 1980s and 1990s.[613]
+
+## Domains and methods
+
+A designer faces a choice of where to work: transform the signal to the frequency domain, operate on it there and transform back to a time-domain result, or use a simpler time-domain method that is easier to implement but less flexible.[52] Working with transform-based instruments forces an understanding of window functions, since the common choices cover most measurements but a wrongly chosen window misleads in the remainder.[570]
+
+The mathematics behind signal processing has a reputation for being forbidding, but it is composed of simple parts; understanding the Fourier kernel and a handful of other ideas is sufficient for real work, and the difficulty lies mostly in encountering those parts in the right order.[214]
+
+### Sampling and decimation
+
+Decimation is frequently misunderstood, including by students who have completed a signal-processing course: it is routinely defined as discarding samples, when it is in fact downsampling and therefore requires an anti-aliasing filter, implemented digitally, before any samples are thrown away.[297] The governing rule is the same one that applies to any sampling operation, applied inside the digital domain rather than at the converter input.[297]
+
+## Implementation platforms
+
+### Dedicated signal processors
+
+The first commercial digital signal processor family appeared in 1983, marking the point at which this class of processing moved out of general-purpose software and into dedicated hardware.[24] A dedicated signal processor is largely a fast microcontroller with hardware acceleration for the relevant operations, in contrast to programmable logic, which can lay the same operations out side by side and execute them concurrently.[141] Silicon vendors ship assembly-level building blocks rather than expecting users to write the mathematics themselves: filter and transform routines are provided alongside motor-control transforms, digital power, solar and power-line communication libraries.[212]
+
+### General-purpose microcontrollers
+
+A single-precision floating-point unit on a mid-range microcontroller is what makes audio processing tractable in a small product, since it removes the effort of working in fixed point.[513] A framework built on an ordinary Cortex-M4 executes 32-bit floating-point audio at a lower rate per clock than a dedicated part but still delivers enough filtering throughput for an active loudspeaker or a four-channel noise-cancellation system.[560] By comparison, the best-known dedicated audio processor performs a 32-bit floating-point operation per clock but costs more than twenty dollars in small quantities, which rules it out of products retailing for a few hundred dollars.[560] A dual-core microcontroller arranged so that both cores can run at full throughput without contending for memory has also proven capable at moving data and performing simple signal-processing work, at roughly 0.9 Dhrystone MIPS per megahertz per core.[529] Integrated parts that combine an analog front end, programmable gain and real-time filtering with a microcontroller in a small ball-grid package are difficult to beat with a discrete front end, microcontroller and separate processor.[184]
+
+### Programmable logic
+
+The parallelism of programmable logic suits signal processing, but the development cost is high: the working rule among practitioners is to avoid an FPGA wherever the design can be met without one, because getting an FPGA working properly is an enormous time commitment.[214] Even on platforms that include FPGA signal-processing capability, the overwhelming majority of users never touch it, while continuing to assume that they will one day.[214] On modern devices, the signal-processing blocks and block memory are hard resources at fixed positions, so once clock rates reach several hundred megahertz the placement of a function on the die begins to matter.[138] Because hand-writing math-heavy processing in a hardware description language is impractical at scale, higher-level languages that compile to hardware have been developed, even though the low-level control is what makes programmable logic attractive in the first place.[150]
+
+Device availability constrains designs in practice. On the USRP software-defined radio platform, Matt Ettus selected the largest FPGA available in a package that could still be hand-reworked, which meant accepting a device with no hard multipliers.[101] Without hard multipliers, the options were to build multipliers from scarce logic fabric or to restructure the algorithms so they never required one; the latter was chosen, and only later generations moved to parts with multiply-accumulate blocks.[101]
+
+### Host computers and heterogeneous systems
+
+Signal processing can be delegated to a host computer entirely. The HackRF software radio was deliberately shipped without an FPGA, aiming instead at the cheapest design that could sustain samples in and out at the maximum high-speed USB rate, on the reasoning that the host laptop already has far more signal-processing capability than the board would.[161] The programmable logic that remained on that design functions as glue rather than compute, performing jobs such as converting unsigned samples to signed integers, and is nowhere near sufficient for signal processing.[214] The unintended on-board capability nonetheless proved substantial: an add-on with a screen ran standalone wideband spectrum analysis at roughly a thousand transforms per second, faster than its designer typically ran on a host machine.[161]
+
+Parallel hardware is an unambiguous win for signal processing, which is why the field has moved toward GPUs as problem sizes have grown.[381] Frameworks achieve speed on conventional processors through libraries of hand-optimised kernels selected at run time for the host, so that the same array operation dispatches to whichever instruction set the machine actually has.[381] That approach does not extend to heterogeneous hardware: the open problem is getting a framework to route data automatically to a GPU, FPGA or dedicated processor without the user selecting the target by hand each time.[381]
+
+## Design workflow
+
+Complex signal-processing products are developed and verified in a numerical environment for months before any code is ported to the target hardware, rather than being written directly in assembly.[39] Visualisation is central to the method: plotting the same signal at several stages of the processing chain simultaneously makes trade-offs visible — filtering too aggressively removes part of the signal, while filtering too little lets the occupied bandwidth balloon, which is the same trade real radio systems make.[381]
+
+A digital implementation changes the iteration cost of tuning a control loop: a wrong filter value means recomputing coefficients, recompiling and reflashing in minutes, where the analog equivalent means recalculating a resistor-capacitor network, desoldering parts and possibly ordering new ones.[212] The counter-argument is maintenance cost: for a static, ordinary supply rail, the burden of carrying another firmware image outweighs the flexibility, and a fixed resistor and capacitor is the better answer.[212]
+
+## Failure modes and constraints
+
+Silent tool bugs are at their worst in signal-processing work, because any error, however small, turns the output into garbage rather than degrading it visibly; reducing one such bug to a minimal test case took two months while preserving the incorrect behaviour.[374] An always-listening device cannot save power by gating its input: an activation filter that shuts the circuit down until an impulse arrives will clip the beginning of the word that woke it.[335] Echo is extremely difficult to remove from a recording after the fact, which is why treating the room matters more than the microphone: an expensive microphone in a reflective room still sounds bad.[6]
+
+## Applications
+
+### Audio
+
+A modern hearing aid carries one or two microphones per ear, used for noise cancellation and directional beamforming, and then converts to the digital domain, where the primary job is equalisation compensating for the bands the wearer has lost.[338] Active loudspeaker design replaces the passive crossover with one amplifier per driver and moves the crossover and equalisation into processing earlier in the audio chain.[338] In phonograph reproduction, high-inductance moving-magnet cartridges exhibit a resonant peak near ten kilohertz that lower-inductance types do not; back-calculating that response allows the peak to be emulated or corrected digitally and applied to any source.[513]
+
+Audio in a vehicle can be corrected far more aggressively than domestic audio because the acoustic environment is fully known, down to which seats are occupied via the seat sensors, whereas a loudspeaker sold to a customer will be placed in an unknown room.[560] That knowledge is used to deliver different audio to different seats simultaneously without headphones, so that navigation, a hands-free call and entertainment can coexist in one cabin.[560] Automotive qualification imposes demands consumer audio does not: amplifiers were held at 75 degrees Celsius and 80 percent relative humidity under vibration for three months, and half emerged with a coil coating turned to powder.[560] Qualification limits are not negotiated against plausibility: a failure after thirty-six hours under a sun-simulating lamp counted as a failure even though no location on earth receives thirty-six consecutive hours of sun.[560]
+
+### Communications
+
+Optical fibre in ordinary use does not preserve polarisation, so information placed on separate polarisations arrives mixed together, and the receiver must recover all of it at once and unravel it computationally.[430] In wired transmission, a phantom channel carries far less than the twisted pair it rides on, because common-mode interference degrades the channel quality that sets its capacity.[430] In power metering, the plug-and-play metering blocks offered by the major vendors are bandwidth-limited to roughly three to six kilohertz, which is the constraint that pushes anyone needing more toward sampling the waveform themselves at rates up to a megasample per second.[371]
+
+### Displays
+
+In a retroreflective head-up display, the image-tracking processing dominates the power budget rather than the illumination, because the retroreflective surface is around ninety percent efficient and the projector therefore needs very few photons.[147]
+
+## Relationship to machine learning
+
+The classical signal-processing method is to choose mathematical functions and check whether the output separates the cases of interest — in effect, guess and check; machine-learning methods invert the direction by starting from the desired answer and deriving the detector.[525]
+
+## Education and references
+
+The standard free reference in the field is Steven W. Smith's *The Scientist and Engineer's Guide to Digital Signal Processing*, available online, with Oppenheim's text serving as the theoretical textbook.[293] Teaching the subject from bilinear and biquadratic transfer functions implemented digitally, down to the adders and delays that realise them in silicon, gives a different and more concrete understanding than the multiply-accumulate framing most practitioners carry.[297] A practical curriculum spans IIR and FIR filter design, sensor fusion, extended Kalman filters, state estimation and control system design, chosen because those are what personal projects actually demand.[573]
+
+## References
+
+| Episode | Title | URL | Date |
+|---|---|---|---|
+| 6 | Open Hardware and The Creative Economy | https://theamphour.com/the-amp-hour-6-open-hardware-and-the-creative-economy/ | |
+| 24 | Solar Cells, SparkFun, TSMC - The Detroit Debunking | https://theamphour.com/the-amp-hour-24-the-detroit-debunking/ | |
+| 39 | Dan Pink, Dual Core, level translators - Mumble Mumbo Jumbo | https://theamphour.com/the-amp-hour-39-mumble-mumbo-jumbo/ | |
+| 52 | An Interview with Jeri Ellsworth - Carnassial Chip Chemicals | https://theamphour.com/the-amp-hour-52-carnassial-chip-chemicals/ | |
+| 101 | An Interview with Matt Ettus - Quality Quadrature Quidam | https://theamphour.com/the-amp-hour-101-quality-quadrature-quidam/ | June 24, 2012 |
+| 138 | An Interview with Ryan Brown - Effortless Equipment Extensibility | https://theamphour.com/the-amp-hour-138-effortless-equipment-extensibility/ | March 25, 2013 |
+| 141 | FPGAs, Robots & Thermocouples - Wampum's Wavering Worth | https://theamphour.com/the-amp-hour-141-wampums-wavering-worth/ | April 15, 2013 |
+| 147 | An interview with Jeri Ellsworth - Absorptive Augmented Actuality | https://theamphour.com/the-amp-hour-147-absorptive-augmented-actuality/ | May 27, 2013 |
+| 150 | Solar, FPGAs and Maxim Integrated - Solar Shopper Sickness | https://theamphour.com/the-amp-hour-150-solar-shopper-sickness/ | June 17, 2013 |
+| 161 | Interview with Michael Ossmann - Gifted Grimgribber Grokker | https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/ | September 2, 2013 |
+| 184 | Chris Becomes Self Employed - Quixotic Quitting Quaere | https://theamphour.com/184-chris-becomes-self-employed-quixotic-quitting-quaere/ | February 10, 2014 |
+| 212 | An Interview with Trey German - Launchpad Laden Lodesman | https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/ | August 18, 2014 |
+| 214 | Impedance Matching With Charvat And Ossmann - Recurring RF Remontados | https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/ | September 1, 2014 |
+| 293 | Call In Show #4 | https://theamphour.com/293-call-in-show-4/ | March 30, 2016 |
+| 297 | An Interview with Jake Baker | https://theamphour.com/297-an-interview-with-jake-baker/ | May 4, 2016 |
+| 335 | When the TV watches you | https://theamphour.com/335-when-the-tv-watches-you/ | February 8, 2017 |
+| 338 | An Interview with Jørgen Jakobsen | https://theamphour.com/338-an-interview-with-jorgen-jakobsen/ | March 5, 2017 |
+| 371 | An Interview With Joe Bamberg | https://theamphour.com/371-an-interview-with-joe-bamberg/ | December 10, 2017 |
+| 374 | An Interview with Claire (née 'Clifford') Wolf | https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/ | January 7, 2018 |
+| 375 | An Interview with Tim "Mithro" Ansell | https://theamphour.com/375-an-interview-with-tim-mithro-ansell/ | January 14, 2018 |
+| 381 | An Interview with Derek Kozel | https://theamphour.com/381-interview-with-derek-kozel/ | February 25, 2018 |
+| 407 | Gregory Charvat and Three New Companies | https://theamphour.com/407-gregory-charvat-and-three-new-companies/ | September 16, 2018 |
+| 430 | Shahriar Discusses 5G | https://theamphour.com/430-shahriar-discusses-5g/ | February 17, 2019 |
+| 513 | Audio DSP with Shannon Parks | https://theamphour.com/513-audio-dsp-with-shannon-parks/ | October 18, 2020 |
+| 525 | Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic | https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/ | January 10, 2021 |
+| 529 | Embedded Hardware with the Raspberry Pi Team | https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/ | February 7, 2021 |
+| 560 | High End Audio with Remco Stoutjesdijk | https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/ | October 3, 2021 |
+| 570 | Keyzermas All The Way | https://theamphour.com/570-keyzermas-all-the-way/ | December 19, 2021 |
+| 573 | Mixed Signal Education with Philip Salmony | https://theamphour.com/573-mixed-signal-education-with-philip-salmony/ | January 17, 2022 |
+| 613 | It's a Keyzermas Miracle! | https://theamphour.com/613-its-a-keyzermas-miracle/ | December 18, 2022 |
