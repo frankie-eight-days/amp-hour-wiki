@@ -4,6 +4,7 @@ set -e
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
+python3 tools/gen_howbuilt.py   # must precede sync (sync copies articles/meta)
 python3 tools/sync_site.py
 python3 tools/gen_landing.py
 python3 tools/gen_explore.py
