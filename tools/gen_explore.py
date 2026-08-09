@@ -12,6 +12,11 @@ OUT = ROOT / "site" / "explore.html"
 
 s = SRC.read_text()
 
+# the artifact host used to supply the doctype; standalone we must, or the
+# page renders in quirks mode (collapsed canvas height, blurry backing store)
+if not s.lstrip().lower().startswith("<!doctype"):
+    s = "<!doctype html>\n<html lang=\"en\">\n" + s + "\n</html>"
+
 # ---- palette swap: neutral tokens -> Amp Hour tokens (light + dark) ----
 LIGHT = {
     "--surface:#faf9f6": "--surface:#fbf7ee",
@@ -50,9 +55,12 @@ NAV = (
     ' margin-left:18px;">All articles</a>'
     '<a href="/explore" style="color:#c94628; text-decoration:none;'
     ' margin-left:18px;">Graph</a></span></nav>'
-    '<div style="height:44px"></div>'
 )
-s = re.sub(r"(<body[^>]*>)", r"\1" + NAV.replace("\\", "\\\\"), s, count=1)
+# no <body> tag in this file — inject the fixed nav before the stage div and
+# push the explorer's own overlay title/search down below the bar
+s = s.replace('<div id="stage">', NAV + '<div id="stage">', 1)
+s = s.replace("</style>",
+              "#title, #searchwrap { transform: translateY(46px); }</style>", 1)
 
 # ---- published-article links on node cards ----
 published = sorted(p.stem for p in (ROOT / "articles" / "wiki").glob("*.md"))
