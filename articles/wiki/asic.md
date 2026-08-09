@@ -1,5 +1,5 @@
 ---
-title: Asic
+title: ASIC
 concept: asic
 generated: 2026-08-08
 model: k3

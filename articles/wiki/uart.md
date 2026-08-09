@@ -1,5 +1,5 @@
 ---
-title: Uart
+title: UART
 concept: uart
 generated: 2026-08-08
 model: k3

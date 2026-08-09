@@ -1,5 +1,5 @@
 ---
-title: Digital To Analog Converter
+title: Digital-to-Analog Converter
 concept: digital-to-analog-converter
 generated: 2026-08-08
 model: k3

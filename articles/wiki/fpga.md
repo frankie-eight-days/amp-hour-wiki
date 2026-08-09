@@ -1,5 +1,5 @@
 ---
-title: Fpga
+title: FPGA
 concept: fpga
 generated: 2026-08-08
 model: k3

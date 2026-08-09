@@ -1,5 +1,5 @@
 ---
-title: Internet Of Things
+title: Internet of Things
 concept: internet-of-things
 generated: 2026-08-08
 model: k3

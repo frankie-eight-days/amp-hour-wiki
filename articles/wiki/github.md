@@ -1,5 +1,5 @@
 ---
-title: Github
+title: GitHub
 concept: github
 generated: 2026-08-08
 model: k3

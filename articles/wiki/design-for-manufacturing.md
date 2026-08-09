@@ -1,5 +1,5 @@
 ---
-title: Design For Manufacturing
+title: Design for Manufacturing
 concept: design-for-manufacturing
 generated: 2026-08-08
 model: k3

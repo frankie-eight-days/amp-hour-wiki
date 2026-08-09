@@ -1,5 +1,5 @@
 ---
-title: Rtos
+title: RTOS
 concept: rtos
 generated: 2026-08-09
 model: k3

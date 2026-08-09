@@ -1,5 +1,5 @@
 ---
-title: Jtag
+title: JTAG
 concept: jtag
 generated: 2026-08-09
 model: k3

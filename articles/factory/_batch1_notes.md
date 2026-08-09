@@ -93,3 +93,11 @@
   early episodes remain unnumbered anywhere (chips-and-fabs-and-garages,
   quassating-quadcopter-quantophrenia, the-chinese-clairvoyancy) — their
   passages stay uncitable; extractors drop them correctly.
+- **Canonical kind mapping (2026-08-09, fleet-agreed)**: principle→mechanism,
+  judgment→practitioner-judgment, case→history, comparison→tradeoff,
+  number→numbers, rule-of-thumb→practice, rationale→mechanism,
+  explains→mechanism, design→practice, spec→numbers, sourcing→market-structure,
+  threshold→numbers, definition→mechanism, trade-off→tradeoff,
+  vendor-history→history, cost→numbers, reference→history. Applied centrally
+  to 923 claims in 42 packets; batch-3+ extractors emit the ten-term set
+  directly.

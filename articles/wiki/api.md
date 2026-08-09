@@ -1,5 +1,5 @@
 ---
-title: Api
+title: API
 concept: api
 generated: 2026-08-09
 model: k3

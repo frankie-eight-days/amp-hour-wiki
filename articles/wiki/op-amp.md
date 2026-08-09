@@ -1,5 +1,5 @@
 ---
-title: Op Amp
+title: Op-Amp
 concept: op-amp
 generated: 2026-08-08
 model: k3
