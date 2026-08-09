@@ -49,6 +49,25 @@ This build starts from first principles.
   lore live as sections inside topics.
 - **Saga articles** — rare multi-episode stories promoted out of a topic when
   they outgrow it (Rigol hacking, Arduino schism).
+- **Theme articles** (Frank, 2026-08-09) — editorially curated experiential
+  topics the frequency ranking is structurally blind to. Diagnosis: the census
+  grades a mention `explains` only when the concept itself is explained, so
+  story-shaped knowledge (Shenzhen 62 eps/6 explains, startup 124/11,
+  teardown 67/11) never clears the explains>=15 floor, and thematic material
+  fragments across sibling concepts. Approved manifest:
+  `articles/factory/_themes.json` (16 themes, 3 tiers). Gathering differs from
+  topic articles in two ways: (1) **depth-relaxed** — mention/opinion-grade
+  passages are gathered too, because narratives live there; the knowledge-only
+  rule still applies at claim level (anchored experience is the gold
+  standard — "bring cash to Huaqiangbei" survives, "China was wild" dies);
+  (2) two modes — **concept-union** (union of member concepts' passages) for
+  tiers 1-2, **guest-episode** (all passages from a domain-guest's episodes,
+  relevance-filtered) for tier 3, where the theme is carried by who the guest
+  is (Mike Harrison installations, Bil Herd retrocomputing) rather than any
+  concept. KEEP test for theme claims: would an engineer about to do this
+  thing (visit a factory, join a startup, bid a defense job) act differently
+  after reading it? Pilot order: working-with-chinese-manufacturers
+  (concept-union), then broadcast-and-big-installs (guest-episode).
 - No guest articles. Guests are a citation attribute (+ maybe an auto-generated
   claims-by-person index).
 
