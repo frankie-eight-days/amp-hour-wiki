@@ -1,3 +1,130 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// ---------- Amp Hour article polish (Wikipedia anatomy, brand palette) ----
+
+// headings: thin rules under h1/h2, Wikipedia-style
+.center h1,
+article h1 {
+  font-weight: 400;
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 0.25rem;
+}
+.center h2,
+article h2 {
+  font-weight: 400;
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 0.2rem;
+  margin-top: 2rem;
+}
+.center h3,
+article h3 {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+// body measure & rhythm
+.center p {
+  line-height: 1.65;
+}
+
+// reference tables & general tables
+.center table {
+  font-size: 0.85rem;
+  border-collapse: collapse;
+  th {
+    font-family: Verdana, sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--darkgray);
+    border-bottom: 2px solid var(--lightgray);
+    text-align: left;
+  }
+  td {
+    border-bottom: 1px solid var(--lightgray);
+    padding: 0.3rem 0.6rem 0.3rem 0;
+    vertical-align: top;
+  }
+}
+
+// citation superscripts + hover cards
+sup a[data-tip] {
+  color: var(--secondary);
+  text-decoration: none;
+  position: relative;
+  &:hover {
+    background: var(--highlight);
+  }
+  &:hover::after {
+    content: attr(data-tip);
+    position: absolute;
+    left: 50%;
+    bottom: 1.6em;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    max-width: 70vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: var(--dark);
+    color: var(--light);
+    font-family: Verdana, sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.02em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 60;
+  }
+}
+
+// citation target flash
+tr:target td {
+  background: var(--highlight);
+}
+
+// topics page community cards
+.amp-commgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+  margin-top: 1rem;
+}
+.amp-commcard {
+  background: var(--lightgray);
+  border-radius: 6px;
+  padding: 14px 16px;
+  border-top: 3px solid var(--tertiary);
+  h3 {
+    margin: 0 0 2px;
+    font-size: 1rem;
+    border: none;
+  }
+  .amp-commcount {
+    font-family: Verdana, sans-serif;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--darkgray);
+    margin-bottom: 8px;
+  }
+  .amp-commlinks {
+    font-size: 0.86rem;
+    line-height: 1.8;
+    a {
+      background: var(--light);
+      border-radius: 3px;
+      padding: 1px 7px;
+      margin: 0 4px 4px 0;
+      display: inline-block;
+      text-decoration: none;
+    }
+    a:hover {
+      background: var(--highlight);
+    }
+  }
+}
+
+// infobox (rendered from sync-injected HTML)
+.amp-infobox {
+  box-shadow: 0 1px 3px rgba(22, 20, 13, 0.08);
+}

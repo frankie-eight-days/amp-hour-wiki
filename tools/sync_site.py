@@ -133,7 +133,8 @@ def linkify(raw: str, slug: str) -> str:
     def cite(m):
         nums = re.findall(r"\[(\d+)\]", m.group(0))
         return "".join(
-            f'<sup><a href="#ref-{n}" title="{ref_meta.get(n, "")}">[{n}]</a></sup>'
+            f'<sup><a href="#ref-{n}" data-tip="{ref_meta.get(n, "")}" '
+            f'title="{ref_meta.get(n, "")}">[{n}]</a></sup>'
             for n in nums)
 
     prose = re.sub(r"(?:\[\d+\]){1,}", cite, prose)
@@ -237,12 +238,16 @@ hero = [
     "## Topics",
     "",
 ]
+hero.append('<div class="amp-commgrid">')
 for comm in sorted(by_comm, key=lambda c: -len(by_comm[c])):
     items = sorted(by_comm[comm], key=lambda a: a[1].lower())
-    hero.append(f"### {comm.title()}")
-    hero.append("")
-    hero.append(" · ".join(f"[[{s}|{t}]]" for s, t in items))
-    hero.append("")
+    links = "".join(f'<a href="./{sl}">{ti}</a> ' for sl, ti in items)
+    hero.append(
+        f'<div class="amp-commcard"><h3>{comm.title()}</h3>'
+        f'<div class="amp-commcount">{len(items)} articles</div>'
+        f'<div class="amp-commlinks">{links}</div></div>')
+hero.append("</div>")
+hero.append("")
 hero.append(
     f"*Last synced {datetime.date.today().isoformat()} · "
     "[source corpus and pipeline]"

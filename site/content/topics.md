@@ -15,80 +15,26 @@ Every claim carries a bracketed citation tracing to a verbatim passage in the sh
 
 ## Topics
 
-### Kicad, Altium, Open Source Hardware
-
-[[altium|Altium]] · [[design-review|Design Review]] · [[design-rule-checking|Design Rule Checking]] · [[eagle|EAGLE]] · [[gerber|Gerber]] · [[github|GitHub]] · [[kicad|KiCad]] · [[open-source|Open Source]] · [[open-source-hardware|Open Source Hardware]] · [[open-source-software|Open Source Software]] · [[pcb-design|PCB Design]] · [[pcb-footprint|PCB Footprint]] · [[pcb-layout|PCB Layout]] · [[pcb-routing|PCB Routing]] · [[reference-design|Reference Design]] · [[schematic|Schematic]] · [[spice|SPICE]]
-
-### Capacitor, Led, Op Amp
-
-[[capacitor|Capacitor]] · [[dc-dc-converter|DC-DC Converter]] · [[inductor|Inductor]] · [[integrated-circuit|Integrated Circuit]] · [[led|LED]] · [[mosfet|MOSFET]] · [[op-amp|Op-Amp]] · [[relay|Relay]] · [[resistor|Resistor]] · [[soldering|Soldering]] · [[switching-power-supply|Switching Power Supply]] · [[transformer|Transformer]] · [[transistor|Transistor]] · [[voltage-regulator|Voltage Regulator]]
-
-### Pcb Fabrication, Pcb, Pick And Place Machine
-
-[[bga|BGA]] · [[breadboard|Breadboard]] · [[fr4|FR-4]] · [[hand-soldering|Hand Soldering]] · [[pcb|PCB]] · [[pcb-assembly|PCB Assembly]] · [[pcb-fabrication|PCB Fabrication]] · [[pcb-lead-time|PCB Lead Time]] · [[pcb-milling|PCB Milling]] · [[pick-and-place-machine|Pick and Place Machine]] · [[reflow-soldering|Reflow Soldering]] · [[solder-mask|Solder Mask]] · [[via|Via]]
-
-### Linux, Usb, Ethernet
-
-[[bootloader|Bootloader]] · [[can-bus|CAN Bus]] · [[eeprom|EEPROM]] · [[firmware-update|Firmware Update]] · [[flash-memory|Flash Memory]] · [[linux|Linux]] · [[ram|RAM]] · [[rtos|RTOS]] · [[serial-port|Serial Port]] · [[usb|USB]] · [[usb-c|USB-C]] · [[virtual-machine|Virtual Machine]] · [[zephyr|Zephyr]]
-
-### Analog To Digital Converter, I2C, Spi
-
-[[accelerometer|Accelerometer]] · [[analog-to-digital-converter|Analog to Digital Converter]] · [[bandwidth|Bandwidth]] · [[digital-to-analog-converter|Digital-to-Analog Converter]] · [[dma|DMA]] · [[gpio|GPIO]] · [[i2c|I2C]] · [[pwm|PWM]] · [[signal-to-noise-ratio|Signal to Noise Ratio]] · [[spi|SPI]] · [[temperature-sensor|Temperature Sensor]] · [[uart|UART]]
-
-### Microcontroller, Arduino, Raspberry Pi
-
-[[arduino|Arduino]] · [[assembly-language|Assembly Language]] · [[breakout-board|Breakout Board]] · [[computer-vision|Computer Vision]] · [[development-board|Development Board]] · [[electronics-education|Electronics Education]] · [[embedded-system|Embedded System]] · [[maker-faire|Maker Faire]] · [[microcontroller|Microcontroller]] · [[python|Python]] · [[raspberry-pi|Raspberry Pi]] · [[sparkfun|SparkFun]]
-
-### Bluetooth, Wifi, Internet Of Things
-
-[[antenna|Antenna]] · [[api|API]] · [[bluetooth|Bluetooth]] · [[bluetooth-low-energy|Bluetooth Low Energy]] · [[cloud-computing|Cloud Computing]] · [[esp32|ESP32]] · [[gps|GPS]] · [[internet-of-things|Internet of Things]] · [[lora|LoRa]] · [[radio-frequency|Radio Frequency]] · [[wifi|Wi-Fi]]
-
-### Fpga, Arm, Risc V
-
-[[arm|ARM]] · [[asic|ASIC]] · [[compiler|Compiler]] · [[fpga|FPGA]] · [[intellectual-property|Intellectual Property]] · [[power-consumption|Power Consumption]] · [[processor|Processor]] · [[register|Register]] · [[risc-v|RISC-V]] · [[verilog|Verilog]]
-
-### Kickstarter, Startup, Venture Capital
-
-[[crowdfunding|Crowdfunding]] · [[kickstarter|Kickstarter]] · [[mass-production|Mass Production]] · [[patent|Patent]] · [[product-pricing|Product Pricing]] · [[professional-networking|Professional Networking]] · [[profit-margin|Profit Margin]] · [[prototype|Prototype]] · [[startup-funding|Startup Funding]] · [[venture-capital|Venture Capital]]
-
-### Battery, Electric Vehicle, Tesla
-
-[[battery|Battery]] · [[battery-life|Battery Life]] · [[low-power-design|Low Power Design]] · [[power-grid|Power Grid]] · [[solar-panel|Solar Panel]] · [[solar-power|Solar Power]] · [[vertical-integration|Vertical Integration]]
-
-### 3D Printing, 3D Printer, Injection Molding
-
-[[3d-printer|3D Printer]] · [[3d-printing|3D Printing]] · [[design-for-manufacturing|Design for Manufacturing]] · [[economies-of-scale|Economies of Scale]] · [[hackerspace|Hackerspace]] · [[injection-molding|Injection Molding]]
-
-### Firmware, Engineering Education, Software
-
-[[automated-testing|Automated Testing]] · [[continuous-integration|Continuous Integration]] · [[engineering-education|Engineering Education]] · [[firmware|Firmware]] · [[jtag|JTAG]] · [[reverse-engineering|Reverse Engineering]]
-
-### Oscilloscope, Multimeter, Soldering Iron
-
-[[logic-analyzer|Logic Analyzer]] · [[multimeter|Multimeter]] · [[oscilloscope|Oscilloscope]] · [[power-supply|Power Supply]] · [[soldering-iron|Soldering Iron]] · [[spectrum-analyzer|Spectrum Analyzer]]
-
-### Digi Key, Component Sourcing, Bill Of Materials
-
-[[bill-of-materials|Bill of Materials]] · [[component-sourcing|Component Sourcing]] · [[contract-manufacturer|Contract Manufacturer]] · [[digi-key|Digi-Key]] · [[supply-chain|Supply Chain]]
-
-### Robotics, Artificial Intelligence, Sensor
-
-[[automation|Automation]] · [[robotics|Robotics]] · [[sensor|Sensor]]
-
-### Intel, Texas Instruments, Semiconductor Fab
-
-[[moores-law|Moore's Law]] · [[semiconductor-fab|Semiconductor Fab]] · [[silicon|Silicon]]
-
-### Youtube, Twitter, Consulting
-
-[[camera|Camera]] · [[youtube|YouTube]]
-
-### Digital Signal Processing, Software Defined Radio, Microphone
-
-[[digital-signal-processing|Digital Signal Processing]] · [[software-defined-radio|Software Defined Radio]]
-
-### Datasheet, Internet, 555 Timer
-
-[[datasheet|Datasheet]]
+<div class="amp-commgrid">
+<div class="amp-commcard"><h3>Kicad, Altium, Open Source Hardware</h3><div class="amp-commcount">17 articles</div><div class="amp-commlinks"><a href="./altium">Altium</a> <a href="./design-review">Design Review</a> <a href="./design-rule-checking">Design Rule Checking</a> <a href="./eagle">EAGLE</a> <a href="./gerber">Gerber</a> <a href="./github">GitHub</a> <a href="./kicad">KiCad</a> <a href="./open-source">Open Source</a> <a href="./open-source-hardware">Open Source Hardware</a> <a href="./open-source-software">Open Source Software</a> <a href="./pcb-design">PCB Design</a> <a href="./pcb-footprint">PCB Footprint</a> <a href="./pcb-layout">PCB Layout</a> <a href="./pcb-routing">PCB Routing</a> <a href="./reference-design">Reference Design</a> <a href="./schematic">Schematic</a> <a href="./spice">SPICE</a> </div></div>
+<div class="amp-commcard"><h3>Capacitor, Led, Op Amp</h3><div class="amp-commcount">14 articles</div><div class="amp-commlinks"><a href="./capacitor">Capacitor</a> <a href="./dc-dc-converter">DC-DC Converter</a> <a href="./inductor">Inductor</a> <a href="./integrated-circuit">Integrated Circuit</a> <a href="./led">LED</a> <a href="./mosfet">MOSFET</a> <a href="./op-amp">Op-Amp</a> <a href="./relay">Relay</a> <a href="./resistor">Resistor</a> <a href="./soldering">Soldering</a> <a href="./switching-power-supply">Switching Power Supply</a> <a href="./transformer">Transformer</a> <a href="./transistor">Transistor</a> <a href="./voltage-regulator">Voltage Regulator</a> </div></div>
+<div class="amp-commcard"><h3>Pcb Fabrication, Pcb, Pick And Place Machine</h3><div class="amp-commcount">13 articles</div><div class="amp-commlinks"><a href="./bga">BGA</a> <a href="./breadboard">Breadboard</a> <a href="./fr4">FR-4</a> <a href="./hand-soldering">Hand Soldering</a> <a href="./pcb">PCB</a> <a href="./pcb-assembly">PCB Assembly</a> <a href="./pcb-fabrication">PCB Fabrication</a> <a href="./pcb-lead-time">PCB Lead Time</a> <a href="./pcb-milling">PCB Milling</a> <a href="./pick-and-place-machine">Pick and Place Machine</a> <a href="./reflow-soldering">Reflow Soldering</a> <a href="./solder-mask">Solder Mask</a> <a href="./via">Via</a> </div></div>
+<div class="amp-commcard"><h3>Linux, Usb, Ethernet</h3><div class="amp-commcount">13 articles</div><div class="amp-commlinks"><a href="./bootloader">Bootloader</a> <a href="./can-bus">CAN Bus</a> <a href="./eeprom">EEPROM</a> <a href="./firmware-update">Firmware Update</a> <a href="./flash-memory">Flash Memory</a> <a href="./linux">Linux</a> <a href="./ram">RAM</a> <a href="./rtos">RTOS</a> <a href="./serial-port">Serial Port</a> <a href="./usb">USB</a> <a href="./usb-c">USB-C</a> <a href="./virtual-machine">Virtual Machine</a> <a href="./zephyr">Zephyr</a> </div></div>
+<div class="amp-commcard"><h3>Analog To Digital Converter, I2C, Spi</h3><div class="amp-commcount">12 articles</div><div class="amp-commlinks"><a href="./accelerometer">Accelerometer</a> <a href="./analog-to-digital-converter">Analog to Digital Converter</a> <a href="./bandwidth">Bandwidth</a> <a href="./digital-to-analog-converter">Digital-to-Analog Converter</a> <a href="./dma">DMA</a> <a href="./gpio">GPIO</a> <a href="./i2c">I2C</a> <a href="./pwm">PWM</a> <a href="./signal-to-noise-ratio">Signal to Noise Ratio</a> <a href="./spi">SPI</a> <a href="./temperature-sensor">Temperature Sensor</a> <a href="./uart">UART</a> </div></div>
+<div class="amp-commcard"><h3>Microcontroller, Arduino, Raspberry Pi</h3><div class="amp-commcount">12 articles</div><div class="amp-commlinks"><a href="./arduino">Arduino</a> <a href="./assembly-language">Assembly Language</a> <a href="./breakout-board">Breakout Board</a> <a href="./computer-vision">Computer Vision</a> <a href="./development-board">Development Board</a> <a href="./electronics-education">Electronics Education</a> <a href="./embedded-system">Embedded System</a> <a href="./maker-faire">Maker Faire</a> <a href="./microcontroller">Microcontroller</a> <a href="./python">Python</a> <a href="./raspberry-pi">Raspberry Pi</a> <a href="./sparkfun">SparkFun</a> </div></div>
+<div class="amp-commcard"><h3>Bluetooth, Wifi, Internet Of Things</h3><div class="amp-commcount">11 articles</div><div class="amp-commlinks"><a href="./antenna">Antenna</a> <a href="./api">API</a> <a href="./bluetooth">Bluetooth</a> <a href="./bluetooth-low-energy">Bluetooth Low Energy</a> <a href="./cloud-computing">Cloud Computing</a> <a href="./esp32">ESP32</a> <a href="./gps">GPS</a> <a href="./internet-of-things">Internet of Things</a> <a href="./lora">LoRa</a> <a href="./radio-frequency">Radio Frequency</a> <a href="./wifi">Wi-Fi</a> </div></div>
+<div class="amp-commcard"><h3>Fpga, Arm, Risc V</h3><div class="amp-commcount">10 articles</div><div class="amp-commlinks"><a href="./arm">ARM</a> <a href="./asic">ASIC</a> <a href="./compiler">Compiler</a> <a href="./fpga">FPGA</a> <a href="./intellectual-property">Intellectual Property</a> <a href="./power-consumption">Power Consumption</a> <a href="./processor">Processor</a> <a href="./register">Register</a> <a href="./risc-v">RISC-V</a> <a href="./verilog">Verilog</a> </div></div>
+<div class="amp-commcard"><h3>Kickstarter, Startup, Venture Capital</h3><div class="amp-commcount">10 articles</div><div class="amp-commlinks"><a href="./crowdfunding">Crowdfunding</a> <a href="./kickstarter">Kickstarter</a> <a href="./mass-production">Mass Production</a> <a href="./patent">Patent</a> <a href="./product-pricing">Product Pricing</a> <a href="./professional-networking">Professional Networking</a> <a href="./profit-margin">Profit Margin</a> <a href="./prototype">Prototype</a> <a href="./startup-funding">Startup Funding</a> <a href="./venture-capital">Venture Capital</a> </div></div>
+<div class="amp-commcard"><h3>Battery, Electric Vehicle, Tesla</h3><div class="amp-commcount">7 articles</div><div class="amp-commlinks"><a href="./battery">Battery</a> <a href="./battery-life">Battery Life</a> <a href="./low-power-design">Low Power Design</a> <a href="./power-grid">Power Grid</a> <a href="./solar-panel">Solar Panel</a> <a href="./solar-power">Solar Power</a> <a href="./vertical-integration">Vertical Integration</a> </div></div>
+<div class="amp-commcard"><h3>3D Printing, 3D Printer, Injection Molding</h3><div class="amp-commcount">6 articles</div><div class="amp-commlinks"><a href="./3d-printer">3D Printer</a> <a href="./3d-printing">3D Printing</a> <a href="./design-for-manufacturing">Design for Manufacturing</a> <a href="./economies-of-scale">Economies of Scale</a> <a href="./hackerspace">Hackerspace</a> <a href="./injection-molding">Injection Molding</a> </div></div>
+<div class="amp-commcard"><h3>Firmware, Engineering Education, Software</h3><div class="amp-commcount">6 articles</div><div class="amp-commlinks"><a href="./automated-testing">Automated Testing</a> <a href="./continuous-integration">Continuous Integration</a> <a href="./engineering-education">Engineering Education</a> <a href="./firmware">Firmware</a> <a href="./jtag">JTAG</a> <a href="./reverse-engineering">Reverse Engineering</a> </div></div>
+<div class="amp-commcard"><h3>Oscilloscope, Multimeter, Soldering Iron</h3><div class="amp-commcount">6 articles</div><div class="amp-commlinks"><a href="./logic-analyzer">Logic Analyzer</a> <a href="./multimeter">Multimeter</a> <a href="./oscilloscope">Oscilloscope</a> <a href="./power-supply">Power Supply</a> <a href="./soldering-iron">Soldering Iron</a> <a href="./spectrum-analyzer">Spectrum Analyzer</a> </div></div>
+<div class="amp-commcard"><h3>Digi Key, Component Sourcing, Bill Of Materials</h3><div class="amp-commcount">5 articles</div><div class="amp-commlinks"><a href="./bill-of-materials">Bill of Materials</a> <a href="./component-sourcing">Component Sourcing</a> <a href="./contract-manufacturer">Contract Manufacturer</a> <a href="./digi-key">Digi-Key</a> <a href="./supply-chain">Supply Chain</a> </div></div>
+<div class="amp-commcard"><h3>Robotics, Artificial Intelligence, Sensor</h3><div class="amp-commcount">3 articles</div><div class="amp-commlinks"><a href="./automation">Automation</a> <a href="./robotics">Robotics</a> <a href="./sensor">Sensor</a> </div></div>
+<div class="amp-commcard"><h3>Intel, Texas Instruments, Semiconductor Fab</h3><div class="amp-commcount">3 articles</div><div class="amp-commlinks"><a href="./moores-law">Moore's Law</a> <a href="./semiconductor-fab">Semiconductor Fab</a> <a href="./silicon">Silicon</a> </div></div>
+<div class="amp-commcard"><h3>Youtube, Twitter, Consulting</h3><div class="amp-commcount">2 articles</div><div class="amp-commlinks"><a href="./camera">Camera</a> <a href="./youtube">YouTube</a> </div></div>
+<div class="amp-commcard"><h3>Digital Signal Processing, Software Defined Radio, Microphone</h3><div class="amp-commcount">2 articles</div><div class="amp-commlinks"><a href="./digital-signal-processing">Digital Signal Processing</a> <a href="./software-defined-radio">Software Defined Radio</a> </div></div>
+<div class="amp-commcard"><h3>Datasheet, Internet, 555 Timer</h3><div class="amp-commcount">1 articles</div><div class="amp-commlinks"><a href="./datasheet">Datasheet</a> </div></div>
+</div>
 
 *Last synced 2026-08-09 · [source corpus and pipeline](https://github.com/frankie-eight-days/amp-hour-wiki)*

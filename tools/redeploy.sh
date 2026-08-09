@@ -6,6 +6,7 @@ cd "$ROOT"
 
 python3 tools/sync_site.py
 python3 tools/gen_landing.py
+python3 tools/gen_explore.py
 cd site
 npx quartz build
 
@@ -22,6 +23,11 @@ LC_ALL=C find public -name 'prescript-*.js' -exec sed -i '' \
 
 # marketing landing replaces the Quartz index at /
 cp landing.html public/index.html
+# standalone explore page (cleanUrls serves it at /explore)
+cp explore.html public/explore.html
+rm -f public/explore   # remove Quartz's extensionless copy if present
+# site-wide top nav bar on all wiki pages
+python3 ../tools/inject_nav.py public
 cd public
 if [ ! -d .vercel ]; then
   npx vercel link --yes --project amphour-wiki --scope frankie-eight-days-projects
