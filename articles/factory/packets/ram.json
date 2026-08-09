@@ -1,0 +1,620 @@
+{
+ "concept": "ram",
+ "name": "RAM",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": "RAM",
+ "claims": [
+  {
+   "claim_text": "In embedded work random-access memory is the resource that runs out first, ahead of program storage, and is treated as the bottleneck when selecting a part.",
+   "quote_verbatim": "RAM is almost always the first thing I run out of. RAM is the bottleneck",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "A microcontroller offering an unusually large memory for its physical size \u2014 256 kilobytes of program storage and 64 kilobytes of RAM in a package available in through-hole, small-outline and leadless forms \u2014 was selected on that combination rather than on processor architecture, which was judged not to matter.",
+   "quote_verbatim": "the 170, which gives you 256K of flash and 64K of RAM, which is very unusual on a chip that small",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "Memory ceilings rather than processing speed are what push designers from the smallest processor cores up to larger ones, since the smaller parts cannot address as much program storage or RAM.",
+   "quote_verbatim": "the M0s can't access as much flash and RAM, which is how most people get pushed up into the M3s",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The choice presented when a program outgrows its part is to pay an engineer to make the code smaller or to move up to the larger device.",
+   "quote_verbatim": "It's either I'll call you or go up to the M3, right?",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Practitioners working in the deeply embedded range operate below about sixty megahertz and treat half a megabyte of RAM as an unfamiliar abundance.",
+   "quote_verbatim": "If I see a half meg of RAM, I have no idea what to do with it. That is so much.",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Very small parts remain in current use at the bottom of the range: a low-cost processor running at forty-eight megahertz with sixteen kilobytes of program storage and two kilobytes of RAM.",
+   "quote_verbatim": "It's got 16 kilobytes of flash, two kilobytes of RAM.",
+   "speaker": "Chris Gammell",
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Constrained platforms of that size force optimisation only when a design moves toward commercial production, since the two-kilobyte budget cannot absorb general-purpose library code.",
+   "quote_verbatim": "You have 16 kilobyte of flash and two kilobyte of RAM. So eventually when you go for, you know, commercial products, then you might need to, you know, optimize.",
+   "speaker": "Pallav Aggarwal",
+   "episode": 661,
+   "episode_title": "Blogging Electronics with Pallav Aggarwal",
+   "episode_url": "https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A processor with roughly two hundred and fifty-six bytes of RAM required the memory to be partitioned deliberately and the code hand-optimised instruction by instruction, with cycle counts tracked individually.",
+   "quote_verbatim": "I had very carefully partitioned my RAM because I think it only had like 256 bytes of RAM",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "A long-lived instrument design written in assembly on a twenty-year-old processor had reached the point where roughly three bytes of RAM remained, and new features had to be built within whatever was left.",
+   "quote_verbatim": "it's like, okay, we have three bytes of RAM now",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "opinion",
+   "kind": "case"
+  },
+  {
+   "claim_text": "The standard library is a major consumer of a small memory budget: using a formatted print routine even once forces the whole library to be linked in, adding a kilobyte or two, which is enough to justify writing a replacement routine by hand.",
+   "quote_verbatim": "I couldn't link in printf because I couldn't afford the one or two kilobytes",
+   "speaker": "Dave Jones",
+   "episode": 541,
+   "episode_title": "Chip Shortage Denier",
+   "episode_url": "https://theamphour.com/541-chip-shortage-denier/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The cost is invisible at the call site, since a single added line pulls in layers of library code whose memory use the author never sees.",
+   "quote_verbatim": "it can take up a couple of kilobytes just because you added one line in your code",
+   "speaker": "Dave Jones",
+   "episode": 541,
+   "episode_title": "Chip Shortage Denier",
+   "episode_url": "https://theamphour.com/541-chip-shortage-denier/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The same problem was familiar in earlier practice, where adding a print statement for debugging was impossible because the routine would have consumed more memory than the entire device had.",
+   "quote_verbatim": "the printf routine would take up more memory than the entire microcontroller had",
+   "speaker": "Ben Heck",
+   "episode": 490,
+   "episode_title": "An Interview with Ben Heck(endorn)",
+   "episode_url": "https://theamphour.com/490-an-interview-with-ben-heckendorn/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The working maxim that follows is to write code as though memory remains scarce, on the reasoning that program storage has become cheap while RAM has not.",
+   "quote_verbatim": "program like RAM is still rare. That's my motto",
+   "speaker": "Ben Heck",
+   "episode": 490,
+   "episode_title": "An Interview with Ben Heck(endorn)",
+   "episode_url": "https://theamphour.com/490-an-interview-with-ben-heckendorn/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A component shortage that forced substitution to a variant with half the memory required the existing code base to be halved as well, achieved by disabling functionality rather than by redesign.",
+   "quote_verbatim": "it was actually half the memory, half the RAM, half the flash, half the RAM",
+   "speaker": "Chris Gammell",
+   "episode": 541,
+   "episode_title": "Chip Shortage Denier",
+   "episode_url": "https://theamphour.com/541-chip-shortage-denier/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "A vendor's radio protocol stack supplied as a binary occupies a fixed region of both program storage and RAM that the application must reserve and must not touch, with the stack at the bottom of the address space and the bootloader at the top, both in protected regions.",
+   "quote_verbatim": "you just basically have to, like, preserve part of your flash and part of your RAM",
+   "speaker": "Chris Gammell",
+   "episode": 516,
+   "episode_title": "Thermions Aren't A Thing",
+   "episode_url": "https://theamphour.com/516-thermions-arent-a-thing/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Security material carried over from mobile practice does not fit constrained devices: a certificate sized for a phone application can consume all the RAM available on an embedded target.",
+   "quote_verbatim": "that certificate uses all the RAM that's available on the device",
+   "speaker": "Jonathan Beri",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Protocols inherit the assumptions of what they were designed for, and the web protocols were never optimised for a limited memory budget or a small maximum packet size, which is what motivated a constrained-device alternative modelled closely on them.",
+   "quote_verbatim": "they didn't optimize for, you know, a limited amount of RAM or a small MTU size communications",
+   "speaker": "Jonathan Beri",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Graphics is where memory demand grows fastest: holding a full frame buffer means every pixel occupies memory, which requires both substantial RAM and enough processing to move all those pixels.",
+   "quote_verbatim": "you need a fair amount of RAM, at least at that time, and secondly, you need a fair amount of CPU power in order to push all those pixels",
+   "speaker": "Jeroen Domburg",
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "That constraint still binds on contemporary microcontrollers: a part with a hundred and ninety-two kilobytes of RAM, generous for its class, still cannot hold a complete frame buffer.",
+   "quote_verbatim": "it's like 192 kilobytes of Ram, but it doesn't, still doesn't have enough Ram to have a full frame buffer",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The historical transition from text and executables to bitmapped images, fonts and graphical elements is what caused memory requirements to explode, since a program made only of instructions is small by comparison.",
+   "quote_verbatim": "when you start doing bitmaps, storing bitmap images and fonts and other graphical elements, that's when the explosion in the amount of memory needed took off",
+   "speaker": "Ken Shirriff",
+   "episode": 361,
+   "episode_title": "An Interview with Ken Shirriff",
+   "episode_url": "https://theamphour.com/361-an-interview-with-ken-shirriff/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "On early bitmapped workstations the display consumed roughly half the total memory, and programs would blank part of the screen in order to reclaim that RAM for their own use.",
+   "quote_verbatim": "You'd end up using half of your RAM just for the screen.",
+   "speaker": "Ken Shirriff",
+   "episode": 361,
+   "episode_title": "An Interview with Ken Shirriff",
+   "episode_url": "https://theamphour.com/361-an-interview-with-ken-shirriff/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Large memory in mobile processors is achieved by stacking a second die carrying the memory on top of the processor die inside one package rather than by placing separate parts on the board.",
+   "quote_verbatim": "It's physically piggybacked on top of the silicon of the processor.",
+   "speaker": "Dave Jones",
+   "episode": 54,
+   "episode_title": "An Interview with Jack Ganssle - Embedded Elchee Epexegesis",
+   "episode_url": "https://theamphour.com/the-amp-hour-54-embedded-elchee-epexegesis/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "That integration is what makes such a processor a complete system rather than a bare core: display drivers and memory are built in, whereas a plain processor requires everything to be added around it to become useful.",
+   "quote_verbatim": "it has the flip chip RAM on top of it inside the one chip",
+   "speaker": "Dave Jones",
+   "episode": 58,
+   "episode_title": "Multicopter, DIY drones & Tektronix - Zappy Zendik Zoilism",
+   "episode_url": "https://theamphour.com/the-amp-hour-58-zappy-zendik-zoilism/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "In a high-speed board design the memory interface, not the display interface, is the signal-integrity problem: a display link is a terminated differential pair and straightforward, while the memory bus is multi-drop and running fast.",
+   "quote_verbatim": "The difficulty is really in the RAM because that's this multi-drop bus still running at a very high speed.",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Getting the memory interface working on a newly chosen programmable logic device was the riskiest element of one camera design, with a fallback to the previous device planned if it had not worked within weeks of the deadline.",
+   "quote_verbatim": "Probably the most worried I was, was getting the RAM working on the ECP5.",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "Memory bandwidth rather than capacity set the resolution limit on that design, which consumed more than sixty percent of a theoretical 4.8 gigabytes per second.",
+   "quote_verbatim": "the theoretical bandwidth on the RAM is about 4.8 gigabytes per second",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "First-in first-out buffers are required in front of shared memory because the memory must be time-shared between the incoming data, the readout for display and its own refresh cycles, so writes have to be pausable; true dual-port memory would remove the need for them.",
+   "quote_verbatim": "If you had true dual port memory, you wouldn't need the FIFO.",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The resulting data path fills a buffer from the incoming stream, trips logic at a fill level that drains it into main memory, and has separate logic read back out at the display rate through a second buffer while applying gain, offset and colour processing.",
+   "quote_verbatim": "it hits a fill level. And that trips logic that starts reading the data out of the FIFO and dumping it into RAM",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Capacity translates directly into capability in a capture instrument, where record time scales with installed memory: doubling to thirty-two gigabytes would extend recording to about sixteen seconds.",
+   "quote_verbatim": "You could potentially go to 32 gigs, yeah. And that'll give you what? How many seconds? 16 seconds record time.",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The limit on installing more was the memory controller rather than the board: signal integrity would have supported a second module, but the controller as implemented supported only one.",
+   "quote_verbatim": "the RAM controller only supports one stick",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Capture instruments that stream to the host rather than buffering locally shift the constraint onto the host's memory, where analogue data sampled at fifty megasamples per second exhausts even a sixteen-gigabyte machine within tens of seconds.",
+   "quote_verbatim": "analog data sampled at 50 mega sample per second, that takes up a lot of Ram",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "An operating system's memory appetite decides which class of processor can run it: a full general-purpose kernel needs megabytes and is cramped at eight, so a device with half a megabyte runs a real-time operating system instead.",
+   "quote_verbatim": "you only have like in half a megabyte of RAM to work with",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Running the general-purpose kernel on such a device requires cutting it back to the point that it is barely the same system, and eight megabytes is simultaneously enormous by microcontroller standards and tight by kernel standards.",
+   "quote_verbatim": "nowadays you can probably get away with like in eight megabytes, but eight megabytes is really cramped",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The boot sequence on a memory-managed system reads the kernel image from storage into RAM at some address and sets the program counter to that address, after which loadable driver modules are read from a file system into RAM and initialised.",
+   "quote_verbatim": "it reads it into RAM at some location and it literally just sets the program counter",
+   "speaker": null,
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "That arrangement creates a bootstrapping order problem, since enough drivers must be compiled into the kernel image for it to reach the storage device and file system that hold the remaining modules.",
+   "quote_verbatim": "there's some chicken and the egg problems",
+   "speaker": null,
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "An interpreted language on a microcontroller stores its compiled bytecode in RAM rather than in program storage, so the memory budget must accommodate the program itself and not only its data.",
+   "quote_verbatim": "the byte code is stored in Ram. It's not stored in your flash",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Source comments carry a runtime cost in such an environment, because the file is loaded into RAM in its entirety, so the memory has to hold the comments as well as the code.",
+   "quote_verbatim": "you've got to have the RAM for all your comments as well",
+   "speaker": "Tony DiCola",
+   "episode": 323,
+   "episode_title": "An Interview with Tony DiCola",
+   "episode_url": "https://theamphour.com/323-an-interview-with-tony-dicola/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Executing from RAM rather than from program storage changes power consumption measurably, with one low-power part quoted at thirty-two microamps per megahertz and roughly two microamps per megahertz of difference between the two execution sources.",
+   "quote_verbatim": "It can run at 32 microamps per meg.",
+   "speaker": null,
+   "episode": 636,
+   "episode_title": "Discovering Cursed Connectors",
+   "episode_url": "https://theamphour.com/636-discovering-cursed-connectors/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A trace peripheral can be pointed at an address in RAM to record program flow in a buffer the designer allocates; at eight bytes per recorded branch, a two-hundred-and-fifty-six byte buffer holds about thirty-two branches.",
+   "quote_verbatim": "here's my Ram address that I want you to keep this buffer in",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Loading configuration or code into a peripheral's RAM at every wake-up, rather than maintaining firmware images in each device, is a deliberate architecture that removes the problem of keeping separate configurations correct.",
+   "quote_verbatim": "when I wake up, I just have to go write this into all of the chips RAM and then it'll do the right thing",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A machine controller with limited RAM cannot hold an entire job, so the toolpath is streamed to it one move at a time and buffered; a part with more memory allows a deeper planner queue until the depth stops being the limiting factor.",
+   "quote_verbatim": "you don't load your job onto the Uno. You're sending it a move at a time and it's buffering them",
+   "speaker": null,
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Host memory shows a threshold effect in compilation and toolpath generation: exceeding available RAM sends the process into paging and lengthens run time sharply, while crossing back above the requirement can cut the time by an order of magnitude.",
+   "quote_verbatim": "if you exceed your RAM, it's your, your compile time is going to jump",
+   "speaker": "Dave Jones",
+   "episode": 138,
+   "episode_title": "An Interview with Ryan Brown - Effortless Equipment Extensibility",
+   "episode_url": "https://theamphour.com/the-amp-hour-138-effortless-equipment-extensibility/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "One generation job was brought down to six hours only by raising the host machine to thirty-two gigabytes.",
+   "quote_verbatim": "I had to take my machine up to 32 gigabytes. Of RAM.",
+   "speaker": null,
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "Once past the threshold the improvement is abrupt rather than gradual, with run time dropping to roughly a tenth.",
+   "quote_verbatim": "once you cross that threshold of, like, there's enough RAM, then the time just drops by, you know, a tenth",
+   "speaker": null,
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Memory that is soldered directly to the board rather than socketed cannot be upgraded without desoldering, and a machine built to a custom memory specification is assembled to order rather than drawn from stock.",
+   "quote_verbatim": "The solid state drive and the RAM are soldered directly to the circuit board",
+   "speaker": "Dave Jones",
+   "episode": 408,
+   "episode_title": "Tronnort Software Rises Again!",
+   "episode_url": "https://theamphour.com/408-tronnort-software-rises-again/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "In server fleets memory is frequently stranded, with capacity sitting unused on a machine whose processing is idle and no mechanism to lend it to another machine that needs it.",
+   "quote_verbatim": "you often have stranded RAM where I'm not a CPU on this machine, but I have plenty of RAM",
+   "speaker": "Rick Altherr",
+   "episode": 357,
+   "episode_title": "An Interview with Rick Altherr",
+   "episode_url": "https://theamphour.com/357-an-interview-with-rick-altherr/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The cost of memory shaped early processor architecture directly: an eight-bit external bus variant of a sixteen-bit processor was insisted upon, and became the version widely adopted, because memory was expensive enough to justify halving the number of parts.",
+   "quote_verbatim": "the reason he did, which is the reason we all bought it, was because RAM was so goddamn expensive",
+   "speaker": "Chuck Peddle",
+   "episode": 241,
+   "episode_title": "An Interview With Chuck Peddle - Charismatic Chipmaking Coryphaeus",
+   "episode_url": "https://theamphour.com/241-an-interview-with-chuck-peddle-charismatic-chipmaking-coryphaeus/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Some early programmable machines had no addressable memory at all, offering only a stack a few entries deep.",
+   "quote_verbatim": "I've had machines that I had to program on that didn't even have RAM. You only had a stack that was 8 deep.",
+   "speaker": "Jeri Ellsworth",
+   "episode": 35,
+   "episode_title": "An Interview with Jeri Ellsworth - The Ternary Tussle",
+   "episode_url": "https://theamphour.com/the-amp-hour-35-the-ternary-tussle/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Memory technology preceding random-access parts was recirculating shift-register memory, a single-input single-output device that behaved as a first-in first-out buffer rather than allowing arbitrary access.",
+   "quote_verbatim": "his was designed around shift register memory. Recirculating memory.",
+   "speaker": "Lee Felsenstein",
+   "episode": 684,
+   "episode_title": "Lee Felsenstein: The Computer Revolution & Counterculture",
+   "episode_url": "https://theamphour.com/684-lee-felsenstein-the-computer-revolution-counterculture/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Development before erasable storage was mediated by emulators: a device that presented itself as memory to the machine under development while appearing as writable storage to the host, which avoided repeatedly erasing parts under ultraviolet light.",
+   "quote_verbatim": "The computer with assembler, which serves for that development process, sees it as RAM.",
+   "speaker": null,
+   "episode": 247,
+   "episode_title": "An Interview with Voja Antonic - Gerontogenous Galaksija Genesis",
+   "episode_url": "https://theamphour.com/247-an-interview-with-voja-antonic-gerontogenous-galaksija-genesis/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Historically significant machines ran in what would now be trivial amounts of memory, including a fully discrete guidance computer with four kilobytes and a working controller written in machine code within two kilobytes.",
+   "quote_verbatim": "a sprinkler controller written in machine code in 2K of RAM",
+   "speaker": "Barry Marshall",
+   "episode": 709,
+   "episode_title": "Nobel Prize Winner Dr Barry Marshall",
+   "episode_url": "https://theamphour.com/709-nobel-prize-winner-dr-barry-marshall/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A microcontroller is conventionally defined as a part carrying both its own RAM and its own program storage, so a device with internal RAM alone does not strictly qualify and starts with nothing to execute at power-up.",
+   "quote_verbatim": "the definition of a microcontroller is that it has on board RAM and ROM",
+   "speaker": "Dave Jones",
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Adding memory to a processor complicates timing closure, because more memory means more routing to carry addresses from the processors and more concurrent accesses to arbitrate on the bus.",
+   "quote_verbatim": "So more routing to do to get the addresses to the RAM from the processors.",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Portability between programmable logic vendors requires memory blocks to be isolated in their own wrapper, because vendors' memory primitives differ and one vendor's memory may need two clock cycles to complete a read where another needs one.",
+   "quote_verbatim": "one vendor's RAM may take two clocks to do a readout",
+   "speaker": "Jeri Ellsworth",
+   "episode": 147,
+   "episode_title": "An interview with Jeri Ellsworth - Absorptive Augmented Actuality",
+   "episode_url": "https://theamphour.com/the-amp-hour-147-absorptive-augmented-actuality/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The design should therefore be written to tolerate differing clock counts rather than assuming a fixed access latency.",
+   "quote_verbatim": "leave that kind of flexibility when you're doing your design",
+   "speaker": "Jeri Ellsworth",
+   "episode": 147,
+   "episode_title": "An interview with Jeri Ellsworth - Absorptive Augmented Actuality",
+   "episode_url": "https://theamphour.com/the-amp-hour-147-absorptive-augmented-actuality/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Memory contents are a target in hardware security work, since sensitive material copied into RAM at power-up for speed becomes readable if the chip's protection can be downgraded to allow debug access.",
+   "quote_verbatim": "the critical contents were copied into Ram on power up",
+   "speaker": null,
+   "episode": 575,
+   "episode_title": "New Life Skills with Joe Grand",
+   "episode_url": "https://theamphour.com/575-new-life-skills-with-joe-grand/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "One published attack chain reduced a device's readout protection from its maximum level to a level that grants debug access limited to RAM, which was sufficient because the private material was resident there during a firmware update.",
+   "quote_verbatim": "which gives you debug access, but only to Ram",
+   "speaker": null,
+   "episode": 575,
+   "episode_title": "New Life Skills with Joe Grand",
+   "episode_url": "https://theamphour.com/575-new-life-skills-with-joe-grand/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Memory faults present as system-wide erratic behaviour rather than as a clean failure: one instrument ran correctly for about thirty minutes before every relay and driver began operating at random as the controller emitted garbage onto its data lines.",
+   "quote_verbatim": "That was a Ram failure that caused that one.",
+   "speaker": null,
+   "episode": 431,
+   "episode_title": "An Interview with Adam McCombs",
+   "episode_url": "https://theamphour.com/431-an-interview-with-adam-mccombs/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Baking a model into read-only memory instead of holding it in RAM allows it to be accessed far faster and entirely on chip, at the cost of fixing its contents at manufacture.",
+   "quote_verbatim": "They've, they've basically baked older models into ROM instead of using RAM.",
+   "speaker": "Luke Beno",
+   "episode": 722,
+   "episode_title": "AI Tooling with Matt Liberty and Luke Beno",
+   "episode_url": "https://theamphour.com/722-ai-tooling-with-matt-liberty-and-luke-beno/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The generational memory increases that characterised earlier computing have slowed, with one console generation moving from eight to sixteen gigabytes, described as the smallest such increment on record where a doubling or more had been normal.",
+   "quote_verbatim": "which is actually the smallest increment in RAM size ever in console generation",
+   "speaker": "Ben Heck",
+   "episode": 490,
+   "episode_title": "An Interview with Ben Heck(endorn)",
+   "episode_url": "https://theamphour.com/490-an-interview-with-ben-heckendorn/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Where memory scaling slows, manufacturers differentiate products on other axes such as power consumption and storage technology rather than on capacity alone.",
+   "quote_verbatim": "manufacturers will find other ways to differentiate and improve their products",
+   "speaker": "Chris Gammell",
+   "episode": 61,
+   "episode_title": "Moore's Law, GaN and SiC devices - Gallimaufry GaN Gabble",
+   "episode_url": "https://theamphour.com/the-amp-hour-61-gallimaufry-gan-gabble/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  }
+ ],
+ "capped": false,
+ "attribution_notes": "Episodes on the speaker-map unreliable list are attributed by content or left unattributed."
+}

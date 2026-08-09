@@ -8,6 +8,12 @@
   topics. Extractor correctly declined to invent them; evidence would have to
   come from another bundle or a targeted transcript search.
 
+- **semiconductor-fab**: three passages from the "Chips And Fabs And Garages"
+  episode carry `episode: null` in the bundle and are uncitable (dry etch /
+  SF6 content was covered from eps 134/120 instead). Multiple other bundles
+  also showed a single null-episode passage 0. Check the bundle builder for
+  the null-episode hole before batch 2.
+
 ## Kimi API behavior (learned 2026-08-08 night)
 
 - Kimi returns **403 permission_error with "billing cycle" quota text for

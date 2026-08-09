@@ -1,0 +1,566 @@
+{
+ "concept": "github",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "github",
+  "census": "union",
+  "aliases": [
+   "github"
+  ],
+  "children": [
+   "command-line-interface",
+   "discord",
+   "file-format",
+   "gitlab",
+   "project-documentation",
+   "pull-request",
+   "slack"
+  ],
+  "neighbors": {
+   "twitter": 8,
+   "subversion": 4
+  },
+  "pins_pre_cap": 72,
+  "pins_final": 72,
+  "pins_by_depth": {
+   "explains": 45,
+   "opinion": 27
+  },
+  "pins_by_role": {
+   "core": 61,
+   "neighbor": 4,
+   "child": 7
+  },
+  "capped": false,
+  "passages_yielding_claims": 46,
+  "passages_killed": 26
+ },
+ "claims": [
+  {
+   "claim_text": "The platform is built for linear, text-based version control, and its front end is very good at exactly that. Hardware design files are graph-based rather than linear, which is a different revision-control problem: work that looks like text belongs in one, work that looks like hardware belongs in a tool built for it.",
+   "quote_verbatim": "GitHub is incredibly good at linear text-based version control",
+   "speaker": "Zach Homet",
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The consequence for board files is that the difference between two revisions is largely opaque: an ASCII-format design lets some changes be discerned by eye, but for the most part the diff only tells you that the file changed.",
+   "quote_verbatim": "you just mostly know that that file is different",
+   "speaker": "Chris Gammell",
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Library structure decides whether revision control says anything useful. Storing one footprint or one schematic symbol per file, with the directory acting as the library, makes each addition visible as its own change.",
+   "quote_verbatim": "each footprint. So like I saw 23 footprint is its, is its own file",
+   "speaker": "Chris Gammell",
+   "episode": 370,
+   "episode_title": "Alternate Info Sources",
+   "episode_url": "https://theamphour.com/370-alternate-info-sources/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The alternative produces a useless record: a monolithic library file reports only that it grew from about two thousand characters to two thousand one hundred, so someone must open the file and find what actually changed.",
+   "quote_verbatim": "your library file grew from, you know, 2000 characters to 2100 characters",
+   "speaker": "Chris Gammell",
+   "episode": 370,
+   "episode_title": "Alternate Info Sources",
+   "episode_url": "https://theamphour.com/370-alternate-info-sources/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "There are two models of capture. Continuous tracking records every component move from one coordinate to another and can replay all of it; the snapshot-and-commit model records only the differences the author chose to mark, which is what keeps the history readable when the author saves compulsively.",
+   "quote_verbatim": "the GitHub kind of thing is more of a snapshot and then you, you know, you commit it",
+   "speaker": "Chris Gammell",
+   "episode": 122,
+   "episode_title": "Processors, CEOs & Soldering irons - Plentiful Perfunctory Programs",
+   "episode_url": "https://theamphour.com/the-amp-hour-122-plentiful-perfunctory-programs/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "The generational difference from the previous system is the branching model: centralised version control was used through a graphical client integrated into the file manager, whereas the newer model is built on forking a line of work and merging it back.",
+   "quote_verbatim": "the Git style of things is like, you know, actually like forking different pieces of code and then being able to merge it all back together",
+   "speaker": "Dave Jones",
+   "episode": 152,
+   "episode_title": "Firmware, Netburner and Semiconductors - Chris's Capitalism Colloquy",
+   "episode_url": "https://theamphour.com/the-amp-hour-152-chriss-capitalism-colloquy/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The system is nominally distributed but is used centrally: when every participant pulls from the same host, that host is the authoritative copy in practice, and the copies reconcile once it is reachable again.",
+   "quote_verbatim": "if you have a copy and I have a copy and we both pulled from GitHub, it's a centralized copy",
+   "speaker": "Chris Gammell",
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Organisations that need the guarantee run their own instance rather than depending on the hosted service, which is what the distributed design was for.",
+   "quote_verbatim": "no, no, no, I host it myself, or I have other infrastructure",
+   "speaker": "Chris Gammell",
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The distinction that matters when explaining this is that the version control system and the hosting service are different things: the underlying tool came out of Linux development, and the hosted service is the social layer on top, which is what made it the default place to share designs.",
+   "quote_verbatim": "GitHub is the social online part of it",
+   "speaker": "Chris Gammell",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "What makes the branching model comprehensible is seeing it: a client that draws the commit tree turns merges from an abstraction into something legible, in a way the standard reference book does not, because that book is written for software developers.",
+   "quote_verbatim": "it actually helps you to visualize",
+   "speaker": "Chris Gammell",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The rest is use: running it a few times and breaking it a few times is what actually teaches it.",
+   "quote_verbatim": "actually using it a couple times, breaking it a couple times, that helps a lot",
+   "speaker": "Chris Gammell",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Publishing a one-off project does not require learning the tool at all: the web interface accepts a new repository and dragged-in files, which takes tens of seconds and leaves the work somewhere others can clone and branch from.",
+   "quote_verbatim": "So GitHub has a drag and drop interface. All you have to do is create the repository, drag the files over, done.",
+   "speaker": "Dave Jones",
+   "episode": 621,
+   "episode_title": "The Magic of Calipers",
+   "episode_url": "https://theamphour.com/621-the-magic-of-calipers/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "For a fragment rather than a project there is a lighter route: a paste service on the same site that keeps revisions and supports forks without installing anything locally.",
+   "quote_verbatim": "It's just a simple way, without the software, to paste your code",
+   "speaker": "Dave Jones",
+   "episode": 158,
+   "episode_title": "Hyperloop, Upverter and Soldering - Unbelievable USB Ustulater",
+   "episode_url": "https://theamphour.com/the-amp-hour-158-unbelievable-usb-ustulater/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "That service is indexed separately, so a search of the main site does not reach it, and the published fragment gets a generated identifier rather than a meaningful project name.",
+   "quote_verbatim": "It's not integrated with the search on GitHub",
+   "speaker": "Dave Jones",
+   "episode": 158,
+   "episode_title": "Hyperloop, Upverter and Soldering - Unbelievable USB Ustulater",
+   "episode_url": "https://theamphour.com/the-amp-hour-158-unbelievable-usb-ustulater/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Pressing the full-stop key while viewing a repository opens an editor on it in the browser.",
+   "quote_verbatim": "if you go to a Git repository and then you hit the period key",
+   "speaker": "Chris Gammell",
+   "episode": 612,
+   "episode_title": "Slapping Industries",
+   "episode_url": "https://theamphour.com/612-slapping-industries/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A development container defined alongside the code removes environment setup from collaboration entirely: the toolchain is pre-installed in the container, and a collaborator opening the shared link gets the code and the toolchain already configured rather than a remote desktop to someone else's machine.",
+   "quote_verbatim": "all of your tool chain is completely pre-installed in there",
+   "speaker": "Chris Gammell",
+   "episode": 654,
+   "episode_title": "Pseudo Code...Pseudo Good",
+   "episode_url": "https://theamphour.com/654-pseudo-code-pseudo-good/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The contribution mechanism is fork then request: forking copies the repository into your own account as it stood at that instant, you make your changes there, and you then ask the original maintainer whether they want them merged back.",
+   "quote_verbatim": "you would fork the repository",
+   "speaker": "Chris Gammell",
+   "episode": 530,
+   "episode_title": "Living Through Chipageddon",
+   "episode_url": "https://theamphour.com/530-living-through-chipageddon/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "That mechanism transfers directly to hardware libraries. Customers were able to draw the missing library parts for boards several years old and submit them, after which the maintainer merged the contribution and it became available to everyone immediately.",
+   "quote_verbatim": "just issue a pull request. We can throw that in and then it's available to everybody instantly",
+   "speaker": "Tony Kloppenstein",
+   "episode": 157,
+   "episode_title": "An Interview with the SparkFun Team - Efficacious Engineering Ensemble",
+   "episode_url": "https://theamphour.com/the-amp-hour-157-efficacious-engineering-ensemble/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The same move solved a revision-control problem that had persisted for years, and gave the vendor a public-facing way to present the revision history of its boards.",
+   "quote_verbatim": "we've always struggled with revision control",
+   "speaker": "Tony Kloppenstein",
+   "episode": 157,
+   "episode_title": "An Interview with the SparkFun Team - Efficacious Engineering Ensemble",
+   "episode_url": "https://theamphour.com/the-amp-hour-157-efficacious-engineering-ensemble/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Migrating product files onto the platform also changed how customer contributions and feedback were handled, alongside the documentation reorganisation it forced.",
+   "quote_verbatim": "getting all of our stuff ported over to GitHub so that way we can have an easier way to track customer feedback",
+   "speaker": "Tony Kloppenstein",
+   "episode": 157,
+   "episode_title": "An Interview with the SparkFun Team - Efficacious Engineering Ensemble",
+   "episode_url": "https://theamphour.com/the-amp-hour-157-efficacious-engineering-ensemble/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Design tools followed: storing part libraries in a repository means a symbol or footprint is pulled from the network when it is placed, rather than from a local cache or mirror.",
+   "quote_verbatim": "they enabled storing your parts libraries on GitHub",
+   "speaker": "Adam Wolf",
+   "episode": 167,
+   "episode_title": "An Interview with Adam Wolf - Brick & Board Biuners",
+   "episode_url": "https://theamphour.com/167-an-interview-with-adam-wolf-brick-board-biuners/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The open question for a shared parts library is organisational rather than technical: whether a contributed set of parts should be merged into the existing library for that manufacturer or kept as the contributor's own, which decides how the collection can be used later.",
+   "quote_verbatim": "How do you put that one in the existing Atmel library",
+   "speaker": "Chris Gammell",
+   "episode": 88,
+   "episode_title": "Yonderly Yodeling Yobbos",
+   "episode_url": "https://theamphour.com/the-amp-hour-88-yonderly-yodeling-yobbos/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Hardware groups use the same machinery for design review even without an automatic merge path, referring to a specific tag or commit number as the thing under review.",
+   "quote_verbatim": "look at this, this tag or this, uh, commit number",
+   "speaker": "Chris Gammell",
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Forking works for hardware in one direction only: a published design can be forked into a derivative and taken anywhere, but reintegration is the hard part, and at the board level it does not work at all.",
+   "quote_verbatim": "you can't do it at the PCB level",
+   "speaker": "Chris Gammell",
+   "episode": 154,
+   "episode_title": "Arduino, IndiGoGo and Hack-a-Day - Doodad Dealer Dancing",
+   "episode_url": "https://theamphour.com/the-amp-hour-154-doodad-dealer-dancing/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A maintainer's review time is the scarce resource, so mechanical objections should be automated away: time spent telling a contributor to change tabs to spaces is the kind of friction that accumulates into the thousand small cuts that kill participation in a project.",
+   "quote_verbatim": "death by a thousand paper cuts",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Project management can run through the same issue tracker, with a subset of issues explicitly labelled as suitable for a first contribution so that newcomers have an identified way in.",
+   "quote_verbatim": "we have issues particularly marked that are good first issues",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The chat layer is a separate choice. A service tightly integrated with the repository gives change history in the channel, but leaves the boundaries of the space vague; a general chat platform supplies channels, a code of conduct and moderation, which is what a community actually needs.",
+   "quote_verbatim": "it's very vague as to what those boundaries are",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The review interface is the model hardware change control has not reached: exactly what changed shown with colour-coded indicators, test results from the automated build pulled in beside it, and everything consolidated in one place so an approver can review it quickly.",
+   "quote_verbatim": "GitHub does a very nice job of quickly identifying exactly what's changed",
+   "speaker": "Michael Corr",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Nobody joining a software company proposes building their own version control, because the tools are free, ubiquitous and shipped with the operating system — a contrast with how hardware teams still handle the same problem.",
+   "quote_verbatim": "there's no reason to, right? Like, it's like, it's just, it's unheard of",
+   "speaker": "Michael Corr",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "One workflow is to stop at proof of concept and publish: photograph the result, write it up, push everything to a repository, and move to the next thing. Over a decade that produces a body of work others pick up and extend.",
+   "quote_verbatim": "I like to push everything to GitHub or somewhere and then move on to the next thing",
+   "speaker": "Trammell Hudson",
+   "episode": 463,
+   "episode_title": "An Interview with Trammell Hudson",
+   "episode_url": "https://theamphour.com/463-an-interview-with-trammell-hudson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The end state of that model is handing over the commit rights to whoever wants to maintain the project and turn it into something better.",
+   "quote_verbatim": "handing the commit keys over to somebody who wants to maintain it",
+   "speaker": "Trammell Hudson",
+   "episode": 463,
+   "episode_title": "An Interview with Trammell Hudson",
+   "episode_url": "https://theamphour.com/463-an-interview-with-trammell-hudson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A project published that way is only useful if it is readable: with the code, the hardware and the design documents all in the repository and properly commented, any individual application can be understood from two or three pages of source.",
+   "quote_verbatim": "You can run through and see how any individual application works just by reading two or three pages of C",
+   "speaker": "Travis Goodspeed",
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Pushing files to a repository has displaced written documentation rather than supplementing it: schematics get dumped there and the write-up never happens.",
+   "quote_verbatim": "All it is is jumping, dumping everything to GitHub",
+   "speaker": "Dave Jones",
+   "episode": 416,
+   "episode_title": "An Interview with James Bruton",
+   "episode_url": "https://theamphour.com/416-an-interview-with-james-bruton/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The gap that leaves is at the entry point. A repository can carry a rendered page describing the project, and most published projects do not have one, so someone arriving has no way to see what the thing is without reading the source tree.",
+   "quote_verbatim": "you can make these read, read, read me documents",
+   "speaker": "Chris Gammell",
+   "episode": 335,
+   "episode_title": "When the TV watches you",
+   "episode_url": "https://theamphour.com/335-when-the-tv-watches-you/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "For hardware the same argument extends to output formats: publishing the fabrication files and rendered PDFs alongside the sources, with a link to an online viewer, lets someone evaluate the board without owning the design tool.",
+   "quote_verbatim": "there's online viewers you can do too",
+   "speaker": "Chris Gammell",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A repository is still several steps away from a manufactured board: the visitor must find the design, download it, identify the correct fabrication files, verify them, upload them, choose the process options and then order — where a prepared upload at a board house is one action.",
+   "quote_verbatim": "They have to go to the GitHub, find the board, download the board, find, find the correct Gerber files",
+   "speaker": "Dave Jones",
+   "episode": 453,
+   "episode_title": "Vertically Integrated Design Engineering",
+   "episode_url": "https://theamphour.com/453-vertically-integrated-design-engineering/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Publication order can be deliberate: pushing everything to the repository before announcing it means the links are live and working by the time anyone follows them.",
+   "quote_verbatim": "So I'll put it all live on GitHub before it goes up",
+   "speaker": "Bunnie Huang",
+   "episode": 336,
+   "episode_title": "An Interview with Bunnie Huang (2nd)",
+   "episode_url": "https://theamphour.com/the-amp-hour-336-an-interview-with-bunnie-huang-2nd/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where documentation lives determines whether it survives. Reverse-engineering work that exists only inside a social platform is hostage to that platform, and moving it into a repository or a documentation archive is what keeps it available.",
+   "quote_verbatim": "getting the stuff documented in places like the internet archive and other documentation archives",
+   "speaker": "Eric Schlaepfer",
+   "episode": 609,
+   "episode_title": "Open Circuits with Eric Schlaepfer and Windell Oskay",
+   "episode_url": "https://theamphour.com/609-open-circuits-with-eric-schlaepfer-and-windell-oskay/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Project documentation is increasingly written in a lightweight markup language and kept in the repository beside the design, rather than in a separate document system.",
+   "quote_verbatim": "It's a markup, it's a markup language",
+   "speaker": "Bob Davidson",
+   "episode": 232,
+   "episode_title": "Impedance Matching\" with Davidson and Vandenbout - Presbytes Pushing Portfolios",
+   "episode_url": "https://theamphour.com/232-impedance-matching-with-davidson-and-vandenbout-presbytes-pushing-portfolios/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A site generated from a repository inverts the load model: committing to the main branch triggers a build that emits a page per document, where a dynamically generated site rebuilds every page from the database on every request, which becomes the bottleneck under load.",
+   "quote_verbatim": "It basically just generates a HTML page for every page",
+   "speaker": "Dave Jones",
+   "episode": 656,
+   "episode_title": "Pneumatic Tubes, Straight To The Home",
+   "episode_url": "https://theamphour.com/656-pneumatic-tubes-straight-to-the-home/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Dependency updates work in one direction only. A software library pulled in dynamically can be updated and the breakage inspected; a footprint committed to a board that has been fabricated cannot be updated at all, which is why footprints have to be checked before the board is sent.",
+   "quote_verbatim": "You don't get to do that with hardware. That's a one way road folks.",
+   "speaker": "Chris Gammell",
+   "episode": 186,
+   "episode_title": "Someone is watching...we think - Horme Hostility Hypochondriac",
+   "episode_url": "https://theamphour.com/186-someone-is-watching-we-think-horme-hostility-hypochondriac/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Treating the schematic as the control document makes the repository useful downstream: fit and no-fit status carried as a schematic attribute can be propagated programmatically into a spreadsheet the purchasing side will actually read, and the method only works if it is adopted completely.",
+   "quote_verbatim": "unless you commit 100% to do it that way, it doesn't work",
+   "speaker": "Dave Jones",
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Small teams get code review and collaboration from the hosted service without maintaining any infrastructure of their own, which is the practical reason it displaced self-managed systems.",
+   "quote_verbatim": "it's in the cloud. So you don't have to have infrastructure at your company that somebody needs to share",
+   "speaker": "Dave Jones",
+   "episode": 422,
+   "episode_title": "Stick 'Em On Whales",
+   "episode_url": "https://theamphour.com/422-stick-em-on-whales/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Using it for hardware repositories is now the norm rather than the exception, and command-line fluency — including judgement about when to commit — is a skill hardware engineers are expected to have.",
+   "quote_verbatim": "that's definitely a skill that hardware people should be working on",
+   "speaker": "Dave Jones",
+   "episode": 422,
+   "episode_title": "Stick 'Em On Whales",
+   "episode_url": "https://theamphour.com/422-stick-em-on-whales/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The operational habit that pays for itself is committing before regenerating anything, so that a wipe leaves the previous version recoverable.",
+   "quote_verbatim": "commit to your repo before you, before you regenerate",
+   "speaker": "Pallav Aggarwal",
+   "episode": 661,
+   "episode_title": "Blogging Electronics with Pallav Aggarwal",
+   "episode_url": "https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Employers began treating a public profile as a curriculum vitae, expecting candidates to have one and to have contributed to some number of projects.",
+   "quote_verbatim": "you need to have a public GitHub profile",
+   "speaker": "Chris Gammell",
+   "episode": 172,
+   "episode_title": "CAD courses and cross platform creation - Printing Propaedeutic Patterns",
+   "episode_url": "https://theamphour.com/172-cad-courses-and-cross-platform-creation-printing-propaedeutic-patterns/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Recruiting on the count of projects a candidate has started has a perverse effect: it removes the incentive to join and improve someone else's project, which is most of what the ecosystem needs.",
+   "quote_verbatim": "it basically disincentivizes people from joining other projects",
+   "speaker": "Chris Gammell",
+   "episode": 172,
+   "episode_title": "CAD courses and cross platform creation - Printing Propaedeutic Patterns",
+   "episode_url": "https://theamphour.com/172-cad-courses-and-cross-platform-creation-printing-propaedeutic-patterns/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Commit frequency is a weak signal in the same way, since a profile can show an enormous number of commits that consist of repeatedly correcting the previous one.",
+   "quote_verbatim": "you could literally be doing a thousand commits a day",
+   "speaker": "Chris Gammell",
+   "episode": 231,
+   "episode_title": "Supply Chain Woes And Wares - Nonplussed Neotechnic Nithing",
+   "episode_url": "https://theamphour.com/231-supply-chain-woes-and-wares-nonplussed-neotechnic-nithing/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The signal that carries information is the pull request rather than the profile: reading a candidate's submitted changes shows whether they understand version control, whether their code is legible, and whether they can discuss a change with other people — which is what tells an employer how it will be to work with them.",
+   "quote_verbatim": "show me your poll requests on GitHub",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 409,
+   "episode_title": "Electronics Consultant Impedance Matching",
+   "episode_url": "https://theamphour.com/409-electronics-consultant-impedance-matching/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The corresponding advice to a student is to contribute to an open-source project before applying anywhere, because it is the one part of an application that demonstrates all of that at once.",
+   "quote_verbatim": "any college student should take their time to, uh, contribute to an open source project",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 409,
+   "episode_title": "Electronics Consultant Impedance Matching",
+   "episode_url": "https://theamphour.com/409-electronics-consultant-impedance-matching/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "On a résumé a project line is worth more than unrelated employment history, and the way to acquire one is to take an existing project, modify it and document the work as it goes.",
+   "quote_verbatim": "take an existing project, modify it, do something nice with it",
+   "speaker": "Dave Jones",
+   "episode": 530,
+   "episode_title": "Living Through Chipageddon",
+   "episode_url": "https://theamphour.com/530-living-through-chipageddon/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "For someone who will not make videos or approach people directly, a repository or a project blog is the route to being known, since the work itself becomes the thing that circulates.",
+   "quote_verbatim": "it could be a github repo it could be you know it could be a blog where you're just documenting projects",
+   "speaker": "Chris Gammell",
+   "episode": 262,
+   "episode_title": "Jobs For Weirdos",
+   "episode_url": "https://theamphour.com/262-jobs-for-weirdos/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "This bundle is dominated by host commentary about personal preference between version control systems; that was dropped. What is kept is the mechanics of collaboration, the limits that apply to hardware files, documentation practice and hiring signals.",
+  "eps 181, 442, 519, 577, 611: attribution flagged unreliable. Claims are content-attributed to the guest whose project, company or hiring practice the passage describes.",
+  "ep 163: the Upverter founders speak under a diarisation label; the comparison between text-based and graph-based version control is content-attributed to the founder describing his own product's boundary with GitHub."
+ ],
+ "capped": false
+}

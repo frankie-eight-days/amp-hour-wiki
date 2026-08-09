@@ -1,0 +1,784 @@
+{
+ "concept": "gerber",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "gerber",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "gerber",
+   "gerber-format",
+   "gerber-standard"
+  ],
+  "children": [
+   "design-file",
+   "gerber-viewer",
+   "hoverboard",
+   "openroad",
+   "svg",
+   "vendor-lock-in",
+   "woodworking"
+  ],
+  "neighbors": {
+   "gds": 5,
+   "jlcpcb": 5,
+   "four-layer-pcb": 4
+  },
+  "episodes_with_kept_mentions": 94,
+  "mentions_kept": 144,
+  "pins_pre_cap": 101,
+  "pins_final": 101,
+  "pins_by_depth": {
+   "explains": 82,
+   "opinion": 19
+  },
+  "pins_by_role": {
+   "core": 87,
+   "child": 7,
+   "neighbor": 7
+  },
+  "speakers": [
+   [
+    "Chris Gammell",
+    34
+   ],
+   [
+    "Dave Jones",
+    33
+   ],
+   [
+    "Jonathan Hirschman",
+    3
+   ],
+   [
+    "Mohamed Kassem",
+    3
+   ],
+   [
+    "Laen",
+    2
+   ],
+   [
+    "Vincent Himpe",
+    2
+   ],
+   [
+    "Saar Drimer",
+    2
+   ],
+   [
+    "Tim Ansell",
+    2
+   ],
+   [
+    "Bob Davidson",
+    1
+   ],
+   [
+    "Adam Wolf",
+    1
+   ],
+   [
+    "Scott Driscoll",
+    1
+   ],
+   [
+    "Chris Church",
+    1
+   ],
+   [
+    "Luke Valenty",
+    1
+   ],
+   [
+    "Mike Szczys",
+    1
+   ],
+   [
+    "Mike Harrison",
+    1
+   ],
+   [
+    "Bart Dring",
+    1
+   ],
+   [
+    "Travis Goodspeed",
+    1
+   ],
+   [
+    "Jesse Vincent",
+    1
+   ],
+   [
+    "Christopher White",
+    1
+   ],
+   [
+    "Kieran O'Leary",
+    1
+   ]
+  ],
+  "capped": false,
+  "gated_out_by_concept": [
+   [
+    "four-layer-pcb",
+    66
+   ],
+   [
+    "jlcpcb",
+    62
+   ],
+   [
+    "vendor-lock-in",
+    28
+   ],
+   [
+    "hoverboard",
+    23
+   ],
+   [
+    "svg",
+    20
+   ],
+   [
+    "design-file",
+    18
+   ],
+   [
+    "gds",
+    17
+   ],
+   [
+    "woodworking",
+    11
+   ],
+   [
+    "openroad",
+    10
+   ]
+  ],
+  "gated_out_total": 255
+ },
+ "claims": [
+  {
+   "claim_text": "Gerber is a vector format: every feature has to be expressed as lines, so text is not stored as text but rendered into line work that only looks like a font.",
+   "quote_verbatim": "Gerbers generate things as lines. It's not like you can render fonts inside a Gerber file",
+   "speaker": "Dave Jones",
+   "episode": 79,
+   "episode_title": "Ludibrious Luxating Layout",
+   "episode_url": "https://theamphour.com/the-amp-hour-79-ludibrious-luxating-layout/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The format comes from photoplotting: a wheel of fixed apertures was selected by the file and light was shone through the chosen hole while an XY bed moved the artwork, which is why a Gerber names an aperture before drawing with it and why the original plotters could only make trace widths that existed on the wheel.",
+   "quote_verbatim": "these wheels with different size holes, different apertures in them, and that would expose the light through",
+   "speaker": "Dave Jones",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A Gerber can express a shape either as an arbitrary polygon or as a flash, a defined primitive stamped from an aperture; pads are normally flashes, which is what lets downstream tools recognise them as pads rather than as anonymous copper.",
+   "quote_verbatim": "in a Gerber file, you can define just a polygon. But typically, like if you have a pad, it's what's known as a flash",
+   "speaker": "Jonathan Hirschman",
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The chip-design equivalent, GDS, differs structurally from Gerber in that all layers live in one file rather than one file per layer; the foundry then splits that single file back out into one mask per layer.",
+   "quote_verbatim": "the Gerber layers, the different Gerber files. They're all combined in one file",
+   "speaker": "Mohamed Kassem",
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Gerber is a downsampling of the design: net identity is gone once the copper is flattened to shapes, so nothing downstream of the Gerber can tell that two touching pieces of copper were meant to be separate nets.",
+   "quote_verbatim": "the nets kind of all tie at the Gerber stage",
+   "speaker": "Chris Gammell",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Treating any export as an archive repeats the same loss in every domain — Gerbers for boards, STLs for mechanical, binaries for firmware are all downsampled outputs from which the original intent cannot be recovered.",
+   "quote_verbatim": "every like output file. If you just have Gerbers is a downsampling",
+   "speaker": null,
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The second digit of the Gerber coordinate format sets resolution in mils: 2:5 gives 0.01 mil, 2:4 gives 0.1 mil and 2:3 gives 1 mil, so exporting at too coarse a format quantises the whole board.",
+   "quote_verbatim": "that means it's a, has a resolution of 0.01 mils. Two colon four is 0.1 and two, three is one mil",
+   "speaker": "Dave Jones",
+   "episode": 504,
+   "episode_title": "This Is Just A Tribute",
+   "episode_url": "https://theamphour.com/504-this-is-just-a-tribute/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Laying out to a rounded imperial value taken from a metric spec drifts the board undersize: 0.09 mm is 3.54 thou, and a design built on a quoted 3.5 thou comes out under the intended metric dimension when the Gerber is exported back in metric.",
+   "quote_verbatim": "but they rounded it to 3.5. So you, so you use that 3.5, you took that as gospel and you laid out your entire board",
+   "speaker": "Dave Jones",
+   "episode": 504,
+   "episode_title": "This Is Just A Tribute",
+   "episode_url": "https://theamphour.com/504-this-is-just-a-tribute/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Design rule checking is run against the Gerbers before they leave, not only inside the schematic-capture tool, because the Gerbers are what the fab will actually build from.",
+   "quote_verbatim": "the actual DRC is a process which you do on the Gerbers before you send them away",
+   "speaker": "Chris Gammell",
+   "episode": 14,
+   "episode_title": "China, Entrepreneurs and Blue Collar Reality",
+   "episode_url": "https://theamphour.com/the-amp-hour-14-china-entrepreneurs-and-blue-collar-reality/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Open the exported files in a Gerber viewer other than the one built into your CAD tool; the second renderer shows the board slightly differently and surfaces mistakes the originating tool renders away.",
+   "quote_verbatim": "use a Gerber viewer that is different than the tool that you're using and just see it slightly differently and that brings up some things that you might want to fix",
+   "speaker": "Saar Drimer",
+   "episode": 286,
+   "episode_title": "An Interview with Saar Drimer",
+   "episode_url": "https://theamphour.com/286-an-interview-with-saar-drimer/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A fab's upload preview doubles as a file check: OSH Park identifies the layers from the uploaded zip and returns preview images, and its own operator routes in-progress designs through the site for that preview rather than trusting a desktop Gerber viewer.",
+   "quote_verbatim": "does some layer identification magic behind the scenes. Spits up a couple preview images to show you what your board will end up looking like",
+   "speaker": "Laen",
+   "episode": 149,
+   "episode_title": "An Interview with Laen - Purple PCB Philosophy",
+   "episode_url": "https://theamphour.com/the-amp-hour-149-purple-pcb-philosophy/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A commercial board house processes and inspects incoming Gerbers before manufacture and emails back anything that looks wrong; a fab that never queries anything is not checking your files.",
+   "quote_verbatim": "you send your Gerbers away and they process the Gerbers and look at them and check them before manufacture",
+   "speaker": "Dave Jones",
+   "episode": 74,
+   "episode_title": "Younker Youtube Yarling",
+   "episode_url": "https://theamphour.com/the-amp-hour-74-younker-youtube-yarling/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Browser-based Gerber viewers accept the whole output zip dragged in and render a preview, which makes a pre-send visual check cheap enough to do every time.",
+   "quote_verbatim": "you just grab, drag a zip of all your Gerber's onto it and it'll give you a preview",
+   "speaker": null,
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Online viewers render the Gerber set as a 3D board including vias, so the check covers what the copper and drill data actually say rather than what the layout tool intended.",
+   "quote_verbatim": "it's actually a 3D rendering of the, you know, everything. All the information on your Gerbers, all the vias and everything",
+   "speaker": "Chris Gammell",
+   "episode": 96,
+   "episode_title": "Senseless Saccadic Shemozzle",
+   "episode_url": "https://theamphour.com/the-amp-hour-96-senseless-saccadic-shemozzle/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Altium's output jobs script the whole release — Gerber layers, formats and bill of materials — so a company-standard job produces byte-identical output conventions across every project.",
+   "quote_verbatim": "you can have like a company standard out job so that it doesn't matter which project you do",
+   "speaker": "Dave Jones",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A scripted output job is a single point of failure: a misconfigured one silently exported only two layers of a four-layer board, and the error was caught by the fab's upload preview showing two layers rather than by anything in the CAD tool.",
+   "quote_verbatim": "he screwed up his out job and it took us a while to figure out that he screwed up his out job. So he was only outputting, exporting two layers",
+   "speaker": "Dave Jones",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Inner planes exported as negative images are a known interchange break: Altium emits an inverse image for a plane layer and at least one fab's front end shows those inner layers as blank while still reporting the correct layer count.",
+   "quote_verbatim": "PCB doesn't like the inverse inner copper layers that Altium produces",
+   "speaker": "Dave Jones",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Boards drawn in a general-purpose illustration tool export Gerbers carrying enormous amounts of redundant geometry, which fab vendors struggle with, and the resulting artwork can carry wrong or missing connections that only show up as a troubleshooting job after assembly.",
+   "quote_verbatim": "the fab vendor really hated the gerber files because of course he started in illustrator there's a ton of extra geometry",
+   "speaker": "Eric Schlaepfer",
+   "episode": 609,
+   "episode_title": "Open Circuits with Eric Schlaepfer and Windell Oskay",
+   "episode_url": "https://theamphour.com/609-open-circuits-with-eric-schlaepfer-and-windell-oskay/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Uploaded designs routinely ask for capabilities the service does not have — microvias, one mil clearances — because the process limits sit in help files nobody reads; the Gerber upload is where that mismatch first surfaces.",
+   "quote_verbatim": "we've been seeing things like, you know, microvias and we've been seeing people that are looking for clearances of one mil",
+   "speaker": "Jonathan Hirschman",
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Put the stack-up into the Gerber set itself rather than in a covering email, so the requirement travels with the files.",
+   "quote_verbatim": "bake in the stack up onto your Gerbers",
+   "speaker": "Dave Jones",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The mechanical layer is the carrier for manufacturing information, not just the board outline; large companies keep a title-block template on it holding the stack-up and the IPC standards the board must meet.",
+   "quote_verbatim": "mechanical layer is not just for doing your board outline. It's also for putting your manufacturing information around that",
+   "speaker": "Dave Jones",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Embedding the stack-up protects against the Gerbers being sent to a fab you never specified: a competent house compares the embedded stack-up with its own and queries the mismatch before building, whereas a bare Gerber set silently gets whatever stack-up that house happens to run.",
+   "quote_verbatim": "will see this and go, oh, you've got a stack up in here, but this doesn't match what we have",
+   "speaker": "Dave Jones",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Gerbers alone cannot drive assembly; the assembler also needs a merged bill of materials and placement file, because the Gerber says where the copper is but not which part goes on it.",
+   "quote_verbatim": "we call it the X, Y, or S file, which is the merge bill of materials and placement data",
+   "speaker": "Chris Church",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Rigid-flex cannot be ordered by uploading a Gerber set and waiting: the files have to carry extensive notes on panelisation, the full layer stack, which layer the flex sits on, how far the flex penetrates into the rigid section and how much the pads overlap, because the flex and rigid pads are glued together during pre-preg stacking.",
+   "quote_verbatim": "you've really got to have extensive notes on the panelization part of the Gerber",
+   "speaker": "Dave Jones",
+   "episode": 415,
+   "episode_title": "Ergs Per Second",
+   "episode_url": "https://theamphour.com/415-ergs-per-second/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Before online upload flows existed, the accepted way to convey rigid-flex intent was a separate mechanical layer carrying worded instructions and arrows marking which region is flex and which is rigid; the format itself never encoded it.",
+   "quote_verbatim": "you'll do it as a separate mechanical layer, for example. And you would, you know, just use worded instructions",
+   "speaker": "Dave Jones",
+   "episode": 727,
+   "episode_title": "Boat Anchor Warehouse",
+   "episode_url": "https://theamphour.com/727-boat-anchor-warehouse/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Ask the fab for the files it actually built from: they are routinely modified after upload, and debugging a board against your own pristine output hides any defect introduced downstream.",
+   "quote_verbatim": "then I asked for the Gerbers back, because I knew they'd been modified",
+   "speaker": "Chris Gammell",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The fab's incoming check is scoped to protect its own process, not your netlist, so a short introduced between two nets during the fab's own file handling passes that check untouched.",
+   "quote_verbatim": "it's really for the protection of the board maker and really the edge process",
+   "speaker": "Chris Gammell",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Finding an unintended short between fab-modified Gerbers and the original meant toggling layers manually with maximally contrasting colours assigned across the colour wheel — roughly three hours of visual comparison, with no automated tool able to do it.",
+   "quote_verbatim": "set them at, like, different, like, opposite colors. So, like, blue on one layer, yellow on another, red on another",
+   "speaker": "Chris Gammell",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Fabs each run different Gerber front ends and different CNC routing machines, so every incoming file set is translated into that shop's own machine format — which is why identical Gerbers do not produce identical results everywhere.",
+   "quote_verbatim": "all have different Gerber programs to actually",
+   "speaker": null,
+   "episode": 149,
+   "episode_title": "An Interview with Laen - Purple PCB Philosophy",
+   "episode_url": "https://theamphour.com/the-amp-hour-149-purple-pcb-philosophy/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Automated optical inspection works by comparing scans of the finished board against the submitted Gerbers to catch shorts and breaks.",
+   "quote_verbatim": "they compare scans of the board with the Gerbers in order to make sure that it, that there are no shorts",
+   "speaker": "Laen",
+   "episode": 149,
+   "episode_title": "An Interview with Laen - Purple PCB Philosophy",
+   "episode_url": "https://theamphour.com/the-amp-hour-149-purple-pcb-philosophy/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Optical comparison against the Gerbers cannot see plating defects: a via that did not plate through is invisible to AOI and needs a final electrical test to find.",
+   "quote_verbatim": "they don't do the final electrical test, which would tell things like, which would expose things like plating issues in vias",
+   "speaker": "Laen",
+   "episode": 149,
+   "episode_title": "An Interview with Laen - Purple PCB Philosophy",
+   "episode_url": "https://theamphour.com/the-amp-hour-149-purple-pcb-philosophy/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Running optical inspection without final electrical test produced a reported failure rate of about one in 40,000 boards at a prototype-volume fab.",
+   "quote_verbatim": "in practice, this is a reported failure rate of about one in 40,000",
+   "speaker": "Laen",
+   "episode": 149,
+   "episode_title": "An Interview with Laen - Purple PCB Philosophy",
+   "episode_url": "https://theamphour.com/the-amp-hour-149-purple-pcb-philosophy/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "At a photo-imaging fab each submitted Gerber layer becomes a physical exposure transparency — roughly ten to twelve per board, one per copper layer plus solder mask on each side — which are consumed per job.",
+   "quote_verbatim": "layer that I send as a Gerber becomes a transparency or part of one",
+   "speaker": "Chris Gammell",
+   "episode": 414,
+   "episode_title": "An Interview with Scotty Allen (Strangeparts)",
+   "episode_url": "https://theamphour.com/414-an-interview-with-scotty-allen-strangeparts/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Milling a board in-house is a Gerber-to-G-code conversion followed by a normal CNC job; the conversion works well and the practical failure is mechanical, breaking the small drill bits.",
+   "quote_verbatim": "it'll convert a uh gerber straight to g-code so the g-code is actually what controls the the xy movement",
+   "speaker": "Chris Gammell",
+   "episode": 223,
+   "episode_title": "Space Difficulties and Lost Heroes - Wanzing Workshop Whemmle",
+   "episode_url": "https://theamphour.com/223-space-difficulties-and-lost-heroes-wanzing-workshop-whemmle/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Gerber-to-G-code conversion reduces the format to a set of lines and then emits a cut move per line segment, which is why curved traces come out as chains of micro steps rather than as arcs.",
+   "quote_verbatim": "then now it's like a bunch of lines, and then it has to then break down each line",
+   "speaker": "Chris Gammell",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The same conversion approach drives a desktop vinyl cutter from the paste layer to cut solder paste stencils.",
+   "quote_verbatim": "hacking a vinyl cutter actually to use to cut out solder paste stencils",
+   "speaker": "Chris Gammell",
+   "episode": 223,
+   "episode_title": "Space Difficulties and Lost Heroes - Wanzing Workshop Whemmle",
+   "episode_url": "https://theamphour.com/223-space-difficulties-and-lost-heroes-wanzing-workshop-whemmle/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A stencil order is a one-layer job: only the paste layer matters, top and possibly bottom, and drill files are irrelevant, which is why stencil services avoid most of the interchange problems a board house has to handle.",
+   "quote_verbatim": "we didn't have to deal with all the drill files and all that type of stuff, because it's not applicable for a stencil",
+   "speaker": "Brent",
+   "episode": 320,
+   "episode_title": "An Interview with Brent of OSHstencils",
+   "episode_url": "https://theamphour.com/320-an-interview-with-brent-of-oshstencils/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Because a stencil service only needs a single vector layer, non-electronics work reaches it by converting artwork into Gerber — paint stencils, UV and photo masking, metal plates for manufacturing.",
+   "quote_verbatim": "people have made paint stencils, uh, by converting their art to Gerber",
+   "speaker": "Brent",
+   "episode": 320,
+   "episode_title": "An Interview with Brent of OSHstencils",
+   "episode_url": "https://theamphour.com/320-an-interview-with-brent-of-oshstencils/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Every EDA package interprets the format slightly differently despite it being nominally a standard, so anyone accepting files from all tools is really supporting a family of dialects rather than one format.",
+   "quote_verbatim": "there are nuances with the Gerber file format. Every EDA package seems to interpret it slightly different",
+   "speaker": "Brent",
+   "episode": 320,
+   "episode_title": "An Interview with Brent of OSHstencils",
+   "episode_url": "https://theamphour.com/320-an-interview-with-brent-of-oshstencils/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The format survives on the demand side rather than on merit: it persists because fab houses accept it, making it the lowest common denominator in the same way G-code is for machines and PDF is for schematics.",
+   "quote_verbatim": "are still around because fab houses take Gerber's",
+   "speaker": "Chris Gammell",
+   "episode": 208,
+   "episode_title": "An Interview With Nadya Peek - Gallant Gcode Gerontology",
+   "episode_url": "https://theamphour.com/208-an-interview-with-nadya-peek-gallant-gcode-gerontology/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A neutral interchange format is what lets a new or open-source CAD tool reach existing assembly houses at all; without spreadsheets for the bill of materials and Gerbers for the artwork, a shop tooled around the incumbent packages has no way to take the work.",
+   "quote_verbatim": "basically spreadsheets and Gerbers are the only reason that Kaikad can, you know, operate in that space is because there is that standardized format",
+   "speaker": "Chris Gammell",
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A CAD vendor building a board-ordering service should accept Gerbers from any tool rather than only its own output, because tying the service to the tool converts a useful feature into a lock-in mechanism.",
+   "quote_verbatim": "sure that anyone can use that service by uploading their own Gerbers from whatever",
+   "speaker": "Dave Jones",
+   "episode": 122,
+   "episode_title": "Processors, CEOs & Soldering irons - Plentiful Perfunctory Programs",
+   "episode_url": "https://theamphour.com/the-amp-hour-122-plentiful-perfunctory-programs/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Fab access is uneven by region: shops without an online front end require Gerbers by email plus back-and-forth follow-up, while portal-based shops return an instant quote from the same uploaded files.",
+   "quote_verbatim": "you have to send them Gerber files or email and talk",
+   "speaker": "Pallav Aggarwal",
+   "episode": 661,
+   "episode_title": "Blogging Electronics with Pallav Aggarwal",
+   "episode_url": "https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Every field on a conventional quoting form is already derivable from the Gerber and drill files, so asking the customer to re-enter it is redundant work rather than a technical necessity.",
+   "quote_verbatim": "all that information is inherently in",
+   "speaker": "Jonathan Hirschman",
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Pricing computed straight from the files supports a flat rate by area — a fixed charge per square inch at a six-board minimum, independent of component count as long as courtyard rules are respected.",
+   "quote_verbatim": "do flat rate pricing. If you have a one square inch design, you get charged at a given rate for one square inch",
+   "speaker": "Jonathan Hirschman",
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Online design-for-manufacture front ends digitise what a board house's engineers would otherwise report by hand, so uploading Gerbers returns the manufacturability findings, a visualiser and pricing without a sales engineer in the loop.",
+   "quote_verbatim": "you go upload your Gerbers on there. And basically all the stuff that like a board house does, they basically digitize the output from that",
+   "speaker": "Chris Gammell",
+   "episode": 504,
+   "episode_title": "This Is Just A Tribute",
+   "episode_url": "https://theamphour.com/504-this-is-just-a-tribute/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An automated layout service that returns a minimally modified native board file rather than Gerbers keeps the design editable, so the engineer can accept part of the result and rework the rest instead of being pushed straight to manufacture.",
+   "quote_verbatim": "we're not spitting back Gerbers or we're not forcing you to go straight to manufacturing",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Assembly front ends have moved placement into the browser: the Gerber upload becomes the canvas on which component positions and rotations are set, rather than those being supplied as a separate file.",
+   "quote_verbatim": "you upload your Gerber images and then you can do your component placements on there",
+   "speaker": "Dave Jones",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A fab's own Gerber tooling can add data the designer never drew, such as a customised serial or QR code auto-incremented across the panel.",
+   "quote_verbatim": "their Gerber program automatically inserts and increments the number",
+   "speaker": "Dave Jones",
+   "episode": 680,
+   "episode_title": "Catching Rockets with Musk Sticks",
+   "episode_url": "https://theamphour.com/680-catching-rockets-with-musk-sticks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "When a CAD package goes obsolete and the source files become unopenable, maintenance degrades into editing the Gerbers directly — reconnecting copper by hand, closer to bitmap retouching than to design work.",
+   "quote_verbatim": "we were just stuck with Gerbers. And there were, you know, and then you have to manually edit Gerbers then",
+   "speaker": "Chris Gammell",
+   "episode": 213,
+   "episode_title": "Travel Recaps and Altium Announcements - Artisinal Aussie Assemblage",
+   "episode_url": "https://theamphour.com/213-travel-recaps-and-altium-announcements-artisinal-aussie-assemblage/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Archiving the version of the design software alongside the design files is a defensible practice precisely because the alternative is being left with only Gerbers years later.",
+   "quote_verbatim": "it's scary when you only have Gerbers in the future",
+   "speaker": "Chris Gammell",
+   "episode": 333,
+   "episode_title": "Science, Not Silence",
+   "episode_url": "https://theamphour.com/333-science-not-silence/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "For an open-source project built in a proprietary tool, publishing the Gerbers alongside the native files is worth the duplication, because a reader without the tool cannot get at the data in a PCB or schematic document even when viewers exist.",
+   "quote_verbatim": "then I think it actually does make sense to have Gerbers and all the other stuff there",
+   "speaker": "Chris Gammell",
+   "episode": 530,
+   "episode_title": "Living Through Chipageddon",
+   "episode_url": "https://theamphour.com/530-living-through-chipageddon/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Gerbers are not a reviewable representation of a design: an engineer comfortable reading schematics can be left with nothing to work from when handed only the fabrication output.",
+   "quote_verbatim": "if you send me a Gerber and you don't send me these schematics, I am toast",
+   "speaker": "Christopher White",
+   "episode": 479,
+   "episode_title": "Why isn't this working?",
+   "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A contract design deliverable of just a hex file and a set of Gerbers undersells the work; the client is paying for judgment that shows up later as a board passing EMC certification first time rather than paying for four board spins plus repeated test fees.",
+   "quote_verbatim": "to bring more than, you know, um, a hex file or a set of Gerbers",
+   "speaker": "Kieran O'Leary",
+   "episode": 492,
+   "episode_title": "More Electronics Consultant Impedance Matching",
+   "episode_url": "https://theamphour.com/492-more-electronics-consultant-impedance-matching/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Compartmentalising by output format is how design data is kept from suppliers: the board house receives only Gerbers and the test house only test files, and neither sees the design database.",
+   "quote_verbatim": "PCB manufacturer gets the Gerber file and the test house gets, you know, various test file",
+   "speaker": "Dave Jones",
+   "episode": 545,
+   "episode_title": "Fear of Banjos",
+   "episode_url": "https://theamphour.com/545-fear-of-banjos/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Some contracts forbid sending Gerbers out at all, on the basis that they can be reverse engineered, which is what pushes those companies into in-house fabrication and milling for prototypes.",
+   "quote_verbatim": "you can't just send your Gerbers out because then, you know, they can reverse engineer your Gerbers",
+   "speaker": "Dave Jones",
+   "episode": 406,
+   "episode_title": "Nerds In A Corner",
+   "episode_url": "https://theamphour.com/406-nerds-in-a-corner/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Hardware diffs can be done by generating Gerbers per layer for two commits, colouring one set red and the other blue, and overlaying them to see what moved between revisions.",
+   "quote_verbatim": "one will be red, one will be blue, and then they'll overlay, and then you can see where your components have changed",
+   "speaker": "Chris Gammell",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Overlay diffing needs a common registration mark, so the board outline has to be present on every layer for the comparison to align — and then removed before the files are sent out.",
+   "quote_verbatim": "you have to have the board outline in there for it to really work well for all layers",
+   "speaker": "Chris Gammell",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "An automated GUI test that drives the CAD tool through building a board and then compares the generated fabrication output against a known-good set catches the case where a tool change silently alters what gets manufactured.",
+   "quote_verbatim": "about we like automatically like drag the mouse around and make a new PCB and then check to make sure that nothing changed",
+   "speaker": "Adam Wolf",
+   "episode": 167,
+   "episode_title": "An Interview with Adam Wolf - Brick & Board Biuners",
+   "episode_url": "https://theamphour.com/167-an-interview-with-adam-wolf-brick-board-biuners/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A factory's habitual board house constrains the design: keyboard makers run older two-layer processes preferring 12/12 rules over 8/8, which will not support a USB Type-C connector or fine-pitch parts, so the process capability has to be checked before the layout is committed.",
+   "quote_verbatim": "their usual PCB fab, they'd prefer that we were at 1212 rather than 8-8",
+   "speaker": "Jesse Vincent",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "When the manufacturing partner's engineers cannot open the design files at all, review can still run on printed PDFs marked up by hand with the changes made back in the CAD tool — slow, but it keeps design control on your side.",
+   "quote_verbatim": "was printing out PDFs of the board, and their EE was drawing on them",
+   "speaker": "Jesse Vincent",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "attribution_reliable was not trusted. ep320 (OSH Stencils interview) labels the guest's answers as 'Dave Jones'; the content is unambiguously the stencil-service operator ('we didn't have to deal with all the drill files'), so those claims are attributed to Brent of OSH Stencils.",
+  "ep149 (Laen / OSH Park interview) alternates labels: the operator's answers about the upload flow, AOI and the one-in-40,000 figure are attributed to Laen by content. The general remark about fabs each running different Gerber front ends is labelled Dave Jones but sits inside an answer to Laen's question; speaker left null.",
+  "ep412 is one of the episodes known to carry swapped labels; the Gerber-viewer recommendation is left unattributed.",
+  "ep442 (Travis Goodspeed interview) is flagged unreliable and the downsampling remark could belong to either party; speaker left null.",
+  "Two passages in the bundle carry episode: null and were dropped as uncitable.",
+  "Reception, host sentiment and the 'Don't touch my Gerbers' t-shirt running joke were excluded as non-transferable."
+ ],
+ "capped": false
+}

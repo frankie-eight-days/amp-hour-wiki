@@ -6,7 +6,7 @@ A topic-first distillation of the tribal engineering knowledge in **719 episodes
 
 Articles are AI-generated syntheses built from the show's official transcripts through a verified extraction pipeline; every bracketed citation traces to a verbatim transcript passage. A full *How this wiki was built* page documenting the pipeline, verification rules, and known limitations is coming with the complete build.
 
-**Status: batch 1 of the article factory — 47 of 412 planned articles published so far. The factory is running; this page updates as articles land.**
+**Status: batch 1 of the article factory — 54 of 412 planned articles published so far. The factory is running; this page updates as articles land.**
 
 ## Articles
 
@@ -30,6 +30,7 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 ### C
 
 - [[capacitor|Capacitor]]
+- [[component-sourcing|Component Sourcing]]
 - [[contract-manufacturer|Contract Manufacturer]]
 
 ### D
@@ -39,6 +40,7 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 
 ### E
 
+- [[eagle|EAGLE]]
 - [[engineering-education|Engineering Education]]
 
 ### F
@@ -47,6 +49,11 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 - [[firmware-update|Firmware Update]]
 - [[flash-memory|Flash Memory]]
 - [[fpga|Fpga]]
+
+### G
+
+- [[gerber|Gerber]]
+- [[github|Github]]
 
 ### I
 
@@ -66,6 +73,7 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 ### M
 
 - [[microcontroller|Microcontroller]]
+- [[multimeter|Multimeter]]
 
 ### O
 
@@ -88,6 +96,7 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 
 ### R
 
+- [[ram|RAM]]
 - [[raspberry-pi|Raspberry Pi]]
 - [[resistor|Resistor]]
 - [[reverse-engineering|Reverse Engineering]]
@@ -96,6 +105,7 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 
 - [[schematic|Schematic]]
 - [[semiconductor-fab|Semiconductor Fab]]
+- [[soldering|Soldering]]
 - [[spi|SPI]]
 
 ### U

@@ -1,0 +1,1443 @@
+{
+ "concept": "bill-of-materials",
+ "name": "Bill of Materials",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "bill-of-materials",
+  "census": "union",
+  "cap": 250,
+  "capped": false,
+  "total_available": 182,
+  "type": "manufacturing",
+  "score": 2325.274,
+  "rank_by_score": 20,
+  "cluster": {
+   "core": [
+    "bill-of-material",
+    "bill-of-materials",
+    "bom"
+   ],
+   "children": [
+    "approved-vendor-list",
+    "bulk-purchasing",
+    "csv",
+    "customs",
+    "excel",
+    "manufacturer-part-number",
+    "vendor",
+    "zero-ohm-resistor"
+   ],
+   "neighbors": [
+    {
+     "concept": "mouser",
+     "weight": 7
+    },
+    {
+     "concept": "component-alternative",
+     "weight": 4
+    },
+    {
+     "concept": "distributor",
+     "weight": 4
+    },
+    {
+     "concept": "jlcpcb",
+     "weight": 4
+    }
+   ]
+  },
+  "stats": {
+   "episodes": 160,
+   "mentions": 316,
+   "explains": 145,
+   "opinions": 44,
+   "candidate_episode_count": 141,
+   "candidate_mention_count": 215,
+   "gated_out": 439,
+   "gated_out_by_concept": [
+    [
+     "mouser",
+     180
+    ],
+    [
+     "jlcpcb",
+     62
+    ],
+    [
+     "distributor",
+     55
+    ],
+    [
+     "excel",
+     27
+    ],
+    [
+     "zero-ohm-resistor",
+     25
+    ],
+    [
+     "bulk-purchasing",
+     17
+    ],
+    [
+     "customs",
+     17
+    ],
+    [
+     "csv",
+     15
+    ],
+    [
+     "vendor",
+     14
+    ],
+    [
+     "manufacturer-part-number",
+     13
+    ],
+    [
+     "component-alternative",
+     8
+    ],
+    [
+     "approved-vendor-list",
+     6
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 33,
+   "speakers": [
+    [
+     "Dave Jones",
+     71
+    ],
+    [
+     "Chris Gammell",
+     49
+    ],
+    [
+     "Michael",
+     7
+    ],
+    [
+     "Chris Church",
+     5
+    ],
+    [
+     "Greg Charvat",
+     4
+    ],
+    [
+     "Jeri Ellsworth",
+     4
+    ],
+    [
+     "Jan Rychter",
+     4
+    ],
+    [
+     "Chris Denney",
+     3
+    ],
+    [
+     "SPEAKER_01",
+     2
+    ],
+    [
+     "Mike Harrison",
+     2
+    ],
+    [
+     "Avidan Ross",
+     2
+    ],
+    [
+     "Simone Giertz",
+     2
+    ],
+    [
+     "Jon Oxer",
+     2
+    ],
+    [
+     "Joshua Vasquez",
+     2
+    ],
+    [
+     "Bunnie Huang",
+     1
+    ],
+    [
+     "Matt Eddis",
+     1
+    ],
+    [
+     "SPEAKER_00",
+     1
+    ],
+    [
+     "Bob Davidson",
+     1
+    ],
+    [
+     "Parker Dillman",
+     1
+    ],
+    [
+     "Luke Iseman",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 171,
+    "child": 9,
+    "neighbor": 2
+   },
+   "passages_by_depth": {
+    "explains": 141,
+    "opinion": 41
+   }
+  }
+ },
+ "claims": [
+  {
+   "claim_text": "A bill of materials generated straight out of a CAD package is incomplete for procurement: it lacks manufacturer part numbers, approved alternatives, and stock levels and prices, so a separately maintained purchasing BOM is required.",
+   "quote_verbatim": "your CAD program spits out a bomb but it doesn't have the manufacturer's part numbers it doesn't have alternatives it doesn't have your stock levels and prices",
+   "speaker": "",
+   "episode": 17,
+   "episode_title": "EE Movies, Part Rants and SPICE.",
+   "episode_url": "https://theamphour.com/the-amp-hour-17-ee-movies-part-rants-and-spice/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A schematic that carries only reference designators forces the reader to cross-reference the bill of materials to identify each device; the part name belongs on the schematic itself.",
+   "quote_verbatim": "I don't like just having the reference designator. You've got to have the actual chip name.",
+   "speaker": "",
+   "episode": 80,
+   "episode_title": "Otiose Ontocyclic Opiniasters",
+   "episode_url": "https://theamphour.com/the-amp-hour-80-otiose-ontocyclic-opiniasters/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Internal company part numbers are held in the bill of materials for purchasing rather than printed on the schematic, which carries the device name.",
+   "quote_verbatim": "That's buried in the Bill of Materials for purchasing and stuff like that",
+   "speaker": "",
+   "episode": 80,
+   "episode_title": "Otiose Ontocyclic Opiniasters",
+   "episode_url": "https://theamphour.com/the-amp-hour-80-otiose-ontocyclic-opiniasters/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An off-the-shelf item can be pinned in a bill of materials by manufacturer, manufacturer part number and distributor SKU together; a custom-made item such as a bespoke cable has to be given its own SKU and drawings before it can be specified the same way.",
+   "quote_verbatim": "you can specify that in your bill of materials. You just go, it's this manufacturer, this part number, this SKU number.",
+   "speaker": "",
+   "episode": 351,
+   "episode_title": "The Automation Amish",
+   "episode_url": "https://theamphour.com/351-the-automation-amish/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Binding a schematic symbol to a unique manufacturer part number rather than to a generic device is the back-end capability that automated bill-of-materials generation and one-click ordering depend on.",
+   "quote_verbatim": "the actual association between, you know, what you're seeing on the page and then real stuff, right. Like a real actual, uh, unique part number, that's a difficult thing to do",
+   "speaker": "",
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Manufacturer part numbers are not unique identifiers, and the electronics industry has no universally accepted part-identity scheme comparable to the GS1 barcode system used in consumer goods; some manufacturers issue suffixes such as a trailing R or T that denote packaging rather than a different die, and distributors sometimes price those variants differently.",
+   "quote_verbatim": "We have the system of MPNs, which are not unique.",
+   "speaker": "Jan Rychter",
+   "episode": 542,
+   "episode_title": "Component Management with Jan Rychter",
+   "episode_url": "https://theamphour.com/542-component-management-with-jan-rychter/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Engineers working without a formal internal numbering scheme use the manufacturer part number as the part number, which becomes visible when an assembly service asks for a customer part number that does not exist.",
+   "quote_verbatim": "I do a bomb upload to a service. And they're like, well, what's your, what's your customer part number? Like, what's your part number for this? I'm like, I don't know. MPN is the part number.",
+   "speaker": "",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A formal internal part number is immutable and unambiguous, whereas identifying a line item by name invites naming conflicts and misinterpretation; bills of materials have been observed in which a line was named only by a description of who knew how to fit the part.",
+   "quote_verbatim": "a formal number is immutable and there's no chances of misinterpretation",
+   "speaker": "Michael Corr",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Jelly-bean passives are commonly specified in a bill of materials by value, package and tolerance alone, with no manufacturer or part number, because a contract manufacturer stocks standard values.",
+   "quote_verbatim": "You don't even bother specifying a manufacturer or part number. You just put in 0.603, 1%, 1K.",
+   "speaker": "",
+   "episode": 216,
+   "episode_title": "Last Minute Decisions - Obdurate Onepercenter Obstacles",
+   "episode_url": "https://theamphour.com/216-last-minute-decisions-obdurate-onepercenter-obstacles/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An assembly service that receives loosely specified passives matches them to its own house part and automatically merges the identical lines into a single bill-of-materials line.",
+   "quote_verbatim": "it'll actually group those all up automatically into one bomb line as well",
+   "speaker": "Chris Church",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "For components with many valid substitutes, the recommended practice is to define an in-house part numbering scheme of meta parts \u2014 for example a 0603 1 microfarad X7R 16 volt capacitor \u2014 each of which contains the set of acceptable physical components.",
+   "quote_verbatim": "My suggestion is always to design your own part numbering scheme",
+   "speaker": "Jan Rychter",
+   "episode": 542,
+   "episode_title": "Component Management with Jan Rychter",
+   "episode_url": "https://theamphour.com/542-component-management-with-jan-rychter/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Carrying the meta part rather than a specific manufacturer part number through the design lets the choice of physical component be deferred until ordering, so a substitution during a shortage does not require reopening the CAD tool.",
+   "quote_verbatim": "PartsBox lets you then delay the decision of which specific part to buy until very late in the game",
+   "speaker": "Jan Rychter",
+   "episode": 542,
+   "episode_title": "Component Management with Jan Rychter",
+   "episode_url": "https://theamphour.com/542-component-management-with-jan-rychter/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Two control-document models exist for a design's part data: the spreadsheet, held as a CSV or Excel file, or the schematic, from which the bill of materials is generated on demand.",
+   "quote_verbatim": "using like the actual \u2013 the CSV or Excel file as the control document, like that is the word of God kind of thing, or if you use the schematic as the control document",
+   "speaker": "",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Where the spreadsheet bill of materials and the schematic are maintained separately, edits made in the spreadsheet are not pushed back to the schematic in time and the two drift apart.",
+   "quote_verbatim": "I used to have problems with this where I would change the Excel file. I still do. And then you don't push it back right in time, and then you can get lots of trouble.",
+   "speaker": "",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The cost of treating the schematic as the control document is that producing a bill of materials requires opening the CAD tool and running the export, which in turn requires a licensed seat for anyone who needs the data.",
+   "quote_verbatim": "you need to open up the program itself, and you need to do the conversion",
+   "speaker": "",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Under the schematic-as-control-document method, part numbers, supplier data and a populate or do-not-populate attribute all live in the schematic and are pushed forward to generate the spreadsheet that purchasing and the contract manufacturer actually work from, since neither will open a schematic to determine whether a part is fitted.",
+   "quote_verbatim": "if you have a attribute in your schematic that says populate or don't populate, you can then programmatically generate a spreadsheet afterwards",
+   "speaker": "",
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A zero-ohm resistor that is populated or omitted is used as a build-variant mechanism to enable different parts of a circuit, and the fit or no-fit state has to be carried as design data rather than left implicit.",
+   "quote_verbatim": "so I have a zero ohm resistor that I do or don't want to populate that, you know, enables different parts of the circuit",
+   "speaker": "",
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The schematic-as-control-document method yields no benefit if adopted partially; it works only where the whole flow is committed to it.",
+   "quote_verbatim": "unless you commit 100% to do it that way, it doesn't work",
+   "speaker": "",
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Driving procurement from the schematic requires purchasing staff either to work inside the CAD tool or to hold their own licence for it in order to edit the library and update on-hand quantities, which is why some organisations keep the spreadsheet as the working document.",
+   "quote_verbatim": "you have, you know, a purchasing person who has to either go into the program or have, you know, a separate license to that program",
+   "speaker": "",
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Spreadsheet bills of materials are obsolete the moment they are finished, cannot be updated without manually revisiting every part, and have no mechanism for multiple currencies, minimum order quantities or order multiples.",
+   "quote_verbatim": "The problem with spreadsheet bombs is, first of all, they are obsolete the moment you finish them.",
+   "speaker": "Jan Rychter",
+   "episode": 542,
+   "episode_title": "Component Management with Jan Rychter",
+   "episode_url": "https://theamphour.com/542-component-management-with-jan-rychter/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The interactive HTML bill of materials is a single self-contained JavaScript file that opens in a browser, can be served behind a web-server password so a client can view a project's parts, and in later versions also exposes traces for troubleshooting.",
+   "quote_verbatim": "it's just a single file. And so you just double click on it, opens in a browser",
+   "speaker": "",
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In product lifecycle management, the bill of materials and CAD files are held together with revision control, part number generation, and controlled distribution of content to team members and suppliers.",
+   "quote_verbatim": "the core components of PLM is managing your bill materials and CAD files, a location for revision control, part number generation, and distribution content to various team members and suppliers",
+   "speaker": "Michael Corr",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Released manufacturing data is distributed as a link into the controlled repository rather than as an email attachment, because an attachment persists in an inbox and can be built from after it has been superseded; a link can be revoked or expired when a newer revision exists.",
+   "quote_verbatim": "if it's an attachment, it falls into that same risk of it always being in someone's inbox and being able to be accessed at any time, which means they can accidentally grab the wrong revision",
+   "speaker": "Michael Corr",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "When many copies of a bill of materials are circulating to different vendors, one document \u2014 the schematic or the lifecycle-management system \u2014 has to be nominated as the single source of truth against which any build is checked.",
+   "quote_verbatim": "I call that the source of truth problem",
+   "speaker": "",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A component change made partway through a production run produces units with the same schematic, the same board and the same revision number but a different bill of materials, and the difference has to be tracked to know which units in the field carry which parts.",
+   "quote_verbatim": "it's a different bomb, but it's still the same schematic. It's still the same PCB. It's still the same version number.",
+   "speaker": "",
+   "episode": 178,
+   "episode_title": "A 2013 Recap - Year-end Yarn Yakking",
+   "episode_url": "https://theamphour.com/178-a-2013-recap-year-end-yarn-yakking/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Tagging a design revision as production-ready in a version-control repository can trigger a hook that regenerates the whole manufacturing set automatically \u2014 Gerbers, schematic and bill of materials \u2014 rather than leaving those exports to be run by hand.",
+   "quote_verbatim": "It auto generates Gerbers. It regenerates a schematic file. It regenerates the bomb.",
+   "speaker": "",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A scripted output job in the CAD tool packages Gerber generation together with the bill of materials, so that a company-standard job produces an identical set of manufacturing files on every project; a misconfigured job fails silently and exports the wrong data.",
+   "quote_verbatim": "you can have like a company standard out job so that it doesn't matter which project you do. If you use that out job, it generates exactly the same format files every time.",
+   "speaker": "",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Bill-of-materials data can be scripted out of the CAD tool into a procurement pipeline in which a build quantity is entered, current prices are pulled from every vendor, and purchase orders are emitted in each vendor's required template.",
+   "quote_verbatim": "it automatically gets all the latest prices from all the different vendors and it automatically generates purchase orders in their required templates",
+   "speaker": "",
+   "episode": 342,
+   "episode_title": "Our first in-person show",
+   "episode_url": "https://theamphour.com/342-our-first-in-person-show/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where BOM pricing and lead time are fed back into the design tool, a component substitution produces an immediate readout of its effect on manufacturing cost, making a cost-target check a form of design rule check alongside the geometric one.",
+   "quote_verbatim": "the drc is did you go over your cost target",
+   "speaker": "",
+   "episode": 342,
+   "episode_title": "Our first in-person show",
+   "episode_url": "https://theamphour.com/342-our-first-in-person-show/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A mechanical assembly modelled down to every nut and bolt exports a complete bill of materials directly from the CAD system; the completeness of the export is limited only by the completeness of the model.",
+   "quote_verbatim": "you just right click and export a bill of materials. And it's perfect. As long as your model has everything that's there.",
+   "speaker": "",
+   "episode": 611,
+   "episode_title": "Grad School Time Capsule with Joshua and Zach",
+   "episode_url": "https://theamphour.com/611-grad-school-time-capsule-with-joshua-and-zach/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "One quick-turn workflow keeps component type and value in the PCB rather than the schematic and exports the bill of materials from the board layout to serve as the shopping list for parts, boards and stencil, with the in-house library orientations matched to the pick-and-place feeders so known parts are placed the right way round.",
+   "quote_verbatim": "I'll then export the bomb from that board layout to produce the shopping list",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Assembly houses that stock their own parts publish export plugins for CAD tools that emit the bill of materials pre-formatted to the required layout and check it against the house parts database before submission.",
+   "quote_verbatim": "there's just like an export plugin for key CAD, which is great. It basically just kind of spits everything out, pre-formatted exactly how they want it",
+   "speaker": "",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Using an assembler's own stocked parts is what makes its low-cost service work, but those parts are not guaranteed to be available on a later build, so a repeat order of the same board can require reworking the bill of materials each time.",
+   "quote_verbatim": "I have to redo the bomb basically each and every time because of that",
+   "speaker": "",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A board sent for contract assembly requires three data sets \u2014 Gerbers, the bill of materials and the X-Y placement file \u2014 and the designer has to learn to export all three and to sanity-check them, because an exporter can be misconfigured.",
+   "quote_verbatim": "Send us the Gerber's the bomb and the X, Y",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The merged bill-of-materials and placement file, sometimes called the XYRS file, is what allows assembly to be automated; the parts list alone does not say where the parts go.",
+   "quote_verbatim": "we call it the X, Y, or S file, which is the merge bill of materials and placement data",
+   "speaker": "Chris Church",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Reference designators present in the bill of materials but absent from the placement file, and placement coordinates supplied in inches, millimetres or thousandths without indication, are routine defects a contract manufacturer has to resolve before a board can be programmed into the machines.",
+   "quote_verbatim": "your bomb says that there should be an R3, but your XY has no R3",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The traditional quoting process sends the bill of materials as a spreadsheet to several distributors, compares the returned line-item prices, and splits the order so that each block of parts is bought from whichever distributor priced it best.",
+   "quote_verbatim": "You send it off to four different distributors. They're all getting spreadsheets. They send it back.",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Splitting a bill of materials across distributors is worth the administrative cost only when the saving is material; for a difference on the order of a hundred dollars it is simpler to buy the whole list from one source.",
+   "quote_verbatim": "if like, you're only going to spend an extra a hundred bucks, you probably just all buy it from one source",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Assembly services will work through a customer's bill of materials with them directly, correcting and re-entering it, though a majority of submitted projects reach a buildable state without that intervention.",
+   "quote_verbatim": "we'll literally do unnatural things like sit there for two hours on the phone with the customer, helping them correct their bomb",
+   "speaker": "Chris Church",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Under a turnkey arrangement the contract manufacturer is given the bill of materials and sources every part, assembles the boards and delivers finished assemblies, in contrast with a consigned build where the customer supplies the parts.",
+   "quote_verbatim": "We just give them the bomb and they'll source everything, assemble them and deliver us four assembled boards.",
+   "speaker": "",
+   "episode": 445,
+   "episode_title": "Ludicrously High Frequency Interference",
+   "episode_url": "https://theamphour.com/the-amp-hour-445-ludicrously-high-frequency-interference/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "On a small build the value of a turnkey quote lies in the sourcing rather than the assembly, because the hours spent buying a large parts list exceed the hours spent placing them.",
+   "quote_verbatim": "that'd be expensive if it was just assembly, but it's not, it's sourcing",
+   "speaker": "",
+   "episode": 445,
+   "episode_title": "Ludicrously High Frequency Interference",
+   "episode_url": "https://theamphour.com/the-amp-hour-445-ludicrously-high-frequency-interference/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Where inventory is consigned to the contract manufacturer and pulled per build, attrition and mis-ordering push the recorded stock out of agreement with the physical stock unless a full audit is run regularly; scanning reels as they are consumed turns each build into an inventory checkpoint.",
+   "quote_verbatim": "as you have attrition and things get lost or not ordered correctly, you kind of get out of a sink unless you do a full audit at a regular basis",
+   "speaker": "Matt Liberty",
+   "episode": 722,
+   "episode_title": "AI Tooling with Matt Liberty and Luke Beno",
+   "episode_url": "https://theamphour.com/722-ai-tooling-with-matt-liberty-and-luke-beno/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "When the contract manufacturer is to buy the parts, the exported bill of materials should carry the general specification rather than a specific manufacturer part number, so that the assembler can use whatever qualified component it can obtain.",
+   "quote_verbatim": "if your CM EMS is supposed to buy the parts, you want the general specification rather than the specific MPN in most cases",
+   "speaker": "Jan Rychter",
+   "episode": 542,
+   "episode_title": "Component Management with Jan Rychter",
+   "episode_url": "https://theamphour.com/542-component-management-with-jan-rychter/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An approved-substitutes list is handed to a contract manufacturer as a secondary document that tabulates every generic line against all its acceptable manufacturer part numbers, sortable either way so the assembler can look up what it finds.",
+   "quote_verbatim": "export this as a, basically a list of approved substitutes for your CM",
+   "speaker": "Jan Rychter",
+   "episode": 542,
+   "episode_title": "Component Management with Jan Rychter",
+   "episode_url": "https://theamphour.com/542-component-management-with-jan-rychter/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A combined purchase list is built by multiplying every bill of materials by its planned build quantity and merging the results, so that parts common to several projects are bought in one larger order; the specific components are chosen only when that list is turned into orders.",
+   "quote_verbatim": "That's the combined list of all the components from all your bombs multiplied by the quantities",
+   "speaker": "Jan Rychter",
+   "episode": 542,
+   "episode_title": "Component Management with Jan Rychter",
+   "episode_url": "https://theamphour.com/542-component-management-with-jan-rychter/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Production planning against a bill of materials includes deciding, line by line, which specific stock or storage location a build will consume, which matters where a line has several approved substitutes or the parts are held in multiple places.",
+   "quote_verbatim": "it's a name for a group of features, which lets you select which specific parts you will use for every line in your bomb",
+   "speaker": "Jan Rychter",
+   "episode": 542,
+   "episode_title": "Component Management with Jan Rychter",
+   "episode_url": "https://theamphour.com/542-component-management-with-jan-rychter/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A bill-of-materials health risk assessment grades every manufacturer part number on global availability, the number of distinct sources selling it, whether it is end-of-life or not recommended for new designs, whether footprint-compatible crosses exist to populate an approved vendor list, and compliance status such as RoHS and REACH.",
+   "quote_verbatim": "how many different sources sell it? Um, three, is it end of life or not recommended for new designs?",
+   "speaker": "",
+   "episode": 451,
+   "episode_title": "An Interview with Scott Miller (2nd)",
+   "episode_url": "https://theamphour.com/451-an-interview-with-scott-miller-2nd/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The point to run a bill-of-materials risk assessment is at roughly eighty percent design completion, once the prototype functions, because component decisions taken then cast long shadows over the product's life.",
+   "quote_verbatim": "usually at that 80% point, once you've got the prototype functioning, that's an awesome time to do a bomb health risk assessment",
+   "speaker": "",
+   "episode": 451,
+   "episode_title": "An Interview with Scott Miller (2nd)",
+   "episode_url": "https://theamphour.com/451-an-interview-with-scott-miller-2nd/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "An approved vendor list attached to a bill of materials names several drop-in alternatives per line, so that a factory unable to find the specified part has qualified options rather than a stalled build against a sole source.",
+   "quote_verbatim": "here's like five other ones that you can just drop in, um, which gives you a lot more flexibility as opposed to just having a sole source",
+   "speaker": "",
+   "episode": 451,
+   "episode_title": "An Interview with Scott Miller (2nd)",
+   "episode_url": "https://theamphour.com/451-an-interview-with-scott-miller-2nd/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Second sourcing is implemented by qualifying several vendors and several part numbers for the same function and listing all of them on the bill of materials so any one can be substituted; military work has required three qualified vendors and three qualified parts per position.",
+   "quote_verbatim": "we would always have to make sure we had three different vendors and three different available parts that were qualified",
+   "speaker": "",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Alternatives that differ only in package or packaging suffix are read by a buyer as the same part, but a change of base part number is not; an equivalent with a different base number has to be explicitly called out as an approved replacement.",
+   "quote_verbatim": "when you actually change the base number, you know, a buyer is going to be like, well, that doesn't look the same. And so you have to specifically call that out",
+   "speaker": "",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Long-obsolete part numbers stay in production because they remain specified in existing bills of materials, and qualified customers such as military contractors will not change a part number.",
+   "quote_verbatim": "a military contractor is not changing their part number for anything",
+   "speaker": "",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "On the castAR programme, second sources and contingency plans were arranged for most bill-of-materials lines before the crowdfunding campaign launched, on the principle that no line should be single-sourced.",
+   "quote_verbatim": "we had second sources for a lot of the stuff in there in backup plans",
+   "speaker": "Jeri Ellsworth",
+   "episode": 173,
+   "episode_title": "An Interview with Jeri Ellsworth - Intense Illusion Introduction",
+   "episode_url": "https://theamphour.com/173-an-interview-with-jeri-ellsworth-intense-illusion-introduction/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The castAR funding target and unit price were derived by working the bill of materials with contract manufacturers over a summer and extrapolating from the required unit volume.",
+   "quote_verbatim": "we spent all summer beating up on the bill of materials",
+   "speaker": "Jeri Ellsworth",
+   "episode": 173,
+   "episode_title": "An Interview with Jeri Ellsworth - Intense Illusion Introduction",
+   "episode_url": "https://theamphour.com/173-an-interview-with-jeri-ellsworth-intense-illusion-introduction/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A bill of materials that has been released into production should be re-run every few months to confirm the parts can still be bought; distributors forward obsolescence notices to customers who previously purchased the affected part.",
+   "quote_verbatim": "run your bomb every couple months make sure they can actually buy the parts",
+   "speaker": "",
+   "episode": 382,
+   "episode_title": "The Toggle Boggle",
+   "episode_url": "https://theamphour.com/382-the-toggle-boggle/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Component availability turns bill-of-materials maintenance into an iterative search: a converter available two months earlier is gone, one previously unavailable has returned, and each substitution restarts the process of finding alternatives, lowest cost and availability.",
+   "quote_verbatim": "you go through that whole iterative process of doing the whole bomb thing and, you know, finding alternatives, finding the lowest cost and availability",
+   "speaker": "",
+   "episode": 128,
+   "episode_title": "Layout, CAD & Raspberry Pi - Kedogenous Kinetic Knowledge",
+   "episode_url": "https://theamphour.com/the-amp-hour-128-kedogenous-kinetic-knowledge/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Every line item on a bill of materials is an independent supply risk; a hundred-line board whose lines carry designed-in substitutes can absorb a shortage, whereas a design that depends on a module built from two hundred other parts concentrates the risk into one bottleneck.",
+   "quote_verbatim": "if you've got your product with a hundred line item bomb and, you know, like if a part, you can't get it, well, maybe you can get a substitute if you design, you know, did your proper engineering",
+   "speaker": "",
+   "episode": 282,
+   "episode_title": "3D Product Logistics",
+   "episode_url": "https://theamphour.com/282-3d-product-logistics/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "One part missing stops the whole surface-mount line; during the shortage period a prototype-sized distributor order covered more than ninety percent of a client's bill of materials while a single unavailable instrumentation amplifier still blocked the build.",
+   "quote_verbatim": "one part missing is no part out of the end of the service mount line",
+   "speaker": "Dave Young",
+   "episode": 628,
+   "episode_title": "Two Dads Puzzlin Things Out",
+   "episode_url": "https://theamphour.com/628-two-dads-puzzlin-things-out/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Publishing the bill of materials for a system-in-package or module lets the integrator identify a component that is holding up delivery and request the board be built with that part depopulated.",
+   "quote_verbatim": "just take a look at the bill of materials and say, hey, well, we don't need this particular part that's currently holding up the delivery schedule. Just depopulate it",
+   "speaker": "Lukas Henkel",
+   "episode": 681,
+   "episode_title": "Compact High Speed Design with Lukas Henkel",
+   "episode_url": "https://theamphour.com/681-compact-high-speed-design-with-lukas-henkel/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Supply-chain information has historically been opaque to design engineers because it is held by a separate team and applied weeks or months after the design decisions that depend on it.",
+   "quote_verbatim": "supply chain information, regardless of the recent, you know, world events that has increased shortages and lead times has always been opaque to the engineers",
+   "speaker": "Michael Corr",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "At a volume of one million units, one cent removed from the bill of materials is ten thousand dollars, which sets the amount of engineering time a cost reduction of that size justifies.",
+   "quote_verbatim": "if you can save one cent off your bomb, you've instantly saved 10 grand",
+   "speaker": "",
+   "episode": 130,
+   "episode_title": "Boeing, PCBs & Startups - Awful Airplane Aeration",
+   "episode_url": "https://theamphour.com/the-amp-hour-130-awful-airplane-aeration/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Worked through at a million units, swapping a six-cent tantalum capacitor for a one-cent ceramic saves five cents and therefore justifies up to fifty thousand dollars of engineering effort, most of which is spent on testing the change rather than making it.",
+   "quote_verbatim": "say you've got a tantalum capacitor that might cost you six cents, and you want to swap it out with a one cent ceramic",
+   "speaker": "Jon Oxer",
+   "episode": 349,
+   "episode_title": "An(other) Interview with Jon Oxer",
+   "episode_url": "https://theamphour.com/349-another-interview-with-jon-oxer/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Where a part appears only once or twice on a board, the difference between a three-cent and a thirty-cent microcontroller is immaterial to the bill of materials, and the engineering effort to exploit it is only repaid at volume.",
+   "quote_verbatim": "in the scheme of a typical BOM, if you've only got one or two of them in your project, it doesn't matter",
+   "speaker": "",
+   "episode": 428,
+   "episode_title": "Setting Fire To The Tracks",
+   "episode_url": "https://theamphour.com/428-setting-fire-to-the-tracks/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A commonly used pricing floor for a small hardware operation is a retail price of at least 2.4 times, and more safely 3 times, the bill-of-materials cost.",
+   "quote_verbatim": "which at the very least is bomb times 2.4 or safely bomb times 3",
+   "speaker": "",
+   "episode": 215,
+   "episode_title": "Wrong Hardware, Wrong Software - Fugacious Fan Funding",
+   "episode_url": "https://theamphour.com/215-wrong-hardware-wrong-software-fugacious-fan-funding/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The retail multiplier of roughly 2.5 to 2.6 is applied to the full cost of producing the product \u2014 assembly, testing, inbound and outbound shipping \u2014 and not to the bill-of-materials cost alone, because distributors take their margin out of the same price.",
+   "quote_verbatim": "It's not just bomb cost, it's everything.",
+   "speaker": "",
+   "episode": 201,
+   "episode_title": "Cheap Respins And A Time Machine - Multiscience Mercenary Marketplace",
+   "episode_url": "https://theamphour.com/201-cheap-respins-and-a-time-machine-multiscience-mercenary-marketplace/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "In the consumer hardware segment the figure quoted is a fourfold multiple of bill-of-materials cost in the selling price for the business arithmetic to work.",
+   "quote_verbatim": "I need a hardware company in the consumer space to carry a Forex, you know, multiple on their bomb in terms of their selling price just for the math to work",
+   "speaker": "",
+   "episode": 495,
+   "episode_title": "An Interview with Eric Klein",
+   "episode_url": "https://theamphour.com/495-an-interview-with-eric-klein/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Under a three-times bill-of-materials rule, a hundred-dollar product supports a bill of materials of thirty to forty dollars, which is what makes a seven-dollar custom chip viable in a low-volume product.",
+   "quote_verbatim": "three times bomb cost means you can have kind of like a $30 to $40 bomb",
+   "speaker": "",
+   "episode": 703,
+   "episode_title": "Building wafer.space with Tim Ansell",
+   "episode_url": "https://theamphour.com/703-building-wafer-space-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Plotting unit price against order quantity for each component on a bill of materials puts the useful break region for a small-scale design in the hundreds to low thousands of units.",
+   "quote_verbatim": "hundreds or thousands of units was kind of the sweet spot for kind of a small scale design",
+   "speaker": "",
+   "episode": 81,
+   "episode_title": "Jersey Jeff Jactitation",
+   "episode_url": "https://theamphour.com/the-amp-hour-81-jersey-jeff-jactitation/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The choice between an assembler's house part and a specified market part inverts with volume: the house part can be cheaper in very small quantities while the market part saves a few cents per board once quantities reach a thousand.",
+   "quote_verbatim": "a house part may be cheaper at a very low volume, but a particular market part, once you get to 1,000 units, that one actually saves you $0.03 a board",
+   "speaker": "Chris Church",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Achievable bill-of-materials cost is set by the minimum order quantity a company can fund: a part list costing fifty dollars at an MOQ of five hundred units falls substantially at ten times that MOQ, which in turn changes the retail price the product can be launched at.",
+   "quote_verbatim": "because at a minimum order quantity of 500 units, I can get it for $50",
+   "speaker": "",
+   "episode": 327,
+   "episode_title": "An Interview with Avidan Ross",
+   "episode_url": "https://theamphour.com/327-an-interview-with-avidan-ross/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Product cost estimates built from the bill of materials alone omit the tooling, firmware development and legal costs of bringing a product to market, and crowdfunding campaigns costed that way run out of money.",
+   "quote_verbatim": "everyone really just looks at, you know, what their individual bomb costs look like",
+   "speaker": "",
+   "episode": 327,
+   "episode_title": "An Interview with Avidan Ross",
+   "episode_url": "https://theamphour.com/327-an-interview-with-avidan-ross/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Cost estimating for a manufactured product counts every screw, piece of tape and item of packaging, and then applies a waste adder and a factory markup adder on top; submitted inventions are routinely costed at half their true figure without that discipline.",
+   "quote_verbatim": "all of that is subjected to a waste adder and it's all subjected to a factory markup adder",
+   "speaker": "Julia Truchsess",
+   "episode": 424,
+   "episode_title": "An Interview with Julia Truchsess",
+   "episode_url": "https://theamphour.com/424-an-interview-with-julia-truchsess/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The recommended costing method prices the whole bill of materials at worst-case catalogue distributor prices and sets the target selling price from that, so that cheaper sourcing found later is margin rather than a dependency.",
+   "quote_verbatim": "make your bomb, base your bomb on, you know, catalog prices, right? Your worst case, catalog digi-key prices",
+   "speaker": "",
+   "episode": 126,
+   "episode_title": "eReaders, datasheets & board assembly - Yearly Yeasty Yapping",
+   "episode_url": "https://theamphour.com/the-amp-hour-126-yearly-yeasty-yapping/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Costing a product on the assumption of the lowest possible offshore manufacturing price removes the option of manufacturing anywhere else, whereas costing it at local prices keeps that option open.",
+   "quote_verbatim": "if you paint yourself into the corner first where, oh, I have to get it manufactured at the absolute lowest possible price in China, you're stuck with that",
+   "speaker": "",
+   "episode": 126,
+   "episode_title": "eReaders, datasheets & board assembly - Yearly Yeasty Yapping",
+   "episode_url": "https://theamphour.com/the-amp-hour-126-yearly-yeasty-yapping/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Contracted volume pricing differs sharply from the catalogue price an engineer sees at a distributor, and pulling the true negotiated cost forward into the design cycle changes what features a board can carry.",
+   "quote_verbatim": "you might see it for a dollar on digi key, but when you actually look at the cost and we're going to buy, you know, however many reels and we have all these relationships",
+   "speaker": "Michael Corr",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Bill-of-materials costs reconstructed from a teardown understate what a large manufacturer actually pays, because they do not capture the purchasing power of a buyer committing to millions of units up front.",
+   "quote_verbatim": "I think they're underestimating Amazon's buying power",
+   "speaker": "",
+   "episode": 70,
+   "episode_title": "Idiorhythmic IPC Inconcinnity",
+   "episode_url": "https://theamphour.com/the-amp-hour-70-idiorhythmic-ipc-inconcinnity/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Squeezing the bill of materials is rarely what determines whether a hardware company succeeds; a product whose parts cost is a small fraction of its selling price has room to absorb manufacturing problems that a thin-margin product does not.",
+   "quote_verbatim": "My bomb is not making or breaking my business",
+   "speaker": "Luke Iseman",
+   "episode": 268,
+   "episode_title": "An Interview with Luke Iseman of yCombinator",
+   "episode_url": "https://theamphour.com/268-an-interview-with-luke-iseman-of-ycombinator/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Manufacturing experience makes it possible to read a bill of materials and see that the design behind it will not work.",
+   "quote_verbatim": "it's like a lot to look at a bomb and say that's not going to work",
+   "speaker": "Josh Lifton",
+   "episode": 314,
+   "episode_title": "An Interview with Josh Lifton",
+   "episode_url": "https://theamphour.com/314-an-interview-with-josh-lifton/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "An electronics manufacturing service taking on a design will redesign parts of the circuit for cheaper topologies \u2014 substituting a linear regulator for a buck converter where the efficiency loss is acceptable \u2014 to remove cents from the bill of materials.",
+   "quote_verbatim": "They'll actually take it and redesign certain parts of your circuit to actually have topologies that are cheaper",
+   "speaker": "",
+   "episode": 291,
+   "episode_title": "Artificially Intelligent Party Platform",
+   "episode_url": "https://theamphour.com/291-artificially-intelligent-party-platform/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Costing a completed design's full bill of materials in a spreadsheet at the end of development can show that the parts cost alone rules out the intended market price, which is grounds for not taking the product to market despite working hardware.",
+   "quote_verbatim": "I did the big bomb and the Excel spreadsheet and the whole, you know, nine yards. And it came out and I'm going, this is just my bomb cost",
+   "speaker": "Dave Jones",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Reviewing a long-lived kit product, the change its designer most wanted to make was to reduce the number of line items on the bill of materials, because every extra line is repeated labour in kitting each unit.",
+   "quote_verbatim": "the number one thing that I wish I had done a better job of when I did the initial design is just using a fewer line items in the bomb",
+   "speaker": "Jeff Keyzer",
+   "episode": 229,
+   "episode_title": "MightyHohm For The Holidays - Kaiser Keyzer's Kits",
+   "episode_url": "https://theamphour.com/229-mightyhohm-for-the-holidays-kaiser-keyzers-kits/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A manual kitting procedure allocates one bowl per component and a second bowl for a component whose bill-of-materials quantity is two, so that assembling a kit is a matter of taking one item from each bowl without counting; batches are made up of a hundred parts per bowl.",
+   "quote_verbatim": "if a component is like two per on the bomb, there's actually two bowls",
+   "speaker": "Jeff Keyzer",
+   "episode": 229,
+   "episode_title": "MightyHohm For The Holidays - Kaiser Keyzer's Kits",
+   "episode_url": "https://theamphour.com/229-mightyhohm-for-the-holidays-kaiser-keyzers-kits/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The feeder slot count of the assembler's pick-and-place machine is a hard limit on line items: adding one more part to a board that already fills every slot changes what the assembly costs.",
+   "quote_verbatim": "the pick and place machine at the assembler only has 60 real slots available",
+   "speaker": "",
+   "episode": 428,
+   "episode_title": "Setting Fire To The Tracks",
+   "episode_url": "https://theamphour.com/428-setting-fire-to-the-tracks/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A board carrying about a thousand placements across roughly 130 unique bill-of-materials line items was quoted at about one hundred dollars of assembly per board at a few hundred units, a quantity at which no significant component price break applies.",
+   "quote_verbatim": "about a thousand parts and about 130 unique bomb line items. It's about a hundred dollars assembly",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Every added line on a bill of materials carries handling overhead at the assembly house \u2014 inventory, handling and correct binning \u2014 independent of the component's price.",
+   "quote_verbatim": "Inventory, handling, making sure it goes in the right bin, et cetera.",
+   "speaker": "",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Integrating the crystal and flash memory into a microcontroller's package removes two part-selection decisions from the designer and one unique line from the bill of materials.",
+   "quote_verbatim": "just having it be in package means one fewer part to select, one less unique on your bomb",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Using an external dedicated display driver alongside a small microcontroller was cheaper than moving up to a larger part in the same family, whose bigger package brought memory that was paid for but not needed; the trade is an extra bill-of-materials line with its own obsolescence and supply exposure.",
+   "quote_verbatim": "you've got another bomb item right and then you've got another thing that could go obsolete",
+   "speaker": "",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A capable debug interface needs enough components that embedding it in every design raises each project's bill of materials, which is the argument for paying once for a separate debug tool.",
+   "quote_verbatim": "a good debugger needs a certain amount of parts on it, making the bill of materials higher than you would want",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Roughly half of a typical bill of materials is jelly-bean passives, and a designer who uses zero-ohm resistors liberally as configurable links can find they account for something like a fifth of the board's parts.",
+   "quote_verbatim": "I feel like most of my boards are like 20% zero ohm resistors",
+   "speaker": "",
+   "episode": 552,
+   "episode_title": "Shouting at chips with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/552-shouting-at-chips-with-colin-oflynn/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "On an eight-inch framed consumer device, the display glass was the single most expensive item on the bill of materials, and the response was to redesign the product around an external screen rather than to optimise the rest of the parts list.",
+   "quote_verbatim": "if you look at the bomb, the most expensive thing in the bomb is glass",
+   "speaker": "Bunnie Huang",
+   "episode": 84,
+   "episode_title": "An Interview with Bunnie Huang - Bunnie's Bibelot Bonification",
+   "episode_url": "https://theamphour.com/the-amp-hour-84-bunnies-bibelot-bonification/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Connectors accounted for about thirty percent of one board's bill of materials, and moving from gold flash to full gold plating would have tripled their cost while adding only wear resistance after first insertion.",
+   "quote_verbatim": "the connectors already represent, um, you know, 30% of my bomb",
+   "speaker": "Zach Fredin",
+   "episode": 330,
+   "episode_title": "An Interview with Zach Fredin",
+   "episode_url": "https://theamphour.com/330-an-interview-with-zach-fredin/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "In a robot arm, the actuation hardware \u2014 motors and motor controllers \u2014 is around eighty percent of the bill-of-materials cost, so finding cheaper motors and controllers accounted for essentially the whole of a two-thousand-dollar cost reduction between revisions.",
+   "quote_verbatim": "those just two things in and of itself probably is around like, you know, 80% of your, your bomb costs",
+   "speaker": "Aaed Musa",
+   "episode": 712,
+   "episode_title": "Robots Everywhere with Aaed Musa",
+   "episode_url": "https://theamphour.com/712-robots-everywhere-with-aaed-musa/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A design that repeats a component 365 times makes that component's unit cost dominate the product: mechanical switches or push buttons at that count would have produced a fifteen-hundred-dollar product, so the input was implemented as capacitive touch pads on the board itself.",
+   "quote_verbatim": "when you have 365 of everything or of anything on a bomb, like the cost of that unit is going to heavily implicate the cost of the, of the product as a whole",
+   "speaker": "Simone Giertz",
+   "episode": 592,
+   "episode_title": "Product Design with Simone Giertz",
+   "episode_url": "https://theamphour.com/592-product-design-with-simone-giertz/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Packaging can approach the electronics cost of a product: a two-dollar corrugated box specified up to a magnet-closed, four-colour, foil-embossed box cost fifteen dollars, comparable to the headset's electronics bill of materials.",
+   "quote_verbatim": "the price of our box went from like a $2 corrugated box to $15 with magnets in it",
+   "speaker": "Jeri Ellsworth",
+   "episode": 394,
+   "episode_title": "Jeri Ellsworth and the demise of CastAR",
+   "episode_url": "https://theamphour.com/394-jeri-ellsworth-and-the-demise-of-castar/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Bill-of-materials scales differ by orders of magnitude between market segments: a computing module offered at ninety dollars in single quantity was pitched to lighting manufacturers whose entire product parts cost was around ninety-five cents.",
+   "quote_verbatim": "our part call, our bomb is 95 cents",
+   "speaker": "",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A product with a five-dollar bill of materials cannot absorb a one-dollar power-monitoring chip; the same component is justified in a variant sold on capability such as locking connectors, higher temperature rating and per-port current monitoring.",
+   "quote_verbatim": "when you're trying to sell something that has a $5 bill of material, you're not going to spend a dollar on the power monitoring chips",
+   "speaker": "Chris Osterwood",
+   "episode": 425,
+   "episode_title": "An Interview with Chris Osterwood",
+   "episode_url": "https://theamphour.com/425-an-interview-with-chris-osterwood/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Uploading a bill of materials to a single distributor's site turns a repeat build into a single ordering action at the correct quantities, at the cost of buying everything from one source.",
+   "quote_verbatim": "I've actually went to the trouble to put my bomb into DigiKey",
+   "speaker": "",
+   "episode": 104,
+   "episode_title": "Ceramic capacitors & High end scopes - Kempt Kickstarter Kakorrhaphiophobia",
+   "episode_url": "https://theamphour.com/the-amp-hour-104-kempt-kickstarter-kakorrhaphiophobia/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A distributor-hosted bill of materials reports stock position against each line before the order is placed, so shortages are visible at ordering time rather than after.",
+   "quote_verbatim": "it tells you live in the bomb whether or not I have stock",
+   "speaker": "",
+   "episode": 104,
+   "episode_title": "Ceramic capacitors & High end scopes - Kempt Kickstarter Kakorrhaphiophobia",
+   "episode_url": "https://theamphour.com/the-amp-hour-104-kempt-kickstarter-kakorrhaphiophobia/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Consolidating a bill of materials with one distributor trades a higher unit price for a single transaction; spreading it across dealers by brand reintroduces part variation and unfamiliar part-number labelling.",
+   "quote_verbatim": "So once you start going, oh, look, I've got to go to a different dealer for this brand of resistor and this one and this one, no.",
+   "speaker": "",
+   "episode": 178,
+   "episode_title": "A 2013 Recap - Year-end Yarn Yakking",
+   "episode_url": "https://theamphour.com/178-a-2013-recap-year-end-yarn-yakking/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "It is frequently cheaper in total to order the entire bill of materials fresh from a distributor, bagged and labelled, than to search existing stock and net it out of the order, because some parts will have to be bought anyway.",
+   "quote_verbatim": "it's often just easier, cheaper and saves time just to simply, regardless of whether or not you've got the parts, just order your entire bomb",
+   "speaker": "",
+   "episode": 493,
+   "episode_title": "PITA Package",
+   "episode_url": "https://theamphour.com/493-pita-package/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Ordering the full bill of materials for every project accumulates duplicate inventory \u2014 in one case around thirty separate lots of 0402 zero-ohm resistors \u2014 which tracking stock against planned build quantities avoids by consuming from reels already held.",
+   "quote_verbatim": "I have probably 30 instances of zero ohm 0402 resistors and yet I don't need all those",
+   "speaker": "Chris Gammell",
+   "episode": 542,
+   "episode_title": "Component Management with Jan Rychter",
+   "episode_url": "https://theamphour.com/542-component-management-with-jan-rychter/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "One budgetary costing convention records a standard cost field per component, populated with the thousand-piece price, so that a bill of materials produces a defensible cost estimate to hand to a client for a nominal build of a thousand units, exclusive of shipping and other loaded costs.",
+   "quote_verbatim": "I want that 1K budgetary price usually to hand off to a client to say, look, if you are building 1,000 or so of this thing, then you can expect about this bomb cost",
+   "speaker": "Chris Gammell",
+   "episode": 542,
+   "episode_title": "Component Management with Jan Rychter",
+   "episode_url": "https://theamphour.com/542-component-management-with-jan-rychter/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Filling a bill of materials with the cheapest locally obtainable parts can consume on the order of ten hours per project, work that has usually already been done independently by many other builders of the same design.",
+   "quote_verbatim": "you can spend 10 hours just sourcing parts for a project when somebody else has already done that",
+   "speaker": "Ian Lesnet",
+   "episode": 125,
+   "episode_title": "An Interview with Ian Lesnet - Bus Buccaneer Builder",
+   "episode_url": "https://theamphour.com/the-amp-hour-125-bus-buccaneer-builder/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Publishing a distributor-hosted bill of materials as a public link, alongside the board files, removes the per-builder sourcing effort for an open design: a builder orders the whole parts list in one action instead of searching each line.",
+   "quote_verbatim": "you know how on, how on these websites you can post like a public link to a bomb",
+   "speaker": "",
+   "episode": 453,
+   "episode_title": "Vertically Integrated Design Engineering",
+   "episode_url": "https://theamphour.com/453-vertically-integrated-design-engineering/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Keeping a bill of materials and its on-hand stock figures accurate while batching purchases across several builds is error-prone enough that a miscalculation left one production run short of parts; at scale it is a full-time function.",
+   "quote_verbatim": "trying to keep my bomb up to date. And my numbers that I've got in stock. And I goofed.",
+   "speaker": "",
+   "episode": 197,
+   "episode_title": "Spacing Out On Space - Dave's Dongle Designing",
+   "episode_url": "https://theamphour.com/197-spacing-out-on-space-daves-dongle-designing/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Where the CAD library does not bind a specific component and the choice is made when the bill of materials is assembled, an inadequate capacitor voltage rating can pass into the parts order; small ceramic capacitors, particularly high-value ones, are commonly rated only for six or ten volts.",
+   "quote_verbatim": "I make that decision when I go to, you know, put all the bomb together",
+   "speaker": "",
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A bill of materials can name the right part number and still specify the wrong package: parts ordered as through-hole DIP against a board laid out for a wide small-outline package are discovered only when the boards arrive.",
+   "quote_verbatim": "I screwed up the width of my package. It was a wide SO.",
+   "speaker": "",
+   "episode": 341,
+   "episode_title": "All the way with DLJ",
+   "episode_url": "https://theamphour.com/341-all-the-way-with-dlj/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A bill of materials denominated in a foreign currency carries exchange-rate exposure directly into the product cost; the usual practice of costing in United States dollars assumes a variation of about plus or minus five percent, which a twelve percent move breaks.",
+   "quote_verbatim": "I usually do my bombs in US dollars",
+   "speaker": "",
+   "episode": 178,
+   "episode_title": "A 2013 Recap - Year-end Yarn Yakking",
+   "episode_url": "https://theamphour.com/178-a-2013-recap-year-end-yarn-yakking/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Purchasing in bulk rather than at catalogue quantities brings customs into the transaction, which is a cost and complexity that small-quantity distributor orders avoid.",
+   "quote_verbatim": "unless I'm doing really bulk stuff and then there's all customs and everything involved",
+   "speaker": "",
+   "episode": 178,
+   "episode_title": "A 2013 Recap - Year-end Yarn Yakking",
+   "episode_url": "https://theamphour.com/178-a-2013-recap-year-end-yarn-yakking/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Tariffs do not fall uniformly across a bill of materials, so the way to establish exposure is to have the whole list re-quoted rather than to apply a blanket percentage.",
+   "quote_verbatim": "it's not everything. So you should really get your bomb. Quoted again.",
+   "speaker": "",
+   "episode": 400,
+   "episode_title": "Once Every Couple Months",
+   "episode_url": "https://theamphour.com/400-once-every-couple-months/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Importing parts into China for assembly there attracts substantial tariffs, so an assembler sources locally where possible and imports only what it cannot find.",
+   "quote_verbatim": "it's actually quite expensive to import American parts into China. There's fairly high tariffs on that",
+   "speaker": "Ian Lesnet",
+   "episode": 125,
+   "episode_title": "An Interview with Ian Lesnet - Bus Buccaneer Builder",
+   "episode_url": "https://theamphour.com/the-amp-hour-125-bus-buccaneer-builder/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Component shortages and tariffs land on the bill of materials as a working-capital problem: the entire stock has to be paid for before any unit can ship.",
+   "quote_verbatim": "you can't get out the door until you've already paid all the money for all the stock",
+   "speaker": "",
+   "episode": 715,
+   "episode_title": "Shiny New Pebble with Eric Migicovsky",
+   "episode_url": "https://theamphour.com/715-shiny-new-pebble-with-eric-migicovsky/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A common open-hardware practice publishes a reduced bill of materials carrying only descriptions and part numbers while retaining a fuller internal version that holds vendors, vendor prices and alternatives, on the basis that the sourcing data represents most of the work.",
+   "quote_verbatim": "But then I've got a more extensive bomb in the background, which is my, you know, secret, which has all the vendors that I get them from",
+   "speaker": "",
+   "episode": 136,
+   "episode_title": "Hardware, Surveys and Giveaways - Radular Rental Ranting",
+   "episode_url": "https://theamphour.com/the-amp-hour-136-radular-rental-ranting/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Disclosing a bill of materials to a distributor signals that a part is designed in with no alternative, which their purchasing side can price against; the counter is to require a second source before disclosing.",
+   "quote_verbatim": "if I say, yes, I'm definitely using this part right here, there is no chance I'll use anything else. Well, they're going to go tell their, they're purchasing people that",
+   "speaker": "",
+   "episode": 136,
+   "episode_title": "Hardware, Surveys and Giveaways - Radular Rental Ranting",
+   "episode_url": "https://theamphour.com/the-amp-hour-136-radular-rental-ranting/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Distributors solicit customers' bills of materials in order to quote against them competitively, which is a routine part of opening a trade account.",
+   "quote_verbatim": "Send us your bombs. And we'll, you know, and we'll quote for you.",
+   "speaker": "",
+   "episode": 136,
+   "episode_title": "Hardware, Surveys and Giveaways - Radular Rental Ranting",
+   "episode_url": "https://theamphour.com/the-amp-hour-136-radular-rental-ranting/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The open-source hardware convention requires releasing the PCB and schematic files together with the bill of materials, not the board files alone.",
+   "quote_verbatim": "you must give away your PCB and schematic files, and the bomb as well",
+   "speaker": "",
+   "episode": 55,
+   "episode_title": "Shonky Stiver Stultiloquence",
+   "episode_url": "https://theamphour.com/the-amp-hour-55-shonky-stiver-stultiloquence/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The scope of an open-hardware release is a graded decision, and including the bill of materials together with supplier information is what makes a published design turnkey-reproducible by a third party.",
+   "quote_verbatim": "Do you give everyone everywhere, you know, make it a turnkey thing so that anyone can just, you know, turn a key and manufacture your product.",
+   "speaker": "",
+   "episode": 534,
+   "episode_title": "Firmware Update Capabilities",
+   "episode_url": "https://theamphour.com/534-firmware-update-capabilities/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Each worked design example in a radar design text was published with a full bill of materials alongside its schematics, block diagrams and software, so that a reader could rebuild the instrument rather than only follow the theory.",
+   "quote_verbatim": "For every radar in that book, there's a full bomb. Schematics, block diagrams, software, everything.",
+   "speaker": "Greg Charvat",
+   "episode": 179,
+   "episode_title": "Greg Charvat Returns With A Book! - Laboratory Literature Laureate",
+   "episode_url": "https://theamphour.com/179-greg-charvat-returns-with-a-book-laboratory-literature-laureate/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A design distributed as a bill of materials rather than a packaged kit puts several hundred separate part orders on the builder, which is a barrier even where the design itself is sound.",
+   "quote_verbatim": "there's a bill material and you have to order everything there's several hundred parts it's pretty tedious",
+   "speaker": "Greg Charvat",
+   "episode": 115,
+   "episode_title": "An Interview with Dr Greg Charvat - Watcher of Wraithlike Walls",
+   "episode_url": "https://theamphour.com/the-amp-hour-115-watcher-of-wraithlike-walls/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A published bill of materials is what allows a third party to turn an open design into a purchasable kit, by working down the list and boxing the parts.",
+   "quote_verbatim": "someone went down the bill of materials and, and said, Hey, let's put this all into a box",
+   "speaker": "",
+   "episode": 611,
+   "episode_title": "Grad School Time Capsule with Joshua and Zach",
+   "episode_url": "https://theamphour.com/611-grad-school-time-capsule-with-joshua-and-zach/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Distributor-owned design tools are built to tie the component library to the distributor's catalogue, with footprints, schematic symbols and datasheet links attached to each stocked part, so that a completed design's bill of materials converts directly into an order.",
+   "quote_verbatim": "they will eventually have every footprint and every data sheet linked and every schematic symbol linked to every component in the Element 14 library",
+   "speaker": "",
+   "episode": 21,
+   "episode_title": "More Freeagle, More Benches and More Engineers on Twitter",
+   "episode_url": "https://theamphour.com/the-amp-hour-21-more-freeagle-more-benches-and-more-engineers-on-twitter/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A distributor's endorsement of a crowdfunded project amounts to confirming that the parts on its bill of materials can be supplied, which is a procurement statement rather than a judgement on whether the product will work or ship.",
+   "quote_verbatim": "All they do is look over their bill of materials and go, yep, we can get those parts for you.",
+   "speaker": "",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  }
+ ],
+ "attribution_notes": [
+  "ep 17: raw labels swap host and guest across the part-rant passages; the CAD-BOM-versus-purchasing-BOM claim is left unattributed.",
+  "ep 125: labelled SPEAKER_00, but the content is the interviewee's own account of the Seeed build process and his own boards; content-attributed to Ian Lesnet.",
+  "ep 126: labelled SPEAKER_01; the costing claims carry no self-identifying content, so the name is dropped.",
+  "ep 229: labelled Chris Gammell, but the content is the kit vendor's own Geiger-counter kits and kitting method; content-attributed to Jeff Keyzer.",
+  "ep 243: MacroFab-side answers are Chris Church; the passage labelled Chris Gammell about per-line handling overhead is left unattributed because the turn boundary is unclear.",
+  "ep 258, 327, 341, 495, 537: flagged unreliable and nothing in the content fixes the speaker; all names dropped, claims kept as unattributed facts.",
+  "ep 325: labelled Chris Gammell, but the supplier, the board and the assembly quote are the guest's own; content-attributed to David Kronstein.",
+  "ep 411: the passage labelled Chris Gammell speaks from the contract manufacturer's side ('we would take your bomb and we'd go to all our vendors'); content-attributed to Chris Denney, consistent with the other ep 411 passages.",
+  "ep 451: the Avnet-side answer about BOM health risk assessment cannot be matched with confidence to the named guest; name dropped, content kept.",
+  "ep 526: labelled Chris Gammell, but the Android Things and Nest account is the guest's; content-attributed to Jonathan Beri only in the note, and the claim itself left unattributed since identity is not part of the content.",
+  "ep 542: four passages are labelled Dave Jones, who is not on this episode. Content-attributed: the PartsBox design rationale, meta parts, spreadsheet-BOM critique and CM export advice are Jan Rychter; the Keithley-derived standard-cost practice and the duplicate-inventory account are Chris Gammell.",
+  "ep 552: flagged; the zero-ohm-resistor proportion carries no self-identifying content, so the name is dropped.",
+  "ep 574: the military three-vendor qualification account cannot be assigned between the two speakers; name dropped.",
+  "ep 577: flagged unreliable, but the content self-identifies the PLM vendor's founder throughout; kept as Michael Corr, except the source-of-truth passage, which is the interviewer's framing and is left unattributed.",
+  "ep 611: flagged; the CAD-export and kit-of-parts claims are generic, so names are dropped.",
+  "ep 682: the abandoned isolated power-supply product and its BOM costing are unambiguously the speaker's own; kept as Dave Jones."
+ ],
+ "capped": false
+}

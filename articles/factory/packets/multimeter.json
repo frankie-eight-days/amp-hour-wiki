@@ -1,0 +1,569 @@
+{
+ "concept": "multimeter",
+ "name": "Multimeter",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "multimeter",
+  "census": "union",
+  "passages_in": 175,
+  "capped": false
+ },
+ "claims": [
+  {
+   "claim_text": "Resolution and accuracy are independent specifications and are routinely conflated. Resolution is the number of digits displayed; accuracy is a percentage figure with many contributing factors, and it rarely matches the resolution. A meter quoted as having four and a half digits of accuracy is being described incorrectly, since digits are a resolution figure.",
+   "quote_verbatim": "Resolution and accuracy is a huge thing",
+   "speaker": "Chris Gammell",
+   "episode": 72,
+   "episode_title": "Kismetic Keithley Katowse",
+   "episode_url": "https://theamphour.com/the-amp-hour-72-kismetic-keithley-katowse/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Extra digits remain useful even where the accuracy behind them is poor, because resolution supports relative measurement: a meter accurate to ten percent but resolving six digits will reliably distinguish one component from another, which is why high-resolution instruments are specified with accuracy figures several digits above their least significant digit.",
+   "quote_verbatim": "Resolution is useful even if your accuracy is totally crap",
+   "speaker": "Dave Jones",
+   "episode": 24,
+   "episode_title": "Solar Cells, SparkFun, TSMC - The Detroit Debunking",
+   "episode_url": "https://theamphour.com/the-amp-hour-24-the-detroit-debunking/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Specifying a meter cannot be done from one prototype. The design is built to a target specification, and the achievable specification is then established by testing a batch to characterise the production spread, since what matters is the distribution across units rather than the performance of any one of them.",
+   "quote_verbatim": "you've got to test a whole batch of them and figure out the production spread",
+   "speaker": "Dave Jones",
+   "episode": 491,
+   "episode_title": "The Almighty Dollarydoo",
+   "episode_url": "https://theamphour.com/491-the-almighty-dollarydoo/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Published specifications shift slightly between revisions of the same instrument, in both directions and by small amounts such as 0.03 to 0.05 percent. The underlying change is commercial: an older approach set the specification first and spent whatever the components cost to reach it, whereas a price-conscious product lets the achievable figure follow from the component budget.",
+   "quote_verbatim": "they set a spec and then they like, no matter what, you're going to go for it",
+   "speaker": "Chris Gammell",
+   "episode": 491,
+   "episode_title": "The Almighty Dollarydoo",
+   "episode_url": "https://theamphour.com/491-the-almighty-dollarydoo/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "What an expensive meter buys is measurement confidence over time rather than initial accuracy, since calibrating any meter to read correctly on the day is straightforward. The question the price answers is how the instrument drifts with time, temperature, ageing and vibration, and that is bound up with the reputation of the manufacturer and of the specific model.",
+   "quote_verbatim": "It's all about measurement confidence",
+   "speaker": "Dave Jones",
+   "episode": 353,
+   "episode_title": "IoT Degree",
+   "episode_url": "https://theamphour.com/353-iot-degree/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Bench instruments set their integration time to a whole number of mains cycles so that line-frequency interference averages to zero, with further averaging applied on top. A meter configured for one line frequency and used on another loses that rejection, which is a real consideration for imported equipment.",
+   "quote_verbatim": "it's integration time is a multiple of the main's frequency",
+   "speaker": "Ian Johnston",
+   "episode": 643,
+   "episode_title": "Calibration & Repair with Ian Johnston",
+   "episode_url": "https://theamphour.com/643-calibration-repair-with-ian-johnston/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "True-RMS converters perform poorly on low-level signals, which is why the alternating-voltage millivolt ranges carry much looser accuracy figures than the direct-voltage ranges, often relegated to a footnote in the manual. The limit is component quality in the signal path rather than the conversion principle.",
+   "quote_verbatim": "the true RMS converters in there, they aren't good at low level signals",
+   "speaker": "Dave Jones",
+   "episode": 464,
+   "episode_title": "KonnectorPanik",
+   "episode_url": "https://theamphour.com/464-konnectorpanik/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Changing range blanks the measurement while the analog path settles, for milliseconds or longer depending on the instrument, and the display gives no indication that data is missing. The behaviour is general to test equipment rather than specific to meters, and it makes range-switching instruments unsuitable for measurements that must be continuous.",
+   "quote_verbatim": "when it switches ranges, it's blank for milliseconds or even more",
+   "speaker": null,
+   "episode": 607,
+   "episode_title": "The Joulescope Upgrade with Matt Liberty",
+   "episode_url": "https://theamphour.com/607-the-joulescope-upgrade-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Putting a meter in line to measure current is a reasonable starting point and far better than not measuring, but it fails where dynamic range is required, because the burden voltage needed to read the small currents will brown out the device being measured.",
+   "quote_verbatim": "if you try to measure the low, then it browns out your target device",
+   "speaker": null,
+   "episode": 607,
+   "episode_title": "The Joulescope Upgrade with Matt Liberty",
+   "episode_url": "https://theamphour.com/607-the-joulescope-upgrade-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The warning that sounds when probes are left in the current jack is implemented with a split current jack and a resistor of around five megohms feeding a high-impedance threshold detector. Because that sensing node is deliberately high impedance, dirt, grime or moisture inside the jack produces the warning with nothing plugged in at all, and cleaning the jacks with alcohol usually restores correct behaviour.",
+   "quote_verbatim": "they use a split jack",
+   "speaker": "Dave Jones",
+   "episode": 688,
+   "episode_title": "The Tandy Train",
+   "episode_url": "https://theamphour.com/688-the-tandy-train/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A meter that drains its battery while switched off points to a component connected across the battery ahead of the rotary switch, the classic case being the reverse-polarity protection diode. The diode fitted is often rated far above the requirement, a thousand volts across a nine volt battery, because the same part is already used in the input protection elsewhere in the circuit and carrying one reel rather than two is worth more than the component saving.",
+   "quote_verbatim": "If it's draining the battery in the off position, it means there's some component across the battery",
+   "speaker": "Dave Jones",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Nine volt batteries persist in meters for a functional reason rather than inertia. Two cells give about three volts, which caps the diode-test voltage below what is needed to turn on an LED, and raising it would require a boost converter. Three cells at four and a half volts is the common compromise, preserving the diode range while allowing each cell to discharge to around a volt so that most of its capacity is used.",
+   "quote_verbatim": "multi meters use three cells because it gives you, you know, the four and a half volts",
+   "speaker": "Chris Gammell",
+   "episode": 555,
+   "episode_title": "Timing is Everything",
+   "episode_url": "https://theamphour.com/555-timing-is-everything/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Measuring resistance in circuit is complicated by the meter's own test voltage being high enough to forward-bias semiconductor junctions, which changes what is being measured. Some meters provide a low-ohms mode specifically to hold the test voltage below that threshold.",
+   "quote_verbatim": "It gives you a low ohm voltage range so you wouldn't turn on semiconductor junk",
+   "speaker": "Dave Jones",
+   "episode": 140,
+   "episode_title": "Project Management, Lasers & Robots - Staunch Specialty Sanctanimity",
+   "episode_url": "https://theamphour.com/the-amp-hour-140-staunch-specialty-sanctanimity/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "A latched continuity tester pulse-stretches a momentary short into an audible tone long enough to hear, so that a contact lasting a microsecond registers. Without that stretching, lightly touching probes together produces a broken, scratchy indication as surface contamination makes and breaks the connection, which some users prefer and others find useless.",
+   "quote_verbatim": "that's called a latched continuity tester, but it's essentially a pulse stretcher",
+   "speaker": "Dave Jones",
+   "episode": 690,
+   "episode_title": "Clap on, clap off, lights flicker",
+   "episode_url": "https://theamphour.com/690-clap-on-clap-off-lights-flicker/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "A high-impedance input mode, above the usual ten megohms, will accumulate charge on the input capacitance when the probes are left open, so the reading ramps upward slowly instead of settling, which can be mistaken for a fault in the instrument.",
+   "quote_verbatim": "just leaving the input open, it'll actually accumulate charge on the input capacitance",
+   "speaker": "Dave Jones",
+   "episode": 293,
+   "episode_title": "Call In Show #4",
+   "episode_url": "https://theamphour.com/293-call-in-show-4/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Susceptibility to electromagnetic fields is specified against an international standard, with manuals for high-end meters claiming compliance at a field strength on the order of three volts per metre, and instruments still fail in ordinary bench conditions. One meter's current reading swung from one amp to ten amps as a hand approached it, and simply placing it beside coaxial cable carrying a ten volt square wave from a function generator moved the reading out of specification without any electrical connection.",
+   "quote_verbatim": "all you have to do is sit it next to the BNC output of a function generator and it upsets the reading",
+   "speaker": "Dave Jones",
+   "episode": 319,
+   "episode_title": "Photon Rich, Cash Poor",
+   "episode_url": "https://theamphour.com/319-photon-rich-cash-poor/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Such susceptibility is frequency-dependent and can peak in a band that ordinary equipment occupies: one meter was reported worst around 13.56 MHz, the frequency used for near-field identification. A separate case involved a mobile phone placed beside a meter locking the instrument up and in some cases rendering it unusable, a defect that took about a year to resolve in a new revision.",
+   "quote_verbatim": "if you put a GSM phone next to it, it just locks up",
+   "speaker": "Dave Jones",
+   "episode": 319,
+   "episode_title": "Photon Rich, Cash Poor",
+   "episode_url": "https://theamphour.com/319-photon-rich-cash-poor/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A single meter is insufficient for ordinary bench work because voltage and current frequently have to be observed at the same instant. Characterising a converter's input and output power simultaneously requires four, and can be done with two only at considerable inconvenience.",
+   "quote_verbatim": "you've got to measure voltage and current at the same time",
+   "speaker": "Dave Jones",
+   "episode": 18,
+   "episode_title": "Transistor Types and Where To Get Electronic Gear",
+   "episode_url": "https://theamphour.com/the-amp-hour-18-transistor-types-and-where-to-get-electronic-gear/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Handheld instruments are preferred over bench instruments by some practitioners on the grounds of mobility rather than performance: a bench meter is tied to one bench, while the work moves between benches, offices and homes, and the alternative of carrying the project to the instrument means probing across whatever else already occupies that bench.",
+   "quote_verbatim": "this is why I hate bench multimeters, right? Because they're just fixed",
+   "speaker": "Dave Jones",
+   "episode": 148,
+   "episode_title": "Contextual Electronics, ClubJameco and Solderpaste - Lifelong Learning Likelihood",
+   "episode_url": "https://theamphour.com/the-amp-hour-148-lifelong-learning-likelihood/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Three and a half digits covers the great majority of practical work, on the order of eighty to eighty-five percent, so a six-and-a-half digit instrument sits unused for most measurements even when it is available.",
+   "quote_verbatim": "Three and a half gets me 80, 85% of the way",
+   "speaker": "Chris Gammell",
+   "episode": 313,
+   "episode_title": "My Kind of Town",
+   "episode_url": "https://theamphour.com/313-my-kind-of-town/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "An inexpensive meter is adequate provided its limitations are understood, and the caution attached is not to measure mains with it. The advice against cheap instruments is about knowing where they stop being trustworthy rather than about avoiding them.",
+   "quote_verbatim": "if it suits your purposes, there's nothing wrong with a $5 cheapie",
+   "speaker": "Dave Jones",
+   "episode": 97,
+   "episode_title": "An Interview with Eben Upton - Morbus Moilsome MakerFaire",
+   "episode_url": "https://theamphour.com/the-amp-hour-97-morbus-moilsome-makerfaire/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Starting on modest equipment is defended on the grounds that capability is only appreciated against a remembered limitation, and that a beginner's difficulties are misattributed to the instrument when they start at the top; review and recommendation work is correspondingly organised around price points rather than around the best available instrument.",
+   "quote_verbatim": "here's the best multimeter for 50 bucks",
+   "speaker": "Dave Jones",
+   "episode": 470,
+   "episode_title": "Just Add Salt",
+   "episode_url": "https://theamphour.com/470-just-add-salt/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Continuity testing is the fallback when optical tracing of a board fails. On a four-layer board a via that disappears into an inner layer cannot be followed from photographs, and the remaining method is to buzz out every pin systematically with a meter.",
+   "quote_verbatim": "get the multimeter out and start buzzing every pin systematically",
+   "speaker": "Dave Jones",
+   "episode": 221,
+   "episode_title": "Warming Up To IoT - Tendentious Thermal Tools",
+   "episode_url": "https://theamphour.com/221-warming-up-to-iot-tendentious-thermal-tools/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A continuity reading of zero ohms establishes only that two nodes are joined at direct current, because the meter measures by passing a small current slowly. Two grounds that read as identical can still behave as separate nets at speed, so the measurement does not settle questions about high-frequency behaviour.",
+   "quote_verbatim": "If you put a multimeter on them and you buzz it out, it's zero ohms",
+   "speaker": "Dave Jones",
+   "episode": 410,
+   "episode_title": "Secret Buzzer Handshake",
+   "episode_url": "https://theamphour.com/410-secret-buzzer-handshake/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Measuring the voltage across every resistor while a device is in its sleep state is a quick way to locate unexpected current paths, and requires nothing beyond a meter before any component is removed from the board.",
+   "quote_verbatim": "you just go with a multimeter and measure the voltage across every resistor in your sleep mode",
+   "speaker": null,
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A meter serves as process control even in semiconductor fabrication at small scale: a test wafer grown with an oxide of the target thickness reads as an open circuit on the resistance range, and is etched in timed steps until it reads as conductive, which establishes the etch time for that layer.",
+   "quote_verbatim": "if you put a multimeter to it and measuring ohms, you'll have open",
+   "speaker": "Sam Zeloof",
+   "episode": 390,
+   "episode_title": "An Interview with Sam Zeloof",
+   "episode_url": "https://theamphour.com/390-an-interview-with-sam-zeloof/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Field repair programmes can be built for people who are neither engineers nor technicians provided they can operate a meter, and candidates are tested on exactly that before being authorised: diode test, continuity, short-circuit detection and voltage measurement. A step-by-step procedure built on those four operations resolves roughly eighty percent of field faults, because the failures concentrate in a small number of over-represented components.",
+   "quote_verbatim": "we actually test them before we authorize a tech repair that they can use a multimeter",
+   "speaker": "Paul Thompson",
+   "episode": 481,
+   "episode_title": "An Interview with Paul Thompson",
+   "episode_url": "https://theamphour.com/481-an-interview-with-paul-thompson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Continuity testing alone recovers the wiring of a machine stripped of its harnesses: hours of point-to-point checking established what connected to what on industrial robot arms cut free of their cabling, which was enough to write a control library for them.",
+   "quote_verbatim": "spent some, some hours with the multimeter, just, uh, doing continuity to figure out what was wired to what",
+   "speaker": "Trammell Hudson",
+   "episode": 463,
+   "episode_title": "An Interview with Trammell Hudson",
+   "episode_url": "https://theamphour.com/463-an-interview-with-trammell-hudson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Sealing on industrial meters is not for operation under water, which nobody does, but so that a fully sealed instrument admits no dust or chemicals and survives being dropped into a drum of oil, after which it can be wiped off and remain within calibration. The cost is that a sealed instrument is harder to hold.",
+   "quote_verbatim": "the fact that it's fully sealed and nothing gets in, no dust, no chemicals",
+   "speaker": "Dave Jones",
+   "episode": 65,
+   "episode_title": "Silego, ADCs & Seismic Detection - Dave's Dingo Dystocia",
+   "episode_url": "https://theamphour.com/the-amp-hour-65-daves-dingo-dystocia/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Test equipment at a contract manufacturer cannot be relied on. A volume factory is a lean operation that holds little prototyping equipment because it is not needed once a design is stable, and what exists is heavily used, often with a damaged input and calibration that cannot be trusted, so the working assumption is to bring your own instruments or arrange for them in advance.",
+   "quote_verbatim": "the factory is actually a very lean, mean operation",
+   "speaker": "Dave Jones",
+   "episode": 279,
+   "episode_title": "Merry Keyzermas!",
+   "episode_url": "https://theamphour.com/279-merry-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A domestic laboratory stresses calibration through ordinary temperature cycling, since a building without environmental control runs hot in summer and cold in winter, which is a real cost of keeping instruments at home rather than in conditioned space.",
+   "quote_verbatim": "the calibrations on those multimeters are probably being stressed by just the temperature cycling",
+   "speaker": null,
+   "episode": 523,
+   "episode_title": "A Keyzermas Story",
+   "episode_url": "https://theamphour.com/523-a-keyzermas-story/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The industry-standard handheld meter has been sold as essentially the same model for decades, introduced in the late 1980s and revised only twice, with the current revision dating from the early 2000s. The commercial logic against replacing it is that existing owners would not upgrade at that price, while the volume comes from organisations whose approved-equipment lists name that specific model, so a new model would forfeit the position rather than extend it.",
+   "quote_verbatim": "they've been selling the exact same model for",
+   "speaker": "Dave Jones",
+   "episode": 534,
+   "episode_title": "Firmware Update Capabilities",
+   "episode_url": "https://theamphour.com/534-firmware-update-capabilities/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Most meters on the market use one-time programmable microcontrollers, so a defect found after purchase cannot be corrected in the field. Manufacturers will occasionally supply a replacement chip to be desoldered and fitted for a technically capable customer, but not as a general remedy, and moving to a flash-programmable part is what makes bug fixes possible at all.",
+   "quote_verbatim": "most multimeters on the market have a one-time programmable chip in there",
+   "speaker": "Dave Jones",
+   "episode": 619,
+   "episode_title": "Super Tecmo Bug",
+   "episode_url": "https://theamphour.com/619-super-tecmo-bug/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Regulation is closing off the one-time programmable option: rules requiring that anything electronic bearing a conformity mark be updatable would exclude meters built on non-updatable memory from that market entirely, which turns a component decision into a market-access decision.",
+   "quote_verbatim": "So no OTP ROMs anymore",
+   "speaker": "Dave Jones",
+   "episode": 720,
+   "episode_title": "Hyper Growth and OpenClaw Interns",
+   "episode_url": "https://theamphour.com/720-hyper-growth-and-openclaw-interns/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Manufacturers resist publishing firmware for meters on a safety argument rather than a commercial one: an instrument's reading has direct safety consequences, so a modified firmware that reports zero volts on a live conductor creates a hazard the manufacturer would carry, which is why very few meters permit public firmware update.",
+   "quote_verbatim": "I can't blame any multi-meter company for not releasing public firmware",
+   "speaker": "Dave Jones",
+   "episode": 680,
+   "episode_title": "Catching Rockets with Musk Sticks",
+   "episode_url": "https://theamphour.com/680-catching-rockets-with-musk-sticks/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Phone- and tablet-connected meters are an additional tool rather than a substitute for a conventional instrument, a position the designers of such products agree with; the error is treating the accessory as a replacement.",
+   "quote_verbatim": "these phone connected multimeters are not a replacement for a regular multimeter",
+   "speaker": "Dave Jones",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Products built around a general-purpose converter and marketed as meters are often data loggers: a sixteen-bit converter recording a signal is specified as a percentage accuracy without a digit count, which is the tell that the device was not designed as a meter and is not treated as one by its makers.",
+   "quote_verbatim": "People do these things as data loggers and then call it a multimeter",
+   "speaker": "Dave Jones",
+   "episode": 199,
+   "episode_title": "The 2014 Maker Faire Show - Traveling Technology Trangam",
+   "episode_url": "https://theamphour.com/199-the-2014-maker-faire-show-traveling-technology-trangam/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Combining instruments into one enclosure tends to produce a poor version of each: a combined calculator and meter was impractical as both, and the pattern of packing unrelated functions into one product recurs whenever the feature list rather than the use governs the design.",
+   "quote_verbatim": "it ends up being a shit multimeter and probably a shit calculator",
+   "speaker": "Dave Jones",
+   "episode": 130,
+   "episode_title": "Boeing, PCBs & Startups - Awful Airplane Aeration",
+   "episode_url": "https://theamphour.com/the-amp-hour-130-awful-airplane-aeration/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The same argument applies to test accessories: a mains socket tester needs only three indicator lamps whose pattern reveals a miswired outlet, and building a measurement chipset, current measurement and non-contact voltage detection into it makes the tool worse rather than better even at a low price.",
+   "quote_verbatim": "just a dumb one with three LEDs in it",
+   "speaker": "Dave Jones",
+   "episode": 660,
+   "episode_title": "My Toothbrush Is Broadcasting",
+   "episode_url": "https://theamphour.com/the-amp-hour-660-my-toothbrush-is-broadcasting/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "There is no single optimal meter because the requirement space is genuinely wide, which is why a thousand distinct models exist; the same reasoning explains why a fully open design would not automatically win the market, since buyers who want a particular feature set will not accept a small-run product that lacks it.",
+   "quote_verbatim": "there's literally a thousand different types of multimeters because there's one for every need",
+   "speaker": "Dave Jones",
+   "episode": 554,
+   "episode_title": "PLEASE be a die shrink",
+   "episode_url": "https://theamphour.com/554-please-be-a-die-shrink/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Open-source meter projects recur across decades and rarely reach completion, because a meter is a more complex instrument than it appears. The honest justification offered for such a project is curiosity rather than a gap in the market.",
+   "quote_verbatim": "it's such a complex thing that, yeah, you have to ask why",
+   "speaker": "Dave Jones",
+   "episode": 449,
+   "episode_title": "Pulled From A Working Environment",
+   "episode_url": "https://theamphour.com/449-pulled-from-a-working-environment/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "An open-source instrument driver layer already exists that speaks to a wide range of meters, oscilloscopes and logic analysers and exposes them to graphical front ends. It is built for desktop operating systems and carries too much overhead to run on a small microcontroller, so reusing it for an embedded display means extracting only the required parts rather than adopting it whole.",
+   "quote_verbatim": "it's basically an open source universal interface to almost every test equipment on the market",
+   "speaker": "Dave Jones",
+   "episode": 665,
+   "episode_title": "Really long needle nose pliers",
+   "episode_url": "https://theamphour.com/665-really-long-needle-nose-pliers/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Cash flow rather than margin is the constraint in selling instruments: a production run of five hundred units at fifty dollars of build cost ties up twenty-five thousand dollars before anything ships, with distributor credit covering only part of it, and larger runs of a more expensive model reach six figures per shipment.",
+   "quote_verbatim": "you're going to go and build 500 multimeters at 50 bucks a piece",
+   "speaker": "Chris Gammell",
+   "episode": 287,
+   "episode_title": "Pull The Trigger",
+   "episode_url": "https://theamphour.com/287-pull-the-trigger/",
+   "depth_regraded": "explains",
+   "kind": "sourcing"
+  },
+  {
+   "claim_text": "The downside risk on a commodity-popular instrument is unusually low, because unsold stock can be cleared at wholesale cost to buyers who recognise the value; what the inventory actually costs is tied-up capital rather than exposure to loss.",
+   "quote_verbatim": "you can always get your money back",
+   "speaker": "Dave Jones",
+   "episode": 287,
+   "episode_title": "Pull The Trigger",
+   "episode_url": "https://theamphour.com/287-pull-the-trigger/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Instruments are ordered on lead times of about two months with no stock held by the manufacturer, so a reseller must forecast that far ahead of running out, and those lead times extend further when component supply tightens upstream.",
+   "quote_verbatim": "it'll be two months lead time. They don't keep any stock at all of this meter",
+   "speaker": "Dave Jones",
+   "episode": 377,
+   "episode_title": "Debugger vs Printeffer",
+   "episode_url": "https://theamphour.com/377-debugger-vs-printeffer/",
+   "depth_regraded": "opinion",
+   "kind": "sourcing"
+  },
+  {
+   "claim_text": "Trade dress is enforced in this market: a manufacturer asserted rights over the yellow holster of its handheld meters against a competitor, who changed the colour to blue rather than contest it, and separately threatened an importer of inexpensive branded meters on the argument that buyers might confuse the two. The counter-argument is that the purchasers are skilled practitioners choosing deliberately between specifications, so confusion would be difficult to demonstrate.",
+   "quote_verbatim": "One's got a yellow holster. One's got a blue holster",
+   "speaker": "Dave Jones",
+   "episode": 190,
+   "episode_title": "Let's Hear It For The Buoys - Vanishing Vessel Vexation",
+   "episode_url": "https://theamphour.com/190-lets-hear-it-for-the-buoys-vanishing-vessel-vexation/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Marking a product with patent numbers that have expired can attract a penalty assessed per unit sold, which for a high-volume product is a substantial exposure, so manufacturers remove the marks when a model is revised.",
+   "quote_verbatim": "you can actually get fined for putting expired patent numbers on a product",
+   "speaker": "Dave Jones",
+   "episode": 52,
+   "episode_title": "An Interview with Jeri Ellsworth - Carnassial Chip Chemicals",
+   "episode_url": "https://theamphour.com/the-amp-hour-52-carnassial-chip-chemicals/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Procurement overhead inside companies can exceed the price of the instrument being bought. Requiring a written justification and several signatures for a hundred dollar meter consumes engineering hours worth many times that, which argues for buying enough instruments outright and distributing them rather than rationing them.",
+   "quote_verbatim": "your $100 multimeter ends up costing, you know, $1,500 just for all the people that have to put time into that report",
+   "speaker": "Chris Gammell",
+   "episode": 200,
+   "episode_title": "SolidCon and Traveling Tech - Joined Junk Jocularity",
+   "episode_url": "https://theamphour.com/200-solidcon-and-traveling-tech-joined-junk-jocularity/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Older precision instruments hold their calibration remarkably well, to the point that a decades-old meter bought second-hand, provided it still functions, will generally read accurately, which makes the used market a legitimate route to high-quality measurement.",
+   "quote_verbatim": "they're so stable over time as well",
+   "speaker": "David Ray",
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Documenting a fault in a meter for a manufacturer is complicated by the layers involved: an instrument whose reading was wrong by volts under a poorly explained sensitivity control demonstrates that a user-facing setting can silently change the digits of precision in the wrong direction, which is a specification problem presented as a feature.",
+   "quote_verbatim": "if you hit it, it can give you completely wrong values",
+   "speaker": null,
+   "episode": 455,
+   "episode_title": "Bill and Dave's Excellent Equipment",
+   "episode_url": "https://theamphour.com/455-bill-and-daves-excellent-equipment/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A meter's probe leads are a design decision in their own right: coiled leads were supplied as standard on the reasoning that long leads clutter a desk, and in practice they tangle and catch on everything, which is why they did not persist.",
+   "quote_verbatim": "I first got my first coiled multimeter pros back in the 80s",
+   "speaker": "Dave Jones",
+   "episode": 696,
+   "episode_title": "It Works With Option Number 5",
+   "episode_url": "https://theamphour.com/696-it-works-with-option-number-5/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Where a design has separate power domains, fitting two-pin headers rather than soldered links makes measurement practical, since a meter's leads can be inserted directly into the header to isolate and measure a rail instead of lifting a surface-mount component and tacking wires to it.",
+   "quote_verbatim": "then you can get in with your multimeter and actually stick, you know, leads in there",
+   "speaker": "Dave Jones",
+   "episode": 132,
+   "episode_title": "Melbourne, Hackerspace & Calibration - Vacuuous Vortex Verification",
+   "episode_url": "https://theamphour.com/the-amp-hour-132-vacuuous-vortex-verification/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Calibration traceability in an automated production setup is maintained by keeping a calibrated meter in series with the instruments under test, so that devices used to calibrate the next generation of devices do not accumulate error from one generation to the next.",
+   "quote_verbatim": "there is a least traceable calibrated multimeter in series",
+   "speaker": null,
+   "episode": 640,
+   "episode_title": "Software Defined Power Supplies with Werner Johansson",
+   "episode_url": "https://theamphour.com/640-software-defined-power-supplies-with-werner-johansson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Continuous current measurement over long periods requires a different architecture from a range-switching meter. Measuring on a separate channel that is always set to the highest range, in parallel with the switched ranges, allows the instrument to remain valid through a range change, and the design must also address charge injection from the switching devices themselves.",
+   "quote_verbatim": "as you switch current ranges, we're measuring on a separate channel at the highest range always",
+   "speaker": null,
+   "episode": 607,
+   "episode_title": "The Joulescope Upgrade with Matt Liberty",
+   "episode_url": "https://theamphour.com/607-the-joulescope-upgrade-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Meters are procured and specified in ways that reveal the buyer: the same instrument can cost roughly double in one country compared with another, which changes who buys it, since a company will absorb the difference while an individual will buy a cheaper instrument instead.",
+   "quote_verbatim": "it's almost like it's double the cost here",
+   "speaker": "Dave Jones",
+   "episode": 9,
+   "episode_title": "From Boston In Boxers?",
+   "episode_url": "https://theamphour.com/the-amp-hour-9-from-boston-in-boxers/",
+   "depth_regraded": "opinion",
+   "kind": "sourcing"
+  }
+ ],
+ "attribution_notes": [
+  "ep 455, 523, 527, 607 and 640 sit on the unreliable-attribution list; those claims carry speaker: null and are attributed by content.",
+  "Two bundle passages carry no episode number and were dropped, since an uncitable passage cannot support a claim.",
+  "Collection, brand-affection and instrument-shootout material was excluded under the knowledge-only rule."
+ ],
+ "capped": false
+}
