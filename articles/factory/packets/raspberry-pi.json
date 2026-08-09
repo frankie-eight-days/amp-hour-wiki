@@ -1,0 +1,602 @@
+{
+ "concept": "raspberry-pi",
+ "name": "Raspberry Pi",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "raspberry-pi",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "raspberry-pi",
+   "raspberry-pi-laptop",
+   "raspberry-pi-one",
+   "raspberry-pi-rp1"
+  ],
+  "children": [
+   "beaglebone",
+   "beaglebone-black",
+   "broadcom",
+   "compute-module-4",
+   "firewall",
+   "nrf",
+   "ntsc",
+   "raspberry-pi-foundation",
+   "raspberry-pi-pico",
+   "raspberry-pi-zero",
+   "single-board-computer",
+   "system-on-module",
+   "webcam"
+  ],
+  "neighbors": {
+   "beagleboard": 7,
+   "embedded-linux": 6,
+   "rp2040": 5,
+   "eben-upton": 4,
+   "hdmi": 4,
+   "raspberry-pi-cm4": 4
+  },
+  "episodes_with_kept_mentions": 197,
+  "mentions_kept": 711,
+  "pins_final": 243,
+  "capped": false,
+  "total_available": 243
+ },
+ "claims": [
+  {
+   "claim_text": "The founding observation was a price gap rather than a technical one: the same silicon costs an individual buying in ones far more than it costs a high-volume customer such as a phone or media-centre maker, and that gap is a structural advantage for large companies. Getting one of those high-volume media processors onto a board an individual could buy was the point of the exercise.",
+   "quote_verbatim": "what you can buy for 10 bucks if you are a high volume company",
+   "speaker": "Eben Upton",
+   "episode": 97,
+   "episode_title": "An Interview with Eben Upton - Morbus Moilsome MakerFaire",
+   "episode_url": "https://theamphour.com/the-amp-hour-97-morbus-moilsome-makerfaire/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The immediate predecessor was a hand-built machine on stripboard at the same target price, producing composite video at 320 by 240 with some accelerated graphics operations, assembled in an afternoon from freely available components with a soldering iron.",
+   "quote_verbatim": "It's a Veraboard Raspberry Pi",
+   "speaker": "Eben Upton",
+   "episode": 97,
+   "episode_title": "An Interview with Eben Upton - Morbus Moilsome MakerFaire",
+   "episode_url": "https://theamphour.com/the-amp-hour-97-morbus-moilsome-makerfaire/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The system-on-chip used in the first boards already existed as a media processor before the project began, and the founding insight was recognising that an existing part suited the machine; several of the hardware team had worked on that chip at the vendor.",
+   "quote_verbatim": "that device already existed. It was built before Raspberry Pi was a thing",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Subsequent generations were evolutions of that same silicon, replacing the weaker processor cores and adding more, until the fourth-generation part became a new design on a 28-nanometre process where the earlier chips had been 40 nanometres; by then the volume made the customer significant enough to ask the vendor for specific features.",
+   "quote_verbatim": "it was just an evolution of the original chip in the first Pi",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Splitting the peripheral set into a separate input-output controller chip removed the need for the main silicon vendor to carry board-specific medium-speed functions such as USB and general-purpose input-output, which the vendor prefers to keep generic; the specific functions moved into silicon the board designer controls.",
+   "quote_verbatim": "it makes a lot of sense for us to put our specific Raspberry Pi things in a separate bit of silicon, which we can control",
+   "speaker": "James Adams",
+   "episode": 648,
+   "episode_title": "The RP1 and beyond with the Raspberry Pi Hardware team",
+   "episode_url": "https://theamphour.com/648-the-rp1-and-beyond-with-the-raspberry-pi-hardware-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Across generations the design has absorbed external support silicon into the main chip, the power-management chip or the input-output controller, leaving a board of connectors, capacitors and resistors. That lowers cost and simplifies the supply chain, and it is also forced by board area, since fitting everything within a credit-card outline gets harder each generation.",
+   "quote_verbatim": "we've always tried to hoover up more and more of the function into the main bits of silicon",
+   "speaker": "James Adams",
+   "episode": 648,
+   "episode_title": "The RP1 and beyond with the Raspberry Pi Hardware team",
+   "episode_url": "https://theamphour.com/648-the-rp1-and-beyond-with-the-raspberry-pi-hardware-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Toggling pins directly from the application processor was always a comparatively high-latency operation, and placing the input-output controller behind a PCI Express link makes it worse, because each pin change becomes a message across the bus; timing-critical uses such as driving addressable LED strings are where that shows up.",
+   "quote_verbatim": "You've got to send your messages over before it can go and twiddle the pin",
+   "speaker": "James Adams",
+   "episode": 648,
+   "episode_title": "The RP1 and beyond with the Raspberry Pi Hardware team",
+   "episode_url": "https://theamphour.com/648-the-rp1-and-beyond-with-the-raspberry-pi-hardware-team/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The microcontroller board was cost-engineered from the start, with a dual in-line form factor chosen deliberately so the board could be used as a component inside other products rather than only as a development board.",
+   "quote_verbatim": "I also wanted it to be kind of modular usable",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The board layout and the chip pin assignment were designed together, because getting the pins into a sensible order takes iteration and having a board to lay out is what reveals whether the ordering works for everyone else as well as for the vendor's own product.",
+   "quote_verbatim": "we sort of co-designed the board layout and the chip pinout",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The resulting board is two layers, single-sided surface mount, with a simple but flexible power chain, chosen so that it is easy to automate, easy to package and therefore as cheap as it can be made.",
+   "quote_verbatim": "it's a two-layer board",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The same board ships on a pick-and-place reel with castellated edges, and the board width was chosen to match a standard reel width, which is a design decision made years ahead in anticipation of customers placing the module by machine.",
+   "quote_verbatim": "the entire Raspberry Pi board comes on a pick and place reel",
+   "speaker": "Dave Jones",
+   "episode": 528,
+   "episode_title": "New Year, New Gear",
+   "episode_url": "https://theamphour.com/528-new-year-new-gear/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Demand for the bare microcontroller led to it being sold by the reel at around eighty cents in five hundred pieces and seventy cents in reels of thirty-four hundred, with customers asking for tens of thousands at a time.",
+   "quote_verbatim": "a reel of 500 of them for at a unit price of 80 cents",
+   "speaker": "Dave Jones",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "That microcontroller carries no internal flash, only RAM, so it is inert until code is loaded from outside; the reason is cost, since adding a flash process to the die is a different and more expensive process.",
+   "quote_verbatim": "it does make the silicon cheaper if you don't have to build the Flash process into your silicon",
+   "speaker": "Chris Gammell",
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Adding a wireless part to the same microcontroller board raised its price by about two dollars, which is the scale at which decisions are made on a board of that cost.",
+   "quote_verbatim": "that upped it by $2",
+   "speaker": "Chris Gammell",
+   "episode": 595,
+   "episode_title": "Trade Show or Conference?",
+   "episode_url": "https://theamphour.com/595-trade-show-or-conference/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The part is a dual Cortex-M0+ running at 133 MHz with 264 kilobytes of SRAM, which is substantial for its price but is explicitly not in the class of an application processor and does not reach the hundred-nanoamp sleep currents of parts designed for that.",
+   "quote_verbatim": "it's got 264k of sram for starters",
+   "speaker": "Dave Jones",
+   "episode": 528,
+   "episode_title": "New Year, New Gear",
+   "episode_url": "https://theamphour.com/528-new-year-new-gear/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The design target for that microcontroller was performance at a price point rather than low power, and the team is explicit that it competes where the required performance is unaffordable elsewhere rather than where sleep current dominates.",
+   "quote_verbatim": "we aren't in the hundred nanoamp sleep current class",
+   "speaker": "Luke Renn",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The processor at the centre of the single-board computers cannot be bought through ordinary channels: obtaining it means presenting as a large customer, signing non-disclosure agreements and committing to volume, which is the practical meaning of the platform not being open hardware.",
+   "quote_verbatim": "you've got to sign an NDA, and you've got to commit to volume",
+   "speaker": "Dave Jones",
+   "episode": 319,
+   "episode_title": "Photon Rich, Cash Poor",
+   "episode_url": "https://theamphour.com/319-photon-rich-cash-poor/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "No schematic or board files are published for the boards, so a user cannot reproduce one; documentation has improved but the design itself is not available.",
+   "quote_verbatim": "you still can't download a schematic for a Raspberry Pi",
+   "speaker": "Dave Jones",
+   "episode": 664,
+   "episode_title": "Simulating doors falling off",
+   "episode_url": "https://theamphour.com/664-simulating-doors-falling-off/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "That difference has a concrete consequence for anyone designing a board into a product: where the design files are open, a customer whose supplier stops production can take the files to an assembly house and have more built, and where they are closed, that option does not exist.",
+   "quote_verbatim": "you just take the files and go to a, you know, a board stuffer and get them to make you a thousand boards",
+   "speaker": "Chris Gammell",
+   "episode": 207,
+   "episode_title": "B Plus Boards and D Minus Cities - Uneath Urban Ubication",
+   "episode_url": "https://theamphour.com/207-b-plus-boards-and-d-minus-cities-uneath-urban-ubication/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A business built on a board it cannot manufacture is exposed the same way as one built on a proprietary chip: if the board is discontinued or the version abandoned, the choice is a forced port or the end of the product. The mitigation a board offers over a chip is that a connector can be made the abstraction boundary.",
+   "quote_verbatim": "totally reliant upon the continued manufacturer of that board",
+   "speaker": "Dave Jones",
+   "episode": 351,
+   "episode_title": "The Automation Amish",
+   "episode_url": "https://theamphour.com/351-the-automation-amish/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Advertising a defined production lifetime, in the case of one compute module eight years, is what makes an industrial designer-in defensible, and it is one of the first things asked of any part designed into a system.",
+   "quote_verbatim": "they specifically advertise right up front that it's going to have an eight year production life",
+   "speaker": "Dave Jones",
+   "episode": 514,
+   "episode_title": "Focus, Dammit",
+   "episode_url": "https://theamphour.com/514-focus-dammit/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The compute module exists as a deliberate stepping stone for people whose projects outgrew the development board but who are not ready to lay out their own processor, memory and high-speed interfaces; it is not aimed at very high volume, because the pricing carries no volume breaks, and is positioned at runs on the order of a few thousand units.",
+   "quote_verbatim": "it's certainly not meant for people who are going into super high volume",
+   "speaker": "Matt Richardson",
+   "episode": 235,
+   "episode_title": "An Interview with Matt Richardson - Raspberry Risorgimento Regent",
+   "episode_url": "https://theamphour.com/235-an-interview-with-matt-richardson-raspberry-risorgimento-regent/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The most common reasons not to build a development board into a product are mechanical: the integration needs its own connectors and additional circuitry, the result is an awkward stack that is difficult to mount, and the money saved on the board is spent on making it fit.",
+   "quote_verbatim": "you've got to piss away your extra money on all the connectors",
+   "speaker": "Dave Jones",
+   "episode": 282,
+   "episode_title": "3D Product Logistics",
+   "episode_url": "https://theamphour.com/282-3d-product-logistics/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Where such a board does belong is a run of about a hundred, for instance controlling production jigs, where designing a custom board would be wasted effort; the same choice at volume is a different decision.",
+   "quote_verbatim": "It's the tool for, you know, a run of 100",
+   "speaker": "Dave Jones",
+   "episode": 282,
+   "episode_title": "3D Product Logistics",
+   "episode_url": "https://theamphour.com/282-3d-product-logistics/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The considered position against designing one into finished goods is not that it cannot work but that it concentrates risk: the attraction is the graphical interface, the Linux capabilities and the community, and the price is control over the product's own supply.",
+   "quote_verbatim": "how much of your destiny do you want to control",
+   "speaker": "Chris Gammell",
+   "episode": 372,
+   "episode_title": "Year End, 2017",
+   "episode_url": "https://theamphour.com/372-year-end-2017/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Where the architecture really is right, the professional route is to take the circuit and design the processor onto your own board, which brings the vendor agreements and higher unit cost with it.",
+   "quote_verbatim": "copy the circuit and get the processor that's on there",
+   "speaker": "Dave Jones",
+   "episode": 282,
+   "episode_title": "3D Product Logistics",
+   "episode_url": "https://theamphour.com/282-3d-product-logistics/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Fitting compute modules to designs that never use their USB, video or camera interfaces means choosing a sixty-to-hundred-dollar embedded computer over a four-dollar microcontroller, usually because the team knows Python; the counterweight is that development cost against volume can still justify a familiar platform, and the error is choosing without doing that arithmetic.",
+   "quote_verbatim": "they're not even using USB, HDMI or camera",
+   "speaker": "Dave Jones",
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "For a product needing HDMI output, audio and graphics acceleration, the compute module is the first part to reach for, because the underlying chip is built in very high volume for media applications and carries HDMI transmitters, graphics acceleration and hardware video encode and decode that general-purpose application processors charge heavily for.",
+   "quote_verbatim": "the Raspberry Pi compute module is 100% the perfect",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A single-board computer is designed on the assumption of a keyboard, mouse and monitor, which is why booting one headless requires changing the configuration first rather than being the default case.",
+   "quote_verbatim": "as anyone who tries to boot one without a monitor or a mouse",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Industrial input-output must never be wired straight to the board's pins, because a 24-volt industrial signal is not a logic level; interposing proper interface circuitry is the point that separates a working installation from a destroyed board.",
+   "quote_verbatim": "not just plug an industrial output into your Raspberry Pi, which is something people should never do",
+   "speaker": "Chris Gammell",
+   "episode": 385,
+   "episode_title": "An Interview with John Davis",
+   "episode_url": "https://theamphour.com/385-an-interview-with-john-davis/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Single-board computers are established in university and technical-school laboratories for sampling and motion-control experiments and are crossing into industrial use, but they do not replace a programmable logic controller and are not supported to that standard.",
+   "quote_verbatim": "these are never going to replace a PLC",
+   "speaker": "John Davis",
+   "episode": 385,
+   "episode_title": "An Interview with John Davis",
+   "episode_url": "https://theamphour.com/385-an-interview-with-john-davis/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The boards are unforgiving about their supply: they brown out and reset on marginal power, an early model could not run two USB wireless adapters at once, and a five-hundred-milliamp port is not enough where nine hundred milliamps is expected.",
+   "quote_verbatim": "the Raspberry Pi like doesn't give enough juice to the USB ports",
+   "speaker": "Samy Kamkar",
+   "episode": 308,
+   "episode_title": "An Interview with Samy Kamkar",
+   "episode_url": "https://theamphour.com/308-an-interview-with-samy-kamkar/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Plugging in a USB device draws a surge of current to charge the bulk decoupling capacitors downstream of the port protection device, which can trip that device into overcurrent and produce a warning that has nothing to do with the attached device's steady-state draw.",
+   "quote_verbatim": "They were taking a surge of current to charge the bulk capacitors",
+   "speaker": "Dave Jones",
+   "episode": 408,
+   "episode_title": "Tronnort Software Rises Again!",
+   "episode_url": "https://theamphour.com/408-tronnort-software-rises-again/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Measured consumption on the small wireless variant is around 275 milliamps at idle and close to 600 milliamps under load, and a full-size board idles at roughly two watts, so an ample supply rather than a nominal one is the working recommendation.",
+   "quote_verbatim": "idols at about two 75 milliamps",
+   "speaker": "Dave Jones",
+   "episode": 565,
+   "episode_title": "Here for a reason",
+   "episode_url": "https://theamphour.com/565-here-for-a-reason/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Peripheral blocks are power decisions taken in the device tree: on one compute module the USB core is disabled by default and enabling it costs a substantial share of the board's consumption, which is invisible until measured.",
+   "quote_verbatim": "USB is one of the ones that really sucks down a lot of the power",
+   "speaker": "Chris Gammell",
+   "episode": 548,
+   "episode_title": "The Last Line of Defense",
+   "episode_url": "https://theamphour.com/548-the-last-line-of-defense/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Running a compute module near its input voltage limit leaves no margin for switching transients: a module powered through a switching circuit was destroyed, with inductive kickback the suspected cause.",
+   "quote_verbatim": "I was already pretty close to the voltage limit on the CM4",
+   "speaker": "Chris Gammell",
+   "episode": 551,
+   "episode_title": "Feed the Mouse",
+   "episode_url": "https://theamphour.com/551-feed-the-mouse/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A five-volt supply capable of two and a half amps is a real constraint that rules the platform out of many embedded power budgets before any other consideration.",
+   "quote_verbatim": "five volts or two and a half amps, thank you very much",
+   "speaker": "Dave Jones",
+   "episode": 428,
+   "episode_title": "Setting Fire To The Tracks",
+   "episode_url": "https://theamphour.com/428-setting-fire-to-the-tracks/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The small wireless model is among the most efficient ways to put a wireless connection into a small project without dropping to a microcontroller, and for work that is mostly toggling pins the top-of-range board's processing is not needed; the newest and fastest board is not the best board for many of the platform's ordinary uses.",
+   "quote_verbatim": "that might be the most efficient, like if you're building a little electronics project and you want wifi on it",
+   "speaker": "Jeff Geerling",
+   "episode": 651,
+   "episode_title": "Learning Computing with Jeff Geerling",
+   "episode_url": "https://theamphour.com/651-learning-computing-with-jeff-geerling/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "These boards do not boot a generic operating system image the way a personal computer does: the bootloader and initialisation are board-specific rather than following the ARM standard for a discoverable boot, so each board needs its device tree and its own build, which is why distributions ship board-specific images.",
+   "quote_verbatim": "you have to put in the device tree and you have to put in all the special things for each board",
+   "speaker": "Jeff Geerling",
+   "episode": 651,
+   "episode_title": "Learning Computing with Jeff Geerling",
+   "episode_url": "https://theamphour.com/651-learning-computing-with-jeff-geerling/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Competing single-board computers now match or beat the platform on raw performance and efficiency, and the durable advantage is maintenance and software support rather than hardware.",
+   "quote_verbatim": "the maintenance and the support are so much better",
+   "speaker": "Jeff Geerling",
+   "episode": 651,
+   "episode_title": "Learning Computing with Jeff Geerling",
+   "episode_url": "https://theamphour.com/651-learning-computing-with-jeff-geerling/",
+   "depth_regraded": "opinion",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Availability is part of the comparison: boards with better processing per dollar exist, and the question that settles the choice is whether they can actually be bought.",
+   "quote_verbatim": "But can you buy them?",
+   "speaker": "Dave Jones",
+   "episode": 520,
+   "episode_title": "Inductance and Stuff",
+   "episode_url": "https://theamphour.com/520-inductance-and-stuff/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Shortage conditions pushed buyers to scalpers, and placing back orders carries its own penalty when they arrive months later against a programme that has already moved on.",
+   "quote_verbatim": "our best approach is to pay the scalpers",
+   "speaker": "Dave Young",
+   "episode": 628,
+   "episode_title": "Two Dads Puzzlin Things Out",
+   "episode_url": "https://theamphour.com/628-two-dads-puzzlin-things-out/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The expansion header moved from twenty-six to forty pins across a hardware revision while keeping the original pins in place, so existing add-on boards continued to fit; maintaining that compatibility, and not diverging the firmware alongside it, is what keeps a platform's accessory ecosystem intact through a revision.",
+   "quote_verbatim": "the bottom 26 are still compatible",
+   "speaker": "Chris Gammell",
+   "episode": 207,
+   "episode_title": "B Plus Boards and D Minus Cities - Uneath Urban Ubication",
+   "episode_url": "https://theamphour.com/207-b-plus-boards-and-d-minus-cities-uneath-urban-ubication/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Add-on boards identify themselves through an on-board memory device rather than requiring the user to select a library by hand, with pin configuration handled by device tree overlays because the pins are multiplexed.",
+   "quote_verbatim": "the pins do have to be configured",
+   "speaker": "Matt Richardson",
+   "episode": 235,
+   "episode_title": "An Interview with Matt Richardson - Raspberry Risorgimento Regent",
+   "episode_url": "https://theamphour.com/235-an-interview-with-matt-richardson-raspberry-risorgimento-regent/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A production test station was built around one of these boards: a barcode scan of the shipping label looked up the customer's chosen radio frequency, the board flashed that frequency into the unit on a pogo-pin bed, and then transmitted a test tone on that frequency using a software radio library that drives an output pin with a short wire as the antenna, so a working unit announced itself audibly.",
+   "quote_verbatim": "there's a library. I think it's called Pi FM",
+   "speaker": null,
+   "episode": 350,
+   "episode_title": "An Interview with Zach Dunham",
+   "episode_url": "https://theamphour.com/350-an-interview-with-zach-dunham/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The same boards serve as long-duration test controllers: an accelerated-life rig ran amplifiers for a month with the boards generating the audio, monitoring device temperatures and logging into a database.",
+   "quote_verbatim": "they play music generated from Raspberry Pis",
+   "speaker": "J\u00f8rgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with J\u00f8rgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A long-range radio gateway is commonly built as one of these boards carrying the network software connected through its header to a concentrator board holding the radio silicon, rather than as a purpose-built device.",
+   "quote_verbatim": "you could put software on top of a Raspberry Pi",
+   "speaker": "Chris Gammell",
+   "episode": 380,
+   "episode_title": "Just Terrestrial and Space Things",
+   "episode_url": "https://theamphour.com/380-just-terrestrial-and-space-things/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Building a cluster from several cheap boards is defended as a learning exercise rather than a performance one: it forces the builder to solve networking, power and management, and those skills transfer to real infrastructure, which one faster machine would not teach.",
+   "quote_verbatim": "It's about the learning and the opportunity",
+   "speaker": "Jeff Geerling",
+   "episode": 651,
+   "episode_title": "Learning Computing with Jeff Geerling",
+   "episode_url": "https://theamphour.com/651-learning-computing-with-jeff-geerling/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Routing all the data through the host board is the bottleneck in vision work: a prototype combining a depth camera with a neural accelerator passed every video and depth frame through the single-board computer for reformatting and overlay, which is the argument for moving that processing onto the module itself.",
+   "quote_verbatim": "all the video and depth data and everything had to go through the Raspberry Pi",
+   "speaker": "Brandon Gilles",
+   "episode": 517,
+   "episode_title": "Depth and AI with Brandon Gilles and Brian Weinstein",
+   "episode_url": "https://theamphour.com/517-depth-and-ai-with-brandon-gilles-and-brian-weinstein/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The organisation is structured as a charity that owns a trading subsidiary, with the subsidiary employing the engineers who design the products and the charity carrying the educational mission; the profit from hardware sales funds that mission, which is also why pricing is kept the same for everyone rather than discounted by volume.",
+   "quote_verbatim": "the Foundation is the charity, and we are basically a subsidiary of the charity",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Cost optimisation is the first lens applied to every decision in the silicon, and the boards have been sold below what an ordinary buyer could purchase the constituent chips for, which is what the high-volume chip relationship buys.",
+   "quote_verbatim": "it was under the cost of what you could buy the chips for",
+   "speaker": "Chris Gammell",
+   "episode": 528,
+   "episode_title": "New Year, New Gear",
+   "episode_url": "https://theamphour.com/528-new-year-new-gear/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The approach is a disruption from below rather than a cheaper version of an existing computer: starting from a media-processing chip obtained cheaply and asking what could be built produces a different object from starting with the requirement for a screen and a keyboard and trying to reduce its cost.",
+   "quote_verbatim": "it's a circuit board using a media processing chip that we get for really cheap",
+   "speaker": "Chris Gammell",
+   "episode": 558,
+   "episode_title": "Toasted Marshmallow Connectors",
+   "episode_url": "https://theamphour.com/558-toasted-marshmallow-connectors/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The value in the platform is the integration rather than any single part: the boards are the assembled, tested combination of silicon, software and support, and a buyer's whole interest is that the top level works.",
+   "quote_verbatim": "the fact that they're gluing it all together and they're testing it",
+   "speaker": "Dave Jones",
+   "episode": 652,
+   "episode_title": "For a couple weeks there...",
+   "episode_url": "https://theamphour.com/652-for-a-couple-weeks-there/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A system on module solves a specific layout problem: laying out a high-speed memory interface is the hard part, so pairing the processor and its memory in a qualified unit and exposing everything else through a connector moves the difficult work into the module and leaves the low-speed peripherals on a carrier board.",
+   "quote_verbatim": "Laying out a, a high speed DDR memory interface is always a hassle",
+   "speaker": null,
+   "episode": 650,
+   "episode_title": "Accessible ASICs with Andreas Olofsson",
+   "episode_url": "https://theamphour.com/650-accessible-asics-with-andreas-olofsson/",
+   "depth_regraded": "explains",
+   "kind": "explains"
+  },
+  {
+   "claim_text": "An open competitor board can be produced by anyone from its published files and is manufactured by more than one company, which is the practical difference an open design makes to supply once a board is designed into something.",
+   "quote_verbatim": "So if you look at the BeagleBone, it is open",
+   "speaker": "Chris Gammell",
+   "episode": 207,
+   "episode_title": "B Plus Boards and D Minus Cities - Uneath Urban Ubication",
+   "episode_url": "https://theamphour.com/207-b-plus-boards-and-d-minus-cities-uneath-urban-ubication/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  }
+ ],
+ "attribution_notes": [
+  "ep 97: the raw label is an unresolved speaker id, but the passages are self-consistently the guest describing his own earlier prototype and the founding rationale; content-attributed to Eben Upton.",
+  "ep 350, 515, 645, 651: labels flagged unreliable; claims are attributed by content (a crowdfunded radio product's production test, an embedded Linux practitioner, a design consultancy and a single-board-computer reviewer) and carry a name only where the identity is the content.",
+  "Enthusiasm, board-versus-board preference and how many boards sit unused were discarded as reception material; only design-relevant content was kept."
+ ],
+ "capped": false
+}

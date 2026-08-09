@@ -1,0 +1,659 @@
+{
+ "concept": "reverse-engineering",
+ "name": "Reverse Engineering",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "reverse-engineering",
+  "census": "union",
+  "passages_in": 138,
+  "capped": false
+ },
+ "claims": [
+  {
+   "claim_text": "Reverse engineering is a distinct skill set from circuit design, soldering or debugging, and its defining requirement is patience: a problem is rarely solved in the first few minutes, and the initial difficulty is often working out what one is even looking at.",
+   "quote_verbatim": "usually reverse engineering is not easy. You need a lot of dedication",
+   "speaker": "Chris Gammell",
+   "episode": 178,
+   "episode_title": "A 2013 Recap - Year-end Yarn Yakking",
+   "episode_url": "https://theamphour.com/178-a-2013-recap-year-end-yarn-yakking/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The skills transfer directly to debugging one's own product, because both consist of probing an unfamiliar system and forming hypotheses about how it works, and the practice also exposes the designer to other engineers' decisions, elegant and otherwise.",
+   "quote_verbatim": "a lot of the skills to use in reverse engineering are also very useful for debugging",
+   "speaker": "Alvaro Prieto",
+   "episode": 363,
+   "episode_title": "An interview with Alvaro and Jen from the URE Podcast",
+   "episode_url": "https://theamphour.com/363-an-interview-with-alvaro-and-jen-from-the-ure-podcast/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Practitioners divide by intent between exploratory and targeted work. Exploratory reverse engineering maps the system for its own sake and treats the process as the objective; targeted work aims at unlocking a specific capability, such as discovering that a receiver and its transceiver variant are physically identical and asking what prevents the extra function from being enabled.",
+   "quote_verbatim": "For me, it's more exploring",
+   "speaker": "Chris Gammell",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The rigour that experimental biology applies to its protocols, positive and negative controls on even routine steps and explicit gauge checks that the starting material is sound, sets a standard for reverse engineering work, where the corresponding discipline is asking continually what assumptions are in play and whether the measurement is being thrown off.",
+   "quote_verbatim": "the thoroughness people have in designing their experiments is actually something that I learn a lot from when I'm trying to reverse engineer systems",
+   "speaker": "Bunnie Huang",
+   "episode": 336,
+   "episode_title": "An Interview with Bunnie Huang (2nd)",
+   "episode_url": "https://theamphour.com/the-amp-hour-336-an-interview-with-bunnie-huang-2nd/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Recovering a circuit from a board is tractable where the board is simple and not multi-layer, because the traces can be followed visually; for popular devices the reconstructed circuit is often already published, so the work becomes checking someone else's blueprint rather than starting from the copper.",
+   "quote_verbatim": "you can look at the PCB and you know where the trace goes",
+   "speaker": "Michal Zalewski",
+   "episode": 725,
+   "episode_title": "The Secret Life of Circuits with lcamtuf / Michał Zalewski",
+   "episode_url": "https://theamphour.com/725-the-secret-life-of-circuits-with-lcamtuf-michal-zalewski/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Board-level repair depends on tooling that links the schematic to the physical board: software that imports the schematic and overlays it on a board image, so that clicking a net highlights the trace across the board, is what makes efficient repair possible. Without a schematic and layout, troubleshooting degrades into removing components at random, since a measured 3.3 volts means nothing without knowing what the node does.",
+   "quote_verbatim": "you actually click on a bit and highlights the trace that goes all over the board",
+   "speaker": "Chris Gammell",
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Whether to reverse engineer a device before repairing it is an economic calculation rather than a technical one. Repair without a schematic is possible where the layout of an adjacent model year is known and the common faults are familiar. For a device that will be seen thousands of times, paying someone to spend months measuring every node on a working board is worth it; for a device that will be seen once, at a repair price of a few tens of dollars, open-ended troubleshooting is not viable at any level below tens of thousands of dollars of value.",
+   "quote_verbatim": "it becomes completely financially unviable to do so",
+   "speaker": "Louis Rossmann",
+   "episode": 507,
+   "episode_title": "Right To Repair with Louis Rossmann",
+   "episode_url": "https://theamphour.com/the-amp-hour-507-right-to-repair-with-louis-rossmann/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Silicon can be reverse engineered by decapsulating the die, photographing it at high resolution and tracing the devices. One such effort mapped all 3,500 transistors of an early microprocessor and produced a transistor-level simulation that was completely accurate without any debugging, and could execute real programs while displaying the state of the die.",
+   "quote_verbatim": "they built a simulation from that without doing any debugging at all",
+   "speaker": "Chris Gammell",
+   "episode": 25,
+   "episode_title": "NASA, WOTW & Modular Design - The NASA Nostalgia",
+   "episode_url": "https://theamphour.com/the-amp-hour-25-the-nasa-nostagia/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Where more than one layer must be recovered, the die is etched from the top and worked downwards through the metal layers, with the circuit redrawn as the layers are removed; the process is straightforward in principle and extremely tedious in practice.",
+   "quote_verbatim": "he basically started. Moving down through the metal layers",
+   "speaker": "Chris Gammell",
+   "episode": 128,
+   "episode_title": "Layout, CAD & Raspberry Pi - Kedogenous Kinetic Knowledge",
+   "episode_url": "https://theamphour.com/the-amp-hour-128-kedogenous-kinetic-knowledge/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Die-level work is not done under the conditions the imagery suggests: practitioners work in ordinary open-air laboratories with the same equipment, rather than in cleanrooms or under vacuum.",
+   "quote_verbatim": "they show people walking around in bunny suits. They're laughing because they're sitting in their lab with the exact same equipment",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 303,
+   "episode_title": "An Interview with Dmitry Nedospasov",
+   "episode_url": "https://theamphour.com/303-an-interview-with-dmitry-nedospasov/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Old patents are a substantial documentary source, because they were written in a period when trivial inventions were filed with pages of full schematics and listings of the code the chip executed; one calculator chip was reverse engineered from that material rather than from the silicon.",
+   "quote_verbatim": "they'll have like pages and pages of entire schematics for the calculator chip",
+   "speaker": "Ken Shirriff",
+   "episode": 361,
+   "episode_title": "An Interview with Ken Shirriff",
+   "episode_url": "https://theamphour.com/361-an-interview-with-ken-shirriff/",
+   "depth_regraded": "explains",
+   "kind": "sourcing"
+  },
+  {
+   "claim_text": "The countermeasures used on high-security silicon go beyond obscurity. A pay television operator will take the vendor's register-transfer source and synthesise the part itself so that proprietary cryptography is never documented back to the chip vendor, and metal layers are changed between production years purely to invalidate work already done on the previous version.",
+   "quote_verbatim": "they'll literally go ahead and change a metal layer just to make it even more obnoxious for somebody trying to reverse engineer this",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 303,
+   "episode_title": "An Interview with Dmitry Nedospasov",
+   "episode_url": "https://theamphour.com/303-an-interview-with-dmitry-nedospasov/",
+   "depth_regraded": "opinion",
+   "kind": "design"
+  },
+  {
+   "claim_text": "The security level of a smart card tracks the compensating controls around it rather than the apparent sensitivity of the application. A SIM card is the cheapest and least protected, because the network operator can detect fraud by other means; a banking card is not much stronger, because daily withdrawal and transaction limits bound the loss; an electronic passport sits above those; and pay television cards sit an order of magnitude higher again, because there is no other mechanism to fall back on.",
+   "quote_verbatim": "your SIM card rather would be the absolute cheapest device of those that you have that has minimal security",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 303,
+   "episode_title": "An Interview with Dmitry Nedospasov",
+   "episode_url": "https://theamphour.com/303-an-interview-with-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Advanced packaging is used as a deliberate obstacle to copying: integrating several dies onto a silicon interposer with programmable interconnect whose configuration is protected by one-time programmable security bits makes the subsystem substantially harder to reverse engineer. Nothing is made impossible; the objective is to make the effort not worth the copier's time.",
+   "quote_verbatim": "all you have to do is to make it not worthwhile for the copycaters",
+   "speaker": "",
+   "episode": 499,
+   "episode_title": "Discussing Chiplets with Ming Zhang",
+   "episode_url": "https://theamphour.com/499-discussing-chiplets-with-ming-zhang/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Custom part marking removes the starting point a reverse engineer relies on. Manufacturers will print any part number or company logo requested at moderate order quantities, sometimes free above a threshold, so a device can be built entirely from standard parts that carry no identifiable markings.",
+   "quote_verbatim": "They will custom silkscreen",
+   "speaker": "Chris Gammell",
+   "episode": 15,
+   "episode_title": "Analog Components, First Person Flying and Idea Ownership",
+   "episode_url": "https://theamphour.com/the-amp-hour-15-analog-components-first-person-flying-and-idea-ownership/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Access to the debug port is the usual entry point on a system with a processor: with JTAG control the firmware can be dumped, and even without analysing the firmware, control of the input and output pins combined with reverse engineering the board establishes what each output actually drives.",
+   "quote_verbatim": "I have JTAG control. I can control GPIOs",
+   "speaker": "",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "What a dumped firmware image typically yields is not a subtle cryptographic weakness but hardcoded material: strings identifying an undocumented page that authenticates automatically and grants control, hardcoded root passwords, and private keys shipped into devices where only public keys were needed.",
+   "quote_verbatim": "we got the firmware and we reverse engineered the firmware, we find this string",
+   "speaker": "",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Disassembly proceeds like a constraint puzzle rather than by reading the code linearly. One known fact, such as the byte value of a documented command, is located by searching for where it is compared; that identifies the routine, whose cross-references identify the addresses it writes; those addresses acquire meaning from what wrote to them, and each element solved constrains the next.",
+   "quote_verbatim": "I compared it to a game of Sudoku",
+   "speaker": "Chris Gammell",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "An undocumented command disclosed for an unrelated purpose is a sufficient foothold: given a peek and poke command with a sixteen-bit address, sweeping the entire address space and disassembling whatever comes back reveals far more than the vendor exposed.",
+   "quote_verbatim": "let's, like, just drive from 0 to 65535",
+   "speaker": "Chris Gammell",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The disassembly tools divide sharply on cost and approachability. One open-source tool is powerful but low-level with a command-line interface and a steep learning curve, and its architecture support may have to be repaired by the user; a later free tool with a graphical interface decompiles assembly into pseudo-C and is considerably more approachable; the commercial standard costs on the order of a thousand dollars once obscure targets are needed.",
+   "quote_verbatim": "The tools have a pretty steep learning curve",
+   "speaker": "Chris Gammell",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A simulator turns static analysis into an experiment. Running the binary under simulation shows which functions write which registers, and recording every call in the simulated binary produces a trace that can be walked backwards from a breakpoint to recover the path that led there, which static disassembly alone cannot give.",
+   "quote_verbatim": "record like every function call that happens in the simulated binary",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Large language models are useful on the volume-limited parts of the problem, sorting through packet captures too large for a person to read in order to recover a proprietary over-the-wire protocol, and matching values visible in a graphical interface against a proprietary binary file to decode its format. The residual risk is that the technique is pattern matching without understanding, so a plausible answer can be subtly wrong in ways that are not caught.",
+   "quote_verbatim": "it's extremely skilled and diligent at sorting through mounds of data",
+   "speaker": "Luke Beno",
+   "episode": 722,
+   "episode_title": "AI Tooling with Matt Liberty and Luke Beno",
+   "episode_url": "https://theamphour.com/722-ai-tooling-with-matt-liberty-and-luke-beno/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The same tools that decompile also guess at intent, and existing static analysis already recognises library signatures such as a formatted print routine or a system call. The realistic value is in that pattern recognition rather than in explanation, and misplaced trust in a wrong answer is harder to catch in code one did not write.",
+   "quote_verbatim": "reverse engineering is trial and error",
+   "speaker": "Alvaro Prieto",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Where the firmware is inaccessible, the communication between the processor and a peripheral can be tapped instead. Recording the traffic between a microcontroller and its radio chip, then connecting a different microcontroller to the same radio, reproduces the function without ever extracting the original code.",
+   "quote_verbatim": "I tapped the communications between the microcontroller and the radio chip",
+   "speaker": "Alvaro Prieto",
+   "episode": 363,
+   "episode_title": "An interview with Alvaro and Jen from the URE Podcast",
+   "episode_url": "https://theamphour.com/363-an-interview-with-alvaro-and-jen-from-the-ure-podcast/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The same approach recovers undocumented component protocols: a proprietary addressable LED string was decoded by putting a logic analyser on the data line, identifying the stream and reproducing it from a development board, which was the only route to controlling the parts at all.",
+   "quote_verbatim": "figured out the data stream and then learned that I could use an Arduino",
+   "speaker": "Samy Kamkar",
+   "episode": 308,
+   "episode_title": "An Interview with Samy Kamkar",
+   "episode_url": "https://theamphour.com/308-an-interview-with-samy-kamkar/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Capture and replay is the standard first attack on consumer remote controls, over infrared and over radio. In the unlicensed bands most consumer equipment sits at 433 MHz or, depending on the country, 315 MHz, covering garage door openers, mains remote controls and wireless weather stations, and a receiver shield producing the raw waveform is enough to start.",
+   "quote_verbatim": "just about everything transmits at 433 megahertz",
+   "speaker": "Jon Oxer",
+   "episode": 349,
+   "episode_title": "An(other) Interview with Jon Oxer",
+   "episode_url": "https://theamphour.com/349-another-interview-with-jon-oxer/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Recurring work justifies purpose-built tooling. A board carrying a wireless microcontroller and a switching supply at one end, with the remaining half left as blank prototyping area, lets a remote control be stuck down and wired in directly, replacing the jumper-wire setup that made each such job unattractive.",
+   "quote_verbatim": "about half of the circuit board is a blank space",
+   "speaker": "Jon Oxer",
+   "episode": 349,
+   "episode_title": "An(other) Interview with Jon Oxer",
+   "episode_url": "https://theamphour.com/349-another-interview-with-jon-oxer/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Reverse engineering a vehicle bus starts from an undifferentiated stream of frames at ten, twenty and fifty millisecond intervals, from which a specific identifier and then a specific bit position within its payload must be isolated. Tools narrow the field by ranking candidate fields on how fast their bits change, since the least significant bits of a slowly varying signal change fastest, and the remainder is correlation: actuate a function and see which field moves.",
+   "quote_verbatim": "look at the rate at which bits change",
+   "speaker": "Dave Jones",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Frames on such a bus can also be attributed to the physical device that sent them, because impedance mismatches produce reflections whose effect on rise and fall times is deterministic given a transmitter's position on the bus. Measuring those times precisely enough allows a map of which module transmits which frames to be built before any payload is decoded.",
+   "quote_verbatim": "you can then start saying which physical device, uh, the can frame came from",
+   "speaker": "Dave Jones",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Bus traffic being visible is not the same as being understood: the protocols carried over a vehicle bus are proprietary, so the ones and zeros can be read without their meaning being recoverable except through sustained effort or by obtaining design specifications. Because the bus itself carries no encryption, the practical defence is encrypting the payload it carries.",
+   "quote_verbatim": "you can see the ones and zeros, you don't know what the ones and zeros mean",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Bluetooth Low Energy is unusually easy to survey because service enumeration is built into the protocol: any phone application can list the services a nearby device advertises, and each service carries properties that function as permissions to read, write or subscribe to notifications.",
+   "quote_verbatim": "built into the protocol is the ability to enumerate all of the services that a device has on offer",
+   "speaker": "",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Manufacturers commonly tunnel an existing custom binary serial protocol over that transport, using the write characteristic to send and the notify characteristic to receive, because the protocol offers no native asynchronous channel. The reverse engineering task therefore reduces to recovering that binary protocol from sniffed exchanges and then determining whether the same messages can be sent from an unauthorised client.",
+   "quote_verbatim": "they'll effectively implement that over Bluetooth low energy",
+   "speaker": "",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Fault injection extends reverse engineering to devices that will not give up their firmware: side-channel measurement and voltage glitching are used to extract an image, which is then analysed statically with a decompiler.",
+   "quote_verbatim": "This is doing side channel. And glitching",
+   "speaker": "Chris Gammell",
+   "episode": 582,
+   "episode_title": "The Same Wavelength",
+   "episode_url": "https://theamphour.com/582-the-same-wavelength/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Whether a fault injection attack counts as reverse engineering is contested, on the argument that recovering behaviour from an already open design is a different activity from reconstructing an unknown one. The counter-argument is that a product contains more than its published source and board files, so establishing something subtle that was not in the original design is reconstruction of a kind.",
+   "quote_verbatim": "you can still reverse engineer an open source product because it's not just, there's more to a product than just the source code and the PCB file",
+   "speaker": "Dave Jones",
+   "episode": 576,
+   "episode_title": "A literal trainwreck",
+   "episode_url": "https://theamphour.com/576-a-literal-trainwreck/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The mobile phones of the early analogue era were built as an eight-bit microcontroller with an external read-only memory and a serial electrically erasable memory holding the identity number, which was stored in a standard bit-packed format of country, manufacturer, model and serial fields. Reading that memory out therefore often showed the number directly in the dump.",
+   "quote_verbatim": "you'd have an 8-bit microcontroller",
+   "speaker": "Dave Jones",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The efficient way into that code was to disassemble the entire read-only memory, of thirty-two to sixty-four kilobytes, and search for any access to the input-output pin the serial memory was wired to. That located the read and write routines immediately, and the calls to those routines located everything that used them, which is far faster than reading a disassembly from the start. Since every manufacturer used a different processor, this meant writing a disassembler per architecture.",
+   "quote_verbatim": "you look through that code, look for any access to that iopin",
+   "speaker": "Dave Jones",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The objective was to reprogram the device without opening it, which meant recovering the factory test protocol available on the external connector; those protocols were generally simple serial protocols, since they existed only for production and dealer use.",
+   "quote_verbatim": "The primary thing was figuring out the factory test protocol",
+   "speaker": "Dave Jones",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "One manufacturer defended the stored identity by routing part of the address bus through a custom chip that blocked processor access to that location, so no code running on the device could write it. The defeat was physical rather than logical: lifting one address pin and tying it changed the mapping so that a writable address landed on the protected location. Epoxy over the chips followed as the next countermeasure.",
+   "quote_verbatim": "you unsold a one-address pin, tie it, so you write to a different address",
+   "speaker": "Dave Jones",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The general principle drawn from that work is to attack the layer the designer did not defend, modifying the hardware rather than fighting the software, on the reasoning that engineers secure a system in the domain they built it in.",
+   "quote_verbatim": "let's just botch the hardware and fix it",
+   "speaker": "Dave Jones",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Protecting a tool that talks to hardware over an observable link is harder than protecting the software itself, since the protocol can be recovered by sniffing the bus. Two mitigations were used together: a hardware dongle containing a microcontroller that performed the final transformation, so the source of the software could be given away without revealing the method; and burying the few real command bytes inside thirty seconds of functionless commands, some carrying fragments of the target serial number as decoys, with the position of the real ones randomised as a function of that number.",
+   "quote_verbatim": "bury the actual programming commands within this torrent",
+   "speaker": "Dave Jones",
+   "episode": 294,
+   "episode_title": "Live from Serbia with Mike Harrison",
+   "episode_url": "https://theamphour.com/294-live-from-serbia-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Keeping a design closed does not protect it. A schematic can be reconstructed from a product in about a day by anyone competent to do a teardown, so the decision to publish costs a designer very little of what closed distribution was supposed to preserve.",
+   "quote_verbatim": "it's trivial to reverse engineer a product",
+   "speaker": "Dave Jones",
+   "episode": 298,
+   "episode_title": "Don't Turn It On, Don't Take It Apart",
+   "episode_url": "https://theamphour.com/298-dont-turn-it-on-dont-take-it-apart/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "What a competitor gains by copying is rarely the part that took the time. The circuit on a straightforward product can be reproduced almost immediately, whereas the manufacturing, the documentation and the support material are where the real investment sits.",
+   "quote_verbatim": "any engineer could reverse engineer this in 10 seconds. There's nothing special here",
+   "speaker": "",
+   "episode": 458,
+   "episode_title": "An Interview with Ken Burns",
+   "episode_url": "https://theamphour.com/458-an-interview-with-ken-burns/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A commercial clone of an instrument was produced without any physical access to the design, by observing the product's behaviour with a logic analyser until the function of its programmable logic could be reimplemented. Every part was reproduced except the intellectual property protection module, and the vendor's own software was then patched at the binary level to load the clone's bitstream in place of the original, which was the one component that could not be reimplemented.",
+   "quote_verbatim": "just from like hooking up a logic analyst to the product and just recording exactly how it works",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The recommended protection for the part of a product that can actually be protected treats software as the asset: the device carries a bootloader whose encryption is programmed at a secure facility with no network access, and the programmed integrated circuits are then consigned to the factory. This both keeps the image out of the factory's hands and caps production, since a factory given a known number of programmed parts cannot run an unauthorised extra shift.",
+   "quote_verbatim": "have that bootloader encryption programmed at a secure facility",
+   "speaker": "",
+   "episode": 113,
+   "episode_title": "An Interview with Scott Miller - Sudden SinoAmerican Synthesis",
+   "episode_url": "https://theamphour.com/the-amp-hour-113-sudden-sinoamerican-synthesis/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "The three subsystems of a product are unequally exposed. Mechanical design is the easiest to copy, requiring little more than a scanner and material identification; electrical design takes more work but yields to component identification, circuit reconstruction and x-ray of the assembly; software is simultaneously the easiest to protect and the most complete loss once it is gone.",
+   "quote_verbatim": "Mechanical is probably the easiest thing in the world to rip off",
+   "speaker": "",
+   "episode": 113,
+   "episode_title": "An Interview with Scott Miller - Sudden SinoAmerican Synthesis",
+   "episode_url": "https://theamphour.com/the-amp-hour-113-sudden-sinoamerican-synthesis/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Reverse engineering has been used as a deliberate market entry route: a vendor's programming cable was reverse engineered and integrated onto low-cost development boards, because a seventy-nine dollar board could not be sold alongside a three-hundred-dollar programming cable. Equivalent cables of the entrant's own design followed, and after several years of demonstrated reliability the original vendor's tools began supporting that hardware.",
+   "quote_verbatim": "we reverse-engineered Xilinx's programming cable",
+   "speaker": "Clint Cole",
+   "episode": 302,
+   "episode_title": "An Interview with Clint Cole of Digilent",
+   "episode_url": "https://theamphour.com/302-an-interview-with-clint-cole-of-digilent/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Repair-driven reverse engineering supports viable small businesses. An instrument display that fails systematically and is no longer obtainable was addressed by recovering its protocol and building an adapter board around a microcontroller that accepts the meter's original signalling and drives a currently available display, which sells in the hundreds because the failure is that common.",
+   "quote_verbatim": "somebody went to the effort to reverse engineer the OLED protocol",
+   "speaker": "Dave Jones",
+   "episode": 646,
+   "episode_title": "Fan Fanboys",
+   "episode_url": "https://theamphour.com/646-fan-fanboys/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Salvage of components from wrecked or discontinued electric vehicles depends on reverse engineering, since the interfaces of original-equipment traction and control modules are undocumented and must be recovered before the parts can be reused in another vehicle.",
+   "quote_verbatim": "try to reverse engineer how that stuff works so that we can make DIY hobbyist cars",
+   "speaker": "Collin Kidder",
+   "episode": 388,
+   "episode_title": "An Interview with Earl Sharpe and Collin Kidder",
+   "episode_url": "https://theamphour.com/388-an-interview-with-earl-sharpe-and-collin-kidder/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The activity is not confined to outsiders. Engineers inside a manufacturer routinely reverse engineer their own systems because documentation for an interface between subsystems is missing, and companies hire contractors to reverse engineer boards they themselves produced, which is common rather than exceptional.",
+   "quote_verbatim": "they will have to hire somebody, not unlike myself to read engineer their own board",
+   "speaker": "David Ray",
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Pervasive reverse engineering can function as a de facto openness: in the Chinese electronics ecosystem parts nominally closed at the register level are effectively documented, not by policy but because everything has been taken apart.",
+   "quote_verbatim": "it's, like, kind of default open source",
+   "speaker": "Akiba",
+   "episode": 245,
+   "episode_title": "An interview with Akiba from Freaklabs - Dimissory Diagraphical Debt",
+   "episode_url": "https://theamphour.com/245-an-interview-with-akiba-from-freaklabs-dimissory-diagraphical-debt/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A community can reconstruct an entire toolchain around an undocumented part: for a microcontroller costing a few cents, support was added to an existing C compiler and the vendor's programming protocol was reverse engineered into an open-source programmer board, making the part usable without the vendor's tools.",
+   "quote_verbatim": "they've reverse engineered the programming protocol",
+   "speaker": "Dave Jones",
+   "episode": 453,
+   "episode_title": "Vertically Integrated Design Engineering",
+   "episode_url": "https://theamphour.com/453-vertically-integrated-design-engineering/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The same pattern applies to consumer radios: the encryption on a manufacturer's firmware update images was broken, the firmware reverse engineered, and a patched firmware is maintained that runs on the unmodified commercial hardware.",
+   "quote_verbatim": "reverse engineered the firmware and now maintain our own patched firmware that runs in the official radio",
+   "speaker": "",
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where a manufacturer locks a machine to its own consumables by withholding control of process parameters, reverse engineering the control system to expose those parameters is itself a product: a temperature controller for a closed 3D printer sustained a small manufacturing business for several years.",
+   "quote_verbatim": "So I reverse engineered their system and I came up with a temperature controller for it",
+   "speaker": "Julia Truchsess",
+   "episode": 424,
+   "episode_title": "An Interview with Julia Truchsess",
+   "episode_url": "https://theamphour.com/424-an-interview-with-julia-truchsess/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Firmware analysis has been used to demonstrate deliberate deception: a curve found in engine control software, with defined upper and lower bounds, matched the certification test cycle so exactly, with equal margins on both sides, that its purpose was unambiguous once the two were overlaid.",
+   "quote_verbatim": "the moment in the talk where they overlaid the curve of what's necessary for certification",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Disclosure of a defect found in hardware differs from software because the vendor frequently cannot deploy a fix to devices already in the field, which weakens the usual argument for private notification. The countervailing concern is that a vendor given quiet notice has an institutional incentive to do nothing, so the leverage to obtain a response is the credible prospect of publication.",
+   "quote_verbatim": "in software, if I find a bug on a server, they can go fix it, but they may not be able to come out and fix it",
+   "speaker": "Chris Gammell",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A legal demand is a routine rather than exceptional response to disclosure, with conference talks withdrawn after vendors issue notices, and an independent teardown that debunked a product's claims drawing a demand for thousands of dollars in damages together with removal of the analysis.",
+   "quote_verbatim": "he got letters from the lawyers",
+   "speaker": "Dave Jones",
+   "episode": 55,
+   "episode_title": "Shonky Stiver Stultiloquence",
+   "episode_url": "https://theamphour.com/the-amp-hour-55-shonky-stiver-stultiloquence/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A structured teaching exercise runs reverse engineering forward into a clean-room rebuild: students strip a simple product such as a guitar pedal, recover the schematic and every component value, simulate it, and write a documentation package that fully describes the circuit and its interfaces. Packages are then exchanged between teams, each builds from the other's document, and the rebuilt object is compared against the original to expose what the documentation missed. A harder variant withholds what the device does and blacks out the board markings.",
+   "quote_verbatim": "play a game of, of clean room where you basically put together a documentation package",
+   "speaker": "Kent Lundberg",
+   "episode": 119,
+   "episode_title": "An Interview with Dr. Kent Lundberg - Luculent Linear Legacy",
+   "episode_url": "https://theamphour.com/the-amp-hour-119-luculent-linear-legacy/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The teaching case for teardown is that no other engineering discipline expects designs to be produced without examining existing ones, and that pulling products apart shows component selection, layout and the trade-offs actually made, which first-principles instruction does not.",
+   "quote_verbatim": "you wouldn't design a bridge without looking at other bridges",
+   "speaker": "Kent Lundberg",
+   "episode": 119,
+   "episode_title": "An Interview with Dr. Kent Lundberg - Luculent Linear Legacy",
+   "episode_url": "https://theamphour.com/the-amp-hour-119-luculent-linear-legacy/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The activity has been simulated as a teaching game with a deliberately faithful instrument set: a voltage probe, a pulse generator, a register read and write interface analogous to a debug port, and a serial port, applied to test points on simulated boards whose function must be worked out and then subverted.",
+   "quote_verbatim": "You have a voltage probe and you also have a thing that can generate voltage pulses",
+   "speaker": "Zach Barth",
+   "episode": 332,
+   "episode_title": "An Interview with Zach Barth of Zachtronics",
+   "episode_url": "https://theamphour.com/332-an-interview-with-zach-barth-of-zachtronics/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Introductory hardware hacking instruction reliably takes non-specialists from unfamiliarity to working results within a couple of days, moving through soldering, logic analysis, monitoring signals and cutting traces; the value claimed is not expertise but the removal of the barrier to attempting it at all.",
+   "quote_verbatim": "watching them reverse engineer a board and defeat security of something is, is totally satisfying",
+   "speaker": "",
+   "episode": 575,
+   "episode_title": "New Life Skills with Joe Grand",
+   "episode_url": "https://theamphour.com/575-new-life-skills-with-joe-grand/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Older data formats and hardware are easier to recover because the constraints of the era, limited code space and slow processors, forced representations that remain legible; decoding a simple bitmap is qualitatively easier than decoding a transform-coded image, which is why documenting old formats before the knowledge is lost is treated as a preservation problem.",
+   "quote_verbatim": "the retro formats is they tend to be very, very approachable",
+   "speaker": "Trammell Hudson",
+   "episode": 463,
+   "episode_title": "An Interview with Trammell Hudson",
+   "episode_url": "https://theamphour.com/463-an-interview-with-trammell-hudson/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Commercial teardown analysis is a paid service that reverse engineers products on behalf of clients, and its conclusions can contradict the prevailing explanation: one such analysis of a battery fire attributed the cause to insufficient physical margin in the mechanical design of the cell rather than to an internal manufacturing short.",
+   "quote_verbatim": "there wasn't enough margin in the physical design of the battery",
+   "speaker": "Dave Jones",
+   "episode": 326,
+   "episode_title": "Magical Fire Bags",
+   "episode_url": "https://theamphour.com/326-magical-fire-bags/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Recovering an interface can be worth more than recovering a whole product, because it makes an existing assembly reusable: reverse engineering the flat-flex interface of a display module gave its pin-out and its shift-register based drive scheme, so a new driver board could be designed to plug into a display that already fits its enclosure and gasket.",
+   "quote_verbatim": "I've, I've, I've reversed engineered the flat flex interface for it",
+   "speaker": "Dave Jones",
+   "episode": 598,
+   "episode_title": "Best way to find a leak",
+   "episode_url": "https://theamphour.com/598-best-way-to-find-a-leak/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Bringing up a fabricated chip that barely works can itself require reverse engineering apparatus: an FPGA was used to emulate the memory that the processor on the chip executed from, counting executed instructions while sweeping the core voltage, so that a histogram of instructions completed against voltage identified an undervolted operating point at which enough instructions ran to configure the outputs.",
+   "quote_verbatim": "used an FPGA to model the memory that the Pico RV32 RISC-V processor on the ASIC executed out of",
+   "speaker": "Matt Venn",
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "depth_regraded": "opinion",
+   "kind": "procedure"
+  }
+ ],
+ "attribution_notes": [
+  "ep 113, 346, 442, 458, 499, 575 and 698 sit on the unreliable-attribution list or carry fused turns; those claims are attributed by content with no speaker name.",
+  "ep 294 and 450: the cellular-phone and radio-firmware accounts are the guests', though the passage labels alternate; the claims are stated without personal attribution where the label could not be relied on.",
+  "Two bundle passages carry no episode number and were dropped, since an uncitable passage cannot support a claim."
+ ],
+ "capped": false
+}

@@ -1,0 +1,627 @@
+{
+ "concept": "flash-memory",
+ "name": "Flash Memory",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "flash-memory",
+  "census": "union",
+  "passages_in": 110,
+  "capped": false
+ },
+ "claims": [
+  {
+   "claim_text": "A flash cell is written by applying a high voltage to drive carriers by tunnelling through a thin oxide onto a floating gate, and the carriers do a small amount of damage to that oxide as they pass. Every write therefore degrades the cell, and because material properties limit how thin the oxide can be made, the tunnel oxide also sets a floor on how small the cell can be scaled.",
+   "quote_verbatim": "you have to apply a large voltage to the flash cell to get tunneling through this thin oxide and it damages the oxide",
+   "speaker": "Jake Baker",
+   "episode": 297,
+   "episode_title": "An Interview with Jake Baker",
+   "episode_url": "https://theamphour.com/297-an-interview-with-jake-baker/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Flash is read by precharging the bit line, the column line running through the cells, and observing what happens: an erased cell discharges the line while a programmed cell does not, with one or more comparators making the decision. An alternative approach holds the bit line at a constant voltage and measures the current flowing in the cell with a delta-sigma loop and a counter acting as a digital filter, which yields the actual cell current rather than a binary decision.",
+   "quote_verbatim": "the way it's read is you precharge a bit line, which is the column line",
+   "speaker": "Jake Baker",
+   "episode": 297,
+   "episode_title": "An Interview with Jake Baker",
+   "episode_url": "https://theamphour.com/297-an-interview-with-jake-baker/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Flash follows leading-edge process nodes rather than trailing them; production flash was at 35 nanometres around 2007 and has continued down from there.",
+   "quote_verbatim": "back in 2008 or 2007, 2008, I was working on 35 nanometer flash",
+   "speaker": "Jake Baker",
+   "episode": 297,
+   "episode_title": "An Interview with Jake Baker",
+   "episode_url": "https://theamphour.com/297-an-interview-with-jake-baker/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Density was increased not only by shrinking the cell but by storing multiple bits in one cell: instead of a single on or off state, several threshold levels are distinguished, so a single-level cell becomes a multi-level cell, and the same trick extends to four, eight or more levels at the cost of margin.",
+   "quote_verbatim": "instead of one state on or, you know, one on or off state, let's have two states effectively",
+   "speaker": "Chris Gammell",
+   "episode": 296,
+   "episode_title": "Gotta Update My Dog",
+   "episode_url": "https://theamphour.com/296-gotta-update-my-dog/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Endurance is the specification that governs flash system design. Modern parts are quoted in the tens of thousands of write cycles, and a working planning figure of one to two thousand erase cycles is used where the effective number depends on the controller. Ferroelectric memory, by contrast, is specified in the region of a hundred trillion write cycles.",
+   "quote_verbatim": "FRAM supports more than 100 trillion write cycles",
+   "speaker": "Chris Gammell",
+   "episode": 41,
+   "episode_title": "An Interview with Jeff Keyzer - Exhilarating ESC Escapades",
+   "episode_url": "https://theamphour.com/the-amp-hour-41-exhilarating-esc-escapades/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Wear levelling exists because writes are not distributed by the application: repeatedly writing one location destroys that location, potentially within an hour, whereas spreading writes across the device converts the same traffic into a manageable lifetime. Even with wear levelling, a device written continuously has a finite and calculable life.",
+   "quote_verbatim": "if you always write to the same spot, bingo, it can, you know, be gone in like an hour",
+   "speaker": "Chris Gammell",
+   "episode": 324,
+   "episode_title": "Mapping Out Nerdery",
+   "episode_url": "https://theamphour.com/324-mapping-out-nerdery/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The controller logic that makes flash usable also makes its timing non-deterministic. An SD card performing wear levelling internally can stall for as long as two hundred milliseconds, and a FAT file system adds further unpredictable delay when the allocation table has to be rewritten, so buffering has to be sized for the worst case rather than the average.",
+   "quote_verbatim": "flash is unpredictable how long it will take because they have, like, load balancing stuff inside the SD cards",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Flash write bandwidth is far higher than intuition suggests, with a single chip sustaining around two hundred megabytes per second, which is what allows a high-speed camera to write captured frames straight to flash rather than buffering them into DRAM first.",
+   "quote_verbatim": "these Flash chips, a single chip you can write 200 megabytes a second sustained to",
+   "speaker": "Dave Jones",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Endurance then becomes the binding constraint on such a design rather than speed: at sixty thousand write cycles, leaving the same camera recording in a continuous loop consumes the entire life of its flash in about two weeks.",
+   "quote_verbatim": "It's 60,000 write cycles. So if you leave it recording in a loop for two weeks, it will completely use up the Flash's life",
+   "speaker": "Chris Gammell",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The alternative architecture, buffering into DRAM, trades endurance for capacity: a camera that loops into DRAM can hold only a few seconds of footage because the buffer must be written to continuously and is bounded by how much DRAM can be attached.",
+   "quote_verbatim": "there's a limit to how much DRAM you can, you know, actually, because you need to write to it fast",
+   "speaker": "Dave Jones",
+   "episode": 324,
+   "episode_title": "Mapping Out Nerdery",
+   "episode_url": "https://theamphour.com/324-mapping-out-nerdery/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Continuous logging into flash without a write budget is a design error whose failure is deferred by years: vehicles that logged data continuously into flash began failing after about four years when the parts exhausted their rated write cycles.",
+   "quote_verbatim": "flash memory has a limited number of rights",
+   "speaker": "Dave Jones",
+   "episode": 464,
+   "episode_title": "KonnectorPanik",
+   "episode_url": "https://theamphour.com/464-konnectorpanik/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Memory dies are repaired rather than discarded. Between fifteen and twenty percent of DRAM and flash parts fail specification, and those are sold at a substantial discount to buyers who can use them; DRAM is repaired at the wafer level by laser-fusing spare rows, whereas flash uses flash-based fuses that can be set later, so far less wafer-level repair is performed on it.",
+   "quote_verbatim": "when you build a DRAM or you build a flash device, they are 15% to 20% of the parts don't meet spec",
+   "speaker": "Chuck Peddle",
+   "episode": 241,
+   "episode_title": "An Interview With Chuck Peddle - Charismatic Chipmaking Coryphaeus",
+   "episode_url": "https://theamphour.com/241-an-interview-with-chuck-peddle-charismatic-chipmaking-coryphaeus/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Flash requires a different fabrication process from logic, so leaving it off the die makes the silicon cheaper, and dedicated memory manufacturers building at the most advanced nodes will produce better flash than a logic vendor can integrate. Advanced packaging resolves the tension by joining a logic die built on a logic-optimised process to a memory die built on a memory-optimised process through an interposer, close enough that bandwidth and signal integrity are preserved.",
+   "quote_verbatim": "it does make the silicon cheaper if you don't have to build the Flash process into your silicon",
+   "speaker": "Chris Gammell",
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "depth_regraded": "opinion",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Flash is more forgiving than RAM as an off-die resource, because its interface bandwidth matters less, which is why designs that must keep RAM on the die will still place flash outside it.",
+   "quote_verbatim": "flash is not as big a deal as, as Ram",
+   "speaker": "Chris Gammell",
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Placing the flash die inside the microcontroller package rather than beside it on the board suits space-constrained applications and adds a degree of security, since the connection is no longer exposed on the board.",
+   "quote_verbatim": "So we put the flash inside the package",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Where a single die cannot hold the required flash, two dies are packaged together and joined inside the device, which is how a large flash array is presented as one chip rather than as processor plus external memory.",
+   "quote_verbatim": "instead of you requiring an extra flash memory chip, it's, you know, this massive amount of flash memory is built into the one chip",
+   "speaker": "Dave Jones",
+   "episode": 12,
+   "episode_title": "Dave Is Back And Blogging!",
+   "episode_url": "https://theamphour.com/the-amp-hour-12-dave-is-back-and-blogging/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "On a microcontroller the processor core is a small share of the die, on the order of ten to twenty percent; what dominates the area is memory, principally flash, together with the peripherals and analog blocks.",
+   "quote_verbatim": "things that typically dominate these chips are still memory, like flash",
+   "speaker": "Oyvind Janbu",
+   "episode": 95,
+   "episode_title": "An Interview with Øyvind Janbu - Feracious Fabless Facilitator",
+   "episode_url": "https://theamphour.com/the-amp-hour-95-feracious-fabless-facilitator/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "A part with no on-board flash falls outside the conventional definition of a microcontroller, which requires on-board RAM and read-only memory, and it shifts work onto the designer, who has to establish whether bootloader code is needed to fetch from the external device before anything runs.",
+   "quote_verbatim": "the definition of a microcontroller is that it has on board RAM and ROM",
+   "speaker": "Chris Gammell",
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Executing from flash costs more energy than executing from RAM, on one low-power part about two extra microamps per megahertz, so a low-power design trades the energy of fetching from flash after each wake against the leakage of keeping RAM powered. Memory power domains can be left on independently of the processor to preserve state, and the balance between wake-up latency and sleep-state dissipation depends entirely on how often the device wakes.",
+   "quote_verbatim": "If you run from flash, ooh, an extra two microamps per megahertz",
+   "speaker": "",
+   "episode": 636,
+   "episode_title": "Discovering Cursed Connectors",
+   "episode_url": "https://theamphour.com/636-discovering-cursed-connectors/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Having few power domains is itself a design goal, because each additional domain requires load switches and complicates power routing integrity, which limits how finely peripherals and memories can be powered down independently.",
+   "quote_verbatim": "there's kind of a pressure to have as few power domains as possible",
+   "speaker": "Liam Fraser",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Flash displaced its competitors by reaching mass production first rather than by being technically superior: several more mature non-volatile technologies were in development, and flash overtook the market because physical parts could actually be bought. The markets those competitors had promised their investors, in every phone and every computer, disappeared.",
+   "quote_verbatim": "Because they actually had physical chips available you could buy in the end",
+   "speaker": "Dave Jones",
+   "episode": 23,
+   "episode_title": "The Innovation Speculation",
+   "episode_url": "https://theamphour.com/the-amp-hour-23-the-innovation-speculation/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Ferroelectric memory occupies the position between static RAM and flash, being fast and free of flash's write-cycle limit, and survives as a niche part rather than as a general replacement because it remained expensive and never reached comparable volume.",
+   "quote_verbatim": "it's, like, somewhere between SD RAM and Flash",
+   "speaker": "Chris Gammell",
+   "episode": 41,
+   "episode_title": "An Interview with Jeff Keyzer - Exhilarating ESC Escapades",
+   "episode_url": "https://theamphour.com/the-amp-hour-41-exhilarating-esc-escapades/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The scale of investment in flash refinement is what any replacement technology must overcome. Two decades of process development, yield improvement and cost reduction sit behind the incumbent, and the incumbents retain the ability to cut price further when challenged, which is the same dynamic that has kept hard drives in production against repeated predictions of their displacement.",
+   "quote_verbatim": "You cannot compete with that sort of development and refinement",
+   "speaker": "Chris Gammell",
+   "episode": 104,
+   "episode_title": "Ceramic capacitors & High end scopes - Kempt Kickstarter Kakorrhaphiophobia",
+   "episode_url": "https://theamphour.com/the-amp-hour-104-kempt-kickstarter-kakorrhaphiophobia/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The demand that made flash the profitable part of the semiconductor industry arrived in a sequence of products rather than all at once: small media players, then mobile phones, which required removable cards, then tablets, and finally solid-state drives in laptops.",
+   "quote_verbatim": "flash suddenly became the thing that you made money on",
+   "speaker": "Chuck Peddle",
+   "episode": 241,
+   "episode_title": "An Interview With Chuck Peddle - Charismatic Chipmaking Coryphaeus",
+   "episode_url": "https://theamphour.com/241-an-interview-with-chuck-peddle-charismatic-chipmaking-coryphaeus/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Solid-state storage adoption is one-directional: users who move from a mechanical drive to a solid-state one do not go back, which is why the cost reduction needed to convert an installed base only has to happen once.",
+   "quote_verbatim": "People will not go back",
+   "speaker": "Chuck Peddle",
+   "episode": 241,
+   "episode_title": "An Interview With Chuck Peddle - Charismatic Chipmaking Coryphaeus",
+   "episode_url": "https://theamphour.com/241-an-interview-with-chuck-peddle-charismatic-chipmaking-coryphaeus/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "One way around flash's write latency and wear in a drive is to write to DRAM and treat the flash as an archive behind it, so the device presents solid-state performance without the wear characteristics; the design question that follows is what happens on sudden power loss.",
+   "quote_verbatim": "we don't have an SSD that runs Flash. We have an SSD that runs DRAM",
+   "speaker": "Chuck Peddle",
+   "episode": 241,
+   "episode_title": "An Interview With Chuck Peddle - Charismatic Chipmaking Coryphaeus",
+   "episode_url": "https://theamphour.com/241-an-interview-with-chuck-peddle-charismatic-chipmaking-coryphaeus/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Reprogrammable microcontrollers began with a part using electrically erasable memory rather than flash. It was the first microcontroller that was neither ultraviolet-erasable nor one-time programmable, which removed both the erase cycle and the need for an expensive in-circuit emulator, and it was followed by a flash version that worked the same way.",
+   "quote_verbatim": "it was the first microcontroller that wasn't either UV erasable or one time programmable",
+   "speaker": "Dave Jones",
+   "episode": 24,
+   "episode_title": "Solar Cells, SparkFun, TSMC - The Detroit Debunking",
+   "episode_url": "https://theamphour.com/the-amp-hour-24-the-detroit-debunking/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "What made that family the default for hobbyists was not the memory technology alone but its combination with a low-cost programmer that connected to a serial port, which put reprogrammable microcontrollers within reach of individuals for the first time.",
+   "quote_verbatim": "you could use a low-cost program, like a program that just hooked up to the serial port",
+   "speaker": "Dave Jones",
+   "episode": 413,
+   "episode_title": "A House of FR4",
+   "episode_url": "https://theamphour.com/413-a-house-of-fr4/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Flash-based microcontrollers arrived around 1995 and differ operationally from the electrically erasable parts that preceded them: the earlier technology could program and change a single byte, while flash erases and programs the whole part. The technologies remained distinct process lines running in parallel in the same fabrication plant for decades, since parts designed into products in each era continued to be ordered.",
+   "quote_verbatim": "we introduced the Flash-based products, where you can Flash-erase the whole part and Flash-program the whole part",
+   "speaker": "Steve Sanghi",
+   "episode": 632,
+   "episode_title": "Steve Sanghi - Microchip CEO for 31 Years!",
+   "episode_url": "https://theamphour.com/632-steve-sanghi-microchip-ceo-for-31-years/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "In-circuit debugging arrived alongside flash rather than after it, with a part introduced around 1997 that combined flash with breakpoints and single stepping. That combination is the direct ancestor of the low-cost debug interfaces embedded developers now take for granted.",
+   "quote_verbatim": "introducing an in-circuit debugger along with a flash technology",
+   "speaker": "",
+   "episode": 485,
+   "episode_title": "An Interview with John Day",
+   "episode_url": "https://theamphour.com/485-an-interview-with-john-day/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Before flash, the development workaround was an EPROM emulator: a device that the target system sees as an erasable read-only memory while the development machine sees it as RAM, so code could be fed across without repeatedly erasing parts under ultraviolet light, which was slow.",
+   "quote_verbatim": "Because you had no flash memories then",
+   "speaker": "",
+   "episode": 247,
+   "episode_title": "An Interview with Voja Antonic - Gerontogenous Galaksija Genesis",
+   "episode_url": "https://theamphour.com/247-an-interview-with-voja-antonic-gerontogenous-galaksija-genesis/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "One-time programmable microcontrollers persist in shipping products because they save a few cents, with the consequence that field bug fixes are impossible; a manufacturer may desolder and replace the chip for a small number of customers but will not do so at scale. Moving to a flash-programmable part is what makes firmware updates a product feature at all.",
+   "quote_verbatim": "most multimeters on the market have a one-time programmable chip in there",
+   "speaker": "Dave Jones",
+   "episode": 619,
+   "episode_title": "Super Tecmo Bug",
+   "episode_url": "https://theamphour.com/619-super-tecmo-bug/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "At the very cheapest end of the microcontroller market, self-programming on-chip flash disappears, which is a risk for a design that expects to update itself. The mitigation is to ask the vendor for pre-programmed parts, since for perhaps another cent per device the programming step is removed from the buyer entirely.",
+   "quote_verbatim": "the onboard, you know, self-programming flash tends to disappear at the $0.03 level",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "opinion",
+   "kind": "sourcing"
+  },
+  {
+   "claim_text": "Flash capacity is the usual reason a design is pushed up a microcontroller family: the program turns out larger than expected, and the choice becomes shrinking the code or moving to a part with more memory, which in practice is a negotiation about which features are given up.",
+   "quote_verbatim": "the M0s can't access as much flash and RAM, which is how most people get pushed up into the M3s",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Fitting an application exactly into the available flash is a false economy at low volume: a program hand-written in assembler to occupy 1023 of 1024 bytes left no room to add anything later, and since processors get cheaper quickly, waiting six months usually beats optimising. The calculation inverts at volume, where fifteen cents a unit across a million units dominates the engineering time.",
+   "quote_verbatim": "I used like 1,023 bytes or something",
+   "speaker": "Dave Jones",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Standard library functions consume flash out of proportion to their use: a single call to a formatted print function links the entire library and adds a kilobyte or two, which on parts with tens of kilobytes has driven developers to write their own replacements.",
+   "quote_verbatim": "just the act of linking in the printf code adds a kilobyte or two",
+   "speaker": "Chris Gammell",
+   "episode": 541,
+   "episode_title": "Chip Shortage Denier",
+   "episode_url": "https://theamphour.com/541-chip-shortage-denier/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A component shortage that forces a substitution to a part with half the flash and half the RAM requires the code base to be halved, which is difficult when a vendor-supplied wireless protocol stack arrives as a large binary blob whose size cannot be reduced.",
+   "quote_verbatim": "my code base now has to shrink in half",
+   "speaker": "Chris Gammell",
+   "episode": 541,
+   "episode_title": "Chip Shortage Denier",
+   "episode_url": "https://theamphour.com/541-chip-shortage-denier/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The usable flash on a wireless part is far less than the headline figure. On a 512 kilobyte device, the vendor's Bluetooth stack occupies around sixty kilobytes, and holding a second image for updates halves what remains, leaving roughly two hundred kilobytes for application code.",
+   "quote_verbatim": "You only get about 200k for your actual program then",
+   "speaker": "Chris Gammell",
+   "episode": 516,
+   "episode_title": "Thermions Aren't A Thing",
+   "episode_url": "https://theamphour.com/516-thermions-arent-a-thing/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Provision for firmware update has to be made in the flash budget at design time, allocating enough space to hold a second image so that a new one can be stored and validated against the current one. The same applies to the hardware path into update mode, whether a button, a signal to be pulled or a connector, since retrofitting it later is not possible.",
+   "quote_verbatim": "did you plan for enough flash to do a software update?",
+   "speaker": "Jonathan Beri",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Halving the flash on a module can remove the ability to hold a second image at all, which eliminates field firmware update as a capability, so a change that looks like a component substitution is in fact a change to what the product can do.",
+   "quote_verbatim": "that might actually prevent you from not being able to store an additional firmware image",
+   "speaker": "Chris Gammell",
+   "episode": 551,
+   "episode_title": "Feed the Mouse",
+   "episode_url": "https://theamphour.com/551-feed-the-mouse/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A bootloader is a small program resident in flash that runs before the application, checks the application for validity and transfers execution to it if the check passes. Updating the application means providing a route back into the bootloader and then delivering the new image over whatever link exists, whether a vehicle bus, USB or a plain serial port, since any path that gets data into the chip will serve.",
+   "quote_verbatim": "You'll have a little bootloader, which is a small program that resides in Flash",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "That mechanism is also an attack surface, because a link reachable from outside the device, such as a wireless bridge onto a vehicle bus, becomes a path for reprogramming the parts on it.",
+   "quote_verbatim": "you put a Bluetooth device on a CAN network",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "An external flash chip used as a staging buffer makes wireless firmware update robust against interrupted transfers: the incoming image is written to the external device, the processor is then rebooted, and the bootloader erases and rewrites the internal flash only if it finds a complete image. A transfer broken partway leaves no complete image, so nothing happens and the existing firmware keeps running.",
+   "quote_verbatim": "if it breaks up in the middle, then your bootloader is not going to see a completed image and is not going to do anything",
+   "speaker": "Dave Jones",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Writing a bootloader means deciding how to divide the flash into regions that support robust image update, and then deciding the versioning and rollback policy on top of that. The residual risk is that a candidate image only passes the tests that were written for it, so validation before switching over cannot establish that the new image is correct.",
+   "quote_verbatim": "figuring out how to divide the, uh, flash up into different spaces to be able to do robust image updates",
+   "speaker": "Laura Abbott",
+   "episode": 590,
+   "episode_title": "Finding Hardware Flaws with Laura Abbott",
+   "episode_url": "https://theamphour.com/590-finding-hardware-flaws-with-laura-abbott/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Microcontrollers commonly provide a small separate electrically erasable memory alongside the program flash, a few hundred bytes to a few kilobytes, intended for storing constants and configuration. Its endurance is far higher than the roughly ten thousand cycles of the program flash, which is low because the program flash is only expected to be rewritten a handful of times in the life of the device.",
+   "quote_verbatim": "in addition to the flash program memory, they have internal EEPROM",
+   "speaker": "Dave Jones",
+   "episode": 428,
+   "episode_title": "Setting Fire To The Tracks",
+   "episode_url": "https://theamphour.com/428-setting-fire-to-the-tracks/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Parts are sometimes shipped with more physical flash than the part number claims, the larger array present but locked out in software. Writing directly to addresses above the nominal size and reading them back revealed the full 256 kilobytes on a device sold as 128 kilobytes.",
+   "quote_verbatim": "he could read and write it",
+   "speaker": "Dave Jones",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A file system can be placed in the microcontroller's own flash: embedded Python ports carry a FAT file system in internal flash, optionally extended to an external flash chip or an SD card, so files are opened, read and written with the same calls used on a desktop.",
+   "quote_verbatim": "all of the boards support a file system internally, like a fat file system",
+   "speaker": "Dave Jones",
+   "episode": 323,
+   "episode_title": "An Interview with Tony DiCola",
+   "episode_url": "https://theamphour.com/323-an-interview-with-tony-dicola/",
+   "depth_regraded": "explains",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Source-level conveniences cost flash directly in an interpreted embedded environment, since comments are stored in the file that occupies flash, and importing that file loads the whole of it into RAM.",
+   "quote_verbatim": "it's going to take up more flash memory",
+   "speaker": "Tony DiCola",
+   "episode": 323,
+   "episode_title": "An Interview with Tony DiCola",
+   "episode_url": "https://theamphour.com/323-an-interview-with-tony-dicola/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "Logging over a serial link consumes flash for the format strings as well as time to transmit, and cannot be done from an interrupt. A more economical scheme compiles the strings out of the binary altogether, leaving only symbols, and transmits pointers that are resolved against a copy of the symbol table held on the host, so verbose logging costs a few bytes per message.",
+   "quote_verbatim": "it takes up all your, your flash space",
+   "speaker": "Alvaro Prieto",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "opinion",
+   "kind": "design"
+  },
+  {
+   "claim_text": "Injecting a voltage glitch while a device reads from flash can make the read return something other than what is stored, or corrupt values held on the stack. Where a device defends itself with a counted lock-out loop, the objective of such an attack is to break out of the loop and regain attempts at the credential.",
+   "quote_verbatim": "maybe the flash bites that it reads, aren't the same as what's actually in flash",
+   "speaker": "",
+   "episode": 418,
+   "episode_title": "An Interview with Josh Datko",
+   "episode_url": "https://theamphour.com/418-an-interview-with-josh-datko/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Dumping the entire flash contents defeats read protection and hands over everything needed to replicate a product. The realistic assessment is that such protection will not stop a determined cloner, so it should be weighed as a delay rather than a defence.",
+   "quote_verbatim": "if you think you have right protection on your, on your flash, that's potentially problematic",
+   "speaker": "Chris Gammell",
+   "episode": 656,
+   "episode_title": "Pneumatic Tubes, Straight To The Home",
+   "episode_url": "https://theamphour.com/656-pneumatic-tubes-straight-to-the-home/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A tool built to speed up firmware development by logging every flash access and serving the contents from emulated memory instead of the flash chip also exposed a security defect: certain addresses were being read twice, and disassembly showed the second read was a code fetch occurring after signature validation had already passed.",
+   "quote_verbatim": "log all of the flash memory accesses and then be able to provide them from an emulated DRAM",
+   "speaker": "Trammell Hudson",
+   "episode": 463,
+   "episode_title": "An Interview with Trammell Hudson",
+   "episode_url": "https://theamphour.com/463-an-interview-with-trammell-hudson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Replacing the mask-programmed read-only memory in a console cartridge with a flash chip is a long-standing route into embedded development, since it converts a fixed device into one that can be reprogrammed at will.",
+   "quote_verbatim": "I took one of the cartridges and I broke it open, replaced the ROM with a flash chip",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A complete flash-based solid-state disk packaged in a 28-pin dual in-line package removed the need to attach a mechanical hard drive to an embedded system, which changed what an embedded computer could be built as.",
+   "quote_verbatim": "it was a 28 pin dip chip and it was a complete flash based disc",
+   "speaker": "Dave Jones",
+   "episode": 362,
+   "episode_title": "Secret Squirrel",
+   "episode_url": "https://theamphour.com/362-secret-squirrel/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Flash was expensive enough in the 1990s that a camera using it held perhaps two megabytes, and the only route to extract images was a 9600 baud serial link, which made a lower-quality camera writing to removable floppy disks the faster tool in practice and the only one that could be reloaded in the field.",
+   "quote_verbatim": "you might have two megabytes tops and we had one, but the only way to dump the data was through a 9,600 baud serial cable",
+   "speaker": "Ben Heck",
+   "episode": 490,
+   "episode_title": "An Interview with Ben Heck(endorn)",
+   "episode_url": "https://theamphour.com/490-an-interview-with-ben-heckendorn/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Small non-volatile memories are becoming hard to obtain because manufacturers prefer to sell large ones, even though a small part remains the right answer for applications where cost and power dominate: there is no reason to power a hundred million transistors when a million are in use.",
+   "quote_verbatim": "the need for very small NOR flash memories and that they're becoming unavailable",
+   "speaker": "Jack Ganssle",
+   "episode": 489,
+   "episode_title": "An Interview with Jack Ganssle (2nd)",
+   "episode_url": "https://theamphour.com/489-an-interview-with-jack-ganssle-2nd/",
+   "depth_regraded": "opinion",
+   "kind": "sourcing"
+  },
+  {
+   "claim_text": "The counter-pressure is that ARM-class microcontrollers have become cheap enough that megabytes of memory arrive for a couple of dollars more, which makes an eight-bit part hard to justify in anything not extremely price sensitive; where eight-bit parts still win, the deciding factor is usually the peripheral set rather than the core.",
+   "quote_verbatim": "you're getting megabytes of memory and all this kind of stuff on an MCU for just a couple of bucks more",
+   "speaker": "Jack Ganssle",
+   "episode": 489,
+   "episode_title": "An Interview with Jack Ganssle (2nd)",
+   "episode_url": "https://theamphour.com/489-an-interview-with-jack-ganssle-2nd/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Very low cost microcontrollers are specified in kilobytes: parts at the bottom of the market carry sixteen kilobytes of flash and two kilobytes of RAM at tens of megahertz, which constrains the software to hand-optimised code or a lightweight library rather than a general hardware abstraction layer.",
+   "quote_verbatim": "It's got 16 kilobytes of flash, two kilobytes of RAM",
+   "speaker": "Chris Gammell",
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "spec"
+  },
+  {
+   "claim_text": "An unusual combination of memory sizes can be the deciding factor in part selection independent of architecture: a small package offering 256 kilobytes of flash with 64 kilobytes of RAM was chosen for video work because RAM, not flash, is the resource that runs out first.",
+   "quote_verbatim": "RAM is almost always the first thing I run out of",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Flash pricing at very high volume is set by long-term commitment rather than by list price: a purchaser able to sign a multi-billion-dollar order for several years of supply obtains a price that no smaller buyer can approach.",
+   "quote_verbatim": "They have no problem with signing a $2 billion purchase order to buy five years worth of flash memory",
+   "speaker": "Dave Jones",
+   "episode": 193,
+   "episode_title": "We're Sorry! But Apple Ain't! - Remorseless RAM Racketeering",
+   "episode_url": "https://theamphour.com/193-were-sorry-but-apple-aint-remorseless-ram-racketeering/",
+   "depth_regraded": "explains",
+   "kind": "sourcing"
+  },
+  {
+   "claim_text": "Running out of flash on the current part is a legitimate trigger for a product revision, since a design with no space left cannot accept new features regardless of what customers ask for.",
+   "quote_verbatim": "I'm like completely out of flash space. Can't add any more features",
+   "speaker": "",
+   "episode": 293,
+   "episode_title": "Call In Show #4",
+   "episode_url": "https://theamphour.com/293-call-in-show-4/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  }
+ ],
+ "attribution_notes": [
+  "ep 247, 293, 418, 485 and 636 sit on the unreliable-attribution list or carry fused turns; those claims are attributed by content with no speaker name."
+ ],
+ "capped": false
+}

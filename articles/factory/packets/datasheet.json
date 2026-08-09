@@ -1,0 +1,1130 @@
+{
+ "concept": "datasheet",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "datasheet",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "data-sheet",
+   "datasheet",
+   "datasheet-link",
+   "datasheet-specification",
+   "datasheet.com"
+  ],
+  "children": [
+   "board-design",
+   "component-characterization",
+   "data-book",
+   "design-reuse",
+   "evernote",
+   "fiber-optic-network",
+   "intel-processor",
+   "internet",
+   "linear-technology",
+   "national-semiconductor",
+   "optical-character-recognition",
+   "pdf",
+   "register-set",
+   "silicon-errata",
+   "sot-23",
+   "tablet",
+   "thermal-camera",
+   "website"
+  ],
+  "neighbors": {
+   "texas-instruments": 9,
+   "stm32": 7,
+   "8051": 4,
+   "parametric-search": 4
+  },
+  "episodes_with_kept_mentions": 212,
+  "mentions_kept": 331,
+  "pins_pre_cap": 262,
+  "pins_final": 250,
+  "pins_by_depth": {
+   "explains": 156,
+   "opinion": 94
+  },
+  "pins_by_role": {
+   "core": 225,
+   "child": 20,
+   "neighbor": 5
+  },
+  "speakers": [
+   [
+    "Dave Jones",
+    96
+   ],
+   [
+    "Chris Gammell",
+    76
+   ],
+   [
+    "Jack Ganssle",
+    3
+   ],
+   [
+    "SPEAKER_01",
+    3
+   ],
+   [
+    "Elecia White",
+    3
+   ],
+   [
+    "Parker Dillman",
+    3
+   ],
+   [
+    "Dafydd Roche",
+    3
+   ],
+   [
+    "Art Kay",
+    3
+   ],
+   [
+    "Natasha Baker",
+    3
+   ],
+   [
+    "SPEAKER_00",
+    2
+   ],
+   [
+    "SPEAKER_03",
+    2
+   ],
+   [
+    "Mike Engelhardt",
+    2
+   ],
+   [
+    "Andreas Olofsson",
+    2
+   ],
+   [
+    "Piotr Esden-Tempski",
+    2
+   ],
+   [
+    "Matt Duff",
+    2
+   ],
+   [
+    "Michael Gielda",
+    2
+   ],
+   [
+    "Carmen",
+    2
+   ],
+   [
+    "Philip Salmony",
+    2
+   ],
+   [
+    "Leigh Brady",
+    2
+   ],
+   [
+    "Pallav Aggarwal",
+    2
+   ]
+  ],
+  "capped": true,
+  "gated_out_by_concept": [
+   [
+    "texas-instruments",
+    440
+   ],
+   [
+    "internet",
+    163
+   ],
+   [
+    "stm32",
+    141
+   ],
+   [
+    "linear-technology",
+    100
+   ],
+   [
+    "tablet",
+    66
+   ],
+   [
+    "national-semiconductor",
+    64
+   ],
+   [
+    "website",
+    57
+   ],
+   [
+    "pdf",
+    51
+   ],
+   [
+    "8051",
+    47
+   ],
+   [
+    "thermal-camera",
+    41
+   ],
+   [
+    "data-book",
+    32
+   ],
+   [
+    "parametric-search",
+    28
+   ],
+   [
+    "sot-23",
+    24
+   ],
+   [
+    "design-reuse",
+    18
+   ],
+   [
+    "board-design",
+    14
+   ]
+  ],
+  "gated_out_total": 1353
+ },
+ "claims": [
+  {
+   "claim_text": "The first page of a datasheet is written by marketing and states the most favourable figures; the parameters that bind a design are in the specification tables further in, and the difference between the two is routinely large.",
+   "quote_verbatim": "don't trust front page specs",
+   "speaker": "Dave Jones",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "What matters to a designer is the minimum and maximum columns rather than the typical ones, and those appear several pages in rather than on the summary page.",
+   "quote_verbatim": "I want to see the max specs or I want to see the min specs",
+   "speaker": null,
+   "episode": 97,
+   "episode_title": "An Interview with Eben Upton - Morbus Moilsome MakerFaire",
+   "episode_url": "https://theamphour.com/the-amp-hour-97-morbus-moilsome-makerfaire/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Worst-case figures are guaranteed by the manufacturer and usually stated at the temperature extremes, so they are what a power budget or a timing margin is built from. Typical figures are appropriate only for estimates such as expected battery life, and adding up typical numbers produces a design that fails at the corners.",
+   "quote_verbatim": "You would take your worst case figure. You wouldn't use your typical figure",
+   "speaker": "Dave Jones",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Designing to typical figures is done at the designer's risk, and any design that depends on the result should be measured rather than assumed.",
+   "quote_verbatim": "use typical figures from a data sheet",
+   "speaker": "Dave Jones",
+   "episode": 36,
+   "episode_title": "Big Business Buffoonery",
+   "episode_url": "https://theamphour.com/the-amp-hour-36-big-business-buffoonery/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The stated range exists because the parts vary across it; treating the typical value as the value the part will have discards the information the range was published to convey, which is why statistical process control and error budgets matter when the performance is being relied on.",
+   "quote_verbatim": "Typical is just typical. They're, they're giving you that full range for a reason",
+   "speaker": null,
+   "episode": 377,
+   "episode_title": "Debugger vs Printeffer",
+   "episode_url": "https://theamphour.com/377-debugger-vs-printeffer/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "On precision parts a good manufacturer publishes the distribution measured across thousands of devices, so the designer can see the production spread rather than a single number. Jellybean parts do not carry that data because nobody needs it, and a well-known manufacturer's name is not a substitute for reading it.",
+   "quote_verbatim": "what is the production spread",
+   "speaker": "Dave Jones",
+   "episode": 578,
+   "episode_title": "Histogrammic or Histomagraphical",
+   "episode_url": "https://theamphour.com/578-histogrammic-or-histomagraphical/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Precision analog parts are tested individually rather than sampled statistically, at both die and packaged stages, and nearly every published parameter is measured on every device. That test time is a substantial part of why such a part can cost fifty dollars.",
+   "quote_verbatim": "almost every parameter you see in the data sheet, not quite every parameter, but almost every parameter is actually tested",
+   "speaker": "Art Kay",
+   "episode": 348,
+   "episode_title": "An Interview with Art Kay",
+   "episode_url": "https://theamphour.com/348-an-interview-with-art-kay/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Digital parts can be functionally tested; analog parts must be characterised against guaranteed limits and then sorted into grades, which is why the same silicon appears as several part numbers at several prices. Designing the test fixtures for that characterisation and then running it is a large and expensive part of bringing an analog part to market.",
+   "quote_verbatim": "analog chips are different. Analog chips, you have to characterize and guarantee various performance limits",
+   "speaker": "Dave Jones",
+   "episode": 502,
+   "episode_title": "Lowest Common Denominator Design",
+   "episode_url": "https://theamphour.com/502-lowest-common-denominator-design/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Which parameters appear as headline specifications is decided by a product definer who visits customers to learn which specifications their applications turn on; applications engineers then review the document, and vendors deliberately follow industry convention so that competing parts can be compared.",
+   "quote_verbatim": "That's the product definer",
+   "speaker": "Art Kay",
+   "episode": 348,
+   "episode_title": "An Interview with Art Kay",
+   "episode_url": "https://theamphour.com/348-an-interview-with-art-kay/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The characteristic curves in a datasheet accumulated historically: each was invented at some point to answer a particular customer's problem and then became a standard inclusion, so the document grows by accretion rather than by design.",
+   "quote_verbatim": "maybe a customer problem, you know, became the, the mother of that curve",
+   "speaker": "Art Kay",
+   "episode": 348,
+   "episode_title": "An Interview with Art Kay",
+   "episode_url": "https://theamphour.com/348-an-interview-with-art-kay/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The theory-of-operation sections originate in the internal system specification written while the part is being defined, with the designers describing how a feature works as it is added; how much of that description survives into the published document is a deliberate decision, since competitors read it too.",
+   "quote_verbatim": "that comes back into the system spec, which would eventually become the data sheet",
+   "speaker": "Dafydd Roche",
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A related-products box on the front page, listing parts of similar function with different feature sets or packages, allows a designer who has nearly the right part to navigate to the right one without a fresh search.",
+   "quote_verbatim": "a little box, which has the related products",
+   "speaker": "Dave Jones",
+   "episode": 88,
+   "episode_title": "Yonderly Yodeling Yobbos",
+   "episode_url": "https://theamphour.com/the-amp-hour-88-yonderly-yodeling-yobbos/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Some manufacturers publish dozens of application schematics per part, showing the part used in many different configurations; those circuits are a large part of the document's practical value.",
+   "quote_verbatim": "maxim chips on their data sheets have like 800 application schematics",
+   "speaker": "Parker Dillman",
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The feature list on a datasheet's front page functions as a competitive checklist: customers compare two vendors' lists item by item, so features that a given customer will never use still have to be present to survive the comparison.",
+   "quote_verbatim": "it's like that checklist on the front of a data sheet",
+   "speaker": "Philip Freidin",
+   "episode": 103,
+   "episode_title": "An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee",
+   "episode_url": "https://theamphour.com/the-amp-hour-103-xenodochial-xilinx-ex-employee/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The limiting conditions that make a part unsuitable are buried, not summarised, so avoiding them means reading the whole document. Schedule pressure means engineers routinely accept that risk instead, choosing the part without having read every page.",
+   "quote_verbatim": "read the 200 page data sheet to make sure there's no gotcha in there",
+   "speaker": "Dave Jones",
+   "episode": 186,
+   "episode_title": "Someone is watching...we think - Horme Hostility Hypochondriac",
+   "episode_url": "https://theamphour.com/186-someone-is-watching-we-think-horme-hostility-hypochondriac/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The decisive restriction is frequently a note beneath a diagram deep in the document stating that some feature does not work, which is read last if at all.",
+   "quote_verbatim": "it's always the sub note in the data sheet on page, you know, 58",
+   "speaker": null,
+   "episode": 432,
+   "episode_title": "Check The Dummy Box",
+   "episode_url": "https://theamphour.com/432-check-the-dummy-box/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Critical caveats appear as footnotes in reduced type rather than in the specification tables, and a designer juggling thousands of parameters across a device has no reliable way to find them by inspection.",
+   "quote_verbatim": "such note was mentioned with, uh, you know, very small size font",
+   "speaker": "Pallav Aggarwal",
+   "episode": 661,
+   "episode_title": "Blogging Electronics with Pallav Aggarwal",
+   "episode_url": "https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A feature listed on the front page may carry a tolerance in a footnote that changes what it can be used for: an integrated current limit with fifteen percent tolerance over temperature is adequate for crude overload protection and useless for a precision current-limited supply.",
+   "quote_verbatim": "go read the little asterisks",
+   "speaker": "Dave Jones",
+   "episode": 154,
+   "episode_title": "Arduino, IndiGoGo and Hack-a-Day - Doodad Dealer Dancing",
+   "episode_url": "https://theamphour.com/the-amp-hour-154-doodad-dealer-dancing/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Peripheral counts on the front page are totals, not simultaneous capabilities: a part advertising four UARTs may not be able to run them at once because they share resources, and that constraint is not stated at the top.",
+   "quote_verbatim": "Check, double check, triple check your capabilities of your devices",
+   "speaker": "Dave Jones",
+   "episode": 654,
+   "episode_title": "Pseudo Code...Pseudo Good",
+   "episode_url": "https://theamphour.com/654-pseudo-code-pseudo-good/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Pin-multiplexing restrictions, where a peripheral is available only on particular pins, are not stated prominently even though assigning a peripheral to an unsupported pin invalidates the board.",
+   "quote_verbatim": "it's never like the top of the data sheet either",
+   "speaker": null,
+   "episode": 375,
+   "episode_title": "An Interview with Tim \"Mithro\" Ansell",
+   "episode_url": "https://theamphour.com/375-an-interview-with-tim-mithro-ansell/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A thorough part check assumes nothing: each pin on the schematic symbol is cross-referenced against the datasheet, then the footprint's pitch and pad sizes, then the mapping between symbol and footprint.",
+   "quote_verbatim": "you cross-reference each individual pin on the schematic against the data sheet",
+   "speaker": "Dave Jones",
+   "episode": 201,
+   "episode_title": "Cheap Respins And A Time Machine - Multiscience Mercenary Marketplace",
+   "episode_url": "https://theamphour.com/201-cheap-respins-and-a-time-machine-multiscience-mercenary-marketplace/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Package families whose names differ by a few characters are the common source of wrong footprints, because the designer recognises the general shape and skips the verification. No fabricator can catch the error, since the board is manufacturable either way.",
+   "quote_verbatim": "that's a SOT 523, you idiot",
+   "speaker": null,
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Package drawings are frequently dimensioned from a mechanical draughtsman's perspective rather than from the origin a layout tool needs, so the numbers required to build a footprint have to be derived rather than read off.",
+   "quote_verbatim": "they don't know how to dimension their package pin out their package dimensions properly",
+   "speaker": "Dave Jones",
+   "episode": 536,
+   "episode_title": "NFT Schematics",
+   "episode_url": "https://theamphour.com/536-nft-schematics/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The page-count economy that justified terse package drawings ended with printed data books; there is no longer a reason not to include additional views, and their absence is a source of avoidable footprint errors.",
+   "quote_verbatim": "Do a 3D view. Like there's, there's no space constraint. There's no data books anymore",
+   "speaker": null,
+   "episode": 370,
+   "episode_title": "Alternate Info Sources",
+   "episode_url": "https://theamphour.com/370-alternate-info-sources/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Datasheets are revised, and errata are added in later revisions, so working from a copy downloaded earlier means working from a document known to be wrong. Long-established silicon carries less of this risk because the problems have been found.",
+   "quote_verbatim": "always download, make sure you have the latest data sheet",
+   "speaker": "Dave Jones",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "New datasheets are produced by copying the document for the nearest existing part and editing it, at a rate of hundreds of parts a year. Errors survive that process as a matter of course, so a fresh datasheet for a new part is among the least reliable.",
+   "quote_verbatim": "somebody doesn't just sit down and write the data sheet. All they do is copy the data sheet from the previous nearest chip",
+   "speaker": "Dave Jones",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Working at register level against a datasheet that is wrong is a recognised failure mode encountered repeatedly over a career, and it is the case in which methodical reading cannot converge.",
+   "quote_verbatim": "sometimes the data sheet's wrong",
+   "speaker": "Dave Jones",
+   "episode": 470,
+   "episode_title": "Just Add Salt",
+   "episode_url": "https://theamphour.com/470-just-add-salt/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A board laid out correctly from a published pinout can still be wrong, because the pinout itself was documented incorrectly against the silicon; the correction appeared as errata in a later revision of the document.",
+   "quote_verbatim": "the UART pins are swapped",
+   "speaker": "Dave Jones",
+   "episode": 468,
+   "episode_title": "The Tiny Lab Movement",
+   "episode_url": "https://theamphour.com/468-the-tiny-lab-movement/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A parameter can depend on an operating condition the datasheet does not relate it to: an amplifier's offset voltage varying with supply rail was found by experiment after the fault was mistakenly attributed to board layout, with the published histograms at two supply voltages giving no hint of the dependence.",
+   "quote_verbatim": "its offset voltage is power supply dependent. And they don't tell you that in the data sheet",
+   "speaker": "Dave Jones",
+   "episode": 146,
+   "episode_title": "Hamvention, Arduino and Intel - Burdensome Background Battology",
+   "episode_url": "https://theamphour.com/the-amp-hour-146-burdensome-background-battology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "An application circuit printed in the datasheet has been found to drive the part beyond its own specified limits. Once that trust is broken, a vendor's assurance and a corrected document do not restore it, because a field failure later cannot be laid at the vendor's door on the strength of a document since revised.",
+   "quote_verbatim": "their own application circuit in the data sheet will ensure that the chip exceeds its own specs",
+   "speaker": "Dave Jones",
+   "episode": 140,
+   "episode_title": "Project Management, Lasers & Robots - Staunch Specialty Sanctanimity",
+   "episode_url": "https://theamphour.com/the-amp-hour-140-staunch-specialty-sanctanimity/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Protection structures listed in a datasheet may be absent or far weaker than implied: a high-voltage driver specified with clamping diodes destroyed parts under inductive kickback because the diodes could not carry the stated conditions.",
+   "quote_verbatim": "the data sheet did not accurately spec how much current",
+   "speaker": "Ben Krasnow",
+   "episode": 480,
+   "episode_title": "An Interview with Ben Krasnow, 8 years on",
+   "episode_url": "https://theamphour.com/480-an-interview-with-ben-krasnow-8-years-on/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Substituting an equivalent part is not free even where the specifications appear to match: the substitute must be revalidated against the datasheet in the application, which is why specifying manufacturer and part number exactly is the norm for silicon in production.",
+   "quote_verbatim": "then you got to play the data sheet game and do all the, the revalidation of components",
+   "speaker": null,
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A blanket footnote reserving the right to change any specification undercuts the document's contractual force, and has been invoked by suppliers declining to guarantee the performance a customer designed around.",
+   "quote_verbatim": "there's an asterisk that says all specs are subject to change",
+   "speaker": "Mark Morin",
+   "episode": 290,
+   "episode_title": "An Interview with Mark Morin of Nufern",
+   "episode_url": "https://theamphour.com/290-an-interview-with-mark-morin-of-nufern/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Silicon can be redesigned without a part number change and with the new limitation stated only deep in a revised datasheet. An amplifier used in the front end of many oscilloscopes lost the input offset range it had been designed around, and instruments were damaged before the change was traced.",
+   "quote_verbatim": "they didn't change the part number",
+   "speaker": "Dave Jones",
+   "episode": 727,
+   "episode_title": "Boat Anchor Warehouse",
+   "episode_url": "https://theamphour.com/727-boat-anchor-warehouse/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Successor parts advertised as improvements are frequently better on one axis and worse on another, so a substitution presented as an upgrade must be checked against every parameter the design depends on.",
+   "quote_verbatim": "they've increased the bandwidth, which is fine, but they've lowered the slew rate",
+   "speaker": "Dave Jones",
+   "episode": 727,
+   "episode_title": "Boat Anchor Warehouse",
+   "episode_url": "https://theamphour.com/727-boat-anchor-warehouse/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Parts frequently perform far better than their specification, and designs quietly come to depend on the observed behaviour rather than the guaranteed one. When a process change moves the part back towards its published limit, the manufacturer is within its rights and the design is broken.",
+   "quote_verbatim": "it used to be 10 ohms internal resistance. And now it's. Right. Now it's 20 when it comes to me. And they're like. Well. We spec'd 100",
+   "speaker": null,
+   "episode": 36,
+   "episode_title": "Big Business Buffoonery",
+   "episode_url": "https://theamphour.com/the-amp-hour-36-big-business-buffoonery/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Measurement sometimes confirms the document rather than beating it: a widely used regulator's dropout voltage matched its published load graph almost exactly, so the margin a designer hoped to find was not there.",
+   "quote_verbatim": "it exactly. Almost exactly meets the data sheet",
+   "speaker": "Dave Jones",
+   "episode": 36,
+   "episode_title": "Big Business Buffoonery",
+   "episode_url": "https://theamphour.com/the-amp-hour-36-big-business-buffoonery/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A simulation model cannot in general be constructed from a datasheet, because the document does not contain the characteristics the model needs. For bipolar transistors the quasi-saturation region is never documented well enough and the attempt is hopeless.",
+   "quote_verbatim": "making a model from a data sheet is essentially impossible",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt - SPICE Simulator Synteresis",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-spice-simulator-synteresis/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A MOSFET model good enough for switching supplies can be built by fitting model parameters until the simulated output characteristics, on-resistance against gate voltage and gate charge reproduce the published curves. The process is laborious even for an expert, taking of the order of an hour.",
+   "quote_verbatim": "I make little test fixtures that will curve trace",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt - SPICE Simulator Synteresis",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-spice-simulator-synteresis/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Different curves in the same datasheet are frequently measured on different physical devices, so no single set of model parameters can reproduce them all; the gate-charge and output-characteristic curves may come from parts with different threshold voltages, and no transistor exists that behaves like the composite document.",
+   "quote_verbatim": "there often is no transistor that behaves like the data sheet",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt - SPICE Simulator Synteresis",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-spice-simulator-synteresis/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Simulators of embedded hardware are built from datasheets and inherit their errors, so the practical validation is whether real software behaves correctly on the model rather than whether the model matches the document.",
+   "quote_verbatim": "How we create the models is typically based on data sheets. And of course, like, data sheets can also contain errors",
+   "speaker": null,
+   "episode": 519,
+   "episode_title": "Simulating Embedded Hardware with Michael Gielda",
+   "episode_url": "https://theamphour.com/519-simulating-embedded-hardware-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Requiring a non-disclosure agreement to obtain a datasheet removes the part from consideration for a significant group of engineers regardless of its price or capability, though a consumer product's buyers are indifferent and a company competing on cost may accept the terms.",
+   "quote_verbatim": "A lot of engineers I know will not touch a device if you have to sign the NDA to get the data sheet",
+   "speaker": "Dave Jones",
+   "episode": 84,
+   "episode_title": "An Interview with Bunnie Huang - Bunnie's Bibelot Bonification",
+   "episode_url": "https://theamphour.com/the-amp-hour-84-bunnies-bibelot-bonification/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Processors at the heart of widely used boards have shipped with the datasheet available only under agreement, which blocks bare-metal programming of the part by anyone outside that arrangement.",
+   "quote_verbatim": "You have to like sign your first born child away to get a data sheet",
+   "speaker": "Dave Jones",
+   "episode": 235,
+   "episode_title": "An Interview with Matt Richardson - Raspberry Risorgimento Regent",
+   "episode_url": "https://theamphour.com/235-an-interview-with-matt-richardson-raspberry-risorgimento-regent/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Datasheet secrecy is a company policy rather than a technical necessity: an acquirer has released the whole documentation set of an acquired company that had kept it under agreement.",
+   "quote_verbatim": "As soon as they bought them, they just released all the data sheets",
+   "speaker": "Dave Jones",
+   "episode": 324,
+   "episode_title": "Mapping Out Nerdery",
+   "episode_url": "https://theamphour.com/324-mapping-out-nerdery/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A manufacturer may simply decline to sell a part or supply its documentation to a given customer, which forecloses the design regardless of how well the part fits.",
+   "quote_verbatim": "wouldn't give us any data sheets",
+   "speaker": "Leigh Brady",
+   "episode": 588,
+   "episode_title": "Siloed Engineering with Leigh Brady",
+   "episode_url": "https://theamphour.com/588-siloed-engineering-with-leigh-brady/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Some ecosystems gate the datasheet behind a legal and commercial admission process, so obtaining the document is a business negotiation rather than a download; the vendor's justification is control over the quality of what carries its interface.",
+   "quote_verbatim": "even to get the data sheet, you have to be in the system",
+   "speaker": "Dave Young",
+   "episode": 628,
+   "episode_title": "Two Dads Puzzlin Things Out",
+   "episode_url": "https://theamphour.com/628-two-dads-puzzlin-things-out/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Repair work is largely conducted without documentation: with no datasheet and no schematic, the relationship between signals must be reconstructed by measuring which are present on working and failed boards, and a diagnosis that takes fifteen minutes to state may represent many hours of that reconstruction.",
+   "quote_verbatim": "there's no data sheet for the chip. That's also proprietary",
+   "speaker": "Louis Rossmann",
+   "episode": 311,
+   "episode_title": "An Interview with Louis Rossmann",
+   "episode_url": "https://theamphour.com/311-an-interview-with-louis-rossmann/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A datasheet found by search for an exact part number may describe a different device: the same number appeared on a six-pin package and an eight-pin one with different internal architecture, so the correspondence between marking and document cannot be assumed.",
+   "quote_verbatim": "this isn't the right part, even though the part number is exact",
+   "speaker": "Dave Jones",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Very low-cost parts are frequently documented only in Chinese and in a family of single-letter variants whose differences are unexplained, so the effective cost of the part includes the work of decoding its documentation.",
+   "quote_verbatim": "I hope there's an English data sheet because the Chinese data sheet is not easy to read",
+   "speaker": "Dave Jones",
+   "episode": 587,
+   "episode_title": "Biblical Broker Bucks",
+   "episode_url": "https://theamphour.com/587-biblical-broker-bucks/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A part five times cheaper than its established equivalent may omit a parameter that determines whether it is safe in the application, such as a switch's on-resistance; an unspecified parameter is not a favourable one.",
+   "quote_verbatim": "RDS on was not, uh, specified in the data sheet",
+   "speaker": null,
+   "episode": 663,
+   "episode_title": "Motors on PCBs with Carl Bugeja",
+   "episode_url": "https://theamphour.com/663-motors-on-pcbs-with-carl-bugeja/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Some component documentation is deliberately thin because the manufacturer expects its real customers to be supported by an applications engineer; for anyone without that relationship, the undocumented behaviour has to be discovered experimentally, such as a clock divider that must also be set before a mode change takes effect.",
+   "quote_verbatim": "they expect you that if you have problems, you're a high enough volume customer to just be talking to a applications engineer directly",
+   "speaker": "Greg Davill",
+   "episode": 473,
+   "episode_title": "An Interview with Greg Davill",
+   "episode_url": "https://theamphour.com/473-an-interview-with-greg-davill/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Length is not completeness: a single part has been documented in five thousand pages that still left questions answerable only by the vendor.",
+   "quote_verbatim": "The data sheet was 5,000 pages and woefully incomplete",
+   "speaker": "Jack Ganssle",
+   "episode": 54,
+   "episode_title": "An Interview with Jack Ganssle - Embedded Elchee Epexegesis",
+   "episode_url": "https://theamphour.com/the-amp-hour-54-embedded-elchee-epexegesis/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Datasheets and application notes are where current practice is documented, whereas textbooks describe methods that remain correct but predate the parts in use; an engineer who reads only books is working from an older toolkit.",
+   "quote_verbatim": "App notes and data sheets",
+   "speaker": "Dave Jones",
+   "episode": 15,
+   "episode_title": "Analog Components, First Person Flying and Idea Ownership",
+   "episode_url": "https://theamphour.com/the-amp-hour-15-analog-components-first-person-flying-and-idea-ownership/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The application circuits in datasheets are a teaching resource in their own right, sufficient to learn a large part of practical electronics from.",
+   "quote_verbatim": "You could almost teach yourself all of electronics with just data sheets",
+   "speaker": null,
+   "episode": 44,
+   "episode_title": "BASIC, Chip companies & Robots - Pernicious Projects, Puppies in Peril",
+   "episode_url": "https://theamphour.com/the-amp-hour-44-pernicious-projects-puppies-in-peril/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A substantial proportion of published schematics are the manufacturer's application circuit reproduced with little change, so reading the datasheet for an unfamiliar part often explains an entire design that appeared original.",
+   "quote_verbatim": "you'll look at a circuit on a circuit diagram sometimes and then you'll be like, you know, you go look up the part",
+   "speaker": "Dave Jones",
+   "episode": 15,
+   "episode_title": "Analog Components, First Person Flying and Idea Ownership",
+   "episode_url": "https://theamphour.com/the-amp-hour-15-analog-components-first-person-flying-and-idea-ownership/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Reading a datasheet is a teachable skill rather than an obvious one, involving organising what the device does well enough to explain it to someone else, and it sits alongside system architecture as a distinct topic in embedded practice.",
+   "quote_verbatim": "how to read a data sheet",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Reading datasheets sits in the same set of core competences as laying out boards, managing a bill of materials, choosing alternative parts and cost optimisation; it is not separable from doing the work.",
+   "quote_verbatim": "You have to be able to read data sheets",
+   "speaker": "Dave Jones",
+   "episode": 251,
+   "episode_title": "Shifting Away From DIY - Pedetentious PnP Progress",
+   "episode_url": "https://theamphour.com/251-shifting-away-from-diy-pedetentious-pnp-progress/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Firmware work at the level of power management requires reading the datasheet to understand the device's modes and the trade-off between clock frequency and consumption, which is why the boundary between firmware and hardware skills is soft.",
+   "quote_verbatim": "They have to be able to read data sheets to understand how the various modes of the micros work",
+   "speaker": "Dave Jones",
+   "episode": 189,
+   "episode_title": "An Interview with Marcus Schappi - Kit Ketch Kenophobia",
+   "episode_url": "https://theamphour.com/189-an-interview-with-marcus-schappi-kit-ketch-kenophobia/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Hardware engineers necessarily work out register addresses and programming sequences while drawing the schematic, and when that work is not written down the firmware engineer repeats it. Handing over a few expected values alongside the schematic also gives the firmware engineer a way to tell whether the result is right.",
+   "quote_verbatim": "the firmware engineer has to redo all that work because the hardware engineer doesn't document it",
+   "speaker": null,
+   "episode": 373,
+   "episode_title": "Pedantic or Andrantic",
+   "episode_url": "https://theamphour.com/373-pedantic-or-andrantic/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A complete register description is not sufficient to use a peripheral: what is missing is a worked example of the intended usage, and a generated list of register definitions does not supply it.",
+   "quote_verbatim": "I can read the data sheet and understand the individual registers, but I don't have an example of how I actually want to use it",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A workable method for a new peripheral is to start from vendor example code to get something compiling and producing output, then use the datasheet to correct the register values to what the application actually needs, rather than deriving the whole configuration from the document first.",
+   "quote_verbatim": "just pull in the example and it's, you know, it shows me how to set up the registers",
+   "speaker": "Dave Jones",
+   "episode": 617,
+   "episode_title": "Conference Room Innovation",
+   "episode_url": "https://theamphour.com/617-conference-room-innovation/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Configuring a complex peripheral such as a serialiser from the datasheet alone, register by register, is a week of full-time work; starting from the vendor's supplied default register set removes that week.",
+   "quote_verbatim": "you could spend a week doing that",
+   "speaker": "Dave Jones",
+   "episode": 148,
+   "episode_title": "Contextual Electronics, ClubJameco and Solderpaste - Lifelong Learning Likelihood",
+   "episode_url": "https://theamphour.com/the-amp-hour-148-lifelong-learning-likelihood/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Bringing up a modern microcontroller from the datasheet alone, without vendor configuration tools, is a project measured in months to a year, and the same is true of a peripheral such as a display controller documented in several hundred pages.",
+   "quote_verbatim": "I have brought up a Cortex-M0 when they first came out from scratch from an 800-page data sheet",
+   "speaker": null,
+   "episode": 479,
+   "episode_title": "Why isn't this working?",
+   "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Document length determines whether one person can hold a whole part in their head. At a thousand pages that is not feasible; at three or four hundred, a few weeks of reading gives an engineer a working understanding of how the chip fits together, which changes what a small team can do with it.",
+   "quote_verbatim": "when a data sheet is only 300, 400 pages, it becomes tenable for one person to actually",
+   "speaker": null,
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A long bring-up reaches a point where the engineer cannot distinguish between having missed something in a document read repeatedly and having found a genuine defect, and note-taking becomes the substitute for a second person to check the reasoning.",
+   "quote_verbatim": "You've read the data sheet five times through, and you're starting your six",
+   "speaker": null,
+   "episode": 474,
+   "episode_title": "An Interview with Nash Reilly",
+   "episode_url": "https://theamphour.com/474-an-interview-with-nash-reilly/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "When a peripheral that gives no visibility into its state refuses to respond and the small set of usual causes has been exhausted, systematically varying the inputs to see whether anything changes is a legitimate technique, and is the one that finds a bit documented incorrectly.",
+   "quote_verbatim": "you have no choice, but to start changing the inputs and just see if something changes",
+   "speaker": "Dave Jones",
+   "episode": 479,
+   "episode_title": "Why isn't this working?",
+   "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Unstructured trial and error can change the behaviour without revealing why, leaving a second fault masking the first; the recovery is to instrument the code, confirm what is actually happening, and re-read the reference manual with that observation in hand.",
+   "quote_verbatim": "I just kind of like went back through and read the data sheet again or the user manual",
+   "speaker": null,
+   "episode": 460,
+   "episode_title": "Rubber Ducking",
+   "episode_url": "https://theamphour.com/460-rubber-ducking/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Publishing datasheets as PDFs means the characteristic curves are pictures: a designer operating between the two published supply voltages cannot interpolate, cannot read values off a curve, and has no access to the underlying numbers. Vendors are hesitant about interpolation because the part is characterised only under the conditions shown.",
+   "quote_verbatim": "there's no way to trace on top of characteristic curves",
+   "speaker": null,
+   "episode": 392,
+   "episode_title": "An Interview with Matt Duff",
+   "episode_url": "https://theamphour.com/392-an-interview-with-matt-duff/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A single machine-readable format for component data, rather than millions of PDFs, would make symbols, footprints, models and parameters usable by tools directly; the obstacle is inertia rather than difficulty, and each part carries hundreds or thousands of attributes that resist simple structuring.",
+   "quote_verbatim": "what I want is everyone to have the same format of data sheet",
+   "speaker": null,
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Optical character recognition applied to a datasheet's pin table can extract the pin list and classify pins as inputs, outputs or power, generating a schematic symbol from the document rather than from manual transcription.",
+   "quote_verbatim": "you can highlight the pin table in a data sheet",
+   "speaker": "Natasha Baker",
+   "episode": 531,
+   "episode_title": "Footprints and Symbols with Natasha Baker",
+   "episode_url": "https://theamphour.com/531-footprints-and-symbols-with-natasha-baker/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Building library data from a datasheet is skilled work rather than a task for a junior: electromechanical parts require interpreting plated and non-plated holes, slotted features and the density level the footprint should follow, and the standards do not define everything, leaving pin-one markers and silkscreen widths to preference.",
+   "quote_verbatim": "you need to be really skilled to read those data sheets sometimes",
+   "speaker": "Natasha Baker",
+   "episode": 531,
+   "episode_title": "Footprints and Symbols with Natasha Baker",
+   "episode_url": "https://theamphour.com/531-footprints-and-symbols-with-natasha-baker/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Older parts survive only as scans of photocopies, skewed on the page and beyond the reach of text recognition, so their contents cannot be searched or extracted.",
+   "quote_verbatim": "scan copies of photocopied like, you know, multiple times",
+   "speaker": null,
+   "episode": 273,
+   "episode_title": "Part Choice Triathlon",
+   "episode_url": "https://theamphour.com/273-part-choice-triathlon/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Practice divides between keeping local copies and re-fetching documents from the web on demand. The argument for local copies is that documents move or disappear, and the argument against is the effort of managing them; the risk is that a design's documentation is not available when it is needed.",
+   "quote_verbatim": "Google's my new data sheet repository",
+   "speaker": "Dave Jones",
+   "episode": 219,
+   "episode_title": "Get Smart About Automation - Caducous Cyborg Concerns",
+   "episode_url": "https://theamphour.com/219-get-smart-about-automation-caducous-cyborg-concerns/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Datasheets are withdrawn from manufacturers' sites, so relying on a search engine as the repository means the reference for a part in production may cease to exist; verifying that documentation before release is part of the designer's job.",
+   "quote_verbatim": "sometimes they just disappear",
+   "speaker": null,
+   "episode": 322,
+   "episode_title": "World Trade Futurity (WTF)",
+   "episode_url": "https://theamphour.com/322-world-trade-futurity-wtf/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Part selection is conducted across dozens of simultaneously open documents, and the reasoning about why each candidate was accepted or rejected is not recorded anywhere, so losing the set means repeating the comparison.",
+   "quote_verbatim": "I had like 20 tabs open on my browser with 20 different datasheets",
+   "speaker": "Dave Jones",
+   "episode": 190,
+   "episode_title": "Let's Hear It For The Buoys - Vanishing Vessel Vexation",
+   "episode_url": "https://theamphour.com/190-lets-hear-it-for-the-buoys-vanishing-vessel-vexation/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Working at a bench, a printed page of a datasheet is preferred to a screen because it can be annotated and left in place while both hands are occupied; the same need drives the recurring interest in a tablet or e-reader at the bench, whose usefulness depends on rendering a page-sized PDF properly.",
+   "quote_verbatim": "I will print something out to take it over to the bench",
+   "speaker": null,
+   "episode": 126,
+   "episode_title": "eReaders, datasheets & board assembly - Yearly Yeasty Yapping",
+   "episode_url": "https://theamphour.com/the-amp-hour-126-yearly-yeasty-yapping/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Before the internet the printed data book was the only source of component information, so which manufacturer's books an engineer happened to own determined which parts they designed with. Companies that gave books away freely, or sold them through retail, acquired designers by that route.",
+   "quote_verbatim": "Data books were the big thing",
+   "speaker": "Dave Jones",
+   "episode": 52,
+   "episode_title": "An Interview with Jeri Ellsworth - Carnassial Chip Chemicals",
+   "episode_url": "https://theamphour.com/the-amp-hour-52-carnassial-chip-chemicals/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The data book model broke on volume: at hundreds of new parts a year and twenty or thirty pages each, the annual book could not keep growing, which is what forced the move to other distribution.",
+   "quote_verbatim": "if you were releasing 500 plus new chips a year, you could not just keep making your data book bigger",
+   "speaker": "Dave Jones",
+   "episode": 326,
+   "episode_title": "Magical Fire Bags",
+   "episode_url": "https://theamphour.com/326-magical-fire-bags/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Between printed books and the web, datasheets were distributed as a rented service: a supplied computer with several hundred floppy disks of scanned documents, searched through an index disk that then directed the user to insert a particular numbered disk.",
+   "quote_verbatim": "about 300, 500 floppy disks",
+   "speaker": "Dave Jones",
+   "episode": 326,
+   "episode_title": "Magical Fire Bags",
+   "episode_url": "https://theamphour.com/326-magical-fire-bags/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Giving away expensive documentation to win future component sales is an old pattern in the industry rather than a recent one, predating the software businesses now identified with it.",
+   "quote_verbatim": "companies have been giving away data books back in the old day",
+   "speaker": "Dave Jones",
+   "episode": 366,
+   "episode_title": "Loopback",
+   "episode_url": "https://theamphour.com/366-loopback/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "From a system designer's position the process technology inside a part is irrelevant; what matters is that the part can be bought and that its document states how to use it and what it guarantees.",
+   "quote_verbatim": "it's got a kick-ass data sheet that tells me how to use it with all the specs",
+   "speaker": "Dave Jones",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A part without a datasheet that can be relied on carries liability that a product cannot absorb, whatever is acceptable while tinkering; scaling up requires understanding both the supply chain and the device specifics that only the document supplies.",
+   "quote_verbatim": "I would never use a part that didn't have a data sheet that I could rely on",
+   "speaker": "Zach Fredin",
+   "episode": 330,
+   "episode_title": "An Interview with Zach Fredin",
+   "episode_url": "https://theamphour.com/330-an-interview-with-zach-fredin/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "For decisions such as how many bypass capacitors a device needs, the datasheet's recommendation is the available answer from a blank sheet; understanding why they are needed does not by itself determine the number.",
+   "quote_verbatim": "I don't know how many to put in other than what the data sheet says",
+   "speaker": "Elecia White",
+   "episode": 329,
+   "episode_title": "Work on it for 10 years...",
+   "episode_url": "https://theamphour.com/329-work-on-it-for-10-years/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "For electromagnetic compatibility specifically, semiconductor application notes and datasheets are considered a poor source, and specialist publications and practitioners are preferred.",
+   "quote_verbatim": "the places I would avoid for EMI, EMC are semiconductor application notes and data sheets",
+   "speaker": "Zachariah Peterson",
+   "episode": 718,
+   "episode_title": "Layout Review with Zachariah Peterson",
+   "episode_url": "https://theamphour.com/718-layout-review-with-zachariah/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Independent verification of every specification is beyond the resources of most designers, so at some point the document is trusted; the practical question is which parameters the design actually depends on and therefore which are worth measuring.",
+   "quote_verbatim": "I have to trust the data sheet at a certain point",
+   "speaker": null,
+   "episode": 671,
+   "episode_title": "NDA Sideshow",
+   "episode_url": "https://theamphour.com/671-nda-sideshow/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Medical and defence practice verifies the published specification on the finished board rather than accepting it, which is a cultural difference from environments where a part meeting its datasheet on paper is treated as settled.",
+   "quote_verbatim": "it's got a spec on the data sheet, but we're going to test it",
+   "speaker": "Leigh Brady",
+   "episode": 588,
+   "episode_title": "Siloed Engineering with Leigh Brady",
+   "episode_url": "https://theamphour.com/588-siloed-engineering-with-leigh-brady/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Parameters not stated directly can often be derived from those that are: a logic output's effective source resistance follows from the specified high-level output voltage at a given output current, which is how a design driving LEDs with no series resistors can be shown to be relying on the driver's output impedance.",
+   "quote_verbatim": "you can actually calculate that with the VOH drop",
+   "speaker": "Dave Jones",
+   "episode": 598,
+   "episode_title": "Best way to find a leak",
+   "episode_url": "https://theamphour.com/598-best-way-to-find-a-leak/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Where a family of parts once differed in forward voltage, capacitance and leakage, identical datasheets across the family suggest a single die is now sold under every number in the series, differentiated only by its voltage rating.",
+   "quote_verbatim": "nowadays the data sheets are identical. So I can only assume that the silicon's identical",
+   "speaker": "Dave Jones",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Power figures quoted per megahertz are not comparable between microcontrollers, because parts differ in instructions per cycle and in whether the core is fed by a linear regulator or a switching converter, which changes how consumption varies with supply voltage. The comparable figure would be power per instruction, and datasheets do not publish it; the only reliable comparison is to build both boards and measure them running the same software.",
+   "quote_verbatim": "the data sheets never give you that figure",
+   "speaker": "Dave Jones",
+   "episode": 629,
+   "episode_title": "At least my house isn't haunted",
+   "episode_url": "https://theamphour.com/629-at-least-my-house-isnt-haunted/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "For the lowest sleep currents each unused pin must be put in the state the manufacturer recommends, which is usually but not always an output driven low; the recommendation differs between parts and has to be read for each.",
+   "quote_verbatim": "data sheets can vary and parts can vary. So you have to, you have to look at each data sheet",
+   "speaker": null,
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Buying a commodity chip is buying its datasheet: the purchaser has no visibility into what is inside and no proof that it behaves as described until it is on a board and running.",
+   "quote_verbatim": "You're basically buying a data sheet",
+   "speaker": null,
+   "episode": 650,
+   "episode_title": "Accessible ASICs with Andreas Olofsson",
+   "episode_url": "https://theamphour.com/650-accessible-asics-with-andreas-olofsson/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Datasheets for integrated parts can name the licensed peripheral blocks and their revisions, so tracking the document across years shows when a vendor changed the source of a peripheral, information which occasionally explains behaviour that changed with silicon revision.",
+   "quote_verbatim": "you actually can see which rev of the peripherals they're buying",
+   "speaker": null,
+   "episode": 652,
+   "episode_title": "For a couple weeks there...",
+   "episode_url": "https://theamphour.com/652-for-a-couple-weeks-there/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "ep 196: raw labels alternate; the SPICE modelling material is Mike Engelhardt's and is content-attributed to him.",
+  "ep 392, 519, 531, 527, 566, 572, 650, 663, 505: labels are flagged unreliable or collapse both speakers onto the guest; claims are content-attributed only where the identity is unambiguous and are otherwise unattributed.",
+  "ep 348, 270, 290, 480, 473, 588, 628, 311, 187, 383, 330, 329, 718, 54, 661: attributed by content to the guests whose accounts are unambiguous from the material.",
+  "Three passages in the bundle carry no episode number and were dropped, since a claim that cannot be cited cannot be used."
+ ],
+ "capped": true
+}

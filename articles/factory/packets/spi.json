@@ -1,0 +1,740 @@
+{
+ "concept": "spi",
+ "name": "SPI",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": "SPI",
+ "claims": [
+  {
+   "claim_text": "The name is spoken either as the three letters or as a single word, both being current among practitioners.",
+   "quote_verbatim": "Well, SPI, SPI. Yeah, either side, I think.",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The electrical distinction from I2C is that every SPI line is a totem-pole output with two transistors, one pulling high and one pulling low, whereas I2C is essentially an open-collector output that depends on a pull-up resistor to return the line high.",
+   "quote_verbatim": "all digital outputs are totem pole outputs. So, that means they have a driver and two output transistors",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "That difference makes SPI the more robust of the two: it needs no pull-up resistors, and the failure modes associated with choosing the wrong pull-up value do not arise.",
+   "quote_verbatim": "You don't need a pull-up resistor on a SPI line because it's just driving directly.",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The asymmetry is visible on an oscilloscope: the falling edge of an I2C line is nearly instantaneous because a transistor pulls it down, while the rising edge is shaped by the pull-up resistor against the line capacitance.",
+   "quote_verbatim": "it'll pull down very quickly. It'll pull down, like, almost instantaneously",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Breadboards and loose wiring add capacitance and act as an antenna, which is a problem specifically for I2C because the pull-up must charge that capacitance, and is why a lower pull-up value is needed in such setups; a directly driven SPI line is unaffected.",
+   "quote_verbatim": "when you've got breadboards and wires hanging everywhere, you've got capacitance and you've got a big antenna",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "I2C carries a further class of problems around device addressing that SPI, which selects devices with a dedicated line, does not have.",
+   "quote_verbatim": "There's addressing stuff like that with I-squared C.",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The cost of that robustness is pin count, since SPI requires more signal lines than I2C for the same connection.",
+   "quote_verbatim": "run more lines, Chris",
+   "speaker": "Chris Gammell",
+   "episode": 235,
+   "episode_title": "An Interview with Matt Richardson - Raspberry Risorgimento Regent",
+   "episode_url": "https://theamphour.com/235-an-interview-with-matt-richardson-raspberry-risorgimento-regent/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "With supply voltage largely standardised, the choice between SPI and I2C has become the substantive interface decision when specifying a peripheral, and I2C often wins on the simple ground that more parts offer it.",
+   "quote_verbatim": "it's more about do you choose spi or i squared c for your communication protocol",
+   "speaker": "Parker Dillman",
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "opinion",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "The clock polarity and phase settings are the classic bring-up trap: a bus configured in the wrong mode returns plausible but meaningless data, and one such fault consumed three days of debugging before the mode was checked.",
+   "quote_verbatim": "the main thing that I had is the different modes",
+   "speaker": "Chris Gammell",
+   "episode": 137,
+   "episode_title": "Mars, System Design & NAND - Mercurial Mars Mission",
+   "episode_url": "https://theamphour.com/the-amp-hour-137-mercurial-mars-mission/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A polarity mismatch is particularly costly because the symptom is not obviously wrong data but data shifted by one bit, and the setting is one an engineer rarely thinks to revisit; two or three weeks were lost to that failure on one project.",
+   "quote_verbatim": "you'll lose two or three weeks on it because you find out it uses SBI with the polarity the other way around",
+   "speaker": null,
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The parameters that have to be established before a transfer will work are the clock frequency, the clock polarity and phase, and whether the slave-select signal is being used at all.",
+   "quote_verbatim": "is it, you know, uh, polarity zero polarity one phase zero phase one",
+   "speaker": "Jonathan Georgino",
+   "episode": 461,
+   "episode_title": "An Interview with Jonathan Georgino",
+   "episode_url": "https://theamphour.com/461-an-interview-with-jonathan-georgino/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Transposing the two data lines is a recurring layout error that experience does not eliminate; on one board the mistake was recoverable without cutting traces because every digital connection had been brought out to solder-bridge jumpers.",
+   "quote_verbatim": "the Mosey and Miso, you know, like those master and slave out, master out, slave in. Got those backwards.",
+   "speaker": "Chris Gammell",
+   "episode": 201,
+   "episode_title": "Cheap Respins And A Time Machine - Multiscience Mercenary Marketplace",
+   "episode_url": "https://theamphour.com/201-cheap-respins-and-a-time-machine-multiscience-mercenary-marketplace/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Bus-variant parts can share a pinout: an I2C and an SPI real-time clock in the same family had identical pin assignments, so the wrong variant passed footprint checks, assembled correctly and failed only when the bus would not enumerate.",
+   "quote_verbatim": "it was a spy part on a it's the wrong part it has the same it has the exact same pin out",
+   "speaker": "Dave Jones",
+   "episode": 652,
+   "episode_title": "For a couple weeks there...",
+   "episode_url": "https://theamphour.com/652-for-a-couple-weeks-there/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The error originated in a library service returning the nearest available footprint together with a manufacturer part number, which was accepted without checking that the part number matched the intended bus variant.",
+   "quote_verbatim": "i put in the part number for the spy real-time clock",
+   "speaker": "Chris Gammell",
+   "episode": 652,
+   "episode_title": "For a couple weeks there...",
+   "episode_url": "https://theamphour.com/652-for-a-couple-weeks-there/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A misconfigured word length produces silent failure: a display refused to work because the peripheral had been left configured for four-bit transfers, a setting the engineer's eye repeatedly skipped over.",
+   "quote_verbatim": "I had spy set to four bits",
+   "speaker": "Christopher White",
+   "episode": 479,
+   "episode_title": "Why isn't this working?",
+   "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The underlying difficulty in bringing up an SPI peripheral is the absence of visibility: nothing works until it does, and the target device cannot report that it was expecting a different mode or command state.",
+   "quote_verbatim": "nothing works, right, until it does",
+   "speaker": "Dave Jones",
+   "episode": 479,
+   "episode_title": "Why isn't this working?",
+   "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Bringing up a display controller from its own documentation can be a multi-month exercise \u2014 one such part required roughly four hundred commands sent over the bus and had a four-hundred-page data sheet \u2014 so adapting a known-good published driver is the pragmatic route.",
+   "quote_verbatim": "It had like 400 instructions, you know, 400 commands that need to be sent over spy.",
+   "speaker": "Dave Jones",
+   "episode": 479,
+   "episode_title": "Why isn't this working?",
+   "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Documentation that names the display's pins, the library to download and the procedure to follow is sufficient to bring up an unfamiliar SPI display without further reference material.",
+   "quote_verbatim": "this is an SPI display and like, these are the pins that you need to use",
+   "speaker": "Zach Fredin",
+   "episode": 330,
+   "episode_title": "An Interview with Zach Fredin",
+   "episode_url": "https://theamphour.com/330-an-interview-with-zach-fredin/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Typical SPI clock rates in practical designs run from about twenty to eighty megahertz.",
+   "quote_verbatim": "Yeah, 20 to 80.",
+   "speaker": "Trammell Hudson",
+   "episode": 463,
+   "episode_title": "An Interview with Trammell Hudson",
+   "episode_url": "https://theamphour.com/463-an-interview-with-trammell-hudson/",
+   "depth_regraded": "opinion",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A device answering an SPI read has roughly half a clock cycle to respond: the result must be ready from the rising edge of the last address bit and present on the output by the falling edge of that clock.",
+   "quote_verbatim": "you really only have half a SPY bus clock cycle",
+   "speaker": "Trammell Hudson",
+   "episode": 463,
+   "episode_title": "An Interview with Trammell Hudson",
+   "episode_url": "https://theamphour.com/463-an-interview-with-trammell-hudson/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Above roughly ten megahertz a designer needs working intuition about capacitance, inductance and edge rates, because the connection can no longer be treated as a simple direct-current one.",
+   "quote_verbatim": "when you're in the 10 megahertz and above range, you should have some good intuition about capacitance and inductance",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The common workaround at hobbyist level for a bus that will not run at sixteen megahertz is simply to reduce the clock to two megahertz until it works, which sidesteps the signal-integrity question rather than answering it.",
+   "quote_verbatim": "if it doesn't work at 16 megahertz, okay, well, you just turn it down to 2 megahertz and it starts working",
+   "speaker": "Chris Gammell",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Several devices commonly share one bus, distinguished by chip select, and consecutive block reads let a host stream several bytes from each device in turn at high rate.",
+   "quote_verbatim": "Same spy bus. Right. So share. But you can stream.",
+   "speaker": "Chris Gammell",
+   "episode": 203,
+   "episode_title": "Tesla, Checklists and Bullies - Emerging External Eupsychics",
+   "episode_url": "https://theamphour.com/203-tesla-checklists-and-bullies-emerging-external-eupsychics/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The shared-bus-with-select-line arrangement generalises: a tri-state bus giving each participant an active line, with inputs and outputs high-impedance when not selected, is how independent designs are combined onto a single chip.",
+   "quote_verbatim": "Just like SPI. Like if you've got like a bunch of SPI devices, they've each got an active line",
+   "speaker": "Matt Venn",
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "A hardware peripheral shifts data out of a register without processor intervention, which is the distinction from bit-banging, where the software must generate the interface timing itself.",
+   "quote_verbatim": "there's a spy port, you write into a register, it shifts out those data",
+   "speaker": "Chris Gammell",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The peripheral can be repurposed as a general timed bit generator: an infrared remote waveform that would normally be produced with pin states and delays was instead built as an SPI packet and clocked out by the peripheral, avoiding both blocking the processor and the timing uncertainty of an interpreted language.",
+   "quote_verbatim": "we build the entire packet in spy and then let it do the work of just shifting out bits at the right frequency",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The number of input and output pins a module can expose constrains which interfaces it can offer at all: an SD-card form factor allowed six pins in total, rising to twelve and then twenty-three in later soldered-down modules.",
+   "quote_verbatim": "which limits you to six, uh, six IO pins in total",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Some microcontroller families allow almost any peripheral to be routed to almost any pin, which permits sharing a pin between functions and clocking one peripheral from another.",
+   "quote_verbatim": "one of the ways I like to drive some of these LED drivers is that I have a PW and I'm actually clocking from the SPI port",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Because the mapping can be changed at run time, a design needing four SPI ports that were never required simultaneously was implemented by remapping a single port between pin pairs to drive each output in turn.",
+   "quote_verbatim": "I basically needed four SPI ports, but I didn't necessarily need them all at the same time.",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The same flexibility permits connecting a UART and an SPI device to one pin and switching the pin's mode between them, which is possible but ill-advised.",
+   "quote_verbatim": "Put it in UART mode. Talk to the UART device. Put it back to spy mode.",
+   "speaker": "Dave Jones",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "On an FPGA the pins used to read the configuration flash are handed over to the user design once configuration completes, so they can be reused afterwards.",
+   "quote_verbatim": "once the configuration process is complete, all of the spy IOs on this particular chip are handed over to the user design",
+   "speaker": "Chris Gammell",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The cleanest way to reuse those pins is to place another SPI device on the same bus with its own chip select; sharing them with a different bus or with indicator outputs also works provided nothing conflicts during boot.",
+   "quote_verbatim": "the easiest way to reuse those pins is if you have another spy device",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "An FPGA with a hard SPI peripheral lets an external microcontroller act as the controller for the FPGA over that bus, which is a natural division of work between the two devices.",
+   "quote_verbatim": "use a micro controller external to control the FPGA over spy",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where a package is specified for a high-density interconnect process with filled and plated via-in-pad \u2014 prohibitively expensive at prototype quantities \u2014 the programming bus pins buried in the footprint were reached by routing over unused pads and covering them with solder mask.",
+   "quote_verbatim": "for really important things like the spy interface, which is how you program the FPGA, they were kind of a little bit deeper in the footprint",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Direct memory access over SPI keeps the processor free: a programmable logic device converted SPI packets from the microcontroller into the parallel shift-register interface an LED panel expected, so the panel could be driven by a DMA transfer while the CPU did other work.",
+   "quote_verbatim": "I programmed up a CPLD to convert a SPY packet from the microcontroller into this parallel shift register interface",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Display bandwidth is where SPI runs out: a parallel interface driven by direct memory access carries far more than SPI, which is the usual choice for connecting an LCD.",
+   "quote_verbatim": "because it has much higher bandwidth than SPI, what usually people are using",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "opinion",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "A 2.8-inch colour display driven over SPI by a sixteen megahertz processor was simply slow, and was moved to a parallel connection for that reason.",
+   "quote_verbatim": "i've been playing with um a 2.8 inch tft at the moment on spy and i've just put it onto parallel",
+   "speaker": "Chris Gammell",
+   "episode": 281,
+   "episode_title": "Crossovers and Call-ins",
+   "episode_url": "https://theamphour.com/281-crossovers-and-call-ins/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "The data rate needed to refresh a modern display over SPI is high enough to rule out the slow, low-power processor a design might otherwise use, since the frame must be held in memory and then transmitted across the bus.",
+   "quote_verbatim": "I can't do a slow, low power processor anymore because the data rates are updating these bloody LCDs so much",
+   "speaker": "Dave Jones",
+   "episode": 702,
+   "episode_title": "Test Point Accupuncture",
+   "episode_url": "https://theamphour.com/702-test-point-accupuncture/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A memory-in-pixel display has no controller and is addressed over SPI directly to the glass, which allows a variable rather than fixed frame rate and partial refreshes, updating anywhere from once a second to twenty-five or thirty frames a second as needed.",
+   "quote_verbatim": "because it's memory in pixel, there's no controller. You talk spy directly to the glass.",
+   "speaker": "Andrew Witte",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Among addressable LED protocols, the two-wire SPI-driven type is easier to drive than the one-wire type and adds around five bits of global brightness control, at the cost of the pulse-width modulation becoming noticeably slower as that control is used.",
+   "quote_verbatim": "the APA 102, which is the two wire one, is better in it. You know, you've got SPI, it's much easier to drive.",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "That part is not constant current, so a drop in supply voltage from four and a half to four volts changes the light output, which matters where a whole installation is being dimmed together.",
+   "quote_verbatim": "the 102 isn't actually even constant current",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "SPI cannot always substitute for a parallel path: reformatting parallel data arriving at twelve and a half megahertz into SPI would require a bus running eight times faster, which was not achievable.",
+   "quote_verbatim": "You're getting parallel data at 12.5 megahertz. Right. Your SPI will be eight times that.",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "An extended form of the interface, marketed as multi-SPI, adds two or four data lines and sampling on both clock edges, making it a hybrid of serial and parallel that reduces the clock rate needed to read a twenty-bit successive-approximation converter at several megasamples per second.",
+   "quote_verbatim": "you can have multiple data lines. So it's kind of a hybrid of, um, serial and parallel.",
+   "speaker": "Art Kay",
+   "episode": 348,
+   "episode_title": "An Interview with Art Kay",
+   "episode_url": "https://theamphour.com/348-an-interview-with-art-kay/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "The reason such extensions exist is that a precision converter clocks its conversion internally, but the result then has to be read out serially, and at twenty bits and megasample rates that read-out becomes the binding constraint.",
+   "quote_verbatim": "most SAR converters will have a serial interface and if it's 20 bits",
+   "speaker": "Art Kay",
+   "episode": 348,
+   "episode_title": "An Interview with Art Kay",
+   "episode_url": "https://theamphour.com/348-an-interview-with-art-kay/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "SD cards can be addressed either through the full SD input-output interface, which uses additional data lines, or through an SPI mode that is slower.",
+   "quote_verbatim": "Not this SPI one where it's a little bit slower, but like additional pins, more data lines.",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "In a layered software stack the file system sits above the card, which is reached at the SPI layer over four pins, and universal SPI support is what makes that layering portable.",
+   "quote_verbatim": "Four pins for spy. And everyone's going to have support for spy.",
+   "speaker": "Chris Gammell",
+   "episode": 514,
+   "episode_title": "Focus, Dammit",
+   "episode_url": "https://theamphour.com/514-focus-dammit/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "A module that terminates a network stack in hardware reduces the host's task to issuing SPI commands, with the addressing, the stack and even a web server handled on the module.",
+   "quote_verbatim": "It's just send SPI commands, and that's it. It handles the stack and everything else",
+   "speaker": "Dave Jones",
+   "episode": 79,
+   "episode_title": "Ludibrious Luxating Layout",
+   "episode_url": "https://theamphour.com/the-amp-hour-79-ludibrious-luxating-layout/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Network connectivity can be routed over the bus on a single-board computer by editing one line of the kernel configuration, which substitutes the SPI-attached interface for the normal Ethernet device.",
+   "quote_verbatim": "it routes Internet connectivity through the SPI bus",
+   "speaker": "Dave Jones",
+   "episode": 319,
+   "episode_title": "Photon Rich, Cash Poor",
+   "episode_url": "https://theamphour.com/319-photon-rich-cash-poor/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Where a single-board computer provides only one SPI bus, the workaround for connecting several peripherals is to multiplex the signal externally with a programmable logic device.",
+   "quote_verbatim": "they're actually taking that and then kind of multiplexing the signal out using a CPLD",
+   "speaker": "Chris Gammell",
+   "episode": 225,
+   "episode_title": "Worktrips and Workspaces - Junket Jactation Jiltedness",
+   "episode_url": "https://theamphour.com/225-worktrips-and-workspaces-junket-jactation-jiltedness/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The number of available buses is a real selection criterion between single-board computers, and one such platform provides a single SPI bus.",
+   "quote_verbatim": "shows that there's one SPI bus",
+   "speaker": "Matt Richardson",
+   "episode": 235,
+   "episode_title": "An Interview with Matt Richardson - Raspberry Risorgimento Regent",
+   "episode_url": "https://theamphour.com/235-an-interview-with-matt-richardson-raspberry-risorgimento-regent/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The quality of a microcontroller's SPI implementation affects results beyond the bus itself: transmitting radio packets from a low-cost part produced badly formed transmissions that worked poorly, while a higher-performance part in the same family reached about eight hundred metres and over a kilometre when overvolted.",
+   "quote_verbatim": "it has a much higher performance, uh, SPI engine than the O three",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  },
+  {
+   "claim_text": "A vision module can expose its results over SPI as a text stream at around thirty updates a second, which lets a very small microcontroller consume the output of a much larger processor.",
+   "quote_verbatim": "there's also an SPI API that's, that's, uh, C plus plus based",
+   "speaker": "Brandon Gilles",
+   "episode": 517,
+   "episode_title": "Depth and AI with Brandon Gilles and Brian Weinstein",
+   "episode_url": "https://theamphour.com/517-depth-and-ai-with-brandon-gilles-and-brian-weinstein/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Writing the driver against a real-time operating system's abstraction means a protocol module built on it can be moved into that operating system unchanged.",
+   "quote_verbatim": "the SPI calls that it will do will be Zephyr compatible",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A microcontroller sending SPI commands into a direct digital synthesis chip is the standard architecture for a programmable signal source, with the chip generating any frequency from direct current to its upper limit.",
+   "quote_verbatim": "which sends in the spy commands into the analog devices, DDS chip",
+   "speaker": "Dave Jones",
+   "episode": 554,
+   "episode_title": "PLEASE be a die shrink",
+   "episode_url": "https://theamphour.com/554-please-be-a-die-shrink/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Software-defined peripherals invert the usual constraint: a small processor attached to each input-output pin can be an I2C, SPI or CAN peripheral depending only on what software is loaded into it, so a chip need not commit to one peripheral mix at design time.",
+   "quote_verbatim": "if your peripheral is software defined, um, it doesn't matter that you only have one type of peripheral",
+   "speaker": "Tim Ansell",
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Adding peripherals to a custom chip is a matter of instantiating pre-built blocks, so specifying two SPI modules is minutes of work in the design flow.",
+   "quote_verbatim": "it's a couple of minutes' work to say this chip is going to have two SPI modules",
+   "speaker": "Dave Jones",
+   "episode": 137,
+   "episode_title": "Mars, System Design & NAND - Mercurial Mars Mission",
+   "episode_url": "https://theamphour.com/the-amp-hour-137-mercurial-mars-mission/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "A secure controller can read an external SPI flash, validate its contents and then emulate that flash to the system it is protecting, which closes the attack in which the image is swapped between the moment it is checked and the moment it is used.",
+   "quote_verbatim": "they might need to read from an external spy and validate it. And then, you know, they can emulate that spy to a system",
+   "speaker": "Colin O'Flynn",
+   "episode": 693,
+   "episode_title": "Small Scale Electronics Manufacturing with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/693-small-scale-electronics-manufacturing-with-colin-oflynn/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "That attack works because the validating system does not have space to hold the whole image in memory and must reload it from the flash after checking, giving the attacker a window in which to substitute it.",
+   "quote_verbatim": "it like reloads the spy flash. Cause it doesn't have everything in memory.",
+   "speaker": "Colin O'Flynn",
+   "episode": 693,
+   "episode_title": "Small Scale Electronics Manufacturing with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/693-small-scale-electronics-manufacturing-with-colin-oflynn/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A host-driven bus adapter that issues single SPI commands, and equivalents that let a script on a host computer talk to an SPI, I2C or JTAG bus, function as an interface between a general-purpose computer and the physical device under test.",
+   "quote_verbatim": "You can write single, single spy commands on a bus pirate as well.",
+   "speaker": "Chris Gammell",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Such an adapter is used as a prototyping instrument, allowing different protocols to be tried and commands thrown at an unfamiliar device quickly.",
+   "quote_verbatim": "you can quickly just turn around and try these different protocols",
+   "speaker": null,
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A modern adapter reduces bring-up to connecting the device, configuring the bus parameters in a graphical interface, typing bytes in hexadecimal or decimal and reading back whatever the device clocked out, in place of building an Arduino test harness and a serial console.",
+   "quote_verbatim": "click transfer. And then you're going to see it send the data.",
+   "speaker": "Jonathan Georgino",
+   "episode": 461,
+   "episode_title": "An Interview with Jonathan Georgino",
+   "episode_url": "https://theamphour.com/461-an-interview-with-jonathan-georgino/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Exercising a new chip over the bus during hardware bring-up produces working driver code as a by-product, so the firmware engineer receives something already proven against the silicon.",
+   "quote_verbatim": "if I actually exercise the chip by throwing commands at it, then I'm already halfway there when I'm on the firmware side",
+   "speaker": "Chris Gammell",
+   "episode": 110,
+   "episode_title": "Armstrong, Camenzind & Museums - Outstanding Oneirophoros Obituaries",
+   "episode_url": "https://theamphour.com/the-amp-hour-110-outstanding-oneirophoros-obituaries/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A working board from a previous project with the same interface is used as the driving platform for a new part, with the unneeded code stripped out and only the bus driver retained; the drawback is that it discourages moving to newer devices.",
+   "quote_verbatim": "I'll have my separate board with the new chip and I'll wire that into the old board",
+   "speaker": "Dave Jones",
+   "episode": 110,
+   "episode_title": "Armstrong, Camenzind & Museums - Outstanding Oneirophoros Obituaries",
+   "episode_url": "https://theamphour.com/the-amp-hour-110-outstanding-oneirophoros-obituaries/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Consistency of peripheral behaviour within a single vendor's ecosystem is itself a productivity asset: knowing how the interface worked across one family is what made it quick, and that knowledge does not transfer to another vendor.",
+   "quote_verbatim": "if you used spy, for example, you knew how it would work",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A vendor library makes a transfer trivial to issue, reducing the operation to sending a byte, but adopting one is a decision about how far the library is trusted.",
+   "quote_verbatim": "I've got my SPI library. Fine. I just send the byte.",
+   "speaker": "Dave Jones",
+   "episode": 186,
+   "episode_title": "Someone is watching...we think - Horme Hostility Hypochondriac",
+   "episode_url": "https://theamphour.com/186-someone-is-watching-we-think-horme-hostility-hypochondriac/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "A protocol analyser does not remove the need to understand the bus: software timeout settings have to be correct or the capture will not decode into meaningful data.",
+   "quote_verbatim": "you've got to set your software time out right. Otherwise it doesn't decode your data properly.",
+   "speaker": "Dave Jones",
+   "episode": 391,
+   "episode_title": "Only A Transmitter",
+   "episode_url": "https://theamphour.com/391-only-a-transmitter/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Capture instruments handle SPI at high rates by streaming samples to a host and doing the work in software, with a hundred megahertz bus recorded over USB 3.0 and software triggering practical for a ten megahertz waveform sampled at about a hundred megasamples per second.",
+   "quote_verbatim": "if you're looking like a 10 megahertz SPI waveform, like clock to 10 megahertz and say that you'd be sampling data at about a hundred mega sample per second",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The design philosophy behind that approach is to record everything and search it afterwards rather than trying to trigger on the exact event, converting a real-time trigger problem into an offline search problem.",
+   "quote_verbatim": "Then it's a search problem. It's not a trigger problem.",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "Instantiating a separate UART, SPI and I2C block for every pin of a protocol analyser wastes programmable logic area, but area is the wrong thing to optimise for someone learning hardware description languages.",
+   "quote_verbatim": "you're wasting a lot of space from the point of view of the FPGA",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Being able to analyse a raw signal trace on the bus is a requirement for embedded engineering work but not for building an installation from published libraries, so the depth to which the abstraction needs to be understood depends entirely on the role.",
+   "quote_verbatim": "you're going to need to know how to analyze an I2C or SBI signal trace",
+   "speaker": "Dave Jones",
+   "episode": 276,
+   "episode_title": "Eating An Elephant",
+   "episode_url": "https://theamphour.com/276-eating-an-elephant/",
+   "depth_regraded": "explains",
+   "kind": "judgment"
+  },
+  {
+   "claim_text": "Standardising demonstration hardware on a common development board is why chip vendors ship SPI-connected evaluation boards for that platform, since the alternative is a different demonstration board for every part.",
+   "quote_verbatim": "You've got to standardize on some platform. Otherwise you have a different demo board for everything.",
+   "speaker": "Chris Gammell",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "principle"
+  },
+  {
+   "claim_text": "In a mixed system a small processing block can watch the bus for a specific pattern and raise an interrupt, handling the real-time work that would otherwise occupy the main processor and depositing results in memory for it to read later.",
+   "quote_verbatim": "you could set up like a, a thing that's like watching on a spy bus or serial bus",
+   "speaker": "Tim Ansell",
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Streaming video into an FPGA over SPI at thirty megahertz required patches to the open-source synthesis toolchain for finer control over how logic was merged, which were written by the user and merged upstream within days.",
+   "quote_verbatim": "he wanted to stream video over USB, over SPI to the FPGA at 30 megahertz",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 423,
+   "episode_title": "Open FPGA Toolchains at 35c3",
+   "episode_url": "https://theamphour.com/423-open-fpga-toolchains-at-35c3/",
+   "depth_regraded": "explains",
+   "kind": "case"
+  }
+ ],
+ "capped": false,
+ "attribution_notes": "Episodes on the speaker-map unreliable list are attributed by content or left unattributed."
+}

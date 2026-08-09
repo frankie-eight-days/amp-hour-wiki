@@ -1,0 +1,624 @@
+{
+ "concept": "3d-printer",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "3d-printer",
+  "census": "union",
+  "aliases": [
+   "3d-printer",
+   "three-d-printer",
+   "three-dimensional-printer"
+  ],
+  "children": [
+   "3d-cad",
+   "abs-plastic",
+   "cnc-machine",
+   "community",
+   "conductive-ink",
+   "digital-fabrication",
+   "formlabs",
+   "industrial-design",
+   "makerbot",
+   "mechanical-design",
+   "milling-machine",
+   "personal-computer",
+   "prusa",
+   "shapeways",
+   "sketchup",
+   "slicer",
+   "stereolithography",
+   "stl",
+   "thingiverse"
+  ],
+  "neighbors": {
+   "pcb-milling-machine": 6,
+   "solidworks": 6,
+   "makerspace": 5,
+   "3d-printer-kit": 4,
+   "freecad": 4,
+   "laser-cutting": 4
+  },
+  "pins_pre_cap": 234,
+  "pins_final": 234,
+  "pins_by_depth": {
+   "explains": 77,
+   "opinion": 157
+  },
+  "pins_by_role": {
+   "core": 191,
+   "neighbor": 14,
+   "child": 29
+  },
+  "capped": false,
+  "passages_yielding_claims": 52,
+  "passages_killed": 182
+ },
+ "claims": [
+  {
+   "claim_text": "The speed of a fused-filament machine is bounded by the thermal properties of the plastic rather than by the motion system: each layer has to harden just enough before the next is laid down, or the new layer smears the one beneath it. That is a physical limit, and it is why tuned machines are still slow.",
+   "quote_verbatim": "You sort of need the plastic to harden just enough in each layer so the next layer comes on cleanly without smushing",
+   "speaker": "Chris Anderson",
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Curing a liquid resin with a laser does not carry the same constraint, which is why the resin processes were expected to be the next step in speed.",
+   "quote_verbatim": "with the laser curing of the resin, you don't have the same physical",
+   "speaker": "Chris Anderson",
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "The complexity of a printer is irreducible in a way that resists cost reduction: there are motors moving in X and Y, plastic that has to be heated, filament fed through a head and nozzle, a platform that has to stay level and aligned, and stepper motors that must not slip and have a maximum usable speed. Applying money and time does not make such a machine a hundred times faster, simpler or more reliable.",
+   "quote_verbatim": "You still got the XY motors that move around",
+   "speaker": "Dave Jones",
+   "episode": 326,
+   "episode_title": "Magical Fire Bags",
+   "episode_url": "https://theamphour.com/326-magical-fire-bags/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The mechanical part count sets a price floor that electronics do not have: boards and components can be driven ever cheaper through jelly-bean parts and low-cost labour, but a machine with many mechanical parts costs what it costs, which is the argument behind the conclusion that a sub-three-hundred-dollar printer is not buildable.",
+   "quote_verbatim": "there's too mechanical, too many mechanical bits to it",
+   "speaker": "Dave Jones",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Warranty and return costs are routinely omitted from these calculations, and on a machine this complex a replacement rate of one in twenty or one in thirty units is plausible.",
+   "quote_verbatim": "I wouldn't be surprised if someone was replacing one out of every 20 or one out of every 30",
+   "speaker": "Chris Church",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "One crowdfunded machine at an unbuildable price raised about a hundred and fifty thousand dollars against the roughly one and a quarter million the arithmetic said it needed.",
+   "quote_verbatim": "they needed like $1.2 million to make it viable. And they only got like $150,000",
+   "speaker": "Dave Jones",
+   "episode": 219,
+   "episode_title": "Get Smart About Automation - Caducous Cyborg Concerns",
+   "episode_url": "https://theamphour.com/219-get-smart-about-automation-caducous-cyborg-concerns/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Belt and motor slippage can be partly compensated in software — driving the axes more slowly, or averaging — but not enough to make a polished product. Closing the loop instead requires an encoder, which raises complexity and lowers speed: a different machine, not a firmware change.",
+   "quote_verbatim": "you can potentially fix some of that in software by either driving it slower, driving it more carefully",
+   "speaker": "Dave Jones",
+   "episode": 337,
+   "episode_title": "Fake it till you make it",
+   "episode_url": "https://theamphour.com/337-fake-it-till-you-make-it/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A printer that produces a part gives a false sense of completion. The prototype prints, the excitement of it working masks defects such as layers not adhering, and those get deferred to a software fix that does not exist.",
+   "quote_verbatim": "you can build your prototype and you can get a false sense of completion",
+   "speaker": "Dave Jones",
+   "episode": 337,
+   "episode_title": "Fake it till you make it",
+   "episode_url": "https://theamphour.com/337-fake-it-till-you-make-it/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Printed features come out undersized because the extruded plastic spreads: a 42-millimetre hole modelled half a millimetre oversize still did not fit the part it was cut for.",
+   "quote_verbatim": "if I wanted a 42 millimetre diameter in a hole, I made it 42.5 in my software",
+   "speaker": "Dave Jones",
+   "episode": 94,
+   "episode_title": "Gnomic Gazumping Gobemouche",
+   "episode_url": "https://theamphour.com/the-amp-hour-94-gnomic-gazumping-gobemouche/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The compensation for that spread belongs in the toolchain rather than in the designer's model: the machine knows the plastic will ooze and that circles will come out smaller than programmed, so the drawing should carry the intended dimensions and the software should apply the offset.",
+   "quote_verbatim": "I should do the CAD drawing exactly the dimensions I want and then be able to print",
+   "speaker": "Dave Jones",
+   "episode": 94,
+   "episode_title": "Gnomic Gazumping Gobemouche",
+   "episode_url": "https://theamphour.com/the-amp-hour-94-gnomic-gazumping-gobemouche/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Low-end machines are adequate for flat work such as a front panel, provided the hole diameters are checked against the parts that must pass through them.",
+   "quote_verbatim": "If you just want to do a flat front panel or something like that",
+   "speaker": "Dave Jones",
+   "episode": 94,
+   "episode_title": "Gnomic Gazumping Gobemouche",
+   "episode_url": "https://theamphour.com/the-amp-hour-94-gnomic-gazumping-gobemouche/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A machine that appears to be working can still be misconfigured in several independent ways at once: streaming a job over USB can lose buffer synchronisation so the file should be printed from the memory card, temperatures can be out of calibration, and belts can slip or be misaligned.",
+   "quote_verbatim": "you've got to print directly from the SD card because it can't stream from the USB",
+   "speaker": "Dave Jones",
+   "episode": 94,
+   "episode_title": "Gnomic Gazumping Gobemouche",
+   "episode_url": "https://theamphour.com/the-amp-hour-94-gnomic-gazumping-gobemouche/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Adhesion depends on the state of the build surface, not only on the settings: a print that needed a raft to stick — and whose raft could not then be separated from the part — turned out to need the tape on the bed cleaned before starting.",
+   "quote_verbatim": "that's because you haven't cleaned your capped on tape before you started",
+   "speaker": "Dave Jones",
+   "episode": 94,
+   "episode_title": "Gnomic Gazumping Gobemouche",
+   "episode_url": "https://theamphour.com/the-amp-hour-94-gnomic-gazumping-gobemouche/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The material a newcomer most needs is generic across machines: what a slicer is, how the additive process works, and how to diagnose a first layer that will not stick.",
+   "quote_verbatim": "how do you troubleshoot my first layers not sticking",
+   "speaker": "Shawn Hymel",
+   "episode": 675,
+   "episode_title": "Changing Course with Shawn Hymel",
+   "episode_url": "https://theamphour.com/675-changing-course-with-shawn-hymel/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Printing a part that is merely pretty is easy; printing one that carries load is not, and the tools do not default to it. Strength comes from settings the user has to learn — more outside perimeters, and different infill patterns and densities — and the documentation for that is poor.",
+   "quote_verbatim": "The tools don't have good defaults for strong, you know, having multiple outside layers, changing the fill patterns and the fill densities",
+   "speaker": "Jeff Keyzer",
+   "episode": 472,
+   "episode_title": "Keyzermas Vacation",
+   "episode_url": "https://theamphour.com/472-keyzermas-vacation/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Designing parts that fail is itself the mechanism by which mechanical design is learned; the first brackets one designs are not mechanically sound, and the learning is worth the machine on its own.",
+   "quote_verbatim": "by building parts that sucked, I learned how to build better parts",
+   "speaker": "Jeff Keyzer",
+   "episode": 472,
+   "episode_title": "Keyzermas Vacation",
+   "episode_url": "https://theamphour.com/472-keyzermas-vacation/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Soluble support material stayed an industrial feature and did not reach hobby machines, and the evidence that it is not a prerequisite is the quality of parts people print without it.",
+   "quote_verbatim": "the thing that I'd been holding out for so long, which was soluble support material",
+   "speaker": "Jeff Keyzer",
+   "episode": 472,
+   "episode_title": "Keyzermas Vacation",
+   "episode_url": "https://theamphour.com/472-keyzermas-vacation/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A printer will happily produce a feature that no volume process can reproduce; printing a hole successfully says nothing about whether the part could be injection moulded, which is a lesson that has to be learned once.",
+   "quote_verbatim": "if you have an actual mold, if you're trying to do any kind of volume, there's no way that's going to work",
+   "speaker": "Chris Gammell",
+   "episode": 127,
+   "episode_title": "FPGA, Xess, 32 Bit - Quirky Qualitative Questions",
+   "episode_url": "https://theamphour.com/the-amp-hour-127-quirky-qualitative-questions/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The specification that matters when buying is reliability and the size of the user community, not peak performance: the objective is that every problem encountered has already been solved by somebody else and written down.",
+   "quote_verbatim": "every time I have a problem, I want someone else to already have figured it out",
+   "speaker": "Chris Gammell",
+   "episode": 610,
+   "episode_title": "Picking a Pick and Place Pickiness",
+   "episode_url": "https://theamphour.com/610-picking-a-pick-and-place-pickiness/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A machine chosen on that basis becomes a tool rather than a project: one much-supported model needed calibrating once and has produced hundreds of prints since without further attention.",
+   "quote_verbatim": "It is printed hundreds of prints for me and I've calibrated it the first time",
+   "speaker": "Chris Gammell",
+   "episode": 625,
+   "episode_title": "Gremlins in the machine",
+   "episode_url": "https://theamphour.com/625-gremlins-in-the-machine/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The skill worth building is now the modelling, not the tuning of the machine, which is a reversal of the earlier position where the printer itself absorbed the effort.",
+   "quote_verbatim": "you need to get good at modeling. And that part is frigging hard",
+   "speaker": "Chris Gammell",
+   "episode": 625,
+   "episode_title": "Gremlins in the machine",
+   "episode_url": "https://theamphour.com/625-gremlins-in-the-machine/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Build volume is routinely over-bought. A first machine of 200 by 200 by 300 millimetres was far larger than needed and traded resolution for a size that never got used.",
+   "quote_verbatim": "my first printer was 200 by 200 by 300 millimeter",
+   "speaker": "Chris Gammell",
+   "episode": 655,
+   "episode_title": "The Twelfth Day of Keyzermas",
+   "episode_url": "https://theamphour.com/655-the-twelfth-day-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Input shaping produces a large speed improvement, but it needs a controller capable of running it: a machine on an older eight-bit board cannot simply be given the feature, and the upgrade path also changes the extruder and therefore the stock of nozzles.",
+   "quote_verbatim": "input shaping is like basically everything speeds up",
+   "speaker": "Chris Gammell",
+   "episode": 655,
+   "episode_title": "The Twelfth Day of Keyzermas",
+   "episode_url": "https://theamphour.com/655-the-twelfth-day-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An intermittently used machine decays into unavailability: new slicer software stops working with old firmware, and getting the printer operational again for a single part consumes a day.",
+   "quote_verbatim": "it takes me all day just to get the thing bloody operational again to do my one print",
+   "speaker": "Dave Jones",
+   "episode": 625,
+   "episode_title": "Gremlins in the machine",
+   "episode_url": "https://theamphour.com/625-gremlins-in-the-machine/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The recommended test before buying is to send five parts to a printing service; if the need does not survive that, it will not sustain a machine.",
+   "quote_verbatim": "Print five things on Shapeways first",
+   "speaker": "Elecia White",
+   "episode": 329,
+   "episode_title": "Work on it for 10 years...",
+   "episode_url": "https://theamphour.com/329-work-on-it-for-10-years/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The failure mode of a cheap machine is not that information is unavailable but that feedback is slow: hours pass before it is clear whether a change worked, and the time is spent watching prints fail.",
+   "quote_verbatim": "you can't really tell if anything you've done has worked for hours",
+   "speaker": "Chris White",
+   "episode": 329,
+   "episode_title": "Work on it for 10 years...",
+   "episode_url": "https://theamphour.com/329-work-on-it-for-10-years/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The buying decision is properly framed as a comparison against a service bureau: for the price of a good desktop machine, how many parts could be printed by someone else?",
+   "quote_verbatim": "So how many parts could you print at shapeways",
+   "speaker": "Chris Gammell",
+   "episode": 312,
+   "episode_title": "Aussie Bound!",
+   "episode_url": "https://theamphour.com/312-aussie-bound/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Two distinct service models exist: a bureau operating its own factories and industrial machines, and a brokerage that matches a file to whoever nearby has a machine and a suitable nozzle, acting purely as a transaction layer.",
+   "quote_verbatim": "it's literally just a transaction layer",
+   "speaker": "Chris Gammell",
+   "episode": 313,
+   "episode_title": "My Kind of Town",
+   "episode_url": "https://theamphour.com/313-my-kind-of-town/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Board houses now offer printing alongside fabrication at prices that undercut owning a machine, and the part comes off industrial equipment rather than a cheap desktop unit; what ownership still buys is immediate feedback on fit and finish and a part in the hand today.",
+   "quote_verbatim": "I think the only thing is fit, like initial fit and finish",
+   "speaker": "Dave Jones",
+   "episode": 625,
+   "episode_title": "Gremlins in the machine",
+   "episode_url": "https://theamphour.com/625-gremlins-in-the-machine/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A heavy user runs several machines rather than reconfiguring one: eleven printers dedicated respectively to flexible material and to wide-nozzle bulk parts, because swapping material and head on a single machine costs more than owning another.",
+   "quote_verbatim": "it's easier just to have separate ones than it is to like just rejig each one each time for a different material",
+   "speaker": "James Bruton",
+   "episode": 416,
+   "episode_title": "An Interview with James Bruton",
+   "episode_url": "https://theamphour.com/416-an-interview-with-james-bruton/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Using desktop printers for production enclosures does not scale: a crowdfunded product needed hundreds — approaching a thousand — cases plus accessory housings for each sensor variant, which meant buying more machines and running them continuously.",
+   "quote_verbatim": "We started 3D printing all these cases",
+   "speaker": "Marcus Schappi",
+   "episode": 189,
+   "episode_title": "An Interview with Marcus Schappi - Kit Ketch Kenophobia",
+   "episode_url": "https://theamphour.com/189-an-interview-with-marcus-schappi-kit-ketch-kenophobia/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The process also has environmental requirements that a workshop plan may not account for: the fumes drove the printing outdoors onto a balcony, which then made the operation dependent on the weather.",
+   "quote_verbatim": "we started off 3D printing, you know, all the enclosures on our balcony",
+   "speaker": "Marcus Schappi",
+   "episode": 189,
+   "episode_title": "An Interview with Marcus Schappi - Kit Ketch Kenophobia",
+   "episode_url": "https://theamphour.com/189-an-interview-with-marcus-schappi-kit-ketch-kenophobia/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The alternative to a faster machine is a farm: a queue that distributes jobs across many individually slow commodity printers, on the model of building large computing capacity from commodity servers, which treats digital fabrication as a manufacturing method rather than only a prototyping one.",
+   "quote_verbatim": "you can have all of these like commodity 3d printers that are all individually have slow output",
+   "speaker": "Zach Hoeken",
+   "episode": 121,
+   "episode_title": "An Interview with Zach Hoeken Smith - Creative China Commorant",
+   "episode_url": "https://theamphour.com/the-amp-hour-121-creative-china-commorant/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The prediction that failed was the household machine; the one that succeeded was industrial. Consumer products designed today make heavy use of printing during product development.",
+   "quote_verbatim": "I would challenge you to find a single consumer product that's designed today that doesn't make heavy use of 3D printing in the product development process",
+   "speaker": "Jeff Keyzer",
+   "episode": 421,
+   "episode_title": "The Legend of Keyzermas",
+   "episode_url": "https://theamphour.com/421-the-legend-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The technology's practical value at a deadline is turnaround: when a contracted enclosure did not arrive in time for a trade show, a housing was designed and printed in five days so there were units people could pick up.",
+   "quote_verbatim": "put together an enclosure in like five days",
+   "speaker": "Christina Cyr",
+   "episode": 475,
+   "episode_title": "An Interview with Christina Cyr",
+   "episode_url": "https://theamphour.com/475-an-interview-with-christina-cyr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The uses that justify the machine are the ones no other process would serve: a holder for pogo pins is not something anybody would injection mould, and it exists because someone needed one.",
+   "quote_verbatim": "Someone 3D printed Pogo pins holders",
+   "speaker": "Chris Gammell",
+   "episode": 244,
+   "episode_title": "The Art Of Staying Interested In Electronics - Exponible Electronics Ennui",
+   "episode_url": "https://theamphour.com/244-the-art-of-staying-interested-in-electronics-exponible-electronics-ennui/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Bench organisation is another such use: mounting hardware for DIN rail, cases for single-board computers and generic clip-on carriers, with the limitation that very small items still need a custom design each time.",
+   "quote_verbatim": "really small stuff doesn't go on there very well",
+   "speaker": "Chris Gammell",
+   "episode": 705,
+   "episode_title": "Psst...Hey buddy, wanna buy an Octopus?",
+   "episode_url": "https://theamphour.com/705-psst-hey-buddy-wanna-buy-an-octopus/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Dentistry and oral surgery are among the heaviest professional users: a surgeon scans the patient's mouth and prints jigs for each part being cut, so the procedure is set up in advance.",
+   "quote_verbatim": "he'll make jigs for every part that he's like cutting out of your mouth",
+   "speaker": "Chris Gammell",
+   "episode": 589,
+   "episode_title": "Mute Button Discipline",
+   "episode_url": "https://theamphour.com/589-mute-button-discipline/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Filament is cheap as a raw material relative to moulded parts of the same plastic: costed per unit mass, filament came out roughly seven to ten times cheaper than buying construction toy bricks made of ABS, and pellets fed to an extruder are cheaper again by a similar factor.",
+   "quote_verbatim": "it's like 10 X, seven X cheaper than Lego per pound",
+   "speaker": "Jason Huggins",
+   "episode": 369,
+   "episode_title": "An Interview with Jason Huggins",
+   "episode_url": "https://theamphour.com/369-an-interview-with-jason-huggins/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The whole class of machines is driven by G-code and is useless without software that hides it; the hardware makes the process accessible and the software is what makes it usable.",
+   "quote_verbatim": "it still runs on G-code",
+   "speaker": "Dave Jones",
+   "episode": 251,
+   "episode_title": "Shifting Away From DIY - Pedetentious PnP Progress",
+   "episode_url": "https://theamphour.com/251-shifting-away-from-diy-pedetentious-pnp-progress/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The motion platform is common across the category: large printers, laser cutters, plasma cutters and CNC machines are the same gantry with a different tool at the end.",
+   "quote_verbatim": "they're all running the, like, it's all the same",
+   "speaker": "Chris Gammell",
+   "episode": 251,
+   "episode_title": "Shifting Away From DIY - Pedetentious PnP Progress",
+   "episode_url": "https://theamphour.com/251-shifting-away-from-diy-pedetentious-pnp-progress/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "That commonality goes deeper than the mechanics. An open benchtop pick-and-place machine runs Marlin — printer firmware — and is in effect a 3D printer with no nozzle and no bed and considerably more axes.",
+   "quote_verbatim": "It's running Marlin",
+   "speaker": "Stephen Hawes",
+   "episode": 686,
+   "episode_title": "A Benchtop Pick and Place with Stephen Hawes",
+   "episode_url": "https://theamphour.com/686-a-benchtop-pick-and-place-with-stephen-hawes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The slicer is where the accumulated intelligence sits: selecting a common material and dropping in a model produces a working job without the user configuring anything, which is the ease of use the rest of the desktop fabrication field is measured against.",
+   "quote_verbatim": "the slicer is going to be crazy intelligent",
+   "speaker": "Stephen Hawes",
+   "episode": 686,
+   "episode_title": "A Benchtop Pick and Place with Stephen Hawes",
+   "episode_url": "https://theamphour.com/686-a-benchtop-pick-and-place-with-stephen-hawes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The CAD toolchain was the bottleneck for a long time: free packages variously failed to import STEP files correctly or to export usable STL, and the one that worked had an explicit export-for-printing path.",
+   "quote_verbatim": "They don't export to STL properly",
+   "speaker": "Dave Jones",
+   "episode": 122,
+   "episode_title": "Processors, CEOs & Soldering irons - Plentiful Perfunctory Programs",
+   "episode_url": "https://theamphour.com/the-amp-hour-122-plentiful-perfunctory-programs/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "One such tool then removed direct STL export in a later release, redirecting the user to order the part from approved vendors on the premise that nobody has a printer at home.",
+   "quote_verbatim": "they've optimized this thing to export so that it automatically goes to their website",
+   "speaker": "Dave Jones",
+   "episode": 122,
+   "episode_title": "Processors, CEOs & Soldering irons - Plentiful Perfunctory Programs",
+   "episode_url": "https://theamphour.com/the-amp-hour-122-plentiful-perfunctory-programs/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "For the common case — enclosures for electronics printed on a mid-cost fused-filament machine — an open-source parametric CAD package is rough to learn but capable of the work.",
+   "quote_verbatim": "I'm making enclosures for electronics. I'm printing them on a medium cost, uh, 3d printer",
+   "speaker": "Chris Gammell",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A machine designed for speed rather than cost becomes an exercise in motion control: one such build paired an injection-moulded enclosure with the designer's own motion engine, PID control and path algorithms to handle the dynamics at high acceleration.",
+   "quote_verbatim": "he's writing his own, you know, algorithms",
+   "speaker": "Chris Gammell",
+   "episode": 282,
+   "episode_title": "3D Product Logistics",
+   "episode_url": "https://theamphour.com/282-3d-product-logistics/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The Z axis is the slowest on a printer because it is driven through a lead screw; where fast repeated Z motion is needed — a robot tapping a phone screen, built on printer motion — a solenoid is added alongside the screw, reaching around 800 taps per minute.",
+   "quote_verbatim": "the Z axis is the slowest axis on a 3d printer as well",
+   "speaker": "Jason Huggins",
+   "episode": 369,
+   "episode_title": "An Interview with Jason Huggins",
+   "episode_url": "https://theamphour.com/369-an-interview-with-jason-huggins/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The file formats are analogous across fabrication domains: GDS is to a chip what STL is to a printed model — a layer-by-layer description handed to the machine that will build the object up one layer at a time.",
+   "quote_verbatim": "STL is a representation of the 3D model that you're looking at for the printer to use to print",
+   "speaker": "Mohamed Kassem",
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Before the designs were opened, a machine could not be had for less than about twenty thousand dollars; publishing the design is what created the low-cost segment, after which professional machines fell into the one to five thousand dollar range.",
+   "quote_verbatim": "you couldn't get one for less than $20,000",
+   "speaker": "Chris Gammell",
+   "episode": 4,
+   "episode_title": "Cultural Differences",
+   "episode_url": "https://theamphour.com/the-amp-hour-4-cultural-differences/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The best-known low-cost machine was derived from the RepRap project, and the kit form was discontinued in favour of a fully built unit once the market moved.",
+   "quote_verbatim": "I know they based it off the RepRap",
+   "speaker": "Dave Jones",
+   "episode": 79,
+   "episode_title": "Ludibrious Luxating Layout",
+   "episode_url": "https://theamphour.com/the-amp-hour-79-ludibrious-luxating-layout/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The scale of that business was small in unit terms — roughly 22,000 printers over about four years, at modest margin — so the four-hundred-million-dollar acquisition was not for the financials, nor for technology that was largely open, but for the brand and the community.",
+   "quote_verbatim": "in their whole four-year history, right, they've only sold 22,000 printers",
+   "speaker": "Dave Jones",
+   "episode": 151,
+   "episode_title": "Google Glass, Lean Startup and VotC - Initializing Instructed Interviews",
+   "episode_url": "https://theamphour.com/the-amp-hour-151-initializing-instructed-interviews/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Stereolithography machines cost a couple of hundred thousand dollars before falling to around ten thousand in the 2010s, and a fused-filament machine for the home appeared at about 2,400 dollars in 2012.",
+   "quote_verbatim": "everybody knew about SLA machines when they were a couple hundred thousand dollars",
+   "speaker": "Julia Truchsess",
+   "episode": 424,
+   "episode_title": "An Interview with Julia Truchsess",
+   "episode_url": "https://theamphour.com/424-an-interview-with-julia-truchsess/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Consumable lock-in was attempted by withholding control: one printer denied the user any control of temperature and other process parameters so that only the vendor's material would work, which was reverse engineered into an aftermarket temperature controller.",
+   "quote_verbatim": "it's a closed system where they tried to encourage people to buy only their materials by, uh, not allowing the user to control the temperature",
+   "speaker": "Julia Truchsess",
+   "episode": 424,
+   "episode_title": "An Interview with Julia Truchsess",
+   "episode_url": "https://theamphour.com/424-an-interview-with-julia-truchsess/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The most widely recommended open machine came out of the same lineage: a teenager building Arduino projects encountered 3D printing, the two combined into his own printer designs, and the company now employs around a thousand people building printers that remain largely open source.",
+   "quote_verbatim": "he started to play around with Arduino when he was a teenager",
+   "speaker": "Massimo Banzi",
+   "episode": 726,
+   "episode_title": "Arduino's Invisible Touch with Massimo Banzi",
+   "episode_url": "https://theamphour.com/the-amp-hour-726-arduinos-invisible-touch-with-massimo-banzi/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Fused-filament output does not match the surface quality of industrial stereolithography, which limits its use for anything where the finish is part of the deliverable.",
+   "quote_verbatim": "apart from the expensive industrial stereolithography ones",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "opinion",
+   "kind": "comparison"
+  }
+ ],
+ "attribution_notes": [
+  "This bundle is dominated by hype-cycle commentary and predictions about household adoption; those were dropped. What is kept is process physics, tuning and failure modes, buying and ownership economics, production use and decision-relevant vendor history.",
+  "One passage carries no episode number and was dropped rather than cited.",
+  "eps 159, 295, 350, 368, 369, 455, 636: attribution flagged unreliable. Claims are content-attributed to the guest whose machine, product or company the passage describes."
+ ],
+ "capped": false
+}

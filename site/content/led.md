@@ -1,0 +1,153 @@
+---
+title: Led
+concept: led
+generated: 2026-08-08
+model: k3
+spec: knowledge-only-v4-cluster
+---
+
+A light-emitting diode (LED) is a semiconductor junction device that emits photons when charge carriers are injected across the junction and recombine; it is, in functional terms, a solar cell operated in reverse, with absorption and emission being reciprocal processes set by the material's bandgap.[433] Bright blue and green emission arrived with gallium nitride, displacing the dim silicon-carbide blue LEDs that preceded it, and white LEDs followed shortly after, with the entire change reaching the surplus and hobbyist market within a very short time.[61] The technology now spans roles from sub-milliwatt indicator lamps to general illumination, and its practical engineering is dominated less by the emitter than by thermal design, drive electronics, and manufacturing handling.[9][48][367]
+
+## Operating principle
+
+Because absorption and emission are reciprocal and both are fixed by the bandgap, a material that absorbs light efficiently is a candidate emitter, and the same device can function as either.[433] An LED continues to emit photons far below any practical drive current, measurably down into the tens of nanoamps and visibly in a dark room at a couple of microamps; at the extreme, the number of electrons required to produce visible emission is of the order of a few hundred.[491][690]
+
+LEDs tolerate a high defect density in the substrate, which is why usable gallium nitride LEDs were possible long before the same material was good enough for lasers or radio-frequency devices, for which substrate defect density was the limiting problem.[61] The viability of the blue LED, and therefore of solid-state lighting, rests on a narrow physical accident: magnesium in gallium nitride happens to sit close enough to the valence band to act as a shallow acceptor and generate enough holes for p-type conduction, and the doping on which the whole industry depends very nearly does not work.[94]
+
+## History
+
+The first commercially available blue LEDs, based on silicon carbide, sold for about seventy-five dollars each in 1987 and were barely visible; the first competing silicon-carbide parts came in under a dollar, cutting the price by nearly two orders of magnitude at a stroke.[71] One manufacturer built LEDs on silicon carbide rather than the industry-standard substrates, using silicon carbide emitting layers for seven years from 1988 and then moving to more efficient nitride layers grown on silicon carbide, which remained its distinguishing process; this work is associated with John Edmond's group at the company he co-founded.[71]
+
+The older bulk-crystal red and green LEDs were extremely reliable; the blue, green and white parts that replaced them are thin-film devices and introduced failure modes that did not previously exist, so products designed on the assumption that LEDs do not fail have been caught out.[539]
+
+Addressable LEDs began as a separate controller chip in a small package that had to be wired to discrete LEDs and passives, so each pixel needed an LED, passives and an integrated circuit ganged together, setting a floor on pixel size and assembly effort.[652][153] Integrating the controller into the LED package itself, combining the RGB dies and the controller in one 5050-format part, reduced a pixel to one component and a decoupling capacitor and made long addressable strings practical.[153][652]
+
+The use of an LED as a photodetector as well as an emitter was documented and submitted to a corporate laboratory decades before the same technique appeared in a commercial product.[29]
+
+## White LEDs and colour quality
+
+A white LED is a blue LED behind a phosphor, so the properties of the blue emitter and of the phosphor together determine the spectrum of every white lighting product.[412] Combining a phosphor-converted blue emitter with a separate red LED in the same fixture produces a spectrum whose colour rendering approaches that of an incandescent lamp, at the cost of two different emitters in one product.[71]
+
+Colour rendering index (CRI) measures how evenly a source covers the visible spectrum, on a scale from zero to a hundred, against the near-continuous spectrum of a filament lamp; cheap white LEDs peak at particular wavelengths and lack others entirely, and binning for high colour rendering is what a professional lighting panel's price buys.[491] Compact fluorescent lamps rate around 50 on the same scale, peaking strongly in the green because the light is produced by a phosphor coating rather than a broadband emitter, and different lamp technologies are distinguishable at a distance by their colour cast for this reason.[491]
+
+Commercially available LED bins reached about 170 lumens per watt, roughly twice the efficacy of the best compact fluorescent lamps of the time.[71] Efficiency improves by only a few percent per generation, with about a year between generations, so forecasts of a step change over a few years are not supported by how the technology has actually advanced, although the cumulative improvement over five or ten years is large.[48]
+
+## Thermal design and lifetime
+
+LEDs convert only twenty to thirty percent of their input power to light, so a high-power fixture must dissipate most of its rating as heat, and in installations where fans are unacceptable that thermal path constrains the whole design.[367] Heat is the dominant determinant of LED lifetime, so the design decision that matters most is the operating point: reducing dissipated power from five watts to two and a half can buy years of additional service, and the same part driven hard has a short life whatever its brand.[48] Large-screen televisions drive their backlight LEDs hard enough that reducing the brightness setting on a new set materially extends its life, the alternative being a better and more expensive thermal design.[539]
+
+A hundred-thousand-hour emitter is only as good as the driver behind it: matching the electronics' lifetime to the emitter's is the harder half of the problem, and in finished fixtures the driver is the component most likely to fail.[9] Low-cost LEDs frequently meet their headline lumens-per-watt figures when new and then fail within weeks, which is why practitioners designing lighting products buy only from established manufacturers despite an order-of-magnitude price difference.[48] Delivered assemblies can also arrive largely non-functional; in one documented installation only seven of thirty units worked, and the panels were installed anyway.[319]
+
+LED strip is mounted into an aluminium profile with thermally conductive double-sided tape, which serves as the strip's heat path rather than a mounting convenience; substituting ordinary double-sided tape removes the cooling.[668]
+
+## Driving LEDs
+
+### Current levels
+
+The textbook figure of 20 milliamps for an indicator LED is far more current than modern parts need; in battery-powered equipment an indicator can be reduced to a couple of milliamps by changing one resistor and remain perfectly visible, and at low total consumption that single component can dominate the current budget.[10] Conversely, indicators sized with a resistor chosen for the old convention are blinding on modern parts, to the point of obscuring the LED beside them; in one design the error was discovered only after the board was built, and ten kilohms is ample for an indicator that only has to be seen, not to light a room.[395] Measuring an LED's luminous output to compute the exact drive current is engineering that most designs do not need—the resistor is adjusted after the board is built and brightness judged in place—though where the LEDs are the product rather than an indicator, the drive must be engineered from the start.[724]
+
+Microcontroller and logic outputs carry two current limits: a per-pin maximum and a separate total limit on the ground or supply pin, so a hundred-pin part rated at 30 milliamps per pin cannot source that from every pin at once; multiplexing reduces the average current so that the total limit is respected even when the per-pin peak is not.[16] Older TTL logic families have enough output impedance to limit LED current on their own, and their high-level threshold of about two volts sits below the LED's roughly 2.2-volt forward drop, so an LED can be driven straight from the output of an LS-family chip with no current-limiting resistor; the technique is specific to that output stage and does not generalise to modern logic.[444]
+
+A part sold as a single LED may be several dies in series inside one package, so a nominal 7.7-volt forward drop indicates a cluster of emitters rather than an unusual junction, and the packaging hides a series arrangement that changes the drive circuit entirely.[382] Relatedly, an instrument's diode-test range is bounded by its own supply: two cells give about three volts, falling to a cutout near 2.1 volts, which is not enough to turn on some LEDs, which is one reason multimeters often use three cells.[555]
+
+### Brightness control and perception
+
+LED output is close to linear with current while the eye's response is not, so a linear brightness ramp appears wrong; squaring an eight-bit value and taking the top bits of the hardware's resolution is a good approximation to gamma correction, ten bits is barely enough, and twelve is comfortable.[412] Without correction, the lowest few dozen codes cover nearly the whole visible range of brightness while the top three quarters of the scale produce no perceptible change, which is what makes an uncorrected fade look wrong rather than merely imprecise.[224]
+
+Looking at bare LEDs as point sources saturates the eye and hides differences between parts; putting a diffuser over the same array makes colour-temperature variation immediately visible, so a display evaluated without its diffuser is not evaluated at all.[224] Ambient light levels indoors and in daylight differ by orders of magnitude, and the eye compensates so well that the difference is invisible without a light meter; a display signed off in a factory can be unusable once installed in a room with windows.[224]
+
+### Matrices and large arrays
+
+On a board carrying thousands of LEDs the current required for acceptable brightness is not known in advance and is far below the theoretical maximum, so sizing the supply for every LED at full output wastes cost and board area.[224] Multiplexed arrays nonetheless draw far more than their average current in the instant when a bank is lit, so a supply sized on average consumption browns out; one design lighting one sixteenth of its LEDs at a time still exceeded a 50-watt, five-volt ten-amp supply.[340]
+
+Dedicated LED matrix driver chips have historically been expensive and hard to obtain, which is why shift registers or a high pin-count microcontroller are the common alternatives for driving a row-column matrix.[16] Driving an LED matrix is an unusually good first FPGA project: it requires many pins driven in parallel to a demanding timing protocol, which is difficult on a microcontroller and natural in fabric where parallel units cost nothing, and it does not require the domain knowledge that other FPGA applications do.[423]
+
+A shift-register matrix panel is built from sink drivers for the red, green and blue channels—sixteen bits per colour—plus a row driver, all cascaded so the whole chain behaves as one long shift register with clock, data, latch and blank signals, and panels then daisy-chain into a larger object.[473] A large monochrome array can be driven by combining a sixteen-channel PWM driver with eight-to-one multiplexing, and needs at least twelve bits of control per channel because gamma correction consumes most of the low end of the range.[224] Where a board must exist in mirrored versions, mounting the driver ICs rotated rather than redrawing the layout is a legitimate shortcut at small quantities; only parts whose orientation matters electrically, such as MOSFETs and connectors, then need rework.[224]
+
+Assigning addresses to identical devices on a shared bus is straightforward, but assigning them by physical position is not; Mike Harrison's installation practice uses a handheld probe that both issues the address command and senses contact, auto-incrementing as each node is touched, so an installer sets a starting address and then touches each unit in order.[294] On a large installation every cable and sub-assembly is tested with a purpose-built go/no-go jig before it goes up, because a fault in a section already winched into place may require dismantling the parts installed after it; building the jigs consumes an afternoon and is repaid immediately.[294]
+
+## Manufacturing and assembly
+
+LEDs are moisture-sensitive parts: absorbed water vaporises during reflow and can crack the package, so they are stored dry, and humidity also degrades the carrier tape itself, which sticks to the cover tape and jams feeders.[243] Pick-and-place placement pressure is a real hazard, since epoxy bodies break under excessive downward force, and the machine's placement-pressure setting must be reduced for them.[477] LEDs with a recessed epoxy-filled cup can seal against the nozzle and refuse to release—a failure of the vacuum interface rather than of placement—for which the fix is a different nozzle rather than more pressure.[477] Carrier tape that is too thin lets parts bounce out as the feeder indexes; on Mike Harrison's job requiring 22,000 LEDs, chosen because they were the only type in sufficient distributor stock, modifying the feeder reduced losses to about ten percent and one further reel had to be bought to cover the shortfall.[412]
+
+Reels carry enough parts that a product can stay in production for months on a single lot; when a new lot finally appears, forward voltage, current and intensity all shift together, and a factory that records which reel built which board is what makes such a change diagnosable.[328] On Jeff Keyzer's production line this lot traceability was standard practice for exactly this reason.[328]
+
+Substituting a cheaper addressable LED for a known-good part can produce behaviour that board revisions and vendor-suggested fixes cannot resolve: on Jesse Vincent's keyboard project, three or four revisions and fixes including adding a farad of capacitance failed, one vendor identified the parts as an obsolete revision of the internal controller that should no longer have been in circulation, and the resolution was to accept a two-cent-per-LED increase and delay production.[450] Building and checking a single panel before releasing the rest of a run catches orientation errors, which occur on essentially every build; on one of Jared Wolff's boards, LEDs were placed upside down and a converter was rotated by 180 degrees.[509]
+
+Sourcing region dominates LED cost at hobby and small-production volumes: the same order came to about thirty dollars from an overseas supplier against roughly 250 dollars for the nearest catalogue equivalent from a Western distributor, a difference of about eight times on part price alone, with unit prices at quantity around 0.7 cents per LED.[700] Lighting-class white LEDs in the common surface-mount formats cost under a cent each in reel quantities and are very bright, though installations intended to last are still specified with branded parts, which competition has also made inexpensive.[294] Component count multiplies fast in LED-heavy designs: fifty LEDs on each of fifty thousand boards is two and a half million parts, a quantity few suppliers hold, so lead time runs to at least twenty weeks and the part choice is frozen when the order is placed.[502] During the component shortage of the early 2020s even ordinary through-hole indicator LEDs became unobtainable, with lead times of three to four months on parts that had always been available from stock.[570]
+
+In a densely populated LED object the emitters and their drivers dominate the bill of materials: Greg Davill's matrix panels carried roughly sixty dollars of LEDs each, while the bare circuit boards were effectively free by comparison and a rush-ordered 3D-printed enclosure cost more than both together.[473] Hand-populating such panels runs at roughly a quarter of an hour per panel of 120 LEDs when panelised four at a time, which makes objects with thousands of LEDs feasible for one person but not repeatable.[473] Setting up a pick-and-place machine whose feeders cannot be changed quickly costs more than a day of loading tape and recording feeder data, which rules it out for varied work; an LED matrix inverts that calculation because one reel loaded once places thousands of identical parts, and a panel of four boards each carrying 300 identical LEDs is 1,200 placements, which a three-head machine completes in roughly twenty minutes.[697][428]
+
+At 0201 size the polarity marking on an LED is at the limit of what can be seen while placing it, and a 3D-printed jig matching the board outline to hold it flat is what makes hand assembly at that size practical.[724] Separately, LED driver controllers from minor manufacturers may have no public datasheet, and a datasheet found elsewhere bearing exactly the same part number can describe a different package and part, so the identification cannot be trusted without corroboration.[462] Selecting LEDs on price against light output for a given package is poorly served by parametric search, and practitioners who do it often work from a remembered set of favourite parts built up over many projects rather than re-selecting each time.[387]
+
+## LEDs as light sensors
+
+An LED works as a photodetector as well as an emitter.[29] Forrest Mims's sun photometers use LEDs as wavelength-selective detectors, avoiding the optical filters that degrade over time; the two original LEDs in one instrument remained in service for 24 years measuring atmospheric optical depth at 880 and 940 nanometres, with total column water vapour derived from the same readings.[171] Detector stability is not uniform across a batch: in a seven-LED instrument some drifted over ten years while others remained stable, so long-term instruments carry several channels and the drifting ones are identified and discarded.[171] Because one LED can both emit and detect, a bidirectional optical link can be built over a single fibre with one device at each end rather than a separate emitter and detector pair.[171]
+
+An indicator LED is also an unintended data channel: it has enough bandwidth that firmware toggling it can be read optically with a phototransistor, extracting memory contents without opening the device.[463]
+
+## Indication, debugging and other applications
+
+A power indicator LED and a second LED on a spare digital output are among the cheapest and most useful additions to a board; their absence is a recurring omission, and their presence distinguishes at a glance between a board that is unpowered, a board whose supply is being back-fed through an I/O pin, and a board that is running.[287] Adding a few lines of code to blink an LED or toggle a pin, then observing it, remains a sufficient debugging technique for a large class of firmware problems and needs no instrument beyond an oscilloscope probe; practical firmware debugging uses a mixture of serial output, indicator LEDs for state, and a hardware debugger for stepping, each suited to a different class of problem and timing constraint.[287][541] Bringing every register bit, latch and state-machine output to an LED turns a processor into an inspectable object: single-stepping through code then shows the entire machine state at each step.[610]
+
+Imitation neon signage is white LEDs in a vinyl extrusion behind a coloured diffuser, avoiding the thousands of volts and the glass forming that genuine neon requires.[486] Long-throw stage lighting, by contrast, still uses discharge lamps because the optics need light generated in a very small area, which LEDs cannot match: spreading emission over a larger area is inherent to the technology and a concentrated source cannot tolerate the temperatures involved.[539]
+
+## Role in electronics education
+
+Producing a visible physical change is what converts curiosity into sustained interest in electronics, which is why blinking an LED functions as the discipline's equivalent of a first program and why the next step is usually to drive something larger.[116] A beginner needs an endpoint that leads somewhere rather than a self-contained exercise: soldering a kit with no follow-on leaves the learner without a next step, while a platform that blinks an LED and can be extended provides one.[276] Teaching from the top down works because each concept is introduced when a project demands it—transistors become necessary when the LED to be driven exceeds what a logic output can supply—and the underlying semiconductor physics becomes tractable once the learner has used the device enough to have formed the questions, which is the reverse of the order most curricula use.[280][512] An LED, a battery and a resistor are enough to produce the sense of discovery that motivates learning, and demonstrations built from an LED and improvised parts—such as a battery made from a silver coin, a piece of magnesium and acidified paper—hold an audience's attention regardless of background and cost nothing.[286][171] Reaching for a microcontroller to flash an LED where a timer chip such as the 555 would serve is common practice; the simpler circuit does the same job and is more instructive about how it works.[171]
+
+## References
+
+| Episode | Title | URL | Date |
+|---------|-------|-----|------|
+| 9 | From Boston In Boxers? | https://theamphour.com/the-amp-hour-9-from-boston-in-boxers/ | |
+| 10 | Open Hardware and Self Publishing | https://theamphour.com/the-amp-hour-10-open-hardware-and-self-publishing/ | |
+| 16 | LED Designs, Last Minute Designs and Board Designs | https://theamphour.com/the-amp-hour-16-led-designs-last-minute-designs-and-board-designs/ | |
+| 29 | DJ and Jazzy Jeff | https://theamphour.com/the-amp-hour-29-dj-and-jazzy-jeff/ | |
+| 48 | Bob Pease, Jim Williams - Posthumous Pease Porridge | https://theamphour.com/the-amp-hour-48-posthumous-pease-porridge/ | |
+| 61 | Moore's Law, GaN and SiC devices - Gallimaufry GaN Gabble | https://theamphour.com/the-amp-hour-61-gallimaufry-gan-gabble/ | |
+| 71 | An Interview with John Edmond - Luciferous LED Lucubrator | https://theamphour.com/the-amp-hour-71-luciferous-led-lucubrator/ | |
+| 94 | Gnomic Gazumping Gobemouche | https://theamphour.com/the-amp-hour-94-gnomic-gazumping-gobemouche/ | May 6, 2012 |
+| 116 | Distribution, Wozniak & Robots - Early Eight-bit Endgame | https://theamphour.com/the-amp-hour-116-early-eight-bit-endgame/ | October 7, 2012 |
+| 153 | An Interview with Ryan O'Hara - Keyed, Kerfed Kapton | https://theamphour.com/the-amp-hour-153-keyed-kerfed-kapton/ | July 8, 2013 |
+| 171 | An Interview with Forrest Mims - Snell Solisequious Scientist | https://theamphour.com/171-an-interview-with-forrest-mims-snell-solisequious-scientist/ | November 11, 2013 |
+| 224 | Meracious Mike Manuduction | https://theamphour.com/224-meracious-mike-manuduction/ | November 12, 2014 |
+| 243 | An interview with Macrofab - Macro Manufacturing Mechanization | https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/ | March 31, 2015 |
+| 276 | Eating An Elephant | https://theamphour.com/276-eating-an-elephant/ | December 2, 2015 |
+| 280 | New Year Education | https://theamphour.com/280-new-year-education/ | |
+| 286 | An Interview with Saar Drimer | https://theamphour.com/286-an-interview-with-saar-drimer/ | February 10, 2016 |
+| 287 | Pull The Trigger | https://theamphour.com/287-pull-the-trigger/ | February 17, 2016 |
+| 294 | Live from Serbia with Mike Harrison | https://theamphour.com/294-live-from-serbia-with-mike-harrison/ | April 13, 2016 |
+| 319 | Photon Rich, Cash Poor | https://theamphour.com/319-photon-rich-cash-poor/ | October 12, 2016 |
+| 328 | The Ghost of Keyzermas Past | https://theamphour.com/328-the-ghost-of-keyzermas-past/ | December 21, 2016 |
+| 340 | An Interview with Jason Cerundolo | https://theamphour.com/340-an-interview-with-jason-cerundolo/ | March 19, 2017 |
+| 367 | Not Reely An Issue | https://theamphour.com/367-not-reely-an-issue/ | November 12, 2017 |
+| 382 | The Toggle Boggle | https://theamphour.com/382-the-toggle-boggle/ | March 4, 2018 |
+| 387 | Microfichery | https://theamphour.com/387-microfichery/ | April 8, 2018 |
+| 395 | An Interview with Luke Valenty | https://theamphour.com/395-an-interview-with-luke-valenty/ | June 3, 2018 |
+| 412 | 3 Cent Micros And 1000s of LEDs | https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/ | October 21, 2018 |
+| 423 | Open FPGA Toolchains at 35c3 | https://theamphour.com/423-open-fpga-toolchains-at-35c3/ | January 1, 2019 |
+| 428 | Setting Fire To The Tracks | https://theamphour.com/428-setting-fire-to-the-tracks/ | February 3, 2019 |
+| 433 | An Interview with Sam Stranks | https://theamphour.com/433-an-interview-with-sam-stranks/ | March 10, 2019 |
+| 444 | An Interview with Ben Eater | https://theamphour.com/444-an-interview-with-ben-eater/ | May 27, 2019 |
+| 450 | Stories from Teardown 2019 | https://theamphour.com/450-stories-from-teardown-2019/ | July 7, 2019 |
+| 462 | Boat Anchors | https://theamphour.com/462-boat-anchors/ | October 13, 2019 |
+| 463 | An Interview with Trammell Hudson | https://theamphour.com/463-an-interview-with-trammell-hudson/ | October 20, 2019 |
+| 473 | An Interview with Greg Davill | https://theamphour.com/473-an-interview-with-greg-davill/ | January 5, 2020 |
+| 477 | EcoWoke and Going Broke | https://theamphour.com/ecowoke-and-going-broke/ | February 2, 2020 |
+| 486 | Medical Kits, They're The Future | https://theamphour.com/486-medical-kits-theyre-the-future/ | March 29, 2020 |
+| 491 | The Almighty Dollarydoo | https://theamphour.com/491-the-almighty-dollarydoo/ | May 3, 2020 |
+| 502 | Lowest Common Denominator Design | https://theamphour.com/502-lowest-common-denominator-design/ | July 26, 2020 |
+| 509 | Cellular IoT with Jared Wolff | https://theamphour.com/509-cellular-iot-with-jared-wolff/ | September 20, 2020 |
+| 512 | Design For Longevity | https://theamphour.com/512-design-for-longevity/ | October 11, 2020 |
+| 539 | The King of Trash with Big Clive | https://theamphour.com/the-amp-hour-539-the-king-of-trash-with-big-clive/ | April 26, 2021 |
+| 541 | Chip Shortage Denier | https://theamphour.com/541-chip-shortage-denier/ | May 10, 2021 |
+| 555 | Timing is Everything | https://theamphour.com/555-timing-is-everything/ | August 30, 2021 |
+| 570 | Keyzermas All The Way | https://theamphour.com/570-keyzermas-all-the-way/ | December 19, 2021 |
+| 610 | Picking a Pick and Place Pickiness | https://theamphour.com/610-picking-a-pick-and-place-pickiness/ | November 20, 2022 |
+| 652 | For a couple weeks there... | https://theamphour.com/652-for-a-couple-weeks-there/ | November 28, 2023 |
+| 668 | 50.0000 Ohms | https://theamphour.com/668-50-0000-ohms/ | May 30, 2024 |
+| 690 | Clap on, clap off, lights flicker | https://theamphour.com/690-clap-on-clap-off-lights-flicker/ | March 11, 2025 |
+| 697 | LEDs Everywhere with Tim from Mitxela | https://theamphour.com/697-leds-everywhere-with-tim-from-mitxela/ | July 8, 2025 |
+| 700 | Beware of the Overachievers | https://theamphour.com/700-beware-of-the-overachievers/ | August 7, 2025 |
+| 724 | All Heat, No Useful Work | https://theamphour.com/724-all-heat-no-useful-work/ | May 25, 2026 |

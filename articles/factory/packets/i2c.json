@@ -1,0 +1,906 @@
+{
+ "concept": "i2c",
+ "name": "I2C",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "i2c",
+  "name": "I2C",
+  "type": "standard-protocol",
+  "cluster": {
+   "core": [
+    "i2c",
+    "i2c-bus",
+    "i2c-nack",
+    "i2c-protocol",
+    "i2c-standard"
+   ],
+   "children": [
+    "analog-input",
+    "cross-platform-software",
+    "dvi",
+    "i2s",
+    "json",
+    "one-wire",
+    "philips",
+    "pio",
+    "serial-bus"
+   ],
+   "neighbors": [
+    {
+     "concept": "stm32",
+     "weight": 5
+    }
+   ]
+  },
+  "stats": {
+   "episodes": 132,
+   "mentions": 264,
+   "explains": 104,
+   "opinions": 19,
+   "candidate_episode_count": 130,
+   "candidate_mention_count": 213,
+   "gated_out": 296,
+   "gated_out_by_concept": [
+    [
+     "stm32",
+     150
+    ],
+    [
+     "philips",
+     34
+    ],
+    [
+     "json",
+     24
+    ],
+    [
+     "pio",
+     20
+    ],
+    [
+     "cross-platform-software",
+     14
+    ],
+    [
+     "i2s",
+     13
+    ],
+    [
+     "serial-bus",
+     13
+    ],
+    [
+     "one-wire",
+     12
+    ],
+    [
+     "analog-input",
+     11
+    ],
+    [
+     "dvi",
+     5
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 11,
+   "speakers": [
+    [
+     "Dave Jones",
+     43
+    ],
+    [
+     "Chris Gammell",
+     31
+    ],
+    [
+     "Dmitry Nedospasov",
+     3
+    ],
+    [
+     "Jay Carlson",
+     3
+    ],
+    [
+     "Keith Burzinski",
+     3
+    ],
+    [
+     "Jeff Roberg",
+     2
+    ],
+    [
+     "Brandon Harris",
+     2
+    ],
+    [
+     "Tim Ansell",
+     2
+    ],
+    [
+     "Scott Shawcroft",
+     2
+    ],
+    [
+     "Jonathan Georgino",
+     2
+    ],
+    [
+     "Michael Gielda",
+     2
+    ],
+    [
+     "Matt Liberty",
+     2
+    ],
+    [
+     "Ray Ozzie",
+     2
+    ],
+    [
+     "Jack Ganssle",
+     1
+    ],
+    [
+     "Adam Wolf",
+     1
+    ],
+    [
+     "Dave Vandenbout",
+     1
+    ],
+    [
+     "Trey German",
+     1
+    ],
+    [
+     "Bob Davidson",
+     1
+    ],
+    [
+     "Mark Garrison",
+     1
+    ],
+    [
+     "Vic Aprea",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 118,
+    "child": 4
+   },
+   "passages_by_depth": {
+    "opinion": 19,
+    "explains": 103
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 122
+ },
+ "claims": [
+  {
+   "claim_text": "I2C stands for inter-integrated circuit, a bus for communication between integrated circuits.",
+   "quote_verbatim": "It's the inter-IC communication system. That's what I2C stands for. Oh. I-C being integrated circuit, right? Inter-integrated circuit.",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Philips developed the I2C bus for analogue television sets, where it supplied a separate chip for each function \u2014 tuner, filter, CRT driver, on-screen display \u2014 and needed a standard protocol to join dozens of its own chips together in place of large multi-gang mechanical switches.",
+   "quote_verbatim": "Philips made a chip for every aspect of a TV. So you'd have the tuner chip, you'd have the filter chip",
+   "speaker": null,
+   "episode": 631,
+   "episode_title": "A Noisy Rude Bus",
+   "episode_url": "https://theamphour.com/631-a-noisy-rude-bus/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "I2C originated at Philips.",
+   "quote_verbatim": "So was I2C. I2C was a Philips thing.",
+   "speaker": null,
+   "episode": 319,
+   "episode_title": "Photon Rich, Cash Poor",
+   "episode_url": "https://theamphour.com/319-photon-rich-cash-poor/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The bus was originally specified with an 8-bit address field on the assumption that 256 devices, all of them Philips parts, would be ample.",
+   "quote_verbatim": "we just need to tie our own chips. We've got an 8-bit address system, 256 chips. That's plenty.",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Once other manufacturers adopted the bus, the original address space was exhausted; a 10-bit addressing mode was added, that too ran short, and many parts on the market ended up sharing addresses.",
+   "quote_verbatim": "8-bit address system wasn't enough",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The I2C name and logo were trademarked by Philips: implementers had to submit a device for evaluation to be granted use of the logo, and licensing terms attached to the name.",
+   "quote_verbatim": "If you wanted to use the Philips I2C logo, then it had to be, you had to submit your chip, your whatever it was to them.",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Since 10 October 2006 no licensing fee is required to implement I2C, but a slave address allocated by NXP still is.",
+   "quote_verbatim": "Since October 10th, 2006, no licensing fees are required to implement it. However, they are required to obtain a slave address allocated by NXP.",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Vendors that do not want to use the trademarked I2C name label an electrically identical interface as a two-wire interface, or TWI.",
+   "quote_verbatim": "they'll just call it a two wire. Two wire interface. TWI.",
+   "speaker": null,
+   "episode": 631,
+   "episode_title": "A Noisy Rude Bus",
+   "episode_url": "https://theamphour.com/631-a-noisy-rude-bus/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "I3C is the successor standard to I2C, developed under the MIPI Alliance rather than by a single vendor, and reaches 33 Mbit/s in its ternary signalling mode.",
+   "quote_verbatim": "It's 33 meg bits per second",
+   "speaker": null,
+   "episode": 631,
+   "episode_title": "A Noisy Rude Bus",
+   "episode_url": "https://theamphour.com/631-a-noisy-rude-bus/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "PM Bus is electrically and protocol-wise essentially I2C, and firmware can be pushed to power-management parts over it.",
+   "quote_verbatim": "you can push firmware over a PM bus because it's, it's basically I squared C",
+   "speaker": null,
+   "episode": 566,
+   "episode_title": "Switching Converter Engineering with Carmen Parisi",
+   "episode_url": "https://theamphour.com/566-switching-converter-engineering-with-carmen-parisi/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "I2C outputs are open-collector: devices can only pull the line low, and the line is returned high by an external pull-up resistor. Ordinary digital outputs such as SPI use totem-pole drivers with one transistor pulling high and one pulling low, so they need no pull-up.",
+   "quote_verbatim": "all digital outputs are totem pole outputs. So, that means they have a driver and two output transistors. One pulls it high and one pulls it low, whereas I squared C is the opposite. I squared C is an open collector output, essentially. And to pull the line high, you're relying on that pull-up resistor.",
+   "speaker": null,
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Because the low side is driven by a transistor and the high side only by a resistor, an I2C edge is asymmetric on a scope: the falling edge is nearly instantaneous while the rising edge is an RC curve.",
+   "quote_verbatim": "you'll see that it'll pull down very quickly. It'll pull down, like, almost instantaneously, right? Because there's a transistor there to pull it down.",
+   "speaker": null,
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The Philips standard gives 2.2 kilohms as the nominal reference pull-up value for I2C.",
+   "quote_verbatim": "The standard, i.e. the Phillips standard, calls for 2k2 as a nominal reference pull-up value.",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "4.7 kilohm pull-up resistors on the SCL and SDA lines are a recognisable signature of an I2C bus when inspecting an assembled board.",
+   "quote_verbatim": "Probably pull up resistors for. I squared C.",
+   "speaker": null,
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Longer lines and higher bus capacitance call for a lower pull-up resistor value, because a lower resistance sources more current into the node and charges the line capacitance faster, restoring a sharp rising edge.",
+   "quote_verbatim": "So a lower pull-up resistor basically dumps more current directly into that node right at the receiving device. And it pulls up faster.",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "If bus capacitance is high enough that the pull-up cannot charge the line in time, the rising edge degrades and the bus stops working.",
+   "quote_verbatim": "if you've got a lot of capacitance on your line, it takes time to charge up and you don't get a nice sharp edge and all hell breaks loose",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The speed limit of an I2C bus is set by the RC time constant formed by the pull-up resistor and the bus capacitance, which limits the slew rate of the rising edge.",
+   "quote_verbatim": "the capacitance of your line limits the, you know, you've got, then you've got an RC charge constant, time constant, and that limits the slew rate and that limits the speed of your bus",
+   "speaker": null,
+   "episode": 631,
+   "episode_title": "A Noisy Rude Bus",
+   "episode_url": "https://theamphour.com/631-a-noisy-rude-bus/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Breadboards and flying wires add capacitance and act as an antenna, which is unfavourable for an I2C line and argues for a lower pull-up value than a compact board would need.",
+   "quote_verbatim": "When you've got things, when you've got breadboards and wires hanging everywhere, you've got capacitance and you've got a big antenna, basically. And when you've got an I-squared C, that is not ideal for an I-squared C line. That's why you want to have a lower value.",
+   "speaker": null,
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A wrongly chosen pull-up resistor value is a common root cause of I2C failures; values in the 5 to 10 kilohm range can be too high for a breadboarded bus.",
+   "quote_verbatim": "A lot of I squared C problems come down to you. You've chosen the wrong pull-up resistor value.",
+   "speaker": null,
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "For a short link across a board \u2014 updating a register in a real-time clock, or reading a temperature sensor at the other end of the board \u2014 a pull-up at either end and, if the signal looks marginal, a reduced clock rate is sufficient.",
+   "quote_verbatim": "I can just, you know, put pull ups at either end and I'm good to go. I can slow down the clock if it doesn't look good.",
+   "speaker": null,
+   "episode": 631,
+   "episode_title": "A Noisy Rude Bus",
+   "episode_url": "https://theamphour.com/631-a-noisy-rude-bus/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "At a few megahertz over a couple of inches on a board with a common ground, I2C is electrically undemanding; digital communication only turns into an analogue signal-corruption problem at high data rates and longer distances.",
+   "quote_verbatim": "it's easy on a board because you're going maybe a megahertz, a few megahertz in data rate, a couple of inches across a common ground board. That's easy. But you start to do high speed data, it starts to get messy.",
+   "speaker": null,
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "An I2C line is easily disturbed, so sharing the SDA and SCL pins of a board with other functions invites failures; separating them onto dedicated lines is the fix.",
+   "quote_verbatim": "It's not hard to upset an iSquadC line.",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Pull-ups are a liability in low-power designs: a pull-up to VCC draws current whenever a device holds the line low or is powered down, and can back-power a powered-down section through the resistor. An I2C bus in a low-power product therefore has to be powered off entirely or left with every device in a low-power state.",
+   "quote_verbatim": "you have to shut off power to the I2C bus or have all the devices still remain powered, but in a low power state",
+   "speaker": null,
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A slave acknowledges by pulling the data line low after its address is transmitted, signalling that the addressed device is present and ready for further bytes.",
+   "quote_verbatim": "if I said address hex 77, then the chip goes... It pulls down on the line. It says, yep, that's me.",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The classic I2C failure signature is a NACK: the master transmits an address and receives no acknowledge, then retries the same address indefinitely. It is visible only once the bus is decoded, not from the shape of the waveform.",
+   "quote_verbatim": "it just kept retrying the same address because it wasn't getting any knowledge. And that was a real problem. That's the classic I2C, NOAC.",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Address collisions are a hard limit on how many identical parts can share one bus; where a part offers no address-strapping option, an I2C multiplexer or switch chip is required.",
+   "quote_verbatim": "if you have the same sensor, you don't have address switching, you need to insert like a I squared C controller or switching chip that handles that sort of stuff",
+   "speaker": null,
+   "episode": 631,
+   "episode_title": "A Noisy Rude Bus",
+   "episode_url": "https://theamphour.com/631-a-noisy-rude-bus/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Wii Nunchuk peripherals communicate over plain I2C but are all hard-coded to the same address, because the Wiimote is the master and only one accessory can be plugged in at a time; reading several from one host requires a switch chip that selects between them, alternating conversations.",
+   "quote_verbatim": "they're all hard-coded to have the same address because, like, the Wiimote is the master",
+   "speaker": null,
+   "episode": 167,
+   "episode_title": "An Interview with Adam Wolf - Brick & Board Biuners",
+   "episode_url": "https://theamphour.com/167-an-interview-with-adam-wolf-brick-board-biuners/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Variants within a sensor family commonly differ only in their I2C bus speed or device address, differences that a hardware abstraction layer hides until they cause a silent failure.",
+   "quote_verbatim": "like a different speed I squared C bus or like it's got a different address or it's got something else",
+   "speaker": null,
+   "episode": 330,
+   "episode_title": "An Interview with Zach Fredin",
+   "episode_url": "https://theamphour.com/330-an-interview-with-zach-fredin/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Ordering by footprint alone can substitute an SPI part for its I2C sibling: the footprints match, the board assembles, and the error only appears when the device fails to enumerate on the I2C bus.",
+   "quote_verbatim": "i put in the part number for the spy real-time clock so like it is the right footprint",
+   "speaker": null,
+   "episode": 652,
+   "episode_title": "For a couple weeks there...",
+   "episode_url": "https://theamphour.com/652-for-a-couple-weeks-there/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "On microcontrollers with more than one I2C peripheral, the alternate instance is mapped to different pins, so selecting I2C1 versus I2C2 in firmware changes which physical pins the bus appears on.",
+   "quote_verbatim": "Turns out I2C and I2C1 and I2C2 are different pins.",
+   "speaker": null,
+   "episode": 623,
+   "episode_title": "Artisanal Crystals",
+   "episode_url": "https://theamphour.com/623-artisanal-crystals/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Because the bus is open-drain and any device may pull a line low, an attacker with bus access can corrupt the address phase and impersonate a peripheral, after which the genuine peripheral no longer replies.",
+   "quote_verbatim": "you can corrupt the address and then pretend you're whatever peripheral, uh, you actually want to, uh, be and the peripheral will not reply anymore on the bus",
+   "speaker": null,
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "I2C needs only two lines, so it fits a microcontroller whose pins are otherwise fully allocated, where a directly driven parallel LCD would not.",
+   "quote_verbatim": "I squared C is only two lines. And if I go to a regular, if I try and jury rigging a regular LCD, I can't because it needs more than two lines to drive the LCD.",
+   "speaker": null,
+   "episode": 74,
+   "episode_title": "Younker Youtube Yarling",
+   "episode_url": "https://theamphour.com/the-amp-hour-74-younker-youtube-yarling/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A shared I2C bus lets a dozen sensors hang off two pins, which makes it the standard answer for pin-starved devices; an I2C I/O expander extends the same trick to general-purpose I/O.",
+   "quote_verbatim": "I can plunk down 12 sensors and only use two pins",
+   "speaker": null,
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Buses of several dozen microcontrollers on a single I2C segment are built in practice; one system carried around 45 of them communicating over I2C.",
+   "quote_verbatim": "He had a system with 40, I think it was 45 little microcontrollers on it all communicating with I squared C.",
+   "speaker": null,
+   "episode": 54,
+   "episode_title": "An Interview with Jack Ganssle - Embedded Elchee Epexegesis",
+   "episode_url": "https://theamphour.com/the-amp-hour-54-embedded-elchee-epexegesis/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Bringing the I2C bus out to a header on a board is a cheap design allowance that lets external sensors be added later without a respin.",
+   "quote_verbatim": "pull out the I squared C to some pins so that I can add external sensors and so forth to it",
+   "speaker": null,
+   "episode": 232,
+   "episode_title": "Impedance Matching\" with Davidson and Vandenbout - Presbytes Pushing Portfolios",
+   "episode_url": "https://theamphour.com/232-impedance-matching-with-davidson-and-vandenbout-presbytes-pushing-portfolios/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Peripherals connected off-board through ordinary 0.1-inch headers are workable precisely because interfaces such as I2C run far below the tens-of-megahertz region where connector parasitics start to matter.",
+   "quote_verbatim": "when you get off of the FPGA off the board, then you're usually going to lower speed peripherals with the I2C interfaces",
+   "speaker": null,
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A single mis-wired pin takes down the whole I2C bus and every sensor on it, producing error messages that do not point at the wiring.",
+   "quote_verbatim": "you can have a wire on a wrong pin and now your I squared C bus doesn't work and your sensors don't work and like you get weird error messages in the log",
+   "speaker": null,
+   "episode": 657,
+   "episode_title": "Automating the Home with Keith Burzinski",
+   "episode_url": "https://theamphour.com/657-automating-the-home-with-keith-burzinski/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Noise on the I2C lines caused by a poor soldering job can present as intermittent protocol misbehaviour \u2014 stray stops and restarts \u2014 and prompt elaborate firmware workarounds that turn out to be unnecessary once the joint is fixed. Checking the soldering is worth doing before redesigning the protocol.",
+   "quote_verbatim": "I realized that there was noise on the I squared C lines because of my soldering job and everything worked great",
+   "speaker": null,
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Small four-pin I2C-only cabled sensor connector systems exist, of which Qwiic is one; Grove uses a similar connector but carries interfaces other than I2C on it.",
+   "quote_verbatim": "the quick is the, the, it's I squared C only",
+   "speaker": null,
+   "episode": 458,
+   "episode_title": "An Interview with Ken Burns",
+   "episode_url": "https://theamphour.com/458-an-interview-with-ken-burns/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Four-pin I2C sensor-cable standards omit the interrupt pin that many of the sensors provide, so the sensors' interrupt-driven features are unreachable; using them fully needs a five- or six-conductor cable for which no standard exists.",
+   "quote_verbatim": "so many of these chips are, they have like interrupt pins and it's just kind of completely ignored",
+   "speaker": null,
+   "episode": 602,
+   "episode_title": "Rigorous engineering stuff may be out the window",
+   "episode_url": "https://theamphour.com/602-rigorous-engineering-stuff-may-be-out-the-window/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The Def Con badge add-on convention standardises on a four-pin header carrying power, ground, SDA and SCL, so arbitrary add-on boards can be plugged into arbitrary badges.",
+   "quote_verbatim": "it's power, ground, and SDA, SCL, four pins",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Development-board form factors such as Adafruit's Feather fix the I2C signals to specific header pins regardless of which microcontroller is fitted, so add-on boards remain interchangeable across processors.",
+   "quote_verbatim": "Regardless of which processor they put on board, though, they will tie the iSquadC lines to those two pins",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The VGA connector on a standard x86 server carries EDID, which is an I2C bus, plus power \u2014 an exposed, externally accessible I2C attack surface into the machine.",
+   "quote_verbatim": "VGA has E did, uh, to get the monitor resolution and that's I squared C and it also has power",
+   "speaker": null,
+   "episode": 418,
+   "episode_title": "An Interview with Josh Datko",
+   "episode_url": "https://theamphour.com/418-an-interview-with-josh-datko/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Because a single physical connector can carry both a PCIe lane and an I2C bus, management firmware needs an explicit description of that mapping to know which sensors and devices sit behind which connector when tracing faults to a component.",
+   "quote_verbatim": "this PCIe lane and this I squared C bus are on the same physical PCI connector",
+   "speaker": null,
+   "episode": 357,
+   "episode_title": "An Interview with Rick Altherr",
+   "episode_url": "https://theamphour.com/357-an-interview-with-rick-altherr/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The recommended order for diagnosing a dead I2C link is: probe the lines with a scope to confirm the pull-up behaviour and clean edges; then check that the device is being addressed and enabled; then question the protocol layer and the provenance of the library.",
+   "quote_verbatim": "The first thing I'm going to do is actually get the scope out and just probe it to make sure that there's nothing funny with the pull-up or anything like that. That the edges are nice and clean and everything's talking. And then, after you've checked that, then you go into the chip addressing. Is the chip being addressed? Is it enabled? All that sort of jazz. And then you get into the protocol.",
+   "speaker": null,
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Confirming on a scope that a waveform looks like valid I2C traffic does not confirm the transaction succeeded; only decoding the bus with a logic analyser shows whether the slave acknowledged.",
+   "quote_verbatim": "I said, oh, that signal looks like the signal it's supposed to be. I didn't actually check what it's actually saying, though.",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A logic analyser or scope with an I2C protocol decoder converts the waveform directly into addresses and bytes and is the fastest route to a bus fault.",
+   "quote_verbatim": "you can actually do the translation in the logic analyzer a lot of times too. And that is just magic.",
+   "speaker": null,
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A scope with an I2C protocol analyser resolves a communication fault on a multi-microcontroller bus in minutes where inspection had failed over a longer period.",
+   "quote_verbatim": "I've got this protocol analyzer on my scope that will watch I squared C. We can figure this out in a heartbeat.",
+   "speaker": null,
+   "episode": 54,
+   "episode_title": "An Interview with Jack Ganssle - Embedded Elchee Epexegesis",
+   "episode_url": "https://theamphour.com/the-amp-hour-54-embedded-elchee-epexegesis/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Deep-memory logic analysers sidestep the need to trigger on a specific I2C packet: record continuously for as long as needed to guarantee capture, then search the recording for the packet in software. This converts a real-time trigger problem into an offline search problem.",
+   "quote_verbatim": "instead of spending all that time trying to trigger on the exact right event, why not just record the whole thing? Then it's a search problem. It's not a trigger problem.",
+   "speaker": null,
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Combining a captured I2C bus trace with the target's register map reconstructs each transaction as a named read or write to a named register with decoded bit fields, turning a binary stream into a readable account of the device's behaviour \u2014 and lets the sequence be replayed from another host.",
+   "quote_verbatim": "this is a read transaction. This is a write transaction. It's going to this device, this register, it's got this data",
+   "speaker": null,
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Linux board bring-up can validate an I2C bus from the command line with utilities that probe the bus, and GPIO through sysfs, before any driver code is written.",
+   "quote_verbatim": "when I want to like test the connection, like test the I2C, there's actually command line utilities like probe I2C",
+   "speaker": null,
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Zephyr provides shell commands for bus-level work, including an I2C scan and direct sensor access, compiled in behind a build symbol and reachable over UART or RTT.",
+   "quote_verbatim": "you can do like an i squared c i squared c scan you can talk to sensors you can toggle gpios",
+   "speaker": null,
+   "episode": 696,
+   "episode_title": "It Works With Option Number 5",
+   "episode_url": "https://theamphour.com/696-it-works-with-option-number-5/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A USB host adapter for I2C and SPI reduces bench bring-up of a bus device to configuring the clock frequency, entering the slave address and payload, and reading back the response, without writing microcontroller firmware first.",
+   "quote_verbatim": "you're just going to configure the bus, go ahead and, you know, give the, the slave device address, uh, give it a payload, click send",
+   "speaker": null,
+   "episode": 461,
+   "episode_title": "An Interview with Jonathan Georgino",
+   "episode_url": "https://theamphour.com/461-an-interview-with-jonathan-georgino/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Vendors have shipped I2C sensors without publishing a register map, leaving integrators to determine the register set experimentally.",
+   "quote_verbatim": "I got access to the register map for that device, which at the time they hadn't published",
+   "speaker": null,
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "SPI is the more robust of the two buses: its totem-pole drivers avoid the pull-up sizing, line-capacitance and interference problems that afflict I2C.",
+   "quote_verbatim": "SPI is more robust. You know, I squared C, you've got the capacitance of the line. If you don't choose your correct pull-up resistor, you can get interference",
+   "speaker": null,
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Where SPI is faster, I2C is the more widely available interface across parts, which in practice decides the choice for many designs.",
+   "quote_verbatim": "i squared c is just way more readily available",
+   "speaker": null,
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "I2C has more to go wrong than SPI, but the slave side of an I2C device is simple \u2014 essentially a set of registers hanging off the bus.",
+   "quote_verbatim": "It's like a set of registers hanging off a bus.",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "opinion",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Bit-banging an I2C master in software is straightforward; implementing an I2C slave in software is substantially harder.",
+   "quote_verbatim": "Unless you need to do, be a slave. That gets really tricky doing I squared C slave. But master it's pretty simple.",
+   "speaker": null,
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Before microcontrollers carried hardware I2C peripherals, designers wrote their own I2C libraries in software.",
+   "quote_verbatim": "It was like a two line display with a PIC controller back before microcontrollers really had I2C modules",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "An I2C implementation does not have to cover every mode in the specification; a minimal implementation sufficient to talk to the specific chip is far less work than a general-purpose reusable one.",
+   "quote_verbatim": "There's different modes and different things. And, you know, well, you don't have to implement all of them",
+   "speaker": null,
+   "episode": 137,
+   "episode_title": "Mars, System Design & NAND - Mercurial Mars Mission",
+   "episode_url": "https://theamphour.com/the-amp-hour-137-mercurial-mars-mission/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The RP2040's Pico SDK I2C peripheral driver responds to only one address in device mode; supporting multiple addresses on that part requires a PIO implementation, using the chip's programmable state machines to listen on the bus.",
+   "quote_verbatim": "the Raspberry Pi hardware, or at least the driver that is in the Pico SDK can't do multiple addresses when it's a peripheral device. It can only do one address",
+   "speaker": null,
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The RP2040's PIO blocks are well matched to implementing an I2C listener, continuously servicing incoming messages so the processor only handles decoded commands.",
+   "quote_verbatim": "he basically borrowed an I squared C listener, right? And that was a really good PIO thing. It's just sitting there cranking on I squared C incoming messages.",
+   "speaker": null,
+   "episode": 648,
+   "episode_title": "The RP1 and beyond with the Raspberry Pi Hardware team",
+   "episode_url": "https://theamphour.com/648-the-rp1-and-beyond-with-the-raspberry-pi-hardware-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Presenting a subsystem as an I2C peripheral \u2014 a display module that accepts a register-and-payload command set exactly as a sensor would \u2014 makes it usable unchanged from any host framework and conserves pins on the controller.",
+   "quote_verbatim": "it is just an I squared C sensor at a certain point",
+   "speaker": null,
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An I2C sensor typically contains no processor: a state machine listens for its address, fetches the requested value from memory and places it on the bus.",
+   "quote_verbatim": "There's a state machine in there. That's just listening for I squared C.",
+   "speaker": null,
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Even inside a driver framework, a raw I2C read or write remains available as an escape hatch for working around a subsystem abstraction, while still benefiting from the framework's power management.",
+   "quote_verbatim": "you can also do a raw I squared C read or write. And I do that kind of stuff all the time to just hack around something",
+   "speaker": null,
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In Linux, a peripheral fails silently when the driver is not bound to the right I2C address, and diagnosing it means reading kernel source rather than writing code.",
+   "quote_verbatim": "why is this driver not getting glued to this I squared C address",
+   "speaker": null,
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Hardware description languages such as Zephyr's device tree record a device's bus instance, address and driver, so swapping a sensor for a different part on the same I2C bus becomes an overlay-file change with no alteration to the application code.",
+   "quote_verbatim": "let's say I squared C, I have a device on I squared C two that is at this device address and it needs this specific driver",
+   "speaker": null,
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A microcontroller may implement I2C in software even when the peripheral pins appear fixed, so the same bus can be instantiated on other pins; this was observed on the ESP32.",
+   "quote_verbatim": "on an ESP32, I found out that it actually is a software implementation of iSquadC",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The Intel Galileo used I2C to emulate the Arduino I/O behind its x86 core, and the resulting I/O was very slow.",
+   "quote_verbatim": "it used like I squared C to emulate the IO of an Arduino. It was so slow.",
+   "speaker": null,
+   "episode": 490,
+   "episode_title": "An Interview with Ben Heck(endorn)",
+   "episode_url": "https://theamphour.com/490-an-interview-with-ben-heckendorn/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A parallel-output image sensor typically splits its interfaces: pixel data leaves on a clocked parallel bus with line-valid and frame-valid strobes, while all configuration \u2014 crop, output bit width, timings \u2014 is written over a separate I2C interface.",
+   "quote_verbatim": "there's also another interface to the camera, which is over I2C, which is how you set its configuration inside the camera",
+   "speaker": null,
+   "episode": 473,
+   "episode_title": "An Interview with Greg Davill",
+   "episode_url": "https://theamphour.com/473-an-interview-with-greg-davill/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An I2C DAC producing 0 to 4.96 volts, followed by a high-current op-amp that scales and shifts the output to plus and minus eight volts, forms a compact programmable supply channel.",
+   "quote_verbatim": "I get like zero to 4.96 volts from the, you know, the I squared C DAC",
+   "speaker": null,
+   "episode": 689,
+   "episode_title": "A Jumperless Breadboard with Kevin Cappuccio",
+   "episode_url": "https://theamphour.com/689-a-jumperless-breadboard-with-kevin-cappuccio/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "ep 396: raw labels alternate between Dave Jones and Chris Gammell mid-exchange and are demonstrably swapped in places (the pull-up/open-collector explanation and the Philips history are attributed to Chris Gammell in some passages and Dave Jones in others). All ep 396 claims are protocol facts and are left unattributed.",
+  "ep 274: caller-show passages; the caller's and the host's lines are interleaved within single passages. All claims left unattributed.",
+  "ep 631: labels alternate within the same explanation (the I2C speed-limit/RC derivation appears under both host labels). Left unattributed.",
+  "ep 622: labels are swapped \u2014 the soldering-noise debugging story, the Pico SDK single-address limitation and the PIO multi-address driver are Mike Szczys's, but appear under Dave Jones. Names dropped; claims are stated as engineering facts.",
+  "ep 527: flagged unreliable; the low-power pull-up reasoning is Matt Liberty's by content but the surrounding banter is host text. Name dropped.",
+  "ep 181, 250, 418, 458, 515, 519, 566: flagged attribution_reliable=false. No claim from these episodes carries a speaker name.",
+  "ep 54: the anecdote is Jack Ganssle's own and self-consistent, but the claim is a general one about protocol-analyser use, so no name is carried.",
+  "ep 155: register-map and I2C-capture-decoding passages are Jeff Rowberg's by content (he authored the I2Cdevlib work discussed); left unattributed as the facts are general.",
+  "No claim in this packet carries a speaker field. Every surviving claim is a protocol, electrical or tooling fact whose value does not depend on the identity of the practitioner."
+ ],
+ "capped": false
+}

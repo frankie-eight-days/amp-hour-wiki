@@ -1,0 +1,682 @@
+{
+ "concept": "op-amp",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "op-amp",
+  "census": "union",
+  "aliases": [
+   "op-amp"
+  ],
+  "children": [
+   "amplifier",
+   "analog-circuit",
+   "analog-computer",
+   "analog-filtering",
+   "art-of-electronics",
+   "feedback-loop",
+   "instrumentation-amplifier",
+   "low-noise-amplifier",
+   "power-management-ic",
+   "radiation-hardening",
+   "thermostat",
+   "wikipedia"
+  ],
+  "neighbors": {
+   "analog-devices": 6,
+   "lm324": 6,
+   "bob-pease": 5
+  },
+  "pins_pre_cap": 122,
+  "pins_final": 122,
+  "pins_by_depth": {
+   "opinion": 35,
+   "explains": 87
+  },
+  "pins_by_role": {
+   "core": 104,
+   "neighbor": 6,
+   "child": 12
+  },
+  "capped": false,
+  "passages_yielding_claims": 58,
+  "passages_killed": 64
+ },
+ "claims": [
+  {
+   "claim_text": "The name records the original purpose: operational amplifiers performed mathematical operations on analog voltages, which is what analog computers were built from.",
+   "quote_verbatim": "op amps, operational amplifiers, are talking about math operations using analog voltages",
+   "speaker": "Chris Gammell",
+   "episode": 296,
+   "episode_title": "Gotta Update My Dog",
+   "episode_url": "https://theamphour.com/296-gotta-update-my-dog/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The operation missing from the classical set is multiplication, which is supplied by a dedicated analog multiplier; with it the applications open into modulation and demodulation.",
+   "quote_verbatim": "there's stuff that's missing from that, which is a multiplier",
+   "speaker": "Dave Jones",
+   "episode": 46,
+   "episode_title": "Autorouter, Datasheets & Obscure Chips - Cloddish Collegiate Conversations",
+   "episode_url": "https://theamphour.com/the-amp-hour-46-cloddish-collegiate-conversations/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The classic general-purpose part is not complicated inside — around two dozen transistors — which is why it can be rebuilt from discrete components as a teaching object.",
+   "quote_verbatim": "it's maybe two dozen transistors and that's it",
+   "speaker": "Eric Schlaepfer",
+   "episode": 609,
+   "episode_title": "Open Circuits with Eric Schlaepfer and Windell Oskay",
+   "episode_url": "https://theamphour.com/609-open-circuits-with-eric-schlaepfer-and-windell-oskay/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Teaching normally begins with the ideal amplifier, which is a confusing place to start; the easier model is that the output is the difference between the two inputs multiplied by a gain. The ideal model is used because it lets a course reach circuit analysis immediately.",
+   "quote_verbatim": "they typically start with the ideal op amp, which isn't really the best place to start",
+   "speaker": "Eric Schlaepfer",
+   "episode": 609,
+   "episode_title": "Open Circuits with Eric Schlaepfer and Windell Oskay",
+   "episode_url": "https://theamphour.com/609-open-circuits-with-eric-schlaepfer-and-windell-oskay/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The ideal device is contrived to the point of parody: reading its supposed specifications shows how unrealistic each property is. Being asked to measure twenty parameters of a real part without being told what any of them mean is the corresponding failure at the other end.",
+   "quote_verbatim": "the professor told us to measure 20 properties of an op amp",
+   "speaker": "Windell Oskay",
+   "episode": 609,
+   "episode_title": "Open Circuits with Eric Schlaepfer and Windell Oskay",
+   "episode_url": "https://theamphour.com/609-open-circuits-with-eric-schlaepfer-and-windell-oskay/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Real devices behave very little like the undergraduate description, and the substance of the discipline is working around their limitations. If a perfect amplifier existed the job would largely disappear, since everything would simply be an analog computer.",
+   "quote_verbatim": "op amps don't work anything like they describe in undergraduate college courses",
+   "speaker": "Ben Krasnow",
+   "episode": 480,
+   "episode_title": "An Interview with Ben Krasnow, 8 years on",
+   "episode_url": "https://theamphour.com/480-an-interview-with-ben-krasnow-8-years-on/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The gap between reading the description and building the circuit is where beginners come unstuck: the account of how the device works reads as complete, and the implementation then fails on imperfections the account did not mention.",
+   "quote_verbatim": "you go try to implement it and you'll be, I mean, you're, you're, you're sunk",
+   "speaker": "Ben Krasnow",
+   "episode": 480,
+   "episode_title": "An Interview with Ben Krasnow, 8 years on",
+   "episode_url": "https://theamphour.com/480-an-interview-with-ben-krasnow-8-years-on/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Individual facts taught early — that no current flows into either input, for instance — carry no weight until the learner has met them repeatedly in real circuits, which is why teaching purely through the mathematics leaves so little behind.",
+   "quote_verbatim": "there's no current going into one, into either of the inputs",
+   "speaker": "Chris Gammell",
+   "episode": 127,
+   "episode_title": "FPGA, Xess, 32 Bit - Quirky Qualitative Questions",
+   "episode_url": "https://theamphour.com/the-amp-hour-127-quirky-qualitative-questions/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Reading a transistor-level schematic is a matter of recognising structures rather than following every device: the differential pair, the current mirror, the current source. The simplified symbol most engineers work with is a compression of exactly that.",
+   "quote_verbatim": "you start to see structures. You understand, right. There's like a, there's a differential amplifier in there. There's a current source.",
+   "speaker": "Dave Jones",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "That is the argument for building a discrete version of a classic part: the internal structure has not changed, so seeing it laid out in discrete components is a way to learn what the symbol stands for.",
+   "quote_verbatim": "It's just a good way to learn about that stuff",
+   "speaker": "Chris Gammell",
+   "episode": 213,
+   "episode_title": "Travel Recaps and Altium Announcements - Artisinal Aussie Assemblage",
+   "episode_url": "https://theamphour.com/213-travel-recaps-and-altium-announcements-artisinal-aussie-assemblage/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The classic instrumentation amplifier is three amplifiers and four resistors — two followers into a difference stage — and its performance depends entirely on how precisely those resistors are matched.",
+   "quote_verbatim": "You can build it with three op amps and four resistors, but that relies on the resistors being totally matched",
+   "speaker": "Dave Jones",
+   "episode": 34,
+   "episode_title": "AD620, DesignSpark, Instrumentation Amplifier - The Rant Rhetorical",
+   "episode_url": "https://theamphour.com/the-amp-hour-34-the-rant-rhetorical/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "That dependence is why the discrete version is usually skipped in favour of an integrated part, in which the resistors are laser trimmed, thermally matched and share the same drift and temperature coefficient.",
+   "quote_verbatim": "which has the match resistors laser trimmed and built on and they're all thermally matched",
+   "speaker": "Dave Jones",
+   "episode": 34,
+   "episode_title": "AD620, DesignSpark, Instrumentation Amplifier - The Rant Rhetorical",
+   "episode_url": "https://theamphour.com/the-amp-hour-34-the-rant-rhetorical/",
+   "depth_regraded": "explains",
+   "kind": "rationale"
+  },
+  {
+   "claim_text": "The reason for that topology is common-mode rejection: it recovers a small differential signal riding on a large common-mode voltage, which is what makes it the front end for measurements taken from electrodes on the skin.",
+   "quote_verbatim": "it can read really small signals on top of really large signals, like large common mode stuff",
+   "speaker": "Chris Gammell",
+   "episode": 34,
+   "episode_title": "AD620, DesignSpark, Instrumentation Amplifier - The Rant Rhetorical",
+   "episode_url": "https://theamphour.com/the-amp-hour-34-the-rant-rhetorical/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The specialised amplifiers sold as complete parts decompose into the same elements: a difference or instrumentation amplifier is three amplifiers and some precision resistors, packaged as a system.",
+   "quote_verbatim": "That's just three op amps",
+   "speaker": "Dave Jones",
+   "episode": 15,
+   "episode_title": "Analog Components, First Person Flying and Idea Ownership",
+   "episode_url": "https://theamphour.com/the-amp-hour-15-analog-components-first-person-flying-and-idea-ownership/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A transimpedance amplifier is an amplifier with a resistor in its feedback path: current driven into the input develops a voltage across that resistor, which becomes the output. The photodiode front end is the standard instance, with the diode on the input and a megohm-class resistor in the feedback loop.",
+   "quote_verbatim": "it's effectively an op amp with a resistor in its feedback path",
+   "speaker": "Chris Gammell",
+   "episode": 579,
+   "episode_title": "ADC Chip Design with Anthony Wall",
+   "episode_url": "https://theamphour.com/579-adc-chip-design-with-anthony-wall/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The performance available from that arrangement is set by the amplifier's input characteristics: a JFET-input part with very low noise and very low input current, at around fifty dollars, supported tens of picoamps of resolution with about half a picoamp of noise.",
+   "quote_verbatim": "like 10 tens of pico amp resolution. And we have like 0.5 pico amps of noise",
+   "speaker": "Akiba",
+   "episode": 245,
+   "episode_title": "An interview with Akiba from Freaklabs - Dimissory Diagraphical Debt",
+   "episode_url": "https://theamphour.com/245-an-interview-with-akiba-from-freaklabs-dimissory-diagraphical-debt/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A charge amplifier substitutes a capacitor for that feedback resistor so the stage integrates charge rather than converting current; it needs a very high impedance input and works at very low frequencies, which is what amplifiers are good at.",
+   "quote_verbatim": "the feedback of your charge amplifier will be an op amp basically with a capacitor feedback element",
+   "speaker": "Dave Jones",
+   "episode": 570,
+   "episode_title": "Keyzermas All The Way",
+   "episode_url": "https://theamphour.com/570-keyzermas-all-the-way/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The historical constraint on that circuit was the feedback capacitor: low frequencies want as much capacitance as possible, and the ultra-stable NP0 ceramics needed for the job did not go past a nanofarad.",
+   "quote_verbatim": "you had to get NPO ceramics, right? These ultra stable NPO ceramics. And they didn't go past a nanofarad back then.",
+   "speaker": "Jeff Keyzer",
+   "episode": 570,
+   "episode_title": "Keyzermas All The Way",
+   "episode_url": "https://theamphour.com/570-keyzermas-all-the-way/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Placing an ordinary diode inside the feedback loop removes its forward drop, producing the ideal-diode behaviour used in precision peak detectors; the same objective in a switching converter is what integrated ideal-diode parts address, by cutting the loss in the switching diode.",
+   "quote_verbatim": "you put a standard diode inside an op amp feedback loop, and you can take out the drop",
+   "speaker": "Dave Jones",
+   "episode": 98,
+   "episode_title": "Proemial Passive Poiesis",
+   "episode_url": "https://theamphour.com/the-amp-hour-98-proemial-passive-poiesis/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Cascading two amplifiers in series buys bandwidth or drive capability. A composite amplifier is different: the second is placed inside the first's feedback loop, which lets a very low-noise, low-offset input stage be combined with a high-current line driver — the point being that at the edge of the specification no single device meets every requirement at once, since they always trade off.",
+   "quote_verbatim": "The second amplifier is within the feedback loop of the first amplifier",
+   "speaker": "Dave Jones",
+   "episode": 660,
+   "episode_title": "My Toothbrush Is Broadcasting",
+   "episode_url": "https://theamphour.com/the-amp-hour-660-my-toothbrush-is-broadcasting/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An adjustable low-dropout regulator can be little more than an amplifier and an internal current source: the output voltage is set by one resistor to ground rather than by a divider, because the current source drives a fixed current through it to make the reference.",
+   "quote_verbatim": "it's basically simply an op amp with a current source in it set by a single resistor",
+   "speaker": "Dave Jones",
+   "episode": 44,
+   "episode_title": "BASIC, Chip companies & Robots - Pernicious Projects, Puppies in Peril",
+   "episode_url": "https://theamphour.com/the-amp-hour-44-pernicious-projects-puppies-in-peril/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Because that internal source is only about ten microamps, it can be overridden by driving the set pin directly, which turns the regulator into a programmable supply.",
+   "quote_verbatim": "it's only 10 microamps",
+   "speaker": "Dave Jones",
+   "episode": 44,
+   "episode_title": "BASIC, Chip companies & Robots - Pernicious Projects, Puppies in Peril",
+   "episode_url": "https://theamphour.com/the-amp-hour-44-pernicious-projects-puppies-in-peril/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A switching regulator and a linear one share almost the whole circuit — the amplifier, the feedback element, the pass transistor and the reference; what differs is that the amplifier's output driving the pass transistor is switched rather than continuous.",
+   "quote_verbatim": "It's the same feedback element. It's the same pass transistor. It's the same reference.",
+   "speaker": "Chris Gammell",
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "An analog audio dynamics processor is built from the same parts in combination: four amplifiers, RMS converters and voltage-controlled amplifiers, arranged to make a compressor, a limiter, automatic gain control or a de-esser.",
+   "quote_verbatim": "there's four op amps in here and there's RMS converters, voltage controlled amplifiers",
+   "speaker": "Dave Jones",
+   "episode": 563,
+   "episode_title": "Grumpy Collaboration",
+   "episode_url": "https://theamphour.com/563-grumpy-collaboration/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A power operational amplifier intended for audio can serve as the output stage of a supply: a device rated at roughly 120 watts, paralleled and reconfigured, reached about 700 watts of output.",
+   "quote_verbatim": "you can use that op amp for like 120 watt uh output but we've we've paralyzed them and reconfigured it so we can get like up to 700 watts out",
+   "speaker": "Parker Dillman",
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Selection is driven by which imperfection matters in the application: low offset voltage for sensing small voltages, low input bias current for a photodiode front end, low noise and low offset drift where the measurement is slow.",
+   "quote_verbatim": "you can go out there for low offset voltage if you're doing, like, real low sensing of voltages",
+   "speaker": "Chris Gammell",
+   "episode": 45,
+   "episode_title": "Texas Instruments, OPA & Chevy Volt - Nerdy Neuroelectronic Neurosis",
+   "episode_url": "https://theamphour.com/the-amp-hour-45-nerdy-neuroelectronic-neurosis/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where the requirements are not demanding the choice hardly matters: a general-purpose part from the drawer will do, which is the right answer for a beginner who cannot yet name what they need.",
+   "quote_verbatim": "probably just any op-amp will do",
+   "speaker": "Dave Jones",
+   "episode": 45,
+   "episode_title": "Texas Instruments, OPA & Chevy Volt - Nerdy Neuroelectronic Neurosis",
+   "episode_url": "https://theamphour.com/the-amp-hour-45-nerdy-neuroelectronic-neurosis/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A modest application often has no meaningful selection problem at all: for an ultrasonic transducer amplifier used to measure distance, a hundred parts on the market would serve, because no noise floor or precision requirement has been stated.",
+   "quote_verbatim": "There's probably, you know, 100 op-amps on the market that could probably do it",
+   "speaker": "Dave Jones",
+   "episode": 141,
+   "episode_title": "FPGAs, Robots & Thermocouples - Wampum's Wavering Worth",
+   "episode_url": "https://theamphour.com/the-amp-hour-141-wampums-wavering-worth/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The vendor application note is a legitimate shortcut: for a given transducer there is usually a published circuit in which someone better qualified has already chosen the amplifier, and it works.",
+   "quote_verbatim": "Somebody smarter than you has already chosen it",
+   "speaker": "Dave Jones",
+   "episode": 141,
+   "episode_title": "FPGAs, Robots & Thermocouples - Wampum's Wavering Worth",
+   "episode_url": "https://theamphour.com/the-amp-hour-141-wampums-wavering-worth/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Those notes exist because they sell chips, which does not make them less useful; the design that is known to work is worth more than the exercise of deriving it.",
+   "quote_verbatim": "It's because that's how they sell chips",
+   "speaker": "Dave Jones",
+   "episode": 141,
+   "episode_title": "FPGAs, Robots & Thermocouples - Wampum's Wavering Worth",
+   "episode_url": "https://theamphour.com/the-amp-hour-141-wampums-wavering-worth/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Replacing a part in a characterised system is a different problem from choosing one for a new design. A nearly-equivalent device with slightly different phase margin can make the circuit oscillate, so the right amplifier for an existing application is the one already in it.",
+   "quote_verbatim": "the right op amp is the op amp you already have",
+   "speaker": "Chris Gammell",
+   "episode": 62,
+   "episode_title": "Op amps, Microchips & Mergers - Narquois Nerd Nescience - Narquois Nerd Nescience",
+   "episode_url": "https://theamphour.com/the-amp-hour-62-narquois-nerd-nescience/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "That is what makes an approximate cross-reference dangerous: close is not exact, and the difference lands in a parameter the original design depended on without recording it.",
+   "quote_verbatim": "If it's not exact and it's never going to be exact and it's not within the tolerance",
+   "speaker": "Chris Gammell",
+   "episode": 62,
+   "episode_title": "Op amps, Microchips & Mergers - Narquois Nerd Nescience - Narquois Nerd Nescience",
+   "episode_url": "https://theamphour.com/the-amp-hour-62-narquois-nerd-nescience/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Sorting a distributor listing by price is a reasonable way to choose among twenty parts that all meet the requirement; the caveat is that an unusually low price may reflect stock the distributor is clearing rather than the part's standing price.",
+   "quote_verbatim": "If you've got 20 different op-amps that can do the job, hell yes, I'm going to sort by price.",
+   "speaker": "Dave Jones",
+   "episode": 211,
+   "episode_title": "Design Reviews Are Important - Habitual Hype Hebetude",
+   "episode_url": "https://theamphour.com/211-design-reviews-are-important-habitual-hype-hebetude/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Second sourcing is easier for a part in a standard small-outline package than for a converter, and a second source need not be a different manufacturer: a higher-performance part from the same vendor costs more but is available now, which is what gets a design out of a lead-time problem.",
+   "quote_verbatim": "second source doesn't necessarily mean a different manufacturer",
+   "speaker": "Dave Jones",
+   "episode": 104,
+   "episode_title": "Ceramic capacitors & High end scopes - Kempt Kickstarter Kakorrhaphiophobia",
+   "episode_url": "https://theamphour.com/the-amp-hour-104-kempt-kickstarter-kakorrhaphiophobia/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Designing an expensive part out has to clear the arithmetic: at a hundred units a year, halving the cost of a fifty-dollar amplifier saves about two and a half thousand dollars, so more than about twenty-five hours of engineering turns the change into a loss.",
+   "quote_verbatim": "if you do 50% better, you only save what? Two, $2,500 in a year",
+   "speaker": "Dave Jones",
+   "episode": 64,
+   "episode_title": "OSHW, Makerbot & Memristo - Maundering Memristor Mathematicaster",
+   "episode_url": "https://theamphour.com/the-amp-hour-64-maundering-memristor-mathematicaster/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "The unit price also bounds the product: a fifty-dollar amplifier cannot go into something intended to sell for forty dollars, so the part choice and the price point have to be settled together.",
+   "quote_verbatim": "if you design in a hundred to $10 op amp",
+   "speaker": "Chris Gammell",
+   "episode": 245,
+   "episode_title": "An interview with Akiba from Freaklabs - Dimissory Diagraphical Debt",
+   "episode_url": "https://theamphour.com/245-an-interview-with-akiba-from-freaklabs-dimissory-diagraphical-debt/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "In precision instruments the parts are not substitutable at all: 0.05 percent resistors and specific amplifiers are single-sourced with no equivalent, which is simultaneously a supply risk and a barrier protecting the product.",
+   "quote_verbatim": "you can't just substitute the op-amps, right? It just doesn't work",
+   "speaker": "Dave Jones",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A design tool can carry the selection: entering the filter requirement and an optimisation preference for power or noise makes the tool choose the components and the amplifiers, with an expert mode in which the user picks a part they already stock and is shown the resulting performance instead.",
+   "quote_verbatim": "you go and you pick your own op amps and then the tools shows you like based on the op amp you picked, here's the performance you're going to get",
+   "speaker": "Matt Duff",
+   "episode": 392,
+   "episode_title": "An Interview with Matt Duff",
+   "episode_url": "https://theamphour.com/392-an-interview-with-matt-duff/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The tool also selects component series by availability, since the series determines how hard the parts are to obtain, and a design that looks poor against a general standard is correct if the application only needs twenty decibels of rejection and it avoids stocking another amplifier.",
+   "quote_verbatim": "that resistor series, capacitor series, because that basically determines how hard the component will be to get",
+   "speaker": "Matt Duff",
+   "episode": 392,
+   "episode_title": "An Interview with Matt Duff",
+   "episode_url": "https://theamphour.com/392-an-interview-with-matt-duff/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Simulation rarely needs the exact device: vendors integrate their own part models to push their catalogue, but for most work a generic model of the amplifier is what is actually being simulated.",
+   "quote_verbatim": "I don't really care about the specific op amp models",
+   "speaker": "Chris Gammell",
+   "episode": 28,
+   "episode_title": "Bowie and The Brown Note",
+   "episode_url": "https://theamphour.com/the-amp-hour-28-bowie-and-the-brown-noise/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The reason a precision part costs fifty dollars is test: every die is tested, every packaged device is tested, and almost every parameter printed in the data sheet is measured on each unit rather than established statistically.",
+   "quote_verbatim": "not only is every device tested, but almost every parameter you see in the data sheet, not quite every parameter, but almost every parameter is actually tested",
+   "speaker": "Art Kay",
+   "episode": 348,
+   "episode_title": "An Interview with Art Kay",
+   "episode_url": "https://theamphour.com/348-an-interview-with-art-kay/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A data sheet for a precision part will report the production spread from thousands of tested devices; a jelly-bean part gets no such treatment, so the presence or absence of that data — not the manufacturer's name — is what tells you what you are buying.",
+   "quote_verbatim": "You've got to go right deep down into the data sheet and you've got to go, well, what is the production spread?",
+   "speaker": "Dave Jones",
+   "episode": 578,
+   "episode_title": "Histogrammic or Histomagraphical",
+   "episode_url": "https://theamphour.com/578-histogrammic-or-histomagraphical/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Some behaviour is not in the data sheet at all: an input offset voltage that varies with the supply rail, arising inside the part, is the kind of dependence that is found by varying the rails during debugging rather than by reading.",
+   "quote_verbatim": "its offset voltage is power supply dependent. And they don't tell you that in the data sheet",
+   "speaker": "Dave Jones",
+   "episode": 146,
+   "episode_title": "Hamvention, Arduino and Intel - Burdensome Background Battology",
+   "episode_url": "https://theamphour.com/the-amp-hour-146-burdensome-background-battology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The working definition of input offset voltage is the operational one: short the inputs and observe what the output does. The formally correct definition — the voltage that would have to be applied to bring the output to zero — describes the same quantity from the other direction.",
+   "quote_verbatim": "when you short the inputs to your op amp, you get 2 million volts on the output",
+   "speaker": "Dave Jones",
+   "episode": 148,
+   "episode_title": "Contextual Electronics, ClubJameco and Solderpaste - Lifelong Learning Likelihood",
+   "episode_url": "https://theamphour.com/the-amp-hour-148-lifelong-learning-likelihood/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Noise is specified in nanovolts per root hertz, and measuring it is difficult in its own right because every instrument used to make the measurement contributes noise of its own.",
+   "quote_verbatim": "especially when each thing you use to measure is going to introduce its own bit of noise",
+   "speaker": "Chris Gammell",
+   "episode": 384,
+   "episode_title": "A++++++ Will Buy Again",
+   "episode_url": "https://theamphour.com/384-a-will-buy-again/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Counterfeit and rebadged parts turn up in this category: a quad amplifier marked as one general-purpose type turned out to be a different device entirely, and the two behave quite differently.",
+   "quote_verbatim": "It turned out to be an LM324. But it's rebadged as a, you know, 07.4",
+   "speaker": "Dave Jones",
+   "episode": 625,
+   "episode_title": "Gremlins in the machine",
+   "episode_url": "https://theamphour.com/625-gremlins-in-the-machine/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Quiescent current is what the device draws while doing nothing: an amplifier that is not amplifying still burns current simply by being powered.",
+   "quote_verbatim": "it's burning some amount of quiescent current just to stay on",
+   "speaker": "Chris Gammell",
+   "episode": 10,
+   "episode_title": "Open Hardware and Self Publishing",
+   "episode_url": "https://theamphour.com/the-amp-hour-10-open-hardware-and-self-publishing/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "That is a real fault in a low-power design: a power budget expected to be tens of microamps came out at tens of milliamps, and one contributor was an amplifier left enabled and idle on a plug-in board.",
+   "quote_verbatim": "I have an op amp just kind of like turned on and sitting there on one of my plugin boards",
+   "speaker": "Chris Gammell",
+   "episode": 534,
+   "episode_title": "Firmware Update Capabilities",
+   "episode_url": "https://theamphour.com/534-firmware-update-capabilities/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "In precision analog the amplifier gets its own supply: a low-noise linear regulator dedicated to that part at the point of use, rather than a general-purpose regulator shared with the rest of the board, because the supply noise appears in the measurement.",
+   "quote_verbatim": "you've got to dedicate your own linear regulator directly to the low noise linear reg",
+   "speaker": "Dave Jones",
+   "episode": 168,
+   "episode_title": "Specialized and/or Open Source Test Gear and Dev Boards - Vacation Videography Vorboten",
+   "episode_url": "https://theamphour.com/168-specialized-and-open-source-test-gear-and-dev-boards-vacation-videography-vorboten/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Driving a coaxial cable is a stability question rather than a power one: some power amplifiers lose stability into a capacitive 50-ohm load, so an output buffer has to be selected for that specific ability.",
+   "quote_verbatim": "make sure it can drive an actual capacitive coax 50-ohm load, because some of them can't",
+   "speaker": "Dave Jones",
+   "episode": 278,
+   "episode_title": "Our Second Callin Show(ish)",
+   "episode_url": "https://theamphour.com/278-our-second-callin-showish/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Capacitive loading in general is a design criterion in its own right and a common way to destroy the stability of an otherwise sound circuit.",
+   "quote_verbatim": "driving a capacitive load can be a killer for an op amp",
+   "speaker": "Dave Jones",
+   "episode": 141,
+   "episode_title": "FPGAs, Robots & Thermocouples - Wampum's Wavering Worth",
+   "episode_url": "https://theamphour.com/the-amp-hour-141-wampums-wavering-worth/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A differential amplifier built from discrete amplifiers and resistors has its accuracy set entirely by the matching of the feedback resistors, which is what determines whether the finished instrument meets its specification.",
+   "quote_verbatim": "the differential amplifier with op amps is determined by the feedback resistors",
+   "speaker": "Dave Jones",
+   "episode": 491,
+   "episode_title": "The Almighty Dollarydoo",
+   "episode_url": "https://theamphour.com/491-the-almighty-dollarydoo/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A supply fault propagates through a board's analog section: a rail that went high voltage killed roughly half the amplifiers on the board at once, which is usually the point at which repair stops being economic.",
+   "quote_verbatim": "half the op amps were dead",
+   "speaker": "Dave Jones",
+   "episode": 643,
+   "episode_title": "Calibration & Repair with Ian Johnston",
+   "episode_url": "https://theamphour.com/643-calibration-repair-with-ian-johnston/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Schematic edits carry their own risk: two pins on an amplifier were transposed while a drawing was being reformatted, a mistake that would otherwise have surfaced as a circuit that failed to regulate.",
+   "quote_verbatim": "I swapped two pins on the op amp, didn't I?",
+   "speaker": "Dave Jones",
+   "episode": 80,
+   "episode_title": "Otiose Ontocyclic Opiniasters",
+   "episode_url": "https://theamphour.com/the-amp-hour-80-otiose-ontocyclic-opiniasters/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "In audio the front end decides the product: gain with low noise is what determines quality, and that stage is analog — a low-noise bipolar amplifier — after which the work can move to digital signal processing.",
+   "quote_verbatim": "gain and, and low noise is still, that's, that's the bread and butter of everything",
+   "speaker": "Dave Jones",
+   "episode": 513,
+   "episode_title": "Audio DSP with Shannon Parks",
+   "episode_url": "https://theamphour.com/513-audio-dsp-with-shannon-parks/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Moving the subsequent stages into DSP avoids the accumulated noise of a chain of analog stages, and avoids the potentiometers used in traditional preamplifiers, which are high impedance, go scratchy and act as noise magnets.",
+   "quote_verbatim": "there's always these pots involved in traditional preamps that get noisy and scratchy",
+   "speaker": "Dave Jones",
+   "episode": 513,
+   "episode_title": "Audio DSP with Shannon Parks",
+   "episode_url": "https://theamphour.com/513-audio-dsp-with-shannon-parks/",
+   "depth_regraded": "explains",
+   "kind": "rationale"
+  },
+  {
+   "claim_text": "Direct-conversion receivers move the amplification problem down in frequency: converting straight from radio frequency to a very low intermediate frequency means the amplifiers are ordinary off-the-shelf parts working in the kilohertz range and the filtering becomes resistors and capacitors.",
+   "quote_verbatim": "you're using amplifiers, which are just off-the-shelf op-amps and instrumentation amplifiers that work in the kilohertz range",
+   "speaker": "Jeri Ellsworth",
+   "episode": 52,
+   "episode_title": "An Interview with Jeri Ellsworth - Carnassial Chip Chemicals",
+   "episode_url": "https://theamphour.com/the-amp-hour-52-carnassial-chip-chemicals/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Long-duration space hardware can be a reason to choose analog over a processor: a microcontroller in low Earth orbit accumulates radiation-induced bit flips, which is acceptable over a six-month mission but not over five years with no way to reprogram. A maximum power point tracker was therefore built as an analog computer, using an amplifier to evaluate a straight-line relationship for the panel's optimum voltage.",
+   "quote_verbatim": "you can get radiation bit flips and, you know, your code can literally change ones and zeros, uh, due to radiation",
+   "speaker": "Chris Gammell",
+   "episode": 401,
+   "episode_title": "An Interview with Brent and Bryce Salmi",
+   "episode_url": "https://theamphour.com/401-an-interview-with-brent-and-bryce-salmi/",
+   "depth_regraded": "explains",
+   "kind": "rationale"
+  },
+  {
+   "claim_text": "That design used commercial off-the-shelf parts selected for existing radiation test data to at least thirty thousand rad, and closed its loop by exploiting the panel's source impedance: drawing more current drops the voltage, which is what makes feed-forward control of the input voltage possible.",
+   "quote_verbatim": "we use all COTS parts in COTS parts that had testing, uh, radiation testing",
+   "speaker": "Chris Gammell",
+   "episode": 401,
+   "episode_title": "An Interview with Brent and Bryce Salmi",
+   "episode_url": "https://theamphour.com/401-an-interview-with-brent-and-bryce-salmi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "High-voltage, high-speed requirements are where the catalogue runs out: driving plus and minus fifteen volts at twenty megahertz into loads of a few hundred ohms to a kilohm, from sixty-volt rails, leaves very few parts to choose from.",
+   "quote_verbatim": "good luck finding op amps that work that way",
+   "speaker": "Todd Bailey",
+   "episode": 194,
+   "episode_title": "An Interview With Todd Bailey - Embedded Embrasure Engineering",
+   "episode_url": "https://theamphour.com/194-an-interview-with-todd-bailey-embedded-embrasure-engineering/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Reducing the amplifier count is what makes some form factors possible: a handheld instrument depended on not having many amplifiers scattered through it, and on CMOS, to run from batteries for a useful time.",
+   "quote_verbatim": "that particular form factor did depend on having not a whole lot of op amps and stuff all over the place",
+   "speaker": "Dave Taylor",
+   "episode": 180,
+   "episode_title": "An Interview with Dave Taylor - Multi-talented Meter Maker",
+   "episode_url": "https://theamphour.com/180-an-interview-with-dave-taylor-multi-talented-meter-maker/",
+   "depth_regraded": "opinion",
+   "kind": "rationale"
+  },
+  {
+   "claim_text": "Modular instrument systems included an amplifier as a plug-in module with terminals on the front panel, so external resistors or a small board turn it into an integrator, a differentiator or a summing stage.",
+   "quote_verbatim": "I have one that is an op amp it's just an op amp and it's got terminals on the front",
+   "speaker": "Jeff Keyzer",
+   "episode": 655,
+   "episode_title": "The Twelfth Day of Keyzermas",
+   "episode_url": "https://theamphour.com/655-the-twelfth-day-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Ceramic capacitor value is specified at zero volts of DC bias, and no working circuit runs there: a one-microfarad 25-volt X7R operated at three volts might retain 0.9 microfarad if it is a good one and a small fraction of that if it is not — which matters directly when the capacitor is compensating an amplifier.",
+   "quote_verbatim": "capacitor values are specified at zero volt DC working voltage",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  }
+ ],
+ "attribution_notes": [
+  "Six passages in this bundle carry no episode number and were dropped rather than cited.",
+  "eps 194, 222, 384, 392, 401, 476, 513, 607: attribution flagged unreliable. Claims are content-attributed to the guest whose product, design or research the passage describes, or left unattributed where the content is general.",
+  "ep 401: the account of the analog maximum power point tracker is the guest describing his own satellite work; the bundle's speaker label is retained."
+ ],
+ "capped": false
+}
