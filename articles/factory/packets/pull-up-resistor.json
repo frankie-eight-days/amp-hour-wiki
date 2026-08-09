@@ -1,0 +1,573 @@
+{
+ "concept": "pull-up-resistor",
+ "name": "Pull-Up Resistor",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "pull-up-resistor",
+    "pullup-resistor"
+   ],
+   "children": [
+    "pull-down-resistor",
+    "rocket-launch",
+    "slew-rate",
+    "technology-adoption"
+   ],
+   "neighbors": []
+  },
+  "stats": {
+   "episodes": 37,
+   "mentions": 67,
+   "explains": 49,
+   "opinions": 4,
+   "candidate_episode_count": 33,
+   "candidate_mention_count": 50,
+   "gated_out": 51,
+   "gated_out_by_concept": [
+    [
+     "rocket-launch",
+     19
+    ],
+    [
+     "technology-adoption",
+     13
+    ],
+    [
+     "slew-rate",
+     11
+    ],
+    [
+     "pull-down-resistor",
+     8
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 5,
+   "speakers": [
+    [
+     "Dave Jones",
+     24
+    ],
+    [
+     "Chris Gammell",
+     12
+    ],
+    [
+     "Jason Cerundolo",
+     2
+    ],
+    [
+     "Uri Shaked",
+     2
+    ],
+    [
+     "Kevin Cappuccio",
+     2
+    ],
+    [
+     "Zach Hoeken",
+     1
+    ],
+    [
+     "Scott Driscoll",
+     1
+    ],
+    [
+     "Dmitry Nedospasov",
+     1
+    ],
+    [
+     "Mike Szczys",
+     1
+    ],
+    [
+     "Matt Liberty",
+     1
+    ],
+    [
+     "Charles Aylward",
+     1
+    ],
+    [
+     "Laura Abbott",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 48,
+    "child": 1
+   },
+   "passages_by_depth": {
+    "opinion": 4,
+    "explains": 45
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 49
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "A pull-up resistor draws current continuously whenever the line it holds is pulled low, so the habitual 10 kilohm pull-up is a permanent drain that a genuinely low-power design cannot afford.",
+   "quote_verbatim": "just absolutely pissing away energy, you know, with a 10K pull-up resistor",
+   "speaker": "Dave Jones",
+   "episode": 7,
+   "episode_title": "Love Robots and Pantyhose Screens",
+   "episode_url": "https://theamphour.com/the-amp-hour-7-love-robots-and-pantyhose-screens/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The upper bound on a pull-up value is set by the input leakage current of the pin it holds: the resistor should be raised as far as power saving demands, but not so far that leakage develops a significant voltage across it.",
+   "quote_verbatim": "up it to its maximum value, but watch your input leakage currents",
+   "speaker": "Dave Jones",
+   "episode": 10,
+   "episode_title": "Open Hardware and Self Publishing",
+   "episode_url": "https://theamphour.com/the-amp-hour-10-open-hardware-and-self-publishing/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "If a pull-up is too weak for the leakage current present, the node is no longer held at a defined level and drifts, which is a slow and difficult fault to track down.",
+   "quote_verbatim": "if you've got some big leakage current then and, and your, your pull-up resistor isn't small enough, you know, then you're, you'd be floating around a little bit",
+   "speaker": "Dave Jones",
+   "episode": 10,
+   "episode_title": "Open Hardware and Self Publishing",
+   "episode_url": "https://theamphour.com/the-amp-hour-10-open-hardware-and-self-publishing/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A high-impedance node held by a weak pull-up is perturbed by the act of probing it, so the symptom can vanish as soon as an instrument or a finger is brought near the pin; that disappearance is itself evidence of an inadequately pulled-up input.",
+   "quote_verbatim": "when you start touching, start touching things to the, the pins, you know, you start affecting the pins by probing them and your problem goes away",
+   "speaker": "Dave Jones",
+   "episode": 10,
+   "episode_title": "Open Hardware and Self Publishing",
+   "episode_url": "https://theamphour.com/the-amp-hour-10-open-hardware-and-self-publishing/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "USB signals a device's speed grade with static pull-up and pull-down resistors on the data lines rather than with a software negotiation, so the host learns the speed grade from which data line carries a pull-up before any protocol exchange occurs.",
+   "quote_verbatim": "which speed grade it is, is based on like pull-ups and pull-down resistors on different lines",
+   "speaker": "Dave Jones",
+   "episode": 51,
+   "episode_title": "Vafrous Video Vaniloquence",
+   "episode_url": "https://theamphour.com/the-amp-hour-51-vafrous-video-vaniloquence/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Configuration options that once required external logic to load into a device are now commonly set by strapping resistors: the chip pulls the pin internally and reads the level established by an external resistor at start-up.",
+   "quote_verbatim": "But now they just pull it internally and they say, well, just set a resistor and we'll figure out the rest.",
+   "speaker": "Dave Jones",
+   "episode": 128,
+   "episode_title": "Layout, CAD & Raspberry Pi - Kedogenous Kinetic Knowledge",
+   "episode_url": "https://theamphour.com/the-amp-hour-128-kedogenous-kinetic-knowledge/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An open-collector or open-drain output can only pull its node low, so it is inoperable without a pull-up resistor somewhere on the net to establish the high level.",
+   "quote_verbatim": "if it's an open collector, you need a pull-up",
+   "speaker": "Dave Jones",
+   "episode": 128,
+   "episode_title": "Layout, CAD & Raspberry Pi - Kedogenous Kinetic Knowledge",
+   "episode_url": "https://theamphour.com/the-amp-hour-128-kedogenous-kinetic-knowledge/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An NMOS pass device can only pull its output up to roughly a gate threshold below its supply, around four volts from a five volt rail, after which the gate turns off and the device behaves as a weak, poorly defined pull-up rather than an active driver.",
+   "quote_verbatim": "Because NMOS can only pull to 4 volts and then the gate turns off. Now it acts just kind of like a bad pull-up resistor.",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A node brought high through a resistor approaches the rail asymptotically rather than in a straight edge, so an RC rise is unsuitable where a signal must reach a valid logic high within a tight timing budget.",
+   "quote_verbatim": "if I did an RC, it wouldn't work. You know, it'd tail off too long to 5 volts.",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "An input left without a defined pull-up returns whatever the surrounding environment imposes on it, so a read of a floating line yields ground, a high, or ambient radio-frequency pickup, and the result changes with the electromagnetic surroundings of the wiring.",
+   "quote_verbatim": "you would do a read cycle and either it'd be ground or high or whatever RF it had picked up",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "I2C is less robust than SPI because its high level is produced by a resistor working against the capacitance of the bus, so an incorrectly chosen pull-up leaves the line vulnerable to interference; an SPI line is driven high and low by a totem-pole output and needs no pull-up at all.",
+   "quote_verbatim": "you've got the capacitance of the line. If you don't choose your correct pull-up resistor, you can get interference",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "An open-collector bus is asymmetric: the falling edge is driven by a transistor and is nearly instantaneous, while the rising edge is produced only by the pull-up charging the line, so on a scope the two edges of the same signal have visibly different shapes.",
+   "quote_verbatim": "I squared C is an open collector output, essentially. And to pull the line high, you're relying on that pull-up resistor.",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A large share of I2C bring-up failures trace to the pull-up value rather than to the protocol or the addressing, and values of 10 kilohms and 5 kilohms are common cases of a pull-up too weak for the bus in question.",
+   "quote_verbatim": "A lot of I squared C problems come down to you. You've chosen the wrong pull-up resistor value.",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A working default for an I2C pull-up is about 2 kilohms, and dropping to 1 kilohm is a legitimate diagnostic step when a bus is marginal.",
+   "quote_verbatim": "the industry standard value is 2K. That's, like, you know, recommended. But you can even lower it down to a K.",
+   "speaker": null,
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A pull-up exists to inject a controlled current from the rail into a node that would otherwise float once the driving device stops pulling it low; the resistor rather than a direct connection to the rail is what makes the current controlled and allows the driver to overpower it.",
+   "quote_verbatim": "you have this pull-up resistor contributing current from the power rail, but you don't want to have it actually shorted to the power rail. You want to have, you know, some kind of controlled amount of current being injected into that line",
+   "speaker": "Chris Gammell",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Lowering the pull-up value increases the current available to charge the node, which shortens the rise time and reduces timing-marginal behaviour on the bus.",
+   "quote_verbatim": "So a lower value pull-up resistor, the better it is, and the faster it's going to pull it up.",
+   "speaker": "Chris Gammell",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The reason higher pull-up values are used at all is power: a very low value injects a large current every time the line is held low, which either burns power directly or shortens battery life, which is why practical pull-ups cluster in the 2 kilohm to 10 kilohm range.",
+   "quote_verbatim": "the reason people use higher values in the first place is power",
+   "speaker": "Chris Gammell",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Breadboard and flying-wire construction adds both stray capacitance and antenna-like pickup to a bus, so a prototype built that way needs a lower pull-up value than the same circuit would on a finished board.",
+   "quote_verbatim": "when you've got breadboards and wires hanging everywhere, you've got capacitance and you've got a big antenna",
+   "speaker": "Dave Jones",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A reset pin held only by the microcontroller's internal pull-up is vulnerable to being disturbed by mains-frequency coupling and touch; fitting an external pull-up of the order of 10 kilohms puts a far lower and better defined impedance on the pin.",
+   "quote_verbatim": "Are you using the internal pull-up resistor in the chip for the reset pin? I'd be, like, really, like, whacking a 10K on there or something",
+   "speaker": "Dave Jones",
+   "episode": 288,
+   "episode_title": "Call In Show #3",
+   "episode_url": "https://theamphour.com/288-call-in-show-3/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Because every device on an open-drain bus can only output a zero against a shared pull-up, any node on an I2C bus can force bits low at will; this wired-AND behaviour means a single misbehaving or hostile device can corrupt an address on the wire and impersonate a peripheral.",
+   "quote_verbatim": "since there's a pullup resistor there and everything is, you know, just basically outputting a zero when it's communicating, then you can corrupt the address",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A pull-up must be referenced to a rail whose voltage is actually known: pulling a microcontroller input up to USB VBUS on the assumption that VBUS is always five volts destroys the pin once power delivery negotiates VBUS up to twenty volts.",
+   "quote_verbatim": "if you pull it up to VBUS, which you assume is five volts all the time, when you set up VBUS to be 20 volts, you can start frying inputs, input pins on your microcontrollers",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A pull-up of a known value working against another known resistance produces a predictable intermediate voltage rather than a logic level, and a 3.3 kilohm pull-up that yields roughly half the rail can be exploited to distinguish several inputs on a single pin by the voltage each one produces.",
+   "quote_verbatim": "the Heiko standard has, like, a 3K3 pull-up or something. So it generates, like, a half-rail voltage.",
+   "speaker": "Dave Jones",
+   "episode": 343,
+   "episode_title": "Road trip to the deep space network",
+   "episode_url": "https://theamphour.com/343-road-trip-to-the-deep-space-network/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An NMOS inverter is a single switching transistor working against a pull-up rather than a complementary totem-pole pair, so it draws current continuously whenever its output is held low and burns more power than the equivalent CMOS stage.",
+   "quote_verbatim": "An NMOS inverter uses, it doesn't use a totem pole arrangement. It uses a pull up, effectively a pull up resistor.",
+   "speaker": "Dave Jones",
+   "episode": 351,
+   "episode_title": "The Automation Amish",
+   "episode_url": "https://theamphour.com/351-the-automation-amish/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "CMOS logic scaled where TTL could not because CMOS gates are built only from transistors and require no on-die pull-up resistors, and resistors occupy a physically large area of die compared with a transistor.",
+   "quote_verbatim": "You don't need the resistance. You don't need pull-up resistors.",
+   "speaker": "Dave Jones",
+   "episode": 361,
+   "episode_title": "An Interview with Ken Shirriff",
+   "episode_url": "https://theamphour.com/361-an-interview-with-ken-shirriff/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "An I2C bus in its entirety is two wires and two pull-up resistors, one on the clock line and one on the data line.",
+   "quote_verbatim": "Dude, it's two wires, two pull-up resistors.",
+   "speaker": "Dave Jones",
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The standing first move when troubleshooting an I2C bus is to check the pull-up resistors and, when in doubt, lower their value.",
+   "quote_verbatim": "thou shalt check pull-up resistors. Thou shalt lower the value of their pull-up resistors.",
+   "speaker": "Dave Jones",
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The Philips I2C standard gives 2.2 kilohms as the nominal reference pull-up value, and longer lines, more devices and higher bus capacitance all push the appropriate value below that figure.",
+   "quote_verbatim": "The standard, i.e. the Phillips standard, calls for 2k2 as a nominal reference pull-up value.",
+   "speaker": "Dave Jones",
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Bus capacitance is what turns an oversized pull-up into a failure: the line takes too long to charge, the rising edge loses its sharpness, and receivers no longer see clean logic transitions.",
+   "quote_verbatim": "if you've got a lot of capacitance on your line, it takes time to charge up and you don't get a nice sharp edge and all hell breaks loose",
+   "speaker": "Dave Jones",
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Wiring buttons to the positive rail against pull-down resistors, rather than to ground against pull-ups, means the resistors carry current only while a button is actually pressed, which removes the standing pull-up current from a battery device's sleep state.",
+   "quote_verbatim": "I have pull down resistors, and then the buttons are connected to VCC so that you're not burning a pull up resistor while it's off",
+   "speaker": "Mike Szczys",
+   "episode": 403,
+   "episode_title": "An Interview with Mike Szczys",
+   "episode_url": "https://theamphour.com/403-an-interview-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The choice between a pull-up and a pull-down topology can be forced by the silicon: AVR parts provide internal pull-ups only, whereas ARM parts typically offer internal pull-downs as well, so a pull-down scheme on an AVR requires external resistors.",
+   "quote_verbatim": "the AVRs don't have a pull down resistor internally like an arm would",
+   "speaker": "Mike Szczys",
+   "episode": 403,
+   "episode_title": "An Interview with Mike Szczys",
+   "episode_url": "https://theamphour.com/403-an-interview-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Confirming that every open-collector net carries a pull-up is a standard item on a pre-fabrication PCB checklist, on the principle that routine mechanical verification catches omissions that the designer already understands perfectly well.",
+   "quote_verbatim": "are there pull-ups on an open collector?",
+   "speaker": "Chris Gammell",
+   "episode": 428,
+   "episode_title": "Setting Fire To The Tracks",
+   "episode_url": "https://theamphour.com/428-setting-fire-to-the-tracks/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A totem-pole CMOS output has no pull-up resistor because it relies on its upper transistor to drive the node high, so degradation of that transistor leaves the output able to pull low but not high, and the part fails progressively rather than all at once.",
+   "quote_verbatim": "the upper transistor might've failed. So it can't pull up.",
+   "speaker": "Dave Jones",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "An external pull-up can rescue a failed totem-pole output, but the value is dictated by the speed and capacitance of the net: a 25 MHz clock line with substantial bus capacitance requires a pull-up as low as 100 ohms, which draws on the order of 33 milliamps.",
+   "quote_verbatim": "The fix is to actually add a pull up resistor to add a low value pull up red bit because it's 25 megahertz, which is really fast. And there's lots of capacitance on the bus. You have to add a low value, a hundred ohm, a hundred ohm pull up.",
+   "speaker": "Dave Jones",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Digital inputs carry a maximum input transition-time specification, of the order of 500 nanoseconds for ordinary 74HC logic, and a resistor-driven edge slower than that voids the guarantee: the input may enter a metastable state and a clock input may oscillate.",
+   "quote_verbatim": "there will be maximum slew rate specs for inputs on chips, like, you know, CMOS digital inputs. And if you exceed, like for regular 7.4 HC or something, it's like 500 nanoseconds",
+   "speaker": "Dave Jones",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The Intel C2000 clock-output degradation affected every manufacturer that had designed the processor in, and the remedy across those products was the same external pull-up resistor on the affected clock line rather than a silicon replacement.",
+   "quote_verbatim": "figure out a workaround like this, which is the pull-up resistor",
+   "speaker": "Dave Jones",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A design targeting battery life measured in years cannot leave any pull-up resistor energised during sleep, because the standing current through even one such resistor dominates the sleep budget.",
+   "quote_verbatim": "if you have any pull-up resistors that are active in your sleep mode and you're thinking about battery life in terms of years, you're out of luck",
+   "speaker": null,
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A design review of a safety-relevant board explicitly checks that every strapping pin is bootstrapped correctly by its pull-up resistors, so that the hardware lands in a safe configuration even if the wrong firmware is loaded and no output is set early in the code.",
+   "quote_verbatim": "you're just checking that like, right. Everything is bootstrapped correctly in terms of right. Pull up resistors",
+   "speaker": null,
+   "episode": 584,
+   "episode_title": "Software for Rockets with Charles Aylward",
+   "episode_url": "https://theamphour.com/584-software-for-rockets-with-charles-aylward/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "An under-strength pull-up is a hard fault to localise even for an experienced hardware team: on a server-class board it took multiple approaches to establish that the cause of the misbehaviour was simply a pull-up resistor that was not strong enough.",
+   "quote_verbatim": "figuring out that a pull up resistor was not strong enough",
+   "speaker": "Laura Abbott",
+   "episode": 590,
+   "episode_title": "Finding Hardware Flaws with Laura Abbott",
+   "episode_url": "https://theamphour.com/590-finding-hardware-flaws-with-laura-abbott/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The most frequent cause of a push button that fails to read correctly on a microcontroller input is that the internal pull-up was never enabled in firmware, leaving the pin floating; contact bounce is the other usual explanation.",
+   "quote_verbatim": "they either forgot to turn on the pull up on the input or they got confused by the simulator simulating the bouncing of the pin of the push button",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The level on a node is the resolution of everything attached to it rather than the intent of any one component, so where several pull-ups and pull-downs share a net their combined effect determines the resulting logic level.",
+   "quote_verbatim": "it could be like that you have a few pull-up resistors and pull-down resistors. And you have to sort of see which signal you end up having on that set of pins",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The maximum speed of an I2C bus is set by an RC time constant: the roughly 2.2 kilohm pull-up charging the capacitance of the line fixes the slew rate of the rising edge, and that slew rate fixes the bus speed. Data rates far above the passive limit require an active pull-up rather than a resistor.",
+   "quote_verbatim": "the speed limit of an I squared C bus, you should know this, right? This is bread and butter. Is that it uses a, usually a 2.2 K pull-up resistor, right? But then the capacitance of your line limits the, you know, you've got, then you've got an RC charge constant, time constant, and that limits the slew rate and that limits the speed of your bus.",
+   "speaker": "Dave Jones",
+   "episode": 631,
+   "episode_title": "A Noisy Rude Bus",
+   "episode_url": "https://theamphour.com/631-a-noisy-rude-bus/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Pull-ups and pull-downs of differing values can encode which of several buttons is pressed onto a single conductor, allowing more signals to be carried than there are wires; the same line can then be time-shared with another function such as LED data when the buttons are not being sampled.",
+   "quote_verbatim": "It uses the pull-ups and pull-downs to tell you which buttons pressed.",
+   "speaker": "Kevin Cappuccio",
+   "episode": 689,
+   "episode_title": "A Jumperless Breadboard with Kevin Cappuccio",
+   "episode_url": "https://theamphour.com/689-a-jumperless-breadboard-with-kevin-cappuccio/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Toggling an internal pull-up on and off distinguishes a node that is genuinely driven low from one that is merely tri-stated or floating: a truly grounded pin stays low with the pull-up enabled, whereas a floating pin follows the pull-up.",
+   "quote_verbatim": "if you're reading something and you turn the, you know, the internal pull-up on and it stays low, then, you know, it's like actually grounded",
+   "speaker": "Kevin Cappuccio",
+   "episode": 689,
+   "episode_title": "A Jumperless Breadboard with Kevin Cappuccio",
+   "episode_url": "https://theamphour.com/689-a-jumperless-breadboard-with-kevin-cappuccio/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "An internal microcontroller pull-up is a weak resistor, on the order of 50 kilohms, and against the capacitance of a real node it limits data rates severely: reading a phototransistor through one held throughput below a thousand bits per second.",
+   "quote_verbatim": "I turned on the internal pullup to use the photo transistor. And it was too slow. It was only able to do like less than a thousand bits per second.",
+   "speaker": null,
+   "episode": 697,
+   "episode_title": "LEDs Everywhere with Tim from Mitxela",
+   "episode_url": "https://theamphour.com/697-leds-everywhere-with-tim-from-mitxela/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Internal pull-ups on GPIO pins tied to the same node act in parallel, so enabling several at once produces an effective resistance of roughly a fifth of one pull-up and correspondingly faster edges and higher throughput.",
+   "quote_verbatim": "I could turn all of all of the pullups on in parallel and then increase the throughput. Like it's just, Oh, instead of being like a 50 K equivalent, it's now like a 10 K or something.",
+   "speaker": null,
+   "episode": 697,
+   "episode_title": "LEDs Everywhere with Tim from Mitxela",
+   "episode_url": "https://theamphour.com/697-leds-everywhere-with-tim-from-mitxela/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  }
+ ],
+ "attribution_notes": [
+  "Episode 222: the bundle labels these passages Chris Gammell but attribution_reliable is false and the content is unambiguously the guest, Bil Herd, recounting his own Z80 clock work ('to do the Z80, we had to make our own clock', 'my boss'). Attributed to Bil Herd.",
+  "Episode 274: the overlapping passage windows swap the Dave Jones and Chris Gammell labels on identical text. The tutorial explanation of current injection, rise time and the power trade-off is Chris Gammell's (his own turn says 'Like Dave said, it's an open collector'); the '2K industry standard, lower it to 1K' turn sits between two speakers in the merged window and could not be settled, so its speaker is null.",
+  "Episode 396: the golden-rule and Philips-standard passages carry both host labels across overlapping windows; the 2k2 reference value and the open-collector explanation continue Dave Jones's turn ('When in doubt, throw it out') and are attributed to him.",
+  "Episode 527: attribution_reliable is false and the sleep-mode pull-up remark could belong to either the host or the guest Matt Liberty; speaker left null.",
+  "Episode 573: the bundle labels the passage Chris Gammell, but the content is the guest describing assembling his own STM32 reference material. Speaker left null rather than guessed.",
+  "Episode 584: attribution_reliable is false and the bootstrap-checking line is part of a host question answered by Charles Aylward, so the speaker is left null.",
+  "Episode 697: the bundle labels the passage Dave Jones, but the content is plainly the guest from Mitxela describing his own charlieplexed board and internal pull-ups. Speaker left null rather than mislabelled.",
+  "Episode 636 passage on resistor networks was dropped: attribution unreliable and the content is resistor packaging, which belongs to the general resistor article."
+ ]
+}

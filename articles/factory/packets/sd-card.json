@@ -1,0 +1,546 @@
+{
+ "concept": "sd-card",
+ "name": "SD Card",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "sd-card"
+   ],
+   "children": [
+    "fat-filesystem"
+   ],
+   "neighbors": []
+  },
+  "stats": {
+   "episodes": 77,
+   "mentions": 135,
+   "explains": 36,
+   "opinions": 21,
+   "candidate_episode_count": 67,
+   "candidate_mention_count": 107,
+   "gated_out": 2,
+   "gated_out_by_concept": [
+    [
+     "fat-filesystem",
+     2
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 7,
+   "speakers": [
+    [
+     "Dave Jones",
+     22
+    ],
+    [
+     "Chris Gammell",
+     12
+    ],
+    [
+     "Piotr Esden-Tempski",
+     4
+    ],
+    [
+     "Eric Van Wyk",
+     2
+    ],
+    [
+     "Jay Carlson",
+     2
+    ],
+    [
+     "Mike Harrison",
+     2
+    ],
+    [
+     "Jeff Keyzer",
+     1
+    ],
+    [
+     "Elecia White",
+     1
+    ],
+    [
+     "Marcus Schappi",
+     1
+    ],
+    [
+     "Brandon Harris",
+     1
+    ],
+    [
+     "David Kronstein",
+     1
+    ],
+    [
+     "Bart Dring",
+     1
+    ],
+    [
+     "Greg Davill",
+     1
+    ],
+    [
+     "Florin Of Voltlog",
+     1
+    ],
+    [
+     "Uri Shaked",
+     1
+    ],
+    [
+     "Lukas Henkel",
+     1
+    ],
+    [
+     "Jason Kridner",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 50,
+    "child": 5
+   },
+   "passages_by_depth": {
+    "opinion": 21,
+    "explains": 34
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 55
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "An SD card is not raw flash but a managed device: a controller inside the card performs wear levelling and block remapping that the host cannot see or schedule, so the time an individual write takes is not deterministic.",
+   "quote_verbatim": "flash is unpredictable how long it will take because they have, like, load balancing stuff inside the SD cards",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The internal housekeeping of an SD card can stall the interface for far longer than a normal transfer; pauses on the order of 200 milliseconds have been observed while the card performs its own management work.",
+   "quote_verbatim": "I've seen really weird stuff happening where the whole SD card is just freezing for 200 milliseconds because it's thinking",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A FAT filesystem layered on an SD card adds its own latency spikes on top of the card's internal behaviour, because updating a file also forces a rewrite of the allocation table.",
+   "quote_verbatim": "especially if you have a FAT file system, that can take also time when you have to rewrite the FAT table",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Because the duration of an SD card write is unbounded from the host's point of view, a logging task that writes to a card cannot be run cooperatively alongside time-critical control code; it must be preemptible so that higher-priority tasks such as actuator control still meet their deadlines.",
+   "quote_verbatim": "logging to an SD card. This can take forever",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "An SD card can be driven over SPI, which lets a filesystem layer sit on top of a generic SPI driver rather than on a dedicated card controller; the hardware abstraction below the filesystem is just the SPI peripheral and its pin assignment.",
+   "quote_verbatim": "your fat file system is talking to the actual SD card. You do that at the spy layer",
+   "speaker": "Chris Gammell",
+   "episode": 514,
+   "episode_title": "Focus, Dammit",
+   "episode_url": "https://theamphour.com/514-focus-dammit/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "SPI mode needs only four pins and is available on essentially every microcontroller, which makes it the portable way to attach a card; the cost is that it forgoes the wider, faster native SD bus.",
+   "quote_verbatim": "Four pins for spy. And everyone's going to have support for spy.",
+   "speaker": "Chris Gammell",
+   "episode": 514,
+   "episode_title": "Focus, Dammit",
+   "episode_url": "https://theamphour.com/514-focus-dammit/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Adding mass storage to a microcontroller design is cheap in effort because the card can be talked to over SPI, so the presence of file storage in a specification is not on its own a reason to move up to a larger operating system.",
+   "quote_verbatim": "So SD cards, you can spy to them if you're willing to.",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Card-reader and FAT components pulled into a bare RTOS are nominally free but are unvetted and may need porting to the target; the same function taken from a vendor-backed hardware abstraction layer arrives already exercised across multiple silicon families.",
+   "quote_verbatim": "You get the SD card reader for quote unquote free, but like, it's not vetted by all of the different vendors and it's, you know, you might have to port it to your system.",
+   "speaker": "Chris Gammell",
+   "episode": 514,
+   "episode_title": "Focus, Dammit",
+   "episode_url": "https://theamphour.com/514-focus-dammit/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Modifying a card's contents from a desktop computer -- deleting, renaming or adding files -- can leave the embedded device that owns the card unable to write to it again, because the device depends on the on-card structures being exactly as it left them.",
+   "quote_verbatim": "if you touch any of the files on the SD card, if you delete a video file, if you, um, uh, rename them, if you, uh, if you copy another file on there, if you do anything at all, touch that card, write to it in any way, shape or form",
+   "speaker": "Dave Jones",
+   "episode": 244,
+   "episode_title": "The Art Of Staying Interested In Electronics - Exponible Electronics Ennui",
+   "episode_url": "https://theamphour.com/244-the-art-of-staying-interested-in-electronics-exponible-electronics-ennui/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The failure is silent and intermittent: the device continues to display every indication of normal operation while nothing is committed to the card, so the loss is only discovered when the card is next read.",
+   "quote_verbatim": "The camera can screw up, not always, but it can completely screw up and refuse to record video to that SD card, even though it's telling you",
+   "speaker": "Dave Jones",
+   "episode": 244,
+   "episode_title": "The Art Of Staying Interested In Electronics - Exponible Electronics Ennui",
+   "episode_url": "https://theamphour.com/244-the-art-of-staying-interested-in-electronics-exponible-electronics-ennui/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Data written to a card is not known to exist until it has been read back; the only defence against silent write failure is to verify by reading, on the same principle that an unrestored backup is not a backup.",
+   "quote_verbatim": "a backup isn't really a backup until you try and back it up until you try and restore it",
+   "speaker": "Dave Jones",
+   "episode": 244,
+   "episode_title": "The Art Of Staying Interested In Electronics - Exponible Electronics Ennui",
+   "episode_url": "https://theamphour.com/244-the-art-of-staying-interested-in-electronics-exponible-electronics-ennui/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Read-back verification after writing a card is routinely skipped because modern flash almost never fails visibly, which is precisely what makes the rare failure so expensive when it happens.",
+   "quote_verbatim": "You write your file to your SD card, and you don't bother doing a verification check.",
+   "speaker": null,
+   "episode": 563,
+   "episode_title": "Grumpy Collaboration",
+   "episode_url": "https://theamphour.com/563-grumpy-collaboration/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Removing power from a running system whose root filesystem is on an SD card can corrupt that filesystem; how often this is actually seen in the field varies sharply between practitioners, so it is a risk to be designed against rather than a certainty.",
+   "quote_verbatim": "using an SD card is always, oh, it's so unreliable and blah, blah, blah. If you turn off the power, it'll corrupt it",
+   "speaker": null,
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A card-based firmware update path should be validated destructively by pulling the card out part-way through the update and confirming the device still boots, rather than by assuming the write completes.",
+   "quote_verbatim": "I've pulled out the SD card during the update and it just happily",
+   "speaker": "Dave Jones",
+   "episode": 377,
+   "episode_title": "Debugger vs Printeffer",
+   "episode_url": "https://theamphour.com/377-debugger-vs-printeffer/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Streaming a long job to a machine over USB risks buffer underruns that corrupt the output; running the same job from a card in the machine removes the host link from the real-time path.",
+   "quote_verbatim": "you've got to print directly from the SD card because it can't stream from the USB. It loses the buffer sync and, you know, buffer underruns and screw things up",
+   "speaker": "Dave Jones",
+   "episode": 94,
+   "episode_title": "Gnomic Gazumping Gobemouche",
+   "episode_url": "https://theamphour.com/the-amp-hour-94-gnomic-gazumping-gobemouche/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Putting a micro SD card on a motion-control module decouples program size from the controller's RAM and from the reliability of a streaming link: the job is uploaded once over the network onto the card and then executed locally.",
+   "quote_verbatim": "you have virtually infinite capacity to serve material from an SD card through that web page",
+   "speaker": "Bart Dring",
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where a product already has a card slot, distributing firmware as a file on the card is chosen over a wireless update path because the wireless route requires building an update stack that does not otherwise exist.",
+   "quote_verbatim": "It's an SD card. So you put on the micro SD card and put it in.",
+   "speaker": "Dave Jones",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The economics of card-based updating rest on vendor-supplied code: the silicon vendor already ships both a card-reading library and a firmware bootloader, so the update mechanism is largely integration rather than development.",
+   "quote_verbatim": "ST already provide a library that reads an SD card. Right. So they've done that. And also, uh, they've already written the bootloader stuff for loading firmware.",
+   "speaker": "Dave Jones",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A manual update that requires opening a battery cover and removing the card is an acceptable burden for a product whose firmware is revised rarely; update ergonomics should be weighted by expected update frequency.",
+   "quote_verbatim": "you don't upgrade firmware all the time. So having to, you know, take the battery cover off and take out the SD card is not really, you know, it's hardly a big deal",
+   "speaker": "Dave Jones",
+   "episode": 364,
+   "episode_title": "The Endless Y2K",
+   "episode_url": "https://theamphour.com/364-the-endless-y2k/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Loading application firmware from a card makes every application-level defect field-recoverable; the residual unrecoverable risks are confined to the bootloader itself and to the hardware.",
+   "quote_verbatim": "Any firmware issue I can fix with the soft, with the SD card update.",
+   "speaker": "Dave Jones",
+   "episode": 370,
+   "episode_title": "Alternate Info Sources",
+   "episode_url": "https://theamphour.com/370-alternate-info-sources/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Booting firmware from a removable card means a bad image is repaired by rewriting the card rather than by returning the unit, which makes it far less risky to ship early hardware with immature software.",
+   "quote_verbatim": "the firmware started an SD card just like a Raspberry Pi, so updating it is no problem",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Small-batch provisioning of card-booted devices is done by cloning one prepared card image to every unit and then applying only the per-unit configuration, such as a channel assignment, afterwards.",
+   "quote_verbatim": "all I've got to do is copy the SD card over to each one and program, and individually set up the channel on each one",
+   "speaker": "Dave Jones",
+   "episode": 319,
+   "episode_title": "Photon Rich, Cash Poor",
+   "episode_url": "https://theamphour.com/319-photon-rich-cash-poor/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Handing out prepared card images with a fixed single-board computer target removes the first hours of a hands-on course, which otherwise go on reconciling drivers and tool installations across each attendee's own laptop.",
+   "quote_verbatim": "you can even rock up somewhere and hand out SD cards and plug them in and go",
+   "speaker": "Dave Jones",
+   "episode": 242,
+   "episode_title": "Can't We All Just Get Arduino? - Tardiloquent Trademark Tirade",
+   "episode_url": "https://theamphour.com/242-cant-we-all-just-get-arduino-tardiloquent-trademark-tirade/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Card-imaging tooling converged on cross-platform writers, replacing the earlier situation in which the procedure for writing a boot image differed between Windows, Linux and macOS.",
+   "quote_verbatim": "There's a good utility called etcher.io that is multi-platform.",
+   "speaker": null,
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Boards designed around a keyboard-and-monitor first boot must have their headless configuration written into the card image before first power-up; discovering the requirement afterwards means re-imaging the card repeatedly.",
+   "quote_verbatim": "you better get that config file, right? Or you're going to be rewriting your SD card a bunch",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "An application processor with a mature boot ROM and build-system support can bring up Linux from an SD card with no on-board storage at all, which is why boot-media and build-system support matter as much as the silicon when selecting such a part.",
+   "quote_verbatim": "I plugged an SD card into it. I turned it on and it just booted right up",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Consumer SD cards are judged insufficiently reliable for equipment left running unattended; industrial-grade cards are a genuine step up, but for industrial environments the storage is more often moved onto the board itself.",
+   "quote_verbatim": "SD cards are just not reliable enough. You know, there's like the industrial ones. Okay. Those are better.",
+   "speaker": null,
+   "episode": 563,
+   "episode_title": "Grumpy Collaboration",
+   "episode_url": "https://theamphour.com/563-grumpy-collaboration/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The Lite variant of a compute module omits on-board managed flash entirely, so the carrier board must provide an external card socket; the non-Lite variants carry soldered flash instead.",
+   "quote_verbatim": "There is the CM4, the compute module for Lite. And that actually has no solid state on board. And so then you actually have to have an external SD card.",
+   "speaker": null,
+   "episode": 563,
+   "episode_title": "Grumpy Collaboration",
+   "episode_url": "https://theamphour.com/563-grumpy-collaboration/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Experience of shipping a card-booted embedded Linux consumer product, where cards died in the field and an operating system and software stack had to be maintained, leads to a preference for a microcontroller with a wireless module for projects that do not genuinely need Linux.",
+   "quote_verbatim": "I've been through the Ninja blocks and I've learned my lessons when it comes to SD cards that die, having projects where you actually have to manage an operating system and a software stack",
+   "speaker": "Marcus Schappi",
+   "episode": 189,
+   "episode_title": "An Interview with Marcus Schappi - Kit Ketch Kenophobia",
+   "episode_url": "https://theamphour.com/189-an-interview-with-marcus-schappi-kit-ketch-kenophobia/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A user-accessible card slot punches an opening through the enclosure and therefore through the isolation barrier, which is why an exposed slot is difficult to reconcile with high-voltage safety qualification on measurement instruments.",
+   "quote_verbatim": "that one was a bit difficult because we had attempted to expose the SD card to the user",
+   "speaker": "Eric Van Wyk",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Calculated isolation margin is not the same as tested margin: a design that had margin on paper withstood only two and a half seconds of a required five-second high-voltage exposure after the degradation caused by earlier tests in the sequence, and the user-accessible card slot was sealed as a result.",
+   "quote_verbatim": "So, you have to survive that for five seconds. We survived it for two and a half after, uh, degradation from previous testing.",
+   "speaker": "Eric Van Wyk",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The safety qualification sequence preconditions the disassembled unit at 93 percent relative humidity for 48 hours, reassembles it, wraps it in foil and applies a 5,400 volt stress, so any aperture in the enclosure is judged after the insulation has absorbed moisture rather than when dry.",
+   "quote_verbatim": "they put in a sauna for 48 hours. So, it's 93% relative humidity",
+   "speaker": "Eric Van Wyk",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A rugged battery-powered logger can keep the card entirely inside the sealed enclosure and expose only a USB port for offload, which avoids both the ingress path of a user-accessible slot and the handling wear of repeated card insertion.",
+   "quote_verbatim": "just takes a GPS feed, records it to an SD card inside. Um, and then you can download the logs later over USB.",
+   "speaker": "Greg Davill",
+   "episode": 473,
+   "episode_title": "An Interview with Greg Davill",
+   "episode_url": "https://theamphour.com/473-an-interview-with-greg-davill/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The volume at which SD cards are manufactured can make a complete, controller-managed card cheaper than the bare flash die it contains, to the point that finished cards are reflowed directly onto product boards as the storage component.",
+   "quote_verbatim": "I've seen the SD cards soldered directly to the boards. Actually reflowed directly to the boards because it's cheaper than buying the raw chip.",
+   "speaker": "Dave Jones",
+   "episode": 690,
+   "episode_title": "Clap on, clap off, lights flicker",
+   "episode_url": "https://theamphour.com/690-clap-on-clap-off-lights-flicker/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Consumer products are found using an ordinary SD card fixed permanently to the board with silicone rather than a socket, taking the card's cost advantage while removing the socket, its cost and its mechanical failure path.",
+   "quote_verbatim": "the storage mechanism was a SD card that was, like, RTV'd to the board",
+   "speaker": "Chris Gammell",
+   "episode": 690,
+   "episode_title": "Clap on, clap off, lights flicker",
+   "episode_url": "https://theamphour.com/690-clap-on-clap-off-lights-flicker/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Full-size SD sockets have become the harder part to source as the market moved to micro form factors, so a design that wants the full-size outline must plan for connector availability.",
+   "quote_verbatim": "Everything switched to mini or micro or whatever it is.",
+   "speaker": null,
+   "episode": 681,
+   "episode_title": "Compact High Speed Design with Lukas Henkel",
+   "episode_url": "https://theamphour.com/681-compact-high-speed-design-with-lukas-henkel/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The SD card outline is large enough to be used as a carrier for a complete system-in-package: earlier commercial wireless cards fitted into it were restricted in compute and closed to user code, whereas a system-in-package built into the same outline can run Linux and arbitrary firmware.",
+   "quote_verbatim": "These things have been around for quite some time. But they are quite limited in their compute power. And also you can't run custom code on that.",
+   "speaker": "Lukas Henkel",
+   "episode": 681,
+   "episode_title": "Compact High Speed Design with Lukas Henkel",
+   "episode_url": "https://theamphour.com/681-compact-high-speed-design-with-lukas-henkel/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Simulating a card faithfully means synthesising a real FAT image from the supplied files, because the firmware under simulation issues the same filesystem reads it would issue against physical media.",
+   "quote_verbatim": "we have a FAT file system driver. So if you simulate an SD card and upload files to that simulated SD card",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Logging instruments write to the card in plain FAT rather than a private format so that the card can be pulled and read directly on any computer without a vendor tool.",
+   "quote_verbatim": "that's just a fat format so it actually logs data to the SD card and, yeah, it's just a standard fat format",
+   "speaker": "Dave Jones",
+   "episode": 690,
+   "episode_title": "Clap on, clap off, lights flicker",
+   "episode_url": "https://theamphour.com/690-clap-on-clap-off-lights-flicker/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Holding a device's operating system on a removable card instead of in on-chip flash makes the entire firmware image trivially extractable by anyone who opens the case and reads the card.",
+   "quote_verbatim": "it actually has an SD card in there containing the operating system. It's not built into the chip.",
+   "speaker": "Dave Jones",
+   "episode": 646,
+   "episode_title": "Fan Fanboys",
+   "episode_url": "https://theamphour.com/646-fan-fanboys/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Cards displace obsolete removable media in reimplementations of old systems because the original drives and discs are both unreliable and hard to buy, and one card holds what previously required a shelf of media and minutes of load time.",
+   "quote_verbatim": "The original hardware is unreliable. And the floppy drives are crap.",
+   "speaker": "Jeff Keyzer",
+   "episode": 47,
+   "episode_title": "Apple HQ and Vintage Arcade Games - The Mothership Manifesto",
+   "episode_url": "https://theamphour.com/theamphour47-the-mothership-manifesto/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Local card storage is what allows speech recognition to run entirely offline on a small board: a four gigabyte card carries a two gigabyte pronunciation dictionary against which spoken sentences are decomposed into phonemes.",
+   "quote_verbatim": "the board has a four gig SD card on which two gig is the dictionary",
+   "speaker": null,
+   "episode": 258,
+   "episode_title": "An Interview with Bertrand Irrisou and Gerald Friedland of Audeme",
+   "episode_url": "https://theamphour.com/258-an-interview-with-bertrand-and-gerald-of-audeme/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  }
+ ],
+ "attribution_notes": [
+  "Episode 258: attribution_reliable is false and speaker_repaired is Chris Gammell, but the description of the board's four gigabyte card and dictionary is the guest's answer; the episode has two guests and the content does not distinguish them, so speaker is null.",
+  "Episode 378: labelled Chris Gammell, but the exchange fuses host and guest turns and the imaging-utility recommendation cannot be assigned from content, so speaker is null.",
+  "Episode 438: attribution_reliable is false, but the passage is the guest's first-person account of his own controller firmware and its card interface, so Bart Dring is retained.",
+  "Episode 515: attribution_reliable is false on both passages, but the material is the guest's own account of his single-board-computer review and his embedded Linux write-up, so Jay Carlson is retained.",
+  "Episode 563: the speaker labels in this episode are internally inconsistent -- each fused window contains first-person statements belonging to both hosts -- so all claims drawn from it carry speaker null.",
+  "Episode 645: attribution_reliable is false and the passage fuses the guest's compute-module account with the hosts' replies about power-loss corruption; the corruption exchange cannot be assigned, so speaker is null.",
+  "Episode 681: the remark about full-size card sockets becoming scarce is the host's aside inside a guest passage and cannot be assigned from content, so speaker is null; the system-in-package claim is the guest's own project and is retained as Lukas Henkel."
+ ]
+}

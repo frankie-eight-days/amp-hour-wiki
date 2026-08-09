@@ -1,0 +1,482 @@
+{
+ "concept": "state-machine",
+ "name": "State Machine",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "state-machine"
+   ],
+   "children": [
+    "multithreading",
+    "real-time-control",
+    "thevenin-equivalent"
+   ],
+   "neighbors": []
+  },
+  "stats": {
+   "episodes": 36,
+   "mentions": 49,
+   "explains": 32,
+   "opinions": 3,
+   "candidate_episode_count": 32,
+   "candidate_mention_count": 41,
+   "gated_out": 25,
+   "gated_out_by_concept": [
+    [
+     "multithreading",
+     13
+    ],
+    [
+     "real-time-control",
+     8
+    ],
+    [
+     "thevenin-equivalent",
+     4
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 4,
+   "speakers": [
+    [
+     "Chris Gammell",
+     12
+    ],
+    [
+     "Dave Jones",
+     8
+    ],
+    [
+     "Mike Engelhardt",
+     2
+    ],
+    [
+     "Jeri Ellsworth",
+     1
+    ],
+    [
+     "Zach Barth",
+     1
+    ],
+    [
+     "Jason Cerundolo",
+     1
+    ],
+    [
+     "John Davis",
+     1
+    ],
+    [
+     "Julia Truchsess",
+     1
+    ],
+    [
+     "Dean Pick",
+     1
+    ],
+    [
+     "Matt Berggren",
+     1
+    ],
+    [
+     "Phillip Johnston",
+     1
+    ],
+    [
+     "Brian Amos",
+     1
+    ],
+    [
+     "Charles Aylward",
+     1
+    ],
+    [
+     "Benjamin Cabe",
+     1
+    ],
+    [
+     "Matt Venn",
+     1
+    ],
+    [
+     "Mark Palmeri",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 35
+   },
+   "passages_by_depth": {
+    "explains": 32,
+    "opinion": 3
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 35
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "An FPGA is a natural home for state machines, since the fabric implements transition logic directly in parallel hardware; conversely an FPGA that carries nothing but a soft processor core spends die area, package, cost and power to do what a microcontroller would have done, so the fabric should be earning its keep with logic such as state machines written in VHDL or Verilog.",
+   "quote_verbatim": "But if you're just running a soft core and that's it in your FPGA, you're basically wasting your time, money, you know, package, space, power, everything.",
+   "speaker": "Chris Gammell",
+   "episode": 141,
+   "episode_title": "FPGAs, Robots & Thermocouples - Wampum's Wavering Worth",
+   "episode_url": "https://theamphour.com/the-amp-hour-141-wampums-wavering-worth/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Before committing a maths-heavy algorithm to silicon it is worth prototyping it in fixed point to establish what precision and how many operations are actually required; the result can be modest enough that an eight-bit CPU sequenced by a small state machine can grind through the arithmetic.",
+   "quote_verbatim": "we're going to have to actually look at the algorithms very closely and first prototype them in fixed point and see what needs to be done",
+   "speaker": "Jeri Ellsworth",
+   "episode": 173,
+   "episode_title": "An Interview with Jeri Ellsworth - Intense Illusion Introduction",
+   "episode_url": "https://theamphour.com/173-an-interview-with-jeri-ellsworth-intense-illusion-introduction/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Some early LCD driver parts were not processors at all but hardwired state machines: the chip sequenced the display directly without executing instructions, which is why it needed no program memory or instruction set.",
+   "quote_verbatim": "But it wasn't actually a CPU. It was just a state machine, kind of.",
+   "speaker": "Dave Jones",
+   "episode": 180,
+   "episode_title": "An Interview with Dave Taylor - Multi-talented Meter Maker",
+   "episode_url": "https://theamphour.com/180-an-interview-with-dave-taylor-multi-talented-meter-maker/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The control logic inside a modern switching regulator is built from state machines rather than a processor, and in a four-switch buck-boost part that logic runs to many thousands of gates, every one of which is doing something; the complexity comes from coordinating N-channel FETs whose floating gate drivers need bootstrap voltages above the input or output rail depending on the operating mode.",
+   "quote_verbatim": "It's got state machines and it's got enough state machines to sink a battleship.",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A bootstrapped high-side gate driver cannot hold its boost capacitor charged if the converter stays in one steady switching mode, so the control state machine periodically forces a refresh: in one four-switch buck-boost part every tenth cycle commutates all four MOSFETs purely to recharge the boost capacitors.",
+   "quote_verbatim": "every 10th cycle, it will commutate all four MOSFETs to recharge the boost capacitor switches",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Speaker-independent voice recognition was shipped in 1988 on a 6804 microcontroller with only one to one and a half kilobytes of memory by moving the analysis off the part: the spectral work was done in advance and reduced to tables burned into the device, leaving the runtime code as a state machine that compares incoming data against those tables.",
+   "quote_verbatim": "So they've done all that research on the side and they've produced tables, right? Which are then programmed into the thing. And then I think it's just some sort of state machine that just operates like a state machine and it compares.",
+   "speaker": "Dave Jones",
+   "episode": 236,
+   "episode_title": "Questioning Everyday Prototyping - Verrucose Vehicle Vitilitigation",
+   "episode_url": "https://theamphour.com/236-questioning-everyday-prototyping-verrucose-vehicle-vitilitigation/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A microcontroller with no analogue-to-digital converter can still take in an audio signal if the signal is squared up externally into a pulse-width-modulated square wave, so the timing edges rather than sample amplitudes become the input to the recognition state machine.",
+   "quote_verbatim": "so it takes, takes the pulse width modulated input because it doesn't have an analog to digital converter",
+   "speaker": "Dave Jones",
+   "episode": 236,
+   "episode_title": "Questioning Everyday Prototyping - Verrucose Vehicle Vitilitigation",
+   "episode_url": "https://theamphour.com/236-questioning-everyday-prototyping-verrucose-vehicle-vitilitigation/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Some microcontrollers expose configurable state-machine peripherals, such as the SGPIO block and the state configurable timer, which run independently of the CPU and make their own decisions on bit patterns; this effectively allows software-defined peripherals, a small machine inside the larger part, without consuming processor cycles.",
+   "quote_verbatim": "they're both these sort of highly configurable state machines that run independently of the CPU. So it kind of gives you the ability to make sort of software-defined peripherals",
+   "speaker": null,
+   "episode": 265,
+   "episode_title": "A Security Update with Michael Ossmann",
+   "episode_url": "https://theamphour.com/265-a-security-update-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A state machine can legitimately be the bulk of a firmware code base: one production battery and power-negotiation firmware was structured around a single machine with roughly twenty-nine states, and that machine alone accounted for some 1,500 to 2,000 lines, the majority of the code.",
+   "quote_verbatim": "there's a big state machine is kind of the core of it. And it has something like 29 possible states. And the state machine itself is the majority of the code. I think that's like 1,500 to 2,000 lines of code",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The Paparazzi autopilot describes flight behaviour as \"blocks\", sequences of instructions in a domain-specific language in which sensor readings crossing a threshold cause a jump to another block; this is a state machine expressed as a small concurrent language rather than as hand-written control flow, and it lets the airframe reason about what it is doing rather than merely follow waypoints.",
+   "quote_verbatim": "you can read out sensors from the aircraft and tell it when the sensors reach a certain threshold, then jump to another block",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Industrial sequencing logic of the kind that runs conveyors and assembly lines is a large state machine at heart; writing the same behaviour as a pile of if-statements is possible but becomes too much to maintain, which is the practical argument for making the machine explicit.",
+   "quote_verbatim": "it would be like if statements. Right. But, uh, that's a little too much to maintain sometimes as well. Well, you know, uh, yeah, it would be a big state machine is, is what it is.",
+   "speaker": "John Davis",
+   "episode": 385,
+   "episode_title": "An Interview with John Davis",
+   "episode_url": "https://theamphour.com/385-an-interview-with-john-davis/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Software design patterns can in principle be applied to ladder logic, but the deployed reality on factory floors is a large quantity of poor code; the very simplicity of the ladder representation acts as a defence, because it limits how badly a corner case can be buried.",
+   "quote_verbatim": "In theory, you can use, um, uh, software design patterns, uh, in ladder logic in practice, you have no idea how much really bad code is running really.",
+   "speaker": "John Davis",
+   "episode": 385,
+   "episode_title": "An Interview with John Davis",
+   "episode_url": "https://theamphour.com/385-an-interview-with-john-davis/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Many bus-attached peripheral devices are not intelligent controllers but fixed state machines behind a set of registers, so they will neither recover from nor report an out-of-sequence access; the master must drive the documented sequence exactly, because there is nothing on the far end capable of interpreting intent.",
+   "quote_verbatim": "It's like a set of registers hanging off a bus. These are state machines, yeah. Yeah, exactly. You know, these aren't intelligent controllers.",
+   "speaker": "Dave Jones",
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Early consumer sound-playback chips had almost no logic: the triggering behaviour was selected by ticking options on a paper form that the vendor turned into mask configuration. The parts that followed were sequencers rather than true microcontrollers, closer to a state machine with fixed options than to a programmable CPU.",
+   "quote_verbatim": "the very first generation had almost no logic. You would, you know, put your sounds in the chip and then you had like a, uh, a paper form where you would check off the triggering options",
+   "speaker": "Julia Truchsess",
+   "episode": 424,
+   "episode_title": "An Interview with Julia Truchsess",
+   "episode_url": "https://theamphour.com/424-an-interview-with-julia-truchsess/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "In vehicle drivetrain control, cross-cutting conditions are handled by feeding them into the state machine as inhibit events rather than by scattering special cases through the code: a lean-angle limit, for example, raises an inhibit that changes the sequence or blocks a shift, and a flag must be clear before the machine will enter the engagement state.",
+   "quote_verbatim": "it might create like a, an inhibit, uh, event, uh, that might, you know, feed into, we do use state machines quite heavily. Um, so that kind of information can be used to change sequences or inhibit certain actions.",
+   "speaker": "Dean Pick",
+   "episode": 426,
+   "episode_title": "An Interview with Dean Pick",
+   "episode_url": "https://theamphour.com/426-an-interview-with-dean-pick/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A state machine that can reach a stalled or blocked state with no path out is a catastrophic defect in an ASIC, because there is no field fix: recovering means a new mask and a new spin at a cost in the region of ten million dollars, which is why formal verification is concentrated in designs where failure cannot be tolerated or cannot be corrected afterwards.",
+   "quote_verbatim": "one of the things that terrifies us is that we build a state machine into the ASIC that ends up getting stalled or blocked. Oh. And then there's no way of unblocking that. And we have to do a new spin.",
+   "speaker": null,
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Formal verification is an exercise in choosing the right property rather than in exhaustively describing the design: a whole command-dispatch pipeline may need only the single assertion that the read and write lines are never asserted at the same time, and a violation of that one property leads back to the bug in the dispatcher.",
+   "quote_verbatim": "the only thing I care about is that the read and the right line are never high at the same point. So I just put one assertion there.",
+   "speaker": null,
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Verifying a non-trivial block often requires building a second state machine whose job is to drive the formal testing of the first, so that different assumptions and assertions apply depending on the operating state the design under test is currently in.",
+   "quote_verbatim": "sometimes you have to build a state machine that, uh, handles the formal testing of, Oh, okay. Okay. Of another state machine. So that different assumptions or assertions are made depending on the current operating state.",
+   "speaker": null,
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Interactive engineering applications such as schematic and PCB tools share one architecture: a command queue that receives commands raised by user-interface events, a UI toolkit that renders the front end, an underlying state machine that processes the queued commands, and a data model that holds the design in memory and on disk.",
+   "quote_verbatim": "you've got a command queue that handles commands from UI events. Uh, you've got a UI framework or UI toolkit that builds the front end of that thing. And then you've got some underlying state machine that processes that, and you've got a data model",
+   "speaker": "Matt Berggren",
+   "episode": 471,
+   "episode_title": "An Interview with Matt Berggren",
+   "episode_url": "https://theamphour.com/471-an-interview-with-matt-berggren/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Firmware becomes testable off-target when hardware-dependent calls are confined to a driver layer instead of being scattered through the code; a decoding pipeline and the state machine that handles decoded messages can then be exercised on a host with an input data array, with no radio or target board present.",
+   "quote_verbatim": "there's a significant amount of that pipeline that I can test by just having an input data array that runs through the decoder and the state machine that handles the messages and things like that. I don't actually need the hardware to test that.",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A practical way to build such a fixture is to capture real traffic once off the hardware, store it as a C array in the test build, and replay it through the layers above the driver, which turns an intermittent over-the-air test into a repeatable one.",
+   "quote_verbatim": "I recorded some data coming over the radio, stored that in a C array, and then ran it through pieces of my code that were not, you know, that were separated from the driver layer, which talked to the hardware",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The first question to ask before reaching for a real-time operating system is whether a plain state machine would meet the requirement; for a small and well-bounded application it is the better option, and the RTOS decision is easier to make when the minimum requirements are known before the code base exists rather than being retrofitted to inherited firmware.",
+   "quote_verbatim": "for people that are thinking about an RTOS, I feel like the first thing is like, well, would a state machine do what you're really needing? It's like, if so, and it's really small, that might be the best option.",
+   "speaker": null,
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The choice is not binary: a range of scheduling structures exists between a bare state machine and a full real-time operating system, and picking a point on that range keeps the system's behaviour knowable.",
+   "quote_verbatim": "there's a lot of different stuff you can do between just having a state machine and a real-time operating system",
+   "speaker": "Charles Aylward",
+   "episode": 584,
+   "episode_title": "Software for Rockets with Charles Aylward",
+   "episode_url": "https://theamphour.com/584-software-for-rockets-with-charles-aylward/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The programmable I/O blocks found on some microcontrollers are small state machines rather than ALUs, each with its own architecture and its own assembly language, so using them means writing to a second instruction set alongside the main processor's.",
+   "quote_verbatim": "I think they're like little logic machines, little, like ALU, not ALUs, little state machines, basically.",
+   "speaker": "Chris Gammell",
+   "episode": 595,
+   "episode_title": "Trade Show or Conference?",
+   "episode_url": "https://theamphour.com/595-trade-show-or-conference/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A minimal RISC-V core decomposes into a handful of small blocks, and the sequencing control is one of the smallest: in one such implementation the load-store logic is about twelve lines and the state machine that drives it about twenty, alongside the ALU and the address generation.",
+   "quote_verbatim": "it's got load store which is about 12 lines and then it's got state machine which is about 20 lines",
+   "speaker": "Dave Jones",
+   "episode": 644,
+   "episode_title": "Garbage Ninjas",
+   "episode_url": "https://theamphour.com/644-garbage-ninjas/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Some real-time operating systems ship a state machine framework alongside the scheduler, which is redundant in the sense that a machine can always be hand-written in a super loop; the framework earns its cost only where the structure it imposes is worth the memory it consumes, on the order of a hundred bytes.",
+   "quote_verbatim": "why doesn't RTOS have state machines? Because I can just do state machines myself or do it, you know, like in a super loop. But then there's obviously reasons.",
+   "speaker": "Chris Gammell",
+   "episode": 653,
+   "episode_title": "Benjamin Cabé Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Protocol parsing that has already been written and maintained in an operating system subsystem, such as a generic NMEA driver under a GNSS subsystem, is work not worth repeating in application code; hand-rolling the parser adds no value and adds a state machine that must be maintained locally.",
+   "quote_verbatim": "you could write your own parser, but like, why? Right. Like there's no value in me doing that.",
+   "speaker": "Chris Gammell",
+   "episode": 653,
+   "episode_title": "Benjamin Cabé Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The point at which a state machine framework beats a hand-written switch-case is where behaviour grows beyond simple parsing: once conditions such as geofence entry and exit, a graphical interface and business rules all hang off the same machine, describing it explicitly in the framework is easier to follow than raw switch-case code.",
+   "quote_verbatim": "I mean, yes, you can switch case the whole thing and just like row code, or maybe you can actually start describing things in like as an actual state machine and, and fit things in, in the framework that way",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cabé Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A simple CPU is not much more than a datapath plus sequencing control, so an engineer who has built a full adder and a state machine in an HDL already has the two ingredients and is roughly halfway to a working processor.",
+   "quote_verbatim": "after you've built a full adder and a state machine, you're like, you're halfway there to a very simple CPU",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Event-driven logic written as nested conditionals degenerates quickly: the if-else testing needed to work out what a button-triggered device is currently doing becomes unreadable even for simple behaviour, which is the concrete argument for imposing a state machine from the outset.",
+   "quote_verbatim": "the if else nightmare of nested conditional statement testing to figure out what your device is doing is a disaster",
+   "speaker": "Mark Palmeri",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The verification argument for a state machine is that it makes the system's condition finite and nameable: at any instant the device is defined by a single state, and that state can be reproduced exactly to test the behaviour that belongs to it, which is what makes state-by-state quality assurance possible at all.",
+   "quote_verbatim": "state machines are a beautiful framework for saying at any instant in time, I'm defined by a single state. Once I'm in that state, then I know how to exactly replicate that environment for testing and quality assurance purposes.",
+   "speaker": "Mark Palmeri",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A state machine framework supplied by a fast-moving operating system is a moving target: the input syntax of one such framework changed within a release series, which is the practical reason to pin builds to specific SDK and toolkit versions in continuous integration, since a nominally minor version bump can carry a major update to a package underneath.",
+   "quote_verbatim": "that's something that's input syntax changed along the way mid-semester on me, and that is why we lock into specific versions",
+   "speaker": "Mark Palmeri",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Threads are the right tool for the behaviour that does not belong to any one state: a heartbeat LED that must keep blinking regardless of what the device is doing is awkward to express inside a pure state machine and natural as a separate thread under a scheduler, which is the boundary at which an RTOS starts to earn its place.",
+   "quote_verbatim": "we'll do simple stuff like having a heartbeat LED that stays on to let someone know the device is even running. Don't need that in every state. Could do that in a thread.",
+   "speaker": "Mark Palmeri",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The programmable I/O peripheral on the Raspberry Pi microcontrollers is a genuine state machine processor with its own tiny program store, holding on the order of thirty-two bytes of machine code, which is enough to implement a serial protocol listener that runs without the main core.",
+   "quote_verbatim": "So it's got a state machine in there with 32 bytes of machine code you can put in.",
+   "speaker": "Dave Jones",
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A microcontroller whose boot vector points at address zero should include a hardwired state machine that fetches transparently from an external SPI ROM, so that off-chip program storage looks like on-chip memory to the running code; without it the external-memory case has to be handled explicitly by the software.",
+   "quote_verbatim": "I would have made sure that it included a state machine in there that simply read from a spy bus external ROM with it, like, completely seamlessly",
+   "speaker": "Dave Jones",
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "Episode 265: bundle labels the passage Chris Gammell with attribution_reliable true, but the content is the guest describing the SGPIO and state-configurable-timer peripherals of a specific part; the host is asking the questions. Speaker set to null rather than mis-assigning the technical explanation.",
+  "Episode 356: bundle labels the passage Chris Gammell, but the content is the guest describing his own project's block language and how it differs from other autopilot platforms. Attributed to Piotr Esden-Tempski on content.",
+  "Episode 467: both passages are labelled Chris Gammell, but the formal-verification material (assertion selection, verifying one state machine with another, the ASIC engineer's stalled-state fear) is the guest speaking; the host is the questioner. Speaker set to null.",
+  "Episode 471: attribution_reliable is false, but the content is unambiguously the person who worked inside the Eagle source and brought the original developers into the organisation, which identifies Matt Berggren; label kept.",
+  "Episode 581: attribution_reliable is false, and the state-machine-before-RTOS question in the passage is asked by the host rather than stated by the guest. Speaker set to null.",
+  "Episode 584: attribution_reliable is false; the retained line about the range of options between a state machine and an RTOS is the guest agreeing with and extending the point, and is consistent with Charles Aylward's role in the passage. Label kept.",
+  "Episode 653: two passages, one labelled Chris Gammell and one Benjamin Cabe; the labels match the content in each case (host describing his own super-loop habit, guest describing the framework trade-off) and were kept.",
+  "Episode 196 appears twice in the bundle under two titles for the same content; the first-seen title and URL (the re-broadcast entry) were used for both claims."
+ ]
+}

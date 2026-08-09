@@ -54,9 +54,13 @@ def infobox(slug, n_refs):
     if not c:
         return ""
     esc = html_mod.escape
-    speakers = [s.get("name") if isinstance(s, dict) else
-                (s[0] if isinstance(s, (list, tuple)) else s)
-                for s in (c.get("top_speakers") or [])[:3]]
+    HOSTS = {"Chris Gammell", "Dave Jones"}
+    pool = c.get("top_guests") or [
+        sp for sp in (c.get("top_speakers") or [])
+        if (sp.get("name") if isinstance(sp, dict) else sp) not in HOSTS]
+    speakers = [sp.get("name") if isinstance(sp, dict) else
+                (sp[0] if isinstance(sp, (list, tuple)) else sp)
+                for sp in pool[:3]]
     neighbors = sorted(adj.get(slug, []), key=lambda t: -t[1])
     related = [n for n, _ in neighbors if n in published and n != slug][:5]
     rows = [
@@ -70,7 +74,7 @@ def infobox(slug, n_refs):
         for k, v in rows)
     speakers_html = ""
     if speakers:
-        speakers_html = ('<tr><td class="ibk">Most heard</td><td class="ibv">'
+        speakers_html = ('<tr><td class="ibk">Top guests</td><td class="ibv">'
                          + ", ".join(esc(s) for s in speakers) + "</td></tr>")
     related_html = ""
     if related:

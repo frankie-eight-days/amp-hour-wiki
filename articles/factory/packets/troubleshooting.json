@@ -1,0 +1,581 @@
+{
+ "concept": "troubleshooting",
+ "name": "Troubleshooting",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "troubleshooting",
+  "census": "union",
+  "type": "technique",
+  "cap": 250,
+  "cluster": {
+   "core": [
+    "technical-troubleshooting",
+    "troubleshooting"
+   ],
+   "children": [
+    "autonomy",
+    "bus-contention",
+    "education-system",
+    "electronics-technician",
+    "humidity-control"
+   ],
+   "neighbors": []
+  },
+  "episodes": 65,
+  "mentions": 103,
+  "explains": 54,
+  "opinions": 27,
+  "gated_out": 37,
+  "gated_out_by_concept": [
+   [
+    "education-system",
+    11
+   ],
+   [
+    "electronics-technician",
+    11
+   ],
+   [
+    "bus-contention",
+    6
+   ],
+   [
+    "humidity-control",
+    5
+   ],
+   [
+    "autonomy",
+    4
+   ]
+  ],
+  "unreliable_attribution_passages": 4,
+  "capped": false,
+  "total_available": 81,
+  "passages_read": 81
+ },
+ "claims": [
+  {
+   "claim_text": "Faults inside a monolithic analog part such as an op amp or a DC-DC controller cannot be probed directly, so deciding whether the part or the surrounding circuit is at fault depends on understanding the discrete building blocks the part implements.",
+   "quote_verbatim": "you really have to understand your basic building blocks for starters",
+   "speaker": null,
+   "episode": 4,
+   "episode_title": "Cultural Differences",
+   "episode_url": "https://theamphour.com/the-amp-hour-4-cultural-differences/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Substituting components one after another until a circuit works locates a bad part without identifying the mechanism, so it gives no protection against the same fault recurring.",
+   "quote_verbatim": "you can start plugging parts in and out until it works",
+   "speaker": null,
+   "episode": 4,
+   "episode_title": "Cultural Differences",
+   "episode_url": "https://theamphour.com/the-amp-hour-4-cultural-differences/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Oscillation or erratic analog behaviour can come from operating a part near a marginal specification rather than from a defective component, for example signals coupling through a supply because of poor power-supply rejection.",
+   "quote_verbatim": "coupling because of poor power supply rejection ratio",
+   "speaker": null,
+   "episode": 4,
+   "episode_title": "Cultural Differences",
+   "episode_url": "https://theamphour.com/the-amp-hour-4-cultural-differences/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "An engineer troubleshooting their own design tends to rule out simple causes on the strength of familiarity and to search for complex explanations first.",
+   "quote_verbatim": "have a closed mind if I'm working on my own design and I'll just go, it can't be that",
+   "speaker": null,
+   "episode": 4,
+   "episode_title": "Cultural Differences",
+   "episode_url": "https://theamphour.com/the-amp-hour-4-cultural-differences/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Handing a stalled fault to someone who does not know the design often exposes an obvious cause quickly, because that person carries none of the designer's assumptions about what cannot be wrong.",
+   "quote_verbatim": "it'd be so obvious to someone with a fresh pair of eyes",
+   "speaker": null,
+   "episode": 4,
+   "episode_title": "Cultural Differences",
+   "episode_url": "https://theamphour.com/the-amp-hour-4-cultural-differences/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Deliberately leaving a fault alone for a period is a recognised troubleshooting tenet, since continuing to stare at it reinforces the hypothesis already held.",
+   "quote_verbatim": "to get away from the problem for a while",
+   "speaker": null,
+   "episode": 4,
+   "episode_title": "Cultural Differences",
+   "episode_url": "https://theamphour.com/the-amp-hour-4-cultural-differences/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The first measurement in any troubleshooting sequence is the supply voltages and power rails.",
+   "quote_verbatim": "the first rule of any troubleshooting is, uh, thou shall check voltages",
+   "speaker": null,
+   "episode": 4,
+   "episode_title": "Cultural Differences",
+   "episode_url": "https://theamphour.com/the-amp-hour-4-cultural-differences/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "An intermittent fault that behaves correctly most of the time and hiccups occasionally defeats a static check of voltages and rails, which is why it resists the standard opening procedure.",
+   "quote_verbatim": "if it's okay, 90% of the time and then just, you know, hiccups",
+   "speaker": null,
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Windowed EPROMs covered with paint rather than an opaque label can still be erased by ultraviolet light passing through the paint, producing bit failures that appear spontaneous.",
+   "quote_verbatim": "the chips had windows on them, but someone just lazily painted over the chip window",
+   "speaker": null,
+   "episode": 68,
+   "episode_title": "Radiation Chips & Old Package Types - Technocratic Toilet Troubleshooting",
+   "episode_url": "https://theamphour.com/the-amp-hour-68-technocratic-toilet-troubleshooting/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A single corrupted memory bit rarely produces an obvious memory symptom; it more often produces behaviour that points the investigator at some unrelated part of the circuit.",
+   "quote_verbatim": "the one bit that would fail would be the one that would lead you down the garden path towards some other fault in the circuit",
+   "speaker": null,
+   "episode": 68,
+   "episode_title": "Radiation Chips & Old Package Types - Technocratic Toilet Troubleshooting",
+   "episode_url": "https://theamphour.com/the-amp-hour-68-technocratic-toilet-troubleshooting/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Repeating an identical test many times is justified when the object is to reproduce an intermittent fault reliably rather than to obtain a different result.",
+   "quote_verbatim": "sometimes when you need to replicate a problem, you know, you have to keep trying it to see if you can catch it",
+   "speaker": null,
+   "episode": 68,
+   "episode_title": "Radiation Chips & Old Package Types - Technocratic Toilet Troubleshooting",
+   "episode_url": "https://theamphour.com/the-amp-hour-68-technocratic-toilet-troubleshooting/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Wrapping a design around an existing supported standard or module, instead of a from-scratch equivalent, removes that block from the set of things that must be diagnosed when the system does not work.",
+   "quote_verbatim": "you remove it from the troubleshooting equation",
+   "speaker": null,
+   "episode": 25,
+   "episode_title": "NASA, WOTW & Modular Design - The NASA Nostalgia",
+   "episode_url": "https://theamphour.com/the-amp-hour-25-the-nasa-nostagia/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Testing every shipped unit to specification with a purpose-built jig lets that unit be excluded as a variable when a customer later troubleshoots a measurement that looks wrong.",
+   "quote_verbatim": "each unit is individually tested to spec anyway",
+   "speaker": "Dave Jones",
+   "episode": 210,
+   "episode_title": "Risky Components and Hardware Innovation - Slipshod Shack Shutdown",
+   "episode_url": "https://theamphour.com/210-risky-components-and-hardware-innovation-slipshod-shack-shutdown/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Freeze spray localises a thermally sensitive fault but does not identify it; confirming the cause requires further work such as reflowing the suspect device or testing traces, and interpreting what the thermal response means.",
+   "quote_verbatim": "you have to go and do other stuff then either reflow the chip or, you know, start actually testing traces",
+   "speaker": null,
+   "episode": 148,
+   "episode_title": "Contextual Electronics, ClubJameco and Solderpaste - Lifelong Learning Likelihood",
+   "episode_url": "https://theamphour.com/the-amp-hour-148-lifelong-learning-likelihood/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Heating or cooling a single component with a hot-air pencil or freeze spray can move a circuit in and out of tolerance even when the responsible part is elsewhere on the board, so a response to local thermal stimulus does not by itself convict the stimulated component.",
+   "quote_verbatim": "we were hitting like one specific component with like a hot air pencil and then like knocked it back in tolerance or out of tolerance",
+   "speaker": null,
+   "episode": 326,
+   "episode_title": "Magical Fire Bags",
+   "episode_url": "https://theamphour.com/326-magical-fire-bags/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The opening questions in a diagnosis are the elementary ones: whether power is applied, whether the unit is connected, whether the reference is present, and whether it is at the correct value.",
+   "quote_verbatim": "Is it plugged in? Is a reference there? Is it the right value?",
+   "speaker": null,
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "opinion",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Hewlett-Packard signature analyzers attempted to mechanise board diagnosis: dedicated test software was run against a known-good board and a logic probe returned a short four-character signature at each node, which a technician could compare against the faulty unit.",
+   "quote_verbatim": "They had a special device that they would run a special piece of test software and you would hook up a logic probe and it'll give you like a four letter number key",
+   "speaker": null,
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "No general troubleshooting recipe transfers unchanged between circuits, which is why requests for a universal troubleshooting guide cannot be satisfied.",
+   "quote_verbatim": "There is no recipe for",
+   "speaker": null,
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Standardising a group on one recommended instrument matters more than which instrument is best, because shared troubleshooting depends on everyone being able to start from the same first step.",
+   "quote_verbatim": "if everybody has it, then when you start troubleshooting, you need to start from the same point of, okay, well, did you do this step one?",
+   "speaker": null,
+   "episode": 190,
+   "episode_title": "Let's Hear It For The Buoys - Vanishing Vessel Vexation",
+   "episode_url": "https://theamphour.com/190-lets-hear-it-for-the-buoys-vanishing-vessel-vexation/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A fault inherent to a widely used part or design would be seen by every user, so a symptom that only one user reports points at something specific to that user's setup.",
+   "quote_verbatim": "If it was, if it was a universal problem, like, everyone and everything would have it. So, there is something horribly or subtly wrong with your setup",
+   "speaker": null,
+   "episode": 288,
+   "episode_title": "Call In Show #3",
+   "episode_url": "https://theamphour.com/288-call-in-show-3/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Establishing what fraction of a batch shows the fault - one unit, ten, or all of them - separates a design fault from a unit-specific one, and being able to swap the suspect item and watch the symptom follow it confirms which variable is responsible.",
+   "quote_verbatim": "within the subset of ones that are tripping, is there one? Are there 10? Is it the whole lot?",
+   "speaker": null,
+   "episode": 288,
+   "episode_title": "Call In Show #3",
+   "episode_url": "https://theamphour.com/288-call-in-show-3/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A diagnosis begins with the elementary confirmations, such as verifying that the expected signal is present at all.",
+   "quote_verbatim": "just checking boneheaded things",
+   "speaker": null,
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Confirming the part number marked on a board itself, rather than trusting the bag or box it arrived in, forecloses a class of fault in which the entire debugging effort is applied to the wrong hardware.",
+   "quote_verbatim": "it was because I had the board was labeled in the wrong bag, like the wrong bag. And I didn't actually look at what the part number was on the board",
+   "speaker": "Chris Gammell",
+   "episode": 428,
+   "episode_title": "Setting Fire To The Tracks",
+   "episode_url": "https://theamphour.com/428-setting-fire-to-the-tracks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Changing many things at once while debugging prevents any single result from being interpreted, because no observation can be tied to one change.",
+   "quote_verbatim": "trying all these different things, trying way too many things, honestly",
+   "speaker": null,
+   "episode": 428,
+   "episode_title": "Setting Fire To The Tracks",
+   "episode_url": "https://theamphour.com/428-setting-fire-to-the-tracks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Applying the scientific method to debugging means stating a hypothesis before probing and writing it down; without a written record the activity is thrashing rather than experiment.",
+   "quote_verbatim": "if you don't write it down, obviously, it's not science",
+   "speaker": null,
+   "episode": 460,
+   "episode_title": "Rubber Ducking",
+   "episode_url": "https://theamphour.com/460-rubber-ducking/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "On a debugging effort running for weeks, tests get repeated because the engineer cannot recall what has already been checked, so a written log of what was tested and what it showed is what keeps the search from circling.",
+   "quote_verbatim": "i've gone through and tested things like 10 times right because i just simply didn't remember that i had done it before",
+   "speaker": null,
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Diagnosis proceeds by narrowing and isolating the elements of a system in turn until the fault is confined to one of them.",
+   "quote_verbatim": "you have to narrow down and isolate different elements of a system in order to tell what the actual problem was",
+   "speaker": null,
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Substituting a suspect module with an identical known-good one and observing that the symptom persists demonstrates the fault lies outside the substituted module.",
+   "quote_verbatim": "i asked that they swap out one final board and the exact same it was not my board anymore and the exact same condition happened",
+   "speaker": "Chris Gammell",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Assuming by default that one's own hardware is the cause produces a concrete list of things to test first, at the cost of biasing the search towards it.",
+   "quote_verbatim": "i usually assume worst case that it is me",
+   "speaker": "Chris Gammell",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "In remote troubleshooting, asking for a photograph of the setup before any verbal description catches gross errors - a missing device, a disconnected battery, reversed wires - that the reporter's own account omits because they are not aware of them.",
+   "quote_verbatim": "I first say, can you send me a picture of your setup? Don't tell me anything about it. I just want to see a picture first.",
+   "speaker": "Chris Gammell",
+   "episode": 477,
+   "episode_title": "EcoWoke and Going Broke",
+   "episode_url": "https://theamphour.com/ecowoke-and-going-broke/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A set of instruments reported as drifting badly was traced to the 10 MHz reference being connected reference-port to reference-port rather than output to input; the fault survived a verbal confirmation that the reference was connected and was found only by inspecting the installation in person.",
+   "quote_verbatim": "they connected the reference end to the reference end because the person who was doing the work wasn't a native English speaker",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Board-repair software that imports a schematic and overlays it on an image of the board lets a technician click a node and highlight the corresponding trace across the layout, which is what makes component-level repair of dense assemblies efficient.",
+   "quote_verbatim": "he wrote software that a very cool software that imports the schematic and then overlays it with the board image",
+   "speaker": null,
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Without a schematic and board layout, diagnosis degrades to measuring nodes whose function is unknown or removing components at random, unless the board is first reverse-engineered.",
+   "quote_verbatim": "Trying to do a troubleshooting with no schematic and no board layout is like, yeah, not that great",
+   "speaker": null,
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "An experienced engineer's immediate diagnosis is still a hypothesis and is confirmed by a test before it is acted on.",
+   "quote_verbatim": "I know what the problem is. You do want to still do a test.",
+   "speaker": null,
+   "episode": 574,
+   "episode_title": "Bubblegum Tap Shoes",
+   "episode_url": "https://theamphour.com/574-bubblegum-tap-shoes/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Digital signals are analog waveforms attempting to reach a logic level, ringing and passing through intermediate voltages on the way; treating them that way rather than as clean ones and zeros is what allows digital faults to be diagnosed.",
+   "quote_verbatim": "It's not a one or a zero. It's a signal that tried to get to a one, and along the way it did some ringing and stuff like that",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "In flat-rate consumer repair paid at roughly $10 per set, a novel fault taking an hour is unprofitable while a previously seen fault fixed in ten minutes is profitable, which puts direct economic value on remembering fault signatures.",
+   "quote_verbatim": "if you actually have to fix it, which takes an hour, if you have to troubleshoot a problem you've never seen, you don't make any money, you know, because you get paid $10 a set you fix",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "In vintage equipment repair the fault found quickly is usually dried-out electrolytic capacitors; the hard cases are parametric, such as a single transistor whose beta is slightly off sitting in the most sensitive part of the circuit.",
+   "quote_verbatim": "it could be because you're a brilliant troubleshooter, but it's probably because you got lucky and, you know, they had dried out caps",
+   "speaker": null,
+   "episode": 227,
+   "episode_title": "Space Bound, Again - Xtreme Xtraplanetary Xenonosocomiophobia",
+   "episode_url": "https://theamphour.com/227-space-bound-again-xtreme-xtraplanetary-xenonosocomiophobia/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Understanding the layers of a system above and below one's own is not critical for design work but is for troubleshooting, because faults surface exactly where those abstractions break down.",
+   "quote_verbatim": "it may not be critical for design, but it damn sure helps for troubleshooting",
+   "speaker": null,
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Buying a module such as a 12 V to 5 V switching converter without understanding how a switcher works is serviceable until the module fails or becomes unstable, at which point the buyer cannot diagnose it.",
+   "quote_verbatim": "you bought a 12 volt to five volt switcher, but you don't know what a switcher is. It's like, you might have trouble going and troubleshooting it when it doesn't work anymore",
+   "speaker": null,
+   "episode": 353,
+   "episode_title": "IoT Degree",
+   "episode_url": "https://theamphour.com/353-iot-degree/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Storing a board under investigation in a tray with its debug programmer and connections left attached preserves the setup between sessions and avoids reconnecting the wrong things when work resumes.",
+   "quote_verbatim": "You leave it hooked up that sits in the tray and it goes away with the tray",
+   "speaker": null,
+   "episode": 559,
+   "episode_title": "Occam's Engineering Razor",
+   "episode_url": "https://theamphour.com/559-occams-engineering-razor/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A fixed-price contract quote transfers the troubleshooting risk to the contractor, because debugging time is unbounded at the moment the estimate is made and electronics work contains more of these traps than software work.",
+   "quote_verbatim": "you've put in a fixed quote. And if you're over and you've, you know, you've run into problems and you've got to troubleshoot",
+   "speaker": null,
+   "episode": 70,
+   "episode_title": "Idiorhythmic IPC Inconcinnity",
+   "episode_url": "https://theamphour.com/the-amp-hour-70-idiorhythmic-ipc-inconcinnity/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Development work requires instruments in the engineer's own lab because troubleshooting has to happen at the moment the fault appears, which is a different equipment requirement from manufacturing.",
+   "quote_verbatim": "you want to be able to troubleshoot right there and then in your own lab",
+   "speaker": null,
+   "episode": 312,
+   "episode_title": "Aussie Bound!",
+   "episode_url": "https://theamphour.com/312-aussie-bound/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Leakage currents across the surface of a PCB are treated by cleaning the board and removing flux residue.",
+   "quote_verbatim": "we're having trouble with our, you know, with leakage on our PCBs, and then you say, oh, well, I used to, you know, run a board cleaner",
+   "speaker": null,
+   "episode": 100,
+   "episode_title": "Bonkers Birthday Badinage",
+   "episode_url": "https://theamphour.com/the-amp-hour-100-bonkers-birthday-badinage/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Pasting compiler or runtime errors from privately written code into a general language model does not yield a diagnosis, because the model has no knowledge of the specific code that produced them.",
+   "quote_verbatim": "they were putting those errors into chat GPT, which of course was not going to work",
+   "speaker": null,
+   "episode": 693,
+   "episode_title": "Small Scale Electronics Manufacturing with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/693-small-scale-electronics-manufacturing-with-colin-oflynn/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Language-model assistance has proved useful for structural configuration debugging such as Zephyr device tree files, where the risk is that a fast-moving project's changes make a suggestion stale - an error the compiler then reports.",
+   "quote_verbatim": "it helped me troubleshoot device tree stuff, which is, like, an ongoing issue of, like, how you connect stuff together",
+   "speaker": "Chris Gammell",
+   "episode": 683,
+   "episode_title": "Troubleshooting is the skill",
+   "episode_url": "https://theamphour.com/683-troubleshooting-is-the-skill/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Using a language model as the primary debugging aid leaves no capability for the cases it cannot answer, so the underlying skill of synthesising evidence remains the thing that has to be maintained.",
+   "quote_verbatim": "if you're so dependent on that crutch that you don't have the skill set",
+   "speaker": null,
+   "episode": 683,
+   "episode_title": "Troubleshooting is the skill",
+   "episode_url": "https://theamphour.com/683-troubleshooting-is-the-skill/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A suspected design-level defect in a mass-produced instrument is worth searching for online before further probing, because the same failure is frequently already documented on forums or in teardown videos.",
+   "quote_verbatim": "I search, so I simply search Google what comes up the EV blog forum",
+   "speaker": "Ian Johnston",
+   "episode": 643,
+   "episode_title": "Calibration & Repair with Ian Johnston",
+   "episode_url": "https://theamphour.com/643-calibration-repair-with-ian-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Learning a development board's configuration options, such as its on-board DIP switches, before they are needed pays off when problems have to be diagnosed on that board later.",
+   "quote_verbatim": "that can really end up helping you, uh, when you're, when you're trying to troubleshoot problems after the fact",
+   "speaker": "Chris Gammell",
+   "episode": 221,
+   "episode_title": "Warming Up To IoT - Tendentious Thermal Tools",
+   "episode_url": "https://theamphour.com/221-warming-up-to-iot-tendentious-thermal-tools/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A board recreated from artwork rather than from a verified netlist carries connections that are missing or wrong, and these surface as wiring faults to be chased during bring-up.",
+   "quote_verbatim": "there were actually a couple of connections that were either missing or wrong",
+   "speaker": null,
+   "episode": 609,
+   "episode_title": "Open Circuits with Eric Schlaepfer and Windell Oskay",
+   "episode_url": "https://theamphour.com/609-open-circuits-with-eric-schlaepfer-and-windell-oskay/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A circuit that partly works - for example running at one third of the expected current - is harder to diagnose than one that fails outright, because the expected discrete pass-or-fail signal is absent.",
+   "quote_verbatim": "That's the worst for troubleshooting, right? When you have, like, an indicator. You know, you expect, like, a very discreet on or off kind of behavior.",
+   "speaker": null,
+   "episode": 94,
+   "episode_title": "Gnomic Gazumping Gobemouche",
+   "episode_url": "https://theamphour.com/the-amp-hour-94-gnomic-gazumping-gobemouche/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A plausible first idea can grow into a chain of reasoning that is followed to its end before it is ever tested, while the actual cause is the simple one dismissed at the outset.",
+   "quote_verbatim": "your brain constructs, oh, it could be this. You know, you hear something, you get the seed of an idea",
+   "speaker": null,
+   "episode": 94,
+   "episode_title": "Gnomic Gazumping Gobemouche",
+   "episode_url": "https://theamphour.com/the-amp-hour-94-gnomic-gazumping-gobemouche/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  }
+ ],
+ "attribution_notes": [
+  "ep 4: the four adjacent windows interleave both hosts and adjacent windows carry different speaker labels over the same sentences (the 'thou shall check voltages' line is labelled Chris Gammell in one window and Dave Jones in the next). Content identifies neither speaker uniquely, so all ep4 claims are unattributed.",
+  "ep 210: passage labelled Chris Gammell, but the content describes the speaker's own uCurrent product, his purchase of precision resistors and his own test jig at the assembler - that is Dave Jones. Content-attributed to Dave Jones.",
+  "ep 222: three passages flagged ATTRIB-UNRELIABLE and labelled Chris Gammell, but the content is the Commodore engineering and flat-rate TV repair career of the guest. Content-attributed to Bil Herd.",
+  "ep 169: passage labelled Dave Jones inside the Vincent Himpe interview; the Hewlett-Packard signature-analyzer recollection could belong to either party. Name dropped.",
+  "ep 494: labelled speakers alternate mid-sentence across the fused windows; the two claims that depend on the speaker's own board being under test at a customer site are content-consistent with Chris Gammell and keep his name, the rest are unattributed.",
+  "ep 533: Joel Dunsmore label is consistent with the content (Keysight customer visits, million-dollar problems); name kept.",
+  "ep 561: passage labelled Chris Gammell, but the content claims first-person efficient board-level repairs of Apple Macs using leaked schematics. Identity not certain from content; name dropped.",
+  "ep 609: passage labelled Eric Schlaepfer but the window fuses host and guest turns around the recreated-board story; name dropped.",
+  "ep 643: passage labelled Dave Jones, but the speaker describes making his own video and then finding 'the EEVblog forum, your videos' when searching - he is addressing Dave Jones, not speaking as him. Content-attributed to the guest, Ian Johnston.",
+  "ep 693: passage labelled Chris Gammell but the students-pasting-errors-into-ChatGPT account is a teaching anecdote inside a fused window shared with the guest. Name dropped."
+ ],
+ "capped": false
+}

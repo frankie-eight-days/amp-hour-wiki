@@ -1,0 +1,503 @@
+{
+ "concept": "hardware-description-language",
+ "name": "Hardware Description Language",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "hardware-description-language",
+    "hdl"
+   ],
+   "children": [
+    "bsd-license",
+    "parser",
+    "routing-algorithm",
+    "schematic-entry",
+    "synchronous-logic",
+    "two-factor-authentication"
+   ],
+   "neighbors": []
+  },
+  "stats": {
+   "episodes": 33,
+   "mentions": 67,
+   "explains": 39,
+   "opinions": 9,
+   "candidate_episode_count": 29,
+   "candidate_mention_count": 49,
+   "gated_out": 27,
+   "gated_out_by_concept": [
+    [
+     "parser",
+     6
+    ],
+    [
+     "routing-algorithm",
+     6
+    ],
+    [
+     "schematic-entry",
+     6
+    ],
+    [
+     "bsd-license",
+     4
+    ],
+    [
+     "two-factor-authentication",
+     3
+    ],
+    [
+     "synchronous-logic",
+     2
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 10,
+   "speakers": [
+    [
+     "Dave Jones",
+     15
+    ],
+    [
+     "Chris Gammell",
+     7
+    ],
+    [
+     "Claire Wolf",
+     7
+    ],
+    [
+     "Matt Venn",
+     5
+    ],
+    [
+     "Dmitry Nedospasov",
+     3
+    ],
+    [
+     "Mike Engelhardt",
+     2
+    ],
+    [
+     "Piotr Esden-Tempski",
+     2
+    ],
+    [
+     "Tim Ansell",
+     1
+    ],
+    [
+     "Sam Zeloof",
+     1
+    ],
+    [
+     "Eric Schlaepfer",
+     1
+    ],
+    [
+     "Sergiy Nesterenko",
+     1
+    ],
+    [
+     "Liam Fraser",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 43,
+    "child": 3
+   },
+   "passages_by_depth": {
+    "explains": 37,
+    "opinion": 9
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 46
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "In a hardware description language the designer states in abstract terms what the circuit should do and the tools derive the physical implementation, laying out the chip and performing the detailed work that would otherwise be done by hand.",
+   "quote_verbatim": "you design in abstract terms what you want, and the computer does the rest",
+   "speaker": "Dave Jones",
+   "episode": 34,
+   "episode_title": "AD620, DesignSpark, Instrumentation Amplifier - The Rant Rhetorical",
+   "episode_url": "https://theamphour.com/the-amp-hour-34-the-rant-rhetorical/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An algorithm prototyped in a numerical environment such as MATLAB is not the deliverable for a cost-sensitive part: a separate engineer may spend of the order of twelve months converting that routine into a hardware description language so that it implements efficiently in an ASIC.",
+   "quote_verbatim": "spend 12 months converting that MATLAB routine into some HDL",
+   "speaker": "Dave Jones",
+   "episode": 39,
+   "episode_title": "Dan Pink, Dual Core, level translators - Mumble Mumbo Jumbo",
+   "episode_url": "https://theamphour.com/the-amp-hour-39-mumble-mumbo-jumbo/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Hardware description language work supports a purely software-side role: some practitioners in the VHDL domain never touch a physical device and spend their time writing test benches and algorithms, which makes verification a career path separate from board and device bring-up.",
+   "quote_verbatim": "all they're doing is writing test benches and, and doing algorithms",
+   "speaker": "Chris Gammell",
+   "episode": 83,
+   "episode_title": "Aggravating Agersia Agiotage",
+   "episode_url": "https://theamphour.com/the-amp-hour-83-aggravating-agersia-agiotage/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Moving between sequential programming and hardware description is difficult in both directions: an engineer fluent in describing logic where everything happens at once and is instantiated in hardware struggles to return to step-by-step processing on an eight-bit microcontroller, just as microcontroller programmers struggle with concurrency.",
+   "quote_verbatim": "That's, that's the hard switch between the two, is, is going from, like, everything happens at once and it's, is instantiated in logic.",
+   "speaker": "Chris Gammell",
+   "episode": 127,
+   "episode_title": "FPGA, Xess, 32 Bit - Quirky Qualitative Questions",
+   "episode_url": "https://theamphour.com/the-amp-hour-127-quirky-qualitative-questions/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The defining capability of a hardware description language is that it reaches down to the structural level: the designer creates registers and other structures directly in logic, which is the reason to use programmable logic at all rather than a processor.",
+   "quote_verbatim": "they can go down really low, and you actually, you know, create registers, and you can actually, you know, create structures in logic",
+   "speaker": "Chris Gammell",
+   "episode": 150,
+   "episode_title": "Solar, FPGAs and Maxim Integrated - Solar Shopper Sickness",
+   "episode_url": "https://theamphour.com/the-amp-hour-150-solar-shopper-sickness/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Higher-level generators exist because hand-coding at register level does not scale to mathematics-heavy work: for DSP-type functions inside an FPGA, libraries hosted in a general-purpose language act as a compiler from that language to hardware, in the same way that C-to-hardware compilers do.",
+   "quote_verbatim": "So, it's a Python to hardware compiler, just like you can get C to hardware compilers.",
+   "speaker": "Dave Jones",
+   "episode": 150,
+   "episode_title": "Solar, FPGAs and Maxim Integrated - Solar Shopper Sickness",
+   "episode_url": "https://theamphour.com/the-amp-hour-150-solar-shopper-sickness/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Regulatory classification, not technical merit, has driven design-entry choice in military electronics: because a design written in a hardware description language was deemed to be source code, it fell under rules requiring every line to be verified, at a nominal cost on the order of a hundred dollars per line, so teams used schematic capture instead to keep the design out of the source-code category.",
+   "quote_verbatim": "They used schematic capture instead of HDL because if it was HDL, it was deemed to be source code.",
+   "speaker": "Dave Jones",
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The workaround for the source-code classification was to enter the design as a schematic, present the schematic as evidence that the product was not programmed, and then regenerate the hardware description language from that schematic for implementation. The resulting schematics are unreadable at review because they consist of very large numbers of individual gates.",
+   "quote_verbatim": "So they'd put in schematic and then they'd go, look, here's our schematic. This is not a programmed product. It's schematic.",
+   "speaker": "Dave Jones",
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Hardware description languages are also used internally for behavioural modelling rather than synthesis. A SPICE vendor maintained a private, primitive description language in which controller models were written; the simulator parses and compiles that language into executable data structures rather than into object code, and then executes them in the manner of a standard hardware description language such as Verilog or VHDL.",
+   "quote_verbatim": "we kind of write a little program in this kind of ugly language that LTSpice can parse, compile, and, uh, and execute. But by compiling there, I don't mean compiling to object code. I mean, compiling the data structures",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The name is a source of confusion in both directions: HDL stands for hardware description language, and although the languages were intended to be higher-level than structural entry they remain difficult in practice, which is why engineers keep writing compilers that translate an easier language down into HDL.",
+   "quote_verbatim": "It's hardware definition language, but it's supposed to be like a high, you know, sort of like a high level type language, but it's still hard",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Portability across vendors is the stated design intent of hardware description languages, and is the practical reason a designer can select a programmable logic vendor on price rather than on toolchain commitment.",
+   "quote_verbatim": "people say that C is portable. I say HDL is portable",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 303,
+   "episode_title": "An Interview with Dmitry Nedospasov",
+   "episode_url": "https://theamphour.com/303-an-interview-with-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Building instrumentation in a hardware description language is justified when commercial equipment refuses to emit invalid stimulus: security analysis of a proprietary or uncommon protocol requires sending deliberately malformed packets, for example with a byte count that does not match the packet contents, and commercial protocol analysers rarely permit that, whereas a custom FPGA peripheral will.",
+   "quote_verbatim": "you actually want to potentially send packets that are in some way malformed or wrong or where the number of bytes doesn't actually match what's in the packet",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Public repositories of donated hardware description language cores are of uneven provenance and are best treated as reference rather than as drop-in modules. A usable pattern is to take only the fragment that answers a specific structural question, such as how to implement an AES S-box purely in logic, and to write the remainder oneself.",
+   "quote_verbatim": "I just wanted to see how they implemented the S box, which was one of the components",
+   "speaker": null,
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Resource efficiency is the wrong objective while learning hardware description. The naive protocol analyser instantiates a separate UART, SPI and I2C module, each with its own internal counter for baud-rate division, on every pin being observed, which wastes a great deal of the FPGA; that waste is acceptable because area should not constrain someone who is still learning to build in the language.",
+   "quote_verbatim": "from the point of view of somebody who's learning how to build stuff with, uh, HTL, I really don't think that space should ever be a limitation",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Vendor documentation, not the language, decided how a generation of engineers entered designs. One vendor's manuals were written entirely around a hardware description language flow, with schematic drawing relegated to an appendix noting that it was possible but not how the work was done.",
+   "quote_verbatim": "the Xilinx manuals were all about HDL-based flow. Uh-huh. And then there was, like, an appendix that said, oh, if you really want to, you can also draw schematics using this and that, too.",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The competing vendor's documentation was inverted, presenting the schematic tools as the main flow and confining the hardware description language to an appendix that described it as very complicated. Comparing the two vendors' documentation was itself sufficient grounds for a designer to choose a vendor, because the documentation determined which design method would be supported in practice.",
+   "quote_verbatim": "And then they had an appendix that says, yeah, you could also use HDL, but that's very complicated.",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Logic synthesis is the step that bridges a description of a logic function to an architecture that can implement it: a program consumes a description, usually written in a hardware description language, and generates a logic circuit made of gates, lookup tables or other primitives. An adder written once in the source becomes a dedicated adder primitive under coarse-grain synthesis, a chain of carry cells for an FPGA, and NAND and NOR gates for an ASIC.",
+   "quote_verbatim": "So you might have an adder in your HDL code, and then the synthesis tool might translate that to a dedicated adder primitive for cross-grain synthesis, for example. It might turn that into a chain of carry cells in an FPGA-based synthesis approach. It might turn it into NAND gates and NOR gates for an ASIC synthesis task.",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Synthesis is the same class of operation as compilation: both take a higher-level description in one format and perform a sequence of transformations to produce an equivalent representation in a format that can actually be worked with, so a compiler or assembler can reasonably be called a program synthesiser.",
+   "quote_verbatim": "It takes a high-level description or higher-level description in one format and performs a sequence of transformations to create the equivalent representation in a format that you can actually work with.",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Access to processor IP at the hardware description language level was historically gated by contract: obtaining the source for a small ARM core required long negotiations, and the code was released only at the end of them. That changed when the vendor published the M0 and M3 sources for download under a click-through licence that permits experimentation and integration but forbids use in an actual ASIC.",
+   "quote_verbatim": "you would need to go through long negotiations and probably only at the end of those negotiations, you would be allowed to, to actually see the HDL code and play with it",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Formal verification of a hardware design is assembled from a synthesis front end and general-purpose solvers: the front end converts the HDL design into a form the constraint solvers can consume, and the solvers then discharge or refute the stated properties.",
+   "quote_verbatim": "is using Yosis to convert your HDL design into a format that those, uh, constraint solvers can understand. Then it's using those constraint solvers to actually solve the, the problem.",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The difficult part of a formal flow is not the solving but the reporting. A raw solver result states that a numbered property failed with a numbered signal high in a given cycle, which means nothing to the designer; the tool must map that counter-example back onto the source design as an artefact the engineer can read, such as a waveform trace.",
+   "quote_verbatim": "the more complicated part is actually taking the constraint solver output and converting it back into something that the design engineer will understand and can work with, like a VCD trace",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The share of hardware description language code that is emitted by other tools rather than written by hand is increasing, which compounds the problem of interpreting tool output: a message that refers to a signal or property by number is harder still to trace when no human wrote the signal in the first place.",
+   "quote_verbatim": "more and more of the HDL code we actually implement is going to be generated by other tools",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A generated-HDL flow can become an end-to-end black box for the engineer operating it: an algorithm entered in MATLAB generated code the engineer never inspected, which was pushed into an FPGA whose behaviour was equally unexamined, leaving a single LED as the only observable and a six-hour turnaround on each iteration.",
+   "quote_verbatim": "That would get pushed into FPGA. Didn't know what that was doing. And at the end, it was like an LED was supposed to light up. It was like, it's like a true black box that I, that it took six hours to iterate on.",
+   "speaker": "Chris Gammell",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Not every Python-based hardware layer is a language translator. Some are templating layers: they emit a parameterised instance of a block such as an SPI controller without the user having to work through the internals, which makes them accessible at a high level while leaving the underlying hardware description unchanged in kind.",
+   "quote_verbatim": "It's not like it doesn't take Python and convert it to hardware. That's not what it does, but it's like a templating language that lets you easily template out",
+   "speaker": "Tim Ansell",
+   "episode": 375,
+   "episode_title": "An Interview with Tim \"Mithro\" Ansell",
+   "episode_url": "https://theamphour.com/375-an-interview-with-tim-mithro-ansell/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Graphical block-integration tools inside a vendor IDE achieve a similar assembly of pre-built blocks by dragging and connecting them, but with a lock-in cost that the scripted equivalents do not carry: the user is given no source code for what the tool produced.",
+   "quote_verbatim": "you don't get any of the source code for that",
+   "speaker": "Chris Gammell",
+   "episode": 375,
+   "episode_title": "An Interview with Tim \"Mithro\" Ansell",
+   "episode_url": "https://theamphour.com/375-an-interview-with-tim-mithro-ansell/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A family of newer hardware description languages is built as domain-specific languages hosted inside a strongly typed general-purpose language: SpinalHDL began as a fork of Chisel, and both are built on Scala running on the Java virtual machine. Hosting in a strongly typed language means a connection between two buses of mismatched width is rejected as an error rather than silently accepted.",
+   "quote_verbatim": "it's a strongly typed hardware description language built in a full programming language",
+   "speaker": "Chris Gammell",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "MyHDL, LiteX and MiGen form a comparable group that starts in Python and emits a conventional hardware description language, so the new language sits as a layer above the existing flow rather than replacing any part of it.",
+   "quote_verbatim": "So this is like the, my HDL, LightX, my gen, all of these other tools that are out there that are starting in Python and, and going to something else.",
+   "speaker": "Chris Gammell",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Vendors keep schematic capture alongside the hardware description language flow to serve a specific job: consolidating a handful of discrete shift registers and flip-flops of glue logic into one small FPGA, where the design is simple enough that learning and writing a hardware description language is not worth the effort.",
+   "quote_verbatim": "You don't want to write hate, learn and write HDL for it. You just want to throw in the schematic",
+   "speaker": "Dave Jones",
+   "episode": 567,
+   "episode_title": "The Rodeo Drive of Electronics",
+   "episode_url": "https://theamphour.com/567-the-rodeo-drive-of-electronics/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The barrier to programmable logic is two separate obstacles, not one. The first is the mindset of data flowing through a device concurrently rather than being processed iteratively as on a microcontroller. The second is independent of the language entirely: even starting from someone else's working source, the design must still be run through synthesis, place and route and the rest of the flow, and that toolchain is a second body of knowledge to acquire.",
+   "quote_verbatim": "Now you have to then run it through a synthesizer, run it through place around, run it through all those tools. And that is a second thing that's hard to understand.",
+   "speaker": "Chris Gammell",
+   "episode": 567,
+   "episode_title": "The Rodeo Drive of Electronics",
+   "episode_url": "https://theamphour.com/567-the-rodeo-drive-of-electronics/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The asymmetry between software and hardware description is exact and worth stating as a rule: software written for a processor is sequential by default and the programmer works to make it parallel, while a hardware description is parallel by default and the designer works to make it synchronous and sequential.",
+   "quote_verbatim": "if you write software for a processor, it is sequential by default and you have to work hard to make it parallel",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The characteristic beginner error is reading top-to-bottom position on the screen as order of execution, a trap made worse because ordinary editors give no visual cue distinguishing statements that execute concurrently from those that are ordered; syntax highlighting that showed which statements run at the same time would address it directly.",
+   "quote_verbatim": "for a beginner, it's all too easy to fall into the trap that top to bottom on your screen is the order of execution",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Before hardware description languages, gate-count limits pushed designers toward asynchronous techniques, feeding combinational logic into set-reset latches, JK latches or latches built from combinational logic, which produced a large class of timing hazards and made designs very hard to get right.",
+   "quote_verbatim": "back in the day when you're really limited on the number of gates that you could put into a design people used asynchronous techniques a lot more",
+   "speaker": "Eric Schlaepfer",
+   "episode": 609,
+   "episode_title": "Open Circuits with Eric Schlaepfer and Windell Oskay",
+   "episode_url": "https://theamphour.com/609-open-circuits-with-eric-schlaepfer-and-windell-oskay/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A principal benefit of hardware-description-based design is that it enforces a synchronous template of combinational logic feeding D flip-flops in cascaded stages, which removes the ad hoc timing hazards of asynchronous design and makes the design tractable to automated timing analysis tools.",
+   "quote_verbatim": "one of the biggest innovations of hdl based design is that it kind of solves that for you because you just simply follow this little strict template and then you can take advantage of all these analysis tools",
+   "speaker": "Eric Schlaepfer",
+   "episode": 609,
+   "episode_title": "Open Circuits with Eric Schlaepfer and Windell Oskay",
+   "episode_url": "https://theamphour.com/609-open-circuits-with-eric-schlaepfer-and-windell-oskay/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Sign-off in a hardware description language flow rests on the tool reports rather than on physical inspection: if the timing report passes and the other checks pass, the compiled design can be treated as working, with failures outside that envelope rare enough that an experienced engineer may never encounter one. Board-level design has no comparable closed check.",
+   "quote_verbatim": "if the timing passes on the report and you know, all the other checks pass, you're good to go. Like it's, it's going to work.",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Place and route for a hardware description language design is compute-intensive enough that vendors added the ability to dispatch the job to a compute cluster for faster turnaround, because the tool must evaluate many alternative placements and timing paths.",
+   "quote_verbatim": "you could send it off to a cluster to get faster turn times because it's very compute intensive",
+   "speaker": "Chris Gammell",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Schematic entry remains useful as a teaching route into hardware description precisely because it is graphical: drawing the design as a network of joined components makes it evident that everything runs in parallel and that separate instantiated devices are being wired together, whereas a text description invites a programmer to read it as an executable program for a CPU. A schematic tool with an export to a hardware description language over a small standard cell library lets a beginner take that route and still reach the normal flow.",
+   "quote_verbatim": "if they have no prior HDL experience, I find that drawing a schematic makes it more obvious that you're designing hardware",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Amaranth is a newer entrant that is a hardware description language rather than a high-level synthesis tool, meaning the designer still describes hardware directly rather than having it inferred from an algorithm; it is under active development driven by community requests for comment.",
+   "quote_verbatim": "So there's one that is not a high level synthesis. It's more, more of a hardware description language called Amaranth.",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  }
+ ],
+ "attribution_notes": [
+  "ep 181: attribution_reliable is false on all three passages. The military source-code-classification account is told in the first person by the speaker describing his own time working at Altium, which is Dave Jones, so that label was retained for both the classification claim and the schematic-workaround claim. The high-level-abstraction exchange is a back-and-forth between host and guest with no first-person anchor, so speaker is null there.",
+  "ep 196: the same text appears under two episode entries (original and re-broadcast); the single kept claim uses the first entry's metadata so the episode title and URL stay consistent. It is a first-person account by the interviewed simulator author and the Mike Engelhardt label was retained.",
+  "ep 318: the OpenCores passage is labelled Chris Gammell but interleaves both voices, and the first-person AES S-box account belongs to the interviewed security guest rather than the host; speaker is null for that claim rather than guess between them.",
+  "ep 374: attribution_reliable is false on all seven passages. The vendor-documentation history, the synthesis definition, the ARM IP-access account and the formal-verification claims are first-person answers by the interviewed synthesis-tool author, so the Claire Wolf label was retained. Two passages are labelled Claire Wolf but contain host material: the early lab-board schematic drawing recollection and the MATLAB-generated-code co-op story are the host's own experience, and both were reattributed to Chris Gammell.",
+  "ep 567: the two-hurdles passage appears under both host labels; the content distinguishing the mindset obstacle from the toolchain obstacle is spoken by the host who pushes back, identified as Chris Gammell in the surrounding turns, and that label was used. The schematic-capture-for-glue-logic passage is the other host's, labelled Dave Jones and kept.",
+  "ep 626: the passage is labelled Sergiy Nesterenko throughout but the cluster-dispatch recollection is the host recalling his own FPGA work; that claim was attributed to Chris Gammell and the timing-report sign-off claim left with the guest.",
+  "ep 469: passages are labelled Chris Gammell and the label was retained, but the SpinalHDL and Chisel material is largely the guest explaining his own tooling; the claims are technical and do not depend on which of the two is speaking.",
+  "ep 127 and ep 450: labels retained as given; the kept claims are technical statements about the sequential/parallel distinction that stand independently of which participant made them."
+ ]
+}

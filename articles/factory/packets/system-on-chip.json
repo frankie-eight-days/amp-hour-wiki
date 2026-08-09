@@ -1,0 +1,547 @@
+{
+ "concept": "system-on-chip",
+ "name": "System on Chip",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "system-on-chip",
+  "census": "union",
+  "cap": 250,
+  "capped": false,
+  "total_available": 49,
+  "cluster": {
+   "core": [
+    "soc",
+    "system-on-chip"
+   ],
+   "children": [
+    "hardware-platform",
+    "lvds"
+   ],
+   "neighbors": []
+  },
+  "type": "component",
+  "episodes_with_kept_mentions": 63,
+  "mentions_kept": 81,
+  "pins_final": 49,
+  "pins_by_role": {
+   "core": 48,
+   "child": 1
+  },
+  "pins_by_depth": {
+   "opinion": 15,
+   "explains": 34
+  },
+  "unreliable_attribution_passages": 6,
+  "speakers": [
+   [
+    "Dave Jones",
+    12
+   ],
+   [
+    "Chris Gammell",
+    9
+   ],
+   [
+    "Michael Gielda",
+    3
+   ],
+   [
+    "Jeroen Domburg",
+    2
+   ],
+   [
+    "Ming Zhang",
+    2
+   ],
+   [
+    "James Adams",
+    2
+   ],
+   [
+    "Matt Venn",
+    2
+   ],
+   [
+    "Aedan Cullen",
+    2
+   ],
+   [
+    "Lukas Henkel",
+    2
+   ],
+   [
+    "SPEAKER_01",
+    1
+   ],
+   [
+    "Alan Wolke",
+    1
+   ],
+   [
+    "Matt Richardson",
+    1
+   ],
+   [
+    "Dafydd Roche",
+    1
+   ],
+   [
+    "Jake Baker",
+    1
+   ],
+   [
+    "Avidan Ross",
+    1
+   ],
+   [
+    "Joe Fitzpatrick",
+    1
+   ],
+   [
+    "Matt Duff",
+    1
+   ],
+   [
+    "David Shah",
+    1
+   ],
+   [
+    "Kieran O'Leary",
+    1
+   ],
+   [
+    "Greg Davill",
+    1
+   ]
+  ]
+ },
+ "claims": [
+  {
+   "claim_text": "Multi-die packaging lets a vendor sell what looks like a single chip: dies that cannot be built on one piece of silicon, such as a large flash array alongside a processor, are stacked or flipped together inside one package, removing the external memory chip from the bill of materials.",
+   "quote_verbatim": "instead of you requiring an extra flash memory chip, it's, you know, this massive amount of flash memory is built into the one chip. And the way they do it, they can't fit it on the single die. So they just do it as separate dies.",
+   "speaker": "Chris Gammell",
+   "episode": 12,
+   "episode_title": "Dave Is Back And Blogging!",
+   "episode_url": "https://theamphour.com/the-amp-hour-12-dave-is-back-and-blogging/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Putting a co-processor and its accelerators on a single die is favourable for power because unused blocks can be shut off, and it also lets an existing platform be extended by dropping a co-processor alongside the main application processor rather than redesigning around a new one.",
+   "quote_verbatim": "It's good for power. It means that, you know, if you've got an old mobile phone platform, you can drop a co-processor in",
+   "episode": 97,
+   "episode_title": "An Interview with Eben Upton - Morbus Moilsome MakerFaire",
+   "episode_url": "https://theamphour.com/the-amp-hour-97-morbus-moilsome-makerfaire/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An individual IP block licensed into a larger system-on-chip can carry documentation on the scale of a printed phone book, because every configurable register of the block is exposed to the integrator.",
+   "quote_verbatim": "if you printed out the data sheet, would be the size of a small phone book because of all the registers",
+   "speaker": "Alan Wolke",
+   "episode": 117,
+   "episode_title": "An Interview with Alan Wolke (Re-broadcast)",
+   "episode_url": "https://theamphour.com/117-an-interview-with-alan-wolke-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Application processors integrate memory, graphics processing and DSP blocks into a single-chip solution, with the memory die packaged on top of the processor die rather than placed separately on the board.",
+   "quote_verbatim": "It's got the memory, you know, flipped on top of it. It's got like graphics processes and stuff built in",
+   "episode": 118,
+   "episode_title": "Kickstarter, Open Source RC & Modelsource - Facinorous Financial Foulness",
+   "episode_url": "https://theamphour.com/the-amp-hour-118-facinorous-financial-foulness/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Because a design becomes a handful of large processor, FPGA or system-on-chip packages joined by modular blocks rather than hundreds of small logic packages, autorouting has lost the role it had when boards carried rows of 74-series TTL in DIP.",
+   "quote_verbatim": "So often a design these days is just all these little modular blocks joining into one big huge chip or a couple of big huge processor or FPGA chips",
+   "speaker": "Dave Jones",
+   "episode": 134,
+   "episode_title": "Intel, EPA & Brown Field - Google's Ground Gurgitation",
+   "episode_url": "https://theamphour.com/the-amp-hour-134-googles-ground-gurgitation/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A Bluetooth system-on-chip of the early 2010s put an ARM core, SRAM, baseband processing, encoding and the radio circuitry on one die, so a sensor node needed little beyond the chip itself.",
+   "quote_verbatim": "It's got SRAM on it. It's got baseband type stuff. It's got encoding. It's got radio circuitry",
+   "speaker": "Chris Gammell",
+   "episode": 152,
+   "episode_title": "Firmware, Netburner and Semiconductors - Chris's Capitalism Colloquy",
+   "episode_url": "https://theamphour.com/the-amp-hour-152-chriss-capitalism-colloquy/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An early-2010s Bluetooth Low Energy system-on-chip drew about 3.8 milliamps in both receive and transmit.",
+   "quote_verbatim": "it needs 3.8 milliamps for receiving and TX",
+   "speaker": "Chris Gammell",
+   "episode": 152,
+   "episode_title": "Firmware, Netburner and Semiconductors - Chris's Capitalism Colloquy",
+   "episode_url": "https://theamphour.com/the-amp-hour-152-chriss-capitalism-colloquy/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The Xilinx Zynq combined a dual-core 1 GHz ARM Cortex-A9 processor with FPGA fabric on one die, and higher models added hard-logic DDR2 and DDR3 memory controllers and high-speed serial transceivers.",
+   "quote_verbatim": "it's a dual, it's a dual ARM one gig processor, A9 processor",
+   "episode": 156,
+   "episode_title": "Tesla, FPGAs and DigiKey - Zesty Zippy Zynq",
+   "episode_url": "https://theamphour.com/the-amp-hour-156-zesty-zippy-zynq/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Supplying a system-on-chip can dominate the board physically: with a separate inductor required per rail, the power supply occupies more area than the processor, and the inductors alone can be larger than the FPGA they feed, while adding cost and efficiency loss.",
+   "quote_verbatim": "The power supply is bigger than the system on chip. Just the inductors alone can be bigger than the entire FPGA.",
+   "episode": 156,
+   "episode_title": "Tesla, FPGAs and DigiKey - Zesty Zippy Zynq",
+   "episode_url": "https://theamphour.com/the-amp-hour-156-zesty-zippy-zynq/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Moving from a single-board computer to a design with the system-on-chip mounted directly on one's own board is a large discontinuity in skill, which is why vendors offer compute modules as an intermediate step; the alternative is going straight to a high-speed DDR3 layout.",
+   "quote_verbatim": "without needing, figuring out how to get into the world of like, uh, you know, putting an SOC chip onto a board themselves",
+   "speaker": "Matt Richardson",
+   "episode": 235,
+   "episode_title": "An Interview with Matt Richardson - Raspberry Risorgimento Regent",
+   "episode_url": "https://theamphour.com/235-an-interview-with-matt-richardson-raspberry-risorgimento-regent/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A chip vendor's own assessment in the mid-2010s was that a one-gigahertz system-on-chip selling for one dollar was not achievable at the time, whatever a board price built on that assumption implied.",
+   "quote_verbatim": "a one gigahertz system on chip that costs a dollar is just not possible",
+   "episode": 253,
+   "episode_title": "Consolidate All The Things - Zonked Zelotic Zaitech",
+   "episode_url": "https://theamphour.com/253-consolidate-all-the-things-zonked-zelotic-zaitech/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "For application-specific system-on-chips serving a narrow end product, only two or three manufacturers may make the part, and the firmware is commonly written by the chip manufacturer to a settings list supplied by the equipment maker rather than by the equipment maker itself.",
+   "quote_verbatim": "I'll get the manufacturer of that cool SOC to do it for me, and I'll tell them what settings I want",
+   "speaker": "Dafydd Roche",
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Evaluation modules and tooling quality are decisive for parts that require firmware work, and for high-performance parts the vendor must publish example layouts showing how the board is to be laid out.",
+   "quote_verbatim": "Good tools, good EVMs are very important for parts where there's some firmware to be done.",
+   "speaker": "Dafydd Roche",
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "System-on-chip power rails are typically variable-voltage rather than fixed, because the supply voltage is lowered together with the clock frequency to obtain the best power efficiency; the external supply therefore has to be a variable source.",
+   "quote_verbatim": "the power supplies are variable voltage so they can get the best power efficiency",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Security assumptions are lost along the system-on-chip supply chain: a silicon vendor may reasonably assume that anyone with physical access to the chip can reprogram it, but that assumption is not passed on to the board maker, the OEM that badges the board, or the software vendor above them.",
+   "quote_verbatim": "the SOC vendor might think like anybody who has physical access to this SOC can reprogram it. And that's a valid assumption. The problem is they don't pass that along.",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Pairing a processor with FPGA fabric in one device suits systems where a very high-bandwidth data path must be managed by logic that does not itself need high bandwidth, such as a telecoms base station routing packet transactions; the cost of the processor is absorbed into the fabric rather than paid separately.",
+   "quote_verbatim": "the data pipe needed to be very high bandwidth. But the management of that data pipe didn't need to be so high bandwidth",
+   "speaker": "Kieran O'Leary",
+   "episode": 452,
+   "episode_title": "An Interview with Kieran O'Leary",
+   "episode_url": "https://theamphour.com/452-an-interview-with-kieran-oleary/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Integration on FPGA-based system-on-chips extended to RF: Xilinx released an RF SoC with multiple RF DACs and ADCs integrated onto the die, allowing a software-defined radio or radar system, including its DSP, to be built on one chip.",
+   "quote_verbatim": "Xilinx brought out an RF SOC, which is quite novel, that had an RF, you know, or multiple RF DACs and ADCs integrated into the package",
+   "speaker": "Kieran O'Leary",
+   "episode": 452,
+   "episode_title": "An Interview with Kieran O'Leary",
+   "episode_url": "https://theamphour.com/452-an-interview-with-kieran-oleary/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "When the processor cores and the programmable fabric sit on the same die, communication bandwidth between them is not a design constraint, because the link is internal rather than a serialised off-chip interface.",
+   "quote_verbatim": "it's, it's just like a very tightly integrated SOC. So communication bandwidth is never an issue between the FPGA and the ARM cores",
+   "episode": 466,
+   "episode_title": "An Interview with Ryan Cousins",
+   "episode_url": "https://theamphour.com/466-an-interview-with-ryan-cousins/",
+   "depth_regraded": "opinion",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Even on a tightly integrated device, a signal path that runs from a custom peripheral in the fabric to a bare-metal core and up to a Linux core and back consumes significant time, so buffer sizes and how often the operating system services the interface have to be sized for the case where the call is late or never arrives.",
+   "quote_verbatim": "Like that's still a decent amount of timing to get all the way up and all the way back down.",
+   "episode": 466,
+   "episode_title": "An Interview with Ryan Cousins",
+   "episode_url": "https://theamphour.com/466-an-interview-with-ryan-cousins/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "In a soft system-on-chip built on FPGA fabric the number of CPU cores can be a single Verilog parameter, but beyond a certain count added cores stop helping because the shared memory bus becomes the constraint and the CPUs wait on each other.",
+   "quote_verbatim": "above a certain count, it doesn't make sense because the memory bus gets so constrained that all the CPUs are waiting on each other",
+   "speaker": "Jeroen Domburg",
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Designing a system-on-chip of any reasonable size costs on the order of 50 to 100 million dollars even when a large proportion of the design is assembled from pre-built IP blocks.",
+   "quote_verbatim": "designing an soc is really expensive so even if you're using a lot of pre-built blocks it's still probably a 50 100 million dollar endeavor",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Yield falls as die area grows, because a fixed density of wafer defects removes a larger fraction of big dies; this is why cost-down revisions shrink the die, which lowers price and raises yield at once.",
+   "quote_verbatim": "as your chip gets bigger your yield goes down",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Integrating more of a system onto one piece of silicon trades away interoperability: the more functions are absorbed into the chip, the less able the system designer is to swap an individual part out, and chip design remains far less accessible than board design.",
+   "quote_verbatim": "why not just put all the silicon together then but then you start to lose the interoperability",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Chiplet integration is offered as an alternative to a monolithic system-on-chip built on one process node, with time to market as the claimed advantage: production samples in months rather than the quarters or years a monolithic part requires.",
+   "quote_verbatim": "the advantage of chiplet integration compared to monolithic system on a chip would be time to market",
+   "speaker": "Ming Zhang",
+   "episode": 499,
+   "episode_title": "Discussing Chiplets with Ming Zhang",
+   "episode_url": "https://theamphour.com/499-discussing-chiplets-with-ming-zhang/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A system-on-chip vendor's configuration interface is aimed at the system designer rather than the chip designer, letting the buyer specify how much RAM and how many converters are wanted, which yields far more combinations than the fixed option table of a microcontroller family.",
+   "quote_verbatim": "So this is an interface. Who's using that interface? Not the chip designer. Is a system designer.",
+   "speaker": "Mohamed Kassem",
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The Broadcom part at the centre of the early Raspberry Pi was designed as a multimedia co-processor to sit alongside a phone's main SoC; an ARM core was grafted onto it, which turned it into a small system-on-chip capable of running Linux, and it was inexpensive because phone makers do not pay much for silicon.",
+   "quote_verbatim": "It's kind of like a little system on a chip that could run Linux",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "With RISC-V the instruction set architecture is fixed by a ratified specification, but the microarchitecture, the number of cores, how those cores communicate and what I/O goes on the chip are all left to the implementer, so implementations of the same ISA vary widely.",
+   "quote_verbatim": "the micro architectural implementation or how many cores you're going to have or how these cores are going to talk to each other, what kind of IO are you going to put in a chip? All of this is up to you.",
+   "speaker": "Michael Gielda",
+   "episode": 547,
+   "episode_title": "Open Source Mindset with Michael Gielda",
+   "episode_url": "https://theamphour.com/547-open-source-mindset-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A multi-core Linux-capable RISC-V system-on-chip can be fitted into an FPGA of roughly 35,000 LUTs or fewer, rather than requiring a top-end device.",
+   "quote_verbatim": "you can put a multi-core Linux capable SOC into your FPGA. And I'm not talking about like a huge VU19 FPGA. I'm talking about something that has, you know, 35K LUTs or less",
+   "speaker": "Michael Gielda",
+   "episode": 547,
+   "episode_title": "Open Source Mindset with Michael Gielda",
+   "episode_url": "https://theamphour.com/547-open-source-mindset-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Teams take the IP cores bundled with a vendor tool chain because building the equivalent from scratch is about twice the work, so open alternatives only displace vendor IP where they are already good enough to use in practice.",
+   "quote_verbatim": "building this from scratch is twice the work that just grabbing Silenx IP",
+   "speaker": "Michael Gielda",
+   "episode": 547,
+   "episode_title": "Open Source Mindset with Michael Gielda",
+   "episode_url": "https://theamphour.com/547-open-source-mindset-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A hard requirement such as a large FPGA with hard processor cores narrows the choice to one or two devices, and the vendor tool chain then comes with the device; replacing a tool chain is not something a project takes on against a deadline.",
+   "quote_verbatim": "you can't just turn around and like use something smaller because of the, you know, the hardware requirements and you aren't going to go and write, you know, try and blow up a tool chain when you have a deadline",
+   "speaker": "Michael Gielda",
+   "episode": 547,
+   "episode_title": "Open Source Mindset with Michael Gielda",
+   "episode_url": "https://theamphour.com/547-open-source-mindset-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A system-in-package keeps the microcontroller and the radio transceiver as separate dies in one package, whereas the succeeding part licenses the transceiver design and combines everything onto a single die, giving more integration and a smaller footprint.",
+   "quote_verbatim": "Microcontroller and the transceiver was different dye, but this one combines everything into one dye.",
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "During the semiconductor shortage the lead time on commodity microcontrollers was long enough that designing a custom RISC-V system-on-chip and having it fabricated would have been quicker than waiting for STM32 parts to arrive.",
+   "quote_verbatim": "there was a time when we were, would have been quicker to have designed your own RISC-V SOC and had it fabricated than wait for some STM32s to come in",
+   "speaker": "Matt Venn",
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The case for a custom chip is normally a system-on-chip case rather than a processor case: outside a learning exercise there is little reason to design a new processor core when off-the-shelf RISC-V cores are available, and the motivation is custom peripherals, a particular feature set or a custom instruction.",
+   "quote_verbatim": "You should just use one of the many RISC-V processes that are like available off the shelf.",
+   "speaker": "Matt Venn",
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "System-on-chip selection can be driven by the display interface rather than by compute: a part was chosen for a head-mounted design because it offered both MIPI DSI and LVDS outputs matching the display in use, alongside on-chip H.264 and H.265 encode and decode.",
+   "quote_verbatim": "It has MIPI DSI outputs. It also has LVDS outputs, which were important for the display I was using at that point.",
+   "speaker": "Aedan Cullen",
+   "episode": 638,
+   "episode_title": "Building AR Headsets with Aedan Cullen",
+   "episode_url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Packaging the same die with integrated DDR2 memory produces a variant part that removes the external memory and its high-speed routing from the board, which is what makes a miniaturised design low cost and straightforward to lay out.",
+   "quote_verbatim": "They also package it with integrated DDR2 in that D1S package",
+   "speaker": "Aedan Cullen",
+   "episode": 638,
+   "episode_title": "Building AR Headsets with Aedan Cullen",
+   "episode_url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Many blocks inside a system-on-chip are designed by companies other than the chip maker and licensed in, so the display controller or similar subsystem in one vendor's SoC may be the same IP family found in another's.",
+   "quote_verbatim": "you find that with a lot of blocks in these SOCs. You know, they're designed by other companies other than the SOC maker, and then they get dropped in.",
+   "speaker": "Aedan Cullen",
+   "episode": 638,
+   "episode_title": "Building AR Headsets with Aedan Cullen",
+   "episode_url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Stacking bare memory and storage dice on top of the system-on-chip requires interposer-level design rules of roughly 10 to 20 microns line and space, which conventional PCB processes cannot achieve.",
+   "quote_verbatim": "So 10, 20 microns space width and tracing, standard PCB won't cut it in this case.",
+   "speaker": "Lukas Henkel",
+   "episode": 681,
+   "episode_title": "Compact High Speed Design with Lukas Henkel",
+   "episode_url": "https://theamphour.com/681-compact-high-speed-design-with-lukas-henkel/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Advanced integration steps such as embedded components and stacked bare dice are technically available but only rational at volume, since the non-recurring engineering and time investment have to be recovered across a common enough use case.",
+   "quote_verbatim": "you have to get enough volume to actually make that a reality so that it's worth that NRE",
+   "speaker": "Lukas Henkel",
+   "episode": 681,
+   "episode_title": "Compact High Speed Design with Lukas Henkel",
+   "episode_url": "https://theamphour.com/681-compact-high-speed-design-with-lukas-henkel/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "An eMCP package combining 4 GB of LPDDR4X with 64 GB of eMMC is dominated by the memory dice themselves, with the moulding accounting for perhaps 10 to 20 percent of the package volume, so the only remaining path to a smaller module is stacking the memory onto the system-on-chip.",
+   "quote_verbatim": "4 gigabytes of LPDDR4X and 64 gigabytes of MMC and it's just memory dice are large",
+   "speaker": "Lukas Henkel",
+   "episode": 681,
+   "episode_title": "Compact High Speed Design with Lukas Henkel",
+   "episode_url": "https://theamphour.com/681-compact-high-speed-design-with-lukas-henkel/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "On-chip SRAM is the practical limit on how much a small custom die can do, which is what separates a microcontroller from a microprocessor design: memory has to be placed off chip once the on-die SRAM runs out.",
+   "quote_verbatim": "limitations are usually going to be like onboard SRAM. You know, you're going to go off chip for a lot of this stuff",
+   "episode": 703,
+   "episode_title": "Building wafer.space with Tim Ansell",
+   "episode_url": "https://theamphour.com/703-building-wafer-space-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A Linux-capable system-on-chip has been taped out on a 130 nm shuttle by a single part-time developer with no prior chip design experience, and it boots an unmodified upstream Linux kernel with no board support package required.",
+   "quote_verbatim": "I want this to boot mainstream upstream Linux kernel. You don't need some board support package or anything.",
+   "speaker": "Tim Ansell",
+   "episode": 703,
+   "episode_title": "Building wafer.space with Tim Ansell",
+   "episode_url": "https://theamphour.com/703-building-wafer-space-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Before system-on-chip parts existed for the application, first-generation DVD players were built from large amounts of non-specialised discrete circuitry, reaching a single board of roughly 10 by 12 inches, and the product retailed for over a thousand early-1990s dollars.",
+   "quote_verbatim": "There was a large amount of discrete circuitry in it, not specialized circuitry, not system on a chip mentality.",
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  }
+ ],
+ "attribution_notes": [
+  "ep97: passage speaker is the diarisation placeholder SPEAKER_01 in an interview episode; the content describes a co-processor part rather than the speaker's own role, so the name was dropped.",
+  "ep118: passage labelled Dave Jones, but the surrounding turn recalls BeagleBoard and a conversation with Jason Kreidner, which does not identify the speaker beyond doubt; names dropped from both ep118 claims.",
+  "ep134: labelled Dave Jones and content-consistent (the same turn refers to a teardown video of 1980s equipment), so the name was kept.",
+  "ep156: labelled Dave Jones on both passages; the Zynq specifications and the power-supply-area observation are traded back and forth between two hosts in the transcript and neither is anchored to a stated project, so names were dropped.",
+  "ep184: labelled Dave Jones but the turn speaks as an analog designer facing the integrated part; attribution not certain, and the passage was not used for an attributed claim.",
+  "ep253: labelled Dave Jones but the turn is reading and quoting a third-party blog post; name dropped.",
+  "ep325: labelled Chris Gammell in an interview episode; the statement about phone SoC supplies is a general technical fact and the speaker is not certain, so the name was dropped.",
+  "ep327: marked attribution-unreliable; the passage yielded only forecasting and sentiment and was dropped entirely.",
+  "ep346: marked attribution-unreliable, but the content is the guest's own closing 'call to action' about hardware security, which identifies Joe Fitzpatrick beyond doubt; name kept.",
+  "ep392: marked attribution-unreliable; the guest is identified by content ('I started at analog devices in 2005') but the passage's kept material was not used, and the host's ADC remark was left unattributed and then dropped.",
+  "ep466: labelled Dave Jones, but the passage alternates between host question and guest answer within one window; both claims from it are left unattributed.",
+  "ep469: labelled Chris Gammell; the SoC cost and yield material reads as the guest's, and the same window contains a third-person reference to Chris, so names were dropped.",
+  "ep499: marked attribution-unreliable; the chiplet material is unambiguously the guest company's own position, so Ming Zhang was kept.",
+  "ep503: marked reliable and content-consistent with the guest's own fabless platform; Mohamed Kassem kept.",
+  "ep529: the SoC history is the Raspberry Pi hardware lead's own account, so James Adams was kept; the adjacent schematics exchange is a host question and was not used.",
+  "ep557: labelled Chris Gammell but the turn summarises the guest's part; name dropped.",
+  "ep703: marked attribution-unreliable; the Tiny Tape Out account is the guest's own, so Tim Ansell was kept, while the process and envelope figures come from the host's question and were not used as an attributed claim.",
+  "ep704: labelled Dave Jones, but the first-generation DVD player account is the guest's working experience; name dropped."
+ ],
+ "capped": false
+}

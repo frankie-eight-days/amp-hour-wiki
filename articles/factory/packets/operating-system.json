@@ -1,0 +1,560 @@
+{
+ "concept": "operating-system",
+ "name": "Operating System",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "operating-system"
+   ],
+   "children": [
+    "digital-equipment-corporation",
+    "smbus",
+    "software-abstraction",
+    "software-portability",
+    "software-versioning",
+    "word-processor"
+   ],
+   "neighbors": [
+    {
+     "concept": "android",
+     "weight": 4
+    },
+    {
+     "concept": "apple",
+     "weight": 4
+    }
+   ]
+  },
+  "stats": {
+   "episodes": 78,
+   "mentions": 110,
+   "explains": 28,
+   "opinions": 25,
+   "candidate_episode_count": 64,
+   "candidate_mention_count": 77,
+   "gated_out": 564,
+   "gated_out_by_concept": [
+    [
+     "apple",
+     346
+    ],
+    [
+     "android",
+     142
+    ],
+    [
+     "software-abstraction",
+     24
+    ],
+    [
+     "software-versioning",
+     18
+    ],
+    [
+     "software-portability",
+     13
+    ],
+    [
+     "word-processor",
+     10
+    ],
+    [
+     "smbus",
+     6
+    ],
+    [
+     "digital-equipment-corporation",
+     5
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 4,
+   "speakers": [
+    [
+     "Chris Gammell",
+     21
+    ],
+    [
+     "Dave Jones",
+     16
+    ],
+    [
+     "Jeff Keyzer",
+     2
+    ],
+    [
+     "Jean Rintoul",
+     2
+    ],
+    [
+     "SPEAKER_02",
+     1
+    ],
+    [
+     "Marcus Schappi",
+     1
+    ],
+    [
+     "Brandon Harris",
+     1
+    ],
+    [
+     "Chuck Peddle",
+     1
+    ],
+    [
+     "Tony DiCola",
+     1
+    ],
+    [
+     "Gerry Roston",
+     1
+    ],
+    [
+     "Trammell Hudson",
+     1
+    ],
+    [
+     "Christina Cyr",
+     1
+    ],
+    [
+     "Kerry Scharfglass",
+     1
+    ],
+    [
+     "Jay Carlson",
+     1
+    ],
+    [
+     "Daryl Tewksbury",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "child": 6,
+    "core": 44,
+    "neighbor": 2
+   },
+   "passages_by_depth": {
+    "opinion": 25,
+    "explains": 27
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 52
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "On a self-designed laptop-class computer the board work is the bounded part of the effort — roughly a month of schematics followed by layout, BGA packages included — while the software is where the project stalls; attempting the operating system as well is the point at which a one-person effort hits a wall.",
+   "quote_verbatim": "you can spend a month doing the schematics and then you lay out the board. And, you know, it's not that hard. There's a lot of work to come in the software side of things.",
+   "speaker": null,
+   "episode": 126,
+   "episode_title": "eReaders, datasheets & board assembly - Yearly Yeasty Yapping",
+   "episode_url": "https://theamphour.com/the-amp-hour-126-yearly-yeasty-yapping/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A long-lived build or instrument machine is kept alive by pairing an old operating system that does very little with isolation from the network. Once such a machine is on a network, newer machines attempt to talk to it and the system attempts to fetch updates, and both are routes for it to be disturbed.",
+   "quote_verbatim": "if they've got an old, robust operating system that didn't do much, you know, then... Right. And it doesn't try to update itself too.",
+   "speaker": "Dave Jones",
+   "episode": 137,
+   "episode_title": "Mars, System Design & NAND - Mercurial Mars Mission",
+   "episode_url": "https://theamphour.com/the-amp-hour-137-mercurial-mars-mission/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Experience shipping a Linux-based connected product identifies the recurring costs of that choice as SD cards that fail in the field and the standing obligation to manage an operating system and a software stack; where the function permits it, a microcontroller with a wireless module carries neither.",
+   "quote_verbatim": "I've been through the Ninja blocks and I've learned my lessons when it comes to SD cards that die, having projects where you actually have to manage an operating system and a software stack.",
+   "speaker": "Marcus Schappi",
+   "episode": 189,
+   "episode_title": "An Interview with Marcus Schappi - Kit Ketch Kenophobia",
+   "episode_url": "https://theamphour.com/189-an-interview-with-marcus-schappi-kit-ketch-kenophobia/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A remotely updatable device should be built so that no update can leave it in a state the owner cannot recover from by changing the code and re-issuing it. Without that property an update is capable of wiping the operating system, at which point the device is broken and no further remote action is possible.",
+   "quote_verbatim": "you should never be able to push down an update to the imp that you can't recover just by changing your code and hitting go",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Where application code runs under an interpreted runtime rather than on bare metal, software timing loops become unreliable and blocking the processor for the length of a bit-banged transmission is unacceptable. The work is moved into a hardware peripheral instead: an infrared remote packet is assembled in memory and clocked out by the SPI peripheral at the required frequency.",
+   "quote_verbatim": "because you're running an interpretive language, timing is a little more challenging",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The 6502 was designed for distributed processing: one processor to do a single job well and cheaply, with a second processor added for a second job rather than more work loaded onto the first. Against that model, the operating systems needed to support many processors inside one machine are enormous and impose a slowdown of their own.",
+   "quote_verbatim": "if you look at the operating systems that support those, they're enormous and they've slowed them down",
+   "speaker": "Chuck Peddle",
+   "episode": 241,
+   "episode_title": "An Interview With Chuck Peddle - Charismatic Chipmaking Coryphaeus",
+   "episode_url": "https://theamphour.com/241-an-interview-with-chuck-peddle-charismatic-chipmaking-coryphaeus/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Engineering tooling concentrates on whichever operating system dominates the desktop, and the concentration is self-reinforcing because the available programming talent follows it. The practical consequence is that changing operating system breaks a substantial part of an established toolchain irrespective of the merits of the alternative.",
+   "quote_verbatim": "It's the world's dominant operating system for desktops. Of course it is. Of course all the tools are going to be on there.",
+   "speaker": null,
+   "episode": 298,
+   "episode_title": "Don't Turn It On, Don't Take It Apart",
+   "episode_url": "https://theamphour.com/298-dont-turn-it-on-dont-take-it-apart/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A platform choice that was sound when a product was started is not reopened lightly two decades later. Moving a long-lived codebase onto whichever operating system or language is currently in favour costs more than living with the original decision, which is why old products stay on old platforms.",
+   "quote_verbatim": "I don't blame any company for not wanting to go, oh, well, it's, you know, that's now not the flavor of the month operating system. So we're going to change it.",
+   "speaker": "Dave Jones",
+   "episode": 298,
+   "episode_title": "Don't Turn It On, Don't Take It Apart",
+   "episode_url": "https://theamphour.com/298-dont-turn-it-on-dont-take-it-apart/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A language runtime intended to run on bare metal cannot call on the system services a Linux-class operating system supplies, so anything it would ordinarily borrow from the kernel — memory management above all — has to be implemented inside the runtime itself.",
+   "quote_verbatim": "it can run in kind of these bare metal environments where you don't have an operating system. So you don't have the typical kind of like Linux system calls and things that you might want to have available.",
+   "speaker": "Tony DiCola",
+   "episode": 323,
+   "episode_title": "An Interview with Tony DiCola",
+   "episode_url": "https://theamphour.com/323-an-interview-with-tony-dicola/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A device built on custom hardware with no operating system presents a very small attack surface: an intruder would need the schematics and the data formats before there is anything to attack, and would then still have to work out how to reprogram the part.",
+   "quote_verbatim": "we have custom hardware and we don't run an operating system. So the ways into our device are very, very limited.",
+   "speaker": "Gerry Roston",
+   "episode": 334,
+   "episode_title": "An Interview with Gerry Roston",
+   "episode_url": "https://theamphour.com/334-an-interview-with-gerry-roston/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Wiping a commodity machine and reinstalling removes everything above the firmware, because the hardware itself carries no behaviour and merely waits for an operating system to be loaded onto it. What a reinstall does not touch is the boot firmware, which is a separate layer requiring separate scrutiny — whether the vendor wrote its own or shipped an off-the-shelf BIOS, and whether that code was ever vetted.",
+   "quote_verbatim": "It's a dumb hardware sitting there waiting for the OS, right? Unless you talk about firmware.",
+   "speaker": "Dave Jones",
+   "episode": 335,
+   "episode_title": "When the TV watches you",
+   "episode_url": "https://theamphour.com/335-when-the-tv-watches-you/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A system that cannot be physically reached once deployed is given an operating system selected for robustness against the commands sent to it, so that no remotely issued command can leave the machine unrecoverable.",
+   "quote_verbatim": "It used a robust operating system so you couldn't nuke it",
+   "speaker": "Dave Jones",
+   "episode": 343,
+   "episode_title": "Road trip to the deep space network",
+   "episode_url": "https://theamphour.com/343-road-trip-to-the-deep-space-network/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Generating a secret on a general-purpose operating system means trusting the entire machine: a fresh install from scratch, disconnected from any network, and verified free of key loggers and malware. That requirement conflicts with the network access the same application needs afterwards, which is the argument for generating the secret on an isolated microcontroller with its own display instead.",
+   "quote_verbatim": "you have to completely install a fresh, a fresh OS from scratch, totally disconnected from the network, totally ensure that there's no back doors or malware or, you know, viruses or anything else on there",
+   "speaker": "Dave Jones",
+   "episode": 353,
+   "episode_title": "IoT Degree",
+   "episode_url": "https://theamphour.com/353-iot-degree/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A desktop operating system carries assumptions about the instruction-set architecture it was built for, so a vendor moving its machines to a different architecture faces an operating-system problem rather than only a silicon one.",
+   "quote_verbatim": "their OS is built around the fact that it runs on an Intel architecture",
+   "speaker": "Dave Jones",
+   "episode": 387,
+   "episode_title": "Microfichery",
+   "episode_url": "https://theamphour.com/387-microfichery/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The operating system is the layer that absorbs hardware variation: software written at a sufficiently high level should not care which target it is compiled for, precisely because the operating system beneath it carries every hardware variant. A vendor that controls its own hardware and tolerates no clones therefore supports a far smaller variant matrix than one whose system must run on arbitrary machines.",
+   "quote_verbatim": "But because an operating system has to take care of all the hardware variants.",
+   "speaker": "Dave Jones",
+   "episode": 387,
+   "episode_title": "Microfichery",
+   "episode_url": "https://theamphour.com/387-microfichery/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The same operating system distribution can be built for unrelated instruction sets — x86 and AMD parts as well as the ARM processors used on boards such as the BeagleBone and the Raspberry Pi — which is what makes the choice of application software largely independent of the processor underneath it.",
+   "quote_verbatim": "so like Debian runs, it can run on x86. It can run on AMD stuff. Right. But then it also runs on things like ARM processors, right? Because that's what runs on a BeagleBone.",
+   "speaker": "Dave Jones",
+   "episode": 387,
+   "episode_title": "Microfichery",
+   "episode_url": "https://theamphour.com/387-microfichery/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An open-source licence on a mobile operating system lets a manufacturer cut off from the original vendor fork the system and ship its own version, with nothing legally in the way. What does not transfer is the proprietary application store layered above it: every application has to be republished to the new store by its own author, so the licence removes the legal obstacle without removing the ecosystem one.",
+   "quote_verbatim": "if consumers can't access the Android app store, then, well, they have to make their own app store. And then people will have to put their Android apps on the Huawei store specifically.",
+   "speaker": "Dave Jones",
+   "episode": 445,
+   "episode_title": "Ludicrously High Frequency Interference",
+   "episode_url": "https://theamphour.com/the-amp-hour-445-ludicrously-high-frequency-interference/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Instrument and research software frequently builds only against one exact operating-system version, one exact driver and one exact compiler build. Shipping the environment as a container image is the practical escape, because it distributes the dependency set itself rather than a description of it.",
+   "quote_verbatim": "it just didn't work for anybody unless you had like, you know, this exact version of the operating system and this exact driver and this exact something, something",
+   "speaker": "Jean Rintoul",
+   "episode": 448,
+   "episode_title": "An Interview with Jean Rintoul",
+   "episode_url": "https://theamphour.com/448-an-interview-with-jean-rintoul/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Rehosting an application from a native toolkit onto a server-and-browser model generalises it across operating systems and removes the per-platform packaging problem. Direct hardware access does not generalise with it: Bluetooth in particular remains operating-system specific and stays hard to get around.",
+   "quote_verbatim": "that's actually not a bad option when, if people have different operating systems, but there's still some limitations with different operating systems that are actually quite hard to get around. So like for instance, the Bluetooth.",
+   "speaker": "Jean Rintoul",
+   "episode": 448,
+   "episode_title": "An Interview with Jean Rintoul",
+   "episode_url": "https://theamphour.com/448-an-interview-with-jean-rintoul/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Boot firmware has grown from the original 64 kilobyte BIOS chips into images containing an entire operating system of their own, so a modern machine runs a complete software stack underneath the operating system its owner installed.",
+   "quote_verbatim": "We've come a long way from the original 64 kilobyte BIOS chips that they're now... Yeah. Right. You know, they have an entire operating system inside of there.",
+   "speaker": "Trammell Hudson",
+   "episode": 463,
+   "episode_title": "An Interview with Trammell Hudson",
+   "episode_url": "https://theamphour.com/463-an-interview-with-trammell-hudson/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Devices divide into two classes by their storage budget and what that permits: a low-level embedded part with tens of kilobytes of flash, or a machine with hundreds of gigabytes running a high-level operating system. The storage available is a reliable indicator of which side of that line a design sits on.",
+   "quote_verbatim": "It's not like a low level embedded, you know, pick chip with its, you know, 32 K of flash memory inside it. It's, you know, a high level operating system. It's got 512 gigs of flash",
+   "speaker": "Dave Jones",
+   "episode": 464,
+   "episode_title": "KonnectorPanik",
+   "episode_url": "https://theamphour.com/464-konnectorpanik/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Outside the United States the mobile operating-system split is heavily one-sided: roughly 84 percent of the world's users are on Android against about 14 percent on Apple's platform, which also determines where an application must be published to reach them.",
+   "quote_verbatim": "It actually holds, what is it? 84% of the world demographic as a part, you know, as a part of the operating system. Apple only still only holds 14%",
+   "speaker": "Christina Cyr",
+   "episode": 475,
+   "episode_title": "An Interview with Christina Cyr",
+   "episode_url": "https://theamphour.com/475-an-interview-with-christina-cyr/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A vendor-supplied device operating system running on an STM32F2 alongside a cellular or wireless module lets the customer supply only Arduino-like application code, which is compiled and run on top of it, while the vendor's own background tasks handle network statistics, monitoring and firmware update. Delivering over-the-air update reliably — getting the right data across and checking it — is substantial firmware work that the customer is thereby spared.",
+   "quote_verbatim": "they have an OS that you then – it's not scripting language, but it's effectively a scripting language because it's basically like Arduino-esque code that then gets compiled down. But it's all running on the OS. And then they have like background tasks that are running.",
+   "speaker": "Chris Gammell",
+   "episode": 477,
+   "episode_title": "EcoWoke and Going Broke",
+   "episode_url": "https://theamphour.com/ecowoke-and-going-broke/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "When the supplier of a device operating system ends support, deployed units keep running and the code remains available for the product owner to develop further, but the update channel closes. The maintenance obligation transfers to the customer rather than disappearing, which is what makes an announced end-of-update date a scheduling problem for everyone shipping on that platform.",
+   "quote_verbatim": "but you could go and develop it yourself, but it's just they're not going to push the updates anymore",
+   "speaker": "Chris Gammell",
+   "episode": 477,
+   "episode_title": "EcoWoke and Going Broke",
+   "episode_url": "https://theamphour.com/ecowoke-and-going-broke/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Connected consumer devices of an earlier generation, built when processing power was more limited, ran a custom Linux assembled with OpenEmbedded and later Yocto. As compute became inexpensive the same class of product moved toward stock mobile-operating-system images rather than bespoke builds.",
+   "quote_verbatim": "it was a custom Linux OS built on built with open embedded or eventually Yocto",
+   "speaker": "Kerry Scharfglass",
+   "episode": 487,
+   "episode_title": "An Interview with Kerry Scharfglass",
+   "episode_url": "https://theamphour.com/487-an-interview-with-kerry-scharfglass/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The size of the available engineering labour pool is itself an argument for putting an operating system under a product. A rule that everything is written in C on bare metal restricts development to a small population of engineers, and a product intended to grow an ecosystem of third-party devices will exhaust that supply before the performance advantage pays for itself; raising the abstraction level also lets contributors program against generic interfaces rather than hardware-specific calls.",
+   "quote_verbatim": "how many engineers are available for that sort of thing and how smart is that? It's like you're going to just run out of engineers",
+   "speaker": "Kerry Scharfglass",
+   "episode": 487,
+   "episode_title": "An Interview with Kerry Scharfglass",
+   "episode_url": "https://theamphour.com/487-an-interview-with-kerry-scharfglass/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Loading files off a disk into memory and executing them is the mechanism from which modern operating systems are assembled, but building a product on an embedded Linux part does not require knowing it. The abstraction holds well enough that a designer can select an application processor and work above the boot path without understanding it.",
+   "quote_verbatim": "all those concepts, they all work together to form, you know, how modern operating systems are built. And Linux is no different. Now, the funny thing is, you really don't need to know any of that, to be completely honest.",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Availability immediately after the power button is pressed is a requirement that excludes a large operating system, because boot time is the price paid for one. Where a device must be running the moment it is switched on, an operating system is only included if something else in the specification demands it.",
+   "quote_verbatim": "when I design something, I want it to be running pretty much after you press the power button. Yep. So, I don't like having huge OSs, you know, unnecessarily in devices.",
+   "speaker": "Daryl Tewksbury",
+   "episode": 521,
+   "episode_title": "Outdoor Laser Projection & Object Mapping with Daryl Tewksbury",
+   "episode_url": "https://theamphour.com/521-outdoor-laser-projection-object-mapping-with-daryl-tewksbury/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A teardown of a product built on a five-core application processor costing several hundred dollars — a part of the class that would normally run Linux — found a wholly in-house software stack instead: the manufacturer's own operating system, its own MPEG codecs and its own USB drivers.",
+   "quote_verbatim": "They wrote the operating system from scratch apparently. Right. They wrote the operating, they've got their own operating system. They wrote their own MPEG codex. They wrote their own USB drivers, everything.",
+   "speaker": null,
+   "episode": 536,
+   "episode_title": "NFT Schematics",
+   "episode_url": "https://theamphour.com/536-nft-schematics/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "On the earliest machines the read-only memory was constructed physically out of diodes, so reprogramming the operating system was a soldering operation: the diodes encoding the old code had to be removed and replaced.",
+   "quote_verbatim": "all of the ROM was built with like, with diodes. And so they actually, when they reprogrammed the OS, they had to like de-solder diodes.",
+   "speaker": "Chris Gammell",
+   "episode": 578,
+   "episode_title": "Histogrammic or Histomagraphical",
+   "episode_url": "https://theamphour.com/578-histogrammic-or-histomagraphical/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A two-tier driver model separates a hardware presentation layer, whose job is to expose every register of a given chip so that nothing the part can do is hidden, from a hardware abstraction layer above it that reduces a peripheral to a single call such as reading an ADC. Application code written against the upper layer moves to a different processor by rewriting only the lower one.",
+   "quote_verbatim": "the job of an HPL was to expose like all the registers of a, of a given chip, right? So you had access to absolutely everything that thing did. And then above that, you have, you know, like this hardware abstraction layer.",
+   "speaker": "Brian Amos",
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The substantive case for a full operating system in an embedded product is that most of the required functionality arrives as other people's code, which the project neither writes nor maintains itself.",
+   "quote_verbatim": "You have, you have a whole bunch of other people's code that you can use most of the time and get a whole bunch of functionality that you don't need to directly create",
+   "speaker": "Brian Amos",
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Bringing up an embedded Linux system-on-module into a fully networked configuration with Yocto took six months of work, which is the counterweight to the ready-made functionality an operating system brings with it.",
+   "quote_verbatim": "I like, you know, suffered through Yocto for six, six months, getting a system on modules set up and brought up",
+   "speaker": "Brian Amos",
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Scheduling tasks and interrupting on inputs are the same idea at desktop scale and at microcontroller scale; the definitive difference is the memory management unit. Its presence or absence is what separates a Linux-class system from a bare embedded one, whatever the core count on either side.",
+   "quote_verbatim": "usually you don't have the same like memory management module. That's like the big definitive difference between like a Linux system and a embedded system.",
+   "speaker": "Chris Gammell",
+   "episode": 589,
+   "episode_title": "Mute Button Discipline",
+   "episode_url": "https://theamphour.com/589-mute-button-discipline/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A complete operating system with the toolchain already installed can be delivered inside a browser tab, so that a user opens a terminal and compiles immediately with nothing installed on the local machine.",
+   "quote_verbatim": "inside the browser tab is a operating system. It's basically Ubuntu with all of the software pre-installed, everything ready to go. The first thing you do is you open a terminal, you put in a line to do compile and you're compiling software.",
+   "speaker": "Chris Gammell",
+   "episode": 604,
+   "episode_title": "Robo Fry Guy",
+   "episode_url": "https://theamphour.com/604-robo-fry-guy/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Engineering tools compiled for every operating system rather than one widen who can use them, and that accessibility is paid for by the maintainers, who carry the per-platform build and support burden — a cost open-source EDA projects report directly.",
+   "quote_verbatim": "there's cross-platform support in a lot of tooling now, like VS code. And even Eclipse tools are often, you know, compiled for each operating system",
+   "speaker": "Chris Gammell",
+   "episode": 612,
+   "episode_title": "Slapping Industries",
+   "episode_url": "https://theamphour.com/612-slapping-industries/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Substituting one Linux single-board computer for another is not a port in the software sense, because the operating system layer is unchanged. The work reappears at the board level, where pinouts and peripherals differ and previously documented projects no longer match the hardware, which is why the substitution is costly in engineer time despite the identical software stack.",
+   "quote_verbatim": "It's not, it's not porting though. It's like the OS level is the same. It's the same. Sure. But like the pinouts may change",
+   "speaker": null,
+   "episode": 628,
+   "episode_title": "Two Dads Puzzlin Things Out",
+   "episode_url": "https://theamphour.com/628-two-dads-puzzlin-things-out/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Training material must not assume that attendees arrive with a freshly installed operating system on their own machines; that assumption fails in practice, and supplying remote machines that already carry the environment is the reliable alternative.",
+   "quote_verbatim": "How I would prefer if people would show up at a training with a completely new OS installed on their laptop. And that is the stupidest assumption you could possibly have.",
+   "speaker": "Chris Gammell",
+   "episode": 639,
+   "episode_title": "Daaaamn We're Duuuummmb",
+   "episode_url": "https://theamphour.com/639-daaaamn-were-duuuummmb/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Holding a device's operating system image on a removable SD card rather than in soldered on-chip flash is a deliberate design change, motivated by either cost saving or field flexibility. A side effect is that the complete image can be read out of the product by anyone who removes the card.",
+   "quote_verbatim": "it actually has an SD card in there containing the operating system. It's not built into the chip.",
+   "speaker": "Dave Jones",
+   "episode": 646,
+   "episode_title": "Fan Fanboys",
+   "episode_url": "https://theamphour.com/646-fan-fanboys/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A low-power display product cannot host a higher-order operating system, and so has no font infrastructure to install typefaces into. The substitute is a dedicated font ROM holding the glyph table plus a small routine in the microcontroller that reads glyph data out of it and transfers it straight to the LCD.",
+   "quote_verbatim": "It's not like I can run a bloody, you know, a higher order operating system on this thing and then, you know, install, like, you know, true type fonts or something like that.",
+   "speaker": "Dave Jones",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  }
+ ],
+ "attribution_notes": [
+  "Episode 126: the bundle labels this passage SPEAKER_02, a diarization placeholder rather than a name, and the exchange alternates between both hosts inside the window; speaker left null.",
+  "Episode 298: the two passages covering the same exchange assign the identical lines to different hosts, so the desktop-dominance claim is left unattributed.",
+  "Episode 515: attribution_reliable is false, but the content is unambiguously the interviewee — it refers to parts 'from my review' and to specific Allwinner devices — so the claim is attributed to Jay Carlson.",
+  "Episode 536: the bundle's labels for this exchange appear crossed, with the teardown narration assigned to the host who does not perform teardowns; speaker left null.",
+  "Episode 581: attribution_reliable is false and the passages are labelled Chris Gammell, but the content is the guest's own career history and design methodology, so those claims are attributed to Brian Amos.",
+  "Episode 628: the window mixes host and guest turns around the single-board-computer substitution point; speaker left null."
+ ]
+}

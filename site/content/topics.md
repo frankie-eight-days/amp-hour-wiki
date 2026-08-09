@@ -7,7 +7,7 @@ title: Browse the wiki
 <p style="font-size: 1.05rem; max-width: 34rem; margin: 0 auto;">The tribal knowledge in <strong>719 episodes of <a href="https://theamphour.com">The Amp Hour</a></strong> &mdash; the practices, rules of thumb, failure modes, and hard numbers that engineers only say out loud &mdash; distilled into cited, browsable articles.</p>
 </div>
 
-<div style="display:flex; justify-content:center; gap:2.2rem; flex-wrap:wrap; text-align:center; margin: 1rem 0 1.4rem; font-variant-numeric: tabular-nums;"><div><strong style="font-size:1.5rem;">150</strong><br>articles live</div><div><strong style="font-size:1.5rem;">6,538</strong><br>episode citations</div><div><strong style="font-size:1.5rem;">719</strong><br>episodes indexed</div><div><strong style="font-size:1.5rem;">412</strong><br>articles planned</div></div>
+<div style="display:flex; justify-content:center; gap:2.2rem; flex-wrap:wrap; text-align:center; margin: 1rem 0 1.4rem; font-variant-numeric: tabular-nums;"><div><strong style="font-size:1.5rem;">153</strong><br>articles live</div><div><strong style="font-size:1.5rem;">6,625</strong><br>episode citations</div><div><strong style="font-size:1.5rem;">719</strong><br>episodes indexed</div><div><strong style="font-size:1.5rem;">412</strong><br>articles planned</div></div>
 
 <p style="text-align:center;"><strong><a href="./explore">Explore the concept graph &rarr;</a></strong> &nbsp;·&nbsp; <a href="./all">All articles A&ndash;Z</a> &nbsp;·&nbsp; search with <kbd>⌘K</kbd></p>
 
@@ -19,6 +19,10 @@ Every claim carries a bracketed citation tracing to a verbatim passage in the sh
 
 [[altium|Altium]] · [[design-review|Design Review]] · [[design-rule-checking|Design Rule Checking]] · [[eagle|EAGLE]] · [[gerber|Gerber]] · [[github|GitHub]] · [[kicad|KiCad]] · [[open-source|Open Source]] · [[open-source-hardware|Open Source Hardware]] · [[open-source-software|Open Source Software]] · [[pcb-design|PCB Design]] · [[pcb-footprint|PCB Footprint]] · [[pcb-layout|PCB Layout]] · [[pcb-routing|PCB Routing]] · [[reference-design|Reference Design]] · [[schematic|Schematic]] · [[spice|SPICE]]
 
+### Capacitor, Led, Op Amp
+
+[[capacitor|Capacitor]] · [[dc-dc-converter|DC-DC Converter]] · [[inductor|Inductor]] · [[integrated-circuit|Integrated Circuit]] · [[led|LED]] · [[mosfet|MOSFET]] · [[op-amp|Op-Amp]] · [[relay|Relay]] · [[resistor|Resistor]] · [[soldering|Soldering]] · [[switching-power-supply|Switching Power Supply]] · [[transformer|Transformer]] · [[transistor|Transistor]] · [[voltage-regulator|Voltage Regulator]]
+
 ### Pcb Fabrication, Pcb, Pick And Place Machine
 
 [[bga|BGA]] · [[breadboard|Breadboard]] · [[fr4|FR-4]] · [[hand-soldering|Hand Soldering]] · [[pcb|PCB]] · [[pcb-assembly|PCB Assembly]] · [[pcb-fabrication|PCB Fabrication]] · [[pcb-lead-time|PCB Lead Time]] · [[pcb-milling|PCB Milling]] · [[pick-and-place-machine|Pick and Place Machine]] · [[reflow-soldering|Reflow Soldering]] · [[solder-mask|Solder Mask]] · [[via|Via]]
@@ -27,21 +31,17 @@ Every claim carries a bracketed citation tracing to a verbatim passage in the sh
 
 [[bootloader|Bootloader]] · [[can-bus|CAN Bus]] · [[eeprom|EEPROM]] · [[firmware-update|Firmware Update]] · [[flash-memory|Flash Memory]] · [[linux|Linux]] · [[ram|RAM]] · [[rtos|RTOS]] · [[serial-port|Serial Port]] · [[usb|USB]] · [[usb-c|USB-C]] · [[virtual-machine|Virtual Machine]] · [[zephyr|Zephyr]]
 
-### Capacitor, Led, Op Amp
-
-[[capacitor|Capacitor]] · [[dc-dc-converter|DC-DC Converter]] · [[inductor|Inductor]] · [[integrated-circuit|Integrated Circuit]] · [[led|LED]] · [[mosfet|MOSFET]] · [[op-amp|Op-Amp]] · [[relay|Relay]] · [[resistor|Resistor]] · [[soldering|Soldering]] · [[switching-power-supply|Switching Power Supply]] · [[transformer|Transformer]] · [[transistor|Transistor]]
-
 ### Analog To Digital Converter, I2C, Spi
 
 [[accelerometer|Accelerometer]] · [[analog-to-digital-converter|Analog to Digital Converter]] · [[bandwidth|Bandwidth]] · [[digital-to-analog-converter|Digital-to-Analog Converter]] · [[dma|DMA]] · [[gpio|GPIO]] · [[i2c|I2C]] · [[pwm|PWM]] · [[signal-to-noise-ratio|Signal to Noise Ratio]] · [[spi|SPI]] · [[temperature-sensor|Temperature Sensor]] · [[uart|UART]]
 
+### Microcontroller, Arduino, Raspberry Pi
+
+[[arduino|Arduino]] · [[assembly-language|Assembly Language]] · [[breakout-board|Breakout Board]] · [[computer-vision|Computer Vision]] · [[development-board|Development Board]] · [[electronics-education|Electronics Education]] · [[embedded-system|Embedded System]] · [[maker-faire|Maker Faire]] · [[microcontroller|Microcontroller]] · [[python|Python]] · [[raspberry-pi|Raspberry Pi]] · [[sparkfun|SparkFun]]
+
 ### Bluetooth, Wifi, Internet Of Things
 
 [[antenna|Antenna]] · [[api|API]] · [[bluetooth|Bluetooth]] · [[bluetooth-low-energy|Bluetooth Low Energy]] · [[cloud-computing|Cloud Computing]] · [[esp32|ESP32]] · [[gps|GPS]] · [[internet-of-things|Internet of Things]] · [[lora|LoRa]] · [[radio-frequency|Radio Frequency]] · [[wifi|Wi-Fi]]
-
-### Microcontroller, Arduino, Raspberry Pi
-
-[[arduino|Arduino]] · [[assembly-language|Assembly Language]] · [[computer-vision|Computer Vision]] · [[development-board|Development Board]] · [[electronics-education|Electronics Education]] · [[embedded-system|Embedded System]] · [[maker-faire|Maker Faire]] · [[microcontroller|Microcontroller]] · [[python|Python]] · [[raspberry-pi|Raspberry Pi]] · [[sparkfun|SparkFun]]
 
 ### Fpga, Arm, Risc V
 
@@ -55,6 +55,10 @@ Every claim carries a bracketed citation tracing to a verbatim passage in the sh
 
 [[battery|Battery]] · [[battery-life|Battery Life]] · [[low-power-design|Low Power Design]] · [[power-grid|Power Grid]] · [[solar-panel|Solar Panel]] · [[solar-power|Solar Power]] · [[vertical-integration|Vertical Integration]]
 
+### 3D Printing, 3D Printer, Injection Molding
+
+[[3d-printer|3D Printer]] · [[3d-printing|3D Printing]] · [[design-for-manufacturing|Design for Manufacturing]] · [[economies-of-scale|Economies of Scale]] · [[hackerspace|Hackerspace]] · [[injection-molding|Injection Molding]]
+
 ### Firmware, Engineering Education, Software
 
 [[automated-testing|Automated Testing]] · [[continuous-integration|Continuous Integration]] · [[engineering-education|Engineering Education]] · [[firmware|Firmware]] · [[jtag|JTAG]] · [[reverse-engineering|Reverse Engineering]]
@@ -62,10 +66,6 @@ Every claim carries a bracketed citation tracing to a verbatim passage in the sh
 ### Oscilloscope, Multimeter, Soldering Iron
 
 [[logic-analyzer|Logic Analyzer]] · [[multimeter|Multimeter]] · [[oscilloscope|Oscilloscope]] · [[power-supply|Power Supply]] · [[soldering-iron|Soldering Iron]] · [[spectrum-analyzer|Spectrum Analyzer]]
-
-### 3D Printing, 3D Printer, Injection Molding
-
-[[3d-printer|3D Printer]] · [[3d-printing|3D Printing]] · [[design-for-manufacturing|Design for Manufacturing]] · [[economies-of-scale|Economies of Scale]] · [[injection-molding|Injection Molding]]
 
 ### Digi Key, Component Sourcing, Bill Of Materials
 

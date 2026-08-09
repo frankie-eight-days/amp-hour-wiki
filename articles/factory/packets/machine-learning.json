@@ -1,0 +1,488 @@
+{
+ "concept": "machine-learning",
+ "name": "Machine Learning",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "machine-learning"
+   ],
+   "children": [
+    "career-development",
+    "edge-processing",
+    "image-recognition",
+    "inverse-kinematics",
+    "machine-learning-model"
+   ],
+   "neighbors": []
+  },
+  "stats": {
+   "episodes": 46,
+   "mentions": 77,
+   "explains": 28,
+   "opinions": 10,
+   "candidate_episode_count": 42,
+   "candidate_mention_count": 60,
+   "gated_out": 46,
+   "gated_out_by_concept": [
+    [
+     "inverse-kinematics",
+     18
+    ],
+    [
+     "career-development",
+     13
+    ],
+    [
+     "image-recognition",
+     6
+    ],
+    [
+     "machine-learning-model",
+     6
+    ],
+    [
+     "edge-processing",
+     3
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 10,
+   "speakers": [
+    [
+     "Chris Gammell",
+     16
+    ],
+    [
+     "Dave Jones",
+     6
+    ],
+    [
+     "Claire Wolf",
+     2
+    ],
+    [
+     "Greg Charvat",
+     2
+    ],
+    [
+     "Chris Anderson",
+     1
+    ],
+    [
+     "Joe Bamberg",
+     1
+    ],
+    [
+     "Mike Szczys",
+     1
+    ],
+    [
+     "Chrissy Meyer",
+     1
+    ],
+    [
+     "Jean Rintoul",
+     1
+    ],
+    [
+     "Christopher White",
+     1
+    ],
+    [
+     "Eric Klein",
+     1
+    ],
+    [
+     "Michael Gielda",
+     1
+    ],
+    [
+     "Brian Faith",
+     1
+    ],
+    [
+     "Andreas Olofsson",
+     1
+    ],
+    [
+     "Jeff Geerling",
+     1
+    ],
+    [
+     "Massimo Banzi",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 35,
+    "child": 3
+   },
+   "passages_by_depth": {
+    "explains": 28,
+    "opinion": 10
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 38
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "Classification tasks such as image tagging tolerate far coarser numerical precision than instrumentation work, because the output is a label rather than a measurement; an implementation that is only roughly in the ballpark still returns the correct category.",
+   "quote_verbatim": "You don't need accuracy. It doesn't matter. Right. You can be just 10% in the ballpark and that's good enough to get the result of the machine learning.",
+   "speaker": null,
+   "episode": 344,
+   "episode_title": "Back Into The Swing Of Things",
+   "episode_url": "https://theamphour.com/344-back-into-the-swing-of-things/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "One motivation for applying machine learning to robot arm control is to avoid deriving and solving the inverse kinematics of the arm explicitly.",
+   "quote_verbatim": "And machine learning, to eliminate the kinematics requirements.",
+   "speaker": "Chris Gammell",
+   "episode": 344,
+   "episode_title": "Back Into The Swing Of Things",
+   "episode_url": "https://theamphour.com/344-back-into-the-swing-of-things/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An autopilot flown on anything other than the vendor's stock airframe has to have its control gains tuned by hand for that airframe; a proposed alternative is to fly the vehicle manually for a short period and let the autopilot infer the gain settings from that flight.",
+   "quote_verbatim": "if you don't buy the stock platform, you know, some tuning is involved",
+   "speaker": "Chris Anderson",
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Interactive machine learning demonstrations often downsample a camera feed drastically before it reaches the model, dropping from a native 640 by 480 or higher frame to a grid of a few tens of pixels per side, which keeps the input dimensionality small enough to train and run in real time.",
+   "quote_verbatim": "she downsampled a webcam. So, basically, instead of like a 640 by 480 or higher webcam.",
+   "speaker": "Chris Gammell",
+   "episode": 296,
+   "episode_title": "Gotta Update My Dog",
+   "episode_url": "https://theamphour.com/296-gotta-update-my-dog/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A whole-home electricity monitor that disaggregates appliance loads ships with generic per-appliance models (a generalised refrigerator, a generalised washer) and then specialises those models against the individual appliances it observes once installed, because the current signature of a given unit differs from the class average.",
+   "quote_verbatim": "when the, the monitor first gets installed in, in your house, they have very general models on it. So a very generalized refrigerator model, a very generalized, um, uh, washer model. And as it, once it's installed and it starts observing your electricity, it, the models start to get tailored to your individual, uh, individual appliances.",
+   "speaker": "Joe Bamberg",
+   "episode": 371,
+   "episode_title": "An Interview With Joe Bamberg",
+   "episode_url": "https://theamphour.com/371-an-interview-with-joe-bamberg/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Because the models in a load-disaggregation product keep changing, the product is built around frequent connected software updates: tailored models are refreshed regularly and newly derived appliance-type models are pushed out to the whole installed fleet.",
+   "quote_verbatim": "when we figure out ways to discover new types of appliances, like we push those models to all the units",
+   "speaker": "Joe Bamberg",
+   "episode": 371,
+   "episode_title": "An Interview With Joe Bamberg",
+   "episode_url": "https://theamphour.com/371-an-interview-with-joe-bamberg/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Reinforcement learning is normally staged from simple examples to complex ones: an agent dropped straight into a large maze wanders at random and never produces a run good enough for the algorithm to identify which behaviour was correct, so training starts on small mazes and grows them.",
+   "quote_verbatim": "so you do that for example, when you would like to build a robot that can find its way in a maze. Um, and if you just drop it in a really, really huge maze, it will just randomly go around.",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A learned model trained on separate corpora of recorded instrument samples can represent the instruments in a shared space, which allows a synthesiser to interpolate continuously between two timbres rather than switching between fixed samples.",
+   "quote_verbatim": "it analyzes all these sound clips of like a flute right and then it analyzes all these sound clips of like a snare drum and what they do is basically they can like use this device that they created the nsynth to basically merge the two together and slide slide between them",
+   "speaker": "Chris Gammell",
+   "episode": 384,
+   "episode_title": "A++++++ Will Buy Again",
+   "episode_url": "https://theamphour.com/384-a-will-buy-again/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Machine-learned perception is a poor fit for guiding a robot, because guidance demands repeatability and accuracy on every cycle while a learned classifier is characterised by a success rate; hit rates that count as aspirational for machine learning are far below what a positioning task tolerates.",
+   "quote_verbatim": "that's why machine learning is terrible at guiding robots",
+   "speaker": "Greg Charvat",
+   "episode": 407,
+   "episode_title": "Gregory Charvat and Three New Companies",
+   "episode_url": "https://theamphour.com/407-gregory-charvat-and-three-new-companies/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Machine vision built on learned models performs well where the field of view is tightly controlled and the subject is presented identically every time, such as aligning a part on a printed circuit board viewed straight on, and degrades as the viewing angle and framing are allowed to vary.",
+   "quote_verbatim": "machine learning starts to work really well, not for navigation, but when you have a super controlled field of view where you're looking at, let's say, a printed circuit board and you're aligning a part or something like that, where it's trained to look at something that's always the same",
+   "speaker": "Greg Charvat",
+   "episode": 407,
+   "episode_title": "Gregory Charvat and Three New Companies",
+   "episode_url": "https://theamphour.com/407-gregory-charvat-and-three-new-companies/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Automated optical inspection has worked by taught comparison since well before the machine-learning label was applied to it: a camera images the finished board and software compares that image against reference examples an operator has taught the machine.",
+   "quote_verbatim": "back then it was kind of like a 2d inspection. So you'd have a camera that looked at the finished circuit board, um, and it would take a picture of it and then it would use software to compare those pictures against other things that you've taught the machine to look for.",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Running heavy inference on a battery-powered device is bounded by energy rather than by feasibility: the computation can be made to work, but the battery required to sustain it dominates the product.",
+   "quote_verbatim": "putting machine learning down or like putting like high, high levels amount of high amounts of processing down onto like a battery powered platform. You're kidding yourself. You know, like that's, it's maybe possible, but you're going to have a big battery and it's going to suck.",
+   "speaker": "Chris Gammell",
+   "episode": 428,
+   "episode_title": "Setting Fire To The Tracks",
+   "episode_url": "https://theamphour.com/428-setting-fire-to-the-tracks/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The set of ordinary embedded products that justify an on-board learned model is small; most low-cost devices gain nothing from one.",
+   "quote_verbatim": "the number of practical everyday applications where it's going to be practical to implement machine learning is, is still going to be small",
+   "speaker": null,
+   "episode": 428,
+   "episode_title": "Setting Fire To The Tracks",
+   "episode_url": "https://theamphour.com/428-setting-fire-to-the-tracks/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The hardware engineer's contribution to a machine-learning system is usually upstream of the model: designing the sensing, collecting the data and packaging it in a form the downstream system can consume, rather than implementing the learning itself.",
+   "quote_verbatim": "thinking about how, how you collect and bundle up sensor data and then probably send it back somewhere",
+   "speaker": "Chris Gammell",
+   "episode": 428,
+   "episode_title": "Setting Fire To The Tracks",
+   "episode_url": "https://theamphour.com/428-setting-fire-to-the-tracks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The image of electronics manufacturing as a fully automated line does not describe most factories: manual assembly steps remain common, and those steps are typically verified by a second human performing visual inspection, which is the gap machine-vision inspection products target.",
+   "quote_verbatim": "there are still humans performing really, really manual tasks. And then, um, the scarier part, like the, the part that's even scarier to me is that there are humans doing visual inspection to confirm that the humans that were doing the manual tasks actually did them correctly.",
+   "speaker": "Chrissy Meyer",
+   "episode": 437,
+   "episode_title": "An Interview with Chrissy Meyer",
+   "episode_url": "https://theamphour.com/437-an-interview-with-chrissy-meyer/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Machine learning applied to MRI data conventionally registers each subject against a standard anatomical model, which averages across individuals; where the clinically interesting feature is an individual anatomical detail, that averaging can remove the very signal being sought.",
+   "quote_verbatim": "often when you're sort of like doing machine learning of MRI data, um, you use these standard models of like, say a brain.",
+   "speaker": "Jean Rintoul",
+   "episode": 448,
+   "episode_title": "An Interview with Jean Rintoul",
+   "episode_url": "https://theamphour.com/448-an-interview-with-jean-rintoul/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Running embedded firmware inside a simulator on a host removes the memory ceiling of the target part and of an external debug probe, so instrumentation and trace that the real device could never hold become possible.",
+   "quote_verbatim": "No memory limits. I mean, or really the limits of the system, which is much more massive than an embedded system might have",
+   "speaker": "Michael Gielda",
+   "episode": 519,
+   "episode_title": "Simulating Embedded Hardware with Michael Gielda",
+   "episode_url": "https://theamphour.com/519-simulating-embedded-hardware-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Simulation of the target microcontroller is used to benchmark embedded machine-learning runtimes such as TensorFlow Lite, measuring how well inference code executes on small platforms without needing the physical silicon in the loop.",
+   "quote_verbatim": "this relationship with Google, the thing that we're building in terms of TensorFlow Lite and metrics stuff and generally measuring how well ML code executes on small embedded platforms",
+   "speaker": "Michael Gielda",
+   "episode": 519,
+   "episode_title": "Simulating Embedded Hardware with Michael Gielda",
+   "episode_url": "https://theamphour.com/519-simulating-embedded-hardware-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A reported method for validating driver-assistance software in the field runs the candidate algorithm alongside the live system, records what the human driver actually did, and treats each divergence between the algorithm's intended action and the driver's action as a training case uploaded for analysis.",
+   "quote_verbatim": "they're recording what the humans do and then comparing that to what they expected. And then they're learning each time the human does something different to what they expected.",
+   "speaker": "Dave Jones",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A cloud-hosted model-generation service for embedded machine learning takes labelled sensor data as its input and emits inference models sized to run on a resource-constrained microcontroller, so that the constrained target is only ever asked to perform inference.",
+   "quote_verbatim": "It takes labeled sensor data and it generates all these inferencing models that you could then run on device in a resource constrained microcontroller",
+   "speaker": "Brian Faith",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The software stack behind one embedded machine-learning toolchain originated as the group inside Intel that supported the Curie IoT module from 2015; Intel recognised that developing such applications without a data scientist required a software platform, and when Curie was cancelled the software outlived the silicon.",
+   "quote_verbatim": "They were actually the software group within Intel, uh, when Intel was doing, uh, the Curie module back in 2015.",
+   "speaker": "Brian Faith",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Labelling sensor data for a supervised model requires domain knowledge rather than data-science knowledge: an engineer who performs the physical event while recording the waveform knows when it happened and can mark the data accordingly, without interpreting the signal.",
+   "quote_verbatim": "They're, they're domain experts, like the door closing. If you were to have a quick feather board or any board for that matter, and just start opening and closing the door and looking at a waveform on a screen, you know, when you were closing and opening the door, right? So you can label that data without even knowing what the data is.",
+   "speaker": "Chris Gammell",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The conventional way to detect an event in a sensor stream is to hand-build a threshold or a slope detector and iterate until it fits, which amounts to imposing a chosen mathematical form on a physical phenomenon and checking the result by trial and error.",
+   "quote_verbatim": "I would probably set up simple thresholds or, uh, you know, maybe, maybe if I'm really, really feeling my, my programming prowess that day, I try and do like some kind of slope detection on data or something like that. But that's me imposing math on a very natural phenomenon and trying to make sure that my math fits it. And it'd be just like a lot of guess and check",
+   "speaker": "Chris Gammell",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Automated machine-learning tooling inverts the classical DSP workflow. Instead of an engineer searching the space of transforms for one whose output separates the cases, the engineer supplies the desired output for labelled examples and the tool searches for the algorithm that produces it.",
+   "quote_verbatim": "navigating that space of what is the right math function to actually yield the result. That's, that is like the old way of doing it, right? You're a DSP engineer, you have the signals and you start applying all these different functions to it to see if the output is going to give you good results. Right. And it is very much flipping that around and saying, no, here's the output I want.",
+   "speaker": "Brian Faith",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Data collection for an embedded classifier is a physical procedure: the event is repeated on the order of a hundred times while the sensor records, and the resulting set of traces is labelled as that event.",
+   "quote_verbatim": "he was talking about like a pressure sensor. You close the door and you do that a hundred times and you collect this data. And then you'd go and characterize it and say, actually, that's a, that's a door closing.",
+   "speaker": "Chris Gammell",
+   "episode": 546,
+   "episode_title": "Thousands Of Dependencies",
+   "episode_url": "https://theamphour.com/546-thousands-of-dependencies/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Embedded machine-learning inference of this kind is targeted at ordinary Cortex-M4 class microcontrollers, not at dedicated accelerator hardware, which is what allows it to displace hand-written signal processing in existing sensor products.",
+   "quote_verbatim": "you put these things into like a, you know, it'll go into like a Cortex M4",
+   "speaker": "Chris Gammell",
+   "episode": 546,
+   "episode_title": "Thousands Of Dependencies",
+   "episode_url": "https://theamphour.com/546-thousands-of-dependencies/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In wireless sensor network research the hardware task and the learning task are separated in time: purpose-built Bluetooth, WiFi or custom 2.4 GHz nodes are designed first to read and collect data during controlled experiments, and the learning is applied afterwards to the collected set.",
+   "quote_verbatim": "I was basically designing mostly Bluetooth, sometimes wifi, and sometimes custom 2.4 gigahertz based sensor nodes, which would read the data, collect the data. And then we would run a couple of, let's say experiments and then use that data, collect the data to do a machine learning on top of it.",
+   "speaker": "Orkhan Amiraslanov",
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Individuals can be identified from gait alone using non-imaging sensors: a worn accelerometer captures walking and movement patterns, and capacitive sensors installed under a carpet support the same identification from footfall, avoiding a camera in the space.",
+   "quote_verbatim": "just using an accelerometer to find or to detect the person who is wearing the sensor based on the, or walking patterns or movement patterns",
+   "speaker": "Orkhan Amiraslanov",
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Automotive active noise cancellation does not need to learn its environment from scratch, because the acoustic transfer function from noise source to the occupant's ears is largely stable in a given cabin; the system is pre-tuned to that rough transfer function and given only a limited adaptive range around it.",
+   "quote_verbatim": "the audio transfer function from noise to your ears, it's usually fairly stable. So if, if you keep your windows closed and you're just driving, it might be speed dependent or something, but essentially it stays roughly the same. So that's why you, you, you pre",
+   "speaker": "Remco Stoutjesdijk",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An adaptive canceller pre-tuned for one cabin condition fails gracefully rather than re-converging when the condition changes: opening a window alters the transfer function beyond the range the system was allowed to adapt over, and cancellation performance simply falls off.",
+   "quote_verbatim": "if somebody would be driving and opens the window, it might be that the ANC says, well, listen, I've been, I've been pre-tuned for a closed window and I can do only so much.",
+   "speaker": "Remco Stoutjesdijk",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Edge machine-learning modules sold as development boards are marketed on their compute and leave the deployment problem to the user; putting one into an industrial setting such as watching a robot arm requires an enclosure, thermal protection and the actual peripheral interfaces the installation needs, none of which the dev board provides.",
+   "quote_verbatim": "you can't just stick a dev board on the edge of that and be like, oh, it'll survive okay. It needs to have good enclosure, good heat protection. It needs to just have all the peripherals that it needs.",
+   "speaker": "Chris Gammell",
+   "episode": 608,
+   "episode_title": "Vapor Phase with Saber Kaygusuz",
+   "episode_url": "https://theamphour.com/608-vapor-phase-with-saber-kaygusuz/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Workloads dominated by large matrix multiplication cannot be served by a general-purpose core alone and require a dedicated accelerator block on the die, which is why machine-learning acceleration is treated as a core component of a modern custom-silicon platform rather than an option.",
+   "quote_verbatim": "if you want to do anything that's, you know, massive matrix multiplication, uh, you need an accelerator on there",
+   "speaker": "Andreas Olofsson",
+   "episode": 650,
+   "episode_title": "Accessible ASICs with Andreas Olofsson",
+   "episode_url": "https://theamphour.com/650-accessible-asics-with-andreas-olofsson/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Single-board computers now carry AI acceleration alongside compute roughly equivalent to a good laptop of five to eight years earlier, which is enough to take in camera data, compress it more efficiently and stream it out from a device small enough to strap to the equipment being observed.",
+   "quote_verbatim": "you can have some AI acceleration, even like the new, the new Raspberry Pi five, it's now fast enough that it's, it's like what a computer was five or eight years ago.",
+   "speaker": "Jeff Geerling",
+   "episode": 651,
+   "episode_title": "Learning Computing with Jeff Geerling",
+   "episode_url": "https://theamphour.com/651-learning-computing-with-jeff-geerling/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Early machine learning on small Arduino-class boards was enabled by a hardware pattern-matching engine present in an Intel embedded processor; the block was scheduled for removal as unused before an application was found for it, and TinyML work on that platform began in 2017.",
+   "quote_verbatim": "this processor that we used from Intel is where I experienced the first time doing machine learning on a small board because they had this pattern matching engine and they said, oh, we're going to remove it from the processors. No, don't remove it. Leave it. We'll figure out a way to use it. And then we started to do TinyML back in 2017.",
+   "speaker": "Massimo Banzi",
+   "episode": 726,
+   "episode_title": "Arduino's Invisible Touch with Massimo Banzi",
+   "episode_url": "https://theamphour.com/the-amp-hour-726-arduinos-invisible-touch-with-massimo-banzi/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  }
+ ],
+ "attribution_notes": [
+  "Episode 344: the passage windows overlap and the line about needing only rough accuracy sits on the boundary between the two hosts' turns, so the claim drawn from it is left with a null speaker.",
+  "Episode 371: passage attribution flagged unreliable, but the answering voice describes the company's own product and update cadence in the first person, so the claim is attributed to the interviewee Joe Bamberg.",
+  "Episode 374: passage attribution flagged unreliable; the reinforcement-learning explanation is given by the interviewee and is attributed to Claire Wolf.",
+  "Episode 384: passage attribution flagged unreliable; the speaker is the host presenting and linking the project to the co-host, attributed to Chris Gammell.",
+  "Episode 411: the bundle labels the passage Chris Gammell, but the content is a first-person account of working at an automated optical inspection company after college, which is the interviewee; attributed to Chris Denney.",
+  "Episode 428: the two overlapping passages disagree on who speaks which turn. The battery-power judgement is attributed to Chris Gammell, who states it while agreeing with his co-host; the remark that few everyday products justify embedded machine learning is left null because it falls on a turn boundary.",
+  "Episode 437: passage attribution flagged unreliable; the account of factory floors is given by the interviewee and attributed to Chrissy Meyer.",
+  "Episode 519: passage attribution flagged unreliable; the simulator and TensorFlow Lite material is the interviewee describing his own tool, attributed to Michael Gielda.",
+  "Episode 525: the passage containing both the labelling example and the auto-ML explanation is labelled Chris Gammell; the closing turn about flipping the DSP workflow is the interviewee's answer and is attributed to Brian Faith.",
+  "Episode 557: the bundle labels the passage Chris Gammell, but the content is a first-person account of the guest's own research on sensor nodes and gait analysis; attributed to Orkhan Amiraslanov.",
+  "Episode 560: passage attribution flagged unreliable; the active-noise-cancellation mechanism is explained by the interviewee and attributed to Remco Stoutjesdijk.",
+  "Episode 650: passage attribution flagged unreliable; the statement about needing a matrix-multiply accelerator is the interviewee's and is attributed to Andreas Olofsson.",
+  "Episode 651: passage attribution flagged unreliable; the single-board-computer capability description is the interviewee's and is attributed to Jeff Geerling."
+ ]
+}

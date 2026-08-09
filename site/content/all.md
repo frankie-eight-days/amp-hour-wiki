@@ -32,6 +32,7 @@ title: All articles
 - [[bluetooth-low-energy|Bluetooth Low Energy]]
 - [[bootloader|Bootloader]]
 - [[breadboard|Breadboard]]
+- [[breakout-board|Breakout Board]]
 
 ### C
 
@@ -86,6 +87,7 @@ title: All articles
 
 ### H
 
+- [[hackerspace|Hackerspace]]
 - [[hand-soldering|Hand Soldering]]
 
 ### I
@@ -211,6 +213,7 @@ title: All articles
 - [[vertical-integration|Vertical Integration]]
 - [[via|Via]]
 - [[virtual-machine|Virtual Machine]]
+- [[voltage-regulator|Voltage Regulator]]
 
 ### W
 
