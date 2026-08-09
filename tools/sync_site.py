@@ -204,13 +204,12 @@ hero = [
     "",
     '<div style="text-align:center; padding: 1.2rem 0 0.4rem;">',
     '<h1 style="font-size: 2.1rem; margin-bottom: 0.4rem; border: none;">'
-    "Sixteen years of electronics oral tradition&nbsp;&mdash; indexed.</h1>",
+    "The parts of electronics nobody writes down.</h1>",
     '<p style="font-size: 1.05rem; max-width: 34rem; margin: 0 auto;">'
-    "The tribal knowledge in <strong>719 episodes of "
+    "Sixteen years of <strong>"
     '<a href="https://theamphour.com">The Amp Hour</a></strong> &mdash; the '
-    "practices, rules of thumb, failure modes, and hard numbers that "
-    "engineers only say out loud &mdash; distilled into cited, browsable "
-    "articles.</p>",
+    "rules of thumb, failure modes, and real numbers that never reach a "
+    "datasheet &mdash; distilled into cited, browsable articles.</p>",
     "</div>",
     "",
     '<div style="display:flex; justify-content:center; gap:2.2rem; '

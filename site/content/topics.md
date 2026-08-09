@@ -3,8 +3,8 @@ title: Browse the wiki
 ---
 
 <div style="text-align:center; padding: 1.2rem 0 0.4rem;">
-<h1 style="font-size: 2.1rem; margin-bottom: 0.4rem; border: none;">Sixteen years of electronics oral tradition&nbsp;&mdash; indexed.</h1>
-<p style="font-size: 1.05rem; max-width: 34rem; margin: 0 auto;">The tribal knowledge in <strong>719 episodes of <a href="https://theamphour.com">The Amp Hour</a></strong> &mdash; the practices, rules of thumb, failure modes, and hard numbers that engineers only say out loud &mdash; distilled into cited, browsable articles.</p>
+<h1 style="font-size: 2.1rem; margin-bottom: 0.4rem; border: none;">The parts of electronics nobody writes down.</h1>
+<p style="font-size: 1.05rem; max-width: 34rem; margin: 0 auto;">Sixteen years of <strong><a href="https://theamphour.com">The Amp Hour</a></strong> &mdash; the rules of thumb, failure modes, and real numbers that never reach a datasheet &mdash; distilled into cited, browsable articles.</p>
 </div>
 
 <div style="display:flex; justify-content:center; gap:2.2rem; flex-wrap:wrap; text-align:center; margin: 1rem 0 1.4rem; font-variant-numeric: tabular-nums;"><div><strong style="font-size:1.5rem;">153</strong><br>articles live</div><div><strong style="font-size:1.5rem;">6,625</strong><br>episode citations</div><div><strong style="font-size:1.5rem;">719</strong><br>episodes indexed</div><div><strong style="font-size:1.5rem;">412</strong><br>articles planned</div></div>

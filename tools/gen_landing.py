@@ -33,6 +33,51 @@ n_refs = 0
 for md in (ROOT / "articles" / "wiki").glob("*.md"):
     n_refs += len(re.findall(r"^\| \d+ \|", md.read_text(), re.M))
 
+# Hero quotes: hand-picked for punch, but the text, episode and link are all
+# resolved from the packets and articles at build time, so the hero can only
+# ever show a quote that actually passed verification.
+HERO_PICKS = [
+    ("analog-to-digital-converter", 218, "24 bit ADC doesn't actually"),
+    ("power-supply", 490, "only rated to 21 volts"),
+    ("component-sourcing", 554, "can't source the chips"),
+    ("schematic", 626, "faithfully execute the schematic"),
+    ("spectrum-analyzer", 107, "bought for $100"),
+    ("eeprom", 27, "erase your EEPROM"),
+    ("compiler", 181, "three lines of code"),
+    ("open-source-software", 373, "intention that it is read"),
+]
+
+
+def hero_quotes():
+    out = []
+    for slug, ep, snip in HERO_PICKS:
+        art = ROOT / "articles" / "wiki" / f"{slug}.md"
+        pkt = ROOT / "articles" / "factory" / "packets" / f"{slug}.json"
+        if not (art.exists() and pkt.exists()):
+            continue
+        claims = json.load(open(pkt)).get("claims", [])
+        claim = next((c for c in claims if c.get("episode") == ep
+                      and snip in (c.get("quote_verbatim") or "")), None)
+        raw = art.read_text()
+        row = re.search(rf"^\| {ep} \| (.+?) \| (\S+) \|(.*?)\|", raw, re.M)
+        if not (claim and row):
+            continue
+        title = re.search(r"^title:\s*(.+)$", raw, re.M).group(1).strip()
+        date = row.group(3).strip()          # a few episodes carry no date
+        year = date.rsplit(" ", 1)[-1] if date else ""
+        out.append({"q": claim["quote_verbatim"], "ep": ep, "slug": slug,
+                    "title": title, "year": year})
+    return out
+
+
+HERO_Q = hero_quotes()
+if not HERO_Q:
+    raise SystemExit("no hero quotes resolved — check HERO_PICKS against packets")
+HERO_JSON = json.dumps(HERO_Q)
+_q0 = HERO_Q[0]
+q0, q0ep, q0slug, q0title = _q0["q"], _q0["ep"], _q0["slug"], _q0["title"]
+q0year = f" &middot; {_q0['year']}" if _q0["year"] else ""
+
 NUGGETS = [
     ("On the Steam Controller, Valve version-locked Altium 12 for the whole "
      "project — every engineer on the same build, because a mid-project CAD "
@@ -51,8 +96,8 @@ page = f"""<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Amp Hour Wiki — sixteen years of electronics oral tradition, indexed</title>
-<meta name="description" content="The tribal engineering knowledge in 719 episodes of The Amp Hour, distilled into cited, browsable articles.">
+<title>The Amp Hour Wiki — the parts of electronics nobody writes down</title>
+<meta name="description" content="The rules of thumb, failure modes and real numbers that never reach a datasheet — 719 episodes of The Amp Hour, distilled into cited, browsable articles.">
 <style>
 :root {{
   --bg:#fbf7ee; --panel:#f3ecdc; --panel2:#efe7d5; --ink:#16140d; --ink2:#5a5344;
@@ -81,11 +126,12 @@ nav .links a:hover {{ color:var(--ember); }}
   nav .links a {{ margin-left:0; white-space:nowrap; }}
 }}
 
-/* On a phone the trace artwork (a 1200x640 board) is scaled UP by `slice` to
-   cover a tall narrow viewport, so traces cut straight across the headline and
-   strike through the stats. Swap it for a drawn trace that frames the content. */
-@media (max-width: 620px) {{
-  .hero {{ padding:52px 18px 60px; }}
+/* The trace artwork is a 1200x640 board drawn for a wide viewport. `slice`
+   scales it UP to cover anything narrower or taller, so below ~900px traces
+   cut across the headline and strike through the stat row. Swap it for a
+   drawn trace that frames the content instead. */
+@media (max-width: 900px) {{
+  .hero {{ padding:clamp(52px, 7vw, 76px) 18px 60px; }}
   .hero svg.traces, .refdes {{ display:none; }}
   .hero::before, .hero::after {{ content:""; position:absolute; left:0; right:0;
     height:9px; opacity:.55; z-index:0; background:
@@ -108,6 +154,18 @@ nav .links a:hover {{ color:var(--ember); }}
   font-variant-numeric:tabular-nums; }}
 .stat b {{ display:block; font-size:1.9rem; color:var(--ember); font-weight:normal; }}
 .refdes {{ position:absolute; font:10px Verdana, sans-serif; color:var(--ink2); opacity:.55; }}
+
+/* verbatim quote: a real, verified line from the corpus, rotating per load */
+.vquote {{ margin:30px auto 34px; max-width:37rem; padding:0 0 0 18px;
+  border-left:3px solid var(--ember); text-align:left; transition:opacity .3s; }}
+.vquote blockquote {{ font-size:1.16rem; line-height:1.5; font-style:italic;
+  color:var(--ink); }}
+.vquote figcaption {{ margin-top:9px; }}
+.vquote figcaption a {{ text-decoration:none; color:var(--ink2);
+  font:11px Verdana, sans-serif; letter-spacing:.06em; }}
+.vquote figcaption a:hover {{ color:var(--ember); }}
+.vquote figcaption .silk {{ display:inline; }}
+@media (prefers-reduced-motion: reduce) {{ .vquote {{ transition:none; }} }}
 .pulse {{ stroke-dasharray: 6 240; animation: flow 5s linear infinite; }}
 @keyframes flow {{ to {{ stroke-dashoffset: -246; }} }}
 @media (prefers-reduced-motion: reduce) {{ .pulse {{ animation:none; opacity:0; }} }}
@@ -208,10 +266,17 @@ footer {{ border-top:3px solid var(--ember); background:var(--panel);
   <span class="refdes" style="bottom:14%; right:14%">TP2</span>
   <div class="inner">
     <div class="silk" style="margin-bottom:14px">theamphour.com &middot; 2010&ndash;2026 &middot; unofficial index</div>
-    <h1>Sixteen years of electronics oral tradition &mdash; <em>indexed</em>.</h1>
-    <p class="sub">The tribal knowledge in 719 episodes of The Amp Hour &mdash; the practices,
-    rules of thumb, failure modes, and hard numbers engineers only say out loud &mdash;
-    distilled into cited, browsable articles.</p>
+    <h1>The parts of electronics <em>nobody writes down</em>.</h1>
+    <p class="sub">For sixteen years, two engineers and their guests have said the quiet
+    part out loud on The Amp Hour &mdash; the rules of thumb, the failure modes, the
+    numbers that never reach a datasheet. 719 episodes, distilled into articles where
+    every claim is cited.</p>
+    <figure class="vquote" id="vquote">
+      <blockquote id="vq-text">&ldquo;{q0}&rdquo;</blockquote>
+      <figcaption><a id="vq-link" href="/{q0slug}">
+        <span class="silk">verbatim &middot; ep {q0ep}{q0year} &middot; </span>
+        <span id="vq-title">{q0title}</span> &rarr;</a></figcaption>
+    </figure>
     <div class="statrow">
       <div class="stat"><b>{n_articles}</b><span class="silk">articles live</span></div>
       <div class="stat"><b>{n_refs:,}</b><span class="silk">episode citations</span></div>
@@ -354,6 +419,21 @@ const schem = document.getElementById('schem');
 new IntersectionObserver((es) => {{
   es.forEach(e => {{ if (e.isIntersecting) schem.classList.add('drawn'); }});
 }}, {{threshold: 0.35}}).observe(schem);
+
+// verbatim hero quote — a different verified line from the corpus each load
+const VQ = {HERO_JSON};
+(function () {{
+  if (VQ.length < 2) return;
+  const pick = VQ[Math.floor(Math.random() * VQ.length)];
+  const box = document.getElementById('vquote');
+  document.getElementById('vq-text').textContent = '\\u201c' + pick.q + '\\u201d';
+  document.getElementById('vq-title').textContent = pick.title;
+  const a = document.getElementById('vq-link');
+  a.href = '/' + pick.slug;
+  a.querySelector('.silk').textContent =
+    'verbatim \\u00b7 ep ' + pick.ep + (pick.year ? ' \\u00b7 ' + pick.year : '') + ' \\u00b7 ';
+  box.animate ? box.animate([{{opacity: 0}}, {{opacity: 1}}], {{duration: 320}}) : null;
+}})();
 </script>
 </body>
 </html>

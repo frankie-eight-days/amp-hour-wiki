@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Amp Hour Wiki — sixteen years of electronics oral tradition, indexed</title>
-<meta name="description" content="The tribal engineering knowledge in 719 episodes of The Amp Hour, distilled into cited, browsable articles.">
+<title>The Amp Hour Wiki — the parts of electronics nobody writes down</title>
+<meta name="description" content="The rules of thumb, failure modes and real numbers that never reach a datasheet — 719 episodes of The Amp Hour, distilled into cited, browsable articles.">
 <style>
 :root {
   --bg:#fbf7ee; --panel:#f3ecdc; --panel2:#efe7d5; --ink:#16140d; --ink2:#5a5344;
@@ -33,11 +33,12 @@ nav .links a:hover { color:var(--ember); }
   nav .links a { margin-left:0; white-space:nowrap; }
 }
 
-/* On a phone the trace artwork (a 1200x640 board) is scaled UP by `slice` to
-   cover a tall narrow viewport, so traces cut straight across the headline and
-   strike through the stats. Swap it for a drawn trace that frames the content. */
-@media (max-width: 620px) {
-  .hero { padding:52px 18px 60px; }
+/* The trace artwork is a 1200x640 board drawn for a wide viewport. `slice`
+   scales it UP to cover anything narrower or taller, so below ~900px traces
+   cut across the headline and strike through the stat row. Swap it for a
+   drawn trace that frames the content instead. */
+@media (max-width: 900px) {
+  .hero { padding:clamp(52px, 7vw, 76px) 18px 60px; }
   .hero svg.traces, .refdes { display:none; }
   .hero::before, .hero::after { content:""; position:absolute; left:0; right:0;
     height:9px; opacity:.55; z-index:0; background:
@@ -60,6 +61,18 @@ nav .links a:hover { color:var(--ember); }
   font-variant-numeric:tabular-nums; }
 .stat b { display:block; font-size:1.9rem; color:var(--ember); font-weight:normal; }
 .refdes { position:absolute; font:10px Verdana, sans-serif; color:var(--ink2); opacity:.55; }
+
+/* verbatim quote: a real, verified line from the corpus, rotating per load */
+.vquote { margin:30px auto 34px; max-width:37rem; padding:0 0 0 18px;
+  border-left:3px solid var(--ember); text-align:left; transition:opacity .3s; }
+.vquote blockquote { font-size:1.16rem; line-height:1.5; font-style:italic;
+  color:var(--ink); }
+.vquote figcaption { margin-top:9px; }
+.vquote figcaption a { text-decoration:none; color:var(--ink2);
+  font:11px Verdana, sans-serif; letter-spacing:.06em; }
+.vquote figcaption a:hover { color:var(--ember); }
+.vquote figcaption .silk { display:inline; }
+@media (prefers-reduced-motion: reduce) { .vquote { transition:none; } }
 .pulse { stroke-dasharray: 6 240; animation: flow 5s linear infinite; }
 @keyframes flow { to { stroke-dashoffset: -246; } }
 @media (prefers-reduced-motion: reduce) { .pulse { animation:none; opacity:0; } }
@@ -160,10 +173,17 @@ footer { border-top:3px solid var(--ember); background:var(--panel);
   <span class="refdes" style="bottom:14%; right:14%">TP2</span>
   <div class="inner">
     <div class="silk" style="margin-bottom:14px">theamphour.com &middot; 2010&ndash;2026 &middot; unofficial index</div>
-    <h1>Sixteen years of electronics oral tradition &mdash; <em>indexed</em>.</h1>
-    <p class="sub">The tribal knowledge in 719 episodes of The Amp Hour &mdash; the practices,
-    rules of thumb, failure modes, and hard numbers engineers only say out loud &mdash;
-    distilled into cited, browsable articles.</p>
+    <h1>The parts of electronics <em>nobody writes down</em>.</h1>
+    <p class="sub">For sixteen years, two engineers and their guests have said the quiet
+    part out loud on The Amp Hour &mdash; the rules of thumb, the failure modes, the
+    numbers that never reach a datasheet. 719 episodes, distilled into articles where
+    every claim is cited.</p>
+    <figure class="vquote" id="vquote">
+      <blockquote id="vq-text">&ldquo;a 24 bit ADC doesn't actually give you 24 usable bits out&rdquo;</blockquote>
+      <figcaption><a id="vq-link" href="/analog-to-digital-converter">
+        <span class="silk">verbatim &middot; ep 218 &middot; 2014 &middot; </span>
+        <span id="vq-title">Analog to Digital Converter</span> &rarr;</a></figcaption>
+    </figure>
     <div class="statrow">
       <div class="stat"><b>153</b><span class="silk">articles live</span></div>
       <div class="stat"><b>6,625</b><span class="silk">episode citations</span></div>
@@ -306,6 +326,21 @@ const schem = document.getElementById('schem');
 new IntersectionObserver((es) => {
   es.forEach(e => { if (e.isIntersecting) schem.classList.add('drawn'); });
 }, {threshold: 0.35}).observe(schem);
+
+// verbatim hero quote — a different verified line from the corpus each load
+const VQ = [{"q": "a 24 bit ADC doesn't actually give you 24 usable bits out", "ep": 218, "slug": "analog-to-digital-converter", "title": "Analog to Digital Converter", "year": "2014"}, {"q": "The original five volt regulator on that is only rated to 21 volts DC input. And the power supply is 24.", "ep": 490, "slug": "power-supply", "title": "Power Supply", "year": "2020"}, {"q": "If you can't source the chips, it's not repairable", "ep": 554, "slug": "component-sourcing", "title": "Component Sourcing", "year": "2021"}, {"q": "The job of a PCB is to faithfully execute the schematic", "ep": 626, "slug": "schematic", "title": "Schematic", "year": "2023"}, {"q": "I have a spectrum analyzer that I bought for $100, and it goes to 12.4 gigahertz", "ep": 107, "slug": "spectrum-analyzer", "title": "Spectrum Analyzer", "year": "2012"}, {"q": "it would slowly over the years erase your EEPROM", "ep": 27, "slug": "eeprom", "title": "EEPROM", "year": ""}, {"q": "I type three lines of code and my part's full now", "ep": 181, "slug": "compiler", "title": "Compiler", "year": ""}, {"q": "they write their code with the intention that it is read", "ep": 373, "slug": "open-source-software", "title": "Open Source Software", "year": "2018"}];
+(function () {
+  if (VQ.length < 2) return;
+  const pick = VQ[Math.floor(Math.random() * VQ.length)];
+  const box = document.getElementById('vquote');
+  document.getElementById('vq-text').textContent = '\u201c' + pick.q + '\u201d';
+  document.getElementById('vq-title').textContent = pick.title;
+  const a = document.getElementById('vq-link');
+  a.href = '/' + pick.slug;
+  a.querySelector('.silk').textContent =
+    'verbatim \u00b7 ep ' + pick.ep + (pick.year ? ' \u00b7 ' + pick.year : '') + ' \u00b7 ';
+  box.animate ? box.animate([{opacity: 0}, {opacity: 1}], {duration: 320}) : null;
+})();
 </script>
 </body>
 </html>
