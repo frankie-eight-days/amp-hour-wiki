@@ -12,7 +12,7 @@
    "episode_title": "Our First Call In Show",
    "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
    "depth_regraded": "opinion",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "The electrical distinction from I2C is that every SPI line is a totem-pole output with two transistors, one pulling high and one pulling low, whereas I2C is essentially an open-collector output that depends on a pull-up resistor to return the line high.",
@@ -22,7 +22,7 @@
    "episode_title": "Our First Call In Show",
    "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "That difference makes SPI the more robust of the two: it needs no pull-up resistors, and the failure modes associated with choosing the wrong pull-up value do not arise.",
@@ -32,7 +32,7 @@
    "episode_title": "Our First Call In Show",
    "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "The asymmetry is visible on an oscilloscope: the falling edge of an I2C line is nearly instantaneous because a transistor pulls it down, while the rising edge is shaped by the pull-up resistor against the line capacitance.",
@@ -42,7 +42,7 @@
    "episode_title": "Our First Call In Show",
    "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "Breadboards and loose wiring add capacitance and act as an antenna, which is a problem specifically for I2C because the pull-up must charge that capacitance, and is why a lower pull-up value is needed in such setups; a directly driven SPI line is unaffected.",
@@ -62,7 +62,7 @@
    "episode_title": "Our First Call In Show",
    "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "The cost of that robustness is pin count, since SPI requires more signal lines than I2C for the same connection.",
@@ -72,7 +72,7 @@
    "episode_title": "An Interview with Matt Richardson - Raspberry Risorgimento Regent",
    "episode_url": "https://theamphour.com/235-an-interview-with-matt-richardson-raspberry-risorgimento-regent/",
    "depth_regraded": "opinion",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "With supply voltage largely standardised, the choice between SPI and I2C has become the substantive interface decision when specifying a peripheral, and I2C often wins on the simple ground that more parts offer it.",
@@ -82,7 +82,7 @@
    "episode_title": "Mashuppery (with MEP)",
    "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
    "depth_regraded": "opinion",
-   "kind": "judgment"
+   "kind": "practitioner-judgment"
   },
   {
    "claim_text": "The clock polarity and phase settings are the classic bring-up trap: a bus configured in the wrong mode returns plausible but meaningless data, and one such fault consumed three days of debugging before the mode was checked.",
@@ -162,7 +162,7 @@
    "episode_title": "Why isn't this working?",
    "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "Bringing up a display controller from its own documentation can be a multi-month exercise \u2014 one such part required roughly four hundred commands sent over the bus and had a four-hundred-page data sheet \u2014 so adapting a known-good published driver is the pragmatic route.",
@@ -172,7 +172,7 @@
    "episode_title": "Why isn't this working?",
    "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
    "depth_regraded": "explains",
-   "kind": "judgment"
+   "kind": "practitioner-judgment"
   },
   {
    "claim_text": "Documentation that names the display's pins, the library to download and the procedure to follow is sufficient to bring up an unfamiliar SPI display without further reference material.",
@@ -202,7 +202,7 @@
    "episode_title": "An Interview with Trammell Hudson",
    "episode_url": "https://theamphour.com/463-an-interview-with-trammell-hudson/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "Above roughly ten megahertz a designer needs working intuition about capacitance, inductance and edge rates, because the connection can no longer be treated as a simple direct-current one.",
@@ -212,7 +212,7 @@
    "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
    "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "The common workaround at hobbyist level for a bus that will not run at sixteen megahertz is simply to reduce the clock to two megahertz until it works, which sidesteps the signal-integrity question rather than answering it.",
@@ -242,7 +242,7 @@
    "episode_title": "Open Source Tapeout with Matthew Venn",
    "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "A hardware peripheral shifts data out of a register without processor intervention, which is the distinction from bit-banging, where the software must generate the interface timing itself.",
@@ -252,7 +252,7 @@
    "episode_title": "An Interview with Jason Kridner and Robert Nelson",
    "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "The peripheral can be repurposed as a general timed bit generator: an infrared remote waveform that would normally be produced with pin states and delays was instead built as an SPI packet and clocked out by the peripheral, avoiding both blocking the processor and the timing uncertainty of an interpreted language.",
@@ -302,7 +302,7 @@
    "episode_title": "An Interview with Jason Kridner and Robert Nelson",
    "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
    "depth_regraded": "explains",
-   "kind": "judgment"
+   "kind": "practitioner-judgment"
   },
   {
    "claim_text": "On an FPGA the pins used to read the configuration flash are handed over to the user design once configuration completes, so they can be reused afterwards.",
@@ -312,7 +312,7 @@
    "episode_title": "An Interview with Luke Valenty",
    "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "The cleanest way to reuse those pins is to place another SPI device on the same bus with its own chip select; sharing them with a different bus or with indicator outputs also works provided nothing conflicts during boot.",
@@ -362,7 +362,7 @@
    "episode_title": "An Interview with Piotr Esden-Tempski",
    "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
    "depth_regraded": "opinion",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "A 2.8-inch colour display driven over SPI by a sixteen megahertz processor was simply slow, and was moved to a parallel connection for that reason.",
@@ -372,7 +372,7 @@
    "episode_title": "Crossovers and Call-ins",
    "episode_url": "https://theamphour.com/281-crossovers-and-call-ins/",
    "depth_regraded": "explains",
-   "kind": "case"
+   "kind": "history"
   },
   {
    "claim_text": "The data rate needed to refresh a modern display over SPI is high enough to rule out the slow, low-power processor a design might otherwise use, since the frame must be held in memory and then transmitted across the bus.",
@@ -382,7 +382,7 @@
    "episode_title": "Test Point Accupuncture",
    "episode_url": "https://theamphour.com/702-test-point-accupuncture/",
    "depth_regraded": "explains",
-   "kind": "judgment"
+   "kind": "practitioner-judgment"
   },
   {
    "claim_text": "A memory-in-pixel display has no controller and is addressed over SPI directly to the glass, which allows a variable rather than fixed frame rate and partial refreshes, updating anywhere from once a second to twenty-five or thirty frames a second as needed.",
@@ -392,7 +392,7 @@
    "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
    "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "Among addressable LED protocols, the two-wire SPI-driven type is easier to drive than the one-wire type and adds around five bits of global brightness control, at the cost of the pulse-width modulation becoming noticeably slower as that control is used.",
@@ -402,7 +402,7 @@
    "episode_title": "3 Cent Micros And 1000s of LEDs",
    "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "That part is not constant current, so a drop in supply voltage from four and a half to four volts changes the light output, which matters where a whole installation is being dimmed together.",
@@ -432,7 +432,7 @@
    "episode_title": "An Interview with Art Kay",
    "episode_url": "https://theamphour.com/348-an-interview-with-art-kay/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "The reason such extensions exist is that a precision converter clocks its conversion internally, but the result then has to be read out serially, and at twenty bits and megasample rates that read-out becomes the binding constraint.",
@@ -442,7 +442,7 @@
    "episode_title": "An Interview with Art Kay",
    "episode_url": "https://theamphour.com/348-an-interview-with-art-kay/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "SD cards can be addressed either through the full SD input-output interface, which uses additional data lines, or through an SPI mode that is slower.",
@@ -452,7 +452,7 @@
    "episode_title": "An Interview with Piotr Esden-Tempski",
    "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "In a layered software stack the file system sits above the card, which is reached at the SPI layer over four pins, and universal SPI support is what makes that layering portable.",
@@ -462,7 +462,7 @@
    "episode_title": "Focus, Dammit",
    "episode_url": "https://theamphour.com/514-focus-dammit/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "A module that terminates a network stack in hardware reduces the host's task to issuing SPI commands, with the addressing, the stack and even a web server handled on the module.",
@@ -512,7 +512,7 @@
    "episode_title": "Long Distance with CNLohr-a",
    "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
    "depth_regraded": "explains",
-   "kind": "case"
+   "kind": "history"
   },
   {
    "claim_text": "A vision module can expose its results over SPI as a text stream at around thirty updates a second, which lets a very small microcontroller consume the output of a much larger processor.",
@@ -552,7 +552,7 @@
    "episode_title": "Discussing the Open Source PDK with Tim Ansell",
    "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "Adding peripherals to a custom chip is a matter of instantiating pre-built blocks, so specifying two SPI modules is minutes of work in the design flow.",
@@ -562,7 +562,7 @@
    "episode_title": "Mars, System Design & NAND - Mercurial Mars Mission",
    "episode_url": "https://theamphour.com/the-amp-hour-137-mercurial-mars-mission/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "A secure controller can read an external SPI flash, validate its contents and then emulate that flash to the system it is protecting, which closes the attack in which the image is swapped between the moment it is checked and the moment it is used.",
@@ -572,7 +572,7 @@
    "episode_title": "Small Scale Electronics Manufacturing with Colin O'Flynn",
    "episode_url": "https://theamphour.com/693-small-scale-electronics-manufacturing-with-colin-oflynn/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "That attack works because the validating system does not have space to hold the whole image in memory and must reload it from the flash after checking, giving the attacker a window in which to substitute it.",
@@ -642,7 +642,7 @@
    "episode_title": "An Interview with Scott Shawcroft",
    "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
    "depth_regraded": "explains",
-   "kind": "judgment"
+   "kind": "practitioner-judgment"
   },
   {
    "claim_text": "A vendor library makes a transfer trivial to issue, reducing the operation to sending a byte, but adopting one is a decision about how far the library is trusted.",
@@ -652,7 +652,7 @@
    "episode_title": "Someone is watching...we think - Horme Hostility Hypochondriac",
    "episode_url": "https://theamphour.com/186-someone-is-watching-we-think-horme-hostility-hypochondriac/",
    "depth_regraded": "explains",
-   "kind": "judgment"
+   "kind": "practitioner-judgment"
   },
   {
    "claim_text": "A protocol analyser does not remove the need to understand the bus: software timeout settings have to be correct or the capture will not decode into meaningful data.",
@@ -682,7 +682,7 @@
    "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
    "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "Instantiating a separate UART, SPI and I2C block for every pin of a protocol analyser wastes programmable logic area, but area is the wrong thing to optimise for someone learning hardware description languages.",
@@ -692,7 +692,7 @@
    "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
    "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
    "depth_regraded": "explains",
-   "kind": "judgment"
+   "kind": "practitioner-judgment"
   },
   {
    "claim_text": "Being able to analyse a raw signal trace on the bus is a requirement for embedded engineering work but not for building an installation from published libraries, so the depth to which the abstraction needs to be understood depends entirely on the role.",
@@ -702,7 +702,7 @@
    "episode_title": "Eating An Elephant",
    "episode_url": "https://theamphour.com/276-eating-an-elephant/",
    "depth_regraded": "explains",
-   "kind": "judgment"
+   "kind": "practitioner-judgment"
   },
   {
    "claim_text": "Standardising demonstration hardware on a common development board is why chip vendors ship SPI-connected evaluation boards for that platform, since the alternative is a different demonstration board for every part.",
@@ -712,7 +712,7 @@
    "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
    "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
    "depth_regraded": "explains",
-   "kind": "principle"
+   "kind": "mechanism"
   },
   {
    "claim_text": "In a mixed system a small processing block can watch the bus for a specific pattern and raise an interrupt, handling the real-time work that would otherwise occupy the main processor and depositing results in memory for it to read later.",
@@ -732,7 +732,7 @@
    "episode_title": "Open FPGA Toolchains at 35c3",
    "episode_url": "https://theamphour.com/423-open-fpga-toolchains-at-35c3/",
    "depth_regraded": "explains",
-   "kind": "case"
+   "kind": "history"
   }
  ],
  "capped": false,

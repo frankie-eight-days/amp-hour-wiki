@@ -207,7 +207,7 @@
   },
   {
    "claim_text": "When streaming acquisition data to a desktop machine, the limiting factor is not peak bandwidth but latency: a general-purpose operating system is not real-time and will periodically go off and do something else, so the design question becomes sustained bandwidth and how large a buffer is needed at each end to cover the gaps.",
-   "quote_verbatim": "It's not a real-time operating system. It's the – you know, the peak bandwidth is fine. It's the sustained bandwidth and how big a buffer you need at each end to cover the gaps.",
+   "quote_verbatim": "It's not a real-time operating system. It's the \u2013 you know, the peak bandwidth is fine. It's the sustained bandwidth and how big a buffer you need at each end to cover the gaps.",
    "speaker": null,
    "episode": 135,
    "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
@@ -406,7 +406,7 @@
    "kind": "market-structure"
   },
   {
-   "claim_text": "The standing objections to adopting an RTOS are that it consumes processor time, that it adds complexity, and that it requires dynamic memory allocation — the last of which is untrue in many cases.",
+   "claim_text": "The standing objections to adopting an RTOS are that it consumes processor time, that it adds complexity, and that it requires dynamic memory allocation \u2014 the last of which is untrue in many cases.",
    "quote_verbatim": "it's going to slow your processor down. You're using up time. You know, it's overly complex. Like, you need to use dynamic memory allocation, which is not true in a lot of cases.",
    "speaker": "Eli Hughes",
    "episode": 511,
@@ -426,7 +426,7 @@
    "kind": "tradeoff"
   },
   {
-   "claim_text": "Much of what modern embedded frameworks provide is a cross-hardware abstraction layer rather than real-time behaviour; the part that properly belongs to the RTOS is the kernel itself — the scheduling of threads and the primitives such as semaphores that coordinate them.",
+   "claim_text": "Much of what modern embedded frameworks provide is a cross-hardware abstraction layer rather than real-time behaviour; the part that properly belongs to the RTOS is the kernel itself \u2014 the scheduling of threads and the primitives such as semaphores that coordinate them.",
    "quote_verbatim": "It's a cross hardware platform extraction, abstraction layer.",
    "speaker": "Dave Jones",
    "episode": 514,
@@ -526,7 +526,7 @@
    "kind": "tradeoff"
   },
   {
-   "claim_text": "An RTOS should be treated like any other dependency and wrapped behind an interface the project controls — a mutex lock and unlock taking a handle, rather than direct calls to the kernel API — so the same application code can be built and tested on a development machine as well as on the target.",
+   "claim_text": "An RTOS should be treated like any other dependency and wrapped behind an interface the project controls \u2014 a mutex lock and unlock taking a handle, rather than direct calls to the kernel API \u2014 so the same application code can be built and tested on a development machine as well as on the target.",
    "quote_verbatim": "treat it like any other dependency. So, you know, you want to interact with an interface that sits on top of the RTOS that you control, because then now I'm in a better position to swap out my code so it can run on my development machine for tests versus on the RTOS",
    "speaker": "Phillip Johnston",
    "episode": 556,
@@ -576,7 +576,7 @@
    "kind": "practice"
   },
   {
-   "claim_text": "The reliable indicators that a design wants an RTOS are a user interface, particularly an on-board graphical one, and extensive communications capability — network connectivity, USB, or heavy use of SPI and UART.",
+   "claim_text": "The reliable indicators that a design wants an RTOS are a user interface, particularly an on-board graphical one, and extensive communications capability \u2014 network connectivity, USB, or heavy use of SPI and UART.",
    "quote_verbatim": "if you have a user interface, almost definitely because, you know, especially like a GUI and onboard GUI or something like that. Anything with extensive communications capability for sure.",
    "speaker": "Brian Amos",
    "episode": 581,
@@ -586,7 +586,7 @@
    "kind": "practice"
   },
   {
-   "claim_text": "FreeRTOS and most microcontroller-targeted kernels are essentially only a scheduler plus basic primitives — queues, semaphores and task notifications — with no libraries or drivers supplied, which is the substantive difference from a full operating system such as Linux where libraries and drivers come with the system.",
+   "claim_text": "FreeRTOS and most microcontroller-targeted kernels are essentially only a scheduler plus basic primitives \u2014 queues, semaphores and task notifications \u2014 with no libraries or drivers supplied, which is the substantive difference from a full operating system such as Linux where libraries and drivers come with the system.",
    "quote_verbatim": "it's pretty much just a scheduler and like some really basic things like, you know, cues, semaphores, task notifications, that kind of stuff. So there isn't, you don't have any libraries",
    "speaker": "Brian Amos",
    "episode": 581,
@@ -646,7 +646,7 @@
    "kind": "mechanism"
   },
   {
-   "claim_text": "An RTOS can be instrumented so that timing itself is observable: record when each task was activated, how long it ran, and whether it overran its real-time constraint. The data can be emitted as a continuous stream or reduced to statistics — minimum, maximum and average runtime plus a counter of missed deadlines — which is what makes timing defects visible during implementation and test.",
+   "claim_text": "An RTOS can be instrumented so that timing itself is observable: record when each task was activated, how long it ran, and whether it overran its real-time constraint. The data can be emitted as a continuous stream or reduced to statistics \u2014 minimum, maximum and average runtime plus a counter of missed deadlines \u2014 which is what makes timing defects visible during implementation and test.",
    "quote_verbatim": "You can instrument when a task was activated, how long it ran, did it like overrun it, it's constraint, it's real time constraint.",
    "speaker": "Charles Aylward",
    "episode": 584,
@@ -666,7 +666,7 @@
    "kind": "procedure"
   },
   {
-   "claim_text": "A system is real-time when a result it depends on — a sensor reading or a computation — must be available within a bounded time, and its absence within that bound constitutes a failure rather than merely a delay.",
+   "claim_text": "A system is real-time when a result it depends on \u2014 a sensor reading or a computation \u2014 must be available within a bounded time, and its absence within that bound constitutes a failure rather than merely a delay.",
    "quote_verbatim": "if you are relying on a result from something, whether that's reading a sensor or computation, that result has to be available within a certain amount of time, or there's a failure",
    "speaker": "Charles Aylward",
    "episode": 584,
@@ -676,7 +676,7 @@
    "kind": "mechanism"
   },
   {
-   "claim_text": "Before writing code, the classes of problem present in a system should be identified explicitly — for example distributed-system problems and real-time problems — because each is an established field of study whose literature has to be worked through rather than rediscovered.",
+   "claim_text": "Before writing code, the classes of problem present in a system should be identified explicitly \u2014 for example distributed-system problems and real-time problems \u2014 because each is an established field of study whose literature has to be worked through rather than rediscovered.",
    "quote_verbatim": "before you start writing any code or designing anything, figure out what class of problems you have",
    "speaker": "Charles Aylward",
    "episode": 584,
@@ -686,7 +686,7 @@
    "kind": "practice"
   },
   {
-   "claim_text": "Much of what an RTOS supplies looks self-evidently useful — assigning priorities to button presses and to screen updates so that the display always refreshes — but on human timescales the difference between a thirty and a two hundred millisecond response is immaterial, so those requirements alone do not justify one.",
+   "claim_text": "Much of what an RTOS supplies looks self-evidently useful \u2014 assigning priorities to button presses and to screen updates so that the display always refreshes \u2014 but on human timescales the difference between a thirty and a two hundred millisecond response is immaterial, so those requirements alone do not justify one.",
    "quote_verbatim": "I have these events, like generally speaking, I have, you know, some event driven system and button pushes, you know, have a certain priority and updating the screen as a certain priority",
    "speaker": "Charles Aylward",
    "episode": 584,
@@ -756,7 +756,7 @@
    "kind": "numbers"
   },
   {
-   "claim_text": "Under an RTOS, work that would conventionally require a hardware timer — tracking a rotary encoder or a beam interrupter, for example — can be done with kernel timing services instead.",
+   "claim_text": "Under an RTOS, work that would conventionally require a hardware timer \u2014 tracking a rotary encoder or a beam interrupter, for example \u2014 can be done with kernel timing services instead.",
    "quote_verbatim": "You really don't need hardware timers when you have a real-time operating system",
    "speaker": "Chris Gammell",
    "episode": 604,
@@ -776,7 +776,7 @@
    "kind": "numbers"
   },
   {
-   "claim_text": "A team that had run FreeRTOS for over two years declined to move to Zephyr for two stated reasons: keeping a single kernel across all projects, and the fact that work outside Zephyr's well-trodden domain — ultra-low power on a platform that has not been developed for it — becomes considerably more complex. The corresponding cost of FreeRTOS is that it ships no drivers and each must be written.",
+   "claim_text": "A team that had run FreeRTOS for over two years declined to move to Zephyr for two stated reasons: keeping a single kernel across all projects, and the fact that work outside Zephyr's well-trodden domain \u2014 ultra-low power on a platform that has not been developed for it \u2014 becomes considerably more complex. The corresponding cost of FreeRTOS is that it ships no drivers and each must be written.",
    "quote_verbatim": "if you try to do like ultra low power on a platform, that's not been developed or do things different way, it's a lot more complex",
    "speaker": "Alvaro Prieto",
    "episode": 614,
@@ -786,7 +786,7 @@
    "kind": "tradeoff"
   },
   {
-   "claim_text": "A cross-vendor RTOS is technically the same object as any other — a scheduler, threads, queues, semaphores and mutexes — but is adopted mainly for its ecosystem: shared drivers for networking and radio are written centrally while each silicon vendor supplies a compatibility layer, so the same kernel and application code retarget across chipsets.",
+   "claim_text": "A cross-vendor RTOS is technically the same object as any other \u2014 a scheduler, threads, queues, semaphores and mutexes \u2014 but is adopted mainly for its ecosystem: shared drivers for networking and radio are written centrally while each silicon vendor supplies a compatibility layer, so the same kernel and application code retarget across chipsets.",
    "quote_verbatim": "There is a scheduler. There's threads. There's queues and all of the semaphores and mutexes and all the things you read about every time you read about it in RTOS. But that's not really why most people are talking about Zephyr",
    "speaker": "Chris Gammell",
    "episode": 622,
@@ -856,7 +856,7 @@
    "kind": "numbers"
   },
   {
-   "claim_text": "A consultancy standardising on an RTOS gave three reasons: starting from an RTOS costs no more development time than a state-machine approach provided it is chosen at the outset rather than switched to mid-project; established boilerplate, templates, drivers and example tasks — a sampling task that queues its results, for instance — save time against writing a state machine each time; and an RTOS shoehorns acceptably into applications where a state machine or bare metal would have been the more natural fit.",
+   "claim_text": "A consultancy standardising on an RTOS gave three reasons: starting from an RTOS costs no more development time than a state-machine approach provided it is chosen at the outset rather than switched to mid-project; established boilerplate, templates, drivers and example tasks \u2014 a sampling task that queues its results, for instance \u2014 save time against writing a state machine each time; and an RTOS shoehorns acceptably into applications where a state machine or bare metal would have been the more natural fit.",
    "quote_verbatim": "if you start from RTOS from the start, the time difference for development isn't any more, any less. As long as you start from the start, you don't change halfway through the project because you realize you need an RTOS",
    "speaker": "Scott Williams",
    "episode": 645,
@@ -880,7 +880,7 @@
    "quote_verbatim": "It's definitely the kernel that many, many people need. And many people don't necessarily need more than that.",
    "speaker": "Benjamin Cabe",
    "episode": 653,
-   "episode_title": "Benjamin Cabé Nose Zephyr",
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
    "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
    "depth_regraded": "explains",
    "kind": "mechanism"
@@ -890,7 +890,7 @@
    "quote_verbatim": "Cortex M0, like you, you would look at like really, really small, I think like two Ks of RAM",
    "speaker": "Benjamin Cabe",
    "episode": 653,
-   "episode_title": "Benjamin Cabé Nose Zephyr",
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
    "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
    "depth_regraded": "explains",
    "kind": "numbers"
@@ -906,7 +906,7 @@
    "kind": "practice"
   },
   {
-   "claim_text": "Kernel and ecosystem are separate axes: FreeRTOS is a kernel that vendors build ecosystems on top of — Espressif's ESP-IDF layers its parts' capabilities over FreeRTOS — while Zephyr supplies both a kernel with scheduler and a vendor-neutral set of subsystems, so the two are comparable as kernels but reached from different directions.",
+   "claim_text": "Kernel and ecosystem are separate axes: FreeRTOS is a kernel that vendors build ecosystems on top of \u2014 Espressif's ESP-IDF layers its parts' capabilities over FreeRTOS \u2014 while Zephyr supplies both a kernel with scheduler and a vendor-neutral set of subsystems, so the two are comparable as kernels but reached from different directions.",
    "quote_verbatim": "So ESP IDF and Zephyr are both ecosystems. Zephyr and free RTOS are both RTOSs, but then like, it's just kind of which direction you're coming at from them",
    "speaker": "Chris Gammell",
    "episode": 675,
@@ -916,7 +916,7 @@
    "kind": "market-structure"
   },
   {
-   "claim_text": "Some developers replace kernel primitives with their own — writing a private mutex rather than using the supplied one — on the grounds of not trusting code whose internals they have not examined.",
+   "claim_text": "Some developers replace kernel primitives with their own \u2014 writing a private mutex rather than using the supplied one \u2014 on the grounds of not trusting code whose internals they have not examined.",
    "quote_verbatim": "I wrote my own mutex because I don't trust the mutex on it. It's like, no, I want to know how this stuff works.",
    "speaker": "Kevin Cappuccio",
    "episode": 689,
@@ -936,7 +936,7 @@
    "kind": "practice"
   },
   {
-   "claim_text": "Threads are not the starting point for a design but a way to express behaviour that is awkward inside a pure state machine — a heartbeat LED that must keep running regardless of the current state is the canonical example, and it belongs in a thread rather than being replicated in every state.",
+   "claim_text": "Threads are not the starting point for a design but a way to express behaviour that is awkward inside a pure state machine \u2014 a heartbeat LED that must keep running regardless of the current state is the canonical example, and it belongs in a thread rather than being replicated in every state.",
    "quote_verbatim": "using something like a thread is not meant to be the day one starting point usually with something. It's meant to facilitate an ease of implementation that gets trickier to do outside of a pure state machine thing.",
    "speaker": "Mark Palmeri",
    "episode": 711,
@@ -961,5 +961,6 @@
   "Episode 637: the labels are Chris Gammell and Dave Jones, but the first-person accounts of writing a stack-free ESP8266 experiment and of the five-person team threshold are the guest's, which identifies CNLohr, so those are attributed to him.",
   "Episode 645: attribution_reliable was false and the label was Dave Jones; the content is the guest describing his own consultancy's standardisation decision, which identifies Scott Williams, so it is attributed to him.",
   "Episode 653: the label alternates between host and guest across the fused windows; the descriptions of the kernel-versus-distribution distinction and of the minimum viable target are the guest's and are attributed to Benjamin Cabe, while the work-queue analogy is the host's."
- ]
+ ],
+ "name": "RTOS"
 }
