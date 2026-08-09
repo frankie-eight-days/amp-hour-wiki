@@ -14,13 +14,26 @@ PLANNED = 412
 DST.mkdir(parents=True, exist_ok=True)
 
 def linkify(raw: str) -> str:
-    """Make [NNN] citations clickable and the References table a real link table."""
+    """Make [NNN] citations clickable (with hover tooltips) and the References
+    table a real link table."""
     parts = re.split(r"\n## References\s*\n", raw, maxsplit=1)
     prose, refs_md = parts[0], (parts[1] if len(parts) > 1 else "")
 
+    # parse references first so citations can carry tooltips
+    ref_meta = {}
+    for line in refs_md.splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) >= 3 and cells[0].isdigit():
+            tip = f"Ep {cells[0]}: {cells[1]}"
+            if len(cells) > 3 and cells[3]:
+                tip += f" ({cells[3]})"
+            ref_meta[cells[0]] = tip.replace('"', "&quot;")
+
     def cite(m):
         nums = re.findall(r"\[(\d+)\]", m.group(0))
-        return "".join(f'<sup><a href="#ref-{n}">[{n}]</a></sup>' for n in nums)
+        return "".join(
+            f'<sup><a href="#ref-{n}" title="{ref_meta.get(n, "")}">[{n}]</a></sup>'
+            for n in nums)
 
     prose = re.sub(r"(?:\[\d+\]){1,}", cite, prose)
 
@@ -62,25 +75,46 @@ by_letter = {}
 for slug, title in sorted(articles, key=lambda a: a[1].lower()):
     by_letter.setdefault(title[0].upper(), []).append((slug, title))
 
+# total citations across the wiki (rows in References tables)
+total_refs = 0
+for md in SRC.glob("*.md"):
+    total_refs += len(re.findall(r"^\| \d+ \|", md.read_text(), re.M))
+
 lines = [
     "---",
     "title: The Amp Hour Wiki",
     "---",
     "",
-    "A topic-first distillation of the tribal engineering knowledge in "
-    "**719 episodes of [The Amp Hour](https://theamphour.com)** — practices, "
-    "rules of thumb, failure modes, and hard numbers, every claim cited to the "
-    "episode it came from.",
+    '<div style="text-align:center; padding: 1.2rem 0 0.4rem;">',
+    '<h1 style="font-size: 2.1rem; margin-bottom: 0.4rem; border: none;">'
+    "Sixteen years of electronics oral tradition&nbsp;&mdash; indexed.</h1>",
+    '<p style="font-size: 1.05rem; max-width: 34rem; margin: 0 auto;">'
+    "The tribal knowledge in <strong>719 episodes of "
+    '<a href="https://theamphour.com">The Amp Hour</a></strong> &mdash; the '
+    "practices, rules of thumb, failure modes, and hard numbers that "
+    "engineers only say out loud &mdash; distilled into cited, browsable "
+    "articles.</p>",
+    "</div>",
     "",
-    "Articles are AI-generated syntheses built from the show's official "
-    "transcripts through a verified extraction pipeline; every bracketed "
-    "citation traces to a verbatim transcript passage. A full *How this wiki "
-    "was built* page documenting the pipeline, verification rules, and known "
-    "limitations is coming with the complete build.",
+    '<div style="display:flex; justify-content:center; gap:2.2rem; '
+    'flex-wrap:wrap; text-align:center; margin: 1rem 0 1.4rem; '
+    'font-variant-numeric: tabular-nums;">'
+    f'<div><strong style="font-size:1.5rem;">{len(articles)}</strong><br>'
+    "articles live</div>"
+    f'<div><strong style="font-size:1.5rem;">{total_refs:,}</strong><br>'
+    "episode citations</div>"
+    '<div><strong style="font-size:1.5rem;">719</strong><br>'
+    "episodes indexed</div>"
+    f'<div><strong style="font-size:1.5rem;">{PLANNED}</strong><br>'
+    "articles planned</div>"
+    "</div>",
     "",
-    f"**Status: batch 1 of the article factory — {len(articles)} of {PLANNED} "
-    "planned articles published so far. The factory is running; this page "
-    "updates as articles land.**",
+    "Every claim carries a bracketed citation that traces to a verbatim "
+    "passage in the show's official transcripts, through a verified "
+    "extraction pipeline. Articles are AI-generated syntheses; a full "
+    "*How this wiki was built* page is coming with the complete build.",
+    "",
+    "**[Explore the concept graph &rarr;](./explore)**",
     "",
     "## Articles",
     "",

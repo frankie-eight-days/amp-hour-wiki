@@ -1,0 +1,736 @@
+{
+ "concept": "reflow-oven",
+ "name": "Reflow Oven",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "reflow-oven",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "reflow-machine",
+   "reflow-oven",
+   "reflow-oven-temperature-zone"
+  ],
+  "children": [
+   "hot-air-rework",
+   "mancorp",
+   "pid-controller",
+   "production-scheduling",
+   "reflow-profile",
+   "stencil",
+   "toaster-oven-reflow"
+  ],
+  "neighbors": {
+   "thermal-profile": 5,
+   "flux": 4,
+   "stencil-printer": 4
+  },
+  "episodes_with_kept_mentions": 65,
+  "mentions_kept": 144,
+  "pins_final": 57,
+  "capped": false,
+  "total_available": 57
+ },
+ "claims": [
+  {
+   "claim_text": "Toaster-oven reflow conversion kits control the oven's existing heating element externally from the mains and add a temperature probe, so the oven itself needs no internal modification.",
+   "quote_verbatim": "So you don't have to modify it. You just, you just control the element from the external mains and then whack a temperature probe in it.",
+   "speaker": "Chris Gammell",
+   "episode": 344,
+   "episode_title": "Back Into The Swing Of Things",
+   "episode_url": "https://theamphour.com/344-back-into-the-swing-of-things/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A PID controller retrofitted to a toaster-oven reflow build must switch AC mains power, because the oven's heating elements draw on the order of hundreds of watts.",
+   "quote_verbatim": "And they're doing that, actually, with AC power because they're going to do, like, you know, 600 watt, 200 watts.",
+   "speaker": "Chris Gammell",
+   "episode": 5,
+   "episode_title": "Girl Power",
+   "episode_url": "https://theamphour.com/the-amp-hour-5-girl-power/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "By the early 2010s small infrared reflow ovens were available on eBay for around 200 dollars, or about 250 dollars delivered to Australia, cheap enough that the hot-plate method no longer had a cost advantage.",
+   "quote_verbatim": "On eBay, you can buy the reflow ovens for 200 bucks.",
+   "speaker": "Dave Jones",
+   "episode": 63,
+   "episode_title": "Shop bots, 450 mm fabs & redFrog - Pick and Place Palillogy",
+   "episode_url": "https://theamphour.com/the-amp-hour-63-pick-and-place-palillogy/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Infrared reflow ovens allow a programmed temperature profile including a preheat stage, a capability a bare hot plate does not provide.",
+   "quote_verbatim": "I mean, you can actually create temperature profiles. You can do preheating and everything like that.",
+   "speaker": "Chris Gammell",
+   "episode": 63,
+   "episode_title": "Shop bots, 450 mm fabs & redFrog - Pick and Place Palillogy",
+   "episode_url": "https://theamphour.com/the-amp-hour-63-pick-and-place-palillogy/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Hand assembly can approximate oven reflow by preheating the board to follow a thermal profile and applying generous flux, rather than relying on the iron alone.",
+   "quote_verbatim": "You preheat your board. Just like it goes through a reflow oven, you know? It has a thermal profile.",
+   "speaker": "Dave Jones",
+   "episode": 154,
+   "episode_title": "Arduino, IndiGoGo and Hack-a-Day - Doodad Dealer Dancing",
+   "episode_url": "https://theamphour.com/the-amp-hour-154-doodad-dealer-dancing/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "QFN and other no-lead packages can be soldered without a reflow oven by preheating the board, flooding the area with flux, and then applying a hot air pencil so the part seats itself on the pads.",
+   "quote_verbatim": "the idea is you preheat the board and then you flood the crap out of it with flux and then you use a hot air pencil",
+   "speaker": null,
+   "episode": 158,
+   "episode_title": "Hyperloop, Upverter and Soldering - Unbelievable USB Ustulater",
+   "episode_url": "https://theamphour.com/the-amp-hour-158-unbelievable-usb-ustulater/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Benchtop board preheaters cost around 200 dollars and are considered worth the price by practitioners who do hot-air work on boards with large copper pours.",
+   "quote_verbatim": "they're worth it man like 200 bucks",
+   "speaker": null,
+   "episode": 158,
+   "episode_title": "Hyperloop, Upverter and Soldering - Unbelievable USB Ustulater",
+   "episode_url": "https://theamphour.com/the-amp-hour-158-unbelievable-usb-ustulater/",
+   "depth_regraded": "opinion",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Boards with substantial copper area should sit on the preheater for a minute or two to bring the assembly up to roughly 200 degrees before hot-air soldering, because the copper otherwise sinks heat away from the joint.",
+   "quote_verbatim": "sit it there for a minute or two on the preheater and then get it up to 200 degrees or something",
+   "speaker": null,
+   "episode": 158,
+   "episode_title": "Hyperloop, Upverter and Soldering - Unbelievable USB Ustulater",
+   "episode_url": "https://theamphour.com/the-amp-hour-158-unbelievable-usb-ustulater/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Standalone PID controller boxes for reflow ovens include a learn function: a temperature sensor is placed inside any oven and the controller characterises that oven's thermal response before profiles are run.",
+   "quote_verbatim": "so you put the temperature sensor in there, and you can, you know, you can put it in any oven, and then it's got a learn button, so you press learn, and it learns the profile of the oven",
+   "speaker": "Dave Jones",
+   "episode": 176,
+   "episode_title": "Funding New/Manufacturing Old Projects - Radical Robotic Requisition",
+   "episode_url": "https://theamphour.com/176-funding-newmanufacturing-old-projects-radical-robotic-requisition/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A radiant oven that does not circulate its hot air produces hot spots across the board, which is why such ovens are not considered professional-grade reflow equipment.",
+   "quote_verbatim": "it doesn't circulate the hot air, you know? Right. So there's possibilities of getting hot spots and things like that on your board.",
+   "speaker": "Dave Jones",
+   "episode": 176,
+   "episode_title": "Funding New/Manufacturing Old Projects - Radical Robotic Requisition",
+   "episode_url": "https://theamphour.com/176-funding-newmanufacturing-old-projects-radical-robotic-requisition/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Inexpensive imported reflow ovens selling for around 300 dollars, with front-panel buttons and an LCD that draws a profile graph, are internally the same arrangement of a couple of heater elements as a converted toaster oven, and suffer the same hot spots.",
+   "quote_verbatim": "you go to eBay, and you pay 300 bucks for one of those, you know, cheap-ass Chinese reflow ovens, right, that claim to be a proper, you know, they've got, like, buttons and LCD on the front that draws the profile and all that. It's the same thing",
+   "speaker": "Dave Jones",
+   "episode": 176,
+   "episode_title": "Funding New/Manufacturing Old Projects - Radical Robotic Requisition",
+   "episode_url": "https://theamphour.com/176-funding-newmanufacturing-old-projects-radical-robotic-requisition/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "QFN packages can be assembled with only a hot air gun, which gives a designer a fallback route to build a board when no reflow oven or technician is available.",
+   "quote_verbatim": "you have a video about showing how to do QFNs with just a hot air gun",
+   "speaker": "Chris Gammell",
+   "episode": 183,
+   "episode_title": "An Interview with Scott Driscoll - Impacable Interdisciplinary Inventor",
+   "episode_url": "https://theamphour.com/183-an-interview-with-scott-driscoll-impaccable-interdisciplinary-inventor/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Reflow ovens emit strong fumes and require extraction, so they cannot be operated in a commercial office space that has no ventilation provision.",
+   "quote_verbatim": "I can't even use my reflow oven here in the office right because the smell is just too bad right there's no ability to you know get fume extraction in here",
+   "speaker": "Dave Jones",
+   "episode": 195,
+   "episode_title": "Guns and Mobile Labs - Nuanced Nomadic Non-essentials",
+   "episode_url": "https://theamphour.com/195-guns-and-mobile-labs-nuanced-nomadic-non-essentials/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Putting an entire assembled board back through a reflow oven is a last-resort repair for a suspected bad BGA joint, with a low and unpredictable chance of fixing the fault.",
+   "quote_verbatim": "I would have taken the whole board out, whacked it in the reflow oven and reflowed it again",
+   "speaker": "Dave Jones",
+   "episode": 203,
+   "episode_title": "Tesla, Checklists and Bullies - Emerging External Eupsychics",
+   "episode_url": "https://theamphour.com/203-tesla-checklists-and-bullies-emerging-external-eupsychics/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Building a toaster-oven reflow setup serves as an intermediate step between hand soldering and production equipment, even though off-the-shelf controllers already exist.",
+   "quote_verbatim": "It's actually a step I'm taking right now. Uh, I am building a, uh, toaster oven reflow.",
+   "speaker": null,
+   "episode": 221,
+   "episode_title": "Warming Up To IoT - Tendentious Thermal Tools",
+   "episode_url": "https://theamphour.com/221-warming-up-to-iot-tendentious-thermal-tools/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A reflow controller with a graphical screen showing the current stage is preferable to bare status LEDs, because with LEDs the operator has to watch a wristwatch to know how far through ramp-up or soak the run has progressed.",
+   "quote_verbatim": "it's a reflow oven is something you don't want to watch with leads, you know, like a lead turns on, it's now in ramp up mode, you know, soak mode",
+   "speaker": null,
+   "episode": 221,
+   "episode_title": "Warming Up To IoT - Tendentious Thermal Tools",
+   "episode_url": "https://theamphour.com/221-warming-up-to-iot-tendentious-thermal-tools/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Some small manufacturers use vapor phase rather than a traditional convection oven; a limitation of lower-end vapor phase machines is weak profiling, where the operator programs how much heat is applied for how many seconds instead of specifying a true thermal profile.",
+   "quote_verbatim": "the oven we have doesn't really have good profiling capabilities. It's more of, more of like a, you know, you kind of program how much heat is for how many seconds",
+   "speaker": "Joe Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Moisture absorbed into a plastic-packaged component turns to steam as the part passes through the reflow oven, expanding and cracking the package; LEDs are particularly susceptible.",
+   "quote_verbatim": "when they go through the reflow oven, that moisture inside can expand and then crack",
+   "speaker": "Dave Jones",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Components on paper carrier tape stored at around 60 percent humidity eventually stick to the cover tape, so the tape will not peel cleanly and the feeder jams; dry storage protects the tape as well as the parts.",
+   "quote_verbatim": "in 60% humidity that paper is going to stick to that tape eventually",
+   "speaker": "Dave Jones",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A contract manufacturer running mixed low-volume work checks datasheet temperature limits only for unusual parts, then lowers the oven temperature for heat-sensitive components or raises it for BGA packages, selecting from a small library of already-characterised profiles rather than reprofiling each job.",
+   "quote_verbatim": "we just knock the temperature down on the oven or have to raise it up if it's like a BGA package. We've got a couple different profiles that we already know",
+   "speaker": "Parker Dillman",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "For roughly 90 percent of boards a perfect reflow profile is worth only about the difference between a 0.3 and a 0.5 percent process error rate, so profile optimisation has a bounded payoff.",
+   "quote_verbatim": "a perfect profile is talking about like the difference between a 0.3 and a 0.5% error rate in the process",
+   "speaker": "Parker Dillman",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "On one-off builds, visually inspecting and reworking defects is cheaper than developing a custom reflow profile to prevent tombstoning of a single part.",
+   "quote_verbatim": "It's less expensive to verify that and fix any problems with it than it is to come up with a custom profile to avoid tombstorming for this one part.",
+   "speaker": "Parker Dillman",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Bringing assembly in house requires more than a pick and place machine: a reflow oven and a stencil printer are both needed before boards can actually be produced.",
+   "quote_verbatim": "you need more than a pick and place machine to actually make boards. You need a reflow oven.",
+   "speaker": "Vic Aprea",
+   "episode": 250,
+   "episode_title": "An Interview with Vic Aprea - Federated Firmware Functionalism",
+   "episode_url": "https://theamphour.com/250-an-interview-with-vic-aprea-federated-firmware-functionalism/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Second-hand placement and reflow equipment demands continuous attention: getting a machine working the first time takes a long time and keeping it working takes more, which undercuts the assumption that a machine simply does what it is told.",
+   "quote_verbatim": "These machines take a lot of babysitting.",
+   "speaker": "Vic Aprea",
+   "episode": 250,
+   "episode_title": "An Interview with Vic Aprea - Federated Firmware Functionalism",
+   "episode_url": "https://theamphour.com/250-an-interview-with-vic-aprea-federated-firmware-functionalism/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Energy is a raw input to electronics assembly, and simply energising the heating coils of a reflow oven is a significant recurring cost adder on top of the equipment itself.",
+   "quote_verbatim": "running reflow oven, right? There is a significant cost adder that is just turning them damn coils on",
+   "speaker": "Chris Gammell",
+   "episode": 289,
+   "episode_title": "Documentation Is A Waste Of Time",
+   "episode_url": "https://theamphour.com/289-documentation-is-a-waste-of-time/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Electricity cost should be calculated before purchasing a reflow oven; some units that appeared to be good deals worked out at up to 10,000 dollars a month in energy at 20 shifts a month.",
+   "quote_verbatim": "the energy cost could be for some of these ovens up to $10,000 a month",
+   "speaker": "Jonathan Hirschman",
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Reflowing a failed BGA in a toaster oven does not permanently repair the joint; at best it restores function temporarily, and an overlong dwell in the oven will destroy the board outright.",
+   "quote_verbatim": "using a toaster oven to reflow a BGA and thinking that he's, you know, permanently fixed it, which of course, you know, is not true",
+   "speaker": "Dave Jones",
+   "episode": 311,
+   "episode_title": "An Interview with Louis Rossmann",
+   "episode_url": "https://theamphour.com/311-an-interview-with-louis-rossmann/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The air-conditioning load imposed by a production reflow oven comes mostly from its exhaust rather than radiated heat: the oven itself is well insulated, but it pulls roughly a thousand cfm of conditioned air out through the roof.",
+   "quote_verbatim": "it's actually not really the reflow oven because the reflow oven's really well insulated it's the fact that the reflow oven sucks about a thousand cfm of nice ac air out your roof",
+   "speaker": "Stephen Craig",
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Once solder paste has been printed onto a board it has a limited working life and must reach the oven within about four hours, because the volatile components in the paste evaporate; pasted boards with parts on them cannot be left standing for days.",
+   "quote_verbatim": "once you take it out and apply it to the board, you've got to put it in the oven within like four hours",
+   "speaker": "Dave Jones",
+   "episode": 337,
+   "episode_title": "Fake it till you make it",
+   "episode_url": "https://theamphour.com/337-fake-it-till-you-make-it/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Printed silver-ink conductors tolerate only about 140 degrees, so a board using them cannot pass through a reflow oven, which limits the technology to prototype work.",
+   "quote_verbatim": "it can only support like 140 degrees. So, it can't go through like a reflow oven",
+   "speaker": "Dave Jones",
+   "episode": 406,
+   "episode_title": "Nerds In A Corner",
+   "episode_url": "https://theamphour.com/406-nerds-in-a-corner/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Across more than a hundred contract manufacturers and OEMs visited over one career, only about 15 to 20 had anything other than a table or a cardboard ramp catching boards as they left the reflow oven.",
+   "quote_verbatim": "at least a hundred. And I would say I have seen maybe 15, maybe 20 of those companies had something besides a table or a cardboard ramp catching circuit boards out of the reflow oven",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Well-run assembly shops buy the automation surrounding a machine rather than the machine alone, deciding in advance how it will be fed, loaded and unloaded on the floor.",
+   "quote_verbatim": "they wouldn't just buy a machine, but they would buy all the automation around the machine",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Board buffers and unloaders sized to a small batch, on the order of fifteen boards, are worth installing even at low volume, since machine capital is cheap relative to the labour of manually loading and unloading.",
+   "quote_verbatim": "cause machines aren't expensive. People are expensive.",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Batch reflow ovens use a pneumatic clamshell that opens for the operator to load boards and closes on a button press, in contrast to inline ovens where boards enter on a conveyor.",
+   "quote_verbatim": "the clamshell opens pneumatically, you put the boards in and you hit a button, the clamshell closes pneumatically",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "One widely sold industrial reflow oven was designed largely around Apple's requirements, and Apple's bulk ordering of the same units pushed lead times for other customers out to 50 weeks.",
+   "quote_verbatim": "it was more or less designed for Apple",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A manual stencil printer, where the operator holds the squeegee blades and draws them across the stencil after aligning the board by hand, is repeatable only to the extent the operator is.",
+   "quote_verbatim": "a manual stencil printer, meaning, you know, holding the squeegee blades with your hand and drawing it across the stencil, you know, aligning it by hand",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The core SMT sequence is stencil printer, then pick and place, then reflow oven, where the oven melts the solder at a very tightly controlled rate so that neither the board nor the components are damaged.",
+   "quote_verbatim": "it goes into a reflow oven, which, um, melts all that solder in place at a very, very, very specific and very tightly controlled rate. So you don't destroy your board",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Solder paste is a slurry of tacky flux and powdered solder; the tackiness holds placed components in position between the pick and place machine and the reflow oven.",
+   "quote_verbatim": "paste is a slurry of, of kind of tacky flux and, uh, powdered metal, uh, powdered solder",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Plastic connectors survive repeated reflow cycles only because they contact air alone; placed in contact with a heat-retaining material such as FR4 the same plastic melts quickly, so scrap connectors must not be used as board standoffs in a reflow oven.",
+   "quote_verbatim": "the reason that the board the plastic connectors survive in in uh in reflow ovens is because they're not touching anything that actually retains heat they're just touching air and when you have them touching something like fr4 that does retain heat uh yeah uh plastic melts real fast",
+   "speaker": "Chris Gammell",
+   "episode": 436,
+   "episode_title": "Downward Sloping Trace",
+   "episode_url": "https://theamphour.com/436-downward-sloping-trace/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A cheap reflow station set to nominal 220 to 240 degrees blackened FR-4 substrate on several runs, showing that the actual delivered temperature exceeded the setpoint.",
+   "quote_verbatim": "despite setting it to like 240, 220, the FR-4 a few times actually blackened",
+   "speaker": "Mike Grover",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The first modification made to low-cost imported reflow ovens is replacing the thermocouple interface, because the operational amplifier front ends fitted on the stock control board are very inaccurate.",
+   "quote_verbatim": "This is the first thing I modify on my Chinese reflow ovens is the thermal couples because they are using, or the thermal couple interfaces.",
+   "speaker": "Dave Jones",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A used industrial reflow oven of the kind found on a small line is around 14 feet long with seven temperature zones top and bottom, each individually PLC controlled.",
+   "quote_verbatim": "It's like a 14 foot long reflow oven. It has seven temperature zones, the top and bottom. Each one's individually controlled, PLC controlled.",
+   "speaker": "Ken Burns",
+   "episode": 458,
+   "episode_title": "An Interview with Ken Burns",
+   "episode_url": "https://theamphour.com/458-an-interview-with-ken-burns/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A complete used SMT line consisting of a 1996-vintage pick and place with 80 feeders, a seven-zone reflow oven and a manual stencil printer was bought and delivered for 25,000 dollars.",
+   "quote_verbatim": "The entire cost with delivery was 25,000.",
+   "speaker": "Ken Burns",
+   "episode": 458,
+   "episode_title": "An Interview with Ken Burns",
+   "episode_url": "https://theamphour.com/458-an-interview-with-ken-burns/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Feeders dominate the cost of a used placement machine: a 30,000 dollar machine with feeders at 500 dollars each reaches roughly 50,000 dollars before any other equipment is bought.",
+   "quote_verbatim": "it might be a $30,000 machine. And then each feeder is 500 bucks. And so now you're up at $50,000",
+   "speaker": "Ken Burns",
+   "episode": 458,
+   "episode_title": "An Interview with Ken Burns",
+   "episode_url": "https://theamphour.com/458-an-interview-with-ken-burns/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Industrial placement machines are engineered for high-volume production and long service life, with 20 to 25 years of service not uncommon, which is what makes buying second-hand equipment viable for a small manufacturer.",
+   "quote_verbatim": "They're like 20, 25 years of service is not uncommon on some of these type of situations.",
+   "speaker": "Ken Burns",
+   "episode": 458,
+   "episode_title": "An Interview with Ken Burns",
+   "episode_url": "https://theamphour.com/458-an-interview-with-ken-burns/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Boards emerging from a reflow oven, even after the cool-down section, remain hot enough to burn on contact and should not be picked up bare-handed.",
+   "quote_verbatim": "those things come out like hotter than pizza. They're piping hot.",
+   "speaker": "Dave Jones",
+   "episode": 486,
+   "episode_title": "Medical Kits, They're The Future",
+   "episode_url": "https://theamphour.com/486-medical-kits-theyre-the-future/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A bare board that cannot survive a pass through a reflow oven is unusable in production, because reflow is the immediate next stop after fabrication in the assembly line.",
+   "quote_verbatim": "this board won't go through a reflow oven and we're like, well, that's the next stop of the line",
+   "speaker": null,
+   "episode": 544,
+   "episode_title": "Standardizing Manufacturing with Pete Staples",
+   "episode_url": "https://theamphour.com/544-standardizing-manufacturing-with-pete-staples/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Moisture-sensitive surface-mount components are supplied in a hermetically sealed moisture barrier package with a desiccant bag, and the seal should not be broken until the day the parts go into the placement machine.",
+   "quote_verbatim": "you're not supposed to open those until, you know, the, the day you're going to put them into your pick and place machine",
+   "speaker": "Dave Jones",
+   "episode": 558,
+   "episode_title": "Toasted Marshmallow Connectors",
+   "episode_url": "https://theamphour.com/558-toasted-marshmallow-connectors/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A controlled oven is also used to bake moisture out of components before assembly, though using a reflow oven for unrelated drying tasks such as 3D printer filament risks contaminating a machine that must stay clean.",
+   "quote_verbatim": "that's like the, the easy way to, you know, like baking out components too",
+   "speaker": null,
+   "episode": 558,
+   "episode_title": "Toasted Marshmallow Connectors",
+   "episode_url": "https://theamphour.com/558-toasted-marshmallow-connectors/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Reflow controllers commonly ship with preset profiles for distinct alloy families: two leaded formulations, several unleaded ones, and a very low-temperature bismuth alloy, because each melts at a different temperature.",
+   "quote_verbatim": "there's a leaded, there's two different leaded. There's a couple unleaded. There's like a bismuth, like super low temp kind of thing.",
+   "speaker": null,
+   "episode": 558,
+   "episode_title": "Toasted Marshmallow Connectors",
+   "episode_url": "https://theamphour.com/558-toasted-marshmallow-connectors/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An identified gap in the reflow equipment market is a pre-modified, dialled-in unit: cheap T962-class ovens bought in quantity, reworked and resold, letting a buyer pay roughly double rather than spend time modifying an oven personally.",
+   "quote_verbatim": "someone could go and buy a bunch of T962s",
+   "speaker": "Dave Jones",
+   "episode": 558,
+   "episode_title": "Toasted Marshmallow Connectors",
+   "episode_url": "https://theamphour.com/558-toasted-marshmallow-connectors/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Through-hole connectors are frequently not rated to pass through a reflow oven and melt outright when they do, so connector temperature ratings must be checked before including them in a reflowed assembly.",
+   "quote_verbatim": "through hole connectors are often not rated to go into a reflow oven",
+   "speaker": "Dave Jones",
+   "episode": 558,
+   "episode_title": "Toasted Marshmallow Connectors",
+   "episode_url": "https://theamphour.com/558-toasted-marshmallow-connectors/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A Mancorp benchtop reflow machine in the five to seven thousand dollar range was mechanically robust and well vented, but was hampered by an Android tablet interface and by profiles that were never quite right.",
+   "quote_verbatim": "it would look expensive, like five to $7,000",
+   "speaker": "Chris Gammell",
+   "episode": 558,
+   "episode_title": "Toasted Marshmallow Connectors",
+   "episode_url": "https://theamphour.com/558-toasted-marshmallow-connectors/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A conveyor reflow oven controlled only by independent PID zones, typically two bottom and three top controllers plus conveyor speed, gives weak control of the actual profile, and an uncalibrated setpoint of 280 degrees may not correspond to 280 degrees at the board.",
+   "quote_verbatim": "It had like a two bottom controllers and then three top controllers. You set them to different temperatures and you kind of just crossed your fingers",
+   "speaker": "Chris Gammell",
+   "episode": 558,
+   "episode_title": "Toasted Marshmallow Connectors",
+   "episode_url": "https://theamphour.com/558-toasted-marshmallow-connectors/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Calibrating a reflow oven for a new paste or board is empirical and normally consumes a few sacrificial boards before the profile is trusted.",
+   "quote_verbatim": "you'll often have to, you know, actually destroy a few boards, just calibrating your reflow oven",
+   "speaker": "Chris Gammell",
+   "episode": 558,
+   "episode_title": "Toasted Marshmallow Connectors",
+   "episode_url": "https://theamphour.com/558-toasted-marshmallow-connectors/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Reflow ovens do not deliver a flat temperature profile across a board, with the centre differing from the edges, so a critical component sitting in a cooler region may fail to reflow properly even when the nominal profile is correct.",
+   "quote_verbatim": "What if you have like differentiation between the center versus the edges",
+   "speaker": "Chris Gammell",
+   "episode": 558,
+   "episode_title": "Toasted Marshmallow Connectors",
+   "episode_url": "https://theamphour.com/558-toasted-marshmallow-connectors/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A vapor phase oven boils a fluid called Galden, which boils at exactly 230 degrees and produces a vapour heavier than air; the assembly is immersed in vapour fixed at that temperature, so components such as BGAs and FPGAs cannot be overheated.",
+   "quote_verbatim": "the galden is boiling exactly at 230 degrees and if it's boiling it generates vapor which is heavier than air this means you have a 230 degree",
+   "speaker": "Saber Kaygusuz",
+   "episode": 608,
+   "episode_title": "Vapor Phase with Saber Kaygusuz",
+   "episode_url": "https://theamphour.com/608-vapor-phase-with-saber-kaygusuz/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An open-source vapor phase oven aimed at small hardware offices was priced at 5,000 euros against roughly 10,000 euros for other vapor phase machines.",
+   "quote_verbatim": "so you said it was 10k euros to get any other machine so it's 5 000 europe's for the for the current machine",
+   "speaker": null,
+   "episode": 608,
+   "episode_title": "Vapor Phase with Saber Kaygusuz",
+   "episode_url": "https://theamphour.com/608-vapor-phase-with-saber-kaygusuz/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The original design target for a desktop vapor phase oven was around 1,500 dollars for makers and hobbyists, but required features in the system made that price unattainable.",
+   "quote_verbatim": "for around 1500 dollars that that was our main goal at this point",
+   "speaker": "Saber Kaygusuz",
+   "episode": 608,
+   "episode_title": "Vapor Phase with Saber Kaygusuz",
+   "episode_url": "https://theamphour.com/608-vapor-phase-with-saber-kaygusuz/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The economic case for a precise reflow process rests on scrap: a 300 dollar cheap oven can destroy enough prototypes that the loss quickly exceeds the price gap to a controlled machine, particularly for high-end boards that would otherwise be sent to an assembly house.",
+   "quote_verbatim": "i think i paid like 300 bucks for my cheapo oven but you think about how many prototypes i potentially destroyed and you know it starts to add up pretty fast",
+   "speaker": null,
+   "episode": 608,
+   "episode_title": "Vapor Phase with Saber Kaygusuz",
+   "episode_url": "https://theamphour.com/608-vapor-phase-with-saber-kaygusuz/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A hot plate can be controlled to within about a degree by inching the setpoint up, and permits a microscope to be positioned over the board to watch joints reflow, which an oven's small door window does not allow.",
+   "quote_verbatim": "I feel like I can get a hot plate within like a degree.",
+   "speaker": "Dave Jones",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Hot plates lose their advantage on large or complicated boards and on assemblies carrying tall components, where vertical temperature gradients develop across the parts; ordinary low-profile SMT assemblies reflow well on a hot plate.",
+   "quote_verbatim": "if the board has like a lot of vertical, like tall components on it, then yeah. You're going to have like temperature gradients over the components",
+   "speaker": "Dave Jones",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A hot plate avoids the air currents present inside a convection oven, one reason practitioners consider it easier to control for single-sided boards.",
+   "quote_verbatim": "There's no like air currents to worry about.",
+   "speaker": "Jeff Keyzer",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Double-sided assembly is not a prerequisite for reflow; ordinary single-sided surface-mount work already justifies a reflow process.",
+   "quote_verbatim": "Well, you don't need dual-sided. You just need regular SMD to do reflow.",
+   "speaker": null,
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A production reflow machine is a conveyor belt carrying boards from the pick and place through an oven that usually has five heating stages, so timing through the profile is fixed by belt speed rather than by an operator placing and removing the board as with a hot plate.",
+   "quote_verbatim": "it's a conveyor belt. Your board comes out of your pick and place machine. It goes on the conveyor belt and then it goes through the oven, which usually has five different stages of heating",
+   "speaker": null,
+   "episode": 636,
+   "episode_title": "Discovering Cursed Connectors",
+   "episode_url": "https://theamphour.com/636-discovering-cursed-connectors/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Some component packages tolerate hot air rework poorly and must be soldered in a reflow oven or drag-soldered instead.",
+   "quote_verbatim": "They don't like hot air at all. So you need to reflow oven",
+   "speaker": null,
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Low-quality or dried-out solder paste passes through the reflow machine without ever properly reflowing, leaving crusty joints that resemble cold solder joints because the flux and paste have effectively gone.",
+   "quote_verbatim": "it dries up and you put that through your, through your reflow machine. It's like cold solder joints.",
+   "speaker": "David Ray",
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Once paste has dried out on a board the joint cannot be rescued by another oven pass; it must be reworked with a hot plate and fresh flux.",
+   "quote_verbatim": "And, and you cannot make it reflow in an oven. Got it. Uh, you have to use a hot plate in some flux.",
+   "speaker": "David Ray",
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "In routine board assembly the reflow thermal profile only needs changing when copper weight changes, such as moving to two-ounce copper, because the extra copper alters the thermal mass of the board.",
+   "quote_verbatim": "How often do you have to change the thermal profile on the reflow oven? Only when I go to two ounce.",
+   "speaker": "David Ray",
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "ep250: passage flagged ATTRIB-UNRELIABLE; attributed to Vic Aprea because the content is a first-person account of his own company's move to in-house assembly, which only the interviewee could give.",
+  "ep458: passage flagged ATTRIB-UNRELIABLE; attributed to Ken Burns because the content is a first-person account of the used line he purchased.",
+  "ep608: bundle labels the vapor phase mechanism passage Chris Gammell, but the content is the answer to the host's question about the product and is unambiguously the vapor phase oven's designer; attributed to Saber Kaygusuz. The 5k/10k price comparison and the cheap-oven scrap remark in the same episode are host-side and left null.",
+  "ep221: both passages are fused host/guest exchanges where the toaster-oven build and the screen-versus-LEDs preference cannot be pinned to one speaker; left null.",
+  "ep158: bundle speaker is a raw diarisation label (SPEAKER_01); left null.",
+  "ep544, ep636, ep645: flagged ATTRIB-UNRELIABLE and the content does not identify a speaker; left null.",
+  "ep558: the mHub Mancorp and Neoden equipment claims are first-person about working out of mHub and attributed to Chris Gammell; the bake-out and paste-alloy passages are fused across speakers and left null."
+ ],
+ "capped": false
+}

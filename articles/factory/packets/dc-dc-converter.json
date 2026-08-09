@@ -1,0 +1,638 @@
+{
+ "concept": "dc-dc-converter",
+ "name": "DC-DC Converter",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "dc-dc-converter",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "dc-dc-converter",
+   "dc-to-dc-converter"
+  ],
+  "children": [
+   "mailing-list",
+   "power-conversion",
+   "power-converter-efficiency"
+  ],
+  "neighbors": {},
+  "episodes_with_kept_mentions": 66,
+  "mentions_kept": 88,
+  "pins_pre_cap": 70,
+  "pins_final": 70,
+  "pins_by_depth": {
+   "explains": 57,
+   "opinion": 13
+  },
+  "pins_by_role": {
+   "core": 67,
+   "child": 3
+  },
+  "speakers": [
+   [
+    "Dave Jones",
+    40
+   ],
+   [
+    "Chris Gammell",
+    17
+   ],
+   [
+    "Henry Ott",
+    2
+   ],
+   [
+    "Mike Harrison",
+    2
+   ],
+   [
+    "Paul Thompson",
+    2
+   ],
+   [
+    "Brett Fox",
+    1
+   ],
+   [
+    "Mark Morin",
+    1
+   ],
+   [
+    "Shahriar Shahramian",
+    1
+   ],
+   [
+    "Florin Of Voltlog",
+    1
+   ],
+   [
+    "Andrea Longobardi",
+    1
+   ],
+   [
+    "Aedan Cullen",
+    1
+   ],
+   [
+    "Werner Johansson",
+    1
+   ]
+  ],
+  "capped": false,
+  "gated_out_by_concept": [
+   [
+    "mailing-list",
+    30
+   ],
+   [
+    "power-converter-efficiency",
+    13
+   ],
+   [
+    "power-conversion",
+    8
+   ]
+  ],
+  "gated_out_total": 51
+ },
+ "claims": [
+  {
+   "claim_text": "A quoted efficiency figure describes one operating point — a particular load current at a particular output voltage — and says nothing about the rest of the curve, so the headline number on a datasheet is not the number your design will see.",
+   "quote_verbatim": "they'll say it's, oh, it's a 95% efficient DC to DC converter, but that's at one very specific operating point",
+   "speaker": "Chris Gammell",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A product with several operating modes draws a different current in each and therefore sits at a different point on the efficiency curve in each, which is what wrecks a power budget calculated from a single figure.",
+   "quote_verbatim": "if you design a product which has different operating modes that draws different currents, that can be a real pain in the ass for a DC to DC converter",
+   "speaker": "Dave Jones",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Converter efficiency has to be built up and measured rather than calculated from the datasheet; the measured figure can come back at seventy percent where the quoted one said ninety-five.",
+   "quote_verbatim": "you've got to build it up to measure your efficiency",
+   "speaker": "Dave Jones",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Measuring converter efficiency properly means capturing input voltage, input current, output voltage and output current simultaneously — four instruments, because taking them in sequence lets the operating point move between readings.",
+   "quote_verbatim": "you've got to have four multimeters because you have to measure those things at the same time",
+   "speaker": "Dave Jones",
+   "episode": 18,
+   "episode_title": "Transistor Types and Where To Get Electronic Gear",
+   "episode_url": "https://theamphour.com/the-amp-hour-18-transistor-types-and-where-to-get-electronic-gear/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Where a circuit's current draw is essentially static, the supply can be sized close to it with roughly twenty percent as a minimum margin — designing the supply to survive a fault condition as well is a different requirement and usually not worth paying for.",
+   "quote_verbatim": "20% would be a minimum margin you'd put on something like that",
+   "speaker": "Dave Jones",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A modern digital design routinely needs half a dozen separate rails — 3.3 volts for IO, a 1.2 volt core, a 1.5 volt PLL supply and more — so the power budget is a set of interacting converters rather than one calculation.",
+   "quote_verbatim": "it's not unusual to, sorry, Tom Jones there",
+   "speaker": "Dave Jones",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Ninety-eight percent efficiency is achievable but characteristically over a narrow load range, so a headline efficiency claim should always be read together with the range it holds across.",
+   "quote_verbatim": "you can design 98% efficient DC to DC converters, but it's usually over very narrow load range",
+   "speaker": "Dave Jones",
+   "episode": 112,
+   "episode_title": "An Interview with Bob Simpson - Ardent Automotive Artisan",
+   "episode_url": "https://theamphour.com/the-amp-hour-112-ardent-automotive-artisan/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The last percent of efficiency costs disproportionately more work than the first ninety, and the variables involved — interwinding capacitance among them — make squeezing it out a specialist skill rather than a matter of following the design equations.",
+   "quote_verbatim": "you've got to put twice as much work into it to gain an extra 1% efficiency",
+   "speaker": "Dave Jones",
+   "episode": 5,
+   "episode_title": "Girl Power",
+   "episode_url": "https://theamphour.com/the-amp-hour-5-girl-power/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A single lithium cell runs from about 4.2 volts down to about 3 volts, which crosses a 3.3 volt rail from above and then from below. A buck alone cannot follow that, so extracting the full capacity of the cell into a 3.3 volt circuit calls for a SEPIC — at some cost in efficiency against a converter that only has to step one way.",
+   "quote_verbatim": "lithium ion battery at full voltage will be, uh, around about 4.2 volts, right. And it will cut out around about three volts",
+   "speaker": "Dave Jones",
+   "episode": 62,
+   "episode_title": "Op amps, Microchips & Mergers - Narquois Nerd Nescience - Narquois Nerd Nescience",
+   "episode_url": "https://theamphour.com/the-amp-hour-62-narquois-nerd-nescience/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Without a converter holding the rail up, a device only gets the part of the cell's discharge curve that stays above the chip's minimum operating voltage — enough to turn a nominal eight-year battery life into roughly three months of usable service.",
+   "quote_verbatim": "you wouldn't use up all the usable capacity in the battery because its lowest voltage is 2.5 volts",
+   "speaker": "Dave Jones",
+   "episode": 49,
+   "episode_title": "Analog Devices, Design Spark - Unusual Usenet Usurpation",
+   "episode_url": "https://theamphour.com/the-amp-hour-49-unusual-usenet-ursurpation/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Lithium primary cells sit at a higher terminal voltage than the alkalines they replace — around 1.75 volts per cell — so a converter wired directly across a series stack can be pushed past its maximum input voltage by what looks like a like-for-like battery swap.",
+   "quote_verbatim": "they might exceed their maximum operational input voltage if you hook them up to lithium primaries",
+   "speaker": "Dave Jones",
+   "episode": 690,
+   "episode_title": "Clap on, clap off, lights flicker",
+   "episode_url": "https://theamphour.com/690-clap-on-clap-off-lights-flicker/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The battery choice determines whether a converter is needed at all: a nine-volt cell is easy to knock down to five, while two AA cells force a boost stage and its cost into the design.",
+   "quote_verbatim": "if you start with two double A's, it's going to cost you money to put in a DC to DC converter to bump it up",
+   "speaker": "Dave Jones",
+   "episode": 32,
+   "episode_title": "Cores, Digikey, Electronic Design - The Commercial Competitor Commencement",
+   "episode_url": "https://theamphour.com/the-amp-hour-32-the-commercial-competition-commencement/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A battery wants to be charged from a current source early in the cycle and a voltage source once it approaches capacity, with the crossover depending on the cell chemistry — which is why charging is a control problem rather than a matter of applying a fixed voltage.",
+   "quote_verbatim": "basically like seeing voltage sources or current sources depending on what stage of the charge cycle they're in",
+   "speaker": "Chris Gammell",
+   "episode": 41,
+   "episode_title": "Contests, Ham Radio & TWIT.tv - Ham, Spam, Thank You Ma'am",
+   "episode_url": "https://theamphour.com/ham-spam-thank-you-maam/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A charge controller can drive an ordinary converter's compensation pin as its control input, turning any DC-DC converter into a battery charger without the converter knowing anything about batteries.",
+   "quote_verbatim": "it uses that compensation pin that we talked about on the DC to DC converter. And it uses that as like a little knob",
+   "speaker": "Chris Gammell",
+   "episode": 41,
+   "episode_title": "Contests, Ham Radio & TWIT.tv - Ham, Spam, Thank You Ma'am",
+   "episode_url": "https://theamphour.com/ham-spam-thank-you-maam/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "That construction only pays at high power or in unusual cell configurations: it carries no internal switching devices, so it needs external FETs plus a separate converter chip costing several dollars, where an integrated charger for a standard cell topology costs around fifty cents.",
+   "quote_verbatim": "really only of use for really more obscure high power stuff",
+   "speaker": "Dave Jones",
+   "episode": 41,
+   "episode_title": "Contests, Ham Radio & TWIT.tv - Ham, Spam, Thank You Ma'am",
+   "episode_url": "https://theamphour.com/ham-spam-thank-you-maam/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The compensation network is a resistor and capacitor setting the time constants of the feedback loop, and getting it wrong is what makes a supply oscillate — the values depend on the load, which is why the calculation belongs in the design rather than being copied.",
+   "quote_verbatim": "people set this with a capacitor, a resistor, and you set up time constants in order to have so that your power supply doesn't oscillate",
+   "speaker": "Chris Gammell",
+   "episode": 41,
+   "episode_title": "Contests, Ham Radio & TWIT.tv - Ham, Spam, Thank You Ma'am",
+   "episode_url": "https://theamphour.com/ham-spam-thank-you-maam/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Measuring loop response rigorously means coupling a swept signal into the feedback divider through a small transformer and reading the result on a network analyser, which turns stability from something assumed into something measured.",
+   "quote_verbatim": "you put a little transformer into the feedback resistor network",
+   "speaker": "Dave Jones",
+   "episode": 377,
+   "episode_title": "Debugger vs Printeffer",
+   "episode_url": "https://theamphour.com/377-debugger-vs-printeffer/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A datasheet's example circuit is sized for the datasheet's example conditions, so reusing its component values at a different target current leaves efficiency far from the quoted figure. The suggested inductor part numbers are a starting point, and the verification of efficiency, noise and layout is still yours to do.",
+   "quote_verbatim": "you can't just take their example circuit and use their example values because it's most likely not going to be applicable to your target current",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A standard converter architecture serves even unusual supply requirements provided the switching device is chosen for a controllable analog region rather than being driven hard into saturation.",
+   "quote_verbatim": "want to have a nice analog region you can control in your",
+   "speaker": "Mark Morin",
+   "episode": 290,
+   "episode_title": "An Interview with Mark Morin of Nufern",
+   "episode_url": "https://theamphour.com/290-an-interview-with-mark-morin-of-nufern/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Switching converters are among the largest sources of conducted noise in a product, which puts them at the centre of most electromagnetic compliance problems rather than at the edge of them.",
+   "quote_verbatim": "DC to DC converts, that kind of stuff, very noisy stuff. And that produces a lot of conductive noise problems",
+   "speaker": "Henry Ott",
+   "episode": 165,
+   "episode_title": "An Interview with Henry Ott - Forced FCC Filtering",
+   "episode_url": "https://theamphour.com/165-an-interview-with-henry-ott-forced-fcc-filtering/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Converters exist that move their switching frequency to track a radio receiver's tuning, keeping the switching fundamental and its harmonics a fixed distance from whatever station is being received — solving an interference problem by moving the aggressor rather than filtering it.",
+   "quote_verbatim": "they tune the DC to DC to chase the AM or FM tuner",
+   "speaker": "Henry Ott",
+   "episode": 165,
+   "episode_title": "An Interview with Henry Ott - Forced FCC Filtering",
+   "episode_url": "https://theamphour.com/165-an-interview-with-henry-ott-forced-fcc-filtering/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Choosing a switching frequency of two megahertz puts the fundamental clear of the AM band, and deliberately spreading the switching frequency lowers the peak noise at any one frequency — both decisions made to get a customer through compliance testing rather than to improve the converter.",
+   "quote_verbatim": "was the first one to do two megahertz DC, DC converters. So they were out of the AM band",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A megahertz counts as high frequency for a switching converter and ten megahertz is extreme; pushing the frequency up shrinks the magnetics dramatically but moves the losses into the switching devices, which is what bounds the trade.",
+   "quote_verbatim": "one megahertz like in the megahertz range is considered high frequency dc to dc converter stuff",
+   "speaker": "Dave Jones",
+   "episode": 304,
+   "episode_title": "Alexa joins the fray",
+   "episode_url": "https://theamphour.com/304-alexa-joins-the-fray/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Switching frequencies reaching tens of megahertz are what allow converters to be pulled onto the same die or into the same package as the load, because the magnetics shrink with frequency even as the leakage and loss problems get harder.",
+   "quote_verbatim": "the switching speed of these converters going up into like 30 megahertz",
+   "speaker": "Chris Gammell",
+   "episode": 156,
+   "episode_title": "Tesla, FPGAs and DigiKey - Zesty Zippy Zynq",
+   "episode_url": "https://theamphour.com/the-amp-hour-156-zesty-zippy-zynq/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A linear regulator draws constant current from the battery while a switching converter draws constant power, so the two behave oppositely as the battery discharges: the linear part's drain holds steady while the converter's current rises as the voltage falls.",
+   "quote_verbatim": "the DC to DC converter, constant power is going to be more accurate than your constant current",
+   "speaker": "Dave Jones",
+   "episode": 629,
+   "episode_title": "At least my house isn't haunted",
+   "episode_url": "https://theamphour.com/629-at-least-my-house-isnt-haunted/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Power figures on a microcontroller datasheet are not comparable between parts — microamps per megahertz ignores instructions per cycle, and power per instruction, which would be the honest metric, is not published — so a genuine comparison means building both boards and running the same software with the same peripherals and sleep modes.",
+   "quote_verbatim": "really the only way to genuinely compare two micros is to actually build them up",
+   "speaker": "Dave Jones",
+   "episode": 629,
+   "episode_title": "At least my house isn't haunted",
+   "episode_url": "https://theamphour.com/629-at-least-my-house-isnt-haunted/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "For test gear or any low-volume build, buying a converter module at thirty to fifty dollars beats designing one even though the chip, inductor, switching device and diode together cost about five: the design time is the expensive part and it buys nothing the module does not already provide.",
+   "quote_verbatim": "going to buy the $50 DC to DC converter brick instead of rolling it",
+   "speaker": "Dave Jones",
+   "episode": 273,
+   "episode_title": "Part Choice Triathlon",
+   "episode_url": "https://theamphour.com/273-part-choice-triathlon/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Putting the converter on a daughterboard isolates the main design from it, so a supply change — a part going obsolete, a spec moving — becomes a small board respin instead of a revision of the whole product.",
+   "quote_verbatim": "a daughter board DC to DC converter. So if that changes, well, your main product doesn't change",
+   "speaker": "Dave Jones",
+   "episode": 565,
+   "episode_title": "Here for a reason",
+   "episode_url": "https://theamphour.com/565-here-for-a-reason/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A synchronous converter is any standard topology with the rectifying diode replaced by an actively switched device, removing the diode's forward conduction loss; the diode's advantages were that it is cheap and needs no timing or control at all.",
+   "quote_verbatim": "those pesky power losing diodes replaced with a switch within intelligent FET",
+   "speaker": "Dave Jones",
+   "episode": 565,
+   "episode_title": "Here for a reason",
+   "episode_url": "https://theamphour.com/565-here-for-a-reason/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Raising a transistor's breakdown voltage normally costs speed, and gallium nitride's contribution is breaking that link: wide bandgap devices hold off high voltages while still switching fast, which is what makes very small, very efficient supplies possible — high efficiency means little waste heat, and little waste heat is what removes the heatsinks and shrinks the package.",
+   "quote_verbatim": "when you increase the breakdown voltage of a transistor you tend to make it slower",
+   "speaker": "Shahriar Shahramian",
+   "episode": 553,
+   "episode_title": "Debunking with Shahriar",
+   "episode_url": "https://theamphour.com/553-debunking-with-shahriar/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Step-down conversion runs into a semiconductor ceiling somewhere around five to eight hundred volts input; above that there is no efficient way to convert down directly, which is why very high voltage distribution is not simply converted at the point of use.",
+   "quote_verbatim": "start to reach a limit where you, where the semiconductors you can get to do your DC to DC converter step down at the power",
+   "speaker": "Dave Jones",
+   "episode": 353,
+   "episode_title": "IoT Degree",
+   "episode_url": "https://theamphour.com/353-iot-degree/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Converters are available with the inductor co-packaged on top of the controller, giving a small footprint at good efficiency — convenient enough to use throughout a board for several different rails rather than designing each supply separately.",
+   "quote_verbatim": "basically have the inductor stacked on top of the chip",
+   "speaker": "Aedan Cullen",
+   "episode": 638,
+   "episode_title": "Building AR Headsets with Aedan Cullen",
+   "episode_url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Some converter modules in an SO8 outline are a small circuit board with the inductor on top and the controller die embedded inside the board itself, which is why the package appears to contain only passives when opened.",
+   "quote_verbatim": "chip is embedded inside the PCB",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Parts exist that carry both isolated data and an isolated supply across the same barrier, and the common mistake made with them is connecting the two grounds back together downstream, which defeats the isolation the part was bought for.",
+   "quote_verbatim": "most people don't realize, like, oh, it's isolated. And then they connect the ground right back",
+   "speaker": "Chris Gammell",
+   "episode": 341,
+   "episode_title": "All the way with DLJ",
+   "episode_url": "https://theamphour.com/341-all-the-way-with-dlj/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Bare die and wafer-scale packages are photosensitive: a xenon camera flash put enough photons into an exposed converter on a well-known single-board computer to lock it up, a failure mode that never appears in the electrical specification.",
+   "quote_verbatim": "there'd be so many photons hitting that chip that would, you know, it would actually, the DC-to-DC converter locked up",
+   "speaker": "Dave Jones",
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A vehicle's 12-volt line carries enough transient energy that an ordinary converter is likely to fail eventually, so the automotive-rated part is bought for survival rather than for paperwork.",
+   "quote_verbatim": "there are a lot of transients on the, like the 12 volt line on a typical car",
+   "speaker": "Florin Of Voltlog",
+   "episode": 568,
+   "episode_title": "YouTube to Consulting with Florin of Voltlog",
+   "episode_url": "https://theamphour.com/568-youtube-to-consulting-with-florin-of-voltlog/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Converters churn in and out of availability fast enough that a schematic revision turns into two days of parametric searching for a substitute — and a part that was unavailable two months ago may well be back.",
+   "quote_verbatim": "this DC to DC converter is not available anymore",
+   "speaker": "Dave Jones",
+   "episode": 128,
+   "episode_title": "Layout, CAD & Raspberry Pi - Kedogenous Kinetic Knowledge",
+   "episode_url": "https://theamphour.com/the-amp-hour-128-kedogenous-kinetic-knowledge/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The practical search when a converter goes to a year's lead time is by footprint first: opening every datasheet down the list looking for a part that drops into the existing land pattern is faster than redesigning the supply around a better part.",
+   "quote_verbatim": "which one has the same footprint",
+   "speaker": "Chris Gammell",
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Two days spent finding a replacement converter is sometimes two days spent solving the wrong problem — a change elsewhere in the schematic can remove the need for the rail entirely, which is worth checking before the substitution search starts.",
+   "quote_verbatim": "didn't need a DC to DC converter at all",
+   "speaker": "Chris Gammell",
+   "episode": 128,
+   "episode_title": "Layout, CAD & Raspberry Pi - Kedogenous Kinetic Knowledge",
+   "episode_url": "https://theamphour.com/the-amp-hour-128-kedogenous-kinetic-knowledge/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Component substitutions in production range from a paper qualification, where reading the datasheet is genuinely enough for something like a resistor, up to changes that require a sample build and real testing. A converter swap sits at the expensive end and takes the design back to first principles.",
+   "quote_verbatim": "say you need to change DC to DC converters. You're probably not going to do that just by looking at a data sheet",
+   "speaker": "Chris Gammell",
+   "episode": 279,
+   "episode_title": "Merry Keyzermas!",
+   "episode_url": "https://theamphour.com/279-merry-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Record why each value was chosen, not just what it is: the reason a supply uses a 4.7 microfarad capacitor rather than a 10 — acoustic behaviour, say — is exactly what has been forgotten by the time a part goes obsolete and the circuit has to be revisited.",
+   "quote_verbatim": "why did I use a, you know, 4.7 microfarad cap and not a 10",
+   "speaker": "Chris Gammell",
+   "episode": 279,
+   "episode_title": "Merry Keyzermas!",
+   "episode_url": "https://theamphour.com/279-merry-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "When no existing converter met a start-up requirement of 0.6 volts, the company canvassed every manufacturer and then designed its own integrated circuit — an illustration that for a sufficiently unusual specification, close really is not good enough and the only remaining option is silicon of your own.",
+   "quote_verbatim": "we cannot find one that starts up at 0.6 volts",
+   "speaker": "Dave Jones",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "An LED lamp's life is now set by its converter rather than by the light-emitting device, so reliability work on such a product means working on the power supply.",
+   "quote_verbatim": "the reliability of these new LED bulbs is dependent upon not the LED itself, but dependent upon the DC to DC converter circuitry",
+   "speaker": "Dave Jones",
+   "episode": 71,
+   "episode_title": "An Interview with John Edmond - Luciferous LED Lucubrator",
+   "episode_url": "https://theamphour.com/the-amp-hour-71-luciferous-led-lucubrator/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Leakage through switch capacitance, combined with how little power a modern lamp needs, can supply enough current to bring the converter's start-up threshold up and make a switched-off bulb glow faintly.",
+   "quote_verbatim": "still get enough turn on voltage for the DC to DC",
+   "speaker": "Dave Jones",
+   "episode": 491,
+   "episode_title": "The Almighty Dollarydoo",
+   "episode_url": "https://theamphour.com/491-the-almighty-dollarydoo/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A converter charging a capacitor bank faces the widest possible load swing within a single cycle of operation: a flat capacitor looks like a short circuit and one charged to nine hundred volts looks like an open circuit, which is what makes the magnetics design hard.",
+   "quote_verbatim": "it's as if it's operating into a short circuit",
+   "speaker": "Paul Thompson",
+   "episode": 481,
+   "episode_title": "An Interview with Paul Thompson",
+   "episode_url": "https://theamphour.com/481-an-interview-with-paul-thompson/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Giving the converter the maximum available time to complete a charge is what makes it efficient, and watching the rate of rise of the capacitor voltage during that charge doubles as a safety check — a bank that is not rising as expected is shorted, and continuing to drive it starts a fire.",
+   "quote_verbatim": "the most efficient way to run your DC, DC, DC is to give it the maximum amount of time to do its job",
+   "speaker": "Paul Thompson",
+   "episode": 481,
+   "episode_title": "An Interview with Paul Thompson",
+   "episode_url": "https://theamphour.com/481-an-interview-with-paul-thompson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A solar panel's substantial source impedance — around thirty ohms in one satellite design — means drawing more current pulls the panel voltage down, and that relationship is what lets a converter regulate its own input voltage rather than its output.",
+   "quote_verbatim": "the solar panel has a, uh, has a, like a large impedance, like 30 something ohms",
+   "speaker": null,
+   "episode": 401,
+   "episode_title": "An Interview with Brent and Bryce Salmi",
+   "episode_url": "https://theamphour.com/401-an-interview-with-brent-and-bryce-salmi/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Where a five-year orbital mission makes radiation-induced bit flips likely and reprogramming impossible, the maximum power point tracker was built as an analog computer around an op-amp instead of a microcontroller — computing the panel's peak-power voltage directly and feeding it forward to control the converter's input.",
+   "quote_verbatim": "we actually went and made an analog MPPT. So it actually is literally an analog computer",
+   "speaker": null,
+   "episode": 401,
+   "episode_title": "An Interview with Brent and Bryce Salmi",
+   "episode_url": "https://theamphour.com/401-an-interview-with-brent-and-bryce-salmi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A converter rated for 125 amps continuous into a vehicle's 12-volt system is roughly a kilowatt of conversion — far more than accessory loads justify, which is a strong hint that the capability was fitted for a vehicle-to-grid feature not yet enabled in software.",
+   "quote_verbatim": "that has a continuous rated output at 125 amps",
+   "speaker": "Chris Gammell",
+   "episode": 692,
+   "episode_title": "Like a steam engine in your house",
+   "episode_url": "https://theamphour.com/692-like-a-steam-engine-in-your-house/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A solid-state transformer is a conversion chain rather than a magnetic device — rectify to a DC bus, convert, then invert back to AC — and the reason it does not simply replace distribution transformers is the number of devices that would have to be stacked in series to stand off hundreds of kilovolts.",
+   "quote_verbatim": "it's like AC to DC, DC bus, DC to AC",
+   "speaker": "Chris Gammell",
+   "episode": 717,
+   "episode_title": "Back on the road in '26",
+   "episode_url": "https://theamphour.com/717-back-on-the-road-in-26/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An instrument powered only from a USB port with no boost stage cannot output more than the bus voltage minus its own internal drops — in one case capping a nominal five-volt output at 3.75 volts in its highest-accuracy mode.",
+   "quote_verbatim": "there are no step-up DC-DC",
+   "speaker": "Werner Johansson",
+   "episode": 640,
+   "episode_title": "Software Defined Power Supplies with Werner Johansson",
+   "episode_url": "https://theamphour.com/640-software-defined-power-supplies-with-werner-johansson/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Power conversion that once filled racks is now a switcher chip and a small inductor, and the change was not only size: the older approach lost more efficiency, took far longer to design and cost many times more in components.",
+   "quote_verbatim": "racks of DC to DC converters doing that kind of stuff, whereas now you do it with, like, a, you know, a tiny little inductor and a six megahertz switcher chip",
+   "speaker": "Chris Gammell",
+   "episode": 88,
+   "episode_title": "Yonderly Yodeling Yobbos",
+   "episode_url": "https://theamphour.com/the-amp-hour-88-yonderly-yodeling-yobbos/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A whole-house DC distribution scheme fed from one central converter founders on the wiring rather than the electronics: every run has to be sized for the highest current any outlet might draw, and the copper that requires is prohibitively expensive.",
+   "quote_verbatim": "would have to cater",
+   "speaker": "Chris Gammell",
+   "episode": 25,
+   "episode_title": "NASA, WOTW & Modular Design - The NASA Nostalgia",
+   "episode_url": "https://theamphour.com/the-amp-hour-25-the-nasa-nostagia/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  }
+ ],
+ "attribution_notes": [
+  "attribution_reliable was not trusted. ep401 records both Salmi brothers under a single speaker label, so the analog maximum-power-point claims carry speaker: null.",
+  "ep568 (Florin of Voltlog), ep640 (Werner Johansson) and ep341 label host questions with the guest's name; only material unambiguously the guest's own was used.",
+  "ep165 labels both sides of the Henry Ott interview with his name; the two claims kept are technical answers that are unambiguously his.",
+  "ep49 and ep191 carry the same battery-capacity passage; it is cited once, to ep49.",
+  "Host banter about buying more test gear, brand preferences and Kickstarter economics was excluded as non-transferable."
+ ],
+ "capped": false
+}

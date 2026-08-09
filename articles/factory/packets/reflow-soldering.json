@@ -1,0 +1,719 @@
+{
+ "concept": "reflow-soldering",
+ "name": "Reflow Soldering",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "reflow-soldering",
+  "census": "union",
+  "aliases": [
+   "reflow-soldering",
+   "solder-paste-reflow",
+   "solder-reflow"
+  ],
+  "children": [
+   "dry-solder-joint",
+   "product-commercialization",
+   "single-sided-assembly",
+   "software-developer",
+   "tombstoning"
+  ],
+  "neighbors": {
+   "flux": 4,
+   "microscope": 4,
+   "qfn": 4,
+   "solder-paste-application": 4,
+   "surface-mount-component": 4
+  },
+  "pins_pre_cap": 55,
+  "pins_final": 55,
+  "pins_by_depth": {
+   "explains": 42,
+   "opinion": 13
+  },
+  "pins_by_role": {
+   "core": 54,
+   "neighbor": 1
+  },
+  "capped": false,
+  "passages_yielding_claims": 43,
+  "passages_killed": 12
+ },
+ "claims": [
+  {
+   "claim_text": "Tombstoning happens when only one of a chip component's two terminals wets during reflow: the surface tension of the molten solder on that land pad pulls the part upright so the other terminal lifts clear of its pad entirely.",
+   "quote_verbatim": "one terminal of the resistor lifts up because the resistor kind of gets sucked upwards by the other pad",
+   "speaker": "Jeff Kaiser",
+   "episode": 11,
+   "episode_title": "Ardui...no Dave This Week?",
+   "episode_url": "https://theamphour.com/the-amp-hour-11-ardui-no-dave-this-week/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A tombstoned part does not always announce itself as a dead board. On an early Arduino Uno, resistor R1 below the crystal was found tombstoned with its left terminal making no contact with the land pad at all, yet the board still functioned normally, so the defect was only caught by inspecting under a stereo microscope.",
+   "quote_verbatim": "the amazing thing about it is that the UNO still works fine",
+   "speaker": "Jeff Kaiser",
+   "episode": 11,
+   "episode_title": "Ardui...no Dave This Week?",
+   "episode_url": "https://theamphour.com/the-amp-hour-11-ardui-no-dave-this-week/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Package choice decides whether a design can be sold as a user-assembled kit. Once a board carries QFN parts, the buyer has to reflow rather than hand solder, which rules out the kit format for most customers.",
+   "quote_verbatim": "having them do reflow soldering is probably kind of not going to happen",
+   "speaker": "Tony Long",
+   "episode": 107,
+   "episode_title": "An interview with Tony Long - Millimeter Microwave Magician",
+   "episode_url": "https://theamphour.com/the-amp-hour-107-millimeter-microwave-magician/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Molten solder's surface tension gives reflow a self-correcting placement tolerance: a chip part such as an 0805 that is set down slightly off its pads is pulled back into position as the paste melts, so hand placement need not be perfect.",
+   "quote_verbatim": "when you reflow, you know, it kind of wiggles back into place",
+   "speaker": "Ryan O'Hara",
+   "episode": 153,
+   "episode_title": "An Interview with Ryan O'Hara - Keyed, Kerfed Kapton",
+   "episode_url": "https://theamphour.com/the-amp-hour-153-keyed-kerfed-kapton/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Bottom-terminated packages such as QFNs, where the joints sit under the body and cannot be reached with an iron, can be attached without an oven by preheating the board, flooding the area with liquid flux, and then applying a hot air pencil until the part settles onto its pads.",
+   "quote_verbatim": "you preheat the board and then you flood the crap out of it with flux and then you use a hot air pencil",
+   "speaker": null,
+   "episode": 158,
+   "episode_title": "Hyperloop, Upverter and Soldering - Unbelievable USB Ustulater",
+   "episode_url": "https://theamphour.com/the-amp-hour-158-unbelievable-usb-ustulater/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Boards with large copper pours sink heat away from the joint faster than a hot air pencil can supply it, so the board should sit on a preheater for a minute or two and come up to roughly 200 degrees before any localised reflow is attempted. A bench preheater for this costs on the order of a couple of hundred dollars.",
+   "quote_verbatim": "every time like dealing with like big ground pours and stuff like that anything with like any significant amount of of solder of copper rather",
+   "speaker": null,
+   "episode": 158,
+   "episode_title": "Hyperloop, Upverter and Soldering - Unbelievable USB Ustulater",
+   "episode_url": "https://theamphour.com/the-amp-hour-158-unbelievable-usb-ustulater/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Fine-pitch packages push even one-off builders toward paste and reflow because some parts are simply not offered in anything else; a TSOP can be drag soldered by hand, but reflow is the route that gets it right first time.",
+   "quote_verbatim": "one of the parts that I'm using only comes in a TSOP",
+   "speaker": null,
+   "episode": 170,
+   "episode_title": "What defines an engineer? - Job Judging Jeremiad",
+   "episode_url": "https://theamphour.com/170-what-defines-an-engineer-job-judging-jeremiad/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Solder paste has to be kept refrigerated, which is a real barrier to setting up reflow in a small lab that has no fridge and is a reason some builders stay with drag soldering.",
+   "quote_verbatim": "keeping paste in the fridge and stuff, I don't even have a fridge here at the lab",
+   "speaker": null,
+   "episode": 170,
+   "episode_title": "What defines an engineer? - Job Judging Jeremiad",
+   "episode_url": "https://theamphour.com/170-what-defines-an-engineer-job-judging-jeremiad/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A reflowed board is visibly better than a hand-soldered one. Comparing a hand-built prototype against reflowed units, careful work under a microscope with enough time can approach reflow quality but does not match it.",
+   "quote_verbatim": "there's nothing beats a nice reflowed board",
+   "speaker": "Dave Jones",
+   "episode": 176,
+   "episode_title": "Funding New/Manufacturing Old Projects - Radical Robotic Requisition",
+   "episode_url": "https://theamphour.com/176-funding-newmanufacturing-old-projects-radical-robotic-requisition/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Setting a reflow run for the least heat that will do the job protects the parts and, where the board itself forms part of the product's visible case, protects the board's appearance too, but the price of running lean is the occasional joint that does not take.",
+   "quote_verbatim": "you want to set your oven so that, you know, a minimal amount of heat possible to do the job",
+   "speaker": null,
+   "episode": 182,
+   "episode_title": "Manufacturing By Wire And Skipping Testing - Calefacient Cuculine Cash",
+   "episode_url": "https://theamphour.com/182-manufacturing-by-wire-and-skipping-testing-calefacient-cuculine-cash/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Reballing a grid-array part uses a stencil to deposit discrete solder spheres onto the package; heating then lets each deposit draw up into a ball, and the process depends on the balls releasing from the stencil rather than sticking to it.",
+   "quote_verbatim": "you heat it up and then they form up into little little tiny balls of solder",
+   "speaker": "Chris Gammell",
+   "episode": 195,
+   "episode_title": "Guns and Mobile Labs - Nuanced Nomadic Non-essentials",
+   "episode_url": "https://theamphour.com/195-guns-and-mobile-labs-nuanced-nomadic-non-essentials/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A module that terminates in plain square pads on its underside rather than solder balls attaches with ordinary paste and reflow and can be done on a hot plate or toaster oven, but the joints are hidden under the body and cannot be inspected visually afterwards.",
+   "quote_verbatim": "it's a little harder to inspect, you know, cause you obviously you can't see underneath it",
+   "speaker": "Colin Karpfinger",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Putting the interconnect pads underneath a module rather than around its edge optimises for size and needs no ball array: paste on flat square pads reflows into the joints directly.",
+   "quote_verbatim": "Then you just put the solder paste down and it reflows.",
+   "speaker": "Colin Karpfinger",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Solder mask is what keeps molten solder confined to the intended pads during reflow. On a bare board without mask, such as a milled or home-fabricated one, nothing dams the solder and the process depends entirely on the flux and paste to define the joint.",
+   "quote_verbatim": "even when you reflow you don't have you don't have the the solder mask then to kind of help guide it along",
+   "speaker": "Chris Gammell",
+   "episode": 233,
+   "episode_title": "Glass and Gongkai GSM - Unzymotic Ursidae Upbuilding",
+   "episode_url": "https://theamphour.com/233-glass-and-gongkai-gsm-unzymotic-ursidae-upbuilding/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "For a low-part-count one-off board, the setup time for paste dispensing can exceed the time it would have taken to hand solder the whole thing, which is why hand assembly still wins at the smallest scale.",
+   "quote_verbatim": "by the time you set up the machine to do the solder paste you could have hand sold the board",
+   "speaker": "Chris Gammell",
+   "episode": 233,
+   "episode_title": "Glass and Gongkai GSM - Unzymotic Ursidae Upbuilding",
+   "episode_url": "https://theamphour.com/233-glass-and-gongkai-gsm-unzymotic-ursidae-upbuilding/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Molten solder pulls on whatever it wets. A very light chip part such as an 0402 or 0201 has too little mass to resist that pull, so if one end wets first the part is flipped or stood on end.",
+   "quote_verbatim": "So when it starts to reflow, it pulls on that part.",
+   "speaker": "Dave Jones",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The condition for a chip part to stay flat is that the paste at both terminals liquefies at the same moment, which is why pad geometry, paste volume and placement all have to be balanced across the two ends.",
+   "quote_verbatim": "the idea is that, that both sides, um, uh, liquefy at the same time",
+   "speaker": "Dave Jones",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Substituted parts with cheap plastic bodies can look fine on arrival and then be destroyed by the reflow pass. Boards assembled in Shanghai came back with surface-mount headers whose plastic had melted, leaving every pin at a distorted angle.",
+   "quote_verbatim": "they won't even survive a simple reflow",
+   "speaker": "Dave Jones",
+   "episode": 239,
+   "episode_title": "An Interview with Colin O'Flynn - Aspirated Adamantine Attacks",
+   "episode_url": "https://theamphour.com/239-an-interview-with-colin-oflynn-aspirated-adamantine-attacks/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Hand soldering will not expose a part that cannot survive reflow, because an iron heats one pin at a time and the body of the part never reaches full temperature; the same part fails as soon as the whole board is brought up together.",
+   "quote_verbatim": "because you're only heating up a single pin at a time, you know, the whole thing doesn't have time to come up to temperature",
+   "speaker": "Dave Jones",
+   "episode": 239,
+   "episode_title": "An Interview with Colin O'Flynn - Aspirated Adamantine Attacks",
+   "episode_url": "https://theamphour.com/239-an-interview-with-colin-oflynn-aspirated-adamantine-attacks/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "In a small-batch assembly shop the reflow pass, not the placement machine, is sometimes the slowest step, so job throughput depends on which processes a given board needs rather than on placement speed alone.",
+   "quote_verbatim": "Sometimes just going through the reflow of it is the slowest part of the process.",
+   "speaker": "Chris Church",
+   "episode": 243,
+   "episode_title": "An interview with Macrofab - Macro Manufacturing Mechanization",
+   "episode_url": "https://theamphour.com/243-an-interview-with-macrofab-macro-manufacturing-mechanization/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Kapton stencils with hot-plate reflow are workable at very small volumes, but the economics change abruptly as soon as volume rises, at which point handing the work to a small-batch assembly service is the sensible move.",
+   "quote_verbatim": "But then I might go to a, you know, a small batch or a macro fab or circuit hub or something like that.",
+   "speaker": "Chris Gammell",
+   "episode": 255,
+   "episode_title": "Inspirations and Aspirations - Recanting Rocket Rationale",
+   "episode_url": "https://theamphour.com/255-inspirations-and-aspirations-recanting-rocket-rationale/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Reflow works on inkjet-printed conductive traces, and both leaded and lead-free alloys can be used on them, with leaded solder giving the better result in practice.",
+   "quote_verbatim": "you can use normal lead or lead-free solder. Although, I find that lead works a little bit better",
+   "speaker": "Ariel Briner",
+   "episode": 260,
+   "episode_title": "An interview with Ariel Briner of Cartesian Co",
+   "episode_url": "https://theamphour.com/260-an-interview-with-ariel-briner-of-cartesian-co/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Printed conductive traces tolerate reflow even on a paper substrate, so the assembly step is not limited to conventional laminates.",
+   "quote_verbatim": "And you can reflow onto paper as well.",
+   "speaker": "Ariel Briner",
+   "episode": 260,
+   "episode_title": "An interview with Ariel Briner of Cartesian Co",
+   "episode_url": "https://theamphour.com/260-an-interview-with-ariel-briner-of-cartesian-co/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Dabbing paste onto pads by hand instead of using a stencil puts down uncontrolled volumes, and the excess bridges neighbouring pads as soon as the board is reflowed.",
+   "quote_verbatim": "it bridges like crazy when I, when I reflow it",
+   "speaker": "Chris Gammell",
+   "episode": 273,
+   "episode_title": "Part Choice Triathlon",
+   "episode_url": "https://theamphour.com/273-part-choice-triathlon/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Getting the land pattern wrong is what produces the classic reflow placement defects: parts stand on end as tombstones or roll onto their sides as billboards while the solder is molten.",
+   "quote_verbatim": "otherwise they're going to get tombstoning. They're going to get billboards.",
+   "speaker": "Jonathan Hirschman",
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Chip passives are occasionally seen to flip completely over during the reflow pass, ending up inverted on their pads, a defect observed in production without a settled explanation.",
+   "quote_verbatim": "we've seen passives that actually flip over during reflux",
+   "speaker": "Jonathan Hirschman",
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Castellated edge holes give a part two attachment routes: they can be pasted, placed and reflowed like any surface-mount part, or, because the hole spacing matches 0.1 inch headers, pin headers can be soldered into them instead.",
+   "quote_verbatim": "it is actually possible to reflow them",
+   "speaker": "Dave Jones",
+   "episode": 319,
+   "episode_title": "Photon Rich, Cash Poor",
+   "episode_url": "https://theamphour.com/319-photon-rich-cash-poor/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "OSH Stencils grew out of a first reflow project where the cost of a conventional stencil was out of proportion to a hobby-scale board, which prompted a search for a cheaper way to produce them.",
+   "quote_verbatim": "as a first-time reflower that this cost just didn't make a lot of sense to me for a hobby project",
+   "speaker": "Brent",
+   "episode": 320,
+   "episode_title": "An Interview with Brent of OSHstencils",
+   "episode_url": "https://theamphour.com/320-an-interview-with-brent-of-oshstencils/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Placing paste by dabbing it on pad by pad becomes impractical quickly as pitch shrinks, so the finer the parts on a board the more a stencil stops being optional.",
+   "quote_verbatim": "even with the dabbing, the paste on kind of stuff, that can get pretty tedious pretty fast",
+   "speaker": null,
+   "episode": 320,
+   "episode_title": "An Interview with Brent of OSHstencils",
+   "episode_url": "https://theamphour.com/320-an-interview-with-brent-of-oshstencils/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The case for buying a stencil is strongest exactly where builders resist it: on boards carrying expensive or very fine-pitch parts, the stencil cost is small next to the components and it buys a first-pass result instead of a rework job.",
+   "quote_verbatim": "You're going to have a much better reflow experience.",
+   "speaker": "Brent",
+   "episode": 320,
+   "episode_title": "An Interview with Brent of OSHstencils",
+   "episode_url": "https://theamphour.com/320-an-interview-with-brent-of-oshstencils/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Shenzhen placement services buy the stencil and hand-assemble and reflow small batches, turning out three to five boards for a technician's day wage, which comes out roughly an order of magnitude cheaper than standing up the equivalent capability in house.",
+   "quote_verbatim": "they buy the stencil and they just, you know, they put together five boards and they'll reflow it",
+   "speaker": "Chris Gammell",
+   "episode": 341,
+   "episode_title": "All the way with DLJ",
+   "episode_url": "https://theamphour.com/341-all-the-way-with-dlj/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "To escape more signals from under a BGA, the outer row of pads was narrowed to 0.1 mm and elongated to 0.35 mm by 0.1 mm, preserving roughly the original pad area so the balls still wet and reflow properly while freeing routing channels between them.",
+   "quote_verbatim": "I took the outer pads of the BGA and I squished them down to 0.1 millimeter and then I elongated them",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "BGA assembly is within reach of a first-time builder: a self-taught developer moving into hardware designed and successfully assembled BGA boards himself on the first attempt.",
+   "quote_verbatim": "this is the first BGI I had ever done. I was able to assemble some myself",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Supercapacitors are now available in a 1206 surface-mount body, which means CMOS and backup-power storage can go through pick-and-place and reflow as an ordinary part instead of forcing a through-hole coin cell or round leaded can into the build.",
+   "quote_verbatim": "This is just a 1206 compatible, uh, you know, reflow compatible",
+   "speaker": "Dave Jones",
+   "episode": 408,
+   "episode_title": "Tronnort Software Rises Again!",
+   "episode_url": "https://theamphour.com/408-tronnort-software-rises-again/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Some parts are rated to survive only a single reflow pass, which constrains double-sided assembly: such a part has to be placed on whichever side goes through last, and everything else must be arranged around that restriction.",
+   "quote_verbatim": "it says can only experience one reflow",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "On the second pass of a double-sided board the first side is inverted, and heavy parts such as large inductors and aluminium electrolytics will drop off their pads once the solder remelts unless they were glued down.",
+   "quote_verbatim": "all these other heavy things that are going to fall off during secondary reflow",
+   "speaker": "Chris Denney",
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Glue layers in board CAD are a legacy of an era of heavier components; as parts have shrunk the need has receded, and a 1206 that would once have been at risk of dropping now generally stays put.",
+   "quote_verbatim": "the glue layers were more common as parts were heavier",
+   "speaker": null,
+   "episode": 411,
+   "episode_title": "An Interview with Chris Denney",
+   "episode_url": "https://theamphour.com/411-an-interview-with-chris-denney/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Very thin prepreg-only boards can be run through standard pick-and-place and reflow by taping them down to a piece of ordinary FR4 as a carrier with kapton tape; no vacuum bed or exotic fixturing is needed because the material wants to stay flat.",
+   "quote_verbatim": "you can just tape it down to a bit of standard FR4 with capstone tape, pick and place and reflow it as if it was an ordinary PCB",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Kapton-substrate flexible boards curl under their own internal tension as soon as they are unrestrained, which is what makes them awkward to place and reflow compared with thin prepreg laminate.",
+   "quote_verbatim": "the capstone stuff wants to curl up as soon as you look at it",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Rigid-flex construction keeps the assembly cost down by letting all the parts sit on the rigid sections: placing and reflowing a rigid board is always easier than working directly on flex, which needs stiffening underneath it.",
+   "quote_verbatim": "it's always going to be easier to pick and place and reflow a rigid board",
+   "speaker": "Dave Jones",
+   "episode": 415,
+   "episode_title": "Ergs Per Second",
+   "episode_url": "https://theamphour.com/415-ergs-per-second/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "FR-4 tolerates reflow heat shock better than cheaper laminates because the adhesive bonding the copper foil to the substrate is more robust, which matters when boards are sourced as blank copper-clad stock from low-cost suppliers.",
+   "quote_verbatim": "The adhesive that, you know, holds the copper to the substrate seems more robust.",
+   "speaker": "Mike Grover",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A cheap reflow station's setpoint is not the board's temperature. With the station set to around 240 and 220 degrees, FR-4 boards were repeatedly blackened, showing the actual heat delivered was well above what the display claimed.",
+   "quote_verbatim": "despite setting it to like 240, 220, the FR-4 a few times actually blackened",
+   "speaker": "Mike Grover",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Reflow can be achieved with improvised heat: sloppily applied solder paste, hand-placed components, flux dispensed from a one millilitre syringe, and a bent spoon held over a candle as the heat source was enough to make working joints.",
+   "quote_verbatim": "put a bent spoon over a candle",
+   "speaker": "Mike Grover",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Solder paste past its date degrades rather than fails outright: joints reflow badly, look visibly poor and give unreliable conductivity, and a run of bad results can be traced back to old paste rather than to technique.",
+   "quote_verbatim": "it just kept having really bad reflow and it just looked really, really bad",
+   "speaker": "Chris Gammell",
+   "episode": 486,
+   "episode_title": "Medical Kits, They're The Future",
+   "episode_url": "https://theamphour.com/486-medical-kits-theyre-the-future/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Expired solder paste is still usable, but its effectiveness falls off progressively, so date-expired stock is a gradual quality risk rather than a hard cutoff.",
+   "quote_verbatim": "You can use expired paste.",
+   "speaker": null,
+   "episode": 486,
+   "episode_title": "Medical Kits, They're The Future",
+   "episode_url": "https://theamphour.com/486-medical-kits-theyre-the-future/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "How long a board needs at temperature is set by thermal mass, not by board area: two-ounce copper takes longer than standard foil, and large-bodied components take longer than small ones.",
+   "quote_verbatim": "If you've got like a two ounce copper board, right? For example, it's going to take longer.",
+   "speaker": "Dave Jones",
+   "episode": 486,
+   "episode_title": "Medical Kits, They're The Future",
+   "episode_url": "https://theamphour.com/486-medical-kits-theyre-the-future/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The worst case for a reflow pass is a board mixing very large and very small thermal mass parts, because the soak time the big parts require is long enough to damage the small ones.",
+   "quote_verbatim": "one of the horrible things is having a mix of large, really large thermal mass components and really small thermal mass components",
+   "speaker": "Dave Jones",
+   "episode": 486,
+   "episode_title": "Medical Kits, They're The Future",
+   "episode_url": "https://theamphour.com/486-medical-kits-theyre-the-future/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The way out of a mixed-thermal-mass board is to split the work: run two separate passes, or reflow the small parts and hand solder the large thermal mass components afterwards.",
+   "quote_verbatim": "either doing a two pass thing or actually just hand soldering the large thermal mass components",
+   "speaker": "Dave Jones",
+   "episode": 486,
+   "episode_title": "Medical Kits, They're The Future",
+   "episode_url": "https://theamphour.com/486-medical-kits-theyre-the-future/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Surface tension does the fine alignment in reflow for small parts. A chip resistor or a wafer-level chip scale package only has to be placed roughly in the vicinity of its pads; as the solder melts it snaps the part into precise alignment.",
+   "quote_verbatim": "You basically get them mostly aligned and then surface tension sucks them right into being perfectly aligned.",
+   "speaker": "Tim Ansell",
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The large centre ground pad on a QFN is the hard part of the joint, because getting enough heat into that thermal pad for the solder under it to reflow properly is difficult compared with the perimeter leads.",
+   "quote_verbatim": "QFNs always have that giant ground pad that is super hard to",
+   "speaker": "Tim Ansell",
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Too much paste on a QFN's centre thermal pad floats the package on a pool of molten solder, letting it settle with one side higher than the other and leaving perimeter leads unconnected.",
+   "quote_verbatim": "if you put too much solder there too, then it's like swimming in that sea of center pad solder",
+   "speaker": "Chris Gammell",
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Hand reflow success rates differ sharply by package: roughly a fifty percent failure rate on QFNs against about an eighty percent success rate on wafer-level chip scale packages, which is enough of a gap to justify avoiding QFNs in a design.",
+   "quote_verbatim": "probably a 50% rate failure rate on my ability to, um, solder QFNs",
+   "speaker": null,
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Wafer-level chip scale packages are easier to reflow than their size suggests, because the package is almost all die with very little thermal mass, so it comes up to temperature quickly and the joints reflow readily.",
+   "quote_verbatim": "the package is so small, it doesn't have a lot of thermal mass. So it heats up really quickly as well",
+   "speaker": null,
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "With decent paste application and decent placement, even by hand, the solder itself finishes the job; the step that repeatedly causes trouble in small-volume in-house work is the reflow pass rather than the placement.",
+   "quote_verbatim": "if you have decent paste application and if you have decent part placement, you know, even hand placement, solder paste takes care of the rest",
+   "speaker": "Chris Gammell",
+   "episode": 610,
+   "episode_title": "Picking a Pick and Place Pickiness",
+   "episode_url": "https://theamphour.com/610-picking-a-pick-and-place-pickiness/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A hot plate lets a microscope sit directly over the board so the joints can be watched as they wet and the parts pull into alignment, which is impossible in an oven where the only view is through a small door window.",
+   "quote_verbatim": "you can actually get your microscope on top of it and watch it while it's reflowing",
+   "speaker": "Dave Jones",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Hot-plate reflow works well for boards of ordinary low-profile surface-mount parts, but tall components develop a vertical temperature gradient between their base and top, so boards with height on them are a poor fit for bottom-only heating.",
+   "quote_verbatim": "You're going to have like temperature gradients over the components and that could be a problem.",
+   "speaker": "Dave Jones",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A bare PCB used as a reflow heating element is not reusable: at around 200 degrees Celsius, hot enough for solder to reflow, the solder mask discolours and degrades, and the damage is visible after about five cycles.",
+   "quote_verbatim": "after like, five times, you, you could see like, the solder mask",
+   "speaker": "Carl Bugeja",
+   "episode": 663,
+   "episode_title": "Motors on PCBs with Carl Bugeja",
+   "episode_url": "https://theamphour.com/663-motors-on-pcbs-with-carl-bugeja/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "In one builder's in-house assembly experience, the failure point was never the placement step but the paste and reflow: a poorly done squeegee application, compounded by paste that was itself bad, produced problem boards even when the parts were placed by hand afterwards.",
+   "quote_verbatim": "I've had a lot of bad luck actually with like paste and reflow",
+   "speaker": "Chris Gammell",
+   "episode": 686,
+   "episode_title": "A Benchtop Pick and Place with Stephen Hawes",
+   "episode_url": "https://theamphour.com/686-a-benchtop-pick-and-place-with-stephen-hawes/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Bringing assembly in house trades a vendor who can be held accountable for defects against owning the entire paste and reflow process yourself, including the diagnosis when boards come out wrong.",
+   "quote_verbatim": "There is nice to have someone to yell at",
+   "speaker": "Chris Gammell",
+   "episode": 686,
+   "episode_title": "A Benchtop Pick and Place with Stephen Hawes",
+   "episode_url": "https://theamphour.com/686-a-benchtop-pick-and-place-with-stephen-hawes/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The recommended fix for persistent paste and reflow problems in a small shop is to move from loose stencils to a framed stencil and to switch to a high-grade paste such as GC10.",
+   "quote_verbatim": "if you're having solder paste issues and you're having reflow issues, go to a frame, stencil and start using GC 10",
+   "speaker": "David Ray",
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "High-grade solder paste has become both more expensive and harder to get on demand: a tube that used to be about $125 and could be bought any day of the week now runs around $200.",
+   "quote_verbatim": "it used to be 125. Now it's $200",
+   "speaker": "David Ray",
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "opinion",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "On the way to liquidus, solder passes through a plastic region, a narrow temperature band where it is neither fully solid nor fully liquid. Moving through that band too slowly is one of the ways a cold joint is produced.",
+   "quote_verbatim": "the solder goes through the, the plastic region it's called, which is a little temperature range",
+   "speaker": "David Ray",
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Flux is a consumable within the reflow pass itself: if the preheat is too long or too hot, the flux is cooked off before the solder ever reaches reflow temperature, and the joints have nothing left to clean the surfaces when they need it.",
+   "quote_verbatim": "you can cook off your flux before it even goes into reflow",
+   "speaker": null,
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Solder paste application is the foundation of the whole process, and a shop that cannot lay down good paste cannot get a good reflow no matter how much the thermal profile is adjusted afterwards.",
+   "quote_verbatim": "If you cannot get a good solder paste application, you cannot have a good reflow.",
+   "speaker": "David Ray",
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Parts falling off the inverted first side during the second reflow of a double-sided board is preventable at design review rather than on the line, which is why a manufacturability review before the build is what keeps it from happening.",
+   "quote_verbatim": "that's because we do the DFM review",
+   "speaker": "David Ray",
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Heavy surface-mount parts such as transformers are poor candidates for a second-side reflow: they need to be glued down to stay put, and even then they generally have to be touched up or fitted by hand afterwards.",
+   "quote_verbatim": "if you've got like a heavy transformer or your surface mount transformer, you might have to glue that down",
+   "speaker": "Dave Jones",
+   "episode": 716,
+   "episode_title": "Electronics Manufacturing History with David Ray",
+   "episode_url": "https://theamphour.com/716-electronics-manufacturing-history-with-david-ray/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "Passage 0 (ep 11) is labelled Chris Gammell, but the content is Jeff Kaiser describing the post he wrote, his own Arduino Uno, and photos he took with his own stereo microscope; attributed to Jeff Kaiser by content.",
+  "Passage 3 (ep 107) is labelled Dave Jones, but the speaker is describing his own forthcoming frequency-multiplier boards and why they will not be kits; attributed to guest Tony Long by content.",
+  "Passages 6 (ep 158) and 7 (ep 170) are labelled SPEAKER_01 with no resolved identity, and the surrounding text does not settle which of the two speakers is talking; speaker passed as None.",
+  "Passage 10 (ep 182) contains a question and an answer and the transcript label does not identify which speaker gives the reflow answer; speaker passed as None.",
+  "Passages 27 and 28 (ep 320) are flagged ATTRIB-UNRELIABLE. The first-reflow founding story and the stencil-value advice are the OSH Stencils founder describing his own project and product, so they are attributed to Brent; the interjected remark about dabbing paste at fine pitch is a host response that the content does not pin to either host, so it is passed as None.",
+  "Passage 29 (ep 341) is flagged ATTRIB-UNRELIABLE; the content is a first-person account of rewatching an Akiba conference talk, consistent with the Chris Gammell label, which is retained.",
+  "Passage 33 (ep 411): the single-reflow rating and the falling-parts explanation are the contract-manufacturing guest Chris Denney; the aside about glue layers in board CAD alternates between speakers and is not resolvable, so that claim is passed as None.",
+  "Passage 39 (ep 486) contains both hosts; the first-person account of repeated bad results from old paste is retained as Chris Gammell, while the general remark that expired paste still works but degrades is not attributable and is passed as None.",
+  "Passages 41 and 42 (ep 501) overlap. The self-alignment and QFN thermal-pad explanations are guest Tim Ansell; the excess-centre-pad-solder response is the Chris Gammell turn. The 50/80 percent hand-assembly success figures and the wafer-level thermal mass remark sit in a stretch where the turn boundary is ambiguous, so both are passed as None.",
+  "Passage 46 (ep 613) is labelled Jeff Keyzer, but the microscope and temperature-gradient content continues the argument in favour of hot plates that passage 45 attributes to Dave Jones; attributed to Dave Jones by content.",
+  "Passage 48 (ep 663) is flagged ATTRIB-UNRELIABLE and labelled Dave Jones, but the speaker is describing his own PCB heating-plate experiment; attributed to guest Carl Bugeja by content.",
+  "Passages 51 and 53 (ep 716): the plastic-region and DFM-review content is the manufacturing guest David Ray; the remark about zones cooking off the flux is a cross-talk turn that is not resolvable and is passed as None.",
+  "Scope: process and defects; oven equipment and thermal profiles are covered by the reflow-oven article."
+ ],
+ "capped": false
+}

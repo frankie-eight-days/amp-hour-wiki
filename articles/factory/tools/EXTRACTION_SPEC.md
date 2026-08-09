@@ -52,7 +52,8 @@ points, who owns whom) are knowledge and are kept. Sentiment about them is not.
 Write `articles/factory/packets/<concept>.json`:
 
 ```json
-{"concept": "<slug>", "spec": "knowledge-only-v4-cluster",
+{"concept": "<slug>", "name": "<display title, copied from the bundle's `name`>",
+ "spec": "knowledge-only-v4-cluster",
  "scope": {...}, "capped": true,
  "claims": [{
    "claim_text": "...",
@@ -85,13 +86,21 @@ Write `articles/factory/packets/<concept>.json`:
 - `depth_regraded` — your own grading: `explains` for transferable mechanism or
   fact, `opinion` for an anchored practitioner judgment. Regrade freely; the
   bundle's `depth` is a weak prior.
-- `kind` — short label, free text but be consistent within the packet. Useful
-  ones: `history`, `mechanism`, `practice`, `failure-mode`, `numbers`,
-  `market-structure`, `practitioner-judgment`, `procedure`, `tradeoff`.
+- `kind` — MUST be one of exactly these ten. `lint.py` fails the article if any
+  claim carries a kind outside this set, so there is no free text here:
+
+      practice   mechanism   tradeoff   numbers   failure-mode
+      procedure  constraint  history    market-structure   practitioner-judgment
+
+  Map anything else onto these before writing: rule-of-thumb → `practice`,
+  number → `numbers`, comparison → `tradeoff`.
 - `attribution_notes` — one line per episode where you overrode or declined a
   speaker label, saying what you did and why.
 - `scope` / `capped` — copy `cluster`, `stats`, `cap`, `capped`,
   `total_available` from the bundle into `scope` (verbatim is fine).
+- `name` — copy the bundle's `name` field exactly. It is REQUIRED: `lint.py`
+  fails without it, and `kimi_write` otherwise title-cases the slug, which
+  produces article titles like "Fpga", "Api" and "Design For Manufacturing".
 
 ## Calibration
 

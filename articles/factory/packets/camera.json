@@ -1,0 +1,374 @@
+{
+ "concept": "camera",
+ "name": "Camera",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "camera",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "camera"
+  ],
+  "children": [
+   "angle-of-arrival",
+   "digital-rights-management",
+   "dji",
+   "embedded-systems-conference",
+   "heads-up-display",
+   "image-sensor",
+   "lumen",
+   "mipi",
+   "smartphone"
+  ],
+  "neighbors": {
+   "motor": 4
+  },
+  "episodes_with_kept_mentions": 94,
+  "mentions_kept": 131,
+  "pins_pre_cap": 95,
+  "pins_final": 95,
+  "pins_by_depth": {
+   "explains": 48,
+   "opinion": 47
+  },
+  "pins_by_role": {
+   "core": 68,
+   "child": 27
+  },
+  "speakers": [
+   [
+    "Dave Jones",
+    43
+   ],
+   [
+    "Chris Gammell",
+    30
+   ],
+   [
+    "Brandon Gilles",
+    3
+   ],
+   [
+    "Jeri Ellsworth",
+    2
+   ],
+   [
+    "James Adams",
+    2
+   ],
+   [
+    "Greg Charvat",
+    1
+   ],
+   [
+    "Andrew Seddon",
+    1
+   ],
+   [
+    "Jeff Roberg",
+    1
+   ],
+   [
+    "Andrew Witte",
+    1
+   ],
+   [
+    "Scott Driscoll",
+    1
+   ],
+   [
+    "Gerry Roston",
+    1
+   ],
+   [
+    "Akiba",
+    1
+   ],
+   [
+    "Mike Harrison",
+    1
+   ],
+   [
+    "Scotty Allen",
+    1
+   ],
+   [
+    "Chrissy Meyer",
+    1
+   ],
+   [
+    "Ben Krasnow",
+    1
+   ],
+   [
+    "Jay Carlson",
+    1
+   ],
+   [
+    "Bruce Simson",
+    1
+   ],
+   [
+    "Florin Of Voltlog",
+    1
+   ],
+   [
+    "Dave Young",
+    1
+   ]
+  ],
+  "capped": false,
+  "gated_out_by_concept": [
+   [
+    "smartphone",
+    147
+   ],
+   [
+    "motor",
+    61
+   ],
+   [
+    "embedded-systems-conference",
+    43
+   ],
+   [
+    "image-sensor",
+    37
+   ],
+   [
+    "lumen",
+    25
+   ],
+   [
+    "heads-up-display",
+    21
+   ],
+   [
+    "digital-rights-management",
+    17
+   ],
+   [
+    "dji",
+    12
+   ],
+   [
+    "angle-of-arrival",
+    7
+   ],
+   [
+    "mipi",
+    7
+   ]
+  ],
+  "gated_out_total": 377
+ },
+ "claims": [
+  {
+   "claim_text": "A high-speed image sensor dissipates enough power to need real heat sinking, and the practical route is a hole in the board behind the sensor so the package can be coupled directly to a heatsink rather than through the laminate.",
+   "quote_verbatim": "I put a hole in the back of the board to connect that directly to the back of the sensor",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Overlooking an internal phase-locked loop is an expensive mistake: feeding 270 megahertz into a sensor expecting 90 permanently damaged it, leaving dead lines in every image afterwards. Clock multiplication inside a part means the frequency at the pin is not the frequency the silicon sees.",
+   "quote_verbatim": "forgot that there is an internal PLL",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Sensor sensitivity becomes intuitive when expressed as scene illumination: shooting at sixty frames a second with a sixtieth-of-a-second exposure needs roughly 400 lux to fully saturate the sensor, which is about the level of ordinary office lighting.",
+   "quote_verbatim": "to shoot in 60 frames a second, like 160th of a second exposure takes about 400 lux",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Pixel size alone does not determine sensitivity. A newer sensor with pixels half the linear size matched the sensitivity of its predecessor while running considerably faster, so generation matters more than the geometric argument suggests.",
+   "quote_verbatim": "this new sensor is about the same sensitivity, even with much smaller pixels",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Separating the processing side of a camera from the sensor side turns a product into a platform: a different sensor and a different programmable logic device produce a faster camera without revisiting the system design, which is what makes a second model economically possible.",
+   "quote_verbatim": "the whole CPU side is sort of disconnected from the image sensor side",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Image sensors are permanently damaged by concentrated light: pointing a laser into a camera kills pixels outright rather than merely saturating them, which is a real hazard around any optical test setup involving a beam.",
+   "quote_verbatim": "he shines lasers into his camera and kills his pixels",
+   "speaker": "Dave Jones",
+   "episode": 78,
+   "episode_title": "Alteritous Andy's Absquatulation",
+   "episode_url": "https://theamphour.com/the-amp-hour-alteritous-andys-absquatulation/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "MIPI is the interface raw camera data actually travels on, and a processor able to ingest it directly can sit at the camera rather than behind a host computer — which is what allows a vision module to be a component instead of an accessory to a PC.",
+   "quote_verbatim": "it has the capability to ingest MIPI data",
+   "speaker": "Brandon Gilles",
+   "episode": 517,
+   "episode_title": "Depth and AI with Brandon Gilles and Brian Weinstein",
+   "episode_url": "https://theamphour.com/517-depth-and-ai-with-brandon-gilles-and-brian-weinstein/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Placing the processor directly on the camera outputs makes it a front end: the imagery is processed where it arrives and only metadata or processed frames leave, which removes the bandwidth and latency of moving raw video to a host that will discard most of it.",
+   "quote_verbatim": "it can be essentially a front end for the imagery data, which is then processed locally",
+   "speaker": "Dave Jones",
+   "episode": 517,
+   "episode_title": "Depth and AI with Brandon Gilles and Brian Weinstein",
+   "episode_url": "https://theamphour.com/517-depth-and-ai-with-brandon-gilles-and-brian-weinstein/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Camera and display interfaces carry multiple gigabits and have been repurposed as general-purpose data links by making the traffic imitate a camera and a display. It worked, it was awkward, and it was eventually replaced by a standards-based interconnect — a good illustration of using the fast interface you already have before designing one.",
+   "quote_verbatim": "could we repurpose these channels to actually transport data",
+   "speaker": "James Adams",
+   "episode": 648,
+   "episode_title": "The RP1 and beyond with the Raspberry Pi Hardware team",
+   "episode_url": "https://theamphour.com/648-the-rp1-and-beyond-with-the-raspberry-pi-hardware-team/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Connecting a camera to programmable logic over the standard camera interface and then targeting the device's signal-processing blocks is now the conventional route into vision work, rather than building a bespoke acquisition path.",
+   "quote_verbatim": "hook up a camera through the MIPI interface",
+   "speaker": "Chris Gammell",
+   "episode": 535,
+   "episode_title": "Efinix FPGAs with Sammy Cheung",
+   "episode_url": "https://theamphour.com/535-efinix-fpgas-with-sammy-cheung/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Camera module vendors work at a scale where a million units is a small order. Ten thousand attracts a high unit price and an eighteen-week lead time, so a new product has to be priced to survive its first batches before volume brings the cost down — and building in batches makes the early pricing worse than the spreadsheet suggests.",
+   "quote_verbatim": "a small order for those guys are maybe a million cameras",
+   "speaker": "Brandon Gilles",
+   "episode": 517,
+   "episode_title": "Depth and AI with Brandon Gilles and Brian Weinstein",
+   "episode_url": "https://theamphour.com/517-depth-and-ai-with-brandon-gilles-and-brian-weinstein/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Image sensor supply was already the tightest it had ever been before the wider component shortage, with demand exceeding manufacturing capacity rather than design capacity — a constraint that no amount of redesign around the part can relieve.",
+   "quote_verbatim": "is the furthest behind they've ever been on making image sensors",
+   "speaker": "Brandon Gilles",
+   "episode": 517,
+   "episode_title": "Depth and AI with Brandon Gilles and Brian Weinstein",
+   "episode_url": "https://theamphour.com/517-depth-and-ai-with-brandon-gilles-and-brian-weinstein/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Commercial off-the-shelf vision cameras have flown on spacecraft for engineering and public imagery precisely because that footage was not mission-critical: where the requirement is documentation rather than science, custom development cannot be justified.",
+   "quote_verbatim": "these were just off the shelf cameras because like, it wasn't a priority of the mission",
+   "speaker": "Dave Jones",
+   "episode": 532,
+   "episode_title": "Recalling Recalls",
+   "episode_url": "https://theamphour.com/532-recalling-recalls/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Camera quality in a small battery-powered device is bounded by power rather than by sensor technology, because there is a hard limit on what can be dissipated in that volume — which is why an otherwise capable sensor performs poorly in a compact product.",
+   "quote_verbatim": "all about power consumption and that's why a camera in its crap",
+   "speaker": "Dave Jones",
+   "episode": 658,
+   "episode_title": "Uncle Al's Eating Garbage Again",
+   "episode_url": "https://theamphour.com/658-uncle-als-eating-garbage-again/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A camera that stops working after a few uses until an application is installed and the owner registers is a change in what buying a product means, not a firmware defect — and it is worth naming as such when evaluating any connected device.",
+   "quote_verbatim": "bought a camera and the camera stopped working after five uses",
+   "speaker": "Dave Jones",
+   "episode": 520,
+   "episode_title": "Inductance and Stuff",
+   "episode_url": "https://theamphour.com/520-inductance-and-stuff/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Rather than computing inverse kinematics for a multi-axis arm, point a camera at it, issue a movement, observe where it went, and let the mapping from command to position build up from the observations. The measurement replaces the model.",
+   "quote_verbatim": "you point a camera at the damn thing and then you move it and then you say, all right, I moved this thing. Now, where is it",
+   "speaker": "Chris Gammell",
+   "episode": 344,
+   "episode_title": "Back Into The Swing Of Things",
+   "episode_url": "https://theamphour.com/344-back-into-the-swing-of-things/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Locating something optically is long-established practice and hinges on the step people skip: the cameras are placed to see the working volume and are calibrated beforehand. Without that calibration the images give relative motion and not position.",
+   "quote_verbatim": "you put cameras in the field of view of where you want to go. Typically, you calibrate the cameras ahead of time",
+   "speaker": "Gerry Roston",
+   "episode": 334,
+   "episode_title": "An Interview with Gerry Roston",
+   "episode_url": "https://theamphour.com/334-an-interview-with-gerry-roston/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Radar returns range and angle directly, where an optical system needs an algorithm to infer range from the image. The camera is cheaper and richer; the radar measurement arrives already in the form the system needs, with no inference in between.",
+   "quote_verbatim": "if you have uh like optics and cameras and things and there's some uh algorithm that has to take place to sort of back out the range",
+   "speaker": "Greg Charvat",
+   "episode": 115,
+   "episode_title": "An Interview with Dr Greg Charvat - Watcher of Wraithlike Walls",
+   "episode_url": "https://theamphour.com/the-amp-hour-115-watcher-of-wraithlike-walls/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Analog video downlinks modulate the carrier directly and degrade gracefully into noise, reflection and ghosting; digital links deliver high definition at high frame rates and fail differently. The digital system reached the point where the recording made at the receiver could exceed the quality of the one stored on the aircraft.",
+   "quote_verbatim": "just modulated a carrier with the video signal on 5.8 gigahertz",
+   "speaker": "Bruce Simson",
+   "episode": 538,
+   "episode_title": "Missle Man with Bruce Simson",
+   "episode_url": "https://theamphour.com/538-missle-man-with-bruce-simson/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Before designing a mount, check whether existing equipment can be rearranged: inverting a tripod and fitting a macro lens produced a working soldering microscope in minutes, reversible just as quickly, where the planned solution involved printed parts and a new stand.",
+   "quote_verbatim": "can invert my tripod",
+   "speaker": "Dave Jones",
+   "episode": 97,
+   "episode_title": "An Interview with Eben Upton - Morbus Moilsome MakerFaire",
+   "episode_url": "https://theamphour.com/the-amp-hour-97-morbus-moilsome-makerfaire/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "attribution_reliable was not trusted. ep325 labels the guest's entire first-person account of designing his own high-speed camera — the sensor damage, the thermal design, the sensitivity measurements — as 'Chris Gammell'; all of it is content-attributed to David Kronstein.",
+  "ep517 records both guests plus the hosts with inconsistent labels; the module architecture and supply-chain claims are unambiguously Brandon Gilles's, while the front-end processing description is recorded under Dave Jones's name and kept as recorded because the passage does not disambiguate it.",
+  "ep538 (Bruce Simson), ep334 (Gerry Roston) and ep648 (James Adams) label host questions with the guest's name; only unambiguous guest material was used.",
+  "This bundle is dominated by podcast production talk — webcams, video framing, phone cameras and conference photography — none of which carries transferable engineering content. Roughly three quarters of the passages were excluded on that basis."
+ ],
+ "capped": false
+}

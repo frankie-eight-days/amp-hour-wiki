@@ -1,0 +1,698 @@
+{
+ "concept": "continuous-integration",
+ "name": "Continuous Integration",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "continuous-integration",
+  "census": "union",
+  "aliases": [
+   "continuous-integration"
+  ],
+  "children": [
+   "fuel-gauge",
+   "reproducible-build",
+   "unit-testing"
+  ],
+  "neighbors": {
+   "continuous-deployment": 4
+  },
+  "pins_pre_cap": 55,
+  "pins_final": 55,
+  "pins_by_depth": {
+   "explains": 49,
+   "opinion": 6
+  },
+  "pins_by_role": {
+   "core": 53,
+   "child": 2
+  },
+  "capped": false,
+  "passages_yielding_claims": 45,
+  "passages_killed": 10
+ },
+ "claims": [
+  {
+   "claim_text": "Software and hardware development carry different default habits: software practice assumes source lives in a shared repository with builds running continuously against it, while board design work treats each fabricated revision as a new fixed baseline. Recognising that mismatch explains why pipeline habits do not transfer automatically to hardware teams.",
+   "quote_verbatim": "I think that's, you know, a programmer's mindset, right, is to do continuous builds, to have source code in a repository somewhere",
+   "speaker": "Chris Gammell",
+   "episode": 152,
+   "episode_title": "Firmware, Netburner and Semiconductors - Chris's Capitalism Colloquy",
+   "episode_url": "https://theamphour.com/the-amp-hour-152-chriss-capitalism-colloquy/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Running a build pipeline against firmware requires more infrastructure than a pure software project: target hardware permanently attached to the build machine, a programming path onto that hardware, and an automated agent that pulls each commit, compiles it, flashes it and executes a test procedure.",
+   "quote_verbatim": "you have to have some kind of a setup where you have the attached hardware and you have programming system and some kind of automated tool to take whatever's been committed to the repo and, like, automatically compile it and install it and run some kind of test procedure",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The payoff from automated build-and-test scales with the number of collaborators, because the point is compressing the delay between someone breaking a component and anyone noticing, rather than letting the breakage sit undiscovered while others build on top of it.",
+   "quote_verbatim": "You want to find, if somebody breaks something, you want to find that out right away instead of finding it out, like, a month later",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A firmware library project that exposes stable hardware abstraction layers and APIs can put unit tests and a build pipeline on top of them, so that a change made for one target is automatically flagged when it regresses an unrelated part of the codebase.",
+   "quote_verbatim": "We have the unit testing and continuous integration stuff running. So, if things break here or you add some feature that breaks somewhere else, then we are trying to be able to automatically find this regression.",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The BeagleBoard project ran two or three full kernel builds per week for each supported version, continuously folding in patches arriving from TI, from downstream customers and from users, rather than batching them into occasional large integrations.",
+   "quote_verbatim": "We're doing continuous integration. We're doing kernel builds. So, we usually do two or three kernel builds a week per version.",
+   "speaker": "Robert Nelson",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Because kernel and bootloader fixes were integrated continuously and re-imaged on a weekly cadence, the supported user procedure for getting current software onto a board was to download the newest published image rather than to network the board and update packages in place.",
+   "quote_verbatim": "It has all the kernel weeks fixes from the week. It has all the uBoot fixes from that week.",
+   "speaker": "Robert Nelson",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "CircuitPython automated the mechanical parts of reviewing outside contributions: every proposed change is checked automatically against the project's code style and, for core changes, automatically compiled, so that reviewer attention is spent on substance instead of on basics that machines can catch.",
+   "quote_verbatim": "when somebody proposes a new file change, we'll automatically make sure it's fits within our style. If it's a circuit Python change, we'll make sure it automatically compiles.",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A USB host adapter that scripts bus traffic can be driven from a build server, letting a Jenkins job that already compiles firmware also exercise the compiled image against real bus peripherals as part of the same automated run.",
+   "quote_verbatim": "if you're using Jenkins to auto build your firmware and then auto run tests on it",
+   "speaker": "Jonathan Georgino",
+   "episode": 461,
+   "episode_title": "An Interview with Jonathan Georgino",
+   "episode_url": "https://theamphour.com/461-an-interview-with-jonathan-georgino/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Building firmware on every small commit rather than compiling once after a large batch of changes narrows the search space when something breaks, because a defect is caught while it is still attributable to one small change instead of after it has entangled itself with weeks of other work.",
+   "quote_verbatim": "if you've got a, you know, you're introducing a new bug, you catch it immediately before it explodes into something that's big and really difficult to debug",
+   "speaker": "Jonathan Georgino",
+   "episode": 461,
+   "episode_title": "An Interview with Jonathan Georgino",
+   "episode_url": "https://theamphour.com/461-an-interview-with-jonathan-georgino/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Dropping the cost of a silicon iteration from roughly one hundred thousand dollars to roughly ten thousand dollars changes chip development from a single carefully hoarded attempt into something closer to a software build loop, where a design is taped out, measured, learned from and taped out again.",
+   "quote_verbatim": "if I try to iterate on some new architecture over and over with the $10,000 versus $100,000, iteration. So it's cheaper to actually iterate.",
+   "speaker": "Mohamed Kassem",
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Git hooks on a KiCad repository can turn a release tag into a full manufacturing handoff: pushing the finalised revision automatically regenerates Gerbers, the schematic output and the bill of materials, removing a manual export step that has to happen anyway before every fabrication order.",
+   "quote_verbatim": "It auto generates Gerbers. It regenerates a schematic file. It regenerates the bomb.",
+   "speaker": "Chris Gammell",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Beyond generating fabrication outputs, a hardware pipeline can derive documentation from the design data itself, for example walking every power port to build a power table listing average and peak current per supply, and then diffing that table between versions to surface a rail whose draw changed.",
+   "quote_verbatim": "we can build out a power table and then check, you know, let you know, this is the amount of current that each power supply is drawing",
+   "speaker": "Kyle Dumont",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "When a suite already exists and runs unattended, selecting a subset of tests for a given change buys little, so the default should be to run the whole suite on every change rather than to reason about which tests the change could plausibly have affected.",
+   "quote_verbatim": "maybe there's a hundred tests and it doesn't need to run them all, but why wouldn't you just run them all every time?",
+   "speaker": "Chris Gammell",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Integration and its test suite are a separate stage from deployment, and the split matters more in hardware: the deployment step means committing files to a contract manufacturer, which is a far heavier commitment than pushing a new software version.",
+   "quote_verbatim": "there's this difference between continuous integration and tests, which is what we talked about. And then continuous deployment.",
+   "speaker": "Kyle Dumont",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The economics of revving differ by orders of magnitude between bits and atoms: incrementing a point release of software costs almost nothing because it updates overnight on devices in the field, whereas committing a physical revision resembles pressing another hundred thousand CDs.",
+   "quote_verbatim": "there is like a, a bigger cost to revving at that point, just like there would have been with printing new CDs",
+   "speaker": "Chris Gammell",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Once a vehicle programme has paid for the bootloader protocol, the build pipeline, the firmware packaging format, the over-the-air path into the car and the version checking, adding one more electronic module to that infrastructure inherits the whole deployment chain rather than requiring a new one.",
+   "quote_verbatim": "just implement this bootloader protocol and then the whole built CI infrastructure and getting it packaged into a vehicle firmware package and sent to the car and then to your device",
+   "speaker": "Joris Aerts",
+   "episode": 518,
+   "episode_title": "Satellites and EVs with Joris Aerts",
+   "episode_url": "https://theamphour.com/518-satellites-and-evs-with-joris-aerts/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Containerisation was the inflection point for build pipelines: the technique was possible beforehand, but packaging a reproducible environment made it cheap enough that a much wider population of teams started doing it.",
+   "quote_verbatim": "it's not that continuous integration wasn't possible before, but it's just gotten so easy with containers and things like this",
+   "speaker": "Michael Gielda",
+   "episode": 519,
+   "episode_title": "Simulating Embedded Hardware with Michael Gielda",
+   "episode_url": "https://theamphour.com/519-simulating-embedded-hardware-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Moving development onto a simulated target buys scalability and reproducibility: a snapshot of a simulated system can be handed to a colleague who then runs bit-identical state, whereas replicating a physical bench setup on someone else's desk reliably introduces differences and takes shipping time.",
+   "quote_verbatim": "if you put it in a computer, it starts being scalable. It starts being reproducible",
+   "speaker": "Michael Gielda",
+   "episode": 519,
+   "episode_title": "Simulating Embedded Hardware with Michael Gielda",
+   "episode_url": "https://theamphour.com/519-simulating-embedded-hardware-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "In the experience of a firm that builds embedded tooling for many clients, systematic testing in embedded projects largely does not happen; teams avoid it wherever they can because the overhead of exercising real hardware pushes verification out into field testing.",
+   "quote_verbatim": "we always say testing in embedded systems, like in most places, it doesn't really exist. Like people avoid testing if they can.",
+   "speaker": "Michael Gielda",
+   "episode": 519,
+   "episode_title": "Simulating Embedded Hardware with Michael Gielda",
+   "episode_url": "https://theamphour.com/519-simulating-embedded-hardware-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Manual verification fails on repetition rather than on difficulty: a procedure that takes only a minute is fine once, but when it needs running a thousand times a human will skip the great majority of runs and perform perhaps ten, which is worse than either extreme.",
+   "quote_verbatim": "But if you're going to do it a thousand times, you're obviously going to skip the 990 times and just do it 10 times, which is worse.",
+   "speaker": "Michael Gielda",
+   "episode": 519,
+   "episode_title": "Simulating Embedded Hardware with Michael Gielda",
+   "episode_url": "https://theamphour.com/519-simulating-embedded-hardware-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Co-simulation keeps pipeline run times tolerable when part of a design is still in HDL: the known, stable portion of the system runs in a fast functional simulator while only the peripheral or DMA block under development is handed to a slow HDL simulator, so overall throughput stays acceptable.",
+   "quote_verbatim": "And most of the system is simulating very fast. And the part that you care about is simulated slower. But since it's just a part, the overall result is pretty good.",
+   "speaker": "Michael Gielda",
+   "episode": 519,
+   "episode_title": "Simulating Embedded Hardware with Michael Gielda",
+   "episode_url": "https://theamphour.com/519-simulating-embedded-hardware-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A power supply company arrived at forty separate firmware images maintained as copies of copies of one another, so that a single defect discovered in one image had to be located and repaired individually in three, four or five others.",
+   "quote_verbatim": "we have 40 different firmwares that we try to maintain. And a lot of them are just copies of copies of each other. So if you find a bug in one, you might need to fix that one in three, four, five other ones.",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The remedy chosen for that sprawl was a migration off Subversion onto Git hosted in Azure DevOps, with a build pipeline layered on top, treating version control replacement and pipeline construction as one project rather than two.",
+   "quote_verbatim": "now I'm moving things to like Git and Azure DevOps and trying to make a continuous integration pipeline",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where hardware abstraction makes upper modules unit-testable on a host, the driver layer still needs silicon, so the approach is to build a small test board carrying the same daughter module used in the product, load nightly builds onto it, and instrument the result with bench equipment such as a multimeter.",
+   "quote_verbatim": "i could just make a test board with that deck on it so i can download the firmware like nightly builds and test them",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A small change to a BLE notification protocol parser broke notification delivery entirely even though the edited code was not the part responsible for that behaviour, illustrating that firmware regressions routinely appear outside the region a change appears to touch.",
+   "quote_verbatim": "we changed the parsing just enough so that, uh, all of a sudden like notifications weren't coming in",
+   "speaker": "Akbar Dhanaliwala",
+   "episode": 537,
+   "episode_title": "Firmware Deployment and Troubleshooting with Akbar Dhanaliwala",
+   "episode_url": "https://theamphour.com/537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Web deployment and firmware deployment sit at opposite ends of a confidence spectrum: a website can go live untouched by a human once the automated suite passes, while a firmware release is preceded by roughly three weeks of manual hammering driven by fear of shipping a break.",
+   "quote_verbatim": "in firmware, it's like, you spend three weeks just like trying to hit it as much as you can because you're so scared that you're going to, you're going to break it",
+   "speaker": "Akbar Dhanaliwala",
+   "episode": 537,
+   "episode_title": "Firmware Deployment and Troubleshooting with Akbar Dhanaliwala",
+   "episode_url": "https://theamphour.com/537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Without automated verification, firmware teams merge to the main branch rarely, batching work behind long manual test campaigns until everyone agrees a version is safe, which is the slow-integration pattern that a build pipeline is meant to replace.",
+   "quote_verbatim": "would merge new code to master infrequently. Cause you, you're so scared. You're going to break something.",
+   "speaker": "Akbar Dhanaliwala",
+   "episode": 537,
+   "episode_title": "Firmware Deployment and Troubleshooting with Akbar Dhanaliwala",
+   "episode_url": "https://theamphour.com/537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The value of the pipeline is not the automatic compile but the regression suite attached to it: every push re-runs the entire accumulated body of tests, including ones written months earlier, specifically to prove that the new change did not disturb old behaviour.",
+   "quote_verbatim": "It runs all the tests that are, you know, all the tests, you know, tests that were written months ago, it runs all of them to make sure nothing broke because of the new code you wrote",
+   "speaker": "Akbar Dhanaliwala",
+   "episode": 537,
+   "episode_title": "Firmware Deployment and Troubleshooting with Akbar Dhanaliwala",
+   "episode_url": "https://theamphour.com/537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The common stopping point for embedded teams is a pipeline that builds artefacts nobody consumes: the hosted runner produces a firmware image on every push, but with no path onto real silicon the image is never exercised and the build only proves that compilation still succeeds.",
+   "quote_verbatim": "GitHub actions made an image for me. Now what?",
+   "speaker": "Akbar Dhanaliwala",
+   "episode": 537,
+   "episode_title": "Firmware Deployment and Troubleshooting with Akbar Dhanaliwala",
+   "episode_url": "https://theamphour.com/537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Closing that gap means a network-attached gateway takes the artefact the hosted runner produced, flashes it onto the target device, runs the test suite against it and reports the failure back into the same pull request status that the build reported to.",
+   "quote_verbatim": "flash your device, run the tests, you know, all the, you know, do all the things you want. And if something fails, now you caught a regression",
+   "speaker": "Akbar Dhanaliwala",
+   "episode": 537,
+   "episode_title": "Firmware Deployment and Troubleshooting with Akbar Dhanaliwala",
+   "episode_url": "https://theamphour.com/537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Making a pipeline useful requires a matching review policy, in which the presence of tests for a change is an explicit item the reviewer checks rather than something left to the author's discretion.",
+   "quote_verbatim": "part of the code review is like, well, where are the tests?",
+   "speaker": "Akbar Dhanaliwala",
+   "episode": 537,
+   "episode_title": "Firmware Deployment and Troubleshooting with Akbar Dhanaliwala",
+   "episode_url": "https://theamphour.com/537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Hardware-in-the-loop stages go beyond unit tests into system tests, where the automation sends a command to a lightweight serial shell on the device and confirms the physical effect through an analog input, for instance issuing a heater start command and capturing the resulting temperature through the gateway.",
+   "quote_verbatim": "When I send start heater command over you are, you know, it turns on the heater. I'm measuring that via analog.",
+   "speaker": "Akbar Dhanaliwala",
+   "episode": 537,
+   "episode_title": "Firmware Deployment and Troubleshooting with Akbar Dhanaliwala",
+   "episode_url": "https://theamphour.com/537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Hosted runners built into the code hosting platform compete directly with self-managed build servers, the pitch being that a team already paying for repository hosting can get its pipeline without standing up and maintaining a separate machine.",
+   "quote_verbatim": "I would say it's like, it's like, it's going against the Jenkins or whatever",
+   "speaker": "Akbar Dhanaliwala",
+   "episode": 537,
+   "episode_title": "Firmware Deployment and Troubleshooting with Akbar Dhanaliwala",
+   "episode_url": "https://theamphour.com/537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The basic trigger is a commit landing on the repository's main line, after which the system walks the full set of builds and tests and raises a visible flag naming the change that broke something.",
+   "quote_verbatim": "every time you do a commit to the, to the main part of your repo or your repository, basically it'll go through all the builds, go through all the tests. And if it doesn't work, it throws a flag",
+   "speaker": "Chris Gammell",
+   "episode": 546,
+   "episode_title": "Thousands Of Dependencies",
+   "episode_url": "https://theamphour.com/546-thousands-of-dependencies/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The practical reason to simulate rather than use real silicon in a pipeline is logistical rather than technical: a development board is difficult to attach to a build server, whereas a simulated target is just another process the server can start.",
+   "quote_verbatim": "I do have a dev board, but the dev board is just hard to put in a CI on a server.",
+   "speaker": "Michael Gielda",
+   "episode": 547,
+   "episode_title": "Open Source Mindset with Michael Gielda",
+   "episode_url": "https://theamphour.com/547-open-source-mindset-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Hosted runner fleets are sized for typical web and application software, where build times are short, and embedded or EDA toolchains routinely exceed what those default machines provide.",
+   "quote_verbatim": "since most of the time the CI frameworks and the cloud providers, all of this is typically used with software where the build times are not as long",
+   "speaker": "Michael Gielda",
+   "episode": 547,
+   "episode_title": "Open Source Mindset with Michael Gielda",
+   "episode_url": "https://theamphour.com/547-open-source-mindset-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The workaround is self-hosted runners: keep the hosting platform as the interface for pull requests and status reporting, but register your own machines or cloud instances as the compute, sized for the memory the tools demand and instrumented for whatever extra metrics you want to collect.",
+   "quote_verbatim": "some of the tools have ridiculous like RAM requirements and you just, the default machines just don't have that. So you have to go and implement, you know, support for your own machines that can sustain those loads",
+   "speaker": "Michael Gielda",
+   "episode": 547,
+   "episode_title": "Open Source Mindset with Michael Gielda",
+   "episode_url": "https://theamphour.com/547-open-source-mindset-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Firmware pipelines should assert non-functional properties, not just correctness, because a silent regression such as boot time drifting from half a second to five seconds is otherwise discovered long after the responsible commit and has to be found by bisecting build by build.",
+   "quote_verbatim": "it used to take us half a second to boot our system. And now it takes us five seconds and we have no idea where that happens",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Concrete per-build checks worth running on real hardware include flashing the new image and measuring reported boot time, and measuring baseline current draw in each defined power state so that a doubling of consumption is caught immediately rather than just before shipping.",
+   "quote_verbatim": "every time you release a new build, it splashed to the hardware and you run some code to measure and report how long it took to boot the system. You might want to check baseline power consumption",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The hard prerequisite for any build pipeline is a command line build using make, CMake, Meson or similar; a project that can only be built by pressing a button inside an IDE cannot be built by an unattended machine no matter what other tooling is added.",
+   "quote_verbatim": "in order to get a good CI process in place, you really need to be able to build your software from the command line. And that rules out pure product builds in an IDE.",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Automated per-build checks are a leverage mechanism for teams that are small, schedule-compressed and cost-constrained, because the alternative of running the full suite manually on every build does not survive contact with reality: people forget, run short of time, or judge a check unnecessary.",
+   "quote_verbatim": "you should run these tests for every single build, right? To make sure that your changes didn't break anything. And in a manual process, that's just not going to happen. It's not feasible. You forget, you don't have the time.",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A pipeline doubles as a gate on contributors whose work is not yet trusted, since the question of whether a newcomer's commit is allowed to reach the device is answered by the defined pass criteria rather than by a senior engineer inspecting every change.",
+   "quote_verbatim": "They push a commit and it's like, can that code make it down to your device? And with a pipeline, if it's bad code, no.",
+   "speaker": "Chris Gammell",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Pipeline setup is worth templating rather than repeating: a shell script clones a skeleton repository containing the standard source layout, the pipeline rules and the shared static analysis modules, then pushes an initial commit that the build server recognises as a new compliant repository and immediately starts building.",
+   "quote_verbatim": "I run the script, the project's created, it pushes a commit, my CI server notices that there's a new compliant repository in my organization, and it automatically runs everything.",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The minimum worthwhile first step, still missing from many embedded teams, is a server that checks out the code on every commit and verifies only that it compiles; everything else is easier to add once that exists.",
+   "quote_verbatim": "every time I push a commit, can I have some kind of server, check out the code and make sure that it compiles successfully?",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The natural second step is moving release packaging off an individual developer's workstation onto the build server, so that the shipped artefact is assembled the same known-good way every time instead of depending on one person's local environment.",
+   "quote_verbatim": "What if we didn't have that developer packaging the release at his desk? What if instead we had the server package it in a known good way every time?",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Before pipelines, the normal firmware release path was a build produced on one developer's machine, attached as a binary to a release record or an email, and sent to the manufacturer for others to test on their own machines.",
+   "quote_verbatim": "you'd like literally attach it to a document or an email and you'd send it over to the manufacturer",
+   "speaker": "Chris Gammell",
+   "episode": 627,
+   "episode_title": "Works on my machine",
+   "episode_url": "https://theamphour.com/627-works-on-my-machine/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The build server landscape an embedded engineer encounters includes self-hosted Jenkins, hosted GitHub Actions and Travis CI, and the practice itself has been established in software for more than twenty years, so the material to learn from is mature rather than experimental.",
+   "quote_verbatim": "Jenkins is one that I've heard of that I've never used, but GitHub Actions is the one I'm using",
+   "speaker": "Chris Gammell",
+   "episode": 627,
+   "episode_title": "Works on my machine",
+   "episode_url": "https://theamphour.com/627-works-on-my-machine/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Build reproducibility is achieved by promoting the same container definition that a developer validated interactively into the automated build, so the pipeline compiles inside the identical environment the developer used and the configuration travels with the code.",
+   "quote_verbatim": "we would also push that configuration into the automated build piece so that now every time I go and do a commit, it would also run it through all these, it would use that same container",
+   "speaker": "Chris Gammell",
+   "episode": 627,
+   "episode_title": "Works on my machine",
+   "episode_url": "https://theamphour.com/627-works-on-my-machine/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "On a multi-discipline product such as a smartwatch, low-level sensor integration, power management, GUI work and cloud connectivity are usually different people, and giving each component a minimal simulated or emulated stand-in lets those people work against the whole system without waiting on each other's hardware.",
+   "quote_verbatim": "It might be nice to be able to sort of simulate, emulate some kind of minimal functionality for each component of the system.",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cabé Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In Zephyr, turning on a compile check for every commit is close to a single line of build system configuration, and a compile-only check is already a worthwhile smoke test because it replaces the assurance of it built on my laptop with a clean-environment build.",
+   "quote_verbatim": "But even just checking that things compile, that's actually a really nice smoke test already, right?",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cabé Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Two engineers compiling the same firmware source on their own machines can produce different binaries whenever their toolchains differ; compiling in a shared cloud environment instead makes the output binary identical regardless of who triggered the build.",
+   "quote_verbatim": "if the tool chain is different or whatever, we might have a different binary. Well, now it's like we would be shipping that code off to be compiled on the cloud. And then we'd have a binary that's always the same.",
+   "speaker": "Chris Gammell",
+   "episode": 654,
+   "episode_title": "Pseudo Code...Pseudo Good",
+   "episode_url": "https://theamphour.com/654-pseudo-code-pseudo-good/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Open source silicon tooling can be installed directly on a hosted build virtual machine, and because the repositories are public the compute for running the flow costs the project nothing.",
+   "quote_verbatim": "This is another nice thing about the open source tools is you can install them on a GitHub virtual machine and everything is public.",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "In the Tiny Tapeout flow, a submitter's own repository builds the GDS, checks it and runs the verification simulations, and only once every status check passes may a pull request be opened against the shared chip repository, so the gate on integration is a machine result rather than a review judgement.",
+   "quote_verbatim": "It basically opens a pull request. So on your repository, it builds the GDS and checks it and runs any simulations verification. And then once the green lights are all lit, you can basically open a pull request on the chips repo and then it gets integrated.",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "After integration the project runs a second automated stage on the merged design covering simulation, formal verification and equivalence checking, then generates the final GDS and submits it to the shuttle service so its own pre-check runs too, giving two independent verification gates before tapeout.",
+   "quote_verbatim": "we then run our own verification, simulation, formal verification, equivalence checking, like all the CI stuff. generate the final GDS files,",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Because verification runs continuously for the whole time a shuttle is open, the schedule can absorb a one week gap between closing submissions and the fabrication deadline, and that buffer plus the automation is what removes the anxiety normally attached to cutting a release.",
+   "quote_verbatim": "we close our shuttles like one week before the eFabulous deadline. And then it's, yeah, no, no longer stressful.",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A formal property checker in the pipeline can replace exhaustive hand-written test programs: asserting that chip inputs equal outputs through an external loopback lets a SAT solver search every multiplexer setting itself and report the one configuration where a missing wire breaks the identity.",
+   "quote_verbatim": "But I didn't have to write a program that checked it in every position because the sat solver would find, if there was a place where it would fail, it would fail there.",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Zephyr's device tree data describes hundreds of boards in one machine-parsable form, which makes it possible to generate simulation models automatically: the bus layout, which peripherals a given SoC carries and how many UARTs it has are all read out of the upstream description rather than hand-written.",
+   "quote_verbatim": "All of this information we're getting from Zephyr and we can just generate that automatically.",
+   "speaker": "Michael Gielda",
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Generating simulator platform files from upstream board descriptions scaled coverage to roughly 620 simulated platforms, a number unreachable by the earlier hand-built approach that had topped out around fifty demonstrations.",
+   "quote_verbatim": "we can essentially run as many as, I think, 620 platforms in Renode now because of this",
+   "speaker": "Michael Gielda",
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The resulting dashboard is a very large pipeline: about twelve sample binaries are cross-compiled for each of roughly eight hundred boards, giving on the order of ten thousand binaries, and each one is then executed in simulation to prove it actually runs on its target.",
+   "quote_verbatim": "we take Zephyr, we build it across all the targets. We run simulation and a huge, massive CI with like thousands of, you know, because there's like 12 binaries across 800 boards.",
+   "speaker": "Michael Gielda",
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Automated builds in a taught medical electronics course are pinned to specific SDK and toolkit versions out of necessity, because an apparently minor Zephyr version bump can pull in a major update of an underlying package and break compatibility mid-project.",
+   "quote_verbatim": "we do have automated builds going on and we do have those, you know, locked into specific versions of the SDK and the toolkits",
+   "speaker": "Mark Palmeri",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The concrete failure that motivated version pinning was the input syntax of Zephyr's built-in state machine framework changing partway through a semester, which broke working student code that had not been touched.",
+   "quote_verbatim": "there's not always guaranteed backward. Compatibility from things that you think are minor version updates, but that minor version is using a major updated package under the hood",
+   "speaker": "Mark Palmeri",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "BeagleBoard exposes its build servers to users directly: a contributor pushes a fork, the servers build it, and the consumable output is a Debian package that can be downloaded and installed on the target, so an FPGA-plus-RISC-V board is programmed through package management rather than through a JTAG session.",
+   "quote_verbatim": "you go to our continuous integration servers, you push your fork to the gateway and you download the .deb",
+   "speaker": "Jason Kridner",
+   "episode": 723,
+   "episode_title": "BeagleBoard's Back with Jason Kridner",
+   "episode_url": "https://theamphour.com/723-beagleboards-back-with-jason-kridner/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "At Altium, engineers responsible for separate modules such as the PCB editor, schematic editor, bill of materials and router each submitted their code daily, and an overnight scripted build assembled a complete product every night that anyone could exercise as a real application before a stable one was chosen for release.",
+   "quote_verbatim": "And then they all submit their code each day. And then overnight it builds.",
+   "speaker": "Dave Jones",
+   "episode": 724,
+   "episode_title": "All Heat, No Useful Work",
+   "episode_url": "https://theamphour.com/724-all-heat-no-useful-work/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Large multi-module products such as KiCad or a full EDA suite bundle to a nightly cadence rather than building on every commit because the builds themselves take a long time, so build duration directly sets how often integration can occur.",
+   "quote_verbatim": "I think that's why they, they bundle it more up nightly because the bills take a while as well",
+   "speaker": "Chris Gammell",
+   "episode": 724,
+   "episode_title": "All Heat, No Useful Work",
+   "episode_url": "https://theamphour.com/724-all-heat-no-useful-work/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The reason large modular codebases need inline automated testing is cross-module dependency breakage: a change three modules away can pull in a dependency that breaks unrelated functionality, and only continuous testing surfaces that regression near the change that caused it.",
+   "quote_verbatim": "you don't have a regression and, you know, something Bob put down, put in three modules down also has a dependency that broke your stuff",
+   "speaker": "Chris Gammell",
+   "episode": 724,
+   "episode_title": "All Heat, No Useful Work",
+   "episode_url": "https://theamphour.com/724-all-heat-no-useful-work/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  }
+ ],
+ "attribution_notes": [
+  "Passages [4] and [5] (ep 378) are labelled speaker=Dave Jones, but Dave Jones is a host asking questions there; the content is the BeagleBoard side describing its own weekly kernel and image builds. Attributed to Robert Nelson, who is the guest responsible for the BeagleBoard kernel and image builds on that interview.",
+  "Passage [10] (ep 461) is labelled Chris Gammell, but the VISA/GPIB explanation is followed by 'I risk speaking out of turn' answered by the host with 'that's fine, we do that all the time around here', and the same voice later answers 'I am' to whether Binho is used to test Binho. Attributed to the guest, Jonathan Georgino.",
+  "Passages [12]-[16] (ep 505) are flagged ATTRIB-UNRELIABLE and interleave host and guest. Rows citing the Jesse Vincent KiCon Git-hook example, the run-all-tests judgment and the bits-versus-atoms cost comparison are attributed to Chris Gammell (host voice, refers to a prior guest of his own programme); rows on hardware CI capabilities, the CI definition and the CI-versus-CD split are attributed to Kyle Dumont, the guest describing his own product.",
+  "Passages [18]-[22] (ep 519) are flagged ATTRIB-UNRELIABLE; all rows taken are the guest describing Renode, Ant Micro's own practices and its customer observations, so Michael Gielda is used throughout.",
+  "Passages [27]-[31] (ep 537) are flagged ATTRIB-UNRELIABLE and labelled Chris Gammell, but the content is the guest recounting his own ANCS parser bug, his own firmware release history, and his own gateway product ('our gateway', dev boards in a room in my house). Attributed to Akbar Dhanaliwala. The episode title spells the surname Dhanaliwala; the guest field spells it Dinaliwala.",
+  "Passage [45] (ep 653) is labelled Chris Gammell, but the smartwatch multi-engineer argument is the guest's answer, opening 'I get that this might not be always practical'. Attributed to Benjamin Cabe (spelled as in the passage metadata). The IDE/command-line remark in [46] is the host's and stays with Chris Gammell.",
+  "Passage [49] (ep 672) is labelled Chris Gammell, but the content is the guest describing the formal loopback assertion in his own chip design. Attributed to Matt Venn.",
+  "Passage [53] (ep 724) is labelled Chris Gammell, but the description of Altium's per-module daily submissions and overnight builds comes from the co-host who worked at Altium (established in ep 627). Attributed to Dave Jones; the Cloudflare static-site deployment description in the same passage is Chris Gammell's own consulting site and stays with him.",
+  "Passage [54] (ep 724) is ambiguous between the two hosts at the turn boundary; the labelled speaker is not contradicted by the content, so Chris Gammell is retained.",
+  "Several quotes preserve transcription artefacts verbatim, including 'you are' for UART, 'eFabulous' for eFabless, 'the bomb' for the BOM, 'the bills take a while' for the builds, and lowercase text in the ep 522 passage."
+ ],
+ "capped": false
+}

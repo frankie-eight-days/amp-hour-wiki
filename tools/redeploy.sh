@@ -12,6 +12,12 @@ npx quartz build
 # restore both from the stable copies kept at site/
 cp -r .vercel public/ 2>/dev/null || true
 cp vercel.json public/ 2>/dev/null || true
+
+# force LIGHT as the default theme (darkmode plugin defaults to OS preference
+# with a dark fallback; we want light unless the visitor explicitly toggles).
+# The theme bootstrap lives in the hashed prescript-*.js bundle.
+LC_ALL=C find public -name 'prescript-*.js' -exec sed -i '' \
+  's/window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"/"light"/g' {} +
 cd public
 if [ ! -d .vercel ]; then
   npx vercel link --yes --project amphour-wiki --scope frankie-eight-days-projects

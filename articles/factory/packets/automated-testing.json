@@ -1,0 +1,733 @@
+{
+ "concept": "automated-testing",
+ "name": "Automated Testing",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "automated-testing",
+  "census": "union",
+  "aliases": [
+   "automated-test",
+   "automated-testing",
+   "test-automation"
+  ],
+  "children": [
+   "dogfooding",
+   "environmental-testing",
+   "golden-sample",
+   "low-pass-filter",
+   "test-engineer",
+   "test-plan"
+  ],
+  "neighbors": {},
+  "pins_pre_cap": 57,
+  "pins_final": 57,
+  "pins_by_depth": {
+   "explains": 53,
+   "opinion": 4
+  },
+  "pins_by_role": {
+   "core": 57
+  },
+  "capped": false,
+  "passages_yielding_claims": 45,
+  "passages_killed": 12
+ },
+ "claims": [
+  {
+   "claim_text": "Once a factory's automated test equipment is fully depreciated, the marginal cost of testing each unit falls close to zero and the binding constraint on test capacity becomes tester uptime rather than test cost.",
+   "quote_verbatim": "testing equipment that we've had here is paid for",
+   "speaker": "John Edmond",
+   "episode": 71,
+   "episode_title": "An Interview with John Edmond - Luciferous LED Lucubrator",
+   "episode_url": "https://theamphour.com/the-amp-hour-71-luciferous-led-lucubrator/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "High-volume production justifies purpose-built test automation: pogo-pin fixtures, hydraulics that push boards along a jig, and flippers that sort units into pass and fail bins. At volumes in the hundreds of thousands of units, a capital budget on the order of a couple hundred thousand dollars for the test system is defensible.",
+   "quote_verbatim": "you might have a couple hundred thousand dollar budget to automate the testing of these things",
+   "speaker": "Dave Jones",
+   "episode": 96,
+   "episode_title": "Senseless Saccadic Shemozzle",
+   "episode_url": "https://theamphour.com/the-amp-hour-96-senseless-saccadic-shemozzle/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Automated testing of hardware changes has a hard floor on cycle time, because each iteration requires physically building and reworking boards; firmware changes have no such floor and are the better first target for automation.",
+   "quote_verbatim": "you're limited as to how fast your testing cycle can be",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A firmware test rig needs four pieces that a pure software project does not: the target hardware physically attached, a programming system, an automated tool that pulls whatever was committed to the repository, and a scripted procedure that compiles, installs and exercises the build.",
+   "quote_verbatim": "you have to have some kind of a setup where you have the attached hardware and you have programming system and some kind of automated tool to take whatever's been committed to the repo",
+   "speaker": "Michael Ossmann",
+   "episode": 161,
+   "episode_title": "Interview with Michael Ossmann - Gifted Grimgribber Grokker",
+   "episode_url": "https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A cheap way to automate mechanical actuation, capable of powering a unit up, pressing a button several hundred times and powering it back down, covers both endurance testing and design experiments such as qualifying a cross-referenced or second-source part before it enters the line.",
+   "quote_verbatim": "turn the machine on and press this button 500 times and then turn it off",
+   "speaker": "Adam Wolf",
+   "episode": 167,
+   "episode_title": "An Interview with Adam Wolf - Brick & Board Biuners",
+   "episode_url": "https://theamphour.com/167-an-interview-with-adam-wolf-brick-board-biuners/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Fitting each board with a unique laser-programmed identity chip lets automated test software read the serial number and file a test report against that specific unit, which turns the test database into a troubleshooting resource for returns years later.",
+   "quote_verbatim": "each board has its own ID and you have automated software which reads that and then you can associate a test report with that individual board",
+   "speaker": "Dave Jones",
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Connector life can be characterised with an automated insertion jig that mates and unmates a sample a thousand times at varying approach angles while the operator measures gold plating wear and predicts service life.",
+   "quote_verbatim": "we designed automated insertion testing jigs. So, it would make these connectors a thousand times at different angles",
+   "speaker": "Dave Jones",
+   "episode": 178,
+   "episode_title": "A 2013 Recap - Year-end Yarn Yakking",
+   "episode_url": "https://theamphour.com/178-a-2013-recap-year-end-yarn-yakking/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A second-source part built to be as close a copy as physically possible still behaves differently in endurance test, so a copied connector must be fully re-characterised and re-tested rather than assumed equivalent to the original.",
+   "quote_verbatim": "It's never an exact duplicate",
+   "speaker": "Dave Jones",
+   "episode": 178,
+   "episode_title": "A 2013 Recap - Year-end Yarn Yakking",
+   "episode_url": "https://theamphour.com/178-a-2013-recap-year-end-yarn-yakking/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Designing a card edge connector into the edge of the production panel makes an entire panel of boards, ten at a time, accessible to a single test fixture without individual handling.",
+   "quote_verbatim": "I designed in like a card edge connector on the side of the panel",
+   "speaker": "Dave Jones",
+   "episode": 182,
+   "episode_title": "Manufacturing By Wire And Skipping Testing - Calefacient Cuculine Cash",
+   "episode_url": "https://theamphour.com/182-manufacturing-by-wire-and-skipping-testing-calefacient-cuculine-cash/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Building an automated pass-fail jig costs a couple of weeks of design plus an open-ended debugging tail, and at low production volume that effort is not recovered; the decision to skip automation gets worse still when the fixture must be shipped to a remote assembler who will need troubleshooting guides for it.",
+   "quote_verbatim": "I don't really have the volume to warrant, you know, spending a couple of weeks designing that",
+   "speaker": "Dave Jones",
+   "episode": 182,
+   "episode_title": "Manufacturing By Wire And Skipping Testing - Calefacient Cuculine Cash",
+   "episode_url": "https://theamphour.com/182-manufacturing-by-wire-and-skipping-testing-calefacient-cuculine-cash/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Production test can be scoped as a spot-value verification against specification at a single operating point rather than a sweep across the full range, which is far cheaper than calibration; calibration exists to correct nonlinearities in precision instruments and brings a large maintenance burden with it.",
+   "quote_verbatim": "it's not like over the full range. It's like a spot value",
+   "speaker": "Dave Jones",
+   "episode": 182,
+   "episode_title": "Manufacturing By Wire And Skipping Testing - Calefacient Cuculine Cash",
+   "episode_url": "https://theamphour.com/182-manufacturing-by-wire-and-skipping-testing-calefacient-cuculine-cash/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The target state for manufacturing test instrumentation is full scriptability: probes land on the unit, the instrument walks a scripted test sequence and returns a pass-fail result without operator judgment, which also allows scopes and function generators to be tied into a pogo-pin fixture.",
+   "quote_verbatim": "you can just have it and, you know, like put the probes on, it'll go through whatever the test sequence is and then give you a pass fail",
+   "speaker": "Akiba",
+   "episode": 355,
+   "episode_title": "The Internet of Septage (with Akiba)",
+   "episode_url": "https://theamphour.com/355-the-internet-of-septage-with-akiba/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Production test and design verification answer different questions. Once a design is qualified, the automated test on the line is checking the assembly of that individual unit, so the failure modes it must catch are the ones introduced during build rather than the ones inherent to the schematic.",
+   "quote_verbatim": "you're no longer testing the design. You're testing the assembly of that particular unit",
+   "speaker": "Chris Gammell",
+   "episode": 363,
+   "episode_title": "An interview with Alvaro and Jen from the URE Podcast",
+   "episode_url": "https://theamphour.com/363-an-interview-with-alvaro-and-jen-from-the-ure-podcast/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Test coverage strategy differs sharply by industry: a large-scale consumer product typically ships with only a built-in self test and no calibration step, whereas at a test-equipment maker the calibration setup is one of the largest pieces of the production test system.",
+   "quote_verbatim": "it's not going to get, it's not doing full calibration",
+   "speaker": "Chris Gammell",
+   "episode": 369,
+   "episode_title": "An Interview with Jason Huggins",
+   "episode_url": "https://theamphour.com/369-an-interview-with-jason-huggins/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Some test scenarios can only be run by a machine because their duration makes them unsafe or unlawful for a person: one automotive customer wanted a twelve-hour overnight run that repeatedly navigated into and out of screens hoping to trigger a buffer overflow.",
+   "quote_verbatim": "they had a particular test scenario where they wanted it to run, uh, 12 hours, like overnight",
+   "speaker": "Jason Huggins",
+   "episode": 369,
+   "episode_title": "An Interview with Jason Huggins",
+   "episode_url": "https://theamphour.com/369-an-interview-with-jason-huggins/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Teams routinely hold a list of scenarios they label untestable, and these tend to involve breaking a physical or wireless link, for example a device losing its Bluetooth connection to a phone, where no rig exists to force the disconnect on demand.",
+   "quote_verbatim": "we don't have an automated test for that",
+   "speaker": "Jason Huggins",
+   "episode": 369,
+   "episode_title": "An Interview with Jason Huggins",
+   "episode_url": "https://theamphour.com/369-an-interview-with-jason-huggins/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The person who acquires test automation is usually not the engineer who will write the tests but that engineer's manager, because the purchase and the search for a vendor happen a level above the bench.",
+   "quote_verbatim": "usually it's not the end line engineer writing the test. It's their boss",
+   "speaker": "Jason Huggins",
+   "episode": 369,
+   "episode_title": "An Interview with Jason Huggins",
+   "episode_url": "https://theamphour.com/369-an-interview-with-jason-huggins/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Buying a test robot does not remove the engineering labour: a skilled engineer must still consume the robot's API and author the automated tests, so the capability remains labour-intensive even when the mechanism is off the shelf.",
+   "quote_verbatim": "you have this robot that can click buttons on a phone, but you still need a skilled engineer to figure out how to consume that API",
+   "speaker": "Jason Huggins",
+   "episode": 369,
+   "episode_title": "An Interview with Jason Huggins",
+   "episode_url": "https://theamphour.com/369-an-interview-with-jason-huggins/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Test-automation service packages priced as a fraction of an engineer's salary land in the tens to hundreds of thousands of dollars, which lets a small vendor stay profitable on engineering services rather than scaling to thousands of units of hardware.",
+   "quote_verbatim": "when you start talking in terms of fractions of a person's salary, you quickly get into tens of thousands or hundreds of thousands of dollars",
+   "speaker": "Jason Huggins",
+   "episode": 369,
+   "episode_title": "An Interview with Jason Huggins",
+   "episode_url": "https://theamphour.com/369-an-interview-with-jason-huggins/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Vendor FPGA toolchains resist test automation in two specific ways: they are GUI-driven rather than scriptable, and even free licences are node-locked to a MAC address, which blocks packaging the toolchain into a portable container image for automated builds and tests.",
+   "quote_verbatim": "even if it's a free license, it's still locked to a particular MAC address",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 423,
+   "episode_title": "Open FPGA Toolchains at 35c3",
+   "episode_url": "https://theamphour.com/423-open-fpga-toolchains-at-35c3/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Production volume sets the test-time budget directly: building five million greeting-card sound modules in three months leaves only seconds per unit, which forces automation regardless of how simple the device is.",
+   "quote_verbatim": "if you want to make 5 million cards in three months, you have to be able to test them very quickly",
+   "speaker": "Julia Truchsess",
+   "episode": 424,
+   "episode_title": "An Interview with Julia Truchsess",
+   "episode_url": "https://theamphour.com/424-an-interview-with-julia-truchsess/",
+   "depth_regraded": "opinion",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A single high-speed production tester can cover both digital and analog acceptance in one insertion, verifying the entire ROM contents of a chip alongside standby current, operating current and output drive, in roughly eight to ten seconds per unit.",
+   "quote_verbatim": "this tester could test the entire ROM contents of the chip as well as all the analog parameters of it, standby current, operating current, output drive",
+   "speaker": "Julia Truchsess",
+   "episode": 424,
+   "episode_title": "An Interview with Julia Truchsess",
+   "episode_url": "https://theamphour.com/424-an-interview-with-julia-truchsess/",
+   "depth_regraded": "opinion",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "USB is a poor transport for sensors on a mobile robot because of connector and cabling reliability, but it is well suited to bench-side automated testing of embedded electronics, where the hub sits inside an existing enclosure and is opened and rewired by technicians.",
+   "quote_verbatim": "USB is not appropriate for mobile robots. Um, but it's great for many other things, including automated testing of embedded electronics",
+   "speaker": "Chris Osterwood",
+   "episode": 425,
+   "episode_title": "An Interview with Chris Osterwood",
+   "episode_url": "https://theamphour.com/425-an-interview-with-chris-osterwood/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Per-port current monitoring in a test hub converts a silent bus collapse into a diagnosable event: a sensor that previously drew a hundred milliamps and now draws an amp indicates a cable short, and that port can be switched off before the whole USB bus goes down.",
+   "quote_verbatim": "the sensor that was drawing a hundred milliamps is now drawing an amp",
+   "speaker": "Chris Osterwood",
+   "episode": 425,
+   "episode_title": "An Interview with Chris Osterwood",
+   "episode_url": "https://theamphour.com/425-an-interview-with-chris-osterwood/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Designing a factory programming and bus tool to be driven either from a Python library or from plain ASCII commands over a serial port keeps it usable from MATLAB, LabVIEW, Python, a Linux single-board computer on the floor, a Windows laptop or a Mac, rather than binding the test system to one language and operating system.",
+   "quote_verbatim": "you can access your I squared C or spy bus from any automated language that you've got from any computer",
+   "speaker": "Jonathan Georgino",
+   "episode": 461,
+   "episode_title": "An Interview with Jonathan Georgino",
+   "episode_url": "https://theamphour.com/461-an-interview-with-jonathan-georgino/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Earlier factory tools exposed APIs only as a DLL that had to be linked, which pinned the whole test station to Windows, or offered access only from C; that coupling is what makes a text-protocol interface valuable in a test rig expected to last years.",
+   "quote_verbatim": "you almost were limited to, you need to, you know, be able to, uh, link into some DLL",
+   "speaker": "Jonathan Georgino",
+   "episode": 461,
+   "episode_title": "An Interview with Jonathan Georgino",
+   "episode_url": "https://theamphour.com/461-an-interview-with-jonathan-georgino/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Automating hardware test is harder to specify than automating software test because the pass criteria depend on real-world physical characteristics that are difficult to measure, and asserting them requires test stands and instruments rather than an assertion in code.",
+   "quote_verbatim": "it's a lot less well-defined than it might be in a software world because it might, it might involve some real world characteristics that are tough to measure",
+   "speaker": "Chris Gammell",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A working hardware-in-the-loop setup at a 3D printer company had the build server push each new firmware version to the machine and run a unit test suite that jogged the printer to every coordinate to confirm no axis crashed.",
+   "quote_verbatim": "it run through a whole series of unit tests on the printer would go like jog it to all the coordinates and make sure it didn't crash",
+   "speaker": "Kyle Dumont",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Attaching a regression test to the change that fixes a defect means the condition is re-checked on every future version, so the test suite accumulates protection against exactly the failures the product has already exhibited.",
+   "quote_verbatim": "it will be tested at each future version to make sure that, um, it doesn't fail those conditions",
+   "speaker": "Kyle Dumont",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Renode, an open-source embedded systems simulator that has existed in some form since 2010, lets a team execute tests and gather metrics against a simulated target, removing physical hardware from the loop for the bulk of test runs.",
+   "quote_verbatim": "you can also use the software, execute tests, gather metrics without touching hardware",
+   "speaker": "Michael Gielda",
+   "episode": 519,
+   "episode_title": "Simulating Embedded Hardware with Michael Gielda",
+   "episode_url": "https://theamphour.com/519-simulating-embedded-hardware-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Whether a board gets manual or automated test is decided by volume: low-volume boards are tested by hand, and the same board moves to an automated fixture once volume rises.",
+   "quote_verbatim": "for our pcbs we are setting up test gigs that do automated testing or depending on the volume",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "One workable division of labour with a contract manufacturer is for the product owner to design and build the test stand in-house and ship it to the assembler, who then runs it as incoming acceptance test on every board.",
+   "quote_verbatim": "a test stand and send it to them so they run it",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Staged automated test at each level of assembly keeps fault-finding cheap: at the contract manufacturer a mini variant of the power module board is driven from a 24 volt AC input while its switching pulses are measured, then the assembled module goes through an automated module tester, and only then is it built into a stack.",
+   "quote_verbatim": "they have a 24 volt AC input to that board and it's switching and then we're measuring and making sure everything works that the pulses are correct",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Final system test can remain automated in its measurement while still needing an operator, because connecting many cables and the cooling water for a water-cooled stack cannot be automated economically.",
+   "quote_verbatim": "the final testing which also an automated test but with personal because you need to connect a lot of cables and the cooling water",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "When every subassembly has already passed its own automated test, the final system test should pass without incident; a final test that regularly finds faults is evidence that coverage is missing further upstream.",
+   "quote_verbatim": "pass without problems because yeah each individual piece is good",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The test instrument industry is historically closed, and its established control standards, SCPI over GPIB and the later LXI, were designed for command-and-response measurement rather than for streaming data, which is why they perform poorly when a test script needs a continuous sample stream.",
+   "quote_verbatim": "The test instrument industry is often very closed",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The economic case for scripting a bench procedure is that writing the script takes roughly the same time as performing the procedure once by hand, after which it can be repeated indefinitely in the identical order, which matters for calibration and any sequence whose validity depends on ordering.",
+   "quote_verbatim": "why do that when you can write a script in, you know, the same time that it would take, and now you can run it all the time?",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A fully automated board line can chain surface mount, depanel, jig loading, electrical test and packaging with no manual handling, though even a mature high-volume operation may still have people loading parts into test sockets while the last robot cell is brought online.",
+   "quote_verbatim": "put in a jig by robots, tested by robots, packaged by robots",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Manual RF characterisation that required roughly 900 connector matings was reduced to about 30 connections by an automated switching system, a factor of a hundred fewer, which also removed the repetitive strain injury risk from screwing precision connectors on and off.",
+   "quote_verbatim": "we developed a system that could knock that down by like a factor of 100. So they could do like, you know, 30 connections instead of 900 connections",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Standing up a remote hardware test setup once is straightforward; keeping it available to a whole team indefinitely is a different and much harder class of problem, and that operational burden is the real cost of hardware test infrastructure.",
+   "quote_verbatim": "getting it working one day is fine. And getting it working for your whole team forever is like a whole different class of problem",
+   "speaker": "Akbar Dhanaliwala",
+   "episode": 537,
+   "episode_title": "Firmware Deployment and Troubleshooting with Akbar Dhanaliwala",
+   "episode_url": "https://theamphour.com/537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A large software product's daily build was gated by a large body of automated test scripts, and a build's automated results were used as a triage filter: if a build failed enough of them, engineers would not spend time testing it manually at all.",
+   "quote_verbatim": "there was also automated testing as well. They had countless automated testing scripts",
+   "speaker": "Dave Jones",
+   "episode": 627,
+   "episode_title": "Works on my machine",
+   "episode_url": "https://theamphour.com/627-works-on-my-machine/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Because the unit is already electrically accessible in the end-of-line jig at the moment of programming, that is the cheapest point to do everything else to it and emit one consolidated test report for that specific serial number, rather than splitting programming and test across separate stations and vendors.",
+   "quote_verbatim": "it's a great time to pretty much do everything you can to it and have a fully integrated test report for that specific unit",
+   "speaker": "Pete Staples",
+   "episode": 544,
+   "episode_title": "Standardizing Manufacturing with Pete Staples",
+   "episode_url": "https://theamphour.com/544-standardizing-manufacturing-with-pete-staples/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A general end-of-line test instrument needs a command-and-measure loop over UART, CAN bus stimulus, voltage, current and resistance measurement and a frequency counter, since those cover the interactions most projects actually require at the end of the line.",
+   "quote_verbatim": "Voltage, current, resistance measurements, there's a frequency counter.",
+   "speaker": "Pete Staples",
+   "episode": 544,
+   "episode_title": "Standardizing Manufacturing with Pete Staples",
+   "episode_url": "https://theamphour.com/544-standardizing-manufacturing-with-pete-staples/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Running the same C test suite twice, once compiled for x86 on the development machine and once cross-compiled and executed on the target, uses the second run purely as a cross-check that the port itself succeeded, since porting reliably introduces its own defects.",
+   "quote_verbatim": "run the same set of tests on the hardware, just as a good cross check. Like did my porting succeed?",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Manual test procedures are not actually executed on every build: engineers forget, run out of time, or decide an item is not worth checking, so a manual regression plan silently decays while an automated one does not.",
+   "quote_verbatim": "in a manual process, that's just not going to happen. It's not feasible. You forget, you don't have the time.",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A system that was not architected for testability can feel impossible to bring under test later, because the hardware dependencies are tangled through the code and prevent any part of it from running on a development machine.",
+   "quote_verbatim": "if you didn't design your system in a particular way at the start, it can feel impossible to, to bring it under test",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A low-effort entry point to firmware test automation is to exercise the serial or USB command line that most embedded projects already have: a Python script opens the serial connection, issues commands and checks for the expected responses from the device.",
+   "quote_verbatim": "have a Python script that opens up a serial connection and start sending commands and checking for expected responses on the device",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The gap between hardware and software change review is functional confirmation: nothing automatically tells a reviewer that a changed feedback resistor still behaves as intended, whereas software review has cheap access to test frameworks that answer that question.",
+   "quote_verbatim": "a reviewer functionally confirm that the resistor change is working as expected",
+   "speaker": "Michael Corr",
+   "episode": 577,
+   "episode_title": "Product Lifecycle Management with Michael Corr",
+   "episode_url": "https://theamphour.com/577-product-lifecycle-management-with-michael-corr/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Treating test data as first-class product data means designing instrumentation into the firmware rather than hanging a UART-to-USB adapter on the board and printing at the first bug, because the ad hoc route yields data no automated test can consume.",
+   "quote_verbatim": "your UART to USB adapter on there and print out some stuff on your UART",
+   "speaker": "Charles Aylward",
+   "episode": 584,
+   "episode_title": "Software for Rockets with Charles Aylward",
+   "episode_url": "https://theamphour.com/584-software-for-rockets-with-charles-aylward/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Bed-of-nails fixtures can themselves cause the defect they fail to detect: pogo pin pressure flexes the board, and the crack in a ceramic capacitor forms as the pins lift and the board springs back, after the measurement has already been taken.",
+   "quote_verbatim": "when you lift the pins back off, that's actually, you know, the board flexes back and that's what does the cracking",
+   "speaker": "Dave Jones",
+   "episode": 585,
+   "episode_title": "Return of the Trade Show Jedi",
+   "episode_url": "https://theamphour.com/585-return-of-the-trade-show-jedi/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A board damaged by its own test fixture ships as fully tested and then exhibits a long-term failure in the field, sometimes only appearing with temperature, mechanical stress, or when the unit is screwed down at its mounting points.",
+   "quote_verbatim": "it's cracked or it has a long-term failure mode",
+   "speaker": "Dave Jones",
+   "episode": 585,
+   "episode_title": "Return of the Trade Show Jedi",
+   "episode_url": "https://theamphour.com/585-return-of-the-trade-show-jedi/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Firmware automated testing is rare in practice because setting it up against real hardware is complicated, which is the gap that device simulation targets.",
+   "quote_verbatim": "I know most people just don't do it because it's pretty complicated to do with real hardware",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Running each new build against a simulated device rather than physical hardware covers most of the behaviour of interest and is a reasonable gate before promoting a build to a real integration-level test on hardware.",
+   "quote_verbatim": "that might get you 98% of the way there",
+   "speaker": "Chris Gammell",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Tuning a few firmware constants against environmental variation required physically carrying the device to different rooms and returning at different times of day, a manual matrix that simulation collapses into repeatable automated runs.",
+   "quote_verbatim": "all I wanted to do was just tweak a few numbers in the firmware to find a combination that works best in all the scenarios",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Running a physical test sequence once or twice by hand is acceptable, but repeating it introduces human error into the results, which makes repeated manual verification the natural first candidate for automation.",
+   "quote_verbatim": "there's human error that like comes into there. So like, this is just a perfect place for automation.",
+   "speaker": "Chris Gammell",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "In a hardware-in-the-loop flow, a precision current measurement instrument can be folded into the same run that executes the functional tests, so current and energy consumption are recorded as a tracked metric over time rather than measured only when someone suspects a problem.",
+   "quote_verbatim": "you push up your changes, you run whatever tests you would normally run, and as part of that, you also measure your current or energy consumption",
+   "speaker": "Matt Liberty",
+   "episode": 607,
+   "episode_title": "The Joulescope Upgrade with Matt Liberty",
+   "episode_url": "https://theamphour.com/607-the-joulescope-upgrade-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Exhaustive testing of a configurable instrument is physically impossible, because the number of permutations of settings grows far faster than any test budget; coverage decisions therefore have to select which configurations matter rather than aiming for completeness.",
+   "quote_verbatim": "you can't run it through every test, every permutation. You can't, you physically can't do it.",
+   "speaker": "Chris Gammell",
+   "episode": 619,
+   "episode_title": "Super Tecmo Bug",
+   "episode_url": "https://theamphour.com/619-super-tecmo-bug/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Configuration-dependent performance regressions are a real failure class in instrument firmware: enabling a single horizontal measurement on an oscilloscope dropped waveform processing and update rate by about three orders of magnitude, a defect invisible to any test that does not exercise that specific combination.",
+   "quote_verbatim": "causes like three orders of magnitude drop in update in waveform processing and update rate speed",
+   "speaker": "Chris Gammell",
+   "episode": 619,
+   "episode_title": "Super Tecmo Bug",
+   "episode_url": "https://theamphour.com/619-super-tecmo-bug/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Using a company's own programmable instruments to manufacture and calibrate the next generation of those instruments tests the scripting interface in the loop, but risks generational calibration drift, so a separately traceable calibrated multimeter is placed in series as the reference.",
+   "quote_verbatim": "in order not to introduce generational degrade there is a least traceable calibrated multimeter in series",
+   "speaker": "Werner Johansson",
+   "episode": 640,
+   "episode_title": "Software Defined Power Supplies with Werner Johansson",
+   "episode_url": "https://theamphour.com/640-software-defined-power-supplies-with-werner-johansson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Vacuum tube burn-in was automated with an electromechanical timer that sequenced racks and rows, holding the heaters on continuously and switching each rack under load for a measured period overnight before the tubes were pulled the next day.",
+   "quote_verbatim": "it would put the racks under load for a measured period of time",
+   "speaker": "Fran Blanche",
+   "episode": 647,
+   "episode_title": "Dave hanging with Fran Blanche",
+   "episode_url": "https://theamphour.com/647-dave-hanging-with-fran-blanche/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The automated tester that followed burn-in ran each tube individually through a cycle of measurements, and the resulting parameter data was used to match tubes into sets rather than only to pass or fail them.",
+   "quote_verbatim": "it would run each tube individually in the tester and put it through these various cycles, take measurements",
+   "speaker": "Fran Blanche",
+   "episode": 647,
+   "episode_title": "Dave hanging with Fran Blanche",
+   "episode_url": "https://theamphour.com/647-dave-hanging-with-fran-blanche/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Production test software has an extremely long service life and pins the factory to obsolete platforms: test racks built around Windows 3.1.1 were still in production use into the late 2000s.",
+   "quote_verbatim": "I still had production test racks running Windows 3.1.1 into the late 2000s.",
+   "speaker": "Dave Jones",
+   "episode": 647,
+   "episode_title": "Dave hanging with Fran Blanche",
+   "episode_url": "https://theamphour.com/647-dave-hanging-with-fran-blanche/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Moving from prototype to high-volume manufacturing has prerequisites in the board itself, since a prototype-level design cannot be run through a high-volume setup unchanged; building the test automation solution is part of that transition work.",
+   "quote_verbatim": "You can't have a prototype level board to be manufactured in very high volume setup.",
+   "speaker": "Pallav Aggarwal",
+   "episode": 661,
+   "episode_title": "Blogging Electronics with Pallav Aggarwal",
+   "episode_url": "https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Physical testing dominates development time for embedded control systems, consuming roughly 80 percent of the effort on university drone and sensor work, because each scenario requires holding hardware and mounting things in the real world.",
+   "quote_verbatim": "like 80% of the time was just testing",
+   "speaker": "Michael Gielda",
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Field testing of a physical system is always incomplete, not because engineers lack the ability but because the effort per additional scenario is high enough that coverage stops well short of what the design warrants.",
+   "quote_verbatim": "you still don't test everything because you like you can't be bothered to",
+   "speaker": "Michael Gielda",
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Simulated targets change the economics of coverage in two ways: additional scenarios cost only compute and parallelise across many servers, so a thousand simulation runs can execute simultaneously.",
+   "quote_verbatim": "you can have a thousand Renode runs across a thousand servers",
+   "speaker": "Michael Gielda",
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A simulated system that spends most of its time reading, writing and sleeping can have its time base compressed, so a week of real behaviour is exercised in about fifteen minutes; the technique breaks down when the system is busy-looping, which is hard to simulate faster than real time.",
+   "quote_verbatim": "you can take like a week's worth of data and compress that to, let's say, 15 minutes",
+   "speaker": "Michael Gielda",
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Manufacturing test is a distinct discipline from bench test, driven largely by software and instrument drivers, and its optimisation targets are throughput, test time per unit, and deciding how much really needs to be tested at all.",
+   "quote_verbatim": "They're concerned about throughput and, you know, how quickly can I test this and how much do I really need to test",
+   "speaker": "Martin Rowe",
+   "episode": 714,
+   "episode_title": "The Measurement Blues with Martin Rowe",
+   "episode_url": "https://theamphour.com/714-the-measurement-blues-with-martin-rowe/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "Passage 0 is labelled Chris Gammell but the content answering the cost question is the interviewee describing his own factory's paid-off test equipment; attributed to John Edmond by content.",
+  "Passage 13 is labelled Alvaro Prieto, but the design-versus-assembly distinction is spoken by the interviewer addressing Alvaro by name; attributed to Chris Gammell.",
+  "Passage 14 is flagged ATTRIB-UNRELIABLE and labelled Jason Huggins; the speaker recounting work at a test equipment company where calibration setup dominated is the host, so attributed to Chris Gammell.",
+  "Passages 15, 16, 17 and 18 are flagged ATTRIB-UNRELIABLE but the content is the guest describing his own robot-based test automation business; attributed to Jason Huggins by content.",
+  "Passage 20 is labelled Chris Gammell; the person who states they designed the high-speed production test equipment is the guest, so attributed to Julia Truchsess.",
+  "Passage 21 is flagged ATTRIB-UNRELIABLE but the content is the guest describing his own USB hub product; attributed to Chris Osterwood.",
+  "Passage 24 is flagged ATTRIB-UNRELIABLE and contains both voices: the observation about hardware pass criteria being ill-defined is the host, and the account of a build server jogging a 3D printer through unit tests is the guest describing his own prior employer, attributed to Kyle Dumont.",
+  "Passage 34 is labelled Chris Gammell; the description of making remote hardware testing work without a DevOps burden is the guest describing his own product, attributed to Akbar Dhanaliwala.",
+  "Passages 42 and 43 are labelled only 'Michael'; the content is the guest explaining product lifecycle tooling, attributed to Michael Corr.",
+  "Passage 46 contains both voices: the point that firmware test automation is rarely done because real hardware makes it complicated is the guest, and the estimate that simulation covers most of the way before integration test is the host.",
+  "Passage 47 is labelled Chris Gammell; the account of carrying a device between rooms at different times of day to tune firmware constants is the guest's own story, attributed to Uri Shaked, while the remark about human error in repeated manual testing is the host.",
+  "Passage 48 is labelled Chris Gammell; the description of how customers use the instrument in hardware-in-the-loop test is the guest answering, attributed to Matt Liberty.",
+  "Passage 53 mixes voices: the burn-in and tube-matching machinery is the guest's account of her own production line, while the remark about production test racks still running Windows 3.1.1 into the late 2000s is the co-host, attributed to Dave Jones."
+ ],
+ "capped": false
+}

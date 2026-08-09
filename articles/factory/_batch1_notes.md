@@ -101,3 +101,8 @@
   vendor-history→history, cost→numbers, reference→history. Applied centrally
   to 923 claims in 42 packets; batch-3+ extractors emit the ten-term set
   directly.
+- **Enrichment lead**: chips-and-fabs-and-garages published 2010-10-22 (ep 1 =
+  2010-08-07, weekly cadence → likely episode ~11-13, unconfirmed). Resolving
+  it would unlock 7+ passages of semiconductor-process material for wafer /
+  semiconductor-fab. Site page and sitemap carry no number; needs archive.org
+  or RSS-history confirmation.

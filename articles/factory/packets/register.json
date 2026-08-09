@@ -1,0 +1,420 @@
+{
+ "concept": "register",
+ "name": "Register",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "register",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "register"
+  ],
+  "children": [],
+  "neighbors": {},
+  "episodes_with_kept_mentions": 42,
+  "mentions_kept": 51,
+  "pins_pre_cap": 45,
+  "pins_final": 45,
+  "pins_by_depth": {
+   "explains": 43,
+   "opinion": 2
+  },
+  "pins_by_role": {
+   "core": 45
+  },
+  "speakers": [
+   [
+    "Chris Gammell",
+    14
+   ],
+   [
+    "Dave Jones",
+    13
+   ],
+   [
+    "Ben Eater",
+    4
+   ],
+   [
+    "Piotr Esden-Tempski",
+    2
+   ],
+   [
+    "Matt Venn",
+    2
+   ],
+   [
+    "Colin O'Flynn",
+    1
+   ],
+   [
+    "Zach Barth",
+    1
+   ],
+   [
+    "Tim Ansell",
+    1
+   ],
+   [
+    "Scott Shawcroft",
+    1
+   ],
+   [
+    "Travis Goodspeed",
+    1
+   ],
+   [
+    "John Day",
+    1
+   ],
+   [
+    "Jared Wolff",
+    1
+   ],
+   [
+    "Carmen",
+    1
+   ],
+   [
+    "Brian Amos",
+    1
+   ],
+   [
+    "Mark Palmeri",
+    1
+   ]
+  ],
+  "capped": false,
+  "gated_out_by_concept": [],
+  "gated_out_total": 0
+ },
+ "claims": [
+  {
+   "claim_text": "A register sits at a specific rung of a ladder that runs from semiconductor to transistor to logic gate to latch to register, and from there to counters, memory and a whole processor. Understanding it as latches with a shared control rather than as an abstract storage location is what makes the layers above it legible.",
+   "quote_verbatim": "do you build a latch from logic gates? And then how do you build a register from latches",
+   "speaker": "Ben Eater",
+   "episode": 444,
+   "episode_title": "An Interview with Ben Eater",
+   "episode_url": "https://theamphour.com/444-an-interview-with-ben-eater/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Most of what a computer does is move data between registers. Each register hangs off a shared bus with two control signals — one to drive its contents onto the bus and one to latch what is on the bus — and the entire discipline is that only one register may drive at a time.",
+   "quote_verbatim": "the registers are hooked into a bus and then at any point in time, a register can either be spitting its content onto the bus",
+   "speaker": "Ben Eater",
+   "episode": 444,
+   "episode_title": "An Interview with Ben Eater",
+   "episode_url": "https://theamphour.com/444-an-interview-with-ben-eater/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A working processor is a clock, an arithmetic unit, some registers and a data path connecting them, and that whole structure comes together in a few hundred lines of hardware description — which is why building one is a tractable exercise rather than an industrial project.",
+   "quote_verbatim": "need an ALU. You need some registers. You need like a couple, you need a data path",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A bit-serial processor takes the register width down to one bit and executes each operation repeatedly — sixteen passes where a parallel machine takes one. It is extremely slow and extremely small, which is exactly the trade that wins where die area is the scarce resource.",
+   "quote_verbatim": "it has a one bit wide register. So you have to execute 16 times",
+   "speaker": "Matt Venn",
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Most peripheral chips are nothing more than a set of registers hanging off a bus, driven by a simple state machine rather than anything intelligent — which is why talking to one is a matter of knowing the map rather than negotiating a protocol.",
+   "quote_verbatim": "like a set of registers hanging off a bus",
+   "speaker": "Chris Gammell",
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Before microcontrollers absorbed their peripherals, a separate interface adapter sat on the processor bus supplying the latch, the direction control and the output register — precisely the port and direction registers that are now inside the part, but as a chip you had to buy and wire up.",
+   "quote_verbatim": "it would contain like a, um, latch signal and, you know, direction control",
+   "speaker": "John Day",
+   "episode": 485,
+   "episode_title": "An Interview with John Day",
+   "episode_url": "https://theamphour.com/485-an-interview-with-john-day/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A complex serialiser can carry hundreds of configuration registers, and deriving each field from the datasheet is a week of full-time work before anything runs. Starting from the vendor's default configuration and changing what you need is not laziness — it is the only proportionate approach.",
+   "quote_verbatim": "some of them have, well, I can't remember exactly, but they might even have hundreds of registers",
+   "speaker": "Dave Jones",
+   "episode": 148,
+   "episode_title": "Contextual Electronics, ClubJameco and Solderpaste - Lifelong Learning Likelihood",
+   "episode_url": "https://theamphour.com/the-amp-hour-148-lifelong-learning-likelihood/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A measurement chipset with hundreds of registers will produce confidently wrong results when configured incorrectly rather than failing to start, and the only consolation is that the mistake lives in software and can be corrected without touching hardware.",
+   "quote_verbatim": "there's hundreds of registers in there that if you don't set them up, right, you're going to completely come a gutter",
+   "speaker": "Dave Jones",
+   "episode": 455,
+   "episode_title": "Bill and Dave's Excellent Equipment",
+   "episode_url": "https://theamphour.com/455-bill-and-daves-excellent-equipment/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A common processor core does not make two vendors' parts interchangeable. The core-level code ports, and every peripheral, register layout, clock tree, timer, serial port and converter setup is specific to the manufacturer — which is where the real cost of switching vendors sits.",
+   "quote_verbatim": "all the peripherals, all the registers, they're all different",
+   "speaker": "Dave Jones",
+   "episode": 455,
+   "episode_title": "Bill and Dave's Excellent Equipment",
+   "episode_url": "https://theamphour.com/455-bill-and-daves-excellent-equipment/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A part with many registers, operating modes and internal multiplexers fails subtly rather than obviously. Route a signal through the wrong internal path and the device still produces plausible numbers, which is far harder to diagnose than a part that simply does not respond.",
+   "quote_verbatim": "you didn't use the right input mux path",
+   "speaker": "Dave Jones",
+   "episode": 380,
+   "episode_title": "Just Terrestrial and Space Things",
+   "episode_url": "https://theamphour.com/380-just-terrestrial-and-space-things/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Register paging is a recurring trap: the write appears to succeed and lands somewhere else entirely because the peripheral was pointing at a different page. Nothing in the code looks wrong, which is what makes it expensive to find.",
+   "quote_verbatim": "you're on the wrong page. Change the page before you write to a value",
+   "speaker": "Chris Gammell",
+   "episode": 479,
+   "episode_title": "Why isn't this working?",
+   "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Direct register access through a named macro is often clearer and carries less overhead than the vendor's abstraction layer. The abstraction exists to let you change chips later, so the question is whether portability is worth paying for on this project.",
+   "quote_verbatim": "there's basically there's a macro that assigns a value or a register name to it",
+   "speaker": "Chris Gammell",
+   "episode": 479,
+   "episode_title": "Why isn't this working?",
+   "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Configuring a peripheral is setting switches in registers and nothing more. A prescaler of 48,000 against a 48 MHz clock produces one-millisecond ticks, a count target of a thousand produces one second, and the timer hardware does the rest without further involvement.",
+   "quote_verbatim": "say the prescaler is 48, 48,000",
+   "speaker": "Chris Gammell",
+   "episode": 460,
+   "episode_title": "Rubber Ducking",
+   "episode_url": "https://theamphour.com/460-rubber-ducking/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A digital interface on an analog part is often a thin wrapper: writing a register to change a compensation gain from twenty to thirty decibels physically switches resistors and capacitors, or alters a transistor's bias to change an amplifier's gain. The interface is digital and the thing being changed is not.",
+   "quote_verbatim": "you're writing a register saying, adjust the compensation gain",
+   "speaker": "Carmen",
+   "episode": 566,
+   "episode_title": "Switching Converter Engineering with Carmen Parisi",
+   "episode_url": "https://theamphour.com/566-switching-converter-engineering-with-carmen-parisi/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Moving data out of a register onto the internal bus charges the capacitance of each line driven high, and that costs measurable power. Watching consumption on every clock edge therefore reveals how many bus lines went high, which is the foundation of power analysis against a running chip.",
+   "quote_verbatim": "those data lines high is basically charging a very small capacitor",
+   "speaker": "Colin O'Flynn",
+   "episode": 239,
+   "episode_title": "An Interview with Colin O'Flynn - Aspirated Adamantine Attacks",
+   "episode_url": "https://theamphour.com/239-an-interview-with-colin-oflynn-aspirated-adamantine-attacks/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The efficient way onto an unfamiliar peripheral is to pull in the vendor's example, get it compiling and producing a value — accepting that the value may be nonsense because the channel or mode is wrong — and only then go into the datasheet for the register settings you actually want. Starting from a blank page costs days and buys nothing.",
+   "quote_verbatim": "just pull in the example and it's, you know, it shows me how to set up the registers",
+   "speaker": "Dave Jones",
+   "episode": 617,
+   "episode_title": "Conference Room Innovation",
+   "episode_url": "https://theamphour.com/617-conference-room-innovation/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A configuration tool that offers every register value in a dropdown is not documentation. An engineer can read the datasheet and understand each register individually and still have no idea how to combine them for a particular job; worked examples are the thing that is missing and the thing that is hardest to find.",
+   "quote_verbatim": "just get a dropdown of all of the register values essentially. Right. And that doesn't help me",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "There are exactly two honest routes through a complex initialisation: start from a project known to work, or commit real time to the reference manual and verify each setting. What does not work is expecting a configuration tool to remove the need for either.",
+   "quote_verbatim": "you either need to start from a project like you were offering here, or you need to be prepared for some time with the reference manual",
+   "speaker": "Brian Amos",
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A library call to toggle a pin expands to many instructions, and the cost is measurable: a 24 MHz part managed just under one megahertz of pin toggling through the standard call, where a direct write to the port register compiles to a single instruction.",
+   "quote_verbatim": "using the regular C library with a 24 meg processor clock, it only toggled at one, just under one meg",
+   "speaker": "Dave Jones",
+   "episode": 617,
+   "episode_title": "Conference Room Innovation",
+   "episode_url": "https://theamphour.com/617-conference-room-innovation/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A function taking a bank and a pin replaces manually shifting a bit into position and writing the register. It costs source size and reads far better, and for most uses it compiles down to the same thing — the exception being the paths where the instruction count actually matters.",
+   "quote_verbatim": "you can just call a function with two parameters. It's the bank and the GPIO pin",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Print the register map on paper for any part that has one. Two screens do not substitute, because the value of paper here is being able to mark it up and hold several pages side by side while working through a configuration.",
+   "quote_verbatim": "with a register map, definitely have that in paper right next to me",
+   "speaker": "Chris Gammell",
+   "episode": 219,
+   "episode_title": "Get Smart About Automation - Caducous Cyborg Concerns",
+   "episode_url": "https://theamphour.com/219-get-smart-about-automation-caducous-cyborg-concerns/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Halting at a breakpoint and inspecting registers is a clumsy way to understand what firmware is doing. Getting a serial channel working first, so values can be streamed out continuously, changes the character of the work more than any debugger feature.",
+   "quote_verbatim": "real turning point for me was having a serial interface",
+   "speaker": "Chris Gammell",
+   "episode": 142,
+   "episode_title": "Kickstarter, IndieGoGo & Ignite - Jasperated Jimswinger Jobbery",
+   "episode_url": "https://theamphour.com/the-amp-hour-142-jasperated-jimswinger-jobbery/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Exploring an unfamiliar register set is much faster from a host-side scripting environment than from compiled firmware: try the settings interactively until the behaviour is right, and port to C only once it is known to work.",
+   "quote_verbatim": "you're probably just deep into the register set and trying different things",
+   "speaker": "Travis Goodspeed",
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A host-side bridge to the internal bus lets scripts on a workstation read and write the registers of peripherals inside an FPGA. The same scripts later run on a soft processor within the device itself, with the bridge removed and the addresses now local — the interface stays identical either side of that move.",
+   "quote_verbatim": "you can write Python scripts on your host computer that read and write registers for the peripherals",
+   "speaker": "Tim Ansell",
+   "episode": 375,
+   "episode_title": "An Interview with Tim \"Mithro\" Ansell",
+   "episode_url": "https://theamphour.com/375-an-interview-with-tim-mithro-ansell/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Debug and programming interfaces are less mysterious than they look: underneath, the tool is reading and writing registers. The same interface also supports boundary scan, which reads the state of the physical pins directly for testing rather than for programming.",
+   "quote_verbatim": "it's actually just like reading and writing registers in order to program a chip",
+   "speaker": "Chris Gammell",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The teaching machines of an earlier era exposed every register with its own row of lamps, so a student could watch a value transfer from one register to another. A front panel with a single set of eight lamps shows the result and hides the mechanism, which is the part worth seeing.",
+   "quote_verbatim": "you have eight LEDs on every register",
+   "speaker": "Dave Jones",
+   "episode": 238,
+   "episode_title": "Old Books, New Tricks - Iterant Inscription Irrationality",
+   "episode_url": "https://theamphour.com/238-old-books-new-tricks-iterant-inscription-irrationality/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Working at the lowest level reduces to a repeated question asked of the datasheet — which register has to change to make this happen — and the discipline is being systematic about answering it rather than guessing from an example.",
+   "quote_verbatim": "what register do I need to change to get this thing to start a timer",
+   "speaker": "Jared Wolff",
+   "episode": 509,
+   "episode_title": "Cellular IoT with Jared Wolff",
+   "episode_url": "https://theamphour.com/509-cellular-iot-with-jared-wolff/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Opening a beginner's introduction with the data direction register loses the beginner. Get them to something that visibly works first and introduce the underlying registers once there is a reason to care — accepting that this genuinely does gloss over detail, which is the point.",
+   "quote_verbatim": "now you have to learn about registers and now this is the data direction register",
+   "speaker": "Chris Gammell",
+   "episode": 11,
+   "episode_title": "Ardui...no Dave This Week?",
+   "episode_url": "https://theamphour.com/the-amp-hour-11-ardui-no-dave-this-week/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The opposite position is equally defensible for someone who has decided they want embedded work: learn from the bottom up, understand how the registers behave, and treat that as separate from learning to program. Which order suits depends on whether the goal is a working project or a career.",
+   "quote_verbatim": "try to learn it from bottom up. So try to understand how the registers work",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Learning on a specific part rather than a generic simulator is what makes the knowledge transfer. The durable skills are talking to registers, writing legible code and troubleshooting hardware you have written code for — none of which are properties of the particular chip, but all of which need a particular chip to be learned at all.",
+   "quote_verbatim": "you're really learning is like how to talk to registers",
+   "speaker": "Chris Gammell",
+   "episode": 413,
+   "episode_title": "A House of FR4",
+   "episode_url": "https://theamphour.com/413-a-house-of-fr4/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A driver is the layer that turns a register map into something a program can use: it knows the acceleration reading lives at a particular address and presents it as a named value or a file. Somebody wrote that mapping by hand from the datasheet, once, for everybody else's benefit.",
+   "quote_verbatim": "that is the driver piece, right, where it's basically abstracting that register set",
+   "speaker": "Chris Gammell",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Moving a serial port from one instance to another inside an embedded operating system took a month, because the register values were scattered across roughly ten places in the source tree. The register itself was never the hard part — finding every place that assumed the old one was.",
+   "quote_verbatim": "there's like 10 different places in the kernel source tree that I had to go find and change these register values",
+   "speaker": "Chris Gammell",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  }
+ ],
+ "attribution_notes": [
+  "attribution_reliable was not trusted. ep444 (Ben Eater), ep485 (John Day), ep566 (Carmen Parisi), ep581 (Brian Amos), ep442 (Travis Goodspeed) and ep455 label host questions with the guest's name; only material unambiguously the guest's own was used.",
+  "ep455's remarks about multimeter chipsets and ARM vendor portability are Dave Jones's own and are attributed to him by content despite the episode's unreliable flag.",
+  "ep11 and ep356 are kept deliberately as a pair because they state opposing teaching positions; both are anchored in the speaker's own experience and neither is presented as settled.",
+  "Passing mentions of specific development boards, IDE preferences and pinout stickers were excluded as non-transferable."
+ ],
+ "capped": false
+}

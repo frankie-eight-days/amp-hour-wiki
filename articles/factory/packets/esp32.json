@@ -1,0 +1,687 @@
+{
+ "concept": "esp32",
+ "name": "ESP32",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "esp32",
+  "census": "union",
+  "aliases": [
+   "esp32",
+   "esp32-board"
+  ],
+  "children": [
+   "bluesky",
+   "dual-core-processor",
+   "esp32-module",
+   "power-gating",
+   "yaml"
+  ],
+  "neighbors": {
+   "stm32": 10,
+   "espressif": 8
+  },
+  "pins_pre_cap": 74,
+  "pins_final": 74,
+  "pins_by_depth": {
+   "explains": 47,
+   "opinion": 27
+  },
+  "pins_by_role": {
+   "core": 66,
+   "child": 6,
+   "neighbor": 2
+  },
+  "capped": false,
+  "passages_yielding_claims": 43,
+  "passages_killed": 31
+ },
+ "claims": [
+  {
+   "claim_text": "The part was originally intended as asymmetric multiprocessing — two cores behaving as though two separate microcontrollers had been placed side by side with a communication bus between them.",
+   "quote_verbatim": "you have a dual core, but it's essentially looks like you took like in two discrete microcontrollers and just smashed them together with a communication bus in between",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Sharing memory regions between the cores is what converted it into a symmetric multiprocessor, and the operating system it runs had to be extended to handle two cores before that was possible.",
+   "quote_verbatim": "if we could share some memory regions, then we can essentially make a symmetric multi-core processor",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The benefit is that threads become transparent to the programmer: a thread can be pinned to a named core when control matters, or left for whichever core has the most free time when throughput matters, and the usual inter-thread communication works either way.",
+   "quote_verbatim": "run my thread on whichever CPU has the most free time",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Memory dominates the die. Around half a megabyte of RAM accounts for roughly three quarters of the silicon area, which is the physical reason the on-chip memory budget is what it is.",
+   "quote_verbatim": "I think we have like in half a megabyte of RAM",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "That budget is also why a full operating system was never a candidate: running Linux would demand external memory, and at those sizes that means an external DDR part with high-speed signalling, which is a different product rather than a firmware choice.",
+   "quote_verbatim": "you're almost forced to add an external DDR",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "There are effectively three processors, not two: two identical fast cores plus a separate ultra-low-power core intended to keep running when the rest is asleep.",
+   "quote_verbatim": "two fast ones. These are exactly the same. So it's a dual core processor. And the third one is this low power one.",
+   "speaker": "Andreas Spiess",
+   "episode": 435,
+   "episode_title": "An Interview with Andreas Spiess",
+   "episode_url": "https://theamphour.com/435-an-interview-with-andreas-spiess/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Using both fast cores does roughly double the available compute, but it is not automatic — the two have to be synchronised, which puts a genuine software burden on the developer.",
+   "quote_verbatim": "you have to synchronize the two and so on",
+   "speaker": "Andreas Spiess",
+   "episode": 435,
+   "episode_title": "An Interview with Andreas Spiess",
+   "episode_url": "https://theamphour.com/435-an-interview-with-andreas-spiess/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Later members of the family deliberately step back from that: a single-core variant shares time on the same core that runs the radio stack, trading the second core for lower power.",
+   "quote_verbatim": "This one is not dual core.",
+   "speaker": "Chris Gammell",
+   "episode": 500,
+   "episode_title": "Two and a Half Orders of Magnitude",
+   "episode_url": "https://theamphour.com/500-two-and-a-half-orders-of-magnitude/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The same variant added a USB peripheral in hardware, so the data lines connect straight to the chip and the separate serial-conversion chip that used to be required disappears from the board.",
+   "quote_verbatim": "It's got a USB hardware core in it",
+   "speaker": "Chris Gammell",
+   "episode": 500,
+   "episode_title": "Two and a Half Orders of Magnitude",
+   "episode_url": "https://theamphour.com/500-two-and-a-half-orders-of-magnitude/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The family has since extended to parts with no radio at all — a dual-core four-hundred-megahertz design with a slower low-power core alongside, from a vendor otherwise known entirely for connectivity.",
+   "quote_verbatim": "it is a dual-core, 400 megahertz, with a secondary 40 megahertz",
+   "speaker": "Chris Gammell",
+   "episode": 615,
+   "episode_title": "Augmented Engineering",
+   "episode_url": "https://theamphour.com/615-augmented-engineering/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The naming is a genuine hazard for a reader: parts sharing the base name differ only by a suffix while using completely different processor architectures, and it is the peripheral set rather than the core that stays consistent across them.",
+   "quote_verbatim": "it's really the peripherals that are going to be very similar",
+   "speaker": "Dave Jones",
+   "episode": 554,
+   "episode_title": "PLEASE be a die shrink",
+   "episode_url": "https://theamphour.com/554-please-be-a-die-shrink/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Recent parts move to an open instruction set and add a second radio band, putting both common Wi-Fi bands on an inexpensive chip.",
+   "quote_verbatim": "it's also got dual frequency",
+   "speaker": "Chris Gammell",
+   "episode": 597,
+   "episode_title": "Wow, Dave REALLY likes Top Gun",
+   "episode_url": "https://theamphour.com/597-wow-dave-really-likes-top-gun/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The gap these parts fill is a market position rather than a capability: the earlier single-core part was judged too simple to serve as a standalone connected microcontroller, while the dual-core successor overshot in the other direction.",
+   "quote_verbatim": "it's too simple to be a standalone Wi-Fi microcontroller for their purposes",
+   "speaker": "Jeroen Domburg",
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "What most designs actually buy is a module, not a chip: under the metal can the processor is soldered to a small circuit board alongside a separate eight-pin package, with the working memory internal to the processor itself.",
+   "quote_verbatim": "the chip itself is, is soldered to what is a tiny circuit board",
+   "speaker": "Chris Gammell",
+   "episode": 406,
+   "episode_title": "Nerds In A Corner",
+   "episode_url": "https://theamphour.com/406-nerds-in-a-corner/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The reason to buy the assembly rather than the part is that the module carries the radio certification with it.",
+   "quote_verbatim": "that whole module is, you know, FCC certified",
+   "speaker": "Chris Gammell",
+   "episode": 406,
+   "episode_title": "Nerds In A Corner",
+   "episode_url": "https://theamphour.com/406-nerds-in-a-corner/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "That external memory is also the security weak point: the storage sits under the shield as a discrete chip, so disabling every debug interface still leaves an attacker able to remove the shield, desolder the part and read it.",
+   "quote_verbatim": "you can still open that up, de-solder that",
+   "speaker": "Matt Brown",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Module footprints in datasheets share a general problem with package drawings — they are rarely dimensioned from the centre of the part, showing pad-to-pad spacing and a central thermal pad instead.",
+   "quote_verbatim": "It shows the relative distance between the pads on the outside of this module",
+   "speaker": "Dave Jones",
+   "episode": 408,
+   "episode_title": "Tronnort Software Rises Again!",
+   "episode_url": "https://theamphour.com/408-tronnort-software-rises-again/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Flash encryption is available in the vendor's software kit but is not the default, and a product that skips it stores its private keys in plain readable form.",
+   "quote_verbatim": "it is an option in their SDK to encrypt flash",
+   "speaker": "Matt Brown",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A worse lifecycle failure is not rotating those keys: on one device they survived a factory reset and transfer to a different account, so the credential stayed bound to the hardware rather than to the owner.",
+   "quote_verbatim": "those keys just stayed in there across a factory reset",
+   "speaker": "Matt Brown",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The identity itself was a key and certificate pair doing mutual authentication against the cloud service, tied to the serial number of the individual unit.",
+   "quote_verbatim": "it was doing mutual TLS authentication with the AWS server",
+   "speaker": "Matt Brown",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The stronger arrangement is secure boot to prevent modified firmware loading, plus a separate security part holding the cryptographic keys used to encrypt the storage.",
+   "quote_verbatim": "there would one be secure boot that would prevent",
+   "speaker": "Matt Brown",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A dedicated secure element earns its place through physical measures a general-purpose part does not have: a mesh laid over the die that defeats imaging and physical probing, on top of the logical protections.",
+   "quote_verbatim": "They put like a mesh over the die and stuff like that",
+   "speaker": "Chris Gammell",
+   "episode": 656,
+   "episode_title": "Pneumatic Tubes, Straight To The Home",
+   "episode_url": "https://theamphour.com/656-pneumatic-tubes-straight-to-the-home/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Getting code to run remotely on a microcontroller is substantially harder than on a device running a full operating system, which is the main thing standing between a vulnerability and a compromise.",
+   "quote_verbatim": "it's always a question of like, well, how, how do I get, how do I get remote code execution",
+   "speaker": "Matt Brown",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "If that barrier is crossed, the device becomes a foothold: anything properly joined to the home network can be used to reach the other devices on it.",
+   "quote_verbatim": "they could hop onto that, onto that network and then start attacking other devices",
+   "speaker": "Matt Brown",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Only five or six processor families account for the overwhelming majority of connected consumer devices, which concentrates both the tooling and the attack surface.",
+   "quote_verbatim": "there's maybe like five or six different processors that, that go into like 95% of these devices",
+   "speaker": "Keith Burzinski",
+   "episode": 657,
+   "episode_title": "Automating the Home with Keith Burzinski",
+   "episode_url": "https://theamphour.com/657-automating-the-home-with-keith-burzinski/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Some vendors respond by choosing deliberately obscure parts, which is security through obscurity and does not survive contact with a determined attacker.",
+   "quote_verbatim": "some of it is just security through obscurity",
+   "speaker": "Keith Burzinski",
+   "episode": 657,
+   "episode_title": "Automating the Home with Keith Burzinski",
+   "episode_url": "https://theamphour.com/657-automating-the-home-with-keith-burzinski/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Handing Wi-Fi credentials to a device is easier over the short-range radio — the phone application connects, the two negotiate, and the credentials pass across — but the underlying problem may not be solvable in the wireless standard, because most proposed fixes open a security hole of their own.",
+   "quote_verbatim": "anything you try to do to solve it probably is a security hole",
+   "speaker": "Elecia White",
+   "episode": 422,
+   "episode_title": "Stick 'Em On Whales",
+   "episode_url": "https://theamphour.com/422-stick-em-on-whales/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Field updates need both halves: the part provides a bootloader capable of over-the-air replacement, and the software above it has to manage receiving a new image while running the old one and swapping between them.",
+   "quote_verbatim": "I receive a piece of a new chunk of firmware. I'm running my old firmware. I try to swap them out",
+   "speaker": "Chris Gammell",
+   "episode": 422,
+   "episode_title": "Stick 'Em On Whales",
+   "episode_url": "https://theamphour.com/422-stick-em-on-whales/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Idle current is the recurring reason not to use one: a design that must sleep for long periods is better served by pairing it with a small always-on microcontroller that wakes the larger part and cuts its supply rail again afterwards.",
+   "quote_verbatim": "it still has really high idle current",
+   "speaker": "Chris Gammell",
+   "episode": 565,
+   "episode_title": "Here for a reason",
+   "episode_url": "https://theamphour.com/565-here-for-a-reason/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Inrush at start-up is large enough to matter physically — on a connection with appreciable path resistance the part will not come up unless the supply connection is doubled up.",
+   "quote_verbatim": "when they're starting up draw a ton of power",
+   "speaker": "Kevin Cappuccio",
+   "episode": 689,
+   "episode_title": "A Jumperless Breadboard with Kevin Cappuccio",
+   "episode_url": "https://theamphour.com/689-a-jumperless-breadboard-with-kevin-cappuccio/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "It also works well as the second processor in a system rather than the only one, driving a display alongside a conventional microcontroller doing the real-time work.",
+   "quote_verbatim": "We've got the STM32 and an ESP32",
+   "speaker": "Daryl Tewksbury",
+   "episode": 521,
+   "episode_title": "Outdoor Laser Projection & Object Mapping with Daryl Tewksbury",
+   "episode_url": "https://theamphour.com/521-outdoor-laser-projection-object-mapping-with-daryl-tewksbury/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "What makes that partitioning comfortable is the switching fabric between peripherals and pins, which lets functions be routed to whichever pins the layout wants on a part with relatively few of them.",
+   "quote_verbatim": "I really like the switching fabric around the pins",
+   "speaker": "Daryl Tewksbury",
+   "episode": 521,
+   "episode_title": "Outdoor Laser Projection & Object Mapping with Daryl Tewksbury",
+   "episode_url": "https://theamphour.com/521-outdoor-laser-projection-object-mapping-with-daryl-tewksbury/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A working consultancy default looks like this: this family when the application needs Wi-Fi, a different vendor's part when it needs low-energy Bluetooth, and a general-purpose thirty-two-bit family for everything else.",
+   "quote_verbatim": "it's like ESP 32. If it's a wifi application",
+   "speaker": "Scott Williams",
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The discipline that keeps that from becoming laziness is staying deliberately uncommitted — selecting a part because it is familiar rather than because it fits is the failure being guarded against.",
+   "quote_verbatim": "you want to be tech agnostic as a consultancy",
+   "speaker": "Scott Williams",
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The visible symptom of that failure is a sixty-to-hundred-dollar embedded computer used where a four-dollar microcontroller would do, in a design that uses none of the interfaces the expensive part exists to provide.",
+   "quote_verbatim": "they're not even using USB, HDMI or camera",
+   "speaker": "Scott Williams",
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The same reasoning has a floor, though: dropping from a five-dollar part to a fifty-cent one is not worth a year spent learning an unfamiliar platform, because at realistic volumes the development cost exceeds the material saving.",
+   "quote_verbatim": "you're talking about development costs is more than the material costs over the volume",
+   "speaker": "Scott Williams",
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Having working example code already in hand is a legitimate selection criterion in its own right, not a shortcut to apologise for.",
+   "quote_verbatim": "if I've already got the example code for the ESP 32, I might just stick with the ESP 32",
+   "speaker": "Dave Jones",
+   "episode": 702,
+   "episode_title": "Test Point Accupuncture",
+   "episode_url": "https://theamphour.com/702-test-point-accupuncture/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The counterweight is knowing what the part is not for: a design that has to be genuinely dependable, or that needs serious processing headroom, is the case for paying someone properly rather than reaching for the cheap option.",
+   "quote_verbatim": "that's probably not the thing that you're going with",
+   "speaker": "Mike Szczys",
+   "episode": 403,
+   "episode_title": "An Interview with Mike Szczys",
+   "episode_url": "https://theamphour.com/403-an-interview-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "There is also a real cost of entry for a certain kind of engineer: working close to the hardware is harder here than on a small part, because the software kit is large and the dual-core arrangement complicates low-level code.",
+   "quote_verbatim": "there's a pain barrier for me to get into it",
+   "speaker": "Mike Szczys",
+   "episode": 403,
+   "episode_title": "An Interview with Mike Szczys",
+   "episode_url": "https://theamphour.com/403-an-interview-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The economics are what changed the design equation — two cores, both radios and a large peripheral set inside a certified module for a few dollars.",
+   "quote_verbatim": "you get a dual core with wifi and Bluetooth and a crap ton of peripherals",
+   "speaker": "Chris Gammell",
+   "episode": 422,
+   "episode_title": "Stick 'Em On Whales",
+   "episode_url": "https://theamphour.com/422-stick-em-on-whales/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "That is why the part shows up in projects that never switch the radio on at all: the processing is simply cheaper than the alternatives.",
+   "quote_verbatim": "it's $6 for a module that, like, is done",
+   "speaker": null,
+   "episode": 403,
+   "episode_title": "An Interview with Mike Szczys",
+   "episode_url": "https://theamphour.com/403-an-interview-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "During component shortages the family became a substitute for parts it was never meant to replace, including standing in as a USB-to-serial bridge when the dedicated bridge chips were unobtainable.",
+   "quote_verbatim": "The ESP USB bridge converts ESP32S2 or S3 into a USB to UART chip",
+   "speaker": "Dave Jones",
+   "episode": 587,
+   "episode_title": "Biblical Broker Bucks",
+   "episode_url": "https://theamphour.com/587-biblical-broker-bucks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The substitution makes more sense when the board already carries one for another purpose, because the same part can absorb the extra function and the increased volume works in the design's favour.",
+   "quote_verbatim": "say you were actually using an ESP32 on another part of your board",
+   "speaker": "Chris Gammell",
+   "episode": 587,
+   "episode_title": "Biblical Broker Bucks",
+   "episode_url": "https://theamphour.com/587-biblical-broker-bucks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The controller for the automotive bus is on the chip, but a transceiver is still required externally to drive the bus at its own voltage levels.",
+   "quote_verbatim": "it needs an external transceiver",
+   "speaker": "Florin Of Voltlog",
+   "episode": 568,
+   "episode_title": "YouTube to Consulting with Florin of Voltlog",
+   "episode_url": "https://theamphour.com/568-youtube-to-consulting-with-florin-of-voltlog/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "In that environment the supporting parts matter more than the processor: automotive high-side switches behave like a transistor with added protection against transients, over-temperature and over-current.",
+   "quote_verbatim": "it has some added intelligence. It has some added protection features.",
+   "speaker": "Florin Of Voltlog",
+   "episode": 568,
+   "episode_title": "YouTube to Consulting with Florin of Voltlog",
+   "episode_url": "https://theamphour.com/568-youtube-to-consulting-with-florin-of-voltlog/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The power conversion has to be automotive-grade for the same reason — an ordinary converter placed on a vehicle supply is likely to fail eventually under the transients present on that line.",
+   "quote_verbatim": "there are a lot of transients on the, like the 12 volt line on a typical car",
+   "speaker": "Florin Of Voltlog",
+   "episode": 568,
+   "episode_title": "YouTube to Consulting with Florin of Voltlog",
+   "episode_url": "https://theamphour.com/568-youtube-to-consulting-with-florin-of-voltlog/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "On the audio side the part carries two channels of digital audio output at twenty-four bits and a sample rate beyond consumer requirements, which is enough to drive four channels individually from one device.",
+   "quote_verbatim": "it has two channels, uh, of I2S output",
+   "speaker": "Jørgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with Jørgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A bare module is programmed with an ordinary serial adapter, with only reset and one boot-selection pin needing to be broken out.",
+   "quote_verbatim": "you can solder the module down onto their breakout that just has like a, a reset and a IO zero",
+   "speaker": "Zach Fredin",
+   "episode": 330,
+   "episode_title": "An Interview with Zach Fredin",
+   "episode_url": "https://theamphour.com/330-an-interview-with-zach-fredin/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The specification that made it interesting was a pair of two-hundred-and-forty-megahertz thirty-two-bit processors running a real-time operating system, with both flavours of short-range radio and Wi-Fi able to act as an access point or scan.",
+   "quote_verbatim": "it's a pair of, um, what 240 megahertz, 32 bit processors",
+   "speaker": "Zach Fredin",
+   "episode": 330,
+   "episode_title": "An Interview with Zach Fredin",
+   "episode_url": "https://theamphour.com/330-an-interview-with-zach-fredin/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The cost of the low price was documentation: the material was crowdsourced and, at launch, examples found on the vendor's forum were days old.",
+   "quote_verbatim": "they're crowdsourcing a lot of the documentation",
+   "speaker": "Zach Fredin",
+   "episode": 330,
+   "episode_title": "An Interview with Zach Fredin",
+   "episode_url": "https://theamphour.com/330-an-interview-with-zach-fredin/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Enough headroom lets the operator interface collapse into the device: serving the control page from the chip itself replaces the host-side sender application entirely.",
+   "quote_verbatim": "So you run it in your browser that is served from the ESP32 itself.",
+   "speaker": "Bart Dring",
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The same headroom moves preprocessing off the workstation — geometry that used to be worked out by a script beforehand can be broken down in real time as the machine runs.",
+   "quote_verbatim": "now that it's on the ESP32, I can actually do that in real time",
+   "speaker": "Bart Dring",
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Porting existing firmware to it is mostly mechanical when both sides are written in the same language, and the width change from eight to thirty-two bits is an opportunity to simplify arithmetic that existed only to work around the narrower registers.",
+   "quote_verbatim": "you can do some optimization because you are working in eight bits versus 32 bits",
+   "speaker": "Bart Dring",
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The productive order for such a port is outside-in: enumerate the peripherals the code needs, prove each one works on the new part, and only then drop the application logic on top.",
+   "quote_verbatim": "I worked from the outside in, I needed all these peripherals",
+   "speaker": "Bart Dring",
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Integrated radios also remove equipment from the workflow rather than just adding features — the previous processor needed extra modules bolted on for the same connectivity.",
+   "quote_verbatim": "the PSoC five didn't have Bluetooth. It didn't have wifi. So I'm adding more modules.",
+   "speaker": "Bart Dring",
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "For sensor work the firmware can be generated rather than written: a short declaration of the sensor type and the pins it is wired to produces the code.",
+   "quote_verbatim": "it generates code for the ESP 32",
+   "speaker": "Chris Gammell",
+   "episode": 621,
+   "episode_title": "The Magic of Calipers",
+   "episode_url": "https://theamphour.com/621-the-magic-of-calipers/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A useful pattern for existing wireless sensors is a bridge — receiving packets on an unlicensed sub-gigahertz band and republishing them onto the network.",
+   "quote_verbatim": "it can just push them up to the net",
+   "speaker": "Chris Gammell",
+   "episode": 621,
+   "episode_title": "The Magic of Calipers",
+   "episode_url": "https://theamphour.com/621-the-magic-of-calipers/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The common long-range boards pair one of these processors with a separate spread-spectrum radio chip, with the processor providing a short-range radio link to a phone application while the other radio does the long-distance work.",
+   "quote_verbatim": "the ESP32 sets up as a Bluetooth interface",
+   "speaker": "Chris Gammell",
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The historical obstacle to those radios was never the hardware but the firmware — point-to-point libraries existed, and anything beyond that was bespoke until a community project supplied a common stack across many boards.",
+   "quote_verbatim": "the limitation for me has always been firmware",
+   "speaker": "Chris Gammell",
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "It also appears as a bolt-on rather than the main processor: a module running command-mode firmware adds Wi-Fi to a design whose main processor comes from a vendor with no wireless part of its own.",
+   "quote_verbatim": "There's an ESP32 module that they're using with AT mode just to give it Wi-Fi",
+   "speaker": "Chris Gammell",
+   "episode": 659,
+   "episode_title": "Altium...Acquired!",
+   "episode_url": "https://theamphour.com/659-altium-acquired/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Simulating the part is a large step up from simulating an eight-bit microcontroller: thirty-two bits, two cores and a much larger instruction set.",
+   "quote_verbatim": "the ESP32 is so much more complex than AVR",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Rewriting that simulator's core from a scripting language into a compiled web format produced no speed gain at all, because the runtime's just-in-time compiler had already optimised the handful of functions the simulation runs repeatedly.",
+   "quote_verbatim": "they run roughly at the same speed",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The distinction that explains it is workload shape: a long-running loop pays the translation cost once in the first few hundred milliseconds, whereas code that runs briefly and exits pays it every time.",
+   "quote_verbatim": "you sort of pay a penalty at the beginning of the simulation",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Running the network gateway locally rather than on a remote server puts a simulated device on the user's own network, so a browser can reach a server running inside the simulation.",
+   "quote_verbatim": "you can connect from your web browser to a web server running inside the ESP32",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "ep 435: the bundle labels these turns with the host's name, but the content is the guest describing his own videos and measurements; the multi-core and low-power claims are content-attributed to him.",
+  "ep 645: the bundle labels the turn with the host's name; the part-selection claims are content-attributed to the guest describing his own consultancy's practice.",
+  "ep 403: one passage fuses host and guest turns and the content does not settle which of them built the badge being described; that claim carries a null speaker rather than a guess.",
+  "eps 438, 568, 636, 645, 663, 698: attribution flagged unreliable. Claims are content-attributed to the guest whose project, product or investigation the passage describes."
+ ],
+ "capped": false
+}

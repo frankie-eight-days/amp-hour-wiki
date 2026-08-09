@@ -1,0 +1,648 @@
+{
+ "concept": "spice",
+ "name": "SPICE",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "spice",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "spice"
+  ],
+  "children": [
+   "mathematics"
+  ],
+  "neighbors": {},
+  "episodes_with_kept_mentions": 40,
+  "mentions_kept": 80,
+  "pins_final": 48,
+  "capped": false,
+  "total_available": 48
+ },
+ "claims": [
+  {
+   "claim_text": "Analog IC design starts at the schematic level with foundry-supplied SPICE transistor models, and the designer builds test benches around them and simulates before any layout exists.",
+   "quote_verbatim": "First, we do design on schematic level, right? So we have the SPICE models to model transistors. And then we set up test benches and we do SPICE simulations of schematics.",
+   "speaker": "Joren Vaes",
+   "episode": 706,
+   "episode_title": "Leading Edge Analog with Joren Vaes",
+   "episode_url": "https://theamphour.com/706-leading-edge-analog-with-joren-vaes/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The design knobs available in transistor-level simulation have narrowed with process generations: bulk CMOS let you sweep transistor width and length continuously, while FinFET reduces the choice to a discrete number of fins or fingers.",
+   "quote_verbatim": "And we get to change the width and the length of transistors. At least we used to in bulk. Now it's just the number of fingers in FinFET.",
+   "speaker": "Joren Vaes",
+   "episode": 706,
+   "episode_title": "Leading Edge Analog with Joren Vaes",
+   "episode_url": "https://theamphour.com/706-leading-edge-analog-with-joren-vaes/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "At higher operating frequencies parasitics dominate enough that the schematic designer and the layout person tend to be the same person, rather than layout being handed off to a dedicated drafter.",
+   "quote_verbatim": "As you go to higher frequencies, because parasitics become more important, you see it's also more common that the people doing the box drawing are also the people doing the design work.",
+   "speaker": "Joren Vaes",
+   "episode": 706,
+   "episode_title": "Leading Edge Analog with Joren Vaes",
+   "episode_url": "https://theamphour.com/706-leading-edge-analog-with-joren-vaes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Parasitic extraction converts a drawn layout into a netlist where each wire becomes a chain of small series resistors with small capacitors to ground and to neighbouring wires, so coupling between nets is explicitly modelled.",
+   "quote_verbatim": "So, a wire would be represented by a series of little resistors with tiny capacitors to ground and other tiny capacitors to other wires, right? You model all of this interaction.",
+   "speaker": "Joren Vaes",
+   "episode": 706,
+   "episode_title": "Leading Edge Analog with Joren Vaes",
+   "episode_url": "https://theamphour.com/706-leading-edge-analog-with-joren-vaes/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The same final verification test benches are rerun on the parasitically extracted netlist, and because the extracted netlist is so much larger these runs can take on the order of two weeks.",
+   "quote_verbatim": "We'd run these again or at least the final verification versions of them on this parasitically extracted net list. This would then take two weeks or whatever because it's very complicated to do this.",
+   "speaker": "Joren Vaes",
+   "episode": 706,
+   "episode_title": "Leading Edge Analog with Joren Vaes",
+   "episode_url": "https://theamphour.com/706-leading-edge-analog-with-joren-vaes/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "When a post-extraction simulation fails, the debugging technique is to bisect the extracted netlist or extract only a single node at a time to isolate which parasitic is responsible.",
+   "quote_verbatim": "And we have various techniques where you can split up the net list or only extract a single node to see if that's the problem or whatever.",
+   "speaker": "Joren Vaes",
+   "episode": 706,
+   "episode_title": "Leading Edge Analog with Joren Vaes",
+   "episode_url": "https://theamphour.com/706-leading-edge-analog-with-joren-vaes/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Solar cells resist straightforward SPICE modelling because their behaviour depends on illumination and junction capacitance together, not just on a diode-like I-V curve.",
+   "quote_verbatim": "And then how you balance the sunlight and the capacitance involved and all that stuff. And it's just like this, if you try and model it in spice, it ends up becoming really difficult to do.",
+   "speaker": null,
+   "episode": 5,
+   "episode_title": "Girl Power",
+   "episode_url": "https://theamphour.com/the-amp-hour-5-girl-power/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The practical value of SPICE for a bench engineer is iteration speed: component values and part types can be swapped instantly without stocking a parts bin or desoldering anything.",
+   "quote_verbatim": "Because Spice allows you to just, you know, it allows you to make changes so quickly, you know, instantly. And you can go, well, what if I change the value of this resistor?",
+   "speaker": "Dave Jones",
+   "episode": 7,
+   "episode_title": "Love Robots and Pantyhose Screens",
+   "episode_url": "https://theamphour.com/the-amp-hour-7-love-robots-and-pantyhose-screens/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Treating SPICE as a universal answer machine is the common misuse; it has a defined place in the design flow rather than being able to settle every question.",
+   "quote_verbatim": "It has its place. People try and do everything in it and think it's the Holy Grail. And that's just wrong, you know.",
+   "speaker": "Dave Jones",
+   "episode": 17,
+   "episode_title": "EE Movies, Part Rants and SPICE.",
+   "episode_url": "https://theamphour.com/the-amp-hour-17-ee-movies-part-rants-and-spice/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Transformer design is a weak spot for SPICE tools because specifying a transformer, and in particular its leakage inductance, is handled inconsistently across simulators.",
+   "quote_verbatim": "just because a lot of them are kind of dodgy on how you kind of spec a transformer and leakage inductance and all that other crazy stuff in there",
+   "speaker": "Chris Gammell",
+   "episode": 17,
+   "episode_title": "EE Movies, Part Rants and SPICE.",
+   "episode_url": "https://theamphour.com/the-amp-hour-17-ee-movies-part-rants-and-spice/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "SPICE interprets the suffix M as milli rather than mega, so a resistor typed as 10M becomes 10 milliohms and the simulation result is nonsense; megohms must be written as Meg.",
+   "quote_verbatim": "So I'm always setting, you know, resistor values in spice and then I'm like M. And then my simulation blows off and I'm like, oh, what the hell is going on here?",
+   "speaker": null,
+   "episode": 76,
+   "episode_title": "Fremescent Floccose Fortification",
+   "episode_url": "https://theamphour.com/the-amp-hour-76-fremescent-floccose-fortification/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Most large semiconductor vendors ship their own SPICE front end tied to their catalogue: TI has TINA, Analog Devices had a tool built jointly with National Instruments, and Linear Technology had LTspice.",
+   "quote_verbatim": "You know, a lot of the big companies have their own SPICE engine. Like, TI has Tina, T-I-N-A. And then ADI has this one that's, I think, the joint venture with National Instruments. Linear Tech obviously has LT SPICE.",
+   "speaker": "Chris Gammell",
+   "episode": 130,
+   "episode_title": "Boeing, PCBs & Startups - Awful Airplane Aeration",
+   "episode_url": "https://theamphour.com/the-amp-hour-130-awful-airplane-aeration/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Internally compensated op-amps are optimised by the manufacturer for stability, whereas an uncompensated part puts the entire stability burden on the designer, who must verify it themselves.",
+   "quote_verbatim": "Whereas if you get an uncompensated op-amp, all bets are off. Good luck. Do it yourself. Do it yourself. Make sure that thing's stable yourself.",
+   "speaker": null,
+   "episode": 141,
+   "episode_title": "FPGAs, Robots & Thermocouples - Wampum's Wavering Worth",
+   "episode_url": "https://theamphour.com/the-amp-hour-141-wampums-wavering-worth/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Importing a schematic into a simulator only carries the passives cleanly; resistors and capacitors get generic models automatically, but every active device has to exist in the simulator's model library or be assigned by hand.",
+   "quote_verbatim": "It's, it can just pull in a generic model for those, but your chips, well, you know, it's got to be in the library.",
+   "speaker": null,
+   "episode": 148,
+   "episode_title": "Contextual Electronics, ClubJameco and Solderpaste - Lifelong Learning Likelihood",
+   "episode_url": "https://theamphour.com/the-amp-hour-148-lifelong-learning-likelihood/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Every graphical SPICE package is a schematic capture front end that emits a text netlist into a decades-old solver core; the netlist, not the drawing, is the real interface between CAD tools and the simulator.",
+   "quote_verbatim": "The, the gooey schematic interface just generates a net list, which goes into the spice engine, you know, the 30 year old spice engine.",
+   "speaker": null,
+   "episode": 148,
+   "episode_title": "Contextual Electronics, ClubJameco and Solderpaste - Lifelong Learning Likelihood",
+   "episode_url": "https://theamphour.com/the-amp-hour-148-lifelong-learning-likelihood/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "For an EDA vendor, the hard part of offering simulation is not the solver but netlist and model generation from the captured schematic; a tool can have a capable SPICE backend that users must feed netlists by hand.",
+   "quote_verbatim": "You have to give us the net list. We don't generate the net. So the weaknesses is the net list generation is terrible.",
+   "speaker": null,
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Because SPICE is open, text-based and long established, attaching an engine to a CAD package is cheap; the expensive engineering is the interfacing layer that makes it usable.",
+   "quote_verbatim": "And that's easy to bolt on there, but then the actual interfacing and doing it right. That's the tough part.",
+   "speaker": "Chris Gammell",
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The SPICE engine itself is open source; the popular free vendor packages layered on top of it, such as LTspice, are not.",
+   "quote_verbatim": "So Spice, that's a big one. Spice is open source. I don't think LTSpice, you know, on top of it is open source, but, you know, the actual engine.",
+   "speaker": "Chris Gammell",
+   "episode": 168,
+   "episode_title": "Specialized and/or Open Source Test Gear and Dev Boards - Vacation Videography Vorboten",
+   "episode_url": "https://theamphour.com/168-specialized-and-open-source-test-gear-and-dev-boards-vacation-videography-vorboten/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A common-mode rejection failure survived every check that simulation and component measurement could offer: the SPICE model predicted correct behaviour, inductor values, Q and tolerance all measured good, yet the assembled board failed.",
+   "quote_verbatim": "So according to the SPICE simulation, everything should work. We measured the inductors. We measured the Q factor of the inductor. We desolded these parts. We measured them for drift and tolerance. Everything is fine. Put them on the board. Doesn't work.",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The root cause was the internal winding orientation of air-core inductors, which differs by manufacturer: horizontally oriented coils on adjacent parts couple enough to act as a common-mode transformer, and vertically oriented ones do not, a distinction no schematic-level SPICE model contains.",
+   "quote_verbatim": "The way that they're positioned, if the cylinders are horizontal, there is enough coupling. So you get very good common mode rejection.",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Ceramic capacitor values are specified at zero volts DC bias, so a part used at any real working voltage delivers substantially less capacitance than its marked value, which a simulation using the nominal value will not show.",
+   "quote_verbatim": "Because the, the dirty secret of the capacitor industry is capacitor values are specified at zero volt DC working voltage.",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The reflexive 100 nF decoupling capacitor was appropriate for tens-of-megahertz clocks; at a hundred megahertz the part is above its self-resonance and behaves as an inductor, contributing nothing to the power distribution network.",
+   "quote_verbatim": "Guys, 0.1 microfarads worked great when the clock speeds were 10. megahertz at a hundred megahertz. They are an inductor. They don't do anything.",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "To fix an EMC failure properly rather than by scattering capacitors, remove the switching regulator, power the board from a clean analog supply, and measure power distribution network impedance versus frequency with a network analyzer and bias tee.",
+   "quote_verbatim": "we're going to hook up a network analyzer with a biasing T filter in it. And we are going to make a spectrum plot of the impedance of the power distribution.",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Vendor SPICE models are often tuned to the vendor's own simulator, and getting third-party sub-circuit models to run in another package is a recurring source of setup friction.",
+   "quote_verbatim": "I always have a problem with that anyways, trying to get the stupid external models to start working. You know, like the sub-circuits trying to work in the Sims.",
+   "speaker": null,
+   "episode": 188,
+   "episode_title": "Capacitors, Simulation and Closures - Deonerated Design Dealmaking",
+   "episode_url": "https://theamphour.com/188-capacitors-simulation-and-closures-deonerated-design-dealmaking/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "SPICE is an acronym for Simulation Program with Integrated Circuit Emphasis.",
+   "quote_verbatim": "sim it spice stands for simulation program with integrated circuit emphasis oh there we go",
+   "speaker": "Dave Jones",
+   "episode": 195,
+   "episode_title": "Guns and Mobile Labs - Nuanced Nomadic Non-essentials",
+   "episode_url": "https://theamphour.com/195-guns-and-mobile-labs-nuanced-nomadic-non-essentials/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "SPICE was written for silicon integrated circuit design, not board-level or macro-scale circuit design; its use for discrete PCB work is a later extension of the original purpose.",
+   "quote_verbatim": "it was not designed for macro level circuit design it was designed for silicon based integrated circuits",
+   "speaker": "Dave Jones",
+   "episode": 195,
+   "episode_title": "Guns and Mobile Labs - Nuanced Nomadic Non-essentials",
+   "episode_url": "https://theamphour.com/195-guns-and-mobile-labs-nuanced-nomadic-non-essentials/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The SPICE engine is fundamentally a command line program that consumes a text file containing the netlist and the simulation directives and executes it.",
+   "quote_verbatim": "the spice engine that you're talking about is is just that it is a command line tool you feed in a netlet you know a a text for file",
+   "speaker": "Dave Jones",
+   "episode": 195,
+   "episode_title": "Guns and Mobile Labs - Nuanced Nomadic Non-essentials",
+   "episode_url": "https://theamphour.com/195-guns-and-mobile-labs-nuanced-nomadic-non-essentials/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Competing SPICE products are largely wrappers around the same solver, so most product-level development effort has gone into schematic entry and waveform display rather than the numerics.",
+   "quote_verbatim": "regardless of what spice program you're using they're just a wrapper around that they're just a pretty wrapper so all the innovation has gone around the wrapper",
+   "speaker": "Dave Jones",
+   "episode": 195,
+   "episode_title": "Guns and Mobile Labs - Nuanced Nomadic Non-essentials",
+   "episode_url": "https://theamphour.com/195-guns-and-mobile-labs-nuanced-nomadic-non-essentials/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Solver algorithms have improved over time, notably in convergence behaviour, but those gains are far less visible to users than improvements in the graphical front end.",
+   "quote_verbatim": "there's convergence stuff like they're getting better oh yeah no no there's yeah there's been improvements in the algorithm",
+   "speaker": null,
+   "episode": 195,
+   "episode_title": "Guns and Mobile Labs - Nuanced Nomadic Non-essentials",
+   "episode_url": "https://theamphour.com/195-guns-and-mobile-labs-nuanced-nomadic-non-essentials/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The author of LTspice had been writing physical simulators since 1975, and LTspice was his third circuit simulator, built after concluding that known and self-invented numerical methods could make a faster and more robust SPICE.",
+   "quote_verbatim": "I have been writing simulators for a real long time. Actually, I've been writing physical simulators since 1975.",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The best simulator in any engineering field tends not to be a commercial product, because developing it costs more than licensing revenue can recoup; such tools get built in-house by companies that need them as a design advantage.",
+   "quote_verbatim": "the best simulators are actually not from software companies. They're not for sale. The problem is that the amount of money it takes to develop, you know, the best simulator in any particular field of engineering is larger than an amount of money that you can recoup with licensing fees.",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "From 2008 LTspice became self-authoring: after parsing the netlist into data structures it generates, assembles and links an assembly language routine specific to that circuit and calls it as a function.",
+   "quote_verbatim": "Well, the first version of LTSpice didn't do this, but in 2008, I made it self-authoring.",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Generating circuit-specific machine code removes layers of pointer indirection imposed by dynamic memory allocation and makes the simulator roughly three times faster, because moving operands into the floating point unit costs more than the arithmetic itself.",
+   "quote_verbatim": "That speeds things up. Yes, it makes it a factor of three faster.",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "SPICE solves nonlinear circuits by successive linear approximation: it repeatedly sets up and solves a system of simultaneous equations as matrices rather than evaluating Laplace transforms directly.",
+   "quote_verbatim": "You probably know that SPICE is doing successive linear approximations to a nonlinear system, which means it sets up the system simultaneously in equations and solves them. Basically, what it's doing is it's solving matrices.",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A workable technical definition of SPICE is any simulator that solves using a global Jacobian, which separates it from tools that solve circuits by other formulations.",
+   "quote_verbatim": "And for me, Spice is anything that uses a global Jacobian.",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "SPICE has two independent accuracy settings: how precisely it resolves the nonlinear I-V behaviour, and TRTOL, which governs how accurately the ordinary differential equations from capacitors and inductors are integrated.",
+   "quote_verbatim": "a directive on how accurately you should integrate the differential equations. This is an entirely different thing than how accurately it should solve the nonlinear aspect of the circuit.",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Industry SPICE programs conventionally set TRTOL to seven, while LTspice ships it at one, an order of magnitude tighter, on the reasoning that the solver was fast enough to afford it and users would then never chase an integration artifact.",
+   "quote_verbatim": "Now in industry, TR tall is normally seven. Every single Spice program in the world uses seven",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Absurd simulation outputs such as gigavolts at an op-amp node usually indicate a Boyle-type macromodel rather than a solver fault, so the fix is changing the device model, not the simulation settings.",
+   "quote_verbatim": "Well, that sounds like you're using a Boyle model for your op amp",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Simulation earns its place when it is faster than breadboarding, for instance when parts are not on hand and only a circuit concept needs testing.",
+   "quote_verbatim": "Because it's quicker than breadboarding sometimes. You don't want to try something out or you don't have the parts or whatever. You know, so you just want to test a circuit concept or something.",
+   "speaker": "Dave Jones",
+   "episode": 210,
+   "episode_title": "Risky Components and Hardware Innovation - Slipshod Shack Shutdown",
+   "episode_url": "https://theamphour.com/210-risky-components-and-hardware-innovation-slipshod-shack-shutdown/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A passing simulation is not a qualification for production; treating a simulated design as ready to manufacture skips everything the model does not represent.",
+   "quote_verbatim": "But, you know, you can't just like simulate the whole thing and go, right, I'm going to go straight into production and...",
+   "speaker": "Dave Jones",
+   "episode": 210,
+   "episode_title": "Risky Components and Hardware Innovation - Slipshod Shack Shutdown",
+   "episode_url": "https://theamphour.com/210-risky-components-and-hardware-innovation-slipshod-shack-shutdown/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Beginners should learn component behaviour before reaching for a simulator, otherwise simulation degenerates into trial and error with no model of why a change helped.",
+   "quote_verbatim": "And it really, you know, you should try and learn about, you know, low-level components on their own first, at least how they work.",
+   "speaker": "Chris Gammell",
+   "episode": 210,
+   "episode_title": "Risky Components and Hardware Innovation - Slipshod Shack Shutdown",
+   "episode_url": "https://theamphour.com/210-risky-components-and-hardware-innovation-slipshod-shack-shutdown/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Simulating a circuit before breadboarding it gives you a reference to check the physical build against, so discrepancies point at something specific rather than at an unknown.",
+   "quote_verbatim": "And then, of course, when I, you know, when I breadboard it again, it's, you have something to check against, right? That's the nice thing.",
+   "speaker": "Chris Gammell",
+   "episode": 210,
+   "episode_title": "Risky Components and Hardware Innovation - Slipshod Shack Shutdown",
+   "episode_url": "https://theamphour.com/210-risky-components-and-hardware-innovation-slipshod-shack-shutdown/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A practical workflow for a half-remembered circuit is to take a known-good topology from a reference text, simulate it to confirm behaviour, and only then commit it to a board.",
+   "quote_verbatim": "That'll get you far enough that you can pop it into Spice and see enough that you feel confident to go stick it on a board",
+   "speaker": null,
+   "episode": 244,
+   "episode_title": "The Art Of Staying Interested In Electronics - Exponible Electronics Ennui",
+   "episode_url": "https://theamphour.com/244-the-art-of-staying-interested-in-electronics-exponible-electronics-ennui/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Signal integrity work should use three tools chosen by how much accuracy the question needs: rules of thumb for intuition, closed-form approximations in spreadsheets, and numerical simulation only when the first two cannot answer it.",
+   "quote_verbatim": "you want to get to an acceptable answer as quickly as possible. And so you want to have three tools in your toolbox to use.",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Multiple reflections on a branched interconnect cannot be tracked by hand or by formula, and a SPICE simulator is the only practical way to get the resulting noise margin.",
+   "quote_verbatim": "If I have a branch and I have multiple reflections, I can't keep track of that in my head. The only way is with a SPICE simulator.",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Crosstalk as a function of trace cross-section is outside what a circuit simulator answers; it requires a 2D field solver, which is a different class of tool from SPICE.",
+   "quote_verbatim": "Or if you want to know how much crosstalk do you have when the cross-section is this much, you have to use a 2D field solver to do it.",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "SPICE effectively performs numerical approximations of the Laplace-transform analysis taught for RLC circuits, which is why the hand technique is worth understanding even though it is rarely used on the job.",
+   "quote_verbatim": "And yes, it does, but Spice makes that even easier. And I'm not saying that you should start with Spice, but honestly, Spice is doing these approximations of Laplace transforms.",
+   "speaker": "Chris Gammell",
+   "episode": 276,
+   "episode_title": "Eating An Elephant",
+   "episode_url": "https://theamphour.com/276-eating-an-elephant/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "KiCad embeds a SPICE engine at no cost to the user, with the rough edges expected of an integration layered onto an existing solver.",
+   "quote_verbatim": "It's like it's implementing a, you know, a Spice engine in there. Obviously, there's troubles with it, but, you know, with difficulties with it, rather.",
+   "speaker": "Chris Gammell",
+   "episode": 380,
+   "episode_title": "Just Terrestrial and Space Things",
+   "episode_url": "https://theamphour.com/380-just-terrestrial-and-space-things/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Active filter design carries a direct trade between stage count and settling: fewer stages give a long step response, while more stages settle quickly, so the filter order is chosen against the settling requirement.",
+   "quote_verbatim": "So you can, you can use, uh, a few stages and kind of have long, uh, long step response, or you can use a lot of stages and settle really quickly.",
+   "speaker": "Matt Duff",
+   "episode": 392,
+   "episode_title": "An Interview with Matt Duff",
+   "episode_url": "https://theamphour.com/392-an-interview-with-matt-duff/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Vendor design wizards export their generated circuits as SPICE netlists specifically so the user can independently verify the result or extend it with extra passive stages the wizard cannot generate.",
+   "quote_verbatim": "And then we also export to spice. So if you want to go, you know, if you don't trust our tool and want to go try it out and spice to make sure that, you know, it works the way that you expect, you can do that.",
+   "speaker": "Matt Duff",
+   "episode": 392,
+   "episode_title": "An Interview with Matt Duff",
+   "episode_url": "https://theamphour.com/392-an-interview-with-matt-duff/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Assembly and wiring faults such as shorts and missing pull-downs are not the kind of defect simulation surfaces; they are found by handling the hardware on the bench.",
+   "quote_verbatim": "I don't think, I mean, like, yeah, I guess you could simulate, like, in Spice or something, but it's not going to be the same as hands-on on the bench, right?",
+   "speaker": null,
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A highly experienced analog designer could correct a circuit by inspection faster than a junior engineer could enter the netlist, which sets a real bar for when simulating is actually the quicker route.",
+   "quote_verbatim": "In the time that it takes you to enter the net list, I'll have the thing working, you know?",
+   "speaker": "Tom Lee",
+   "episode": 459,
+   "episode_title": "An Interview with Tom Lee",
+   "episode_url": "https://theamphour.com/459-an-interview-with-tom-lee/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Pairing instruction-set simulation of a microcontroller with SPICE analog simulation captures per-instruction timing, so the edge timing driving the analog side is correct regardless of what software stack runs on top.",
+   "quote_verbatim": "if you think about that in terms of integrating that with Spice, you have the analog simulation capability of Spice. But then if you have the instruction timing for the individual instructions, it actually kind of doesn't matter at that level what code you write on top of it.",
+   "speaker": "Matt Berggren",
+   "episode": 471,
+   "episode_title": "An Interview with Matt Berggren",
+   "episode_url": "https://theamphour.com/471-an-interview-with-matt-berggren/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "SPICE is not constrained by physics: its models are not thermodynamically consistent and can produce results, particularly for noise and energy, that no real device could produce.",
+   "quote_verbatim": "I love Spice and I've LTE Spice always have done, but it's not bound by physics. You know, it's models don't, they're not thermodynamically accurate.",
+   "speaker": "Kendall Castor-Perry",
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Manufacturer op-amp macromodels frequently violate Kirchhoff's current law, with current appearing or vanishing inside the model, so supply-current and power results from such models cannot be trusted.",
+   "quote_verbatim": "when op-amp macro models that you get from, from manufacturers don't obey Kirchhoff's laws",
+   "speaker": "Kendall Castor-Perry",
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The open-source IC design flow leans on several distinct SPICE-family simulators plus separate parasitic extraction tools, rather than one integrated suite.",
+   "quote_verbatim": "LTSpice, Zeiss, XYCE, NG Spice, and MicroCap. And then parasitic extraction is FastCap and FastHenry.",
+   "speaker": null,
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The same simulator distributed free to Linear Technology's customers was the engine its own designers used to develop the company's chips.",
+   "quote_verbatim": "he did mention that when linear was linear, they actually, the developers used that spice engine to develop the actual chips that linear was making",
+   "speaker": "Chris Gammell",
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "SPICE-family tools have existed since the 1970s and the lineage is visible in their names, with NGspice descending from the Nutmeg-era work.",
+   "quote_verbatim": "Obviously, there's tons of spice tools that have existed since the 70s. You know, NG Spice was kind of like Nutmeg Spice.",
+   "speaker": "Kyle Dumont",
+   "episode": 505,
+   "episode_title": "Hardware Revision Control with Kyle Dumont",
+   "episode_url": "https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Writing simulation software is mostly numerical mathematics; device physics only enters when you build the models themselves, such as how a semiconductor's behaviour shifts with temperature for thermal Monte Carlo analysis.",
+   "quote_verbatim": "unless you're modeling things like, you know, the thermal properties of components. Like you're building a model for how a, how a semiconductor changes based on temperature and things like that for your Monte Carlo analysis",
+   "speaker": null,
+   "episode": 512,
+   "episode_title": "Design For Longevity",
+   "episode_url": "https://theamphour.com/512-design-for-longevity/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Passive component manufacturers increasingly publish SPICE models and exportable simulation data alongside their part selection tools, shifting model quality upstream to the component vendor.",
+   "quote_verbatim": "All of this has spice and simulations that are exportable. And, of course, all the manufacturers are putting out much more spice models, of course.",
+   "speaker": null,
+   "episode": 596,
+   "episode_title": "Capacitor Schoopage with Ron Demcko from AVX",
+   "episode_url": "https://theamphour.com/596-capacitor-schoopage-with-ron-demcko-from-avx/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  }
+ ],
+ "attribution_notes": [
+  "ep706: passage headers list speaker=Dave Jones, but the content is the guest Joren Vaes describing his own analog IC design flow (SPICE testbenches, parasitic extraction, tape-out to TSMC). Attributed to Joren Vaes.",
+  "ep5: the solar-cell modelling remark sits in a two-way exchange where the labels are clearly swapped mid-passage; speaker left null.",
+  "ep7: 'My favorite programming language is solder' and the surrounding defence of SPICE read as Dave Jones; the later parasitic-recognition line is ambiguous and left null.",
+  "ep17: header says Dave Jones, but 'I've been working on transformer design' is the co-host describing his own work, so the transformer-model claim is attributed to Chris Gammell; the 'Holy Grail' line is the SPICE-sceptic, i.e. Dave Jones.",
+  "ep76: the M/Meg suffix exchange alternates speakers within one passage; speaker left null.",
+  "ep141: the compensated/uncompensated op-amp rule of thumb is stated by whichever host is not the one recommending LTspice; genuinely ambiguous, left null.",
+  "ep148: netlist/GUI-wrapper explanation is a back-and-forth between the two hosts; speaker left null.",
+  "ep163: three Upverter founders are present and the transcript does not distinguish them, so founder-side claims are left null; the 'easy to bolt on a spice engine' line is host-side and attributed to Chris Gammell.",
+  "ep188: the external-model/sub-circuit complaint alternates between hosts inside one passage; left null.",
+  "ep195: acronym expansion and 'not designed for macro level circuit design' are Dave Jones; the command-line-engine/wrapper explanation is also Dave Jones despite one header labelling it Chris Gammell.",
+  "ep244: the 'pop it into Spice' line belongs to the speaker who is not the one describing his own Art of Electronics habit; left null.",
+  "ep252 (ATTRIB-UNRELIABLE): passage is flagged, but the content is unmistakably Eric Bogatin ('I write for EDN a series of rules of thumb'), so all three claims are attributed to him.",
+  "ep276: header on one copy of the passage says Michael, but 'the stuff that I learned in university' plus the Laplace-transform background matches Chris Gammell; attributed to him.",
+  "ep392 (ATTRIB-UNRELIABLE): filter-tool mechanics and the SPICE export are Matt Duff describing his own tool; the 'never made magic smoke in spice' aside is host-side and left null.",
+  "ep454: the simulate-versus-bench remark cannot be separated from the interviewer's turn; left null.",
+  "ep459: header says Chris Gammell, but the Joe Davenport anecdote is Tom Lee recounting his own summer job; attributed to Tom Lee.",
+  "ep471 (ATTRIB-UNRELIABLE): the TinkerCAD instruction-set-simulation explanation is Matt Berggren describing the product he worked on.",
+  "ep476 (ATTRIB-UNRELIABLE): header says Dave Jones; the sustained argument about macromodels violating Kirchhoff and thermodynamics matches guest Kendall Castor-Perry, a filter/analog specialist. Attributed to him with residual uncertainty.",
+  "ep501: the read-out list of open-source simulators is host-side and left null; the recollection of the Engelhardt interview is Chris Gammell; the IC-versus-PCB SPICE comparison is Tim Ansell addressing the host.",
+  "ep512: the 'you'd need a degree in pure maths' / thermal-model exchange swaps speakers mid-passage; left null.",
+  "ep596 (ATTRIB-UNRELIABLE): the remark about manufacturers publishing more spice models could be either host or Ron Demcko; left null."
+ ],
+ "capped": false
+}

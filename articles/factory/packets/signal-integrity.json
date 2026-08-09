@@ -1,0 +1,797 @@
+{
+ "concept": "signal-integrity",
+ "name": "Signal Integrity",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "signal-integrity"
+   ],
+   "children": [
+    "ddr",
+    "differential-pair",
+    "high-speed-digital-design",
+    "pcb-warping",
+    "rf-circuit",
+    "rf-engineering",
+    "signal-propagation",
+    "usb-connector"
+   ],
+   "neighbors": [
+    {
+     "concept": "two-layer-pcb",
+     "weight": 4
+    }
+   ]
+  },
+  "stats": {
+   "episodes": 61,
+   "mentions": 132,
+   "explains": 68,
+   "opinions": 20,
+   "candidate_episode_count": 53,
+   "candidate_mention_count": 96,
+   "gated_out": 172,
+   "gated_out_by_concept": [
+    [
+     "two-layer-pcb",
+     49
+    ],
+    [
+     "rf-engineering",
+     34
+    ],
+    [
+     "usb-connector",
+     19
+    ],
+    [
+     "differential-pair",
+     15
+    ],
+    [
+     "high-speed-digital-design",
+     14
+    ],
+    [
+     "rf-circuit",
+     14
+    ],
+    [
+     "ddr",
+     13
+    ],
+    [
+     "signal-propagation",
+     8
+    ],
+    [
+     "pcb-warping",
+     6
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 15,
+   "speakers": [
+    [
+     "Dave Jones",
+     21
+    ],
+    [
+     "Chris Gammell",
+     16
+    ],
+    [
+     "Eric Bogatin",
+     11
+    ],
+    [
+     "Howard Johnson",
+     9
+    ],
+    [
+     "Jeff Keyzer",
+     5
+    ],
+    [
+     "Henry Ott",
+     3
+    ],
+    [
+     "Jason Cerundolo",
+     2
+    ],
+    [
+     "Sergiy Nesterenko",
+     2
+    ],
+    [
+     "Todd Bailey",
+     1
+    ],
+    [
+     "Ariel Briner",
+     1
+    ],
+    [
+     "Arduinos",
+     1
+    ],
+    [
+     "Joe Bamberg",
+     1
+    ],
+    [
+     "Jason Kridner And Robert",
+     1
+    ],
+    [
+     "Nash Reilly",
+     1
+    ],
+    [
+     "Kieran O'Leary",
+     1
+    ],
+    [
+     "Fredrik Kensander",
+     1
+    ],
+    [
+     "Joel Dunsmore",
+     1
+    ],
+    [
+     "Matt Venn",
+     1
+    ],
+    [
+     "Zachariah Peterson",
+     1
+    ],
+    [
+     "Julia Desmazes",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 77,
+    "child": 4
+   },
+   "passages_by_depth": {
+    "explains": 63,
+    "opinion": 18
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 81
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "Probing a fast digital signal meaningfully requires the probe connection to be soldered directly at the point of interest, because the lead inductance and stray capacitance of a clipped-on ground lead corrupt the measurement more than the fault being hunted.",
+   "quote_verbatim": "I had to solder directly where I wanted them and stuff like that. So just to get decent signal integrity to measure it.",
+   "speaker": "Dave Jones",
+   "episode": 39,
+   "episode_title": "Dan Pink, Dual Core, level translators - Mumble Mumbo Jumbo",
+   "episode_url": "https://theamphour.com/the-amp-hour-39-mumble-mumbo-jumbo/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A circuit whose behaviour changes when a hand grasps the wiring or the operator shifts position is being loaded by stray capacitance; the body-position dependence is itself the diagnostic that points at capacitive loading rather than a logic fault.",
+   "quote_verbatim": "you always can, like, isolate that to capacitance",
+   "speaker": "Dave Jones",
+   "episode": 39,
+   "episode_title": "Dan Pink, Dual Core, level translators - Mumble Mumbo Jumbo",
+   "episode_url": "https://theamphour.com/the-amp-hour-39-mumble-mumbo-jumbo/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Stackable expansion boards carry high-speed differential links such as USB 2.0 high speed and Ethernet through 0.1 inch pin headers and through traces that were never routed as controlled-impedance pairs, so every board in the stack adds an uncontrolled discontinuity to the link.",
+   "quote_verbatim": "So I want you to think from a signal integrity standpoint what it's like to have a USB 2.0 high-speed signal go through a pair of pin headers and some traces which are not necessarily differential.",
+   "speaker": "Jeff Keyzer",
+   "episode": 43,
+   "episode_title": "An Interview with Jeff Keyzer and Jeremy Blum - Audacious Arduino Arguments",
+   "episode_url": "https://theamphour.com/the-amp-hour-43-audacious-arduino-arguments/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Howard Johnson's two volumes divide the subject deliberately: the first is a broad practical survey of signal integrity with the mathematics kept to a minimum, and the second narrows to the propagation of a single signal down a single track and carries correspondingly more theory.",
+   "quote_verbatim": "The first book was a survey book, just to do a broad survey of the whole field of signal integrity. And the second book was just to focus in just on the propagation of one signal going down one track.",
+   "speaker": "Howard Johnson",
+   "episode": 77,
+   "episode_title": "An Interview with Dr. Howard Johnson - Winsome Waveform Wizardry",
+   "episode_url": "https://theamphour.com/the-amp-hour-77-winsome-waveform-wizardry/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A receiver equalizer corrects only the specific classes of channel deficiency it was designed for, so the physical link must first be engineered into the range the equalizer can repair; a channel outside that range will not be rescued by equalization at all.",
+   "quote_verbatim": "we have to know enough about signal integrity to get our link good enough to where we get it within the zone that our equalizer is capable of fixing",
+   "speaker": "Howard Johnson",
+   "episode": 77,
+   "episode_title": "An Interview with Dr. Howard Johnson - Winsome Waveform Wizardry",
+   "episode_url": "https://theamphour.com/the-amp-hour-77-winsome-waveform-wizardry/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Because a given channel distorts every pulse into the same shape, the response can be characterised once and then subtracted: removing the known lingering tail of the bit just decided leaves only the contribution of the next bit, which is the basis of decision-feedback equalization.",
+   "quote_verbatim": "you can take whatever you think is coming next, subtract that out of the signal, and whatever new arrives has got to be the effects of the next bit, not the lingering effects of the one you just looked at",
+   "speaker": "Howard Johnson",
+   "episode": 77,
+   "episode_title": "An Interview with Dr. Howard Johnson - Winsome Waveform Wizardry",
+   "episode_url": "https://theamphour.com/the-amp-hour-77-winsome-waveform-wizardry/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An adaptive equalizer identifies the channel by hypothesis and correlation: it postulates a delay and an interference coefficient, constructs the signal that hypothesis predicts, and keeps the candidate if it correlates with the difference between the received waveform and the bit stream already recovered, subtracting each correlated component in turn.",
+   "quote_verbatim": "I'm looking for things that are somehow correlated with the distortion that I'm receiving.",
+   "speaker": "Howard Johnson",
+   "episode": 77,
+   "episode_title": "An Interview with Dr. Howard Johnson - Winsome Waveform Wizardry",
+   "episode_url": "https://theamphour.com/the-amp-hour-77-winsome-waveform-wizardry/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Equalization is a correction of last resort rather than a substitute for a clean channel; the preferred order of work is to fix the physical cause of the distortion first and let the equalizer handle what remains.",
+   "quote_verbatim": "But the best case is to try and fix the actual problem. You try to get the cleanest picture you can to start with.",
+   "speaker": "Howard Johnson",
+   "episode": 77,
+   "episode_title": "An Interview with Dr. Howard Johnson - Winsome Waveform Wizardry",
+   "episode_url": "https://theamphour.com/the-amp-hour-77-winsome-waveform-wizardry/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The tolerance for interconnect imperfection depends on what the link is being asked to deliver: a five or ten percent effect still permits reliable bit recovery in a digital link, but the same effect destroys an instrument specification quoted as a fraction of a decibel of flatness.",
+   "quote_verbatim": "If you have a little 5% or 10% effect in your circuit, you can still receive the bits.",
+   "speaker": "Howard Johnson",
+   "episode": 77,
+   "episode_title": "An Interview with Dr. Howard Johnson - Winsome Waveform Wizardry",
+   "episode_url": "https://theamphour.com/the-amp-hour-77-winsome-waveform-wizardry/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Each new device technology repeats the same cycle: relays, tubes, transistors and integrated circuits each appeared to behave ideally at first and let a generation of engineers ignore packaging, and each in turn was pushed to its speed limit, at which point crosstalk and propagation knowledge became indispensable again.",
+   "quote_verbatim": "as they pressed to the upper limits of speed, suddenly all this knowledge about crosstalk and signal propagation became extremely important",
+   "speaker": "Howard Johnson",
+   "episode": 77,
+   "episode_title": "An Interview with Dr. Howard Johnson - Winsome Waveform Wizardry",
+   "episode_url": "https://theamphour.com/the-amp-hour-77-winsome-waveform-wizardry/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Package parasitics set the ceiling on interconnect speed, so shrinking to chip-scale and flip-chip packaging removes signal integrity burden that would otherwise have to be engineered around at the board level.",
+   "quote_verbatim": "if we continue trying to go faster without doing the chip scale flip chip packaging thing, we're going to have to just know more and more about signal integrity",
+   "speaker": "Howard Johnson",
+   "episode": 77,
+   "episode_title": "An Interview with Dr. Howard Johnson - Winsome Waveform Wizardry",
+   "episode_url": "https://theamphour.com/the-amp-hour-77-winsome-waveform-wizardry/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "High-Speed Digital System Design by Hall, Hall and McCall covers the high-frequency end of signal integrity, and High Speed Digital Design by Johnson and Graham sits across the boundary between electromagnetic compatibility and signal integrity, carrying measurement material not found in the other texts.",
+   "quote_verbatim": "It's called High-Speed Digital System Design. The word system is there. By three authors, Hall, Hall, and McCall.",
+   "speaker": "Henry Ott",
+   "episode": 165,
+   "episode_title": "An Interview with Henry Ott - Forced FCC Filtering",
+   "episode_url": "https://theamphour.com/165-an-interview-with-henry-ott-forced-fcc-filtering/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Signal integrity practice picked up empirically without the underlying principles does not generalise: a rule that happened to work on one design carries no guarantee for the next, because the engineer has no basis for knowing which conditions made it work.",
+   "quote_verbatim": "just because it worked in the last design doesn't mean it's going to work in the next design",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A large share of signal integrity misconceptions trace to one gap: engineers who can state Maxwell's equations often cannot say what a signal actually looks like as it propagates along a transmission line, which is why foundational courses begin with what a transmission line is before any other effect is discussed.",
+   "quote_verbatim": "50 percent of the misconceptions out there about signal integrity problems are because engineers don't have a really good understanding of what's a signal look like on a transmission line as it propagates",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Narrowband RF design and broadband signal integrity differ in what must be controlled: an RF design need only present the target impedance at one frequency and may use stubs on the board to tune it there, whereas a digital link needs that impedance held across a wide band, which is a much harder problem.",
+   "quote_verbatim": "in the RF world, everything is narrowband. All you care about is what happens at one frequency.",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A broadband converter front end has to hold its impedance from DC to the top of its band rather than at a single frequency, so for an indium phosphide analogue-to-digital converter working to 100 GHz every element of the path is a signal integrity problem.",
+   "quote_verbatim": "It is from DC to 100 gigahertz. And so that means you have to engineer everything.",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "One way to keep a multi-gigahertz path wideband is to eliminate the conventional package interconnect: the ceramic package is opened and a coaxial connector carries the signal from the board straight onto the die, with the whole path from board through connector and ceramic into the die engineered as one broadband structure.",
+   "quote_verbatim": "they have an opening in the ceramic package with a little coax connector. So that coax connector goes from the outside of the package where the board connects to right onto the die itself.",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Many design teams fix the layer order of a stackup but specify no dielectric thicknesses, instead instructing the fabricator to choose thicknesses that yield the target impedance, which hands the impedance calculation and the field-solver work to the fabricator.",
+   "quote_verbatim": "They leave the instruction on the PCB, please make the correct thickness to give me 50 ohms.",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Above roughly 10 MHz a design leaves the simple DC world and parasitic inductance begins to matter, so an intuition for the capacitance and inductance of the interconnect becomes part of ordinary design rather than a specialist concern.",
+   "quote_verbatim": "when you're in the 10 megahertz and above range, you should have some good intuition about capacitance and inductance",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Systems in the tens of megahertz can be built successfully on about half a dozen rules, chiefly routing controlled-impedance lines and keeping a return path adjacent to every signal line; a handful of such rules carries a design into the 100 MHz range without dedicated analysis.",
+   "quote_verbatim": "as long as you use a half a dozen simple design rules, you can get away really well. About design, you know, controlled impedance lines, have return path adjacent signal lines.",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "It is edge rate rather than clock rate that sets the bandwidth a design must cope with: a 32 MHz clock with a 100 picosecond rise time carries content to around 3 GHz, which lands directly on a 2.4 GHz radio receiver sharing the board.",
+   "quote_verbatim": "if it's got 100 picoseconds, you've got, you know, 3 gigahertz bandwidth signals there",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The cheapest signal integrity and mixed-signal fixes are to run the lowest clock frequency the system tolerates and the longest rise time the timing budget allows, since both directly reduce the spectral content the rest of the board has to be designed against.",
+   "quote_verbatim": "you always want to use those low clock frequencies you can get away with. Like you said before, you, you know, cut the clock frequency out. You want to use as long rise time as you can get away with.",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A twenty-dollar two-layer Arduino-class board with power distribution routed as a wandering trace works adequately for an 8 MHz processor because cost, not signal integrity, was the design objective; the same rule set does not scale to 32 MHz and above.",
+   "quote_verbatim": "it is a terrible signal integrity board. It's two layers.",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A three-dimensional field solver is a verification instrument, not a design tool: the topology comes from engineering intuition and mental models, and the solver is used afterwards to confirm whether that topology performs.",
+   "quote_verbatim": "You don't create things with a 3D field solver. You can verify performance with a 3D field solver to know is it going to work or not.",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "RF and high-frequency structures are among the hardest circuits to synthesise correctly from a design alone, since the manufactured article routinely departs from the intent, which is why rapid in-house prototyping is worth more here than in low-speed work.",
+   "quote_verbatim": "You can't be certain that the thing that you design is going to work out the way that you think it's going to when you make it.",
+   "speaker": "Ariel Briner",
+   "episode": 260,
+   "episode_title": "An interview with Ariel Briner of Cartesian Co",
+   "episode_url": "https://theamphour.com/260-an-interview-with-ariel-briner-of-cartesian-co/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Whether a designed impedance is realised comes down to manufacturing repeatability: etch accuracy and control of copper thickness set how closely the fabricated geometry matches the geometry that was simulated.",
+   "quote_verbatim": "how carefully they can etch a board, how carefully they can control the thickness of the copper",
+   "speaker": "Ariel Briner",
+   "episode": 260,
+   "episode_title": "An interview with Ariel Briner of Cartesian Co",
+   "episode_url": "https://theamphour.com/260-an-interview-with-ariel-briner-of-cartesian-co/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Mainstream PCB design suites have historically carried weak signal integrity and impedance tooling, with designers instead buying dedicated field-solver toolkits such as those from Polar Instruments to do the impedance and stackup work.",
+   "quote_verbatim": "Because Altium Designer is very lacking in signal integrity type stuff.",
+   "speaker": "Dave Jones",
+   "episode": 264,
+   "episode_title": "The Cost Of Doing Business",
+   "episode_url": "https://theamphour.com/264-the-cost-of-doing-business/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "At 5 Gbit/s a link tolerates no branching and no stubs; the topology has to be a single point-to-point run, because any unterminated spur reflects enough energy to close the link down to a lower negotiated rate.",
+   "quote_verbatim": "I can't get the 5 gig connection unless it's a perfectly straight line, no branching, no stubs.",
+   "speaker": null,
+   "episode": 293,
+   "episode_title": "Call In Show #4",
+   "episode_url": "https://theamphour.com/293-call-in-show-4/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A terminated point-to-point differential pair such as an LVDS link is comparatively easy to get right; the hard interface on the same board is memory, where a high-speed bus has to be shared among multiple loads on a multi-drop topology.",
+   "quote_verbatim": "the LBDS is dead easy because it's a nice terminated differential pair. The difficulty is really in the RAM because that's this multi-drop bus still running at a very high speed",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A DDR interface clocked at 300 MHz transfers on both clock edges and therefore runs at 600 megabits per second per line, which is why the memory bus rather than the display link dominates the layout difficulty of a high-speed camera board.",
+   "quote_verbatim": "The DDR runs at 300 megahertz DDR, so 600 megabits per second.",
+   "speaker": "David Kronstein",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Connector wear is a signal integrity failure mode as well as a mechanical one: repeated insertion at an off-optimal angle abrades the contacts progressively, so a high-speed link such as DisplayPort carried over that connector degrades gradually over the product's life.",
+   "quote_verbatim": "you can wind up with the signal integrity degrading over time",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The Micro-B USB connector carries an insertion-cycle rating on the order of ten thousand cycles, but the rating is measured under controlled insertion and does not account for the slightly angled insertions users make in practice.",
+   "quote_verbatim": "that's rated for something like 10,000 cycles",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Reversible connectors handle their two orientations differently by signal class: power and ground pins are arranged radially symmetrically so orientation does not matter, and low-speed USB 2 pairs can simply have both candidate paths shorted together, but the multi-gigabit SuperSpeed pairs cannot, because the unused path would hang off the live one as a large stub.",
+   "quote_verbatim": "with the super speed pairs, if you're at gigabits per second, you can't just short them together because you'll have a huge stub",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A system-in-package module moves the hard part of building a Linux-class computer from chip-level design to board layout, so the prerequisite skills become signal integrity understanding and matched trace lengths rather than processor design.",
+   "quote_verbatim": "you should have some idea of what signal integrity means, you know, some idea of, you know, match trace links",
+   "speaker": "Jason Kridner",
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The debugging order for a bus that will not communicate is physical first and logical second: confirm the signal integrity on the wire, confirm the lines are not swapped, confirm data is present at all, and only then move to protocol analysis.",
+   "quote_verbatim": "Once you check your first step is to check your signal integrity, if that looks okay, and you haven't swapped the lines and done anything stupid, and there's data happening there, then you've got no choice. You have to go in and protocol analyze it.",
+   "speaker": "Dave Jones",
+   "episode": 396,
+   "episode_title": "The Synergy Bus",
+   "episode_url": "https://theamphour.com/396-the-synergy-bus/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "When long signal runs cross a board to reach connectors, the first response is to question the placement rather than to add termination, because most of PCB design is layout and the run usually exists only because the parts were placed badly.",
+   "quote_verbatim": "this is a PCB layout, PCB design is 90% layout",
+   "speaker": "Dave Jones",
+   "episode": 410,
+   "episode_title": "Secret Buzzer Handshake",
+   "episode_url": "https://theamphour.com/410-secret-buzzer-handshake/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Signal integrity as a working discipline consists of managing reflections and discontinuities and rearranging transmission lines, rather than of circuit design in the conventional schematic sense.",
+   "quote_verbatim": "looking at reflections and discontinuities and moving transmission lines around, I mean, that's kind of what that field is about",
+   "speaker": "Jeff Keyzer",
+   "episode": 421,
+   "episode_title": "The Legend of Keyzermas",
+   "episode_url": "https://theamphour.com/421-the-legend-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Memory interface testing has to exercise all combinations of address and data rather than a representative sample, because the failure is a rare pattern-dependent one: an address bus of all ones against a data bus of all zeros on adjacent crossing traces produces a transient large enough to corrupt a single access in a million.",
+   "quote_verbatim": "you'd fully exercise all possibilities of the memory address and data combinations",
+   "speaker": null,
+   "episode": 439,
+   "episode_title": "Grow A Superbrain",
+   "episode_url": "https://theamphour.com/the-amp-hour-439-grow-a-superbrain/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A pattern-dependent memory error usually has several simultaneous contributors rather than one cause: decoupling that is marginal at the switching instant, terminations slightly off value, and a compromised return path for those terminations can each push an otherwise working interface over the edge.",
+   "quote_verbatim": "Your terminations might be slightly out and your return pass for your terminations might be out.",
+   "speaker": null,
+   "episode": 439,
+   "episode_title": "Grow A Superbrain",
+   "episode_url": "https://theamphour.com/the-amp-hour-439-grow-a-superbrain/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Local automated adjustments to a routed board on the order of a hundred microns do not materially change the electrical behaviour of a net, so such changes do not require the board to be re-simulated.",
+   "quote_verbatim": "if you're only rerouting 100 microns or so that it really doesn't have much impact on signal integrity",
+   "speaker": "Craig J Bishop",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The effective bandwidth of a digital signal follows from its rising edge, which gives a knee frequency; placing a small external series resistor and capacitor on the line so that its three decibel corner sits at that knee removes the higher harmonics without degrading the digital edge the receiver needs.",
+   "quote_verbatim": "here's the effective bandwidth given the rising edge",
+   "speaker": "Nash Reilly",
+   "episode": 474,
+   "episode_title": "An Interview with Nash Reilly",
+   "episode_url": "https://theamphour.com/474-an-interview-with-nash-reilly/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Modern high-speed digital interfaces behave as analogue channels: DRAM is fully digital inside the package, but once the data leaves the package the frequency and time response of copper traces on FR-4 govern it, and correcting or equalizing that channel is filter design rather than logic design.",
+   "quote_verbatim": "it's a return almost to filter theory",
+   "speaker": "Kendall Castor-Perry",
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Serialiser-deserialiser links reduce pin count by pushing per-lane rates upward, and at rates approaching 112 gigabits per second a board trace is carrying frequencies beyond the everyday experience of most radio designers as an analogue signal.",
+   "quote_verbatim": "now that people are talking about things up to 112 gigabits per second",
+   "speaker": "Kendall Castor-Perry",
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Copper foil roughness is a first-order loss term at multi-gigabit rates: fabricators roughen the copper-to-laminate interface for peel strength, propagation depends acutely on the smoothness of the underside of the track, and an over-rough surface can double the loss, so low-loss builds trade peel strength for smoother foil and produce traces that lift easily.",
+   "quote_verbatim": "you can double the, you know, the loss effectively by having a surface that's too rough",
+   "speaker": "Kendall Castor-Perry",
+   "episode": 476,
+   "episode_title": "An Interview with Kendall Castor-Perry",
+   "episode_url": "https://theamphour.com/476-an-interview-with-kendall-castor-perry/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Modelling a decoupling capacitor properly, including measuring the real part rather than assuming the marked value, can absorb weeks of work for a single capacitor on a single chip, which is why designers rarely do it even when the analysis would be useful.",
+   "quote_verbatim": "you can spend weeks just modeling one bypass capacity and capacitor and measuring it properly",
+   "speaker": null,
+   "episode": 488,
+   "episode_title": "Sowing Discord",
+   "episode_url": "https://theamphour.com/488-sowing-discord/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The parasitic behaviour of passive components matters progressively more as edge rates rise rather than switching on at a threshold; the point at which it starts to dominate is somewhere around the 100 MHz to 1 GHz region, and below that the effort is better spent elsewhere.",
+   "quote_verbatim": "increasingly important as your speeds move up in time and don't stress about it too much until you really are moving up in speeds",
+   "speaker": "Chris Gammell",
+   "episode": 488,
+   "episode_title": "Sowing Discord",
+   "episode_url": "https://theamphour.com/488-sowing-discord/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Signal integrity effects can be taught on purpose-built two-layer boards laid out deliberately to behave badly, so that a given mechanism can be provoked and measured in a controlled way on real hardware instead of only being described.",
+   "quote_verbatim": "boards that are designed, you know, to intentionally have a bad signal integrity properties",
+   "speaker": "Kieran O'Leary",
+   "episode": 492,
+   "episode_title": "More Electronics Consultant Impedance Matching",
+   "episode_url": "https://theamphour.com/492-more-electronics-consultant-impedance-matching/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Field solvers make signal integrity phenomena easy to display, but they remain simulations of the structure rather than the structure itself, and the tools are not universally available, so bench measurement retains a role that simulation does not replace.",
+   "quote_verbatim": "these things are all very interesting and easy to demonstrate using field solvers. Um, but not everybody has access to those tools and it's, it's still a simulation, you know, and, and the map is not the terrain.",
+   "speaker": "Kieran O'Leary",
+   "episode": 492,
+   "episode_title": "More Electronics Consultant Impedance Matching",
+   "episode_url": "https://theamphour.com/492-more-electronics-consultant-impedance-matching/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "At multi-gigabit rates the individual discontinuities in a link accumulate rapidly, so a system built at considerable expense for high throughput can deliver a fraction of its rated speed unless the interconnect is verified rather than assumed.",
+   "quote_verbatim": "little discontinuities, little badnesses stack up so fast at these super high speeds that you can give up performance so fast",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A packet-level bus analyser reports what was decoded and cannot identify a physical-layer defect such as a stub on a data line; diagnosing that requires instrumentation at the analogue layer, and the sensitivity to such defects rises sharply from USB 2.0 to USB 3.0.",
+   "quote_verbatim": "This is not going to tell you that you've got a signal integrity problem.",
+   "speaker": "Chris Gammell",
+   "episode": 551,
+   "episode_title": "Feed the Mouse",
+   "episode_url": "https://theamphour.com/551-feed-the-mouse/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A link that misses its impedance target does not usually fail outright; it works in quotation marks, showing an elevated error rate that surfaces as intermittent lost packets and is therefore hard to attribute to the interconnect.",
+   "quote_verbatim": "meet the impedance target or whatever, yeah, you would see that. You would actually see it come out. It'd work in quote marks, right? But you would get a larger rate of errors",
+   "speaker": "Dave Jones",
+   "episode": 554,
+   "episode_title": "PLEASE be a die shrink",
+   "episode_url": "https://theamphour.com/554-please-be-a-die-shrink/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Cable and interconnect quality can be settled by measurement rather than assertion: push the link until it fails to find the maximum rate it sustains, and capture the eye diagram, which together give a quantitative comparison between two nominally identical cables.",
+   "quote_verbatim": "He wants to actually quantify that, yes, this SATA cable is better than this one because of the signal integrity.",
+   "speaker": "Dave Jones",
+   "episode": 569,
+   "episode_title": "Electric Fields, Son.",
+   "episode_url": "https://theamphour.com/569-electric-fields-son/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Differential signalling as used by RS-485 supports far longer cable runs than the single-ended scheme of RS-232, because the receiver responds to the difference between the two conductors and rejects what the pair picks up in common.",
+   "quote_verbatim": "RS485 is a differential signaling system. So you can go over much longer runs and you don't get the signal integrity problems you get with RS232 being a single ended system.",
+   "speaker": "Dave Jones",
+   "episode": 595,
+   "episode_title": "Trade Show or Conference?",
+   "episode_url": "https://theamphour.com/595-trade-show-or-conference/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Advanced packaging places separately optimised dies, logic on a logic process and memory on a memory process, onto a common interposer, so the die-to-die interconnect stays short enough to preserve the bandwidth and signal integrity that an off-package bus would give up.",
+   "quote_verbatim": "you slap them together with some interposer or whatever that gives you, that means that you don't lose out on the bandwidth and the signal integrity of having it all so close together",
+   "speaker": "Matt Venn",
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Every board-level electromagnetic question reduces to scattering parameters: if the S-parameters of the fabricated structure can be computed or measured with a vector network analyser, the result can be compared against the tolerances the schematic assumed, which is what an automated three-dimensional Maxwell solver on a routed board is for.",
+   "quote_verbatim": "basically everything is answerable if you can compute S parameters",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Layer count is a direct cost-against-performance trade: a four-layer board costs more than a two-layer board and buys better signal integrity and isolation between noisy and quiet nets, which makes it an optimisation variable like size or component cost.",
+   "quote_verbatim": "four-layer board is going to be more expensive, but you're going to get definitely better, you know, signal integrity and noise isolation on that than a two-layer board",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Very high-speed data systems are communications channel problems rather than digital design problems, which is why they are routinely handed to analogue designers even though the payload is digital.",
+   "quote_verbatim": "They're basically a communications channel problem. They're not really a digital problem.",
+   "speaker": "Jerry Twomey",
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "University teaching covers ideal signals and ideal digital systems and generally stops before noise, inductance and cross-coupling between conductors, so the second-order effects that dominate real high-speed hardware have to be learned after graduation.",
+   "quote_verbatim": "they're not going to go into things like noise, immunity, and second-order problems with things like inductance and cross-coupling",
+   "speaker": "Jerry Twomey",
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Most routine board design calculations are handled by tools rather than by hand, but timing on a parallel bus such as DDR is one of the cases where a designer still works the numbers out explicitly.",
+   "quote_verbatim": "If you're doing like, you know, timing and that kind of stuff on a, on a parallel bus or if it's DDR or something, you might pull out the pencil and paper.",
+   "speaker": "Zachariah Peterson",
+   "episode": 718,
+   "episode_title": "Layout Review with Zachariah Peterson",
+   "episode_url": "https://theamphour.com/718-layout-review-with-zachariah/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Signal integrity debugging proceeds as hypothesis testing: the engineer reasons from the governing equations and from previously seen symptoms to a likely cause, then checks that specific hypothesis in simulation rather than sweeping the design space.",
+   "quote_verbatim": "you're pulling up your equations list and kind of thinking about why you're seeing what you're seeing over time",
+   "speaker": "Zachariah Peterson",
+   "episode": 718,
+   "episode_title": "Layout Review with Zachariah Peterson",
+   "episode_url": "https://theamphour.com/718-layout-review-with-zachariah/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Because problematic behaviour appears only above a certain frequency, deliberately lowering the clock during FPGA emulation keeps ad-hoc prototype wiring from producing failures that would otherwise be mistaken for design faults.",
+   "quote_verbatim": "I drop the frequency a little bit in order that my terrible wiring doesn't cause any issues",
+   "speaker": "Julia Desmazes",
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "Episode 252 (Eric Bogatin): attribution_reliable is false on every passage from this episode. The teaching, stackup, rise-time and field-solver material is unambiguously the guest's own (he teaches signal integrity and wrote the books discussed), so Eric Bogatin is retained.",
+  "Episode 252, passage 30: labelled Dave Jones, but the field-solver statement is the guest's reply to a host question; reattributed to Eric Bogatin. The loop-area rule-of-thumb material in the same passage is the host's and was left to the ground-plane article.",
+  "Episode 260: the passage on RF synthesis and manufacturing repeatability was drawn from the copy labelled Ariel Briner rather than the near-duplicate labelled Chris Gammell, since the content is the guest's.",
+  "Episode 293: speaker_repaired is the nonsense token 'Arduinos'; content does not identify the speaker, so speaker is null.",
+  "Episode 325: passages labelled Chris Gammell describe the guest's own high-speed camera design (LVDS and DDR interfaces); reattributed to David Kronstein.",
+  "Episode 378: speaker_repaired is the combined label 'Jason Kridner And Robert'; the exchange is addressed to Jason ('What should scare me off, Jason?'), so Jason Kridner is used.",
+  "Episode 439: the memory-pattern testing passage is labelled Chris Gammell but reads as the other host recounting production test experience, and the fused window mixes both; speaker set to null.",
+  "Episode 469: the passage on 100 micron reroutes is labelled Chris Gammell but is the guest describing his own tool; reattributed to Craig J Bishop.",
+  "Episode 476: attribution_reliable false and labelled Dave Jones, but the SERDES, filter-theory and copper-roughness material is the guest's own account of his analogue career; reattributed to Kendall Castor-Perry.",
+  "Episode 488: the passage fuses both hosts; the remark about spending weeks modelling one bypass capacitor cannot be assigned from content and is left null, while the speed-threshold judgment is clearly the first-person host reflection labelled Chris Gammell.",
+  "Episode 492: the field-solver-versus-hardware passage is labelled Chris Gammell but continues the guest's first-person account of his demonstration boards; reattributed to Kieran O'Leary.",
+  "Episode 704: passages labelled Dave Jones are the guest describing his own book and consulting work; reattributed to Jerry Twomey."
+ ]
+}

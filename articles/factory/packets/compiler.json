@@ -1,0 +1,619 @@
+{
+ "concept": "compiler",
+ "name": "Compiler",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "compiler",
+  "census": "union",
+  "passages_in": 87,
+  "capped": false
+ },
+ "claims": [
+  {
+   "claim_text": "Embedded debugging is far poorer than desktop debugging and the gap is hardware, not laziness: a desktop IDE gives unlimited breakpoints, variable inspection and tracebacks, while an embedded target typically offers one or two hardware breakpoints. Expect to work differently, not just with worse tools.",
+   "quote_verbatim": "you're lucky to get one, maybe two breakpoints",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Splitting a design across two processors means two compilers and two toolchains that do not talk to each other. That toolchain cost belongs in the decision alongside the technical argument for separating the tasks.",
+   "quote_verbatim": "that means two different compilers probably",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The toolchain-cost argument mostly bites at the high end. For the cheap microcontrollers, the ones costing tens of cents, free compilers exist and are entirely adequate, so a second processor does not necessarily mean a second purchase.",
+   "quote_verbatim": "these cheap micros, you don't have to buy the compilers for them",
+   "speaker": null,
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Embedded development tools, meaning IDEs, compilers and debuggers, sit roughly ten to fifteen years behind equivalent desktop-targeting tools. The gap is economic and structural rather than technical: there is no good reason for it beyond who pays.",
+   "quote_verbatim": "i think that's all probably 10 or 15 years behind where desktop",
+   "speaker": null,
+   "episode": 281,
+   "episode_title": "Crossovers and Call-ins",
+   "episode_url": "https://theamphour.com/281-crossovers-and-call-ins/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Two forces keep embedded tooling behind. The community is small and unwilling to pay, and its needs are fragmented: a compiler for one vendor's Cortex part differs from another vendor's, so new compilers are constantly needed and each one has few users to fund it.",
+   "quote_verbatim": "we're a small group and we really don't want to pay for anything",
+   "speaker": null,
+   "episode": 281,
+   "episode_title": "Crossovers and Call-ins",
+   "episode_url": "https://theamphour.com/281-crossovers-and-call-ins/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Hand-written assembly is not automatically fast. A good compiler will beat a poor assembly programmer reliably, so the choice to drop to assembly only pays if you are genuinely good at it.",
+   "quote_verbatim": "A good compiler will, will beat a crappy assembler programmer any day of the week",
+   "speaker": "Dave Jones",
+   "episode": 267,
+   "episode_title": "Standing With Ahmed",
+   "episode_url": "https://theamphour.com/267-standing-with-ahmed/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Assembly earned its place when memory was the binding constraint: on a one-kiloword part, C runtime overhead consumed most of the available flash, so fitting the program at all required hand assembly. That constraint has largely gone, which is why the practice has too.",
+   "quote_verbatim": "if you try and do something in C, well, you've pissed away most of that",
+   "speaker": null,
+   "episode": 267,
+   "episode_title": "Standing With Ahmed",
+   "episode_url": "https://theamphour.com/267-standing-with-ahmed/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The efficient way to learn assembly is not to write it directly but to read what your C compiles to. It builds the same understanding while keeping you productive in the higher-level language.",
+   "quote_verbatim": "I would look at what your C is doing and learn assembly that way",
+   "speaker": "Dave Jones",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The discipline that produces genuinely fast code is comparing the compiler's assembly output against what you would have written by hand, then counting the difference in cycles. Whether the difference matters depends entirely on the domain: irrelevant in most code, significant in a power-plant distributed control system.",
+   "quote_verbatim": "he would regularly compare assembly output from a compiler to what he had handwritten",
+   "speaker": null,
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Compilers were once distrusted the way automated design tools are now. For many years it was believed automatic compilation was impossible, and when the first compilers appeared people pulled the output apart to show it was slower and less efficient than hand work. The pattern recurs whenever a layer of automation arrives.",
+   "quote_verbatim": "For, for many years, people thought that it would never be possible to automatically compile code",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The argument for learning what sits under the IDE is what one engineer calls the 2am problem: when something breaks and nobody is awake to ask, you need to be able to look one level down yourself. For day-to-day work the IDE is the right answer; the knowledge is insurance.",
+   "quote_verbatim": "What happens when it's 2am and something's not working?",
+   "speaker": null,
+   "episode": 470,
+   "episode_title": "Just Add Salt",
+   "episode_url": "https://theamphour.com/470-just-add-salt/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Acquiring that knowledge does not require building the toolchain by hand. The IDE's build console prints the actual command line it runs, showing GCC being invoked with every flag, which is enough to understand what the button does.",
+   "quote_verbatim": "you can see it actually running the command line, it calls up GCC",
+   "speaker": null,
+   "episode": 470,
+   "episode_title": "Just Add Salt",
+   "episode_url": "https://theamphour.com/470-just-add-salt/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Put the compiler last on the diagnostic list. Crowdsourced advice gravitates to the most complicated explanation, but the toolchain is almost never the fault; work through everything else before believing it is.",
+   "quote_verbatim": "It's probably not the compiler",
+   "speaker": null,
+   "episode": 470,
+   "episode_title": "Just Add Salt",
+   "episode_url": "https://theamphour.com/470-just-add-salt/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Compiler bugs do exist and finding one has a real schedule cost. One engineer found a confirmed bug in GCC and the project slipped a couple of weeks waiting for the upstream fix, because a bug in someone else's compiler is not something you can route around on your own timetable.",
+   "quote_verbatim": "he's found a bug in the GCC compiler",
+   "speaker": "Dave Jones",
+   "episode": 460,
+   "episode_title": "Rubber Ducking",
+   "episode_url": "https://theamphour.com/460-rubber-ducking/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The common antipattern under time pressure is thrashing: rewriting code until the symptom disappears without ever establishing why it failed. It works often enough to be tempting and leaves the actual defect in place.",
+   "quote_verbatim": "I'll rewrite things until it works",
+   "speaker": null,
+   "episode": 470,
+   "episode_title": "Just Add Salt",
+   "episode_url": "https://theamphour.com/470-just-add-salt/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A concrete version trap: a compiler defaulting to C90 rejects declaring the loop counter inside the for statement, which has been legal since C99. The symptom is an inexplicable syntax error in ordinary-looking code, and the fix is to declare the variable outside the loop or set the language standard.",
+   "quote_verbatim": "It's not using C99",
+   "speaker": null,
+   "episode": 479,
+   "episode_title": "Why isn't this working?",
+   "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Compiling the same source with a second compiler is a cheap correctness check: building with Clang alongside GCC surfaces warnings the other did not raise, catching problems in how the code interacts with itself rather than resource errors.",
+   "quote_verbatim": "two different compilers, double checking that my work is accurate and clean",
+   "speaker": null,
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The paid-versus-free compiler balance has shifted. Declining to pay is now viable in a professional context where it once was not, though some commercial tools still justify their price on debugger quality alone.",
+   "quote_verbatim": "especially in a professional context to not pay for compilers",
+   "speaker": null,
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "C compilers once cost around a thousand dollars, which is the direct reason a generation of hobbyists started in assembler. The parts that took over the magazine-project world were the ones whose development tools could be obtained cheaply and readily before online ordering existed.",
+   "quote_verbatim": "you've got to pay $1,000 for a C compiler kind of thing",
+   "speaker": "Dave Jones",
+   "episode": 287,
+   "episode_title": "Pull The Trigger",
+   "episode_url": "https://theamphour.com/287-pull-the-trigger/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Toolchain cost can decide a product's fate. An early robotics controller that required a hundred-dollar compiler went nowhere against a contemporary that shipped free tools, a difference its founder names alongside the interface choice as why it failed.",
+   "quote_verbatim": "you had to buy a hundred dollar compiler to use the chips",
+   "speaker": null,
+   "episode": 425,
+   "episode_title": "An Interview with Chris Osterwood",
+   "episode_url": "https://theamphour.com/425-an-interview-with-chris-osterwood/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The absence of a free C compiler for a given part pushed real projects to assembler well into the era when C was standard elsewhere. Tool availability, not language preference, determined how the firmware got written.",
+   "quote_verbatim": "I don't think there were any free C compilers",
+   "speaker": "Stefan Dzisiewski-Smith",
+   "episode": 309,
+   "episode_title": "An Interview with Stefan Dzisiewski-Smith",
+   "episode_url": "https://theamphour.com/309-an-interview-with-stefan-dzisiewski-smith/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The precursor to the accessible-hardware wave was programmers and compilers becoming widely available and cheap. That is what let people with no electronics background start building, several years before the boards that get the credit.",
+   "quote_verbatim": "programmers and compilers started becoming more widely available",
+   "speaker": "Mike Szczys",
+   "episode": 403,
+   "episode_title": "An Interview with Mike Szczys",
+   "episode_url": "https://theamphour.com/403-an-interview-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Mature tooling is why old cores refuse to die. The 8051 persists because it has extremely mature compilers, debuggers, in-circuit emulators and JTAG support built up over decades, alongside its public-domain status.",
+   "quote_verbatim": "It has extremely mature tools, debuggers, and circuit emulators, JTAG, whatever",
+   "speaker": null,
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The same trade seen from the other side: an old core stays accessible because people can still write assembly for it and it simply works, while a newer part obliges you to bring up a compiler and a full toolchain first. Newer parts are more capable and heavier to start with.",
+   "quote_verbatim": "you have to have a compiler and you got to, you know, do all the way through",
+   "speaker": null,
+   "episode": 326,
+   "episode_title": "Magical Fire Bags",
+   "episode_url": "https://theamphour.com/326-magical-fire-bags/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A fixed instruction set is what lets an ecosystem form. When every design in a family had a different instruction set, nothing could be shared; a single fixed set allowed standard compilers, in-circuit emulators and a development ecosystem to grow around the part.",
+   "quote_verbatim": "So you could have standard compilers and in-circuit emulators and a development ecosystem could grow up around it",
+   "speaker": "Philip Frieden",
+   "episode": 103,
+   "episode_title": "An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee",
+   "episode_url": "https://theamphour.com/the-amp-hour-103-xenodochial-xilinx-ex-employee/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Building a processor is the easy part. The hard part is building all the software tools around it, which is why an instruction set with an existing tool universe is worth more than the silicon design itself.",
+   "quote_verbatim": "The hard part is building all the software tools around that processor",
+   "speaker": null,
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Compiler quality comes from users, not only from compiler developers. Optimisation improves because many people read the generated output closely, judge that it could do better, and contribute test cases. A processor built for one user never accumulates that feedback, so its retargeted compiler stays mediocre.",
+   "quote_verbatim": "you need also a lot of people using that compiler and looking at the compiler output very, very closely",
+   "speaker": null,
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The argument for a common open instruction set is amortisation: the enormous toolchain effort gets done once and reused by everyone building a compliant processor, instead of being redone for each new architecture.",
+   "quote_verbatim": "we only need to do that once",
+   "speaker": null,
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Compilation and logic synthesis are the same class of operation. Both take a higher-level description and perform a sequence of transformations to produce an equivalent representation you can actually build with, whether that is machine code or NAND and NOR gates.",
+   "quote_verbatim": "It takes a high-level description or higher-level description in one format and performs a sequence of transformations",
+   "speaker": null,
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The method for building a compiler is decomposition: find a way to break the translation from input language to output language into many small problems. The front end looks deceptively simple, which is the point of the dragon on the textbook cover.",
+   "quote_verbatim": "you figure out a way to break down the problem of taking your input language and producing the output language into many, many small problems",
+   "speaker": null,
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Generate microcode rather than hand-writing it. A few thousand hand-written instructions represent weeks of work that a single requirements change invalidates, whereas generated instructions can simply be regenerated.",
+   "quote_verbatim": "you are very happy when the couple of thousand instructions were actually generated by a compiler",
+   "speaker": null,
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An abstraction you have never used is invisible rather than obviously missing. Engineers working in assembler knew compilers existed and did not feel deprived, because they had no access and no workflow built around one. You cannot want the higher level until you have worked in it.",
+   "quote_verbatim": "Until you have access to that higher level of abstraction, you don't know what's actually possible",
+   "speaker": null,
+   "episode": 374,
+   "episode_title": "An Interview with Claire (née 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The discipline that separates good FPGA designers is knowing what hardware each line of code infers. Build that association deliberately: drive the compiler with small pieces of code and inspect the result in the RTL viewer, then move up in abstraction once the mapping is intuitive.",
+   "quote_verbatim": "you should drive the compiler around a little bit, try little pieces of code, and then bring it into the RTL viewer",
+   "speaker": null,
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Without that association the failure is abrupt and confusing: three lines of code fill the part and there is no obvious reason why. Coding blind against a synthesis tool does not work the way coding blind against a processor does.",
+   "quote_verbatim": "I type three lines of code and my part's full now",
+   "speaker": null,
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Vendor toolchains drop support for old parts, which strands hardware. Free FPGA tool releases progressively remove older families, so development boards become unusable not because they broke but because nothing will compile for them any more.",
+   "quote_verbatim": "they do start dropping off the older chips out of there",
+   "speaker": null,
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Toolchain longevity is a real selection criterion. A long-established compiler will still build source written twenty-five years ago, whereas an online compiler cannot be relied on to exist for the supported life of a product. Choosing leading-edge parts and tools trades that guarantee away.",
+   "quote_verbatim": "you can count on GCC",
+   "speaker": null,
+   "episode": 244,
+   "episode_title": "The Art Of Staying Interested In Electronics - Exponible Electronics Ennui",
+   "episode_url": "https://theamphour.com/244-the-art-of-staying-interested-in-electronics-exponible-electronics-ennui/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Platform restrictions can force compilation off the device entirely: a phone application could not embed a compiler because the platform forbids it, so source is compiled on a server and the returned hex is programmed to the target over a wireless link.",
+   "quote_verbatim": "we couldn't put the compiler inside the app because Apple doesn't allow that",
+   "speaker": "Colin",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The browser-IDE model is genuinely low friction, cross-platform and vendor-independent: write in the browser, the service compiles, and the binary is copied to a board that enumerates as a USB drive. What it still lacks is debugging, which is the trade for that simplicity.",
+   "quote_verbatim": "I don't like that it still doesn't have debugging",
+   "speaker": null,
+   "episode": 287,
+   "episode_title": "Pull The Trigger",
+   "episode_url": "https://theamphour.com/287-pull-the-trigger/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Build reproducibility fails quietly across a team. Two engineers compiling the same firmware with different tool versions produce genuinely different binaries with no practical way to identify what changed, which is what makes works-on-my-machine unresolvable rather than merely annoying.",
+   "quote_verbatim": "if you compared the binaries, they are different binaries",
+   "speaker": null,
+   "episode": 627,
+   "episode_title": "Works on my machine",
+   "episode_url": "https://theamphour.com/627-works-on-my-machine/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The fix is to standardise the build environment so everyone passes through the same virtual machine and the same compiler, making the binary identical regardless of who builds it. This has been routine in software for years and is only now arriving in firmware.",
+   "quote_verbatim": "everybody is always going through the same pipe and the same compiler",
+   "speaker": null,
+   "episode": 627,
+   "episode_title": "Works on my machine",
+   "episode_url": "https://theamphour.com/627-works-on-my-machine/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Adopting containerised builds has a real migration cost for firmware. A Windows IDE-based flow must either move its tools to their Linux equivalents inside the container or abandon the vendor compiler for a different one, and neither is a small change.",
+   "quote_verbatim": "either I either have to go and use the Linux version of those tools",
+   "speaker": null,
+   "episode": 627,
+   "episode_title": "Works on my machine",
+   "episode_url": "https://theamphour.com/627-works-on-my-machine/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Continuous integration for firmware means shipping the source off to be compiled centrally so that the resulting binary is always the same, with every developer able to obtain the identical compiler setup rather than reproducing it locally.",
+   "quote_verbatim": "we would be shipping that code off to be compiled on the cloud",
+   "speaker": null,
+   "episode": 654,
+   "episode_title": "Pseudo Code...Pseudo Good",
+   "episode_url": "https://theamphour.com/654-pseudo-code-pseudo-good/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The advantage of compiling ahead of time is that a powerful desktop machine can spend time optimising, and what reaches the target is instructions the CPU executes directly.",
+   "quote_verbatim": "you have a very strong computer like your desktop or your laptop that can spend time optimizing",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The interpreted alternative inverts that: the virtual machine itself is machine code compiled on a desktop for the specific target and loaded into flash, where it acts as an engine that parses and executes plain source text at run time. The user's program is never compiled to machine code at all.",
+   "quote_verbatim": "the VM is, is machine code that's loaded into flash",
+   "speaker": null,
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Once a compiler supports an instruction set, retargeting approaches a flag change: GCC absorbed the RISC-V instruction set and switching architecture became a command-line option. The work behind that is enormous, but the resulting portability is close to switchable.",
+   "quote_verbatim": "you could just switch a flag in gcc and it starts targeting risk five",
+   "speaker": null,
+   "episode": 528,
+   "episode_title": "New Year, New Gear",
+   "episode_url": "https://theamphour.com/528-new-year-new-gear/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The distinction that trips people up: an instruction set architecture is not a processor. Designing a compliant processor from scratch means an existing compiler has a good chance of targeting it, but the design remains your own and is not itself open source.",
+   "quote_verbatim": "RISC-V is an instruction set architecture. It's not a processor",
+   "speaker": null,
+   "episode": 597,
+   "episode_title": "Wow, Dave REALLY likes Top Gun",
+   "episode_url": "https://theamphour.com/597-wow-dave-really-likes-top-gun/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A maturity argument against new architectures for production work: teams still hit compiler issues on mainstream, heavily used processors, so an architecture with far fewer users is likely to hide more. Pick one with visible consensus behind it if you must use it at all.",
+   "quote_verbatim": "how many issues are hidden in these",
+   "speaker": null,
+   "episode": 432,
+   "episode_title": "Check The Dummy Box",
+   "episode_url": "https://theamphour.com/432-check-the-dummy-box/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Owning your toolchain shortens the loop between finding a problem and fixing it, which is the productivity argument for a large user contributing directly to an open compiler rather than coordinating every fix with an outside vendor, however willing that vendor is.",
+   "quote_verbatim": "the time between, uh, finding a problem and fixing a problem, um, is really important to productivity",
+   "speaker": "Tim Ansell",
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The economics of compiler optimisation are extreme at the top: large numbers of engineers work on fractions of a percent because that fraction converts into very large revenue for a big user. A commercial compiler vendor instead works through bugs in the order its largest clients want them, which is a different prioritisation entirely.",
+   "quote_verbatim": "just tweaking them this one tiny part of a percent",
+   "speaker": "Michael Gielda",
+   "episode": 547,
+   "episode_title": "Open Source Mindset with Michael Gielda",
+   "episode_url": "https://theamphour.com/547-open-source-mindset-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Switching machine-learning platforms is expensive precisely because of the toolchain: operations may simply be missing from the target compiler, and much of the stack is closed, so the usual route of improving the tools yourself is unavailable.",
+   "quote_verbatim": "these operations are missing from that compiler",
+   "speaker": "Michael Gielda",
+   "episode": 547,
+   "episode_title": "Open Source Mindset with Michael Gielda",
+   "episode_url": "https://theamphour.com/547-open-source-mindset-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Compressing source onto fewer lines buys nothing. It assembles identically to the readable version, so the only measurable effect is reduced readability.",
+   "quote_verbatim": "it's going to assemble the same way as if you did it on five lines",
+   "speaker": "Dave Jones",
+   "episode": 110,
+   "episode_title": "Armstrong, Camenzind & Museums - Outstanding Oneirophoros Obituaries",
+   "episode_url": "https://theamphour.com/the-amp-hour-110-outstanding-oneirophoros-obituaries/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Practice only counts as practice when something tells you that you were wrong. Compiler errors are legitimate feedback in exactly the way a design review or a simulator is, which is what makes hours spent with a toolchain that talks back more valuable than hours spent guessing.",
+   "quote_verbatim": "It can be from the compiler",
+   "speaker": null,
+   "episode": 140,
+   "episode_title": "Project Management, Lasers & Robots - Staunch Specialty Sanctanimity",
+   "episode_url": "https://theamphour.com/the-amp-hour-140-staunch-specialty-sanctanimity/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Using a DSP is not a separate discipline. Vendor-supplied libraries are pre-compiled to drive the hardware blocks, so the compiler emits the right assembly when it sees the function call and the part behaves like a very fast microcontroller for maths.",
+   "quote_verbatim": "it already has the stuff pre-compiled to, you know, to use those blocks",
+   "speaker": null,
+   "episode": 213,
+   "episode_title": "Travel Recaps and Altium Announcements - Artisinal Aussie Assemblage",
+   "episode_url": "https://theamphour.com/213-travel-recaps-and-altium-announcements-artisinal-aussie-assemblage/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "On small cores it pays to know what the compiler will and will not emit: shifts and rotates are free, and you can get surprisingly far before the compiler needs a multiply at all. When it does emit one, the operation stops being instantaneous.",
+   "quote_verbatim": "it is amazing how far you can get before you actually, like, before the compiler even wants to emit a multiply",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An object file is the compiler's output for one source file, carrying not just compiled code but header metadata recording where the function entry points are. That well-defined format is what makes loadable kernel modules possible at run time.",
+   "quote_verbatim": "an object file is the output of a compiler",
+   "speaker": null,
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Bringing a new architecture up under Linux starts with the toolchain: getting compiler support into mainline GCC, often bootstrapped with a commercial compiler first, before any of the platform work can proceed.",
+   "quote_verbatim": "compiler support into mainline GCC",
+   "speaker": null,
+   "episode": 378,
+   "episode_title": "An Interview with Jason Kridner and Robert Nelson",
+   "episode_url": "https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A commercial compiler, development system and debugger covering many automotive processor families across multiple vendors is a substantial business in its own right, valuable enough to be acquired for that reason alone.",
+   "quote_verbatim": "it's a compiler slash development system debugger, everything for automotive processes",
+   "speaker": "Dave Jones",
+   "episode": 659,
+   "episode_title": "Altium...Acquired!",
+   "episode_url": "https://theamphour.com/659-altium-acquired/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A defensible toolchain upgrade policy: lock the working version in a virtual machine and leave it alone. Upgrade when there is a reason, such as a compiler bug you have actually hit, not because a newer release exists.",
+   "quote_verbatim": "if your compiler's not working and it's got a bug or something, yeah, you might have to upgrade your compiler",
+   "speaker": null,
+   "episode": 546,
+   "episode_title": "Thousands Of Dependencies",
+   "episode_url": "https://theamphour.com/546-thousands-of-dependencies/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Large vendors give the compilers away and charge for the optimisation settings, so cost is not a barrier to starting; it becomes one only when you need the generated code to be as good as the tool can make it.",
+   "quote_verbatim": "It's only if you want some whiz-bang optimized setting on the compiler that that's what you pay for",
+   "speaker": "Dave Jones",
+   "episode": 633,
+   "episode_title": "Engineering Optimization",
+   "episode_url": "https://theamphour.com/633-engineering-optimization/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The baseline everything above is measured against: real products were hand machine-coded because no compiler existed for the part at all, with the developer assembling instructions directly.",
+   "quote_verbatim": "There was no compiler for this",
+   "speaker": "Barry Marshall",
+   "episode": 709,
+   "episode_title": "Nobel Prize Winner Dr Barry Marshall",
+   "episode_url": "https://theamphour.com/709-nobel-prize-winner-dr-barry-marshall/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  }
+ ],
+ "attribution_notes": [
+  "ep374, ep442, ep425, ep181, ep515, ep381, ep38 passages are flagged attribution_reliable:false in the bundle; claims drawn from them carry speaker null and are content-attributed in the claim text.",
+  "Several passages label the host as speaker where the words are plainly the interviewee's (ep187 P8, ep267 P16, ep626 P79); those claims carry speaker null.",
+  "ep281 and ep528 are fused lowercase transcripts with no reliable turn boundaries; both claims from them carry speaker null."
+ ],
+ "capped": false
+}

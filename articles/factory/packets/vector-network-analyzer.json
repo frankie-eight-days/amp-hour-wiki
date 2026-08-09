@@ -1,0 +1,668 @@
+{
+ "concept": "vector-network-analyzer",
+ "name": "Vector Network Analyzer",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "vector-network-analyzer",
+  "census": "union",
+  "aliases": [
+   "vector-network-analyzer",
+   "vna"
+  ],
+  "children": [
+   "antenna-design",
+   "apc7",
+   "hp-8753",
+   "radio-frequency-engineering",
+   "rf-design",
+   "s-parameter",
+   "time-domain-reflectometry",
+   "type-n-connector",
+   "wire-antenna"
+  ],
+  "neighbors": {},
+  "pins_pre_cap": 65,
+  "pins_final": 65,
+  "pins_by_depth": {
+   "explains": 42,
+   "opinion": 23
+  },
+  "pins_by_role": {
+   "core": 62,
+   "child": 3
+  },
+  "capped": false,
+  "passages_yielding_claims": 43,
+  "passages_killed": 22
+ },
+ "claims": [
+  {
+   "claim_text": "A vector network analyzer characterizes electrical circuits by reporting gain and impedance as complex numbers, giving magnitude and phase together. Every network other than a pure DC network has a complex impedance, so reactance shows up as a phase angle change in the measurement.",
+   "quote_verbatim": "So a vector network analyzer gives you a vector number, which is a magnitude in a phase. And that's a complex number. So it allows you to measure networks that have complex impedances. And anything except a DC network has a complex impedance.",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An oscilloscope can display the sine waves involved but makes it awkward to extract magnitude and phase, whereas a vector network analyzer reports both directly. That is the practical reason to reach for a VNA instead of a scope when complex impedance is the quantity of interest.",
+   "quote_verbatim": "instead of using an oscilloscope where you can measure the sine waves on the oscilloscope, but it's hard to pick off the magnitude and phase on an oscilloscope, a vector network analyzer gives you that directly",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Calibration means measuring artifacts whose true values are known and then correcting subsequent readings toward those true values. Solving for impedance on a vector instrument requires three known standards, conventionally an open, a short and a load.",
+   "quote_verbatim": "calibration is basically you measure something that you know its true value, and then you just correct the readings to get the true value. And for vector analyzers, to do impedance, you need to have three true things. So we usually use an open, a short, and a load.",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Commercial calibration opens and shorts are physically offset from the connector reference plane, so on a Smith chart they trace an arc rather than collapsing to a single point. An instrument designer who worked on these standards judged that naming them plainly open and short rather than offset open and offset short was an industry mistake that has confused users ever since.",
+   "quote_verbatim": "All of our opens and shorts are offset, so they all have a little arc.",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A recurring beginner complaint is that connecting the calibration short does not produce a single dot on the display. The explanation is that the standard carries a physical offset, and the instrument makers' naming choice from the early 1970s onward hid that fact.",
+   "quote_verbatim": "we would save so much grief from people saying, I put my short on and it's not a dot. Why is it not a dot?",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Gendered RF connectors leave a small air gap when a calibration load is mated, because the pin seats into the socket with slight clearance. That gap behaves like a small series inductance, and the instrument's error correction measures and subtracts it.",
+   "quote_verbatim": "The load can't connect directly if it has a gendered connector because the pin will go into the socket and have a little bit of a gap. And that little bit of a gap, we measure its response, which is going to look like a little inductance, and we essentially subtract that out with the error correction.",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The APC7 connector is sexless, with a collet and spring giving a mating junction of zero offset, so its shorts are true shorts, its opens are close to ideal and its load has no mating discontinuity. That mattered enormously before error correction became routine, and the reason instruments kept the connector afterwards was inertia rather than necessity.",
+   "quote_verbatim": "With the APC7, if you look at the collet, it's got like a tiny little spring in there. So it's a mating connection that has zero offsets. So the shorts are true shorts. The opens are pretty close to opens, and the load has got no little inconsistency in it. So if you didn't use error correction, that would be important. But everybody uses error correction.",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "When adapters and converters are used to reach a different connector family, the working approach is to accept them as part of the measurement setup and calibrate with the adapters already in place, rather than calibrating bare and adding them afterwards.",
+   "quote_verbatim": "you start to get into that ecosystem of just using converters, understanding that they're there and calibrating once they're on there",
+   "speaker": "Chris Gammell",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Because a vector instrument captures both amplitude and phase, a phase error anywhere in the measurement path can be calibrated out; a scalar instrument that only sees magnitude cannot do this and cannot produce a Smith chart. Measuring the through, short, open and load lets the instrument build a model of the test fixture itself.",
+   "quote_verbatim": "So if you have a vector network, network analyzer, where you're measuring the input as vectors, right? You get the amplitude and phase. If there's a phase problem somewhere in, in your, um, in your loop, you can calibrate that out",
+   "speaker": "Ted Yapo",
+   "episode": 465,
+   "episode_title": "An Interview with Ted Yapo",
+   "episode_url": "https://theamphour.com/465-an-interview-with-ted-yapo/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Running the supplied calibration kit standards through the fixture, the through plus the short, open and load, yields a sophisticated model of what the test jig contributes to every measurement, which is what lets the fixture be removed from the result.",
+   "quote_verbatim": "you take your expensive cal kit that they sent you. Yeah. Right. And you, and you put the through in there and you can measure the amplitude and phase with the through and you can do the, the short and the open and the load and all those things. And you can build this sophisticated model for what the test jig itself looks like.",
+   "speaker": "Ted Yapo",
+   "episode": 465,
+   "episode_title": "An Interview with Ted Yapo",
+   "episode_url": "https://theamphour.com/465-an-interview-with-ted-yapo/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Instruments that lack vector capability run into trouble specifically with purely reactive components and cannot present results on a Smith chart, and they are also harder to calibrate.",
+   "quote_verbatim": "So like purely reactive components, you could have some problems. You don't get Smith charts, stuff like that, right?",
+   "speaker": "Ted Yapo",
+   "episode": 465,
+   "episode_title": "An Interview with Ted Yapo",
+   "episode_url": "https://theamphour.com/465-an-interview-with-ted-yapo/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Before measuring a phone antenna, the antenna is cabled out: a cable is attached at the antenna feed and its shield grounded to the PCB, so the cable itself does not perturb the measurement. Only then is the assembly connected to a VNA to read impedance.",
+   "quote_verbatim": "you would essentially just, uh, cable it out, which means put a cable on the antenna and ground it to the PCB and all that. So it's your cables, not influencing, uh, the measurement. First thing is you put on a VNA vector network analyzer. That's where you can see the impedance.",
+   "speaker": "Pete Bevilacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A VNA sweep gives VSWR against frequency, where a VSWR of one means a perfect match, so the plot shows where the antenna is tuned and which direction it needs to move. This tells you only that the antenna accepts power, not that it radiates.",
+   "quote_verbatim": "you'll hear antenna people talk about VSWR, um, or that's just basically the return loss, like a VSWR one is perfectly matched. So basically you're looking at a plot of VSWR versus frequency, you know, you see, oh, it goes down and it's matched at this frequency. So I can tune it up or down. Um, that first thing just tells you the antenna is accepting power. It doesn't actually tell you it radiates.",
+   "speaker": "Pete Bevilacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A working antenna needs two independent things: a structure that supports radiation and a match to 50 ohms. A plain 50 ohm resistor terminating a VNA port reads as a perfect match while radiating nothing, which is the standard demonstration that a good match is not evidence of a working antenna.",
+   "quote_verbatim": "Radiate has to have a structure that supports radiation. And it also has to be matched to 50 ohms. So with the VNA, you can tell, Hey, it's matched. And so we're delivering power to the antenna, but it could also just be absorbing that power. Like if I put a 50 ohm resistor on a VNA, it'll be like, Oh, it's really well matched.",
+   "speaker": "Pete Bevilacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Once impedance is matched, the next measurement is radiation efficiency, taken in an anechoic chamber that integrates radiated power over all directions. An antenna program iterates on the pair of measurements, impedance against frequency and efficiency against frequency.",
+   "quote_verbatim": "you just go straight to measuring the efficiency and that's, um, done an anechoic chamber",
+   "speaker": "Pete Bevilacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Measuring impedance at RF reduces to measuring the reflected wave, because reflection coefficient and impedance are related by a fixed equation: on a 50 ohm line terminated in 60 ohms, the reflection is fully determined.",
+   "quote_verbatim": "the problem, or I guess the hard part is to measure the impedance of something at RF, you're kind of have to measure like the reflected wave. So impedance and what's reflected from the antenna are the exact same thing. Um, cause like there's an equation that relates the two. So like if you have a 50 ohm line and a, uh, 60 ohm antenna, for instance, the reflection coefficient is determined.",
+   "speaker": "Pete Bevilacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Separating the returning wave from the outgoing one on a single line requires a bidirectional coupler, which siphons off part of the reflected energy. Getting that coupler accurate over a wide bandwidth is the hard engineering problem, and is a large part of what a good VNA costs money for.",
+   "quote_verbatim": "To get the reflected wave, you have to have a thing called a bi-directional coupler, which essentially like, you know, you're pushing energy to the antenna, but the energy that comes back is what's reflected and you have to be able to pull that out of the same line. So the bi-directional coupler, you know, basically siphons off some of that reflected energy. And to get that right over a pretty wide bandwidth is pretty tough.",
+   "speaker": "Pete Bevilacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An engineer who built his own VNA found the bidirectional coupler took many iterations, working between cheap catalogue couplers from a distributor and printed couplers etched directly on the circuit board, which achieve roughly the same function.",
+   "quote_verbatim": "so that was a lot of iterations where I was trying, like, you can buy couplers on Digi-Key that are cheap or make printed ones on circuit boards that kind of do the same thing",
+   "speaker": "Pete Bevilacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Beyond the coupler, a VNA needs amplifiers and a frequency synthesizer. Off-the-shelf synthesizer parts covering roughly 10 MHz to 6 GHz can be programmed by a microcontroller to emit a commanded frequency, so a homebuilt instrument can step to the band of interest and then read the reflected wave there.",
+   "quote_verbatim": "you can just buy like a frequency synthesizer that'll work like from, you know, 10 megahertz to six gigahertz or whatever. And you just program it with MCU or you're saying, hey, I want this frequency to come out and it does.",
+   "speaker": "Pete Bevilacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A self-built two-port instrument covering 400 MHz to 2.7 GHz handles Bluetooth and low- and high-band cellular work, and its designer kept using it at home. Its main advantage over professional bench instruments is size and weight: roughly the bulk of a large phone rather than something that strains your back.",
+   "quote_verbatim": "It's like 400 megahertz to 2.7 gigahertz.",
+   "speaker": "Pete Bevilacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The scarcity and cost of vector network analyzers motivated at least one antenna designer to design and build his own, on the reasoning that the instrument is among the most critical tools for measuring RF and antennas.",
+   "quote_verbatim": "I was building a VNA, so Vector Network Analyzer, which is actually one of the most critical tools for measuring RF or, you know, antenna. So I just kind of frustrated that super high cost, decided to build my own",
+   "speaker": "Pete Bevilacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A low-cost two-port instrument covering 400 MHz to 2.7 GHz with a calibration kit built in was aimed specifically at characterizing antennas, and was designed by an antenna engineer who had not previously done PCB layout and iterated through many revisions.",
+   "quote_verbatim": "It's called the Chazwaza. It's a two-port, low-cost, 400 to 2.7 gigahertz VNA. So, basically, if you want to characterize antennas with a CalKit built in, this is your thing.",
+   "speaker": "Chris Gammell",
+   "episode": 347,
+   "episode_title": "Re-scoping the problem",
+   "episode_url": "https://theamphour.com/347-re-scoping-the-problem/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Network analyzers come in scalar and vector forms and the distinction matters for what can be measured: the vector instrument is the one that recovers phase as well as magnitude.",
+   "quote_verbatim": "There's Scalar Network Analyzers, and there's Vector Network Analyzers.",
+   "speaker": "Dave Jones",
+   "episode": 347,
+   "episode_title": "Re-scoping the problem",
+   "episode_url": "https://theamphour.com/347-re-scoping-the-problem/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A lower frequency limit of 400 MHz excludes work below the RF bands, and an engineer working mostly at lower frequencies wanted coverage extending down toward kilohertz instead.",
+   "quote_verbatim": "It's a shame it only goes down to 400 megahertz, because I would like a V&A that goes much like down to like five, you know, down to kilohertz or something.",
+   "speaker": "Dave Jones",
+   "episode": 347,
+   "episode_title": "Re-scoping the problem",
+   "episode_url": "https://theamphour.com/347-re-scoping-the-problem/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Around the mid-2010s the entry price for a new vector network analyzer sat near three thousand dollars, so the used market on auction sites was the realistic route for a small lab, and even secondhand units were considered expensive.",
+   "quote_verbatim": "I saw online, I was looking at other ones, I think it was like three grand was kind of lower end. I think you can get about three grand for a V&A",
+   "speaker": "Chris Gammell",
+   "episode": 347,
+   "episode_title": "Re-scoping the problem",
+   "episode_url": "https://theamphour.com/347-re-scoping-the-problem/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "One argument against a portable VNA with a built-in screen is that a USB-connected instrument driven from a PC gives a far better interface for the analysis work than six buttons and a small display, though most instruments of this class are bench units with their own screens.",
+   "quote_verbatim": "why not just make it USB interface and do all your graphic-y stuff on the PC would be my first thought",
+   "speaker": "Dave Jones",
+   "episode": 347,
+   "episode_title": "Re-scoping the problem",
+   "episode_url": "https://theamphour.com/347-re-scoping-the-problem/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The two specifications that determine whether a given VNA is usable for a job are frequency range and dynamic range. Small handheld units offer roughly 40 dB up to a gigahertz or about 70 dB at 500 MHz, whereas an older bench instrument from the classic vendors delivers on the order of 80 to 100 dB.",
+   "quote_verbatim": "so like the pocket VNA does 40, 40 DB up to gigahertz. It said. And then the other one I think is the same range. I think that's the thing. Like if you're getting like an old HP one, you'll get like maybe like 80 to a hundred DB of dynamic range.",
+   "speaker": "Chris Gammell",
+   "episode": 449,
+   "episode_title": "Pulled From A Working Environment",
+   "episode_url": "https://theamphour.com/449-pulled-from-a-working-environment/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A modest low-cost VNA is adequate for impedance matching, transmission line work and antenna tuning, but not for full component characterization, which is where the dynamic range and accuracy of a large bench instrument are needed.",
+   "quote_verbatim": "it's just for like doing matching, uh, you know, like, uh, uh, transmission line stuff and antenna stuff and things like that",
+   "speaker": "Chris Gammell",
+   "episode": 449,
+   "episode_title": "Pulled From A Working Environment",
+   "episode_url": "https://theamphour.com/449-pulled-from-a-working-environment/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A buyer facing the VNA market has two distinct paths: a new low-end instrument or the used equipment market, and the choice is shaped by the frequency range actually needed, since covering to three gigahertz is a different problem from covering tens of megahertz.",
+   "quote_verbatim": "is it better to do a low end type of thing? Or is it better to kind of dive into the used, the used equipment market",
+   "speaker": "Chris Gammell",
+   "episode": 449,
+   "episode_title": "Pulled From A Working Environment",
+   "episode_url": "https://theamphour.com/449-pulled-from-a-working-environment/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The HP 8753ES bundles an internal test set with the analyzer, meaning the RF relay switching needed to route the stimulus is built in, so full S-parameter measurements can be made without assembling external switching hardware.",
+   "quote_verbatim": "the 8753 ES is like, it's got, it's got an option built in. So you get, it's not just the, it's not just the VNA. It's also got the, the test sets. So like the RF relay switching stuff. So you can do S parameter measurement easily without like external setup.",
+   "speaker": "Chris Gammell",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Decades-old bench analyzers with floppy disk drives still commanded around six thousand dollars on the secondhand market, which sets the reference price against which any new low-cost instrument is judged.",
+   "quote_verbatim": "these things are like, they've got floppy disc drives on them and they're like six grand",
+   "speaker": "Chris Gammell",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "New VNAs from the value-oriented Chinese instrument vendors started around three and a half thousand US dollars before software option upgrades, so expectations of a five hundred dollar instrument from that class of vendor were unfounded at the time.",
+   "quote_verbatim": "don't get excited that Siglin have released a $500 VNA. No, it's like three and a half grand. No one has. Starter price, right? Starter price. Right. Right. And that's before all the software upgrades and stuff like that.",
+   "speaker": "Chris Gammell",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Having a 40 GHz VNA available on the bench changes how an engineer works, because the marginal cost of measuring one more thing is zero and everything gets thrown at the instrument. Losing access to that equipment after leaving a company with a well-stocked RF lab is a real loss of capability.",
+   "quote_verbatim": "if you have like a 40 gigahertz VNA sitting on your desk, you throw everything at it. You're like, I want to see what this looks like. I want to see what this looks like.",
+   "speaker": "Jeff Keyzer",
+   "episode": 472,
+   "episode_title": "Keyzermas Vacation",
+   "episode_url": "https://theamphour.com/472-keyzermas-vacation/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A 68 GHz vector network analyzer was priced around half a million dollars, while a 40 GHz instrument ran roughly forty thousand, which places high-frequency measurement capability far outside individual purchase and inside institutional budgets.",
+   "quote_verbatim": "I mean, you can get a 40 gig VNA for, I don't know, probably 40K maybe, something like that.",
+   "speaker": "Jeff Keyzer",
+   "episode": 472,
+   "episode_title": "Keyzermas Vacation",
+   "episode_url": "https://theamphour.com/472-keyzermas-vacation/",
+   "depth_regraded": "opinion",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Instruments reaching 60 GHz can cost over half a million dollars, more than a house in many US cities, and serve a very small worldwide population of users. That price structure is a direct consequence of how few organizations need microwave measurement at that frequency.",
+   "quote_verbatim": "And then like, I kind of zoomed out and I'm like, Oh, that says $564,000. Like that's more than a, you know, a house in many cities in the United States, you know, like that's insane. But it's a 60 gigahertz VNA that like only very, very small amounts of people in the world need.",
+   "speaker": "Chris Gammell",
+   "episode": 479,
+   "episode_title": "Why isn't this working?",
+   "episode_url": "https://theamphour.com/479-why-isnt-this-working/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Expensive shared measurement equipment constrains how distributed a hardware team can be: a fifty thousand dollar VNA is not something an engineer takes home, both because of company policy and because coworkers need access to the same instrument.",
+   "quote_verbatim": "look, I have a $50,000 VNA on my desk. I am not allowed to bring that home or maybe I am allowed to bring that home, but you know, my coworker uses it, you know, my other coworker uses it sometimes and it's just becomes really tough",
+   "speaker": "Chris Gammell",
+   "episode": 514,
+   "episode_title": "Focus, Dammit",
+   "episode_url": "https://theamphour.com/514-focus-dammit/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A vector network analyzer is used in signal integrity work in both frequency and time domain, unlike RF practice where the time domain response often matters less. In signal integrity the concern is fast edges reflecting off impedance discontinuities along a transmission line, which is inherently a time domain picture.",
+   "quote_verbatim": "In signal integrity, you'll use it in frequency domain, but you'll also use it for time domain measurements. You know, usually on the RF side, you don't care about time domain or care about it as much. But in the SI world, time domain response is much more important because you have edges that are bouncing around and you're looking at impedance discontinuities down the transmission line.",
+   "speaker": "Jeff Keyzer",
+   "episode": 421,
+   "episode_title": "The Legend of Keyzermas",
+   "episode_url": "https://theamphour.com/421-the-legend-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Time domain results can be obtained two ways: directly with a time domain reflectometer, or by sweeping reflection and transmission against frequency on a vector network analyzer and applying a transform to convert the frequency domain data into a time domain response.",
+   "quote_verbatim": "you can measure time domain in two ways. You can use a frequency domain instrument, like a vector network analyzer, which basically looks at reflections and transmissions of signals versus frequency. And you can actually do a Z transform to convert that to time domain.",
+   "speaker": "Jeff Keyzer",
+   "episode": 421,
+   "episode_title": "The Legend of Keyzermas",
+   "episode_url": "https://theamphour.com/421-the-legend-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A controlled impedance failure traced through two days of debugging turned out to be an unannounced change of board house with a completely different stack-up, leaving the measured trace impedance off by a factor of two, reading about 25 ohms where 50 was designed. The lesson drawn was to send an explicit stack-up drawing rather than trusting a verbal description of the stack.",
+   "quote_verbatim": "I looked at the stack up finally. I'm like, oh my God. It was completely different to the point where the controlled impedance was off by 100%.",
+   "speaker": "Chris Gammell",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "When a measurement disagrees with expectation the natural first assumption is operator error with an unfamiliar instrument, and that assumption can consume days. Eliminating every other explanation is what eventually forces attention back to the board's stack-up.",
+   "quote_verbatim": "It was basically me assuming that I was wrong with the VNA and Jeff was helping me kind of work through what I was doing with it. Finally, I was like, I looked at this. I looked at this and I was like, there's nothing else that it could be.",
+   "speaker": "Chris Gammell",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Test coupons carry deliberately laid out controlled impedance traces with an SMA connector footprint at each end so the trace can be connected to a VNA or a TDR and its characteristics measured. This exists because fabrication tolerance means a nominal 50 ohm trace may arrive at 45 or 55 ohms and the only way to know is to measure.",
+   "quote_verbatim": "you might put like a, an SMA connector footprint at each end. So you can, you know, so it just allows you to hook it up to your VNA or your, your, your network analyzer. Or TDR as well.",
+   "speaker": "Dave Jones",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Fabricated trace impedance varies within a manufacturing tolerance band, so large companies with impedance-critical products staff an incoming inspection function whose job is measuring returned boards with a VNA or TDR continuously.",
+   "quote_verbatim": "Because as I said, there's a tolerance variance when they manufacture these things. Is it 50 ohms or is it 55 ohms or is it 45 ohms? You don't know. You want to measure it.",
+   "speaker": "Dave Jones",
+   "episode": 494,
+   "episode_title": "The Two Person Rule",
+   "episode_url": "https://theamphour.com/494-the-two-person-rule/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In operation a VNA emits a sine wave stepped across frequency and observes how much of it comes back, which is the same reflection physics that governs a PCB trace or any other impedance-matched structure.",
+   "quote_verbatim": "what a VNA is effectively is you're passing an AC signal out or, you know, a sine wave effectively at different frequencies. And then you're seeing how it bounces back, just like reflections on, you know, a PCB trace or any other, you know, matched impedance type of thing.",
+   "speaker": "Chris Gammell",
+   "episode": 496,
+   "episode_title": "Drab Olive",
+   "episode_url": "https://theamphour.com/496-drab-olive/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A calibration will always appear to succeed: applying the open, short and 50 ohm load lets the instrument compute correction coefficients that make the open trace flat and the load land at the center of the Smith chart, regardless of whether the calibration was actually valid. A beginner therefore has no built-in reference for whether the result is trustworthy.",
+   "quote_verbatim": "you have a calibration kit and you have to like understand if it's right and, and anything will like, anything will show as it's, it's being calibrated. Right. So you put these, you know, you put an open and you put a short and you put a load on there, 50 unload. And then basically it, you know, calculates all these coefficients and it does all the math to make it look like a flat line",
+   "speaker": "Chris Gammell",
+   "episode": 496,
+   "episode_title": "Drab Olive",
+   "episode_url": "https://theamphour.com/496-drab-olive/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The available sanity check on a suspect measurement is physical plausibility rather than the instrument itself. A passive part cannot plot outside the boundary of the Smith chart, so a trace that leaves the chart indicates a bad calibration or setup rather than a device radiating energy.",
+   "quote_verbatim": "like on a Smith chart, right? You can't be outside a Smith chart or else you're usually emitting energy and stuff like that",
+   "speaker": "Chris Gammell",
+   "episode": 496,
+   "episode_title": "Drab Olive",
+   "episode_url": "https://theamphour.com/496-drab-olive/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Beyond one port, useful measurement means multi-port setups and the S-parameter formalism, which is the framework in which transmission and reflection between every pair of ports is expressed.",
+   "quote_verbatim": "And then you have to get into ports. You've got to get into multi-ports and things like that. That's, you know, and then you have to get into your S, you have to get into your S parameters",
+   "speaker": "Chris Gammell",
+   "episode": 496,
+   "episode_title": "Drab Olive",
+   "episode_url": "https://theamphour.com/496-drab-olive/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "An engineer with decades of instrument experience judged that a VNA is not a device he could pick up and use without a refresher course, in contrast with a dynamic signal analyzer, which is essentially a network analyzer for audio circuits where twenty kilohertz counts as high frequency.",
+   "quote_verbatim": "there's no way I could go out and use a VNA without a refresher course like this, I just wouldn't be able to do it. You can give me a DSA. Like I'm used to using a dynamic signal analyzer, which, you know, is like, uh, like 20 kilohertz was high frequency",
+   "speaker": "Dave Jones",
+   "episode": 496,
+   "episode_title": "Drab Olive",
+   "episode_url": "https://theamphour.com/496-drab-olive/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A fractal antenna gets its electrical length by folding the conductor back on itself so a long radiator fits a small area, which is what made compact phone antennas practical. It still requires a ground plane of comparable size to work.",
+   "quote_verbatim": "the fractal shape has, you know, so you get the physical length out of it, but in a much smaller area",
+   "speaker": "Chris Gammell",
+   "episode": 464,
+   "episode_title": "KonnectorPanik",
+   "episode_url": "https://theamphour.com/464-konnectorpanik/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Putting a suspect antenna module on a VNA revealed two independent faults at once: the radiator was the wrong physical size and therefore resonant at the wrong frequency, and the ground plane it was mounted on was too small to support it.",
+   "quote_verbatim": "threw it on the VNA, looked at it. It was the wrong size in the first place, you know, wrong resident frequency. And then didn't have a big enough ground plane.",
+   "speaker": "Chris Gammell",
+   "episode": 464,
+   "episode_title": "KonnectorPanik",
+   "episode_url": "https://theamphour.com/464-konnectorpanik/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Antenna qualification normally consists of passive VNA measurements plus over-the-air measurements in an anechoic chamber, and that pair is sufficient for the overwhelming majority of cases. Active measurements with the radio actually transmitting and receiving are reserved for cellular antennas and are rare, since roughly 99 percent of verification is achievable passively.",
+   "quote_verbatim": "these metrics that I just described like VNA passive measurements and then over there measurements in an echolid chamber that's more than enough for antenna testing sometimes when we have cellular antennas we also have some active measurements",
+   "speaker": "Katerina Galitskaya",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "When landing an RF probe on a chip, connect the probe to a VNA and watch the S11 reflected energy drop as contact is made; that drop is the indication of correct landing. Judging contact by pressure instead risks destroying the probe, since at high frequencies the probe is the fragile element and the discontinuity that ruins the measurement.",
+   "quote_verbatim": "what you want to do is pipe your VNA into that probe. And then when it drops, you'll see the S one, one scatter energy go down and that's how, you know, you've dropped it correctly. So that's the trick. Cause you don't want to put too much pressure on it. Cause you'll break your probe.",
+   "speaker": "Greg Charvat",
+   "episode": 729,
+   "episode_title": "The Terahertz Frontier with Greg Charvat of Teradar",
+   "episode_url": "https://theamphour.com/729-the-terahertz-frontier-greg-charvat-teradar/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "If S-parameters for a board can be computed, essentially every electromagnetic question about that board is answerable, which is why a field solver aims to reproduce what connecting the physical board to a vector network analyzer would measure.",
+   "quote_verbatim": "as far as the Maxwell equations are concerned, basically everything is answerable if you can compute S parameters, right? Like if I took a blank board, hooked it up to a vector network analyzer, and, you know, measured like literally everything you could think of. You can then compare that against the schematic",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A three-dimensional Maxwell solver can stand in for the instrument by letting a designer place virtual input and output ports on an imported board and sweep S-parameters across frequency, which allows signal integrity and isolation to be compared between candidate routings before fabrication.",
+   "quote_verbatim": "you can, you know, basically drag and drop a board, and then drop some kind of imaginary ports from like an imaginary vector network analyzer, you know, import, output port, and then just measure a bunch of S parameters across the frequency suite",
+   "speaker": "Sergiy Nesterenko",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Joel Dunsmore developed much of the RF front end of the HP 8753 network analyzer, remained at the successor company, and wrote books both on the development of that instrument and on using a VNA effectively.",
+   "quote_verbatim": "Joel is the guy who did the 87 53, pretty much the entire VNA, not, not the entire thing, but he did a lot of the RF front end and everything. And he wrote a book about it as well.",
+   "speaker": "Chris Gammell",
+   "episode": 532,
+   "episode_title": "Recalling Recalls",
+   "episode_url": "https://theamphour.com/532-recalling-recalls/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The HP 8753 is a vector network analyzer dating from the late 1980s and early 1990s that remained a live reference point decades later, used as the side-by-side comparison against which newer instruments were judged.",
+   "quote_verbatim": "the 8753 is a classic HP vector network analyzer from the 80s, right? It's old technology.",
+   "speaker": "Jeff Keyzer",
+   "episode": 613,
+   "episode_title": "It's a Keyzermas Miracle!",
+   "episode_url": "https://theamphour.com/613-its-a-keyzermas-miracle/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "An RF engineer building a home lab rebuilt the step attenuator on a secondhand 8753 and put it into working service. His argument for the old instrument is fluency: it was the analyzer he used in college and in his first two RF jobs, so he can operate it almost without looking, which outweighs its very large bench footprint.",
+   "quote_verbatim": "I rebuilt the step attenuator on the 8753 that I bought from you and that's been working great. And I've actually used that to do some, some work with and it's been really good. And I wish that box was like a third of the size that it is because it does take up like a big amount of my workbench, but it works great.",
+   "speaker": "Jeff Keyzer",
+   "episode": 655,
+   "episode_title": "The Twelfth Day of Keyzermas",
+   "episode_url": "https://theamphour.com/655-the-twelfth-day-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Newer alternatives to the classic bench analyzer include headless instruments that have no front panel and are driven entirely from a host computer, which is how the size problem of the older boxes gets solved.",
+   "quote_verbatim": "I demoed a Copper Mountain VNA over the summer.",
+   "speaker": "Jeff Keyzer",
+   "episode": 655,
+   "episode_title": "The Twelfth Day of Keyzermas",
+   "episode_url": "https://theamphour.com/655-the-twelfth-day-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Knowing when a VNA is genuinely required is itself a skill; for most non-antenna work an engineer concluded he did not need one, and that what he actually wanted for inspecting circuit board behaviour was closer to a TDR.",
+   "quote_verbatim": "Knowing when you actually need a V&A is also, like, the important thing, and I almost certainly do not for most things that I'm doing.",
+   "speaker": "Dave Jones",
+   "episode": 710,
+   "episode_title": "Tugging on the Nerd Heartstring",
+   "episode_url": "https://theamphour.com/710-tugging-on-the-nerd-heartstring/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Measuring the capacitance of ground plane pairs in a four-layer board requires sweeping well past the 50 MHz limit of a low-frequency network analyzer, because the interesting behaviour only begins around 50 to 100 MHz.",
+   "quote_verbatim": "I've got a 50 megahertz one here, and that's okay, but we only start getting to the interesting stuff at 50 or 100 megahertz",
+   "speaker": "Dave Jones",
+   "episode": 710,
+   "episode_title": "Tugging on the Nerd Heartstring",
+   "episode_url": "https://theamphour.com/710-tugging-on-the-nerd-heartstring/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A vector network analyzer and a radar are architecturally the same class of device, both transmitting a stimulus and analysing the returned signal, which is why the same hardware platform can plausibly serve as both.",
+   "quote_verbatim": "VNAs are actually radar devices themselves.",
+   "speaker": "Michael Ossmann",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A homebuilt vector network analyzer covering 30 MHz to 6 GHz was implemented on an ordinary low-cost prototyping-service PCB using simulated stripline structures, laid out in KiCad, with the software built on an existing open source SDR codebase.",
+   "quote_verbatim": "a guy built a homemade 30 megahertz to six gigahertz vector net network analyzer on a PCB from Oshpark",
+   "speaker": "Chris Gammell",
+   "episode": 312,
+   "episode_title": "Aussie Bound!",
+   "episode_url": "https://theamphour.com/312-aussie-bound/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A metal block heatsink bolted to chassis ground and sitting close to an antenna feed trace is a legitimate thing to put on a VNA, because what matters is its actual impedance at frequency rather than its intended thermal role.",
+   "quote_verbatim": "I was just wondering, like, if you put it on a VNA, what it looks like, that kind of thing, you know? So like looking at the actual impedance of that thing would be interesting.",
+   "speaker": "Chris Gammell",
+   "episode": 520,
+   "episode_title": "Inductance and Stuff",
+   "episode_url": "https://theamphour.com/520-inductance-and-stuff/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "Passages 17 and 18 are labelled speaker=Chris Gammell in the bundle, but the content is the guest describing his own antenna measurement workflow at a phone manufacturer and the internals of the VNA he personally designed and built; attributed by content to Pete Bevilacqua, the episode 446 guest. Passages 19 and 20 are already labelled Pete Bevelacqua and use the same spelling normalised to Pete Bevilacqua.",
+  "Passage 50 mixes speakers: the APC7 collet and error-correction explanation is Joel Dunsmore's, while the closing remark about calibrating with converters already fitted is the interviewer's; the two claims drawn from it are attributed separately by content.",
+  "Passage 60 (ep 708) is flagged ATTRIB-UNRELIABLE and mixes Davide Andrea's APC7 description with the interviewer recounting his own 8753 ownership; no claim was taken from it since the connector material is covered more precisely by Joel Dunsmore in ep 533.",
+  "Passages 34 through 37 (ep 472) alternate between Jeff Keyzer and Chris Gammell; the 68 GHz half-million-dollar instrument is from Chris Gammell's own talk slide, consistent with his account in ep 479, so passage 36 was left with the labelled speaker and the 40 GHz figure in passage 37 attributed to Jeff Keyzer.",
+  "Vendor name in passage 29 appears as a transcription of Siglent; the quote is preserved verbatim as transcribed."
+ ],
+ "capped": false
+}

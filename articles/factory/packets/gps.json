@@ -1,0 +1,800 @@
+{
+ "concept": "gps",
+ "name": "GPS",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "gps",
+  "census": "union",
+  "aliases": [
+   "gps"
+  ],
+  "children": [
+   "air-quality-sensor",
+   "asset-tracking",
+   "cellular-module",
+   "foam-aircraft",
+   "geofencing",
+   "slam",
+   "time-of-flight",
+   "waypoint-navigation",
+   "wifi-6"
+  ],
+  "neighbors": {
+   "nrf9160": 4
+  },
+  "pins_pre_cap": 69,
+  "pins_final": 69,
+  "pins_by_depth": {
+   "opinion": 22,
+   "explains": 47
+  },
+  "pins_by_role": {
+   "core": 63,
+   "child": 6
+  },
+  "capped": false,
+  "passages_yielding_claims": 47,
+  "passages_killed": 22
+ },
+ "claims": [
+  {
+   "claim_text": "Small autonomous aircraft that derive their entire position estimate from GNSS have no fallback when the signal is jammed or spoofed: losing the fix leaves the vehicle with no idea where it is. Anyone designing an autonomous air vehicle should treat GNSS denial as a design case rather than an edge case.",
+   "quote_verbatim": "And you take GPS away from ours and they're dead.",
+   "speaker": "Chris Anderson",
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "One recovery path after a GNSS outage is inertial dead reckoning: the vehicle keeps integrating heading and motion data from its onboard sensors so it can retrace its path back toward the point where the fix was lost.",
+   "quote_verbatim": "one is just dead reckoning, sort of saying, oh, I lost GPS.",
+   "speaker": "Chris Anderson",
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A second GNSS-denied navigation approach is to navigate off ambient radio energy: the vehicle listens to known transmitters, uses Doppler shift and changes in received signal strength to infer direction of travel, and flies along the gradients of the surrounding RF field.",
+   "quote_verbatim": "So let me just sort of fly along the gradients of the existing RF space.",
+   "speaker": "Chris Anderson",
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A third GNSS-denied approach is terrain-referenced navigation: the aircraft images the ground below with LiDAR or an optical camera and matches what it sees against an onboard terrain database, the machine equivalent of a pilot looking down to recognise landmarks.",
+   "quote_verbatim": "the third is imaging of the ground beneath you with LiDAR or optical",
+   "speaker": "Chris Anderson",
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Hobby autopilots of the early 2010s flew fully autonomous waypoint missions including automatic takeoff, terrain-following using elevation data pulled from mapping services, loitering over a point of interest with the camera held on target, and landing.",
+   "quote_verbatim": "with Google Maps, they know the elevations of the various waypoints and you can maintain an elevation for that.",
+   "speaker": "Chris Anderson",
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Large military unmanned aircraft of that era were far less autonomous than their reputation suggested: crews of dozens of people flew the inner stabilisation loop manually while the outer navigation loop was a human point-and-click on a map.",
+   "quote_verbatim": "But the outer loop as to where you're going is being actually point and clicked on a map.",
+   "speaker": "Chris Anderson",
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Flying a camera drone through a slot canyon rules GNSS out entirely: walls only ten to twenty metres apart block the sky view, so obstacle avoidance and station keeping have to come from onboard ranging sensors such as sonar instead.",
+   "quote_verbatim": "The walls are only 10, 20 meters wide at most. There's no GPS reception.",
+   "speaker": "Dave Jones",
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "GNSS-based waypoint holding on a hobby multirotor autopilot was only good to roughly a three-metre box, which is adequate for aerial photography over open ground but nowhere near enough for flying between canyon walls or other tight corridors.",
+   "quote_verbatim": "you should be able to stay within about a sort of a three-meter box",
+   "speaker": "Chris Anderson",
+   "episode": 105,
+   "episode_title": "An Interview with Chris Anderson - Deambulatory Daedal Drones",
+   "episode_url": "https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Building a radio ranging system from scratch means timing the round trip of a signal, which demands a very fast counter; an early attempt at tracking model rockets was built around a timer clocked at 100 MHz to resolve the flight time.",
+   "quote_verbatim": "So, I had this, like, timer running at 100 megahertz.",
+   "speaker": "Andrew Seddon",
+   "episode": 131,
+   "episode_title": "An Interview with Andrew Seddon - Necessary Networked Novelty",
+   "episode_url": "https://theamphour.com/the-amp-hour-131-necessary-networked-novelty/",
+   "depth_regraded": "opinion",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "In a home-built radio positioning project the timing electronics proved to be the easy half and the RF link the hard half; assuming the radio side will be trivial is a common way for a positioning project to stall.",
+   "quote_verbatim": "then thought that the whole radio side of it was going to be the easy thing",
+   "speaker": "Andrew Seddon",
+   "episode": 131,
+   "episode_title": "An Interview with Andrew Seddon - Necessary Networked Novelty",
+   "episode_url": "https://theamphour.com/the-amp-hour-131-necessary-networked-novelty/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "High-altitude balloon teams that carry a live GNSS tracker can and should use the track to warn air traffic control when a payload drifts toward an airport; on one flight that call led the airport to delay a departure.",
+   "quote_verbatim": "So we had GPS track on all of these flights",
+   "speaker": "Vic Aprea",
+   "episode": 250,
+   "episode_title": "An Interview with Vic Aprea - Federated Firmware Functionalism",
+   "episode_url": "https://theamphour.com/250-an-interview-with-vic-aprea-federated-firmware-functionalism/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Putting a GNSS receiver on a free-flying balloon turns the payload into a wind sensor, because the recorded ground track is the wind profile; the data shows wind direction changing radically across atmospheric layer boundaries rather than varying smoothly with height.",
+   "quote_verbatim": "There's like shearing, they change directions like, like radically at, at a layer boundaries.",
+   "speaker": "Vic Aprea",
+   "episode": 250,
+   "episode_title": "An Interview with Vic Aprea - Federated Firmware Functionalism",
+   "episode_url": "https://theamphour.com/250-an-interview-with-vic-aprea-federated-firmware-functionalism/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Commercial GNSS receivers carry export-control limits that shut the receiver down when it is simultaneously above a speed and an altitude threshold, so that the part cannot guide a missile; balloon payloads aiming past 100,000 feet stay inside the limit only because they ascend slowly.",
+   "quote_verbatim": "if you're going above a certain speed and above a certain altitude, GPS is have to like shut themselves down",
+   "speaker": "Vic Aprea",
+   "episode": 250,
+   "episode_title": "An Interview with Vic Aprea - Federated Firmware Functionalism",
+   "episode_url": "https://theamphour.com/250-an-interview-with-vic-aprea-federated-firmware-functionalism/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Before the modern era of assisted and high-sensitivity receivers, acquiring a GNSS fix from cold took minutes rather than seconds, which shaped what kinds of products could use satellite positioning at all.",
+   "quote_verbatim": "it took minutes to lock in on a GPS",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A modern phone-class receiver that has recently had a fix reacquires in roughly five to ten seconds, because it still holds a recent estimate of its own position and of the satellite orbits.",
+   "quote_verbatim": "And within five seconds, maybe, ten, it's sort of locked in.",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A wearable that stamps a location onto every photo has to reacquire a fix on the order of every thirty seconds, and both the acquisition time and the energy per fix have to be reconciled with a battery life measured in days.",
+   "quote_verbatim": "So presumably it's got to lock on every 30 seconds to take a photo.",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Older standalone receivers asked the user whether the unit had moved more than a few hundred kilometres since last use, because a stale stored position makes the search for satellites wrong; answering yes forced the receiver to discard its coarse position estimate and start over.",
+   "quote_verbatim": "have you moved more than 300 kilometers since your last, you know, operation?",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "On a battery-powered connected device the GNSS receiver is typically the largest power consumer, with the radio uplink close behind, which is why such devices are designed to upload only while on mains power.",
+   "quote_verbatim": "aside from GPS, it's probably one of the highest power things",
+   "speaker": "Chris Gammell",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Civil GNSS accuracy was deliberately degraded by selective availability until it was switched off in 2000; before that the intentional error was on the order of three to four hundred metres for non-military users.",
+   "quote_verbatim": "until Bill Clinton turned off what's called selective availability, the errors were huge",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The first autonomous road vehicle driven under GNSS control had to be scheduled around satellite visibility, because the constellation was not yet complete; the lab kept printed charts showing the windows when four satellites would be in view.",
+   "quote_verbatim": "So, we actually had charts up in the lab so we would know when we would have four satellites in view.",
+   "speaker": "Gerry Roston",
+   "episode": 334,
+   "episode_title": "An Interview with Gerry Roston",
+   "episode_url": "https://theamphour.com/334-an-interview-with-gerry-roston/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A satellite sitting right on the horizon degrades a position solution rather than improving it, because its signal takes a long, low path through the atmosphere and obstructions; masking that satellite out gives a better fix than including it.",
+   "quote_verbatim": "And if you get one satellite right on the horizon, it can throw you out.",
+   "speaker": "Gerry Roston",
+   "episode": 334,
+   "episode_title": "An Interview with Gerry Roston",
+   "episode_url": "https://theamphour.com/334-an-interview-with-gerry-roston/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Adding a GNSS receiver to a multirotor is what makes automatic position hold possible, letting the aircraft park itself in the air instead of demanding continuous stick corrections from the pilot.",
+   "quote_verbatim": "I just recently got GPS working on it, which means I'll be able to do position hold.",
+   "speaker": "Jon Oxer",
+   "episode": 349,
+   "episode_title": "An(other) Interview with Jon Oxer",
+   "episode_url": "https://theamphour.com/349-another-interview-with-jon-oxer/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Without a position fix a multirotor holds attitude but not position, so it wanders continuously and has to be flown by hand; the apparently effortless hover of commercial drones is the result of that position loop, not of the airframe.",
+   "quote_verbatim": "It was just drifting around all over the place.",
+   "speaker": "Jon Oxer",
+   "episode": 349,
+   "episode_title": "An(other) Interview with Jon Oxer",
+   "episode_url": "https://theamphour.com/349-another-interview-with-jon-oxer/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "GNSS satellites transmit with a very limited power budget from very far away, so the signal arrives well below the noise floor; the receiver recovers it by spreading each data bit across 1023 chips and correlating against the known code to pull the signal out of the noise.",
+   "quote_verbatim": "they actually transmit 1023 chips",
+   "speaker": "Michael Ossmann",
+   "episode": 352,
+   "episode_title": "Conning with Michael Ossmann",
+   "episode_url": "https://theamphour.com/352-conning-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Vehicles that need to localise where there is no sky view, such as inside a multi-storey car park, use SLAM, a mapping technique that has been in practical use since roughly the mid 2000s and that builds and matches a map from onboard sensors rather than from satellites.",
+   "quote_verbatim": "There's a mapping technology called SLAM and it's been around for the last 10 years.",
+   "speaker": "David Ledger",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "In a self-driving vehicle stack satellite positioning contributes only a small share of what the vehicle needs; the primary localisation comes from matching live sensor data against maps already stored on the vehicle, and the vehicle keeps working where no satellite signal reaches.",
+   "quote_verbatim": "GPS is a tiny fraction of what they need.",
+   "speaker": "David Ledger",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Map-relative localisation works by registering what the sensors currently see against a prior map held in the vehicle, which is why the vehicle can keep an accurate pose in places where no satellite signal is available.",
+   "quote_verbatim": "It maps with respect to maps they already have in their system.",
+   "speaker": "David Ledger",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Because a car park receives no satellite signal at all, a vehicle operating there must be able to establish its position purely from onboard sensing and stored maps.",
+   "quote_verbatim": "They don't need the GPS. They can basically figure out where they are without it.",
+   "speaker": "David Ledger",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Early public autonomous-vehicle trials are staged at sites chosen to remove as many variables as possible: very wide roads, almost no other traffic, and a completely unobstructed sky view giving a strong satellite signal.",
+   "quote_verbatim": "there's perfect GPS sky reception like you can get 20 zillion satellites",
+   "speaker": "Dave Jones",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A complete fixed-wing or multirotor autopilot can be built on a 20 by 20 mm board carrying the GNSS receiver and the full inertial sensor set, with radio control and telemetry pushed onto a separate daughter board so the core module stays small.",
+   "quote_verbatim": "And it has GPS built in, and it has all the sensors you need for autonomous flight.",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Locating a specific failed machine inside a data centre defeats satellite positioning entirely: the building blocks the sky, the aisles demand metre-level precision, the RF environment is saturated by the machines themselves, there is metal everywhere, and the floor plan changes constantly as equipment is moved.",
+   "quote_verbatim": "So GPS isn't going to work for you.",
+   "speaker": "Rick Altherr",
+   "episode": 357,
+   "episode_title": "An Interview with Rick Altherr",
+   "episode_url": "https://theamphour.com/357-an-interview-with-rick-altherr/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "One proposed indoor localisation scheme for data centres is to paint an artificial star field on the ceiling with paintballs and have a camera plus constellation-matching software resolve position from the unique pattern overhead; QR codes on fixed surfaces serve the same purpose more prosaically.",
+   "quote_verbatim": "paint an artificial star scape with paint balls on the ceiling and then use a camera and constellation tracking software to figure out where I am",
+   "speaker": "Rick Altherr",
+   "episode": 357,
+   "episode_title": "An Interview with Rick Altherr",
+   "episode_url": "https://theamphour.com/357-an-interview-with-rick-altherr/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A logged GNSS altitude trace can capture atmospheric events that would otherwise be invisible: one balloon payload's log showed the package descending to about 6,000 feet, being carried back up to about 8,000 feet over several minutes by a thunderstorm updraft, and then descending again.",
+   "quote_verbatim": "the GPS log shows it going down to something like 6,000 feet, going back up over several minutes to 8,000 feet",
+   "speaker": null,
+   "episode": 401,
+   "episode_title": "An Interview with Brent and Bryce Salmi",
+   "episode_url": "https://theamphour.com/401-an-interview-with-brent-and-bryce-salmi/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A balloon payload gets very cold at altitude and then falls into humid air, so condensation forms on the boards on the way down; coating the assemblies before flight, even with clear nail polish as an improvised conformal coat, kept a payload running through a soaking that left visible water on the microcontrollers.",
+   "quote_verbatim": "we actually took like clear nail polish and like completely coated the boards",
+   "speaker": null,
+   "episode": 401,
+   "episode_title": "An Interview with Brent and Bryce Salmi",
+   "episode_url": "https://theamphour.com/401-an-interview-with-brent-and-bryce-salmi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Underwater robots lose satellite positioning the moment they submerge, so navigation that is trivial for a surface vessel becomes the hard problem for the vehicle below the waves.",
+   "quote_verbatim": "But when you're above the waves, you have GPS, right?",
+   "speaker": "Greg Charvat",
+   "episode": 407,
+   "episode_title": "Gregory Charvat and Three New Companies",
+   "episode_url": "https://theamphour.com/407-gregory-charvat-and-three-new-companies/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A subsea positioning network is built from acoustic transponders anchored to the seabed that measure time of flight between each other to establish a local coordinate frame, then range to the surface ship; the ship ties that local frame to global coordinates using its own satellite fix.",
+   "quote_verbatim": "the ones at the bottom are a local navigation network that are tethered to the bottom via anchors",
+   "speaker": "Greg Charvat",
+   "episode": 407,
+   "episode_title": "Gregory Charvat and Three New Companies",
+   "episode_url": "https://theamphour.com/407-gregory-charvat-and-three-new-companies/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "In a local RF positioning instrument the achievable accuracy is set by the precision of the measurement rather than by the carrier wavelength, so product tiers named after centimetres or millimetres refer to position accuracy and not to the band being used.",
+   "quote_verbatim": "It doesn't matter what wavelength you're at for what we're doing.",
+   "speaker": "Greg Charvat",
+   "episode": 407,
+   "episode_title": "Gregory Charvat and Three New Companies",
+   "episode_url": "https://theamphour.com/407-gregory-charvat-and-three-new-companies/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A short-range local positioning system aimed at factory automation was specified to work from zero out to 500 metres, deliberately trading global coverage for far better accuracy than satellite positioning within that volume.",
+   "quote_verbatim": "It's short range, out to 500 meters, 0 to 500 meters",
+   "speaker": "Greg Charvat",
+   "episode": 407,
+   "episode_title": "Gregory Charvat and Three New Companies",
+   "episode_url": "https://theamphour.com/407-gregory-charvat-and-three-new-companies/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A local positioning system is effectively a private satellite constellation: the vendor supplies both the fixed transmitters that play the role of satellites and the mobile receivers, which is how it can beat satellite accuracy inside a building where the sky signal barely penetrates.",
+   "quote_verbatim": "You're now basically making the satellites and then also making the receivers.",
+   "speaker": "Chris Gammell",
+   "episode": 407,
+   "episode_title": "Gregory Charvat and Three New Companies",
+   "episode_url": "https://theamphour.com/407-gregory-charvat-and-three-new-companies/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The argument for RF ranging over machine-learning-based vision for guiding industrial robots is determinism: a ranging solution is right essentially every time, whereas vision systems trained by machine learning are judged against success rates well short of that, and a robot needs repeatability rather than a good average.",
+   "quote_verbatim": "It's not right to 50% of the time, like machine learning, or even 80% of the time, which is aspirational in the machine learning world.",
+   "speaker": "Greg Charvat",
+   "episode": 407,
+   "episode_title": "Gregory Charvat and Three New Companies",
+   "episode_url": "https://theamphour.com/407-gregory-charvat-and-three-new-companies/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A cellular IoT module may include a GNSS receiver on die, but a tracker vendor may still move positioning out to a separate coprocessor, while separately investigating whether a coarse position can be triangulated from the satellite signals the modem already receives rather than running a full fix.",
+   "quote_verbatim": "It does have GPS capabilities. We're going to make it external as a kind of coprocessor",
+   "speaker": "Maarten Engelen",
+   "episode": 427,
+   "episode_title": "An Interview with Maarten Engelen",
+   "episode_url": "https://theamphour.com/427-an-interview-with-maarten-engelen/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Nordic's cellular module packs an LTE-M and NB-IoT modem together with a GNSS receiver in a package around 20 by 10 mm, at a list price near fifteen dollars, which is the point at which combined cellular plus positioning stops being a multi-chip design problem.",
+   "quote_verbatim": "It can do GPS and cellular for like, I think the list price is like 15 bucks.",
+   "speaker": "Chris Gammell",
+   "episode": 432,
+   "episode_title": "Check The Dummy Box",
+   "episode_url": "https://theamphour.com/432-check-the-dummy-box/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The first number an antenna engineer needs is the lowest operating frequency; GNSS sits near 1.575 GHz, which fixes the physical scale of an efficient radiator at roughly three and a half to three and three quarter inches for a half-wave structure.",
+   "quote_verbatim": "So GPS is 1.5, 75 gigahertz or whatever.",
+   "speaker": "Pete Bevilacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "When a product enclosure is far smaller than the half-wavelength of the band it must receive, the antenna cannot radiate or capture efficiently; a quarter-sized product asking for satellite positioning is a predictable efficiency problem before any design work starts.",
+   "quote_verbatim": "then I know they're going to have huge efficiency problems",
+   "speaker": "Pete Bevilacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Antenna efficiency is the ratio of power delivered into the antenna to power actually radiated, and it is the key figure of merit for an antenna in a size-constrained product.",
+   "quote_verbatim": "efficiency, by the way, is just a ratio of how much power you're putting into the antenna versus how much it actually radiates",
+   "speaker": "Pete Bevilacqua",
+   "episode": 446,
+   "episode_title": "An Interview with Pete Bevelacqua",
+   "episode_url": "https://theamphour.com/446-an-interview-with-pete-bevelacqua/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A minimal GNSS tracking logger can be built as a battery-powered handheld that consumes the receiver's serial output, writes fixes to an onboard SD card, and offers the logs over USB afterwards, avoiding any radio link at all.",
+   "quote_verbatim": "just takes a GPS feed, records it to an SD card inside",
+   "speaker": "Greg Davill",
+   "episode": 473,
+   "episode_title": "An Interview with Greg Davill",
+   "episode_url": "https://theamphour.com/473-an-interview-with-greg-davill/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Adding a LoRa transceiver to a position logger turns it into a live tracker without needing a LoRaWAN network, because the only payload required is a device identifier plus a position, which fits comfortably in the low bandwidth a long-range low-power link provides.",
+   "quote_verbatim": "I was just wanting to send basically just, uh, ID number, where they are at the time",
+   "speaker": "Greg Davill",
+   "episode": 473,
+   "episode_title": "An Interview with Greg Davill",
+   "episode_url": "https://theamphour.com/473-an-interview-with-greg-davill/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A hobbyist-facing development board built around Nordic's cellular module combines the application processor, an LTE-M and NB-IoT radio and GNSS on one small board, so a connected tracker needs no separate positioning subsystem.",
+   "quote_verbatim": "I am focusing on building the NRF 91 60 feather.",
+   "speaker": "Jared Wolff",
+   "episode": 509,
+   "episode_title": "Cellular IoT with Jared Wolff",
+   "episode_url": "https://theamphour.com/509-cellular-iot-with-jared-wolff/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Autonomous flight indoors is substantially harder than outdoors because there is no satellite fix to anchor position, forcing the vehicle to derive position from active ranging or other onboard sensing.",
+   "quote_verbatim": "I've done some work on autonomous quadcopters where you don't have GPS",
+   "speaker": "Dave Jones",
+   "episode": 510,
+   "episode_title": "Knob and Tube Wiring",
+   "episode_url": "https://theamphour.com/510-knob-and-tube-wiring/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Crowd-sourced Bluetooth asset tracking works by having the tag broadcast a beacon and any nearby phone running the app report the sighting together with the phone's own satellite position, so the tag itself never needs a positioning receiver.",
+   "quote_verbatim": "Your phone scan, it goes by, you know, the train station, scans it, sees it, and then it tags it because your phone has a GPS on it",
+   "speaker": "Chris Gammell",
+   "episode": 543,
+   "episode_title": "Cassette decks have browsers?",
+   "episode_url": "https://theamphour.com/543-cassette-decks-have-browsers/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The economic argument for beacon-only tags is per-device cost and power: a Bluetooth transmitter is cheap and low power enough to run for a long time in a sealed package, whereas putting a positioning receiver and a network radio in every tag is not.",
+   "quote_verbatim": "you keep the per device cost down because, you know, Bluetooth chips are cheap",
+   "speaker": "Chris Gammell",
+   "episode": 543,
+   "episode_title": "Cassette decks have browsers?",
+   "episode_url": "https://theamphour.com/543-cassette-decks-have-browsers/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Bulk logistics tracking is already solved economically with one satellite tracker per vehicle plus barcode scan events at load and unload, which sets a high bar for any proposal to instrument individual parcels or personal items.",
+   "quote_verbatim": "And they've got a single GPS transmitter in the truck.",
+   "speaker": "Dave Jones",
+   "episode": 576,
+   "episode_title": "A literal trainwreck",
+   "episode_url": "https://theamphour.com/576-a-literal-trainwreck/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Nordic's cellular module carries a dual front end that alternates between the cellular link and the satellite navigation band rather than dedicating hardware to each.",
+   "quote_verbatim": "Basically, there's like a dual front end on that 9160 on that cellular board.",
+   "speaker": "Chris Gammell",
+   "episode": 600,
+   "episode_title": "The Custodial Arts",
+   "episode_url": "https://theamphour.com/600-the-custodial-arts/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Acquiring a satellite fix is power hungry precisely because the receiver has to sit with its front end active waiting on a signal around minus 120 dB, so time spent searching for a fix dominates the energy budget of a battery-powered tracker.",
+   "quote_verbatim": "But it's really power hungry to like sit around waiting for like a, you know, minus 120 dB signal.",
+   "speaker": "Chris Gammell",
+   "episode": 600,
+   "episode_title": "The Custodial Arts",
+   "episode_url": "https://theamphour.com/600-the-custodial-arts/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A practical way to cut tracker power is to gate the positioning receiver on an accelerometer: the device reports only changes of location, and if the accelerometer shows the asset has not moved the receiver is never powered up at all.",
+   "quote_verbatim": "it uses the accelerometer, uh, so that you don't have to power up the GPS. If the device has not moved",
+   "speaker": "Ray Ozzie",
+   "episode": 603,
+   "episode_title": "An Interview with Ray Ozzie (Blues Wireless)",
+   "episode_url": "https://theamphour.com/603-an-interview-with-ray-ozzie-blues-wireless/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A bit-packing routine that only sets bits and never clears them corrupts position reports whenever the buffer is reused, because stale ones from previous fixes accumulate; the reported location degrades progressively as the device moves and then appears to heal after a reset.",
+   "quote_verbatim": "And the bit packing function was expecting to have a buffer full of zeros. So it would only set the ones. It would not clear the zeros.",
+   "speaker": "Alvaro Prieto",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Some positioning bugs are only reachable by physically moving the hardware through the field, so reproducing them means taking the unit out and driving it in a specific direction rather than testing on the bench.",
+   "quote_verbatim": "the only way to reproduce it was to move that buoy in a particular direction",
+   "speaker": "Alvaro Prieto",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Satellite positioning gave a usable altitude profile through a descent at a 2.5 Hz update rate, which was enough resolution for the measurement being attempted.",
+   "quote_verbatim": "And we're doing like two and a half Hertz update rate.",
+   "speaker": "Alvaro Prieto",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Barometric pressure is a workable alternative for computing altitude, but a payload that starts spinning introduces noise artifacts in the pressure reading, which is why the satellite-derived altitude was the more trustworthy record.",
+   "quote_verbatim": "But the problems started spinning around and then you have all these weird noise artifacts.",
+   "speaker": "Alvaro Prieto",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Nordic's cellular module ships in variants distinguished only by a suffix on the part number, and the NB-IoT-only version has neither GNSS nor LTE-M; ordering the wrong suffix produces a board that will not connect on an LTE-M SIM and cannot position at all, and the failure surfaces only during bring-up.",
+   "quote_verbatim": "the one that i bought only has nbiot and so it doesn't have gps or ltem",
+   "speaker": "Chris Gammell",
+   "episode": 652,
+   "episode_title": "For a couple weeks there...",
+   "episode_url": "https://theamphour.com/652-for-a-couple-weeks-there/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "An RTOS-level GNSS subsystem with a generic NMEA driver removes the need to hand-write a sentence parser for every project, which is pure overhead work with no product value; higher-level behaviour such as geofence entry and exit is then naturally expressed with the same framework's state machine support.",
+   "quote_verbatim": "the driver, the new recently added GNSS subsystem gets a generic NMEA driver",
+   "speaker": "Chris Gammell",
+   "episode": 653,
+   "episode_title": "Benjamin Cabé Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Wi-Fi positioning services expose an API where a client submits the MAC addresses and signal strengths of the access points it can currently hear and receives back geographic coordinates, with no satellite receiver involved.",
+   "quote_verbatim": "you can put in the MAC addresses and the RSS IDs that you like see in your general area and it'll just spit you back your GPS coordinates",
+   "speaker": "Chris Gammell",
+   "episode": 668,
+   "episode_title": "50.0000 Ohms",
+   "episode_url": "https://theamphour.com/668-50-0000-ohms/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The Wi-Fi access point database is built by the phones that use it: when a handset takes an expensive satellite fix it records the access points and signal strengths visible at that location, and repeated observations from many handsets converge on a position estimate for each access point.",
+   "quote_verbatim": "my phone basically could wait for a GPS signal, which is expensive thing",
+   "speaker": "Chris Gammell",
+   "episode": 668,
+   "episode_title": "50.0000 Ohms",
+   "episode_url": "https://theamphour.com/668-50-0000-ohms/",
+   "depth_regraded": "opinion",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Wi-Fi positioning can beat satellite positioning for accuracy in built-up areas because the reference transmitters sit within about a hundred metres of the receiver rather than in orbit, and signal strength adds a usable range cue on top of mere presence.",
+   "quote_verbatim": "it's like a constellation of basically satellites that are within, you know, a hundred meters of you",
+   "speaker": "Chris Gammell",
+   "episode": 668,
+   "episode_title": "50.0000 Ohms",
+   "episode_url": "https://theamphour.com/668-50-0000-ohms/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A crowd-sourced finding network has every participating handset relay encrypted packets it overhears from nearby tags, tagging each sighting with the finder's own position, so the owner learns where the item was last seen without the tag knowing anything about its own location.",
+   "quote_verbatim": "based on, based on the GPS location",
+   "speaker": "Chris Gammell",
+   "episode": 690,
+   "episode_title": "Clap on, clap off, lights flicker",
+   "episode_url": "https://theamphour.com/690-clap-on-clap-off-lights-flicker/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A satellite carrying a large digitally beamformed antenna array can locate a ground transmitter itself using angle of arrival across its elements, so the endpoint only has to emit rather than compute its own position.",
+   "quote_verbatim": "the way that we do that is through angle of arrival. So we have this antenna array. It's got thousands of array elements on it.",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Each uplink burst begins with a known preamble; detecting that preamble in parallel across all the formed beams is what lets the receiver correct for the large Doppler shift of a low-orbit satellite and pull the packet out of the noise.",
+   "quote_verbatim": "That preamble allows us to do a lot of complicated things like adjust for Doppler and also, you know, identify a signal through the, through the noise.",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Moving position computation to the satellite lets an asset tag drop both its GNSS receiver and its cellular modem and keep only a Bluetooth-class transmitter, which cuts the bill of materials substantially.",
+   "quote_verbatim": "you can actually remove the GPS chip from your device as well",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Pushing all signal processing onto the receiving satellite yields endpoints so power-frugal that a single coin cell supports hourly reporting for multiple years, which is the threshold that makes field-deployed asset tags viable without battery swaps or solar.",
+   "quote_verbatim": "with a single coin cell battery reporting, you know, once per hour, you can literally create devices that last for multiple years on a coin cell",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Angle of arrival alone is bounded by the angular error of the array, which limits ground position to roughly tens of metres no matter how good the implementation.",
+   "quote_verbatim": "you can only get down to like tens of meters, uh, from a theoretical standpoint with angle of arrival",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "With several satellites overhead at once, the differing times of flight from the endpoint to each satellite can be combined with the per-satellite angle of arrival, inverting the usual geometry so that satellites locate the device and the device carries no positioning receiver.",
+   "quote_verbatim": "you can, uh, combine the time of flight measurement as well",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Inverting the positioning geometry also moves the orbital ephemeris off the endpoint and onto the satellite, removing the stored almanac and the acquisition search that a conventional receiver needs before it can produce a fix.",
+   "quote_verbatim": "we kind of move the ephemeris from the, uh, end point up to the satellite",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Conventional receivers save acquisition power with predicted-orbit assistance: a starter table of where the satellites are expected to be lets the receiver skip searching for satellites that cannot be overhead.",
+   "quote_verbatim": "So, you know, don't look everywhere",
+   "speaker": "Chris Gammell",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In a satellite-side positioning scheme the location adds no bytes to the uplink, because it is derived from the physical arrival of the transmission itself; a 13-byte packet can therefore carry an identifier and a battery level and still deliver a position.",
+   "quote_verbatim": "you still get the full 13 bytes and you get location essentially for free",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A battery-powered cellular data logger with an onboard GNSS receiver and an expansion-shield architecture lets one base platform serve many verticals, with each shield adding sensing such as CO2, temperature, pressure or oxygen while the base stamps every reading with time and position before uploading it.",
+   "quote_verbatim": "gather the data from the sensor and send it over to the cloud with time stamp gps location",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "Passages 15, 16 and 17 (ep 250) are flagged ATTRIB-UNRELIABLE. All three are the guest describing his own high-altitude balloon flights in the first person ('we had GPS track on all of these flights', 'we wanted to get up over a hundred thousand feet'), so they are attributed by content to the guest, Vic Aprea.",
+  "Passage 26 (ep 352) is labelled Dave Jones, but within the passage that speaker twice says 'I didn't know that' and then the spread-spectrum explanation follows; the explanation is the guest's. Attributed by content to Michael Ossmann.",
+  "Passage 35 (ep 401) is flagged ATTRIB-UNRELIABLE and is labelled Chris Gammell, but the content is a guest describing his own student balloon payload. The guests are the brothers Brent and Bryce Salmi and the content does not identify which brother is speaking, so the speaker is left as None.",
+  "Passage 44 (ep 427) is labelled Chris Gammell, but the labelled speaker asks the question ('Does the modem currently have GPS capabilities') and the answer describing the vendor's own roadmap follows. Attributed by content to the guest, Maarten Engelen.",
+  "Passage 67 (ep 728) is labelled Alex Haro, but the assisted-GNSS aside beginning 'my mental model is like thinking about this almost like inverting GPS' is the interviewer framing the guest's system in familiar terms. That one claim is attributed by content to Chris Gammell; the remaining claims from the passage stay with Alex Haro.",
+  "Passages 8 and 9 (ep 105) overlap; passage 8 is labelled Dave Jones but the text about 'our waypoint' code being released that week is the guest's, so the waypoint accuracy claim is taken from passage 9, which is labelled Chris Anderson."
+ ],
+ "capped": false
+}

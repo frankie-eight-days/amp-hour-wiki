@@ -1,0 +1,111 @@
+---
+title: Continuous Integration
+concept: continuous-integration
+generated: 2026-08-09
+model: k3
+spec: knowledge-only-v4-cluster
+---
+
+Continuous integration (CI) is a development practice in which every commit landing on a repository's main line automatically triggers the full set of builds and tests, with the system raising a visible flag naming the change that broke something.[546] The practice exists to compress the delay between a defect being introduced and someone noticing it, so that breakage is caught while it is still attributable to one small change rather than after it has entangled itself with weeks of other work.[161][461] Established in software development for more than two decades, it has since been adapted to firmware, circuit board design and silicon development, domains where connecting a build pipeline to physical artefacts requires additional infrastructure.[627][161]
+
+## Rationale
+
+The value of a pipeline lies less in the automatic compile than in the regression suite attached to it: every push re-runs the entire accumulated body of tests, including tests written months earlier, specifically to prove that the new change did not disturb old behaviour.[537] This matters because regressions routinely surface outside the region a change appears to touch; in one incident a small edit to a BLE notification protocol parser broke notification delivery entirely even though the edited code was not the part responsible for that behaviour.[537] In large modular codebases the same problem appears as cross-module dependency breakage, where a change three modules away pulls in a dependency that breaks unrelated functionality, and only continuous testing surfaces the regression near the change that caused it.[724]
+
+Building on every small commit rather than compiling once after a large batch of changes narrows the search space when something breaks, because a defect is caught before it can combine with other work into something large and difficult to debug.[461] For the same reason, when a suite already exists and runs unattended, selecting a subset of tests for a given change buys little, and the default is to run the whole suite on every change rather than reason about which tests the change could plausibly have affected.[505] The payoff from this automation scales with the number of collaborators, since the alternative is breakage sitting undiscovered while others build on top of it.[161]
+
+Manual verification fails on repetition rather than on difficulty: a procedure that takes only a minute is fine once, but when it must run a thousand times a human will skip the great majority of runs and perform perhaps ten, which is worse than either extreme.[519] Running a full suite manually on every build likewise does not survive contact with real schedules — people forget, run short of time, or judge a check unnecessary — which makes automation a leverage mechanism for teams that are small, schedule-compressed and cost-constrained.[556] Without automated verification, firmware teams merge to the main branch rarely, batching work behind long manual test campaigns until everyone agrees a version is safe, which is the slow-integration pattern a build pipeline is meant to replace.[537] Regressions in non-functional properties are especially easy to miss without automation: a boot time drifting from half a second to five seconds is otherwise discovered long after the responsible commit and has to be located by bisecting build by build.[556]
+
+## Pipeline operation
+
+The hard prerequisite for any build pipeline is a command-line build using make, CMake, Meson or similar; a project that can only be built by pressing a button inside an IDE cannot be built by an unattended machine no matter what other tooling is added.[556] The basic trigger is a commit landing on the repository's main line, after which the system walks the full set of builds and tests and raises a flag naming the breaking change.[546] Even a compile-only check is a worthwhile smoke test, because it replaces a build verified on one developer's laptop with a build performed in a clean environment; in Zephyr, enabling a compile check for every commit is close to a single line of build system configuration.[653]
+
+The minimum worthwhile first step is a server that checks out the code on every commit and verifies only that it compiles, with everything else easier to add once that exists.[556] The natural second step is moving release packaging off an individual developer's workstation onto the build server, so that the shipped artefact is assembled the same known-good way every time instead of depending on one person's local environment.[556]
+
+Pipelines also automate the mechanical parts of reviewing contributions. The CircuitPython project checks every proposed change automatically against the project's code style and, for core changes, compiles it automatically, so that reviewer attention is spent on substance rather than on basics a machine can catch.[383] A matching review policy makes the pipeline effective: the presence of tests for a change is an explicit item the reviewer checks rather than something left to the author's discretion.[537] A pipeline also doubles as a gate on contributors whose work is not yet trusted, since the question of whether a newcomer's commit is allowed to reach the device is answered by the defined pass criteria rather than by a senior engineer inspecting every change.[556]
+
+### Reproducibility
+
+Two engineers compiling the same firmware source on their own machines can produce different binaries whenever their toolchains differ; compiling in a shared cloud environment instead makes the output binary identical regardless of who triggered the build.[654] Build reproducibility is achieved by promoting the same container definition that a developer validated interactively into the automated build, so the pipeline compiles inside the identical environment and the configuration travels with the code.[627] Automated builds are likewise pinned to specific SDK and toolkit versions where stability matters. In Mark Palmeri's medical electronics course, builds are locked to specific versions of the SDK and toolkits because an apparently minor Zephyr version bump can pull in a major update of an underlying package; the motivating failure was the input syntax of Zephyr's built-in state machine framework changing partway through a semester, breaking working student code that had not been touched.[711]
+
+### Runners
+
+Hosted runners built into the code hosting platform compete directly with self-managed build servers, the pitch being that a team already paying for repository hosting can get its pipeline without standing up and maintaining a separate machine.[537] Those hosted fleets are sized for typical web and application software, where build times are short, and embedded or EDA toolchains routinely exceed what the default machines provide, particularly in memory.[547] The workaround is self-hosted runners: the hosting platform remains the interface for pull requests and status reporting, while a team's own machines or cloud instances supply compute sized for the loads the tools demand and instrumented for whatever extra metrics the team wants to collect.[547]
+
+Pipeline setup itself is worth templating rather than repeating. Phillip Johnston's approach is a shell script that clones a skeleton repository containing the standard source layout, the pipeline rules and the shared static analysis modules, then pushes an initial commit that the build server recognises as a new compliant repository and immediately starts building.[556]
+
+## History
+
+Before pipelines, the normal firmware release path was a build produced on one developer's machine, attached as a binary to a release record or an email, and sent to the manufacturer for others to test on their own machines.[627] In large commercial software, the daily-build discipline predates modern hosted tooling: at Altium, engineers responsible for separate modules such as the PCB editor, schematic editor, bill of materials and router each submitted their code daily, and an overnight scripted build assembled a complete product every night that anyone could exercise as a real application before a stable build was chosen for release.[724] The practice has been established in software for more than twenty years, and the build server landscape an embedded engineer encounters — self-hosted Jenkins, hosted GitHub Actions and Travis CI — reflects that maturity.[627] Containerisation was the later inflection point for build pipelines: the technique was possible beforehand, but packaging a reproducible environment made it cheap enough to serve as routine infrastructure.[519]
+
+## Firmware and embedded targets
+
+Running a build pipeline against firmware requires more infrastructure than a pure software project: target hardware permanently attached to the build machine, a programming path onto that hardware, and an automated agent that pulls each commit, compiles it, flashes it and executes a test procedure.[161] A firmware library that exposes stable hardware abstraction layers and APIs can put unit tests and a build pipeline on top of them, so that a change made for one target is automatically flagged when it regresses an unrelated part of the codebase.[356]
+
+A common stopping point for embedded teams is a pipeline that builds artefacts nobody consumes: the hosted runner produces a firmware image on every push, but with no path onto real silicon the image is never exercised and the build proves only that compilation still succeeds — "GitHub actions made an image for me. Now what?"[537] Closing that gap means a network-attached gateway takes the artefact the hosted runner produced, flashes it onto the target device, runs the test suite against it and reports failures back into the same pull request status that the build reported to.[537]
+
+### Hardware-in-the-loop testing
+
+Hardware-in-the-loop stages go beyond unit tests into system tests, where the automation sends a command to a lightweight serial shell on the device and confirms the physical effect through an analog input — for instance issuing a heater start command and capturing the resulting temperature through the gateway.[537] Where hardware abstraction makes upper modules unit-testable on a host, the driver layer still needs silicon: one approach builds a small test board carrying the same daughter module used in the product, loads nightly builds onto it, and instruments the result with bench equipment such as a multimeter.[522] A USB host adapter that scripts bus traffic can likewise be driven from a build server, letting a Jenkins job that already compiles firmware also exercise the compiled image against real bus peripherals as part of the same automated run.[461] Per-build checks on real hardware can also assert non-functional properties, not just correctness: flashing the new image and measuring reported boot time, and measuring baseline current draw in each defined power state so that a doubling of consumption is caught immediately rather than just before shipping.[556]
+
+Web deployment and firmware deployment sit at opposite ends of a confidence spectrum: a website can go live untouched by a human once the automated suite passes, while a firmware release is typically preceded by weeks of manual hammering driven by fear of shipping a break.[537]
+
+Pipeline construction often accompanies version-control consolidation. At the power supply company where Fredrik Kensander worked, forty separate firmware images were maintained as copies of copies of one another, so that a single defect discovered in one image had to be located and repaired individually in three, four or five others; the remedy was a migration off Subversion onto Git hosted in Azure DevOps with a build pipeline layered on top, treated as one project rather than two.[522]
+
+### Simulation-based pipelines
+
+The practical reason to simulate rather than use real silicon in a pipeline is logistical rather than technical: a development board is difficult to attach to a build server, whereas a simulated target is just another process the server can start.[547] Moving development onto a simulated target also buys scalability and reproducibility — a snapshot of a simulated system can be handed to a colleague who then runs bit-identical state, whereas replicating a physical bench setup on someone else's desk reliably introduces differences.[519] Co-simulation keeps pipeline run times tolerable when part of a design is still in HDL: the known, stable portion of the system runs in a fast functional simulator while only the peripheral or DMA block under development is handed to a slow HDL simulator, so overall throughput stays acceptable.[519] In the experience of Michael Gielda, whose firm builds embedded tooling for many clients, systematic testing in embedded projects largely does not happen, because the overhead of exercising real hardware pushes verification out into field testing.[519]
+
+On a multi-discipline product such as a smartwatch, where low-level sensor integration, power management, GUI work and cloud connectivity are usually different people, giving each component a minimal simulated or emulated stand-in lets those people work against the whole system without waiting on each other's hardware.[653]
+
+Simulation coverage scales when platform models are generated rather than hand-written. Zephyr's device tree data describes hundreds of boards in one machine-parsable form — the bus layout, which peripherals a given SoC carries and how many UARTs it has — so simulation models can be generated automatically from the upstream description rather than hand-written.[691] In Renode, generating platform files from upstream board descriptions scaled coverage to roughly 620 simulated platforms, a number unreachable by the earlier hand-built approach that had topped out around fifty demonstrations.[691] The resulting dashboard is a very large pipeline: about twelve sample binaries are cross-compiled for each of roughly eight hundred boards, giving on the order of ten thousand binaries, each then executed in simulation to prove it actually runs on its target.[691]
+
+## Circuit board design
+
+Software and hardware development carry different default habits: software practice assumes source lives in a shared repository with builds running continuously against it, while board design work treats each fabricated revision as a new fixed baseline, and recognising that mismatch explains why pipeline habits do not transfer automatically to hardware teams.[152]
+
+Where pipelines are applied to board design, Git hooks on a KiCad repository can turn a release tag into a full manufacturing handoff: pushing the finalised revision automatically regenerates Gerbers, the schematic output and the bill of materials, removing a manual export step that has to happen before every fabrication order anyway.[505] Beyond generating fabrication outputs, a hardware pipeline can derive documentation from the design data itself — for example walking every power port to build a power table listing average and peak current per supply, then diffing that table between versions to surface a rail whose draw changed.[505]
+
+Integration and its test suite are a separate stage from deployment, and the split matters more in hardware: the deployment step means committing files to a contract manufacturer, a far heavier commitment than pushing a new software version.[505] The economics of revving differ by orders of magnitude between bits and atoms: incrementing a point release of software costs almost nothing because it updates overnight on devices in the field, whereas committing a physical revision resembles pressing another hundred thousand CDs.[505]
+
+## Silicon design
+
+Dropping the cost of a silicon iteration from roughly one hundred thousand dollars to roughly ten thousand dollars changes chip development from a single carefully hoarded attempt into something closer to a software build loop, where a design is taped out, measured, learned from and taped out again.[503] Open source silicon tooling can be installed directly on a hosted build virtual machine, and because the repositories are public, the compute for running the flow costs the project nothing.[672]
+
+The Tiny Tapeout flow applies the pipeline model to a shared chip: a submitter's own repository builds the GDS, checks it and runs the verification simulations, and only once every status check passes may a pull request be opened against the shared chip repository, so the gate on integration is a machine result rather than a review judgement.[672] After integration, the project runs a second automated stage on the merged design covering simulation, formal verification and equivalence checking, then generates the final GDS and submits it to the shuttle service so its own pre-check runs too, giving two independent verification gates before tapeout.[672] Because verification runs continuously for the whole time a shuttle is open, the schedule can absorb a one-week gap between closing submissions and the fabrication deadline.[672]
+
+A formal property checker in the pipeline can replace exhaustive hand-written test programs: asserting that chip inputs equal outputs through an external loopback lets a SAT solver search every multiplexer setting itself and report the one configuration where a missing wire breaks the identity.[672]
+
+## Cadence and distribution
+
+Integration frequency is bounded by build duration: large multi-module products such as KiCad or a full EDA suite bundle to a nightly cadence rather than building on every commit because the builds themselves take a long time.[724] On the BeagleBoard project, Robert Nelson ran two or three full kernel builds per week for each supported version, continuously folding in patches arriving from TI, from downstream customers and from users rather than batching them into occasional large integrations.[378] Because kernel and bootloader fixes were integrated continuously and re-imaged on a weekly cadence, the supported user procedure for getting current software onto a board was to download the newest published image rather than to network the board and update packages in place.[378]
+
+Pipelines also serve as distribution infrastructure. BeagleBoard exposes its build servers to users directly: a contributor pushes a fork, the servers build it, and the consumable output is a Debian package that can be downloaded and installed on the target, so an FPGA-plus-RISC-V board is programmed through package management rather than through a JTAG session.[723] In automotive work, once a vehicle programme has paid for the bootloader protocol, the build pipeline, the firmware packaging format, the over-the-air path into the car and the version checking, adding one more electronic module inherits the whole deployment chain rather than requiring a new one.[518]
+
+## References
+
+| Episode | Title | URL | Date |
+|---|---|---|---|
+| 152 | Firmware, Netburner and Semiconductors - Chris's Capitalism Colloquy | https://theamphour.com/the-amp-hour-152-chriss-capitalism-colloquy/ | July 1, 2013 |
+| 161 | Interview with Michael Ossmann - Gifted Grimgribber Grokker | https://theamphour.com/the-amp-hour-161-gifted-grimgribber-grokker/ | September 2, 2013 |
+| 356 | An Interview with Piotr Esden-Tempski | https://theamphour.com/356-an-interview-with-piotr-esden-tempski/ | August 20, 2017 |
+| 378 | An Interview with Jason Kridner and Robert Nelson | https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/ | February 4, 2018 |
+| 383 | An Interview with Scott Shawcroft | https://theamphour.com/383-an-interview-with-scott-shawcroft/ | March 11, 2018 |
+| 461 | An Interview with Jonathan Georgino | https://theamphour.com/461-an-interview-with-jonathan-georgino/ | October 6, 2019 |
+| 503 | Fabless Chip Design with Mohamed Kassem | https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/ | August 2, 2020 |
+| 505 | Hardware Revision Control with Kyle Dumont | https://theamphour.com/505-hardware-revision-control-with-kyle-dumont/ | August 16, 2020 |
+| 518 | Satellites and EVs with Joris Aerts | https://theamphour.com/518-satellites-and-evs-with-joris-aerts/ | November 22, 2020 |
+| 519 | Simulating Embedded Hardware with Michael Gielda | https://theamphour.com/519-simulating-embedded-hardware-with-michael-gielda/ | November 29, 2020 |
+| 522 | High Current Power Supplies with Fredrik Kensander | https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/ | December 20, 2020 |
+| 537 | Firmware Deployment and Troubleshooting with Akbar Dhanaliwala | https://theamphour.com/537-firmware-deployment-and-troubleshooting-with-akbar-dhanaliwala/ | April 5, 2021 |
+| 546 | Thousands Of Dependencies | https://theamphour.com/546-thousands-of-dependencies/ | June 21, 2021 |
+| 547 | Open Source Mindset with Michael Gielda | https://theamphour.com/547-open-source-mindset-with-michael-gielda/ | June 28, 2021 |
+| 556 | Firmware for Hardware Engineers with Phillip Johnston | https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/ | September 6, 2021 |
+| 627 | Works on my machine | https://theamphour.com/627-works-on-my-machine/ | April 9, 2023 |
+| 653 | Benjamin Cabé Nose Zephyr | https://theamphour.com/653-benjamin-cabe-nose-zephyr/ | December 11, 2023 |
+| 654 | Pseudo Code...Pseudo Good | https://theamphour.com/654-pseudo-code-pseudo-good/ | December 18, 2023 |
+| 672 | Silicon Revolution with Matt Venn | https://theamphour.com/672-silicon-revolution-with-matt-venn/ | June 30, 2024 |
+| 691 | System Designer Lets You Try Every Part with Michael Gielda | https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/ | March 23, 2025 |
+| 711 | Medical Electronics Education with Mark Palmeri | https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/ | December 21, 2025 |
+| 723 | BeagleBoard's Back with Jason Kridner | https://theamphour.com/723-beagleboards-back-with-jason-kridner/ | May 7, 2026 |
+| 724 | All Heat, No Useful Work | https://theamphour.com/724-all-heat-no-useful-work/ | May 25, 2026 |

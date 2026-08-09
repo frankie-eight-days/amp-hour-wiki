@@ -1,0 +1,145 @@
+---
+title: GPS
+concept: gps
+generated: 2026-08-09
+model: k3
+spec: knowledge-only-v4-cluster
+---
+
+The Global Positioning System (GPS) is a satellite-based radionavigation system whose signals are received at extremely low power and processed into position, velocity, altitude, and time fixes by receivers ranging from phone-class parts to dedicated modules.[352][301] The satellite signal arrives well below the noise floor and is recovered by correlation against a known spreading code, which shapes the system's power consumption, acquisition behaviour, and antenna requirements.[352][600][446] GPS underpins applications from autonomous aircraft and high-altitude balloon tracking to cellular asset tags and data loggers, but it fails entirely wherever the sky is obstructed — indoors, underwater, in narrow canyons, and inside metal-clad buildings — and it is vulnerable to jamming and spoofing, so systems that depend on it treat denial as a design case.[105][407][357][510]
+
+## Operating principles
+
+GPS satellites transmit with a limited power budget from orbital altitude, so the signal arrives at the receiver well below the noise floor; the receiver recovers it by spreading each data bit across 1023 chips and correlating against the known code to pull the signal out of the noise.[352] Because the received signal is so weak — on the order of −120 dB — the receiver must sit with its front end active while searching, which makes the acquisition phase a dominant energy cost in battery-powered trackers.[600]
+
+Acquiring a fix from cold is a search problem: the receiver must find satellites without knowing which are overhead. Before the era of assisted and high-sensitivity receivers, cold acquisition took minutes rather than seconds, which constrained which products could use satellite positioning at all.[301] Predicted-orbit assistance reduces this cost by giving the receiver a starter table of expected satellite positions, letting it skip searching for satellites that cannot be in view.[728] A modern phone-class receiver that has recently held a fix reacquires in roughly five to ten seconds, because it retains a recent estimate of its own position and of the satellite orbits.[301] Older standalone receivers surfaced the same dependency directly to the user, asking whether the unit had moved more than about 300 kilometres since last use; answering yes forced the receiver to discard its stale coarse position estimate and search again from scratch.[301]
+
+The geometry of the visible constellation also matters. A satellite sitting right on the horizon degrades a position solution rather than improving it, because its signal takes a long, low path through atmosphere and obstructions; masking that satellite out yields a better fix than including it.[334]
+
+## History
+
+Civil GPS accuracy was deliberately degraded by selective availability until the policy was switched off in 2000; before that, the intentional error for non-military users was on the order of three to four hundred metres.[301]
+
+The constellation was initially incomplete, so early users scheduled work around satellite visibility. The first autonomous road vehicle driven under GPS control — developed in Gerry Roston's group — had its test runs planned against printed charts in the lab showing the windows when four satellites would be in view.[334]
+
+By the early 2010s, hobby autopilots were flying fully autonomous waypoint missions including automatic takeoff, terrain following using elevation data pulled from mapping services, loitering over a point of interest with a camera held on target, and landing.[105] On Chris Anderson's open-source drone programme, large military unmanned aircraft of the same era were noted to be far less autonomous than their reputation suggested: crews of dozens flew the inner stabilisation loop manually while the outer navigation loop was a human point-and-click on a map.[105]
+
+## Receiver characteristics and integration
+
+### Update rate and accuracy
+
+GPS-based waypoint holding on a hobby multirotor autopilot of the early 2010s was accurate to roughly a three-metre box — adequate for aerial photography over open ground but insufficient for flying between canyon walls or other tight corridors.[105] In one descent measurement, a 2.5 Hz update rate provided a usable altitude profile with enough resolution for the measurement being attempted.[614] Barometric pressure is a workable alternative source of altitude, but a spinning payload introduces noise artifacts in the pressure reading, making the satellite-derived altitude the more trustworthy record in that condition.[614]
+
+### Antenna constraints
+
+GPS sits near 1.575 GHz, which fixes the physical scale of an efficient half-wave radiator at roughly three and a half to three and three-quarter inches.[446] Antenna efficiency — the ratio of power delivered into the antenna to power actually radiated — is the key figure of merit in a size-constrained product, and when a product enclosure is far smaller than the half-wavelength of the band it must receive, the antenna cannot radiate or capture efficiently, so a quarter-sized product requesting GPS is a predictable efficiency problem before any design work begins.[446]
+
+### Power management
+
+On a battery-powered connected device, the GPS receiver is typically the largest power consumer, with the radio uplink close behind, which is why such devices are often designed to upload only while on mains power.[301] A wearable that stamps a location onto every photo must reacquire a fix on the order of every thirty seconds, and both the acquisition time and the energy per fix must be reconciled with a battery life measured in days.[301] A practical mitigation is to gate the receiver on an accelerometer: the device reports only changes of location, and if the accelerometer shows the asset has not moved, the GPS receiver is never powered up.[603]
+
+### Combined cellular and positioning modules
+
+Nordic's nRF9160-class cellular module packs an LTE-M and NB-IoT modem together with a GPS receiver in a package around 20 by 10 mm at a list price near fifteen dollars, the point at which combined cellular plus positioning stops being a multi-chip design problem.[432] The module carries a dual front end that alternates between the cellular link and the satellite navigation band rather than dedicating hardware to each.[600] A hobbyist-facing development board built around the module — Jared Wolff's nRF9160 Feather — combines the application processor, LTE-M and NB-IoT radio, and GPS on one small board, so a connected tracker needs no separate positioning subsystem.[509] Even with GPS available on die, a tracker vendor may move positioning to a separate coprocessor; Maarten Engelen's tracker design did exactly this while separately investigating whether a coarse position could be triangulated from satellite signals the modem already receives, rather than running a full fix.[427]
+
+The module family ships in variants distinguished only by a suffix on the part number, and the NB-IoT-only version has neither GPS nor LTE-M; ordering the wrong suffix produces a board that will not connect on an LTE-M SIM and cannot position at all, with the failure surfacing only during bring-up.[652]
+
+### Software
+
+An RTOS-level GNSS subsystem with a generic NMEA driver removes the need to hand-write a sentence parser for every project — pure overhead work with no product value — and higher-level behaviour such as geofence entry and exit is then naturally expressed with the same framework's state machine support.[653]
+
+Firmware defects in position reporting can be subtle. A bit-packing routine that only sets bits and never clears them corrupts position reports whenever the buffer is reused, because stale ones from previous fixes accumulate; the reported location degrades progressively as the device moves and then appears to heal after a reset.[614] Some positioning bugs are only reachable by physically moving the hardware through the field, so reproducing them means taking the unit out and driving it in a specific direction rather than testing on the bench.[614]
+
+## Applications
+
+### Autonomous aircraft
+
+Adding a GPS receiver to a multirotor is what makes automatic position hold possible, letting the aircraft park itself in the air instead of demanding continuous stick corrections from the pilot.[349] Without a position fix, a multirotor holds attitude but not position, so it wanders continuously and must be flown by hand; the apparently effortless hover of commercial drones is the result of that position loop, not of the airframe.[349] A complete fixed-wing or multirotor autopilot can be built on a 20 by 20 mm board carrying the GPS receiver and the full inertial sensor set, with radio control and telemetry pushed onto a separate daughter board so the core module stays small.[356]
+
+### High-altitude balloons
+
+High-altitude balloon teams carrying a live GPS tracker can and should use the track to warn air traffic control when a payload drifts toward an airport; on one of Vic Aprea's flights, that call led the airport to delay a departure.[250] A GPS receiver on a free-flying balloon turns the payload into a wind sensor, because the recorded ground track is the wind profile; the data shows wind direction changing radically across atmospheric layer boundaries rather than varying smoothly with height.[250] A logged altitude trace can also capture atmospheric events that would otherwise be invisible: one payload's log showed the package descending to about 6,000 feet, being carried back up to about 8,000 feet over several minutes by a thunderstorm updraft, and then descending again.[401]
+
+Commercial receivers carry export-control limits that shut the receiver down when it is simultaneously above a speed and an altitude threshold, so the part cannot guide a missile; balloon payloads aiming past 100,000 feet stay inside the limit only because they ascend slowly.[250]
+
+### Tracking and logistics
+
+A minimal GPS tracking logger can be built as a battery-powered handheld that consumes the receiver's serial output, writes fixes to an onboard SD card, and offers the logs over USB afterwards, avoiding any radio link at all; Greg Davill built such a device, then added a LoRa transceiver to turn it into a live tracker without needing a LoRaWAN network, because the only payload required — a device identifier plus a position — fits comfortably in the low bandwidth of a long-range, low-power link.[473] A battery-powered cellular data logger with an onboard GPS receiver and an expansion-shield architecture lets one base platform serve many verticals, with each shield adding sensing such as CO2, temperature, pressure, or oxygen while the base stamps every reading with time and position before uploading it; Andrea Longobardi's connected-device work followed this pattern.[635]
+
+In bulk logistics, tracking is handled economically with one GPS tracker per vehicle plus barcode scan events at load and unload, which sets a high bar for any proposal to instrument individual parcels or personal items.[576]
+
+### Asset tags without receivers
+
+Crowd-sourced Bluetooth asset tracking works by having the tag broadcast a beacon while any nearby phone running the app reports the sighting together with the phone's own satellite position, so the tag itself never needs a positioning receiver.[543] The economic argument is per-device cost and power: a Bluetooth transmitter is cheap and low-power enough to run for a long time in a sealed package, whereas putting a positioning receiver and a network radio in every tag is not.[543] In a crowd-sourced finding network, every participating handset relays encrypted packets it overhears from nearby tags, tagging each sighting with the finder's own GPS position, so the owner learns where the item was last seen without the tag knowing anything about its own location.[690]
+
+## Limitations and denied environments
+
+GPS requires a view of the sky, and its absence defines several hard boundaries. Flying a camera drone through a slot canyon rules GPS out entirely: walls only ten to twenty metres apart block the sky view, so obstacle avoidance and station keeping must come from onboard ranging sensors such as sonar.[105] Autonomous flight indoors is substantially harder than outdoors for the same reason, forcing the vehicle to derive position from active ranging or other onboard sensing.[510] Underwater robots lose satellite positioning the moment they submerge, so navigation that is trivial for a surface vessel becomes the hard problem for the vehicle below the waves.[407] Locating a specific failed machine inside a data centre defeats satellite positioning as well: the building blocks the sky, the aisles demand metre-level precision, the RF environment is saturated by the machines themselves, there is metal everywhere, and the floor plan changes constantly as equipment is moved.[357]
+
+Small autonomous aircraft that derive their entire position estimate from satellite navigation have no fallback when the signal is jammed or spoofed: losing the fix leaves the vehicle with no idea where it is, so GNSS denial is a design case rather than an edge case for autonomous air vehicles.[105]
+
+Early public autonomous-vehicle trials are staged at sites chosen to remove as many variables as possible: very wide roads, almost no other traffic, and a completely unobstructed sky view giving a strong satellite signal.[354]
+
+## Alternatives and complements
+
+### GNSS-denied navigation for aircraft
+
+Three recovery strategies apply when the satellite fix is lost. The first is inertial dead reckoning: the vehicle keeps integrating heading and motion data from its onboard sensors so it can retrace its path toward the point where the fix was lost.[105] The second is to navigate off ambient radio energy: the vehicle listens to known transmitters, uses Doppler shift and changes in received signal strength to infer direction of travel, and flies along the gradients of the surrounding RF field.[105] The third is terrain-referenced navigation: the aircraft images the ground below with LiDAR or an optical camera and matches what it sees against an onboard terrain database, the machine equivalent of a pilot looking down to recognise landmarks.[105]
+
+### Map-relative localisation
+
+In a self-driving vehicle stack, satellite positioning contributes only a small share of what the vehicle needs; the primary localisation comes from matching live sensor data against maps already stored on the vehicle, and the vehicle keeps working where no satellite signal reaches.[354] Vehicles that must localise where there is no sky view, such as inside a multi-storey car park, use SLAM — a mapping technique in practical use since roughly the mid-2000s that builds and matches a map from onboard sensors rather than from satellites — registering what the sensors currently see against a prior map held in the vehicle.[354]
+
+### Acoustic and RF local positioning
+
+A subsea positioning network is built from acoustic transponders anchored to the seabed that measure time of flight between each other to establish a local coordinate frame, then range to the surface ship; the ship ties that local frame to global coordinates using its own satellite fix.[407]
+
+A terrestrial local positioning system is effectively a private satellite constellation: the vendor supplies both the fixed transmitters that play the role of satellites and the mobile receivers, which is how it can beat satellite accuracy inside a building where the sky signal barely penetrates.[407] One such system aimed at factory automation was specified from zero out to 500 metres, deliberately trading global coverage for far better accuracy than satellite positioning within that volume.[407] In a local RF positioning instrument, the achievable accuracy is set by the precision of the measurement rather than by the carrier wavelength, so product tiers named after centimetres or millimetres refer to position accuracy, not to the band in use.[407] The argument for RF ranging over machine-learning-based vision for guiding industrial robots is determinism: a ranging solution is right essentially every time, whereas vision systems trained by machine learning are judged against success rates well short of that, and a robot needs repeatability rather than a good average.[407]
+
+Building a radio ranging system from scratch means timing the round trip of a signal, which demands a very fast counter; Andrew Seddon's early attempt at tracking model rockets was built around a timer clocked at 100 MHz to resolve the flight time, and in that project the timing electronics proved to be the easy half and the RF link the hard half — assuming the radio side will be trivial is a common way for a positioning project to stall.[131]
+
+For indoor localisation in data centres, one proposed scheme is to paint an artificial star field on the ceiling with paintballs and have a camera plus constellation-matching software resolve position from the unique pattern overhead; QR codes on fixed surfaces serve the same purpose more prosaically.[357]
+
+### Wi-Fi positioning
+
+Wi-Fi positioning services expose an API where a client submits the MAC addresses and signal strengths of the access points it can currently hear and receives back geographic coordinates, with no satellite receiver involved.[668] The access-point database is built by the phones that use it: when a handset takes an expensive satellite fix it records the access points and signal strengths visible at that location, and repeated observations from many handsets converge on a position estimate for each access point.[668] Wi-Fi positioning can beat satellite positioning for accuracy in built-up areas because the reference transmitters sit within about a hundred metres of the receiver rather than in orbit, and signal strength adds a usable range cue on top of mere presence.[668]
+
+### Satellite-side positioning
+
+Positioning geometry can be inverted so that the satellite, not the endpoint, computes the location. A satellite carrying a large digitally beamformed antenna array locates a ground transmitter using angle of arrival across its elements, so the endpoint only has to emit rather than compute its own position.[728] Each uplink burst begins with a known preamble; detecting that preamble in parallel across all the formed beams lets the receiver correct for the large Doppler shift of a low-orbit satellite and pull the packet out of the noise.[728] With several satellites overhead at once, the differing times of flight from the endpoint to each satellite can be combined with the per-satellite angle of arrival, so the satellites locate the device and the device carries no positioning receiver.[728] Angle of arrival alone is bounded by the angular error of the array, limiting ground position to roughly tens of metres no matter how good the implementation.[728]
+
+Inverting the geometry also moves the orbital ephemeris off the endpoint and onto the satellite, removing the stored almanac and the acquisition search that a conventional receiver needs before it can produce a fix.[728] Because the location is derived from the physical arrival of the transmission itself, it adds no bytes to the uplink: a 13-byte packet can carry an identifier and a battery level and still deliver a position.[728] Moving position computation to the satellite lets an asset tag drop both its GPS receiver and its cellular modem and keep only a Bluetooth-class transmitter, cutting the bill of materials substantially, and yields endpoints so power-frugal that a single coin cell supports hourly reporting for multiple years — the threshold that makes field-deployed asset tags viable without battery swaps or solar power.[728]
+
+## References
+
+| Episode | Title | URL | Date |
+|---------|-------|-----|------|
+| 105 | An Interview with Chris Anderson - Deambulatory Daedal Drones | https://theamphour.com/the-amp-hour-105-deambulatory-daedal-drones/ | July 23, 2012 |
+| 131 | An Interview with Andrew Seddon - Necessary Networked Novelty | https://theamphour.com/the-amp-hour-131-necessary-networked-novelty/ | February 4, 2013 |
+| 250 | An Interview with Vic Aprea - Federated Firmware Functionalism | https://theamphour.com/250-an-interview-with-vic-aprea-federated-firmware-functionalism/ | May 20, 2015 |
+| 301 | The Nerd Calendar | https://theamphour.com/301-the-nerd-calendar/ | June 1, 2016 |
+| 334 | An Interview with Gerry Roston | https://theamphour.com/334-an-interview-with-gerry-roston/ | February 1, 2017 |
+| 349 | An(other) Interview with Jon Oxer | https://theamphour.com/349-another-interview-with-jon-oxer/ | June 25, 2017 |
+| 352 | Conning with Michael Ossmann | https://theamphour.com/352-conning-with-michael-ossmann/ | July 17, 2017 |
+| 354 | A Meeting Of The Davids | https://theamphour.com/354-a-meeting-of-the-davids/ | August 7, 2017 |
+| 356 | An Interview with Piotr Esden-Tempski | https://theamphour.com/356-an-interview-with-piotr-esden-tempski/ | August 20, 2017 |
+| 357 | An Interview with Rick Altherr | https://theamphour.com/357-an-interview-with-rick-altherr/ | August 28, 2017 |
+| 401 | An Interview with Brent and Bryce Salmi | https://theamphour.com/401-an-interview-with-brent-and-bryce-salmi/ | July 29, 2018 |
+| 407 | Gregory Charvat and Three New Companies | https://theamphour.com/407-gregory-charvat-and-three-new-companies/ | September 16, 2018 |
+| 427 | An Interview with Maarten Engelen | https://theamphour.com/427-an-interview-with-maarten-engelen/ | January 27, 2019 |
+| 432 | Check The Dummy Box | https://theamphour.com/432-check-the-dummy-box/ | March 3, 2019 |
+| 446 | An Interview with Pete Bevelacqua | https://theamphour.com/446-an-interview-with-pete-bevelacqua/ | June 9, 2019 |
+| 473 | An Interview with Greg Davill | https://theamphour.com/473-an-interview-with-greg-davill/ | January 5, 2020 |
+| 509 | Cellular IoT with Jared Wolff | https://theamphour.com/509-cellular-iot-with-jared-wolff/ | September 20, 2020 |
+| 510 | Knob and Tube Wiring | https://theamphour.com/510-knob-and-tube-wiring/ | September 28, 2020 |
+| 543 | Cassette decks have browsers? | https://theamphour.com/543-cassette-decks-have-browsers/ | May 23, 2020 |
+| 576 | A literal trainwreck | https://theamphour.com/576-a-literal-trainwreck/ | February 6, 2022 |
+| 600 | The Custodial Arts | https://theamphour.com/600-the-custodial-arts/ | August 21, 2022 |
+| 603 | An Interview with Ray Ozzie (Blues Wireless) | https://theamphour.com/603-an-interview-with-ray-ozzie-blues-wireless/ | September 25, 2022 |
+| 614 | Reunion Impedance Matching and 2023 Predictions | https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/ | January 8, 2023 |
+| 635 | Low Power Connected Devices with Andrea Longobardi | https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/ | June 4, 2023 |
+| 652 | For a couple weeks there... | https://theamphour.com/652-for-a-couple-weeks-there/ | November 28, 2023 |
+| 653 | Benjamin Cabé Nose Zephyr | https://theamphour.com/653-benjamin-cabe-nose-zephyr/ | December 11, 2023 |
+| 668 | 50.0000 Ohms | https://theamphour.com/668-50-0000-ohms/ | May 30, 2024 |
+| 690 | Clap on, clap off, lights flicker | https://theamphour.com/690-clap-on-clap-off-lights-flicker/ | March 11, 2025 |
+| 728 | Space Age Bluetooth with Alex Haro | https://theamphour.com/728-space-age-bluetooth-with-alex-haro/ | July 9, 2026 |

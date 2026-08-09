@@ -1,0 +1,620 @@
+{
+ "concept": "design-rule-checking",
+ "name": "Design Rule Checking",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "design-rule-checking",
+  "census": "union",
+  "cap": 250,
+  "capped": false,
+  "total_available": 61,
+  "cluster": {
+   "core": [
+    "design-rule-check",
+    "design-rule-checker",
+    "design-rule-checking"
+   ],
+   "children": [
+    "erc",
+    "layout-versus-schematic",
+    "pcb-design-rule"
+   ],
+   "neighbors": [
+    {
+     "concept": "tsmc",
+     "weight": 4
+    }
+   ]
+  },
+  "stats": {
+   "episodes": 45,
+   "mentions": 79,
+   "explains": 49,
+   "opinions": 12,
+   "candidate_episode_count": 45,
+   "candidate_mention_count": 68,
+   "gated_out": 173,
+   "gated_out_by_concept": [
+    [
+     "tsmc",
+     137
+    ],
+    [
+     "pcb-design-rule",
+     16
+    ],
+    [
+     "erc",
+     12
+    ],
+    [
+     "layout-versus-schematic",
+     8
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 4,
+   "speakers": [
+    [
+     "Dave Jones",
+     19
+    ],
+    [
+     "Chris Gammell",
+     17
+    ],
+    [
+     "Tim Ansell",
+     5
+    ],
+    [
+     "Mohamed Kassem",
+     3
+    ],
+    [
+     "Sergiy Nesterenko",
+     3
+    ],
+    [
+     "Sam Zeloof",
+     2
+    ],
+    [
+     "Zachariah Peterson",
+     2
+    ],
+    [
+     "SPEAKER_01",
+     1
+    ],
+    [
+     "Mahesh",
+     1
+    ],
+    [
+     "Jonathan Hirschman",
+     1
+    ],
+    [
+     "Jason Huggins",
+     1
+    ],
+    [
+     "Ming Zhang",
+     1
+    ],
+    [
+     "Shahriar Shahramian",
+     1
+    ],
+    [
+     "Lukas Henkel",
+     1
+    ],
+    [
+     "James Adams",
+     1
+    ],
+    [
+     "Andrew Seddon",
+     1
+    ],
+    [
+     "Luke Beno",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 61
+   },
+   "passages_by_depth": {
+    "explains": 49,
+    "opinion": 12
+   }
+  }
+ },
+ "claims": [
+  {
+   "claim_text": "Advanced IC processes carry voltage-dependent design rules: the minimum permitted spacing between two pieces of metal grows with the maximum voltage difference across them, so nets at 700 mV, 1.2 V and 1.8 V each require progressively larger separation.",
+   "quote_verbatim": "they actually have voltage dependent DRC rules. So if the maximum difference between two pieces of metal, 700 millivolts, then you're allowed to put them this close",
+   "episode": 706,
+   "episode_title": "Leading Edge Analog with Joren Vaes",
+   "episode_url": "https://theamphour.com/706-leading-edge-analog-with-joren-vaes/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Integrated-circuit design rule checking was originally performed by teams of human checkers working with slide rules against a printed rule book; it is now a software step, with the foundry supplying a machine-readable rule file alongside the manual.",
+   "quote_verbatim": "they had slide rules, right? And that's how they did DRC. But no, we have software that checks this",
+   "episode": 706,
+   "episode_title": "Leading Edge Analog with Joren Vaes",
+   "episode_url": "https://theamphour.com/706-leading-edge-analog-with-joren-vaes/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "An advanced-node rule deck contains millions of individual rules, and a full check run takes a long time to complete.",
+   "quote_verbatim": "it takes a very long time to do all of these checks because there's millions of rules",
+   "episode": 706,
+   "episode_title": "Leading Edge Analog with Joren Vaes",
+   "episode_url": "https://theamphour.com/706-leading-edge-analog-with-joren-vaes/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "IC rule decks include electromigration checks, which limit current density in a wire: a sustained DC current through a very thin conductor progressively displaces the metal atoms through collisions with electrons and can open the wire years after manufacture.",
+   "quote_verbatim": "You have to take into account the current density in your wire, or you cannot guarantee that in 10 years at this DC current of 100 microamps, this wire won't suddenly go open.",
+   "episode": 706,
+   "episode_title": "Leading Edge Analog with Joren Vaes",
+   "episode_url": "https://theamphour.com/706-leading-edge-analog-with-joren-vaes/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The IC physical-verification sequence runs DRC first, to a clean or almost-clean result with a small number of waived rules, then layout versus schematic, then parasitic extraction; where a PCB tool folds the shorts check into DRC, IC flows split connectivity checking into a separate step.",
+   "quote_verbatim": "Well, so, first, DRC clean or almost clean. Sometimes there's rules we can waive or we can ignore.",
+   "episode": 706,
+   "episode_title": "Leading Edge Analog with Joren Vaes",
+   "episode_url": "https://theamphour.com/706-leading-edge-analog-with-joren-vaes/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Layout versus schematic (LVS) checks that the drawn layout implements the circuit captured in the schematic; the subsequent extraction step reads only the layout and produces a SPICE netlist including parasitics, expanding a hand-drawn schematic of tens of lines into millions.",
+   "quote_verbatim": "And then we went to what's called LVS, layout versus schematic. So, that's a step where you actually check that the thing you draw is the thing you had in schematic.",
+   "episode": 706,
+   "episode_title": "Leading Edge Analog with Joren Vaes",
+   "episode_url": "https://theamphour.com/706-leading-edge-analog-with-joren-vaes/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Three vendors supply full analog IC tool stacks: Cadence, Synopsys and Siemens (formerly Mentor). A foundry may support only some of them for a given technology, forcing the choice; Siemens' Calibre is the de facto standard for DRC and LVS even where Cadence dominates schematic capture and layout entry.",
+   "quote_verbatim": "Siemens' tools are called Caliber there. And I think they're pretty much the industry standard.",
+   "episode": 706,
+   "episode_title": "Leading Edge Analog with Joren Vaes",
+   "episode_url": "https://theamphour.com/706-leading-edge-analog-with-joren-vaes/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Constraint-driven checking extends beyond geometry to electrical performance: propagation-delay limits are entered up front, the tool computes the RC of each trace, checks continuously during layout and reports the violating locations for correction.",
+   "quote_verbatim": "It has to be, you know, 1 picosecond or 10 picoseconds to get from here to there. And once you do that, it'll actually, you know, calculate the RC of your trace. And it'll actually check all this stuff for you as you go along.",
+   "episode": 8,
+   "episode_title": "Layouts and Design-Outs",
+   "episode_url": "https://theamphour.com/the-amp-hour-8-layouts-and-design-outs/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Much of a modern DRC rule set is expressed through net classes rather than as global values, so clearance and width rules attach to groups of nets and the checker enforces different limits in different parts of the board.",
+   "quote_verbatim": "that's actually where a lot of the DRC stuff comes from as well",
+   "episode": 177,
+   "episode_title": "Discussing Innovation and the Future with Mike Ossmann - Fiesty Festivus Futurology",
+   "episode_url": "https://theamphour.com/177-discussing-innovation-and-the-future-with-mike-ossmann-fiesty-festivus-futurology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An early design rule checker tested only proximity, not connectivity: metal routed directly across another conductor satisfied the spacing rule and passed, and the resulting chip shipped with the A10 address line shorted to A9, A8 and A7 so the part could not be addressed at all.",
+   "quote_verbatim": "But it wouldn't tell you if the metal went right across the other one. It'd say, yeah, it's a great short. That meets the rules.",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode",
+   "speaker": "Bil Herd"
+  },
+  {
+   "claim_text": "Some fabricators run fully automated inbound checking and reject a design for a single track 0.001 mm outside the stated capability, so the design's own rule set must be set strictly to that fabricator's limits rather than to approximate values.",
+   "quote_verbatim": "But if one track is like 0.001 of a millimetre too wide, they'll bounce it back at you and you've got to redo it.",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A layout tool that permits arbitrary shapes gives up automated checking as the price of that freedom: nothing reports that two routes have come close to each other, so all electrical and design rule checking has to be carried by the designer.",
+   "quote_verbatim": "There's nothing that tells me that two routes are close to each other.",
+   "episode": 286,
+   "episode_title": "An Interview with Saar Drimer",
+   "episode_url": "https://theamphour.com/286-an-interview-with-saar-drimer/",
+   "depth_regraded": "explains",
+   "kind": "constraint",
+   "speaker": "Saar Drimer"
+  },
+  {
+   "claim_text": "Design rule checking belongs on a release checklist as a named step, alongside generating Gerbers and the bill of materials, before a design is checked in or released.",
+   "quote_verbatim": "You know, you do your DRC, you generate your Gerbers and you do whatnot.",
+   "episode": 287,
+   "episode_title": "Pull The Trigger",
+   "episode_url": "https://theamphour.com/287-pull-the-trigger/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Artwork or graphics constructed as pseudo-components on the copper layer defeat design rule checking; once a real component is placed over such a fill the checker can no longer be relied on for that area.",
+   "quote_verbatim": "when then you try to put a component over top of that, then all your DRC is out the window",
+   "episode": 288,
+   "episode_title": "Call In Show #3",
+   "episode_url": "https://theamphour.com/288-call-in-show-3/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Some prototype board houses run no design rule check on submitted Gerbers at all and will fabricate a design that breaks their own published rules, which makes the designer's local DRC the only check performed.",
+   "quote_verbatim": "It doesn't do any sort of DRC on the Gerbers? Nope.",
+   "episode": 291,
+   "episode_title": "Artificially Intelligent Party Platform",
+   "episode_url": "https://theamphour.com/291-artificially-intelligent-party-platform/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Electrical rule checking is confined to electrical correctness of the connectivity, while design rule checking has no inherent scope limit and can be extended to any checkable design constraint, including non-geometric ones such as a bill-of-materials cost target.",
+   "quote_verbatim": "that's the difference between drc and erc erc electrical rules check it's just electrical drc could encompass as much as you want",
+   "episode": 342,
+   "episode_title": "Our first in-person show",
+   "episode_url": "https://theamphour.com/342-our-first-in-person-show/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Schematic-level electrical rule checking typically verifies only pin electrical type and voltage-level compatibility; it does not check that a signal has been connected to a functionally appropriate pin, such as an I2C bus landing on a device's I2C-capable pins where pin multiplexing allows many alternative assignments.",
+   "quote_verbatim": "extend KiCAD to do much better design rule checks than just like, is this input or output and these voltage levels matches?",
+   "episode": 375,
+   "episode_title": "An Interview with Tim \"Mithro\" Ansell",
+   "episode_url": "https://theamphour.com/375-an-interview-with-tim-mithro-ansell/",
+   "depth_regraded": "explains",
+   "kind": "constraint",
+   "speaker": "Tim Ansell"
+  },
+  {
+   "claim_text": "In the Magic VLSI layout tool the process rules live in a .tech file holding minimum and maximum spacings between each pair of layers, layer thicknesses and MOSFET characteristics; with it loaded the editor flags a spacing violation as the geometry is drawn.",
+   "quote_verbatim": "it's all the design rules about maximum and minimum spacing between this and that layer thicknesses",
+   "episode": 390,
+   "episode_title": "An Interview with Sam Zeloof",
+   "episode_url": "https://theamphour.com/390-an-interview-with-sam-zeloof/",
+   "depth_regraded": "explains",
+   "kind": "mechanism",
+   "speaker": "Sam Zeloof"
+  },
+  {
+   "claim_text": "Automatically generated mask output is not trusted on its own for an expensive tapeout; the masks are inspected by hand before submission because a full manual review of a real chip takes a great deal of time.",
+   "quote_verbatim": "But you'll be checking that you'll be checking the mask by hand before you send it out.",
+   "episode": 390,
+   "episode_title": "An Interview with Sam Zeloof",
+   "episode_url": "https://theamphour.com/390-an-interview-with-sam-zeloof/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Some component domains have no design-rule-check infrastructure available to the customer at all: LCD manufacturers each perform the equivalent checking with their own in-house tools at their end.",
+   "quote_verbatim": "And they've got their own in-house tools and every manufacturer's probably got their own different in-house tool for their LCDs to do their design rule checking.",
+   "episode": 400,
+   "episode_title": "Once Every Couple Months",
+   "episode_url": "https://theamphour.com/400-once-every-couple-months/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Running a design rule check across a panelized array is substantially harder than on a single board, and manually copy-pasting a board to build a panel risks omitting objects from the selection; panel-level checking is practical mainly at the Gerber stage, which is where fabricators perform it.",
+   "quote_verbatim": "you might accidentally forget to, you know, highlight something and doing a DRC on a panel is much more difficult",
+   "episode": 400,
+   "episode_title": "Once Every Couple Months",
+   "episode_url": "https://theamphour.com/400-once-every-couple-months/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The Magic layout editor ran a design rule checker continuously in the background while polygons were being drawn: a violating shape started blinking immediately and clicking it named the rule that had been broken, allowing correction in effectively real time.",
+   "quote_verbatim": "which had running in the background all the time as you were laying down polygons, a design rule checker",
+   "episode": 459,
+   "episode_title": "An Interview with Tom Lee",
+   "episode_url": "https://theamphour.com/459-an-interview-with-tom-lee/",
+   "depth_regraded": "explains",
+   "kind": "mechanism",
+   "speaker": "Tom Lee"
+  },
+  {
+   "claim_text": "Rule checkers catch connectivity errors that have been declared illegal, such as tying a power input to ground, but cannot catch a connection that is legal yet functionally wrong, such as reversed RX and TX.",
+   "quote_verbatim": "Nothing will stop me from reversing RX and TX.",
+   "episode": 499,
+   "episode_title": "Discussing Chiplets with Ming Zhang",
+   "episode_url": "https://theamphour.com/499-discussing-chiplets-with-ming-zhang/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "ASIC place-and-route output routinely emerges from the tool with a couple of thousand design rule violations still in it, and repairing them by hand is a paid job rather than an exception.",
+   "quote_verbatim": "the design comes out and probably has, you know, a couple of thousand errors in the outputs that have to be fixed manually",
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode",
+   "speaker": "Tim Ansell"
+  },
+  {
+   "claim_text": "Passing the design rule check establishes that a design is manufacturable, not that it works; nothing in the check verifies design intent, so a layout that connects a converter to nothing can still be DRC clean.",
+   "quote_verbatim": "so it has to pass DRC, but there's no guarantee that it's going to work",
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Some connectivity checking of the kind associated with electrical rule checking is embedded in the DRC deck itself, and layout versus schematic provides the separate comparison of the drawn layout against the intended netlist.",
+   "quote_verbatim": "there is a lot of, um, ERC like stuff in the DRC. Um, there's also, um, what's called LVS, um, which is layout versus schematic.",
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "mechanism",
+   "speaker": "Tim Ansell"
+  },
+  {
+   "claim_text": "Foundry design rules are delivered as a PDF manual of numeric values covering metal spacing, metal overlap of via and similar geometry; building a usable checker means transcribing those numbers into a rule deck the layout tool can read.",
+   "quote_verbatim": "Literally we take these numbers and stick them into a rule deck that is readable by the layout tool.",
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "depth_regraded": "explains",
+   "kind": "procedure",
+   "speaker": "Mohamed Kassem"
+  },
+  {
+   "claim_text": "A rule deck ports reasonably well between older process nodes because the physical effects and the number of metal layers are similar down to roughly 90 nm, so adapting a deck to another node is largely a substitution of parameters rather than a rewrite.",
+   "quote_verbatim": "the physical effects all the way to call it 90 nanometer are very similar",
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "depth_regraded": "explains",
+   "kind": "mechanism",
+   "speaker": "Mohamed Kassem"
+  },
+  {
+   "claim_text": "Rule decks are validated against foundry-supplied reference layouts with known outcomes, one GDS designed to pass and another designed to fail specific rules; running the checker must reproduce the expected number of failures on each, and a shortfall means the deck is missing checks.",
+   "quote_verbatim": "Like I give you a GDS and say that GDS passes the DRC and the other one fails the DRC",
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "depth_regraded": "explains",
+   "kind": "procedure",
+   "speaker": "Mohamed Kassem"
+  },
+  {
+   "claim_text": "Manufacturing rules used for that validation cannot be waived: the deck under test and the foundry's design rules manual must express the same rules for the comparison to mean anything.",
+   "quote_verbatim": "the design rules themselves have to be the same. I can't just waive them.",
+   "episode": 503,
+   "episode_title": "Fabless Chip Design with Mohamed Kassem",
+   "episode_url": "https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/",
+   "depth_regraded": "explains",
+   "kind": "constraint",
+   "speaker": "Mohamed Kassem"
+  },
+  {
+   "claim_text": "Setting the working design rule slightly looser than the fabricator's stated minimum, for example 3.75 mil against a 3.5 mil capability, preserves headroom to tighten locally where the routing demands it instead of designing the whole board at the process limit.",
+   "quote_verbatim": "I should have set this at 3.75 mil instead of 3.5",
+   "episode": 504,
+   "episode_title": "This Is Just A Tribute",
+   "episode_url": "https://theamphour.com/504-this-is-just-a-tribute/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Changing a clearance or width rule after the board is routed generates violations in bulk and leaves the layout over-constrained: one such change produced 850 DRC errors, made push-and-shove routing unusable, and would have required a full reroute or a move to more layers.",
+   "quote_verbatim": "And I had 850, you know, DRC errors and like, it's so locked up.",
+   "episode": 504,
+   "episode_title": "This Is Just A Tribute",
+   "episode_url": "https://theamphour.com/504-this-is-just-a-tribute/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "From the 16 nm FinFET generation onward, multiple patterning removed the freedom to orient devices arbitrarily: because a single layer is split across several exposures, all gates must run in the same direction, and the DRC rule stack grew enormously as a result.",
+   "quote_verbatim": "but now you can't do that anymore because of the patterning limitations everything has to be the same direction",
+   "episode": 553,
+   "episode_title": "Debunking with Shahriar",
+   "episode_url": "https://theamphour.com/553-debunking-with-shahriar/",
+   "depth_regraded": "explains",
+   "kind": "constraint",
+   "speaker": "Shahriar Shahramian"
+  },
+  {
+   "claim_text": "Only two or three semiconductor companies in the world can run 5 nm and 3 nm processes, TSMC and Samsung with Intel potentially joining them, and the tooling required is correspondingly expensive.",
+   "quote_verbatim": "there's only maybe two or three semiconductor companies now in the world that can do these five three kind of nanometer process",
+   "episode": 553,
+   "episode_title": "Debunking with Shahriar",
+   "episode_url": "https://theamphour.com/553-debunking-with-shahriar/",
+   "depth_regraded": "explains",
+   "kind": "market-structure",
+   "speaker": "Shahriar Shahramian"
+  },
+  {
+   "claim_text": "Pre-tapeout DRC at a foundry is exhaustive down to details such as the layers used and the number of elements in a polygon, leaving essentially no scope for a design to slip through with an irregularity.",
+   "quote_verbatim": "they'll check the layers, they'll check the, the number of elements in a polygon, it's just stuff like you cannot get away with anything",
+   "episode": 579,
+   "episode_title": "ADC Chip Design with Anthony Wall",
+   "episode_url": "https://theamphour.com/579-adc-chip-design-with-anthony-wall/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Metal density is a checked design rule because chemical-mechanical polishing depends on it: a die with too little metal polishes into a dip, which on a multi-project wafer damages neighbouring designs as well as its own.",
+   "quote_verbatim": "So the DRC checks need to check if you've got a high enough density of metal that the polishing will, will be even enough.",
+   "episode": 579,
+   "episode_title": "ADC Chip Design with Anthony Wall",
+   "episode_url": "https://theamphour.com/579-adc-chip-design-with-anthony-wall/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Density violations are cleared by automated metal fill: a script walks the die zone by zone and inserts dummy metal polygons where the density is short.",
+   "quote_verbatim": "So we have a script that will, that will look at each kind of zone sequentially and kind of fill it in with little polygons of metal here and there.",
+   "episode": 579,
+   "episode_title": "ADC Chip Design with Anthony Wall",
+   "episode_url": "https://theamphour.com/579-adc-chip-design-with-anthony-wall/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Verification tooling on the IC side extends past geometry to circuit-level hazards, with checks that report whether a layout will cause latch-up or an ESD failure.",
+   "quote_verbatim": "there are tools that will tell you, for example, if it will cause a latch up or an ESD",
+   "episode": 579,
+   "episode_title": "ADC Chip Design with Anthony Wall",
+   "episode_url": "https://theamphour.com/579-adc-chip-design-with-anthony-wall/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A layout produced by an automated tool is run back through an independent design rule check on the downloaded board file as a final confirmation before release to fabrication.",
+   "quote_verbatim": "We run a DRC just to like double check that nothing else went really wrong.",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "practice",
+   "speaker": "Sergiy Nesterenko"
+  },
+  {
+   "claim_text": "The acceptance baseline for an automatically generated layout, before any signal-integrity or physics consideration, is 100 percent routing completion with zero DRC violations; anything short of that counts as a failure of the tool.",
+   "quote_verbatim": "the baseline before even thinking about any physics or anything is a hundred percent completion with zero DRC violations",
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "constraint",
+   "speaker": "Sergiy Nesterenko"
+  },
+  {
+   "claim_text": "Design rule checking has no equivalent for signal integrity: identifying insertion loss or crosstalk problems requires setting up a field simulation rather than running a rule check, which is a recognised gap in the everyday hardware workflow.",
+   "quote_verbatim": "I just need a DRC effectively for signal integrity",
+   "episode": 681,
+   "episode_title": "Compact High Speed Design with Lukas Henkel",
+   "episode_url": "https://theamphour.com/681-compact-high-speed-design-with-lukas-henkel/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Fabricator-side checks on Gerber data have no net-name knowledge because connectivity is discarded in the Gerber format; they can only test whether copper is too close to copper, which protects the fabricator's process but cannot distinguish an intended connection from an accidental short between two nets.",
+   "quote_verbatim": "But the thing is, they don't have net name knowledge, right? So they just test, is this too close to that?",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Chip layouts are run back through design rule checking before mask generation on the same principle as circuit boards, confirming the geometry is legal for the process and manufacturable, though it will not catch an accidental short between power and ground.",
+   "quote_verbatim": "And you make sure that you've done something that's legal from a process point of view and it's still manufacturable",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "mechanism",
+   "speaker": "James Adams"
+  },
+  {
+   "claim_text": "A 0.35 mm pitch wafer-level chip-scale package was routed on a six-layer via-in-pad process where 0.25 mm is the minimum via-to-pad distance; sitting exactly at that limit requires the layout grid to be configured to match, because anything off-grid is rejected by the fabricator's DRC.",
+   "quote_verbatim": "the exact minimum distance so i think it's 0.25 millimeters is the minimum distance",
+   "episode": 692,
+   "episode_title": "Like a steam engine in your house",
+   "episode_url": "https://theamphour.com/692-like-a-steam-engine-in-your-house/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Contract manufacturers run their own inbound verification: a suite of tools checks the submitted design against the netlist, confirms it can physically be manufactured and that any stack-up complexity is feasible. Simple two- and four-layer boards generally pass without human involvement, while designs pushing the process envelope still receive human review.",
+   "quote_verbatim": "we run that through a whole suite of tools to, to verify their design, check it against the netlist, make sure it's physically can be manufactured",
+   "episode": 699,
+   "episode_title": "CircuitHub, 12 Years Later with Andrew Seddon",
+   "episode_url": "https://theamphour.com/699-circuithub-12-years-later-with-andrew-seddon/",
+   "depth_regraded": "explains",
+   "kind": "procedure",
+   "speaker": "Andrew Seddon"
+  },
+  {
+   "claim_text": "Omitting local DRC and ERC transfers the checking to the fabricator's inbound review, which turns each error into a reject-and-resubmit cycle that can take a day per iteration across time zones.",
+   "quote_verbatim": "DRC, ERC stuff that I should be doing on my computer. That's all there.",
+   "episode": 699,
+   "episode_title": "CircuitHub, 12 Years Later with Andrew Seddon",
+   "episode_url": "https://theamphour.com/699-circuithub-12-years-later-with-andrew-seddon/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Designs are routinely submitted for review carrying hundreds to thousands of outstanding DRC errors, with 900 errors common and cases up to roughly 3000 observed; the underlying cause is usually a rule set left at the tool's defaults rather than genuinely difficult geometry.",
+   "quote_verbatim": "they will send in a design that has, you know, 900 errors",
+   "episode": 718,
+   "episode_title": "Layout Review with Zachariah Peterson",
+   "episode_url": "https://theamphour.com/718-layout-review-with-zachariah/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode",
+   "speaker": "Zachariah Peterson"
+  },
+  {
+   "claim_text": "Rule values must be taken from the fabricator's published capability sheet rather than left at the CAD tool's defaults; spending five minutes retrieving a manufacturer's capabilities and entering those numbers clears roughly 90 percent of the violations that default rules generate.",
+   "quote_verbatim": "you just didn't change the default value in the design rules when you created the PCB project. And if you had just done that and done like five minutes of, of looking on a manufacturer's website to get some capabilities, you would have put in some values that would have cleared up 90% of those, those errors.",
+   "episode": 718,
+   "episode_title": "Layout Review with Zachariah Peterson",
+   "episode_url": "https://theamphour.com/718-layout-review-with-zachariah/",
+   "depth_regraded": "explains",
+   "kind": "practice",
+   "speaker": "Zachariah Peterson"
+  },
+  {
+   "claim_text": "Tool defaults exist only because the vendor has to ship some number, and are not a recommendation; determining the actual constraint the design will be built under, and then confirming the layout satisfies it, is the designer's responsibility.",
+   "quote_verbatim": "it's your job to figure out what is the actual constraint I'm going to be working under",
+   "episode": 718,
+   "episode_title": "Layout Review with Zachariah Peterson",
+   "episode_url": "https://theamphour.com/718-layout-review-with-zachariah/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment",
+   "speaker": "Zachariah Peterson"
+  },
+  {
+   "claim_text": "Live design rule checking during routing gives continuous feedback at the point of editing, but working permanently at that zoom level obscures board-level problems that only become apparent when the physical board arrives.",
+   "quote_verbatim": "I got my live DRC, whatever",
+   "episode": 718,
+   "episode_title": "Layout Review with Zachariah Peterson",
+   "episode_url": "https://theamphour.com/718-layout-review-with-zachariah/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  }
+ ],
+ "attribution_notes": [
+  "ep 222: passage labelled Chris Gammell, but the content (arriving at the company in his second week, watching the TED chip designers probe) is guest Bil Herd. Content-attributed to Bil Herd.",
+  "ep 286: passage labelled Chris Gammell; the statement that nothing warns him two routes are close describes the speaker's own arbitrary-shape layout tool, which is guest Saar Drimer's. Content-attributed to Saar Drimer.",
+  "ep 459: passage labelled Chris Gammell, but the content (a graduate student finishing a chip in a two-day marathon after Berkeley's Magic arrived) is guest Tom Lee. Content-attributed to Tom Lee.",
+  "ep 499: marked attribution-unreliable and the RX/TX exchange straddles both voices; name dropped, claim left unattributed.",
+  "ep 501: the passage answering what LVS is carries the host's label while the answer content is the PDK maintainer's. Content-attributed to Tim Ansell where the answer is his; the 'no guarantee that it's going to work' question left unattributed.",
+  "ep 626: passages 48-51 alternate host and guest under mixed labels; only the statements describing Quilter's internal process (final DRC before fab, 100 percent completion baseline) are attributed, to Sergiy Nesterenko.",
+  "ep 699: marked attribution-unreliable and fused; the inbound-verification answer is content-attributed to Andrew Seddon (CircuitHub), while the reject-and-resubmit complaint is the host's and is left unattributed.",
+  "ep 706, 342, 291, 288, 287, 224: labelled Dave Jones or Chris Gammell on turns that read as either voice; these are ordinary facts, so names were dropped rather than risk a swap.",
+  "ep 718: labels are consistent with content (the reviewer describing submitted designs is Zachariah Peterson); the 'live DRC / forest versus trees' turn is the host's and is left unattributed."
+ ],
+ "capped": false
+}

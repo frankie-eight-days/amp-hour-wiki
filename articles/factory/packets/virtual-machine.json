@@ -1,0 +1,549 @@
+{
+ "concept": "virtual-machine",
+ "name": "Virtual Machine",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "virtual-machine",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "virtual-machine"
+  ],
+  "children": [
+   "buffer-overflow",
+   "c-api",
+   "docker",
+   "dos",
+   "mean-time-between-failures",
+   "memory-usage",
+   "murata",
+   "semiconductor-vendor",
+   "windows-xp"
+  ],
+  "neighbors": {
+   "ubuntu": 6,
+   "windows": 5
+  },
+  "episodes_with_kept_mentions": 36,
+  "mentions_kept": 53,
+  "pins_pre_cap": 51,
+  "pins_final": 51,
+  "pins_by_depth": {
+   "explains": 43,
+   "opinion": 8
+  },
+  "pins_by_role": {
+   "core": 49,
+   "child": 2
+  },
+  "speakers": [
+   [
+    "Chris Gammell",
+    22
+   ],
+   [
+    "Nadya Peek",
+    3
+   ],
+   [
+    "Bob Davidson",
+    2
+   ],
+   [
+    "Dave Jones",
+    2
+   ],
+   [
+    "Dave Vandenbout",
+    2
+   ],
+   [
+    "Omer Kilic",
+    2
+   ],
+   [
+    "Tony DiCola",
+    2
+   ],
+   [
+    "Scott Shawcroft",
+    2
+   ],
+   [
+    "Uri Shaked",
+    2
+   ],
+   [
+    "Shawn Hymel",
+    2
+   ],
+   [
+    "Jeff Keyzer",
+    1
+   ],
+   [
+    "Elecia White",
+    1
+   ],
+   [
+    "Brandon Harris",
+    1
+   ],
+   [
+    "Jeroen Domburg",
+    1
+   ],
+   [
+    "Jason Huggins",
+    1
+   ],
+   [
+    "Piotr Esden-Tempski",
+    1
+   ],
+   [
+    "Travis Goodspeed",
+    1
+   ],
+   [
+    "Ben Heck",
+    1
+   ],
+   [
+    "Laura Abbott",
+    1
+   ],
+   [
+    "Jason Kridner",
+    1
+   ]
+  ],
+  "capped": false,
+  "gated_out_by_concept": [
+   [
+    "windows",
+    169
+   ],
+   [
+    "ubuntu",
+    37
+   ],
+   [
+    "dos",
+    32
+   ],
+   [
+    "docker",
+    17
+   ],
+   [
+    "buffer-overflow",
+    11
+   ],
+   [
+    "mean-time-between-failures",
+    11
+   ],
+   [
+    "murata",
+    8
+   ],
+   [
+    "windows-xp",
+    7
+   ],
+   [
+    "semiconductor-vendor",
+    5
+   ],
+   [
+    "memory-usage",
+    4
+   ],
+   [
+    "c-api",
+    3
+   ]
+  ],
+  "gated_out_total": 304
+ },
+ "claims": [
+  {
+   "claim_text": "Give every client project its own virtual machine. The cost is disk space, which is effectively free, and the thing it buys is that a project paused for months can be resumed by starting an image rather than by rebuilding a development environment from memory.",
+   "quote_verbatim": "from now on projects get their own virtual machine and storage is effectively free",
+   "speaker": "Chris Gammell",
+   "episode": 512,
+   "episode_title": "Design For Longevity",
+   "episode_url": "https://theamphour.com/512-design-for-longevity/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A development environment is destroyed by ordinary events — a machine reinstall between one phase of a project and the next — and the loss only becomes visible when the client returns eight months later expecting work to resume immediately.",
+   "quote_verbatim": "completely wiped out their, the dev environment though",
+   "speaker": "Chris Gammell",
+   "episode": 512,
+   "episode_title": "Design For Longevity",
+   "episode_url": "https://theamphour.com/512-design-for-longevity/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Keep an image loaded with the old toolchain ready to start at any moment, because updated compilers and place-and-route tools do not necessarily handle older designs as well as the versions those designs were built with.",
+   "quote_verbatim": "there's a good reason to have your virtual machine all loaded up with your old tools and ready to pull it out at any moment",
+   "speaker": "Dave Vandenbout",
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The durable argument for open tools is not ideology but access: an old image running an old version can still be started in thirty years, with no licence server to contact and no licence left to expire.",
+   "quote_verbatim": "can always have an old virtual machine running key cat five and 30 years from now, I will still be able to edit my designs",
+   "speaker": "Travis Goodspeed",
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Declining to upgrade a working toolchain is defensible when the old version is sealed in an image that never has to change. The counter-argument — that the newest version supports the newest operating system — only matters if the environment is expected to move, and an image is exactly the way to stop it moving.",
+   "quote_verbatim": "it's just not broken. And I put it in a VM. And it's just sitting there. And I never have to touch it again",
+   "speaker": "Chris Gammell",
+   "episode": 546,
+   "episode_title": "Thousands Of Dependencies",
+   "episode_url": "https://theamphour.com/546-thousands-of-dependencies/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "When a vendor introduces a major version migration in its firmware tooling, installing the version you rely on into an image locks it down before the upgrade path becomes mandatory — a defensive move worth making on client work specifically, where you cannot control when you will next need to build.",
+   "quote_verbatim": "going to go install all this stuff onto a VM so that it's like locked down forever",
+   "speaker": "Chris Gammell",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Vendor software that demands an obsolete operating system gets its own image, which solves two problems at once: the obsolete requirement is satisfied, and the installation cannot collide with another copy of the same package already on the machine.",
+   "quote_verbatim": "it really wanted to run an XP, so I just set up an XP virtual machine and put it in there, and it didn't collide with my other",
+   "speaker": "Bob Davidson",
+   "episode": 144,
+   "episode_title": "An Interview with Bob Davidson - Hoodied HP Hijinks",
+   "episode_url": "https://theamphour.com/the-amp-hour-144-hoodied-hp-hijinks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An image captures the whole ecosystem — compiler, drivers and configuration — so that booting it returns the identical system rather than an approximation of it. The costs are that anything emulated inside runs slower, and that debug hardware has to be passed through.",
+   "quote_verbatim": "you can actually have entire ecosystems of your, you know, like your compiler and everything else in a virtual machine",
+   "speaker": "Chris Gammell",
+   "episode": 144,
+   "episode_title": "An Interview with Bob Davidson - Hoodied HP Hijinks",
+   "episode_url": "https://theamphour.com/the-amp-hour-144-hoodied-hp-hijinks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Version drift in teaching and long-lived projects is exactly what images and containers are for: booting into a controlled environment removes the problem of every participant having a slightly different install.",
+   "quote_verbatim": "virtual machines should take care of some of this stuff where it's like, oh, okay. You just kind of boot this thing up",
+   "speaker": "Chris Gammell",
+   "episode": 497,
+   "episode_title": "An Interview with Brock LaMeres",
+   "episode_url": "https://theamphour.com/497-an-interview-with-brock-lameres/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Hardware passthrough is the part people expect to fail and in practice it is solid: a USB debug adapter or serial converter handed to the guest works well enough to develop against real boards from inside an image.",
+   "quote_verbatim": "the USB pass through, I was kind of worried about, but like that part is like rock solid",
+   "speaker": "Chris Gammell",
+   "episode": 512,
+   "episode_title": "Design For Longevity",
+   "episode_url": "https://theamphour.com/512-design-for-longevity/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Virtualisation products differ specifically in how well they handle low-level device passthrough, which is the criterion that matters for embedded work — enough to justify paying for one over a free alternative that handles it less reliably.",
+   "quote_verbatim": "is great for like low level connection to like a, you know, a USB to UART kind of chip",
+   "speaker": "Chris Gammell",
+   "episode": 534,
+   "episode_title": "Firmware Update Capabilities",
+   "episode_url": "https://theamphour.com/534-firmware-update-capabilities/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A practical recovery from an unusable native Linux install is to host the distribution in an image on the working machine and pass the debug cable through to it; the toolchain then talks to the board with no change to how the work is done.",
+   "quote_verbatim": "just pass through whatever USB cable I'm plugging into that",
+   "speaker": "Chris Gammell",
+   "episode": 510,
+   "episode_title": "Knob and Tube Wiring",
+   "episode_url": "https://theamphour.com/510-knob-and-tube-wiring/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Compatibility layers that run a Linux userland on a Windows host handle terminals and files easily and historically fell down exactly at the hardware boundary — the path from software all the way down to the USB port was the part that did not work.",
+   "quote_verbatim": "actually talking to the hardware, you know, there's a USB port somewhere",
+   "speaker": "Chris Gammell",
+   "episode": 576,
+   "episode_title": "A literal trainwreck",
+   "episode_url": "https://theamphour.com/576-a-literal-trainwreck/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Some vendor toolchains cannot be run natively on a Mac at all, so an image hosting Windows or Linux is not a preference but the only path — a practical constraint when planning a workshop where participants bring their own laptops.",
+   "quote_verbatim": "Mac, you need a virtual machine to run the vendor tools",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 423,
+   "episode_title": "Open FPGA Toolchains at 35c3",
+   "episode_url": "https://theamphour.com/423-open-fpga-toolchains-at-35c3/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A per-client image is transferable: handing over the file gives the client the entire working environment, which is functionally equivalent to shipping them a configured laptop and removes any argument about what was installed.",
+   "quote_verbatim": "can just like box it up and ship it over and it's like sending them a laptop",
+   "speaker": "Chris Gammell",
+   "episode": 520,
+   "episode_title": "Inductance and Stuff",
+   "episode_url": "https://theamphour.com/520-inductance-and-stuff/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Distributing a prepared image on USB sticks for a workshop broke on machines with the newer Apple processors, and the remediation each participant needed made the experience worse than having everyone install locally — the approach fails precisely where the audience's hardware is least uniform.",
+   "quote_verbatim": "you had like an M1, it was just like, ha ha, no, I'm not running this",
+   "speaker": "Shawn Hymel",
+   "episode": 675,
+   "episode_title": "Changing Course with Shawn Hymel",
+   "episode_url": "https://theamphour.com/675-changing-course-with-shawn-hymel/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The ideal teaching distribution really is a single image everyone can run, and it fails on licensing economics rather than on technology: redistributing commercial virtualisation to students is not realistic, which is what pushes courses to browser-hosted environments instead.",
+   "quote_verbatim": "the best case scenario would just be a virtual machine to be honest that like anyone could run. But those are expensive",
+   "speaker": "Chris Gammell",
+   "episode": 675,
+   "episode_title": "Changing Course with Shawn Hymel",
+   "episode_url": "https://theamphour.com/675-changing-course-with-shawn-hymel/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Browser-hosted environments suit toolchains that are mostly compilation and poorly suit graphics-heavy work such as CAD, which needs GPU support to be usable at all — so the right hosting model follows from what the tool actually does.",
+   "quote_verbatim": "you would need to have GPU support. And then like it wouldn't be a great experience because it's pretty graphic heavy",
+   "speaker": "Chris Gammell",
+   "episode": 675,
+   "episode_title": "Changing Course with Shawn Hymel",
+   "episode_url": "https://theamphour.com/675-changing-course-with-shawn-hymel/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Running a full toolchain inside a processor simulator in the browser works and is unusable: compiling a trivial sketch takes around two minutes, and the environment itself is tens of megabytes to download before any of that starts.",
+   "quote_verbatim": "just compiling link for Arduino takes around two minutes",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The workable split is to compile in a remote container and execute the result locally in the browser, which puts the resource-hungry step on a machine that can do it and leaves the interactive part where the user is.",
+   "quote_verbatim": "the compilation was running at the remote container, but once it's compiled, it runs in the browser",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Storing the toolchain with the source solves the same problem an image does and costs far less: an image drags an entire operating system and its interface along with the compiler, where a build definition carries only what is needed to reconstruct the environment.",
+   "quote_verbatim": "that's actually really like heavy. Cause then you need to have like a whole windows image or Linux image",
+   "speaker": "Chris Gammell",
+   "episode": 612,
+   "episode_title": "Slapping Industries",
+   "episode_url": "https://theamphour.com/612-slapping-industries/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Committing the toolchain definition as another file in the repository means nothing is installed on the developer's machine: the hosted environment reads that file, builds the environment and runs the work, so a new contributor is one clone away from a working setup.",
+   "quote_verbatim": "you commit the entire, so you basically, you send this tool chain as like another file that's in your repo",
+   "speaker": "Chris Gammell",
+   "episode": 627,
+   "episode_title": "Works on my machine",
+   "episode_url": "https://theamphour.com/627-works-on-my-machine/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Continuous integration is the same mechanism applied on a schedule: spin up a clean environment, install the dependencies, pull the code, run the tests and report the result — the value coming from the environment being clean every time rather than from the automation itself.",
+   "quote_verbatim": "when you spin up this virtual machine, you go and install",
+   "speaker": "Chris Gammell",
+   "episode": 627,
+   "episode_title": "Works on my machine",
+   "episode_url": "https://theamphour.com/627-works-on-my-machine/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An on-device Python implementation ships the tools rather than the output: firmware finds the source file, converts it to bytecode held in memory, and a virtual machine written in C interprets that bytecode. Saving the file again stops the machine and repeats the cycle, which is why there is no compile-and-flash step.",
+   "quote_verbatim": "going to convert it to byte code, which I'm going to store in memory",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The point of the bytecode layer is that nobody porting to a new microcontroller has to understand it: the machine behaves identically everywhere, so the work of supporting a new part is confined to the hardware layer beneath it.",
+   "quote_verbatim": "don't need to know the intricate details of how the VM works because that's something that works across all of the microcontrollers in the same way",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Writing a device library in an interpreted on-device language works when you can code against the firmware's own I2C, SPI and digital interfaces, and stops working where timing is tight — reading a converter's register occasionally is fine, sustaining a fast continuous transfer is not.",
+   "quote_verbatim": "if you're doing this in Python, it's going to be running in this virtual machine. It's interpreted. There's some overhead there",
+   "speaker": "Tony DiCola",
+   "episode": 323,
+   "episode_title": "An Interview with Tony DiCola",
+   "episode_url": "https://theamphour.com/323-an-interview-with-tony-dicola/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Anything running in a virtual machine — any dynamic language — is harder to prove correct and harder to test than compiled code, which is a real objection to shipping that stack in a commercial embedded product however good the testing frameworks around it become.",
+   "quote_verbatim": "anything that runs in a vm it's ultimately going to be more difficult to prove and like test",
+   "speaker": "Omer Kilic",
+   "episode": 295,
+   "episode_title": "An Interview with Omer Kilic",
+   "episode_url": "https://theamphour.com/295-an-interview-with-omer-kilic/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Waking a device, bringing up an operating system, starting a virtual machine and executing interpreted code takes around 50 milliseconds — far longer than bare hardware needs, and irrelevant in a design where the device wakes, captures an event and then waits on a network connection anyway.",
+   "quote_verbatim": "think we're somewhere around 50 milliseconds, which is longer than you would have for your average hardware",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Bytecode on a microcontroller repeats what portable bytecode did for the browser, and inherits the same objection in a new form: the abstraction costs cycles, and on a battery-powered device cycles are energy.",
+   "quote_verbatim": "you can run a virtual machine on a, on a microcontroller",
+   "speaker": "Jason Kridner",
+   "episode": 723,
+   "episode_title": "BeagleBoard's Back with Jason Kridner",
+   "episode_url": "https://theamphour.com/723-beagleboards-back-with-jason-kridner/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Console backward compatibility across an architecture change was achieved by translating code as it executes rather than by emulating the old machine, which is what allows software built for one instruction set to run at usable speed on a completely different one.",
+   "quote_verbatim": "they actually have real-time bytecode, not emulation, but like virtual machines",
+   "speaker": "Ben Heck",
+   "episode": 490,
+   "episode_title": "An Interview with Ben Heck(endorn)",
+   "episode_url": "https://theamphour.com/490-an-interview-with-ben-heckendorn/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "In machine control the term means something else entirely: every axis, heater and sensor is a node on a machine network with a corresponding object in software, and motion happens by calling functions on those nodes directly instead of streaming a command language to a controller that interprets it.",
+   "quote_verbatim": "all aspects of the machine, so say all axes",
+   "speaker": "Nadya Peek",
+   "episode": 208,
+   "episode_title": "An Interview With Nadya Peek - Gallant Gcode Gerontology",
+   "episode_url": "https://theamphour.com/208-an-interview-with-nadya-peek-gallant-gcode-gerontology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "That representation makes machine topology cheap to change: going from three axes to four was connecting one more node and composing two compound nodes in software, where a command-language toolchain would have needed the whole interpretation layer reworked.",
+   "quote_verbatim": "prototyping the electronics for that was just me connecting four nodes together instead of connecting three nodes together",
+   "speaker": "Nadya Peek",
+   "episode": 208,
+   "episode_title": "An Interview With Nadya Peek - Gallant Gcode Gerontology",
+   "episode_url": "https://theamphour.com/208-an-interview-with-nadya-peek-gallant-gcode-gerontology/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In a server the host processor runs a hypervisor whose only job is to host customer machines, so the workloads a customer cares about never touch the hardware directly and the platform beneath them can be maintained independently.",
+   "quote_verbatim": "the host processor is going to be running, um, what is essentially our, our, uh, hypervisor",
+   "speaker": "Laura Abbott",
+   "episode": 590,
+   "episode_title": "Finding Hardware Flaws with Laura Abbott",
+   "episode_url": "https://theamphour.com/590-finding-hardware-flaws-with-laura-abbott/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A virtualisation layer installed just above the firmware lets one physical machine carry several independent systems, which is how two instances of the same appliance software end up running side by side on hardware that would otherwise host one.",
+   "quote_verbatim": "that's like a virtualization layer that you install kind of at the, just above the BIOS level",
+   "speaker": "Chris Gammell",
+   "episode": 685,
+   "episode_title": "Data Provenance in the Home, Server, and Fab",
+   "episode_url": "https://theamphour.com/685-data-provenance-in-the-home-server-and-fab/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Running an autonomous agent inside an image with its own account is a containment measure rather than a compatibility one: the isolation is what stops software acting on its own initiative from reaching the rest of the machine.",
+   "quote_verbatim": "it's running in a VM on the computer behind me because I like put it in a little box inside the box",
+   "speaker": "Chris Gammell",
+   "episode": 720,
+   "episode_title": "Hyper Growth and OpenClaw Interns",
+   "episode_url": "https://theamphour.com/720-hyper-growth-and-openclaw-interns/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Vendors have distributed complete images with the compiler and SDK preinstalled, which solves the setup problem entirely and leaves the recipient with whatever licensing terms attach to the contents.",
+   "quote_verbatim": "you got a virtual machine with the, uh, with the compiler tools installed and, uh, also the SDK installed",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Stacking a Windows program under a compatibility layer, inside a Linux guest, inside an image on a Mac looks absurd and is defensible for one reason: the result is identical to the machine at home, and consistency across machines is worth more than any layer of it costs.",
+   "quote_verbatim": "i have a consistent experience with my i have a windows at home",
+   "speaker": "Chris Gammell",
+   "episode": 234,
+   "episode_title": "We'll Believe It When We See It - Hiring Hypercatalectic Helpelp",
+   "episode_url": "https://theamphour.com/234-well-believe-it-when-we-see-it-hiring-hypercatalectic-helpelp/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  }
+ ],
+ "attribution_notes": [
+  "attribution_reliable was not trusted. ep181 (Dave Vandenbout), ep295 (Omer Kilic), ep369, ep442 and ep675 label host questions with the guest's name; only material unambiguously the guest's own was used.",
+  "ep675 records both Shawn Hymel and Chris Gammell discussing workshop distribution; the failed USB-stick distribution is Shawn Hymel's own account and the licensing and GPU observations are Chris Gammell's, assigned by content.",
+  "The bundle mixes three distinct senses of the term — the system-virtualisation sense, the bytecode-interpreter sense, and Nadya Peek's machine-control sense — and all three are kept and distinguished rather than merged.",
+  "Passing remarks about personal operating system preference and dual-boot arrangements were excluded as non-transferable."
+ ],
+ "capped": false
+}

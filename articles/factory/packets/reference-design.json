@@ -1,0 +1,468 @@
+{
+ "concept": "reference-design",
+ "name": "Reference Design",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "reference-design",
+  "census": "union",
+  "passages_in": 50,
+  "capped": false
+ },
+ "claims": [
+  {
+   "claim_text": "Reference designs are free to use and carry no attribution requirement. They are published specifically to be copied verbatim, which is a different legal position from most published engineering work.",
+   "quote_verbatim": "reference designs are free to use",
+   "speaker": null,
+   "episode": 41,
+   "episode_title": "Contests, Ham Radio & TWIT.tv - Ham, Spam, Thank You Ma'am",
+   "episode_url": "https://theamphour.com/ham-spam-thank-you-maam/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The reason the vendor wants them copied is that the circuit is built entirely from their own catalogue: the regulator, the switching circuit and the discrete devices are all theirs, so a copied design sells the whole bill of materials rather than one part.",
+   "quote_verbatim": "They want you to cut and paste",
+   "speaker": null,
+   "episode": 216,
+   "episode_title": "Last Minute Decisions - Obdurate Onepercenter Obstacles",
+   "episode_url": "https://theamphour.com/216-last-minute-decisions-obdurate-onepercenter-obstacles/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Application notes and application circuits have been effectively open for as long as the industry has existed. Their whole function is to be lifted into someone else's design, which predates any formal open licensing.",
+   "quote_verbatim": "app circuits and app nodes are open source. They want you to copy them",
+   "speaker": null,
+   "episode": 216,
+   "episode_title": "Last Minute Decisions - Obdurate Onepercenter Obstacles",
+   "episode_url": "https://theamphour.com/216-last-minute-decisions-obdurate-onepercenter-obstacles/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "There is a legal reason vendors sometimes avoid the term. Calling something a reference design implies it was validated for a purpose, which creates exposure if someone copies it exactly and it fails in their application.",
+   "quote_verbatim": "that means when somebody copies it exactly, they can sue you",
+   "speaker": "Jason Kridner",
+   "episode": 723,
+   "episode_title": "BeagleBoard's Back with Jason Kridner",
+   "episode_url": "https://theamphour.com/723-beagleboards-back-with-jason-kridner/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The mitigation is to be explicit that the design is not validated for any purpose whatsoever while still publishing the full documentation, so the user can validate it for their own purpose. The material is just as useful with the guarantee removed.",
+   "quote_verbatim": "no, it's not validated for any purpose at all whatsoever",
+   "speaker": "Jason Kridner",
+   "episode": 723,
+   "episode_title": "BeagleBoard's Back with Jason Kridner",
+   "episode_url": "https://theamphour.com/723-beagleboards-back-with-jason-kridner/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The vendor's first diagnostic question when a customer reports poor performance is whether they followed the reference design, in the same reflexive way that computer support asks whether it has been switched off and on.",
+   "quote_verbatim": "did you follow the reference design?",
+   "speaker": "Dafydd Roche",
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The reference board also allocates responsibility. It demonstrates the performance the part is capable of, and it establishes that departing from the published layout is the customer's own decision with the resulting performance as their own problem.",
+   "quote_verbatim": "if you don't follow our instructions for layout",
+   "speaker": "Dafydd Roche",
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Reference designs matter most in two cases: parts that need firmware written for them, and very high-performance parts where the layout dominates the result. Elsewhere a datasheet may be enough.",
+   "quote_verbatim": "good tools, good EVMs are very important for parts where there's some firmware to be done",
+   "speaker": "Dafydd Roche",
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The numbers behind layout sensitivity in audio explain why the reference layout is not advisory. A system with 115 to 130 dB of dynamic range at one volt RMS output has a noise floor in the low nanovolts, so sending an amplifier's ground current past the converter lifts the ground reference and consumes the entire budget.",
+   "quote_verbatim": "you're into the nanovolts range, low nanovolts of noise",
+   "speaker": "Dafydd Roche",
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The limitation of any reference design is scope: it shows how to make one device work well. What distinguishes the best designers is global knowledge of the whole signal chain, asking in turn how every other part of the system interferes with each circuit until the whole board has been considered.",
+   "quote_verbatim": "apps, notes, and things are excellent at showing you how to get one device to work well",
+   "speaker": "Dafydd Roche",
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "When a proven reference circuit does not work, the default assumption should be that you did something wrong rather than that the published geometry needs adjusting. A design that has worked repeatedly is evidence about your board, not about the design.",
+   "quote_verbatim": "the default assumption should always be like, what did I do versus what did they do?",
+   "speaker": null,
+   "episode": 631,
+   "episode_title": "A Noisy Rude Bus",
+   "episode_url": "https://theamphour.com/631-a-noisy-rude-bus/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The checklist that follows from that assumption is specific: wrong dielectric, other components too close, or the wrong impedance on the feeding trace. Each is your own deviation from the reference conditions rather than a flaw in the reference.",
+   "quote_verbatim": "Because I use the wrong, wrong dielectric PCB",
+   "speaker": null,
+   "episode": 631,
+   "episode_title": "A Noisy Rude Bus",
+   "episode_url": "https://theamphour.com/631-a-noisy-rude-bus/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The first step when approaching an unfamiliar integrated circuit is to read the reference schematics and work through them part by part, asking how each piece would be realised in your own design.",
+   "quote_verbatim": "The first step when I look at a new IC is look at reference schematics, reference designs",
+   "speaker": "Philip Salmony",
+   "episode": 573,
+   "episode_title": "Mixed Signal Education with Philip Salmony",
+   "episode_url": "https://theamphour.com/573-mixed-signal-education-with-philip-salmony/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The learning argument for that approach runs parallel to music: you learn the existing forms before modifying them. Following the example through to the end, including the parts that go wrong, is where the understanding comes from.",
+   "quote_verbatim": "just try and follow the example first",
+   "speaker": null,
+   "episode": 573,
+   "episode_title": "Mixed Signal Education with Philip Salmony",
+   "episode_url": "https://theamphour.com/573-mixed-signal-education-with-philip-salmony/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A datasheet frequently contains six or seven distinct reference designs rather than one, so choosing among them is itself a design decision that has to be made deliberately rather than by taking the first diagram.",
+   "quote_verbatim": "There's like six or seven reference designs in the data sheet",
+   "speaker": null,
+   "episode": 360,
+   "episode_title": "A Total 360",
+   "episode_url": "https://theamphour.com/360-a-total-360/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The scale of reliance on reference designs in consumer products is widely quoted at sixty to eighty percent of phone designs being essentially unmodified, a figure the speaker himself flags as unverified but which matches what practitioners observe.",
+   "quote_verbatim": "60 to 80% of all cell phone designs are just reference designs",
+   "speaker": null,
+   "episode": 216,
+   "episode_title": "Last Minute Decisions - Obdurate Onepercenter Obstacles",
+   "episode_url": "https://theamphour.com/216-last-minute-decisions-obdurate-onepercenter-obstacles/",
+   "depth_regraded": "opinion",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The same pattern holds in consumer networking, where products are largely the networking chip's reference circuit repackaged. The vendor absorbs the research and development cost, and the product company contributes the enclosure and the brand.",
+   "quote_verbatim": "it's just the networking chips reference circuit repackaged",
+   "speaker": "Alvaro Prieto",
+   "episode": 363,
+   "episode_title": "An interview with Alvaro and Jen from the URE Podcast",
+   "episode_url": "https://theamphour.com/363-an-interview-with-alvaro-and-jen-from-the-ure-podcast/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The security consequence is direct. Vendor example code carries explicit warnings against production use because security features are disabled to keep the example simple, and it is copied into shipping products anyway.",
+   "quote_verbatim": "this is – do not use in production",
+   "speaker": "Alvaro Prieto",
+   "episode": 363,
+   "episode_title": "An interview with Alvaro and Jen from the URE Podcast",
+   "episode_url": "https://theamphour.com/363-an-interview-with-alvaro-and-jen-from-the-ure-podcast/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The situation is often worse than a disabled feature: vendor-supplied software can be unstable and carry its own defects, and product schedules are tight enough that those may never be found before the device ships.",
+   "quote_verbatim": "is completely unstable and doesn't work and has its own set of bugs",
+   "speaker": "Alvaro Prieto",
+   "episode": 363,
+   "episode_title": "An interview with Alvaro and Jen from the URE Podcast",
+   "episode_url": "https://theamphour.com/363-an-interview-with-alvaro-and-jen-from-the-ure-podcast/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "An entire product category can be one part plus its reference design. A common Bluetooth speaker is the reference design speaker, built on a roughly one-dollar part carrying microphone input, converters in both directions, signal processing, battery charging and the radio.",
+   "quote_verbatim": "that Bluetooth speaker is actually reference design speaker",
+   "speaker": null,
+   "episode": 351,
+   "episode_title": "The Automation Amish",
+   "episode_url": "https://theamphour.com/351-the-automation-amish/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "When a platform owner gives away the software for a device category, the barrier collapses: anyone can obtain a reference design and build the product with near-zero startup cost. What remains is a design exercise, and margins across the category go with it.",
+   "quote_verbatim": "All they had to do was go to Shenzhen, get a reference design",
+   "speaker": null,
+   "episode": 327,
+   "episode_title": "An Interview with Avidan Ross",
+   "episode_url": "https://theamphour.com/327-an-interview-with-avidan-ross/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Reference designs shape part selection well beyond their own circuit. Components get specified into unrelated products simply because that is what the reference design used, which is how a particular interface chip becomes ubiquitous.",
+   "quote_verbatim": "they get specced in because that's what reference designs have",
+   "speaker": null,
+   "episode": 587,
+   "episode_title": "Biblical Broker Bucks",
+   "episode_url": "https://theamphour.com/587-biblical-broker-bucks/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Inside the semiconductor vendor, the applications engineers are frequently the people actually doing the design work that becomes the published reference. A large share of the industry's circuit design happens in that function rather than at the customer.",
+   "quote_verbatim": "a lot of times they're actually doing the design work these days",
+   "speaker": null,
+   "episode": 231,
+   "episode_title": "Supply Chain Woes And Wares - Nonplussed Neotechnic Nithing",
+   "episode_url": "https://theamphour.com/231-supply-chain-woes-and-wares-nonplussed-neotechnic-nithing/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The hidden burden of the reference-design model is that designing around one chip pulls in the vendor's other parts. You end up sourcing each surrounding reference design, dropping it into your schematic and tweaking it, so you become the designer of all of them rather than just the one you wanted.",
+   "quote_verbatim": "I become a designer of all of these TI parts around the one at the core",
+   "speaker": null,
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The proposed remedy is to place a whole reference design into a schematic the way a chip is placed, treating it as a reusable block. The honest claim for it is iteration speed rather than any guarantee of correctness.",
+   "quote_verbatim": "can drop in a reference design instead of a chip",
+   "speaker": null,
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The claim has to be stated carefully. What such reuse delivers is a prototype to work with sooner, not a finished product out the door sooner, and conflating the two oversells it.",
+   "quote_verbatim": "They'll get a prototype faster",
+   "speaker": null,
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A paid marketplace for design blocks cannot compete with this, because vendors already give reference designs away for free. Attaching even a small transactional cost stops engineers using a block at all.",
+   "quote_verbatim": "as soon as you put a dollar transactional cost on that, that's no way",
+   "speaker": null,
+   "episode": 163,
+   "episode_title": "Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs",
+   "episode_url": "https://theamphour.com/the-amp-hour-163-ramiform-reciprocity-raconteurs/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "For low-volume products the reference design justifies expensive parts. Paying a few hundred dollars for a device you can use straight from the published circuit beats spending engineering time optimising toward a cheaper one when the volume will never repay it.",
+   "quote_verbatim": "it's faster for me to use, use the reference design and pay the $300",
+   "speaker": null,
+   "episode": 64,
+   "episode_title": "OSHW, Makerbot & Memristo - Maundering Memristor Mathematicaster",
+   "episode_url": "https://theamphour.com/the-amp-hour-64-maundering-memristor-mathematicaster/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The counterweight is that a good reference kit is persuasive in a way that has nothing to do with whether the part is the right long-term choice. Being taken in by one is a recognised failure among experienced engineers, not only beginners.",
+   "quote_verbatim": "I've gotten taken in before by a good reference kit",
+   "speaker": "Dave Jones",
+   "episode": 271,
+   "episode_title": "Amazon Moves In, Dave Says Run",
+   "episode_url": "https://theamphour.com/271-amazon-moves-in-dave-says-run/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A well-supported reference library measurably changes outcomes: customers reaching mass production on their first board spin, including designs with wireless on them, is the standard a vendor's reference material should be judged against.",
+   "quote_verbatim": "several customers go to mass production with their first spin of the PCB",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Vendor support can be granular to a surprising degree. In robotics, a supplier may offer a device and a matching reference design for every individual joint, each with an available demonstration board.",
+   "quote_verbatim": "they all have reference designs for every single joint",
+   "speaker": "Alex Lidow",
+   "episode": 719,
+   "episode_title": "Inventing the Power MOSFET with Alex Lidow",
+   "episode_url": "https://theamphour.com/719-inventing-the-power-mosfet-with-alex-lidow/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Reference designs solve a specific problem for consultants: client work cannot be reused, so the hours produce no reusable asset. A self-funded reference design both attracts clients and becomes the basis for later work.",
+   "quote_verbatim": "I can't reuse that work again",
+   "speaker": null,
+   "episode": 470,
+   "episode_title": "Just Add Salt",
+   "episode_url": "https://theamphour.com/470-just-add-salt/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Stated as a business strategy, the mechanism is to put projects into the world so that someone eventually arrives asking for something that looks like one of them, at which point the answer is that this is exactly what you do.",
+   "quote_verbatim": "someone's going to walk up to you and be like, I need something that looks kind of like that",
+   "speaker": null,
+   "episode": 492,
+   "episode_title": "More Electronics Consultant Impedance Matching",
+   "episode_url": "https://theamphour.com/492-more-electronics-consultant-impedance-matching/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A concrete version of that strategy: develop and properly test the hardware and firmware yourself, ship a standard version to the general market, and take the customisation work from the customers who need a different size or feature set.",
+   "quote_verbatim": "that solid hard tested hardware and firmware, uh, will, will bring a lot of people to you",
+   "speaker": null,
+   "episode": 492,
+   "episode_title": "More Electronics Consultant Impedance Matching",
+   "episode_url": "https://theamphour.com/492-more-electronics-consultant-impedance-matching/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The failure mode of a portfolio reference design is leaving the system context for later. One board showcased the hardware competently but was unfinished as a product because the software and the networking topology were deferred, and the radio chosen never suited the intended architecture.",
+   "quote_verbatim": "I'll figure out the software later",
+   "speaker": null,
+   "episode": 587,
+   "episode_title": "Biblical Broker Bucks",
+   "episode_url": "https://theamphour.com/587-biblical-broker-bucks/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Buying a proven module is buying somebody else's reference design together with the community around it. Memory training between processor and memory is very hard to debug without the right tools, and avoiding that class of problem is what the module premium actually purchases.",
+   "quote_verbatim": "These things are very hard to debug",
+   "speaker": "Lukas Henkel",
+   "episode": 681,
+   "episode_title": "Compact High Speed Design with Lukas Henkel",
+   "episode_url": "https://theamphour.com/681-compact-high-speed-design-with-lukas-henkel/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "For anyone without the budget for full custom silicon, the sensible route is to start from an existing reference design and customise the ordinary functions around the chip or the firmware on top of it, which gives real flexibility without a custom tape-out.",
+   "quote_verbatim": "it probably makes more sense to customize the jelly bean functions around the chip",
+   "speaker": null,
+   "episode": 499,
+   "episode_title": "Discussing Chiplets with Ming Zhang",
+   "episode_url": "https://theamphour.com/499-discussing-chiplets-with-ming-zhang/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Publishing everything, schematics, board files, bill of materials and the software development kit, lets a general-purpose design serve as a reference for the specific variants others build from it. That is the point of a generic node rather than a side effect.",
+   "quote_verbatim": "you use it as a reference design for their own",
+   "speaker": null,
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A project can be conceived from the start as a reference rather than a product: capturing the current best practices for a class of problem so that somebody who wants the capability can build one without having to design it themselves.",
+   "quote_verbatim": "I wanted Jubilee to be this reference for precision motion",
+   "speaker": null,
+   "episode": 611,
+   "episode_title": "Grad School Time Capsule with Joshua and Zach",
+   "episode_url": "https://theamphour.com/611-grad-school-time-capsule-with-joshua-and-zach/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Publishing a reference design for a difficult board has effects nobody plans for. Assembly houses download the artwork and build the board themselves, which levels the field between them and produces uses of the design that were never anticipated.",
+   "quote_verbatim": "all these assembly houses can download the PCB drawings",
+   "speaker": "Jeff Keyzer",
+   "episode": 59,
+   "episode_title": "An Interview with Jeff Keyzer and Jason Kridner - Bonafide BeagleBoard Bionomics",
+   "episode_url": "https://theamphour.com/the-amp-hour-59-bonafide-beagleboard-bionomics/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Open sourcing a board can be a commercial lever in component negotiation. Once the board functions as a reference design for the chips on it, the suppliers of those chips have a reason to improve their pricing that did not exist before.",
+   "quote_verbatim": "it became a kind of reference design for a lot of these chips on the board",
+   "speaker": "Andreas Olofsson",
+   "episode": 254,
+   "episode_title": "An Interview with Andreas Olofsson - Adapteva's Ampliative Abacus",
+   "episode_url": "https://theamphour.com/254-an-interview-with-andreas-olofsson-adaptevas-ampliative-abacus/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A single common reference design produces a coherent ecosystem, while several incompatible ones sharing only a software interface fragment it. The number of reference designs a platform blesses is therefore a strategic decision rather than a technical one.",
+   "quote_verbatim": "there's going to be like 10 of them, and they're all going to be different",
+   "speaker": "Jeff Keyzer",
+   "episode": 43,
+   "episode_title": "An Interview with Jeff Keyzer and Jeremy Blum - Audacious Arduino Arguments",
+   "episode_url": "https://theamphour.com/the-amp-hour-43-audacious-arduino-arguments/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Two approaches to generating schematics automatically trade generality against assurance. Parsing datasheets can generate almost anything but risks interpretation errors; assembling predefined manufacturer blocks known to work can only generate specific things but moves the remaining risk to how the blocks are connected.",
+   "quote_verbatim": "you have a much greater assurance that what you are generating is actually going to be correct",
+   "speaker": "Zachariah Peterson",
+   "episode": 718,
+   "episode_title": "Layout Review with Zachariah Peterson",
+   "episode_url": "https://theamphour.com/718-layout-review-with-zachariah/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A vendor's recommended layout for a sensitive block can be treated as a fixed region: copy the published switching regulator layout into your design and mark it as untouchable so automated tools route around it rather than through it.",
+   "quote_verbatim": "here's the best case layout for like a switcher",
+   "speaker": null,
+   "episode": 626,
+   "episode_title": "Intelligent Routing with Sergiy Nesterenko",
+   "episode_url": "https://theamphour.com/626-intelligent-routing-with-sergiy-nesterenko/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An unexpected use for an existing board design is as the starting point for learning visualisation. Importing a real project you already have gives you something concrete to work with immediately rather than modelling an object from nothing.",
+   "quote_verbatim": "start from a reference design",
+   "speaker": null,
+   "episode": 695,
+   "episode_title": "Making The Invisible, Visible with Sam Aldhaher",
+   "episode_url": "https://theamphour.com/695-making-the-invisible-visible-with-sam-aldahar/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "ep327, ep499, ep611 passages are flagged attribution_reliable:false in the bundle; claims drawn from them carry speaker null.",
+  "ep163 is diarised as SPEAKER_03 and several passages label the host where the words are the interviewee's (ep216, ep351, ep631, ep557); those claims carry speaker null and are content-attributed in the claim text."
+ ],
+ "capped": false
+}

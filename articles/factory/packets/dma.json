@@ -1,0 +1,581 @@
+{
+ "concept": "dma",
+ "name": "DMA",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "dma",
+  "census": "union",
+  "aliases": [
+   "direct-memory-access",
+   "dma"
+  ],
+  "children": [
+   "charlieplexing",
+   "development-environment",
+   "fifo",
+   "hardware-abstraction",
+   "jtag-programmer",
+   "memory-map",
+   "minimum-viable-product",
+   "omap3"
+  ],
+  "neighbors": {},
+  "pins_pre_cap": 32,
+  "pins_final": 32,
+  "pins_by_depth": {
+   "explains": 30,
+   "opinion": 2
+  },
+  "pins_by_role": {
+   "core": 31,
+   "child": 1
+  },
+  "capped": false,
+  "passages_yielding_claims": 28,
+  "passages_killed": 4
+ },
+ "claims": [
+  {
+   "claim_text": "On Energy Micro's low-power microcontrollers a low-baud-rate serial port can stay active while the part draws roughly one microamp, with received bytes moved into memory by DMA rather than by the core, so a slow link can be serviced continuously without leaving deep sleep.",
+   "quote_verbatim": "we have a low board rate serial port that can actually be active in a one microamp current consumption and move data via DMA",
+   "speaker": "Oyvind Janbu",
+   "episode": 95,
+   "episode_title": "An Interview with Øyvind Janbu - Feracious Fabless Facilitator",
+   "episode_url": "https://theamphour.com/the-amp-hour-95-feracious-fabless-facilitator/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A peripheral-triggered DMA channel that carries analog-to-digital converter results straight into RAM turns the microcontroller into a data logger that runs with the CPU core powered down entirely; the processor only has to wake when the buffer needs handling.",
+   "quote_verbatim": "a complete data logger right there without actually running your processor",
+   "speaker": "Dave Jones",
+   "episode": 95,
+   "episode_title": "An Interview with Øyvind Janbu - Feracious Fabless Facilitator",
+   "episode_url": "https://theamphour.com/the-amp-hour-95-feracious-fabless-facilitator/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Whether DMA-driven autonomous peripheral operation saves power depends entirely on the duty cycle of the application: where a sensor is sampled continuously while the core would otherwise be idle the saving can be orders of magnitude, and where the core has to run anyway it saves nothing.",
+   "quote_verbatim": "But if you actually have the use for this, then it could save you a thousand times.",
+   "speaker": "Oyvind Janbu",
+   "episode": 95,
+   "episode_title": "An Interview with Øyvind Janbu - Feracious Fabless Facilitator",
+   "episode_url": "https://theamphour.com/the-amp-hour-95-feracious-fabless-facilitator/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A reset line that is asserted while a bus-mastering video chip is in the middle of a DMA cycle will crash the machine, because the video chip does not respond to reset and keeps the bus while the processor tries to start fetching from it.",
+   "quote_verbatim": "if you reset it and the VIC chip's in a DMA, the processor will try and start and it will crash",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The fix for a reset colliding with an in-progress DMA cycle was a latch made from back-to-back open-collector gates that held the processor in reset until the DMA finished and then released it, rather than any change to the bus-mastering chip itself.",
+   "quote_verbatim": "when the DMA's over with, then we'll go ahead and let the processor start up",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Late fixes on a shipping design get built out of whatever logic parts are already on the board, because keeping the change within a class 1 permissive change avoids restarting FCC certification, and missing that window means missing the retail ship date that follows a January trade show.",
+   "quote_verbatim": "But I only had like 6406s and 6407s left to wire together for a class 1 permissive change.",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "When a bare-metal project needs output waveforms faster than the instruction loop can toggle them, the thing to check in the part's architecture is whether it has a DMA path that feeds data from memory straight to the I/O peripheral without routing it through processor registers.",
+   "quote_verbatim": "direct memory transfer that allows you to directly funnel from transfer from the memory without going through the processor registers",
+   "speaker": "Dave Jones",
+   "episode": 278,
+   "episode_title": "Our Second Callin Show(ish)",
+   "episode_url": "https://theamphour.com/278-our-second-callin-showish/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A usable function generator is not purely digital even when the waveform is produced by direct digital synthesis: the output stage still needs DC offset injection, attenuators, amplifiers and reconstruction filters on the analog side.",
+   "quote_verbatim": "There's a lot of stuff on the analog output side of things.",
+   "speaker": "Chris Gammell",
+   "episode": 278,
+   "episode_title": "Our Second Callin Show(ish)",
+   "episode_url": "https://theamphour.com/278-our-second-callin-showish/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The STM8 Discovery board ships a waveform-generator demo that drives the output DAC through DMA, which makes it a working reference for how a bare-metal DMA-to-DAC path is set up rather than only a description of one.",
+   "quote_verbatim": "it uses the output DAX, and it'll push it through DMA, so you can see how that's done in bare metal",
+   "speaker": "Chris Gammell",
+   "episode": 278,
+   "episode_title": "Our Second Callin Show(ish)",
+   "episode_url": "https://theamphour.com/278-our-second-callin-showish/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Commodity RGB LED panels present a shift-register interface, so a small CPLD placed between the microcontroller and the panel can translate a SPI packet into the parallel shift-register signalling the panel expects.",
+   "quote_verbatim": "I programmed up a CPLD to convert a SPY packet from the microcontroller into this parallel shift register interface that the panels use",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Once the panel interface is reduced to a SPI stream, the frame can be pushed out by a DMA transfer, which leaves nearly all CPU time free for the application instead of spending it bit-banging pixel data.",
+   "quote_verbatim": "I can just do a DMA transfer from the microcontroller out over SPY and then leave most of the CPU time available for doing whatever else you want to do",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "An off-the-shelf PCI Express controller can be programmed to issue arbitrary DMA accesses, so a card built around it becomes a general-purpose reader and writer of a host machine's memory once plugged into a slot.",
+   "quote_verbatim": "It's a PCI Express device based off of an off-the-shelf chip that you can program to do DMA accesses.",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Unrestricted DMA from an expansion slot defeats software security entirely, because being able to read and write live system memory allows a lock screen to be bypassed and a running kernel to be modified in place unless the platform has separate protections against it.",
+   "quote_verbatim": "you can go and read the contents of memory and modify the contents of memory",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "In a DMA-driven display pipeline the CPU only has to produce the frame buffer; in one animated pattern the rendering consumed about a third of the frame time and the processor was free for the remaining two thirds while the transfer ran.",
+   "quote_verbatim": "one third of the frame time to render",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A parallel display interface combined with DMA is fast because the transfer engine drives the whole bus width per cycle in the background, so the pixel data leaves memory without any per-word CPU involvement.",
+   "quote_verbatim": "The DMA interface is just blasting the bits out to the display.",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A practical way to catch a DMA transfer that never completes is to spin in a loop reading the completion or interrupt status register and then halt the target from the debugger with a keyboard interrupt, which locates the hang without setting a breakpoint at all.",
+   "quote_verbatim": "I'm doing DMA and I'm waiting for an interrupt to happen and I'm checking for the interrupt by just reading a register and the DMA is not working. So I just control C and I'm stopped.",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Vendor configuration tools that expose every peripheral register as a dropdown do not help with a task such as setting up DMA to a QSPI flash interface, because the difficulty is the ordering and combination of registers rather than the meaning of any one of them; worked examples plus documentation are what make the peripheral usable.",
+   "quote_verbatim": "I can read the data sheet and understand the individual registers, but I don't have an example of how I actually want to use it",
+   "speaker": "Scott Shawcroft",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A low-cost software-defined transmitter dongle stores no samples of its own: the host holds the waveform in RAM and the device is only a conduit, with a DMA path carrying data from host memory through the DAC and out to the antenna.",
+   "quote_verbatim": "The device is acting as a conduit from computer to air.",
+   "speaker": "Chris Gammell",
+   "episode": 391,
+   "episode_title": "Only A Transmitter",
+   "episode_url": "https://theamphour.com/391-only-a-transmitter/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A dongle built around a VGA display driver chip contains only a DAC, so it can transmit but has no analog-to-digital path and cannot be used to capture a received signal.",
+   "quote_verbatim": "it's only a VGA display driver. So it's only a DAC. I don't see where it does capture with an ADC",
+   "speaker": "Chris Gammell",
+   "episode": 391,
+   "episode_title": "Only A Transmitter",
+   "episode_url": "https://theamphour.com/391-only-a-transmitter/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Peripheral-driven DMA lets a microcontroller run autonomous hardware agents that poll a serial sensor such as a GPS receiver and deposit the returned bytes directly into system memory or a register, so a system with many sensors collects data without the CPU servicing each transfer.",
+   "quote_verbatim": "It'll perform DMA from the serial peripheral into either system memory of your microcontroller or into a register.",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Driving commodity 32-by-32 RGB LED matrix panels from a microcontroller became practical because the Teensy 3.2 came with mature DMA-based driver code for those panels, which handles the refresh timing that would otherwise dominate the firmware.",
+   "quote_verbatim": "which is Paul Stoffergen's board that has a ton of great DMA code for driving those LEDs",
+   "speaker": "Mike Szczys",
+   "episode": 403,
+   "episode_title": "An Interview with Mike Szczys",
+   "episode_url": "https://theamphour.com/403-an-interview-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The playfield of a classic coin-op arcade game fits inside a 32-by-32 pixel grid, roughly 30 by 26 tiles, so a single commodity LED matrix panel can hold the whole game as long as sprite detail is dropped and each element is reduced to one coloured dot.",
+   "quote_verbatim": "Pac-Man has less than 32 by 32. It's like 30 by 26 or something.",
+   "speaker": "Mike Szczys",
+   "episode": 403,
+   "episode_title": "An Interview with Mike Szczys",
+   "episode_url": "https://theamphour.com/403-an-interview-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A DMA-based library that pushes a frame buffer out to addressable WS2812 LEDs removes the timing and throughput problem of driving them from software, because the transfer engine generates the pulse-width-encoded stream without the CPU meeting each bit deadline.",
+   "quote_verbatim": "has a library called Octo2812, I believe, that's using, again, DMA to push out basically a frame buffer to these. So you don't have to deal with the speed problems that you would normally have.",
+   "speaker": "Mike Szczys",
+   "episode": 403,
+   "episode_title": "An Interview with Mike Szczys",
+   "episode_url": "https://theamphour.com/403-an-interview-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Quiescent current is the constraint that catches builders of large addressable-LED arrays: about a thousand WS2812 devices drew roughly 900 milliamps with every LED commanded off, because each device's controller draws current regardless of the colour it is displaying.",
+   "quote_verbatim": "And it's like 900 milliamps when all of these are off.",
+   "speaker": "Mike Szczys",
+   "episode": 403,
+   "episode_title": "An Interview with Mike Szczys",
+   "episode_url": "https://theamphour.com/403-an-interview-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "An I2C-driven LED controller running at 400 kHz rather than the full 1 Mbit rate was fast enough for visually smooth fades once the update path was optimised, so the bus speed did not have to be raised to reach the target.",
+   "quote_verbatim": "I think I was running it at maybe 400 kilohertz",
+   "speaker": "Kerry Scharfglass",
+   "episode": 487,
+   "episode_title": "An Interview with Kerry Scharfglass",
+   "episode_url": "https://theamphour.com/487-an-interview-with-kerry-scharfglass/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Smooth multiplexed LED fading took several rounds of iteration, and moving the bus traffic onto DMA was what finally made the refresh fast enough that the multiplexing was invisible to the eye.",
+   "quote_verbatim": "a couple rounds of optimization and DMA, I think, eventually got me there",
+   "speaker": "Kerry Scharfglass",
+   "episode": 487,
+   "episode_title": "An Interview with Kerry Scharfglass",
+   "episode_url": "https://theamphour.com/487-an-interview-with-kerry-scharfglass/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A modern phone contains several processors beyond the application core that run firmware nobody outside the vendor can inspect while holding DMA access to the rest of the system, so trusting that the sensors behave as documented is an assumption rather than something the owner can verify.",
+   "quote_verbatim": "processors that run software that can't be inspected, that you don't know anything about, that has DMA access to the rest of the system",
+   "speaker": "Kerry Scharfglass",
+   "episode": 487,
+   "episode_title": "An Interview with Kerry Scharfglass",
+   "episode_url": "https://theamphour.com/487-an-interview-with-kerry-scharfglass/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A real-time audio product built on a Cortex-M4 was written without a real-time operating system, using interrupts alone, with the I2S path to the ADC and DAC handled entirely by DMA so the sample-rate deadlines are met by hardware rather than by scheduling.",
+   "quote_verbatim": "it's just interrupt based",
+   "speaker": "Shannon Parks",
+   "episode": 513,
+   "episode_title": "Audio DSP with Shannon Parks",
+   "episode_url": "https://theamphour.com/513-audio-dsp-with-shannon-parks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Real-time audio processing on a microcontroller became feasible only once parts combined a DMA-fed I2S interface with a hardware floating-point unit, as on the Cortex-M4; earlier microcontrollers could not sustain the sample stream and the arithmetic together.",
+   "quote_verbatim": "to have, have it be DMA and have the, the FPU on the Cortex M4, just things that you just couldn't do on, on earlier microcontrollers",
+   "speaker": "Shannon Parks",
+   "episode": 513,
+   "episode_title": "Audio DSP with Shannon Parks",
+   "episode_url": "https://theamphour.com/513-audio-dsp-with-shannon-parks/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Keyword spotting on a bare-metal Cortex-M7 requires threshold-based wake from the ADC, a DMA channel filling a memory buffer, and the neural network ported down to bare-metal C; that plumbing is far more work than running the equivalent as a Python script in user space on embedded Linux, and the justification is sleep current in the microamps.",
+   "quote_verbatim": "just getting all that stuff plumbed together is going to be so much harder than running a Python script in user space Linux",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A microcontroller audio chain is structured as a set of buffers rather than a stream of samples: DMA fills a buffer from the ADC, the contents are moved into a ring buffer, the filter reads one ring buffer and writes another, and the output side stuffs the processed data back to the DAC.",
+   "quote_verbatim": "it's grabbing DMA buffers from an A to D converter and sticking it in a ring buffer",
+   "speaker": "Remco Stoutjesdijk",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "In a real-time audio filter chain roughly 90 percent of the execution time is spent inside the biquad section, so the hand-optimised biquad is the first thing to port to a new platform and everything around it is comparatively cheap housekeeping.",
+   "quote_verbatim": "your code is going to be 90% running that bi-quad and everything around it is just, you know, doing the housekeeping",
+   "speaker": "Remco Stoutjesdijk",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Building on ARM's CMSIS DSP library rather than writing primitives from scratch gives an already optimised biquad and helper routines; it can be linked pre-compiled or taken as source and tuned further, and higher-level effects are then assembled from those blocks.",
+   "quote_verbatim": "I'm, I'm making very heavy use of the Cortex DMC's DSP library",
+   "speaker": "Remco Stoutjesdijk",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A biquad is a universal filtering block with programmable coefficients, which is why a single optimised implementation plus a set of coefficients covers most of the filtering a platform needs.",
+   "quote_verbatim": "So bi-quad is a universal filtering component with programmable coefficients.",
+   "speaker": "Remco Stoutjesdijk",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A DMA controller can be given a fixed transfer block size matching the sensor's response length, so that once the controller has collected all the bytes it raises a completion signal that releases a task to process them, and the CPU never handles an individual byte.",
+   "quote_verbatim": "you set up DMA with a, a transfer block size of 12. And whenever the DMA controller says, Hey, I've collected 12 bytes, it signals some tasks to go look at those 12 bytes.",
+   "speaker": "Brian Amos",
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Hardware peripherals and DMA controllers give a single-core microcontroller genuine parallelism, but the parallelism is limited to moving data over communication interfaces rather than to computation, so the design pattern is to make every communication path DMA-driven and keep the core for application work.",
+   "quote_verbatim": "It's not that difficult to set up all of your communication to be DMA driven.",
+   "speaker": "Brian Amos",
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The Wi-Fi radio on an ESP32 is reached as a memory-mapped peripheral: the driver writes each Wi-Fi frame into a linked list of DMA buffers and then signals the peripheral to transmit them, so an emulator has to model the buffer descriptor chain rather than any Wi-Fi instruction.",
+   "quote_verbatim": "So the driver writes the Wi-Fi frames into a linked list of DMA buffers.",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Reverse engineering a closed Wi-Fi driver blob took about a month, with the hardest part being the undocumented magic constants that convert a Wi-Fi channel number into the radio's internal frequency setting rather than the DMA data path itself.",
+   "quote_verbatim": "it took me a month of sleepless nights to reverse engineer their Wi-Fi driver",
+   "speaker": "Uri Shaked",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The STM32U5 provides a low-power DMA controller that continues transfers while the processor is in stop mode, which allows most of the clock tree to stay powered down while a peripheral keeps filling a buffer.",
+   "quote_verbatim": "you can do DMA in stop mode",
+   "speaker": "Alvaro Prieto",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "DMA is not inherently low power: on an ordinary part the bus and peripheral clocks still have to be running for a transfer to proceed, so replacing a CPU loop with DMA saves energy only if the clocks it needs are cheaper than the ones the core would need.",
+   "quote_verbatim": "Cause usually people think, oh, DMA, it's going to be low powers. I'm like, no, your clocks still have to be running.",
+   "speaker": "Alvaro Prieto",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The unusual low-power DMA and similar features on newer parts are generally absent from vendor configuration tooling and hardware abstraction layers, so using them means writing custom register-level code and giving up the portability that made the abstraction layer worth using.",
+   "quote_verbatim": "these are so obscure of features that you can't generalize them. So you have to do it all custom and that's where it starts breaking down.",
+   "speaker": "Alvaro Prieto",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Driving the ESP8266's I2S engine by DMA can send and receive bit streams at around 80 MHz using roughly a kilobyte of code, once the vendor operating system layer is removed and the hardware is not restricted to the uses the SDK assumes.",
+   "quote_verbatim": "you could use the DMA on the I squared S engine to send and receive like 80 megahertz bit streams and stuff like that with like a kilobyte worth of code",
+   "speaker": "CNLohr",
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Dropping the vendor SDK frees enough flash and RAM that the whole program can execute from RAM instead of from external flash, and the flash-and-boot cycle drops to about half a second, which makes the compile-test loop effectively instant.",
+   "quote_verbatim": "now you can just run everything from RAM because now you don't have to have this huge amount of like space that is filled with all of the code to support the system",
+   "speaker": "CNLohr",
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Outside the constraints imposed by the vendor stack an ESP8266 will run reliably at about 380 MHz rather than its nominal 80 or 160 MHz.",
+   "quote_verbatim": "You can just take the part up to around 380 megahertz and it works just fine.",
+   "speaker": "CNLohr",
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Espressif's original non-OS SDK for the ESP8266 provided only timers and malloc, with the Wi-Fi and LWIP stacks layered on top; it booted faster and was leaner than the later FreeRTOS-based SDK that the vendor moved to.",
+   "quote_verbatim": "the non-OS SDK was, was a lot cleaner and booted much faster",
+   "speaker": "CNLohr",
+   "episode": 637,
+   "episode_title": "CH32V003...fun! with CNLohr",
+   "episode_url": "https://theamphour.com/637-ch32v003-fun-with-cnlohr/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Multi-channel audio hardware is easier to use than a generic parallel capture port because the peripheral itself recognises the frame marker that identifies the first word of the stream, and can then DMA each channel straight into its own buffer in internal memory instead of the CPU continuously commanding transfers.",
+   "quote_verbatim": "it's a lot easier for the audio hardware to recognize the frame marker to know which which word is which",
+   "speaker": "Werner Johansson",
+   "episode": 640,
+   "episode_title": "Software Defined Power Supplies with Werner Johansson",
+   "episode_url": "https://theamphour.com/640-software-defined-power-supplies-with-werner-johansson/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Software radio protocol libraries that bit-bang a link keep the CPU polling; the same protocol can be offloaded to a Nordic part's DMA hardware, and a commercial fork of one such library did exactly that, but no open-source stack takes advantage of the host hardware that way.",
+   "quote_verbatim": "there is somebody I'm aware of who commercially took that library and made one that uses the DMA on a Nordic chip",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Knowing that a specialised field such as DMA exists is valuable even without expertise in it, because a correctly written DMA driver can speed a program up by orders of magnitude, whereas an engineer unaware of the mechanism concludes the processor is too slow and pays for a faster one.",
+   "quote_verbatim": "then they like accelerate your program by a thousand times by like correctly writing a DMA driver",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The PIO block is a set of stripped-down processors good only at deterministic high-speed bit banging; the timing-critical part of a software peripheral is offloaded onto a PIO core and the main processors then talk to it through FIFOs and DMA exactly as if it were a hardware peripheral.",
+   "quote_verbatim": "you take the timing sensitive part of a software peripheral. You push that onto the PIO cores, you offload it.",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Because a PIO state machine can be fed by DMA, protocols such as the pulse-width-encoded WS2812 LED serial format run with zero processor overhead, and the same soft resource can instead be committed to extra UARTs or I2C ports that the silicon does not provide in hardware.",
+   "quote_verbatim": "which we can do with zero overhead just by DMAing into a PIO state machine",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "DMA is the hardest peripheral to secure under a TrustZone-style split, because it performs memory accesses on another master's behalf and therefore has to carry that master's security state rather than its own.",
+   "quote_verbatim": "a particularly fun peripheral is DMA because DMA is something that does memory accesses for you on your behalf",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Privilege in a bus fabric must be monotonic: a transfer programmed by a processor can be less privileged than that processor but must never be more privileged, and a DMA channel programmed from non-secure code is the classic place where that rule gets broken by accident.",
+   "quote_verbatim": "Could that bus transfer be more privileged than the originating transfer from the processor?",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Security in the RP2350 is built by tagging every bus access with the originating security state and filtering it per peripheral, so each UART or I2C can be declared secure or non-secure and the processor's claimed state is checked against that list at every access.",
+   "quote_verbatim": "the processor tags every bus access it does saying, I think I'm in this security state at the moment",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  }
+ ],
+ "attribution_notes": [
+  "Passage 2 (ep 222) is flagged ATTRIB-UNRELIABLE and labelled Chris Gammell, but the content is a first-person account of designing the Commodore 128 reset circuit and its FCC permissive change; attributed to the guest Bil Herd.",
+  "Passage 3 (ep 278) is labelled Chris Gammell yet the speaker refers to Chris in the third person ('as Chris said'); the phrasing 'direct memory transfer' matches the co-host's usage in ep 95, so attributed to Dave Jones.",
+  "Passage 16 (ep 513) is flagged ATTRIB-UNRELIABLE and labelled Dave Jones, but the content is the guest describing the firmware architecture of his own audio product; attributed to Shannon Parks.",
+  "Passage 19 (ep 560) is flagged ATTRIB-UNRELIABLE and labelled Dave Jones, but the speaker says 'I'm making very heavy use of the CMSIS DSP library' about his own platform; attributed to the guest Remco Stoutjesdijk.",
+  "Passage 20 (ep 581) is flagged ATTRIB-UNRELIABLE and labelled Chris Gammell, but the extended explanation of DMA transfer block sizes and task signalling is the guest's subject matter; attributed to Brian Amos.",
+  "Passage 23 (ep 637) is labelled Chris Gammell, but the content is a first-person account of writing the no-SDK ESP8266 environment; attributed to the guest CNLohr.",
+  "Passages 17 and 24 are flagged ATTRIB-UNRELIABLE but the labelled guest matches the first-person content, so the labels were kept.",
+  "Passage 28 is from a multi-guest Raspberry Pi episode; the labelled speaker James Adams was kept because the passage flag is clean and no content signal identifies a different team member.",
+  "Passages 18, 27, 30 and 31 were not used: 18 contains no DMA content, and 27, 30 and 31 are pointers to external material with no transferable detail."
+ ],
+ "capped": false
+}

@@ -1,0 +1,439 @@
+{
+ "concept": "signal-to-noise-ratio",
+ "name": "Signal to Noise Ratio",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "signal-to-noise-ratio",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "signal-to-noise-ratio",
+   "snr"
+  ],
+  "children": [
+   "base-station",
+   "cw",
+   "decibel",
+   "digital-beamforming",
+   "doppler-shift",
+   "link-budget",
+   "noise-figure",
+   "rf-mixer",
+   "step-response",
+   "thermal-noise",
+   "total-harmonic-distortion",
+   "voltage-controlled-oscillator"
+  ],
+  "neighbors": {},
+  "episodes_with_kept_mentions": 28,
+  "mentions_kept": 33,
+  "pins_pre_cap": 32,
+  "pins_final": 32,
+  "pins_by_depth": {
+   "opinion": 3,
+   "explains": 29
+  },
+  "pins_by_role": {
+   "core": 32
+  },
+  "speakers": [
+   [
+    "Dave Jones",
+    10
+   ],
+   [
+    "Chris Gammell",
+    6
+   ],
+   [
+    "Greg Charvat",
+    3
+   ],
+   [
+    "Hank Zumbahlen",
+    2
+   ],
+   [
+    "Adrian Tang",
+    2
+   ],
+   [
+    "Howard Johnson",
+    1
+   ],
+   [
+    "Dafydd Roche",
+    1
+   ],
+   [
+    "Jake Baker",
+    1
+   ],
+   [
+    "Richard Ginus",
+    1
+   ],
+   [
+    "Shahriar Shahramian",
+    1
+   ],
+   [
+    "Nash Reilly",
+    1
+   ],
+   [
+    "Joel Dunsmore",
+    1
+   ],
+   [
+    "Colin O'Flynn",
+    1
+   ],
+   [
+    "Todd Bailey",
+    1
+   ]
+  ],
+  "capped": false,
+  "gated_out_by_concept": [
+   [
+    "total-harmonic-distortion",
+    18
+   ],
+   [
+    "decibel",
+    16
+   ],
+   [
+    "base-station",
+    11
+   ],
+   [
+    "noise-figure",
+    10
+   ],
+   [
+    "cw",
+    9
+   ],
+   [
+    "doppler-shift",
+    9
+   ],
+   [
+    "link-budget",
+    9
+   ],
+   [
+    "thermal-noise",
+    9
+   ],
+   [
+    "digital-beamforming",
+    7
+   ],
+   [
+    "voltage-controlled-oscillator",
+    6
+   ],
+   [
+    "step-response",
+    5
+   ],
+   [
+    "rf-mixer",
+    4
+   ]
+  ],
+  "gated_out_total": 113
+ },
+ "claims": [
+  {
+   "claim_text": "Resolution and accuracy are different quantities: resolution is how many bits move, accuracy is how many of those bits mean anything. A converter described as 24-bit has to be read through its signal-to-noise figure to find out which it is — grounding the inputs and expecting the lower bits to sit still is a misunderstanding of what was bought.",
+   "quote_verbatim": "is the number of bits that wiggle and accuracy is the number of those bits that actually mean something",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Effective number of bits and signal-to-noise ratio carry the same information in different units, related by 6.02 times the bit count minus 1.76. Which one an engineer reaches for tends to reflect their background rather than the problem.",
+   "quote_verbatim": "6.02 times the number of bits minus 1.76",
+   "speaker": "Hank Zumbahlen",
+   "episode": 185,
+   "episode_title": "An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism",
+   "episode_url": "https://theamphour.com/185-an-interview-with-hank-zumbahlen-zoppa-zumbahlen-zateticism/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Two converters can share an architecture and a bit count and still not substitute for each other. An audio-oriented part is optimised for dynamic figures — distortion and signal-to-noise across the band — while a strain gauge bridge is a DC measurement needing absolute accuracy, and the audio part will produce a measurement that looks like nonsense.",
+   "quote_verbatim": "can't use an audio ADC, even though it is a, you know, 24-bit Delta Sigma",
+   "speaker": "Dave Jones",
+   "episode": 65,
+   "episode_title": "Silego, ADCs & Seismic Detection - Dave's Dingo Dystocia",
+   "episode_url": "https://theamphour.com/the-amp-hour-65-daves-dingo-dystocia/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The sigma-delta architecture buys very high signal-to-noise ratio and pays for it in latency, which is why it dominates audio: the ear does not care about a hundred milliseconds of delay, and a control loop would.",
+   "quote_verbatim": "you can get very high signal to noise ratios, uh, and all you're trading for it is latency",
+   "speaker": "Nash Reilly",
+   "episode": 474,
+   "episode_title": "An Interview with Nash Reilly",
+   "episode_url": "https://theamphour.com/474-an-interview-with-nash-reilly/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Shrinking process voltages squeeze analog performance directly: less available swing across a resistor means less signal for the same noise, so the achievable ratio falls. That is why good analog on a modern digital process is both hard and expensive.",
+   "quote_verbatim": "if you can't have as much voltage, you can't have as much signal, which affects your signal to noise ratio",
+   "speaker": "Chris Gammell",
+   "episode": 579,
+   "episode_title": "ADC Chip Design with Anthony Wall",
+   "episode_url": "https://theamphour.com/579-adc-chip-design-with-anthony-wall/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A memory sense amplifier is two inverters back to back, and essentially all the engineering that follows goes into reducing its offset — which is what improves the signal-to-noise ratio and, through it, the yield of the whole part.",
+   "quote_verbatim": "reduce the offset and improve the yield. So that improves the signal to noise ratio",
+   "speaker": "Jake Baker",
+   "episode": 297,
+   "episode_title": "An Interview with Jake Baker",
+   "episode_url": "https://theamphour.com/297-an-interview-with-jake-baker/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Shannon's theorem gives the theoretical ceiling on bits per second through a channel of a given bandwidth at a given signal-to-noise ratio, which makes the ratio a currency: more of it can always be spent on rate.",
+   "quote_verbatim": "the theoretical limit of how much of channel capacity",
+   "speaker": "Dave Jones",
+   "episode": 352,
+   "episode_title": "Conning with Michael Ossmann",
+   "episode_url": "https://theamphour.com/352-conning-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Crosstalk in a connector does more than degrade a link — by capping the achievable signal-to-noise ratio it forecloses whole families of signalling schemes that would otherwise have been available, so improving the connector is what unlocks the data rate rather than cleverer modulation.",
+   "quote_verbatim": "you've limited the signal-to-noise ratio. So that eliminates a lot of possible signaling strategies",
+   "speaker": "Howard Johnson",
+   "episode": 77,
+   "episode_title": "An Interview with Dr. Howard Johnson - Winsome Waveform Wizardry",
+   "episode_url": "https://theamphour.com/the-amp-hour-77-winsome-waveform-wizardry/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Packing more modulation into each hertz forces the transmitter and receiver closer together, because the denser constellation needs a better ratio to be decoded at all. Distance, modulation complexity and processing power are one budget, and running out of room in it is what pushed the industry to millimetre wave and then to beam-forming.",
+   "quote_verbatim": "you either have to get your transmit received so close to each other to meet the signal to noise ratio requirements",
+   "speaker": "Shahriar Shahramian",
+   "episode": 430,
+   "episode_title": "Shahriar Discusses 5G",
+   "episode_url": "https://theamphour.com/430-shahriar-discusses-5g/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Adaptive links trade rate for margin continuously: radios negotiate down to a lower modulation rate when a vehicle or a rain cell interrupts the path, because a lower rate needs less signal-to-noise. At the highest rates the signal is barely out of the noise at all, which is why degradation appears as brief pixelation rather than a clean failure.",
+   "quote_verbatim": "lower the modulation rate, the more signal to noise you have",
+   "speaker": "Joel Dunsmore",
+   "episode": 533,
+   "episode_title": "Microwave measurement with Joel Dunsmore",
+   "episode_url": "https://theamphour.com/533-microwave-measurement-with-joel-dunsmore/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Averaging works because signal and noise accumulate differently: a repeated signal grows in proportion to the number of measurements while uncorrelated noise grows only as the square root, so the signal eventually rises out of the noise no matter how deeply it started buried.",
+   "quote_verbatim": "grows with N, but the noise B grows with root N",
+   "speaker": "Adrian Tang",
+   "episode": 483,
+   "episode_title": "An Interview with Adrian Tang",
+   "episode_url": "https://theamphour.com/483-an-interview-with-adrian-tang/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Weak-signal operators buy range by spending time: minimum bandwidth, and modes so slow that sending a call sign takes a minute, with the receiver integrating over that whole period. The result is dramatically improved noise performance from a transmitter that has not gained a single watt.",
+   "quote_verbatim": "are long-term integration type of things that will take, you know, a minute to send a call sign",
+   "speaker": "Dave Jones",
+   "episode": 107,
+   "episode_title": "An interview with Tony Long - Millimeter Microwave Magician",
+   "episode_url": "https://theamphour.com/the-amp-hour-107-millimeter-microwave-magician/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Satellite navigation solves an appalling ratio at the receiver by spreading each bit across 1023 chips and correlating for the pattern, which is what makes a signal from a distant, power-limited transmitter recoverable below the noise floor.",
+   "quote_verbatim": "every time they want to transmit one bit of information, they actually transmit 1023 chips",
+   "speaker": "Dave Jones",
+   "episode": 352,
+   "episode_title": "Conning with Michael Ossmann",
+   "episode_url": "https://theamphour.com/352-conning-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "In dense urban environments the same transmission reaches the receiver several times over, echoed from buildings at different delays and amplitudes. Chirped spread-spectrum modulation is what lets the intended signal be separated from its own reflections, improving the effective ratio without more power.",
+   "quote_verbatim": "the spread spectrum, uh, chirp modulation helps to, uh, get the, the right signal out",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A lock-in amplifier recovers a signal whose frequency you already know from noise thousands of times larger — a few microvolts of expected carrier pulled out of volts of noise, and in the extreme down into nanovolts. Knowing what you are looking for is what makes the impossible measurement routine.",
+   "quote_verbatim": "lock-in amplifier can extract that signal out of ridiculously high noise",
+   "speaker": "Dave Jones",
+   "episode": 455,
+   "episode_title": "Bill and Dave's Excellent Equipment",
+   "episode_url": "https://theamphour.com/455-bill-and-daves-excellent-equipment/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Reducing each measurement to a single bit — did this clock in a one or a zero — gives a far worse ratio per sample and still succeeds, because enough samples recover what any individual one cannot. The same principle underlies one-bit receivers in other domains.",
+   "quote_verbatim": "SNR is worse, but you get enough data and it still works",
+   "speaker": "Colin O'Flynn",
+   "episode": 693,
+   "episode_title": "Small Scale Electronics Manufacturing with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/693-small-scale-electronics-manufacturing-with-colin-oflynn/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Thousands of channels in a properly spaced phased array is the honest route to imaging at these frequencies, and the distinction worth holding onto is between pulling a real signal out of the noise and letting an algorithm produce something plausible where no signal was recovered.",
+   "quote_verbatim": "pulling signals out of the noise",
+   "speaker": "Greg Charvat",
+   "episode": 729,
+   "episode_title": "The Terahertz Frontier with Greg Charvat of Teradar",
+   "episode_url": "https://theamphour.com/729-the-terahertz-frontier-greg-charvat-teradar/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Through-wall radar can be built with long chirps at low peak power instead of very short high-power impulses, provided the receiver can reject the enormous reflection from the wall itself — which is the hard part, because that flash saturates the receiver and distorts everything behind it.",
+   "quote_verbatim": "i'm going to send a really long cw fm cw chirp at the wall",
+   "speaker": "Greg Charvat",
+   "episode": 115,
+   "episode_title": "An Interview with Dr Greg Charvat - Watcher of Wraithlike Walls",
+   "episode_url": "https://theamphour.com/the-amp-hour-115-watcher-of-wraithlike-walls/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The impulse approach to the same problem needs about ten kilowatts into a two-nanosecond pulse and a digitiser running at several gigasamples per second — and those fast digitisers perform worse than slow ones, while the data volume makes real-time processing impractical. Long waveforms move the difficulty into signal processing where it is cheaper.",
+   "quote_verbatim": "you've got to dump 10 kilowatts into that two nanosecond waveform",
+   "speaker": "Greg Charvat",
+   "episode": 115,
+   "episode_title": "An Interview with Dr Greg Charvat - Watcher of Wraithlike Walls",
+   "episode_url": "https://theamphour.com/the-amp-hour-115-watcher-of-wraithlike-walls/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Angular resolution is bought with signal-to-noise ratio: comparing amplitude and phase across four sub-arrays, a 20 dB ratio allows a ten-degree beam to be split by a factor of a hundred, resolving to a tenth of a degree from an antenna that physically cannot do better than ten.",
+   "quote_verbatim": "if it's got a really good SNR, like 20 dB SNR, you can split the beam of one of those arrays by a factor of a hundred",
+   "speaker": "Greg Charvat",
+   "episode": 179,
+   "episode_title": "Greg Charvat Returns With A Book! - Laboratory Literature Laureate",
+   "episode_url": "https://theamphour.com/179-greg-charvat-returns-with-a-book-laboratory-literature-laureate/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Spot size on a distant target is the wavelength times the distance over the antenna radius, so resolution improves with aperture — and since an arbitrarily large antenna cannot be flown, the remaining levers are trajectory and integration time. Flying closer improves resolution and worsens relative velocity, which shortens the time available to integrate exactly when the ratio most needs it.",
+   "quote_verbatim": "your spot size of that distance will be lambda d over r",
+   "speaker": "Adrian Tang",
+   "episode": 483,
+   "episode_title": "An Interview with Adrian Tang",
+   "episode_url": "https://theamphour.com/483-an-interview-with-adrian-tang/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Link budget is the difference between transmit power and the receiver's minimum usable sensitivity, expressed in decibels. Twenty dBm out and minus 121 dBm of real-world sensitivity gives about 141 dB to spend on distance, antennas and obstructions.",
+   "quote_verbatim": "link budget is just, it's a term used by us radio people",
+   "speaker": "JP Norair",
+   "episode": 443,
+   "episode_title": "An Interview with JP Norair",
+   "episode_url": "https://theamphour.com/443-an-interview-with-jp-norair/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Received signal strength and signal-to-noise ratio are separate readings and both matter: a strong wireless signal sits better than about minus 60 dBm, while the ratio degrades independently as other devices in the band add noise — which is why the quieter sub-gigahertz bands behave so much better outdoors than 2.4 GHz.",
+   "quote_verbatim": "a good, strong wifi signal is going to be better than usually minus 60 DBM",
+   "speaker": "JP Norair",
+   "episode": 443,
+   "episode_title": "An Interview with JP Norair",
+   "episode_url": "https://theamphour.com/443-an-interview-with-jp-norair/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A broadband noise source is a jammer whatever its intent. Standing next to the transmitter does not help, because reception is set by the ratio rather than by the level — a coded digital signal cannot be extracted once the noise floor has been raised over it, no matter how strong it is.",
+   "quote_verbatim": "may be right next to the transmitter, but you're still going to",
+   "speaker": "Dave Jones",
+   "episode": 391,
+   "episode_title": "Only A Transmitter",
+   "episode_url": "https://theamphour.com/391-only-a-transmitter/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Pushing a megabit per second demands a good signal-to-noise ratio; sending a text-message-sized packet once a day demands almost none. Where the application genuinely tolerates the low rate, the customer never needs to know the bit rate at all — and the link reaches places a faster one could not.",
+   "quote_verbatim": "as soon as you start to lower your bit rate",
+   "speaker": "Dave Jones",
+   "episode": 427,
+   "episode_title": "An Interview with Maarten Engelen",
+   "episode_url": "https://theamphour.com/427-an-interview-with-maarten-engelen/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "What listeners describe as warmth in analog playback is harmonic distortion rather than clarity, and the measurements say so: the signal-to-noise ratio of vinyl beats cassette and does not approach compact disc. Preference for a distortion signature is a legitimate taste and a different claim from fidelity.",
+   "quote_verbatim": "the signal to noise ratio on vinyl is, I mean, it's better than cassette, but it's not even as good as CD",
+   "speaker": "Dafydd Roche",
+   "episode": 270,
+   "episode_title": "An Interview With Dafydd Roche",
+   "episode_url": "https://theamphour.com/270-an-interview-with-dafydd-roche/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Reproduction quality has been engineered to a point where further gains in the signal barely register, which reframes the problem: the remaining improvement in listening is on the noise side of the ratio, meaning the room and the environment rather than the equipment.",
+   "quote_verbatim": "think we've, we've done a lot about the signal. We need to work on noise now",
+   "speaker": "Dave Jones",
+   "episode": 560,
+   "episode_title": "High End Audio with Remco Stoutjesdijk",
+   "episode_url": "https://theamphour.com/the-amp-hour-560-high-end-audio-with-remco-stoutjesdijk/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Older image sensor technology persisted in scientific and space instruments long after being displaced commercially, because its noise performance remained better — a reminder that the part which lost the consumer market is not automatically the worse instrument.",
+   "quote_verbatim": "very good signal to noise ratio",
+   "speaker": "Chris Gammell",
+   "episode": 325,
+   "episode_title": "An Interview with David Kronstein (Tesla500)",
+   "episode_url": "https://theamphour.com/the-amp-hour-325-an-interview-with-david-kronstein-tesla500/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  }
+ ],
+ "attribution_notes": [
+  "attribution_reliable was not trusted. ep443 labels the guest's own explanation of link budget — including 'us radio people' — as 'Dave Jones'; it is content-attributed to JP Norair.",
+  "ep427 and ep560 similarly label guest material with a host's name; ep427's bit-rate reasoning is kept as recorded because the surrounding turns do not disambiguate it, and ep560's reframing of the noise problem is the guest's and is noted as such in the article text rather than reassigned in the packet.",
+  "ep185 (Hank Zumbahlen), ep483 (Adrian Tang), ep115 and ep179 (Greg Charvat) label host questions with the guest's name; only material unambiguously the guest's own was used.",
+  "The bundle also contains the term used socially — the ratio of useful to useless content in an online feed — which carries no engineering content and was excluded."
+ ],
+ "capped": false
+}

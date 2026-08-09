@@ -1,0 +1,715 @@
+{
+ "concept": "switching-power-supply",
+ "name": "Switching Power Supply",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "switching-power-supply",
+  "census": "union",
+  "aliases": [
+   "switch-mode-power-supply",
+   "switched-mode-power-supply",
+   "switching-power-supply"
+  ],
+  "children": [
+   "analog-engineering",
+   "feedback-system",
+   "motor-speed-control",
+   "power-electronics",
+   "switching-frequency"
+  ],
+  "neighbors": {
+   "linear-power-supply": 5
+  },
+  "pins_pre_cap": 57,
+  "pins_final": 57,
+  "pins_by_depth": {
+   "opinion": 20,
+   "explains": 37
+  },
+  "pins_by_role": {
+   "core": 57
+  },
+  "capped": false,
+  "passages_yielding_claims": 42,
+  "passages_killed": 15
+ },
+ "claims": [
+  {
+   "claim_text": "The principle is simply interruption: the input is turned on and off tens of thousands of times a second, and the ratio of on to off sets the output voltage.",
+   "quote_verbatim": "It's like turning the power on and off tens of thousands of times a second to get the right voltage.",
+   "speaker": "Ken Shirriff",
+   "episode": 361,
+   "episode_title": "An Interview with Ken Shirriff",
+   "episode_url": "https://theamphour.com/361-an-interview-with-ken-shirriff/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Frequency buys size. At those rates the transformer can be small enough to fit inside a plug, which is the whole reason a charger is now a cubic inch rather than the brick it was in the 1980s.",
+   "quote_verbatim": "At these high frequencies, they can use a very tiny transformer",
+   "speaker": "Ken Shirriff",
+   "episode": 361,
+   "episode_title": "An Interview with Ken Shirriff",
+   "episode_url": "https://theamphour.com/361-an-interview-with-ken-shirriff/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Inside, the part is a small control system rather than a power component: a little current is sensed across a resistor, fed back, and used to change the drive and the pulse width.",
+   "quote_verbatim": "You're drawing off a little bit of current and, you know, going across the sense resistor, feeding that back through",
+   "speaker": "Chris Gammell",
+   "episode": 62,
+   "episode_title": "Op amps, Microchips & Mergers - Narquois Nerd Nescience - Narquois Nerd Nescience",
+   "episode_url": "https://theamphour.com/the-amp-hour-62-narquois-nerd-nescience/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The controller also changes strategy depending on where in the operating range it is, including skipping pulses entirely under light load.",
+   "quote_verbatim": "you can skip pulses",
+   "speaker": "Chris Gammell",
+   "episode": 62,
+   "episode_title": "Op amps, Microchips & Mergers - Narquois Nerd Nescience - Narquois Nerd Nescience",
+   "episode_url": "https://theamphour.com/the-amp-hour-62-narquois-nerd-nescience/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Frequency sets the size of the magnetics. At fifteen kilohertz the inductors are large hand-wound components occupying a serious fraction of the board.",
+   "quote_verbatim": "you need these huge inductors",
+   "speaker": "Dave Jones",
+   "episode": 61,
+   "episode_title": "Moore's Law, GaN and SiC devices - Gallimaufry GaN Gabble",
+   "episode_url": "https://theamphour.com/the-amp-hour-61-gallimaufry-gan-gabble/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Commercial designs mostly sit between a few hundred kilohertz and a few megahertz, and pushing to the top of that range shrinks the inductor to the point where a loop of trace on the board can serve as one.",
+   "quote_verbatim": "You can do board-level inductors just doing a loop on a board kind of thing.",
+   "speaker": "Dave Jones",
+   "episode": 61,
+   "episode_title": "Moore's Law, GaN and SiC devices - Gallimaufry GaN Gabble",
+   "episode_url": "https://theamphour.com/the-amp-hour-61-gallimaufry-gan-gabble/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "There is a wall at the top, though. As frequency rises the parasitic capacitance and inductance of the layout and the components themselves come to dominate, so the efficiency curve peaks and then falls — there is a sweet spot rather than a monotonic gain.",
+   "quote_verbatim": "there's a curve which peaks and then goes down in your efficiency curve as you go up in frequency",
+   "speaker": "Dave Jones",
+   "episode": 61,
+   "episode_title": "Moore's Law, GaN and SiC devices - Gallimaufry GaN Gabble",
+   "episode_url": "https://theamphour.com/the-amp-hour-61-gallimaufry-gan-gabble/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Wide-bandgap devices move that wall rather than removing it, switching fast enough to make the linear region essentially disappear.",
+   "quote_verbatim": "it does 100 volts per nanosecond switching",
+   "speaker": "Dave Jones",
+   "episode": 61,
+   "episode_title": "Moore's Law, GaN and SiC devices - Gallimaufry GaN Gabble",
+   "episode_url": "https://theamphour.com/the-amp-hour-61-gallimaufry-gan-gabble/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The reason those devices are unusual is that the normal relationship runs the other way: raising a transistor's breakdown voltage usually makes it slower, and this material keeps both the high breakdown and the speed.",
+   "quote_verbatim": "when you increase the breakdown voltage of a transistor you tend to make it slower",
+   "speaker": "Shahriar Shahramian",
+   "episode": 553,
+   "episode_title": "Debunking with Shahriar",
+   "episode_url": "https://theamphour.com/553-debunking-with-shahriar/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Sharp edges plus high breakdown produce very efficient converters, and efficiency is what makes the supply physically small.",
+   "quote_verbatim": "you can create extremely efficient dc-dc converters based on a gallium nitride device",
+   "speaker": "Shahriar Shahramian",
+   "episode": 553,
+   "episode_title": "Debunking with Shahriar",
+   "episode_url": "https://theamphour.com/553-debunking-with-shahriar/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The chain is worth stating explicitly because it is the whole design argument: higher efficiency means less waste heat, less waste heat means no large internal or external heatsink, and that is what allows sixty watts in a package that size.",
+   "quote_verbatim": "you don't need large internal heat sinks",
+   "speaker": "Shahriar Shahramian",
+   "episode": 553,
+   "episode_title": "Debunking with Shahriar",
+   "episode_url": "https://theamphour.com/553-debunking-with-shahriar/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Power silicon does not follow the leading edge of process technology — these parts are built on much older nodes, not the ones attracting fabrication investment.",
+   "quote_verbatim": "You're going to build it on a 90 nanometer or 45 nanometer process",
+   "speaker": "Chris Gammell",
+   "episode": 582,
+   "episode_title": "The Same Wavelength",
+   "episode_url": "https://theamphour.com/582-the-same-wavelength/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The defining drawback is inherent rather than incidental: pushing pulses through a system is what the topology does, so noise comes with it, and a genuinely quiet system still needs a linear stage or a transformer.",
+   "quote_verbatim": "there is innate noise to having, to putting pulses through a system",
+   "speaker": "Chris Gammell",
+   "episode": 9,
+   "episode_title": "From Boston In Boxers?",
+   "episode_url": "https://theamphour.com/the-amp-hour-9-from-boston-in-boxers/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The noise is not only electrical. Magnetics hum and vibrate, so the requirement can be acoustic as much as electrical.",
+   "quote_verbatim": "not just quiet in the electrical sense, but quiet in the mechanical sense as well",
+   "speaker": "Chris Gammell",
+   "episode": 9,
+   "episode_title": "From Boston In Boxers?",
+   "episode_url": "https://theamphour.com/the-amp-hour-9-from-boston-in-boxers/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Audible noise has three distinct sources worth separating. An inductor wound loosely — likely if it was hand-wound, as large power parts often are — vibrates under load.",
+   "quote_verbatim": "if you don't wind your inductors tight enough",
+   "speaker": "Chris Gammell",
+   "episode": 127,
+   "episode_title": "FPGA, Xess, 32 Bit - Quirky Qualitative Questions",
+   "episode_url": "https://theamphour.com/the-amp-hour-127-quirky-qualitative-questions/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The second is operating the supply outside its intended range, which can push the controller into a very low duty cycle mode and start it whining.",
+   "quote_verbatim": "I was just running it out of the zone it was supposed to be running in",
+   "speaker": "Chris Gammell",
+   "episode": 127,
+   "episode_title": "FPGA, Xess, 32 Bit - Quirky Qualitative Questions",
+   "episode_url": "https://theamphour.com/the-amp-hour-127-quirky-qualitative-questions/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The third is the capacitors: multilayer ceramics are microphonic and audibly sing, and because the effect is reciprocal, tapping the board makes them generate a voltage.",
+   "quote_verbatim": "they can actually become microphonic and they can sing",
+   "speaker": "Chris Gammell",
+   "episode": 127,
+   "episode_title": "FPGA, Xess, 32 Bit - Quirky Qualitative Questions",
+   "episode_url": "https://theamphour.com/the-amp-hour-127-quirky-qualitative-questions/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Noise has to be characterised across the load range rather than at one operating point, because the switching behaviour, the effectiveness of the output capacitors and sometimes the frequency itself all change with load.",
+   "quote_verbatim": "you also have to track them over their load as well",
+   "speaker": "Chris Gammell",
+   "episode": 360,
+   "episode_title": "A Total 360",
+   "episode_url": "https://theamphour.com/360-a-total-360/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Cascading two of them with no linear stage anywhere in the chain leaves nothing to knock the high-frequency content down, and the output capacitance is what holds the loop stable when there is no load at all.",
+   "quote_verbatim": "There's two switching supplies in line with no linear component to knock down noise.",
+   "speaker": "Chris Gammell",
+   "episode": 360,
+   "episode_title": "A Total 360",
+   "episode_url": "https://theamphour.com/360-a-total-360/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Instruments are not exempt. A bench supply can be switch mode internally with a quasi-linear post-regulator and substantial filtering behind it, and still be noisier than a classic linear design.",
+   "quote_verbatim": "They're switch mode internally, with a sort of a quasi-linear post regulator",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Above a certain current there is no choice: a linear supply delivering forty amps would be unmanageably heavy, so high-current bench supplies are switch mode by necessity.",
+   "quote_verbatim": "you can't get that from a linear supply and it weighs, like, 20 kilos",
+   "speaker": "Dave Jones",
+   "episode": 277,
+   "episode_title": "Interconnectorama",
+   "episode_url": "https://theamphour.com/277-interconnectorama/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Putting one in a product also commits the design to electromagnetic compliance work, because the switching is a deliberate source of emissions.",
+   "quote_verbatim": "because you've got a switch mode in there, it's going to be spewing out the stuff",
+   "speaker": "Dave Jones",
+   "episode": 184,
+   "episode_title": "Chris Becomes Self Employed - Quixotic Quitting Quaere",
+   "episode_url": "https://theamphour.com/184-chris-becomes-self-employed-quixotic-quitting-quaere/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "For a sensitive analogue product a reasonable position is to buy the problem rather than design it: an off-the-shelf brick with switching content in the tens of kilohertz is straightforward to filter and has small leakage currents.",
+   "quote_verbatim": "their frequency content is, is up there. I mean, I think, uh, 30 to 50 kilohertz. So filtering is filtering is pretty easy",
+   "speaker": "Shannon Parks",
+   "episode": 513,
+   "episode_title": "Audio DSP with Shannon Parks",
+   "episode_url": "https://theamphour.com/513-audio-dsp-with-shannon-parks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The other half of that argument is scope: buying the brick keeps mains wiring out of the product entirely.",
+   "quote_verbatim": "the idea of having a, making something that plugged into AC mains, that, that would just terrify me",
+   "speaker": "Shannon Parks",
+   "episode": 513,
+   "episode_title": "Audio DSP with Shannon Parks",
+   "episode_url": "https://theamphour.com/513-audio-dsp-with-shannon-parks/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Control has traditionally been an analogue integrated circuit closing the loop, and the digital alternative reads the output voltage and current and adjusts the pulse width in software.",
+   "quote_verbatim": "you're running a control loop to adjust the duty cycle of your PWM",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The argument for doing it digitally is iteration speed: getting a filter value wrong in the analogue version means recalculating the resistor and capacitor network, unsoldering parts and possibly reordering them, where the digital version is a coefficient change, a recompile and a reflash.",
+   "quote_verbatim": "you recalculate the coefficients for your filter, and you just change the code",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The argument against is that a firmware image is a thing you then have to maintain, which is a poor trade against a fixed resistor and capacitor in a static application such as a plain five-to-three-point-three-volt regulator.",
+   "quote_verbatim": "the cost of maintaining another firmware image is not worth it compared to a low-cost switching regulator",
+   "speaker": "Chris Gammell",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "What makes digital control work in practice is a hardware linkage between peripherals: the comparison events that shape the pulse width can also trigger the converter, so the measurement always lands at the same point in the switching cycle.",
+   "quote_verbatim": "those events can also trigger the ADC so that you always sample that reference point at a fixed time in your cycle",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "That determinism is the requirement — the sampling instant relative to the switching edge matters more than the raw speed of the converter.",
+   "quote_verbatim": "So it's very, very deterministic.",
+   "speaker": "Trey German",
+   "episode": 212,
+   "episode_title": "An Interview with Trey German - Launchpad Laden Lodesman",
+   "episode_url": "https://theamphour.com/212-an-interview-with-trey-german-launchpad-laden-lodesman/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Implementing the controller yourself on a general-purpose microcontroller, using its own timers and converters, is the wrong instinct; a dedicated controller chip is known to work.",
+   "quote_verbatim": "Just use an external controller chip you know that's going to work and be done with it.",
+   "speaker": "Dave Jones",
+   "episode": 88,
+   "episode_title": "Yonderly Yodeling Yobbos",
+   "episode_url": "https://theamphour.com/the-amp-hour-88-yonderly-yodeling-yobbos/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The exposure that creates is supply: depending on a specific vendor part means an end-of-life notice or an allocation problem leaves the design stranded.",
+   "quote_verbatim": "when there's an obsolescence, you are sometimes really up a creek without a paddle",
+   "speaker": "Chris Gammell",
+   "episode": 88,
+   "episode_title": "Yonderly Yodeling Yobbos",
+   "episode_url": "https://theamphour.com/the-amp-hour-88-yonderly-yodeling-yobbos/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Building a device model from a datasheet is essentially impossible for bipolar transistors, because the quasi-saturation region will never be documented well enough there.",
+   "quote_verbatim": "For the bipolars, you know, there's no way because you have this whole quasi-saturation region",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "For field-effect devices it is possible and good enough for this application, but laborious: build test fixtures that reproduce the datasheet curves — output characteristics, on-resistance against gate voltage, gate charge — and adjust the model parameters until they match.",
+   "quote_verbatim": "I make little test fixtures that will curve trace",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "There is a trap underneath even that. Often no single physical transistor matches the whole datasheet, because different curves were extracted from different devices, so a model cannot be made to fit them all at once.",
+   "quote_verbatim": "there often is no transistor that behaves like the data sheet",
+   "speaker": "Mike Engelhardt",
+   "episode": 196,
+   "episode_title": "An Interview with Mike Engelhardt (Re-broadcast)",
+   "episode_url": "https://theamphour.com/196-an-interview-with-mike-engelhardt-re-broadcast/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Beginner-oriented browser simulators are not built for this either — convergence on a switching supply is exactly the case they are not designed to handle.",
+   "quote_verbatim": "it's not designed for professional, you know, switch mode power supply type stuff that converges",
+   "speaker": "Dave Jones",
+   "episode": 210,
+   "episode_title": "Risky Components and Hardware Innovation - Slipshod Shack Shutdown",
+   "episode_url": "https://theamphour.com/210-risky-components-and-hardware-innovation-slipshod-shack-shutdown/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The property that makes these circuits expensive to revisit is that performance is heavily dependent on layout, so a substitution is not a like-for-like swap the way replacing a linear regulator is.",
+   "quote_verbatim": "especially for like switch mode power supplies where they're heavily layout dependent",
+   "speaker": "Dave Young",
+   "episode": 601,
+   "episode_title": "Rebuilding Projects with Dave Young",
+   "episode_url": "https://theamphour.com/601-rebuilding-projects-with-dave-young/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The cost cascades: new passives have to be selected, the qualification effort grows, and the replacement may come in a smaller package that forces the board into blind and buried vias.",
+   "quote_verbatim": "now you've got to pick new passives",
+   "speaker": "Dave Young",
+   "episode": 601,
+   "episode_title": "Rebuilding Projects with Dave Young",
+   "episode_url": "https://theamphour.com/601-rebuilding-projects-with-dave-young/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "All of that can be triggered by an unremarkable part making an unremarkable rail, which is why a switcher is a bad place to carry sourcing risk.",
+   "quote_verbatim": "tons of pain just because of a silly switcher that needs to make 3.3 volts",
+   "speaker": "Dave Young",
+   "episode": 601,
+   "episode_title": "Rebuilding Projects with Dave Young",
+   "episode_url": "https://theamphour.com/601-rebuilding-projects-with-dave-young/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "When such a part becomes scarce the decision is binary — pay a price that may be a hundred times the original or design it out — and there is no honest probability to attach to either branch.",
+   "quote_verbatim": "It is all speculation.",
+   "speaker": "Dave Young",
+   "episode": 601,
+   "episode_title": "Rebuilding Projects with Dave Young",
+   "episode_url": "https://theamphour.com/601-rebuilding-projects-with-dave-young/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "At small volumes the calculation is different again: for a run of ten, an off-the-shelf module avoids selecting the transistor and inductor, working through the calculations and discovering afterwards that the loop oscillates.",
+   "quote_verbatim": "you just buy a off the shelf power brick",
+   "speaker": "Dave Jones",
+   "episode": 604,
+   "episode_title": "Robo Fry Guy",
+   "episode_url": "https://theamphour.com/604-robo-fry-guy/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Complete modules go further, packaging the converter with a panel interface and control so that a bench supply is an enclosure and an input source away.",
+   "quote_verbatim": "It's just a complete switch mode power supply in a little panel interface with the knob and everything.",
+   "speaker": "Dave Jones",
+   "episode": 408,
+   "episode_title": "Tronnort Software Rises Again!",
+   "episode_url": "https://theamphour.com/408-tronnort-software-rises-again/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "That reusability once underpinned a broader claim — that nobody would lay out a board from scratch again, since every product contains a converter and the layout has been done a million times — and the claim did not survive contact with practice.",
+   "quote_verbatim": "Why redo the layout for a switching power supply when you can simply take it, that module and drop it in",
+   "speaker": "Dave Jones",
+   "episode": 565,
+   "episode_title": "Here for a reason",
+   "episode_url": "https://theamphour.com/565-here-for-a-reason/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "In organisations that take it seriously the work is partitioned to a specialist: one designer takes the converter half of the board and another takes the digital and analogue remainder, with someone merging them at the end.",
+   "quote_verbatim": "They wanted their designer to do the switching, you know",
+   "speaker": "Dave Jones",
+   "episode": 230,
+   "episode_title": "Prepping For Hoverboards - Gallionic GitHub Gabble",
+   "episode_url": "https://theamphour.com/230-prepping-for-hoverboards-gallionic-github-gabble/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "It is also a classic subject for a design review to catch, and the feedback loop in particular is where an inexperienced designer gets found out.",
+   "quote_verbatim": "I got nailed on a switching power supply feedback",
+   "speaker": "Dave Jones",
+   "episode": 138,
+   "episode_title": "An Interview with Ryan Brown - Effortless Equipment Extensibility",
+   "episode_url": "https://theamphour.com/the-amp-hour-138-effortless-equipment-extensibility/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A front-panel power switch is often not a mains switch at all but a logic input to the converter's enable pin, which is a legitimate design and also the reason an instrument can draw six and a half watts while apparently switched off.",
+   "quote_verbatim": "the switch is not a mains one. It's a logic one",
+   "speaker": "Dave Jones",
+   "episode": 39,
+   "episode_title": "Dan Pink, Dual Core, level translators - Mumble Mumbo Jumbo",
+   "episode_url": "https://theamphour.com/the-amp-hour-39-mumble-mumbo-jumbo/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "For comparison, converters built to the efficiency standards measure around a tenth of a watt in standby.",
+   "quote_verbatim": "they have a standby power of 0.1 watts",
+   "speaker": "Dave Jones",
+   "episode": 5,
+   "episode_title": "Girl Power",
+   "episode_url": "https://theamphour.com/the-amp-hour-5-girl-power/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A mains-side failure inside one of these can put current to earth and trip the residual-current breaker while leaving no visible damage and no equipment that has stopped working, which makes it very hard to localise afterwards.",
+   "quote_verbatim": "it puts some current to earth and tripped the breaker",
+   "speaker": "Dave Jones",
+   "episode": 81,
+   "episode_title": "Jersey Jeff Jactitation",
+   "episode_url": "https://theamphour.com/the-amp-hour-81-jersey-jeff-jactitation/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Universal input is what allows a single stock item across regions, with interchangeable pins on the plug — an overhead saving that pushes the waste onto the buyer as a drawer of unused adapters.",
+   "quote_verbatim": "with switching power supplies, it's gotten a lot easier",
+   "speaker": null,
+   "episode": 523,
+   "episode_title": "A Keyzermas Story",
+   "episode_url": "https://theamphour.com/523-a-keyzermas-story/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Dimming interacts with these supplies in a way worth understanding. A conventional dimmer waits past the zero crossing, then triggers a device that latches on until the current falls to zero at the end of the half cycle.",
+   "quote_verbatim": "it waits for the zero crossing in the mains, then waits for a while and then turns it on after a delay",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Modern lamps prefer the opposite arrangement, because their front end is a rectifier feeding an electrolytic capacitor, and switching that on part way up the waveform draws a large current surge — which is why conventional dimmers contain a sizeable choke to slow the edge.",
+   "quote_verbatim": "you get quite a high current surge",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Switching off late in the cycle has its own hazard: interrupting several amps drawn through the inductance of a transformer secondary generated an eight-hundred-volt spike that destroyed the small internal mains supply, not the output devices under test.",
+   "quote_verbatim": "I was getting this, like, 800 volt spike",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The remedy is either to avoid the transformer or to put a few microfarads across its output, and the diagnosis only came from putting a scope on the incoming mains rather than on the suspected circuit.",
+   "quote_verbatim": "either don't use a transformer or just stick a few microfrads of capacitance on the output",
+   "speaker": "Mike Harrison",
+   "episode": 524,
+   "episode_title": "LEDs and EVs with Mike Harrison",
+   "episode_url": "https://theamphour.com/524-leds-and-evs-with-mike-harrison/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "At the extreme the topology is unchanged but everything around it is: a converter taking mains in and producing ten kilovolts out means creepage and clearance measured in inches and boards floating at the full output voltage.",
+   "quote_verbatim": "you're basically doing a switching power supply that has like 220 in and 10 kilovolts out",
+   "speaker": "Bart Dring",
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Potting solves the insulation and creates the next problem, because the heat — up to a kilowatt of it — then has to cross the potting compound to get out.",
+   "quote_verbatim": "everything's potted, but then you've got all this heat",
+   "speaker": "Bart Dring",
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The way out is materials that conduct heat without conducting electricity, such as alumina and other technical ceramics, supplemented by heat pipes spreading the load to several points.",
+   "quote_verbatim": "they can conduct heat and not, um, the voltage",
+   "speaker": "Bart Dring",
+   "episode": 438,
+   "episode_title": "An Interview with Bart Dring",
+   "episode_url": "https://theamphour.com/438-an-interview-with-bart-dring/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Industrial rectifiers are the same thing at scale — switch mode supplies built for high current and high voltage rather than the four diodes the name suggests.",
+   "quote_verbatim": "it's basically a switch mode power supplies for high current and high voltage",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Distribution follows the same logic at building scale: running low-voltage direct current any distance loses too much to resistance, so the converter belongs local to the load rather than centralised.",
+   "quote_verbatim": "You'd have I-squared R drops",
+   "speaker": "Dave Jones",
+   "episode": 25,
+   "episode_title": "NASA, WOTW & Modular Design - The NASA Nostalgia",
+   "episode_url": "https://theamphour.com/the-amp-hour-25-the-nasa-nostagia/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The grid version of that idea, a solid-state transformer operating at several kilovolts, is essentially this topology scaled up.",
+   "quote_verbatim": "it's kind of like a switching power supply for 7.2 kV",
+   "speaker": "Paul Zawada",
+   "episode": 583,
+   "episode_title": "The Smart Grid with Paul Zawada",
+   "episode_url": "https://theamphour.com/583-the-smart-grid-with-paul-zawada/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The historical switch from linear to switching in consumer products was driven by cost alone.",
+   "quote_verbatim": "Why did you go from linear to switching? It was cheaper.",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "It changed how the rest of the system had to be designed, because the failure behaviour is different: a linear supply sags and carries on, whereas a switching supply that is pushed past its limit shuts down.",
+   "quote_verbatim": "if I go over too much, it stops being a power, you know, it'll shut off",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "That hard limit turned an accessory drawing six hundred milliamps into a supply-sizing problem for every unit shipped, which is what made integrating the function — at a hundred milliamps — the cheaper answer.",
+   "quote_verbatim": "it only took us like 100 milliamps",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The attraction in early portable computers was that it addressed three constraints at once — heat, weight and size — rather than any one of them.",
+   "quote_verbatim": "we have a problem with heat, a problem with weight, a problem with size",
+   "speaker": "Lee Felsenstein",
+   "episode": 684,
+   "episode_title": "Lee Felsenstein: The Computer Revolution & Counterculture",
+   "episode_url": "https://theamphour.com/684-lee-felsenstein-the-computer-revolution-counterculture/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The same transition is why instruments from the 1980s are markedly harder to service than those from the 1970s: the switching supply is one of the components that pushed the complexity up.",
+   "quote_verbatim": "you've got like switching power supplies and all this stuff in the newer ones",
+   "speaker": "Jeff Keyzer",
+   "episode": 655,
+   "episode_title": "The Twelfth Day of Keyzermas",
+   "episode_url": "https://theamphour.com/655-the-twelfth-day-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A commodity computer supply is a cheap source of serious current — a few hundred watts for around twenty dollars, and quieter than reputation suggests because low-cost manufacturers adopted better offline switching.",
+   "quote_verbatim": "all of these low-cost companies are taking advantage of better switching technology for offline switchers",
+   "speaker": "Chris Gammell",
+   "episode": 199,
+   "episode_title": "The 2014 Maker Faire Show - Traveling Technology Trangam",
+   "episode_url": "https://theamphour.com/199-the-2014-maker-faire-show-traveling-technology-trangam/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Its low-voltage rail carries tens of amps, which makes it a practical starting point for generating other rails by boosting rather than by building a supply from scratch.",
+   "quote_verbatim": "it's 5 volts, but you can get like 35 amps out of it",
+   "speaker": "Chris Gammell",
+   "episode": 198,
+   "episode_title": "Mike Ossmann Returns! - Planetic Portalab Packaging",
+   "episode_url": "https://theamphour.com/198-mike-ossmann-returns-planetic-portalab-packaging/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A gap remains at the low end of the market: adjustable modules are widely available and noisy, where much of the time what is wanted is a fixed, properly regulated output with no adjustment at all.",
+   "quote_verbatim": "there's a market out there just for like a bunch of little fixed supplies",
+   "speaker": "Chris Gammell",
+   "episode": 406,
+   "episode_title": "Nerds In A Corner",
+   "episode_url": "https://theamphour.com/406-nerds-in-a-corner/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "One habit carries over from this kind of development work generally: a development circuit should expose its intermediate signals deliberately, because that access is exactly what disappears once the function is integrated.",
+   "quote_verbatim": "you don't build it with an eye on mass manufacturing",
+   "speaker": "Stefan Dzisiewski-Smith",
+   "episode": 309,
+   "episode_title": "An Interview with Stefan Dzisiewski-Smith",
+   "episode_url": "https://theamphour.com/309-an-interview-with-stefan-dzisiewski-smith/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "ep 222: attribution flagged unreliable and the bundle labels the turns with the host's name; the linear-to-switching and supply-sizing claims are content-attributed to the guest recounting his own design work.",
+  "ep 513: the bundle labels the turn with the host's name; the off-the-shelf-brick claims are content-attributed to the guest describing his own product's power arrangement.",
+  "ep 523: attribution flagged unreliable and the passage fuses both hosts' turns; the universal-input claim carries a null speaker rather than a guess.",
+  "ep 438: attribution flagged unreliable. The high-voltage converter claims are content-attributed to the guest recounting his earlier transmitter work."
+ ],
+ "capped": false
+}

@@ -1,0 +1,418 @@
+{
+ "concept": "temperature-sensor",
+ "name": "Temperature Sensor",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "temperature-sensor",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "temperature-sensor",
+   "thermal-sensor"
+  ],
+  "children": [
+   "clock-synchronization",
+   "cubesat",
+   "humidity-sensor",
+   "hysteresis",
+   "intellectual-property-ownership",
+   "original-design-manufacturer",
+   "pressure-sensor",
+   "sensor-data"
+  ],
+  "neighbors": {},
+  "episodes_with_kept_mentions": 56,
+  "mentions_kept": 71,
+  "pins_pre_cap": 38,
+  "pins_final": 38,
+  "pins_by_depth": {
+   "explains": 32,
+   "opinion": 6
+  },
+  "pins_by_role": {
+   "core": 35,
+   "child": 3
+  },
+  "speakers": [
+   [
+    "Dave Jones",
+    13
+   ],
+   [
+    "Chris Gammell",
+    9
+   ],
+   [
+    "Luke Beno",
+    2
+   ],
+   [
+    "Rick Altherr",
+    2
+   ],
+   [
+    "Ian Danaher",
+    1
+   ],
+   [
+    "Bob Simpson",
+    1
+   ],
+   [
+    "Bob Davidson",
+    1
+   ],
+   [
+    "Ryan O'Hara",
+    1
+   ],
+   [
+    "Richard Ginus",
+    1
+   ],
+   [
+    "Chris Osterwood",
+    1
+   ],
+   [
+    "Ken Burns",
+    1
+   ],
+   [
+    "Jonathan Beri",
+    1
+   ],
+   [
+    "Charles Aylward",
+    1
+   ],
+   [
+    "Andrea Longobardi",
+    1
+   ],
+   [
+    "Ian Johnston",
+    1
+   ],
+   [
+    "Keith Burzinski",
+    1
+   ]
+  ],
+  "capped": false,
+  "gated_out_by_concept": [
+   [
+    "cubesat",
+    30
+   ],
+   [
+    "pressure-sensor",
+    23
+   ],
+   [
+    "sensor-data",
+    17
+   ],
+   [
+    "humidity-sensor",
+    12
+   ],
+   [
+    "hysteresis",
+    11
+   ],
+   [
+    "intellectual-property-ownership",
+    8
+   ],
+   [
+    "original-design-manufacturer",
+    8
+   ],
+   [
+    "clock-synchronization",
+    7
+   ]
+  ],
+  "gated_out_total": 116
+ },
+ "claims": [
+  {
+   "claim_text": "An ordinary integrated temperature sensor measures the behaviour of a silicon junction on its own die, so it reports the temperature of the chip. A thermopile part is a different instrument entirely: a cavity in the package collects incident infrared, which is what makes non-contact measurement possible.",
+   "quote_verbatim": "usually uses a silicon diode or something like that. You know, a junction to measure the temperature",
+   "speaker": "Dave Jones",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A sensor reports its own location and nothing else. In a reflow oven with an infrared element and the sensor in a corner, the board can be a hundred or two hundred degrees hotter than the controller believes, because nothing in the loop measures the thing that matters.",
+   "quote_verbatim": "not measuring the temperature on your board",
+   "speaker": "Dave Jones",
+   "episode": 170,
+   "episode_title": "What defines an engineer? - Job Judging Jeremiad",
+   "episode_url": "https://theamphour.com/170-what-defines-an-engineer-job-judging-jeremiad/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A convection oven is more forgiving because the moving air the sensor sits in is close to what the board experiences, which suppresses both hot spots and the divergence between the reading and the reality.",
+   "quote_verbatim": "the sensor in it is sensing the circulated air",
+   "speaker": "Dave Jones",
+   "episode": 170,
+   "episode_title": "What defines an engineer? - Job Judging Jeremiad",
+   "episode_url": "https://theamphour.com/170-what-defines-an-engineer-job-judging-jeremiad/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A temperature reading without its context is nearly useless. Whatever transports the number has to carry where it was taken, because the value alone cannot be acted on by anyone who was not there when the sensor was installed.",
+   "quote_verbatim": "23 degrees where? In your office",
+   "speaker": "Dave Jones",
+   "episode": 205,
+   "episode_title": "Solar Factories and HVDC Lines - Pollent Power Pushing",
+   "episode_url": "https://theamphour.com/205-solar-factories-and-hvdc-lines-pollent-power-pushing/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A device that transmits also heats itself, and in a precision thermostat the radio's own dissipation was enough to corrupt the reading. The fix was scheduling rather than filtering: the wireless stack and the measurement were synchronised so the system knew exactly when the radio had been on.",
+   "quote_verbatim": "it created erroneous heat that threw off the temperature sensor",
+   "speaker": "Jonathan Beri",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Where one sensor is exposed to a heat source that is not the quantity of interest, weight it down rather than discarding it. Averaging several thermostats and progressively reducing the weight of the one near the boiler as that room warms — to zero above about eighty-five degrees Fahrenheit — removed the disturbance without losing the sensor entirely.",
+   "quote_verbatim": "as the temperature in the boiler room increases, the weight of the reading from the wall mounted thermostat decreases",
+   "speaker": "Keith Burzinski",
+   "episode": 657,
+   "episode_title": "Automating the Home with Keith Burzinski",
+   "episode_url": "https://theamphour.com/657-automating-the-home-with-keith-burzinski/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A single threshold applied to a temperature reading chatters on the sensor's own noise, switching repeatedly as the value crosses back and forth. Two thresholds — one to switch on and a separate lower one to switch off — is what stops the output cycling on noise alone.",
+   "quote_verbatim": "it'll continually trigger on just just based on the thermal noise",
+   "speaker": "Dave Jones",
+   "episode": 696,
+   "episode_title": "It Works With Option Number 5",
+   "episode_url": "https://theamphour.com/696-it-works-with-option-number-5/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Replacing an air conditioner's built-in control with a sensor placed where the temperature actually matters — the workbench rather than the unit — brought the hysteresis band down to two or three tenths of a degree, which is tight enough that the larger the space the harder it becomes to hold.",
+   "quote_verbatim": "get about maybe 0.2, 0.3 of a degree hysteresis now",
+   "speaker": "Ian Johnston",
+   "episode": 643,
+   "episode_title": "Calibration & Repair with Ian Johnston",
+   "episode_url": "https://theamphour.com/643-calibration-repair-with-ian-johnston/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Temperature sensing is a commodity right up to the moment it is not. Filtering for a generic part still returns thousands of results, so choosing something familiar is the pragmatic answer — but a requirement as ordinary-sounding as 200 degrees Celsius narrows the field to almost nothing.",
+   "quote_verbatim": "the temperature sensor needs to go up to 200 degrees C. Good luck finding one of those",
+   "speaker": "Dave Jones",
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Temperature measurement is one of the most thoroughly commoditised functions in electronics — wait a few months and a smaller, cheaper part appears — which changes the engineering question from how to measure to where to put the sensor and what to do with the number.",
+   "quote_verbatim": "actually just came out with a new one this month and it's smaller and lighter",
+   "speaker": "Ryan O'Hara",
+   "episode": 153,
+   "episode_title": "An Interview with Ryan O'Hara - Keyed, Kerfed Kapton",
+   "episode_url": "https://theamphour.com/the-amp-hour-153-keyed-kerfed-kapton/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Some regulators expose their own die temperature as an output whose voltage range is set by a single external resistor, so the range can be matched directly to the converter that will read it — removing the op-amps and dividers that scaling would otherwise require.",
+   "quote_verbatim": "it's also got a die temperature output as well",
+   "speaker": "Dave Jones",
+   "episode": 154,
+   "episode_title": "Arduino, IndiGoGo and Hack-a-Day - Doodad Dealer Dancing",
+   "episode_url": "https://theamphour.com/the-amp-hour-154-doodad-dealer-dancing/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A three-pin temperature sensor and a small-signal diode in the same package are indistinguishable by inspection once the markings are gone, so identifying salvaged parts is a curve-tracing problem rather than a visual one.",
+   "quote_verbatim": "telling your three-pin temperature detector or your three-pin temperature sensor from your TO92 diode is nearly impossible",
+   "speaker": "Ian Danaher",
+   "episode": 87,
+   "episode_title": "An Interview with Ian Daniher - Nascent Nonolith Numquid",
+   "episode_url": "https://theamphour.com/the-amp-hour-87-nascent-nonolith-numquid/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Modern soldering irons integrate the heating element and the sensor into the tip itself, so changing the tip changes both. The feedback is far more direct than sensing through a mechanical contact or an air gap, and the older construction is recognisable because the tip is bare metal with no electrical contacts on it.",
+   "quote_verbatim": "the temperature sensor is all integrated into the tip",
+   "speaker": "Dave Jones",
+   "episode": 384,
+   "episode_title": "A++++++ Will Buy Again",
+   "episode_url": "https://theamphour.com/384-a-will-buy-again/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Characterising a board thermally means several channels of accurate measurement with probes small enough to sit directly on individual integrated circuits, which is what turns a vague overheating complaint into an identified source, sink and thermal path.",
+   "quote_verbatim": "small RTDs that you can place right on ICs on your board",
+   "speaker": "Chris Osterwood",
+   "episode": 425,
+   "episode_title": "An Interview with Chris Osterwood",
+   "episode_url": "https://theamphour.com/425-an-interview-with-chris-osterwood/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A battery management design instrumented every group of cells for temperature alongside per-cell voltage to a few millivolts, with the shunt current returning on its own separate path specifically so that balancing current could not corrupt the voltage measurement.",
+   "quote_verbatim": "every group of cells has a temperature sensor",
+   "speaker": "Bob Simpson",
+   "episode": 112,
+   "episode_title": "An Interview with Bob Simpson - Ardent Automotive Artisan",
+   "episode_url": "https://theamphour.com/the-amp-hour-112-ardent-automotive-artisan/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A small satellite carried on the order of sixty temperature sensors — including those inside devices that already had them — alongside a converter on every voltage rail and current measurement on every subsystem, because nothing about it can be probed after launch.",
+   "quote_verbatim": "we have like something like 60 temperature sensors",
+   "speaker": null,
+   "episode": 220,
+   "episode_title": "An Interview with Shaun Meehan - Doctiloquent Dove Deployer",
+   "episode_url": "https://theamphour.com/220-an-interview-with-shaun-meehan-doctiloquent-dove-deployer/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The number of sensors a system can carry is a link budget calculation done on paper: packet size, protocol headers, and bytes per sample give the number of channels that fit. Doing that arithmetic early is what lets an engineer tell the rest of the team that two hundred temperature sensors are not going to happen, with a reason attached.",
+   "quote_verbatim": "know you want 200 temperature sensors on here, but that's just not going to happen",
+   "speaker": "Charles Aylward",
+   "episode": 584,
+   "episode_title": "Software for Rockets with Charles Aylward",
+   "episode_url": "https://theamphour.com/584-software-for-rockets-with-charles-aylward/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A separate management processor whose only job is the health of the hardware can read temperature sensors, collect serial numbers and control power while the main processor is off — which is exactly when a thermal problem most needs to be visible.",
+   "quote_verbatim": "can pull the temp sensors and things like that and it provides a way to do that even when the host processor is actually turned off",
+   "speaker": "Rick Altherr",
+   "episode": 357,
+   "episode_title": "An Interview with Rick Altherr",
+   "episode_url": "https://theamphour.com/357-an-interview-with-rick-altherr/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The long-standing management standard reports that temperature sensors exist and what they read, but not which components each one is measuring. At scale that gap is what stops readings being actionable — a number without a subject cannot drive a decision.",
+   "quote_verbatim": "it doesn't tie those temp sensors to what components they affect",
+   "speaker": "Rick Altherr",
+   "episode": 357,
+   "episode_title": "An Interview with Rick Altherr",
+   "episode_url": "https://theamphour.com/357-an-interview-with-rick-altherr/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Send a periodic keep-alive and otherwise transmit only when the value changes. A flat line then means the device is alive and the temperature is steady, which is the same information at a fraction of the traffic and the energy.",
+   "quote_verbatim": "only send it if it's actually changed",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A sensor repeating the same value is spending its energy budget saying nothing. Computing the difference on the device and sending only the change lets the receiver reconstruct the series from a much smaller stream.",
+   "quote_verbatim": "you have a temperature sensor that's saying, um, 78, 78, 78, 78",
+   "speaker": "Dave Jones",
+   "episode": 370,
+   "episode_title": "Alternate Info Sources",
+   "episode_url": "https://theamphour.com/370-alternate-info-sources/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Temperature and humidity tolerate lost samples, which makes them a genuinely forgiving class of system — worth recognising, because it permits architectural choices such as fire-and-forget transmission that a system with real-time stakes could never accept.",
+   "quote_verbatim": "if I miss a sample or two or, or even 10, it's not the end of the world",
+   "speaker": "Luke Beno",
+   "episode": 272,
+   "episode_title": "An Interview With Luke Beno of Analog.io",
+   "episode_url": "https://theamphour.com/272-an-interview-with-luke-beno-of-analog-io/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A lightweight publish-and-subscribe protocol fits sensing naturally: the sensor announces its reading without knowing who is listening, and displays or loggers subscribe independently — which decouples adding a consumer from changing the device.",
+   "quote_verbatim": "you can basically have a temperature sensor broadcast my temperatures",
+   "speaker": "Chris Gammell",
+   "episode": 203,
+   "episode_title": "Tesla, Checklists and Bullies - Emerging External Eupsychics",
+   "episode_url": "https://theamphour.com/203-tesla-checklists-and-bullies-emerging-external-eupsychics/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Industrial transmitters costing hundreds to thousands of dollars are remarkably simple to interrogate — one or two commands and the device states what it is, the units it reports in and the current value. That self-describing behaviour is the property worth copying into cheap embedded sensors, not the price.",
+   "quote_verbatim": "a temperature sensor. I'm reporting in degrees Celsius and it's, you know, 47.2 degrees",
+   "speaker": "Ken Burns",
+   "episode": 458,
+   "episode_title": "An Interview with Ken Burns",
+   "episode_url": "https://theamphour.com/458-an-interview-with-ken-burns/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A gas volume corrector is a small sensor-fusion problem: flow, pressure and temperature combine through the gas law into a standard volume, and it is that computed figure rather than any single measurement that the customer is billed on.",
+   "quote_verbatim": "they take the input from the flow meter they take the input from the pressure sensor from the temperature sensor",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Firmware in something as unremarkable as a temperature sensor is an attack surface. Faking an overheat is a plausible way to make a system shut itself down, and the security attention that has gone into application software has largely not reached this layer.",
+   "quote_verbatim": "maybe you could fake it overheating",
+   "speaker": "Chris Gammell",
+   "episode": 590,
+   "episode_title": "Finding Hardware Flaws with Laura Abbott",
+   "episode_url": "https://theamphour.com/590-finding-hardware-flaws-with-laura-abbott/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Battery pack connectors carry more than power: a thermistor for temperature and an identification pin alongside the cell connections, so the charger can establish both what the pack is and whether it is safe to charge before delivering any current.",
+   "quote_verbatim": "this one has a thermistor. It has an ID pin",
+   "speaker": "Chris Gammell",
+   "episode": 662,
+   "episode_title": "The non-Stinky Car",
+   "episode_url": "https://theamphour.com/662-the-non-stinky-car/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "attribution_reliable was not trusted. ep220 labels the satellite guest's description of his own spacecraft as 'Dave Jones'; the speaker could not be resolved with confidence and that claim carries speaker: null.",
+  "ep384, ep425, ep458, ep584 and ep645 label host questions with the guest's name; only material unambiguously the guest's own was used.",
+  "ep645 records Dave Jones's own account of part selection inside a guest interview and is attributed to him by content.",
+  "Passing remarks about temperature units, thermal cameras and home automation preferences were excluded as non-transferable."
+ ],
+ "capped": false
+}

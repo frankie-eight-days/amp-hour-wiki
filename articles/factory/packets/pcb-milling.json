@@ -1,0 +1,827 @@
+{
+ "concept": "pcb-milling",
+ "name": "PCB Milling",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "pcb-milling",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "board-milling",
+   "pcb-milling"
+  ],
+  "children": [
+   "cnc-router",
+   "copper-clad-board"
+  ],
+  "neighbors": {
+   "milling-machine": 5,
+   "othermill": 5,
+   "pcb-milling-machine": 4
+  },
+  "episodes_with_kept_mentions": 53,
+  "mentions_kept": 111,
+  "pins_final": 75,
+  "capped": false,
+  "total_available": 75
+ },
+ "claims": [
+  {
+   "claim_text": "Laser ablation of copper-clad board is complicated by heat conduction: copper spreads the incident energy across the plane instead of confining it to the spot being burned away.",
+   "quote_verbatim": "because the heat would possibly disperse through the copper plane, rather than burn out a little spot",
+   "speaker": "Dave Jones",
+   "episode": 26,
+   "episode_title": "The Ben & Jeri Show",
+   "episode_url": "https://theamphour.com/the-amp-hour-26-the-ben-jeri-show/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Laser-based board prototyping machines substitute a focused beam for the spinning routing bit, ablating copper and cutting the FR-4 outline instead of mechanically removing it.",
+   "quote_verbatim": "there's a laser-based one where you cut out the copper board or cut out the FR-4 kind of stuff with the laser instead of with a drill, a routing bit",
+   "speaker": "Chris Gammell",
+   "episode": 28,
+   "episode_title": "Bowie and The Brown Note",
+   "episode_url": "https://theamphour.com/the-amp-hour-28-bowie-and-the-brown-noise/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Once cheap offshore fabs offered week-turnaround double-sided boards with plated through holes and solder mask for around sixteen dollars, the economic case for making boards yourself largely disappeared.",
+   "quote_verbatim": "when you can get your circuit prototyped in, you know, like in, in a week turnaround in, you know, double-sided play through solder mask. Why would you make your own boards?",
+   "speaker": "Dave Jones",
+   "episode": 33,
+   "episode_title": "Bob Widlar, Electronic Design, FIRST Robotics - Monday, Meta Monday",
+   "episode_url": "https://theamphour.com/the-amp-hour-33-monday-meta-monday/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Cheap fabricated boards still need incoming inspection; a batch delivered with a short between two tracks shows that low unit price shifts verification onto the buyer.",
+   "quote_verbatim": "One of them had, um, a short between two of the tracks",
+   "speaker": "Dave Jones",
+   "episode": 33,
+   "episode_title": "Bob Widlar, Electronic Design, FIRST Robotics - Monday, Meta Monday",
+   "episode_url": "https://theamphour.com/the-amp-hour-33-monday-meta-monday/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Home board fabrication splits into two families: wet chemical etching, and mechanical copper routing on a milling machine, which avoids handling chemicals.",
+   "quote_verbatim": "if you're doing chemical etching, you can do that at home, too, which has got its own bit of coolness. Or if you're doing, not chemical etching, but, you know, like copper routing",
+   "speaker": "Chris Gammell",
+   "episode": 49,
+   "episode_title": "Analog Devices, Design Spark - Unusual Usenet Usurpation",
+   "episode_url": "https://theamphour.com/the-amp-hour-49-unusual-usenet-ursurpation/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A mill can machine isolated circular pads out of bare copper-clad stock, producing the solderable islands used in Manhattan construction.",
+   "quote_verbatim": "They've actually machined out little, uh, circles on bare board. Right. And so then you can solder to that and that's used a lot in Manhattan construction technique",
+   "speaker": "Dave Jones",
+   "episode": 106,
+   "episode_title": "Tektronix, ChipReport.tv, & the Signal Path - Temperative Tegmen Temperature",
+   "episode_url": "https://theamphour.com/the-amp-hour-106-temperative-tegmen-temperature/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Cutting only islands leaves the surrounding copper intact, so the uncut area still serves as a continuous ground plane for dead-bug builds and signal integrity.",
+   "quote_verbatim": "you can also still use the, you know, the main, the non cutout part as your ground plane for, you know, like dead bug",
+   "speaker": "Dave Jones",
+   "episode": 106,
+   "episode_title": "Tektronix, ChipReport.tv, & the Signal Path - Temperative Tegmen Temperature",
+   "episode_url": "https://theamphour.com/the-amp-hour-106-temperative-tegmen-temperature/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Holes must be drilled before the isolation routing pass; routing the annular ring first leaves a thin unsupported pad that the drill tears off the substrate.",
+   "quote_verbatim": "If you do that first and then you try and drill in the middle of the lollipop, it'll just rip that trace right up.",
+   "speaker": null,
+   "episode": 111,
+   "episode_title": "DIP projects, OSHW & Trade Booths - Demonstrative DIP Dacrygelosis",
+   "episode_url": "https://theamphour.com/the-amp-hour-111-demonstrative-dip-dacrygelosis/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "PCB milling removes copper mechanically with a small rotating bit rather than dissolving it, which is why it needs no chemistry.",
+   "quote_verbatim": "PCB milling machine, right? It's a little drill bit. You just cut out the copper clad.",
+   "speaker": "Chris Gammell",
+   "episode": 111,
+   "episode_title": "DIP projects, OSHW & Trade Booths - Demonstrative DIP Dacrygelosis",
+   "episode_url": "https://theamphour.com/the-amp-hour-111-demonstrative-dip-dacrygelosis/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Milling trades chemical mess for particulate mess: the process throws fiberglass and copper dust around the machine and the room.",
+   "quote_verbatim": "It's bad enough with the milling machine with all the fiberglass dust and shit around it.",
+   "speaker": "Chris Gammell",
+   "episode": 111,
+   "episode_title": "DIP projects, OSHW & Trade Booths - Demonstrative DIP Dacrygelosis",
+   "episode_url": "https://theamphour.com/the-amp-hour-111-demonstrative-dip-dacrygelosis/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Professional-grade LPKF board plotters cost on the order of forty thousand dollars, which is why the demand was for a low-cost machine rather than the established product.",
+   "quote_verbatim": "When I have 40 grand sitting around, I will go straight to LPKF.",
+   "speaker": null,
+   "episode": 111,
+   "episode_title": "DIP projects, OSHW & Trade Booths - Demonstrative DIP Dacrygelosis",
+   "episode_url": "https://theamphour.com/the-amp-hour-111-demonstrative-dip-dacrygelosis/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "General-purpose CNC machines only produce usable copper-clad boards at the high end of the spec range; a low-end machine will not do the job.",
+   "quote_verbatim": "Oh, they're okay machines, but you've got to have a high spec one.",
+   "speaker": "Dave Jones",
+   "episode": 120,
+   "episode_title": "Prototyping, Machining & Accelerators- Mugwumps Mulling Milling",
+   "episode_url": "https://theamphour.com/the-amp-hour-120-mugwumps-mulling-milling/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Purpose-built desktop PCB mills such as the Other Mill emerged as a distinct product category from general CNC routers, designed to do nothing but cut boards.",
+   "quote_verbatim": "It's only meant to be a PCB mill. And it's called the Other Mill.",
+   "speaker": "Chris Gammell",
+   "episode": 145,
+   "episode_title": "PCB Mills, SDR and Oscilloscopes - Flaunting Furbelow Fanciness",
+   "episode_url": "https://theamphour.com/the-amp-hour-145-flaunting-furbelow-fanciness/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A turnkey PCB mill removes the setup burden of a generic CNC, which must be assembled, trammed and aligned before it will cut accurately.",
+   "quote_verbatim": "I had to put my mill together. I had to tram it. I had to, you know, I had to actually align and everything.",
+   "speaker": "Chris Gammell",
+   "episode": 145,
+   "episode_title": "PCB Mills, SDR and Oscilloscopes - Flaunting Furbelow Fanciness",
+   "episode_url": "https://theamphour.com/the-amp-hour-145-flaunting-furbelow-fanciness/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A desktop PCB mill is worth it only if the work fits its small envelope, roughly four by five inches, and speed matters more than board quality.",
+   "quote_verbatim": "you think you can get by with four by five PCBs and you have a need for fast stuff, then yeah, go for it",
+   "speaker": "Chris Gammell",
+   "episode": 145,
+   "episode_title": "PCB Mills, SDR and Oscilloscopes - Flaunting Furbelow Fanciness",
+   "episode_url": "https://theamphour.com/the-amp-hour-145-flaunting-furbelow-fanciness/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Drawing a board outline or internal cutout as a single wide trace, rather than tracing its perimeter, is easier to edit and yields the rounded internal corners a router bit naturally produces.",
+   "quote_verbatim": "if you're just drawing a single line, that's a hundred mils wide, then you not only get the, the, the rounded edges, which is good for like a milling machine like they use",
+   "speaker": "Chris Gammell",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Because fabs interpret outline data inconsistently, a common convention is to draw the inside dimension as the routing line and state that convention explicitly in the fab notes.",
+   "quote_verbatim": "I've typically used, uh, like the inside dimension as the routing line and said somewhere in the fab notes",
+   "speaker": null,
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Having an LPKF board plotter on site collapses the design loop to a single evening, letting a small design be laid out, cut and assembled in one session.",
+   "quote_verbatim": "they actually cut it on site and then you actually manufacture it. And so, like, these are smaller designs, but, like, that's awesome. I mean, like, single night design iteration.",
+   "speaker": "Chris Gammell",
+   "episode": 166,
+   "episode_title": "Prior Art, Wafer Fabs and Guns - Whimsical Wafer Waffling",
+   "episode_url": "https://theamphour.com/166-prior-art-wafer-fabs-and-guns-whimsical-wafer-waffling/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A CNC routed board is missing the two features that make a fabricated board convenient: plated through holes and solder mask.",
+   "quote_verbatim": "then it doesn't do nice plate through holes and it doesn't do solder mask and all that",
+   "speaker": "Dave Jones",
+   "episode": 176,
+   "episode_title": "Funding New/Manufacturing Old Projects - Radical Robotic Requisition",
+   "episode_url": "https://theamphour.com/176-funding-newmanufacturing-old-projects-radical-robotic-requisition/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "For simple single-sided analog work such as an op-amp circuit, a milled board can go from layout to finished part in about two hours.",
+   "quote_verbatim": "if you're doing like a, if you're doing a simple op amp circuit, you know, I can crank out a board in two hours",
+   "speaker": "Dave Jones",
+   "episode": 176,
+   "episode_title": "Funding New/Manufacturing Old Projects - Radical Robotic Requisition",
+   "episode_url": "https://theamphour.com/176-funding-newmanufacturing-old-projects-radical-robotic-requisition/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Small CNC router tables have very little Z travel, on the order of one or two inches, which suits them to wide flat planar work like cutting copper-clad boards.",
+   "quote_verbatim": "It doesn't actually raise that much, maybe like one or two inches, but, but basically it's great for these plain, large planer things",
+   "speaker": "Chris Gammell",
+   "episode": 199,
+   "episode_title": "The 2014 Maker Faire Show - Traveling Technology Trangam",
+   "episode_url": "https://theamphour.com/199-the-2014-maker-faire-show-traveling-technology-trangam/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Fab labs standardise on milling for circuit boards because it is fast, accepting that the process cannot produce complex boards.",
+   "quote_verbatim": "the way that people in Fab Lab like making circuit boards is by milling them. You don't get a whole \u2013 you can't make very complex circuit boards that way. But it's a really fast process.",
+   "speaker": "Nadya Peek",
+   "episode": 208,
+   "episode_title": "An Interview With Nadya Peek - Gallant Gcode Gerontology",
+   "episode_url": "https://theamphour.com/208-an-interview-with-nadya-peek-gallant-gcode-gerontology/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The commercial circuit board mill sold into fab labs was judged the worst machine in the lab on cost per unit of output, which motivated building modular replacements.",
+   "quote_verbatim": "the circuit board mill that was being sold in the Fab Lab was the one that we thought was most expensive per unit output",
+   "speaker": "Nadya Peek",
+   "episode": 208,
+   "episode_title": "An Interview With Nadya Peek - Gallant Gcode Gerontology",
+   "episode_url": "https://theamphour.com/208-an-interview-with-nadya-peek-gallant-gcode-gerontology/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The toolchain for milling a board runs Gerber output through a converter that emits G-code, which is what actually drives the router's XY motion.",
+   "quote_verbatim": "it'll convert it'll convert a uh gerber straight to g-code so the g-code is actually what controls the the xy movement of the of the router",
+   "speaker": "Chris Gammell",
+   "episode": 223,
+   "episode_title": "Space Difficulties and Lost Heroes - Wanzing Workshop Whemmle",
+   "episode_url": "https://theamphour.com/223-space-difficulties-and-lost-heroes-wanzing-workshop-whemmle/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Running a board job without the correct milling bits on hand ends the job early, because the wrong bits break during the cut.",
+   "quote_verbatim": "the big problem was i broke all my drill bits",
+   "speaker": "Chris Gammell",
+   "episode": 223,
+   "episode_title": "Space Difficulties and Lost Heroes - Wanzing Workshop Whemmle",
+   "episode_url": "https://theamphour.com/223-space-difficulties-and-lost-heroes-wanzing-workshop-whemmle/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The common cheap Chinese CNC engravers sold as the 3020 and 3040 differ mainly in bed size, the 3040 being roughly A3.",
+   "quote_verbatim": "There's a 3020 and a 3040, which are \u2013 the 3040, it's about an A3 size.",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A machine sold as an engraver has only about 15 mm of vertical travel, which rules out tall stock but is irrelevant for cutting PCB outlines, where it works very well.",
+   "quote_verbatim": "It's designed really as an engraver, so the vertical travels only about 15 millimeters. But for things like cutting PCB outlines, it is brilliant.",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A small CNC pays for itself on jigs and fixtures as much as on boards; drilling twenty holes at an exact pitch is nearly impossible by hand but takes minutes on the machine.",
+   "quote_verbatim": "I had to do a test jig where all I wanted was like 20 holes at an exact pitch.",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Cheap laser cutters have failed not on the optics but on the motion control, with a parallel-port 8051 controller stalling mid-job and leaving the beam burning the workpiece.",
+   "quote_verbatim": "you'd get halfway through the job and then just stop and set fire to the piece with the laser on",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A milling machine covers a wider range of materials than a laser cutter, since only a small handful of materials can be lasered without producing dangerous fumes.",
+   "quote_verbatim": "Laser cutting is only really a small handful of materials you can cut without gassing yourself",
+   "speaker": "Mike Harrison",
+   "episode": 224,
+   "episode_title": "Meracious Mike Manuduction",
+   "episode_url": "https://theamphour.com/224-meracious-mike-manuduction/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "For the narrow purpose of fast prototype boards, an FR-4 milling machine remains a defensible choice over other in-house fabrication methods.",
+   "quote_verbatim": "I still reckon that the milling machine, the FR4 milling machine is still the way to go. If you want quick protos",
+   "speaker": "Dave Jones",
+   "episode": 236,
+   "episode_title": "Questioning Everyday Prototyping - Verrucose Vehicle Vitilitigation",
+   "episode_url": "https://theamphour.com/236-questioning-everyday-prototyping-verrucose-vehicle-vitilitigation/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Designing milled boards to 8 mil trace and 8 mil space leaves enough margin for roughly a 90 to 95 percent first-pass success rate.",
+   "quote_verbatim": "I normally use, like, 8 mil, trace width, 8 mil spacing just because it's, it has, like, enough margin that I can guarantee, like, around, like, almost, like, a 90, 95% success rate",
+   "speaker": "Akiba",
+   "episode": 245,
+   "episode_title": "An interview with Akiba from Freaklabs - Dimissory Diagraphical Debt",
+   "episode_url": "https://theamphour.com/245-an-interview-with-akiba-from-freaklabs-dimissory-diagraphical-debt/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A practical division of labour is to mill boards only for evaluating unfamiliar ICs and developing drivers, then order fabricated boards once the design is understood.",
+   "quote_verbatim": "PCB milling is mainly to test out ICs. And so, like, just so I can get a feel for what they behave like",
+   "speaker": "Akiba",
+   "episode": 245,
+   "episode_title": "An interview with Akiba from Freaklabs - Dimissory Diagraphical Debt",
+   "episode_url": "https://theamphour.com/245-an-interview-with-akiba-from-freaklabs-dimissory-diagraphical-debt/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The mechanical figures of merit for a board-cutting CNC are frame rigidity and the flatness of the bed, since both set how consistently depth of cut is held across the workpiece.",
+   "quote_verbatim": "what it comes down to for CNC is this rigidity and then flatness of your bed",
+   "speaker": "Chris Gammell",
+   "episode": 251,
+   "episode_title": "Shifting Away From DIY - Pedetentious PnP Progress",
+   "episode_url": "https://theamphour.com/251-shifting-away-from-diy-pedetentious-pnp-progress/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Across milling, additive printing and acid etching, the differentiator between home fabrication systems is the software tool flow rather than the physical mechanism.",
+   "quote_verbatim": "what it comes down to is software tool flows, right? Because even if you're etching with, you know, with the acid, you still need to make sure your tool flows are good",
+   "speaker": "Chris Gammell",
+   "episode": 251,
+   "episode_title": "Shifting Away From DIY - Pedetentious PnP Progress",
+   "episode_url": "https://theamphour.com/251-shifting-away-from-diy-pedetentious-pnp-progress/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Desktop milling is generally restricted to soft FR-1 substrate, whereas additive printing processes can work directly on FR-4 and G10.",
+   "quote_verbatim": "a lot of milling is only FR-1 because that is. Yeah, we use FR-4 and G10.",
+   "speaker": null,
+   "episode": 260,
+   "episode_title": "An interview with Ariel Briner of Cartesian Co",
+   "episode_url": "https://theamphour.com/260-an-interview-with-ariel-briner-of-cartesian-co/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "RF circuits are among the hardest to synthesize with confidence, so the main value of an in-house rapid board process is empirically testing whether the design behaves as predicted.",
+   "quote_verbatim": "one of the advantages to having a rapid prototyping machine is that you can actually test whether or not it works the way you think that it's going to work",
+   "speaker": "Ariel Briner",
+   "episode": 260,
+   "episode_title": "An interview with Ariel Briner of Cartesian Co",
+   "episode_url": "https://theamphour.com/260-an-interview-with-ariel-briner-of-cartesian-co/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The Other Mill's practical feature size was around a 10 mil limit, and claims of 7 mil on comparable machines were treated as unproven until demonstrated.",
+   "quote_verbatim": "we were discussing the 10 mil limit that's on other mil",
+   "speaker": "Dave Jones",
+   "episode": 275,
+   "episode_title": "No One Even Missed Us?",
+   "episode_url": "https://theamphour.com/275-no-one-even-missed-us/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Because modern package footprints keep shrinking rather than growing, a mill limited to coarse geometry forces every new part onto a breakout board first.",
+   "quote_verbatim": "any of the new footprints, it's like, no, I mean, like, footprints aren't getting bigger. So, you at least need to have a breakout then.",
+   "speaker": "Dave Jones",
+   "episode": 275,
+   "episode_title": "No One Even Missed Us?",
+   "episode_url": "https://theamphour.com/275-no-one-even-missed-us/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A milled board is electrically different from an etched one because isolation routing leaves all the unused copper in place instead of removing it.",
+   "quote_verbatim": "they don't etch away all the dead copper",
+   "speaker": "Dave Jones",
+   "episode": 275,
+   "episode_title": "No One Even Missed Us?",
+   "episode_url": "https://theamphour.com/275-no-one-even-missed-us/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The practical objections to in-house milling are that the machines are slower than expected, messy, and loud enough to be unpleasant in a shared workspace.",
+   "quote_verbatim": "The issue with milling machines is that they're not actually that quick and they're messy, they're noisy.",
+   "speaker": "Dave Jones",
+   "episode": 275,
+   "episode_title": "No One Even Missed Us?",
+   "episode_url": "https://theamphour.com/275-no-one-even-missed-us/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Where an additive inkjet-style process is used, a solder mask layer can in principle be deposited as a final step, something subtractive milling cannot do.",
+   "quote_verbatim": "if you're doing something like a inkjet style, you also, in theory, would be able to lay down a layer of solder mask at the end",
+   "speaker": "Chris Gammell",
+   "episode": 275,
+   "episode_title": "No One Even Missed Us?",
+   "episode_url": "https://theamphour.com/275-no-one-even-missed-us/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Some lower-end CAD packages cannot emit a proper milling path for board outlines and instead fall back on a deprecated encoding that expresses the cut as a dense sequence of drill hits.",
+   "quote_verbatim": "some of the lower end packages, they can't do a proper milling path. I mean they just can't do it. They'll use a very, very deprecated style of just defining two drill hits",
+   "speaker": "Jonathan Hirschman",
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Clean Excellon milling paths are the industry-standard way to hand routing data to a board house, and requests to supply outlines in proprietary formats should be resisted.",
+   "quote_verbatim": "we give folks absolutely airtight Exelon milling paths",
+   "speaker": "Jonathan Hirschman",
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The decision to buy a board mill reduces to a crossover calculation: divide the machine price by the price of an overnight fabricated board and ask how long it takes to reach that many urgent jobs.",
+   "quote_verbatim": "take the cost of the machine. Look at the cost of however many overnight boards you can get for that. Same cost. And how soon are you going to do the crossover",
+   "speaker": "Chris Gammell",
+   "episode": 341,
+   "episode_title": "All the way with DLJ",
+   "episode_url": "https://theamphour.com/341-all-the-way-with-dlj/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Before prototype board services existed, a commercially fabricated board cost eight hundred to a thousand dollars and took two weeks, which is why in-house etching could turn a board around in a single day.",
+   "quote_verbatim": "it'd cost you 800 or a thousand bucks to get your board made. It'd take two weeks.",
+   "speaker": "Dave Jones",
+   "episode": 341,
+   "episode_title": "All the way with DLJ",
+   "episode_url": "https://theamphour.com/341-all-the-way-with-dlj/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The recurring setup difficulty in board milling is establishing Z height and ensuring the stock is flat, since cut depth must be held across the whole panel.",
+   "quote_verbatim": "it's always like dialing in the Z height and then making sure it's like nice and flat",
+   "speaker": "Chris Gammell",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Isolation routing only cuts an outline around each conductor, so the board is left as a sea of copper and is easy to short accidentally.",
+   "quote_verbatim": "In the case of circuit board milling, you're just outlining, basically. So there's still tons of copper there, so you could short it pretty easily.",
+   "speaker": "Chris Gammell",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The difficult parts of a milled board are not the traces but registering the drill hits to the routed pattern and forming vias by hand.",
+   "quote_verbatim": "the hard part is aligning drills and then setting up, doing your own vias",
+   "speaker": "Chris Gammell",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Desktop board mills use FR-1 rather than FR-4 because the glass fibre in FR-4 destroys cutting bits.",
+   "quote_verbatim": "These things use FR1 instead of FR4.",
+   "speaker": "Chris Gammell",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "FR-4's fiberglass reinforcement is abrasive enough to consume every bit put through it, which is why cheaper machines avoid the material.",
+   "quote_verbatim": "FR4 is fiberglass, right? And that stuff just chews up every bit because...",
+   "speaker": "Dave Jones",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A later-generation desktop mill was marketed as taking Gerber files directly and producing double-sided boards at six thou trace and space.",
+   "quote_verbatim": "You just throw in your Gerber file and double-sided boards with six thou, you know, trace and space.",
+   "speaker": "Chris Gammell",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The buy-versus-outsource arithmetic for a desktop mill compares a machine costing around two thousand dollars against overnight fabricated turns at under two hundred dollars each.",
+   "quote_verbatim": "if there's sub $200 for an overnight turn, right? And this thing costs $2,000, right?",
+   "speaker": "Chris Gammell",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A milled board is missing plating, solder mask and silkscreen entirely, so it cannot substitute for a finished board with controlled impedance, fine spacing, or four to six layers.",
+   "quote_verbatim": "These things aren't plated through. They've got no solder mask, no silk screen, no bloody nothing",
+   "speaker": "Dave Jones",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Milled prototypes mislead on RF designs because the substrate and geometry give different impedances than the fabricated board that will follow.",
+   "quote_verbatim": "if you're doing anything like RF-based, all of your impedances are different",
+   "speaker": "Dave Jones",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A shared board mill only works if someone is assigned to operate it, and that staffing cost is only justified at volumes such as a busy school makerspace.",
+   "quote_verbatim": "the feedback I got was be prepared to have someone kind of running the machine",
+   "speaker": "Chris Gammell",
+   "episode": 345,
+   "episode_title": "Milling About",
+   "episode_url": "https://theamphour.com/show-345-milling-about/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "No amount of software polish changes the underlying physics: a spinning bit is being pushed into copper, with all the tooling and depth constraints that implies.",
+   "quote_verbatim": "it's still milling. Good luck. There's a drill bit coming down, it spins, and it cuts copper.",
+   "speaker": "Chris Gammell",
+   "episode": 367,
+   "episode_title": "Not Reely An Issue",
+   "episode_url": "https://theamphour.com/367-not-reely-an-issue/",
+   "depth_regraded": "opinion",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Desktop board mills sell largely to software-background engineers importing an iterate-fast habit into hardware.",
+   "quote_verbatim": "They see hardware and they go, I need to iterate faster.",
+   "speaker": "Chris Gammell",
+   "episode": 373,
+   "episode_title": "Pedantic or Andrantic",
+   "episode_url": "https://theamphour.com/373-pedantic-or-andrantic/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Current desktop mills cannot hold five mil trace and five mil space, but remain capable across a wide range of coarser designs.",
+   "quote_verbatim": "You can't do. You know. A five mil. Five space. Thing on. Another mill. Or Bantam tool.",
+   "speaker": "Chris Gammell",
+   "episode": 382,
+   "episode_title": "The Toggle Boggle",
+   "episode_url": "https://theamphour.com/382-the-toggle-boggle/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "In-house board fabrication persists at firms whose contracts forbid sending Gerbers out, because outsourcing exposes the design to reverse engineering.",
+   "quote_verbatim": "you can't just send your Gerbers out because then, you know, they can reverse engineer your Gerbers",
+   "speaker": null,
+   "episode": 406,
+   "episode_title": "Nerds In A Corner",
+   "episode_url": "https://theamphour.com/406-nerds-in-a-corner/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "RF boards are the clearest remaining case for milling, since they are often mostly ground plane and therefore need very little copper removed.",
+   "quote_verbatim": "RF boards is a classic case because they're mostly, like, they're often mostly ground plane",
+   "speaker": "Chris Gammell",
+   "episode": 406,
+   "episode_title": "Nerds In A Corner",
+   "episode_url": "https://theamphour.com/406-nerds-in-a-corner/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Solder mask can be added to a milled board by coating the finished copper and then milling the mask away over the pads, giving mask openings without photoimaging.",
+   "quote_verbatim": "So they applied the solder mask on top after doing the actual milled PCB piece. And then they're milling out the solder mask to expose the copper beneath it.",
+   "speaker": "Dave Jones",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Milling the mask rather than photoimaging it keeps the whole process dry, which is the point of choosing milling over etching in the first place.",
+   "quote_verbatim": "You don't want to get the chemicals out and do your photo imageable solder mask, right? That's just kind of defeating the purpose. So you want to mill that too.",
+   "speaker": "Chris Gammell",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Solder mask matters on a milled board because it provides insulation between the part and the surrounding copper, making it the first capability to add after the mill itself.",
+   "quote_verbatim": "usually the solder mask is kind of the next thing that you want to have some kind of insulation between your part and your board",
+   "speaker": "Chris Gammell",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A desktop mill turns a KiCad layout into a tested board in about twenty minutes single-sided or roughly an hour double-sided, against a week or two for an outside shop.",
+   "quote_verbatim": "I could very quickly turn around a board, push it in the key cad, mill it, you know, 20 minutes later. You know, I was doing double-sided for the most part. So maybe it's an hour.",
+   "speaker": "Mike Grover",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The engineering value of a mill is the number of failed boards it permits; cheap wrong boards teach grounding and shorting mistakes that a single yearly fabricated board never surfaces.",
+   "quote_verbatim": "the mill allowed me to make so many bad circuit boards to the point that, you know, oh, this shouldn't, you know, this pin needs to be grounded",
+   "speaker": "Mike Grover",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "An enclosed mill plus vacuum extraction is the health-relevant configuration when cutting FR-4, which liberates glass dust that must not be inhaled.",
+   "quote_verbatim": "further helps for FR4, which is going to produce a lot of glass dust, which you don't want to inhale",
+   "speaker": "Mike Grover",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The used market lowers the entry price substantially: a four or five year old desktop board mill went for about nine hundred dollars against roughly two thousand for current models.",
+   "quote_verbatim": "I got a used, uh, like four or five year old modern model for about 900 bucks.",
+   "speaker": "Mike Grover",
+   "episode": 454,
+   "episode_title": "An Interview with MG (Mike Grover)",
+   "episode_url": "https://theamphour.com/the-amp-hour-454-mike-grover/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A dedicated desktop board mill is essentially a miniaturised metal-working CNC mill with a much faster spindle, suited to shallow cuts in soft substrate.",
+   "quote_verbatim": "this is basically a much miniaturized version of it and faster spindle",
+   "speaker": "Chris Gammell",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "G-code is the low-level command language positioning the milling bit in three dimensions, and the toolchain's job is decomposing Gerber geometry into those moves.",
+   "quote_verbatim": "basically G-code is the way that you tell a controller where your, you know, your milling bit is supposed to go in 3D space",
+   "speaker": "Chris Gammell",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Curved traces have no native representation in the generated tool path and are approximated by thousands of tiny straight segments.",
+   "quote_verbatim": "And it couldn't do curves. It could, a curve, it'd break down into little micro steps.",
+   "speaker": "Chris Gammell",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The Gerber format's apertures are a survival of photoplotters that exposed film through physical wheels of different sized holes on an XY bed, limiting designers to the trace widths a wheel provided.",
+   "quote_verbatim": "you would actually have these wheels with different size holes, different apertures in them, and that would expose the light through, and then you'd have an XY bed",
+   "speaker": "Dave Jones",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The tool path must be generated for the exact bit geometry in the spindle; running a path computed for a 50 degree V-bit with a 20 degree bit ruins the board.",
+   "quote_verbatim": "if you tell it, you've got a 50 degree angle bit and you've only got a 20 degree angle bit, your board's going to be screwed",
+   "speaker": "Dave Jones",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Getting good milled boards means adapting the CAD layout to suit the process and then getting the stock genuinely flat and dialled in, not just running the default flow.",
+   "quote_verbatim": "it's about like tweaking KiCad or whatever your CAD program is to make a board that actually is friendly for this process",
+   "speaker": "Chris Gammell",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Some CAD tools have no native slotted-hole primitive, so the standard workaround is to define the slot on the milling layer for the fab to route.",
+   "quote_verbatim": "I believe in Eagle, for example, we need to use the milling, you know, the milling layer because there isn't like an actual slotted hole element",
+   "speaker": "Natasha Baker",
+   "episode": 531,
+   "episode_title": "Footprints and Symbols with Natasha Baker",
+   "episode_url": "https://theamphour.com/531-footprints-and-symbols-with-natasha-baker/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Board milling can be done on machines costing around 150 dollars, far below the price of purpose-built PCB mills.",
+   "quote_verbatim": "milling PCBs on, on like 150 bucks",
+   "speaker": "Bitluni",
+   "episode": 673,
+   "episode_title": "Lifelong Learning with Bitluni",
+   "episode_url": "https://theamphour.com/673-lifelong-learning-with-bitluni/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Two-day delivery of fabricated boards for a few dollars removes most of the rationale for investing hundreds in home fabrication equipment.",
+   "quote_verbatim": "you can get bars like within two days or something delivered for a few bucks",
+   "speaker": "Bitluni",
+   "episode": 673,
+   "episode_title": "Lifelong Learning with Bitluni",
+   "episode_url": "https://theamphour.com/673-lifelong-learning-with-bitluni/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Vias on a milled double-sided board can be formed manually by threading enamel wire through the drilled hole and melting solder on both faces.",
+   "quote_verbatim": "he has a Carvera that he uses for like milling the boards on a little desktop CNC and he will actually thread like enamel wire",
+   "speaker": "Stephen Hawes",
+   "episode": 686,
+   "episode_title": "A Benchtop Pick and Place with Stephen Hawes",
+   "episode_url": "https://theamphour.com/686-a-benchtop-pick-and-place-with-stephen-hawes/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  }
+ ],
+ "attribution_notes": [
+  "The dump repeatedly emits the same overlapping text twice with the two host labels swapped (e.g. indices [3]/[4] ep=49, [7]/[8] ep=111, [13]/[14] ep=145, [17]/[18] ep=176, [50]/[51] ep=345, [64]/[65] ep=454). I attributed by content: first-person accounts of owning/assembling a benchtop mill, tramming it, blowing FR1 dust into his own face, and running Bantam/Other Mill loaners are Chris Gammell; first-person accounts of etching boards commercially in the early 90s and of cranking out op-amp boards on a mill at work are Dave Jones.",
+  "ep=111: the '40 grand' LPKF line and the drill-holes-first explanation appear under both host labels in adjacent passages; the content does not identify the speaker unambiguously, so speaker is null.",
+  "ep=120: the passage is labelled Chris Gammell, but the reply 'Oh, they're okay machines, but you've got to have a high spec one' answers Chris's own question about his CNC purchase, so I attributed it to Dave Jones.",
+  "ep=162: labelled Chris Gammell with guest Jeff Kaiser. The KiCad wide-outline-line technique and the 'inside dimension as the routing line' habit are told in the first person by the person who drew the boards being held up; I kept Chris Gammell for the KiCad line and used null for the fab-notes routing convention, which could belong to either.",
+  "ep=176: the plate-through/solder-mask limitation and the two-hour op-amp board both appear under both labels; the workplace anecdote ('that's what I always used them for') is Dave Jones.",
+  "ep=260: the FR-1-versus-FR-4 exchange crosses a speaker boundary mid-passage (host observation plus Ariel Briner's 'we use FR-4 and G10'), so speaker is null; the RF-synthesis argument is Ariel Briner's own product rationale.",
+  "ep=275: 'I would prefer to have a proper chemically etched homemade board than a milled board' is labelled Dave Jones and matches his long-standing home-etching practice, so kept.",
+  "ep=341 is flagged ATTRIB-UNRELIABLE. The cost-crossover advice is introduced as 'this friend, he recommended', continuing Chris Gammell's story from the previous passage about his workspace considering a mill, so I attributed it to Chris Gammell despite the Dave Jones label. The early-90s in-house etching history in the same passage is unambiguously Dave Jones.",
+  "ep=345: 'FR4 is fiberglass, right? And that stuff just chews up every bit' is labelled Dave Jones and follows Chris's FR1 discovery, so kept as Dave Jones; the Other Mill Pro spec description and the $200/$2000 crossover arithmetic are Chris Gammell.",
+  "ep=373: 'I would use it for jewelry and fun things, but not, not for boards' answers Chris's theory about the Other Mill and reads as the other host, so speaker is null.",
+  "ep=406: the in-house-IP rationale and the 16-layer remark read as Dave Jones describing defence/secure customers, but the passage is labelled Chris Gammell and the turns interleave, so speaker is null for that claim.",
+  "ep=462: passages [70]/[71] are labelled Chris Gammell, but the Gerber aperture-wheel history ('40 plus years ago') is Dave Jones's recollection; the G-code and process-tuning material is Chris Gammell describing his Bantam loaner.",
+  "ep=531 is flagged ATTRIB-UNRELIABLE; the Eagle milling-layer detail is Natasha Baker describing SnapEDA's own exporters, which matches the label.",
+  "ep=673: the speaker label reads 'Bitluni' and the guest field reads 'Matthias'; these are the same person, attributed as Bitluni."
+ ],
+ "capped": false
+}

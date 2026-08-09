@@ -1,0 +1,175 @@
+---
+title: ARM
+concept: arm
+generated: 2026-08-09
+model: k3
+spec: knowledge-only-v4-cluster
+---
+
+ARM is a family of reduced instruction set computer (RISC) processor architectures and the company that licenses them as semiconductor intellectual property. The architecture descends from the Acorn computers of the 1980s — the name originally stood for Acorn RISC Machine — rather than from any of the established microprocessor houses.[24][103][720] ARM sells cores rather than silicon: no processor can be purchased from ARM itself, and nominally the same core can be bought from around twenty different chip vendors.[106] By the early 2010s ARM held roughly 85 percent of the mobile processor market while Intel had shipped essentially nothing into phones.[100] By 2014 the cumulative installed base of ARM-powered chips had reached roughly 50 billion, with about 10 billion shipped in 2013 alone.[188]
+
+## History
+
+ARM's first designs shipped inside Acorn's BBC Micro, and the part began as a captive product: the only way to obtain the chip was to buy the computer it sat inside.[720][103] The company then spent decades selling only intellectual property before shipping a chip of its own.[720]
+
+The architecture's naming splits into architecture versions and core families: ARMv7 is the architecture from which the Cortex families derive, while ARMv8 introduced the 64-bit generation.[378] In the early 2010s, FPGA vendors moved back toward hard silicon by embedding ARM cores, transceivers, UARTs and other microcontroller peripherals into their fabrics, after the prediction that cheap FPGAs would displace microcontrollers failed to materialise.[98]
+
+ARM historically required lengthy negotiations before a prospective licensee could even see the HDL for a core; it later published downloadable Cortex-M0 and Cortex-M3 source licensed for evaluation and integration, though not for use in a shipped ASIC, so that customers could begin integrating while contracts were still being argued.[374] Chinese ownership rules blocking foreign majority control forced ARM to spin its China operation into a separate company that is not part of ARM proper.[558] A proposed acquisition of ARM by a chip company was blocked on regulatory grounds because so many ARM licensees compete with the would-be acquirer, raising both IP-access and preferential-treatment concerns.[578]
+
+The arrival of the open RISC-V instruction set produced visible competitive responses: ARM registered and operated a site arguing against RISC-V, treating the open ISA as competition, and it opened up custom instruction extensions for embedded cores as a direct answer to customers newly able to build their own processors under an open ISA.[400][462] ARM Limited also lent Arduino the money needed to regain control of that company during an internal takeover fight, an ecosystem investment that carried real risk for the lender.[726]
+
+## Licensing model and economics
+
+ARM's business is licensing processor cores and related IP to chip vendors; it does not manufacture or sell processors itself.[106] Published per-chip royalty rates are startlingly small — fractions of a penny per part in some accounts, and tenths of a cent rather than whole cents in others — with the licensee's cost concentrated in up-front non-recurring engineering.[95][188] Because the royalty is measured in tenths of a cent, enormous unit volumes translate into modest revenue for ARM itself, yet a royalty that looks negligible per unit becomes material at ten million chips, which is part of why a RISC-V consortium functions as leverage on ARM's pricing.[188][642]
+
+Historically ARM was not structured to serve a broad customer base, so an unknown startup had to work through back channels just to find the right people to license a core from.[95] The barrier to small licensees has since been lowered in several ways: ARM will license its IP free until a startup has a system running, and at least one open silicon design platform holds a blanket agreement allowing users to instantiate a Cortex-M0 core and simulate a full system in minutes without contacting ARM, with the RTL kept behind the platform rather than downloadable.[489][503]
+
+Licence structures vary in the protection they offer. A perpetual architecture licence protects the licensee if the architecture owner fails: the rights are bought outright so production continues regardless of the licensor's solvency.[534] The commercial logic of licensing is that a ready-made core removes the need to fund an in-house processor-architecture team.[122] A chip vendor buying ARM outright, conversely, would be funding its own competitors' supply, since those competitors license the same cores.[118] Companies such as Qualcomm and Broadcom build very large ASICs whose value lies in the surrounding blocks wrapped around licensed ARM IP, and handset makers have moved to bring those capabilities in-house.[617]
+
+## Architecture
+
+### RISC character
+
+RISC architectures such as ARM gain efficiency by deleting the transistors and architectural machinery that exist only to support a complex instruction set and backward compatibility.[704] A large fraction of an x86 die area goes to instruction decoding, which is why embedded parts favour RISC-style designs; ARM itself, however, has not been a pure RISC design for a long time despite the name.[374]
+
+### Core families
+
+The Cortex range spans from small microcontrollers to 64-bit application processors. The bottom of the Cortex-M0 range and the top of the ATmega range do not overlap in capability: the smallest M0 already offers more, and a Cortex-M4 adds floating point and DSP instructions.[281] Modern ARM parts allow bootstrap and startup code to be written entirely in C, where older architectures such as ColdFire required hand-written assembly.[356] Modern system-on-chips can mix core classes on one die: a video-mixing SoC, for example, can carry six hard ARM cores split between application processors and real-time cores, combining an A53-class core with Cortex-M-class parts.[532]
+
+### Buses, clocks and memory
+
+AXI, the ARM-originated bus standard used heavily in Xilinx FPGAs, is intricate enough that hand-written Verilog implementations need a vendor verification model to check them; a higher-level HDL with a standard library supplying a pre-verified AXI slave removes most of that work.[469] The chained clock-enabling scheme familiar on ST parts is an ARM-wide consequence of the high-speed and low-speed bus split: each peripheral takes a different clock source and PLLs must be enabled to reach higher frequencies, so a missed enable leaves the peripheral silently dead.[557] On the memory side, obtaining a large physically contiguous block of memory is a genuinely hard kernel problem, which is why Linux on ARM needed the contiguous memory allocator alongside ordinary page allocation.[590] Bus fabric design trades latency against throughput: the RP2040 uses a small fabric tuned for low latency so a peripheral read takes one or two clock cycles, whereas the PCI Express based RP1 fabric trades latency for throughput and a peripheral access can take around ten cycles, which is acceptable under Linux.[648]
+
+### Security
+
+ARM's secure-world design deliberately requires very specific instruction sequences to cross between secure and non-secure state, so that an unintended transition cannot happen by accident.[590] The speculative-execution vulnerabilities disclosed in 2018 affected only specific ARM cores — the Cortex-A8, A9, A17 and R8 — leaving the low-power Cortex-M parts common in connected devices unaffected.[377]
+
+## Toolchain and ecosystem
+
+The decisive advantage of licensing ARM for a new chip is the surrounding tools and middleware ecosystem rather than the core itself; a technically equivalent but less supported core loses on support.[95] Building a processor is the easy part; the hard and valuable part is the compiler, debugger and tool ecosystem around it, which is why proprietary instruction sets are guarded as monopoly assets.[374] Experience licensing a rival architecture confirms the point: licensing a processor architecture is very hard without shipping the compiler and software stack with it, because customers license a solution, not an ISA.[254]
+
+Toolchain maturity, not the instruction set, is what drives architecture selection for risk-averse engineers; the 8051 and ARM toolchains are long proven, which is why engineers stay with them.[489] What buyers of chips actually weigh is whether the tools work, whether they are bug-free, and whether the team already knows them, rather than which core is inside.[116] For someone outgrowing 8-bit Arduino but wanting a hosted environment, ARM's mbed, which covers the Cortex line, is a reasonable next step, though its debugging support is weak.[281] Whether Rust is usable on a given microcontroller comes down to two checks: whether the chip architecture has general toolchain support, and whether crate-level register access exists for that part.[590] The density of ARM-based consumer hardware also makes the architecture a practical target for reverse engineering: mature disassembly tooling plus SWD or JTAG access is enough to patch and reflash firmware on most devices.[463]
+
+Ordinary Linux userspace C code, such as a serial-port utility, needs no knowledge of the underlying architecture and simply rebuilds from x86 to ARM.[378] With mature build systems and hardware abstraction layers in place, day-to-day microcontroller work looks the same on a RISC-V core as on an ARM core; the architecture only surfaces in the toolchain names.[693]
+
+## Competition and alternatives
+
+### x86
+
+Intel's Atom parts out-ran contemporary ARM cores on raw throughput while losing on performance per watt, which is why they were pushed into tasks like HD video that ARM could not carry.[44] At the high end, a 128-core Windows-on-ARM desktop tops the 2024 Cinebench results while only exercising 64 cores, because the benchmark has a defect above 64 cores on ARM that previously also affected high-core-count x86 systems.[651]
+
+### MIPS
+
+Microchip deliberately picked MIPS over ARM for the PIC32 line as a differentiation play, since every competitor was already going ARM; the company's CEO later justified staying off ARM on the grounds that licensees pay an ARM royalty — the "ARM tax" — and get no point of differentiation for it.[95][278] A chip startup that picks a minority architecture burns its customer meetings justifying the architecture instead of selling the part's actual differentiators, which is a real sales cost.[95] Networking equipment remained a large MIPS market well after ARMv8 arrived, so MIPS skills retained commercial demand in that segment.[344] MIPS later abandoned its own architecture and rebased its next generation on the open RISC-V standard.[534]
+
+### 8-bit architectures
+
+The 8051's four register banks make context switching nearly free: a task is assigned a bank and switching means pointing the CPU at another bank, leaving all state in place, so cooperative multitasking fits in a few dozen lines where an ARM or AVR needs far more code.[169] The MSP430 sits below ARM microcontrollers on both power and processing; in one wristwatch build, a radio-integrated MSP430 variant measured around three microamps, giving years of coin-cell life.[442] Cortex-M parts nonetheless became cheap and capable enough that using an 8-bit part in a product that is not extremely price-sensitive is hard to justify when megabytes of memory cost a couple of dollars more.[489] Reaching for an ARM part to blink a couple of LEDs remains overkill when an eight-pin micro does the job, and a three-cent microcontroller is not compelling against a fifty-cent ARM part, because the saving is not an order of magnitude once the tooling burden is counted.[292][412]
+
+### RISC-V
+
+RISC-V is an ISA rather than a processor, with distinct cores implemented against it.[400] Before RISC-V, soft cores from open repositories were either legally encumbered against use in a product that grew large, or maintained by one person with an unmainlined GCC fork years out of date.[467] ARM treated the open instruction set as competition, running a dedicated site against it and later opening custom instruction extensions on its embedded cores in response.[400][462] In selecting IP for new silicon, ARM cores are favoured for being easy to obtain, well tested, well documented and available in genuinely high-performance variants, with no equivalent RISC-V option and a large software-maturity gap behind x86 and ARM.[648]
+
+### Specialised and heterogeneous architectures
+
+General-purpose cores like x86 and ARM excel at running an operating system, but the architectural baggage they carry caps their achievable high-performance math throughput, which is the argument for a specialised parallel core alongside them.[254] On a heterogeneous ARM-plus-accelerator board, the working method is to run the application on the ARM core, identify the bottleneck section, split it into worker threads and dispatch one per accelerator core; the speedup is easy when threads do not communicate and much harder when they do.[254] XMOS built hardware multithreading rather than licensing ARM: silicon that executes several threads concurrently removes the context-switch penalty that breaks a conventional sequential processor under many simultaneous tasks.[102] One approach to speeding up managed-language runtimes is to convert interpreter functions into a hardware-accelerated instruction set rather than executing them sequentially on a general-purpose ARM core, though hardware Java execution engines such as picoJava and the aJ102 had been attempted before and never reached commercial use.[48] The ESP family of Wi-Fi chips uses a Tensilica core rather than ARM and runs FreeRTOS rather than Linux, because roughly half a megabyte of RAM keeps it in embedded territory.[359]
+
+## ARM-based systems
+
+### FPGA SoCs
+
+The Xilinx Zynq pairs a dual ARM Cortex-A9 running around a gigahertz with FPGA fabric plus hard-logic memory controllers for DDR2 and DDR3 and high-speed serial transceivers.[156] In a Zynq the ARM subsystem is a hard IP black box; the FPGA bitstream only configures how that block connects to user logic, so a vendor could in principle substitute a different hard core without changing the bitstream format.[374] A Zynq also boots differently from an ordinary FPGA: the dual Cortex-A9 comes up first over JTAG and the ARM side then brings up the FPGA fabric, so bring-up order is ARM, then debug UART, then U-Boot in boot flash, then Linux.[469]
+
+### Application processors and SoCs
+
+Most application-processor vendors license their graphics IP; Broadcom is unusual in designing its own 3D core in-house, which is what went into the BCM2835 alongside a later-added ARM core.[97] The usual reason to reach for an ARM application processor over a plain microcontroller is the high-level requirements: an operating system, a large graphical display, and networking.[190] For driving a display, a general-purpose ARM part beats a DSP, and some ARM microcontrollers include an LCD controller peripheral outright.[281] Early smartphones were pushed past a gigahertz mainly to render the graphical user interface, and that clock rate directly drove battery drain and thermal load.[48] Early Bluetooth low energy systems-on-chip combined an ARM core, SRAM, baseband, encoding and radio in one part, drawing about 3.8 mA in receive and transmit, and that integration is what made cheap networked sensor nodes practical.[152]
+
+### Microcontrollers and notable parts
+
+The RP2040 is a Cortex-M0 class microcontroller that Raspberry Pi designed itself rather than buying off the shelf, and it is not a Linux-class application processor.[528] Raspberry Pi began selling the RP2040 in reels at 80 cents per unit for 500 pieces and 70 cents for 3,400 pieces, after demand for the bare chip reached tens of thousands of units; adding an Infineon 43439 Wi-Fi part to the RP2040 board raised its price by about two dollars.[574][595] Successive Raspberry Pi generations absorbed external control silicon into the main chips, which lowers overall cost, simplifies the supply chain, and frees increasingly scarce board area.[648] At the extreme low end, a Cortex-M0 was implemented in polymer-based plastic transistors as an ultra-minimal system-on-chip with 128 bytes of RAM and 456 bytes of ROM.[551] GigaDevices ships both a register-compatible STM32F103 clone and a RISC-V part whose name differs by a single letter, so the GD32F103 and GD32VF103 are entirely different architectures.[462]
+
+### Emulation on ARM
+
+When HP could no longer source the original 12C calculator ASIC, the product was rebuilt around an ARM core that emulated the old processor so the untouched original ROM could run, on the reasoning that emulation either works or visibly fails and is far easier to prove correct than reimplementing every financial algorithm.[53] The redesign wrecked battery life because the core was clocked at 30 MHz off a coin cell, drawing current in gulps the cell handles inefficiently.[53]
+
+## Engineering practice around ARM
+
+The claim that ARM lets designers move freely between manufacturers is overstated: changing ARM silicon vendors, or even moving between ARM families from the same vendor, is a substantial engineering effort rather than a drop-in swap, possible but painful in practice.[122][275] Highly integrated modern parts have vendor-proprietary footprints, so there is no second source for the physical package and each part choice becomes one large locked-in decision rather than many small reversible ones.[244] Migrating a product family to ARM to unlock features such as Bluetooth firmware update and SD card support is pure sunk engineering cost, because customers will not pay extra for the architecture change itself.[536]
+
+On the vendor side, moving a proprietary line onto ARM widens the addressable market but collapses unit economics, trading five-dollar parts for fifty-cent parts at near-zero margin, and a vendor that abandons its proprietary cores enters a commodity fight where the only remaining lever is price against half a dozen equally equipped competitors.[122][116] Selling ARM-based microcontrollers is accordingly a low-margin, cutthroat business, and competition among licensees has driven part prices toward fifty cents and below, which undermines the business case for entering the market as yet another supplier.[351][278]
+
+Part selection in this field has converged: where the ARM microcontroller market was once too crowded to choose from, the STM32 became the default pick largely because the surrounding user base had already standardised on it.[455] That concentration creates its own supply risk — the most popular low-end STM32 parts became hard to source precisely because everyone had standardised on them, and during the component shortage STM32 parts were unobtainable at the same time as PIC parts.[412][598] With cheap ARM silicon on every dev board, the community and support around a board has become a stronger selection criterion than its published specifications.[146]
+
+Individual practitioners anchor their own uses of the architecture. On the Mooshimeter, Eric VanWyk's team chose a Cortex-M3 partly because the ecosystem was mature, with roughly seven different vendor compilers to choose from.[218] Gammell selected ARM as the teaching architecture for his embedded course specifically because its longevity was safe enough to make the register-level and peripheral knowledge worth learning.[310] Listing experience with ARM in the abstract is too broad to function as a hiring signal; naming a specific family and toolchain, such as an STM32 F0 or L0 flow, demonstrates immediately usable skill.[565] For a design that is not tightly cost-constrained, a cheap 32-bit ARM part is hard to argue against unless the application specifically needs what programmable logic provides.[492]
+
+## References
+
+| Episode | Title | URL | Date |
+|---|---|---|---|
+| 24 | Solar Cells, SparkFun, TSMC - The Detroit Debunking | https://theamphour.com/the-amp-hour-24-the-detroit-debunking/ |  |
+| 44 | BASIC, Chip companies & Robots - Pernicious Projects, Puppies in Peril | https://theamphour.com/the-amp-hour-44-pernicious-projects-puppies-in-peril/ |  |
+| 48 | Bob Pease, Jim Williams - Posthumous Pease Porridge | https://theamphour.com/the-amp-hour-48-posthumous-pease-porridge/ |  |
+| 53 | Biarchy Birthday Bavardage | https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/ |  |
+| 95 | An Interview with Øyvind Janbu - Feracious Fabless Facilitator | https://theamphour.com/the-amp-hour-95-feracious-fabless-facilitator/ |  |
+| 97 | An Interview with Eben Upton - Morbus Moilsome MakerFaire | https://theamphour.com/the-amp-hour-97-morbus-moilsome-makerfaire/ |  |
+| 98 | Proemial Passive Poiesis | https://theamphour.com/the-amp-hour-98-proemial-passive-poiesis/ | June 3, 2012 |
+| 100 | Bonkers Birthday Badinage | https://theamphour.com/the-amp-hour-100-bonkers-birthday-badinage/ | June 17, 2012 |
+| 102 | Gouging Green Gardyloo | https://theamphour.com/the-amp-hour-102-gouging-green-gardyloo/ | July 1, 2012 |
+| 103 | An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee | https://theamphour.com/the-amp-hour-103-xenodochial-xilinx-ex-employee/ | July 8, 2012 |
+| 106 | Tektronix, ChipReport.tv, & the Signal Path - Temperative Tegmen Temperature | https://theamphour.com/the-amp-hour-106-temperative-tegmen-temperature/ | July 29, 2012 |
+| 116 | Distribution, Wozniak & Robots - Early Eight-bit Endgame | https://theamphour.com/the-amp-hour-116-early-eight-bit-endgame/ | October 7, 2012 |
+| 118 | Kickstarter, Open Source RC & Modelsource - Facinorous Financial Foulness | https://theamphour.com/the-amp-hour-118-facinorous-financial-foulness/ | October 21, 2012 |
+| 122 | Processors, CEOs & Soldering irons - Plentiful Perfunctory Programs | https://theamphour.com/the-amp-hour-122-plentiful-perfunctory-programs/ | November 19, 2012 |
+| 146 | Hamvention, Arduino and Intel - Burdensome Background Battology | https://theamphour.com/the-amp-hour-146-burdensome-background-battology/ | May 21, 2013 |
+| 152 | Firmware, Netburner and Semiconductors - Chris's Capitalism Colloquy | https://theamphour.com/the-amp-hour-152-chriss-capitalism-colloquy/ | July 1, 2013 |
+| 156 | Tesla, FPGAs and DigiKey - Zesty Zippy Zynq | https://theamphour.com/the-amp-hour-156-zesty-zippy-zynq/ | July 29, 2013 |
+| 169 | An Interview with Vincent Himpe - Escaped Electron Elocution | https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/ | October 28, 2013 |
+| 188 | Capacitors, Simulation and Closures - Deonerated Design Dealmaking | https://theamphour.com/188-capacitors-simulation-and-closures-deonerated-design-dealmaking/ | March 10, 2014 |
+| 190 | Let's Hear It For The Buoys - Vanishing Vessel Vexation | https://theamphour.com/190-lets-hear-it-for-the-buoys-vanishing-vessel-vexation/ | March 24, 2014 |
+| 218 | An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter | https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/ | September 29, 2014 |
+| 244 | The Art Of Staying Interested In Electronics - Exponible Electronics Ennui | https://theamphour.com/244-the-art-of-staying-interested-in-electronics-exponible-electronics-ennui/ | April 7, 2015 |
+| 254 | An Interview with Andreas Olofsson - Adapteva's Ampliative Abacus | https://theamphour.com/254-an-interview-with-andreas-olofsson-adaptevas-ampliative-abacus/ | June 16, 2015 |
+| 275 | No One Even Missed Us? | https://theamphour.com/275-no-one-even-missed-us/ | November 19, 2015 |
+| 278 | Our Second Callin Show(ish) | https://theamphour.com/278-our-second-callin-showish/ | December 16, 2015 |
+| 281 | Crossovers and Call-ins | https://theamphour.com/281-crossovers-and-call-ins/ | January 6, 2016 |
+| 292 | An Interview with Timothy Lamb | https://theamphour.com/292-an-interview-with-timothy-lamb/ | March 23, 2016 |
+| 310 | Mergers and Acquiescence | https://theamphour.com/310-mergers-and-acquiescence/ | August 3, 2016 |
+| 344 | Back Into The Swing Of Things | https://theamphour.com/344-back-into-the-swing-of-things/ |  |
+| 351 | The Automation Amish | https://theamphour.com/351-the-automation-amish/ | July 10, 2017 |
+| 356 | An Interview with Piotr Esden-Tempski | https://theamphour.com/356-an-interview-with-piotr-esden-tempski/ | August 20, 2017 |
+| 359 | An Interview with Jeroen Domburg (Sprite_tm) | https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/ | September 11, 2017 |
+| 374 | An Interview with Claire (née 'Clifford') Wolf | https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/ | January 7, 2018 |
+| 377 | Debugger vs Printeffer | https://theamphour.com/377-debugger-vs-printeffer/ | January 28, 2018 |
+| 378 | An Interview with Jason Kridner and Robert Nelson | https://theamphour.com/378-an-interview-with-jason-kridner-and-robert-nelson/ | February 4, 2018 |
+| 400 | Once Every Couple Months | https://theamphour.com/400-once-every-couple-months/ |  |
+| 412 | 3 Cent Micros And 1000s of LEDs | https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/ | October 21, 2018 |
+| 442 | An Interview with Travis Goodspeed | https://theamphour.com/442-an-interview-with-travis-goodspeed/ | May 12, 2019 |
+| 455 | Bill and Dave's Excellent Equipment | https://theamphour.com/455-bill-and-daves-excellent-equipment/ | August 19, 2019 |
+| 462 | Boat Anchors | https://theamphour.com/462-boat-anchors/ | October 13, 2019 |
+| 463 | An Interview with Trammell Hudson | https://theamphour.com/463-an-interview-with-trammell-hudson/ | October 20, 2019 |
+| 467 | Stories from Supercon 2019 | https://theamphour.com/467-stories-from-supercon-2019/ | November 18, 2019 |
+| 469 | An Interview with Craig J Bishop | https://theamphour.com/469-an-interview-with-craig-j-bishop/ | December 1, 2019 |
+| 489 | An Interview with Jack Ganssle (2nd) | https://theamphour.com/489-an-interview-with-jack-ganssle-2nd/ | April 19, 2020 |
+| 492 | More Electronics Consultant Impedance Matching | https://theamphour.com/492-more-electronics-consultant-impedance-matching/ | May 10, 2020 |
+| 503 | Fabless Chip Design with Mohamed Kassem | https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/ | August 2, 2020 |
+| 528 | New Year, New Gear | https://theamphour.com/528-new-year-new-gear/ | January 31, 2021 |
+| 532 | Recalling Recalls | https://theamphour.com/532-recalling-recalls/ | February 28, 2021 |
+| 534 | Firmware Update Capabilities | https://theamphour.com/534-firmware-update-capabilities/ | March 14, 2021 |
+| 536 | NFT Schematics | https://theamphour.com/536-nft-schematics/ | March 28, 2021 |
+| 551 | Feed the Mouse | https://theamphour.com/551-feed-the-mouse/ | July 25, 2021 |
+| 557 | Generic Nodes with Orkhan Amiraslanov | https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/ |  |
+| 558 | Toasted Marshmallow Connectors | https://theamphour.com/558-toasted-marshmallow-connectors/ | September 19, 2021 |
+| 565 | Here for a reason | https://theamphour.com/565-here-for-a-reason/ | November 7, 2021 |
+| 574 | Bubblegum Tap Shoes | https://theamphour.com/574-bubblegum-tap-shoes/ | January 23, 2022 |
+| 578 | Histogrammic or Histomagraphical | https://theamphour.com/578-histogrammic-or-histomagraphical/ | February 20, 2022 |
+| 590 | Finding Hardware Flaws with Laura Abbott | https://theamphour.com/590-finding-hardware-flaws-with-laura-abbott/ | May 22, 2022 |
+| 595 | Trade Show or Conference? | https://theamphour.com/595-trade-show-or-conference/ | July 10, 2022 |
+| 598 | Best way to find a leak | https://theamphour.com/598-best-way-to-find-a-leak/ | August 7, 2022 |
+| 617 | Conference Room Innovation | https://theamphour.com/617-conference-room-innovation/ | January 29, 2023 |
+| 642 | Sad Violins for Superconductors | https://theamphour.com/642-sad-violins-for-superconductors/ | August 13, 2023 |
+| 648 | The RP1 and beyond with the Raspberry Pi Hardware team | https://theamphour.com/648-the-rp1-and-beyond-with-the-raspberry-pi-hardware-team/ | October 22, 2023 |
+| 651 | Learning Computing with Jeff Geerling | https://theamphour.com/651-learning-computing-with-jeff-geerling/ | November 20, 2023 |
+| 693 | Small Scale Electronics Manufacturing with Colin O'Flynn | https://theamphour.com/693-small-scale-electronics-manufacturing-with-colin-oflynn/ | May 13, 2025 |
+| 704 | Applied Embedded Electronics with Jerry Twomey | https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/ | October 2, 2025 |
+| 720 | Hyper Growth and OpenClaw Interns | https://theamphour.com/720-hyper-growth-and-openclaw-interns/ | March 31, 2026 |
+| 726 | Arduino's Invisible Touch with Massimo Banzi | https://theamphour.com/the-amp-hour-726-arduinos-invisible-touch-with-massimo-banzi/ | June 17, 2026 |

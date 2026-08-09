@@ -1,0 +1,124 @@
+---
+title: Development Board
+concept: development-board
+generated: 2026-08-09
+model: k3
+spec: knowledge-only-v4-cluster
+---
+
+A **development board** is a printed circuit board that carries a microcontroller, microprocessor, or programmable logic device together with the minimum support circuitry and connectors needed to power it, program it, and access its pins, so that engineers can evaluate the silicon, prototype systems, or learn the part before committing to a custom design.[302][515] Semiconductor vendors produce such boards primarily as a means of selling silicon rather than as products in their own right, and they are typically retired once that purpose has been served.[62][422] In contemporary practice the boards also underpin a fast-prototyping workflow in which a vendor board is combined with a small custom peripheral board, a display, and an enclosure to produce a working system in a fraction of the time a full custom design would take.[422]
+
+## Purpose and market structure
+
+Development boards exist to sell silicon, and their economics reflect that purpose. They carry deliberately lower profit margins than production boards and are frequently booked internally as a marketing expense rather than as a product line, which accounts both for their low prices and for vendors' reluctance to let them become revenue-bearing products.[422] Microcontroller vendors compete on development-tool shipment counts and report those numbers prominently in annual financial statements; boards are given away so the figure looks strong, which is a large part of why so many boards end up unused in drawers.[28] Estimates from people who make and buy the boards put meaningful utilisation in the single-digit percentages, with more than half powered on once to run the demonstration application and then set aside.[455] The counterweight to that waste is capability: because the ecosystem exists, almost any job has a board or module that will do it, and the unused inventory is effectively what pays for that availability.[455]
+
+Pricing is used deliberately at both ends of the market. An evaluation board priced at $500 or $1,000 may cost only $100 or $200 to build, the premium serving as a filter to discourage casual buyers, because supporting a hobbyist purchaser can cost more than the board ever earns.[452] For silicon that is not aimed at the mass market, evaluation boards never reach distributor catalogues at all, so the absence of a board for a part is itself information about who that part is sold to.[452] At the low end, vendor discovery boards at nine dollars set the reference expectation against which any board priced in the hundreds now competes.[558] Price ceilings vary by audience: boards at seventy-five to a hundred dollars remain too expensive for university courses because the cost multiplies by the number of students,[497] while a $130 board purchased simply to gain access to a processor constrains which parts get tried by people not spending an employer's money.[564]
+
+Independent board vendors face a parallel calculus. A vendor's reason not to support a second FPGA family is that the families offer no capability difference that matters to most users, so a second board doubles the support burden while doubling nothing else; what changes the calculation is the silicon vendor offering a discount to get a board into the market.[181]
+
+## History
+
+Boards of this kind existed for decades before the popular ones arrived, and the boards themselves were rarely the innovation: "It's the IDE that makes the Arduino."[43] Stated the other way, strip away the ecosystem and community and what remains is another development board; the hook that creates the community is the ability to impart a change on the physical world, starting with a blinking LED.[116] The same argument applies to single-board computers: without the community and software around it, the object is just a single-board computer, and industrial catalogues have carried those since the 1970s.[158]
+
+The economics changed decisively over two decades. Where the chip alone might once have cost thirty dollars, the development environment another thousand, and the board five hundred, boards now cost a few dollars, which is what made casual experimentation possible.[166] Before low-cost interpreter boards existed, every demo board came from a manufacturer, was aimed at professionals, and cost hundreds of dollars; the shift was as much about who was permitted to buy one as about the price.[339] Before standard stacking connectors existed, a quick prototype meant buying a vendor microcontroller board and a separate sensor board from a different vendor and wiring them into a fragile assembly, with each board around fifty dollars and rarely carrying the sensor actually wanted.[458]
+
+A cautionary case in board pricing was a $4,000 development board built on the premise that plugging pre-made modules together would remove the need to design custom boards at all, sold with a software licence that pointedly excluded the PCB tool.[555] The underlying technology was genuinely advanced, with modules auto-detected over one-wire serial numbers and the corresponding FPGA configuration pulled in automatically.[593] Distributors returned their stock and the product had to be bought back.[555] The correction was an order-of-magnitude price cut: a $300 successor compatible with the same modules, with the same technology at a different price producing an entirely different commercial outcome.[593]
+
+## Use in prototyping
+
+The modern fast-prototype pattern takes a vendor board off the shelf, adds a custom sensor board connected through the board's standard header, and finishes the assembly with a display and a 3D-printed case; the result costs perhaps ten to twenty times a production version and exists in a fraction of the time.[422] The economics behind the pattern are that materials are now cheap while engineering time is not, which shifts the decision decisively toward assembling from existing boards for one-off and small quantities.[422]
+
+The build-versus-buy arithmetic rarely favours building a board from scratch. Assuming the parts are on hand, a milling machine is available, and nothing is fine-pitch, the layout, assembly, testing, and software still come to around thirty hours; at fifty dollars an hour that is $1,500, which buys six boards delivered overnight.[345] The bias to watch for is wanting to build because building is enjoyable and feels like the proper thing to do, which most of the time is not the right call.[345] Where building is justified, a part family of ten devices may have a vendor board for only one of them, which is usually enough: most of the functionality can be evaluated on the single available board, with the footprint changed later for whichever family member the application needs.[244]
+
+## Designing products around development boards
+
+Designing a manufacturer's development board into a product is regarded as a mistake, because the board will not remain purchasable: it exists to sell silicon and is retired whenever that purpose is served.[62] Open-sourcing the board does not solve the problem, since a vendor discontinuing the board forces the customer to manufacture it, removing the entire reason for using a vendor board in the first place.[62] The vendor's reason for discouraging design-in is supply rather than spite: a run is sized for thousands of individual engineers, and one customer designing the board into a product buys out that supply so the boards never reach the engineers they were made for.[422]
+
+Building a product on a complete board also inherits the board's entire bill of materials as a supply risk. A hundred-line product bill of materials can be engineered with substitutes; a board that itself depends on two hundred parts is a single bottleneck that cannot be substituted around.[282] At volume, the move is to buy the silicon and negotiate directly with the chip vendor rather than buying finished boards, keeping the software stack while obtaining the pricing that comes from being a significant customer.[282]
+
+There are also designs where a general-purpose board is simply the wrong tool: anything constrained on size and weight, an airborne platform being the standard example, needs a custom board carrying the minimum circuitry required to do the job.[22]
+
+## Ecosystems and software
+
+Sponsored ecosystem solutions create a false sense of security: the pre-selected boards and software stack give a genuine head start, but the moment a neighbouring part number or a different processor is needed the project is back in green-field territory with none of the support.[370] The specific trap that costs schedules is proving a concept on the vendor board, obtaining approval on the strength of it, then having purchasing or a memory requirement force a different part, at which point the work restarts and the timeline needs months added.[370] The corresponding advice is to commit or not commit, but not to half-commit: "if you're going to buy in, buy all the way in," and expect to be charged somewhere on the back end, because that is the business the ecosystem exists to support.[370]
+
+A custom board's pin assignment kept close to the vendor board's allows its build configuration to be reused wholesale; placing an SD card on the same pins as the reference design means the existing configuration files simply work.[515] The general rule is not to move pins without a reason, because the reference board remains a live sanity check: when a custom board misbehaves, the same point can be probed on both boards to see immediately that one is high and the other low.[515]
+
+Vendor tool installations are enormous because a single installer covers every board in the range plus every analysis tool, rather than the one board the user actually owns; there is usually no way to install support for just the hardware in hand.[65]
+
+## Board design practice
+
+What makes a genuinely useful development board is unglamorous: every pin brought out to 0.1-inch headers. Most parts have no exotic high-speed peripherals demanding special connectors, so the specialised interface boards vendors prefer add cost without adding access.[515] Vendor boards are frequently poor enough that experienced engineers build their own breakouts rather than use them, particularly when a vendor adopts a fashionable form factor instead of exposing the part.[515] A breakout with nowhere to attach an oscilloscope probe or a jumper is not an evaluation platform, and building a replacement saves time for everyone who evaluates that part afterwards.[661]
+
+A good cheap FPGA board contains only what is needed: the FPGA, its regulators, a JTAG programmer, and every pin on headers, at a cost of around seventeen pounds, with nothing else on the board missed.[224] The part choice that makes such a board possible is on-chip flash, on-chip regulator, and on-chip oscillator, which removes most support circuitry; the trade is packaging, since the small QFN version drops the memory blocks and PLLs, so needing those forces a hundred-pin package.[224]
+
+A sensible two-tier product strategy pairs a simple entry board with an easily understood feature set against a full-feature board that breaks out everything on the module, so the second board supports current measurement and deeper testing that the first deliberately hides.[226] A single artefact can also serve three roles simultaneously: a castellated module that can be soldered down, a reference design to copy, and a development board to work on; keeping it simple and cheap covers the high-volume case and leaves fuller-featured variants to third parties.[687]
+
+A first-cut board of any kind benefits from being designed for measurement rather than for production: jumpers to isolate sections and small current shunts in the supply rails allow each part of the circuit to be metered directly instead of cutting traces later.[132] A persistent gap in the board market is a display built onto the board itself rather than stacked on as a daughterboard; boards that do integrate one, some around fifteen dollars with a small OLED, a wireless processor, and a long-range radio, are unusually useful for that reason alone.[530]
+
+## Education
+
+Vendor evaluation boards are designed to illustrate every function and feature of the silicon to a working engineer; making teaching or learning easier is a different goal producing a different board, and confusing the two leads to disappointment with both.[302] The step that matters in learning is moving off the board onto one's own design, and what it requires is datasheet literacy: which decoupling capacitors are needed, which pins need pull-ups, and what the boot mode pins do.[573] Copying vendor reference schematics is legitimate practice rather than cheating, and mistakes will still be made in the copying; those mistakes are where the learning actually happens.[573] A recurring dispute in education is whether using a ready-made board counts as cheating when the board is a means to an end rather than the subject of the project; the answer depends on what is being assessed, which is worth stating in the brief rather than leaving implicit.[124]
+
+## Regulatory classification
+
+The same object can be classified differently by different audiences, with both classifications correct: electronics practitioners may see a development board while consumers see a computer, and which one it is determines the compliance expectations it must meet.[97] Many boards on the market carry no CE or FCC marking, and at small volume the risk is often absorbed; that option disappears when a product has public visibility as a high-volume item before a single unit ships, at which point compliance has to be taken seriously from the start.[97]
+
+## Licensing and interoperability
+
+Cloning a board's pinout is good for the industry rather than a threat to it: a market where every board has a different interface serves nobody, and attempts to protect a product at the interface layer would be a bad sign for everyone.[300] The argument for placing development and breakout boards in the public domain rather than under a share-alike licence is that the board exists specifically for an engineer to learn from or build on, so restricting it is self-defeating, like a textbook demanding attribution each time a formula is used.[125]
+
+## Failure modes
+
+Getting-started problems are often mundane rather than technical. One multi-day debugging session ended when the board turned out to be a different part in a mislabelled bag; the part number on the silicon should be read before the packaging is trusted.[428] The accompanying human failure is assuming the fault must be one's own and then changing too many things at once, which destroys the ability to tell which change mattered.[428]
+
+Cost-reduced boards fail in a particular way: built to a price with no attention beyond the first power-on, they get used once and discarded, which is a different problem from being merely inexpensive.[22] Claims that a conference badge will be reused afterwards as a development board are almost never borne out, even when the hardware would genuinely support it, with a large FPGA still well under half utilised after everything the badge itself does.[468]
+
+## Related practices
+
+Cheap consumer devices make good development hardware when the microcontroller inside can be reprogrammed, since they package a processor and radio in a finished enclosure and often expose test points; small trackers and tags are the standard example.[552] The silicon-design equivalent of starting from a development board is a proven, tested chip published together with its board, so that a designer can clone the whole thing and replace only their own block while keeping the rest of the chip and its verification benches intact.[503]
+
+## References
+
+| Episode | Title | URL | Date |
+|---|---|---|---|
+| 22 | The Hard Work Hypothesis | https://theamphour.com/the-amp-hour-22-the-hard-work-hypothesis/ | December 21, 2010 |
+| 28 | Bowie and The Brown Note | https://theamphour.com/the-amp-hour-28-bowie-and-the-brown-noise/ | February 1, 2011 |
+| 43 | An Interview with Jeff Keyzer and Jeremy Blum - Audacious Arduino Arguments | https://theamphour.com/the-amp-hour-43-audacious-arduino-arguments/ |  |
+| 62 | Op amps, Microchips & Mergers - Narquois Nerd Nescience - Narquois Nerd Nescience | https://theamphour.com/the-amp-hour-62-narquois-nerd-nescience/ |  |
+| 65 | Silego, ADCs & Seismic Detection - Dave's Dingo Dystocia | https://theamphour.com/the-amp-hour-65-daves-dingo-dystocia/ |  |
+| 97 | An Interview with Eben Upton - Morbus Moilsome MakerFaire | https://theamphour.com/the-amp-hour-97-morbus-moilsome-makerfaire/ |  |
+| 116 | Distribution, Wozniak & Robots - Early Eight-bit Endgame | https://theamphour.com/the-amp-hour-116-early-eight-bit-endgame/ | October 7, 2012 |
+| 124 | SpaceX, Enclosures & Startups - Urging Unemployment Ullagone | https://theamphour.com/the-amp-hour-124-urging-unemployment-ullagone/ | December 3, 2012 |
+| 125 | An Interview with Ian Lesnet - Bus Buccaneer Builder | https://theamphour.com/the-amp-hour-125-bus-buccaneer-builder/ | December 10, 2012 |
+| 132 | Melbourne, Hackerspace & Calibration - Vacuuous Vortex Verification | https://theamphour.com/the-amp-hour-132-vacuuous-vortex-verification/ | February 11, 2013 |
+| 158 | Hyperloop, Upverter and Soldering - Unbelievable USB Ustulater | https://theamphour.com/the-amp-hour-158-unbelievable-usb-ustulater/ | August 12, 2013 |
+| 166 | Prior Art, Wafer Fabs and Guns - Whimsical Wafer Waffling | https://theamphour.com/166-prior-art-wafer-fabs-and-guns-whimsical-wafer-waffling/ | October 7, 2013 |
+| 181 | An Interview with Dave Vandenbout - Xceptional XESS Xenagogue | https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/ |  |
+| 224 | Meracious Mike Manuduction | https://theamphour.com/224-meracious-mike-manuduction/ | November 12, 2014 |
+| 226 | An Interview with Colin Karpfinger - Blendling Bean Brio | https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/ | December 2, 2014 |
+| 244 | The Art Of Staying Interested In Electronics - Exponible Electronics Ennui | https://theamphour.com/244-the-art-of-staying-interested-in-electronics-exponible-electronics-ennui/ | April 7, 2015 |
+| 282 | 3D Product Logistics | https://theamphour.com/282-3d-product-logistics/ | January 13, 2016 |
+| 300 | Three Hundred Down, Three Hundred To Go | https://theamphour.com/300-three-hundred-down-three-hundred-to-go/ | May 25, 2016 |
+| 302 | An Interview with Clint Cole of Digilent | https://theamphour.com/302-an-interview-with-clint-cole-of-digilent/ | June 8, 2016 |
+| 339 | Look at nature and meet nerds | https://theamphour.com/339-look-at-nature-and-meet-nerds/ | March 12, 2017 |
+| 345 | Milling About | https://theamphour.com/show-345-milling-about/ | May 30, 2017 |
+| 370 | Alternate Info Sources | https://theamphour.com/370-alternate-info-sources/ | December 3, 2017 |
+| 422 | Stick 'Em On Whales | https://theamphour.com/422-stick-em-on-whales/ | December 27, 2018 |
+| 428 | Setting Fire To The Tracks | https://theamphour.com/428-setting-fire-to-the-tracks/ | February 3, 2019 |
+| 452 | An Interview with Kieran O'Leary | https://theamphour.com/452-an-interview-with-kieran-oleary/ | July 28, 2019 |
+| 455 | Bill and Dave's Excellent Equipment | https://theamphour.com/455-bill-and-daves-excellent-equipment/ | August 19, 2019 |
+| 458 | An Interview with Ken Burns | https://theamphour.com/458-an-interview-with-ken-burns/ | September 15, 2019 |
+| 468 | The Tiny Lab Movement | https://theamphour.com/468-the-tiny-lab-movement/ | November 24, 2019 |
+| 497 | An Interview with Brock LaMeres | https://theamphour.com/497-an-interview-with-brock-lameres/ | June 21, 2020 |
+| 503 | Fabless Chip Design with Mohamed Kassem | https://theamphour.com/503-fabless-chip-design-with-mohammed-kassem/ | August 2, 2020 |
+| 515 | Embedded Linux with Jay Carlson | https://theamphour.com/515-embedded-linux-with-jay-carlson/ | November 1, 2020 |
+| 530 | Living Through Chipageddon | https://theamphour.com/530-living-through-chipageddon/ | February 15, 2021 |
+| 552 | Shouting at chips with Colin O'Flynn | https://theamphour.com/552-shouting-at-chips-with-colin-oflynn/ | August 1, 2021 |
+| 555 | Timing is Everything | https://theamphour.com/555-timing-is-everything/ | August 30, 2021 |
+| 558 | Toasted Marshmallow Connectors | https://theamphour.com/558-toasted-marshmallow-connectors/ | September 19, 2021 |
+| 564 | Pavlovian Cheapskates | https://theamphour.com/564-pavlovian-cheapskates/ | October 31, 2021 |
+| 573 | Mixed Signal Education with Philip Salmony | https://theamphour.com/573-mixed-signal-education-with-philip-salmony/ | January 17, 2022 |
+| 593 | Publicly Traded Hobby with Ben Jordan | https://theamphour.com/593-publicly-traded-hobby-with-ben-jordan/ | June 14, 2022 |
+| 661 | Blogging Electronics with Pallav Aggarwal | https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/ | March 10, 2024 |
+| 687 | The RP2350 with the Raspberry Pi Team | https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/ | January 28, 2025 |

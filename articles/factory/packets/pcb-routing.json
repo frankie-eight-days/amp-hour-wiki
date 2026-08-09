@@ -1,0 +1,549 @@
+{
+ "concept": "pcb-routing",
+ "name": "PCB Routing",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "pcb-routing",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "board-routing",
+   "pcb-routing",
+   "pcb-routing-rule",
+   "pcb-trace-routing",
+   "printed-circuit-board-routing"
+  ],
+  "children": [],
+  "neighbors": {
+   "pcb-placement": 4
+  },
+  "episodes_with_kept_mentions": 49,
+  "mentions_kept": 58,
+  "pins_pre_cap": 65,
+  "pins_final": 65,
+  "pins_by_depth": {
+   "explains": 50,
+   "opinion": 15
+  },
+  "pins_by_role": {
+   "core": 65
+  },
+  "speakers": [
+   [
+    "Dave Jones",
+    31
+   ],
+   [
+    "Chris Gammell",
+    15
+   ],
+   [
+    "Robert Feranec",
+    3
+   ],
+   [
+    "Saar Drimer",
+    2
+   ],
+   [
+    "Jonathan Hirschman",
+    2
+   ],
+   [
+    "Laen",
+    1
+   ],
+   [
+    "Jeff Keyzer",
+    1
+   ],
+   [
+    "Dave Vandenbout",
+    1
+   ],
+   [
+    "Colin",
+    1
+   ],
+   [
+    "Claire Wolf",
+    1
+   ],
+   [
+    "Tim Ansell",
+    1
+   ],
+   [
+    "Matt Berggren",
+    1
+   ],
+   [
+    "Kerry Scharfglass",
+    1
+   ],
+   [
+    "Jack Ganssle",
+    1
+   ],
+   [
+    "James Adams",
+    1
+   ],
+   [
+    "Petr Dvorak",
+    1
+   ],
+   [
+    "Lukas Henkel",
+    1
+   ]
+  ],
+  "capped": false,
+  "gated_out_by_concept": [
+   [
+    "pcb-placement",
+    18
+   ]
+  ],
+  "gated_out_total": 18
+ },
+ "claims": [
+  {
+   "claim_text": "The routing is roughly ninety percent placement: with the parts in the right places the connections very nearly fall out on their own, and no amount of skill at drawing traces rescues a bad arrangement.",
+   "quote_verbatim": "the old adage is that designing a PCB is 90% placement",
+   "speaker": "Dave Jones",
+   "episode": 16,
+   "episode_title": "LED Designs, Last Minute Designs and Board Designs",
+   "episode_url": "https://theamphour.com/the-amp-hour-16-led-designs-last-minute-designs-and-board-designs/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Do not attempt to place a whole board at once. Take one functional group at a time — an amplifier being an op amp and the passives around it — place and route that block on its own, then move finished blocks together as units.",
+   "quote_verbatim": "You do little subgroups",
+   "speaker": "Dave Jones",
+   "episode": 16,
+   "episode_title": "LED Designs, Last Minute Designs and Board Designs",
+   "episode_url": "https://theamphour.com/the-amp-hour-16-led-designs-last-minute-designs-and-board-designs/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Start from what cannot move: front panel controls, the battery, physical connectors. Fixing the mechanically constrained parts first turns everything else into a problem with known boundaries rather than an open one.",
+   "quote_verbatim": "you fix your major components in place that you want to",
+   "speaker": "Dave Jones",
+   "episode": 128,
+   "episode_title": "Layout, CAD & Raspberry Pi - Kedogenous Kinetic Knowledge",
+   "episode_url": "https://theamphour.com/the-amp-hour-128-kedogenous-kinetic-knowledge/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Setup belongs to the placement phase: rules, clearances and the board outline established before any trace is drawn. Routing is then constrained work, and the constraints are the thing that makes it go quickly.",
+   "quote_verbatim": "setting up all your rules, setting up your clearances, your outlines",
+   "speaker": "Dave Jones",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Judge a placement by how few rat's-nest lines cross, rotating parts to test it — turning a large package ninety degrees is often enough to unpick a tangle — and group components into functional modules while doing it.",
+   "quote_verbatim": "the fewest number of lines that are crossed over",
+   "speaker": "Dave Jones",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Leave the few nets that must cross the whole board until last, and then stop caring how they get there: twenty vias to carry one signal end to end is an acceptable answer where the trace has no performance requirement.",
+   "quote_verbatim": "you do those last",
+   "speaker": "Dave Jones",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Ripping up half a routed board because moving one part improves everything downstream is normal practice rather than lost work — though it is also evidence that the placement was not finished before routing started.",
+   "quote_verbatim": "don't be afraid to rip up half of your board",
+   "speaker": "Dave Jones",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Interactive auto-routing — starting a trace and letting the tool complete it — is genuinely useful for the last one or two connections on a board and a poor idea at the beginning, where accepting the tool's choices forecloses the arrangement you have not yet found.",
+   "quote_verbatim": "is fine if you've got one or two traces left",
+   "speaker": "Dave Jones",
+   "episode": 682,
+   "episode_title": "Your Mind Is The Tool",
+   "episode_url": "https://theamphour.com/682-your-mind-is-the-tool/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A trace running the full width of a board is not primarily an interference problem, it is a blockage: it cuts the available routing channel in two and forces everything crossing it onto another layer.",
+   "quote_verbatim": "last thing a PCB layout designer wants to do is have traces going right across the board",
+   "speaker": "Dave Jones",
+   "episode": 410,
+   "episode_title": "Secret Buzzer Handshake",
+   "episode_url": "https://theamphour.com/410-secret-buzzer-handshake/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The classical discipline is one routing direction per side — all traces one way on top, the orthogonal way on the bottom — because it guarantees any two nets can cross by changing layer. Diagonal runs across the board destroy that property and the routing room with it.",
+   "quote_verbatim": "all the traces going one direction on one side of the board, and they all go on one direction on the other side",
+   "speaker": "Dave Jones",
+   "episode": 636,
+   "episode_title": "Discovering Cursed Connectors",
+   "episode_url": "https://theamphour.com/636-discovering-cursed-connectors/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Holding to north-south on one side and east-west on the other still runs out of room when the board is dense enough: a four-layer board chosen to keep cost down, carrying a radio, a cellular module and a high-density mezzanine connector, was squeezed to the fab's stated 3.5 thou limit and still would not close.",
+   "quote_verbatim": "top sides, a North South traces, bottom sides, East West traces",
+   "speaker": "Chris Gammell",
+   "episode": 504,
+   "episode_title": "This Is Just A Tribute",
+   "episode_url": "https://theamphour.com/504-this-is-just-a-tribute/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Package choice is a routing decision as much as a thermal one. A small outline package lets traces pass underneath it, while a power package's thermal pad claims that board area outright — so where the power is not needed, taking the smaller package buys back routing space.",
+   "quote_verbatim": "you can route traces under these suckers",
+   "speaker": "Dave Jones",
+   "episode": 580,
+   "episode_title": "Electrical Archeology",
+   "episode_url": "https://theamphour.com/580-electrical-archeology/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A late component addition does not always mean re-routing: placing a small part directly over existing wide traces on the opposite side can absorb the change without disturbing the layout that already works.",
+   "quote_verbatim": "can just put the 1k resistor. Over top of some of the big traces",
+   "speaker": "Dave Jones",
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A thousand-pin BGA with all pins in use means roughly a thousand traces and a thousand vias placed individually, multiplied by however many times the work is ripped up and redone — which is why a large professional board is measured in weeks rather than days.",
+   "quote_verbatim": "that's a thousand traces you've got to place. That's probably a thousand vias",
+   "speaker": "Chris Gammell",
+   "episode": 316,
+   "episode_title": "An Interview with Robert Feranec",
+   "episode_url": "https://theamphour.com/316-an-interview-with-robert-feranec/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Automated fan-out handles the first stage of a large BGA: set the design rules and the number of signal layers, and the tool escapes every ball to just outside the package. It is not the finished answer but it is a reasonable start on work that is otherwise pure tedium.",
+   "quote_verbatim": "you can put in a 1500 pin bga and go fan it out",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "With a programmable device the pin assignment can be decided last. Fan the package out, route the surrounding circuitry inward to whichever pin is convenient without connecting anything, then run the pin-swap tool: it matches each incoming trace to the nearest escaped pin and joins them. The swaps are recorded as reversible, so the whole assignment can be undone.",
+   "quote_verbatim": "you route the traces in but you don't connect them up",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Pin swapping is never fully automatic, because real devices carry dozens of placement requirements — signals that must stay within a particular quadrant to reach that quadrant's local clock among them — and those constraints have to be imposed before the tool is allowed to optimise.",
+   "quote_verbatim": "these pins have to be the correct one in the correct quadrant",
+   "speaker": "Dave Jones",
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Swapping pins to ease routing can quietly break a capability requirement: on some devices a high-speed input is only supported on certain banks while the corresponding output is only supported on others. A library that described what each pin can do would let the tool check this, and most libraries do not.",
+   "quote_verbatim": "inputs can only be handled on certain banks of the FPGA",
+   "speaker": "Tim Ansell",
+   "episode": 375,
+   "episode_title": "An Interview with Tim \"Mithro\" Ansell",
+   "episode_url": "https://theamphour.com/375-an-interview-with-tim-mithro-ansell/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A 0.4 mm pitch BGA of three rows can be escaped with conventional board technology and manufactured cheaply; beyond three rows the escape requires laser-drilled vias, which is the point where the part choice commits the whole board to a more expensive process.",
+   "quote_verbatim": "you've got a three row 0.4 millimeter pitch one, you can actually route it out",
+   "speaker": "Chris Gammell",
+   "episode": 59,
+   "episode_title": "An Interview with Jeff Keyzer and Jason Kridner - Bonafide BeagleBoard Bionomics",
+   "episode_url": "https://theamphour.com/the-amp-hour-59-bonafide-beagleboard-bionomics/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A module's pad layout is an optimisation between leaving enough space between pads to escape every trace and keeping the pads large enough to solder reliably — which is why vendors publish example escape patterns that stay inside ordinary board capability.",
+   "quote_verbatim": "having enough room to route out all the traces",
+   "speaker": "Colin",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A 256-ball BGA facing memory on the opposite side of the board was routed on four layers with two of them given over to power and ground — achievable, and the kind of result that depends entirely on finding the right pin assignment first.",
+   "quote_verbatim": "got the 256-ball BGA on one side and I've got the SD RAM on the other side",
+   "speaker": "Dave Vandenbout",
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "An any-layer build puts a laser via between every pair of layers, so a via can drop from any layer to any other and routing becomes almost unconstrained. The cost is a lamination, plating and drilling cycle per layer during manufacture — and at 120 boards fitting on a single A4 panel, a ten-layer any-layer board still came to about ten dollars each.",
+   "quote_verbatim": "there is a blind via or a laser wire between each layer so you can freely drop a via from any layer",
+   "speaker": "Lukas Henkel",
+   "episode": 681,
+   "episode_title": "Compact High Speed Design with Lukas Henkel",
+   "episode_url": "https://theamphour.com/681-compact-high-speed-design-with-lukas-henkel/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Where the silicon is designed in-house, the pinout can be laid out to suit the board: a multi-lane differential bus between two chips runs as a straight bank of pairs with no crossings, because a single crossing would force the whole board onto more expensive technology.",
+   "quote_verbatim": "every chip has been co-designed or designed to have the pins and the wires coming out in exactly the right place",
+   "speaker": "James Adams",
+   "episode": 648,
+   "episode_title": "The RP1 and beyond with the Raspberry Pi Hardware team",
+   "episode_url": "https://theamphour.com/648-the-rp1-and-beyond-with-the-raspberry-pi-hardware-team/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The honest account of a full auto-router: a week spent setting up the rules, then a run that reported the board could not be routed at all. The setup cost is the part that gets omitted from demonstrations.",
+   "quote_verbatim": "spent like a week setting up the rules",
+   "speaker": "Robert Feranec",
+   "episode": 316,
+   "episode_title": "An Interview with Robert Feranec",
+   "episode_url": "https://theamphour.com/316-an-interview-with-robert-feranec/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The useful form of automation constrains rather than decides: telling the tool which corridor the tracks should run through, and letting it place them there, reduces clicks on work the engineer has already planned instead of asking the machine to plan it.",
+   "quote_verbatim": "they call it pipe. And you specify how you would like the outer router",
+   "speaker": "Robert Feranec",
+   "episode": 316,
+   "episode_title": "An Interview with Robert Feranec",
+   "episode_url": "https://theamphour.com/316-an-interview-with-robert-feranec/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The comparison with board games does not hold. Those games have a fixed rule set however large the search space; moving one component two millimetres on a board changes the rules themselves, which is a different class of problem from searching a fixed space well.",
+   "quote_verbatim": "has a very specific set of rules",
+   "speaker": "Chris Gammell",
+   "episode": 367,
+   "episode_title": "Not Reely An Issue",
+   "episode_url": "https://theamphour.com/367-not-reely-an-issue/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Any claim about automated routing has to include placement to be meaningful, because placement is where the difficulty lives and a router handed a poor arrangement is being asked to solve the wrong problem.",
+   "quote_verbatim": "try and get it to do placement, too",
+   "speaker": "Dave Jones",
+   "episode": 367,
+   "episode_title": "Not Reely An Issue",
+   "episode_url": "https://theamphour.com/367-not-reely-an-issue/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Fifty pages of dense schematic implies connecting every pin on every part, and that volume of work alone puts a serious layout beyond a couple of weeks regardless of how good the tools are.",
+   "quote_verbatim": "you actually need to connect all the pins. And just connect the pins. It takes so long time",
+   "speaker": "Robert Feranec",
+   "episode": 316,
+   "episode_title": "An Interview with Robert Feranec",
+   "episode_url": "https://theamphour.com/316-an-interview-with-robert-feranec/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Breakout tabs snapped with pliers leave fibreglass shards and ragged edges unless they are designed carefully. Tabs in the corners can be trimmed square with side cutters; tabs part-way along an edge need a half-moon relief in the outline and leave a visible scallop behind.",
+   "quote_verbatim": "when you cut them out with pliers they can be really sort of you know they can leave",
+   "speaker": "Dave Jones",
+   "episode": 158,
+   "episode_title": "Hyperloop, Upverter and Soldering - Unbelievable USB Ustulater",
+   "episode_url": "https://theamphour.com/the-amp-hour-158-unbelievable-usb-ustulater/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Where appearance matters, mix the two separation methods: rout the edges that will be seen for a clean profile and V-score the others, accepting the scored edges where they face away from the user.",
+   "quote_verbatim": "be half V grooved and half routed out",
+   "speaker": "Dave Jones",
+   "episode": 188,
+   "episode_title": "Capacitors, Simulation and Closures - Deonerated Design Dealmaking",
+   "episode_url": "https://theamphour.com/188-capacitors-simulation-and-closures-deonerated-design-dealmaking/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Which line the router follows — inside the outline, outside it, or on it — differs by fab, so state the intent explicitly in the fabrication notes rather than assuming the convention your last vendor used carries over.",
+   "quote_verbatim": "whatever the fab house wants and every fab house is different",
+   "speaker": "Jeff Keyzer",
+   "episode": 162,
+   "episode_title": "Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion",
+   "episode_url": "https://theamphour.com/the-amp-hour-162-ostrobogulous-openness-occasion/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Unless the board is scored, the outline has to be routed anyway — which means a curved or unusual outline costs nothing extra, since the machine is following a path either way.",
+   "quote_verbatim": "unless you do V-grooving, the routing is the routing",
+   "speaker": "Saar Drimer",
+   "episode": 286,
+   "episode_title": "An Interview with Saar Drimer",
+   "episode_url": "https://theamphour.com/286-an-interview-with-saar-drimer/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Embedding a component inside the board needs a very fine routing bit and controlled-depth routing, which takes the job off any shared panel service. Bonding several thin boards together is the alternative route to the same result, and both belong to fit-to-envelope products where the enclosure dictates the board.",
+   "quote_verbatim": "it's got to use a really thin routing bit",
+   "speaker": "Dave Jones",
+   "episode": 617,
+   "episode_title": "Conference Room Innovation",
+   "episode_url": "https://theamphour.com/617-conference-room-innovation/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Not every CAD package emits a usable outline path, and deprecated output formats create real friction with board vendors — which is why a low-cost service restricts which files it will accept rather than attempting to interpret everything.",
+   "quote_verbatim": "some software can create a proper routing path and some can't",
+   "speaker": "Jonathan Hirschman",
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Board house quality is not stable over time: a vendor that was consistently excellent began returning panels with boards rotated within the panel and outlines cut wrong. Keeping at least three qualified vendors and spreading orders across them is insurance against a supplier quietly slipping.",
+   "quote_verbatim": "their routing just went kind of berserk and we got misshaped boards",
+   "speaker": "Jonathan Hirschman",
+   "episode": 299,
+   "episode_title": "An Interview with Jonathan Hirschman of PCB:NG",
+   "episode_url": "https://theamphour.com/299-an-interview-with-jonathan-hirschman-of-pcbng/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Driving irregularly shaped LED arrays from multi-channel driver chips makes the board routing dominate the project, and for a one-off installation that work is almost entirely wasted effort.",
+   "quote_verbatim": "all the PCB routing to that, unless it's a really regular shape, takes forever",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Putting a tiny microcontroller behind every one or three LEDs collapses the routing problem: power, ground and a single data line run in parallel to every device, so a four-layer board becomes a copy-and-paste job. The unit cost rises by well under a pound per device and the design time falls by more than that is worth.",
+   "quote_verbatim": "just got power grounds and data all in parallel",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "No CAD system expresses the constraint that actually applies to a microcontroller — that a net may go to any of several particular permutations of pins — so experienced designers keep libraries of bare footprints, rat's-nest them by hand and route directly, sometimes without a schematic existing at all.",
+   "quote_verbatim": "yet to see any CAD system that handles that well",
+   "speaker": "Mike Harrison",
+   "episode": 135,
+   "episode_title": "An Interview with Mike Harrison - X-ray Examining Xenogogue",
+   "episode_url": "https://theamphour.com/the-amp-hour-135-x-ray-examining-xenogogue/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Rotating a radio module to make the slow signals route more easily is a common and expensive mistake, because it puts the antenna in the middle of the board. The antenna belongs on an edge, preferably the short one, with a keep-out that has no metal beneath it on any layer.",
+   "quote_verbatim": "think it's easier routing for my signals, my low and slow signals if I turn this module 180 degrees",
+   "speaker": "Chris Gammell",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Progress per minute is the signal to watch while routing. Ten hours into a four-layer board the rate collapsed and the remaining connections turned out to be impossible — recognising that at ten hours is far better than discovering it at what feels like ninety percent complete.",
+   "quote_verbatim": "rapidly tailed off in my progress per minute of time routing",
+   "speaker": "Kerry Scharfglass",
+   "episode": 487,
+   "episode_title": "An Interview with Kerry Scharfglass",
+   "episode_url": "https://theamphour.com/487-an-interview-with-kerry-scharfglass/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Ordinary FR4 with disciplined routing carries a few hundred megahertz of front-end bandwidth comfortably; multiple gigahertz needs controlled-impedance materials and exotic construction, so the board technology rather than the silicon is what bounds a cheap instrument.",
+   "quote_verbatim": "you need exotic, you know, you need controlled impedance materials",
+   "speaker": "Dave Jones",
+   "episode": 654,
+   "episode_title": "Pseudo Code...Pseudo Good",
+   "episode_url": "https://theamphour.com/654-pseudo-code-pseudo-good/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "On two-layer boards it was accepted that some connections simply could not be routed and were finished with wire after assembly — a practice that disappeared once cheap multilayer became available rather than because designers got better.",
+   "quote_verbatim": "there'd be some tracks you just couldn't route",
+   "speaker": "Jack Ganssle",
+   "episode": 489,
+   "episode_title": "An Interview with Jack Ganssle (2nd)",
+   "episode_url": "https://theamphour.com/489-an-interview-with-jack-ganssle-2nd/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Teaching layout means withholding the finished layout. Schematics and libraries can be given away, but deciding where the vias go and which traces run where is the part that only transfers by doing it, and watching someone else do it teaches almost nothing.",
+   "quote_verbatim": "don't give the final board layout and board routing",
+   "speaker": "Chris Gammell",
+   "episode": 573,
+   "episode_title": "Mixed Signal Education with Philip Salmony",
+   "episode_url": "https://theamphour.com/573-mixed-signal-education-with-philip-salmony/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  }
+ ],
+ "attribution_notes": [
+  "attribution_reliable was not trusted. ep135 labels Mike Harrison's first-person account of his own installations, his PCB software and his LED architecture as 'Dave Jones'; those claims are content-attributed to Mike Harrison.",
+  "ep316 (Robert Feranec), ep181 (Dave Vandenbout), ep471, ep669 and ep681 label host questions with the guest's name; only material unambiguously the guest's own was used.",
+  "ep678 records the antenna placement exchange across both Chris Gammell and the guest; the claim keeps the host's statement of the mistake, which is the part the passage attributes unambiguously.",
+  "Tool version complaints, hotkey trivia and vendor marketing demonstrations were excluded as non-transferable."
+ ],
+ "capped": false
+}

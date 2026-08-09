@@ -1,0 +1,627 @@
+{
+ "concept": "bandwidth",
+ "name": "Bandwidth",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "bandwidth",
+  "census": "union",
+  "cap": 250,
+  "aliases": [
+   "bandwidth"
+  ],
+  "children": [
+   "frequency",
+   "frequency-modulation",
+   "smith-chart"
+  ],
+  "neighbors": {},
+  "episodes_with_kept_mentions": 64,
+  "mentions_kept": 79,
+  "pins_pre_cap": 98,
+  "pins_final": 98,
+  "pins_by_depth": {
+   "explains": 69,
+   "opinion": 29
+  },
+  "pins_by_role": {
+   "core": 95,
+   "child": 3
+  },
+  "speakers": [
+   [
+    "Dave Jones",
+    41
+   ],
+   [
+    "Chris Gammell",
+    31
+   ],
+   [
+    "Greg Charvat",
+    4
+   ],
+   [
+    "Jeri Ellsworth",
+    2
+   ],
+   [
+    "Larry Sears",
+    2
+   ],
+   [
+    "Dave Taylor",
+    2
+   ],
+   [
+    "Eric Bogatin",
+    2
+   ],
+   [
+    "Jonathan Beri",
+    2
+   ],
+   [
+    "Ron Quan",
+    1
+   ],
+   [
+    "Michael Ossmann",
+    1
+   ],
+   [
+    "Colin O'Flynn",
+    1
+   ],
+   [
+    "Mark Morin",
+    1
+   ],
+   [
+    "Piotr Esden-Tempski",
+    1
+   ],
+   [
+    "Richard Ginus",
+    1
+   ],
+   [
+    "Derek Kozel",
+    1
+   ],
+   [
+    "Trammell Hudson",
+    1
+   ],
+   [
+    "Adrian Tang",
+    1
+   ],
+   [
+    "Jared Wolff",
+    1
+   ],
+   [
+    "Brandon Gilles",
+    1
+   ],
+   [
+    "Carmen",
+    1
+   ]
+  ],
+  "capped": false,
+  "gated_out_by_concept": [
+   [
+    "frequency",
+    20
+   ],
+   [
+    "frequency-modulation",
+    18
+   ],
+   [
+    "smith-chart",
+    13
+   ]
+  ],
+  "gated_out_total": 51
+ },
+ "claims": [
+  {
+   "claim_text": "The term is literal and most people meet it as an abstraction first: bandwidth is the width a signal occupies on the band, and seeing that width on a waterfall display is what converts the word from vocabulary into a concept.",
+   "quote_verbatim": "the term bandwidth, uh, literally means the width of the data near the width of the signal on this RF band",
+   "speaker": "Trammell Hudson",
+   "episode": 463,
+   "episode_title": "An Interview with Trammell Hudson",
+   "episode_url": "https://theamphour.com/463-an-interview-with-trammell-hudson/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Adjusting a receiver's bandwidth interactively — watching the window narrow and widen over the spectrum — teaches the idea faster than the mathematics does, which is an argument for putting a cheap software radio in front of anyone learning signals.",
+   "quote_verbatim": "you're actually adjusting bandwidth you're like oh the width and you're like you're like closing in this window",
+   "speaker": "Derek Kozel",
+   "episode": 381,
+   "episode_title": "An Interview with Derek Kozel",
+   "episode_url": "https://theamphour.com/381-interview-with-derek-kozel/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Nyquist's factor of two is the mathematical floor, not the engineering figure. A Gaussian-response oscilloscope needs about 2.3 times its bandwidth in sample rate to be guaranteed alias-free — 230 megasamples per second for a 100 MHz front end — while ten times is the usual rule of thumb for a waveform that looks right.",
+   "quote_verbatim": "can get away with only 2.3 times above the bandwidth as sample rate",
+   "speaker": "Dave Jones",
+   "episode": 570,
+   "episode_title": "Keyzermas All The Way",
+   "episode_url": "https://theamphour.com/570-keyzermas-all-the-way/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "An instrument quoting 100 megasamples per second against 30 MHz of bandwidth is running only about three times oversampled: enough that it will not report a wrong frequency through aliasing, but not enough to reproduce the shape of the signal faithfully.",
+   "quote_verbatim": "it says it's 100 mega samples, but then I think they list the bandwidth at 30 megahertz",
+   "speaker": "Chris Gammell",
+   "episode": 339,
+   "episode_title": "Look at nature and meet nerds",
+   "episode_url": "https://theamphour.com/339-look-at-nature-and-meet-nerds/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Passive probes run out somewhere around 300 MHz, arguably 500, so beyond that the probe rather than the oscilloscope sets the usable bandwidth of the measurement — buying more scope without changing the probe buys nothing.",
+   "quote_verbatim": "that's pretty much where passive probes stop",
+   "speaker": "Dave Jones",
+   "episode": 347,
+   "episode_title": "Re-scoping the problem",
+   "episode_url": "https://theamphour.com/347-re-scoping-the-problem/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Two changes made digital oscilloscopes practical: real-time sampling, where ten times the sample rate bought ten times the bandwidth, and then deep sample memory — the second being the one that changes how the instrument is used day to day.",
+   "quote_verbatim": "the TDS200, which was the real time, okay? Ten times the sample rate was ten times the bandwidth",
+   "speaker": "Dave Jones",
+   "episode": 72,
+   "episode_title": "Kismetic Keithley Katowse",
+   "episode_url": "https://theamphour.com/the-amp-hour-72-kismetic-keithley-katowse/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Resolution has never been the scarce quantity in USB oscilloscopes — twelve and sixteen bit converters are common — and bandwidth is what the money actually buys.",
+   "quote_verbatim": "12-bits, like even 16-bits are still a thing. But it's bandwidth, right? It's all about the bandwidth",
+   "speaker": "Dave Jones",
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "When comparing acquisition hardware the bandwidth figure is the one that matters and the sample count follows from it; extra resolution bits are only real if the noise floor lets you use them.",
+   "quote_verbatim": "going to be 10x the bandwidth",
+   "speaker": "Chris Gammell",
+   "episode": 193,
+   "episode_title": "We're Sorry! But Apple Ain't! - Remorseless RAM Racketeering",
+   "episode_url": "https://theamphour.com/193-were-sorry-but-apple-aint-remorseless-ram-racketeering/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Serious analog work means reading the performance curves across the bandwidth you actually operate over, because the headline figure at the top of the datasheet holds at one point and the parts of the range you care about may be much worse.",
+   "quote_verbatim": "can't just get the single figure at the top of the data sheet",
+   "speaker": "Dave Jones",
+   "episode": 168,
+   "episode_title": "Specialized and/or Open Source Test Gear and Dev Boards - Vacation Videography Vorboten",
+   "episode_url": "https://theamphour.com/168-specialized-and-open-source-test-gear-and-dev-boards-vacation-videography-vorboten/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An entire 800 MHz oscilloscope front end now fits in a single chip, which is why instruments across a vendor's range often share identical hardware and differ only in what the firmware permits.",
+   "quote_verbatim": "that Rygol one is an 800 megahertz complete front end in a single chip",
+   "speaker": "Dave Jones",
+   "episode": 654,
+   "episode_title": "Pseudo Code...Pseudo Good",
+   "episode_url": "https://theamphour.com/654-pseudo-code-pseudo-good/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Clock frequency does not bound the spectrum a signal occupies — rise time does. A 32 MHz clock with a 100 picosecond edge puts content out to roughly 3 GHz, which lands squarely on a receiver listening for signals at minus 100 dB nearby.",
+   "quote_verbatim": "if it's got 100 picoseconds, you've got, you know, 3 gigahertz bandwidth signals there",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "On a mixed-signal board, use the lowest clock frequency and the longest rise time the design tolerates. A handful of ordinary layout rules covers you to around 100 MHz; past thirty-odd megahertz with radio on the same board, crosstalk and shielding become the design problem.",
+   "quote_verbatim": "you always want to use those low clock frequencies you can get away with",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A signal travels down a trace at the speed of light in the laminate, not in air: the dielectric constant of about four for FR4 slows propagation by its square root, which is what makes trace length a timing quantity rather than a mechanical one.",
+   "quote_verbatim": "slows the speed of light down and it slows it down with the square root of the dielectric constant",
+   "speaker": "Eric Bogatin",
+   "episode": 252,
+   "episode_title": "An Interview with Eric Bogatin - Tilded Thumb Tenets",
+   "episode_url": "https://theamphour.com/252-an-interview-with-eric-bogatin-tilded-thumb-tenets/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The conventional cascaded resistive divider in a multimeter front end cannot be held flat to high frequency, because each junction in the chain adds a node with its own stray capacitance — the topology, not the component values, is what limits the bandwidth.",
+   "quote_verbatim": "too many nodes with too much stray capacitance to keep it flat",
+   "speaker": "Dave Taylor",
+   "episode": 180,
+   "episode_title": "An Interview with Dave Taylor - Multi-talented Meter Maker",
+   "episode_url": "https://theamphour.com/180-an-interview-with-dave-taylor-multi-talented-meter-maker/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Where board material itself contributes the limiting capacitance, the remedy is to remove it: cutting the laminate away around a high-impedance divider takes the dielectric out of the circuit entirely.",
+   "quote_verbatim": "finally gave up on trying to control the bad capacitance of a FR4 material. And I just started cutting it out",
+   "speaker": "Dave Taylor",
+   "episode": 180,
+   "episode_title": "An Interview with Dave Taylor - Multi-talented Meter Maker",
+   "episode_url": "https://theamphour.com/180-an-interview-with-dave-taylor-multi-talented-meter-maker/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Bandwidth drove more prototype iterations than any other requirement in a precision instrument design — worth knowing when scheduling, because a flat response to a stated frequency is a far larger commitment than the specification line suggests.",
+   "quote_verbatim": "the bandwidth probably caused more iterations of the prototype boards than anything else",
+   "speaker": "Dave Taylor",
+   "episode": 180,
+   "episode_title": "An Interview with Dave Taylor - Multi-talented Meter Maker",
+   "episode_url": "https://theamphour.com/180-an-interview-with-dave-taylor-multi-talented-meter-maker/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Bandwidth is a currency that buys other specifications: a part limited to 4 kHz — too narrow even for audio — can offer distortion performance nothing else touches, and extremely low power for the bandwidth it does deliver.",
+   "quote_verbatim": "they only go to, like, 4 kHz bandwidth. They can't even do audio. But their THD is phenomenal",
+   "speaker": "Dave Jones",
+   "episode": 65,
+   "episode_title": "Silego, ADCs & Seismic Detection - Dave's Dingo Dystocia",
+   "episode_url": "https://theamphour.com/the-amp-hour-65-daves-dingo-dystocia/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A newer part advertised as higher bandwidth can be worse where it matters — bandwidth up and slew rate down is a real combination, and only reading the whole datasheet rather than the headline reveals it.",
+   "quote_verbatim": "they've increased the bandwidth, which is fine, but they've lowered the slew rate",
+   "speaker": "Dave Jones",
+   "episode": 727,
+   "episode_title": "Boat Anchor Warehouse",
+   "episode_url": "https://theamphour.com/727-boat-anchor-warehouse/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "At the edge of what a single op amp can do, a composite amplifier puts the second device inside the first one's feedback loop so their strengths combine — a very low noise, low offset input stage with a high-drive output able to swing a coaxial cable. Cascading two amplifiers in series is a different arrangement that buys bandwidth or drive but not the mix-and-match.",
+   "quote_verbatim": "second amplifier is within the feedback loop of the first amplifier",
+   "speaker": "Dave Jones",
+   "episode": 660,
+   "episode_title": "My Toothbrush Is Broadcasting",
+   "episode_url": "https://theamphour.com/the-amp-hour-660-my-toothbrush-is-broadcasting/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Substituting a faster transistor into a working design amplifies noise the slower part had quietly ignored, so a higher-bandwidth part is not automatically a drop-in improvement.",
+   "quote_verbatim": "the new transistor is a higher bandwidth than the old one, so it amplifies all this junk on our clock",
+   "speaker": "Mark Morin",
+   "episode": 290,
+   "episode_title": "An Interview with Mark Morin of Nufern",
+   "episode_url": "https://theamphour.com/290-an-interview-with-mark-morin-of-nufern/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "In control loops the word means something else again: a right-half-plane zero, characteristic of boost-derived topologies, limits how fast the loop can be made and so rules out topologies that otherwise look attractive on cost.",
+   "quote_verbatim": "that right half plane zero, like a boost converter, you know, this topology has that too, which is going to wreak havoc on our bandwidth",
+   "speaker": "Carmen",
+   "episode": 566,
+   "episode_title": "Switching Converter Engineering with Carmen Parisi",
+   "episode_url": "https://theamphour.com/566-switching-converter-engineering-with-carmen-parisi/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A superheterodyne receiver discards half the information at down-conversion; an in-phase and quadrature direct conversion receiver keeps both components, giving twice the usable bandwidth and enough information to do image rejection digitally instead of with aggressive analog filters.",
+   "quote_verbatim": "a superhet receiver, you're throwing away 50% of your information",
+   "speaker": "Jeri Ellsworth",
+   "episode": 52,
+   "episode_title": "An Interview with Jeri Ellsworth - Carnassial Chip Chemicals",
+   "episode_url": "https://theamphour.com/the-amp-hour-52-carnassial-chip-chemicals/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Filtering can be done in either domain, and the crossover comes when a time-domain filter needs so many taps that building a good one gets hard — at that point moving into the frequency domain is the cheaper path.",
+   "quote_verbatim": "as you start making fur filters with multiple taps, it becomes increasingly difficult",
+   "speaker": "Jeri Ellsworth",
+   "episode": 52,
+   "episode_title": "An Interview with Jeri Ellsworth - Carnassial Chip Chemicals",
+   "episode_url": "https://theamphour.com/the-amp-hour-52-carnassial-chip-chemicals/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The two common spread-spectrum families put the burden in different places: frequency hopping moves the signal around and needs a receiver that retunes, while direct sequence stays put but occupies a wide band, so the receiver must capture a wide slice at once.",
+   "quote_verbatim": "direct sequence spread spectrum, which stays on the same frequency the whole time, but has a really wide bandwidth",
+   "speaker": "Dave Jones",
+   "episode": 352,
+   "episode_title": "Conning with Michael Ossmann",
+   "episode_url": "https://theamphour.com/352-conning-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Instantaneous visible bandwidth is limited — under 20 MHz on one popular platform — so covering a six gigahertz tuning range means sweeping, and moving the retuning into device firmware removes the USB round-trip latency that would otherwise dominate every step of the sweep.",
+   "quote_verbatim": "by doing the tuning in firmware instead of doing it on the host computer",
+   "speaker": "Dave Jones",
+   "episode": 352,
+   "episode_title": "Conning with Michael Ossmann",
+   "episode_url": "https://theamphour.com/352-conning-with-michael-ossmann/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Moving to millimetre-wave carriers does not by itself deliver more throughput, because the converters rather than the radio set the limit: an enormous carrier frequency is no help if the system can only digitise a 50 MHz slice of it.",
+   "quote_verbatim": "it's not the radio that limits the bandwidth. It's the ADC and the DAC",
+   "speaker": "Adrian Tang",
+   "episode": 483,
+   "episode_title": "An Interview with Adrian Tang",
+   "episode_url": "https://theamphour.com/483-an-interview-with-adrian-tang/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "High data rates carry a power cost that does not shrink with the radio: a gigabit per second into a handset implies a baseband processor clocking at gigahertz, and the resulting dissipation is incompatible with a device someone holds.",
+   "quote_verbatim": "high data rates don't come at low power",
+   "speaker": "Adrian Tang",
+   "episode": 483,
+   "episode_title": "An Interview with Adrian Tang",
+   "episode_url": "https://theamphour.com/483-an-interview-with-adrian-tang/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Cellular categories for low-power devices are defined by narrowing the occupied band: each step down the ladder squeezes the signal into less spectrum for less throughput, and the narrowband tier goes further still with different modulation and less data again.",
+   "quote_verbatim": "they're squeezing the band, band slower and smaller",
+   "speaker": "Jared Wolff",
+   "episode": 509,
+   "episode_title": "Cellular IoT with Jared Wolff",
+   "episode_url": "https://theamphour.com/509-cellular-iot-with-jared-wolff/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Sending very little data buys receiver sensitivity, because a low rate leaves time for processing gain. A utility meter needs roughly one bit an hour, which is what allowed simple FM modulation, a cheap receiver and a transmit power low enough to meet emissions limits without effort.",
+   "quote_verbatim": "if you send a very, very low data rate, you can have essentially a very sensitive receiver",
+   "speaker": "Larry Sears",
+   "episode": 109,
+   "episode_title": "An Interview with Larry Sears - Hexagram Hardware Holism",
+   "episode_url": "https://theamphour.com/the-amp-hour-109-hexagram-hardware-holism/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A digital mode occupying about 15 Hz of bandwidth fits many simultaneous users onto one voice channel, and shaping every transition with a cosine-squared ramp is what keeps each of them from splattering into the others.",
+   "quote_verbatim": "15 Hertz of bandwidth",
+   "speaker": "Trammell Hudson",
+   "episode": 463,
+   "episode_title": "An Interview with Trammell Hudson",
+   "episode_url": "https://theamphour.com/463-an-interview-with-trammell-hudson/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Side-channel work against a gigahertz-clocked device needs only twenty or thirty megahertz of capture bandwidth, because a down-converter moves the band of interest down to where an ordinary digitiser can reach it.",
+   "quote_verbatim": "like, 20 or 30 megahertz of bandwidth",
+   "speaker": "Colin O'Flynn",
+   "episode": 239,
+   "episode_title": "An Interview with Colin O'Flynn - Aspirated Adamantine Attacks",
+   "episode_url": "https://theamphour.com/239-an-interview-with-colin-oflynn-aspirated-adamantine-attacks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A resonant transducer is narrowband by nature, so bandwidth is bought by damping it — directly trading efficiency for the frequency span the device can cover.",
+   "quote_verbatim": "get bandwidth, they put dampening on it so they reduce the efficiency",
+   "speaker": "Greg Charvat",
+   "episode": 407,
+   "episode_title": "Gregory Charvat and Three New Companies",
+   "episode_url": "https://theamphour.com/407-gregory-charvat-and-three-new-companies/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A well-known amateur radar design sweeps 80 MHz of bandwidth, which is what sets its range resolution — in a chirped system the bandwidth is the resolution, not the carrier frequency.",
+   "quote_verbatim": "the coffee can is 80 megahertz of bandwidth",
+   "speaker": "Greg Charvat",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Frequency-modulated video recording places the carrier only a little above the baseband it carries — roughly 5 to 10 MHz of carrier for 4 MHz of video — which is what makes the recovered signal so tolerant of tape dropouts and level variation.",
+   "quote_verbatim": "if you have 4 megahertz bandwidth, your carrier could be very, you know, could be, you know, in the order of about 5 to 10 megahertz",
+   "speaker": "Ron Quan",
+   "episode": 133,
+   "episode_title": "An Interview with Ron Quan - Tenacious Transistor Teacher",
+   "episode_url": "https://theamphour.com/the-amp-hour-133-tenacious-transistor-teacher/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The high-bandwidth part of 5G is millimetre wave and it trades range for capacity, which is why it implies transceivers distributed on poles throughout a city rather than a few tall masts — most of what is marketed as 5G is additional spectrum in the existing lower bands.",
+   "quote_verbatim": "you'll have millimeter wave transceivers kind of spread throughout a",
+   "speaker": "Chris Gammell",
+   "episode": 569,
+   "episode_title": "Electric Fields, Son.",
+   "episode_url": "https://theamphour.com/569-electric-fields-son/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "For sensor traffic the oldest cellular generations were always adequate on bandwidth and inadequate only on device power — and the constraint that actually strands those designs is that the networks are being switched off to reclaim the spectrum.",
+   "quote_verbatim": "2G is fine for most of the you know like sensor things except for the power needs on the device side",
+   "speaker": "Chris Gammell",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Spectrum is fixed, so a carrier's incentive is always to reclaim an old allocation and repurpose it for a denser standard — which makes any long-lived industrial device dependent on a legacy network a dated asset regardless of how well it works.",
+   "quote_verbatim": "there's a fixed amount of bandwidth and they want it",
+   "speaker": "Chris Gammell",
+   "episode": 462,
+   "episode_title": "Boat Anchors",
+   "episode_url": "https://theamphour.com/462-boat-anchors/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Satellite service throughput is set by contention with nearby users rather than by remoteness, so an isolated location does not get a private link — measured rates of 400 to 800 kilobits per second are common enough to make modern web pages barely usable.",
+   "quote_verbatim": "basically limited by the number of nearby users using it",
+   "speaker": "Dave Jones",
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A single processor driving many shift-register display modules fails on the aggregate data rate rather than on processing power; giving each module its own small controller and letting the controllers exchange data is what makes the system scale.",
+   "quote_verbatim": "if you've just got the one processor trying to drive 50 of these modules, it doesn't work",
+   "speaker": "Dave Jones",
+   "episode": 16,
+   "episode_title": "LED Designs, Last Minute Designs and Board Designs",
+   "episode_url": "https://theamphour.com/the-amp-hour-16-led-designs-last-minute-designs-and-board-designs/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Driving a display over a parallel interface with DMA gives far more bandwidth than the serial interface most projects reach for by default, and costs nothing in processor time once the transfer is set up.",
+   "quote_verbatim": "using a DMA to, um, send the data to the display because it has much higher bandwidth than SPI",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Swapping a web-oriented request protocol for one designed for constrained devices saves twenty to forty percent of both bandwidth and battery for exactly the same message, because the framing carries less that a small device never needed.",
+   "quote_verbatim": "saving to 20 to 40% on bandwidth",
+   "speaker": "Jonathan Beri",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A team experienced in scalable cloud services burned a fleet's entire monthly cellular data allowance in a single day, because nothing in that background prepares you for a link where each message has a cost — the protocol choice is a hardware decision, not a server one.",
+   "quote_verbatim": "they would use their entire monthly budget of cell data in one day because it was just so chatty",
+   "speaker": "Jonathan Beri",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A domestic appliance consuming a gigabyte a day is a design smell rather than a feature, and the usual explanation is verbose human-readable logging left enabled in shipping firmware.",
+   "quote_verbatim": "how could you possibly design a dryer like that, that needed one gig of bandwidth a day",
+   "speaker": "Dave Jones",
+   "episode": 541,
+   "episode_title": "Chip Shortage Denier",
+   "episode_url": "https://theamphour.com/541-chip-shortage-denier/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Bit-level frugality is a response to a constraint, not a virtue in itself: a deep-space probe packs every bit and pays for it in decoding complexity at the other end, while a device on a cheap link can reasonably send text — the mistake is applying either habit where the other belongs.",
+   "quote_verbatim": "is not the Voyager 2 space probe where every bit matters",
+   "speaker": "Dave Jones",
+   "episode": 541,
+   "episode_title": "Chip Shortage Denier",
+   "episode_url": "https://theamphour.com/541-chip-shortage-denier/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Retransmissions present as a halving of throughput rather than as an error, which makes a marginal link look like a slow one and sends the investigation in the wrong direction.",
+   "quote_verbatim": "it halves your bandwidth or something like that",
+   "speaker": "Dave Jones",
+   "episode": 554,
+   "episode_title": "PLEASE be a die shrink",
+   "episode_url": "https://theamphour.com/554-please-be-a-die-shrink/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Customers ask for continuous high-rate telemetry from quantities that barely move; matching the reporting rate to the physical rate of change of what is being measured is usually the largest single saving available in a battery-powered sensor.",
+   "quote_verbatim": "temperature doesn't change that fast",
+   "speaker": "Chris Gammell",
+   "episode": 153,
+   "episode_title": "An Interview with Ryan O'Hara - Keyed, Kerfed Kapton",
+   "episode_url": "https://theamphour.com/the-amp-hour-153-keyed-kerfed-kapton/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Downlinking imagery that turns out to be cloud wastes bandwidth, operational cost and energy in equal measure, which is the clearest case for deciding on board what is worth transmitting rather than filtering after the fact.",
+   "quote_verbatim": "you're taking pictures of clouds all day long and then downloading all of it",
+   "speaker": "Brandon Gilles",
+   "episode": 517,
+   "episode_title": "Depth and AI with Brandon Gilles and Brian Weinstein",
+   "episode_url": "https://theamphour.com/517-depth-and-ai-with-brandon-gilles-and-brian-weinstein/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Reach for programmable logic when the data rate genuinely requires computation before the host can cope, and avoid it when it does not — the discipline of leaving it out is a mark of a good design rather than a limitation.",
+   "quote_verbatim": "you use them if you need the, if you have to do some pre-computing, you know, when you're running a lot of bandwidth",
+   "speaker": "Greg Charvat",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A sound-activated switch discriminates on four things at once — frequency through a bandpass filter, bandwidth, duration and amplitude — and loosening any of them is what turned the cheaper versions of these products into things that triggered on their own.",
+   "quote_verbatim": "that had to be a specific bandwidth for a specific period of time at a specific amplitude",
+   "speaker": "Dave Jones",
+   "episode": 690,
+   "episode_title": "Clap on, clap off, lights flicker",
+   "episode_url": "https://theamphour.com/690-clap-on-clap-off-lights-flicker/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  }
+ ],
+ "attribution_notes": [
+  "attribution_reliable was not trusted. ep252 (Eric Bogatin), ep381 (Derek Kozel), ep566 (Carmen Parisi) and ep513 label host questions with the guest's name; only material unambiguously the guest's own was used.",
+  "ep352 records Michael Ossmann's answers under Dave Jones's name in this bundle; the spread-spectrum and sweep claims are technical answers from the interview and are attributed as recorded rather than reassigned, since the surrounding turns do not disambiguate them cleanly.",
+  "The bundle contains a large amount of everyday usage of the word — home internet plans, video streaming, data caps, hotel wifi — which carries no transferable engineering content and was excluded. What was kept is the technical senses: occupied spectrum, sampling and instrument limits, loop bandwidth, and link budget."
+ ],
+ "capped": false
+}
