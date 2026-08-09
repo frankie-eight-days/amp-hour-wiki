@@ -8,7 +8,7 @@ import pathlib, re, sys
 
 PUB = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "site/public")
 
-NAV = """<nav class="amp-topbar"><a class="amp-brand" href="/">The Amp Hour <span>Wiki</span></a><span class="amp-links"><a href="/topics">Topics</a><a href="/all">All articles</a><a href="/explore">Graph</a><a href="/contribute">Contribute</a></span></nav>
+NAV = """<nav class="amp-topbar"><a class="amp-brand" href="/">The Amp Hour <span>Wiki</span></a><span class="amp-links"><a href="/topics">Topics</a><a href="/all">All articles</a><a href="/explore">Graph</a><a href="/how-this-was-built">How it was built</a><a href="/contribute">Contribute</a></span></nav>
 <style>
 :root { --amp-nav: 43px; }
 .amp-topbar { position: sticky; top: 0; z-index: 100; display: flex;

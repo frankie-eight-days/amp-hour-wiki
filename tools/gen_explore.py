@@ -58,6 +58,8 @@ NAV = (
     ' margin-left:18px;">All articles</a>'
     '<a href="/explore" style="color:#c94628; text-decoration:none;'
     ' margin-left:18px;">Graph</a>'
+    '<a href="/how-this-was-built" style="color:var(--ink);'
+    ' text-decoration:none; margin-left:18px;">How it was built</a>'
     '<a href="/contribute" style="color:var(--ink); text-decoration:none;'
     ' margin-left:18px;">Contribute</a></span></nav>'
 )

@@ -144,7 +144,14 @@ nav .links a:hover {{ color:var(--ember); }}
 
 /* ---------------- hero ---------------- */
 .hero {{ position:relative; overflow:hidden; padding:90px 24px 100px; text-align:center; }}
-.hero svg.traces {{ position:absolute; inset:0; width:100%; height:100%; z-index:0; }}
+/* Keep-out: the artwork scales independently of where the text lands, so the
+   traces are masked away over the content block instead of hand-routed. Stays
+   correct at every viewport width. */
+.hero svg.traces {{ position:absolute; inset:0; width:100%; height:100%; z-index:0;
+  -webkit-mask-image: radial-gradient(ellipse 46% 52% at 50% 49%,
+    transparent 62%, #000 100%);
+  mask-image: radial-gradient(ellipse 46% 52% at 50% 49%,
+    transparent 62%, #000 100%); }}
 .hero .inner {{ position:relative; z-index:1; max-width:760px; margin:0 auto; }}
 .hero h1 {{ font-size:clamp(2.1rem, 5.4vw, 3.6rem); line-height:1.12; font-weight:normal;
   text-wrap:balance; margin-bottom:18px; }}
@@ -157,7 +164,9 @@ nav .links a:hover {{ color:var(--ember); }}
 
 /* verbatim quote: a real, verified line from the corpus, rotating per load */
 .vquote {{ margin:30px auto 34px; max-width:37rem; padding:0 0 0 18px;
-  border-left:3px solid var(--ember); text-align:left; transition:opacity .3s; }}
+  border-left:3px solid var(--ember); text-align:left; transition:opacity .26s;
+  min-height:5.6rem; }}
+@media (max-width: 900px) {{ .vquote {{ min-height:7.2rem; }} }}
 .vquote blockquote {{ font-size:1.16rem; line-height:1.5; font-style:italic;
   color:var(--ink); }}
 .vquote figcaption {{ margin-top:9px; }}
@@ -234,30 +243,53 @@ footer {{ border-top:3px solid var(--ember); background:var(--panel);
 <nav>
   <div class="brand">The Amp Hour <span>Wiki</span></div>
   <div class="links">
-    <a href="/topics">Topics</a><a href="/all">All articles</a><a href="/explore">Graph</a><a href="/contribute">Contribute</a>
+    <a href="/topics">Topics</a><a href="/all">All articles</a><a href="/explore">Graph</a><a href="/how-this-was-built">How it was built</a><a href="/contribute">Contribute</a>
   </div>
 </nav>
 
 <header class="hero">
   <svg class="traces" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <g stroke="var(--copper)" stroke-width="2.5" fill="none" opacity="0.5">
+    <g stroke="var(--copper)" stroke-width="2" fill="none" opacity="0.34">
       <path id="t1" d="M-20,80 H300 l40,40 H620 l30,-30 H1220"/>
       <path id="t2" d="M-20,560 H260 l50,-50 H760 l40,40 H1220"/>
       <path id="t3" d="M140,-20 V180 l40,40 V660"/>
       <path id="t4" d="M1030,-20 V240 l-40,40 V660"/>
       <path id="t5" d="M-20,320 H90 l30,30 V520"/>
       <path id="t6" d="M1220,380 H1120 l-36,-36 V120"/>
+      <path id="t7" d="M-20,180 H120 l40,-40 H430 l30,30 H700"/>
+      <path id="t8" d="M1220,150 H1080 l-40,40 H820 l-30,30 H600"/>
+      <path id="t9" d="M-20,440 H200 l40,40 H540 l30,-30 H780"/>
+      <path id="t10" d="M1220,470 H1000 l-40,-40 H700"/>
+      <path id="t11" d="M330,-20 V50 l30,30 V300 l-24,24 V620"/>
+      <path id="t12" d="M880,660 V520 l-30,-30 V250 l26,-26 V-20"/>
+      <path id="t13" d="M-20,610 H420 l30,-30 H900 l40,40 H1220"/>
+      <path id="t14" d="M60,-20 V300 l26,26 V660"/>
+      <path id="t15" d="M1160,-20 V220 l-30,30 V660"/>
+      <path id="t16" d="M-20,250 H60"/><path id="t17" d="M1140,300 H1220"/>
+      <path id="t18" d="M480,-20 V40 H760 l30,30 V150"/>
     </g>
-    <g fill="var(--copper)" opacity="0.6">
-      <circle cx="300" cy="80" r="6"/><circle cx="620" cy="120" r="6"/>
-      <circle cx="260" cy="560" r="6"/><circle cx="760" cy="510" r="6"/>
-      <circle cx="140" cy="180" r="6"/><circle cx="1030" cy="240" r="6"/>
-      <circle cx="120" cy="350" r="6"/><circle cx="1084" cy="344" r="6"/>
+    <g fill="var(--copper)" opacity="0.42">
+      <circle cx="300" cy="80" r="5"/><circle cx="620" cy="120" r="5"/>
+      <circle cx="260" cy="560" r="5"/><circle cx="760" cy="510" r="5"/>
+      <circle cx="140" cy="180" r="5"/><circle cx="1030" cy="240" r="5"/>
+      <circle cx="120" cy="350" r="5"/><circle cx="1084" cy="344" r="5"/>
+      <circle cx="120" cy="180" r="5"/><circle cx="1080" cy="150" r="5"/>
+      <circle cx="200" cy="440" r="5"/><circle cx="1000" cy="470" r="5"/>
+      <circle cx="360" cy="80" r="5"/><circle cx="850" cy="490" r="5"/>
+      <circle cx="86" cy="326" r="5"/><circle cx="1130" cy="250" r="5"/>
+      <circle cx="450" cy="580" r="5"/><circle cx="940" cy="610" r="5"/>
+      <circle cx="790" cy="70" r="5"/><circle cx="336" cy="324" r="5"/>
     </g>
-    <g stroke="var(--ember2)" stroke-width="2.5" fill="none">
+    <g fill="none" stroke="var(--copper)" stroke-width="1.4" opacity="0.26">
+      <circle cx="300" cy="80" r="11"/><circle cx="1030" cy="240" r="11"/>
+      <circle cx="260" cy="560" r="11"/><circle cx="940" cy="610" r="11"/>
+    </g>
+    <g stroke="var(--ember2)" stroke-width="2" fill="none">
       <use href="#t1" class="pulse"/><use href="#t2" class="pulse" style="animation-delay:1.4s"/>
       <use href="#t3" class="pulse" style="animation-delay:.6s"/>
       <use href="#t4" class="pulse" style="animation-delay:2.2s"/>
+      <use href="#t13" class="pulse" style="animation-delay:3.1s"/>
+      <use href="#t8" class="pulse" style="animation-delay:1.9s"/>
     </g>
   </svg>
   <span class="refdes" style="top:18%; left:8%">R1</span>
@@ -420,19 +452,45 @@ new IntersectionObserver((es) => {{
   es.forEach(e => {{ if (e.isIntersecting) schem.classList.add('drawn'); }});
 }}, {{threshold: 0.35}}).observe(schem);
 
-// verbatim hero quote — a different verified line from the corpus each load
+// verbatim hero quote — real verified lines from the corpus, cycling
 const VQ = {HERO_JSON};
+const VQ_DWELL = 2000;   // ms each quote is held; hover pauses it
 (function () {{
-  if (VQ.length < 2) return;
-  const pick = VQ[Math.floor(Math.random() * VQ.length)];
   const box = document.getElementById('vquote');
-  document.getElementById('vq-text').textContent = '\\u201c' + pick.q + '\\u201d';
-  document.getElementById('vq-title').textContent = pick.title;
+  if (!box || VQ.length < 2) return;
+  const txt = document.getElementById('vq-text');
+  const ttl = document.getElementById('vq-title');
   const a = document.getElementById('vq-link');
-  a.href = '/' + pick.slug;
-  a.querySelector('.silk').textContent =
-    'verbatim \\u00b7 ep ' + pick.ep + (pick.year ? ' \\u00b7 ' + pick.year : '') + ' \\u00b7 ';
-  box.animate ? box.animate([{{opacity: 0}}, {{opacity: 1}}], {{duration: 320}}) : null;
+  const silk = a.querySelector('.silk');
+  let i = Math.floor(Math.random() * VQ.length);
+  let paused = false;
+
+  function render(p) {{
+    txt.textContent = '\\u201c' + p.q + '\\u201d';
+    ttl.textContent = p.title;
+    a.href = '/' + p.slug;
+    silk.textContent = 'verbatim \\u00b7 ep ' + p.ep +
+      (p.year ? ' \\u00b7 ' + p.year : '') + ' \\u00b7 ';
+  }}
+  render(VQ[i]);
+
+  // a cycling quote is unreadable if you can't stop it, and pointless offscreen
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  box.addEventListener('mouseenter', () => {{ paused = true; }});
+  box.addEventListener('mouseleave', () => {{ paused = false; }});
+  box.addEventListener('focusin', () => {{ paused = true; }});
+  box.addEventListener('focusout', () => {{ paused = false; }});
+  let onscreen = true;
+  new IntersectionObserver((es) => {{
+    es.forEach(e => {{ onscreen = e.isIntersecting; }});
+  }}).observe(box);
+
+  setInterval(function () {{
+    if (paused || document.hidden || !onscreen) return;
+    i = (i + 1) % VQ.length;
+    box.style.opacity = '0';
+    setTimeout(function () {{ render(VQ[i]); box.style.opacity = '1'; }}, 260);
+  }}, VQ_DWELL);
 }})();
 </script>
 </body>
