@@ -1,0 +1,762 @@
+{
+ "concept": "lora",
+ "name": "LoRa",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "lora",
+  "name": "LoRa",
+  "type": "standard-protocol",
+  "cluster": {
+   "core": [
+    "lora"
+   ],
+   "children": [
+    "b2b",
+    "frequency-shift-keying",
+    "rest-api",
+    "semtech",
+    "things-network"
+   ],
+   "neighbors": [
+    {
+     "concept": "900-mhz-band",
+     "weight": 4
+    },
+    {
+     "concept": "battery-charger",
+     "weight": 4
+    },
+    {
+     "concept": "radio",
+     "weight": 4
+    }
+   ]
+  },
+  "stats": {
+   "episodes": 55,
+   "mentions": 169,
+   "explains": 62,
+   "opinions": 14,
+   "candidate_episode_count": 55,
+   "candidate_mention_count": 121,
+   "gated_out": 201,
+   "gated_out_by_concept": [
+    [
+     "radio",
+     84
+    ],
+    [
+     "battery-charger",
+     34
+    ],
+    [
+     "900-mhz-band",
+     23
+    ],
+    [
+     "things-network",
+     17
+    ],
+    [
+     "frequency-shift-keying",
+     14
+    ],
+    [
+     "b2b",
+     12
+    ],
+    [
+     "semtech",
+     12
+    ],
+    [
+     "rest-api",
+     5
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 3,
+   "speakers": [
+    [
+     "Chris Gammell",
+     27
+    ],
+    [
+     "Richard Ginus",
+     16
+    ],
+    [
+     "CNLohr",
+     10
+    ],
+    [
+     "Dave Jones",
+     8
+    ],
+    [
+     "Akiba",
+     2
+    ],
+    [
+     "Ray Ozzie",
+     2
+    ],
+    [
+     "Alex Haro",
+     2
+    ],
+    [
+     "Luke Beno",
+     1
+    ],
+    [
+     "Derek Kozel",
+     1
+    ],
+    [
+     "Greg Davill",
+     1
+    ],
+    [
+     "Brandon Gilles",
+     1
+    ],
+    [
+     "Werner Johansson",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 70,
+    "child": 2
+   },
+   "passages_by_depth": {
+    "explains": 58,
+    "opinion": 14
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 72
+ },
+ "claims": [
+  {
+   "claim_text": "LoRa originated in the mid-2000s with a small French company whose technology Semtech acquired and productised; its modulation is chirp spread spectrum, which improved on earlier low-power radios in propagation, quality of service and multipath performance.",
+   "quote_verbatim": "the origins are from the mid-2000s from a couple of French engineers who had a little company. And Semtech ended up buying their technology and productizing it into LoRa. It's a unique modulation among other things of its class. It's chirp spread spectrum.",
+   "speaker": "JP Norair",
+   "episode": 443,
+   "episode_title": "An Interview with JP Norair",
+   "episode_url": "https://theamphour.com/443-an-interview-with-jp-norair/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "LoRa is a physical layer only: it defines what happens to the sub-GHz carrier to turn it into a data packet, and carries no networking of its own.",
+   "quote_verbatim": "LoRa is, it's a phi layer is what we call it in the industry",
+   "speaker": "JP Norair",
+   "episode": 443,
+   "episode_title": "An Interview with JP Norair",
+   "episode_url": "https://theamphour.com/443-an-interview-with-jp-norair/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A LoRa symbol is an up-chirp whose starting point within the sweep is shifted to carry data, rather than up-chirps and down-chirps representing ones and zeros; a single chirp carries roughly five to ten bits depending on how far it is shifted.",
+   "quote_verbatim": "per chirp, you can get anywhere from like about five bits to about 12, not 12, 10 bits of data from a single chirp by depending on how much it's shifted by",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Down-chirps appear in a LoRa frame only in the synchronisation sequence, which uses two and a quarter of them; all remaining symbols in the frame are up-chirps, and interleaving the two directions to carry more data is possible but not done.",
+   "quote_verbatim": "They have two down two and a quarter down chirps. So that's how they synchronize. And that's the only place where the down chirps are used.",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Because a LoRa receiver correlates against one precisely specified chirp shape, it can extract that waveform from signals far noisier than itself, which is the processing gain that lets LoRa be received below the noise floor.",
+   "quote_verbatim": "you can pick it out of extremely noisy stuff",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "LoRa deliberately trades the full orthogonality of code-division schemes such as those used by GPS for far easier synchronisation and cheap receiver hardware; the cost is that two transmissions sharing frequency, spreading factor and timing collide in a way that is very difficult to separate.",
+   "quote_verbatim": "if there is somebody else who is transmitting a Laura signal on the same coding at the same time at the same frequency, and like if all of the properties perfectly line up, then you actually can have collisions",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Chirp detection is robust against terrestrial multipath because the receiver looks for tones rather than reconstructing symbols, whereas code-division schemes suffer inter-symbol interference when reflected copies arrive smeared in time.",
+   "quote_verbatim": "it's robust against that because it's looking for these tones versus something like code division multiplexing",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Spreading factor sets the length of the chirp: a longer chirp allows a more accurate lock and therefore greater range, while a shorter one gives a higher data rate over less distance.",
+   "quote_verbatim": "if you have more time, like a longer chirp, you can more accurately lock onto it. And so that's how, depending on how you're transmitting Laura, you can get some very long range or shorter range, but faster data rate.",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "At the highest spreading factor, SF12, throughput falls to a few bits per second and airtime per message becomes long; the receiver must be configured for the same spreading factor to recover the message.",
+   "quote_verbatim": "it looks like SF12 is spread way the hell out and you only get, you know, a couple of bits per second, fine, but then you just, you take a long time to transmit",
+   "speaker": null,
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A microcontroller GPIO toggled at a few megahertz radiates harmonics up into the 900 MHz band, but at very low power because pins not designed as high-speed outputs have slow edges; a LoRa receiver's sensitivity is high enough that this residual harmonic energy can still be decoded, which is the basis of software-defined LoRa transmission from a bare microcontroller.",
+   "quote_verbatim": "when you get up to like 900 megahertz from turning a signal on and off down at like, I don't know, six megahertz, the amount of power you have is itty bitty",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "LoRa is not tied to one frequency; it is applied across the ISM bands, commonly at 315 MHz, 433 MHz, 868 MHz and 915 MHz.",
+   "quote_verbatim": "It's usually used on the ISM bands. Okay. Down from 160 megahertz in the US, I guess, to 315, 433 megahertz, 868 megahertz, and 915 megahertz.",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Regional allocation splits deployments: 915 MHz is used in the United States and Australia, 868 MHz in Europe.",
+   "quote_verbatim": "that's what 915 megahertz and you use the same ones in australia right yeah yeah so it's 915 here 915 there 868 in europe right",
+   "speaker": null,
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "In the United States LoRa occupies the spectrum from roughly 900 to 915 MHz, with uplink channels around 903 MHz.",
+   "quote_verbatim": "it's part of the 900 degree spectrum from 900 to nine 15. The uplinks are at nine Oh three.",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The sub-GHz LoRa bands are discontinuous between regions, so a device or network intended to work worldwide cannot settle on a single band the way a 2.4 GHz design can.",
+   "quote_verbatim": "the bands are discontinuous. So, you know, the frequency bands here in the U.S. versus Europe are different bands.",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Operating near 900 MHz rather than 2.4 GHz roughly quadruples the wavelength, so an antenna array of equivalent directivity must be significantly larger; the spread-spectrum nature of the LoRa waveform also makes beamforming harder.",
+   "quote_verbatim": "the beam forming is actually a lot harder to do because of the sped spectrum nature of the Laura protocol. But on top of that, it's a longer wavelength. And so your antenna array actually has to be significantly bigger",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Proposed reallocations of the 900 MHz ISM band, such as a navigation system seeking a change, are a live regulatory risk for LoRa deployments, and community projects have filed comment against them.",
+   "quote_verbatim": "A navigation system that was proposing a change to the band. Oh. And MeshTastic put out a comment about it.",
+   "speaker": null,
+   "episode": 680,
+   "episode_title": "Catching Rockets with Musk Sticks",
+   "episode_url": "https://theamphour.com/680-catching-rockets-with-musk-sticks/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Vendor range figures of the order of ten kilometres on a couple of batteries are the headline specification for LoRa and are routinely met with disbelief by radio engineers on first encounter.",
+   "quote_verbatim": "And he mentioned some amazing specs, like 10 kilometers of range on a couple of batteries. And then I just said, that's not possible.",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "opinion",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Achieved LoRa range is governed by line of sight rather than by transmit power: a node flown on a radio-controlled aircraft over the Netherlands reached gateways in Utrecht and in Antwerp, Belgium, purely because altitude put it over the horizon.",
+   "quote_verbatim": "I saw that I hit multiple gateways, you call them. Uh-huh. One, it was in Antwerp in Belgium.",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Line-of-sight LoRa testing from elevated terrain has demonstrated links of roughly 36 kilometres.",
+   "quote_verbatim": "It's like 36 kilometers or something. I mean, it was a mountain",
+   "speaker": null,
+   "episode": 628,
+   "episode_title": "Two Dads Puzzlin Things Out",
+   "episode_url": "https://theamphour.com/628-two-dads-puzzlin-things-out/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Reported record LoRa links reach into the hundreds of kilometres, on the order of 240 kilometres, but require line of sight, considerable elevation and a high-gain antenna, so they are not representative of deployed range.",
+   "quote_verbatim": "You know, it has to be line of sight, but it has to, it basically, if you get up high enough, like on a mountain, like Andreas did, you can basically send to, you know, around the curvature of the earth and you can get a good distance with a high gain antenna",
+   "speaker": null,
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "For comparison, WiFi driven at its lowest coding rates and long-range modes tops out at around 800 metres, which is the baseline LoRa has to beat to justify a second radio.",
+   "quote_verbatim": "around 800 meters is kind of like where the sorts of stuff that I do with wifi kind of top out",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "LoRa and LoRaWAN are distinct layers sharing a confusingly similar name: LoRa describes how one chip's radio talks to another, while LoRaWAN is a network protocol layered on top that routes packets to an application over the internet.",
+   "quote_verbatim": "Laura is, it's long range or low, low power radio or something like that. It doesn't matter. It's basically how the chip talks to other chips. That's the easy way to think about it. Laura Wan is then a protocol layer that's on top of that",
+   "speaker": null,
+   "episode": 422,
+   "episode_title": "Stick 'Em On Whales",
+   "episode_url": "https://theamphour.com/422-stick-em-on-whales/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "In LoRaWAN a node transmits without addressing any particular receiver; every gateway in range hears the packet, and the packet header determines where the network forwards it.",
+   "quote_verbatim": "there's a bunch of listening devices that are called gateways",
+   "speaker": null,
+   "episode": 422,
+   "episode_title": "Stick 'Em On Whales",
+   "episode_url": "https://theamphour.com/422-stick-em-on-whales/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Multiple gateways commonly receive the same LoRaWAN packet, and the server side deduplicates the repeated copies before handing the reading to the application.",
+   "quote_verbatim": "the application server receives from three different gateway servers",
+   "speaker": null,
+   "episode": 422,
+   "episode_title": "Stick 'Em On Whales",
+   "episode_url": "https://theamphour.com/422-stick-em-on-whales/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The LoRaWAN gateway is a dumb forwarder that relays received packets to the network server; the account, key management and data handling all sit on the server side, which is where the system's complexity lives.",
+   "quote_verbatim": "And the gateway is like a dummy device which forwards the data to the LoRa server.",
+   "speaker": null,
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "LoRaWAN traffic carries layered encryption: the outermost key tells the gateway whether the packet belongs on that network and should be forwarded rather than dropped, while the payload remains encrypted beneath it up to the application server.",
+   "quote_verbatim": "But the outermost key is going to say, hey, this is allowed to be on this specific network. I'm going to forward the traffic along and not just drop the packet.",
+   "speaker": null,
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "LoRaWAN is bidirectional, so data can be sent down to a node as well as up from it, but the mechanism is centralised through the network and application servers.",
+   "quote_verbatim": "And then you could also send data down in the other direction as well, right? It is bidirectional.",
+   "speaker": null,
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "LoRa links are half duplex; an application built directly on the physical layer picks its own transmit and listen times, whereas LoRaWAN defines three schemes governing when a node listens.",
+   "quote_verbatim": "In Laura1, there's actually, uh, three different schemes for that.",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Gateway-initiated downlink to a node is not what LoRa is suited to, so applications that need to command a remote device on demand should use another technology.",
+   "quote_verbatim": "No, not Laura is not the right technology for such application.",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Node transceivers such as the SX1276 receive on a single channel, while gateway builds use eight-channel receivers so that many nodes on different channels can be heard at once.",
+   "quote_verbatim": "the SX 1276 is the chip that I've used in the past, but that's a one channel receiver",
+   "speaker": null,
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "LoRa is an intellectual-property block describing a modulation rather than an open standard, and building a node requires an SPI-controlled radio chip from Semtech, the owner of that IP, plus a software library to extract the data.",
+   "quote_verbatim": "The thing is you, you do need a chip from Semtech, which is the owner of the LoRa IP. Okay. And that's an, an SBI controlled chip that does the radio part",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Single-source silicon is a design and supply constraint for LoRa: the transceiver can only be bought from Semtech, unlike Bluetooth radios which are already integrated into most electronics.",
+   "quote_verbatim": "Where Laura, you know, you can only get your chip from Semtech.",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Semtech's commercial model for LoRa has been to encourage small operators to stand up their own local networks, effectively duplicating cellular coverage so that sensors can be dropped anywhere and still reach the internet.",
+   "quote_verbatim": "they're kind of advocating setting up kind of small ISPs and create, you know, basically in my opinion, duplicating the cellular cellular network in order to get to provide coverage",
+   "speaker": "Akiba",
+   "episode": 355,
+   "episode_title": "The Internet of Septage (with Akiba)",
+   "episode_url": "https://theamphour.com/355-the-internet-of-septage-with-akiba/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Complete LoRa node hardware is inexpensive: modules built around a Semtech chip sell for around five dollars, and combined ESP32-plus-LoRa development boards for fifteen to twenty dollars.",
+   "quote_verbatim": "like a five dollar module that has a Semtech chip on it with some radio stuff",
+   "speaker": null,
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "LoRa transceivers reach sleep currents below one microamp, which is what makes multi-year battery operation practical; current is materially higher during transmit and lower during receive.",
+   "quote_verbatim": "typical LoRa transceivers, it can go down to less than one microamp sleep currents",
+   "speaker": null,
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A coin cell has an internal resistance measured in tens of ohms, so most transmitters collapse its terminal voltage when the radio turns on; LoRa is among the few that can be run from one, and even then bulk capacitance is normally added to absorb the transmit pulse.",
+   "quote_verbatim": "some of them like LoRa you can actually do on coin cell but maybe have a bunch of caps there too",
+   "speaker": null,
+   "episode": 640,
+   "episode_title": "Software Defined Power Supplies with Werner Johansson",
+   "episode_url": "https://theamphour.com/640-software-defined-power-supplies-with-werner-johansson/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The LoRa trade is fixed: very low data rate in exchange for very high range, with good battery life following from the fact that a node transmits a short burst and then powers the radio down.",
+   "quote_verbatim": "The data rate, the amount of data you can send is really low. The range is really high. And also, the battery life is really good because it doesn't really take a lot of energy.",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "LoRa's maximum data rate is roughly a tenth of that achievable with a sub-GHz FSK module such as the RFM69, and that gap is inherent to the protocol rather than an implementation limit.",
+   "quote_verbatim": "if you want to get maximum data rates from LoRa, it's probably a tenth of the maximum data rate you can get from RFM 69",
+   "speaker": "Felix Rusu",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "LoRa transceiver modules cost more per unit and are inherently more complex to work with than plain FSK sub-GHz modules, so range is the only reason to accept the trade.",
+   "quote_verbatim": "LoRa is more costly per transceiver module. So, the cost is higher for those. And, yeah, complexity. There's more complexity with LoRa.",
+   "speaker": "Felix Rusu",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Range should not dominate a sub-GHz radio choice; conventional FSK links suffice for home, farm and industrial spans where reliability and battery life matter more, and LoRa is reserved for the cases where very long range is genuinely required.",
+   "quote_verbatim": "I would say people shouldn't get stuck up on the range question. These can be optimized for range, for very long range. And then if you really need very, very long range, then look at LoRa because that's optimized for that.",
+   "speaker": "Felix Rusu",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "LoRa is the wrong choice for applications that generate a lot of data or need it in near real time; a body-worn cycling telemetry system failed on both counts because its data volume and latency requirement ran directly against LoRa's strengths.",
+   "quote_verbatim": "LoRa is actually a really bad choice for the cycling thing because it was a lot of data. And it needed to arrive relatively real time.",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Remote sensing is the application LoRa fits best, and the clearest case for it is a site where no other network exists and one has to be built regardless.",
+   "quote_verbatim": "there are two different scenarios where Laura really shines. And that is when there is no other network available",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Where the deployment location is not under the builder's control, cellular is the better wide-area choice; LoRa's observed sweet spots are smart-city and agricultural installations where the operator owns the site.",
+   "quote_verbatim": "where you're not the one controlling the deployment, uh, cellular wins",
+   "speaker": "Ray Ozzie",
+   "episode": 603,
+   "episode_title": "An Interview with Ray Ozzie (Blues Wireless)",
+   "episode_url": "https://theamphour.com/603-an-interview-with-ray-ozzie-blues-wireless/",
+   "depth_regraded": "opinion",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Deploying hundreds of sensors with individual cellular modems is uneconomic in module cost, power and connectivity charges, which is the structural argument for a LoRa network with shared gateways.",
+   "quote_verbatim": "Laura is a cheap way. If you've got hundreds of sensors, you don't want them all with a GSM gateway",
+   "speaker": null,
+   "episode": 380,
+   "episode_title": "Just Terrestrial and Space Things",
+   "episode_url": "https://theamphour.com/380-just-terrestrial-and-space-things/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Payload budgets on LoRaWAN are small enough that application state is bit-packed rather than sent as structured data; a single byte encoding 255 distinct states is a normal way to report a combination of detected conditions.",
+   "quote_verbatim": "you have 255 possible encodings in a single byte",
+   "speaker": "Brandon Gilles",
+   "episode": 517,
+   "episode_title": "Depth and AI with Brandon Gilles and Brian Weinstein",
+   "episode_url": "https://theamphour.com/517-depth-and-ai-with-brandon-gilles-and-brian-weinstein/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where the payload is only an identifier and a position, the bare LoRa transceiver used point to point is sufficient and the LoRaWAN ecosystem can be skipped entirely.",
+   "quote_verbatim": "I wasn't really focusing on the Laura WAN aspect of, of kind of that ecosystem, just, just the Laura transceiver itself",
+   "speaker": "Greg Davill",
+   "episode": 473,
+   "episode_title": "An Interview with Greg Davill",
+   "episode_url": "https://theamphour.com/473-an-interview-with-greg-davill/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "LoRa occupies a wide band, so widespread adoption leaves measurably less spectrum for other users and coexistence problems are expected to appear as density rises.",
+   "quote_verbatim": "we would get there pretty quickly because Laura has a wide band. Okay. Uh, so there is a little bit less, uh, space for other people to send stuff.",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Network capacity, not link budget, is the scaling limit for LoRa: channels are few and slow, so collisions rise with the number of devices sharing a network.",
+   "quote_verbatim": "as you have more devices in a network, you start to have more collisions and stuff like that too",
+   "speaker": null,
+   "episode": 618,
+   "episode_title": "Refrigerators and Robots with Amitabh Shrivastava",
+   "episode_url": "https://theamphour.com/618-refrigerators-and-robots-with-amitabh-shrivastava/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The DASH7 stack was proposed as an alternative network layer to LoRaWAN specifically to address LoRaWAN's collision behaviour, though it has not been widely deployed.",
+   "quote_verbatim": "he was talking about the Dash 7 stack that's instead of LoRaWAN. It was basically because LoRaWAN has many collisions",
+   "speaker": null,
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "LoRa has no connected or disconnected state, so the deauthentication-style attacks that work against WiFi have no analogue; jamming the receiver remains the available attack.",
+   "quote_verbatim": "That's some kind of attack you could not do with Laura because there is no connected or disconnected state.",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The Things Network began in 2015 by publishing an open-source LoRaWAN network server, with participants buying gateways from any vendor and installing them at home to build shared coverage.",
+   "quote_verbatim": "in 2015, Things Network, or Things Industries, took this idea, and they run with creating publicly an open-source LoRaWAN network server",
+   "speaker": null,
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Early community LoRa gateways were priced around two hundred dollars each and were promoted as covering a radius of several miles, so a handful of units could blanket a community.",
+   "quote_verbatim": "they have these routers that they're like $200 and you can, you know, put one in your home and service, let's just say a five-mile radius of low-power RF nodes",
+   "speaker": null,
+   "episode": 272,
+   "episode_title": "An Interview With Luke Beno of Analog.io",
+   "episode_url": "https://theamphour.com/272-an-interview-with-luke-beno-of-analog-io/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Community LoRaWAN gateway hardware has needed region-specific firmware builds; a Things Network gateway bought for use in Australia required a custom compile and did not work out of the box.",
+   "quote_verbatim": "it had to be custom firmware because it's it's an australia specific thing",
+   "speaker": null,
+   "episode": 393,
+   "episode_title": "I've bitten myself",
+   "episode_url": "https://theamphour.com/393-ive-bitten-myself/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A LoRa deployment for radiation and air-quality monitoring in the Fukushima exclusion zone used solar-powered boxes with dual particle counters and dual Geiger counters backhauled over LoRa through a Raspberry Pi-based concentrator, and moved to cellular as service became available because building and maintaining a private LoRa network is difficult in that environment.",
+   "quote_verbatim": "So initially we were backhauling by LoRa. As the cellular service came up, that was something we were looking forward to because building your own LoRa network can be challenging",
+   "speaker": "Ray Ozzie",
+   "episode": 603,
+   "episode_title": "An Interview with Ray Ozzie (Blues Wireless)",
+   "episode_url": "https://theamphour.com/603-an-interview-with-ray-ozzie-blues-wireless/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A satellite IoT network evaluated LoRa against Bluetooth and chose Bluetooth, because Bluetooth radios are already present in nearly every device and 2.4 GHz is unlicensed worldwide, whereas LoRa requires adding a single-source radio in region-specific bands.",
+   "quote_verbatim": "part of the reason we went with Bluetooth is Bluetooth is already embedded into every chip",
+   "speaker": "Alex Haro",
+   "episode": 728,
+   "episode_title": "Space Age Bluetooth with Alex Haro",
+   "episode_url": "https://theamphour.com/728-space-age-bluetooth-with-alex-haro/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The Amazon Sidewalk network built on those radios is point to point rather than a mesh, and participation became opt-in after objections.",
+   "quote_verbatim": "No, it's just point to point. It's Laura.",
+   "speaker": null,
+   "episode": 628,
+   "episode_title": "Two Dads Puzzlin Things Out",
+   "episode_url": "https://theamphour.com/628-two-dads-puzzlin-things-out/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Meshtastic is a firmware and application layer over bare LoRa that forms an ad-hoc mesh rather than a LoRaWAN-style star, and a packet hops between nodes but reaches the internet only if some node on the network is bridging it.",
+   "quote_verbatim": "it's not going to go anywhere unless you have a receiver also on that network",
+   "speaker": null,
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Firmware, not radio hardware, has been the practical barrier to LoRa projects: stock libraries such as RadioHead give only point-to-point links, and layering channels on top of them produces a bespoke, non-standard system.",
+   "quote_verbatim": "but the limitation for me has always been firmware",
+   "speaker": "Chris Gammell",
+   "episode": 677,
+   "episode_title": "Watt Is The Deal",
+   "episode_url": "https://theamphour.com/677-watt-is-the-deal/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The value of building on LoRaWAN rather than a private protocol is the existing density of gateways: the radio provides a wide net of receivers and the internet carries the traffic the rest of the way.",
+   "quote_verbatim": "So you have a wide net of receivers, but then the internet does the lifting.",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Two independent open-source implementations of LoRa modulation and demodulation exist for GNU Radio, both published under the name gr-lora.",
+   "quote_verbatim": "there are actually two full full implementations of the modulation and demodulation in gnu radio yeah gr laura right gr laura and gr laura",
+   "speaker": "Derek Kozel",
+   "episode": 381,
+   "episode_title": "An Interview with Derek Kozel",
+   "episode_url": "https://theamphour.com/381-interview-with-derek-kozel/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  }
+ ],
+ "attribution_notes": [
+  "ep272: passage labelled Luke Beno covers both interviewer and guest turns; the Things Network router description could not be assigned with confidence, so the claim is unattributed.",
+  "ep355: labelled Akiba throughout, but the window contains the host's question 'Remind me what Laura is'. The Semtech/small-ISP explanation is the guest's answer and is content-attributed to Akiba.",
+  "ep376: labels alternate unreliably between Chris Gammell and Richard Ginus within windows; every technical answer (modulation as IP block, Semtech SPI chip, ISM bands, half duplex, coexistence, cycling failure) is the guest's and is content-attributed to Richard Ginus. Passage 10 is labelled Chris Gammell but contains Ginus's answer.",
+  "ep380: passage 25 is labelled Dave Jones; the content ('Guess what I'm building right now, Dave? So I'm building a 4G to Laura gateway') is Chris Gammell addressing Dave Jones. Claims from this episode are left unattributed since the surviving content is general.",
+  "ep381: flagged attribution_reliable false. The GNU Radio gr-lora statement is content-attributed to Derek Kozel (GNU Radio project); the surrounding 'I'm playing around with laura stuff' is the host's.",
+  "ep398: passages are labelled Dave Jones, who is not on this episode; the guest is Felix Rusu of LowPowerLab, whose RFM69 product line the content concerns. All RFM69-versus-LoRa claims are content-attributed to Felix Rusu.",
+  "ep418: flagged attribution_reliable false; the garage-door security thought experiment yielded no transferable LoRa knowledge and was dropped rather than attributed.",
+  "ep443: passage is labelled Dave Jones but the episode is an interview with JP Norair of Haystack Technologies, and the content is his account of LoRa's origins and chirp spread spectrum. Content-attributed to JP Norair.",
+  "ep557: labelled Chris Gammell; the LoRaWAN and sleep-current explanation is guest Orkhan Amiraslanov's answer. Left unattributed rather than passing through a doubtful name.",
+  "ep603: Ray Ozzie's claims are anchored to the Safecast/Blues Wireless programme and that context is stated in the claim text.",
+  "ep628: labelled Chris Gammell; the 36 km line-of-sight figure is reported second-hand about another experimenter, so the claim is stated without attribution.",
+  "ep640: flagged attribution_reliable false. The coin-cell internal-resistance and LoRa claim is left unattributed.",
+  "ep667: labels alternate between CNLohr and Chris Gammell inside windows; the chirp-encoding, spreading-factor and software-defined-LoRa explanations are content-attributed to CNLohr, and passage 57 (DASH7 recollection, labelled Chris Gammell) is left unattributed.",
+  "ep677: labelled Chris Gammell throughout and consistent with the content (his own Meshtastic and LoRa hardware experience); the firmware-limitation judgment is attributed to him, the rest left as general fact.",
+  "ep728: passage 69 is labelled Chris Gammell but contains guest Alex Haro's answer about Hubble Network's Bluetooth-versus-LoRa decision; content-attributed to Alex Haro."
+ ],
+ "capped": false
+}

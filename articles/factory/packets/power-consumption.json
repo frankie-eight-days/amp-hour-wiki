@@ -1,0 +1,1012 @@
+{
+ "concept": "power-consumption",
+ "name": "Power Consumption",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "power-consumption",
+  "type": "concept-principle",
+  "rank_by_score": 53,
+  "cluster": {
+   "core": [
+    "power-consumption",
+    "power-consumption-scaling"
+   ],
+   "children": [
+    "memory-allocation",
+    "power-switch"
+   ],
+   "neighbors": []
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 141,
+  "passages_used": 141,
+  "episodes": 108,
+  "mentions": 153,
+  "explains": 95,
+  "opinions": 46,
+  "candidate_episode_count": 77,
+  "candidate_mention_count": 100,
+  "gated_out": 15,
+  "gated_out_by_concept": [
+   [
+    "power-switch",
+    9
+   ],
+   [
+    "memory-allocation",
+    6
+   ]
+  ],
+  "gate_relaxed": false,
+  "unreliable_attribution_passages": 4,
+  "speakers": [
+   [
+    "Dave Jones",
+    51
+   ],
+   [
+    "Chris Gammell",
+    37
+   ],
+   [
+    "Jørgen Jakobsen",
+    4
+   ],
+   [
+    "SPEAKER_00",
+    3
+   ],
+   [
+    "Andrew Witte",
+    3
+   ],
+   [
+    "Brandon Harris",
+    3
+   ],
+   [
+    "Aedan Cullen",
+    3
+   ],
+   [
+    "Jeff Keyzer",
+    2
+   ],
+   [
+    "Larry Sears",
+    2
+   ],
+   [
+    "Greg Charvat",
+    2
+   ],
+   [
+    "Jeri Ellsworth",
+    2
+   ],
+   [
+    "Mike Engelhardt",
+    2
+   ],
+   [
+    "Zach Archer",
+    2
+   ],
+   [
+    "Tim Ansell",
+    2
+   ],
+   [
+    "Alvaro Prieto",
+    2
+   ],
+   [
+    "Julia Desmazes",
+    2
+   ],
+   [
+    "Colin O'Flynn",
+    1
+   ],
+   [
+    "Ahmed",
+    1
+   ],
+   [
+    "Luke Iseman",
+    1
+   ],
+   [
+    "Dafydd Roche",
+    1
+   ]
+  ],
+  "passages_by_source_role": {
+   "core": 141
+  },
+  "passages_by_depth": {
+   "explains": 95,
+   "opinion": 46
+  }
+ },
+ "claims": [
+  {
+   "claim_text": "A low-power part was cited as drawing 250 microwatts in operation and about 10 nanoamps of leakage as standby current once switched off, illustrating the several-decade gap between active and off-state consumption.",
+   "quote_verbatim": "And it draws 250 microwatts during operation. And 10 nanoamps, you know, leakage, you know, standby current when you actually switch it off.",
+   "speaker": "Dave Jones",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Power consumption should be re-measured over the full operating temperature range, for example by placing the assembled unit in a thermal chamber and repeating the measurement at 0 C and 70 C, because leakage and bias currents vary with temperature.",
+   "quote_verbatim": "you would actually stick it in a thermal oven and you'd measure its power consumption again at the extremes at zero and 70",
+   "speaker": "Dave Jones",
+   "episode": 53,
+   "episode_title": "Biarchy Birthday Bavardage",
+   "episode_url": "https://theamphour.com/the-amp-hour-53-biarchy-birthday-bavardage/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The BeagleBoard consumed roughly 2 watts at its maximum clock frequency while decoding video, plus whatever peripherals drew from the USB host ports, so the board-level figure had to be quoted as a base figure plus USB load.",
+   "quote_verbatim": "So 2 watts plus whatever you're drawing off of the USB host port",
+   "episode": 59,
+   "episode_title": "An Interview with Jeff Keyzer and Jason Kridner - Bonafide BeagleBoard Bionomics",
+   "episode_url": "https://theamphour.com/the-amp-hour-59-bonafide-beagleboard-bionomics/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Dynamic power in a digital process has a switching-frequency component and a supply-voltage component, which is why chip designers push core voltages as low as the process allows and avoid raising switching frequency further than needed.",
+   "quote_verbatim": "there's a frequency component, a voltage component, and everything else. So they have to try to optimize with lowest core voltage on chips these days.",
+   "episode": 61,
+   "episode_title": "Moore's Law, GaN and SiC devices - Gallimaufry GaN Gabble",
+   "episode_url": "https://theamphour.com/the-amp-hour-61-gallimaufry-gan-gabble/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "In towed marine seismic streamers up to about 10 kilometres long, ADC power consumption dominated the system design because it was multiplied across roughly 10,000 channels, so every microwatt per channel mattered.",
+   "quote_verbatim": "you start out with the power consumption of the ADC. This is why it's so critical. When you add up 10,000 channels",
+   "speaker": "Dave Jones",
+   "episode": 65,
+   "episode_title": "Silego, ADCs & Seismic Detection - Dave's Dingo Dystocia",
+   "episode_url": "https://theamphour.com/the-amp-hour-65-daves-dingo-dystocia/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "In a towed seismic array the power budget trades directly against mechanical design: higher consumption demands heavier copper conductors to carry the power, which in turn demands more buoyancy material.",
+   "quote_verbatim": "there was a trade-off between your power consumption versus the weight of your copper to carry the power",
+   "speaker": "Dave Jones",
+   "episode": 228,
+   "episode_title": "An Interview with Shahriar from The Signal Path - Quisquous Quivering Quadripole",
+   "episode_url": "https://theamphour.com/228-an-interview-with-shahriar-from-the-signal-path-quisquous-quivering-quadripole/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The Raspberry Pi Model A cost about $10 less than the Model B, dropped one USB port and the Ethernet interface, and consumed substantially less power because a large share of the Model B's consumption went to the Ethernet controller.",
+   "quote_verbatim": "But the A is $10 cheaper, loses one USB port on the Ethernet. It consumes a lot less power as well.",
+   "speaker": "Eben Upton",
+   "episode": 97,
+   "episode_title": "An Interview with Eben Upton - Morbus Moilsome MakerFaire",
+   "episode_url": "https://theamphour.com/the-amp-hour-97-morbus-moilsome-makerfaire/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Integrating functional blocks onto a single die allows unused blocks to be switched off, which is favourable for power consumption.",
+   "quote_verbatim": "Just because it's easier to have single die and then you just shut off whatever you don't need. Yeah, absolutely. It's good for power.",
+   "episode": 97,
+   "episode_title": "An Interview with Eben Upton - Morbus Moilsome MakerFaire",
+   "episode_url": "https://theamphour.com/the-amp-hour-97-morbus-moilsome-makerfaire/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Absolute lowest power consumption remains one of the parametric reasons a design is taken to an ASIC rather than an FPGA, alongside IP protection and other business considerations.",
+   "quote_verbatim": "Or you want the absolute lowest power consumption or something like that. There are a whole bunch of parametric things and business reasons why ASICs won't go away.",
+   "episode": 103,
+   "episode_title": "An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee",
+   "episode_url": "https://theamphour.com/the-amp-hour-103-xenodochial-xilinx-ex-employee/",
+   "depth_regraded": "opinion",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A utility meter needs only about one bit of data per hour, and choosing a very low data rate permits a very sensitive receiver because more processing gain is available per bit, which in turn keeps both cost and transmit power down.",
+   "quote_verbatim": "if you send a very, very low data rate, you can have essentially a very sensitive receiver",
+   "speaker": "Larry Sears",
+   "episode": 109,
+   "episode_title": "An Interview with Larry Sears - Hexagram Hardware Holism",
+   "episode_url": "https://theamphour.com/the-amp-hour-109-hexagram-hardware-holism/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where antenna size is not constrained, a lower carrier frequency is preferable for a low-power radio link: semiconductors are cheaper, gain is easier to obtain, propagation is better and power consumption is lower.",
+   "quote_verbatim": "Cheaper semiconductors, you know, easier to get gain, lower power consumption.",
+   "speaker": "Larry Sears",
+   "episode": 109,
+   "episode_title": "An Interview with Larry Sears - Hexagram Hardware Holism",
+   "episode_url": "https://theamphour.com/the-amp-hour-109-hexagram-hardware-holism/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A large valve audio amplifier used about 23 tubes with roughly 16 to 20 amps of filament current and a 535 volt DC plate supply, drawing on the order of one kilowatt in total.",
+   "quote_verbatim": "23 tubes and maybe like, actually, I can't remember, 16 or 20 amps of filament current and, you know, the plate voltage is 535 volts DC.",
+   "speaker": "Greg Charvat",
+   "episode": 115,
+   "episode_title": "An Interview with Dr Greg Charvat - Watcher of Wraithlike Walls",
+   "episode_url": "https://theamphour.com/the-amp-hour-115-watcher-of-wraithlike-walls/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Performing head-tracking and video processing in an FPGA on a head-mounted display burned enough power that the glasses became noticeably warm to the wearer, driving a move to an ASIC to cut both consumption and heat.",
+   "quote_verbatim": "Currently, we're doing a lot of processing on an FPGA and it's burning tons of power.",
+   "speaker": "Jeri Ellsworth",
+   "episode": 173,
+   "episode_title": "An Interview with Jeri Ellsworth - Intense Illusion Introduction",
+   "episode_url": "https://theamphour.com/173-an-interview-with-jeri-ellsworth-intense-illusion-introduction/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "For a body-worn device, heat generation is a design constraint in its own right alongside battery life, so processing is moved off general-purpose logic specifically to stop the product running warm.",
+   "quote_verbatim": "we want to make sure that we cut anything that will generate heat",
+   "speaker": "Jeri Ellsworth",
+   "episode": 173,
+   "episode_title": "An Interview with Jeri Ellsworth - Intense Illusion Introduction",
+   "episode_url": "https://theamphour.com/173-an-interview-with-jeri-ellsworth-intense-illusion-introduction/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "On a battery-powered wearable, power consumption is treated as a primary criterion during both part selection and software design, and features are dropped when they would cost too much battery life.",
+   "quote_verbatim": "It's one of our biggest concerns, definitely, when I'm speccing parts, when we're doing software design.",
+   "speaker": "Andrew Witte",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A wearable platform intended to run third-party applications was built on a microcontroller rather than an ARM Cortex-A class microprocessor, accepting reduced application headroom in exchange for lower power consumption.",
+   "quote_verbatim": "choosing a microcontroller as opposed to, um, like an ARM Cortex A microprocessor, um, as the platform",
+   "speaker": "Andrew Witte",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Power characterisation continues after a product ships: current probes are used to determine exactly where power is going on the board, and firmware is driven into each of its modes in turn to attribute consumption.",
+   "quote_verbatim": "continuing to characterize the power consumption and like using current probes to understand exactly where power is going in the board",
+   "speaker": "Andrew Witte",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "In a sealed battery-powered sensor puck deployed in the field, the governing requirement was a five-year life on the internal battery, making power consumption the overriding system constraint.",
+   "quote_verbatim": "So you have these pucks, and they have their own batteries, and they have to last for five years.",
+   "speaker": "Greg Charvat",
+   "episode": 179,
+   "episode_title": "Greg Charvat Returns With A Book! - Laboratory Literature Laureate",
+   "episode_url": "https://theamphour.com/179-greg-charvat-returns-with-a-book-laboratory-literature-laureate/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The standard figure of merit when comparing processing platforms under a power budget is MIPS per watt, that is how much processing is obtained for a given power consumption.",
+   "quote_verbatim": "How much processing power can you get for X amount of power consumption?",
+   "episode": 183,
+   "episode_title": "An Interview with Scott Driscoll - Impacable Interdisciplinary Inventor",
+   "episode_url": "https://theamphour.com/183-an-interview-with-scott-driscoll-impaccable-interdisciplinary-inventor/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Power optimisation in firmware resembles earlier code-size and speed optimisation work, and includes running the core at a different clock speed to trade throughput for a small reduction in consumption.",
+   "quote_verbatim": "And sometimes you run the clock speed differently so that you can just eke out a little bit more, a little bit less power.",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "In a battery-powered Wi-Fi device most of the energy is burned in high load transients rather than in steady-state online operation, and alkaline, nickel metal hydride and lithium primary chemistries behave differently under those transients.",
+   "quote_verbatim": "we have these, these high load transients and that's actually where we end up burning a lot of our power",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A Wi-Fi connected device drew roughly one to two milliamps powered up with the radio off, five to six milliamps with Wi-Fi on in power-save mode, and about 100 milliamps with everything running.",
+   "quote_verbatim": "so on with wifi off is, uh, one or two on with wifi on in power save is five or six. And then all out, everything on is a, is a hundred milliamps.",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Entering a Wi-Fi power-save mode itself takes time, up to about 300 milliseconds, so there is no benefit in dropping to the next power-save level unless the device will remain online longer than that.",
+   "quote_verbatim": "unless you're online for 300 milliseconds or more, there's no, uh, there's no incentive, um, because it, it takes 300 mills up to 300 milliseconds to take effect.",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Duty cycling keeps average energy low even when peak power is high: the device wakes, connects, sends its data and returns to sleep quickly, so the joules consumed per cycle stay small.",
+   "quote_verbatim": "It's wake up, do your thing, go back.",
+   "speaker": "Brandon Harris",
+   "episode": 202,
+   "episode_title": "An Interview With Brandon Harris - Impish Internet Iamatology",
+   "episode_url": "https://theamphour.com/202-an-interview-with-brandon-harris-impish-internet-iamatology/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Analog front-end and boost-converter sections are switched off entirely when not in use, because their linear elements would otherwise draw substantial current continuously.",
+   "quote_verbatim": "You would have to, otherwise you'd be chewing a lot of power.",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Process development in the early home-computer era was aimed not only at shrinking geometry, toward roughly one micron down from 1.6 micron, but at making transistors turn off more completely so the chip drew less power.",
+   "quote_verbatim": "And we were doing things then to try and make it, make the process work better and to shut off better so that it drew less power.",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "An on-chip back-bias generator, essentially a capacitive voltage doubler driving the substrate, drifted in voltage during intervals when the chip was not being addressed and corrupted the display; grounding the substrate through the package's pin-one slot restored correct operation.",
+   "quote_verbatim": "It changed its voltage during the time you weren't talking to the chip. It would drift.",
+   "speaker": "Bil Herd",
+   "episode": 222,
+   "episode_title": "An Interview With Bil Herd - Zany Z80 Zygology",
+   "episode_url": "https://theamphour.com/222-an-interview-with-bil-herd-zany-z80-zygology/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Doing heavy processing locally in a wrist-worn device is the main reason its battery life is short; treating the watch as a terminal for a nearby phone and moving processing off it is the architectural lever on consumption.",
+   "quote_verbatim": "All they do is act as a terminal for your smartphone",
+   "episode": 233,
+   "episode_title": "Glass and Gongkai GSM - Unzymotic Ursidae Upbuilding",
+   "episode_url": "https://theamphour.com/233-glass-and-gongkai-gsm-unzymotic-ursidae-upbuilding/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A smartwatch achieving about seven days of battery life was calculated to be drawing only around 600 microamps; the limiting factor was the small battery that fits in the case rather than the current draw itself.",
+   "quote_verbatim": "it's like it's drawing 600 microamps or something, you know, which isn't much. Yeah. But you can only fit a tiny battery.",
+   "speaker": "Dave Jones",
+   "episode": 238,
+   "episode_title": "Old Books, New Tricks - Iterant Inscription Irrationality",
+   "episode_url": "https://theamphour.com/238-old-books-new-tricks-iterant-inscription-irrationality/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Driving an internal data bus line high charges a small capacitance and therefore physically consumes power, so the instantaneous current on each clock edge scales with how many bus lines are driven high.",
+   "quote_verbatim": "Setting those data lines high is basically charging a very small capacitor, which physically takes power.",
+   "speaker": "Colin O'Flynn",
+   "episode": 239,
+   "episode_title": "An Interview with Colin O'Flynn - Aspirated Adamantine Attacks",
+   "episode_url": "https://theamphour.com/239-an-interview-with-colin-oflynn-aspirated-adamantine-attacks/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A wireless module was specified at 200 to 300 milliamps peak and under one milliwatt in standby, a profile in which consumption arrives as a large pulse between long deep-sleep intervals.",
+   "quote_verbatim": "200 to 300 milliamps peak power. That's peak. And standby power is less than one milliwatt.",
+   "speaker": "Dave Jones",
+   "episode": 249,
+   "episode_title": "Wearables Might Have Limited Fashion Options - Lachrymogenic Lane Language",
+   "episode_url": "https://theamphour.com/249-wearables-might-have-limited-fashion-options-lachrymogenic-lane-language/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The choice between an FPGA and an ASIC is not only about unit price but about die area, physical size and, most critically, power consumption; FPGAs are rarely selected when power is the governing constraint.",
+   "quote_verbatim": "It's also about area and physical size and, most critically, power consumption as well.",
+   "speaker": "Dave Jones",
+   "episode": 264,
+   "episode_title": "The Cost Of Doing Business",
+   "episode_url": "https://theamphour.com/264-the-cost-of-doing-business/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A solar-powered soil sensor was optimised around an assumed one-reading-per-minute update rate, but users were satisfied with four readings a day, a duty cycle requiring roughly a thousandth of the power; establishing the real update requirement first would have avoided hundreds of hours of optimisation.",
+   "quote_verbatim": "If you send readings four times a day, people are thrilled. And that, you know, obviously the power load for that is drastically less, like it's like a thousandth as much as the power that I was trying to optimize for.",
+   "speaker": "Luke Iseman",
+   "episode": 268,
+   "episode_title": "An Interview with Luke Iseman of yCombinator",
+   "episode_url": "https://theamphour.com/268-an-interview-with-luke-iseman-of-ycombinator/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Battery-powered sensor nodes are given a low-power proprietary RF link to a mains-powered gateway that then bridges to Wi-Fi, rather than putting Wi-Fi on every node, a decision driven mainly by power and secondarily by cost.",
+   "quote_verbatim": "Why not just put Wi-Fi on the node? Cost and power. Mostly power now.",
+   "episode": 272,
+   "episode_title": "An Interview With Luke Beno of Analog.io",
+   "episode_url": "https://theamphour.com/272-an-interview-with-luke-beno-of-analog-io/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Bus pull-up resistors are a continuous current drain whenever the line is pulled low, so low values such as tens of ohms are avoided on battery-powered designs and values in the 2K to 10K range are used instead, trading edge speed for current.",
+   "quote_verbatim": "either you're going to have to, you're going to burn a bunch of power directly, or you're just going to burn your battery out because you're going to be using so much current in order to simply raise a lineup. So usually it's a higher value, like, you know, 2K, 5K, 10K type of thing.",
+   "speaker": "Chris Gammell",
+   "episode": 274,
+   "episode_title": "Our First Call In Show",
+   "episode_url": "https://theamphour.com/274-our-first-call-in-show/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A single line of behavioural HDL can instantiate several thousand gates and add on the order of 100 milliwatts, a consequence that stays invisible to the designer until the design no longer fits the part or fails to meet timing.",
+   "quote_verbatim": "does it matter to them that that one line of code just instantiated several thousand gates and just required 100 milliwatts of power?",
+   "speaker": "Clint Cole",
+   "episode": 302,
+   "episode_title": "An Interview with Clint Cole of Digilent",
+   "episode_url": "https://theamphour.com/302-an-interview-with-clint-cole-of-digilent/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Power over Ethernet supplies on the order of 10 watts to a device, and a design intended to be safely within that budget was targeted at less than half the maximum.",
+   "quote_verbatim": "it's, it's something like in the order of 10 watts",
+   "episode": 318,
+   "episode_title": "Impedance Matching with Michael Ossmann and Dmitry Nedospazov",
+   "episode_url": "https://theamphour.com/318-impedance-matching-with-michael-ossmann-and-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Every logic transition takes a gulp of current to charge the trace capacitance, so slowing the slew rate reduces the impulse current and hence average power, up to the point where the slower transition keeps the output devices in their linear region long enough to burn more power than is saved.",
+   "quote_verbatim": "when you slew something, you're slewing a capacitive trace and that takes a little gulp of current every time you transition",
+   "episode": 322,
+   "episode_title": "World Trade Futurity (WTF)",
+   "episode_url": "https://theamphour.com/322-world-trade-futurity-wtf/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A hearing-device class product has a total budget below one milliamp, of which only a small portion is available for the analog and wireless sections, forcing extensive tricks in the control stack to pull consumption down.",
+   "quote_verbatim": "You still have the budget sub one, uh, milliamps and some of that, uh, only have a small portion of that is, is left for you for doing your analog, your, your, uh, wireless connection.",
+   "speaker": "Jørgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with Jørgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Class D amplifier efficiency is high only at high output levels; at normal listening levels the losses in the output filter inductors dominate, and an amplifier optimised for that region was claimed to cut power consumption there by a factor of ten.",
+   "quote_verbatim": "So I think we, uh, we will be a factor 10 less power consumption in that area.",
+   "speaker": "Jørgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with Jørgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Audio output quality in an amplifier can be tuned upward at the direct expense of higher power consumption, making it an explicit product-level trade-off rather than a fixed specification.",
+   "quote_verbatim": "we, uh, also have a measure so we can, uh, tune up the, the audio quality, uh, at an expense of more power consumption",
+   "speaker": "Jørgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with Jørgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Halving the process feature size does not halve power consumption but roughly quarters it while increasing speed, because the effect is quadratic in feature size; the costs are wafer cost, yield, radiation performance, leakage and progressively lower gate voltages.",
+   "quote_verbatim": "if you halve the feature size, you don't just halve your power consumption. You quarter your... It's a squared thing.",
+   "speaker": "Dave Jones",
+   "episode": 347,
+   "episode_title": "Re-scoping the problem",
+   "episode_url": "https://theamphour.com/347-re-scoping-the-problem/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "An NMOS inverter is a single transistor with a pull-up resistor, so it burns static current whenever the output is low, which is why NMOS logic dissipates far more than the CMOS that replaced it.",
+   "quote_verbatim": "an NMOS inverter is like using a single transistor with a pull up resistor",
+   "episode": 351,
+   "episode_title": "The Automation Amish",
+   "episode_url": "https://theamphour.com/351-the-automation-amish/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Integrated injection logic, briefly promoted in the 1970s as a very dense alternative to TTL, consumed so much power in microprocessor implementations that ordinary ceramic packages could not remove the heat and beryllium ceramic had to be used.",
+   "quote_verbatim": "The power consumption of a microprocessor built in integrated injection logic was so high that they couldn't use regular ceramic. They had to use a special beryllium ceramic to get the heat out.",
+   "speaker": "Ken Shirriff",
+   "episode": 361,
+   "episode_title": "An Interview with Ken Shirriff",
+   "episode_url": "https://theamphour.com/361-an-interview-with-ken-shirriff/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Battery-life arithmetic that divides capacity by load current must be done in power rather than current when a boost converter sits between cell and load, because the converter draws more input current than the load current at a lower input voltage.",
+   "quote_verbatim": "Well, you've got to work in power when you're talking about it because you probably have to boost it up.",
+   "speaker": "Chris Gammell",
+   "episode": 362,
+   "episode_title": "Secret Squirrel",
+   "episode_url": "https://theamphour.com/362-secret-squirrel/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "An early 386SX-class industrial PC drew about two watts idling and roughly half a watt more with a video card fitted, low enough that no heatsink was required.",
+   "quote_verbatim": "I powered it up this morning and it only drew, uh, two watts or thereabouts when it was just idling.",
+   "speaker": "Dave Jones",
+   "episode": 362,
+   "episode_title": "Secret Squirrel",
+   "episode_url": "https://theamphour.com/362-secret-squirrel/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A battery security camera built around a custom low-power imaging chip ran about two years on two AA lithium cells while capturing continuous low-frame-rate video, an achievement attributed to the custom silicon rather than the system around it.",
+   "quote_verbatim": "it's like two double a uh lithiums or something and it can last for like two years taking continuous security video",
+   "episode": 382,
+   "episode_title": "The Toggle Boggle",
+   "episode_url": "https://theamphour.com/382-the-toggle-boggle/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A real-time clock can usually be left out of a low-power budget entirely, because RTC current is insignificant next to the rest of the system.",
+   "quote_verbatim": "the real time clock is not going to add much because they run on the sniff of an oily rag",
+   "speaker": "Dave Jones",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A low-power design starts from the battery: its chemistry and capacity are chosen first, because without a fixed energy source there is nothing against which to budget the rest of the design.",
+   "quote_verbatim": "you start with your battery, right? What's your battery solution, right? You've got to start with that.",
+   "speaker": "Dave Jones",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Moving to a larger ARM microcontroller forces reliance on the manufacturer's peripheral libraries, whose internal behaviour and timing are opaque, which is a problem when power consumption and timing tightness are being controlled.",
+   "quote_verbatim": "I'm always thinking about power and, you know, processing tightness. And I think when you go to those beefier chips, not just the ESP32, but, like, once you start to get to the bigger arms, you're relying on, like, peripheral libraries from the manufacturer.",
+   "speaker": "Mike Szczys",
+   "episode": 403,
+   "episode_title": "An Interview with Mike Szczys",
+   "episode_url": "https://theamphour.com/403-an-interview-with-mike-szczys/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Perceived LED brightness follows roughly a square law, so doubling apparent brightness requires about four times the power; gamma correction applies the inverse of the eye's response.",
+   "quote_verbatim": "if you want double the brightness, you have to give it four times as much power",
+   "speaker": "Mike Harrison",
+   "episode": 412,
+   "episode_title": "3 Cent Micros And 1000s of LEDs",
+   "episode_url": "https://theamphour.com/412-3-cent-micros-and-1000s-of-leds/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A large LED installation was designed to a maximum draw of about 500 watts but in practice ran nearer 100 to 200 watts, because only part of the array was illuminated at any moment.",
+   "quote_verbatim": "it could have drawn a max of about 500 watts. I'm guessing we didn't do that in practice. It was probably more around 100 or 200.",
+   "speaker": "Zach Archer",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Applying gamma correction to an LED array both makes brightness look correct to the eye and reduces overall power consumption, because the corrected colours are skewed darker.",
+   "quote_verbatim": "it also has the nice side effect of, it reduces the overall power consumption, like all the colors are skewed darker",
+   "speaker": "Zach Archer",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Industrial wireless sensors typically report every six minutes or every hour; the reporting interval can be scheduled down to under a second, but doing so directly increases power consumption and shortens battery life.",
+   "quote_verbatim": "You can, you can schedule it to go actually under a second. Um, but again, that affects power consumption.",
+   "episode": 458,
+   "episode_title": "An Interview with Ken Burns",
+   "episode_url": "https://theamphour.com/458-an-interview-with-ken-burns/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Oversampling imposes a clock-rate cost that becomes a power problem: a 50 MHz signal bandwidth oversampled 64 times demands a 3.2 GHz clock, comparable to the fastest desktop processors, which is precisely the regime designers avoid on power grounds.",
+   "quote_verbatim": "oversampled at 64 X is going to require a 3.2 gigahertz clock",
+   "episode": 474,
+   "episode_title": "An Interview with Nash Reilly",
+   "episode_url": "https://theamphour.com/474-an-interview-with-nash-reilly/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Using a microcontroller's built-in capacitive touch peripheral as a wake-from-off power button costs more current than a dedicated external touch controller that holds the micro unpowered until a touch is detected.",
+   "quote_verbatim": "You can use the built in touch sensor on your micro, but it's going to chew more power.",
+   "speaker": "Dave Jones",
+   "episode": 477,
+   "episode_title": "EcoWoke and Going Broke",
+   "episode_url": "https://theamphour.com/ecowoke-and-going-broke/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Clock frequency scaling has effectively stopped and core counts have risen instead, but packing more transistors into the same area raises the power dissipated in that area and makes heat extraction a limiting problem.",
+   "quote_verbatim": "the more transistors you have in a small space, the more power that space consumes and the more you kind of have to extract the heat from it",
+   "speaker": "Tim Ansell",
+   "episode": 501,
+   "episode_title": "Discussing the Open Source PDK with Tim Ansell",
+   "episode_url": "https://theamphour.com/501-discussing-the-open-source-pdk-with-tim-ansell/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "On a satellite, lower power consumption directly extends the economically useful life of the spacecraft because the solar panels degrade over time; the companion limit is how much heat can be rejected, since large heatsinks are not an option.",
+   "quote_verbatim": "So if you can reduce power consumption, it essentially means your satellite will be economically viable for a longer period of time.",
+   "speaker": "Joris Aerts",
+   "episode": 518,
+   "episode_title": "Satellites and EVs with Joris Aerts",
+   "episode_url": "https://theamphour.com/518-satellites-and-evs-with-joris-aerts/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "An air conditioner's headline kilowatt figure is thermal output, not electrical input: because it is a heat pump with a coefficient of performance above one, a 3.5 kilowatt unit drew only about 800 watts of electrical power.",
+   "quote_verbatim": "a 3.5 kilowatt air con in this case supposedly only takes 800 watts",
+   "speaker": "Dave Jones",
+   "episode": 520,
+   "episode_title": "Inductance and Stuff",
+   "episode_url": "https://theamphour.com/520-inductance-and-stuff/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The first step in reducing firmware power consumption is establishing where the power is going, which is hard because a single firmware routine typically enables a radio, subsystem clocking and further peripherals at once, so the observed current cannot be attributed to any one action.",
+   "quote_verbatim": "you have a part of your firmware that goes and does a bunch of the turns on a radio, it turns on this subsystem clocking, turns on this other peripheral",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Firmware continuous integration should measure baseline power consumption on real hardware for every build, so that a change which doubles the current drawn in a given power state is caught when it is introduced rather than immediately before shipping.",
+   "quote_verbatim": "You might want to check baseline power consumption, like make sure that I didn't make some change that, you know, in a specific power state, I'm now running with, I'm drawing twice as much current as I'm expecting.",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A Linux single-board computer used for a task a microcontroller could do wastes most of the power it draws, and even the low-power variants still require a mains supply or a large battery with solar charging.",
+   "quote_verbatim": "you just still need to have a good wall supply or huge battery",
+   "episode": 565,
+   "episode_title": "Here for a reason",
+   "episode_url": "https://theamphour.com/565-here-for-a-reason/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A high-capacity FPGA cannot be packaged in a very small pin count: with only a handful of pins, a single power pin carries too much inductance to supply the surge current the device needs at turn-on.",
+   "quote_verbatim": "if you have eight pins, that means one of them is power. And that means you have a lot of inductance. Yeah. The surge power just to turn on.",
+   "speaker": "Chris Gammell",
+   "episode": 567,
+   "episode_title": "The Rodeo Drive of Electronics",
+   "episode_url": "https://theamphour.com/567-the-rodeo-drive-of-electronics/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Keeping a GNSS receiver listening for signals around minus 120 dBm is power hungry, which is why a combined cellular and GPS front end alternates between the two functions rather than running both continuously.",
+   "quote_verbatim": "it's really power hungry to like sit around waiting for like a, you know, minus 120 dB signal",
+   "speaker": "Chris Gammell",
+   "episode": 600,
+   "episode_title": "The Custodial Arts",
+   "episode_url": "https://theamphour.com/600-the-custodial-arts/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Iridium Short Burst Data messages carry 340 bytes uplink and 240 bytes downlink per message, a payload budget that shapes what a remote battery-powered device can report.",
+   "quote_verbatim": "So I can send 340 bytes up and get 240 bytes down per message. And it takes a lot of power to do it.",
+   "speaker": "Alvaro Prieto",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Transmitting a single satellite short-burst message draws over a watt for several seconds, and the attempt often has to be repeated before it gets through, so the energy per successful message is a multiple of the nominal figure.",
+   "quote_verbatim": "Oh, like over a watt to transmit over several seconds. And that's when it actually gets through.",
+   "speaker": "Alvaro Prieto",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "An ST low-power microcontroller was specified at 88 microwatts per megahertz in active processing mode, the conventional way of quoting active consumption for a battery-powered part.",
+   "quote_verbatim": "they claim 88 microwatts per megahertz, right. Power consumption in, in, in active, uh, processing mode.",
+   "speaker": "Dave Jones",
+   "episode": 629,
+   "episode_title": "At least my house isn't haunted",
+   "episode_url": "https://theamphour.com/629-at-least-my-house-isnt-haunted/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Microamps per megahertz misstates efficiency because processors differ in instructions executed per clock; a part taking four cycles per instruction delivers a quarter of the work for the same current per megahertz, so power per MIPS is the sounder figure, and datasheets rarely give it.",
+   "quote_verbatim": "So it should be microwatts per megahertz or microwatts per MIPS.",
+   "speaker": "Dave Jones",
+   "episode": 629,
+   "episode_title": "At least my house isn't haunted",
+   "episode_url": "https://theamphour.com/629-at-least-my-house-isnt-haunted/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Whether a microcontroller's consumption looks like constant current or constant power depends on its internal supply: a core fed by an internal LDO draws constant current, so input power falls as the battery voltage falls, whereas a DC-DC converter makes the draw constant power and the input current rise as the battery discharges.",
+   "quote_verbatim": "the DC to DC converter, constant power is going to be more accurate than your constant current, which will change with battery voltage as your battery voltage drops",
+   "speaker": "Dave Jones",
+   "episode": 629,
+   "episode_title": "At least my house isn't haunted",
+   "episode_url": "https://theamphour.com/629-at-least-my-house-isnt-haunted/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Datasheet figures do not allow two microcontrollers to be compared for power; the only reliable method is to build a board around each, run the same firmware on both, and exercise every peripheral and sleep mode while measuring.",
+   "quote_verbatim": "really the only way to genuinely compare two micros is to actually build them up. Make two boards.",
+   "speaker": "Dave Jones",
+   "episode": 629,
+   "episode_title": "At least my house isn't haunted",
+   "episode_url": "https://theamphour.com/629-at-least-my-house-isnt-haunted/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "On a head-mounted display, computer-vision workloads such as SLAM are constrained first by power consumption, so the design question becomes which camera function is worth its power rather than what the processor can compute.",
+   "quote_verbatim": "the challenge with slam and cameras in general with my designs is just power consumption, because you don't want to spend too much power on processing for these sorts of computer vision tasks",
+   "speaker": "Aedan Cullen",
+   "episode": 638,
+   "episode_title": "Building AR Headsets with Aedan Cullen",
+   "episode_url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Bluetooth Low Energy is the low-power option for a wearable personal-area link, but it cannot carry video; moving to Wi-Fi for the higher data rate brings an order-of-magnitude jump in power consumption, and there is no satisfying low-power link in between.",
+   "quote_verbatim": "Then you're forced into wifi and yes, then you have this sort of order of magnitude power consumption jump.",
+   "speaker": "Aedan Cullen",
+   "episode": 638,
+   "episode_title": "Building AR Headsets with Aedan Cullen",
+   "episode_url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "Offloading rendering or processing to a phone or computer saves power on the wearable but transfers consumption to the transmitting device, so the saving is a system-level reallocation rather than an absolute reduction.",
+   "quote_verbatim": "you consume some extra power on whatever device is transmitting this data, you know, so you're saving power on the actual wearable device",
+   "speaker": "Aedan Cullen",
+   "episode": 638,
+   "episode_title": "Building AR Headsets with Aedan Cullen",
+   "episode_url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A dedicated energy analyser such as the Joulescope is the go-to instrument for troubleshooting power consumption, because ordinary bench meters cannot resolve a device's current across the range from sleep to active.",
+   "quote_verbatim": "my go-to tool is going to be, for example, Juulscope",
+   "speaker": "Pallav Aggarwal",
+   "episode": 661,
+   "episode_title": "Blogging Electronics with Pallav Aggarwal",
+   "episode_url": "https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A peripheral left initialised but unused is a common source of unexplained current: an idle UART block was drawing more than 200 microamps, and de-initialising and powering down the block recovered that current.",
+   "quote_verbatim": "when you are not using UART, you are consuming, you know, 200, more than 200 microampere. So when you de-initialize UART and you don't use that block, you don't provide any power, you switch off that block, you are saving a lot of power.",
+   "speaker": "Pallav Aggarwal",
+   "episode": 661,
+   "episode_title": "Blogging Electronics with Pallav Aggarwal",
+   "episode_url": "https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Payload format is a power decision in a radio-connected device: replacing a 200 byte JSON packet with a 16 byte binary message cut hundreds of microamps of average consumption by shortening radio-on time.",
+   "quote_verbatim": "And that has reduced their power consumption by, you know, hundreds of microamps.",
+   "speaker": "Pallav Aggarwal",
+   "episode": 661,
+   "episode_title": "Blogging Electronics with Pallav Aggarwal",
+   "episode_url": "https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "For low-rate sensor telemetry the bandwidth of 2G is entirely adequate; the objection to it is the power required at the device, and in Europe the 2G and 3G networks have been switched off regardless.",
+   "quote_verbatim": "2G is fine for most of the you know like sensor things except for the power needs on the device side",
+   "episode": 678,
+   "episode_title": "All About Antennas with Katerina Galitskaya",
+   "episode_url": "https://theamphour.com/678-all-about-antennas-with-katerina-galitskaya/",
+   "depth_regraded": "opinion",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The RP2040 was designed as a clean-sheet microcontroller aimed at low cost and deterministic behaviour, with little attention paid to power consumption; it offers a deep sleep mode but is not a low-power part, a gap addressed in the RP2350.",
+   "quote_verbatim": "it didn't really have any, not a lot of thought to power consumption, right? So, you could put it into some deep sleep coma mode. But really, it's not a very low-power microcontroller, right?",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "opinion",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The CH32V003 proved unsuitable for a coin-cell powered LED earring because its consumption is high for the application and its brown-out detector cannot be disabled, so the part simply stops below about three volts rather than running the cell down.",
+   "quote_verbatim": "It's not actually the right choice for an earring because it's not very good in terms of power consumption. And also I don't think you can even turn off the brown ant detector.",
+   "episode": 697,
+   "episode_title": "LEDs Everywhere with Tim from Mitxela",
+   "episode_url": "https://theamphour.com/697-leds-everywhere-with-tim-from-mitxela/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A reflective segmented LCD gives high contrast for almost zero power and needs no backlight, which suits a battery-powered instrument whose real-time clock keeps the display live continuously.",
+   "quote_verbatim": "And they're reflective. So they're very high contrast for almost zero power",
+   "speaker": "Dave Jones",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A custom segmented LCD wins on contrast and power consumption but cannot show arbitrary content, so a dot-matrix panel is chosen when flexibility matters; transflective dot-matrix panels that work without a backlight are difficult to source.",
+   "quote_verbatim": "a segmented LCD would be great from a contrast point of view, power consumption, everything else. But it lacks the flexibility of a full dot matrix.",
+   "speaker": "Dave Jones",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "opinion",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "An underpowered charger can present the correct voltage and assert charging status while supplying almost no current, so the machine's own consumption exceeds the charge current and the battery discharges despite the operating system reporting that it is charging.",
+   "quote_verbatim": "And then the consumption of the machine would overtake the charger",
+   "episode": 702,
+   "episode_title": "Test Point Accupuncture",
+   "episode_url": "https://theamphour.com/702-test-point-accupuncture/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "In medical implantables, driving power consumption down to virtually nothing is the system bottleneck and can absorb around 90 percent of the total design effort, leaving the remaining functionality comparatively straightforward.",
+   "quote_verbatim": "Sometimes it's getting power consumption down to virtually nothing. Medical implantables, that's a big issue.",
+   "speaker": "Jerry Twomey",
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Shortening a processor pipeline stage below its physical sweet spot requires making all the logic on the path faster, which costs additional power and forces sacrifices elsewhere on the path.",
+   "quote_verbatim": "if you can make it faster, but then you need to make all of the logic faster and maybe that's going to require like more power",
+   "speaker": "Julia Desmazes",
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "An embedded CPU core is designed against two simultaneous constraints: a power envelope set by the host device's battery, and a die-area budget, since core size translates directly into manufacturing cost.",
+   "quote_verbatim": "you have the additional constraints of not only the power envelope, because you don't want someone's battery to, phone battery to instantly die",
+   "speaker": "Julia Desmazes",
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A Raspberry Pi is an unsuitable default for embedded applications on power grounds, since its supply requirement is 5 volts at up to 2.5 amps.",
+   "quote_verbatim": "You know, five volts or two and a half amps, thank you very much.",
+   "speaker": "Dave Jones",
+   "episode": 428,
+   "episode_title": "Setting Fire To The Tracks",
+   "episode_url": "https://theamphour.com/428-setting-fire-to-the-tracks/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Converting an existing data centre to AI workloads has required roughly an order of magnitude more incoming power for the same server floor area, with new building volume added purely for transformers, cooling and standby generators.",
+   "quote_verbatim": "it's requiring, what, an order of magnitude more power?",
+   "speaker": "Dave Jones",
+   "episode": 724,
+   "episode_title": "All Heat, No Useful Work",
+   "episode_url": "https://theamphour.com/724-all-heat-no-useful-work/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  }
+ ],
+ "attribution_notes": [
+  "ep 59: passage labelled Jeff Keyzer, but the 2-watt BeagleBoard figure is the answer of the BeagleBoard-side interviewee (Jason Kridner) in a two-guest episode. Name dropped; claim left unattributed.",
+  "ep 61: passage labelled Jeff Keyzer in an episode with no guest of that name present for this exchange; the CMOS power-equation explanation cannot be safely assigned. Name dropped.",
+  "ep 97: passages labelled SPEAKER_00. The Model A versus Model B product rationale is unmistakably the Raspberry Pi interviewee, so that claim is content-attributed to Eben Upton; the more general single-die power-gating remark is left unattributed.",
+  "ep 103: labelled Dave Jones but the ASIC-versus-FPGA business reasoning sits with the Xilinx-veteran guest in the same exchange. Name dropped.",
+  "ep 183: labelled Dave Jones; the MIPS-per-watt formulation is traded between host and guest inside the passage. Name dropped.",
+  "ep 187: labelled Chris Gammell, but the content identifies the speaker beyond doubt as the guest (she describes her own early career optimisation work and her time at Fitbit). Content-attributed to Elecia White.",
+  "ep 218: labelled Dave Jones; the description of what shuts down is the Mooshimeter designer's. Name dropped.",
+  "ep 222: marked attribution-unreliable and labelled Chris Gammell, but the content (Commodore chip bring-up, the CES deadline, soldering to the substrate through the ceramic pin-one slot) is unambiguously the guest. Content-attributed to Bil Herd.",
+  "ep 233: labelled Chris Gammell; the smartwatch-architecture argument runs across both speakers in the window. Name dropped.",
+  "ep 272: two passages, one labelled Dave Jones and one Luke Beno. The cost-and-power answer to 'why not put Wi-Fi on the node' is the guest's, but the window fuses the question and answer. Name dropped.",
+  "ep 318: labelled Dave Jones; the Power over Ethernet budget figure is the guest's answer to Dave's question. Name dropped.",
+  "ep 322: labelled Chris Gammell, but the same passage contains 'I might be doing a fundamental Friday on', which identifies Dave Jones. Labels are swapped mid-window; name dropped.",
+  "ep 351: labelled Chris Gammell; the NMOS-inverter explanation is not safely separable from the guest's side of the exchange. Name dropped.",
+  "ep 382: labelled Chris Gammell, but the window contains first-person videographer remarks that do not fit cleanly. Name dropped.",
+  "ep 458: marked attribution-unreliable and labelled Ken Burns; the wireless-sensor reporting-interval content is the industrial product side of the conversation but the label cannot be trusted. Name dropped.",
+  "ep 474: labelled Nash Reilly, but the passage says 'I'm using the Google Chrome calculator here', which is the host doing the arithmetic. Name dropped.",
+  "ep 527: marked attribution-unreliable. The opening of the window is the host's framing; the answer beginning 'the first step is to figure out where your power is going' is the guest, who is identified by the episode as the current-measurement instrument author. Content-attributed to Matt Liberty.",
+  "ep 565: labelled Dave Jones; the low-power-Linux exchange alternates between hosts inside the window. Name dropped.",
+  "ep 678: labelled Chris Gammell, but the second half of the window ('here in Europe they switch off all the 2G 3G networks') is the guest. Merged claim left unattributed.",
+  "ep 697: labelled Dave Jones, but the earring project with the CH32V003 is the guest's own build, not Dave's. Name dropped rather than guessing the guest's full name.",
+  "ep 702: labelled Chris Gammell; the charger-diagnosis narrative crosses both hosts in the window. Name dropped.",
+  "ep 704: labelled Dave Jones, but the content is a consultant describing his own architecture-level advisory work and a multi-camera endoscope programme, which is the guest. Content-attributed to Jerry Twomey."
+ ],
+ "capped": false
+}

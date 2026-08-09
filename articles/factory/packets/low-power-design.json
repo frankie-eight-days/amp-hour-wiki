@@ -1,0 +1,921 @@
+{
+ "concept": "low-power-design",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "low-power-analog-design",
+    "low-power-design",
+    "low-power-embedded-design"
+   ],
+   "children": [
+    "arm-cortex-m",
+    "board-level-design",
+    "design-simplification",
+    "joulescope",
+    "pager"
+   ],
+   "neighbors": []
+  },
+  "stats": {
+   "episodes": 88,
+   "mentions": 122,
+   "explains": 57,
+   "opinions": 45,
+   "candidate_episode_count": 69,
+   "candidate_mention_count": 83,
+   "gated_out": 51,
+   "gated_out_by_concept": [
+    [
+     "joulescope",
+     21
+    ],
+    [
+     "board-level-design",
+     10
+    ],
+    [
+     "arm-cortex-m",
+     8
+    ],
+    [
+     "pager",
+     7
+    ],
+    [
+     "design-simplification",
+     5
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 13,
+   "speakers": [
+    [
+     "Chris Gammell",
+     36
+    ],
+    [
+     "Dave Jones",
+     24
+    ],
+    [
+     "Elecia White",
+     5
+    ],
+    [
+     "Matt Liberty",
+     4
+    ],
+    [
+     "Andrea Longobardi",
+     3
+    ],
+    [
+     "James Adams",
+     2
+    ],
+    [
+     "Pallav Aggarwal",
+     2
+    ],
+    [
+     "Jeff Keyzer",
+     1
+    ],
+    [
+     "Oyvind Janbu",
+     1
+    ],
+    [
+     "Brett Fox",
+     1
+    ],
+    [
+     "Brandon Harris",
+     1
+    ],
+    [
+     "Michael Ossmann",
+     1
+    ],
+    [
+     "Colin",
+     1
+    ],
+    [
+     "Dafydd Roche",
+     1
+    ],
+    [
+     "Parker Dillman",
+     1
+    ],
+    [
+     "Jørgen Jakobsen",
+     1
+    ],
+    [
+     "Art Kay",
+     1
+    ],
+    [
+     "Richard Ginus",
+     1
+    ],
+    [
+     "Travis Goodspeed",
+     1
+    ],
+    [
+     "Jean Rintoul",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 102
+   },
+   "passages_by_depth": {
+    "explains": 57,
+    "opinion": 45
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 102
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "The feasibility of an energy-harvesting design is set by the quiescent leakage of the parts around the harvester rather than by the harvester itself, because anything that draws current while the system is idle competes directly with a very small energy income.",
+   "quote_verbatim": "As long as you have like good parts that don't leak a lot of power as, you know, when they're just sitting there. That's obviously a really important thing.",
+   "speaker": "Chris Gammell",
+   "episode": 7,
+   "episode_title": "Love Robots and Pantyhose Screens",
+   "episode_url": "https://theamphour.com/the-amp-hour-7-love-robots-and-pantyhose-screens/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Low-power work is a discipline in its own right spanning both analogue and digital design, with a body of technique for holding devices and microcontrollers at very small currents; ordinary practice habitually spends current that such a design cannot afford.",
+   "quote_verbatim": "there's a real art to low power, to true low power design, you know, low power analog and digital design. There's a lot of, you know, there's a lot of tricks you can do to actually keep devices and microcontrollers and other items, you know, extremely low power. So, yeah, there's a bit of an art there",
+   "speaker": "Dave Jones",
+   "episode": 7,
+   "episode_title": "Love Robots and Pantyhose Screens",
+   "episode_url": "https://theamphour.com/the-amp-hour-7-love-robots-and-pantyhose-screens/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A workload that must process continuously, such as an audio recorder capturing to storage, cannot be put to sleep at all, which leaves dynamic adjustment of the processor clock as the remaining lever on its power consumption.",
+   "quote_verbatim": "because these things have to record all the time, pretty much, unless you're, unless you're not recording. Then, but when they're recording, they have to be processing full time. So you can't put them to sleep, but you can adjust, dynamically adjust the speed of the clock",
+   "speaker": "Dave Jones",
+   "episode": 10,
+   "episode_title": "Open Hardware and Self Publishing",
+   "episode_url": "https://theamphour.com/the-amp-hour-10-open-hardware-and-self-publishing/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A processor should not be left running at its top clock rate merely because occasional bursts of computation require that speed; the standard technique is to switch the clock up, perform the work, and switch it back down, a facility present on most modern microcontroller families.",
+   "quote_verbatim": "you don't just run your micro at the one high speed just because you might have to do a bit of processing every now and then. Right. You just switch the clock speed, go do your processing, then switch it back down again",
+   "speaker": "Dave Jones",
+   "episode": 10,
+   "episode_title": "Open Hardware and Self Publishing",
+   "episode_url": "https://theamphour.com/the-amp-hour-10-open-hardware-and-self-publishing/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Two distinct strategies exist for cutting average consumption: run the processor at full speed and shut it down between tasks, relying on a low standby current, or run continuously at a much lower clock such as 32 kHz. Application-class silicon typically supports only the first, since its low-power effort goes into standby rather than into efficient operation at low frequencies.",
+   "quote_verbatim": "You run fast and shut down, right? It has very low standby currents.",
+   "speaker": null,
+   "episode": 59,
+   "episode_title": "An Interview with Jeff Keyzer and Jason Kridner - Bonafide BeagleBoard Bionomics",
+   "episode_url": "https://theamphour.com/the-amp-hour-59-bonafide-beagleboard-bionomics/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "In analogue parts the meaningful low-power figure of merit is power for a given bandwidth, since consumption scales with the bandwidth the amplifier must support; parts with exceptional distortion performance and very low supply current commonly buy both by restricting bandwidth to a few kilohertz.",
+   "quote_verbatim": "they only go to, like, 4 kHz bandwidth. They can't even do audio. But their THD is phenomenal. You know, leading edge. You know, you can't even touch them. And the other thing is extremely low power as well. Oh, okay. Extremely low power for a given bandwidth.",
+   "speaker": "Dave Jones",
+   "episode": 65,
+   "episode_title": "Silego, ADCs & Seismic Detection - Dave's Dingo Dystocia",
+   "episode_url": "https://theamphour.com/the-amp-hour-65-daves-dingo-dystocia/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Core selection for an ultra-low-power microcontroller family was driven by the core vendor's own priorities: ARM was chosen because its design effort was directed at reducing both die size and power consumption, matching the target of the licensee, with MIPS considered as the alternative.",
+   "quote_verbatim": "focusing on reducing both size, of course, and the power consumption. And it was basically a perfect fit",
+   "speaker": "Oyvind Janbu",
+   "episode": 95,
+   "episode_title": "An Interview with Øyvind Janbu - Feracious Fabless Facilitator",
+   "episode_url": "https://theamphour.com/the-amp-hour-95-feracious-fabless-facilitator/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Integrating the analogue front end, microcontroller and signal processing onto a single die lowers power relative to the same functions assembled from separate packages on a board, which is why a board-level design using discrete equivalents cannot match a monolithic part on an energy budget.",
+   "quote_verbatim": "it's low power because it's on single, single silicon, that kind of thing. Yeah. I think it's single silicon. And it might be, it might be die bonded, but, um, but yeah, it's just got everything in there. So, how do you compete with that when you're trying to put down, you're just like, oh, I need to put down an AFE",
+   "speaker": "Chris Gammell",
+   "episode": 184,
+   "episode_title": "Chris Becomes Self Employed - Quixotic Quitting Quaere",
+   "episode_url": "https://theamphour.com/184-chris-becomes-self-employed-quixotic-quitting-quaere/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The low-power promise of the smallest ARM cores has often been passed over in favour of running a larger core at a reduced clock rate, because that keeps throughput in reserve for the occasions when the application needs it while still bringing consumption down.",
+   "quote_verbatim": "I'll just run an M3 at a lower clock rate. We do want some MIPS after all.",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Where a processor derives its core clock from a PLL, the input frequency and multiplication ratio are a power control: supplying eight or even three megahertz and multiplying up to thirty is what allows the PLL to be turned down and the part to draw substantially less current when the throughput is not needed.",
+   "quote_verbatim": "we PLL the clock so that you only have to put in eight megahertz or sometimes even three megahertz to get up to a 30 megahertz clock. And so you turn your PLL down and now you're drawing much less power",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Processors with sleep instructions wake only on a restricted set of interrupt sources, so the system has to be arranged around that restriction: the events that must bring the device out of sleep have to be routed onto the interrupts the sleep mode actually honours.",
+   "quote_verbatim": "many processors have actual sleep instructions and they wake up for a limited number of interrupts. You design your system so the important interrupts are on those interrupts",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The governing rule for a duty-cycled processor is to complete whatever work has woken it as quickly as possible so that it can return to sleep, since the time spent awake rather than the work performed is what the energy budget pays for.",
+   "quote_verbatim": "when you need to wake up and do something, you do it as fast as possible so you can go back to sleep",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Powering an instrument entirely from a USB 2.0 port sets a hard ceiling on the energy budget, and meeting it while covering a very wide frequency range at the highest bandwidth the bus will carry is what makes such a design difficult; the power requirement, not the signal path, becomes the binding constraint.",
+   "quote_verbatim": "I wanted to run off of a, uh, uh, USB 2.0 port and, you know, operating over a very wide frequency range and, and at as high bandwidth as I can over USB 2.0, uh, made it very challenging to meet that power requirement",
+   "speaker": "Michael Ossmann",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Omitting an FPGA cuts both cost and power in a software-defined radio front end: a small CPLD is sufficient for glue logic such as converting unsigned samples to signed integers, with the signal processing left to an ARM Cortex-M4 carrying DSP instructions.",
+   "quote_verbatim": "one way I was able to reduce costs and power consumption is just to go without an FPGA",
+   "speaker": "Michael Ossmann",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A Bluetooth Low Energy link that wakes and transmits a burst every five to ten seconds averages on the order of a hundred microwatts, which serves as the planning figure when sizing a duty-cycled radio design before measurements exist.",
+   "quote_verbatim": "The, the number that I usually ballpark with is, uh, about a hundred microwatts average draw. If you're waking up and, uh, bursting every five to 10 seconds",
+   "speaker": "Eric VanWyk",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Coin-cell operation is a property of the whole system rather than of any one part: a general-purpose 8-bit microcontroller drawing a few milliamps rules it out on its own, so the entire design has to be arranged for low power before a coin cell becomes a viable supply.",
+   "quote_verbatim": "running your, you know, at mega going a few milliamps is just terrible. So, yeah, we've kind of designed the whole system to be low power so you actually can run on a coin cell",
+   "speaker": "Colin",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Reducing power in an embedded system largely consists of stripping away the layers stacked on top of the hardware, since interpreters, high-level runtimes and real-time operating systems all keep the processor doing work the application did not ask for.",
+   "quote_verbatim": "I can always optimize and get rid of all of the fluff on top and, you know, like Python and interpreters and RTOSes",
+   "speaker": "Elecia White",
+   "episode": 281,
+   "episode_title": "Crossovers and Call-ins",
+   "episode_url": "https://theamphour.com/281-crossovers-and-call-ins/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "In a battery-powered instrument the novel idea is rarely the hard part: assembling a camera, a microcontroller, a periodic image capture and a GPS fix from off-the-shelf hardware is a matter of days, while the low-power design that makes the combination viable can absorb years of engineering.",
+   "quote_verbatim": "all the hard engineering, you could spend years perfecting this, is the low power design. This is. Oh, yeah. Yeah. Yeah. Like to have a camera and a microcontroller and take a picture every 30 seconds and get a GPS location is nothing. Right. You could develop this product in a day using off the shelf hardware.",
+   "speaker": "Dave Jones",
+   "episode": 301,
+   "episode_title": "The Nerd Calendar",
+   "episode_url": "https://theamphour.com/301-the-nerd-calendar/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "With sleep currents on contemporary microcontrollers at around four microamps and often lower, the idle silicon is no longer what limits a connected battery device; the cost of remaining attached to a network dominates, which is why continuous connectivity rather than component count is the constraint on such designs.",
+   "quote_verbatim": "look at the sleep power that's on half of these chips nowadays it's like four microamps you know or or less you know that's even high on a lot of them",
+   "speaker": "Parker Dillman",
+   "episode": 315,
+   "episode_title": "Mashuppery (with MEP)",
+   "episode_url": "https://theamphour.com/315-mashuppery-with-mep/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Pre-certified radio modules remove the FCC certification burden and simplify production, which makes them the default choice; a demanding low-power requirement is the usual reason to abandon the module and lay out a custom board around the bare silicon instead.",
+   "quote_verbatim": "it's easier to do more modules unless you have a very low power situation. And then you're probably building your board again",
+   "speaker": null,
+   "episode": 329,
+   "episode_title": "Work on it for 10 years...",
+   "episode_url": "https://theamphour.com/329-work-on-it-for-10-years/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Low-power audio profiles were added to the Bluetooth specification under pressure from the hearing-aid industry, which needed streaming audio inside a budget no existing profile could meet; the resulting work is expected to be reused across other industries.",
+   "quote_verbatim": "this was a big push from the hearing aid industry trying to put some low power audio profiles into there",
+   "speaker": "Jørgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with Jørgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A hearing-aid class device works to a total budget below one milliamp, of which only a small share is available for the analogue signal path and the wireless link together, so the power allocation between subsystems has to be settled before any of them is designed.",
+   "quote_verbatim": "you need to do a lot of tricks to pull down the power consumption on these devices there. You still have the budget sub one, uh, milliamps and some of that, uh, only have a small portion of that is, is left for you for doing your analog",
+   "speaker": "Jørgen Jakobsen",
+   "episode": 338,
+   "episode_title": "An Interview with Jørgen Jakobsen",
+   "episode_url": "https://theamphour.com/338-an-interview-with-jorgen-jakobsen/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Choosing Bluetooth Low Energy for its lower consumption is only worth its development difficulty where the energy budget is genuinely tight; in a product carrying four AA cells the saving would not have mattered and a classic Bluetooth module would have been the easier path.",
+   "quote_verbatim": "Yes, BLE is lower power, but we've got four AA batteries in this thing. It probably wouldn't have mattered a huge amount anyway.",
+   "speaker": null,
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Powering a radio module down entirely saves more than any of its internal low-power modes, and the cost is paid in reconnection time when the link has to be brought back up.",
+   "quote_verbatim": "they have the ability to turn off the whole module. Yes. So... Like, it would need to reconnect",
+   "speaker": null,
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Metal-oxide gas sensors of the common MQ type contain an internal heater element and require a long warm-up before they read correctly, which rules them out of a battery-powered design; converting an application from an older sensing technology to a lower-power equivalent is a distinct piece of engineering work driven by that constraint.",
+   "quote_verbatim": "there's a heater elements inside those sensors. So it's not great for low power. No, that's out of the question.",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The choice of programming language does not by itself determine a design's power consumption. What matters is whether the code actually enables the low-power capabilities the silicon provides, which can be done from almost any language.",
+   "quote_verbatim": "there's more to it than just writing it in C, you know? I mean, there's, yeah, if you're not turning on, if you're not turning on the low, like the capabilities of the chipset, and you can do that in almost any language",
+   "speaker": "Dave Jones",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The association between low-level languages and low power is indirect: writing in C puts the developer closer to the hardware, so the same people tend to be the ones switching subsystems off, whereas higher-level environments are leaned on as crutches and the power question goes unasked.",
+   "quote_verbatim": "if you are writing it in C, then it's, you're probably a little bit, closer to the hardware. And so you're probably doing that in the first place because you want to get down into the, the low level stuff and switch things off",
+   "speaker": "Chris Gammell",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Within a single radio module family the low-power and high-power variants share the same silicon and differ in how the module is wired and how its passives are arranged, with the high-power parts reaching 20 dBm or 100 milliwatts; the selection is a straight exchange of transmit range against battery life.",
+   "quote_verbatim": "how their passives are wired to enable lower power for the W and CW variants and higher power for the HW and HCW, which are 20 dBm or 100 milliwatts",
+   "speaker": "Felix Rusu",
+   "episode": 398,
+   "episode_title": "An Interview with Felix Rusu",
+   "episode_url": "https://theamphour.com/398-an-interview-with-felix-rusu/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The MSP430 family sits below the ARM microcontrollers on both power consumption and processing capability, occupying the rung beneath them; combining that 16-bit core with an acquired radio design on one die produced parts offering a highly configurable sub-gigahertz link alongside a microcontroller that costs almost no power.",
+   "quote_verbatim": "it also gives you a 16-bit microcontroller that costs almost no power",
+   "speaker": "Travis Goodspeed",
+   "episode": 442,
+   "episode_title": "An Interview with Travis Goodspeed",
+   "episode_url": "https://theamphour.com/442-an-interview-with-travis-goodspeed/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "CMOS entered production not as a general-purpose logic technology but through wristwatches, where its capability for low power mattered and its inability to run fast did not; from there it moved into calculators before being considered for anything larger.",
+   "quote_verbatim": "CMOS started off finding a little toe hole in the marketplace for wristwatches because it was capable of low power. But it couldn't go fast. But that's fine for wristwatches. And then it kind of worked its way into calculators.",
+   "speaker": "Tom Lee",
+   "episode": 459,
+   "episode_title": "An Interview with Tom Lee",
+   "episode_url": "https://theamphour.com/459-an-interview-with-tom-lee/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The industry moved microprocessors and memory to CMOS in the mid-1980s because dissipation in those parts had grown to the point that power looked like the overarching limit; before that transition it was genuinely open whether CMOS would ever be a mainstream technology.",
+   "quote_verbatim": "we're starting to burn some serious wattage in these microprocessors. There's, you know, maybe the power limit is going to be overarching. And so maybe CMOS is something we should consider. So the mid 80s was when the industry started to make transition toward employing CMOS and microprocessors and memory",
+   "speaker": "Tom Lee",
+   "episode": 459,
+   "episode_title": "An Interview with Tom Lee",
+   "episode_url": "https://theamphour.com/459-an-interview-with-tom-lee/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Power consumption tracks the silicon resources a design instantiates, so there is a continuing case for small memories and small processors: bringing a hundred million transistors out of reset to use one million of them costs power that a modest application has no reason to spend.",
+   "quote_verbatim": "a little tiny one is the perfect solution for some applications where you want low cost, low power. Power is kind of everything. You don't want to power up 100 million transistors when you're only using a million",
+   "speaker": "Jack Ganssle",
+   "episode": 489,
+   "episode_title": "An Interview with Jack Ganssle (2nd)",
+   "episode_url": "https://theamphour.com/489-an-interview-with-jack-ganssle-2nd/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Cheap and capable Cortex-M parts have made it hard to justify an 8-bit device on cost or capability alone, so the remaining reason to choose one is usually its peripheral set: a hardware-oriented designer will select an 8051-based part specifically for the peripherals it brings.",
+   "quote_verbatim": "The only reason I chose it, it's got an 8051 in it, is because of the peripherals. And I think that's what it comes down to, is that it became this corner case of like, oh, well, it's a pretty good fit and it's got the peripherals I need. And as a hardware person, that was really critical to me",
+   "speaker": "Chris Gammell",
+   "episode": 489,
+   "episode_title": "An Interview with Jack Ganssle (2nd)",
+   "episode_url": "https://theamphour.com/489-an-interview-with-jack-ganssle-2nd/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Pairing an application processor running Linux with a small low-power supervisory microcontroller that can shut the whole system down is a common design pattern, and the same supervisor covers safety-critical duties; an independent watchdog timer that can kill and reboot the operating system is the related mechanism.",
+   "quote_verbatim": "That's a super common design pattern. Yeah. And maybe not even in that role, definitely in like safety critical stuff. Right. I mean, you know, having, but, but I will say, I mean, app processors have watchdogs, right? And you can certainly have a watchdog timer that is completely independent of everything and it can kill Linux and reboot it",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "One workable order of design for a power-constrained platform is to drive every subsystem's consumption as low as it will go first, then see what total that produces and absorb any remaining shortfall by cutting the duty cycle, for instance by declining to sample over some regions in the first generation.",
+   "quote_verbatim": "we try to get the power consumption on every system as low as we can. Sure. And then, uh, we'll, we'll, we'll see where that gets us. And then, uh, we like worst case, we'll have to reduce our, um, our duty cycle a bit where we maybe for this first generation, not sample over certain regions or, or do some other tricks to, to save some power",
+   "speaker": "Joris Aerts",
+   "episode": 518,
+   "episode_title": "Satellites and EVs with Joris Aerts",
+   "episode_url": "https://theamphour.com/518-satellites-and-evs-with-joris-aerts/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Programmable-logic vendors targeting power-sensitive applications build comparatively low-density fabrics suited to implementing IO interfaces and lightweight processing, rather than competing on density; the high-density data-centre parts require chasing the process node down to seven and ten nanometres, where mask sets alone cost millions of dollars each.",
+   "quote_verbatim": "the FPGA fabrics that we have tend to be on the lower density side and very low power",
+   "speaker": "Brian Faith",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The useful distinction for programmable logic is between the data centre, where power is effectively free, and the edge, where customisation and computation are still wanted but have to fit inside a stated power envelope; the same fabric cannot serve both.",
+   "quote_verbatim": "We tend to focus very much at the edge where you do want customization. You do want computing, but you want to do it within the power envelope of something. Not where power is essentially free.",
+   "speaker": "Brian Faith",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Generic programmable logic does not lend itself to battery operation, because a fabric only reaches useful sleep behaviour when targeted hard blocks with genuine power-down states have been designed into the silicon alongside it.",
+   "quote_verbatim": "you have to start having targeted silicon blocks to really have power down states and things like that to, to make it worthwhile on a battery",
+   "speaker": "Chris Gammell",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A total current reading cannot be attributed to any one subsystem, so in a system carrying several microcontrollers and peripherals the work of finding an unexpected consumer is a matter of understanding the design; an instrument can show that excess current exists and quantify it, but not say where it comes from.",
+   "quote_verbatim": "When you, when you actually start measuring it's any complicated system, it's hard to separate things out. So if you have different microcontrollers, different subsystems, and it's not behaving like you expect, let's say it's consuming more current than you think, which is the typical case. Yeah. Tracing, tracing that down is, is not something that any instrument's going to help you with.",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The historical habit of pulling idle lines up to the supply rail is the wrong default for a low-power design: once the driving chip is powered down the pin can no longer be held high and the resistor draws current continuously. Arranging the logic so the idle state is pulled to ground removes that standing current.",
+   "quote_verbatim": "A lot of historically, pull-ups were to VCC, right? Your power rail. That's just really bad when you start talking about low power design, because that means when your chip powers down, unless you can keep that pin high, it's consuming current",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A pull-up left connected to a powered-down section back-powers that section through the resistor, so a pull-up is both a source of standing current and a route by which a shut-down subsystem is kept partly alive.",
+   "quote_verbatim": "if you power down a segment and you have a pull-up on the line, you're now back-powering something through that resistor. So that's also bad.",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Bypass and bulk capacitors are a credible source of leakage in a microamp-level design: off-brand or bulk-sourced parts have caused significant leakage problems, so the decoupling network cannot be assumed to be free of standing current.",
+   "quote_verbatim": "I've heard stories of people buying particularly off-brand capacitors or just bulk source capacitors. And they've had major leakage problems for people that are doing low power design",
+   "speaker": "Matt Liberty",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Microcontroller families with selectively gated clock trees and separately powered blocks put the difficulty at bring-up rather than at shutdown: getting each block powered and clocked correctly the first time is the awkward part, after which shutting them down individually is comparatively straightforward.",
+   "quote_verbatim": "STM32s have like all the clock trees and you can selectively power things up and down. And there's a lot of stuff, a lot of problems getting those powered up the first time, but then you can go and shut stuff off",
+   "speaker": "Chris Gammell",
+   "episode": 527,
+   "episode_title": "Measuring Current with Matt Liberty",
+   "episode_url": "https://theamphour.com/527-measuring-current-with-matt-liberty/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Circuit techniques that reduce leakage on a digital part can raise its dynamic power, because the same measures increase the capacitance that has to be driven on the MOSFET gates; leakage and switching energy are traded against one another rather than reduced together.",
+   "quote_verbatim": "it makes the leakage less and actually increases the dynamic power a bit, I think, because you're driving more capacitance on your MOSFET gates",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Reaching the tens-of-microamps range demands deliberate analogue biasing work that a digitally-focused design team may reasonably decline to take on; a best-effort approach to power management is a defensible choice when the team's strength is architecture and digital design.",
+   "quote_verbatim": "we're not doing any kind of crazy biasing to really get down into the tens of microamps type range. You know, there are microcontrollers out there that do that kind of thing. It's something that we are certainly interested in doing for any future silicon if we do another kind of microcontroller in this space. It's just a function of engineering team size",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A two-tier sleep architecture is common on modern microcontrollers. In the shallower mode both processors enter deep sleep and, once neither is requesting clocks, a sleep-enable register determines which clocks keep running, so a real-time clock can be left alive to wake the part after a set interval.",
+   "quote_verbatim": "So there's basically a sleep enable register which says, what do you still want running? So in that case, you can basically run just like the RTC to wake you up in like two minutes time. And that will then wake you back up and only have that clock running",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The deepest sleep state stops every clock on the chip, which means nothing on the part can generate its own wake-up; an external event such as a GPIO edge is required to restart the clocks.",
+   "quote_verbatim": "There's another mode called dormant mode, which we also call Tacoma mode internally, which basically stops all of the clocks running. So there's no clocks running on the chip at all. But you need some kind of external source to restart those clocks. So a GPIO edge or going high",
+   "speaker": "James Adams",
+   "episode": 529,
+   "episode_title": "Embedded Hardware with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/529-embedded-hardware-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Support for low-power states and for transitions between them is one of the primary determinants of how embedded firmware is structured, not a feature added afterwards; a project whose device wakes once a day on a cellular link cannot have that support retrofitted into a structure that assumed continuous operation.",
+   "quote_verbatim": "one of the biggest concerns in how I structure systems is, um, making sure that I can support low power states and changing power states",
+   "speaker": "Phillip Johnston",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "General-purpose embedded frameworks tend to put their design effort into networking rather than power management, which leaves the designer to add the control needed to turn individual elements off; networking is itself among the hungrier subsystems, so the omission falls exactly where a battery design needs the most help.",
+   "quote_verbatim": "I still need to have enough control to be able to turn off discrete elements and lower the power requirements",
+   "speaker": "Chris Gammell",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The supply converter's own quiescent current sets the floor of a sleeping design's consumption, which makes quiescent current the selection criterion for the regulator; buck-boost converters with quiescent currents of a few hundred nanoamps are available for this reason.",
+   "quote_verbatim": "We have a really nice buck boost converter from Ricoh. It basically has a 300 nanoAms of quiescent current. Wow. So it can go really low.",
+   "speaker": "Orkhan Amiraslanov",
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Placing every sensor and the expansion connector behind switchable power gating means an unused peripheral contributes nothing at all to the sleep budget, which together with a deep stop mode on the microcontroller brings a complete sensor node into the low single-digit microamps.",
+   "quote_verbatim": "You can switch off power gating, all the sensors, even the expansion part. And in sleep mode, we've measured something around 1.7, like 1.8 microamps. Very nice. Putting the microcontroller in a stop mode 3.",
+   "speaker": "Orkhan Amiraslanov",
+   "episode": 557,
+   "episode_title": "Generic Nodes with Orkhan Amiraslanov",
+   "episode_url": "https://theamphour.com/557-generic-nodes-with-orkhan-amiraslanov/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Industrial signalling standards are incompatible with an optimised power budget: a board carrying RS-485 transceivers and 4-20 mA current-loop drivers sustains standing current by design, so choosing an industrial interface set effectively forgoes low-power operation.",
+   "quote_verbatim": "There's a. RS485 on here. 420 controllers. And just. Yeah. It's not. This is more industrial than anything. So. It's not going to be. This is not going to win any low power sippy awards anytime soon.",
+   "speaker": "Dave Jones",
+   "episode": 561,
+   "episode_title": "Assembly Chat",
+   "episode_url": "https://theamphour.com/561-assembly-chat/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Polling costs processor cycles whether or not it is wrapped in an operating-system task, because the core must still wake and check the device at whatever interval the application demands; routing the sensor into an interrupt pin or a serial peripheral that raises its own interrupt instead lets meaningful data arrive before any task runs.",
+   "quote_verbatim": "Some sort of serial peripheral has interrupts. Then those interrupts could be activated. They can bring in a meaningful amount of data from the sensor. And then you can, you know, signal a task to wake up",
+   "speaker": "Brian Amos",
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Event-driven structure is what makes a low-power design work under a real-time operating system, and some kernels support a tickless mode so that the periodic timekeeping interrupt itself stops firing when nothing is scheduled.",
+   "quote_verbatim": "the more things that you can have event driven in a low power design, the better, because the one thing that you kind of get for free, depending on which port of free RTOS you're using, some RTOS is, free RTOS is one of them where they have a tickless mode",
+   "speaker": "Brian Amos",
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where a board form-factor standard leaves a pin loosely specified, vendors targeting different markets assign it incompatible functions: one cellular board maker uses it as a low-power cutout for designs chasing the lowest possible field consumption, another uses it as a back-power input from an industrial supply. Pin-compatible boards are therefore not interchangeable.",
+   "quote_verbatim": "So Jared focuses on like super low power. And so that's like a low power cutout. So if you're trying to like get like the lowest power possible on a cellular board, that's what Jared uses that pin for. So Actinous uses it to have this backpower capability.",
+   "speaker": "Chris Gammell",
+   "episode": 600,
+   "episode_title": "The Custodial Arts",
+   "episode_url": "https://theamphour.com/600-the-custodial-arts/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Requests for help with energy consumption usually arrive as a narrow question about one routine when the real problem is the product's overall energy target; the productive response is to establish what the design as a whole has to achieve before optimising any part of it.",
+   "quote_verbatim": "So people come to us with all types of questions of how do I optimize this little part of code? It's like, well, I can help with that, but what is the real thing that you want to get?",
+   "speaker": "Matt Liberty",
+   "episode": 607,
+   "episode_title": "The Joulescope Upgrade with Matt Liberty",
+   "episode_url": "https://theamphour.com/607-the-joulescope-upgrade-with-matt-liberty/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A bistable display costs energy only when the image changes, so it is the natural choice for a device that is powered down most of the time; adding a capacitive touch layer reintroduces a continuous scanning current, which means the residual draw of such a product sits in the input sensing rather than the display.",
+   "quote_verbatim": "It only draws power when, when you, well, yeah, there's a residual power. Cause it's, it's checking for the capacitive touchscreen",
+   "speaker": "Dave Jones",
+   "episode": 621,
+   "episode_title": "The Magic of Calipers",
+   "episode_url": "https://theamphour.com/621-the-magic-of-calipers/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Automotive electronics that stay connected to the vehicle battery when the car is switched off are specified at the board level rather than the part level: a customer requirement that the entire assembly consume less than a hundred microamps in that state is typical for infotainment hardware.",
+   "quote_verbatim": "the entire board has to consume less than the hundred microamps. So basically, yeah, you have to design the power management to be low power when everything is shut down",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Meeting a whole-board standby budget resolves into two separate regulator specifications: the front-end regulators that remain active must have a low quiescent current, and the downstream low-voltage regulators must have a low shutdown current, since these are different parameters governing different parts of the rail tree.",
+   "quote_verbatim": "your, uh, regular, your front end regulators, they have a low question current and your low voltage regulators, they have a low shutdown current",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The automotive supply rail is hostile as well as always present: it rises to forty volts during load dump and falls to around three volts during cold cranking, and the display must not blank at the low end, so a front-end boost stage is required alongside the low-quiescent-current requirement.",
+   "quote_verbatim": "It goes up to 40 volts during the load dump and during the cold crank, it goes down to three volts and you, you don't want it to really, yeah. Yeah. When it's really cold, it does. So you don't want your screen to turn off. So you need to have like some front front end boost",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Explosion-protection certification imposes a thermal limit rather than a power limit: with a dead short assumed inside the protected device, no component on the board may exceed a stated surface temperature, because it is the temperature rise alone that can ignite the surrounding gas.",
+   "quote_verbatim": "you can ignite the gas only because of temperature rise of the components on the board",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The arithmetic behind that limit is direct: a three-volt rail from a converter capable of one amp can deliver three watts into a fault, and a TQFP package with a thermal resistance near fifty degrees Celsius per watt then rises about a hundred and fifty degrees, far past the permitted ceiling.",
+   "quote_verbatim": "you have a tqfp package with thermal resistance of 50 degrees per watts under three watts is already 150 degrees increase",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The standard mitigation is a series resistor of one to ten kilohms between the supply and the protected device's power pin, which caps the energy a fault can deliver. That resistor also fixes the device's current budget, since anything drawing more than microamps develops enough voltage across it to brown the part out, which is why certified equipment of this class is built from low-power silicon.",
+   "quote_verbatim": "placing like a 1k or 10k resistor between the power supply and the adc power supply pin so that means that your adc has to be in the micro micro area micro micro sorry uh current range so basically if you look at the an athex certified device they all use low power devices for these reasons",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Active consumption on a microcontroller is quoted per megahertz rather than as an absolute, which makes microamps per megahertz the comparable figure; a low-cost Bluetooth part of this class runs at around 32 microamps per megahertz and operates down to 1.7 volts.",
+   "quote_verbatim": "It can run at 32 microamps per meg",
+   "speaker": "Dave Jones",
+   "episode": 636,
+   "episode_title": "Discovering Cursed Connectors",
+   "episode_url": "https://theamphour.com/636-discovering-cursed-connectors/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Whether code executes from on-chip flash or from RAM changes a microcontroller's active current by a couple of microamps per megahertz, so the memory the firmware runs out of is a power decision and not only a speed one.",
+   "quote_verbatim": "If you run from flash, ooh, an extra two microamps per megahertz.",
+   "speaker": "Dave Jones",
+   "episode": 636,
+   "episode_title": "Discovering Cursed Connectors",
+   "episode_url": "https://theamphour.com/636-discovering-cursed-connectors/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Driving one display rather than two, and accepting limited on-board computation, is what makes an all-day wearable head-mounted display conceivable; the immersive alternative sets the opposite design goal and cannot be worn for more than a couple of hours.",
+   "quote_verbatim": "if you are just powering one display rather than two, you have, you know, limited compute on board, but perhaps you can still provide a decent two dimensional display. Then you can start to imagine, you know, how to get to something that you could actually comfortably wear",
+   "speaker": "Aedan Cullen",
+   "episode": 638,
+   "episode_title": "Building AR Headsets with Aedan Cullen",
+   "episode_url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Processor selection follows whichever requirement binds hardest on a given product, and an ultra-low-power target binds hard: only a few parts on the market meet it, so the designer accepts a vendor, architecture and toolchain that would not otherwise have been chosen.",
+   "quote_verbatim": "if it's really ultra, ultra low power design. Well, there's only a few on the market. Right. So I might have to choose something that I wouldn't ordinarily choose.",
+   "speaker": "Dave Jones",
+   "episode": 642,
+   "episode_title": "Sad Violins for Superconductors",
+   "episode_url": "https://theamphour.com/642-sad-violins-for-superconductors/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The lens over a passive infrared element is a set of deliberately offset Fresnel facets, so that a body crossing the field presents heat alternately to different sections of the element; the sensor never settles fully on or off but sits in a linear state producing a varying voltage.",
+   "quote_verbatim": "it's actually a Fresnel lens pattern, but they're offset from each other",
+   "speaker": "Chris Gammell",
+   "episode": 657,
+   "episode_title": "Automating the Home with Keith Burzinski",
+   "episode_url": "https://theamphour.com/657-automating-the-home-with-keith-burzinski/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Passive infrared detection resists duty cycling because the element has to stay biased and its amplifier has to stay running for the sensor to be watching at all, which is why continuous motion sensing has historically been difficult to reconcile with a low-power budget.",
+   "quote_verbatim": "there is impossible to get low power on those. Right. Cause it's like, it's always like always watching, always amplifying",
+   "speaker": "Chris Gammell",
+   "episode": 657,
+   "episode_title": "Automating the Home with Keith Burzinski",
+   "episode_url": "https://theamphour.com/657-automating-the-home-with-keith-burzinski/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A power-optimisation review of an existing board usually begins with what is visible on it: indicator LEDs in quantity and linear regulators scattered across the design account for a large share of the excess before any firmware is examined.",
+   "quote_verbatim": "I see, you know, tens of LEDs and LDOs everywhere. Right. So, and then they say, okay, I'm struggling to optimize. And I was like, okay, everything is in front of you. Yeah. Get out the thermal camera being like spot, spot, spot. These are all linear regulators. These are all your LEDs, right?",
+   "speaker": "Pallav Aggarwal",
+   "episode": 661,
+   "episode_title": "Blogging Electronics with Pallav Aggarwal",
+   "episode_url": "https://theamphour.com/661-blogging-electronics-with-pallav-aggarwal/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A dedicated font memory holding glyph bitmaps lets a power-constrained device render text without a higher-order operating system or a font-rendering stack: the microcontroller needs only a small routine that reads the glyph out of the font chip and transfers the data straight into the display.",
+   "quote_verbatim": "you only need a tiny routine inside your micro that reads the font chip and just transfers that data straight into the LCD itself. So, just, you know, basically transferring some data",
+   "speaker": "Dave Jones",
+   "episode": 700,
+   "episode_title": "Beware of the Overachievers",
+   "episode_url": "https://theamphour.com/700-beware-of-the-overachievers/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A Bluetooth low-power system reduces energy along two axes at once: it works at extremely small duty cycles, with the radio circuits live only briefly and off ninety-five percent of the time or more behind a background digital controller, and it separately optimises the power drawn by the circuitry while it is on.",
+   "quote_verbatim": "the, the actual RF circuits are live for extremely short periods of time. And the other thing too, is they do try to power optimize what's there. So reduce the overall power, reduce the duty cycle",
+   "speaker": "Jerry Twomey",
+   "episode": 704,
+   "episode_title": "Applied Embedded Electronics with Jerry Twomey",
+   "episode_url": "https://theamphour.com/704-applied-embedded-electronics-with-jerry-twomey/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Selecting a part with no surplus capability is itself a low-power decision: where power consumption is the governing requirement, the right component is the small one that does exactly what the product needs and nothing more.",
+   "quote_verbatim": "Small, low power, and doesn't have any thrills. Like it does exactly what we needed to do and nothing more. For the index, it's all about power consumption. We needed to get something down as low power as possible.",
+   "speaker": "Eric Migicovsky",
+   "episode": 715,
+   "episode_title": "Shiny New Pebble with Eric Migicovsky",
+   "episode_url": "https://theamphour.com/715-shiny-new-pebble-with-eric-migicovsky/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Writing in a high-level language does not preclude a low-power design, but it shifts the burden onto knowing what the toolchain emits and what the generated code will actually do at run time; the tooling to give that visibility is not fully in place.",
+   "quote_verbatim": "the idea of using high level programming, you know, doesn't preclude you from doing low power stuff. Right. It's just a matter of you, you got to know your tools, right? You got to know what it's actually going to spit out",
+   "speaker": "Chris Gammell",
+   "episode": 723,
+   "episode_title": "BeagleBoard's Back with Jason Kridner",
+   "episode_url": "https://theamphour.com/723-beagleboards-back-with-jason-kridner/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Resolving a device's configuration at build time rather than at run time saves both power and boot time, because a generic configurable image spends energy each start-up deciding what it is; where the firmware can be updated in the field, fixing the configuration in the build is the cheaper arrangement.",
+   "quote_verbatim": "Just make the firmware do what you want it to do and configure it ahead of time, right? Configure it at build time, not at runtime. Like that saves a lot of power and boot time if you're doing your configuration at build time instead of runtime",
+   "speaker": "Jason Kridner",
+   "episode": 723,
+   "episode_title": "BeagleBoard's Back with Jason Kridner",
+   "episode_url": "https://theamphour.com/723-beagleboards-back-with-jason-kridner/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "ep 59: labelled Jeff Keyzer, but the passage is a fused question and answer in which the host asks about scaling to 32 kHz and a guest replies; nothing in the text settles which guest answers, so the speaker was set to null.",
+  "ep 218: labelled Dave Jones, but the hundred-microwatt ballpark is given in answer to Dave's question by the interviewed guest Eric VanWyk; reattributed.",
+  "ep 329: labelled Elecia White, but the remark about modules versus a custom board for a low-power situation sits in a rapid exchange between host and guest and cannot be assigned from the text; speaker set to null.",
+  "ep 338: the hearing-aid origin of the Bluetooth low-power audio profiles is labelled Chris Gammell but is plainly the interviewed guest's own account of his industry; reattributed to Jorgen Jakobsen.",
+  "ep 354: attribution_reliable is true, but the episode is a meeting of two Daves and the first-person material about a four-AA-cell product cannot be assigned to either from the text; speaker set to null for both claims.",
+  "ep 398: labelled Dave Jones, but the explanation of how the module variants differ in their passives is the interviewed module designer's; reattributed to Felix Rusu.",
+  "ep 442: attribution_reliable is false, but the passage is a continuous first-person account of the speaker's own watch design and his adoption of the MSP430, which matches the interviewed guest; the Travis Goodspeed label was retained.",
+  "ep 459: labelled Chris Gammell, but the CMOS history is delivered as an answer to the host's question by the interviewed guest; reattributed to Tom Lee.",
+  "ep 489: the 8-bit-and-small-memory argument is the interviewed guest's and was attributed to Jack Ganssle; the following remark about choosing an 8051 part for its peripherals is the host speaking about his own design and was attributed to Chris Gammell.",
+  "ep 515: attribution_reliable is false, but the answer confirming the supervisory-microcontroller pattern is the interviewed guest's; the Jay Carlson label was retained.",
+  "ep 518: the design philosophy of driving every subsystem down first and absorbing the shortfall in duty cycle is the interviewed guest's account of his own platform; attributed to Joris Aerts.",
+  "ep 525: the fabric and process-node material is the interviewed guest's and was attributed to Brian Faith; the closing judgment that programmable logic needs targeted hard blocks with power-down states is the host's and was attributed to Chris Gammell.",
+  "ep 527: attribution_reliable is false throughout, but the measurement and pull-up material is the interviewed instrument designer's and the Matt Liberty label was retained; the remark about clock trees and selective power gating on a particular microcontroller family is the host's question and was attributed to Chris Gammell.",
+  "ep 556: labelled Chris Gammell; the complaint that frameworks under-serve power management is the host's and was kept as his, while the statement that low-power state support governs system structure is the interviewed guest's answer and was reattributed to Phillip Johnston.",
+  "ep 557: labelled Chris Gammell, but the description of the node's regulator, power gating and sleep current is the interviewed designer's account of his own board; reattributed to Orkhan Amiraslanov.",
+  "ep 581: attribution_reliable is false; the explanation of polling versus interrupt-driven structure and of tickless kernel modes is the interviewed author's and was attributed to Brian Amos.",
+  "ep 607: attribution_reliable is false and the passage is labelled Chris Gammell, but the account of what customers ask for is the interviewed instrument maker's; reattributed to Matt Liberty.",
+  "ep 636: attribution_reliable is false, but the passage has the host explicitly handing over before the datasheet figures are read out, and those figures are quoted in Dave Jones's voice; the label was retained.",
+  "ep 704: labelled Chris Gammell, but the two-axis explanation of how Bluetooth low-power systems save energy is the interviewed author's answer rather than the host's question; reattributed to Jerry Twomey.",
+  "ep 723: the build-time-versus-run-time configuration point is the interviewed guest's and was attributed to Jason Kridner; the claim about high-level languages and toolchain visibility is the host speaking about his own work and was attributed to Chris Gammell."
+ ]
+}

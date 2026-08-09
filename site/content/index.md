@@ -6,7 +6,7 @@ A topic-first distillation of the tribal engineering knowledge in **719 episodes
 
 Articles are AI-generated syntheses built from the show's official transcripts through a verified extraction pipeline; every bracketed citation traces to a verbatim transcript passage. A full *How this wiki was built* page documenting the pipeline, verification rules, and known limitations is coming with the complete build.
 
-**Status: batch 1 of the article factory — 81 of 412 planned articles published so far. The factory is running; this page updates as articles land.**
+**Status: batch 1 of the article factory — 100 of 412 planned articles published so far. The factory is running; this page updates as articles land.**
 
 ## Articles
 
@@ -21,16 +21,19 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 - [[altium|Altium]]
 - [[analog-to-digital-converter|Analog To Digital Converter]]
 - [[antenna|Antenna]]
+- [[api|Api]]
 - [[arduino|Arduino]]
 - [[asic|Asic]]
 - [[assembly-language|Assembly Language]]
 
 ### B
 
+- [[battery|Battery]]
 - [[battery-life|Battery Life]]
 - [[bga|BGA]]
 - [[bill-of-materials|Bill of Materials]]
 - [[bluetooth|Bluetooth]]
+- [[bluetooth-low-energy|Bluetooth Low Energy]]
 - [[bootloader|Bootloader]]
 
 ### C
@@ -40,6 +43,7 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 - [[cloud-computing|Cloud Computing]]
 - [[component-sourcing|Component Sourcing]]
 - [[contract-manufacturer|Contract Manufacturer]]
+- [[crowdfunding|Crowdfunding]]
 
 ### D
 
@@ -72,9 +76,15 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 ### I
 
 - [[i2c|I2C]]
+- [[inductor|Inductor]]
 - [[injection-molding|Injection Molding]]
 - [[integrated-circuit|Integrated Circuit]]
+- [[intellectual-property|Intellectual Property]]
 - [[internet-of-things|Internet Of Things]]
+
+### J
+
+- [[jtag|Jtag]]
 
 ### K
 
@@ -86,9 +96,12 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 - [[led|Led]]
 - [[linux|Linux]]
 - [[logic-analyzer|Logic Analyzer]]
+- [[lora|LoRa]]
+- [[low-power-design|Low Power Design]]
 
 ### M
 
+- [[maker-faire|Maker Faire]]
 - [[microcontroller|Microcontroller]]
 - [[mosfet|Mosfet]]
 - [[multimeter|Multimeter]]
@@ -102,6 +115,7 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 
 ### P
 
+- [[patent|Patent]]
 - [[pcb|PCB]]
 - [[pcb-assembly|PCB Assembly]]
 - [[pcb-fabrication|Pcb Fabrication]]
@@ -109,6 +123,7 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 - [[pcb-layout|PCB Layout]]
 - [[pcb-lead-time|PCB Lead Time]]
 - [[pick-and-place-machine|Pick and Place Machine]]
+- [[power-consumption|Power Consumption]]
 - [[power-supply|Power Supply]]
 - [[prototype|Prototype]]
 - [[pwm|Pwm]]
@@ -122,6 +137,7 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 - [[resistor|Resistor]]
 - [[reverse-engineering|Reverse Engineering]]
 - [[risc-v|Risc V]]
+- [[rtos|Rtos]]
 
 ### S
 
@@ -129,8 +145,11 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 - [[semiconductor-fab|Semiconductor Fab]]
 - [[sensor|Sensor]]
 - [[software-defined-radio|Software Defined Radio]]
+- [[solder-mask|Solder Mask]]
 - [[soldering|Soldering]]
+- [[spectrum-analyzer|Spectrum Analyzer]]
 - [[spi|SPI]]
+- [[supply-chain|Supply Chain]]
 
 ### T
 
@@ -141,10 +160,12 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 
 - [[uart|Uart]]
 - [[usb|Usb]]
+- [[usb-c|Usb C]]
 
 ### V
 
 - [[venture-capital|Venture Capital]]
+- [[verilog|Verilog]]
 
 ### W
 
@@ -154,4 +175,8 @@ Articles are AI-generated syntheses built from the show's official transcripts t
 
 - [[youtube|YouTube]]
 
-*Last synced 2026-08-08 · [source corpus and pipeline](https://github.com/frankie-eight-days/amp-hour-wiki)*
+### Z
+
+- [[zephyr|Zephyr]]
+
+*Last synced 2026-08-09 · [source corpus and pipeline](https://github.com/frankie-eight-days/amp-hour-wiki)*

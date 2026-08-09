@@ -1,0 +1,637 @@
+{
+ "concept": "usb-c",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "usb-c",
+  "census": "union",
+  "aliases": [
+   "usb-c",
+   "usb-c-standard",
+   "usb-type-c",
+   "usbc"
+  ],
+  "children": [
+   "computer-monitor",
+   "displayport",
+   "micro-usb",
+   "usb-2",
+   "usb-c-connector"
+  ],
+  "neighbors": {
+   "hdmi": 5,
+   "thunderbolt": 5
+  },
+  "pins_pre_cap": 94,
+  "pins_final": 94,
+  "pins_by_depth": {
+   "explains": 53,
+   "opinion": 41
+  },
+  "pins_by_role": {
+   "core": 88,
+   "child": 6
+  },
+  "capped": false,
+  "passages_yielding_claims": 47,
+  "passages_killed": 47
+ },
+ "claims": [
+  {
+   "claim_text": "The connector carries twenty-four pins where earlier USB had four or five, with several of them duplicated for power and one dedicated configuration channel that establishes which way round the plug went in and which end is sourcing power.",
+   "quote_verbatim": "this one has 24 pins",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Reversibility is free on the power pins and cheap on the slow ones: four power and four ground pins are placed radially symmetrically so orientation does not matter, and the low-speed data pair is slow enough that both candidate positions can simply be shorted together.",
+   "quote_verbatim": "So the power pins, there's just four power pins and four ground pins. So they're radially symmetric.",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The high-speed pairs cannot be handled that way. Shorting both positions at gigabits per second leaves a long unterminated branch on the line, and that stub destroys the signal.",
+   "quote_verbatim": "you can't just short them together because you'll have a huge stub",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Orientation therefore has to be resolved in hardware: the lines are multiplexed so that whichever way the plug went in, the right signals reach the right pins.",
+   "quote_verbatim": "there's a multiplexing of of the lines",
+   "speaker": "Chris Gammell",
+   "episode": 262,
+   "episode_title": "Jobs For Weirdos",
+   "episode_url": "https://theamphour.com/262-jobs-for-weirdos/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A related trap in pass-through designs is that the high-speed transmit and receive pairs are swapped inside the cable rather than at the ports.",
+   "quote_verbatim": "USB 3 and C swapped the transmitter received inside the cable",
+   "speaker": "Arduinos",
+   "episode": 293,
+   "episode_title": "Call In Show #4",
+   "episode_url": "https://theamphour.com/293-call-in-show-4/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The connector itself is rated to ten gigabits per second per lane depending on the specific part, with four lanes available.",
+   "quote_verbatim": "the maximum in the spec is 10 gigabit per second per lane",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "In principle that means forty gigabits per second of data and a hundred watts of power moving through one connector at once.",
+   "quote_verbatim": "you can run, theoretically, 40 gigabits per second of data and 100 watts all at the same time",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The published mating-cycle rating is ten thousand insertions, which is what makes it viable as a user-removable connection where an internal board-to-board part might be specified for ten or thirty.",
+   "quote_verbatim": "the cycle ratings, at least on the data sheets, were 10,000 cycles",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "That rating is what drove its selection for a product needing a detachable cable carrying video: alternate mode runs the display protocol over the high-speed pins, and even without leaving five volts the power budget reaches fifteen watts.",
+   "quote_verbatim": "You could run video over the super speed pins by going into an alternate mode.",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Cheap connectors do not meet that rating. A locally sourced part substituted on cost grounds worked for roughly fifty insertions before the plating was scraped away and contact became unreliable, which justified paying for the higher-grade Japanese part despite it being among the more expensive items on the bill of materials.",
+   "quote_verbatim": "the local connector was fine the first 50 insertions",
+   "speaker": "Jesse Vincent",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The connector can also outrun the factory's board process: a keyboard is otherwise a two-layer board with wide traces, so the assembler's usual fabricator preferred twelve-thousandths trace and space, which will not accommodate this connector's footprint.",
+   "quote_verbatim": "they'd prefer that we were at 1212 rather than 8-8",
+   "speaker": "Jesse Vincent",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The plug overmold has a specified maximum envelope, on the order of six and a half by twelve or thirteen millimetres, which is the number to design an enclosure cutout against.",
+   "quote_verbatim": "that overmold is spec'd as, like, 6.5 by 13.5",
+   "speaker": "Chris Gammell",
+   "episode": 668,
+   "episode_title": "50.0000 Ohms",
+   "episode_url": "https://theamphour.com/668-50-0000-ohms/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Cables in hand do not always respect it, so a recess sized to the specification can still fail to admit a particular heavier cable.",
+   "quote_verbatim": "the first cable I plug in doesn't meet that spec",
+   "speaker": "Chris Gammell",
+   "episode": 668,
+   "episode_title": "50.0000 Ohms",
+   "episode_url": "https://theamphour.com/668-50-0000-ohms/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Role assignment starts as pure analogue: resistors on the two configuration pins set a voltage that says roughly whether this end is a source or a sink.",
+   "quote_verbatim": "you have the two CC pins, CC1 and 2",
+   "speaker": "Werner Johansson",
+   "episode": 640,
+   "episode_title": "Software Defined Power Supplies with Werner Johansson",
+   "episode_url": "https://theamphour.com/640-software-defined-power-supplies-with-werner-johansson/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Above that sits a negotiation in which source and sink settle on a contract — one end advertising, say, twenty volts at three amps alongside fifteen, nine and five — and either end can ask to change roles or contracts later.",
+   "quote_verbatim": "Actually getting the source and the sync to decide on the best contract to use.",
+   "speaker": "Werner Johansson",
+   "episode": 640,
+   "episode_title": "Software Defined Power Supplies with Werner Johansson",
+   "episode_url": "https://theamphour.com/640-software-defined-power-supplies-with-werner-johansson/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The simplest implementations need nothing more than pull-ups, pull-downs and an analogue reading; swapping power or data roles on the fly requires the power delivery protocol, which despite the name governs far more than power.",
+   "quote_verbatim": "if you want to do more complicated things like swapping power roles or swapping data roles on the fly, you need to do what's called the power delivery communication",
+   "speaker": "Chris Gammell",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "That protocol is a single-wire, time-based scheme using biphase mark coding, which once had to be coaxed out of serial peripheral hardware; dedicated chips now translate it into a two-wire bus that ordinary firmware can drive.",
+   "quote_verbatim": "It's a one-wire protocol. It's all time-based.",
+   "speaker": "Chris Gammell",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The most useful thing to know starting out is how little is needed for the common case: to replace an older USB port with this connector, tie the two candidate positions for the data lines together, wire them in as before, and add a pull-down resistor on the configuration lines.",
+   "quote_verbatim": "basically just add a pull down resistor on the CC lines",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "For a device that only wants the new connector at legacy speeds, that compatibility is the whole story — changing connector needs very little else.",
+   "quote_verbatim": "if you just want to change to the new connector, there's not a whole lot that you have to do",
+   "speaker": "Jeff Keyzer",
+   "episode": 421,
+   "episode_title": "The Legend of Keyzermas",
+   "episode_url": "https://theamphour.com/421-the-legend-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Anything above the default couple of watts requires a controller that implements the negotiation, placed on the port side of the isolation barrier in an isolated supply so that the incoming power can be brokered before it crosses.",
+   "quote_verbatim": "it handles the negotiation with the, uh, with the type C USB port, because we need to deliver more than your 2.5 Watts",
+   "speaker": "Dave Jones",
+   "episode": 449,
+   "episode_title": "Pulled From A Working Environment",
+   "episode_url": "https://theamphour.com/449-pulled-from-a-working-environment/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Because those controllers implement a common standard, poor documentation from one vendor can be worked around by taking a competing vendor's development material and running it against the part, which in one case simply worked.",
+   "quote_verbatim": "he went to a Texas instruments part, which was another type of type C",
+   "speaker": "Dave Jones",
+   "episode": 449,
+   "episode_title": "Pulled From A Working Environment",
+   "episode_url": "https://theamphour.com/449-pulled-from-a-working-environment/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Writing the firmware against the standard rather than the part is what makes the obsolescence plan credible: if the chosen controller is discontinued five years into production, another power delivery controller should drop in with the code unchanged.",
+   "quote_verbatim": "we could just switch it out with any other power delivery controller chip and our code should still just work",
+   "speaker": "Dave Jones",
+   "episode": 449,
+   "episode_title": "Pulled From A Working Environment",
+   "episode_url": "https://theamphour.com/449-pulled-from-a-working-environment/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where a product only wants power, the full twenty-four-pin fine-pitch connector is a burden that still has to be paid for, because the negotiation is mandatory even when no data will ever be sent.",
+   "quote_verbatim": "You're using the USB-C connector just for the power. That's it. You don't need to send data.",
+   "speaker": "Dave Jones",
+   "episode": 496,
+   "episode_title": "Drab Olive",
+   "episode_url": "https://theamphour.com/496-drab-olive/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The power brackets themselves are a small set of fixed rails — five, nine, fifteen and twenty volts — and the top one plausibly exists because laptop supplies had already settled around nineteen and a half to twenty volts.",
+   "quote_verbatim": "there's a 5-volt rail and then there's a 9-volt rail and then there's a 15-volt rail",
+   "speaker": "Jeff Keyzer",
+   "episode": 421,
+   "episode_title": "The Legend of Keyzermas",
+   "episode_url": "https://theamphour.com/421-the-legend-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "That ceiling does not cover every case: a laptop and dock pairing that charges at a hundred and thirty watts is already outside what the standard guarantees, which is a hundred.",
+   "quote_verbatim": "USB Type-C only guarantees 100 watts",
+   "speaker": "Jeff Keyzer",
+   "episode": 421,
+   "episode_title": "The Legend of Keyzermas",
+   "episode_url": "https://theamphour.com/421-the-legend-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A hundred watts is enough power to be thought about in household terms rather than electronic ones, which is the sort of comparison that makes the figure concrete.",
+   "quote_verbatim": "which is the maximum power that you can transmit over USB C",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "That figure is twenty volts at five amps, and it is the reason the connector became interesting to people who had no interest in its data capabilities.",
+   "quote_verbatim": "20 volts to five amps",
+   "speaker": "Dave Jones",
+   "episode": 240,
+   "episode_title": "Compare and Contrast Tech Entitlement - Worldly Working Wonks",
+   "episode_url": "https://theamphour.com/240-compare-and-contrast-tech-entitlement-worldly-working-wonks/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Five amps is the ceiling because the copper is not there: several pins are assigned to power, but each is small and the total cross-section is limited.",
+   "quote_verbatim": "that's the reason why they topped out at 5 amps",
+   "speaker": "Werner Johansson",
+   "episode": 640,
+   "episode_title": "Software Defined Power Supplies with Werner Johansson",
+   "episode_url": "https://theamphour.com/640-software-defined-power-supplies-with-werner-johansson/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "At forty-eight volts the contact geometry becomes a safety feature. The tips are shaped to steer where an arc forms, the configuration pins must break first, and the voltage must collapse quickly on unplugging under load — otherwise a direct-current arc sustains itself.",
+   "quote_verbatim": "you want the CC pins to disconnect first and then you want the voltage to drop very, very quickly",
+   "speaker": "Werner Johansson",
+   "episode": 640,
+   "episode_title": "Software Defined Power Supplies with Werner Johansson",
+   "episode_url": "https://theamphour.com/640-software-defined-power-supplies-with-werner-johansson/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "For that reason most connectors actually available are still only rated to twenty volts, whatever the standard permits.",
+   "quote_verbatim": "most of the USB-C pin, USB-C connectors that you find, they're still only rated for 20 volts",
+   "speaker": "Werner Johansson",
+   "episode": 640,
+   "episode_title": "Software Defined Power Supplies with Werner Johansson",
+   "episode_url": "https://theamphour.com/640-software-defined-power-supplies-with-werner-johansson/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The gap that leaves is a configurable sink: a device that negotiates a contract and then presents whatever fixed output voltage and physical connector a legacy product expects, such as a barrel jack.",
+   "quote_verbatim": "a configurable USB power delivery sink that can be programmed for any output voltage",
+   "speaker": "Luke Beno",
+   "episode": 722,
+   "episode_title": "AI Tooling with Matt Liberty and Luke Beno",
+   "episode_url": "https://theamphour.com/722-ai-tooling-with-matt-liberty-and-luke-beno/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The greatest hazard of a connector that can do anything is that a given port usually cannot: one port on a machine may be the only one that charges, another the only one that drives a display, and the plug gives no clue.",
+   "quote_verbatim": "your laptop might have only one of the four ports you can actually charge the battery with",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The remedies are weak. Markings can be printed on the case and will mostly be ignored, and a billboard device class exists to send a human-readable string explaining why the thing the user just plugged in is not working.",
+   "quote_verbatim": "deliver over USB a human readable string that can let the user know",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Making every port equivalent is the right answer for the user and expensive for the builder, because it means duplicating the internal hardware behind each one.",
+   "quote_verbatim": "the best solution for the user would be just make every port able to do everything",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "trade-off"
+  },
+  {
+   "claim_text": "Doing so means adding switches and multiplexers on the board — which are already needed to handle the cable flip — while keeping power and signal integrity intact across them, which is the general pattern of this standard: ease for the user, paid for by the engineer.",
+   "quote_verbatim": "make things easier for the user and push all that effort back on the engineers",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Dedicating one of a small number of ports to charging quietly removes it from the pool, which is a real cost when the machine only has four.",
+   "quote_verbatim": "you've just pissed away one of your four ports already",
+   "speaker": "Chris Gammell",
+   "episode": 565,
+   "episode_title": "Here for a reason",
+   "episode_url": "https://theamphour.com/565-here-for-a-reason/",
+   "depth_regraded": "explains",
+   "kind": "trade-off"
+  },
+  {
+   "claim_text": "A modular port scheme exploits the same generality in the other direction: every slot is the same connector into the mainboard, and each removable module converts it out to a display protocol, a network connection or a legacy port while passing through the full charging power.",
+   "quote_verbatim": "they can pass through the 100 watt power for charging",
+   "speaker": "Chris Gammell",
+   "episode": 717,
+   "episode_title": "Back on the road in '26",
+   "episode_url": "https://theamphour.com/717-back-on-the-road-in-26/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Because the interface is documented, third parties can design their own modules for such a machine.",
+   "quote_verbatim": "he's designed these little USB-C modules that plug in",
+   "speaker": "Dave Jones",
+   "episode": 600,
+   "episode_title": "The Custodial Arts",
+   "episode_url": "https://theamphour.com/600-the-custodial-arts/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The accumulated complexity is structural: the older USB generation is ubiquitous enough that it must still be supported, the faster generation is wanted on top of that, and this connector adds a further dimension of alternate modes.",
+   "quote_verbatim": "USB 2 is so ubiquitous that you have to sort of support all the legacy USB 2 stuff",
+   "speaker": "Jeff Keyzer",
+   "episode": 421,
+   "episode_title": "The Legend of Keyzermas",
+   "episode_url": "https://theamphour.com/421-the-legend-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The retention is literal at the pin level: the original low-speed data pair remains present on this connector and is carried even by the newest specification, which itself runs two lanes in each direction for forty gigabits per direction.",
+   "quote_verbatim": "It still has the D plus and minus pins dedicated only to USB 2.",
+   "speaker": "Brock Lameres",
+   "episode": 497,
+   "episode_title": "An Interview with Brock LaMeres",
+   "episode_url": "https://theamphour.com/497-an-interview-with-brock-lameres/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "That newest specification came from a proprietary high-speed interface being opened up and folded into the standard, using the same connector so that no further physical variant was introduced.",
+   "quote_verbatim": "Intel opened that up and then that got adopted as the USB 4 specification",
+   "speaker": "Chris Gammell",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "vendor-history"
+  },
+  {
+   "claim_text": "Convergence on one connector did not converge the cables: differently specified cables that look identical support different combinations, and some carry identification chips to declare what they are.",
+   "quote_verbatim": "there's specific USB-C Thunderbolt cables that don't necessarily work the same as others",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A product that supports only one proprietary fast-charge scheme inherits a compatibility problem that can be fatal to it: the overwhelming majority of the battery packs people already own will not implement that scheme, and there is no fallback at lower power.",
+   "quote_verbatim": "it's like quick charge 3 or bust for that product",
+   "speaker": "Dave Jones",
+   "episode": 421,
+   "episode_title": "The Legend of Keyzermas",
+   "episode_url": "https://theamphour.com/421-the-legend-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Every cable or adapter that does anything beyond basic USB contains a microcontroller, which changes what a cable is from a passive object to a computer of unknown provenance.",
+   "quote_verbatim": "Any cable that you plug in that does anything beyond basic USB has essentially a microcontroller in it.",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Opening one adapter found a display-protocol conversion chip, a power delivery chip and a microcontroller with firmware update left enabled, so its firmware could be read out and replaced.",
+   "quote_verbatim": "it turns out direct firmware update is available on this USB microcontroller",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The consequence is that a single plug can enumerate as a display, a charger, a network adapter, a keyboard and a mass storage device at once, connecting every standard input and output path of the computer to hardware whose contents are unknown until it is plugged in.",
+   "quote_verbatim": "You don't know what's on the other side until you plug it in.",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The electrical failure mode is just as sharp: a pull-up tied to the bus voltage on the assumption that it is always five volts will destroy microcontroller input pins the moment that rail negotiates up to twenty.",
+   "quote_verbatim": "when you set up VBUS to be 20 volts, you can start frying inputs",
+   "speaker": "Chris Gammell",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Protocol violations are enforced in firmware here in a way they were not on the older bus, so a device that misbehaves is hard-reset and has its bus voltage cut rather than being tolerated.",
+   "quote_verbatim": "It just turns off V bus on me every time.",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "That makes a protocol analyser close to mandatory, because otherwise the only symptom visible is that the link keeps resetting for no stated reason.",
+   "quote_verbatim": "having a protocol analyzer or something like that is definitely helped",
+   "speaker": "Jason Cerundolo",
+   "episode": 340,
+   "episode_title": "An Interview with Jason Cerundolo",
+   "episode_url": "https://theamphour.com/340-an-interview-with-jason-cerundolo/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A device operating near the top of the link's data rate can be tipped over the edge by the path rather than the device: an adapter to the older connector plus the internal ribbon run to the motherboard lost enough margin that the device failed well below its maximum resolution.",
+   "quote_verbatim": "they're on the edge of what they can do, data rate for the USB-C connection",
+   "speaker": "Dave Jones",
+   "episode": 597,
+   "episode_title": "Wow, Dave REALLY likes Top Gun",
+   "episode_url": "https://theamphour.com/597-wow-dave-really-likes-top-gun/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Plugging the same device straight into a port on the back of the machine fixed it, which is the general lesson that a marginal high-speed link should be tested on the shortest, most direct path before anything else is suspected.",
+   "quote_verbatim": "I flipped my PC around, I plugged it directly into a USB-C port and it worked",
+   "speaker": "Dave Jones",
+   "episode": 597,
+   "episode_title": "Wow, Dave REALLY likes Top Gun",
+   "episode_url": "https://theamphour.com/597-wow-dave-really-likes-top-gun/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The same reflex applies to the cable: trying a different one belongs near the top of the list when a board will not enumerate, ahead of hours of investigation.",
+   "quote_verbatim": "try a different USB-C cable before spending hours looking for why the board doesn't enumerate",
+   "speaker": "Chris Gammell",
+   "episode": 470,
+   "episode_title": "Just Add Salt",
+   "episode_url": "https://theamphour.com/470-just-add-salt/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "A cable can also be the root cause of a signal integrity problem that looks like a board problem — added bypass capacitors helped a little, but the actual fault was an out-of-specification cable without the shielding it should have had.",
+   "quote_verbatim": "your USB-C cable isn't up to spec and it's not shielded like it's supposed to be",
+   "speaker": "Jesse Vincent",
+   "episode": 450,
+   "episode_title": "Stories from Teardown 2019",
+   "episode_url": "https://theamphour.com/450-stories-from-teardown-2019/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A phone can serve as the terminal: connecting a development board port-to-port and opening a serial session in a phone terminal application gives shell access and log output without a laptop, provided the board's firmware presents a serial device over USB.",
+   "quote_verbatim": "I plugged it into my phone, USB-C to USB-C. And I just started seeing log outputs.",
+   "speaker": "Chris Gammell",
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The connector costs about twice what the older micro connector does, which is not negligible on a product engineered down to a few dollars where the fixed costs of test and assembly already dominate.",
+   "quote_verbatim": "USB-C connectors are twice the price of the micro USB",
+   "speaker": "James Adams",
+   "episode": 648,
+   "episode_title": "The RP1 and beyond with the Raspberry Pi Hardware team",
+   "episode_url": "https://theamphour.com/648-the-rp1-and-beyond-with-the-raspberry-pi-hardware-team/",
+   "depth_regraded": "explains",
+   "kind": "cost"
+  },
+  {
+   "claim_text": "Going the other way, fitting a second legacy connector costs about as much as including a small adapter in the box, so a single modern connector plus an adapter bought in bulk is the cheaper way to satisfy everyone.",
+   "quote_verbatim": "you can buy a little adapter that converts Type-C to Micro anyway",
+   "speaker": "Chris Gammell",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Some products adopt the connector purely for its mechanical robustness and power handling while running data at serial-port speeds that the very first USB generation could have carried.",
+   "quote_verbatim": "We're only using it for its physical robustness and for its power capability.",
+   "speaker": "Chris Gammell",
+   "episode": 434,
+   "episode_title": "Use The Protection Circuit",
+   "episode_url": "https://theamphour.com/434-use-the-protection-circuit/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Whether that matters depends entirely on speed: at low rates the connector is undemanding, but moving gigabits per second across it is not a first layout.",
+   "quote_verbatim": "if you really want to use USB-C and you want to go fast, it is definitely not trivial",
+   "speaker": "Jeff Keyzer",
+   "episode": 421,
+   "episode_title": "The Legend of Keyzermas",
+   "episode_url": "https://theamphour.com/421-the-legend-of-keyzermas/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "During a migration it is worth carrying both connectors on the prototype with a switch between them, both to prove the new one works and to find out what users actually think of having the choice.",
+   "quote_verbatim": "had a little switch on the board that would switch back and forth between the two USB connectors",
+   "speaker": "Christina Cyr",
+   "episode": 475,
+   "episode_title": "An Interview with Christina Cyr",
+   "episode_url": "https://theamphour.com/475-an-interview-with-christina-cyr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "ep 346: attribution flagged unreliable. The security claims are content-attributed to the guest describing his own adapter teardown and cable investigation.",
+  "ep 640: attribution flagged unreliable. The connector, arc and contract-negotiation claims are content-attributed to the guest whose power supply work the passage describes.",
+  "ep 497: the passage is a sponsor segment inside the episode; the connector-history claim is attributed as the bundle labels the turn.",
+  "ep 293: the bundle's speaker label for one turn is a diarisation artifact rather than a person; the cable transmit/receive claim is attributed as labelled and should be read as content, not provenance."
+ ],
+ "capped": false
+}

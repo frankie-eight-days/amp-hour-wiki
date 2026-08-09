@@ -19,7 +19,9 @@
   drawing on ep 706 silently loses those passages (they had good material:
   foundry PDK models with hundreds of parameters, parasitic extraction
   inflating a 30-device schematic to 2–3M devices). Fix the join before
-  batch 3 and consider a rebuild pass for affected bundles.
+  batch 3 and consider a rebuild pass for affected bundles. Second broken
+  stem found by the inductor extractor: `0591-olive-a-the-world` (ep 591) —
+  same null-episode/null-URL join failure.
 - **attribution_reliable: true is not trustworthy** (worst cases: ep 18
   hosts flatly transposed; ep 542 Dave Jones credited on an episode he isn't
   on; battery-life bundle would have credited Dave Jones with 11 claims that
@@ -59,3 +61,13 @@
 - Passages with `episode: null` are uncitable — drop them.
 - Lint's reception-language regex bans the bare word "divided"; phrase
   numeric claims as "0.35 over the rise time", not "divided by".
+- **Scratchpad collisions**: extractor agents share one scratchpad; two agents
+  overwrote each other's `build.py` mid-run (harmless this time — packet was
+  already written). Batch-3 briefs should mandate per-concept script names
+  (`build_<concept>.py`).
+- **Bundle dedup**: ep 196 appears twice under different episode_title strings
+  (one "(Re-broadcast)") — downstream dedup must key on episode number.
+- **Lint fix pattern (no API call needed)**: Kimi sometimes opens a bullet list
+  with an uncited lead-in sentence ("Several failure modes are characteristic
+  of X:"). Deleting the lead-in by hand fixes lint in seconds — do not spend a
+  rewrite call on it.

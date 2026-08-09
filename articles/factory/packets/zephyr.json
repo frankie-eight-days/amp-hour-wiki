@@ -1,0 +1,1037 @@
+{
+ "concept": "zephyr",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "zephyr"
+   ],
+   "children": [
+    "embedded-world",
+    "joe-grand",
+    "linux-foundation",
+    "nordic",
+    "nordic-semiconductor",
+    "starship"
+   ],
+   "neighbors": [
+    {
+     "concept": "cellular-modem",
+     "weight": 4
+    },
+    {
+     "concept": "goliath",
+     "weight": 4
+    },
+    {
+     "concept": "nrf52840",
+     "weight": 4
+    },
+    {
+     "concept": "nrf9160",
+     "weight": 4
+    }
+   ]
+  },
+  "stats": {
+   "episodes": 82,
+   "mentions": 273,
+   "explains": 75,
+   "opinions": 47,
+   "candidate_episode_count": 80,
+   "candidate_mention_count": 172,
+   "gated_out": 261,
+   "gated_out_by_concept": [
+    [
+     "cellular-modem",
+     54
+    ],
+    [
+     "embedded-world",
+     53
+    ],
+    [
+     "nordic-semiconductor",
+     44
+    ],
+    [
+     "starship",
+     30
+    ],
+    [
+     "nrf52840",
+     19
+    ],
+    [
+     "nrf9160",
+     18
+    ],
+    [
+     "goliath",
+     17
+    ],
+    [
+     "joe-grand",
+     13
+    ],
+    [
+     "nordic",
+     7
+    ],
+    [
+     "linux-foundation",
+     6
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 6,
+   "speakers": [
+    [
+     "Chris Gammell",
+     64
+    ],
+    [
+     "Benjamin Cabe",
+     13
+    ],
+    [
+     "Michael Gielda",
+     7
+    ],
+    [
+     "Dave Jones",
+     5
+    ],
+    [
+     "Jason Kridner",
+     4
+    ],
+    [
+     "Eli Hughes",
+     3
+    ],
+    [
+     "Alvaro Prieto",
+     3
+    ],
+    [
+     "Jared Wolff",
+     2
+    ],
+    [
+     "Jay Carlson",
+     2
+    ],
+    [
+     "Fredrik Kensander",
+     2
+    ],
+    [
+     "Pete Staples",
+     2
+    ],
+    [
+     "Shawn Hymel",
+     2
+    ],
+    [
+     "Mark Palmeri",
+     2
+    ],
+    [
+     "Eric Migicovsky",
+     2
+    ],
+    [
+     "Jonathan Beri",
+     1
+    ],
+    [
+     "Brian Amos",
+     1
+    ],
+    [
+     "Scott Williams",
+     1
+    ],
+    [
+     "CNLohr",
+     1
+    ],
+    [
+     "Alex Haro",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "child": 8,
+    "core": 109,
+    "neighbor": 1
+   },
+   "passages_by_depth": {
+    "opinion": 44,
+    "explains": 74
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 118
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "Zephyr defines a set of driver classes, each with its own API, that a device driver is expected to implement. A peripheral can instead be driven from application code in the traditional way, and a part with no exactly matching class is commonly fitted to the nearest one, as a real-time clock chip is implemented against the timer or counter API.",
+   "quote_verbatim": "Zephyr has a bunch of pre-determined kind of structures for different type of drivers.",
+   "speaker": "Jared Wolff",
+   "episode": 509,
+   "episode_title": "Cellular IoT with Jared Wolff",
+   "episode_url": "https://theamphour.com/509-cellular-iot-with-jared-wolff/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Supported boards are held in the Zephyr source tree grouped by processor architecture, so the list of supported hardware is read directly out of the repository rather than from a vendor catalogue; whether a given part appears at all depends on its silicon vendor having contributed the support.",
+   "quote_verbatim": "in terms of the file structure, they have like arm and risk and everything. You just click down in the arm and there's just like a list of different boards",
+   "speaker": null,
+   "episode": 509,
+   "episode_title": "Cellular IoT with Jared Wolff",
+   "episode_url": "https://theamphour.com/509-cellular-iot-with-jared-wolff/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Beyond the kernel primitives of threads, context switching and queues, Zephyr standardises the build process across every supported board and the interfaces used to reach peripherals such as UART and SPI, and it imports two configuration mechanisms from Linux: Kconfig and the device tree.",
+   "quote_verbatim": "But what Zephyr also adds, it standardizes the build process for all these different boards. In most of your hardware interface, you don't have to use it, but they kind of standardize how you talk to UARTs and SPY. And they brought in kconfig and the device tree concept from Linux",
+   "speaker": "Eli Hughes",
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Zephyr's native build flow is a command-line CMake and Ninja invocation rather than a vendor IDE, and vendor tutorials built on top of it double as an explanation of how the operating system itself is put together.",
+   "quote_verbatim": "I'm going to install in Linux according to their command line build, and just read through the Zephyr documentation, Nordic did a really good job of putting a tutorial together of, like, not only how to build their stuff, but they inserted little things about how Zephyr worked",
+   "speaker": "Eli Hughes",
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Zephyr consumes the device tree statically at build time rather than parsing it at run time: the description is turned into header files giving the memory map and the addresses of peripherals such as the UARTs, which is what allows the same application code to be rebuilt for a different board.",
+   "quote_verbatim": "the device tree, how they use it kind of in a special way where it kind of static, you take all this stuff. At the end of the day, it makes, like, a header file that says, here's where all my registers. Here's my memory map. Here's where the UARTs are at. And it at least gets you to a point that it's pretty easy once you have Zephyr code that you can kind of move it between boards",
+   "speaker": "Eli Hughes",
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The recurring cost Zephyr removes is the boilerplate rebuilt on every bare-scheduler project: a build system, a file system, and a mechanism for storing parameters. These are optional components that are pulled in rather than written again, and being documented they remain legible to the original author years later and to anyone else on the project.",
+   "quote_verbatim": "every time I do a free RTOS project, I'm writing the same. I'm coming up with a build system. I'm bringing in a file system. I'm bringing in all this stuff. That's what Zephyr does is you can optionally bring in all the boilerplate",
+   "speaker": "Eli Hughes",
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Zephyr's standard driver models are deliberately thin, far less elaborate than the equivalent Linux driver frameworks, despite borrowing the device tree and Kconfig from Linux.",
+   "quote_verbatim": "they're some of their standard models for drivers, which are very thin, they're not nowhere near as complex as Linux",
+   "speaker": "Eli Hughes",
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Bringing an existing custom cellular and Bluetooth board up on Zephyr took a developer who had specialised in the operating system roughly two to three weeks of contract work.",
+   "quote_verbatim": "he got my ABC board up and running on Zephyr in two weeks, three weeks",
+   "speaker": "Chris Gammell",
+   "episode": 514,
+   "episode_title": "Focus, Dammit",
+   "episode_url": "https://theamphour.com/514-focus-dammit/",
+   "depth_regraded": "opinion",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Where a product line must follow short silicon lifetimes, writing the application above Zephyr means a chip change is handled by producing a new board support package and testing it against the same set of hooks, after which the existing application should build and run on the successor part; the abstraction is not perfect and the board support work is substantial in itself.",
+   "quote_verbatim": "you just go and develop the new board support package. You test it for all of the hooks that need to be tested for. And now you have the blinky app should work the same on",
+   "speaker": "Chris Gammell",
+   "episode": 514,
+   "episode_title": "Focus, Dammit",
+   "episode_url": "https://theamphour.com/514-focus-dammit/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Where an older vendor SDK shipped its protocol stack as an all-or-nothing package, Zephyr keeps the whole stack in the tree and selects components at build time, so unused parts are excluded and the image can be shrunk.",
+   "quote_verbatim": "in the Zephyr stuff that I've been doing, it's, like, I think it's more selective on the build. Because the idea is, like, I think they didn't want people to mess it up during the build. But I think they also didn't want to show their source code in the old way of doing things for Nordic. But, like, now I think there's actually, like, the whole stack is in there and available. And, like, you can selectively build what's in there. So, you could shrink it down if you needed less stuff",
+   "speaker": "Chris Gammell",
+   "episode": 516,
+   "episode_title": "Thermions Aren't A Thing",
+   "episode_url": "https://theamphour.com/516-thermions-arent-a-thing/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A team writing its own hardware abstraction can use Zephyr's API definitions as the reference to implement against, on the reasoning that an interface designed and proven elsewhere avoids the iteration needed to invent one, and that in-house modules written to it can later be carried into Zephyr unchanged.",
+   "quote_verbatim": "if we make our modules in with the Zephyr abstraction, we cannot reuse them if we start to use Zephyr also. So it's like, yeah, we have something to follow and we don't invent it from, take something that works. Instead, if you try to invent it, you have to iterate over it to get it working. Here we have a reference. You can just implement like that reference",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Implementing a protocol module against Zephyr's SPI call signatures, even inside a non-Zephyr firmware, means the module can be dropped into a Zephyr application later without rewriting its bus access; in one case a Profibus module talking to a Profibus ASIC over SPI was written this way.",
+   "quote_verbatim": "the SPI calls that it will do will be Zephyr compatible. So we make, make our SPI driver that way also. So we could just take that Profibus module into Zephyr and it would work right off the bat",
+   "speaker": "Fredrik Kensander",
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A switching power converter running a 37 kilohertz control loop has roughly 27 microseconds of slack per cycle and cannot miss a deadline without damaging the hardware, which is the reason such a design adopts an operating system's interfaces selectively rather than adopting the whole framework.",
+   "quote_verbatim": "you have to hit your timing, right? Like so that 37 kilohertz over the 27 microsecond. Yeah. Yeah. Like you cannot miss that, that train as it goes by the station. Things will go boom",
+   "speaker": null,
+   "episode": 522,
+   "episode_title": "High Current Power Supplies with Fredrik Kensander",
+   "episode_url": "https://theamphour.com/522-high-power-supplies-with-fredrik-kensander/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Zephyr's networking was designed in from the start, with the API set made consistent and with cases such as an IP stack coexisting with a separate networking ASIC considered up front, rather than being added later on top of an existing scheduler.",
+   "quote_verbatim": "there are some aspects of Zephyr being designed from the beginning specifically to have flexibility and all the APIs to be consistent and thinking through how an IP stack might be running on a device that also has an ASIC that's it's networking. All those pieces are just from the beginning. And so you, you end up having, uh, just a cleaner, um, tighter integration",
+   "speaker": "Jonathan Beri",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The payoff from Zephyr arrives after the hardware integration is finished: bringing a board into the ecosystem is real work, but the protocol and peripheral subsystems above it are already written and tested, so a new transport or protocol is enabled rather than implemented.",
+   "quote_verbatim": "it's already built into the system. It's tested, you know, like that's one of the benefits that I've seen about it so far is that like they abstract away some of the hardware stuff",
+   "speaker": "Chris Gammell",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Attaching new hardware to Zephyr is not comparable to dropping in a vendor library written for the chip in use; it is closer to Linux-style interconnection, and is often the part of a project handed to a specialist firmware developer.",
+   "quote_verbatim": "from my experience of like hooking in the hardware piece, that is not simple, right? I mean, like it's, it's definitely different than like, you know, grabbing a vendor library that's already designed for the chip you're using, whatever it's more Linux style interconnecting type of stuff",
+   "speaker": "Chris Gammell",
+   "episode": 526,
+   "episode_title": "Why IoT Is Difficult with Jonathan Beri",
+   "episode_url": "https://theamphour.com/526-why-iot-is-difficult-with-jonathan-beri/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Updating a Zephyr workspace fetches the current revision of each vendor's hardware abstraction repository, including those for silicon the project does not use, so an update pulls down a large volume of source and takes minutes.",
+   "quote_verbatim": "it's all these packages for like ST and Nordic and like all of the vendors and NXP and all these other ones, you know, all they all have like their latest version of the code and you go and update Zephyr, which like references these. And it's just like, it's just like sitting there scrolling for like minutes and minutes of just pulling down the latest versions",
+   "speaker": "Chris Gammell",
+   "episode": 534,
+   "episode_title": "Firmware Update Capabilities",
+   "episode_url": "https://theamphour.com/534-firmware-update-capabilities/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Zephyr publishes long-term stable releases alongside its ordinary release train, following the same pattern as the Linux kernel and Linux distributions, so a product can sit on a supported branch rather than tracking the tip of development.",
+   "quote_verbatim": "Zephyr does have like a long-term stable release, just like, like Linux does, like Ubuntu does",
+   "speaker": "Chris Gammell",
+   "episode": 534,
+   "episode_title": "Firmware Update Capabilities",
+   "episode_url": "https://theamphour.com/534-firmware-update-capabilities/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "One rule of thumb used to place products on either side of the microcontroller-versus-Linux boundary puts devices under about one hundred dollars in Zephyr territory and devices above roughly two hundred and fifty dollars on Linux, on the reasoning that a temperature sensor or a tracking tag has no use for a graphics-capable general-purpose operating system.",
+   "quote_verbatim": "I sort of feel like things under a hundred dollars are Zephyr land and, and should be not running Linux. It's just too, you know, if, if it's just a temperature sensor, like, come on, let's not, let's not get carried away here. We don't, we don't need the graphics on that one. Maybe, you know, or an air tag or something like that. Like there's, there's going to be a home for these, for Zephyr essentially. But anything above 250 bucks ought to be running Linux",
+   "speaker": "Pete Staples",
+   "episode": 544,
+   "episode_title": "Standardizing Manufacturing with Pete Staples",
+   "episode_url": "https://theamphour.com/544-standardizing-manufacturing-with-pete-staples/",
+   "depth_regraded": "opinion",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Zephyr is hosted by the Linux Foundation, in the same manner as other cross-industry projects such as CHIPS Alliance, and is funded through tiered corporate membership.",
+   "quote_verbatim": "the Chipsy Alliance is LF project and the Zephyr project. By the way, we just became platinum member. It's also Linux foundation project",
+   "speaker": "Michael Gielda",
+   "episode": 547,
+   "episode_title": "Open Source Mindset with Michael Gielda",
+   "episode_url": "https://theamphour.com/547-open-source-mindset-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Moving a vendor Bluetooth stack from a pre-compiled binary blob into open source inside Zephyr changes what an integrator can do with it: unneeded pieces can be removed to recover flash and cycles, and defects become visible rather than merely unknown, since a closed blob may carry the same faults without anyone being able to see them.",
+   "quote_verbatim": "Nordic put their Bluetooth stack into Zephyr, which is another thing you guys work on. And the bad news is that there was a security vulnerability recently found, but that's neither here nor there. And, but like before it was like, you have the binary blob and it's tested and that also could have had a vulnerability as well, but you don't know that. But then you could start to actually, when it becomes more open, you can actually like whittle away the things you do or don't need",
+   "speaker": "Chris Gammell",
+   "episode": 547,
+   "episode_title": "Open Source Mindset with Michael Gielda",
+   "episode_url": "https://theamphour.com/547-open-source-mindset-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Nordic Semiconductor uses Zephyr for new parts, so an engineer who could work directly against the bare-metal nRF5 SDK on an nRF52 faces an entirely different software model when moving to the nRF53.",
+   "quote_verbatim": "Nordic going forward is going to be using Zephyr exclusively for new products. And it's like, okay, so that's a pretty significant shift. Even if people are just leaning into like, okay, I, I use the NRF52, I was able to hack it fine, you know, for a proof of concept now in NRF53, I'm in Zephyr",
+   "speaker": "Chris Gammell",
+   "episode": 556,
+   "episode_title": "Firmware for Hardware Engineers with Phillip Johnston",
+   "episode_url": "https://theamphour.com/556-firmware-for-hardware-engineers-with-phillip-johnston/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A vendor's move to Zephyr does not move its shipping volume: because high-volume products were designed years earlier, a large share of parts in production remained on the older bare-metal SDK, which continued to be supported alongside the new flow.",
+   "quote_verbatim": "all of the things that are at volume were built three, four years ago. Yeah. And they were using that old SDK",
+   "speaker": "Chris Gammell",
+   "episode": 644,
+   "episode_title": "Garbage Ninjas",
+   "episode_url": "https://theamphour.com/644-garbage-ninjas/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Choosing a board whose peripherals already have in-tree drivers is what makes a Zephyr demonstration cheap: a single build combining solenoid control, LED output, a door sensor, cellular backhaul and over-the-air firmware update can be assembled without writing driver code.",
+   "quote_verbatim": "flip a solenoid, turn on LEDs, measure whether or not a door was open and do all that over cellular and have firmware updating",
+   "speaker": "Chris Gammell",
+   "episode": 569,
+   "episode_title": "Electric Fields, Son.",
+   "episode_url": "https://theamphour.com/569-electric-fields-son/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Zephyr is entered from the middle rather than the bottom: a project begins with a large package in which the subsystems are already present and the work is paring them down, whereas a bare scheduler such as FreeRTOS begins from the assumption that almost nothing is there and is built upwards.",
+   "quote_verbatim": "it's more like starting from the middle and saying like, okay, you've already got a lot of stuff in this huge package and you can pare it down",
+   "speaker": "Chris Gammell",
+   "episode": 581,
+   "episode_title": "Real Time Operating Systems with Brian Amos",
+   "episode_url": "https://theamphour.com/581-real-time-operating-systems-with-brian-amos/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The Zephyr toolchain is large enough that hosted or containerised builds are noticeably slow, which is why browser-based simulation services compile remotely on a server and run only the resulting binary in the browser.",
+   "quote_verbatim": "I think you even did an experiment where you had like a containerized Zephyr where you were showing a compiling. And it was like very slow because the Zephyr toolchain is monstrous",
+   "speaker": "Chris Gammell",
+   "episode": 599,
+   "episode_title": "An Interview with Uri Shaked (Wokwi.com)",
+   "episode_url": "https://theamphour.com/599-an-interview-with-uri-shaked-wokwi-com/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The case for staying on a bare scheduler rests on two things: uniformity across a company's projects, and the observation that work outside the patterns the framework anticipates, such as ultra-low-power operation on a platform that has not been developed for it, becomes considerably more complex. The compensating cost is that the bare scheduler supplies no drivers at all.",
+   "quote_verbatim": "it's great if you're doing things in kind of the domain of, of suffer that, but if you try to do like ultra low power on a platform, that's not been developed or do things different way, it's a lot more complex, but we're, yeah, we're doing everything, uh, free RTOS these days and yeah, you have to write your own drivers. It doesn't come with drivers.",
+   "speaker": "Alvaro Prieto",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Zephyr has been used on mains-powered products where the power budget is not a constraint, a case its users describe as much more straightforward than the battery-powered one.",
+   "quote_verbatim": "We have been using Zephyr across two of our products, two of our projects recently, but they have, I agree with you. I would not want to do this when we're power limited or trying to do ultra low power. These are both plugged into the wall products.",
+   "speaker": null,
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A prototype that reached a working network stack under Zephyr became difficult once power and performance were examined: with communications in the ten megabit range it was hard to determine where time was being lost, and the power management work was judged to be severe.",
+   "quote_verbatim": "as soon as we started looking at power and performance, we were trying to use some high speed communicate. Well, you know, 10 megabit, but you know, high speed communications. It's, it started getting very complicated to debug, figure out where, where things are, are slowing down. And then the power management was, was going to be rough",
+   "speaker": null,
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "opinion",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A default Zephyr checkout brings in the support for every platform in the tree, including all of the vendor hardware abstraction code, and narrowing the workspace to a single silicon platform is itself a non-trivial task.",
+   "quote_verbatim": "when you, when you download like the default, when you start from like Zephyr, you're getting all of the S like every, every supported platform pretty much like unless you like go in and you're saying like, Oh, actually I only want this one chip platform, which is a pretty complex task to go and do",
+   "speaker": "Chris Gammell",
+   "episode": 621,
+   "episode_title": "The Magic of Calipers",
+   "episode_url": "https://theamphour.com/621-the-magic-of-calipers/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Zephyr's workspace layout catches newcomers at the point of version control: the application lives inside a tree of several gigabytes that the developer does not own, so the application directory must be committed separately from the SDK and upstream modules rather than the whole workspace being pushed to a repository.",
+   "quote_verbatim": "but do I commit the, the whole thing? And then it was like the entire SDK and that's like two gigabytes",
+   "speaker": "Chris Gammell",
+   "episode": 621,
+   "episode_title": "The Magic of Calipers",
+   "episode_url": "https://theamphour.com/621-the-magic-of-calipers/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The device tree is a separate description language from the application's C: it names each hardware block and states where it sits, for example that a given UART is at a particular address in a particular chip's memory map. Silicon vendors keep the descriptions of their own parts in the tree.",
+   "quote_verbatim": "So device tree is like a whole nother language that describes the hardware, like each module, what the address is. So for instance, you would say, I have a UART, the UART is at this address in the memory map of this specific chip",
+   "speaker": "Chris Gammell",
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Board-specific hardware differences are expressed as device tree overlay files, and application code reaches devices through aliases or by walking the instances of a driver class, so substituting one humidity sensor for another during a shortage changes the overlay rather than the C source.",
+   "quote_verbatim": "You can just give it a different overlay file and everything in your C code will be the same because it kind of has like an alias or it has like a way to find, to walk through instances of this one type of sensor. And it kind of makes it so that your C code never has to deal with changes in hardware or minimally has to deal with it",
+   "speaker": "Chris Gammell",
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The device tree reaches C code through an elaborate layer of preprocessor macros generated at build time; understanding that macro layer is what tells a developer where to look when a device tree change does not take effect.",
+   "quote_verbatim": "It's like the pre-processor that has all of the macros in it. And you and I went to that talk at ZDS last year called Macrobatics that explained like how all of this, like device tree stuff is getting, you know, compiled in, built into the project",
+   "speaker": "Chris Gammell",
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The division of labour in Zephyr is that shared subsystems such as networking and Bluetooth drivers are developed centrally, and each silicon vendor supplies the compatibility layer that maps them onto its own parts, so the same operating system is retargeted across chipsets while behaving the same way internally.",
+   "quote_verbatim": "they all develop like network drivers and Bluetooth drivers and all these different things that are centralized. And then a company like Nordic or NXP or Infineon, they all then make compatibility layers for their own chipsets so that you can retarget that same centralized real-time operating system towards all these different chipsets, but it all works the same way internally",
+   "speaker": "Chris Gammell",
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Foundation stewardship is itself part of the engineering case: manufacturers are willing to invest in writing abstraction layers for their own products because a Linux Foundation project is expected to persist and not change direction abruptly.",
+   "quote_verbatim": "Zephyr is maintained by the Linux Foundation. And so this model of having manufacturers come in and write the abstraction layers for their own products works, I think, because those manufacturers look and say, oh, Linux Foundation, this is probably going to be around for a while and it's probably not going to take a big left turn",
+   "speaker": "Mike Szczys",
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "FreeRTOS is a scheduler and a standardised set of APIs rather than an ecosystem, and it is obtained per vendor: an implementation from STMicroelectronics, another from NXP, and Espressif's ESP-IDF built on top of it. FreeRTOS was acquired by Amazon.",
+   "quote_verbatim": "it's not an ecosystem, right? It's a scheduler and a set of APIs that are standardized",
+   "speaker": null,
+   "episode": 622,
+   "episode_title": "Building Firmware and Hardware for Trade Shows with Mike Szczys",
+   "episode_url": "https://theamphour.com/622-building-firmware-and-hardware-for-trade-shows-with-mike-szczys/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "A default Zephyr build is not small and carries a great deal of optional functionality; it can be optimised down aggressively, but that work is left to the user rather than being the out-of-the-box state, which matters where RAM budgets are tight.",
+   "quote_verbatim": "I do a lot of Zephyr and it is not small. I mean, it's not, and it's just like, uh, there's a lot of bells and whistles in there too. You can optimize it like crazy, but it's, that's up exercises left to the user",
+   "speaker": "Chris Gammell",
+   "episode": 634,
+   "episode_title": "The CAN bus can! with Dr Ken Tindell",
+   "episode_url": "https://theamphour.com/634-the-can-bus-can-with-dr-ken-tindell/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "One part-selection rule used by designers working exclusively in Zephyr is to exclude any component that has no in-tree driver: where the component choice carries no product differentiation, as with a commodity accelerometer, the integration cost of writing a driver dominates the decision.",
+   "quote_verbatim": "I don't design stuff in if it doesn't have a Zephyr driver personally, just because like, it is not worth it to me. Like I, I could potentially go and write a Zephyr driver, but like, there's no product differentiation",
+   "speaker": "Chris Gammell",
+   "episode": 645,
+   "episode_title": "Moving Down The Stack with Scott Williams",
+   "episode_url": "https://theamphour.com/645-moving-down-the-stack-with-scott-williams/",
+   "depth_regraded": "opinion",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Zephyr is described by the project as a small framework running on microcontrollers whose purpose is to avoid reimplementing peripheral interfacing: it supplies file systems and the means to talk to Wi-Fi and Bluetooth parts, so the application code is confined to what is specific to the product.",
+   "quote_verbatim": "it is an operating system, like a small framework that you can use to run on top of your tiny devices and your microcontrollers to not have to reinvent the wheel when it comes to interfacing with all your peripherals. And like, you need some kind of file system. It's likely that Zephyr has some way to help you there. You need to communicate with a Wi-Fi chip, a Bluetooth chip. It provides all those facilities and more",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The distinction the project draws is between a kernel and a distribution: where the Linux kernel is packaged by separate distributions, Zephyr is both at once, which is why comparing it to a bare real-time operating system understates what a checkout contains.",
+   "quote_verbatim": "It's a distro rather than an OS, just like you could compare the Linux kernel to Ubuntu. That's pretty much the way you could compare Zephyr to other real-time operating systems out there",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Silicon vendors keep their existing hardware abstraction layers and their own IDEs, and integrate the Zephyr APIs directly on top of that HAL, which is what makes GPIO, I2C and similar calls behave identically while allowing a design to move from one SoC vendor to another.",
+   "quote_verbatim": "they also work like pretty closely with the Zephyr community so that right on top and like just on top of their HAL, they integrate with the Zephyr APIs",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The Zephyr tree carried close to six hundred supported boards and several hundred code samples, so a sample can usually be built and run on a board already on the bench without modification.",
+   "quote_verbatim": "I think it's like getting close to 600 boards supported in Zephyr, like as in just check out Zephyr, check out one of the hundreds of code samples we have and it's likely that they will just run on whatever board you have on your desk",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Board support in Zephyr is not limited to boards made by the silicon vendor: third-party boards from companies such as Adafruit appear in the tree, whereas a vendor-specific ecosystem generally supports only that vendor's own boards and requires gluing for anything else.",
+   "quote_verbatim": "an Adafruit board might be supported within Zephyr, whereas like an Adafruit ESP32 board won't necessarily be, you could probably like glue it together or it looks kind of like in ESPIDF, but it's not going to be directly supported",
+   "speaker": null,
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The device tree is the overhead paid in exchange for portability. The abstraction can feel excessive on a one-shot integration, but it is what makes a later change of radio silicon tractable, which is the reason it repaid teams caught by the component shortages.",
+   "quote_verbatim": "The overhead of device three is also sort of the price you have to pay. That's right. Yep. You really want, especially in those times of like silicon shortage and stuff. Oh, yeah. You add some level of abstraction, which sometimes might feel like it's too much or too complicated, but that's going to save your house later when it comes to being like, oh, I don't want to use an RF at the end of the day. I'm going to go back to ESP32",
+   "speaker": null,
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The habit Zephyr breaks in hardware engineers is graphical configuration: coming from vendor Eclipse-based tools, they expect to change a timer or reassign a pin by clicking through a configurator, and the silicon vendors are commercially motivated to provide exactly that. The change required is one of working method rather than of knowledge.",
+   "quote_verbatim": "tell me where to click. Right. That's like, that's like the hardware person version of like, like at training. And like, they're used to like, you know, better or worse. They're like in Eclipse IDE with the vendor specific tools. And they're like, just show me where to click. Because at the end of the day, they want to like change the timer or change which pin it's attached to. Right. Make, you know, choose a little configurator thingy",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A Zephyr application can be developed without the target board: the build produces the same final binary, which is then run under a simulator or emulator such as Renode or Wokwi in a browser or on the desktop instead of being flashed.",
+   "quote_verbatim": "you don't even have to have the hardware at hand. Like there's tons of solutions out there to simulate, emulate. I don't know if you've had Yuri on the show in the past, but like things like WalkWe or things like Renode. Yeah. You, yeah, things like, yeah, Renode, WalkWe, you end up building your, your, your, like your firmware and your, your final binary, except that you don't have anything to flush it to",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The register manipulation that a vendor HAL requires to bootstrap a part and initialise a peripheral, on the order of thirty lines for an STM32, is reduced to a single Zephyr initialisation call, and improvements made to the vendor HAL for new SoCs propagate to Zephyr applications without the application changing.",
+   "quote_verbatim": "whatever you would do in like 30 lines of code to initialize your, like to bootstrap your STM 32, whatever, and initialize your I squared C and whatever it is you're going to need. Like this is something that's already done as part of the integration with Zephyr. When you do Zephyr underscore I squared C in it, say, it's going to be one line, like under the hood. If for STM 32, it turns out it requires like tons of register manipulation, et cetera. You won't have to, to, to think about that. It's already done for you.",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "When checking whether a part is usable, the open pull requests are worth searching as well as the current tree, since a handful of new drivers land each week and code for a device may exist outside the repository entirely.",
+   "quote_verbatim": "not only looking at what's supported in the tree, but usually there's a pretty big pipeline of pull requests and contributions from the community that are probably going to make it really soon. Uh huh. And like every week there's a handful of new drivers that are supported by the community",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Zephyr includes a state machine framework, which becomes worth using at the point where behaviour that would otherwise be written as a large switch statement acquires real structure, such as tracking geofence entry and exit alongside a user interface and business rules.",
+   "quote_verbatim": "things like the Zephyr built-in state machine framework. Maybe now it starts to make more sense because you will be like, Oh, but you know what my NMEA frames, like sometimes there might be some situations where I don't know. I want to do like geofencing stuff and have some kind of like, am I within the geofence outside the geofence and hook up an entire graphical user interface and some like business rules on top of that. It might be that, I mean, yes, you can switch case the whole thing and just like row code, or maybe you can actually start describing things in like as an actual state machine and, and fit things in, in the framework that way",
+   "speaker": null,
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The intended measure of success on a Zephyr application is calling an existing upstream API rather than writing a driver: code that has been upstream for years has already been exercised in shipped products, so reimplementing it trades tested code for untested code.",
+   "quote_verbatim": "I managed to just call this one API that was pretty much exactly the same, except that it's already, it's tested. It's, it's been in Zephyr upstream for years, which means that it's already used in commercial products",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Zephyr supports running application code in an isolated user mode with memory protection even on a small microcontroller, so that application faults cannot corrupt kernel internals.",
+   "quote_verbatim": "tight timings and memory protection and making sure that even if you're running on a small MCU, you can still have, I mean, the applications could run in user mode. Right. on the Linux operating system. If you're writing code, probably don't want the application to mess up with the low-level internals of the kernel. So that's also something that's possible in Zephyr to make sure that applications run in isolation from the kernel",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Against Linux, the argument for Zephyr on a capable microcontroller is the size of the software bill of materials: fewer third-party dependencies means the provenance of what runs on the silicon is known, security advisories are easier to trace, and certification is easier because the behaviour to be assessed spans a few dozen source files.",
+   "quote_verbatim": "when you build something on top of Zephyr, it's going to be way smaller also in terms of what are all the software dependencies that you're pulling. And you're much more in control of the actual provenance of what it is that you end up actually running on your silicon. And should there be security issues, it's going to be easier to track because you only rely on so many third-party dependencies. And from a safety perspective, it might also be easier to certify the behavior of the system because you're only looking at, I don't know, a couple dozen source files that are making the entirety of your application",
+   "speaker": "Benjamin Cabe",
+   "episode": 653,
+   "episode_title": "Benjamin Cab\u00e9 Nose Zephyr",
+   "episode_url": "https://theamphour.com/653-benjamin-cabe-nose-zephyr/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "On the nRF9160 the serial peripheral instances share a numbering space, so a UART, an SPI and an I2C bearing the same instance number cannot all be used at once; the constraint differs from Nordic's Bluetooth parts and is easily missed until peripherals silently fail to work.",
+   "quote_verbatim": "you are zero one, two, three, or you can have spies or one, two, three, I squared C one, two, three, but you can't use the same base number more than once",
+   "speaker": "Chris Gammell",
+   "episode": 654,
+   "episode_title": "Pseudo Code...Pseudo Good",
+   "episode_url": "https://theamphour.com/654-pseudo-code-pseudo-good/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Where a workaround for a pin or peripheral shortage depends on a mode that has no in-tree driver, such as driving an ESP32 AT command modem over SPI rather than UART, the workaround carries the cost of writing that driver as a separate work item.",
+   "quote_verbatim": "there's no Zephyr driver for spy mode to talk to the ESP 32 AT modem. Fine. I guess we could write that",
+   "speaker": "Chris Gammell",
+   "episode": 654,
+   "episode_title": "Pseudo Code...Pseudo Good",
+   "episode_url": "https://theamphour.com/654-pseudo-code-pseudo-good/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Environment setup is a large enough share of the friction in Zephyr that training is delivered on standardised desktops served through the browser, so that participants do not each begin from a differently configured machine.",
+   "quote_verbatim": "everybody brings a computer that's just like, I don't know. Like so Dave brings his Windows laptop. He brought out of, you know, he got out of the dumpster room. Yeah, exactly. It's just like, yeah, it's got somebody else's window XP on it. Okay. And then you're always starting from different problems and different spots",
+   "speaker": "Chris Gammell",
+   "episode": 654,
+   "episode_title": "Pseudo Code...Pseudo Good",
+   "episode_url": "https://theamphour.com/654-pseudo-code-pseudo-good/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "There is a lower bound to where Zephyr is appropriate: on very small, very cheap parts such as a CH32V003 running at a few megahertz, the resources are enough for interesting work but running Zephyr on them is not advisable even if it can be made to fit.",
+   "quote_verbatim": "this is enough horsepower to do really interesting things, but not so much that like you, you can't get away with running Zephyr on it. I mean, maybe you could, but you shouldn't",
+   "speaker": "CNLohr",
+   "episode": 667,
+   "episode_title": "Long Distance with CNLohr-a",
+   "episode_url": "https://theamphour.com/667-long-distance-with-cnlohr-a/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A teaching sequence for Zephyr that starts from prior Arduino experience proceeds by mapping known concepts onto the new model first, GPIO and then I2C, before reaching the writing of device drivers, on the basis that most learners stop once they have enough to build what they came for.",
+   "quote_verbatim": "oh, we're going to do GPIO. You probably know what a GPIO is. So let's talk about how we do this in Zephyr. Great. Now let's talk about I squared C. Now let's talk about writing your own device drivers",
+   "speaker": "Shawn Hymel",
+   "episode": 675,
+   "episode_title": "Changing Course with Shawn Hymel",
+   "episode_url": "https://theamphour.com/675-changing-course-with-shawn-hymel/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The size of the learning curve into Zephyr depends almost entirely on where the engineer is coming from: prior embedded Linux experience transfers directly, while a background in bare-metal microcontroller work does not.",
+   "quote_verbatim": "If they're coming from like embedded Linux, I'm like, you're going to be fine. Yeah. But if you're coming from like, you know, bare metal programming, like, oh boy, get ready. Get ready for some weirdness",
+   "speaker": "Chris Gammell",
+   "episode": 675,
+   "episode_title": "Changing Course with Shawn Hymel",
+   "episode_url": "https://theamphour.com/675-changing-course-with-shawn-hymel/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The specific point at which bare-metal engineers stall is Kconfig: coming from a super-loop program in which I2C access is written by hand, a configuration system inherited from the Linux kernel has no counterpart in their existing practice.",
+   "quote_verbatim": "I came from the bare metal world where it's everything is a super loop. I'm writing I squared C stuff by hand. And then suddenly you're like K config. What the hell is K config?",
+   "speaker": "Shawn Hymel",
+   "episode": 675,
+   "episode_title": "Changing Course with Shawn Hymel",
+   "episode_url": "https://theamphour.com/675-changing-course-with-shawn-hymel/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Zephyr occupies both roles at once: at its core it is a kernel and scheduler like any real-time operating system, and around that it carries the subsystems and vendor compatibility layers that make it an ecosystem. FreeRTOS holds only the first role, with vendor ecosystems such as Espressif's ESP-IDF layered above it.",
+   "quote_verbatim": "at the core Zephyr is, it has a kernel and it has a scheduler and it has all the stuff that is, makes it go. And then it has all the peripheral, sorry, all the subsystems that make it interesting and cool and very full featured. So a lot of vendors will take free RTOS, which is this, you know, starts from bare bones. So like Espressif, ESP IDF is based on free RTOS, but it's really the ecosystem of ESP IDF is built on top of free RTOS",
+   "speaker": "Chris Gammell",
+   "episode": 675,
+   "episode_title": "Changing Course with Shawn Hymel",
+   "episode_url": "https://theamphour.com/675-changing-course-with-shawn-hymel/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Almost every Zephyr subsystem ships a matching shell command set that is enabled by a configuration symbol and compiled in, with I2C scans, sensor reads and GPIO toggles available by default. The shell runs over UART or over a debug-probe channel such as RTT, and its backend is replaceable, so the same command set can be carried over an arbitrary transport.",
+   "quote_verbatim": "basically any feature that's in zephyr usually has a shell associated with it you can you can turn on with a symbol and then you can compile it in and that's what i do it all the time and i talked it over you are and it's got these other interfaces too it's got you know rtt which is like the jlink output but uh there's a way to write a custom back end",
+   "speaker": "Chris Gammell",
+   "episode": 696,
+   "episode_title": "It Works With Option Number 5",
+   "episode_url": "https://theamphour.com/696-it-works-with-option-number-5/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Zephyr is organised around device trees and data-driven build flows that produce the binary from a structured description of the hardware, which makes a microcontroller project resemble a Linux one and differs sharply from bare-metal practice.",
+   "quote_verbatim": "Zephyr is structured around device trees and data-driven flows that allow you to build your binaries and work with your hardware in a structured way. Which is kind of a difference from how some other operating systems do it or how people do it in the bare metal world",
+   "speaker": "Michael Gielda",
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The initial build system and setup are the difficult part; past that point Zephyr scales well to products that have variants and must be ported across a range of hardware, which is why a consultancy building complicated products for clients treats the up-front investment as repaid for professional work and not necessarily for every project.",
+   "quote_verbatim": "Definitely Zephyr's, you know, build system and setup is sometimes challenging for people. And we're always trying to make the developer experience better. So, you know, all kinds of help in that regard is appreciated. But once you cover this initial kind of setup part, it scales really well. It's a really good tool to like build actual products that have variants, that can be ported across a range of hardware",
+   "speaker": "Michael Gielda",
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Zephyr samples for a given board can be built and executed in continuous integration against a simulated model of that board, producing per-sample pass results, captured UART output and execution traces; tracing comes without instrumenting the target.",
+   "quote_verbatim": "these have been executed in RCI. So for all of them, you'll see, if you click on them, you'll see the UART output and you'll see a trace",
+   "speaker": "Michael Gielda",
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Published prebuilt Zephyr sample binaries are used in practice as a shortcut for checking a board: rather than setting up a toolchain and compiling, an engineer downloads an existing binary for that target and runs it.",
+   "quote_verbatim": "We're trying to run some Zephyr on some board, and we didn't want to compile our own binary. We just grabbed one from your portal and run it, and it worked",
+   "speaker": "Michael Gielda",
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Zephyr's tooling began as a command-line-only flow and later gained editor plugins, principally for VS Code; the result is not a packaged IDE delivered as a Windows installer, which is what engineers arriving from vendor tools expect, but an intermediate arrangement.",
+   "quote_verbatim": "when I started with Zephyr at Goliath, at least, it was like a lot of command line only. And now there's just been more and more VS Code plugins",
+   "speaker": "Chris Gammell",
+   "episode": 691,
+   "episode_title": "System Designer Lets You Try Every Part with Michael Gielda",
+   "episode_url": "https://theamphour.com/691-system-designer-lets-you-try-everything-with-michael-gielda/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Mbed OS shows the failure mode of a vendor-funded ecosystem: Arm paid its own engineers to write and maintain the per-vendor compatibility work that made the ecosystem function, and when that funding stopped the project languished and was declared end of life.",
+   "quote_verbatim": "ARM was the one that was driving all that stuff where they would pay their engineers to do a compatibility for an NRF 52 versus a STM 32 versus all the different things out. And I have the vendors wrong. So don't, don't quote me on that stuff, but they, they really, they really made it all go. And so when that funding drew dried up for that, right. Then, then basically the ecosystem just languished. And then it went end of life",
+   "speaker": "Chris Gammell",
+   "episode": 707,
+   "episode_title": "Welding with an HDMI Cable",
+   "episode_url": "https://theamphour.com/707-welding-with-an-hdmi-cable/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Zephyr supports linkable loadable extensions, or LLEXT, which are code modules loaded into memory at run time rather than linked into the image at build time. This is what lets a platform keep the networking and driver plumbing resident while user-supplied application code, such as an Arduino sketch, is swapped in on top of it.",
+   "quote_verbatim": "in Zephyr, there's something called a linkable, loadable extension. So LL, E X T, which is basically like the Nintendo's slot cartridge on like a original Nintendo. Right. And what you do is at runtime, you can actually load in these linkable, loadable extensions, right? You could have kind of dynamic memory slot in there. And so that works really well for something like an Arduino, Arduino sketch, where you already have all the plumbing set up down below. But now you or I, again, we change a digital, the characteristic of a digital pin, right? Which is relatively simple thing. You now load that on top of this linkable load extension, and then you can hot swap them in basically",
+   "speaker": "Chris Gammell",
+   "episode": 707,
+   "episode_title": "Welding with an HDMI Cable",
+   "episode_url": "https://theamphour.com/707-welding-with-an-hdmi-cable/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Zephyr was designed from the outset for a hardware landscape of several different chips from different manufacturers in one product, so that a communications chip and a processing chip do not each require a separate firmware effort later married together in complex tooling.",
+   "quote_verbatim": "Zephyr has the day one mindset of solving this problem of like multiple chips in kind of a hardware landscape that needed to be addressed with a common firmware set",
+   "speaker": "Mark Palmeri",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Device trees do not motivate themselves to a student with no Linux background, so the justification taught first is economic: when hardware description is embedded in the source code, a change of chip becomes brutally expensive to unwind and is a source of corner-case defects.",
+   "quote_verbatim": "device trees do not make the most sense to this student who has never heard of this. If you've never dabbled in the Linux world, I totally get it. Like that's that, but selling early on that, hey, cost-wise to a company doing a chip change is sometimes a highly draconian process. It is brutally expensive because when hardware description is integrated and embedded into the actual code itself, you just have a disaster unwrapping it and it's ripe for bugs",
+   "speaker": "Mark Palmeri",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Before Zephyr, an open-source embedded toolchain meant Eclipse, which had not been designed for the purpose, with the alternative being proprietary vendor tooling.",
+   "quote_verbatim": "Tooling was like if you wanted to stay within an open source world, Eclipse would be your tool. And Eclipse had some stuff. But again, Eclipse was not designed just for doing that sort of thing. And it was a bit of a mess",
+   "speaker": "Mark Palmeri",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "The chipsets found inside medical devices come predominantly from Nordic, NXP, Silicon Labs and STMicroelectronics, all of which support Zephyr, so a device team choosing it is not narrowing its silicon options.",
+   "quote_verbatim": "you could probably go crack open 30 medical devices and you're going to find chipsets from Nordic, big Zephyr, you know, proponent, NXP, big Zephyr proponent, Psylabs just got into the Zephyr game, you know, ST, they got into the Zephyr",
+   "speaker": "Chris Gammell",
+   "episode": 711,
+   "episode_title": "Medical Electronics Education with Mark Palmeri",
+   "episode_url": "https://theamphour.com/711-medical-electronics-education-with-mark-palmeri/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Adding a new part to Zephyr is largely a matter of configuration data: the vendor contributes files declaring which subsystems, such as Bluetooth or the ADC, are enabled for that device.",
+   "quote_verbatim": "each vendor basically contributes their code that says, hey, so we just made ABC123 this new part. We're going to enable the Bluetooth subsystem and the ADC subsystem. It's a config file, basically.",
+   "speaker": "Chris Gammell",
+   "episode": 713,
+   "episode_title": "Rubber Duck Incarnate",
+   "episode_url": "https://theamphour.com/713-rubber-duck-incarnate/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "SMP is the management protocol spoken by devices running the MCUboot bootloader, and it is transport-agnostic, running over Bluetooth or over a serial link.",
+   "quote_verbatim": "SMP is, like, the protocol that a lot of things that use MCU boot talk over, like, Bluetooth or serial",
+   "speaker": "Chris Gammell",
+   "episode": 724,
+   "episode_title": "All Heat, No Useful Work",
+   "episode_url": "https://theamphour.com/724-all-heat-no-useful-work/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The shell and SMP contend for the same serial link, so the shell must be disabled while SMP holds the transport. Over that link SMP carries arbitrary files into the device's file system, such as certificates, as well as firmware images, which allows both provisioning and update to be driven from a browser over Web Serial.",
+   "quote_verbatim": "you have to turn off the shell at the same time. But you can push stuff using SMP over serial. So, I can push, like, certificate files into the file system. So, I can do security stuff there. And I can do firmware updates through the browser",
+   "speaker": "Chris Gammell",
+   "episode": 724,
+   "episode_title": "All Heat, No Useful Work",
+   "episode_url": "https://theamphour.com/724-all-heat-no-useful-work/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "One route for an existing product operating system built on FreeRTOS is to keep the application and swap the kernel underneath it for the Zephyr kernel, which brings the Bluetooth stack with it; the alternative is to stay on FreeRTOS and source an open-source Bluetooth stack separately.",
+   "quote_verbatim": "do we use a chip that uses Zephyr natively, like, like the Nordic 54 and then, and then port, you know, Pebble OS to Zephyr, not really port it, but like swap out the kernel free RTOS for the Zephyr kernel, which would give us the Bluetooth stack",
+   "speaker": "Eric Migicovsky",
+   "episode": 715,
+   "episode_title": "Shiny New Pebble with Eric Migicovsky",
+   "episode_url": "https://theamphour.com/715-shiny-new-pebble-with-eric-migicovsky/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The port was declined because the chosen SiFli silicon was not in the Zephyr tree, so the work of porting the product's operating system would have been compounded by adding the part itself; the assessment was made by an engineer sitting on the Zephyr working committee, and the difficulty of forecasting software effort was itself part of the decision.",
+   "quote_verbatim": "Sifly is not in there either. The person who built it for us, a guy named Gerard, he's actually on, he's on the Zephyr working committee. So he's, he's a big Zephyr fan already, but he looked at it and he said, like, this would be more, more work than we needed to do",
+   "speaker": "Eric Migicovsky",
+   "episode": 715,
+   "episode_title": "Shiny New Pebble with Eric Migicovsky",
+   "episode_url": "https://theamphour.com/715-shiny-new-pebble-with-eric-migicovsky/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The quality argument for taking code from the tree rather than pasting together examples found online is the number of people involved in reviewing it; new code written for a single project has no such scrutiny.",
+   "quote_verbatim": "The thing I love about the Linux kernel and Zephyr is just how many people get involved in the review and quality control of that software",
+   "speaker": "Jason Kridner",
+   "episode": 723,
+   "episode_title": "BeagleBoard's Back with Jason Kridner",
+   "episode_url": "https://theamphour.com/723-beagleboards-back-with-jason-kridner/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Hot-swappable sensor modules do not sit well with a small microcontroller node: keeping every possible sensor driver resident in flash is impractical, so the driver has to be selected at build time and the node reflashed rather than reconfigured.",
+   "quote_verbatim": "the likelihood of having all of the sensor drivers on that small microcontroller are very, very low. So like the swappability is very off from this use case",
+   "speaker": "Jason Kridner",
+   "episode": 723,
+   "episode_title": "BeagleBoard's Back with Jason Kridner",
+   "episode_url": "https://theamphour.com/723-beagleboards-back-with-jason-kridner/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Zephyr targets are not limited to microcontroller cores: application-class Cortex-A parts, including Cortex-A53 devices, have mainline board support and are programmed as though they were microcontrollers.",
+   "quote_verbatim": "mainline support for BeagleBadge and Zephyr, right? So you can just target, you know, the A53s as if they were just MCUs",
+   "speaker": "Jason Kridner",
+   "episode": 723,
+   "episode_title": "BeagleBoard's Back with Jason Kridner",
+   "episode_url": "https://theamphour.com/723-beagleboards-back-with-jason-kridner/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Beginner-facing environments are layered on top of Zephyr rather than replacing it: an Arduino core and a MicroPython port both run on it, and block-based environments run in turn on the Arduino core, so one underlying operating system serves several levels of entry.",
+   "quote_verbatim": "the Arduino core on Zephyr is really helpful for that. The MicroPython port on Zephyr is really helpful for that. And then, of course, we do microblocks on type of the Arduino core on Zephyr as well",
+   "speaker": "Jason Kridner",
+   "episode": 723,
+   "episode_title": "BeagleBoard's Back with Jason Kridner",
+   "episode_url": "https://theamphour.com/723-beagleboards-back-with-jason-kridner/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A third party defining the software interface layer acts as a forcing function on silicon vendors, who left to themselves each define their own; the same dynamic that Arduino created at the beginner level now operates through Zephyr at the professional one.",
+   "quote_verbatim": "having a third party that defines the standard, whatever it may be in the Arduino case, a very beginner friendly as well, it is a forcing function on the industry",
+   "speaker": "Chris Gammell",
+   "episode": 726,
+   "episode_title": "Arduino's Invisible Touch with Massimo Banzi",
+   "episode_url": "https://theamphour.com/the-amp-hour-726-arduinos-invisible-touch-with-massimo-banzi/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Zephyr resembles Linux more than it resembles a bare scheduler in that it ships drivers for devices, and it reuses the same two Linux configuration mechanisms, Kconfig and device tree source.",
+   "quote_verbatim": "It would be more similar to Zephyr, I guess, in the sense that it has drivers for everything",
+   "speaker": "Jay Carlson",
+   "episode": 515,
+   "episode_title": "Embedded Linux with Jay Carlson",
+   "episode_url": "https://theamphour.com/515-embedded-linux-with-jay-carlson/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  }
+ ],
+ "attribution_notes": [
+  "Episode 509: passage attributing 'There's a huge library of boards ... file structure' is a two-speaker window covering both host and guest; speaker set to null because the content does not settle which of them describes the board tree.",
+  "Episode 515: passages are flagged unreliable, but the content is an explanation of Linux and RTOS internals given by the guest; attributed to Jay Carlson.",
+  "Episode 544: passages flagged unreliable; the content answers a question put to the guest about trends he sees across manufacturing test projects, so attributed to Pete Staples.",
+  "Episode 581: passage labelled Brian Amos, but the speaker describes himself as the one learning Zephyr while the guest is the FreeRTOS author; attributed to Chris Gammell.",
+  "Episode 614: passage labelled Dave Jones describes using Zephyr on two of the speaker's own products and a team's prototyping work; Dave Jones is not that person and the transcript does not identify which guest is speaking, so speaker is null.",
+  "Episode 622: passages labelled Dave Jones contain explanations of device tree, the macro layer and vendor compatibility layers given by someone who attended the Zephyr developer summit and works with the technology daily; attributed to Chris Gammell. The FreeRTOS and Linux Foundation comparison in the same window is a direct answer to a question addressed to the guest and is attributed to Mike Szczys.",
+  "Episode 622: the FreeRTOS 'not an ecosystem' span spans a handover between two speakers; speaker set to null.",
+  "Episode 645: passage labelled Scott Williams contains the part-selection rule of a designer who states he uses Zephyr all the time; the guest is the one being asked how he selects parts, so this is the host, attributed to Chris Gammell.",
+  "Episode 653: spans covering the device tree overhead exchange and the third-party board comparison cross a speaker handover between host and guest; speaker set to null for those.",
+  "Episode 675: the 'came from the bare metal world ... what the hell is Kconfig' span is the guest describing his own path, and is attributed to Shawn Hymel although the passage was labelled Chris Gammell.",
+  "Episode 522: the 37 kilohertz timing exchange is a host restatement confirmed by the guest; speaker set to null.",
+  "Episode 653: the state machine framework span begins mid-answer from the guest but the passage is labelled Chris Gammell; speaker set to null."
+ ]
+}

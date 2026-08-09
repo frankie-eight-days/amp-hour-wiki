@@ -1,0 +1,841 @@
+{
+ "concept": "verilog",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "cluster": {
+   "core": [
+    "hardware-verilog",
+    "verilog"
+   ],
+   "children": [
+    "asic-design",
+    "clock-domain-crossing",
+    "dsl",
+    "logic-synthesis",
+    "st",
+    "testbench"
+   ],
+   "neighbors": [
+    {
+     "concept": "xilinx",
+     "weight": 7
+    },
+    {
+     "concept": "altera",
+     "weight": 6
+    },
+    {
+     "concept": "fpga-toolchain",
+     "weight": 4
+    }
+   ]
+  },
+  "stats": {
+   "episodes": 83,
+   "mentions": 209,
+   "explains": 75,
+   "opinions": 21,
+   "candidate_episode_count": 77,
+   "candidate_mention_count": 143,
+   "gated_out": 366,
+   "gated_out_by_concept": [
+    [
+     "xilinx",
+     155
+    ],
+    [
+     "altera",
+     104
+    ],
+    [
+     "fpga-toolchain",
+     38
+    ],
+    [
+     "asic-design",
+     20
+    ],
+    [
+     "st",
+     14
+    ],
+    [
+     "logic-synthesis",
+     12
+    ],
+    [
+     "clock-domain-crossing",
+     9
+    ],
+    [
+     "testbench",
+     8
+    ],
+    [
+     "dsl",
+     6
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 15,
+   "speakers": [
+    [
+     "Chris Gammell",
+     20
+    ],
+    [
+     "Dave Jones",
+     10
+    ],
+    [
+     "Claire Wolf",
+     6
+    ],
+    [
+     "Dave Vandenbout",
+     5
+    ],
+    [
+     "Andreas Olofsson",
+     5
+    ],
+    [
+     "Matt Venn",
+     5
+    ],
+    [
+     "Dmitry Nedospasov",
+     4
+    ],
+    [
+     "Vincent Himpe",
+     3
+    ],
+    [
+     "Tim Ansell",
+     3
+    ],
+    [
+     "Luke Valenty",
+     3
+    ],
+    [
+     "Jeroen Domburg",
+     3
+    ],
+    [
+     "Jeri Ellsworth",
+     2
+    ],
+    [
+     "Sylvain Minot",
+     2
+    ],
+    [
+     "Philip Frieden",
+     1
+    ],
+    [
+     "Jeff Keyzer",
+     1
+    ],
+    [
+     "Mark Garrison",
+     1
+    ],
+    [
+     "Akiba",
+     1
+    ],
+    [
+     "Joe Fitzpatrick",
+     1
+    ],
+    [
+     "Sam Zeloof",
+     1
+    ],
+    [
+     "Piotr Esden-Tempski",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 75,
+    "child": 11,
+    "neighbor": 3
+   },
+   "passages_by_depth": {
+    "opinion": 19,
+    "explains": 70
+   }
+  },
+  "cap": 250,
+  "capped": false,
+  "total_available": 89
+ },
+ "capped": false,
+ "claims": [
+  {
+   "claim_text": "The risk in carrying an HDL design from simulation into a metallised gate array is absorbed by the test benches written before commit; test benches written for one target's tools transfer to another target's tools only partially.",
+   "quote_verbatim": "So it's all on the test benches that you make before you go in.",
+   "speaker": "Jeri Ellsworth",
+   "episode": 147,
+   "episode_title": "An interview with Jeri Ellsworth - Absorptive Augmented Actuality",
+   "episode_url": "https://theamphour.com/the-amp-hour-147-absorptive-augmented-actuality/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Digital chip design and verification work is heavily Verilog-based, with the industry moving toward higher-level languages including SystemVerilog and SystemC.",
+   "quote_verbatim": "it's very Verilog heavy. You know, they're moving into system Verilog, system C, a lot of the higher level languages now",
+   "speaker": "Chris Gammell",
+   "episode": 152,
+   "episode_title": "Firmware, Netburner and Semiconductors - Chris's Capitalism Colloquy",
+   "episode_url": "https://theamphour.com/the-amp-hour-152-chriss-capitalism-colloquy/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Before hardware description languages reached programmable logic, designs were entered either as schematics or in proprietary notations such as AHDL and CUPL. Those notations were Boolean descriptions rather than synthesis languages: they performed logic expansion and minimisation, but the designer still had to understand the target primitives and do the bulk of the structural work.",
+   "quote_verbatim": "But those weren't real synthesis languages. These were just a Boolean notation that you would do.",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A downloadable Verilog soft core can be dropped straight into either vendor's tool and run out of the box, but adapting it to the target usually means changing its memory model: an 8051 core written for external asynchronous RAM and EEPROM was retargeted to the FPGA's own synchronous block memories so no external memory was needed.",
+   "quote_verbatim": "Instead of using external asynchronous memory, I'm gonna use the memories who are available in the FPGA.",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Inferring a memory in Verilog by declaring an array and coding around it is hazardous for any design that may move: the inference is specific to the target's memory blocks and breaks when the design is retargeted to a metallised gate array, a custom ASIC, or another FPGA vendor. The mitigation is to place a generic memory interface wrapper around every such block so nothing is inferred directly into the design.",
+   "quote_verbatim": "But that's very hazardous because you could break your design when you go to your metalized gate array or your custom ASIC.",
+   "speaker": "Jeri Ellsworth",
+   "episode": 173,
+   "episode_title": "An Interview with Jeri Ellsworth - Intense Illusion Introduction",
+   "episode_url": "https://theamphour.com/173-an-interview-with-jeri-ellsworth-intense-illusion-introduction/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The characteristic beginner failure in Verilog and VHDL is writing the description as though it executed sequentially: an FPGA has no pre-built sequential execution model, so every statement takes effect at once unless the designer has explicitly built a processor into the fabric to run sequential code.",
+   "quote_verbatim": "they'll do it sequentially and they'll think that that's how it should go",
+   "speaker": "Dave Vandenbout",
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Language choice in hardware description has a geographic pattern rather than a technical one: Verilog predominates on the United States west coast and in Asia, while VHDL predominates east of the Mississippi through to Europe, and military work is largely VHDL.",
+   "quote_verbatim": "everything to the west and California and I think Asia is Verilog and everything to the east",
+   "speaker": "Dave Vandenbout",
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The semantic gap between Verilog and VHDL is small enough that knowing one makes the other learnable; the genuine difficulty in either language is the parallel model, and a designer who does not hold a mental model of circuitry operating concurrently cannot write either language successfully.",
+   "quote_verbatim": "The hard part is the parallel nature of it.",
+   "speaker": "Dave Vandenbout",
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A practical way to build the association between HDL source and generated hardware is to compile small fragments deliberately and open them in the tool's RTL viewer, which displays the gates the code produced, before moving up to more abstract coding styles.",
+   "quote_verbatim": "you should drive the compiler around a little bit, try little pieces of code, and then bring it into the RTL viewer where it shows you the gates for it",
+   "speaker": "Dave Vandenbout",
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Inference is what makes an HDL worth using at a higher level of abstraction: Verilog and VHDL can infer RAMs and other structures from loops written in the source, and a designer working with the right macros and abstractions can express an entire microcontroller in a couple of hundred lines that another engineer can read and recognise as a processor.",
+   "quote_verbatim": "when Verilog or VHDL can infer, you know, rams and other things from loops that you put into the coding",
+   "speaker": "Dave Vandenbout",
+   "episode": 181,
+   "episode_title": "An Interview with Dave Vandenbout - Xceptional XESS Xenagogue",
+   "episode_url": "https://theamphour.com/181-an-interview-with-dave-vandenbout-xceptional-xess-xenagogue/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A digital design taken to silicon is comparatively low-risk when the clock is not being pushed to the limit and the test benches on the Verilog have been done properly; the residual uncertainty in a mixed-signal part sits on the analogue side, where device behaviour such as transistor gain at frequency depends on doping and process rather than on logic that has been simulated.",
+   "quote_verbatim": "If you've done all your test benches properly on your Verilog, you know, why wouldn't it work?",
+   "speaker": "Dave Jones",
+   "episode": 201,
+   "episode_title": "Cheap Respins And A Time Machine - Multiscience Mercenary Marketplace",
+   "episode_url": "https://theamphour.com/201-cheap-respins-and-a-time-machine-multiscience-mercenary-marketplace/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "The fundamental semantic difference between Verilog and VHDL is the delta cycle, the model of how concurrent processes interact and settle during a simulation time step; Verilog implements it differently from VHDL, and internalising it sharply reduces the error rate in written code.",
+   "quote_verbatim": "the fundamental difference between Verilog and VHDL is something called the Delta cycle",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Understanding the delta-cycle model changes the role of the test bench: code written without it fails until every conceivable case has been test-benched, whereas code written with it in mind frequently works before the first test bench is written.",
+   "quote_verbatim": "It goes from like, nothing will ever work until you've test benched it under every single conceivable option",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Meeting timing is set by device utilisation as much as by clock rate: a heavily utilised FPGA design whose core ran at 100 MHz, with filtering and sampling paths at 200 MHz and a few minor components near 40 MHz, took a long period of optimisation to close, and 200 MHz in a fully loaded part is hard even though the number sounds unremarkable.",
+   "quote_verbatim": "But like meeting timing in a full, a fully loaded chip like that, that's, that is, that's, that's tough to do.",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Reducing the number of independent clock domains simplifies a design: an early version that fitted only two channels used unrelated clocks joined by glue FIFOs, whereas the reworked design related all its clocks and left only the USB 3.0 bridge interface, a 32-bit bus clocked at roughly 100 MHz, as a separate domain.",
+   "quote_verbatim": "The original design did only fit two channels. It was like unrelated clocks with like glue, um, uh, glue, glue FIFOs.",
+   "speaker": "Mark Garrison",
+   "episode": 237,
+   "episode_title": "An Interview with Joe and Mark Garrison - Subtly Spelling SayLeeAy",
+   "episode_url": "https://theamphour.com/237-an-interview-with-joe-and-mark-garrison-subtly-spelling-sayleeay/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Generic Verilog written without vendor constructs is a single source for two very different back ends: the same code is fed either into a logical synthesis step that maps it to an ASIC standard cell library, or into a flow that maps it to the resources inside an FPGA, which is what makes FPGA prototyping of an ASIC practical.",
+   "quote_verbatim": "we write our code in Verilog, you know, vanilla generic Verilog",
+   "speaker": "Andreas Olofsson",
+   "episode": 254,
+   "episode_title": "An Interview with Andreas Olofsson - Adapteva's Ampliative Abacus",
+   "episode_url": "https://theamphour.com/254-an-interview-with-andreas-olofsson-adaptevas-ampliative-abacus/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Algorithms that are still being explored are often better written in C than in Verilog even when the target is programmable logic, because the iteration cycle is so much faster; this is why engineers arriving from the DSP processor world resist implementing signal processing directly in FPGA logic.",
+   "quote_verbatim": "you'd rather write them in C code than in Verilog. Cause you can iterate that much faster.",
+   "speaker": "Andreas Olofsson",
+   "episode": 254,
+   "episode_title": "An Interview with Andreas Olofsson - Adapteva's Ampliative Abacus",
+   "episode_url": "https://theamphour.com/254-an-interview-with-andreas-olofsson-adaptevas-ampliative-abacus/",
+   "depth_regraded": "opinion",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "VHDL supports a stronger verification story than Verilog, extending to formal proofs that hardware behaves as specified, and Verilog's syntax makes the same techniques harder to apply.",
+   "quote_verbatim": "you can do a lot more verification. So like even theoretical proofs that, that this hardware will function as it should. And you can't do that because of the syntax of Verilog",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 303,
+   "episode_title": "An Interview with Dmitry Nedospasov",
+   "episode_url": "https://theamphour.com/303-an-interview-with-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "A mixed-language practice follows from the verification difference: teams write the design itself in Verilog and write the test benches in VHDL.",
+   "quote_verbatim": "They'll do their test benches in VHDL.",
+   "speaker": null,
+   "episode": 303,
+   "episode_title": "An Interview with Dmitry Nedospasov",
+   "episode_url": "https://theamphour.com/303-an-interview-with-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The verbosity difference between the two languages is large and visible: in textbooks that print equivalent Verilog and VHDL implementations on facing pages, the Verilog page is mostly white space while the VHDL page fills entirely, and Verilog requires markedly less syntax and boilerplate to express the same design.",
+   "quote_verbatim": "you open up the page on the left, that's Verilog on, on the right, it's VHDL. It's absolutely equivalent code. And then the Verilog is 90% white space.",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 303,
+   "episode_title": "An Interview with Dmitry Nedospasov",
+   "episode_url": "https://theamphour.com/303-an-interview-with-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Pre-silicon security work on a chip starts with Verilog code review, because synthesis makes assumptions about the source; the assumptions found in review become concrete test cases, some confirmable pre-silicon and others deferred to post-silicon tests that set a particular address and run a chosen instruction sequence to see what happens.",
+   "quote_verbatim": "Verilog makes a lot of assumptions as you synthesize it. So those assumptions turned into my test cases",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Coarse-grained target architectures complicate synthesis because the mapping is no longer one-to-many: an ordinary operator in source normally expands into many very fine-grained cells, but a coarse-grained primitive requires the tool to recognise a whole constellation of operators and collapse it onto the one hardware primitive that implements it.",
+   "quote_verbatim": "the compiler would need to, uh, uh, recognize a certain constellation of operators and say, oh, this set of operators implement that primitive operation",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (n\u00e9e 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Designing for a novel architecture does not require a new domain-specific language: accepting a subset of ordinary Verilog and inferring the target primitives from it gives the same expressive power while keeping the existing language, tooling and knowledge base.",
+   "quote_verbatim": "we should not use a DSL. We should just pass, uh, a subset of regular variolog, um, and infer the primitives from that.",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (n\u00e9e 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Verilog serves as an interchange format as well as a source language: synthesis output can be emitted as Verilog again, and many commercial place-and-route tools accept only very simple, strict subsets of structural Verilog as input, alongside formats such as BLIF and a lossless tool-specific JSON.",
+   "quote_verbatim": "place and route tools and stuff like that process as inputs very, very simple, strict subsets of structural Verilog",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (n\u00e9e 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Retargeting an open-source synthesis tool to a new architecture is done by writing small Verilog code snippets describing the target's cells, so the language knowledge required to extend the tool is no more than the language knowledge required to use it.",
+   "quote_verbatim": "if you already know how to write Verilog code, you know everything, uh, at least language-wise, that you need to know how to retarget",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (n\u00e9e 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "On a small part such as the iCE40 1K, which carries roughly a thousand logic cells with a lookup table and flip-flop apiece, an optimised open-source flow can go from Verilog to bitstream in under a second; on large designs the same flow is slower than the vendor tools, so the optimisation target is explicitly the small design.",
+   "quote_verbatim": "for a small designs, we can go from Verilog to Bitstream in less than a second",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (n\u00e9e 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Sub-second turnaround changes who benefits rather than how much time is saved: an experienced engineer spends most of the working day simulating individual cores and rarely synthesises the whole design, since a full synthesis may take a day, whereas beginners and workshop participants iterate by making a small change and observing the result in hardware immediately.",
+   "quote_verbatim": "the experienced FPGA engineer isn't, isn't synthesizing most of the time. Uh, most of the time you're just simulating, you're working on, on individual cores.",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (n\u00e9e 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Formal equivalence checking can validate a reverse-engineered toolchain: bitstreams generated from known designs were converted back into Verilog, and formal verification then proved the extracted Verilog logically equivalent to the original input, which replaces a large number of directed test cases with a proof over the important points.",
+   "quote_verbatim": "I was using formal verification there to prove that the generated extracted Verilog is still, uh, formally equivalent to the thing I put in",
+   "speaker": "Claire Wolf",
+   "episode": 374,
+   "episode_title": "An Interview with Claire (n\u00e9e 'Clifford') Wolf",
+   "episode_url": "https://theamphour.com/374-an-interview-with-claire-nee-clifford-wolf/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A complete open-source custom-silicon flow exists in Qflow, which is built on Magic and a set of related packages and carries a design from Verilog synthesis all the way through to mask generation; a ring oscillator and a serial receiver have both been taken through it, with the tool producing masks for any design that synthesises.",
+   "quote_verbatim": "It takes it right from Verilog synthesis. So right from HDL all the way through mask generation with all these open source packages",
+   "speaker": "Sam Zeloof",
+   "episode": 390,
+   "episode_title": "An Interview with Sam Zeloof",
+   "episode_url": "https://theamphour.com/390-an-interview-with-sam-zeloof/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Schematic entry works as a first step into programmable logic and Verilog modules as the second, but it does not scale: a complicated piece of hardware cannot be built purely by drawing, so schematic entry serves to teach the concepts rather than to carry real designs.",
+   "quote_verbatim": "You're not going to be implementing a very complicated bit of hardware purely using schematic entry.",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Control logic in Verilog is conventionally written as a state machine, for which there are well-established coding patterns; the conceptual obstacle for newcomers is that the source is not a running program at all but a description of how to wire up hardware.",
+   "quote_verbatim": "you're not running a program anymore. You're describing how to wire up some hardware",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Verilog's permissiveness with identifiers is a real defect source: where VHDL requires a name to be declared in several places and cross-checks them, a Verilog typo in a signal name causes the synthesis tool to silently create an additional variable and continue, emitting only a warning rather than an error.",
+   "quote_verbatim": "the synthesis tool is like, Hey, I noticed you made a new variable here. Uh, I'm going to warn you about it, but, uh, I'll just make a new one.",
+   "speaker": "Chris Gammell",
+   "episode": 449,
+   "episode_title": "Pulled From A Working Environment",
+   "episode_url": "https://theamphour.com/449-pulled-from-a-working-environment/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Wishbone is a standardised on-chip bus used to attach peripherals written in Verilog to a soft CPU core inside an FPGA; because the bus is addressable from outside, a host connected over USB can write memory locations on it directly, which allows a running program's peripheral state to be altered without touching the program.",
+   "quote_verbatim": "that's like a way to, like a standardized bus in FPGA is to like add peripherals to a microcontroller, a soft, uh, soft CPU that might be in there",
+   "speaker": "Chris Gammell",
+   "episode": 449,
+   "episode_title": "Pulled From A Working Environment",
+   "episode_url": "https://theamphour.com/449-pulled-from-a-working-environment/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "PicoRV32 is a RISC-V core written in pure Verilog and formally verified, which is why it is reused widely as a drop-in soft processor.",
+   "quote_verbatim": "It's written in pure varilog. It's formally verified. It's used all over the place.",
+   "speaker": "Jeroen Domburg",
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Parameterisation in Verilog is literal rather than notional: a single parameter naming a CPU count actually determines how many processor cores are instantiated in the fabric, so raising it by one adds a core. The practical ceiling is not syntax but resources and shared bandwidth, since the build fails when the part runs out of space and, above a certain count, the memory bus becomes so constrained that the cores wait on each other.",
+   "quote_verbatim": "It literally sets the amount of cores that you have in your SoC.",
+   "speaker": "Jeroen Domburg",
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Most Verilog is generic and the synthesis tool translates it into device-specific primitives on its own, but where the tool cannot do the mapping the designer instantiates the vendor primitive by hand. Those hand-instantiated primitives are what break portability: moving a design from an iCE40 to an ECP5 came down to replacing the block RAM primitives with the equivalents for the new family.",
+   "quote_verbatim": "you help the tool by instantiating primitives",
+   "speaker": "Sylvain Minot",
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "On-chip block RAMs are small and vendor-specific, on the order of four to sixteen kilobits apiece, which is why memory is the resource most often instantiated explicitly rather than inferred.",
+   "quote_verbatim": "they're really small memory, like four kilobits or 16 kilobits and that kind of stuff. And these are, uh, vendor specific.",
+   "speaker": "Sylvain Minot",
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "Hand-written test benches are bounded by the imagination of their author and cannot reach all corner cases of a design with many input combinations. A Verilator-based harness written in C++ can instead sweep the entire input space and check every output, running in minutes, which is why exhaustive simulation is preferred to directed stimulus where the state space allows.",
+   "quote_verbatim": "if you've got something with too many combinations to test and you'll never get all the corner cases",
+   "speaker": "Chris Gammell",
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Verilator is a Verilog simulator that presents the design as a C wrapper, so the design under test is exercised from ordinary C or C++ code rather than from an HDL test bench.",
+   "quote_verbatim": "it's like a C wrapper for simulating your Verilog code",
+   "speaker": "Chris Gammell",
+   "episode": 467,
+   "episode_title": "Stories from Supercon 2019",
+   "episode_url": "https://theamphour.com/467-stories-from-supercon-2019/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Chisel is a hardware description language built as a domain-specific language inside Scala, chosen because Scala is strongly typed without the verbosity of VHDL and flexible enough to host a language of its own; like the Python-based generators it emits Verilog or VHDL, so its output feeds the existing vendor tool flow unchanged.",
+   "quote_verbatim": "So whatever you write in it, it just spits out Verilog that you feed into all the tools you already use.",
+   "speaker": "Chris Gammell",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "AXI, the ARM-derived bus used widely in Xilinx FPGA designs, is a complicated protocol with many details that must be got right; implementing an AXI interface in raw Verilog means writing all that logic and then verifying it against a vendor-supplied bus verification model that probes the design in a test bench.",
+   "quote_verbatim": "it's a complicated bus protocol. It comes from ARM and it has a lot of stuff you have to get right.",
+   "speaker": "Chris Gammell",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Verilog has modules but no library mechanism in the software sense, and the available third-party IP is often commercial and not modular enough to include at will, so common infrastructure such as an AXI master or slave tends to be rewritten rather than imported.",
+   "quote_verbatim": "it's not modular enough to, you know, include wherever you want",
+   "speaker": "Chris Gammell",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Hosting a hardware description language inside a general-purpose programming language gives a meta layer: loops and conditionals in the host language run at elaboration time, so instead of describing one specific bus slave the designer writes a subroutine that generates the slave from parameters. The VexRiscv core is built this way, emitting a different CPU depending on whether a memory management unit, floating point or vector support is switched on.",
+   "quote_verbatim": "So I'm writing a program that generates hardware.",
+   "speaker": "Chris Gammell",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Removing the processor from a design entirely is sometimes the simplification: replacing a dual-core RISC-V system-on-chip with pure Verilog that takes the camera stream and drives the LCD directly leaves no CPU in the data path at all.",
+   "quote_verbatim": "So there's no CPU in the loop at all.",
+   "speaker": "Greg Davill",
+   "episode": 473,
+   "episode_title": "An Interview with Greg Davill",
+   "episode_url": "https://theamphour.com/473-an-interview-with-greg-davill/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Silicon vendors retain the RTL simulation environment for shipped parts, so an application engineer can have a Verilog simulation of a peripheral re-run internally to confirm a suspected hardware defect such as a DMA trigger that does not fire.",
+   "quote_verbatim": "I had them rerun a Verilog simulation of a peripheral to verify that, Hey, this DMA trigger actually didn't work",
+   "speaker": "Eli Hughes",
+   "episode": 511,
+   "episode_title": "Brewing Electronics with Eli Hughes",
+   "episode_url": "https://theamphour.com/511-brewing-electronics-with-eli-hughes/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A vendor FPGA toolchain is assembled from separable pieces rather than being monolithic: one supplier bundled Mentor Graphics Precision RTL for synthesis with its own proprietary place-and-route, and deliberately bundled no simulator at all on the basis that any Verilog simulator would work.",
+   "quote_verbatim": "For simulation, it's Verilog. So any simulator will work. We didn't really bundle any simulator with our tools.",
+   "speaker": "Brian Faith",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The open-source equivalent of a vendor FPGA flow decomposes the same way, with SymbiFlow covering simulation, Yosys for synthesis, VPR for place and route and a final bitstream generation step.",
+   "quote_verbatim": "You could do synthesis with EOSYS. You can do the place and route with VPR.",
+   "speaker": "Brian Faith",
+   "episode": 525,
+   "episode_title": "Open FPGA Toolchains and Machine Learning with Brian Faith of QuickLogic",
+   "episode_url": "https://theamphour.com/525-open-fpga-toolchains-and-machine-learning-with-brian-faith-of-quicklogic/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "C-to-hardware compilation was tried as a commercial product line: a purchased C-to-hardware compiler emitted VHDL or Verilog and the surrounding tool installed alongside and called the Xilinx and Altera flows in the background, so the user never handled the generated HDL. It worked for modest designs but not for high-end projects.",
+   "quote_verbatim": "you could just write your C, it'd convert it to VHDL, or Verilog order, and it'd drop it in there",
+   "speaker": "Dave Jones",
+   "episode": 555,
+   "episode_title": "Timing is Everything",
+   "episode_url": "https://theamphour.com/555-timing-is-everything/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Getting a very high sample-rate signal off a mixed-signal chip is impractical, so the digital reduction is done on-die: a ring oscillator producing one bit at one gigasample per second is fed to a sinc or decimation filter written in Verilog that filters and then downsamples, yielding for example eight bits at 32 megasamples per second at a rate the pads and bond wires can carry.",
+   "quote_verbatim": "The pads are far too slow. The bombed wires have inductance that would stop me getting that off too easily.",
+   "speaker": "Anthony Wall",
+   "episode": 579,
+   "episode_title": "ADC Chip Design with Anthony Wall",
+   "episode_url": "https://theamphour.com/579-adc-chip-design-with-anthony-wall/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "The digital portion of a mixed-signal ASIC follows the same sequence as an FPGA design with one substitution: the Verilog is written and exercised in a test bench, then synthesised, but the target primitives are standard cells such as two- and four-input AND gates and various flip-flops rather than lookup tables. Synthesis emits a gate-level Verilog netlist, which is then placed, routed and closed on timing.",
+   "quote_verbatim": "you synthesize the Verilog, which creates a gate level Verilog",
+   "speaker": "Anthony Wall",
+   "episode": 579,
+   "episode_title": "ADC Chip Design with Anthony Wall",
+   "episode_url": "https://theamphour.com/579-adc-chip-design-with-anthony-wall/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Open-source ASIC flows accept the same input as any other digital flow: a hardware description language such as Verilog or VHDL goes in one end of OpenLane, whose core is the separately developed OpenROAD project, and the digital side including IO routing is handled automatically.",
+   "quote_verbatim": "So you take your harder description language. Like Verilog or VHDL are really popular common ones. And you throw it in one end of one of these tool flows",
+   "speaker": "Matt Venn",
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Verilog's C-like syntax actively misleads programmers coming from software, because the resemblance suggests the code is a program when it is a description of hardware; drawing a schematic of gates is in a real sense closer to the silicon than writing in a hardware description language.",
+   "quote_verbatim": "one of the hard things about coming to a hardware description language is, especially one like Verilog, where it kind of has a C like syntax",
+   "speaker": "Matt Venn",
+   "episode": 616,
+   "episode_title": "Open Source Tapeout with Matthew Venn",
+   "episode_url": "https://theamphour.com/616-open-source-tapeout-with-matthew-venn/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Schematic capture for custom silicon breaks down at roughly twenty to thirty standard cells and becomes unmanageable by about fifty, which is the concrete argument for a hardware description language: a sixteen-bit register that would take sixteen drawn flip-flops is a single register declaration, and adding two registers together is one expression instead of drawing dozens of NAND gates and carry logic.",
+   "quote_verbatim": "what we kind of breaks down after maybe 20, 30 standard cells, I think maybe the biggest design I've seen in Wokwee is maybe 50, but it starts getting really like a nightmare",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "tradeoff"
+  },
+  {
+   "claim_text": "Newer hardware description languages such as Amaranth are viable for open-source silicon and FPGA work specifically because they emit Verilog; producing Verilog is the compatibility requirement that lets any new language plug into the existing open-source tool flow.",
+   "quote_verbatim": "as long as you eventually end up generating Verilog, that will work. That plays nicely with all the open source tools.",
+   "speaker": "Matt Venn",
+   "episode": 672,
+   "episode_title": "Silicon Revolution with Matt Venn",
+   "episode_url": "https://theamphour.com/672-silicon-revolution-with-matt-venn/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Fixing a defect in an already-taped-out chip is triaged on three axes: the engineering effort to implement, the desirability of the fix, and the risk that the change introduces new problems. The dominant cost question is whether the fix can be made as a surgical change to only the metal and via layers or requires a full re-spin.",
+   "quote_verbatim": "can this be done, um, with a surgical change to just the metal and vial layers of the chip, or is this a complete, uh, re-spin of the chip",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "A metal-layer fix works by rewiring existing logic gates and occasionally recruiting a spare gate from elsewhere in the design, so feasibility depends on how the logic was synthesised and whether timing budget is available. A defect in timing-critical logic can therefore be unfixable by metal alone even when the logic error is trivial, as with a register decode mask one bit too narrow, while the same class of error in slow logic is straightforward to edit into the metal stack.",
+   "quote_verbatim": "you can, um, rewire existing logic gates in your design to tweak the way that logic behaves",
+   "speaker": "James Adams",
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Logical equivalence checking is the tool that connects the two representations of a chip: it takes the Verilog and the gate-level netlist and reports whether they are logically identical, which is necessary because the correspondence between a gate-level implementation and the source description is not obvious to a human reading either.",
+   "quote_verbatim": "There's a tool called logical equivalence checking, which can basically take the Verilog and it can take what this sort of gate level net list",
+   "speaker": null,
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "Two disciplines exist for gate-level chip fixes. One edits the gates, adds a register known as a chicken bit to disable the new logic, and proves only that the design reverts to its previous behaviour when the bit is off, which de-risks the change without fully understanding it. The other requires every gate-level edit to have an exactly logically equivalent change made back in the Verilog source, which is more work because the equivalent source change is often indirect rather than the obvious one-bit correction.",
+   "quote_verbatim": "for every change we make to the gates, we want to have an exactly logical equivalent change to the Verilog",
+   "speaker": null,
+   "episode": 687,
+   "episode_title": "The RP2350 with the Raspberry Pi Team",
+   "episode_url": "https://theamphour.com/687-the-rp2350-with-the-raspberry-pi-team/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Chip configuration can be script-generated rather than hand-written: a set of scripts consumes a configuration file and writes out the Verilog describing the part, so producing a variant with different clocks, GPIO counts and fabric means editing the configuration and re-running the scripts rather than editing RTL.",
+   "quote_verbatim": "what the scripts are doing is effectively writing out Verilog, which, which describes the, you know, which is the harder description language, which describes the chip",
+   "speaker": "Liam Fraser",
+   "episode": 648,
+   "episode_title": "The RP1 and beyond with the Raspberry Pi Hardware team",
+   "episode_url": "https://theamphour.com/648-the-rp1-and-beyond-with-the-raspberry-pi-hardware-team/",
+   "depth_regraded": "explains",
+   "kind": "mechanism"
+  },
+  {
+   "claim_text": "A working RISC-V core has been published as roughly one hundred lines of Verilog, or about two hundred with reasonable formatting and comments, and demonstrated driving an LED matrix, which sets a useful lower bound on how much source a minimal soft processor requires.",
+   "quote_verbatim": "he posted the complete verilog source code a very risk five core he says it takes more or less than a hundred lines or 200 lines if you have reasonable formatting in comments",
+   "speaker": "Dave Jones",
+   "episode": 644,
+   "episode_title": "Garbage Ninjas",
+   "episode_url": "https://theamphour.com/644-garbage-ninjas/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "The open-source iCE40 toolchain is a small, command-line-oriented install, in contrast to the Xilinx and Intel vendor toolchains that run to around sixty gigabytes.",
+   "quote_verbatim": "compared to the the xilinx so the now intel formerly altera uh tool chains that you know that are like 60 gigs uh it was like you know very reasonable installs",
+   "speaker": "Chris Gammell",
+   "episode": 644,
+   "episode_title": "Garbage Ninjas",
+   "episode_url": "https://theamphour.com/644-garbage-ninjas/",
+   "depth_regraded": "explains",
+   "kind": "numbers"
+  },
+  {
+   "claim_text": "A digital design starts on paper, not in an editor: the target's constraints, such as the number of pins available and the frequency those pins can run at, fix the IO interface and the target internal frequency, since there is no benefit in clocking internal logic faster than data can be fed in and doing so only makes matters worse.",
+   "quote_verbatim": "there's no use like running my internal logic faster than I can feed it",
+   "speaker": "Julia Desmazes",
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Verilog and SystemVerilog are language representations of how logic gates are connected, and the working assumption is that the first version will be wrong; the test bench is written on that assumption, applying an input to the simulated logic, reading the output and comparing it against an expected value.",
+   "quote_verbatim": "here's an input to my simulated logic and read the output and like compare it to an expected output",
+   "speaker": "Julia Desmazes",
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Test benches need not be written in the hardware description language itself: open-source simulators are commonly wrapped so the stimulus and checking are written in Python, which is the arrangement used for Tiny Tapeout submissions.",
+   "quote_verbatim": "for Tiny Tape Out, they use a Python wrapper. So all the test benches are actually written in Python.",
+   "speaker": "Julia Desmazes",
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Verilog development paired with a cocotb test bench is well suited to machine assistance, particularly for large, reproducible interface blocks such as a DDR controller that are laborious for a human to write, while analogue schematic work and power net layout remain manual.",
+   "quote_verbatim": "So Verilog with, you know, Coco TB with the test bench side of that, with firmware, software, and all of that, it's dramatically accelerated.",
+   "speaker": "Matt Liberty",
+   "episode": 722,
+   "episode_title": "AI Tooling with Matt Liberty and Luke Beno",
+   "episode_url": "https://theamphour.com/722-ai-tooling-with-matt-liberty-and-luke-beno/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  }
+ ],
+ "attribution_notes": [
+  "ep 152: passage labelled Dave Jones, but the content is a first-person account of American classmates, co-ops and interviewing with Intel, which is Chris Gammell rather than Dave Jones; reattributed.",
+  "ep 181: attribution_reliable is false for all five passages, but every kept claim is an answer given in the first person by the interviewed board vendor about his own customers, examples and recommended workflow, so the Dave Vandenbout label was retained.",
+  "ep 201: the kept claim is the test-bench-and-clock-margin judgment, which the passage gives in the labelled speaker's voice; the surrounding process-node figures are spoken by the other host and were not used.",
+  "ep 303: the episode's passages overlap and the same text appears under both the guest and a host label. The verification and verbosity claims are the guest's own position and kept under his name; the design-in-Verilog / test-bench-in-VHDL practice is raised by a host and confirmed by the guest, so speaker is null.",
+  "ep 346: attribution_reliable false, but the passage is a first-person account of doing pre-silicon Verilog review with full internal access, which is the interviewed hardware security guest; label retained.",
+  "ep 374: attribution_reliable false on all six passages, but each kept claim is a first-person answer about the speaker's own synthesis tool, formal verification work and bitstream reverse engineering; the Claire Wolf label is supported by content and retained.",
+  "ep 449: the Verilog typo / silent-variable-creation account is told in the first person by the speaker who came from VHDL; the bundle labels the overlapping passages inconsistently across hosts, and the surrounding passages identify that speaker as Chris Gammell, so his label was used.",
+  "ep 650: attribution_reliable false; no claim was taken from these passages that depended on the speaker label.",
+  "ep 687: the passage is labelled James Adams but plainly contains several members of the same engineering team ('as Luke says'). The management-level triage and metal-layer claims were left with the labelled speaker; the logical-equivalence-checking and chicken-bit claims are spoken by an unidentified colleague and use null."
+ ]
+}

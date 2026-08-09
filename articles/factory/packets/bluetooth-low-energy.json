@@ -1,0 +1,858 @@
+{
+ "concept": "bluetooth-low-energy",
+ "name": "Bluetooth Low Energy",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "bluetooth-low-energy",
+  "census": "union",
+  "cap": 250,
+  "capped": false,
+  "total_available": 88,
+  "aliases": [
+   "ble",
+   "bluetooth-low-energy"
+  ],
+  "children": [
+   "apple-watch",
+   "chip-and-pin",
+   "fcc-certification",
+   "iot-gateway",
+   "neuroscience"
+  ],
+  "neighbors": {
+   "zigbee": 6,
+   "android": 5,
+   "bluetooth-module": 4,
+   "coin-cell-battery": 4
+  },
+  "stats": {
+   "episodes": 60,
+   "mentions": 165,
+   "explains": 67,
+   "opinions": 28,
+   "candidate_episode_count": 54,
+   "candidate_mention_count": 118,
+   "gated_out": 341,
+   "gated_out_by_concept": [
+    [
+     "android",
+     138
+    ],
+    [
+     "coin-cell-battery",
+     41
+    ],
+    [
+     "zigbee",
+     41
+    ],
+    [
+     "fcc-certification",
+     33
+    ],
+    [
+     "apple-watch",
+     29
+    ],
+    [
+     "bluetooth-module",
+     26
+    ],
+    [
+     "chip-and-pin",
+     19
+    ],
+    [
+     "neuroscience",
+     8
+    ],
+    [
+     "iot-gateway",
+     6
+    ]
+   ],
+   "gate_relaxed": false,
+   "unreliable_attribution_passages": 3,
+   "speakers": [
+    [
+     "Dave Jones",
+     27
+    ],
+    [
+     "Chris Gammell",
+     12
+    ],
+    [
+     "David Ledger",
+     9
+    ],
+    [
+     "Colin",
+     8
+    ],
+    [
+     "Bob Davidson",
+     7
+    ],
+    [
+     "Jeff Roberg",
+     4
+    ],
+    [
+     "Andrea Longobardi",
+     3
+    ],
+    [
+     "Elecia White",
+     2
+    ],
+    [
+     "Luke Beno",
+     2
+    ],
+    [
+     "Richard Ginus",
+     2
+    ],
+    [
+     "Vincent Himpe",
+     1
+    ],
+    [
+     "Andrew Witte",
+     1
+    ],
+    [
+     "Noah Feehan",
+     1
+    ],
+    [
+     "Michael Ossmann",
+     1
+    ],
+    [
+     "Eric Van Wyk",
+     1
+    ],
+    [
+     "Akiba",
+     1
+    ],
+    [
+     "Luke Iseman",
+     1
+    ],
+    [
+     "Jørgen Jakobsen",
+     1
+    ],
+    [
+     "Travis Goodspeed",
+     1
+    ],
+    [
+     "Joris Aerts",
+     1
+    ]
+   ],
+   "passages_by_source_role": {
+    "core": 81,
+    "neighbor": 5,
+    "child": 2
+   },
+   "passages_by_depth": {
+    "explains": 62,
+    "opinion": 26
+   }
+  }
+ },
+ "claims": [
+  {
+   "claim_text": "Bluetooth Low Energy shares only the lowest layers of the Bluetooth specification, such as the physical layer, with classic Bluetooth; the protocol stack built on top of that radio is a different design.",
+   "quote_verbatim": "So it's really Bluetooth and name only because it's really the very lowest levels, like the physical layer that are Bluetooth.",
+   "speaker": "",
+   "episode": 144,
+   "episode_title": "An Interview with Bob Davidson - Hoodied HP Hijinks",
+   "episode_url": "https://theamphour.com/the-amp-hour-144-hoodied-hp-hijinks/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A BLE peripheral advertises a description of the data it offers, so any nearby application can discover it and attach, in place of the PIN exchange and pairing handshake that classic Bluetooth requires before communication.",
+   "quote_verbatim": "packet that's part of the advertising that, that tells everybody what it can do",
+   "speaker": "",
+   "episode": 144,
+   "episode_title": "An Interview with Bob Davidson - Hoodied HP Hijinks",
+   "episode_url": "https://theamphour.com/the-amp-hour-144-hoodied-hp-hijinks/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A phone with only a classic Bluetooth radio cannot communicate with a BLE device; BLE support is a hardware property of the host, so adoption depended on the handset replacement cycle.",
+   "quote_verbatim": "A regular Bluetooth phone can't talk to a Bluetooth low energy device.",
+   "speaker": "",
+   "episode": 144,
+   "episode_title": "An Interview with Bob Davidson - Hoodied HP Hijinks",
+   "episode_url": "https://theamphour.com/the-amp-hour-144-hoodied-hp-hijinks/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "The BlueGiga BLE112 module is built on the Texas Instruments CC2540 and is driven by a host processor over a UART, but its on-board 8051 can also run BlueGiga Script so sensors attach directly to the module and no external microcontroller is needed.",
+   "quote_verbatim": "So the module itself, you can actually hook sensors directly to the module and run Blue Giga Script on it and not really have to hook up an external MCU to it.",
+   "speaker": "Bob Davidson",
+   "episode": 144,
+   "episode_title": "An Interview with Bob Davidson - Hoodied HP Hijinks",
+   "episode_url": "https://theamphour.com/the-amp-hour-144-hoodied-hp-hijinks/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Among the short-range radio options, BLE is a low-bandwidth link, classic Bluetooth offers relatively high bandwidth at the cost of holding a connection open, and Wi-Fi is generally excluded from battery-powered products on power grounds.",
+   "quote_verbatim": "Bluetooth low energy is low bandwidth. Bluetooth is relatively high bandwidth if it has to be connected all the time.",
+   "speaker": "",
+   "episode": 145,
+   "episode_title": "PCB Mills, SDR and Oscilloscopes - Flaunting Furbelow Fanciness",
+   "episode_url": "https://theamphour.com/the-amp-hour-145-flaunting-furbelow-fanciness/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "An early integrated Bluetooth 4.0 low-energy part drew about 3.8 milliamps while receiving and transmitting, a figure considered low for a radio of that era.",
+   "quote_verbatim": "Although it needs 3.8 milliamps for receiving and TX.",
+   "speaker": "",
+   "episode": 152,
+   "episode_title": "Firmware, Netburner and Semiconductors - Chris's Capitalism Colloquy",
+   "episode_url": "https://theamphour.com/the-amp-hour-152-chriss-capitalism-colloquy/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "BLE and classic Bluetooth occupy exactly the same 2.4 GHz spectrum and the same set of channels, with BLE using a subset, so a dual-mode device cannot fully use both links at the same time.",
+   "quote_verbatim": "Because BLE and classic Bluetooth use exactly the same spectrum and even the same set of channels.",
+   "speaker": "Jeff Rowberg",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Classic Bluetooth profiles such as serial port profile and HID are defined by the Bluetooth SIG and handed to the implementer, whereas BLE requires the developer to build the profile unless the chosen stack supplies one; this is more work but permits a much lighter, application-specific data model.",
+   "quote_verbatim": "With BLE, they totally change that around. And in order to implement anything, you actually have to build the profile yourself unless it's provided for you as part of the stack you're using.",
+   "speaker": "Jeff Rowberg",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A BLE peripheral that sends a one- or two-byte packet once a second and sleeps between transmissions can run for about a year on a coin cell, a duty cycle that classic Bluetooth cannot achieve.",
+   "quote_verbatim": "And then the module can sleep the rest of the time and it'll last on a coin sale for a year, you know, whereas you'd never, ever be able to do that with with Bluetooth classic.",
+   "speaker": "",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Supporting classic Bluetooth alongside BLE forfeits the low-energy power saving, because the classic radio must run continuously at roughly two milliamps, which exhausts a coin cell in about two days.",
+   "quote_verbatim": "And that's going to pull, you know, two milliamps all the time. And it'll kill a coin sale in, you know, two days.",
+   "speaker": "",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Dual-mode Bluetooth radios are normally placed at the end of the link that has a large battery, such as a smartphone or PC, while the peripheral implements one mode only.",
+   "quote_verbatim": "mostly they're in they're in the end of the connection that has the big battery, like the smartphone or the PC and the peripheral device has one or the other",
+   "speaker": "",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "BLE performs poorly at high bandwidth because the protocol was built around very small packets sent infrequently, so throughput-oriented uses run into significant speed limits.",
+   "quote_verbatim": "There's some really significant limitations in terms of speed because they built the whole protocol for very small packets very infrequently.",
+   "speaker": "",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "A BLE cable-replacement service can be made to work but bends the protocol into a role it was not designed for, and the result performs worse than an equivalent classic Bluetooth serial port profile connection.",
+   "quote_verbatim": "if you were to compare a classic Bluetooth SPP connection to what you actually have to end up with on the BLE side of things in order to make it do what feels like the same thing, you're actually doing worse with BLE because you're using it in a way that it wasn't designed",
+   "speaker": "Jeff Rowberg",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "The choice between BLE and classic Bluetooth should be driven by the data the product must send and receive: if the traffic fits BLE, adding classic support as well is usually a kludge, and if the product is already pushing the limits of BLE the choice is wrong.",
+   "quote_verbatim": "You have to look at the data that you need to transmit and or, you know, just transmit, but but send back and forth.",
+   "speaker": "",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "Bluetooth SIG qualification is a voluntary association requirement rather than a government regulation: the 2.4 GHz band itself is largely unregulated, but a product may not carry Bluetooth branding or claim conformance without following the SIG's guidelines.",
+   "quote_verbatim": "you only have to do their certification thing if you are using Bluetooth officially",
+   "speaker": "",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "Apple introduced BLE support with the iPhone 4S; Android hardware supported BLE earlier than the platform did, and official Android support arrived only with API level 18.",
+   "quote_verbatim": "when they added BLE to the iPhone 4S",
+   "speaker": "",
+   "episode": 155,
+   "episode_title": "An Interview with Jeff Rowberg - Mini Module Master",
+   "episode_url": "https://theamphour.com/the-amp-hour-155-mini-module-master/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "Classic Bluetooth's baseband digital section has to run continuously in a connected peripheral, so devices such as wireless keyboards exhausted their AA cells in about two days, which is the power failure that motivated low-energy profiles.",
+   "quote_verbatim": "You try to do the same thing on Bluetooth when that transmitter has to end at that baseband, which is the digital chip, has to be running all the time. And after two days, the batteries are gone.",
+   "speaker": "Vincent Himpe",
+   "episode": 169,
+   "episode_title": "An Interview with Vincent Himpe - Escaped Electron Elocution",
+   "episode_url": "https://theamphour.com/169-an-interview-with-vincent-himpe-escaped-electron-elocution/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Classic Bluetooth silicon came from roughly four main vendors, while BLE silicon was available from dozens, a much broader supplier base for the low-energy variant.",
+   "quote_verbatim": "there's you know four main vendors of bluetooth classic silicon and there's dozens for for le",
+   "speaker": "Andrew Witte",
+   "episode": 175,
+   "episode_title": "An Interview With Andrew Witte - Telistic Timepiece Technomania",
+   "episode_url": "https://theamphour.com/175-an-interview-with-andrew-witte-telistic-timepiece-technomania/",
+   "depth_regraded": "explains",
+   "kind": "market-structure"
+  },
+  {
+   "claim_text": "The RFduino module packages an ARM Cortex-M0 with an integrated BLE radio in a footprint of about 15 by 15 millimetres, small enough for pendant-scale wearables.",
+   "quote_verbatim": "It's a little tiny ARM Cortex-M0 with integrated BLE. So it's about 15 by 15 millimeters, super small.",
+   "speaker": "",
+   "episode": 204,
+   "episode_title": "An Interview with Noah Feehan - Biloquistic Blinking Blush",
+   "episode_url": "https://theamphour.com/204-an-interview-with-noah-feehan-biloquistic-blinking-blush/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "A common architecture for a long-range radio product is to use BLE only as the short link to the user's phone while a separate transceiver, such as a VHF link in the 150 MHz region, carries traffic between units.",
+   "quote_verbatim": "It connects to your phone over Bluetooth low energy and, uh, which is the new flavor of Bluetooth. And then it connects to another Gotenna over some kind of a, some kind of a VHF link",
+   "speaker": "",
+   "episode": 214,
+   "episode_title": "Impedance Matching With Charvat And Ossmann - Recurring RF Remontados",
+   "episode_url": "https://theamphour.com/214-impedance-matching-with-charvat-and-ossmann-recurring-rf-remontados/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The Texas Instruments CC2540 combines a BLE radio and an 8051 core in a single package, which is why it was adopted as the BLE platform for battery-powered instruments.",
+   "quote_verbatim": "our, our BLE platform is the CC 2540 by Texas instruments. Uh, and that's basically just a BLE radio and a 8051 in the same box.",
+   "speaker": "Eric Van Wyk",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The analogue-to-digital converter integrated in the CC2540 is nominally 12 bits but delivers roughly three effective bits, so it serves only to prove out a use case and not for measurement.",
+   "quote_verbatim": "the very, very first version used the little like 12 bit A to D built into it that has three bits effective",
+   "speaker": "Eric Van Wyk",
+   "episode": 218,
+   "episode_title": "An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter",
+   "episode_url": "https://theamphour.com/218-an-interview-with-eric-vanwyk-meiotic-mountenance-mooshimeter/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "BLE defines two roles: the central, typically the phone, manages the connection, while the peripheral, typically the small low-power sensor, does the minimum of answering the central rather than transmitting whenever it chooses.",
+   "quote_verbatim": "So Bluetooth has two, Bluetooth energy has two roles, uh, central and peripheral. Um, typically the device, the small low power sensor device is the peripheral. Uh, it doesn't, it doesn't manage the connection.",
+   "speaker": "Colin Karpfinger",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "An iPhone can occupy the central and peripheral roles at the same time.",
+   "quote_verbatim": "On the iPhone, you can be, uh, central and peripheral at the same time.",
+   "speaker": "",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A BLE accessory does not go through Apple's Made for iPhone hardware approval process; in the most demanding case the app review asks only for a video of the hardware working with the application.",
+   "quote_verbatim": "you don't have to go through that same hardware approval process. And so, you know, you set up to get approved and in the most extreme situation, they'll ask you for a video of your hardware working with the app",
+   "speaker": "Colin Karpfinger",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Android had no usable BLE support through version 4.2, where each handset required its manufacturer's own stack; a common API was added in Android 4.3.",
+   "quote_verbatim": "Like, you know, as of 4.2, there is really no real way to do it. Like you'd have to use the manufacturer-specific stack for each phone. 4.3 added it.",
+   "speaker": "",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "A general-purpose BLE scanning and inspection application is the standard bench tool for testing a peripheral, because it exposes whatever the device advertises without requiring a custom app.",
+   "quote_verbatim": "we actually have an app on the app store called light blue, which is like a general purpose, uh, test tool for anyone, you know, wanting to test their Bluetooth, um, products",
+   "speaker": "",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Because a BLE device can be reprogrammed over the radio link itself, a development board can be built with no connectors at all.",
+   "quote_verbatim": "It's entirely wireless. So you can actually program it over BLE.",
+   "speaker": "",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "BLE transmit current peaks at roughly ten milliamps for the short duration of a transmission, well above its average draw.",
+   "quote_verbatim": "For that short amount of time, I think it's about 10.",
+   "speaker": "",
+   "episode": 226,
+   "episode_title": "An Interview with Colin Karpfinger - Blendling Bean Brio",
+   "episode_url": "https://theamphour.com/226-an-interview-with-colin-karpfinger-blendling-bean-brio/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "BLE is fundamentally a mobile-connectivity protocol for linking a sensor to a nearby smartphone rather than a general-purpose sensor-network protocol.",
+   "quote_verbatim": "Oh, actually, Bluetooth low energy is really only for mobile connectivity.",
+   "speaker": "Akiba",
+   "episode": 245,
+   "episode_title": "An interview with Akiba from Freaklabs - Dimissory Diagraphical Debt",
+   "episode_url": "https://theamphour.com/245-an-interview-with-akiba-from-freaklabs-dimissory-diagraphical-debt/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A recurring design error is specifying BLE for a product whose application needs more bandwidth than the link can deliver; BLE is also non-deterministic in its timing, which compounds the problem.",
+   "quote_verbatim": "Like I see some things that are coming out with like Bluetooth low energy on them and you're like, how are they going to possibly have the bandwidth they need for their applications?",
+   "speaker": "",
+   "episode": 264,
+   "episode_title": "The Cost Of Doing Business",
+   "episode_url": "https://theamphour.com/264-the-cost-of-doing-business/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "BLE delivers value only when a phone is within range of the device, so it buys nothing for a remote unattended sensor whose whole purpose is to report while the owner is absent.",
+   "quote_verbatim": "in the case of the beehive, Bluetooth low energy doesn't really buy you anything because the value that that system has is when you're not around",
+   "speaker": "Luke Beno",
+   "episode": 272,
+   "episode_title": "An Interview With Luke Beno of Analog.io",
+   "episode_url": "https://theamphour.com/272-an-interview-with-luke-beno-of-analog-io/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Classic Bluetooth was designed as a wireless serial-port replacement and therefore has good support for implementing serial ports, a capability BLE does not carry over.",
+   "quote_verbatim": "Bluetooth was originally, I believe, designed to be a serial port replacement. A wireless serial port replacement. And so it has good support for implementing serial ports.",
+   "speaker": "",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A BLE cable-replacement service does not present itself as a COM port at the host driver level, so software written against a classic Bluetooth serial port will not work unchanged.",
+   "quote_verbatim": "So the BLE implementation of a serial port using this cable replacement thing is just not the same. It doesn't implement the same at the driver level.",
+   "speaker": "",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Every host platform's BLE implementation behaves differently, so host-side application work must effectively be redone for each operating system and version.",
+   "quote_verbatim": "Each BLE implementation is a special snowflake.",
+   "speaker": "",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "In a cross-platform instrument application, the only platform-specific code was the BLE implementation for each device plus the touchscreen handling.",
+   "quote_verbatim": "The only differences with our app at the moment are the BLE implementation for each device and the touchscreen implementation.",
+   "speaker": "David Ledger",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Android 4.3 did not reliably support multiple simultaneous BLE connections even though the API implied it should, misbehaving when a second adapter was added, while Android 6, 7 and 8 handled it correctly.",
+   "quote_verbatim": "But Android 4.3 doesn't even support, you know, multiple simultaneous BLE devices.",
+   "speaker": "",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Android 4.3 contained a BLE defect that closed the application for reasons unrelated to the application itself, with no workaround available on that version.",
+   "quote_verbatim": "Like Android 4.3 or something has an issue where it just closes the app because of a BLE thing. And it's nothing to do with the app.",
+   "speaker": "",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "For a product powered by four AA cells the low-energy power saving does not repay BLE's integration cost, and a classic Bluetooth module would have been the better choice in hindsight.",
+   "quote_verbatim": "So, with hindsight, we wished we had chosen a Bluetooth module instead of BLE. Yes, BLE is lower power, but we've got four AA batteries in this thing.",
+   "speaker": "Dave Jones",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "Once a product is at the test house for FCC certification the radio module can no longer be changed, so a late discovery that the wrong Bluetooth variant was chosen cannot be corrected without restarting certification.",
+   "quote_verbatim": "But it was too far down the track, because it was already at the test house being tested for the federal communications FCC requirements, and you can't just go change your Bluetooth module at the last minute.",
+   "speaker": "Dave Jones",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "BLE is the right choice when the product must run for a year or more from a coin cell such as a CR2032.",
+   "quote_verbatim": "BLE is great if you're running something from a coin cell and a... You know. You know, that you want to work for two years off a CR2032 or something.",
+   "speaker": "",
+   "episode": 354,
+   "episode_title": "A Meeting Of The Davids",
+   "episode_url": "https://theamphour.com/354-a-meeting-of-the-davids/",
+   "depth_regraded": "explains",
+   "kind": "rule-of-thumb"
+  },
+  {
+   "claim_text": "BLE is a reasonable choice for local firmware update of a sealed battery-powered node, performed by a technician standing next to it, rather than pushing the update down from a long-range gateway.",
+   "quote_verbatim": "But I would, I would recommend using a Bluetooth low energy to, uh, firmware update.",
+   "speaker": "Richard Ginus",
+   "episode": 376,
+   "episode_title": "An Interview with Richard Ginus",
+   "episode_url": "https://theamphour.com/376-an-interview-with-richard-ginus/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A BLE device can achieve roughly a year of operation from a CR2032 coin cell, but at the cost of the connection reliability that classic Bluetooth provides.",
+   "quote_verbatim": "But even with a tiny CR2032 battery, you're still going to get a year's life. If you use Bluetooth BLE, but then if you use Bluetooth BLE, you've got connection issues.",
+   "speaker": "",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Mechanical form factor determines the battery, and the battery in turn determines the radio: a keyring-sized product implies a CR2032 and therefore forces BLE.",
+   "quote_verbatim": "So if it's on a key chain, we're talking a CR 2032 solution. Therefore we're forced into BLE just based on the battery solution.",
+   "speaker": "",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Sizing a BLE product's energy budget requires the duty cycle to be pinned down first: how often the user activates it, how often it must ping, how fast it must respond, and whether it can store and forward.",
+   "quote_verbatim": "How often does it have to ping? How fast does it need to respond? Right. Can it store and forward?",
+   "speaker": "",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Five years of life from a coin cell is achievable for a BLE device only with a cell thicker than a CR2032, such as a CR2450-class part with roughly four times the capacity.",
+   "quote_verbatim": "So you use a CR, you know, 30, 40 or something like a thicker version of that coin cell, which has like four times the capacity. Then you'll, then you should be able to get your five years.",
+   "speaker": "",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Battery life is estimated from the cell's capacity discharge curve against the nominal average current, and the transmit current spikes of a BLE radio are averaged out by the filter capacitors rather than being drawn from the cell directly.",
+   "quote_verbatim": "But that's what your filter caps are for, right? Your filter caps can average out a lot of those spikes.",
+   "speaker": "",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A typical CR2032 coin cell has about 20 ohms of series resistance, which is why a BLE transmit current pulse must be supplied from local bulk capacitance instead of from the cell.",
+   "quote_verbatim": "Cause your typical CR2032 coin cell has got a 20 ohm series resistance",
+   "speaker": "",
+   "episode": 389,
+   "episode_title": "Sipping Coulombs",
+   "episode_url": "https://theamphour.com/389-sipping-coulombs/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "The BLE implementation on the ESP32 has been judged poor quality by practitioners who otherwise regard BLE as an attractive technology.",
+   "quote_verbatim": "First is the ESP 32 implementation is horrible.",
+   "speaker": "Andreas Spiess",
+   "episode": 435,
+   "episode_title": "An Interview with Andreas Spiess",
+   "episode_url": "https://theamphour.com/435-an-interview-with-andreas-spiess/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "When BLE demand outran the available integrated parts, designers placed a separate microcontroller die and BLE die side by side in one package and routed a memory bus, enable signals and power between them.",
+   "quote_verbatim": "one of the ones we did was a microcontroller and a ble chip and it was right when ble was exploding and they didn't have time to integrate a ble",
+   "speaker": "",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "On a BLE system-on-chip the vendor's Bluetooth stack occupies a fixed region of memory and the application image is linked to start at the end of that region, after which it runs as an ordinary program.",
+   "quote_verbatim": "It starts at the end of the Bluetooth memory area. And then it just runs like a normal program.",
+   "speaker": "",
+   "episode": 516,
+   "episode_title": "Thermions Aren't A Thing",
+   "episode_url": "https://theamphour.com/516-thermions-arent-a-thing/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Assuming BLE supports a proper serial implementation is a costly design error: implementing serial behaviour over BLE consumed substantial time, money and effort and ended as a kludge.",
+   "quote_verbatim": "Bluetooth LE does not support proper serial implementation. We thought it did. And that's why we spent a huge amount of time, money, and effort.",
+   "speaker": "Dave Jones",
+   "episode": 516,
+   "episode_title": "Thermions Aren't A Thing",
+   "episode_url": "https://theamphour.com/516-thermions-arent-a-thing/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "One practitioner position drawn from a commercial product is to prefer classic Bluetooth and use BLE only where it is genuinely required.",
+   "quote_verbatim": "my pro tip there is don't use Bluetooth LE unless you absolutely have to use normal Bluetooth",
+   "speaker": "Dave Jones",
+   "episode": 516,
+   "episode_title": "Thermions Aren't A Thing",
+   "episode_url": "https://theamphour.com/516-thermions-arent-a-thing/",
+   "depth_regraded": "opinion",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A multi-node BLE network can be simulated on the bench by building a single card carrying several BLE microcontrollers, each addressable over a generic host interface.",
+   "quote_verbatim": "if you want to simulate bigger BLE or lower networks, then you can just make, make maybe a card with, with four BLE micros on there and then, you know, simulate your whole network",
+   "speaker": "Joris Aerts",
+   "episode": 518,
+   "episode_title": "Satellites and EVs with Joris Aerts",
+   "episode_url": "https://theamphour.com/518-satellites-and-evs-with-joris-aerts/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A wearable air-quality sensor measuring 18 by 18 by 8 millimetres and weighing about five grams carried a carbon monoxide sensor and reported over BLE, with the battery housed separately in the garment and coupled magnetically.",
+   "quote_verbatim": "so the sensor itself is very tiny it's like 18 by 18 by 8 millimeters",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "number"
+  },
+  {
+   "claim_text": "Pairing BLE with NFC on the same sensor lets a user either stream data live to a phone carried during use or download the stored log later by touching the device to a phone, removing the requirement to carry the phone.",
+   "quote_verbatim": "we'll make this information available through bluetooth low energy so again with your cell phone you can retrieve the data or through nfc",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Battery-powered BLE devices can be reached from the cloud by adding Wi-Fi-to-BLE or cellular-to-BLE gateways; where no mains supply is available at the gateway site the gateway itself must also be a low-power battery-powered design.",
+   "quote_verbatim": "we also done some gateways so wi-fi to ble gateways and cellular to really gateways in that way this you can control the sprinklers directly from the cloud",
+   "speaker": "Andrea Longobardi",
+   "episode": 635,
+   "episode_title": "Low Power Connected Devices with Andrea Longobardi",
+   "episode_url": "https://theamphour.com/635-low-power-connected-devices-with-andrea-longobardi/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Bluetooth, and Nordic Semiconductor's nRF series in particular, is well suited to low-power personal area networking, but there is no satisfying low-power alternative at higher data rates, so video transport forces a move to Wi-Fi and an order-of-magnitude jump in power consumption.",
+   "quote_verbatim": "Bluetooth is great for low power consumption and like Nordics NRF series of chips are awesome for that.",
+   "speaker": "",
+   "episode": 638,
+   "episode_title": "Building AR Headsets with Aedan Cullen",
+   "episode_url": "https://theamphour.com/638-building-ar-headsets-with-aedan-cullen/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "A BLE consumer device that advertises continuously discloses its usage pattern to anyone within radio range, since the advertisement itself is observable without connecting.",
+   "quote_verbatim": "which means I'm just broadcasting when I'm brushing my teeth",
+   "speaker": "",
+   "episode": 660,
+   "episode_title": "My Toothbrush Is Broadcasting",
+   "episode_url": "https://theamphour.com/the-amp-hour-660-my-toothbrush-is-broadcasting/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "In practice a BLE link reaches across a small house but does not carry to a neighbouring property, so the exposure from continuous advertising is bounded by the low transmit power.",
+   "quote_verbatim": "granted, it's not going to reach the people next door because Bluetooth is pretty low energy",
+   "speaker": "",
+   "episode": 660,
+   "episode_title": "My Toothbrush Is Broadcasting",
+   "episode_url": "https://theamphour.com/the-amp-hour-660-my-toothbrush-is-broadcasting/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Bluetooth Low Energy dates from 2010 and originated under the name Wibree before being folded into the Bluetooth specification.",
+   "quote_verbatim": "Turns out Bluetooth low energy was 2010 was Bluetooth low energy.",
+   "speaker": "",
+   "episode": 664,
+   "episode_title": "Simulating doors falling off",
+   "episode_url": "https://theamphour.com/664-simulating-doors-falling-off/",
+   "depth_regraded": "explains",
+   "kind": "history"
+  },
+  {
+   "claim_text": "In a BLE stack's sample set the peripheral is the node device and the central is the side that accepts connections, with reference profiles provided for heart rate, health thermometer, HID and a UART service.",
+   "quote_verbatim": "So like, there's like peripheral is usually the node device, right? So like there's the peripheral and then central is like the thing that's accepting all these things.",
+   "speaker": "",
+   "episode": 664,
+   "episode_title": "Simulating doors falling off",
+   "episode_url": "https://theamphour.com/664-simulating-doors-falling-off/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "BLE builds service enumeration into the protocol, so a scanner application such as nRF Connect can list every nearby device that is advertising along with the services it offers, and usually connect to them without obstruction.",
+   "quote_verbatim": "built into the protocol is the ability to enumerate all of the services that a device has on offer",
+   "speaker": "Matt Brown",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Each BLE service exposes properties, principally read, write and notify, that function as permissions on that item of data; notify behaves as a publish-subscribe channel from the device back to the host.",
+   "quote_verbatim": "the services all have these properties, which are, are, are more or less like permissions. And so they're, they're like things like read or write or, or notify",
+   "speaker": "Matt Brown",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "BLE has no native mechanism for asynchronous communication, but the pattern is constructed by using the notify property to receive data from the device and the write property to send data to it.",
+   "quote_verbatim": "there's no, uh, property. There's no way in Bluetooth low energy natively to do asynchronous communications, but you can effectively achieve it by using that notify service to receive data back from the device and the right service to send data to the device",
+   "speaker": "Matt Brown",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A common BLE security weakness is a manufacturer transplanting an existing custom binary serial protocol onto GATT writes and notifies without added protection, leaving the traffic open to sniffing, reverse engineering and replay by anyone who can connect.",
+   "quote_verbatim": "device manufacturers that have some existing type of serial protocol that they've already designed some binary protocol, they'll effectively implement that over Bluetooth low energy",
+   "speaker": "Matt Brown",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "A BLE link is far easier to intercept than the wired serial connection it replaces, since observing it needs only a radio in range rather than physical access to the conductors.",
+   "quote_verbatim": "it's like that except it's way easier to listen in than like putting a current clamp around those wires",
+   "speaker": "",
+   "episode": 698,
+   "episode_title": "Hardware Security with Matt Brown",
+   "episode_url": "https://theamphour.com/698-hardware-security-with-matt-brown/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  }
+ ],
+ "attribution_notes": [
+  "ep144: passage [5] ('A regular Bluetooth phone can't talk to a Bluetooth low energy device') is labelled Dave Jones but sits inside the guest exchange; the fact is ordinary, so the name was dropped. The BLE112/BlueGiga Script detail is content-attributed to Bob Davidson, who states the project is his.",
+  "ep155: label alternates between Jeff Rowberg and Chris Gammell across overlapping windows, and passage [9] labelled Chris Gammell plainly contains the guest's answer. Names kept only where the content self-identifies the speaker as being at BlueGiga; elsewhere dropped.",
+  "ep175: passage [16] labelled Andrew Witte contains both the host's question and the guest's answer; the silicon-vendor-count and stack-complexity claims are the guest's and are attributed to Andrew Witte, the rest left unnamed.",
+  "ep204: flagged ATTRIB-UNRELIABLE. The RFduino dimensions are stated by the guest describing his own wearable, but the name was dropped since the claim is an ordinary component fact.",
+  "ep226: passage [29] labelled Dave Jones ('For that short amount of time, I think it's about 10') is the guest answering a host question about peak current; the name was dropped. Product and process claims about Punch Through are content-attributed to Colin Karpfinger, whose company and product the passages describe.",
+  "ep245: passages [32] and [33] carry the same text under Dave Jones and Akiba respectively; the content ('I wrote a book on it with Bob and Kevin') identifies the guest, so the mobile-connectivity judgement is attributed to Akiba.",
+  "ep248: passage [34] labelled Dave Jones contains the Backyard Brains guests' own words about their cockroach camera; the name was dropped and the claim left unattributed.",
+  "ep354: David Ledger and Dave Jones labels are interleaved across overlapping windows and are swapped in at least two places. The multimeter specification, FCC test-house and four-AA-cell claims are content-attributed to Dave Jones, whose product it is; the cross-platform app claim is content-attributed to David Ledger, who wrote the app. Android-version defects were left unattributed.",
+  "ep435: passage [70] labelled Dave Jones is plainly the guest's answer to a question about his own channel; content-attributed to Andreas Spiess.",
+  "ep442: flagged ATTRIB-UNRELIABLE; the Bluetooth history claim is generic, so the name was dropped.",
+  "ep469: passage [72] labelled Chris Gammell contains the guest's account of a specific chip-packaging job; the name was dropped rather than guessed.",
+  "ep516: the serial-over-BLE cost and the 'don't use BLE unless you have to' judgement are content-attributed to Dave Jones, whose multimeter product is the stated basis.",
+  "ep638: passage [81] labelled Aedan Cullen mixes the host's Google Glass anecdote with the guest's answer; the Nordic/Wi-Fi comparison claims were left unattributed.",
+  "ep698: flagged ATTRIB-UNRELIABLE, but the content is unambiguously the hardware-security guest describing his own reverse-engineering workflow, so the BLE enumeration and GATT-property claims are content-attributed to Matt Brown."
+ ],
+ "capped": false
+}

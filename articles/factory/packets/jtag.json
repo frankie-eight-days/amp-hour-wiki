@@ -1,0 +1,640 @@
+{
+ "concept": "jtag",
+ "spec": "knowledge-only-v4-cluster",
+ "scope": {
+  "concept": "jtag",
+  "census": "union",
+  "aliases": [
+   "jtag"
+  ],
+  "children": [
+   "arm-trustzone",
+   "computer-engineering",
+   "electromagnetic-fault-injection",
+   "fault-injection",
+   "firmware-reverse-engineering",
+   "jtagulator",
+   "penetration-testing",
+   "private-key",
+   "social-engineering",
+   "swd",
+   "threat-model",
+   "timing-attack",
+   "voltage-glitching"
+  ],
+  "neighbors": {},
+  "pins_pre_cap": 54,
+  "pins_final": 54,
+  "pins_by_depth": {
+   "explains": 49,
+   "opinion": 5
+  },
+  "pins_by_role": {
+   "core": 53,
+   "child": 1
+  },
+  "capped": false,
+  "passages_yielding_claims": 44,
+  "passages_killed": 10
+ },
+ "claims": [
+  {
+   "claim_text": "The standard itself is thinner than its reputation: it defines a signal layer and a state machine into which bits are shifted through a shift register, after which commands are run inside the device.",
+   "quote_verbatim": "JTAG is mostly just a signal layer definition",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "definition"
+  },
+  {
+   "claim_text": "What those commands mean is not part of it. The set the state machine interprets depends on the device attached, which is why a given debugger supports particular processor families rather than everything with the connector.",
+   "quote_verbatim": "the amount of commands that the state machine then interprets is depending on the device",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "For one large processor family the layers above are pinned down by a separate specification, the vendor's debug interface document, and that is what a probe has to implement to be useful.",
+   "quote_verbatim": "all that stuff is defined by the ARM debug interface version 5",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The transport is close to interchangeable at that level: whether the physical link is the four-wire interface or the two-wire one, the commands running over it are much the same.",
+   "quote_verbatim": "the commands that are running on top of that are pretty much the same",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "comparison"
+  },
+  {
+   "claim_text": "The two-wire variant generally uses a subset of the same pins, which is why boards often expose one or the other from the same footprint.",
+   "quote_verbatim": "there is singleware debug, which is, you know, it's usually a subset of the pins",
+   "speaker": "Chris Gammell",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The cleanest description of a debug probe is therefore a translator: it converts the debugger's remote protocol into commands on the wire.",
+   "quote_verbatim": "it is a GDB remote protocol to JTAG converter",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "definition"
+  },
+  {
+   "claim_text": "That translation is chattier than it looks. Every single step issues a stream of commands, because each watched variable must be located and read back out of memory over the link before it can be displayed.",
+   "quote_verbatim": "GDB itself actually is issuing a lot of commands with every step",
+   "speaker": "Chris Gammell",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Knowing that is what makes the interface clock rate a real decision rather than a default — you trade link speed against reliability depending on how much data you need to move.",
+   "quote_verbatim": "even like selected your JTAG speed, you might be more or less willing to slow it down",
+   "speaker": "Chris Gammell",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The mental model that clears up most of the confusion is that all of it is reading and writing registers, and that programming a part is only one of the things this allows.",
+   "quote_verbatim": "it's actually just like reading and writing registers in order to program a chip",
+   "speaker": "Dave Jones",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The debug block sits immediately beside the processor on the die, which is why access to it means control of the processor and the ability to read all of memory.",
+   "quote_verbatim": "You're, you're controlling the processor and you're able to read all the memory.",
+   "speaker": "Chris Gammell",
+   "episode": 383,
+   "episode_title": "An Interview with Scott Shawcroft",
+   "episode_url": "https://theamphour.com/383-an-interview-with-scott-shawcroft/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The name records the original purpose: the T is for test, not for programming.",
+   "quote_verbatim": "hence the name joint test and action group",
+   "speaker": "Dave Jones",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "vendor-history"
+  },
+  {
+   "claim_text": "Boundary scan is that purpose in practice — it reads the input and output pins of the device directly.",
+   "quote_verbatim": "Boundary scan allows you to actually read the, directly read all the IO pins.",
+   "speaker": "Chris Gammell",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "definition"
+  },
+  {
+   "claim_text": "For a thousand-pin ball grid array with no X-ray equipment available, that is how you confirm every ball actually landed on its pad and is not shorted to its neighbour.",
+   "quote_verbatim": "you can make sure that your thousand pin BGA, that every one of those pins is actually connected to the ball",
+   "speaker": "Dave Jones",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "It has limits: the scan operates far too slowly to exercise something like a high-speed memory bus.",
+   "quote_verbatim": "You're not going to control a DDR3 memory bus or something like that.",
+   "speaker": "Dave Jones",
+   "episode": 482,
+   "episode_title": "Shine A Light",
+   "episode_url": "https://theamphour.com/482-shine-a-light/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Designing test coverage onto the chain moves effort earlier — fewer physical test points are needed on the board — but the handling problem does not disappear, since jigs, contacts and board flow through production still have to be engineered.",
+   "quote_verbatim": "maybe you move it all to be on a JTAG chain, right? So maybe you don't need as many test points",
+   "speaker": "Chris Gammell",
+   "episode": 219,
+   "episode_title": "Get Smart About Automation - Caducous Cyborg Concerns",
+   "episode_url": "https://theamphour.com/219-get-smart-about-automation-caducous-cyborg-concerns/",
+   "depth_regraded": "explains",
+   "kind": "trade-off"
+  },
+  {
+   "claim_text": "Chaining across a panel lets programming run through a single breakout rather than a bed of contacts, which matters because a panel of ten or twenty boards can need hundreds of spring pins and one that fails to make contact fails the panel.",
+   "quote_verbatim": "pogo pins can be a pain in the ass because if you've got a big panel",
+   "speaker": "Dave Jones",
+   "episode": 174,
+   "episode_title": "Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles",
+   "episode_url": "https://theamphour.com/174-motors-and-upgrading-sinclairs/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "As a handoff boundary between a hardware contractor and a client's firmware team, it is a natural stopping point: check the supply rails, confirm the parts can be scanned, and pass the boards on.",
+   "quote_verbatim": "we'll just test the voltage rails test that we can JTAG scan the chips",
+   "speaker": "Dave Jones",
+   "episode": 614,
+   "episode_title": "Reunion Impedance Matching and 2023 Predictions",
+   "episode_url": "https://theamphour.com/614-reunion-impedance-matching-and-2023-predictions/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Nearly every low-cost debugger, commercial or hobbyist, is built around the same dual-channel USB interface chip, so the only real difference between them is the buffer logic in front that handles voltage translation.",
+   "quote_verbatim": "the only difference amongst manufacturers' programmers that use this chip is the buffer logic on the front",
+   "speaker": "Ian Lesnet",
+   "episode": 125,
+   "episode_title": "An Interview with Ian Lesnet - Bus Buccaneer Builder",
+   "episode_url": "https://theamphour.com/the-amp-hour-125-bus-buccaneer-builder/",
+   "depth_regraded": "explains",
+   "kind": "vendor-history"
+  },
+  {
+   "claim_text": "Making that buffer logic programmable turns one board into many: putting a programmable logic device in the buffer position and wiring its own debug connection to the interface chip's second channel means an entirely new programmer personality can be uploaded over USB.",
+   "quote_verbatim": "you can, over USB, upload an entirely new programmer logic into the CPLD on the fly",
+   "speaker": "Ian Lesnet",
+   "episode": 125,
+   "episode_title": "An Interview with Ian Lesnet - Bus Buccaneer Builder",
+   "episode_url": "https://theamphour.com/the-amp-hour-125-bus-buccaneer-builder/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The same programmable part earns its place a second time by participating in the board's self-test.",
+   "quote_verbatim": "that CPLD is able to help out with the self-test",
+   "speaker": "Ian Lesnet",
+   "episode": 125,
+   "episode_title": "An Interview with Ian Lesnet - Bus Buccaneer Builder",
+   "episode_url": "https://theamphour.com/the-amp-hour-125-bus-buccaneer-builder/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A product whose behaviour lives in the host software and not the hardware is also the cheapest to support, which is a design argument as much as a business one.",
+   "quote_verbatim": "the one that requires the least amount of support",
+   "speaker": "Ian Lesnet",
+   "episode": 125,
+   "episode_title": "An Interview with Ian Lesnet - Bus Buccaneer Builder",
+   "episode_url": "https://theamphour.com/the-amp-hour-125-bus-buccaneer-builder/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "A well-equipped probe does more than talk to the core: powering the target from the interface's reference pin, driven by a command from the debugger, removes a separate supply from the bench.",
+   "quote_verbatim": "it will power your target using the power reference pin of the JTAG interface",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Folding a serial adapter into the same board means one plug gives both debug control and a console, which is more useful in practice than it sounds.",
+   "quote_verbatim": "you can just plug it in and have serial while you also have JTAG or SWD",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A bootloader that works over this interface can avoid taxing the target: a small separate chip loads a snippet of code into the target's RAM to execute, so no program memory is consumed and there is no shared space for the application and the loader to corrupt.",
+   "quote_verbatim": "it doesn't occupy any memory on the target chip",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Whether the interface is brought out at all decides which boards can be used this way; a popular development board's omission of it was reason enough to design a different one.",
+   "quote_verbatim": "The problem is it doesn't have the JTAC interface exposed.",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Semihosting inverts the usual direction of debug: the application raises a hardware exception, the debugger catches it and performs the operation on the host, so target code can print, open and read files that exist on the development machine.",
+   "quote_verbatim": "there is so-called semi-hosting",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "That is the practical route to getting bulk test data into a device with no storage card and no other interface, when the debug link is already present for flashing firmware.",
+   "quote_verbatim": "you don't have an SD card, you don't have an interface, but you have JTAG",
+   "speaker": "Piotr Esden-Tempski",
+   "episode": 356,
+   "episode_title": "An Interview with Piotr Esden-Tempski",
+   "episode_url": "https://theamphour.com/356-an-interview-with-piotr-esden-tempski/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Acquiring a real debugger is the step past a beginner platform: the processor underneath is capable, and the debugger is what lets you use the space and speed the friendly environment was hiding.",
+   "quote_verbatim": "I'm going to buy a JTAG. And now you've got a platform to do really cool stuff.",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Two probes can debug two targets simultaneously without virtual machines, though pairing two identical processors is usually the wrong architecture when a faster single one would do.",
+   "quote_verbatim": "you can dual debug using two JTAG modules",
+   "speaker": "Elecia White",
+   "episode": 187,
+   "episode_title": "An Interview with Elecia White - Wirewove Worshipping Wookieist?",
+   "episode_url": "https://theamphour.com/187-an-interview-with-elecia-white-wirewove-worshipping-wookieist/",
+   "depth_regraded": "explains",
+   "kind": "trade-off"
+  },
+  {
+   "claim_text": "Documentation for how to attach a debugger belongs in the source tree rather than in posts elsewhere, because when the implementation changes the external article goes stale while remaining the first thing people find.",
+   "quote_verbatim": "then you essentially have an old article, which isn't up to date anymore, but which still turns up",
+   "speaker": "Jeroen Domburg",
+   "episode": 359,
+   "episode_title": "An Interview with Jeroen Domburg (Sprite_tm)",
+   "episode_url": "https://theamphour.com/359-an-interview-with-jeroen-domburg-sprite_tm/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A development board that puts a dual-channel USB interface chip on board and wires one channel as the programmer removes the need to buy the vendor's own programming pod.",
+   "quote_verbatim": "one of the channels is connected as, uh, the JTAG programmer",
+   "speaker": "Dmitry Nedospasov",
+   "episode": 303,
+   "episode_title": "An Interview with Dmitry Nedospasov",
+   "episode_url": "https://theamphour.com/303-an-interview-with-dmitry-nedospasov/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Building the programmer itself, a small microcontroller can beat programmable logic on cost and part count: one needs only a regulator and decoupling capacitors, and its clock can be trimmed on the fly from the synchronisation packets on the USB wire.",
+   "quote_verbatim": "this particular PIC microcontroller can adjust its clock based on the synchronization packets coming over the USB wires",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Programmable logic loses that comparison because the small parts lack integrated regulators and cannot adjust a clock finely enough to track a host, so an external oscillator is required.",
+   "quote_verbatim": "you don't have a fine enough adjustment of the clock to be able to do something like that",
+   "speaker": "Luke Valenty",
+   "episode": 395,
+   "episode_title": "An Interview with Luke Valenty",
+   "episode_url": "https://theamphour.com/395-an-interview-with-luke-valenty/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Testing a programmable logic device is not a matter of powering a few pins and attaching a probe — it effectively needs the whole board, with rails brought up in the right order and substantial current on the low-voltage core supply.",
+   "quote_verbatim": "you can't just power a few pins and throw a JTAG on there",
+   "speaker": "Chris Gammell",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "On parts that combine processors with fabric the boot order inverts the usual expectation: the processors come up first and are what bring up the fabric, so debug access to the processor side comes first and everything else follows from there.",
+   "quote_verbatim": "So you get JTAG access to the ARM side first, and boot up the ARM processors",
+   "speaker": "Dave Jones",
+   "episode": 469,
+   "episode_title": "An Interview with Craig J Bishop",
+   "episode_url": "https://theamphour.com/469-an-interview-with-craig-j-bishop/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Silicon cannot be breakpointed after fabrication, so the observability has to be designed in beforehand — which in one project meant spending the last two weeks before tape-out building the on-chip debug infrastructure.",
+   "quote_verbatim": "You can't put breakpoints there. It's crystal. It's done.",
+   "speaker": "Julia Desmazes",
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "depth_regraded": "explains",
+   "kind": "constraint"
+  },
+  {
+   "claim_text": "Building that interface yourself rather than dropping in an existing open core is defensible as a learning strategy, and it pays off when the design later needs a capability the existing hardware does not have.",
+   "quote_verbatim": "that's why I'm going to rebuild it myself in order to fully understand that",
+   "speaker": "Julia Desmazes",
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "It also exposes what you did not know: a design that simulated correctly against its own test benches failed the moment a real commercial probe was connected, which is the point at which the wrong assumption becomes visible.",
+   "quote_verbatim": "I plugged the actual JTAG probe there and it doesn't work",
+   "speaker": "Julia Desmazes",
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Once the specification is genuinely understood, custom features can be added to the interface for whatever the particular hardware needs, and debugging becomes an iteration on the debug interface itself.",
+   "quote_verbatim": "I know that I can add custom features to JTAG which are going to be useful for debugging my weird hardware",
+   "speaker": "Julia Desmazes",
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Verifying such a block in programmable logic means instantiating both the design and the interface, routing the interface out to spare pins, and driving it with a second, known-good device to confirm the data is flowing.",
+   "quote_verbatim": "I stuck a second JTAG",
+   "speaker": "Julia Desmazes",
+   "episode": 721,
+   "episode_title": "Chip Design for Fun (and Waffles) with Julia Desmazes",
+   "episode_url": "https://theamphour.com/721-chip-design-for-fun-and-waffles-with-julia-desmazes/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The interface can also rescue a finished part: a test pin exposed on a chip allowed a flip-flop that powered up in a random state — a fault that had not appeared in simulation — to be forced before the master reset, saving the mask set.",
+   "quote_verbatim": "I just toggled the test pin before my master reset",
+   "speaker": "Jeri Ellsworth",
+   "episode": 52,
+   "episode_title": "An Interview with Jeri Ellsworth - Carnassial Chip Chemicals",
+   "episode_url": "https://theamphour.com/the-amp-hour-52-carnassial-chip-chemicals/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "As an attack path this is well understood: debug control of the processor is the whole point of the interface, and a small board replaying a stored command file can be plugged in and left to run.",
+   "quote_verbatim": "You hook it up, you get debug control over a CPU.",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The command file itself is a standard artefact — a serial vector format file is just a series of interface commands — and replaying one can modify memory to change something as consequential as a root password.",
+   "quote_verbatim": "that series of JTAG commands could modify memory to change a root password",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "The physical opening is often an accessory slot: removing an expansion module from an industrial controller exposed a ten-pin header, and a small board plugged in there took power from the connector, waited, halted the processor and wrote a pin to change the controller's output.",
+   "quote_verbatim": "it waits five seconds, it halts the CPU and writes to a GPIO to turn off your output",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Nothing about that required firmware analysis. A sample of the same model bought openly identifies the processor and base firmware, and tracing the board maps each controlled pin to a physical output.",
+   "quote_verbatim": "I can reverse engineer the board and see where the GPIOs are connected",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "Defensive practice has moved in response: within a few years vendors stopped labelling debug and serial test points, disabled the consoles and locked the interface on shipped devices.",
+   "quote_verbatim": "vendors have stopped obviously marking JTAG and UART test points",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Integration does more than any of those measures — as functionality collapses into one or two pieces of silicon with no test points, board-level access ceases to be the route in and attacks have to move to the silicon itself.",
+   "quote_verbatim": "so much of the functionality is integrated into a single piece of silicon",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The equilibrium argument follows from that: attention moves to whatever is cheapest to attack, so improving software pushes effort towards hardware, improving hardware pushes it towards silicon, and beyond that towards people.",
+   "quote_verbatim": "anybody who really wants to get into a system is going to look for the cheapest spot",
+   "speaker": "Joe Fitzpatrick",
+   "episode": 346,
+   "episode_title": "An Interview with Joe FitzPatrick",
+   "episode_url": "https://theamphour.com/346-an-interview-with-joe-fitzpatrick/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The common glitching target is the boot sequence: the device reads a configuration fuse and, depending on it, enables the debug lock, so disturbing the part at exactly that moment can skip the step and the device comes up unlocked.",
+   "quote_verbatim": "if like at the right time you skip over, turning on the J tag lock, it just comes up on lock",
+   "speaker": "Chris Gammell",
+   "episode": 552,
+   "episode_title": "Shouting at chips with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/552-shouting-at-chips-with-colin-oflynn/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Once that has happened the rest is undramatic — with debug access the memory can simply be read out.",
+   "quote_verbatim": "from having J tag access, you can just go and peek and poke at memory and just pull it all out",
+   "speaker": "Chris Gammell",
+   "episode": 552,
+   "episode_title": "Shouting at chips with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/552-shouting-at-chips-with-colin-oflynn/",
+   "depth_regraded": "explains",
+   "kind": "procedure"
+  },
+  {
+   "claim_text": "The port is also a side-channel measurement point. Because propagation delay through a device varies with supply voltage, timing jitter observed through the debug interface yields an accurate measure of the device's power consumption, and from that, information about secrets.",
+   "quote_verbatim": "the time delay varies with voltage, which means you can actually get a really accurate measurement of power",
+   "speaker": "Colin O'Flynn",
+   "episode": 693,
+   "episode_title": "Small Scale Electronics Manufacturing with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/693-small-scale-electronics-manufacturing-with-colin-oflynn/",
+   "depth_regraded": "explains",
+   "kind": "failure-mode"
+  },
+  {
+   "claim_text": "Published security frameworks make this checkable rather than speculative: the lower levels are self-assessable checklists containing concrete items such as whether the debug port is locked, with worked threat models for particular product categories, while the highest level requires actual side-channel and fault-injection testing.",
+   "quote_verbatim": "the highest level involved actual side channel and fault injection testing",
+   "speaker": "Colin O'Flynn",
+   "episode": 693,
+   "episode_title": "Small Scale Electronics Manufacturing with Colin O'Flynn",
+   "episode_url": "https://theamphour.com/693-small-scale-electronics-manufacturing-with-colin-oflynn/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Leaving the port open after programming is a named item on the standard weakness lists, and those lists are a reasonable starting point — the difficulty is never knowing what to do, it is implementing it.",
+   "quote_verbatim": "leaving your JTAG port just open",
+   "speaker": "Joe Grand",
+   "episode": 575,
+   "episode_title": "New Life Skills with Joe Grand",
+   "episode_url": "https://theamphour.com/575-new-life-skills-with-joe-grand/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The gap between seeing test points on a board and using them is filled by a tool that identifies which unknown pins on an unpopulated connector form a debug interface, so identification and exploitation become two separate, tractable steps.",
+   "quote_verbatim": "a tool to help you identify the function of unknown test points",
+   "speaker": "Joe Grand",
+   "episode": 575,
+   "episode_title": "New Life Skills with Joe Grand",
+   "episode_url": "https://theamphour.com/575-new-life-skills-with-joe-grand/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "A further scan correlates each physical pin to its bit position within the boundary scan register, which is a probing aid for attackers and an engineering aid for everyone else.",
+   "quote_verbatim": "help you identify the physical pins on the chip and how they correspond to the actual boundary scan register",
+   "speaker": "Joe Grand",
+   "episode": 575,
+   "episode_title": "New Life Skills with Joe Grand",
+   "episode_url": "https://theamphour.com/575-new-life-skills-with-joe-grand/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "The tool deliberately stops there: it can drive an open-source debugger once an interface is found, but slowly, and the intended workflow is to switch to a proper probe afterwards.",
+   "quote_verbatim": "once you find the interface, you'll want to end up using proper, faster, better tools",
+   "speaker": "Joe Grand",
+   "episode": 575,
+   "episode_title": "New Life Skills with Joe Grand",
+   "episode_url": "https://theamphour.com/575-new-life-skills-with-joe-grand/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  },
+  {
+   "claim_text": "Choosing an unusual microcontroller for an open project has a lasting cost in outside contributions, whatever its technical merits.",
+   "quote_verbatim": "I think I'd have more community contributions if it wasn't such an arcane kind of thing",
+   "speaker": "Joe Grand",
+   "episode": 575,
+   "episode_title": "New Life Skills with Joe Grand",
+   "episode_url": "https://theamphour.com/575-new-life-skills-with-joe-grand/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "The skills involved transfer directly back into ordinary engineering: dumping firmware, reading hex, finding the debug pins and probing around are the same motions used to debug one's own product.",
+   "quote_verbatim": "a lot of the skills to use in reverse engineering are also very useful for debugging",
+   "speaker": "Chris Gammell",
+   "episode": 363,
+   "episode_title": "An interview with Alvaro and Jen from the URE Podcast",
+   "episode_url": "https://theamphour.com/363-an-interview-with-alvaro-and-jen-from-the-ure-podcast/",
+   "depth_regraded": "explains",
+   "kind": "practitioner-judgment"
+  },
+  {
+   "claim_text": "For a system that will never be accessible again, the temptation to attach a debugger during bring-up is a trap. Anything learned that way is unavailable in flight, so each early problem should instead be answered by getting the relevant data into the telemetry stream already being consumed.",
+   "quote_verbatim": "figure out how you can get that data in the sort of data stream that you're already consuming",
+   "speaker": "Charles Aylward",
+   "episode": 584,
+   "episode_title": "Software for Rockets with Charles Aylward",
+   "episode_url": "https://theamphour.com/584-software-for-rockets-with-charles-aylward/",
+   "depth_regraded": "explains",
+   "kind": "practice"
+  }
+ ],
+ "attribution_notes": [
+  "ep 346: attribution flagged unreliable. The attack-path claims are content-attributed to the guest describing his own controller and replay-device work.",
+  "ep 575: attribution flagged unreliable. The tool claims are content-attributed to the guest who designed and sells the pin-identification tool being described.",
+  "ep 584: attribution flagged unreliable. The bring-up-telemetry claim is content-attributed to the guest whose launch-vehicle software work the passage describes.",
+  "ep 125: the bundle labels the speaker as an unresolved diarisation token; the debugger-design claims are content-attributed to the guest whose projects are described.",
+  "One passage in the bundle carries no episode identifier and was excluded."
+ ],
+ "capped": false
+}
