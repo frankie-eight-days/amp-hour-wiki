@@ -70,7 +70,7 @@ and follows it all the way down to the audio.</p>
     <span class="hb-scale">486 mentions of this concept</span>
     <span class="hb-gauge"><i style="width:38.2%"></i></span>
   </div>
-  <div class="hb-layer-body"><div class="hb-grid2"><div><div class="hb-lbl">surface forms folded into one concept</div><div class="hb-fold"><code class="hb-alias">adc</code><code class="hb-alias">adcs</code><code class="hb-alias">analog-to-digital-converter</code><code class="hb-alias">custom-analog-to-digital-converter</code></div></div><div><div class="hb-lbl">this concept across the corpus</div><div class="hb-stat">211 episodes &middot; 486 mentions &middot; 239 explanatory</div></div></div><div class="hb-note">Roughly 197,000 mentions were logged across the whole corpus, then folded down a 90,150-entry alias table so that &ldquo;ADC&rdquo;, &ldquo;A to D&rdquo; and &ldquo;analog to digital&rdquo; all land on one concept.</div></div>
+  <div class="hb-layer-body"><div class="hb-grid2"><div><div class="hb-lbl">surface forms folded into one concept</div><div class="hb-fold"><code class="hb-alias">adc</code><code class="hb-alias">adcs</code><code class="hb-alias">analog-to-digital-converter</code><code class="hb-alias">custom-analog-to-digital-converter</code></div></div><div><div class="hb-lbl">this concept across the corpus</div><div class="hb-stat">211 episodes &middot; 486 mentions &middot; 239 explanatory</div></div></div><div class="hb-note">270,979 mentions were logged across the whole corpus, then folded down a 90,150-entry alias table so that &ldquo;ADC&rdquo;, &ldquo;A to D&rdquo; and &ldquo;analog to digital&rdquo; all land on one concept.</div></div>
 </section><section class="hb-layer" data-layer="01">
   <div class="hb-layer-head">
     <span class="hb-num">01</span>
@@ -147,7 +147,7 @@ and follows it all the way down to the audio.</p>
     <span class="hb-scale">121 mentions of this concept</span>
     <span class="hb-gauge"><i style="width:29.6%"></i></span>
   </div>
-  <div class="hb-layer-body"><div class="hb-grid2"><div><div class="hb-lbl">surface forms folded into one concept</div><div class="hb-fold"><code class="hb-alias">electric-grid</code><code class="hb-alias">electrical-grid</code><code class="hb-alias">electricity-grid</code><code class="hb-alias">power-grid</code></div></div><div><div class="hb-lbl">this concept across the corpus</div><div class="hb-stat">48 episodes &middot; 121 mentions &middot; 54 explanatory</div></div></div><div class="hb-repair"><span class="hb-rx">Chris Gammell</span><span class="hb-arrow">&rarr;</span><span class="hb-rok">John Davis</span><span class="hb-note hb-inline">the transcript labelled this turn with the wrong voice; the speaker map repaired it</span></div><div class="hb-note">Roughly 197,000 mentions were logged across the whole corpus, then folded down a 90,150-entry alias table so that &ldquo;ADC&rdquo;, &ldquo;A to D&rdquo; and &ldquo;analog to digital&rdquo; all land on one concept.</div></div>
+  <div class="hb-layer-body"><div class="hb-grid2"><div><div class="hb-lbl">surface forms folded into one concept</div><div class="hb-fold"><code class="hb-alias">electric-grid</code><code class="hb-alias">electrical-grid</code><code class="hb-alias">electricity-grid</code><code class="hb-alias">power-grid</code></div></div><div><div class="hb-lbl">this concept across the corpus</div><div class="hb-stat">48 episodes &middot; 121 mentions &middot; 54 explanatory</div></div></div><div class="hb-repair"><span class="hb-rx">Chris Gammell</span><span class="hb-arrow">&rarr;</span><span class="hb-rok">John Davis</span><span class="hb-note hb-inline">the transcript labelled this turn with the wrong voice; the speaker map repaired it</span></div><div class="hb-note">270,979 mentions were logged across the whole corpus, then folded down a 90,150-entry alias table so that &ldquo;ADC&rdquo;, &ldquo;A to D&rdquo; and &ldquo;analog to digital&rdquo; all land on one concept.</div></div>
 </section><section class="hb-layer" data-layer="01">
   <div class="hb-layer-head">
     <span class="hb-num">01</span>
@@ -224,7 +224,7 @@ and follows it all the way down to the audio.</p>
     <span class="hb-scale">194 mentions of this concept</span>
     <span class="hb-gauge"><i style="width:32.5%"></i></span>
   </div>
-  <div class="hb-layer-body"><div class="hb-grid2"><div><div class="hb-lbl">surface forms folded into one concept</div><div class="hb-fold"><code class="hb-alias">reverse-engineer</code><code class="hb-alias">reverse-engineering</code></div></div><div><div class="hb-lbl">this concept across the corpus</div><div class="hb-stat">107 episodes &middot; 194 mentions &middot; 102 explanatory</div></div></div><div class="hb-repair"><span class="hb-rx">Chris Gammell</span><span class="hb-arrow">&rarr;</span><span class="hb-rok">Clint Cole</span><span class="hb-note hb-inline">the transcript labelled this turn with the wrong voice; the speaker map repaired it</span></div><div class="hb-note">Roughly 197,000 mentions were logged across the whole corpus, then folded down a 90,150-entry alias table so that &ldquo;ADC&rdquo;, &ldquo;A to D&rdquo; and &ldquo;analog to digital&rdquo; all land on one concept.</div></div>
+  <div class="hb-layer-body"><div class="hb-grid2"><div><div class="hb-lbl">surface forms folded into one concept</div><div class="hb-fold"><code class="hb-alias">reverse-engineer</code><code class="hb-alias">reverse-engineering</code></div></div><div><div class="hb-lbl">this concept across the corpus</div><div class="hb-stat">107 episodes &middot; 194 mentions &middot; 102 explanatory</div></div></div><div class="hb-repair"><span class="hb-rx">Chris Gammell</span><span class="hb-arrow">&rarr;</span><span class="hb-rok">Clint Cole</span><span class="hb-note hb-inline">the transcript labelled this turn with the wrong voice; the speaker map repaired it</span></div><div class="hb-note">270,979 mentions were logged across the whole corpus, then folded down a 90,150-entry alias table so that &ldquo;ADC&rdquo;, &ldquo;A to D&rdquo; and &ldquo;analog to digital&rdquo; all land on one concept.</div></div>
 </section><section class="hb-layer" data-layer="01">
   <div class="hb-layer-head">
     <span class="hb-num">01</span>
@@ -266,7 +266,7 @@ claims cannot be traced does not build.
 
 ### What survives each stage
 
-<div class="hb-fn"><div class="hb-fn-lbl">Words of raw transcript</div><div class="hb-fn-bar"><i style="width:100.0%"></i><span>11,000,000</span></div><div class="hb-fn-sub">719 episodes, machine-transcribed</div></div><div class="hb-fn"><div class="hb-fn-lbl">Concept mentions logged</div><div class="hb-fn-bar"><i style="width:75.2%"></i><span>197,000</span></div><div class="hb-fn-sub">the census pass</div></div><div class="hb-fn"><div class="hb-fn-lbl">Verified claims extracted</div><div class="hb-fn-bar"><i style="width:58.5%"></i><span>13,225</span></div><div class="hb-fn-sub">each pinned to a byte-checked quote</div></div><div class="hb-fn"><div class="hb-fn-lbl">Episode citations published</div><div class="hb-fn-bar"><i style="width:54.3%"></i><span>6,625</span></div><div class="hb-fn-sub">across every live article</div></div><div class="hb-fn"><div class="hb-fn-lbl">Articles live</div><div class="hb-fn-bar"><i style="width:31.0%"></i><span>153</span></div><div class="hb-fn-sub">of 412 planned</div></div>
+<div class="hb-fn"><div class="hb-fn-lbl">Words of raw transcript</div><div class="hb-fn-bar"><i style="width:100.0%"></i><span>11,000,000</span></div><div class="hb-fn-sub">719 episodes, machine-transcribed</div></div><div class="hb-fn"><div class="hb-fn-lbl">Concept mentions logged</div><div class="hb-fn-bar"><i style="width:77.2%"></i><span>270,979</span></div><div class="hb-fn-sub">the census pass</div></div><div class="hb-fn"><div class="hb-fn-lbl">Verified claims extracted</div><div class="hb-fn-bar"><i style="width:58.5%"></i><span>13,225</span></div><div class="hb-fn-sub">each pinned to a byte-checked quote</div></div><div class="hb-fn"><div class="hb-fn-lbl">Episode citations published</div><div class="hb-fn-bar"><i style="width:54.3%"></i><span>6,625</span></div><div class="hb-fn-sub">across every live article</div></div><div class="hb-fn"><div class="hb-fn-lbl">Articles live</div><div class="hb-fn-bar"><i style="width:31.0%"></i><span>153</span></div><div class="hb-fn-sub">of 412 planned</div></div>
 
 </div></div>
 
@@ -296,7 +296,7 @@ the one the machinery cannot catch by itself.
 |---|---|
 | Episodes transcribed | 719 |
 | Words of transcript | ~11 million |
-| Concept mentions in the census | ~197,000 |
+| Concept mentions in the census | 270,979 |
 | Alias table entries | 90,150 |
 | Concept graph | 4,016 nodes, 12,776 edges |
 | Verified claims extracted | 13,225 |
@@ -348,7 +348,8 @@ their Creative Commons-licensed show; go listen to
   background: var(--lightgray); }
 
 /* --- pinned sentence --- */
-.hb-pin { position: sticky; top: 44px; z-index: 20; background: var(--light);
+.hb-pin { position: sticky; top: var(--amp-nav, 43px); z-index: 20;
+  background: var(--light);
   border-bottom: 1px solid var(--lightgray); padding: 12px 14px;
   margin-top: 18px; }
 .hb-pin-lbl { font-family: var(--codeFont); font-size: 0.62rem; letter-spacing: .1em;

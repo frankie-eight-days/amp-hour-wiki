@@ -10,17 +10,37 @@ PUB = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "site/public")
 
 NAV = """<nav class="amp-topbar"><a class="amp-brand" href="/">The Amp Hour <span>Wiki</span></a><span class="amp-links"><a href="/topics">Topics</a><a href="/all">All articles</a><a href="/explore">Graph</a><a href="/contribute">Contribute</a></span></nav>
 <style>
+:root { --amp-nav: 43px; }
 .amp-topbar { position: sticky; top: 0; z-index: 100; display: flex;
-  justify-content: space-between; align-items: center; padding: 9px 22px;
+  justify-content: space-between; align-items: center; padding: 0 22px;
+  height: var(--amp-nav); box-sizing: border-box;
   border-bottom: 3px solid #c94628; background: var(--light);
   font-family: Verdana, sans-serif; font-size: 12px; letter-spacing: .08em;
   text-transform: uppercase; }
+/* Quartz's rails are sticky at top:0, which parks them under this bar and
+   permanently clips their headings. Offset every sticky thing by the bar. */
+@media (min-width: 800px) {
+  #quartz-body > .sidebar { top: var(--amp-nav) !important;
+    height: calc(100vh - var(--amp-nav)) !important; }
+}
+html { scroll-padding-top: calc(var(--amp-nav) + 12px); }
 .amp-brand { font-weight: bold; color: var(--dark) !important;
   text-decoration: none !important; }
 .amp-brand span { color: #c94628; }
 .amp-links a { color: var(--dark) !important; text-decoration: none !important;
   margin-left: 18px; font-weight: normal; }
 .amp-links a:hover { color: #c94628 !important; }
+/* On a phone the brand + four links exceed the viewport, which widens the
+   whole document and clips every page. Wrap to two centred rows instead. */
+@media (max-width: 799px) {
+  .amp-topbar { height: auto; min-height: 0; flex-wrap: wrap; gap: 3px 0;
+    justify-content: center; padding: 6px 10px; font-size: 10px;
+    letter-spacing: .04em; }
+  .amp-brand { flex: 1 0 100%; text-align: center; }
+  .amp-links { display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 0 14px; }
+  .amp-links a { margin-left: 0; }
+}
 #amp-report { position: absolute; z-index: 200; display: none;
   background: #16140d; color: #fbf7ee; border: none; border-radius: 4px;
   padding: 6px 12px; font: bold 11px Verdana, sans-serif; letter-spacing: .06em;

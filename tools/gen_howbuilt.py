@@ -44,6 +44,21 @@ TRACES = [
 E = html.escape
 
 
+def count_mentions():
+    """Total census mentions in the union layer — the layer build_bundles.py
+    reads, and so the honest corpus figure. (The earlier luna-v3 pass on its
+    own logged 197,424; quoting that number understates the corpus.)"""
+    total = 0
+    for f in (ROOT / "census" / "union").glob("*.json"):
+        d = json.load(open(f))
+        m = d.get("mentions") if isinstance(d, dict) else d
+        total += len(m) if m else 0
+    return total
+
+
+MENTIONS = count_mentions()
+
+
 def mark(text, quote):
     """Escape text, wrapping the quote occurrence in a <mark>."""
     i = text.find(quote)
@@ -264,7 +279,7 @@ def render_trace(t, idx):
         f'{st.get("mentions", 0):,} mentions &middot; '
         f'{st.get("explains", 0):,} explanatory</div></div></div>'
         f'{repair}'
-        f'<div class="hb-note">Roughly 197,000 mentions were logged across the '
+        f'<div class="hb-note">{MENTIONS:,} mentions were logged across the '
         f'whole corpus, then folded down a 90,150-entry alias table so that '
         f'&ldquo;ADC&rdquo;, &ldquo;A to D&rdquo; and &ldquo;analog to digital'
         f'&rdquo; all land on one concept.</div>')
@@ -337,7 +352,7 @@ def main():
     graph = json.load(open(ROOT / "graph/graph.json"))
 
     funnel = [("Words of raw transcript", 11_000_000, "719 episodes, machine-transcribed"),
-              ("Concept mentions logged", 197_000, "the census pass"),
+              ("Concept mentions logged", MENTIONS, "the census pass"),
               ("Verified claims extracted", n_claims, "each pinned to a byte-checked quote"),
               ("Episode citations published", n_cites, "across every live article"),
               ("Articles live", n_articles, "of 412 planned")]
@@ -351,6 +366,7 @@ def main():
     page = PAGE.format(
         tabs=tabs, traces=body, funnel=funnel_html,
         n_articles=n_articles, n_claims=f"{n_claims:,}", n_cites=f"{n_cites:,}",
+        n_mentions=f"{MENTIONS:,}",
         nodes=f"{len(graph['nodes']):,}", edges=f"{len(graph['edges']):,}",
         css=CSS, js=JS)
     OUT.parent.mkdir(parents=True, exist_ok=True)
@@ -393,7 +409,8 @@ CSS = """
   background: var(--lightgray); }
 
 /* --- pinned sentence --- */
-.hb-pin { position: sticky; top: 44px; z-index: 20; background: var(--light);
+.hb-pin { position: sticky; top: var(--amp-nav, 43px); z-index: 20;
+  background: var(--light);
   border-bottom: 1px solid var(--lightgray); padding: 12px 14px;
   margin-top: 18px; }
 .hb-pin-lbl { font-family: var(--codeFont); font-size: 0.62rem; letter-spacing: .1em;
@@ -697,7 +714,7 @@ the one the machinery cannot catch by itself.
 |---|---|
 | Episodes transcribed | 719 |
 | Words of transcript | ~11 million |
-| Concept mentions in the census | ~197,000 |
+| Concept mentions in the census | {n_mentions} |
 | Alias table entries | 90,150 |
 | Concept graph | {nodes} nodes, {edges} edges |
 | Verified claims extracted | {n_claims} |

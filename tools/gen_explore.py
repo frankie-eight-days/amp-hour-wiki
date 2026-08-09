@@ -15,7 +15,10 @@ s = SRC.read_text()
 # the artifact host used to supply the doctype; standalone we must, or the
 # page renders in quirks mode (collapsed canvas height, blurry backing store)
 if not s.lstrip().lower().startswith("<!doctype"):
-    s = "<!doctype html>\n<html lang=\"en\">\n" + s + "\n</html>"
+    s = ("<!doctype html>\n<html lang=\"en\">\n<head>"
+         "<meta charset=\"utf-8\">"
+         "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+         "</head>\n" + s + "\n</html>")
 
 # ---- palette swap: neutral tokens -> Amp Hour tokens (light + dark) ----
 LIGHT = {
