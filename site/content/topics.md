@@ -7,7 +7,7 @@ title: Browse the wiki
 <p style="font-size: 1.05rem; max-width: 34rem; margin: 0 auto;">Sixteen years of <strong><a href="https://theamphour.com">The Amp Hour</a></strong> &mdash; the rules of thumb, failure modes, and real numbers that never reach a datasheet &mdash; distilled into cited, browsable articles.</p>
 </div>
 
-<div style="display:flex; justify-content:center; gap:2.2rem; flex-wrap:wrap; text-align:center; margin: 1rem 0 1.4rem; font-variant-numeric: tabular-nums;"><div><strong style="font-size:1.5rem;">209</strong><br>articles live</div><div><strong style="font-size:1.5rem;">8,676</strong><br>episode citations</div><div><strong style="font-size:1.5rem;">719</strong><br>episodes indexed</div><div><strong style="font-size:1.5rem;">412</strong><br>articles planned</div></div>
+<div style="display:flex; justify-content:center; gap:2.2rem; flex-wrap:wrap; text-align:center; margin: 1rem 0 1.4rem; font-variant-numeric: tabular-nums;"><div><strong style="font-size:1.5rem;">208</strong><br>articles live</div><div><strong style="font-size:1.5rem;">8,633</strong><br>episode citations</div><div><strong style="font-size:1.5rem;">719</strong><br>episodes indexed</div><div><strong style="font-size:1.5rem;">412</strong><br>articles planned</div></div>
 
 <p style="text-align:center;"><strong><a href="./explore">Explore the concept graph &rarr;</a></strong> &nbsp;·&nbsp; <a href="./all">All articles A&ndash;Z</a> &nbsp;·&nbsp; search with <kbd>⌘K</kbd></p>
 
@@ -32,7 +32,6 @@ Experiential subjects that the frequency ranking is structurally blind to &mdash
 <a class="amp-themecard" href="./space-electronics"><strong>Space Electronics</strong><span>Radiation tolerance, version-locked toolchains, 20-year-old silicon, test-like-you-fly</span></a>
 <a class="amp-themecard" href="./broadcast-and-big-installs"><strong>Stage, Broadcast, and Giant Installations</strong><span>Mike Harrison territory: very big, very public electronics and its odd physics</span></a>
 <a class="amp-themecard" href="./the-teardown-tradition"><strong>The Teardown Tradition</strong><span>What teardowns teach: cost-down archaeology, how professionals read a board, the EEVblog tradition</span></a>
-<a class="amp-themecard" href="./working-with-chinese-manufacturers"><strong>Working with Chinese Manufacturers</strong><span>Quoting, golden samples, quality fade, tooling ownership, communication rituals, when to fly out</span></a>
 </div>
 
 ## Topics
