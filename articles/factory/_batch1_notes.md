@@ -87,3 +87,9 @@
   after launching each delegate (relative paths silently fail — cwd resets
   between bash calls). Event-driven, costs nothing idle. Mandate in batch-3
   briefs.
+- **Bundle join FIXED (2026-08-09 morning)**: 120 null-episode passages
+  backfilled across 79 bundles from transcript frontmatter (eps 706, 591, et
+  al.); ham-spam-thank-you-maam resolved to ep 41 from the live page. Three
+  early episodes remain unnumbered anywhere (chips-and-fabs-and-garages,
+  quassating-quadcopter-quantophrenia, the-chinese-clairvoyancy) — their
+  passages stay uncitable; extractors drop them correctly.

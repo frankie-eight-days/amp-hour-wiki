@@ -20,7 +20,8 @@ import argparse, json, os, re, sys, time
 
 RECEPTION = re.compile(
     r"\bcame around\b|\badoption\b|\bdismissed\b|\bhosts disagreed\b|\breception\b|"
-    r"\bdivided\b|\bwidely praised\b|\bcriticis|\bcriticiz|\bwas well received\b|"
+    r"\bdivided (?:over|on|about|between|among)\b|\bwidely praised\b|"
+    r"\bcriticis|\bcriticiz|\bwas well received\b|"
     r"\bwarmly received\b|\bfan favourite\b|\bfan favorite\b", re.I)
 META = re.compile(
     r"\bpodcast\b|\bthe archive\b|\bthe show\b|\bthis article\b|\bthe hosts\b|"
@@ -44,6 +45,16 @@ def lint(article_path, packet_path):
     fail, warn = [], []
     body = art.split("## References")[0]
     ref = art.split("## References", 1)[1] if "## References" in art else ""
+
+    # 0. packet integrity (g2 batch-2 findings)
+    KINDS = {"practice", "mechanism", "tradeoff", "numbers", "failure-mode",
+             "procedure", "constraint", "history", "market-structure",
+             "practitioner-judgment"}
+    if not pkt.get("name"):
+        fail.append("packet missing 'name' (kimi_write will title-case the slug)")
+    bad_kinds = sorted({c.get("kind") for c in claims} - KINDS - {None})
+    if bad_kinds:
+        fail.append(f"claim kind outside vocabulary: {bad_kinds}")
 
     # 8. frontmatter
     if not art.startswith("---"):
