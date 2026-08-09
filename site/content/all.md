@@ -222,7 +222,6 @@ title: All articles
 - [[semiconductor-fab|Semiconductor Fab]]
 - [[sensor|Sensor]]
 - [[serial-port|Serial Port]]
-- [[shenzhen-and-the-markets|Shenzhen and the Markets]]
 - [[signal-integrity|Signal Integrity]]
 - [[signal-to-noise-ratio|Signal to Noise Ratio]]
 - [[silicon|Silicon]]

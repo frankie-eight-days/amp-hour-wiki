@@ -37,14 +37,19 @@ for md in (ROOT / "articles" / "wiki").glob("*.md"):
 # resolved from the packets and articles at build time, so the hero can only
 # ever show a quote that actually passed verification.
 HERO_PICKS = [
+    # the test for this list: would you know it without having listened?
+    ("intellectual-property", 232, "$10,000 to get a patent"),
+    ("spectrum-analyzer", 107, "as much as a Ferrari"),
+    ("patent", 270, "it becomes public"),
+    ("firmware-update", 561, "That's also a vulnerability"),
+    ("engineering-career", 491, "two weeks specifying a screw"),
     ("analog-to-digital-converter", 218, "24 bit ADC doesn't actually"),
     ("power-supply", 490, "only rated to 21 volts"),
     ("component-sourcing", 554, "can't source the chips"),
+    ("semiconductor-fab", 103, "million for a mask set"),
+    ("bootloader", 364, "dumb and as simple as possible"),
     ("schematic", 626, "faithfully execute the schematic"),
-    ("spectrum-analyzer", 107, "bought for $100"),
-    ("eeprom", 27, "erase your EEPROM"),
-    ("compiler", 181, "three lines of code"),
-    ("open-source-software", 373, "intention that it is read"),
+    ("getting-hired", 615, "got like 500 resumes"),
 ]
 
 
