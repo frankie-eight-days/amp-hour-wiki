@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 125 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,26.5 22.2,19.3 33.4,5.0 44.5,16.7 55.6,14.0 66.8,22.0 77.9,23.8 89.0,19.3 100.1,16.7 111.2,18.4 122.4,21.1 133.5,19.3 144.6,15.8 155.8,26.5 166.9,27.4 178.0,22.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,26.5 22.2,19.3 33.4,5.0 44.5,16.7 55.6,14.0 66.8,22.0 77.9,23.8 89.0,19.3 100.1,16.7 111.2,18.4 122.4,21.1 133.5,19.3 144.6,15.8 155.8,26.5 166.9,27.4 178.0,22.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">125</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">203</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">67</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#41 — #726</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Claire Wolf</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./risc-v">risc v</a> · <a href="./microcontroller">microcontroller</a> · <a href="./raspberry-pi">raspberry pi</a> · <a href="./fpga">fpga</a> · <a href="./arduino">arduino</a></td></tr></table></div>
+
+
 ARM is a family of reduced instruction set computer (RISC) processor architectures and the company that licenses them as semiconductor intellectual property. The architecture descends from the Acorn computers of the 1980s — the name originally stood for Acorn RISC Machine — rather than from any of the established microprocessor houses.<sup><a href="#ref-24" title="Ep 24: Solar Cells, SparkFun, TSMC - The Detroit Debunking">[24]</a></sup><sup><a href="#ref-103" title="Ep 103: An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee (July 8, 2012)">[103]</a></sup><sup><a href="#ref-720" title="Ep 720: Hyper Growth and OpenClaw Interns (March 31, 2026)">[720]</a></sup> ARM sells cores rather than silicon: no processor can be purchased from ARM itself, and nominally the same core can be bought from around twenty different chip vendors.<sup><a href="#ref-106" title="Ep 106: Tektronix, ChipReport.tv, & the Signal Path - Temperative Tegmen Temperature (July 29, 2012)">[106]</a></sup> By the early 2010s ARM held roughly 85 percent of the mobile processor market while Intel had shipped essentially nothing into phones.<sup><a href="#ref-100" title="Ep 100: Bonkers Birthday Badinage (June 17, 2012)">[100]</a></sup> By 2014 the cumulative installed base of ARM-powered chips had reached roughly 50 billion, with about 10 billion shipped in 2013 alone.<sup><a href="#ref-188" title="Ep 188: Capacitors, Simulation and Closures - Deonerated Design Dealmaking (March 10, 2014)">[188]</a></sup>
 
 ## History

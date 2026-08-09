@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 60 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,20.6 22.2,20.6 33.4,18.0 44.5,10.2 55.6,23.2 66.8,18.0 77.9,5.0 89.0,25.8 100.1,18.0 111.2,15.4 122.4,23.2 133.5,18.0 144.6,18.0 155.8,25.8 166.9,23.2 178.0,20.6 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,20.6 22.2,20.6 33.4,18.0 44.5,10.2 55.6,23.2 66.8,18.0 77.9,5.0 89.0,25.8 100.1,18.0 111.2,15.4 122.4,23.2 133.5,18.0 144.6,18.0 155.8,25.8 166.9,23.2 178.0,20.6" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">60</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">74</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">33</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#9 — #725</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Trey German</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./microcontroller">microcontroller</a> · <a href="./analog-to-digital-converter">analog to digital converter</a> · <a href="./digital-to-analog-converter">digital to analog converter</a> · <a href="./i2c">i2c</a> · <a href="./resistor">resistor</a></td></tr></table></div>
+
+
 **Pulse-width modulation** (**PWM**) is a technique for encoding an analog quantity as the duty cycle of a square wave: the output switches between a fixed voltage and zero, and the proportion of each period spent high carries the information. Three parameters must be specified independently — the switching voltage, the frequency, and the duty cycle — and conflating them produces circuits that are correct in only one of the three.<sup><a href="#ref-329" title="Ep 329: Work on it for 10 years...">[329]</a></sup> The technique spans switching frequencies from one cycle per sixty seconds up to hundreds of kilohertz, and its two largest application families sit an order of magnitude apart: motor control typically runs in the 10–30 kHz range while digital power supplies run at 100 kHz and above.<sup><a href="#ref-202" title="Ep 202: An Interview With Brandon Harris - Impish Internet Iamatology (June 9, 2014)">[202]</a></sup><sup><a href="#ref-212" title="Ep 212: An Interview with Trey German - Launchpad Laden Lodesman (August 18, 2014)">[212]</a></sup> Because a PWM output needs only a single digital pin and a timer, it substitutes for dedicated hardware across an unusual range of functions, from digital-to-analog conversion and programmable power supplies to LED dimming, audio amplification, and signalling.<sup><a href="#ref-281" title="Ep 281: Crossovers and Call-ins (January 6, 2016)">[281]</a></sup><sup><a href="#ref-44" title="Ep 44: BASIC, Chip companies & Robots - Pernicious Projects, Puppies in Peril">[44]</a></sup><sup><a href="#ref-285" title="Ep 285: Something's Serially Wrong Here (February 3, 2016)">[285]</a></sup><sup><a href="#ref-612" title="Ep 612: Slapping Industries (December 13, 2022)">[612]</a></sup>
 
 ## Characteristics

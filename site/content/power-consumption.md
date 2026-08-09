@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 77 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,22.3 22.2,20.2 33.4,7.2 44.5,7.2 55.6,18.0 66.8,5.0 77.9,7.2 89.0,24.5 100.1,18.0 111.2,18.0 122.4,24.5 133.5,24.5 144.6,13.7 155.8,22.3 166.9,24.5 178.0,22.3 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,22.3 22.2,20.2 33.4,7.2 44.5,7.2 55.6,18.0 66.8,5.0 77.9,7.2 89.0,24.5 100.1,18.0 111.2,18.0 122.4,24.5 133.5,24.5 144.6,13.7 155.8,22.3 166.9,24.5 178.0,22.3" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">77</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">100</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">62</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#18 — #724</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Andrew Witte</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./fpga">fpga</a> · <a href="./battery-life">battery life</a> · <a href="./raspberry-pi">raspberry pi</a> · <a href="./asic">asic</a> · <a href="./battery">battery</a></td></tr></table></div>
+
+
 **Power consumption** is the rate at which an electronic circuit or system draws energy from its supply, and it is one of the primary constraints in electronic design, governing battery life, heat generation, mechanical design, and operating cost.<sup><a href="#ref-61" title="Ep 61: Moore's Law, GaN and SiC devices - Gallimaufry GaN Gabble">[61]</a></sup><sup><a href="#ref-173" title="Ep 173: An Interview with Jeri Ellsworth - Intense Illusion Introduction (November 25, 2013)">[173]</a></sup><sup><a href="#ref-518" title="Ep 518: Satellites and EVs with Joris Aerts (November 22, 2020)">[518]</a></sup> In digital circuits it decomposes into a dynamic component that scales with switching frequency and supply voltage, and a static component dominated by leakage, with the gap between active and off-state draw spanning several decades of current.<sup><a href="#ref-61" title="Ep 61: Moore's Law, GaN and SiC devices - Gallimaufry GaN Gabble">[61]</a></sup><sup><a href="#ref-53" title="Ep 53: Biarchy Birthday Bavardage">[53]</a></sup> Because dissipated electrical power becomes heat, consumption is simultaneously an electrical and a thermal design problem, and in domains from medical implantables to satellites it can dominate the entire design effort.<sup><a href="#ref-704" title="Ep 704: Applied Embedded Electronics with Jerry Twomey (October 2, 2025)">[704]</a></sup><sup><a href="#ref-501" title="Ep 501: Discussing the Open Source PDK with Tim Ansell (July 19, 2020)">[501]</a></sup>
 
 ## Physical origins

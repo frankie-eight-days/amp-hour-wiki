@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 55 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,31.0 22.2,31.0 33.4,31.0 44.5,31.0 55.6,31.0 66.8,30.1 77.9,30.1 89.0,5.0 100.1,24.2 111.2,28.7 122.4,26.9 133.5,29.6 144.6,26.9 155.8,25.1 166.9,30.5 178.0,28.7 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,31.0 22.2,31.0 33.4,31.0 44.5,31.0 55.6,31.0 66.8,30.1 77.9,30.1 89.0,5.0 100.1,24.2 111.2,28.7 122.4,26.9 133.5,29.6 144.6,26.9 155.8,25.1 166.9,30.5 178.0,28.7" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">55</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">121</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">20</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#272 — #728</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Richard Ginus, Dave Jones</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./wifi">wifi</a> · <a href="./esp32">esp32</a> · <a href="./bluetooth">bluetooth</a> · <a href="./gps">gps</a></td></tr></table></div>
+
+
 LoRa is a proprietary physical-layer modulation for low-power, long-range sub-GHz radio, based on chirp spread spectrum and owned as intellectual property by Semtech.<sup><a href="#ref-443" title="Ep 443: An Interview with JP Norair (May 19, 2019)">[443]</a></sup><sup><a href="#ref-376" title="Ep 376: An Interview with Richard Ginus (January 21, 2018)">[376]</a></sup> The technology originated in the mid-2000s with a small French company whose technology Semtech acquired and productised; its modulation improved on earlier low-power radios in propagation, quality of service and multipath performance.<sup><a href="#ref-443" title="Ep 443: An Interview with JP Norair (May 19, 2019)">[443]</a></sup> LoRa defines only what happens to the sub-GHz carrier to turn it into a data packet and carries no networking of its own; network protocols such as LoRaWAN are layered on top of it.<sup><a href="#ref-443" title="Ep 443: An Interview with JP Norair (May 19, 2019)">[443]</a></sup><sup><a href="#ref-422" title="Ep 422: Stick 'Em On Whales (December 27, 2018)">[422]</a></sup> Its defining trade is a very low data rate in exchange for very high range, with good battery life following from the fact that a node transmits a short burst and then powers its radio down.<sup><a href="#ref-376" title="Ep 376: An Interview with Richard Ginus (January 21, 2018)">[376]</a></sup>
 
 ## History

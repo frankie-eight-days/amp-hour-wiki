@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 121 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,27.9 11.1,18.8 22.2,20.3 33.4,5.0 44.5,20.3 55.6,5.0 66.8,9.6 77.9,11.1 89.0,26.4 100.1,12.6 111.2,6.5 122.4,17.2 133.5,24.9 144.6,14.2 155.8,18.8 166.9,21.8 178.0,24.9 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,27.9 11.1,18.8 22.2,20.3 33.4,5.0 44.5,20.3 55.6,5.0 66.8,9.6 77.9,11.1 89.0,26.4 100.1,12.6 111.2,6.5 122.4,17.2 133.5,24.9 144.6,14.2 155.8,18.8 166.9,21.8 178.0,24.9" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">121</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">158</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">51</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#1 — #724</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Jeff Keyzer</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./pcb-fabrication">pcb fabrication</a> · <a href="./pick-and-place-machine">pick and place machine</a> · <a href="./contract-manufacturer">contract manufacturer</a> · <a href="./component-sourcing">component sourcing</a> · <a href="./pcb">pcb</a></td></tr></table></div>
+
+
 **PCB assembly** (PCBA) is the process of populating a bare printed circuit board with electronic components to produce a functional assembly, distinct from PCB fabrication, which produces the unpopulated board.<sup><a href="#ref-445" title="Ep 445: Ludicrously High Frequency Interference (June 2, 2019)">[445]</a></sup> The process matters economically because failures concentrate at the assembly stage—solder that does not flow, joints that do not make contact, or wrong parts—rather than in the silicon itself.<sup><a href="#ref-483" title="Ep 483: An Interview with Adrian Tang">[483]</a></sup> Where a design's bare boards and components are entirely in stock, an assembly house can turn a build in about twenty-four hours, a turnaround that distinguishes board assembly from semiconductor packaging, where prefabricated dies and substrates still take weeks.<sup><a href="#ref-650" title="Ep 650: Accessible ASICs with Andreas Olofsson (November 12, 2023)">[650]</a></sup>
 
 ## Production process

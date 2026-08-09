@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 28 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,20.6 22.2,20.6 33.4,20.6 44.5,10.2 55.6,31.0 66.8,15.4 77.9,15.4 89.0,5.0 100.1,15.4 111.2,15.4 122.4,20.6 133.5,25.8 144.6,31.0 155.8,31.0 166.9,20.6 178.0,25.8 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,20.6 22.2,20.6 33.4,20.6 44.5,10.2 55.6,31.0 66.8,15.4 77.9,15.4 89.0,5.0 100.1,15.4 111.2,15.4 122.4,20.6 133.5,25.8 144.6,31.0 155.8,31.0 166.9,20.6 178.0,25.8" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">28</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">33</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">23</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#6 — #729</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Greg Charvat</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./analog-to-digital-converter">analog to digital converter</a> · <a href="./oscilloscope">oscilloscope</a></td></tr></table></div>
+
+
 Signal-to-noise ratio (SNR) expresses how strongly a desired signal stands above the noise accompanying it, determining whether information can be converted, communicated, recovered, or resolved.<sup><a href="#ref-185" title="Ep 185: An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism (February 17, 2014)">[185]</a></sup><sup><a href="#ref-352" title="Ep 352: Conning with Michael Ossmann (July 17, 2017)">[352]</a></sup> It functions as an engineering budget: available ratio can be exchanged for data rate, integration time, measurement resolution, modulation complexity, or operating range.<sup><a href="#ref-179" title="Ep 179: Greg Charvat Returns With A Book! - Laboratory Literature Laureate (January 6, 2014)">[179]</a></sup><sup><a href="#ref-427" title="Ep 427: An Interview with Maarten Engelen (January 27, 2019)">[427]</a></sup><sup><a href="#ref-483" title="Ep 483: An Interview with Adrian Tang">[483]</a></sup><sup><a href="#ref-533" title="Ep 533: Microwave measurement with Joel Dunsmore (March 7, 2021)">[533]</a></sup> Because both the signal and noise sides can be engineered, improving SNR may involve increasing signal energy, reducing noise, narrowing bandwidth, integrating longer, or using a waveform that separates the wanted signal from interference.<sup><a href="#ref-107" title="Ep 107: An interview with Tony Long - Millimeter Microwave Magician (August 5, 2012)">[107]</a></sup><sup><a href="#ref-376" title="Ep 376: An Interview with Richard Ginus (January 21, 2018)">[376]</a></sup><sup><a href="#ref-443" title="Ep 443: An Interview with JP Norair (May 19, 2019)">[443]</a></sup><sup><a href="#ref-560" title="Ep 560: High End Audio with Remco Stoutjesdijk (October 3, 2021)">[560]</a></sup>
 
 ## Data conversion and measurement

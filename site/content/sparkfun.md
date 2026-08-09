@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 125 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,27.4 11.1,20.1 22.2,23.1 33.4,11.0 44.5,5.0 55.6,23.1 66.8,12.9 77.9,24.3 89.0,28.0 100.1,24.3 111.2,28.6 122.4,26.8 133.5,25.6 144.6,29.2 155.8,27.4 166.9,31.0 178.0,29.2 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,27.4 11.1,20.1 22.2,23.1 33.4,11.0 44.5,5.0 55.6,23.1 66.8,12.9 77.9,24.3 89.0,28.0 100.1,24.3 111.2,28.6 122.4,26.8 133.5,25.6 144.6,29.2 155.8,27.4 166.9,31.0 178.0,29.2" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">125</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">215</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">18</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#1 — #713</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Marcus Schappi</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./arduino">arduino</a> · <a href="./open-source-hardware">open source hardware</a> · <a href="./microcontroller">microcontroller</a> · <a href="./digi-key">digi key</a> · <a href="./eagle">eagle</a></td></tr></table></div>
+
+
 SparkFun is an American open source hardware retailer and manufacturer whose business centres on designing and selling breakout boards, sensor modules and hobby electronics kits, supported by free documentation and code libraries.<sup><a href="#ref-1" title="Ep 1: What's In A Name?">[1]</a></sup><sup><a href="#ref-458" title="Ep 458: An Interview with Ken Burns (September 15, 2019)">[458]</a></sup> By around 2010 the company was turning over more than $10 million a year, placing it among roughly a dozen firms that had passed the million-dollar annual revenue mark selling open source hobby kits.<sup><a href="#ref-1" title="Ep 1: What's In A Name?">[1]</a></sup> Its revenue was subsequently estimated at $10–15 million and then $15–20 million, and by the mid-2010s was put at $30 million or more.<sup><a href="#ref-55" title="Ep 55: Shonky Stiver Stultiloquence">[55]</a></sup><sup><a href="#ref-163" title="Ep 163: Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs (September 16, 2013)">[163]</a></sup><sup><a href="#ref-198" title="Ep 198: Mike Ossmann Returns! - Planetic Portalab Packaging (May 12, 2014)">[198]</a></sup> Beyond retail, the company operates as a contract manufacturer and distributor for outside hardware designers and runs an open source cloud data service for connected devices.<sup><a href="#ref-189" title="Ep 189: An Interview with Marcus Schappi - Kit Ketch Kenophobia (March 17, 2014)">[189]</a></sup><sup><a href="#ref-272" title="Ep 272: An Interview With Luke Beno of Analog.io (October 21, 2015)">[272]</a></sup><sup><a href="#ref-713" title="Ep 713: Rubber Duck Incarnate (January 25, 2026)">[713]</a></sup>
 
 ## History

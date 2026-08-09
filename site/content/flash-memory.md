@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 94 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,15.9 22.2,13.2 33.4,22.8 44.5,20.1 55.6,15.9 66.8,5.0 77.9,13.2 89.0,14.6 100.1,9.1 111.2,18.7 122.4,18.7 133.5,26.9 144.6,15.9 155.8,20.1 166.9,24.2 178.0,22.8 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,15.9 22.2,13.2 33.4,22.8 44.5,20.1 55.6,15.9 66.8,5.0 77.9,13.2 89.0,14.6 100.1,9.1 111.2,18.7 122.4,18.7 133.5,26.9 144.6,15.9 155.8,20.1 166.9,24.2 178.0,22.8" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">94</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">160</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">46</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#6 — #715</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Elecia White</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./microcontroller">microcontroller</a> · <a href="./ram">ram</a> · <a href="./eeprom">eeprom</a> · <a href="./usb">usb</a> · <a href="./firmware-update">firmware update</a></td></tr></table></div>
+
+
 Flash memory is a non-volatile semiconductor memory in which the state of each cell is set by charge placed on a floating gate and read by sensing the cell's effect on a bit line.<sup><a href="#ref-297" title="Ep 297: An Interview with Jake Baker (May 4, 2016)">[297]</a></sup> Writing a cell requires a high voltage that drives carriers through a thin tunnel oxide, a mechanism that makes every write slightly destructive and limits both endurance and how far the cell can be scaled.<sup><a href="#ref-297" title="Ep 297: An Interview with Jake Baker (May 4, 2016)">[297]</a></sup> Density has been increased by aggressive process scaling and by storing multiple threshold levels in one cell, while limited write endurance, controller-managed wear levelling, and variable write latency have become defining concerns in system design.<sup><a href="#ref-296" title="Ep 296: Gotta Update My Dog (April 27, 2016)">[296]</a></sup><sup><a href="#ref-297" title="Ep 297: An Interview with Jake Baker (May 4, 2016)">[297]</a></sup><sup><a href="#ref-41" title="Ep 41: An Interview with Jeff Keyzer - Exhilarating ESC Escapades (May 4, 2011)">[41]</a></sup><sup><a href="#ref-324" title="Ep 324: Mapping Out Nerdery (November 23, 2016)">[324]</a></sup><sup><a href="#ref-356" title="Ep 356: An Interview with Piotr Esden-Tempski (August 20, 2017)">[356]</a></sup>
 
 ## Operating principles

@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 316 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,30.8 11.1,18.1 22.2,21.0 33.4,5.0 44.5,16.0 55.6,19.3 66.8,19.1 77.9,18.7 89.0,26.0 100.1,23.3 111.2,21.9 122.4,22.9 133.5,20.4 144.6,24.1 155.8,27.1 166.9,25.4 178.0,29.7 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,30.8 11.1,18.1 22.2,21.0 33.4,5.0 44.5,16.0 55.6,19.3 66.8,19.1 77.9,18.7 89.0,26.0 100.1,23.3 111.2,21.9 122.4,22.9 133.5,20.4 144.6,24.1 155.8,27.1 166.9,25.4 178.0,29.7" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">316</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">822</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">86</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#5 — #729</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Jeff Keyzer</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./multimeter">multimeter</a> · <a href="./logic-analyzer">logic analyzer</a> · <a href="./power-supply">power supply</a> · <a href="./analog-to-digital-converter">analog to digital converter</a> · <a href="./soldering-iron">soldering iron</a></td></tr></table></div>
+
+
 An **oscilloscope** is an electronic test instrument that plots signal voltage against time, giving a direct view of the waveform of an electrical signal.<sup><a href="#ref-613" title="Ep 613: It's a Keyzermas Miracle! (December 18, 2022)">[613]</a></sup> It is the principal instrument for observing what a circuit is actually doing, and effective use of one requires understanding how the instrument itself distorts the view it presents.<sup><a href="#ref-289" title="Ep 289: Documentation Is A Waste Of Time (March 2, 2016)">[289]</a></sup> The product category spans an extreme range: from USB-connected front ends and four-channel bench instruments around four hundred dollars to gigahertz-class real-time instruments at twenty-five thousand dollars and beyond, with the top of the market reaching a million dollars per unit.<sup><a href="#ref-606" title="Ep 606: Professional Scooter Charger (October 23, 2022)">[606]</a></sup><sup><a href="#ref-347" title="Ep 347: Re-scoping the problem (June 13, 2017)">[347]</a></sup><sup><a href="#ref-236" title="Ep 236: Questioning Everyday Prototyping - Verrucose Vehicle Vitilitigation (February 10, 2015)">[236]</a></sup> Oscilloscopes are sufficiently central to weapons-relevant measurement that high-bandwidth models are export-controlled.<sup><a href="#ref-119" title="Ep 119: An Interview with Dr. Kent Lundberg - Luculent Linear Legacy (October 28, 2012)">[119]</a></sup>
 
 ## History

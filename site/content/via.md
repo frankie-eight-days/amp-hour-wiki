@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 53 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,18.0 22.2,21.2 33.4,5.0 44.5,31.0 55.6,8.2 66.8,11.5 77.9,14.8 89.0,21.2 100.1,8.2 111.2,5.0 122.4,27.8 133.5,21.2 144.6,24.5 155.8,18.0 166.9,11.5 178.0,27.8 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,18.0 22.2,21.2 33.4,5.0 44.5,31.0 55.6,8.2 66.8,11.5 77.9,14.8 89.0,21.2 100.1,8.2 111.2,5.0 122.4,27.8 133.5,21.2 144.6,24.5 155.8,18.0 166.9,11.5 178.0,27.8" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">53</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">68</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">38</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#32 — #724</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Stephen Hawes</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./pcb-fabrication">pcb fabrication</a> · <a href="./solder-mask">solder mask</a> · <a href="./pcb-routing">pcb routing</a> · <a href="./pcb">pcb</a></td></tr></table></div>
+
+
 A **via** is a vertical electrical connection between the copper layers of a printed circuit board, formed by a plated hole that carries a signal, power, or heat from one layer to another.<sup><a href="#ref-121" title="Ep 121: An Interview with Zach Hoeken Smith - Creative China Commorant (November 11, 2012)">[121]</a></sup><sup><a href="#ref-522" title="Ep 522: High Current Power Supplies with Fredrik Kensander (December 20, 2020)">[522]</a></sup> Because a via turns a horizontal trace straight down through the stack, it is the sharpest possible right-angle transition in a board — the existence of reliable vias is itself the argument that right-angle trace corners are not a general signal-integrity problem.<sup><a href="#ref-77" title="Ep 77: An Interview with Dr. Howard Johnson - Winsome Waveform Wizardry (January 9, 2012)">[77]</a></sup> Vias also appear in integrated circuits, where they connect metallisation layers in the same way they connect copper layers on a board.<sup><a href="#ref-390" title="Ep 390: An Interview with Sam Zeloof (April 29, 2018)">[390]</a></sup><sup><a href="#ref-687" title="Ep 687: The RP2350 with the Raspberry Pi Team (January 28, 2025)">[687]</a></sup>
 
 ## Fabrication

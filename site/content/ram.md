@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 65 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,27.1 22.2,23.2 33.4,25.8 44.5,18.0 55.6,14.1 66.8,27.1 77.9,5.0 89.0,25.8 100.1,20.6 111.2,23.2 122.4,21.9 133.5,27.1 144.6,29.7 155.8,27.1 166.9,25.8 178.0,25.8 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,27.1 22.2,23.2 33.4,25.8 44.5,18.0 55.6,14.1 66.8,27.1 77.9,5.0 89.0,25.8 100.1,20.6 111.2,23.2 122.4,21.9 133.5,27.1 144.6,29.7 155.8,27.1 166.9,25.8 178.0,25.8" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">65</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">99</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">39</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#12 — #726</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Elecia White</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./flash-memory">flash memory</a> · <a href="./microcontroller">microcontroller</a> · <a href="./linux">linux</a> · <a href="./firmware">firmware</a> · <a href="./analog-to-digital-converter">analog to digital converter</a></td></tr></table></div>
+
+
 **Random-access memory** (RAM) is the working memory of a computing system, holding code and data for immediate access by a processor, in contrast to non-volatile program storage.<sup><a href="#ref-713" title="Ep 713: Rubber Duck Incarnate (January 25, 2026)">[713]</a></sup> In embedded engineering it is treated as the resource that runs out first — ahead of program storage — and as the primary bottleneck when selecting a part.<sup><a href="#ref-224" title="Ep 224: Meracious Mike Manuduction (November 12, 2014)">[224]</a></sup> Its cost historically shaped processor architecture itself, and its capacity continues to determine what class of software, graphics, and operating system a given machine can support.<sup><a href="#ref-241" title="Ep 241: An Interview With Chuck Peddle - Charismatic Chipmaking Coryphaeus (March 18, 2015)">[241]</a></sup><sup><a href="#ref-359" title="Ep 359: An Interview with Jeroen Domburg (Sprite_tm) (September 11, 2017)">[359]</a></sup>
 
 ## Role in embedded system design

@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 200 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,28.6 11.1,14.5 22.2,7.4 33.4,6.2 44.5,13.3 55.6,6.2 66.8,12.1 77.9,7.4 89.0,12.1 100.1,6.2 111.2,5.0 122.4,5.0 133.5,9.7 144.6,10.9 155.8,18.0 166.9,16.8 178.0,28.6 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,28.6 11.1,14.5 22.2,7.4 33.4,6.2 44.5,13.3 55.6,6.2 66.8,12.1 77.9,7.4 89.0,12.1 100.1,6.2 111.2,5.0 122.4,5.0 133.5,9.7 144.6,10.9 155.8,18.0 166.9,16.8 178.0,28.6" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">200</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">270</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">62</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#4 — #726</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Jeff Keyzer</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./resistor">resistor</a> · <a href="./inductor">inductor</a> · <a href="./digi-key">digi key</a> · <a href="./op-amp">op amp</a> · <a href="./transistor">transistor</a></td></tr></table></div>
+
+
 A capacitor is a passive electronic component that stores energy in an electric field between conductors separated by an insulator, governed by the relation that the current through it equals its capacitance multiplied by the rate of change of the voltage across it.<sup><a href="#ref-33" title="Ep 33: Bob Widlar, Electronic Design, FIRST Robotics - Monday, Meta Monday">[33]</a></sup> Although circuit theory treats the capacitor as a pure capacitance, every physical part is a complex network of capacitance, inductance, and resistance, and working with that reality is one of the core skills of analogue design.<sup><a href="#ref-185" title="Ep 185: An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism (February 17, 2014)">[185]</a></sup> Capacitors appear in essentially every electronic system, in roles ranging from power-supply decoupling and energy storage to signal coupling, filtering, sensing, and memory, and their non-ideal behaviour — voltage-dependent value, finite lifetime, and mechanical fragility — is a recurring source of design error and field failure.<sup><a href="#ref-185" title="Ep 185: An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism (February 17, 2014)">[185]</a></sup><sup><a href="#ref-169" title="Ep 169: An Interview with Vincent Himpe - Escaped Electron Elocution (October 28, 2013)">[169]</a></sup><sup><a href="#ref-367" title="Ep 367: Not Reely An Issue (November 12, 2017)">[367]</a></sup>
 
 ## Operating principles

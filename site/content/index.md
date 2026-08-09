@@ -9,232 +9,86 @@ title: The Amp Hour Wiki
 
 <div style="display:flex; justify-content:center; gap:2.2rem; flex-wrap:wrap; text-align:center; margin: 1rem 0 1.4rem; font-variant-numeric: tabular-nums;"><div><strong style="font-size:1.5rem;">150</strong><br>articles live</div><div><strong style="font-size:1.5rem;">6,538</strong><br>episode citations</div><div><strong style="font-size:1.5rem;">719</strong><br>episodes indexed</div><div><strong style="font-size:1.5rem;">412</strong><br>articles planned</div></div>
 
-Every claim carries a bracketed citation that traces to a verbatim passage in the show's official transcripts, through a verified extraction pipeline. Articles are AI-generated syntheses; a full *How this wiki was built* page is coming with the complete build.
+<p style="text-align:center;"><strong><a href="./explore">Explore the concept graph &rarr;</a></strong> &nbsp;·&nbsp; <a href="./all">All articles A&ndash;Z</a> &nbsp;·&nbsp; search with <kbd>⌘K</kbd></p>
 
-**[Explore the concept graph &rarr;](./explore)**
+Every claim carries a bracketed citation tracing to a verbatim passage in the show's official transcripts. Articles are AI-generated syntheses built by a verified extraction pipeline; a full *How this wiki was built* page is coming with the complete build.
 
-## Articles
+## Topics
 
-### 3
+### Kicad, Altium, Open Source Hardware
 
-- [[3d-printer|3D Printer]]
-- [[3d-printing|3D Printing]]
+[[altium|Altium]] · [[design-review|Design Review]] · [[design-rule-checking|Design Rule Checking]] · [[eagle|EAGLE]] · [[gerber|Gerber]] · [[github|GitHub]] · [[kicad|Kicad]] · [[open-source|Open Source]] · [[open-source-hardware|Open Source Hardware]] · [[open-source-software|Open Source Software]] · [[pcb-design|PCB Design]] · [[pcb-footprint|PCB Footprint]] · [[pcb-layout|PCB Layout]] · [[pcb-routing|PCB Routing]] · [[reference-design|Reference Design]] · [[schematic|Schematic]] · [[spice|SPICE]]
 
-### A
+### Pcb Fabrication, Pcb, Pick And Place Machine
 
-- [[accelerometer|Accelerometer]]
-- [[altium|Altium]]
-- [[analog-to-digital-converter|Analog To Digital Converter]]
-- [[antenna|Antenna]]
-- [[api|API]]
-- [[arduino|Arduino]]
-- [[arm|ARM]]
-- [[asic|ASIC]]
-- [[assembly-language|Assembly Language]]
-- [[automated-testing|Automated Testing]]
-- [[automation|Automation]]
+[[bga|BGA]] · [[breadboard|Breadboard]] · [[fr4|FR-4]] · [[hand-soldering|Hand Soldering]] · [[pcb|PCB]] · [[pcb-assembly|PCB Assembly]] · [[pcb-fabrication|Pcb Fabrication]] · [[pcb-lead-time|PCB Lead Time]] · [[pcb-milling|PCB Milling]] · [[pick-and-place-machine|Pick and Place Machine]] · [[reflow-soldering|Reflow Soldering]] · [[solder-mask|Solder Mask]] · [[via|Via]]
 
-### B
+### Linux, Usb, Ethernet
 
-- [[bandwidth|Bandwidth]]
-- [[battery|Battery]]
-- [[battery-life|Battery Life]]
-- [[bga|BGA]]
-- [[bill-of-materials|Bill of Materials]]
-- [[bluetooth|Bluetooth]]
-- [[bluetooth-low-energy|Bluetooth Low Energy]]
-- [[bootloader|Bootloader]]
-- [[breadboard|Breadboard]]
+[[bootloader|Bootloader]] · [[can-bus|CAN Bus]] · [[eeprom|EEPROM]] · [[firmware-update|Firmware Update]] · [[flash-memory|Flash Memory]] · [[linux|Linux]] · [[ram|RAM]] · [[rtos|RTOS]] · [[serial-port|Serial Port]] · [[usb|Usb]] · [[usb-c|USB-C]] · [[virtual-machine|Virtual Machine]] · [[zephyr|Zephyr]]
 
-### C
+### Capacitor, Led, Op Amp
 
-- [[camera|Camera]]
-- [[can-bus|CAN Bus]]
-- [[capacitor|Capacitor]]
-- [[cloud-computing|Cloud Computing]]
-- [[compiler|Compiler]]
-- [[component-sourcing|Component Sourcing]]
-- [[computer-vision|Computer Vision]]
-- [[continuous-integration|Continuous Integration]]
-- [[contract-manufacturer|Contract Manufacturer]]
-- [[crowdfunding|Crowdfunding]]
+[[capacitor|Capacitor]] · [[dc-dc-converter|DC-DC Converter]] · [[inductor|Inductor]] · [[integrated-circuit|Integrated Circuit]] · [[led|Led]] · [[mosfet|Mosfet]] · [[op-amp|Op-Amp]] · [[relay|Relay]] · [[resistor|Resistor]] · [[soldering|Soldering]] · [[switching-power-supply|Switching Power Supply]] · [[transformer|Transformer]] · [[transistor|Transistor]]
 
-### D
+### Analog To Digital Converter, I2C, Spi
 
-- [[datasheet|Datasheet]]
-- [[dc-dc-converter|DC-DC Converter]]
-- [[design-for-manufacturing|Design for Manufacturing]]
-- [[design-review|Design Review]]
-- [[design-rule-checking|Design Rule Checking]]
-- [[development-board|Development Board]]
-- [[digi-key|Digi-Key]]
-- [[digital-signal-processing|Digital Signal Processing]]
-- [[digital-to-analog-converter|Digital-to-Analog Converter]]
-- [[dma|DMA]]
+[[accelerometer|Accelerometer]] · [[analog-to-digital-converter|Analog To Digital Converter]] · [[bandwidth|Bandwidth]] · [[digital-to-analog-converter|Digital-to-Analog Converter]] · [[dma|DMA]] · [[gpio|GPIO]] · [[i2c|I2C]] · [[pwm|Pwm]] · [[signal-to-noise-ratio|Signal to Noise Ratio]] · [[spi|SPI]] · [[temperature-sensor|Temperature Sensor]] · [[uart|UART]]
 
-### E
+### Bluetooth, Wifi, Internet Of Things
 
-- [[eagle|EAGLE]]
-- [[economies-of-scale|Economies of Scale]]
-- [[eeprom|EEPROM]]
-- [[electronics-education|Electronics Education]]
-- [[embedded-system|Embedded System]]
-- [[engineering-education|Engineering Education]]
-- [[esp32|ESP32]]
+[[antenna|Antenna]] · [[api|API]] · [[bluetooth|Bluetooth]] · [[bluetooth-low-energy|Bluetooth Low Energy]] · [[cloud-computing|Cloud Computing]] · [[esp32|ESP32]] · [[gps|GPS]] · [[internet-of-things|Internet of Things]] · [[lora|LoRa]] · [[radio-frequency|Radio Frequency]] · [[wifi|Wi-Fi]]
 
-### F
+### Microcontroller, Arduino, Raspberry Pi
 
-- [[firmware|Firmware]]
-- [[firmware-update|Firmware Update]]
-- [[flash-memory|Flash Memory]]
-- [[fpga|FPGA]]
-- [[fr4|FR-4]]
+[[arduino|Arduino]] · [[assembly-language|Assembly Language]] · [[computer-vision|Computer Vision]] · [[development-board|Development Board]] · [[electronics-education|Electronics Education]] · [[embedded-system|Embedded System]] · [[maker-faire|Maker Faire]] · [[microcontroller|Microcontroller]] · [[python|Python]] · [[raspberry-pi|Raspberry Pi]] · [[sparkfun|SparkFun]]
 
-### G
+### Fpga, Arm, Risc V
 
-- [[gerber|Gerber]]
-- [[github|GitHub]]
-- [[gpio|GPIO]]
-- [[gps|GPS]]
+[[arm|ARM]] · [[asic|ASIC]] · [[compiler|Compiler]] · [[fpga|FPGA]] · [[intellectual-property|Intellectual Property]] · [[power-consumption|Power Consumption]] · [[processor|Processor]] · [[register|Register]] · [[risc-v|Risc V]] · [[verilog|Verilog]]
 
-### H
+### Kickstarter, Startup, Venture Capital
 
-- [[hand-soldering|Hand Soldering]]
+[[crowdfunding|Crowdfunding]] · [[kickstarter|Kickstarter]] · [[mass-production|Mass Production]] · [[patent|Patent]] · [[product-pricing|Product Pricing]] · [[professional-networking|Professional Networking]] · [[profit-margin|Profit Margin]] · [[prototype|Prototype]] · [[startup-funding|Startup Funding]] · [[venture-capital|Venture Capital]]
 
-### I
+### Battery, Electric Vehicle, Tesla
 
-- [[i2c|I2C]]
-- [[inductor|Inductor]]
-- [[injection-molding|Injection Molding]]
-- [[integrated-circuit|Integrated Circuit]]
-- [[intellectual-property|Intellectual Property]]
-- [[internet-of-things|Internet of Things]]
+[[battery|Battery]] · [[battery-life|Battery Life]] · [[low-power-design|Low Power Design]] · [[power-grid|Power Grid]] · [[solar-panel|Solar Panel]] · [[solar-power|Solar Power]] · [[vertical-integration|Vertical Integration]]
 
-### J
+### Firmware, Engineering Education, Software
 
-- [[jtag|JTAG]]
+[[automated-testing|Automated Testing]] · [[continuous-integration|Continuous Integration]] · [[engineering-education|Engineering Education]] · [[firmware|Firmware]] · [[jtag|JTAG]] · [[reverse-engineering|Reverse Engineering]]
 
-### K
+### Oscilloscope, Multimeter, Soldering Iron
 
-- [[kicad|Kicad]]
-- [[kickstarter|Kickstarter]]
+[[logic-analyzer|Logic Analyzer]] · [[multimeter|Multimeter]] · [[oscilloscope|Oscilloscope]] · [[power-supply|Power Supply]] · [[soldering-iron|Soldering Iron]] · [[spectrum-analyzer|Spectrum Analyzer]]
 
-### L
+### 3D Printing, 3D Printer, Injection Molding
 
-- [[led|Led]]
-- [[linux|Linux]]
-- [[logic-analyzer|Logic Analyzer]]
-- [[lora|LoRa]]
-- [[low-power-design|Low Power Design]]
+[[3d-printer|3D Printer]] · [[3d-printing|3D Printing]] · [[design-for-manufacturing|Design for Manufacturing]] · [[economies-of-scale|Economies of Scale]] · [[injection-molding|Injection Molding]]
 
-### M
+### Digi Key, Component Sourcing, Bill Of Materials
 
-- [[maker-faire|Maker Faire]]
-- [[mass-production|Mass Production]]
-- [[microcontroller|Microcontroller]]
-- [[moores-law|Moore's Law]]
-- [[mosfet|Mosfet]]
-- [[multimeter|Multimeter]]
+[[bill-of-materials|Bill of Materials]] · [[component-sourcing|Component Sourcing]] · [[contract-manufacturer|Contract Manufacturer]] · [[digi-key|Digi-Key]] · [[supply-chain|Supply Chain]]
 
-### O
+### Robotics, Artificial Intelligence, Sensor
 
-- [[op-amp|Op-Amp]]
-- [[open-source|Open Source]]
-- [[open-source-hardware|Open Source Hardware]]
-- [[open-source-software|Open Source Software]]
-- [[oscilloscope|Oscilloscope]]
+[[automation|Automation]] · [[robotics|Robotics]] · [[sensor|Sensor]]
 
-### P
+### Intel, Texas Instruments, Semiconductor Fab
 
-- [[patent|Patent]]
-- [[pcb|PCB]]
-- [[pcb-assembly|PCB Assembly]]
-- [[pcb-design|PCB Design]]
-- [[pcb-fabrication|Pcb Fabrication]]
-- [[pcb-footprint|PCB Footprint]]
-- [[pcb-layout|PCB Layout]]
-- [[pcb-lead-time|PCB Lead Time]]
-- [[pcb-milling|PCB Milling]]
-- [[pcb-routing|PCB Routing]]
-- [[pick-and-place-machine|Pick and Place Machine]]
-- [[power-consumption|Power Consumption]]
-- [[power-grid|Power Grid]]
-- [[power-supply|Power Supply]]
-- [[processor|Processor]]
-- [[product-pricing|Product Pricing]]
-- [[professional-networking|Professional Networking]]
-- [[profit-margin|Profit Margin]]
-- [[prototype|Prototype]]
-- [[pwm|Pwm]]
-- [[python|Python]]
+[[moores-law|Moore's Law]] · [[semiconductor-fab|Semiconductor Fab]] · [[silicon|Silicon]]
 
-### R
+### Youtube, Twitter, Consulting
 
-- [[radio-frequency|Radio Frequency]]
-- [[ram|RAM]]
-- [[raspberry-pi|Raspberry Pi]]
-- [[reference-design|Reference Design]]
-- [[reflow-soldering|Reflow Soldering]]
-- [[register|Register]]
-- [[relay|Relay]]
-- [[resistor|Resistor]]
-- [[reverse-engineering|Reverse Engineering]]
-- [[risc-v|Risc V]]
-- [[robotics|Robotics]]
-- [[rtos|RTOS]]
+[[camera|Camera]] · [[youtube|YouTube]]
 
-### S
+### Digital Signal Processing, Software Defined Radio, Microphone
 
-- [[schematic|Schematic]]
-- [[semiconductor-fab|Semiconductor Fab]]
-- [[sensor|Sensor]]
-- [[serial-port|Serial Port]]
-- [[signal-to-noise-ratio|Signal to Noise Ratio]]
-- [[silicon|Silicon]]
-- [[software-defined-radio|Software Defined Radio]]
-- [[solar-panel|Solar Panel]]
-- [[solar-power|Solar Power]]
-- [[solder-mask|Solder Mask]]
-- [[soldering|Soldering]]
-- [[soldering-iron|Soldering Iron]]
-- [[sparkfun|SparkFun]]
-- [[spectrum-analyzer|Spectrum Analyzer]]
-- [[spi|SPI]]
-- [[spice|SPICE]]
-- [[startup-funding|Startup Funding]]
-- [[supply-chain|Supply Chain]]
-- [[switching-power-supply|Switching Power Supply]]
+[[digital-signal-processing|Digital Signal Processing]] · [[software-defined-radio|Software Defined Radio]]
 
-### T
+### Datasheet, Internet, 555 Timer
 
-- [[temperature-sensor|Temperature Sensor]]
-- [[transformer|Transformer]]
-- [[transistor|Transistor]]
-
-### U
-
-- [[uart|UART]]
-- [[usb|Usb]]
-- [[usb-c|USB-C]]
-
-### V
-
-- [[venture-capital|Venture Capital]]
-- [[verilog|Verilog]]
-- [[vertical-integration|Vertical Integration]]
-- [[via|Via]]
-- [[virtual-machine|Virtual Machine]]
-
-### W
-
-- [[wifi|Wi-Fi]]
-
-### Y
-
-- [[youtube|YouTube]]
-
-### Z
-
-- [[zephyr|Zephyr]]
+[[datasheet|Datasheet]]
 
 *Last synced 2026-08-09 · [source corpus and pipeline](https://github.com/frankie-eight-days/amp-hour-wiki)*

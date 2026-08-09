@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 52 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,30.2 22.2,29.4 33.4,5.0 44.5,27.8 55.6,28.6 66.8,23.7 77.9,29.4 89.0,30.2 100.1,26.9 111.2,26.9 122.4,27.8 133.5,26.1 144.6,28.6 155.8,29.4 166.9,30.2 178.0,29.4 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,30.2 22.2,29.4 33.4,5.0 44.5,27.8 55.6,28.6 66.8,23.7 77.9,29.4 89.0,30.2 100.1,26.9 111.2,26.9 122.4,27.8 133.5,26.1 144.6,28.6 155.8,29.4 166.9,30.2 178.0,29.4" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">52</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">82</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">33</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#17 — #718</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Charles Aylward</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./schematic">schematic</a> · <a href="./pcb-layout">pcb layout</a> · <a href="./altium">altium</a> · <a href="./datasheet">datasheet</a> · <a href="./firmware">firmware</a></td></tr></table></div>
+
+
 A **design review** is a structured examination of an engineering design by people other than, or in addition to, its original designer, conducted to find defects, challenge assumptions, and transfer knowledge before the design is committed to fabrication or production.<sup><a href="#ref-211" title="Ep 211: Design Reviews Are Important - Habitual Hype Hebetude (August 11, 2014)">[211]</a></sup><sup><a href="#ref-287" title="Ep 287: Pull The Trigger (February 17, 2016)">[287]</a></sup> The practice rests on a documented limitation of self-checking: a designer reviewing their own work tends to skip over elements they are certain are correct and to see things that exist only in their head rather than on the page, so even a formal checklist performs better when someone else runs it.<sup><a href="#ref-287" title="Ep 287: Pull The Trigger (February 17, 2016)">[287]</a></sup> Beyond defect detection, a rigorous review serves a second function as a teaching mechanism, instructing engineers in how to design, test, evaluate, and document, and organisations that treat it purely as quality control extract less value from it than they could.<sup><a href="#ref-138" title="Ep 138: An Interview with Ryan Brown - Effortless Equipment Extensibility (March 25, 2013)">[138]</a></sup>
 
 ## Rationale

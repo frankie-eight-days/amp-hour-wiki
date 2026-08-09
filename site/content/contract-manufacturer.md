@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 113 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,30.2 11.1,25.1 22.2,26.8 33.4,14.2 44.5,16.7 55.6,7.5 66.8,10.9 77.9,17.6 89.0,24.3 100.1,5.0 111.2,25.1 122.4,23.5 133.5,24.3 144.6,24.3 155.8,29.3 166.9,26.8 178.0,30.2 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,30.2 11.1,25.1 22.2,26.8 33.4,14.2 44.5,16.7 55.6,7.5 66.8,10.9 77.9,17.6 89.0,24.3 100.1,5.0 111.2,25.1 122.4,23.5 133.5,24.3 144.6,24.3 155.8,29.3 166.9,26.8 178.0,30.2" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">113</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">197</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">70</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#4 — #723</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Jeri Ellsworth</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./pick-and-place-machine">pick and place machine</a> · <a href="./pcb-assembly">pcb assembly</a> · <a href="./pcb-fabrication">pcb fabrication</a> · <a href="./component-sourcing">component sourcing</a> · <a href="./kickstarter">kickstarter</a></td></tr></table></div>
+
+
 A **contract manufacturer** (CM) is a firm that fabricates or assembles products to another company's design, ranging from bare printed circuit board assembly through box build, parts purchasing, inventory holding, and drop-shipping of finished units to the customer's own customers.<sup><a href="#ref-315" title="Ep 315: Mashuppery (with MEP)">[315]</a></sup><sup><a href="#ref-255" title="Ep 255: Inspirations and Aspirations - Recanting Rocket Rationale (June 24, 2015)">[255]</a></sup> The business is structurally low-margin: price pressure from the customer's purchasing function on finished goods means the model depends on volume and machine utilisation rather than markup.<sup><a href="#ref-104" title="Ep 104: Ceramic capacitors & High end scopes - Kempt Kickstarter Kakorrhaphiophobia (July 15, 2012)">[104]</a></sup> Its attraction as a business is the cash-flow shape — a contract shop builds nothing until an order exists and can ship before its inventory is paid for, which makes it startable without capital or a marketing operation.<sup><a href="#ref-109" title="Ep 109: An Interview with Larry Sears - Hexagram Hardware Holism (August 19, 2012)">[109]</a></sup> Because a typical shop is built around two or three large accounts making up roughly eighty percent of its business, smaller customers' work is fitted around the big accounts' schedules.<sup><a href="#ref-411" title="Ep 411: An Interview with Chris Denney (October 14, 2018)">[411]</a></sup>
 
 ## Business model and economics

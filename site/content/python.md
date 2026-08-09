@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 138 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,30.3 22.2,27.0 33.4,21.7 44.5,23.7 55.6,25.7 66.8,13.0 77.9,11.0 89.0,5.0 100.1,9.7 111.2,16.3 122.4,21.0 133.5,27.0 144.6,25.7 155.8,27.0 166.9,25.0 178.0,27.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,30.3 22.2,27.0 33.4,21.7 44.5,23.7 55.6,25.7 66.8,13.0 77.9,11.0 89.0,5.0 100.1,9.7 111.2,16.3 122.4,21.0 133.5,27.0 144.6,25.7 155.8,27.0 166.9,25.0 178.0,27.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">138</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">240</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">41</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#7 — #722</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Tony DiCola</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./microcontroller">microcontroller</a> · <a href="./arduino">arduino</a> · <a href="./fpga">fpga</a> · <a href="./kicad">kicad</a> · <a href="./open-source-software">open source software</a></td></tr></table></div>
+
+
 Python is an interpreted high-level programming language created in the early 1990s, descended from system-administration languages such as Perl but built on the opposing principle that there should be one obvious way to do a thing rather than ten.<sup><a href="#ref-323" title="Ep 323: An Interview with Tony DiCola (November 16, 2016)">[323]</a></sup> It has grown well beyond conventional software engineering into scientific and engineering work, because it is accessible to people whose job is not programming, and teaching institutions have moved introductory courses onto it in place of Scratch, Java or C++.<sup><a href="#ref-383" title="Ep 383: An Interview with Scott Shawcroft (March 11, 2018)">[383]</a></sup> Its characteristic role in hardware and embedded engineering is as glue: joining subsystems written in other languages, scripting quick tasks, and handling the small jobs that surround a product, alongside C or C++ for firmware that must be controlled directly.<sup><a href="#ref-355" title="Ep 355: The Internet of Septage (with Akiba) (August 13, 2017)">[355]</a></sup>
 
 ## History and design principles

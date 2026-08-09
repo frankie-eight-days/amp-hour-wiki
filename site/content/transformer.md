@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 74 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,21.0 11.1,21.0 22.2,7.0 33.4,5.0 44.5,13.0 55.6,23.0 66.8,25.0 77.9,29.0 89.0,29.0 100.1,5.0 111.2,5.0 122.4,23.0 133.5,5.0 144.6,15.0 155.8,23.0 166.9,29.0 178.0,17.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,21.0 11.1,21.0 22.2,7.0 33.4,5.0 44.5,13.0 55.6,23.0 66.8,25.0 77.9,29.0 89.0,29.0 100.1,5.0 111.2,5.0 122.4,23.0 133.5,5.0 144.6,15.0 155.8,23.0 166.9,29.0 178.0,17.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">74</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">116</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">35</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#5 — #724</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Ben Krasnow</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./switching-power-supply">switching power supply</a> · <a href="./inductor">inductor</a> · <a href="./dc-dc-converter">dc dc converter</a> · <a href="./power-supply">power supply</a> · <a href="./analog-to-digital-converter">analog to digital converter</a></td></tr></table></div>
+
+
 A **transformer** is a passive electrical device that transfers energy between circuits through magnetic coupling between two or more windings, allowing alternating-current voltage to be raised or lowered while providing galvanic isolation. The transformer's ability to change voltage levels cheaply and efficiently is the fundamental reason alternating current was adopted for power distribution; nearly every other aspect of AC operation, reactive power in particular, is harder than the DC equivalent.<sup><a href="#ref-583" title="Ep 583: The Smart Grid with Paul Zawada (March 27, 2022)">[583]</a></sup> Conventional power transformers run at roughly 99 percent efficiency with extreme reliability,<sup><a href="#ref-717" title="Ep 717: Back on the road in '26 (March 4, 2026)">[717]</a></sup> and because every transformer is inherently bidirectional, the same device can step voltage up or down depending on which winding is driven.<sup><a href="#ref-671" title="Ep 671: NDA Sideshow (June 19, 2024)">[671]</a></sup><sup><a href="#ref-14" title="Ep 14: China, Entrepreneurs and Blue Collar Reality">[14]</a></sup> Beyond power distribution, transformers underpin isolated power conversion, signal isolation, measurement, and a wide range of unconventional applications from medical stimulation to through-window power transfer.
 
 ## Efficiency and thermal limits

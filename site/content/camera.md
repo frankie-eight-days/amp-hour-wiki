@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 94 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,30.1 11.1,19.9 22.2,28.2 33.4,18.9 44.5,21.7 55.6,22.6 66.8,25.4 77.9,5.0 89.0,28.2 100.1,26.4 111.2,23.6 122.4,23.6 133.5,26.4 144.6,25.4 155.8,25.4 166.9,23.6 178.0,31.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,30.1 11.1,19.9 22.2,28.2 33.4,18.9 44.5,21.7 55.6,22.6 66.8,25.4 77.9,5.0 89.0,28.2 100.1,26.4 111.2,23.6 122.4,23.6 133.5,26.4 144.6,25.4 155.8,25.4 166.9,23.6 178.0,31.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">94</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">131</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">13</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#3 — #710</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Scott Driscoll</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./gps">gps</a> · <a href="./kickstarter">kickstarter</a> · <a href="./youtube">youtube</a> · <a href="./3d-printer">3d printer</a> · <a href="./raspberry-pi">raspberry pi</a></td></tr></table></div>
+
+
 A camera is an optical imaging instrument built around an image sensor, and in modern embedded practice it is as much an electronic system as an optical one: the sensor's clocking, power dissipation, interface bandwidth, and supply chain each impose constraints that shape the final product.<sup><a href="#ref-325" title="Ep 325: An Interview with David Kronstein (Tesla500) (November 30, 2016)">[325]</a></sup><sup><a href="#ref-517" title="Ep 517: Depth and AI with Brandon Gilles and Brian Weinstein (November 15, 2020)">[517]</a></sup> Raw image data from the sensor travels over the MIPI interface, and placing a processor directly on that interface allows a camera to function as a self-contained vision component rather than an accessory to a host computer.<sup><a href="#ref-517" title="Ep 517: Depth and AI with Brandon Gilles and Brian Weinstein (November 15, 2020)">[517]</a></sup> Because concentrated light permanently destroys pixels and power limits bound achievable image quality in compact devices, camera engineering is dominated by failure modes and thermal constraints as much as by optics.<sup><a href="#ref-78" title="Ep 78: Alteritous Andy's Absquatulation (January 16, 2012)">[78]</a></sup><sup><a href="#ref-658" title="Ep 658: Uncle Al's Eating Garbage Again (February 12, 2024)">[658]</a></sup>
 
 ## Image sensors

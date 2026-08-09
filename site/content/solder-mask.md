@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 68 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,29.8 11.1,18.6 22.2,22.3 33.4,5.0 44.5,26.0 55.6,21.1 66.8,17.4 77.9,28.5 89.0,13.7 100.1,11.2 111.2,27.3 122.4,26.0 133.5,24.8 144.6,31.0 155.8,27.3 166.9,23.6 178.0,29.8 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,29.8 11.1,18.6 22.2,22.3 33.4,5.0 44.5,26.0 55.6,21.1 66.8,17.4 77.9,28.5 89.0,13.7 100.1,11.2 111.2,27.3 122.4,26.0 133.5,24.8 144.6,31.0 155.8,27.3 166.9,23.6 178.0,29.8" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">68</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">116</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">39</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#4 — #726</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Laen</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./pcb-fabrication">pcb fabrication</a> · <a href="./pcb-milling">pcb milling</a> · <a href="./via">via</a> · <a href="./pcb">pcb</a> · <a href="./pcb-lead-time">pcb lead time</a></td></tr></table></div>
+
+
 Solder mask is the polymer layer applied over the copper of a printed circuit board, with openings cut where each pad sits and material left everywhere in between.<sup><a href="#ref-393" title="Ep 393: I've bitten myself (May 20, 2018)">[393]</a></sup> It serves several functions at once: it keeps moisture and surface contamination off the copper, which directly affects creepage and the withstanding voltage between adjacent traces; it steers solder and flux onto the pads during assembly; and it prevents bridging between closely spaced pads during reflow.<sup><a href="#ref-447" title="Ep 447: Voltnuts for Flashlights (June 16, 2019)">[447]</a></sup><sup><a href="#ref-28" title="Ep 28: Bowie and The Brown Note (February 1, 2011)">[28]</a></sup><sup><a href="#ref-153" title="Ep 153: An Interview with Ryan O'Hara - Keyed, Kerfed Kapton (July 8, 2013)">[153]</a></sup> Because it is the inverse of a copper layer, its manufacturability is governed by a single rule — the minimum width of the strip of mask left between adjacent pads — and that rule in turn constrains how fine a component pitch a given fabrication house can build.<sup><a href="#ref-393" title="Ep 393: I've bitten myself (May 20, 2018)">[393]</a></sup><sup><a href="#ref-67" title="Ep 67: BeagleBoard successors, CAD & Robots - Haussmannized Halloween Hypostrophe">[67]</a></sup>
 
 ## Function

@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 68 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,27.0 11.1,23.0 22.2,31.0 33.4,15.0 44.5,9.0 55.6,13.0 66.8,17.0 77.9,25.0 89.0,25.0 100.1,23.0 111.2,15.0 122.4,5.0 133.5,13.0 144.6,11.0 155.8,27.0 166.9,31.0 178.0,25.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,27.0 11.1,23.0 22.2,31.0 33.4,15.0 44.5,9.0 55.6,13.0 66.8,17.0 77.9,25.0 89.0,25.0 100.1,23.0 111.2,15.0 122.4,5.0 133.5,13.0 144.6,11.0 155.8,27.0 166.9,31.0 178.0,25.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">68</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">96</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">37</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#3 — #727</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Brandon Harris</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./i2c">i2c</a> · <a href="./microcontroller">microcontroller</a> · <a href="./led">led</a> · <a href="./wifi">wifi</a> · <a href="./arduino">arduino</a></td></tr></table></div>
+
+
 An accelerometer is a transducer that measures acceleration and converts it into an electrical signal; in modern practice the sensing element is a capacitive micro-electromechanical structure fabricated in a CMOS process whose capacitance changes by amounts measured in zeptofarads, with that change converted to a voltage.<sup><a href="#ref-185" title="Ep 185: An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism (February 17, 2014)">[185]</a></sup> For a stationary device the reading is dominated by gravity, so the simplest demonstration of the sensor is one that shows which way is down.<sup><a href="#ref-256" title="Ep 256: Is This A Show? (July 1, 2015)">[256]</a></sup> The technology was a genuine discontinuity rather than an incremental improvement: before micro-electromechanical parts existed there was no practical way to make such measurements at all.<sup><a href="#ref-185" title="Ep 185: An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism (February 17, 2014)">[185]</a></sup> Its significance lies in the breadth of systems it enables, from orientation sensing and gesture input to vibration analysis, balancing machines, and clinical instrumentation.<sup><a href="#ref-204" title="Ep 204: An Interview with Noah Feehan - Biloquistic Blinking Blush (June 23, 2014)">[204]</a></sup><sup><a href="#ref-246" title="Ep 246: Robots are coming - Ominous Operational Overhaul (April 21, 2015)">[246]</a></sup><sup><a href="#ref-549" title="Ep 549: Creative Engineering with Shrouk El-Attar (July 11, 2021)">[549]</a></sup><sup><a href="#ref-560" title="Ep 560: High End Audio with Remco Stoutjesdijk (October 3, 2021)">[560]</a></sup>
 
 ## Physical principles

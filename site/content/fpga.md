@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 312 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,28.4 11.1,22.2 22.2,14.1 33.4,5.0 44.5,11.4 55.6,19.6 66.8,10.0 77.9,15.5 89.0,15.5 100.1,7.0 111.2,16.7 122.4,12.6 133.5,22.2 144.6,22.5 155.8,24.6 166.9,27.2 178.0,28.4 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,28.4 11.1,22.2 22.2,14.1 33.4,5.0 44.5,11.4 55.6,19.6 66.8,10.0 77.9,15.5 89.0,15.5 100.1,7.0 111.2,16.7 122.4,12.6 133.5,22.2 144.6,22.5 155.8,24.6 166.9,27.2 178.0,28.4" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">312</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">767</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">86</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#2 — #723</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Dave Vandenbout</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./microcontroller">microcontroller</a> · <a href="./analog-to-digital-converter">analog to digital converter</a> · <a href="./asic">asic</a> · <a href="./verilog">verilog</a> · <a href="./risc-v">risc v</a></td></tr></table></div>
+
+
 A field-programmable gate array (FPGA) is an integrated circuit whose logic function is fixed after manufacture by a configuration bitstream, in SRAM-based parts reloaded from external flash at every power-up.<sup><a href="#ref-286" title="Ep 286: An Interview with Saar Drimer (February 10, 2016)">[286]</a></sup> Internally, the fabric consists of lookup tables, flip-flops, carry chains and a programmable routing network, supplemented by hard blocks such as multipliers, block RAM and, in modern devices, complete processor cores.<sup><a href="#ref-103" title="Ep 103: An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee (July 8, 2012)">[103]</a></sup><sup><a href="#ref-302" title="Ep 302: An Interview with Clint Cole of Digilent (June 8, 2016)">[302]</a></sup><sup><a href="#ref-150" title="Ep 150: Solar, FPGAs and Maxim Integrated - Solar Shopper Sickness (June 17, 2013)">[150]</a></sup> The device class occupies the space between software-programmable processors and application-specific integrated circuits: it offers concurrency and deterministic timing that no processor can match, at a substantial penalty in die area, unit price and power consumption relative to custom silicon.<sup><a href="#ref-103" title="Ep 103: An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee (July 8, 2012)">[103]</a></sup><sup><a href="#ref-254" title="Ep 254: An Interview with Andreas Olofsson - Adapteva's Ampliative Abacus (June 16, 2015)">[254]</a></sup><sup><a href="#ref-264" title="Ep 264: The Cost Of Doing Business (August 25, 2015)">[264]</a></sup> FPGAs matter economically because mask-set costs on leading-edge processes exceed ten million dollars, which confines ASICs to ever-narrower high-volume bands and leaves reconfigurable fabric to cover everything else.<sup><a href="#ref-103" title="Ep 103: An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee (July 8, 2012)">[103]</a></sup>
 
 ## Architecture

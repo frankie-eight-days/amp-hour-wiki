@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 76 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,31.0 22.2,31.0 33.4,31.0 44.5,31.0 55.6,31.0 66.8,25.5 77.9,17.3 89.0,7.7 100.1,5.0 111.2,21.4 122.4,13.2 133.5,14.6 144.6,11.8 155.8,7.7 166.9,10.5 178.0,26.9 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,31.0 22.2,31.0 33.4,31.0 44.5,31.0 55.6,31.0 66.8,25.5 77.9,17.3 89.0,7.7 100.1,5.0 111.2,21.4 122.4,13.2 133.5,14.6 144.6,11.8 155.8,7.7 166.9,10.5 178.0,26.9" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">76</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">131</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">28</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#275 — #726</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Bart Dring</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./wifi">wifi</a> · <a href="./bluetooth">bluetooth</a> · <a href="./arduino">arduino</a> · <a href="./microcontroller">microcontroller</a> · <a href="./lora">lora</a></td></tr></table></div>
+
+
 The ESP32 is a family of low-cost 32-bit microcontroller chips and modules built around Wi-Fi and short-range-radio connectivity, with early parts offering a pair of 240 MHz 32-bit processors running a real-time operating system and radios able to act as an access point or scan.<sup><a href="#ref-330" title="Ep 330: An Interview with Zach Fredin (January 4, 2017)">[330]</a></sup> Its design significance comes from integration economics: a certified module combines two cores, both radios, and a large peripheral set for a few dollars, and the processing is cheap enough that the part appears in designs that never enable the radio at all.<sup><a href="#ref-422" title="Ep 422: Stick 'Em On Whales (December 27, 2018)">[422]</a></sup><sup><a href="#ref-403" title="Ep 403: An Interview with Mike Szczys (August 12, 2018)">[403]</a></sup> The family has since broadened in both directions, including a single-core lower-power variant with a hardware USB peripheral, a radio-less dual-core 400 MHz design with a slower low-power companion core, and recent parts using an open instruction set with dual-band Wi-Fi.<sup><a href="#ref-500" title="Ep 500: Two and a Half Orders of Magnitude (July 12, 2020)">[500]</a></sup><sup><a href="#ref-615" title="Ep 615: Augmented Engineering (January 16, 2023)">[615]</a></sup><sup><a href="#ref-597" title="Ep 597: Wow, Dave REALLY likes Top Gun (July 24, 2022)">[597]</a></sup>
 
 ## Architecture

@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 213 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,29.6 11.1,11.3 22.2,6.4 33.4,6.4 44.5,21.2 55.6,22.6 66.8,5.0 77.9,14.1 89.0,20.5 100.1,11.3 111.2,16.2 122.4,14.8 133.5,19.8 144.6,25.4 155.8,21.9 166.9,17.6 178.0,25.4 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,29.6 11.1,11.3 22.2,6.4 33.4,6.4 44.5,21.2 55.6,22.6 66.8,5.0 77.9,14.1 89.0,20.5 100.1,11.3 111.2,16.2 122.4,14.8 133.5,19.8 144.6,25.4 155.8,21.9 166.9,17.6 178.0,25.4" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">213</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">338</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">51</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#2 — #729</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Forrest Mims</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./resistor">resistor</a> · <a href="./arduino">arduino</a> · <a href="./microcontroller">microcontroller</a> · <a href="./pcb">pcb</a> · <a href="./digi-key">digi key</a></td></tr></table></div>
+
+
 A light-emitting diode (LED) is a semiconductor junction device that emits photons when charge carriers are injected across the junction and recombine; it is, in functional terms, a solar cell operated in reverse, with absorption and emission being reciprocal processes set by the material's bandgap.<sup><a href="#ref-433" title="Ep 433: An Interview with Sam Stranks (March 10, 2019)">[433]</a></sup> Bright blue and green emission arrived with gallium nitride, displacing the dim silicon-carbide blue LEDs that preceded it, and white LEDs followed shortly after, with the entire change reaching the surplus and hobbyist market within a very short time.<sup><a href="#ref-61" title="Ep 61: Moore's Law, GaN and SiC devices - Gallimaufry GaN Gabble">[61]</a></sup> The technology now spans roles from sub-milliwatt indicator lamps to general illumination, and its practical engineering is dominated less by the emitter than by thermal design, drive electronics, and manufacturing handling.<sup><a href="#ref-9" title="Ep 9: From Boston In Boxers?">[9]</a></sup><sup><a href="#ref-48" title="Ep 48: Bob Pease, Jim Williams - Posthumous Pease Porridge">[48]</a></sup><sup><a href="#ref-367" title="Ep 367: Not Reely An Issue (November 12, 2017)">[367]</a></sup>
 
 ## Operating principle

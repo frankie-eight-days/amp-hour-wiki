@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 69 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,28.1 11.1,13.7 22.2,22.3 33.4,22.3 44.5,13.7 55.6,10.8 66.8,16.6 77.9,16.6 89.0,10.8 100.1,16.6 111.2,16.6 122.4,7.9 133.5,13.7 144.6,5.0 155.8,22.3 166.9,22.3 178.0,28.1 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,28.1 11.1,13.7 22.2,22.3 33.4,22.3 44.5,13.7 55.6,10.8 66.8,16.6 77.9,16.6 89.0,10.8 100.1,16.6 111.2,16.6 122.4,7.9 133.5,13.7 144.6,5.0 155.8,22.3 166.9,22.3 178.0,28.1" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">69</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">83</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">44</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#2 — #715</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Elecia White</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./battery-life">battery life</a> · <a href="./internet-of-things">internet of things</a> · <a href="./arduino">arduino</a> · <a href="./bluetooth">bluetooth</a> · <a href="./fpga">fpga</a></td></tr></table></div>
+
+
 Low-power design is the engineering discipline of minimising the energy an electronic system consumes, spanning analogue and digital technique for holding devices and microcontrollers at currents far smaller than ordinary practice habitually spends.<sup><a href="#ref-7" title="Ep 7: Love Robots and Pantyhose Screens">[7]</a></sup> It matters wherever the energy supply is constrained: in energy-harvesting systems the quiescent leakage of the parts around the harvester competes directly with a very small energy income, and in connected battery devices the cost of remaining attached to a network dominates even as microcontroller sleep currents fall to a few microamps.<sup><a href="#ref-7" title="Ep 7: Love Robots and Pantyhose Screens">[7]</a></sup><sup><a href="#ref-315" title="Ep 315: Mashuppery (with MEP)">[315]</a></sup> Low-power operation is a property of the whole system rather than of any single part, since one general-purpose component drawing a few milliamps rules out coin-cell operation on its own.<sup><a href="#ref-226" title="Ep 226: An Interview with Colin Karpfinger - Blendling Bean Brio (December 2, 2014)">[226]</a></sup> On a battery-powered product, assembling the working function from off-the-shelf hardware can be a matter of days while the low-power engineering that makes the combination viable absorbs years of effort.<sup><a href="#ref-301" title="Ep 301: The Nerd Calendar (June 1, 2016)">[301]</a></sup>
 
 ## History

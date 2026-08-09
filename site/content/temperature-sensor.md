@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 56 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,28.8 11.1,28.8 22.2,26.7 33.4,20.2 44.5,24.5 55.6,20.2 66.8,13.7 77.9,18.0 89.0,5.0 100.1,22.3 111.2,22.3 122.4,18.0 133.5,22.3 144.6,18.0 155.8,26.7 166.9,26.7 178.0,31.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,28.8 11.1,28.8 22.2,26.7 33.4,20.2 44.5,24.5 55.6,20.2 66.8,13.7 77.9,18.0 89.0,5.0 100.1,22.3 111.2,22.3 122.4,18.0 133.5,22.3 144.6,18.0 155.8,26.7 166.9,26.7 178.0,31.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">56</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">71</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">25</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#3 — #696</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Luke Beno</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./internet-of-things">internet of things</a> · <a href="./microcontroller">microcontroller</a> · <a href="./sensor">sensor</a> · <a href="./accelerometer">accelerometer</a> · <a href="./analog-to-digital-converter">analog to digital converter</a></td></tr></table></div>
+
+
 A **temperature sensor** is a transducer that converts thermal conditions into an electrical signal readable by an electronic system. An ordinary integrated temperature sensor measures the behaviour of a silicon junction on its own die, so it reports the temperature of the chip itself, whereas non-contact instruments such as thermopile parts collect incident infrared radiation in a package cavity to measure remote objects.<sup><a href="#ref-53" title="Ep 53: Biarchy Birthday Bavardage">[53]</a></sup> Temperature measurement is among the most thoroughly commoditised functions in electronics, which shifts the engineering problem from how to measure temperature to where to place the sensor and what to do with the resulting number.<sup><a href="#ref-153" title="Ep 153: An Interview with Ryan O'Hara - Keyed, Kerfed Kapton (July 8, 2013)">[153]</a></sup>
 
 ## Operating principles

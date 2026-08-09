@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 54 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,29.0 22.2,11.0 33.4,5.0 44.5,29.0 55.6,9.0 66.8,15.0 77.9,17.0 89.0,23.0 100.1,23.0 111.2,21.0 122.4,21.0 133.5,29.0 144.6,25.0 155.8,27.0 166.9,31.0 178.0,31.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,29.0 22.2,11.0 33.4,5.0 44.5,29.0 55.6,9.0 66.8,15.0 77.9,17.0 89.0,23.0 100.1,23.0 111.2,21.0 122.4,21.0 133.5,29.0 144.6,25.0 155.8,27.0 166.9,31.0 178.0,31.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">54</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">75</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">33</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#35 — #682</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Jeri Ellsworth</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./venture-capital">venture capital</a></td></tr></table></div>
+
+
 Startup funding is the acquisition of capital by a new company to finance development, manufacturing, and operation before the business can sustain itself from revenue. For engineering-led and hardware companies, the available routes range from personal savings and friends-and-family cheques through grants, accelerators, and crowdfunding to institutional venture capital, and each route carries distinct consequences for ownership, pace, and risk.<sup><a href="#ref-72" title="Ep 72: Kismetic Keithley Katowse">[72]</a></sup><sup><a href="#ref-109" title="Ep 109: An Interview with Larry Sears - Hexagram Hardware Holism (August 19, 2012)">[109]</a></sup> The structure of the raise determines more than the amount: the size of a round dictates an expected growth rate, the source of the money dictates the obligations attached to it, and the timing of the raise relative to the remaining work frequently determines whether the company survives.<sup><a href="#ref-394" title="Ep 394: Jeri Ellsworth and the demise of CastAR (May 28, 2018)">[394]</a></sup><sup><a href="#ref-163" title="Ep 163: Interview with the Upverter Founders - Ramiform Reciprocity Raconteurs (September 16, 2013)">[163]</a></sup> Because early hardware development can be cheap but production and staffing are not, the gap between a fundable prototype and a funded company is a recurring structural problem in the sector.<sup><a href="#ref-94" title="Ep 94: Gnomic Gazumping Gobemouche (May 6, 2012)">[94]</a></sup><sup><a href="#ref-340" title="Ep 340: An Interview with Jason Cerundolo (March 19, 2017)">[340]</a></sup>
 
 ## Sources of early capital

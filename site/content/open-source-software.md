@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 155 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,30.2 11.1,21.2 22.2,22.9 33.4,5.0 44.5,20.4 55.6,21.2 66.8,18.0 77.9,20.4 89.0,20.4 100.1,13.9 111.2,20.4 122.4,13.9 133.5,23.7 144.6,21.2 155.8,21.2 166.9,21.2 178.0,27.8 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,30.2 11.1,21.2 22.2,22.9 33.4,5.0 44.5,20.4 55.6,21.2 66.8,18.0 77.9,20.4 89.0,20.4 100.1,13.9 111.2,20.4 122.4,13.9 133.5,23.7 144.6,21.2 155.8,21.2 166.9,21.2 178.0,27.8" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">155</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">226</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">57</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#3 — #723</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Michael Gielda</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./kicad">kicad</a> · <a href="./open-source-hardware">open source hardware</a> · <a href="./github">github</a> · <a href="./altium">altium</a> · <a href="./arduino">arduino</a></td></tr></table></div>
+
+
 Open source software is software distributed with its source code, under a licence that permits the recipient to use, modify and redistribute that code within the licence's terms.<sup><a href="#ref-547" title="Ep 547: Open Source Mindset with Michael Gielda (June 28, 2021)">[547]</a></sup> The substantive difference from proprietary software is the availability of the code itself; the other characteristics commonly attached to either label — cost, quality, support, community — are conventions rather than consequences of the licence.<sup><a href="#ref-547" title="Ep 547: Open Source Mindset with Michael Gielda (June 28, 2021)">[547]</a></sup> In electronics and embedded engineering the model extends beyond applications into compilers, design tools, real-time operating systems and process design kits, and its presence reshapes vendor business models, support relationships and the longevity of engineering work.<sup><a href="#ref-20" title="Ep 20: Military Electronics and The Free Eagle (Freagle) Campaign">[20]</a></sup><sup><a href="#ref-501" title="Ep 501: Discussing the Open Source PDK with Tim Ansell (July 19, 2020)">[501]</a></sup><sup><a href="#ref-622" title="Ep 622: Building Firmware and Hardware for Trade Shows with Mike Szczys (March 5, 2023)">[622]</a></sup>
 
 ## Terminology and licensing

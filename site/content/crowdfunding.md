@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 96 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,30.2 11.1,26.4 22.2,27.9 33.4,5.0 44.5,14.2 55.6,13.4 66.8,9.6 77.9,14.9 89.0,23.4 100.1,23.4 111.2,30.2 122.4,29.5 133.5,28.7 144.6,29.5 155.8,28.7 166.9,31.0 178.0,31.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,30.2 11.1,26.4 22.2,27.9 33.4,5.0 44.5,14.2 55.6,13.4 66.8,9.6 77.9,14.9 89.0,23.4 100.1,23.4 111.2,30.2 122.4,29.5 133.5,28.7 144.6,29.5 155.8,28.7 166.9,31.0 178.0,31.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">96</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">170</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">51</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#5 — #676</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Jeri Ellsworth</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./kickstarter">kickstarter</a> · <a href="./open-source-hardware">open source hardware</a> · <a href="./venture-capital">venture capital</a> · <a href="./arduino">arduino</a> · <a href="./product-pricing">product pricing</a></td></tr></table></div>
+
+
 Crowdfunding is a method of financing a hardware product in which payment is collected from buyers before manufacturing begins, so that the initial production run does not have to be financed out of the producer's own capital.<sup><a href="#ref-109" title="Ep 109: An Interview with Larry Sears - Hexagram Hardware Holism (August 19, 2012)">[109]</a></sup> In the dominant reward-based form, a pledge is a purchase order for a promised unit rather than an equity investment: the backer acquires no stake in the company and no claim on its future revenue.<sup><a href="#ref-109" title="Ep 109: An Interview with Larry Sears - Hexagram Hardware Holism (August 19, 2012)">[109]</a></sup> A campaign simultaneously raises capital and measures demand, since tiered pledge levels return a quantified reading of how many buyers exist at each price before inventory is committed.<sup><a href="#ref-40" title="Ep 40: Adafruit, Chip heist, Hackerspaces - The Kit Conniption">[40]</a></sup> The mechanism is best understood as a way of mitigating the risk of building unsold inventory rather than as a new form of marketing, since the work of reaching the right buyers is unchanged by the platform.<sup><a href="#ref-314" title="Ep 314: An Interview with Josh Lifton (September 7, 2016)">[314]</a></sup>
 
 ## Model and mechanics

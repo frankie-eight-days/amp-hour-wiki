@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 240 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,29.2 22.2,21.4 33.4,8.6 44.5,9.6 55.6,16.0 66.8,17.5 77.9,15.7 89.0,10.0 100.1,5.0 111.2,12.1 122.4,5.4 133.5,22.8 144.6,23.2 155.8,14.3 166.9,16.8 178.0,26.7 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,29.2 22.2,21.4 33.4,8.6 44.5,9.6 55.6,16.0 66.8,17.5 77.9,15.7 89.0,10.0 100.1,5.0 111.2,12.1 122.4,5.4 133.5,22.8 144.6,23.2 155.8,14.3 166.9,16.8 178.0,26.7" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">240</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">679</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">53</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#12 — #724</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Adam Wolf</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./altium">altium</a> · <a href="./eagle">eagle</a> · <a href="./open-source-software">open source software</a> · <a href="./open-source-hardware">open source hardware</a> · <a href="./pcb-layout">pcb layout</a></td></tr></table></div>
+
+
 KiCad is an open-source electronic design automation (EDA) suite for schematic capture and printed circuit board (PCB) layout. The project dates from the mid-1990s and followed the trajectory common to long-lived open-source projects: little visible movement for many years, followed by a period in which capability accumulated faster than users could track.<sup><a href="#ref-501" title="Ep 501: Discussing the Open Source PDK with Tim Ansell (July 19, 2020)">[501]</a></sup> Its development rate changed when a research laboratory assigned paid staff to work on the project, adding development capacity that a volunteer project cannot schedule.<sup><a href="#ref-172" title="Ep 172: CAD courses and cross platform creation - Printing Propaedeutic Patterns (November 19, 2013)">[172]</a></sup> The tool imposes no layer-count restriction of the kind free tiers of commercial tools have imposed, and supports high-speed differential pairs and arbitrary-angle routing.<sup><a href="#ref-669" title="Ep 669: Freelance PCB Design with Petr Dvorak (June 6, 2024)">[669]</a></sup>
 
 ## History and development model

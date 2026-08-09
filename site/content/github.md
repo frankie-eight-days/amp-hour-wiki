@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 125 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,31.0 22.2,25.4 33.4,5.0 44.5,15.2 55.6,21.7 66.8,25.4 77.9,13.4 89.0,15.2 100.1,16.1 111.2,18.9 122.4,17.1 133.5,22.6 144.6,11.5 155.8,18.9 166.9,22.6 178.0,28.2 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,31.0 22.2,25.4 33.4,5.0 44.5,15.2 55.6,21.7 66.8,25.4 77.9,13.4 89.0,15.2 100.1,16.1 111.2,18.9 122.4,17.1 133.5,22.6 144.6,11.5 155.8,18.9 166.9,22.6 178.0,28.2" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">125</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">202</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">36</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#67 — #721</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Piotr Esden-Tempski</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./open-source-hardware">open source hardware</a> · <a href="./kicad">kicad</a> · <a href="./open-source-software">open source software</a> · <a href="./microcontroller">microcontroller</a> · <a href="./schematic">schematic</a></td></tr></table></div>
+
+
 GitHub is a hosted service built on top of the Git version control system, which originated in Linux development; the service supplies the social, online layer around the underlying tool and thereby became the default place to share designs.<sup><a href="#ref-230" title="Ep 230: Prepping For Hoverboards - Gallionic GitHub Gabble (December 30, 2014)">[230]</a></sup> Although Git is nominally a distributed system, it is used centrally in practice: when every participant pulls from the same host, that host functions as the authoritative copy, with local copies reconciling once it is reachable again.<sup><a href="#ref-396" title="Ep 396: The Synergy Bus (June 10, 2018)">[396]</a></sup> The platform provides code review and collaboration to small teams without requiring them to maintain any infrastructure of their own.<sup><a href="#ref-422" title="Ep 422: Stick 'Em On Whales (December 27, 2018)">[422]</a></sup> Its contribution mechanism is built on forking a line of work and merging it back, a model that distinguishes it from the centralised version control systems that preceded it.<sup><a href="#ref-152" title="Ep 152: Firmware, Netburner and Semiconductors - Chris's Capitalism Colloquy (July 1, 2013)">[152]</a></sup>
 
 ## Relationship to Git

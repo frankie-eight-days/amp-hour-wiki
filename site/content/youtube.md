@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 262 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,28.7 11.1,5.0 22.2,7.3 33.4,6.2 44.5,15.4 55.6,18.9 66.8,8.5 77.9,8.5 89.0,16.0 100.1,16.6 111.2,20.6 122.4,6.7 133.5,14.8 144.6,18.3 155.8,16.0 166.9,20.0 178.0,27.5 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,28.7 11.1,5.0 22.2,7.3 33.4,6.2 44.5,15.4 55.6,18.9 66.8,8.5 77.9,8.5 89.0,16.0 100.1,16.6 111.2,20.6 122.4,6.7 133.5,14.8 144.6,18.3 155.8,16.0 166.9,20.0 178.0,27.5" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">262</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">471</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">29</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#1 — #720</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Big Clive</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./oscilloscope">oscilloscope</a> · <a href="./altium">altium</a> · <a href="./kicad">kicad</a> · <a href="./camera">camera</a></td></tr></table></div>
+
+
 YouTube operates in engineering practice as a publishing channel, a live-production endpoint, a search surface and an income mechanism rather than as playback alone.<sup><a href="#ref-199" title="Ep 199: The 2014 Maker Faire Show - Traveling Technology Trangam (May 19, 2014)">[199]</a></sup><sup><a href="#ref-568" title="Ep 568: YouTube to Consulting with Florin of Voltlog (November 28, 2021)">[568]</a></sup><sup><a href="#ref-416" title="Ep 416: An Interview with James Bruton (November 18, 2018)">[416]</a></sup> For technical work it imposes constraints of cadence, watch-time ranking, compression and irreversibility that shape how designs are documented, financed and taught.<sup><a href="#ref-140" title="Ep 140: Project Management, Lasers & Robots - Staunch Specialty Sanctanimity (April 8, 2013)">[140]</a></sup><sup><a href="#ref-449" title="Ep 449: Pulled From A Working Environment (June 30, 2019)">[449]</a></sup><sup><a href="#ref-285" title="Ep 285: Something's Serially Wrong Here (February 3, 2016)">[285]</a></sup><sup><a href="#ref-14" title="Ep 14: China, Entrepreneurs and Blue Collar Reality">[14]</a></sup> Its technical use spans one-person live stacks, long-form build documentation, distributor-funded courses, consulting lead generation and machining instruction learned from recorded classes.<sup><a href="#ref-199" title="Ep 199: The 2014 Maker Faire Show - Traveling Technology Trangam (May 19, 2014)">[199]</a></sup><sup><a href="#ref-675" title="Ep 675: Changing Course with Shawn Hymel (August 8, 2024)">[675]</a></sup><sup><a href="#ref-568" title="Ep 568: YouTube to Consulting with Florin of Voltlog (November 28, 2021)">[568]</a></sup><sup><a href="#ref-697" title="Ep 697: LEDs Everywhere with Tim from Mitxela (July 8, 2025)">[697]</a></sup>
 
 ## Production model

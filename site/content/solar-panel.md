@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 69 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,30.1 11.1,28.2 22.2,28.2 33.4,25.4 44.5,23.6 55.6,17.1 66.8,27.3 77.9,24.5 89.0,28.2 100.1,26.4 111.2,27.3 122.4,5.0 133.5,21.7 144.6,17.1 155.8,12.4 166.9,25.4 178.0,31.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,30.1 11.1,28.2 22.2,28.2 33.4,25.4 44.5,23.6 55.6,17.1 66.8,27.3 77.9,24.5 89.0,28.2 100.1,26.4 111.2,27.3 122.4,5.0 133.5,21.7 144.6,17.1 155.8,12.4 166.9,25.4 178.0,31.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">69</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">138</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">33</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#5 — #702</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Dan Esparon</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./solar-power">solar power</a> · <a href="./power-grid">power grid</a> · <a href="./battery">battery</a></td></tr></table></div>
+
+
 A **solar panel** (photovoltaic panel) is a device that converts incident sunlight directly into electrical energy, with output rated against a standard insolation of 1000 watts per square metre so that any panel's nameplate figure is directly comparable with any other's.<sup><a href="#ref-639" title="Ep 639: Daaaamn We're Duuuummmb (July 17, 2023)">[639]</a></sup> Panels are characteristically wired in series strings producing several hundred volts of DC, converted to grid-synchronised AC by an inverter, and their real-world energy yield is dominated less by nameplate rating than by siting, orientation, temperature, and shading.<sup><a href="#ref-532" title="Ep 532: Recalling Recalls (February 28, 2021)">[532]</a></sup><sup><a href="#ref-548" title="Ep 548: The Last Line of Defense (July 5, 2021)">[548]</a></sup><sup><a href="#ref-555" title="Ep 555: Timing is Everything (August 30, 2021)">[555]</a></sup> Because photovoltaic conversion has no wear-out mechanism in the way chemistry and mechanisms do, panels routinely remain serviceable for decades, with twenty-year output warranties common on domestic hardware.<sup><a href="#ref-322" title="Ep 322: World Trade Futurity (WTF) (November 9, 2016)">[322]</a></sup><sup><a href="#ref-150" title="Ep 150: Solar, FPGAs and Maxim Integrated - Solar Shopper Sickness (June 17, 2013)">[150]</a></sup>
 
 ## Ratings and performance

@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 69 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,18.9 22.2,25.8 33.4,18.9 44.5,10.2 55.6,5.0 66.8,11.9 77.9,6.7 89.0,18.9 100.1,25.8 111.2,27.5 122.4,18.9 133.5,29.3 144.6,27.5 155.8,24.1 166.9,27.5 178.0,27.5 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,18.9 22.2,25.8 33.4,18.9 44.5,10.2 55.6,5.0 66.8,11.9 77.9,6.7 89.0,18.9 100.1,25.8 111.2,27.5 122.4,18.9 133.5,29.3 144.6,27.5 155.8,24.1 166.9,27.5 178.0,27.5" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">69</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">99</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">47</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#6 — #717</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Andrew Witte</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./low-power-design">low power design</a> · <a href="./power-consumption">power consumption</a> · <a href="./battery">battery</a> · <a href="./bluetooth">bluetooth</a> · <a href="./bluetooth-low-energy">bluetooth low energy</a></td></tr></table></div>
+
+
 Battery life is the period for which a battery-powered device can operate before its cells are exhausted or require recharging, and it is governed by the ratio between the energy stored in the cells and the device's average power consumption over time.<sup><a href="#ref-10" title="Ep 10: Open Hardware and Self Publishing">[10]</a></sup><sup><a href="#ref-49" title="Ep 49: Analog Devices, Design Spark - Unusual Usenet Usurpation">[49]</a></sup> It is frequently the governing constraint in portable and remote electronic design, determining a product's size, weight, price and feature set rather than merely following from them.<sup><a href="#ref-179" title="Ep 179: Greg Charvat Returns With A Book! - Laboratory Literature Laureate (January 6, 2014)">[179]</a></sup><sup><a href="#ref-292" title="Ep 292: An Interview with Timothy Lamb (March 23, 2016)">[292]</a></sup><sup><a href="#ref-334" title="Ep 334: An Interview with Gerry Roston (February 1, 2017)">[334]</a></sup> In remote telemetry it is also a commercial requirement, since a single field service visit can consume the margin on the serviced device and on several others.<sup><a href="#ref-427" title="Ep 427: An Interview with Maarten Engelen (January 27, 2019)">[427]</a></sup>
 
 ## Energy budgets and estimation

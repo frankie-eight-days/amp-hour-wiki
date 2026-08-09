@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 65 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,31.0 22.2,26.1 33.4,8.2 44.5,22.9 55.6,9.9 66.8,21.2 77.9,5.0 89.0,13.1 100.1,8.2 111.2,24.5 122.4,29.4 133.5,27.8 144.6,29.4 155.8,29.4 166.9,21.2 178.0,26.1 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,31.0 22.2,26.1 33.4,8.2 44.5,22.9 55.6,9.9 66.8,21.2 77.9,5.0 89.0,13.1 100.1,8.2 111.2,24.5 122.4,29.4 133.5,27.8 144.6,29.4 155.8,29.4 166.9,21.2 178.0,26.1" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">65</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">100</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">36</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#75 — #715</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Eric Van Wyk</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./3d-printing">3d printing</a> · <a href="./design-for-manufacturing">design for manufacturing</a> · <a href="./3d-printer">3d printer</a> · <a href="./contract-manufacturer">contract manufacturer</a> · <a href="./economies-of-scale">economies of scale</a></td></tr></table></div>
+
+
 Injection molding is a manufacturing process in which plastic pellets are melted, driven forward by a reciprocating screw, and forced into a precision-machined mold under hundreds of tons of clamping pressure.<sup><a href="#ref-379" title="Ep 379: An Interview with John Saunders (February 11, 2018)">[379]</a></sup> The process dominates the production of high-volume plastic parts because its economics invert those of most fabrication methods: the tooling carries nearly all of the cost, while the marginal cost of each additional part approaches zero.<sup><a href="#ref-130" title="Ep 130: Boeing, PCBs & Startups - Awful Airplane Aeration (January 28, 2013)">[130]</a></sup><sup><a href="#ref-405" title="Ep 405: An Interview with Spencer Wright (September 3, 2018)">[405]</a></sup> That cost structure, together with geometric constraints imposed by the need to extract a solidified part from a steel tool, shapes a distinct body of design rules, failure modes, and production practices.<sup><a href="#ref-153" title="Ep 153: An Interview with Ryan O'Hara - Keyed, Kerfed Kapton (July 8, 2013)">[153]</a></sup><sup><a href="#ref-218" title="Ep 218: An Interview with Eric VanWyk - Meiotic Mountenance Mooshimeter (September 29, 2014)">[218]</a></sup>
 
 ## Process

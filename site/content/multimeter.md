@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 183 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,28.4 11.1,5.0 22.2,14.8 33.4,13.4 44.5,8.9 55.6,24.5 66.8,8.9 77.9,10.8 89.0,16.1 100.1,19.3 111.2,20.6 122.4,8.9 133.5,21.2 144.6,19.3 155.8,24.5 166.9,22.5 178.0,28.4 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,28.4 11.1,5.0 22.2,14.8 33.4,13.4 44.5,8.9 55.6,24.5 66.8,8.9 77.9,10.8 89.0,16.1 100.1,19.3 111.2,20.6 122.4,8.9 133.5,21.2 144.6,19.3 155.8,24.5 166.9,22.5 178.0,28.4" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">183</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">356</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">50</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#2 — #720</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Martin Lorton</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./oscilloscope">oscilloscope</a> · <a href="./power-supply">power supply</a> · <a href="./soldering-iron">soldering iron</a> · <a href="./analog-to-digital-converter">analog to digital converter</a> · <a href="./kickstarter">kickstarter</a></td></tr></table></div>
+
+
 A multimeter is an electronic test instrument that measures voltage, current and resistance, with secondary functions that commonly include continuity testing, diode testing and short-circuit detection.<sup><a href="#ref-481" title="Ep 481: An Interview with Paul Thompson (February 24, 2020)">[481]</a></sup><sup><a href="#ref-72" title="Ep 72: Kismetic Keithley Katowse">[72]</a></sup> It is the foundational instrument of electronics work: continuity testing alone can recover the complete wiring of a machine stripped of its harnesses, and a step-by-step diagnostic procedure built on four basic meter operations resolves roughly eighty percent of field faults in some repair programmes.<sup><a href="#ref-463" title="Ep 463: An Interview with Trammell Hudson (October 20, 2019)">[463]</a></sup><sup><a href="#ref-481" title="Ep 481: An Interview with Paul Thompson (February 24, 2020)">[481]</a></sup> The instrument exists in handheld and bench forms across a requirement space wide enough to support on the order of a thousand distinct models, with no single optimal design.<sup><a href="#ref-554" title="Ep 554: PLEASE be a die shrink (August 15, 2021)">[554]</a></sup><sup><a href="#ref-148" title="Ep 148: Contextual Electronics, ClubJameco and Solderpaste - Lifelong Learning Likelihood (June 3, 2013)">[148]</a></sup>
 
 ## Specifications

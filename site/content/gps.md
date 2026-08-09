@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 60 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,27.3 22.2,25.4 33.4,25.4 44.5,19.9 55.6,23.6 66.8,12.4 77.9,5.0 89.0,12.4 100.1,12.4 111.2,27.3 122.4,23.6 133.5,19.9 144.6,16.1 155.8,19.9 166.9,29.1 178.0,29.1 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,27.3 22.2,25.4 33.4,25.4 44.5,19.9 55.6,23.6 66.8,12.4 77.9,5.0 89.0,12.4 100.1,12.4 111.2,27.3 122.4,23.6 133.5,19.9 144.6,16.1 155.8,19.9 166.9,29.1 178.0,29.1" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">60</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">90</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">29</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#40 — #728</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Vic Aprea</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./camera">camera</a> · <a href="./wifi">wifi</a> · <a href="./bluetooth">bluetooth</a> · <a href="./antenna">antenna</a> · <a href="./lora">lora</a></td></tr></table></div>
+
+
 The Global Positioning System (GPS) is a satellite-based radionavigation system whose signals are received at extremely low power and processed into position, velocity, altitude, and time fixes by receivers ranging from phone-class parts to dedicated modules.<sup><a href="#ref-352" title="Ep 352: Conning with Michael Ossmann (July 17, 2017)">[352]</a></sup><sup><a href="#ref-301" title="Ep 301: The Nerd Calendar (June 1, 2016)">[301]</a></sup> The satellite signal arrives well below the noise floor and is recovered by correlation against a known spreading code, which shapes the system's power consumption, acquisition behaviour, and antenna requirements.<sup><a href="#ref-352" title="Ep 352: Conning with Michael Ossmann (July 17, 2017)">[352]</a></sup><sup><a href="#ref-600" title="Ep 600: The Custodial Arts (August 21, 2022)">[600]</a></sup><sup><a href="#ref-446" title="Ep 446: An Interview with Pete Bevelacqua (June 9, 2019)">[446]</a></sup> GPS underpins applications from autonomous aircraft and high-altitude balloon tracking to cellular asset tags and data loggers, but it fails entirely wherever the sky is obstructed — indoors, underwater, in narrow canyons, and inside metal-clad buildings — and it is vulnerable to jamming and spoofing, so systems that depend on it treat denial as a design case.<sup><a href="#ref-105" title="Ep 105: An Interview with Chris Anderson - Deambulatory Daedal Drones (July 23, 2012)">[105]</a></sup><sup><a href="#ref-407" title="Ep 407: Gregory Charvat and Three New Companies (September 16, 2018)">[407]</a></sup><sup><a href="#ref-357" title="Ep 357: An Interview with Rick Altherr (August 28, 2017)">[357]</a></sup><sup><a href="#ref-510" title="Ep 510: Knob and Tube Wiring (September 28, 2020)">[510]</a></sup>
 
 ## Operating principles

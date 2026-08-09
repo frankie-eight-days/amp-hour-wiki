@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 60 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,23.6 22.2,24.5 33.4,5.0 44.5,13.4 55.6,28.2 66.8,23.6 77.9,24.5 89.0,12.4 100.1,18.9 111.2,29.1 122.4,28.2 133.5,31.0 144.6,28.2 155.8,28.2 166.9,30.1 178.0,30.1 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,23.6 22.2,24.5 33.4,5.0 44.5,13.4 55.6,28.2 66.8,23.6 77.9,24.5 89.0,12.4 100.1,18.9 111.2,29.1 122.4,28.2 133.5,31.0 144.6,28.2 155.8,28.2 166.9,30.1 178.0,30.1" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">60</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">126</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">23</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#47 — #714</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Michael Ossmann</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./digital-signal-processing">digital signal processing</a> · <a href="./fpga">fpga</a> · <a href="./kickstarter">kickstarter</a> · <a href="./open-source-hardware">open source hardware</a> · <a href="./spectrum-analyzer">spectrum analyzer</a></td></tr></table></div>
+
+
 A **software-defined radio** (SDR) is a radio communication system built around a defining split: an analog front end handles the radio-frequency interface while everything after it — filtering, demodulation and mixing — is performed digitally, allowing those functions to be changed without touching hardware so that one board becomes many radios through a recompile.<sup><a href="#ref-48" title="Ep 48: Bob Pease, Jim Williams - Posthumous Pease Porridge">[48]</a></sup> The architecture matters because it makes radio behaviour a property of software rather than of fixed circuitry: waveform, congestion control and transmission scheduling can all be reconfigured on units already deployed in the field, and the modulation format is irrelevant to the hardware as long as a decoder exists in software.<sup><a href="#ref-427" title="Ep 427: An Interview with Maarten Engelen (January 27, 2019)">[427]</a></sup><sup><a href="#ref-73" title="Ep 73: Horrisonous Holiday Habromania">[73]</a></sup> The same digitise-early architecture, however, carries measurable costs in front-end robustness, transmit agility and power consumption that shape where software-defined radios can be used.<sup><a href="#ref-613" title="Ep 613: It's a Keyzermas Miracle! (December 18, 2022)">[613]</a></sup><sup><a href="#ref-162" title="Ep 162: Discussing The Open Hardware Summit With MightyOhm - Ostrobogulous Openness Occasion (September 8, 2013)">[162]</a></sup><sup><a href="#ref-442" title="Ep 442: An Interview with Travis Goodspeed (May 12, 2019)">[442]</a></sup>
 
 ## Architecture

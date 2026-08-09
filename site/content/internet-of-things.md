@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 198 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,28.3 11.1,30.2 22.2,27.9 33.4,23.7 44.5,18.0 55.6,19.9 66.8,9.6 77.9,5.0 89.0,21.1 100.1,21.8 111.2,25.3 122.4,21.4 133.5,19.5 144.6,22.6 155.8,26.0 166.9,29.9 178.0,29.9 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,28.3 11.1,30.2 22.2,27.9 33.4,23.7 44.5,18.0 55.6,19.9 66.8,9.6 77.9,5.0 89.0,21.1 100.1,21.8 111.2,25.3 122.4,21.4 133.5,19.5 144.6,22.6 155.8,26.0 166.9,29.9 178.0,29.9" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">198</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">384</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">68</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#23 — #729</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Elecia White</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./wifi">wifi</a> · <a href="./bluetooth">bluetooth</a> · <a href="./microcontroller">microcontroller</a> · <a href="./arduino">arduino</a> · <a href="./cloud-computing">cloud computing</a></td></tr></table></div>
+
+
 The **Internet of Things** (IoT) is the practice of connecting physical devices—sensors, actuators, appliances and industrial equipment—to data networks so that they can report state and be controlled remotely. The category rests on two underlying trends: local computation approaching zero cost, and connectivity that is effectively ubiquitous through WiFi in buildings, Bluetooth carried on people, and cellular coverage between them.<sup><a href="#ref-327" title="Ep 327: An Interview with Avidan Ross (December 14, 2016)">[327]</a></sup> The dominant architecture is not a direct connection of every sensor to the internet, but a local sensor network reporting to a gateway device that handles the internet-facing communication.<sup><a href="#ref-232" title="Ep 232: Impedance Matching&quot; with Davidson and Vandenbout - Presbytes Pushing Portfolios">[232]</a></sup> The engineering and commercial substance of the field lies in power budgets, fleet maintenance, service longevity and security rather than in the radio link itself, and the durable applications are those that remove technician visits, prevent expensive failures or tie directly to money saved.<sup><a href="#ref-495" title="Ep 495: An Interview with Eric Klein (June 7, 2020)">[495]</a></sup><sup><a href="#ref-272" title="Ep 272: An Interview With Luke Beno of Analog.io (October 21, 2015)">[272]</a></sup><sup><a href="#ref-179" title="Ep 179: Greg Charvat Returns With A Book! - Laboratory Literature Laureate (January 6, 2014)">[179]</a></sup>
 
 ## Architecture

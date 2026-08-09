@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 212 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,30.2 11.1,19.6 22.2,19.2 33.4,5.0 44.5,24.1 55.6,19.6 66.8,21.2 77.9,23.7 89.0,23.3 100.1,11.5 111.2,20.4 122.4,24.5 133.5,27.8 144.6,24.1 155.8,24.1 166.9,24.9 178.0,26.9 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,30.2 11.1,19.6 22.2,19.2 33.4,5.0 44.5,24.1 55.6,19.6 66.8,21.2 77.9,23.7 89.0,23.3 100.1,11.5 111.2,20.4 122.4,24.5 133.5,27.8 144.6,24.1 155.8,24.1 166.9,24.9 178.0,26.9" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">212</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">386</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">62</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#4 — #727</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Laen</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./pcb-assembly">pcb assembly</a> · <a href="./gerber">gerber</a> · <a href="./pcb-lead-time">pcb lead time</a> · <a href="./solder-mask">solder mask</a> · <a href="./kicad">kicad</a></td></tr></table></div>
+
+
 Printed circuit board (PCB) fabrication is the set of manufacturing processes that converts a layout design into a bare, unpopulated circuit board. A two-layer board passes through roughly fifteen distinct manufacturing steps, and a multi-layer board through substantially more; a full bare-board fabrication line runs to twenty-five or thirty steps, including cleanroom stages that must be re-entered in sequence.<sup><a href="#ref-140" title="Ep 140: Project Management, Lasers & Robots - Staunch Specialty Sanctanimity (April 8, 2013)">[140]</a></sup><sup><a href="#ref-414" title="Ep 414: An Interview with Scotty Allen (Strangeparts) (November 5, 2018)">[414]</a></sup> The economics of the process have shifted by orders of magnitude: single boards that cost thousands of dollars and took weeks in the early 1990s are now available as five four-layer boards for about seven dollars from shared-panel services, a change that has restructured how hardware is designed and iterated.<sup><a href="#ref-79" title="Ep 79: Ludibrious Luxating Layout (January 23, 2012)">[79]</a></sup><sup><a href="#ref-137" title="Ep 137: Mars, System Design & NAND - Mercurial Mars Mission (March 19, 2013)">[137]</a></sup><sup><a href="#ref-652" title="Ep 652: For a couple weeks there... (November 28, 2023)">[652]</a></sup>
 
 ## Process sequence

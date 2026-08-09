@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 80 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,31.0 22.2,31.0 33.4,31.0 44.5,31.0 55.6,31.0 66.8,30.3 77.9,31.0 89.0,31.0 100.1,29.6 111.2,10.8 122.4,15.1 133.5,18.0 144.6,10.8 155.8,5.0 166.9,16.6 178.0,18.7 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,31.0 22.2,31.0 33.4,31.0 44.5,31.0 55.6,31.0 66.8,30.3 77.9,31.0 89.0,31.0 100.1,29.6 111.2,10.8 122.4,15.1 133.5,18.0 144.6,10.8 155.8,5.0 166.9,16.6 178.0,18.7" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">80</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">172</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">33</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#323 — #728</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Michael Gielda</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./rtos">rtos</a> · <a href="./linux">linux</a> · <a href="./bluetooth">bluetooth</a> · <a href="./arduino">arduino</a> · <a href="./firmware">firmware</a></td></tr></table></div>
+
+
 Zephyr is an open-source real-time operating system and software ecosystem for microcontrollers, hosted by the Linux Foundation and funded through tiered corporate membership.<sup><a href="#ref-547" title="Ep 547: Open Source Mindset with Michael Gielda (June 28, 2021)">[547]</a></sup> At its core it is a kernel and scheduler comparable to other real-time operating systems, but around that core it carries driver classes, protocol stacks, file systems, and per-vendor compatibility layers, a structure the project itself describes as a distribution rather than an operating system alone.<sup><a href="#ref-653" title="Ep 653: Benjamin Cabé Nose Zephyr (December 11, 2023)">[653]</a></sup><sup><a href="#ref-675" title="Ep 675: Changing Course with Shawn Hymel (August 8, 2024)">[675]</a></sup> Zephyr imports two configuration mechanisms from Linux — Kconfig and the device tree — and uses them to separate application code from specific hardware, so that the same application can be rebuilt for different boards and silicon vendors.<sup><a href="#ref-511" title="Ep 511: Brewing Electronics with Eli Hughes (October 4, 2020)">[511]</a></sup><sup><a href="#ref-622" title="Ep 622: Building Firmware and Hardware for Trade Shows with Mike Szczys (March 5, 2023)">[622]</a></sup> Its stated purpose is to relieve product firmware of reimplementing peripheral interfacing: file systems, Wi-Fi and Bluetooth communication, and similar facilities are supplied in the tree, leaving application code confined to what is specific to the product.<sup><a href="#ref-653" title="Ep 653: Benjamin Cabé Nose Zephyr (December 11, 2023)">[653]</a></sup>
 
 ## Architecture

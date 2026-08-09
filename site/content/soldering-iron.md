@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 110 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,29.7 11.1,6.3 22.2,23.2 33.4,5.0 44.5,15.4 55.6,18.0 66.8,16.7 77.9,21.9 89.0,20.6 100.1,16.7 111.2,21.9 122.4,15.4 133.5,24.5 144.6,21.9 155.8,28.4 166.9,27.1 178.0,23.2 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,29.7 11.1,6.3 22.2,23.2 33.4,5.0 44.5,15.4 55.6,18.0 66.8,16.7 77.9,21.9 89.0,20.6 100.1,16.7 111.2,21.9 122.4,15.4 133.5,24.5 144.6,21.9 155.8,28.4 166.9,27.1 178.0,23.2" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">110</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">147</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">21</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#11 — #723</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, David Ray</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./oscilloscope">oscilloscope</a> · <a href="./multimeter">multimeter</a> · <a href="./soldering">soldering</a> · <a href="./arduino">arduino</a> · <a href="./led">led</a></td></tr></table></div>
+
+
 A soldering iron is a hand tool used to melt solder and form joints between electronic components and a printed circuit board, consisting of a heated tip, a heating element, and a temperature-regulation mechanism.<sup><a href="#ref-384" title="Ep 384: A++++++ Will Buy Again (March 18, 2018)">[384]</a></sup> Two constructions dominate the field: an older design in which the tip slides over a separate heating element with the temperature sensor buried in that assembly, and a newer design in which the element and sensor are integrated into the tip itself.<sup><a href="#ref-384" title="Ep 384: A++++++ Will Buy Again (March 18, 2018)">[384]</a></sup> The property that matters most in use is thermal recovery — how quickly the tip returns to working temperature after each joint pulls heat from it — and this depends not on wattage alone but on the entire control loop, including the drive circuitry, the sensor's thermal response, and the physical design of the tip.<sup><a href="#ref-384" title="Ep 384: A++++++ Will Buy Again (March 18, 2018)">[384]</a></sup> At the low end of the market, serviceable temperature-controlled irons are available for roughly thirty dollars, while production-grade systems cost around a thousand dollars and target instant heat and tightly held temperature rather than occasional use.<sup><a href="#ref-473" title="Ep 473: An Interview with Greg Davill (January 5, 2020)">[473]</a></sup><sup><a href="#ref-606" title="Ep 606: Professional Scooter Charger (October 23, 2022)">[606]</a></sup>
 
 ## Construction

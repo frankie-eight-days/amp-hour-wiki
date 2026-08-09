@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 91 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,26.0 22.2,19.9 33.4,13.7 44.5,16.1 55.6,22.3 66.8,17.4 77.9,27.3 89.0,16.1 100.1,5.0 111.2,18.6 122.4,22.3 133.5,26.0 144.6,18.6 155.8,26.0 166.9,29.8 178.0,23.6 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,26.0 22.2,19.9 33.4,13.7 44.5,16.1 55.6,22.3 66.8,17.4 77.9,27.3 89.0,16.1 100.1,5.0 111.2,18.6 122.4,22.3 133.5,26.0 144.6,18.6 155.8,26.0 166.9,29.8 178.0,23.6" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">91</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">135</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">34</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#6 — #729</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Greg Charvat</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./radio-frequency">radio frequency</a> · <a href="./wifi">wifi</a> · <a href="./microcontroller">microcontroller</a> · <a href="./pcb">pcb</a> · <a href="./gps">gps</a></td></tr></table></div>
+
+
 An antenna is a structure that converts between guided electrical signals and radiating electromagnetic waves, and its dimensions are fixed by physics rather than by design preference: the working target is a total dimension of about half a wavelength shared between the radiating element and the ground plane.<sup><a href="#ref-678" title="Ep 678: All About Antennas with Katerina Galitskaya (September 30, 2024)">[678]</a></sup> Because antenna size cannot be designed around, the subject dominates the integration of any radio into a product, from the placement of elements on a printed circuit board to the certification programme that follows.<sup><a href="#ref-678" title="Ep 678: All About Antennas with Katerina Galitskaya (September 30, 2024)">[678]</a></sup><sup><a href="#ref-175" title="Ep 175: An Interview With Andrew Witte - Telistic Timepiece Technomania (December 9, 2013)">[175]</a></sup> Antennas also appear where they are not wanted: signal traces, cables, and cutouts in ground planes can all radiate unintentionally, making antenna behaviour the central problem in electromagnetic compliance.<sup><a href="#ref-452" title="Ep 452: An Interview with Kieran O'Leary (July 28, 2019)">[452]</a></sup><sup><a href="#ref-338" title="Ep 338: An Interview with Jørgen Jakobsen (March 5, 2017)">[338]</a></sup>
 
 ## Physical constraints

@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 212 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,29.7 11.1,5.0 22.2,16.7 33.4,6.3 44.5,17.4 55.6,14.8 66.8,10.8 77.9,15.4 89.0,22.5 100.1,18.0 111.2,20.0 122.4,21.9 133.5,16.7 144.6,19.3 155.8,22.5 166.9,27.8 178.0,27.1 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,29.7 11.1,5.0 22.2,16.7 33.4,6.3 44.5,17.4 55.6,14.8 66.8,10.8 77.9,15.4 89.0,22.5 100.1,18.0 111.2,20.0 122.4,21.9 133.5,16.7 144.6,19.3 155.8,22.5 166.9,27.8 178.0,27.1" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">212</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">331</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">78</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#1 — #727</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Parker Dillman</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./microcontroller">microcontroller</a> · <a href="./schematic">schematic</a> · <a href="./digi-key">digi key</a> · <a href="./op-amp">op amp</a> · <a href="./pcb-layout">pcb layout</a></td></tr></table></div>
+
+
 A **datasheet** is the document published by a component's manufacturer that states how to use the part and what performance it guarantees; from a system designer's position, the internal process technology of a part is irrelevant compared with whether the part can be bought and whether its document states how to use it and what it guarantees.<sup><a href="#ref-230" title="Ep 230: Prepping For Hoverboards - Gallionic GitHub Gabble (December 30, 2014)">[230]</a></sup> The guarantees that bind a design are carried in the minimum and maximum columns of the specification tables rather than on the marketing summary page, and the difference between the two is routinely large.<sup><a href="#ref-53" title="Ep 53: Biarchy Birthday Bavardage">[53]</a></sup><sup><a href="#ref-97" title="Ep 97: An Interview with Eben Upton - Morbus Moilsome MakerFaire">[97]</a></sup> Datasheets and their companion application notes are where current engineering practice is documented, whereas textbooks describe methods that remain correct but predate the parts in use.<sup><a href="#ref-15" title="Ep 15: Analog Components, First Person Flying and Idea Ownership">[15]</a></sup> Because the purchaser of a commodity chip has no visibility into what is inside and no proof that it behaves as described until it is on a board and running, buying the part is, in effect, "buying a data sheet".<sup><a href="#ref-650" title="Ep 650: Accessible ASICs with Andreas Olofsson (November 12, 2023)">[650]</a></sup>
 
 ## Content and organisation

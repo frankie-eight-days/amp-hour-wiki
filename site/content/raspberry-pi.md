@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 172 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,31.0 22.2,22.1 33.4,17.7 44.5,16.6 55.6,5.0 66.8,11.1 77.9,15.0 89.0,16.1 100.1,18.8 111.2,20.5 122.4,10.0 133.5,23.3 144.6,15.0 155.8,15.0 166.9,27.7 178.0,24.4 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,31.0 22.2,22.1 33.4,17.7 44.5,16.6 55.6,5.0 66.8,11.1 77.9,15.0 89.0,16.1 100.1,18.8 111.2,20.5 122.4,10.0 133.5,23.3 144.6,15.0 155.8,15.0 166.9,27.7 178.0,24.4" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">172</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">374</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">34</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#59 — #728</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Matt Richardson</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./arduino">arduino</a> · <a href="./linux">linux</a> · <a href="./microcontroller">microcontroller</a> · <a href="./open-source-hardware">open source hardware</a> · <a href="./usb">usb</a></td></tr></table></div>
+
+
 Raspberry Pi is a family of low-cost single-board computers and associated microcontroller boards built around media-processing silicon originally developed for high-volume consumer products.<sup><a href="#ref-97" title="Ep 97: An Interview with Eben Upton - Morbus Moilsome MakerFaire">[97]</a></sup><sup><a href="#ref-529" title="Ep 529: Embedded Hardware with the Raspberry Pi Team (February 7, 2021)">[529]</a></sup> The project is structured as a charity carrying an educational mission, funded by the profits of a trading subsidiary that employs the engineers and sells the hardware at prices held uniform regardless of volume.<sup><a href="#ref-529" title="Ep 529: Embedded Hardware with the Raspberry Pi Team (February 7, 2021)">[529]</a></sup> The range extends from full single-board computers through compute modules intended for design-in to a dual-core microcontroller sold on pick-and-place reels at prices measured in tens of cents.<sup><a href="#ref-235" title="Ep 235: An Interview with Matt Richardson - Raspberry Risorgimento Regent (February 3, 2015)">[235]</a></sup><sup><a href="#ref-528" title="Ep 528: New Year, New Gear (January 31, 2021)">[528]</a></sup><sup><a href="#ref-574" title="Ep 574: Bubblegum Tap Shoes (January 23, 2022)">[574]</a></sup>
 
 ## History

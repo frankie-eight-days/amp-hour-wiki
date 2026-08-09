@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 78 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,31.0 22.2,27.9 33.4,20.3 44.5,23.4 55.6,20.3 66.8,5.0 77.9,6.5 89.0,21.8 100.1,20.3 111.2,14.2 122.4,12.6 133.5,20.3 144.6,24.9 155.8,17.2 166.9,27.9 178.0,21.8 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,31.0 22.2,27.9 33.4,20.3 44.5,23.4 55.6,20.3 66.8,5.0 77.9,6.5 89.0,21.8 100.1,20.3 111.2,14.2 122.4,12.6 133.5,20.3 144.6,24.9 155.8,17.2 166.9,27.9 178.0,21.8" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">78</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">118</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">59</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#94 — #724</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Laura Abbott</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./bluetooth">bluetooth</a> · <a href="./bootloader">bootloader</a> · <a href="./firmware">firmware</a> · <a href="./flash-memory">flash memory</a> · <a href="./internet-of-things">internet of things</a></td></tr></table></div>
+
+
 A **firmware update** is the replacement of the program stored in a device's non-volatile memory with a new image, performed after manufacture and typically in the field. The standard mechanism is a bootloader, a small program resident in flash that runs first at power-up, checks the application image for validity, and transfers execution to it if the image is good.<sup><a href="#ref-212" title="Ep 212: An Interview with Trey German - Launchpad Laden Lodesman (August 18, 2014)">[212]</a></sup> Updating requires a path for the application to re-enter the bootloader, after which the new image is received over whatever communication channel is available; any interface capable of getting data into the chip will serve, including CAN, USB, and a plain UART.<sup><a href="#ref-212" title="Ep 212: An Interview with Trey German - Launchpad Laden Lodesman (August 18, 2014)">[212]</a></sup> The capability matters in both directions: a device that cannot be updated is a permanent vulnerability, while the ability to update a device remotely is itself a vulnerability, so both the presence and the absence of the capability carry security cost.<sup><a href="#ref-561" title="Ep 561: Assembly Chat (October 10, 2021)">[561]</a></sup>
 
 ## Mechanisms

@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 206 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,30.5 11.1,26.1 22.2,27.2 33.4,19.1 44.5,21.8 55.6,13.7 66.8,5.0 77.9,12.0 89.0,15.8 100.1,14.2 111.2,21.2 122.4,21.2 133.5,20.7 144.6,16.9 155.8,19.1 166.9,25.6 178.0,26.7 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,30.5 11.1,26.1 22.2,27.2 33.4,19.1 44.5,21.8 55.6,13.7 66.8,5.0 77.9,12.0 89.0,15.8 100.1,14.2 111.2,21.2 122.4,21.2 133.5,20.7 144.6,16.9 155.8,19.1 166.9,25.6 178.0,26.7" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">206</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">351</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">59</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#5 — #724</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Akiba</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./bluetooth">bluetooth</a> · <a href="./internet-of-things">internet of things</a> · <a href="./esp32">esp32</a> · <a href="./lora">lora</a> · <a href="./bluetooth-low-energy">bluetooth low energy</a></td></tr></table></div>
+
+
 Wi-Fi is a wireless local-area networking technology operating in the 2.4 GHz and 5 GHz bands, with products required to cover both bands rather than one.<sup><a href="#ref-446" title="Ep 446: An Interview with Pete Bevelacqua (June 9, 2019)">[446]</a></sup> The name is a play on hi-fi and does not stand for wireless fidelity.<sup><a href="#ref-457" title="Ep 457: Dotty Ernest Annty Frost (September 8, 2019)">[457]</a></sup> It is engineered for throughput rather than bounded latency, so a fast, predictable round trip is not something it provides.<sup><a href="#ref-264" title="Ep 264: The Cost Of Doing Business (August 25, 2015)">[264]</a></sup> Its defining engineering trade-off is power: it is high power relative to Bluetooth Low Energy and low power only relative to always-on Wi-Fi devices, so the comparison class must be stated before calling a Wi-Fi part low power.<sup><a href="#ref-249" title="Ep 249: Wearables Might Have Limited Fashion Options - Lachrymogenic Lane Language (May 12, 2015)">[249]</a></sup>
 
 ## History

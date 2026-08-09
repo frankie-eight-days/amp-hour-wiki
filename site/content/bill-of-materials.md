@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 141 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,30.0 11.1,24.3 22.2,19.4 33.4,6.9 44.5,8.9 55.6,5.0 66.8,11.7 77.9,15.6 89.0,22.3 100.1,13.7 111.2,26.2 122.4,18.5 133.5,20.4 144.6,24.3 155.8,24.3 166.9,23.3 178.0,25.2 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,30.0 11.1,24.3 22.2,19.4 33.4,6.9 44.5,8.9 55.6,5.0 66.8,11.7 77.9,15.6 89.0,22.3 100.1,13.7 111.2,26.2 122.4,18.5 133.5,20.4 144.6,24.3 155.8,24.3 166.9,23.3 178.0,25.2" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">141</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">215</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">66</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#1 — #724</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Michael</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./component-sourcing">component sourcing</a> · <a href="./digi-key">digi key</a> · <a href="./schematic">schematic</a> · <a href="./gerber">gerber</a> · <a href="./open-source-hardware">open source hardware</a></td></tr></table></div>
+
+
 A bill of materials (BOM) is the itemised list of parts, quantities and reference designators required to build a product, and in electronics manufacture it functions as the central document linking design to procurement and assembly: it is exported from the design data, priced against distributors, and delivered to the contract manufacturer together with the Gerber and placement files.<sup><a href="#ref-17" title="Ep 17: EE Movies, Part Rants and SPICE.">[17]</a></sup><sup><a href="#ref-411" title="Ep 411: An Interview with Chris Denney (October 14, 2018)">[411]</a></sup> Every line item is simultaneously a cost driver and an independent supply risk, so the composition, formatting and maintenance of the bill of materials are treated as engineering and logistics disciplines in their own right.<sup><a href="#ref-282" title="Ep 282: 3D Product Logistics (January 13, 2016)">[282]</a></sup><sup><a href="#ref-130" title="Ep 130: Boeing, PCBs & Startups - Awful Airplane Aeration (January 28, 2013)">[130]</a></sup>
 
 ## Contents and part identification

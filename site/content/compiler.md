@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 61 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,31.0 22.2,29.6 33.4,20.1 44.5,22.8 55.6,24.2 66.8,18.7 77.9,24.2 89.0,9.1 100.1,18.7 111.2,28.3 122.4,21.4 133.5,24.2 144.6,5.0 155.8,22.8 166.9,29.6 178.0,31.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,31.0 22.2,29.6 33.4,20.1 44.5,22.8 55.6,24.2 66.8,18.7 77.9,24.2 89.0,9.1 100.1,18.7 111.2,28.3 122.4,21.4 133.5,24.2 144.6,5.0 155.8,22.8 166.9,29.6 178.0,31.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">61</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">99</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">37</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#70 — #709</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Claire Wolf</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./arduino">arduino</a> · <a href="./assembly-language">assembly language</a> · <a href="./arm">arm</a> · <a href="./risc-v">risc v</a> · <a href="./linux">linux</a></td></tr></table></div>
+
+
 A **compiler** is a program that takes a higher-level description in one format and performs a sequence of transformations to produce an equivalent representation that can actually be built with, whether that output is machine code for a processor or a gate-level netlist.<sup><a href="#ref-374" title="Ep 374: An Interview with Claire (née 'Clifford') Wolf (January 7, 2018)">[374]</a></sup> The canonical method for building one is decomposition: breaking the translation from input language to output language into many small problems, an approach whose deceptive front-end simplicity is the point of the dragon on the cover of the standard textbook.<sup><a href="#ref-374" title="Ep 374: An Interview with Claire (née 'Clifford') Wolf (January 7, 2018)">[374]</a></sup> Compilers matter beyond their own operation because the toolchain built around an instruction set — compiler, debugger, emulator, libraries — is frequently worth more than the processor design itself, and is what determines whether an ecosystem can form around a part.<sup><a href="#ref-103" title="Ep 103: An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee (July 8, 2012)">[103]</a></sup><sup><a href="#ref-374" title="Ep 374: An Interview with Claire (née 'Clifford') Wolf (January 7, 2018)">[374]</a></sup>
 
 ## Construction and operation

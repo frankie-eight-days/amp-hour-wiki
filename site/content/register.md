@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 42 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,28.1 22.2,28.1 33.4,19.4 44.5,19.4 55.6,19.4 66.8,19.4 77.9,22.3 89.0,5.0 100.1,13.7 111.2,13.7 122.4,22.3 133.5,28.1 144.6,22.3 155.8,25.2 166.9,31.0 178.0,31.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,28.1 22.2,28.1 33.4,19.4 44.5,19.4 55.6,19.4 66.8,19.4 77.9,22.3 89.0,5.0 100.1,13.7 111.2,13.7 122.4,22.3 133.5,28.1 144.6,22.3 155.8,25.2 166.9,31.0 178.0,31.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">42</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">51</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">27</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#11 — #672</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Ben Eater</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./datasheet">datasheet</a> · <a href="./microcontroller">microcontroller</a> · <a href="./analog-to-digital-converter">analog to digital converter</a> · <a href="./fpga">fpga</a> · <a href="./processor">processor</a></td></tr></table></div>
+
+
 A **register** is a small storage element built from latches with a shared control, sitting at a specific rung of the ladder that runs from semiconductor to transistor to logic gate to latch, and from the register onward to counters, memory and a whole processor.<sup><a href="#ref-444" title="Ep 444: An Interview with Ben Eater (May 27, 2019)">[444]</a></sup> Registers are the working storage of a processor — most of what a computer does is move data between them — and they are equally the control surface of nearly every peripheral chip, which presents itself to software as a set of registers hanging off a bus.<sup><a href="#ref-444" title="Ep 444: An Interview with Ben Eater (May 27, 2019)">[444]</a></sup><sup><a href="#ref-396" title="Ep 396: The Synergy Bus (June 10, 2018)">[396]</a></sup> Because so much of digital design reduces to reading and writing registers, understanding them as physical latches with control signals rather than as abstract storage locations is what makes the layers above them legible.<sup><a href="#ref-444" title="Ep 444: An Interview with Ben Eater (May 27, 2019)">[444]</a></sup>
 
 ## Structure and operation

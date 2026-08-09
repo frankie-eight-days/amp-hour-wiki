@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 68 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,23.2 22.2,10.2 33.4,7.6 44.5,5.0 55.6,24.5 66.8,16.7 77.9,28.4 89.0,20.6 100.1,15.4 111.2,25.8 122.4,24.5 133.5,27.1 144.6,27.1 155.8,24.5 166.9,28.4 178.0,29.7 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,23.2 22.2,10.2 33.4,7.6 44.5,5.0 55.6,24.5 66.8,16.7 77.9,28.4 89.0,20.6 100.1,15.4 111.2,25.8 122.4,24.5 133.5,27.1 144.6,27.1 155.8,24.5 166.9,28.4 178.0,29.7" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">68</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">121</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">37</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#7 — #725</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Ted Yapo</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./oscilloscope">oscilloscope</a> · <a href="./radio-frequency">radio frequency</a> · <a href="./software-defined-radio">software defined radio</a></td></tr></table></div>
+
+
 A **spectrum analyzer** is a test instrument that measures and displays signal power as a function of frequency, sweeping over a selected frequency range and reporting how much power is present at each frequency within it.<sup><a href="#ref-376" title="Ep 376: An Interview with Richard Ginus (January 21, 2018)">[376]</a></sup><sup><a href="#ref-465" title="Ep 465: An Interview with Ted Yapo (November 3, 2019)">[465]</a></sup> It is one of the principal instruments of radio-frequency (RF) work: a serious RF bench is defined by a network analyzer and a spectrum analyzer, with a tracking generator if the budget allows, and for microwave design specifically the principal instruments are a power meter and a spectrum analyzer, with a frequency counter as a possible third.<sup><a href="#ref-73" title="Ep 73: Horrisonous Holiday Habromania">[73]</a></sup><sup><a href="#ref-107" title="Ep 107: An interview with Tony Long - Millimeter Microwave Magician (August 5, 2012)">[107]</a></sup> A wideband RF spectrum analyzer is also typically one of the last big-ticket instruments a general electronics bench acquires, with new units starting at roughly $1,500 to $2,000 and prices climbing steeply from there.<sup><a href="#ref-73" title="Ep 73: Horrisonous Holiday Habromania">[73]</a></sup>
 
 ## Operating principle

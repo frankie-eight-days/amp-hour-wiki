@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 54 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,31.0 22.2,31.0 33.4,18.0 44.5,27.5 55.6,5.0 66.8,20.6 77.9,11.1 89.0,26.7 100.1,25.8 111.2,25.8 122.4,29.3 133.5,30.1 144.6,24.1 155.8,26.7 166.9,30.1 178.0,31.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,31.0 22.2,31.0 33.4,18.0 44.5,27.5 55.6,5.0 66.8,20.6 77.9,11.1 89.0,26.7 100.1,25.8 111.2,25.8 122.4,29.3 133.5,30.1 144.6,24.1 155.8,26.7 166.9,30.1 178.0,31.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">54</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">118</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">25</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#144 — #698</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Colin</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./bluetooth">bluetooth</a> · <a href="./wifi">wifi</a> · <a href="./internet-of-things">internet of things</a> · <a href="./sensor">sensor</a> · <a href="./battery">battery</a></td></tr></table></div>
+
+
 Bluetooth Low Energy (BLE) is a short-range wireless protocol that shares only the lowest layers of the Bluetooth specification, such as the physical layer, with classic Bluetooth; the protocol stack built on top of that radio is a different design.<sup><a href="#ref-144" title="Ep 144: An Interview with Bob Davidson - Hoodied HP Hijinks (May 7, 2013)">[144]</a></sup> Introduced in 2010 under the original name Wibree before being folded into the Bluetooth specification, it was designed around very small packets sent infrequently, enabling battery lifetimes of a year or more from a coin cell at the cost of the bandwidth and connection behaviour of classic Bluetooth.<sup><a href="#ref-155" title="Ep 155: An Interview with Jeff Rowberg - Mini Module Master (July 22, 2013)">[155]</a></sup><sup><a href="#ref-664" title="Ep 664: Simulating doors falling off (April 3, 2024)">[664]</a></sup> BLE defines an asymmetric connection model in which a central device, typically a smartphone or PC, manages the connection while a low-power peripheral answers it, and it exposes application data through enumerated services with read, write and notify properties rather than through fixed profiles.<sup><a href="#ref-226" title="Ep 226: An Interview with Colin Karpfinger - Blendling Bean Brio (December 2, 2014)">[226]</a></sup><sup><a href="#ref-698" title="Ep 698: Hardware Security with Matt Brown (July 17, 2025)">[698]</a></sup>
 
 ## History

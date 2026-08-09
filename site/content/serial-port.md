@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 40 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,28.4 11.1,28.4 22.2,28.4 33.4,25.8 44.5,31.0 55.6,31.0 66.8,23.2 77.9,7.6 89.0,5.0 100.1,12.8 111.2,23.2 122.4,28.4 133.5,25.8 144.6,23.2 155.8,28.4 166.9,18.0 178.0,25.8 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,28.4 11.1,28.4 22.2,28.4 33.4,25.8 44.5,31.0 55.6,31.0 66.8,23.2 77.9,7.6 89.0,5.0 100.1,12.8 111.2,23.2 122.4,28.4 133.5,25.8 144.6,23.2 155.8,28.4 166.9,18.0 178.0,25.8" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">40</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">51</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">30</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#1 — #726</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Werner Johansson</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./bootloader">bootloader</a> · <a href="./arduino">arduino</a> · <a href="./jtag">jtag</a> · <a href="./led">led</a> · <a href="./linux">linux</a></td></tr></table></div>
+
+
 A serial port is an asynchronous communications interface built around a transmit line, a receive line, and a shared ground reference between the two ends.<sup><a href="#ref-378" title="Ep 378: An Interview with Jason Kridner and Robert Nelson (February 4, 2018)">[378]</a></sup> It has served as the standard channel for loading programs into embedded systems, configuring and controlling test equipment, and moving diagnostic text between a device and a host computer.<sup><a href="#ref-570" title="Ep 570: Keyzermas All The Way (December 19, 2021)">[570]</a></sup><sup><a href="#ref-135" title="Ep 135: An Interview with Mike Harrison - X-ray Examining Xenogogue (March 4, 2013)">[135]</a></sup><sup><a href="#ref-383" title="Ep 383: An Interview with Scott Shawcroft (March 11, 2018)">[383]</a></sup> Although native serial ports have largely disappeared from commodity desktop hardware, the interface persists through USB-to-serial converter chips and through wireless links that present themselves to the host as serial ports.<sup><a href="#ref-471" title="Ep 471: An Interview with Matt Berggren (December 15, 2019)">[471]</a></sup><sup><a href="#ref-366" title="Ep 366: Loopback (November 5, 2017)">[366]</a></sup><sup><a href="#ref-408" title="Ep 408: Tronnort Software Rises Again! (September 23, 2018)">[408]</a></sup>
 
 ## Electrical interface

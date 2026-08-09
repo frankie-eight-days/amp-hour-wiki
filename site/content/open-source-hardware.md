@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 268 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,29.1 11.1,14.0 22.2,13.7 33.4,5.0 44.5,18.7 55.6,23.9 66.8,21.3 77.9,25.1 89.0,24.9 100.1,22.5 111.2,25.6 122.4,24.6 133.5,27.0 144.6,26.5 155.8,28.4 166.9,27.0 178.0,29.1 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,29.1 11.1,14.0 22.2,13.7 33.4,5.0 44.5,18.7 55.6,23.9 66.8,21.3 77.9,25.1 89.0,24.9 100.1,22.5 111.2,25.6 122.4,24.6 133.5,27.0 144.6,26.5 155.8,28.4 166.9,27.0 178.0,29.1" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">268</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">595</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">81</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#1 — #727</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Michael Ossmann</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./arduino">arduino</a> · <a href="./open-source-software">open source software</a> · <a href="./kicad">kicad</a> · <a href="./kickstarter">kickstarter</a> · <a href="./raspberry-pi">raspberry pi</a></td></tr></table></div>
+
+
 Open-source hardware is hardware whose design files — the schematic, printed circuit board layout and bill of materials — are published under licence terms that permit anyone to study, modify, manufacture and sell the design, with commercial use being a required freedom rather than an optional one.<sup><a href="#ref-6" title="Ep 6: Open Hardware and The Creative Economy">[6]</a></sup><sup><a href="#ref-55" title="Ep 55: Shonky Stiver Stultiloquence">[55]</a></sup> A release constitutes a complete manufacturing package, going beyond a patent, which discloses an invention without handing over the files needed to build it.<sup><a href="#ref-6" title="Ep 6: Open Hardware and The Creative Economy">[6]</a></sup> By the early 2010s roughly a dozen companies had passed one million dollars a year in revenue selling open-source hobbyist boards and kits, with SparkFun above ten million dollars a year and Adafruit near one million from a two-person operation.<sup><a href="#ref-1" title="Ep 1: What's In A Name?">[1]</a></sup> Because the design itself may be copied lawfully, the trademark on the product name is typically the only exclusive right an originator retains, which makes trademark disputes existential for open hardware companies.<sup><a href="#ref-6" title="Ep 6: Open Hardware and The Creative Economy">[6]</a></sup><sup><a href="#ref-242" title="Ep 242: Can't We All Just Get Arduino? - Tardiloquent Trademark Tirade (March 24, 2015)">[242]</a></sup>
 
 ## Definition and licensing

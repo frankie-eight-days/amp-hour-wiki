@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 104 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,25.5 11.1,17.3 22.2,22.8 33.4,25.5 44.5,10.5 55.6,17.3 66.8,9.1 77.9,10.5 89.0,15.9 100.1,20.1 111.2,5.0 122.4,14.6 133.5,18.7 144.6,14.6 155.8,22.8 166.9,29.6 178.0,29.6 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,25.5 11.1,17.3 22.2,22.8 33.4,25.5 44.5,10.5 55.6,17.3 66.8,9.1 77.9,10.5 89.0,15.9 100.1,20.1 111.2,5.0 122.4,14.6 133.5,18.7 144.6,14.6 155.8,22.8 166.9,29.6 178.0,29.6" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">104</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">159</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">37</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#1 — #722</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Elecia White</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./fpga">fpga</a> · <a href="./linux">linux</a> · <a href="./arduino">arduino</a> · <a href="./internet-of-things">internet of things</a> · <a href="./microcontroller">microcontroller</a></td></tr></table></div>
+
+
 An embedded system is a complete computing system built into a larger product: firmware runs across processors, memories and interfaces and controls hardware directly at the register level.<sup><a href="#ref-479" title="Ep 479: Why isn't this working? (February 13, 2020)">[479]</a></sup><sup><a href="#ref-131" title="Ep 131: An Interview with Andrew Seddon - Necessary Networked Novelty (February 4, 2013)">[131]</a></sup> The usual boundary between an embedded target and a general-purpose Linux machine is the memory management unit, while task scheduling and interrupt-driven response are the same ideas at both scales.<sup><a href="#ref-589" title="Ep 589: Mute Button Discipline (May 15, 2022)">[589]</a></sup> The subject matters at industrial scale because small microcontrollers sell in the billions each year and because a code-size or component choice repeated in every unit can become a multi-million-dollar decision.<sup><a href="#ref-54" title="Ep 54: An Interview with Jack Ganssle - Embedded Elchee Epexegesis">[54]</a></sup><sup><a href="#ref-634" title="Ep 634: The CAN bus can! with Dr Ken Tindell (May 30, 2023)">[634]</a></sup>
 
 ## Definition and scope

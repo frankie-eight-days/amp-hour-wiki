@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 137 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,28.5 11.1,24.0 22.2,13.9 33.4,5.0 44.5,22.8 55.6,10.7 66.8,18.3 77.9,8.8 89.0,24.0 100.1,20.9 111.2,23.4 122.4,26.6 133.5,25.9 144.6,15.8 155.8,23.4 166.9,24.0 178.0,26.6 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,28.5 11.1,24.0 22.2,13.9 33.4,5.0 44.5,22.8 55.6,10.7 66.8,18.3 77.9,8.8 89.0,24.0 100.1,20.9 111.2,23.4 122.4,26.6 133.5,25.9 144.6,15.8 155.8,23.4 166.9,24.0 178.0,26.6" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">137</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">291</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">36</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#4 — #727</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Jeff Keyzer</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./3d-printing">3d printing</a> · <a href="./kickstarter">kickstarter</a> · <a href="./open-source-hardware">open source hardware</a> · <a href="./pick-and-place-machine">pick and place machine</a> · <a href="./maker-faire">maker faire</a></td></tr></table></div>
+
+
 A 3D printer is a machine that fabricates solid objects additively, building them one layer at a time from a digital model under toolpaths expressed in G-code.<sup><a href="#ref-251" title="Ep 251: Shifting Away From DIY - Pedetentious PnP Progress (May 26, 2015)">[251]</a></sup><sup><a href="#ref-503" title="Ep 503: Fabless Chip Design with Mohamed Kassem (August 2, 2020)">[503]</a></sup> The most widespread class, fused-filament fabrication, drives motors in X and Y, heats plastic filament and feeds it through a head and nozzle onto a platform that must stay level, with stepper motors that must not slip.<sup><a href="#ref-326" title="Ep 326: Magical Fire Bags (December 7, 2016)">[326]</a></sup> Print speed on such machines is bounded by the thermal properties of the plastic rather than the motion system: each layer must harden just enough before the next is laid down.<sup><a href="#ref-105" title="Ep 105: An Interview with Chris Anderson - Deambulatory Daedal Drones (July 23, 2012)">[105]</a></sup> The technology's weight in practice sits in professional product development, where consumer products designed today make heavy use of printing, and in the fabrication of parts — housings, jigs, fixtures — that no other process would serve.<sup><a href="#ref-244" title="Ep 244: The Art Of Staying Interested In Electronics - Exponible Electronics Ennui (April 7, 2015)">[244]</a></sup><sup><a href="#ref-421" title="Ep 421: The Legend of Keyzermas (December 23, 2018)">[421]</a></sup>
 
 ## History

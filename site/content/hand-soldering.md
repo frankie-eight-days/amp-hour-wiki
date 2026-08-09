@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 86 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,25.8 11.1,25.8 22.2,20.6 33.4,18.9 44.5,22.3 55.6,5.0 66.8,15.4 77.9,20.6 89.0,18.9 100.1,17.1 111.2,18.9 122.4,22.3 133.5,31.0 144.6,20.6 155.8,31.0 166.9,27.5 178.0,25.8 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,25.8 11.1,25.8 22.2,20.6 33.4,18.9 44.5,22.3 55.6,5.0 66.8,15.4 77.9,20.6 89.0,18.9 100.1,17.1 111.2,18.9 122.4,22.3 133.5,31.0 144.6,20.6 155.8,31.0 166.9,27.5 178.0,25.8" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">86</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">92</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">41</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#1 — #718</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Luke Valenty</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./bga">bga</a> · <a href="./pcb-assembly">pcb assembly</a> · <a href="./reflow-soldering">reflow soldering</a> · <a href="./pcb">pcb</a> · <a href="./pick-and-place-machine">pick and place machine</a></td></tr></table></div>
+
+
 **Hand soldering** is the manual assembly of electronic components onto a printed circuit board, in which each joint is formed individually with a soldering iron rather than by a reflow oven, wave, or selective soldering machine.<sup><a href="#ref-329" title="Ep 329: Work on it for 10 years...">[329]</a></sup><sup><a href="#ref-239" title="Ep 239: An Interview with Colin O'Flynn - Aspirated Adamantine Attacks (March 3, 2015)">[239]</a></sup> It remains a standard method for prototype construction, rework, and small-batch production, and it persists inside volume manufacturing wherever a part or process step resists automation.<sup><a href="#ref-407" title="Ep 407: Gregory Charvat and Three New Companies (September 16, 2018)">[407]</a></sup><sup><a href="#ref-366" title="Ep 366: Loopback (November 5, 2017)">[366]</a></sup> The technique trades directly against machine assembly: it is slower per joint, but requires no stencil, fixture, or machine setup, and it accommodates parts that reflow processes cannot.<sup><a href="#ref-259" title="Ep 259: No More Naming (July 21, 2015)">[259]</a></sup><sup><a href="#ref-558" title="Ep 558: Toasted Marshmallow Connectors (September 19, 2021)">[558]</a></sup>
 
 ## Technique

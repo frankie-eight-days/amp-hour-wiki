@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 85 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,29.6 11.1,26.9 22.2,24.2 33.4,20.1 44.5,28.3 55.6,25.5 66.8,28.3 77.9,21.4 89.0,9.1 100.1,20.1 111.2,5.0 122.4,15.9 133.5,17.3 144.6,18.7 155.8,28.3 166.9,18.7 178.0,25.5 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,29.6 11.1,26.9 22.2,24.2 33.4,20.1 44.5,28.3 55.6,25.5 66.8,28.3 77.9,21.4 89.0,9.1 100.1,20.1 111.2,5.0 122.4,15.9 133.5,17.3 144.6,18.7 155.8,28.3 166.9,18.7 178.0,25.5" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">85</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">120</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">38</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#2 — #724</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Michael Gielda</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./i2c">i2c</a> · <a href="./spi">spi</a> · <a href="./microcontroller">microcontroller</a> · <a href="./analog-to-digital-converter">analog to digital converter</a> · <a href="./usb">usb</a></td></tr></table></div>
+
+
 A **UART** (universal asynchronous receiver-transmitter) is a hardware peripheral that implements asynchronous serial communication between digital devices, and it is one of the most widely assumed capabilities in embedded computing.<sup><a href="#ref-137" title="Ep 137: Mars, System Design & NAND - Mercurial Mars Mission (March 19, 2013)">[137]</a></sup><sup><a href="#ref-24" title="Ep 24: Solar Cells, SparkFun, TSMC - The Detroit Debunking">[24]</a></sup> Almost every serial link in practice uses the same framing — eight data bits, no parity, one stop bit — so the only settings a user normally has to get right are the baud rate and which port to open.<sup><a href="#ref-391" title="Ep 391: Only A Transmitter (May 6, 2018)">[391]</a></sup> The dedicated serial interface chip is conventionally listed among the components that changed the electronics industry, alongside the first flash-programmable microcontroller and the first ARM processor.<sup><a href="#ref-24" title="Ep 24: Solar Cells, SparkFun, TSMC - The Detroit Debunking">[24]</a></sup>
 
 ## Hardware availability and history

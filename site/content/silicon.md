@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 93 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,29.1 11.1,14.3 22.2,5.0 33.4,6.9 44.5,25.4 55.6,19.9 66.8,8.7 77.9,21.7 89.0,23.6 100.1,23.6 111.2,25.4 122.4,12.4 133.5,27.3 144.6,18.0 155.8,19.9 166.9,29.1 178.0,21.7 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,29.1 11.1,14.3 22.2,5.0 33.4,6.9 44.5,25.4 55.6,19.9 66.8,8.7 77.9,21.7 89.0,23.6 100.1,23.6 111.2,25.4 122.4,12.4 133.5,27.3 144.6,18.0 155.8,19.9 166.9,29.1 178.0,21.7" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">93</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">105</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">42</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#2 — #729</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Jeri Ellsworth</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./semiconductor-fab">semiconductor fab</a> · <a href="./transistor">transistor</a> · <a href="./resistor">resistor</a> · <a href="./asic">asic</a> · <a href="./moores-law">moores law</a></td></tr></table></div>
+
+
 **Silicon** is the semiconductor material on which the overwhelming majority of integrated circuits are built, valued in manufacture for an exceptionally low defect density—roughly a million times fewer defects than a typical perovskite film, a level at which a working device would otherwise be impossible because every charge carrier would be trapped.<sup><a href="#ref-433" title="Ep 433: An Interview with Sam Stranks (March 10, 2019)">[433]</a></sup> Its band gap sits in the low single digits of electron volts, below the three-to-four electron volt range of the wide band gap materials silicon carbide and gallium nitride that now compete with it in power electronics.<sup><a href="#ref-534" title="Ep 534: Firmware Update Capabilities (March 14, 2021)">[534]</a></sup> Beyond conventional logic and memory, silicon serves as the substrate for photovoltaics, millimetre-wave transceivers, field emission devices, and quantum computing research, and the economics of fabricating it—dominated by thermal budget, die area, and yield—shape the structure of the entire electronics industry.<sup><a href="#ref-52" title="Ep 52: An Interview with Jeri Ellsworth - Carnassial Chip Chemicals">[52]</a></sup><sup><a href="#ref-297" title="Ep 297: An Interview with Jake Baker (May 4, 2016)">[297]</a></sup><sup><a href="#ref-498" title="Ep 498: Quantum Computing with Andrea Morello (June 28, 2020)">[498]</a></sup>
 
 ## Physical and electrical properties

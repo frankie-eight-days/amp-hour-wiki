@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 106 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,29.6 11.1,11.8 22.2,24.2 33.4,5.0 44.5,25.5 55.6,21.4 66.8,13.2 77.9,13.2 89.0,21.4 100.1,10.5 111.2,11.8 122.4,14.6 133.5,14.6 144.6,24.2 155.8,24.2 166.9,29.6 178.0,31.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,29.6 11.1,11.8 22.2,24.2 33.4,5.0 44.5,25.5 55.6,21.4 66.8,13.2 77.9,13.2 89.0,21.4 100.1,10.5 111.2,11.8 122.4,14.6 133.5,14.6 144.6,24.2 155.8,24.2 166.9,29.6 178.0,31.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">106</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">147</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">40</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#21 — #687</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Ben Jordan</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./fpga">fpga</a> · <a href="./arduino">arduino</a> · <a href="./microcontroller">microcontroller</a> · <a href="./raspberry-pi">raspberry pi</a> · <a href="./altium">altium</a></td></tr></table></div>
+
+
 A **development board** is a printed circuit board that carries a microcontroller, microprocessor, or programmable logic device together with the minimum support circuitry and connectors needed to power it, program it, and access its pins, so that engineers can evaluate the silicon, prototype systems, or learn the part before committing to a custom design.<sup><a href="#ref-302" title="Ep 302: An Interview with Clint Cole of Digilent (June 8, 2016)">[302]</a></sup><sup><a href="#ref-515" title="Ep 515: Embedded Linux with Jay Carlson (November 1, 2020)">[515]</a></sup> Semiconductor vendors produce such boards primarily as a means of selling silicon rather than as products in their own right, and they are typically retired once that purpose has been served.<sup><a href="#ref-62" title="Ep 62: Op amps, Microchips & Mergers - Narquois Nerd Nescience - Narquois Nerd Nescience">[62]</a></sup><sup><a href="#ref-422" title="Ep 422: Stick 'Em On Whales (December 27, 2018)">[422]</a></sup> In contemporary practice the boards also underpin a fast-prototyping workflow in which a vendor board is combined with a small custom peripheral board, a display, and an enclosure to produce a working system in a fraction of the time a full custom design would take.<sup><a href="#ref-422" title="Ep 422: Stick 'Em On Whales (December 27, 2018)">[422]</a></sup>
 
 ## Purpose and market structure

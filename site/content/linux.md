@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 210 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,29.6 11.1,22.8 22.2,20.1 33.4,13.9 44.5,18.7 55.6,18.0 66.8,20.1 77.9,7.7 89.0,7.7 100.1,9.8 111.2,5.7 122.4,5.0 133.5,16.6 144.6,12.5 155.8,23.5 166.9,21.4 178.0,21.4 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,29.6 11.1,22.8 22.2,20.1 33.4,13.9 44.5,18.7 55.6,18.0 66.8,20.1 77.9,7.7 89.0,7.7 100.1,9.8 111.2,5.7 122.4,5.0 133.5,16.6 144.6,12.5 155.8,23.5 166.9,21.4 178.0,21.4" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">210</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">369</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">46</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#2 — #726</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Jay Carlson</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./raspberry-pi">raspberry pi</a> · <a href="./usb">usb</a> · <a href="./microcontroller">microcontroller</a> · <a href="./arduino">arduino</a> · <a href="./open-source-hardware">open source hardware</a></td></tr></table></div>
+
+
 Linux is an open-source operating system kernel used in embedded systems as the general-purpose alternative to bare-metal firmware and real-time operating systems.<sup><a href="#ref-378" title="Ep 378: An Interview with Jason Kridner and Robert Nelson (February 4, 2018)">[378]</a></sup> It is only the kernel, not the interface, and conflating the two misstates what a vendor supplies and what a product team must still build.<sup><a href="#ref-378" title="Ep 378: An Interview with Jason Kridner and Robert Nelson (February 4, 2018)">[378]</a></sup> Its defining architectural requirement is a memory management unit, which is the dividing line between processors that can run the full kernel and microcontrollers that cannot, though cut-down variants exist for parts without one.<sup><a href="#ref-146" title="Ep 146: Hamvention, Arduino and Intel - Burdensome Background Battology (May 21, 2013)">[146]</a></sup> Its practical significance in embedded work is that it carries with it drivers, libraries and a network stack that would otherwise be a large undertaking to create, at the cost of memory, power, determinism and engineering complexity.<sup><a href="#ref-325" title="Ep 325: An Interview with David Kronstein (Tesla500) (November 30, 2016)">[325]</a></sup><sup><a href="#ref-466" title="Ep 466: An Interview with Ryan Cousins (November 10, 2019)">[466]</a></sup><sup><a href="#ref-515" title="Ep 515: Embedded Linux with Jay Carlson (November 1, 2020)">[515]</a></sup>
 
 ## Hardware requirements

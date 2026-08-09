@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 130 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,30.3 11.1,30.3 22.2,25.5 33.4,22.8 44.5,26.2 55.6,23.5 66.8,15.9 77.9,25.5 89.0,5.0 100.1,19.4 111.2,17.3 122.4,22.8 133.5,22.8 144.6,21.4 155.8,20.7 166.9,22.1 178.0,29.6 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,30.3 11.1,30.3 22.2,25.5 33.4,22.8 44.5,26.2 55.6,23.5 66.8,15.9 77.9,25.5 89.0,5.0 100.1,19.4 111.2,17.3 122.4,22.8 133.5,22.8 144.6,21.4 155.8,20.7 166.9,22.1 178.0,29.6" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">130</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">213</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">38</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#4 — #723</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Jay Carlson</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./spi">spi</a> · <a href="./uart">uart</a> · <a href="./arduino">arduino</a> · <a href="./microcontroller">microcontroller</a> · <a href="./usb">usb</a></td></tr></table></div>
+
+
 I2C (inter-integrated circuit) is a two-wire synchronous serial bus for communication between integrated circuits on a board.<sup><a href="#ref-396" title="Ep 396: The Synergy Bus (June 10, 2018)">[396]</a></sup> It was developed by Philips, originally to interconnect the many chips inside analogue television sets, and uses open-drain drivers with external pull-up resistors on its two lines, SDA and SCL.<sup><a href="#ref-631" title="Ep 631: A Noisy Rude Bus (May 7, 2023)">[631]</a></sup><sup><a href="#ref-319" title="Ep 319: Photon Rich, Cash Poor (October 12, 2016)">[319]</a></sup><sup><a href="#ref-274" title="Ep 274: Our First Call In Show (November 4, 2015)">[274]</a></sup> Its combination of a two-pin footprint, multi-device addressing, and simple register-oriented peripherals has made it the standard interconnect for sensors and other low-speed devices in embedded systems.<sup><a href="#ref-202" title="Ep 202: An Interview With Brandon Harris - Impish Internet Iamatology (June 9, 2014)">[202]</a></sup><sup><a href="#ref-315" title="Ep 315: Mashuppery (with MEP)">[315]</a></sup>
 
 ## History and licensing

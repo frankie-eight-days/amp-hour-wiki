@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 37 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,27.8 22.2,27.8 33.4,26.1 44.5,31.0 55.6,5.0 66.8,22.9 77.9,21.2 89.0,21.2 100.1,16.4 111.2,22.9 122.4,31.0 133.5,27.8 144.6,26.1 155.8,31.0 166.9,26.1 178.0,31.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,27.8 22.2,27.8 33.4,26.1 44.5,31.0 55.6,5.0 66.8,22.9 77.9,21.2 89.0,21.2 100.1,16.4 111.2,22.9 122.4,31.0 133.5,27.8 144.6,26.1 155.8,31.0 166.9,26.1 178.0,31.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">37</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">62</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">25</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#24 — #700</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Joe Garrison</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./flash-memory">flash memory</a> · <a href="./microcontroller">microcontroller</a> · <a href="./arduino">arduino</a> · <a href="./i2c">i2c</a></td></tr></table></div>
+
+
 **EEPROM** (electrically erasable programmable read-only memory) is a non-volatile memory technology whose defining role in electronics was to make program and configuration storage changeable after manufacture, sitting between factory-programmed and one-time programmable memory and the flash memory that followed it.<sup><a href="#ref-236" title="Ep 236: Questioning Everyday Prototyping - Verrucose Vehicle Vitilitigation (February 10, 2015)">[236]</a></sup> The first microcontroller built on electrically erasable memory was the first such part that was neither ultraviolet-erasable nor one-time programmable, and therefore the first that could be reprogrammed in place without removal from the circuit.<sup><a href="#ref-24" title="Ep 24: Solar Cells, SparkFun, TSMC - The Detroit Debunking">[24]</a></sup> Its commercial significance came when electrically erasable parts became cheap enough to ship in production rather than serve only as development devices, eliminating both the financial risk of a code bug committed to a mask and the factory lead time from product schedules.<sup><a href="#ref-485" title="Ep 485: An Interview with John Day (March 22, 2020)">[485]</a></sup>
 
 ## History

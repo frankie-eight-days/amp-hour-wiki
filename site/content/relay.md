@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 52 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,29.4 11.1,31.0 22.2,5.0 33.4,24.5 44.5,26.1 55.6,27.8 66.8,22.9 77.9,26.1 89.0,24.5 100.1,26.1 111.2,27.8 122.4,19.6 133.5,19.6 144.6,24.5 155.8,18.0 166.9,29.4 178.0,26.1 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,29.4 11.1,31.0 22.2,5.0 33.4,24.5 44.5,26.1 55.6,27.8 66.8,22.9 77.9,26.1 89.0,24.5 100.1,26.1 111.2,27.8 122.4,19.6 133.5,19.6 144.6,24.5 155.8,18.0 166.9,29.4 178.0,26.1" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">52</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">73</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">23</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#2 — #727</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Marcus Schappi</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./transistor">transistor</a> · <a href="./analog-to-digital-converter">analog to digital converter</a> · <a href="./mosfet">mosfet</a> · <a href="./breadboard">breadboard</a> · <a href="./capacitor">capacitor</a></td></tr></table></div>
+
+
 A **relay** is an electrically operated switch in which a magnetic coil physically moves a strip of metal into contact with another piece of metal to make or break a connection.<sup><a href="#ref-94" title="Ep 94: Gnomic Gazumping Gobemouche (May 6, 2012)">[94]</a></sup> Because the control side and the switched side are separate, a relay provides galvanic isolation between the driving circuit and the load, and in one of its states a mechanical relay consumes no current at all.<sup><a href="#ref-93" title="Ep 93: An Interview with Tom LeMense - Cacaesthestic Chronometric Carriwitchet (April 29, 2012)">[93]</a></sup> Relays formed the basis of early computing and telephone switching and remain in use wherever contacts must carry large currents, exhibit near-zero leakage, or be driven from simple low-power control signals.<sup><a href="#ref-77" title="Ep 77: An Interview with Dr. Howard Johnson - Winsome Waveform Wizardry (January 9, 2012)">[77]</a></sup><sup><a href="#ref-94" title="Ep 94: Gnomic Gazumping Gobemouche (May 6, 2012)">[94]</a></sup><sup><a href="#ref-607" title="Ep 607: The Joulescope Upgrade with Matt Liberty (October 30, 2022)">[607]</a></sup>
 
 ## Construction and operation

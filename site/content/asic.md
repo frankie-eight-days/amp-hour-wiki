@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 83 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,27.8 11.1,21.2 22.2,25.6 33.4,5.0 44.5,22.3 55.6,16.9 66.8,24.5 77.9,25.6 89.0,22.3 100.1,24.5 111.2,12.6 122.4,18.0 133.5,27.8 144.6,11.5 155.8,19.1 166.9,24.5 178.0,24.5 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,27.8 11.1,21.2 22.2,25.6 33.4,5.0 44.5,22.3 55.6,16.9 66.8,24.5 77.9,25.6 89.0,22.3 100.1,24.5 111.2,12.6 122.4,18.0 133.5,27.8 144.6,11.5 155.8,19.1 166.9,24.5 178.0,24.5" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">83</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">160</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">34</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#2 — #721</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Jeri Ellsworth</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./fpga">fpga</a> · <a href="./microcontroller">microcontroller</a> · <a href="./analog-to-digital-converter">analog to digital converter</a> · <a href="./oscilloscope">oscilloscope</a> · <a href="./risc-v">risc v</a></td></tr></table></div>
+
+
 An **application-specific integrated circuit** (ASIC) is an integrated circuit designed and fabricated for one fixed function, as distinct from a general-purpose processor or a field-programmable device. The economics that bound ASIC use are set by the fabrication process rather than by the devices themselves: as processes move to tighter geometries on larger wafers, the cost of a mask set rises, passing ten million dollars at the leading nodes, so an ASIC remains viable for an ever-shrinking set of applications.<sup><a href="#ref-103" title="Ep 103: An Interview with Philip Freidin - Xenodochial Xilinx Ex-Employee (July 8, 2012)">[103]</a></sup> Where one is warranted, dedicated silicon wins on efficiency by a large factor rather than a small one — implementing a fixed function as an ASIC rather than in an FPGA is worth something like twenty times, and possibly more.<sup><a href="#ref-254" title="Ep 254: An Interview with Andreas Olofsson - Adapteva's Ampliative Abacus (June 16, 2015)">[254]</a></sup> Most of the effort in building an ASIC is verification rather than design, because a tape-out cannot be corrected once the masks are made.<sup><a href="#ref-547" title="Ep 547: Open Source Mindset with Michael Gielda (June 28, 2021)">[547]</a></sup>
 
 ## Economics

@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 102 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,29.7 11.1,29.7 22.2,28.4 33.4,5.0 44.5,19.3 55.6,14.1 66.8,8.9 77.9,16.7 89.0,10.2 100.1,14.1 111.2,5.0 122.4,25.8 133.5,24.5 144.6,19.3 155.8,27.1 166.9,25.8 178.0,28.4 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,29.7 11.1,29.7 22.2,28.4 33.4,5.0 44.5,19.3 55.6,14.1 66.8,8.9 77.9,16.7 89.0,10.2 100.1,14.1 111.2,5.0 122.4,25.8 133.5,24.5 144.6,19.3 155.8,27.1 166.9,25.8 178.0,28.4" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">102</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">150</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">45</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#4 — #723</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Piotr Esden-Tempski</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./i2c">i2c</a> · <a href="./uart">uart</a> · <a href="./microcontroller">microcontroller</a> · <a href="./analog-to-digital-converter">analog to digital converter</a> · <a href="./usb">usb</a></td></tr></table></div>
+
+
 SPI is a clocked serial interface whose transfers depend on the configured clock frequency, clock polarity, clock phase, and use of a slave-select signal.<sup><a href="#ref-348" title="Ep 348: An Interview with Art Kay (June 18, 2017)">[348]</a></sup><sup><a href="#ref-461" title="Ep 461: An Interview with Jonathan Georgino (October 6, 2019)">[461]</a></sup> Separate data lines carry information between a host and peripheral, while multiple peripherals can share one bus and be selected individually with chip-select lines.<sup><a href="#ref-201" title="Ep 201: Cheap Respins And A Time Machine - Multiscience Mercenary Marketplace (June 2, 2014)">[201]</a></sup><sup><a href="#ref-203" title="Ep 203: Tesla, Checklists and Bullies - Emerging External Eupsychics (June 16, 2014)">[203]</a></sup> Its directly driven electrical outputs distinguish it from I2C, although the resulting requirement for additional pins is a central design trade-off.<sup><a href="#ref-235" title="Ep 235: An Interview with Matt Richardson - Raspberry Risorgimento Regent (February 3, 2015)">[235]</a></sup><sup><a href="#ref-274" title="Ep 274: Our First Call In Show (November 4, 2015)">[274]</a></sup> The abbreviation is pronounced either as three separate letters or as a single word.<sup><a href="#ref-274" title="Ep 274: Our First Call In Show (November 4, 2015)">[274]</a></sup>
 
 ## Electrical characteristics

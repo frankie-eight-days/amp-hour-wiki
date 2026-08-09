@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 65 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,31.0 22.2,30.0 33.4,23.7 44.5,24.8 55.6,31.0 66.8,28.9 77.9,26.8 89.0,24.8 100.1,22.7 111.2,12.3 122.4,18.5 133.5,5.0 144.6,19.6 155.8,26.8 166.9,26.8 178.0,30.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,31.0 22.2,30.0 33.4,23.7 44.5,24.8 55.6,31.0 66.8,28.9 77.9,26.8 89.0,24.8 100.1,22.7 111.2,12.3 122.4,18.5 133.5,5.0 144.6,19.6 155.8,26.8 166.9,26.8 178.0,30.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">65</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">109</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">38</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#79 — #713</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Charles Aylward</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./zephyr">zephyr</a> · <a href="./bluetooth">bluetooth</a> · <a href="./linux">linux</a> · <a href="./wifi">wifi</a> · <a href="./microcontroller">microcontroller</a></td></tr></table></div>
+
+
 A **real-time operating system** (RTOS) is an operating system for embedded systems in which a result that the system depends on — a sensor reading or a computation — must be available within a bounded time, and its absence within that bound constitutes a failure rather than merely a delay.<sup><a href="#ref-584" title="Ep 584: Software for Rockets with Charles Aylward (April 3, 2022)">[584]</a></sup> In its minimal form, a microcontroller RTOS is a scheduler plus basic synchronisation primitives such as queues, semaphores and task notifications, without the libraries and drivers that accompany a full operating system such as Linux.<sup><a href="#ref-581" title="Ep 581: Real Time Operating Systems with Brian Amos (March 13, 2022)">[581]</a></sup> The category matters because it sits at the boundary between bare-metal firmware and general-purpose computing: it provides preemptive multitasking and deterministic scheduling on hardware too small for a conventional operating system, at the cost of added complexity, per-task memory and design discipline.<sup><a href="#ref-105" title="Ep 105: An Interview with Chris Anderson - Deambulatory Daedal Drones (July 23, 2012)">[105]</a></sup><sup><a href="#ref-510" title="Ep 510: Knob and Tube Wiring (September 28, 2020)">[510]</a></sup><sup><a href="#ref-556" title="Ep 556: Firmware for Hardware Engineers with Phillip Johnston (September 6, 2021)">[556]</a></sup>
 
 ## Definition and characteristics

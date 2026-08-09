@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 60 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,18.0 22.2,28.8 33.4,13.7 44.5,24.5 55.6,20.2 66.8,22.3 77.9,5.0 89.0,31.0 100.1,22.3 111.2,5.0 122.4,15.8 133.5,31.0 144.6,20.2 155.8,22.3 166.9,28.8 178.0,22.3 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,18.0 22.2,28.8 33.4,13.7 44.5,24.5 55.6,20.2 66.8,22.3 77.9,5.0 89.0,31.0 100.1,22.3 111.2,5.0 122.4,15.8 133.5,31.0 144.6,20.2 155.8,22.3 166.9,28.8 178.0,22.3" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">60</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">76</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">35</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#12 — #726</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Michael Gielda</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./open-source-hardware">open source hardware</a> · <a href="./firmware">firmware</a> · <a href="./github">github</a> · <a href="./3d-printing">3d printing</a> · <a href="./arduino">arduino</a></td></tr></table></div>
+
+
 Open source is an ecosystem rather than a technology: the code is the smaller half of what a project is, and treating it as only a technical artefact is the mistake newcomers most often make.<sup><a href="#ref-123" title="Ep 123: An Interview with Jon Oxer - Innoxious Implant Innovator (November 26, 2012)">[123]</a></sup> The underlying arrangement is social — pulling together a team and creating an architecture of participation, with the technical output following from that rather than the other way round.<sup><a href="#ref-105" title="Ep 105: An Interview with Chris Anderson - Deambulatory Daedal Drones (July 23, 2012)">[105]</a></sup> The practice long predates the terminology: before open licences existed, the way to open a design was to publish a full construction article in a hobbyist magazine.<sup><a href="#ref-10" title="Ep 10: Open Hardware and Self Publishing">[10]</a></sup> Open source is one development and distribution model among several rather than the only legitimate one, and something challenging it is not automatically wrong.<sup><a href="#ref-54" title="Ep 54: An Interview with Jack Ganssle - Embedded Elchee Epexegesis">[54]</a></sup>
 
 ## History

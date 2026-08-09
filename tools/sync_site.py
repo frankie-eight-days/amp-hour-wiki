@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Sync articles/wiki/*.md into site/content/ and regenerate the index page.
+"""Sync articles/wiki/*.md into site/content/ and regenerate index pages.
 
-Re-runnable at any time; the factory writes articles concurrently and this
-copies whatever exists when it runs.
+Site v2: per-article infobox (sparkline, stats, top speakers, related topics),
+provenance line, related-articles footer, community-sectioned homepage, /all
+A-Z page, citation tooltips. Re-runnable at any time; the factory writes
+articles concurrently and this copies whatever exists when it runs.
 """
-import pathlib, re, shutil, datetime
+import pathlib, re, json, datetime, html as html_mod
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "articles" / "wiki"
@@ -13,13 +15,108 @@ PLANNED = 412
 
 DST.mkdir(parents=True, exist_ok=True)
 
-def linkify(raw: str) -> str:
-    """Make [NNN] citations clickable (with hover tooltips) and the References
-    table a real link table."""
+# ---------------------------------------------------------------- corpus data
+cand = {c["concept"]: c
+        for c in json.load(open(ROOT / "articles" / "candidates.json"))["candidates"]}
+graph = json.load(open(ROOT / "graph" / "graph.json"))
+# adjacency with edge weights (cooccurrence only)
+adj = {}
+for e in graph.get("edges", graph.get("links", [])):
+    if e.get("kind") == "hierarchy":
+        continue
+    a, b, w = e.get("source"), e.get("target"), e.get("weight", 1)
+    adj.setdefault(a, []).append((b, w))
+    adj.setdefault(b, []).append((a, w))
+
+published = {p.stem for p in SRC.glob("*.md")}
+
+
+def sparkline(mentions_by_year, width=178, height=34):
+    """Inline SVG sparkline of mentions 2010-2026."""
+    years = list(range(2010, 2027))
+    vals = [mentions_by_year.get(str(y), mentions_by_year.get(y, 0)) or 0
+            for y in years]
+    top = max(vals) or 1
+    step = width / (len(years) - 1)
+    pts = " ".join(f"{i*step:.1f},{height - 3 - (v/top)*(height-8):.1f}"
+                   for i, v in enumerate(vals))
+    area = f"0,{height} " + pts + f" {width},{height}"
+    return (
+        f'<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" '
+        'preserveAspectRatio="none" role="img" aria-label="mentions per year">'
+        f'<polygon points="{area}" fill="var(--tertiary)" opacity="0.25"/>'
+        f'<polyline points="{pts}" fill="none" stroke="var(--secondary)" '
+        'stroke-width="1.6"/></svg>')
+
+
+def infobox(slug, n_refs):
+    c = cand.get(slug)
+    if not c:
+        return ""
+    esc = html_mod.escape
+    speakers = [s.get("name") if isinstance(s, dict) else
+                (s[0] if isinstance(s, (list, tuple)) else s)
+                for s in (c.get("top_speakers") or [])[:3]]
+    neighbors = sorted(adj.get(slug, []), key=lambda t: -t[1])
+    related = [n for n, _ in neighbors if n in published and n != slug][:5]
+    rows = [
+        ("Episodes", f'{c["episode_count"]}'),
+        ("Mentions", f'{c["mention_count"]:,}'),
+        ("Cited here", f"{n_refs}"),
+        ("First — last", f'#{c["first_episode"]} — #{c["last_episode"]}'),
+    ]
+    rows_html = "".join(
+        f'<tr><td class="ibk">{k}</td><td class="ibv">{v}</td></tr>'
+        for k, v in rows)
+    speakers_html = ""
+    if speakers:
+        speakers_html = ('<tr><td class="ibk">Most heard</td><td class="ibv">'
+                         + ", ".join(esc(s) for s in speakers) + "</td></tr>")
+    related_html = ""
+    if related:
+        links = " · ".join(
+            f'<a href="./{n}">{esc(cand.get(n, {}).get("concept", n)).replace("-", " ")}</a>'
+            for n in related)
+        related_html = (f'<tr><td class="ibk">Related</td>'
+                        f'<td class="ibv">{links}</td></tr>')
+    return (
+        '<div class="amp-infobox">'
+        f'<div class="ib-spark">{sparkline(c.get("mentions_by_year") or {})}'
+        '<div class="ib-sparklabel">mentions 2010–2026</div></div>'
+        f'<table>{rows_html}{speakers_html}{related_html}</table>'
+        "</div>")
+
+
+PROVENANCE = ('<div class="amp-provenance">Synthesized from {n} episodes of '
+              '<a href="https://theamphour.com">The Amp Hour</a> · AI-generated, '
+              "every claim cited to a verbatim transcript passage</div>")
+
+INFOBOX_CSS = """
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+"""
+
+
+def linkify(raw: str, slug: str) -> str:
+    """Citations -> tooltip links; references -> link table; inject infobox,
+    provenance, and related-articles footer."""
     parts = re.split(r"\n## References\s*\n", raw, maxsplit=1)
     prose, refs_md = parts[0], (parts[1] if len(parts) > 1 else "")
 
-    # parse references first so citations can carry tooltips
     ref_meta = {}
     for line in refs_md.splitlines():
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
@@ -37,6 +134,18 @@ def linkify(raw: str) -> str:
 
     prose = re.sub(r"(?:\[\d+\]){1,}", cite, prose)
 
+    # inject provenance + infobox after frontmatter
+    fm_end = prose.find("\n---", 3)
+    if prose.startswith("---") and fm_end != -1:
+        head = prose[: fm_end + 4]
+        body = prose[fm_end + 4:]
+    else:
+        head, body = "", prose
+    n_eps = cand.get(slug, {}).get("episode_count", "?")
+    inject = (INFOBOX_CSS + PROVENANCE.format(n=n_eps)
+              + infobox(slug, len(ref_meta)))
+    prose = head + "\n" + inject + "\n" + body
+
     rows = []
     for line in refs_md.splitlines():
         cells = [c.strip() for c in line.strip().strip("|").split("|")]
@@ -46,41 +155,43 @@ def linkify(raw: str) -> str:
             rows.append(
                 f'<tr id="ref-{n}"><td>{n}</td>'
                 f'<td><a href="{url}" target="_blank" rel="noopener">{title}</a></td>'
-                f"<td>{date}</td></tr>"
-            )
+                f"<td>{date}</td></tr>")
+    out = prose
     if rows:
-        table = (
-            "<table><thead><tr><th>Episode</th><th>Title</th><th>Date</th></tr></thead>"
-            "<tbody>" + "".join(rows) + "</tbody></table>"
-        )
-        return prose + "\n## References\n\n" + table + "\n"
-    return raw if not refs_md else prose + "\n## References\n\n" + refs_md
+        table = ("<table><thead><tr><th>Episode</th><th>Title</th><th>Date</th>"
+                 "</tr></thead><tbody>" + "".join(rows) + "</tbody></table>")
+        out = prose + "\n## References\n\n" + table + "\n"
+    elif refs_md:
+        out = prose + "\n## References\n\n" + refs_md
+    return out
 
 
+# ------------------------------------------------------------------- sync
 articles = []
 for md in sorted(SRC.glob("*.md")):
     raw = md.read_text()
     m = re.search(r"^title:\s*(.+)$", raw, re.M)
     title = m.group(1).strip() if m else md.stem
     articles.append((md.stem, title))
-    (DST / md.name).write_text(linkify(raw))
+    (DST / md.name).write_text(linkify(raw, md.stem))
 
-# prune articles removed upstream (never prune index.md)
 present = {a[0] for a in articles}
+KEEP = {"index", "all", "explore"}
 for md in DST.glob("*.md"):
-    if md.stem != "index" and md.stem not in present:
+    if md.stem not in KEEP and md.stem not in present:
         md.unlink()
 
-by_letter = {}
-for slug, title in sorted(articles, key=lambda a: a[1].lower()):
-    by_letter.setdefault(title[0].upper(), []).append((slug, title))
-
-# total citations across the wiki (rows in References tables)
 total_refs = 0
 for md in SRC.glob("*.md"):
     total_refs += len(re.findall(r"^\| \d+ \|", md.read_text(), re.M))
 
-lines = [
+# ------------------------------------------------------------- homepage
+by_comm = {}
+for slug, title in articles:
+    comm = cand.get(slug, {}).get("community_name") or "other topics"
+    by_comm.setdefault(comm, []).append((slug, title))
+
+hero = [
     "---",
     "title: The Amp Hour Wiki",
     "---",
@@ -109,26 +220,43 @@ lines = [
     "articles planned</div>"
     "</div>",
     "",
-    "Every claim carries a bracketed citation that traces to a verbatim "
-    "passage in the show's official transcripts, through a verified "
-    "extraction pipeline. Articles are AI-generated syntheses; a full "
-    "*How this wiki was built* page is coming with the complete build.",
+    '<p style="text-align:center;">'
+    '<strong><a href="./explore">Explore the concept graph &rarr;</a></strong>'
+    ' &nbsp;·&nbsp; <a href="./all">All articles A&ndash;Z</a>'
+    ' &nbsp;·&nbsp; search with <kbd>⌘K</kbd></p>',
     "",
-    "**[Explore the concept graph &rarr;](./explore)**",
+    "Every claim carries a bracketed citation tracing to a verbatim passage "
+    "in the show's official transcripts. Articles are AI-generated syntheses "
+    "built by a verified extraction pipeline; a full *How this wiki was "
+    "built* page is coming with the complete build.",
     "",
-    "## Articles",
+    "## Topics",
     "",
 ]
-for letter in sorted(by_letter):
-    lines.append(f"### {letter}")
-    lines.append("")
-    for slug, title in by_letter[letter]:
-        lines.append(f"- [[{slug}|{title}]]")
-    lines.append("")
-
-lines.append(
+for comm in sorted(by_comm, key=lambda c: -len(by_comm[c])):
+    items = sorted(by_comm[comm], key=lambda a: a[1].lower())
+    hero.append(f"### {comm.title()}")
+    hero.append("")
+    hero.append(" · ".join(f"[[{s}|{t}]]" for s, t in items))
+    hero.append("")
+hero.append(
     f"*Last synced {datetime.date.today().isoformat()} · "
-    "[source corpus and pipeline](https://github.com/frankie-eight-days/amp-hour-wiki)*"
-)
-(DST / "index.md").write_text("\n".join(lines) + "\n")
-print(f"synced {len(articles)} articles -> {DST}")
+    "[source corpus and pipeline]"
+    "(https://github.com/frankie-eight-days/amp-hour-wiki)*")
+(DST / "index.md").write_text("\n".join(hero) + "\n")
+
+# ---------------------------------------------------------------- /all page
+by_letter = {}
+for slug, title in sorted(articles, key=lambda a: a[1].lower()):
+    by_letter.setdefault(title[0].upper(), []).append((slug, title))
+allpage = ["---", "title: All articles", "---", ""]
+for letter in sorted(by_letter):
+    allpage.append(f"### {letter}")
+    allpage.append("")
+    for slug, title in by_letter[letter]:
+        allpage.append(f"- [[{slug}|{title}]]")
+    allpage.append("")
+(DST / "all.md").write_text("\n".join(allpage) + "\n")
+
+print(f"synced {len(articles)} articles -> {DST} "
+      f"({len(by_comm)} communities, {total_refs:,} citations)")

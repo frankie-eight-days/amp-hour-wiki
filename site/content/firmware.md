@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 223 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,28.2 22.2,28.2 33.4,22.0 44.5,23.4 55.6,20.1 66.8,13.0 77.9,6.4 89.0,17.3 100.1,17.3 111.2,5.0 122.4,13.0 133.5,21.1 144.6,20.1 155.8,25.3 166.9,27.2 178.0,27.2 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,28.2 22.2,28.2 33.4,22.0 44.5,23.4 55.6,20.1 66.8,13.0 77.9,6.4 89.0,17.3 100.1,17.3 111.2,5.0 122.4,13.0 133.5,21.1 144.6,20.1 155.8,25.3 166.9,27.2 178.0,27.2" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">223</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">383</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">105</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#9 — #726</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Alvaro Prieto</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./microcontroller">microcontroller</a> · <a href="./fpga">fpga</a> · <a href="./oscilloscope">oscilloscope</a> · <a href="./usb">usb</a> · <a href="./firmware-update">firmware update</a></td></tr></table></div>
+
+
 Firmware is software stored in and bound to a hardware product, spanning the whole stack from bare-metal bootloaders up to network services, and hardware built without it has no function.<sup><a href="#ref-336" title="Ep 336: An Interview with Bunnie Huang (2nd)">[336]</a></sup> Because functionality that can be changed after shipping is worth more than functionality fixed in the board, product teams now typically employ several firmware engineers for every hardware engineer.<sup><a href="#ref-219" title="Ep 219: Get Smart About Automation - Caducous Cyborg Concerns (October 6, 2014)">[219]</a></sup> On a typical embedded project the firmware effort runs at least twice as long as the hardware effort, and unlike the hardware its scope tends to keep growing after the board is frozen.<sup><a href="#ref-368" title="Ep 368: The EEVblog Sparkgap Generator (November 19, 2017)">[368]</a></sup> Firmware also carries commercial weight: capabilities of shipped hardware are routinely enabled, licensed, withheld or revoked through firmware alone.<sup><a href="#ref-65" title="Ep 65: Silego, ADCs & Seismic Detection - Dave's Dingo Dystocia">[65]</a></sup><sup><a href="#ref-72" title="Ep 72: Kismetic Keithley Katowse">[72]</a></sup><sup><a href="#ref-339" title="Ep 339: Look at nature and meet nerds (March 12, 2017)">[339]</a></sup>
 
 ## Role in product development

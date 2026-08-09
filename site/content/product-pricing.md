@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 63 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,26.7 22.2,20.2 33.4,5.0 44.5,18.0 55.6,22.3 66.8,15.8 77.9,5.0 89.0,24.5 100.1,18.0 111.2,26.7 122.4,22.3 133.5,22.3 144.6,28.8 155.8,22.3 166.9,28.8 178.0,31.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,26.7 22.2,20.2 33.4,5.0 44.5,18.0 55.6,22.3 66.8,15.8 77.9,5.0 89.0,24.5 100.1,18.0 111.2,26.7 122.4,22.3 133.5,22.3 144.6,28.8 155.8,22.3 166.9,28.8 178.0,31.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">63</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">73</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">49</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#43 — #693</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Jeri Ellsworth</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./profit-margin">profit margin</a> · <a href="./kickstarter">kickstarter</a> · <a href="./raspberry-pi">raspberry pi</a> · <a href="./3d-printer">3d printer</a> · <a href="./analog-to-digital-converter">analog to digital converter</a></td></tr></table></div>
+
+
 Product pricing is the process of setting the sale price of a physical product, and in electronics hardware it is dominated by the relationship between the bill of materials, distribution margins, and the production volume the seller can realistically achieve.<sup><a href="#ref-105" title="Ep 105: An Interview with Chris Anderson - Deambulatory Daedal Drones (July 23, 2012)">[105]</a></sup><sup><a href="#ref-143" title="Ep 143: PCBs, Tektronix & Ham Radio - Habitual Handicraft Hangups (April 29, 2013)">[143]</a></sup><sup><a href="#ref-201" title="Ep 201: Cheap Respins And A Time Machine - Multiscience Mercenary Marketplace (June 2, 2014)">[201]</a></sup> Common practice builds the retail figure from a cost multiplier — typically 2.4 to 4 times hardware cost — while the price a market will bear is bounded by psychological thresholds, volume economics, and the margin demands of distributors.<sup><a href="#ref-215" title="Ep 215: Wrong Hardware, Wrong Software - Fugacious Fan Funding (September 7, 2014)">[215]</a></sup><sup><a href="#ref-114" title="Ep 114: Kickstarter, Manufacturing, Open Hardware - Judging Jurisdictional Junctures (September 23, 2012)">[114]</a></sup><sup><a href="#ref-646" title="Ep 646: Fan Fanboys (September 11, 2023)">[646]</a></sup> Underpricing is the characteristic failure mode of small and crowdfunded hardware ventures, because a price that cannot cover production, fulfillment, and support guarantees failure regardless of demand.<sup><a href="#ref-215" title="Ep 215: Wrong Hardware, Wrong Software - Fugacious Fan Funding (September 7, 2014)">[215]</a></sup><sup><a href="#ref-58" title="Ep 58: Multicopter, DIY drones & Tektronix - Zappy Zendik Zoilism">[58]</a></sup>
 
 ## Cost-plus pricing and margin multipliers

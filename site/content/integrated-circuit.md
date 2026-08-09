@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 102 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,28.6 11.1,20.4 22.2,5.0 33.4,9.7 44.5,15.6 55.6,12.1 66.8,18.0 77.9,26.3 89.0,23.9 100.1,22.7 111.2,26.3 122.4,25.1 133.5,25.1 144.6,25.1 155.8,27.5 166.9,25.1 178.0,28.6 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,28.6 11.1,20.4 22.2,5.0 33.4,9.7 44.5,15.6 55.6,12.1 66.8,18.0 77.9,26.3 89.0,23.9 100.1,22.7 111.2,26.3 122.4,25.1 133.5,25.1 144.6,25.1 155.8,27.5 166.9,25.1 178.0,28.6" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">102</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">137</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">46</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#2 — #725</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Henry Ott</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./transistor">transistor</a> · <a href="./digi-key">digi key</a> · <a href="./microcontroller">microcontroller</a> · <a href="./pcb">pcb</a> · <a href="./analog-to-digital-converter">analog to digital converter</a></td></tr></table></div>
+
+
 An integrated circuit (IC) is a semiconductor device in which a complete circuit function is fabricated as a single unit, sealing its internal operation inside a package that presents only a defined interface to the designer using it.<sup><a href="#ref-165" title="Ep 165: An Interview with Henry Ott - Forced FCC Filtering (September 30, 2013)">[165]</a></sup><sup><a href="#ref-725" title="Ep 725: The Secret Life of Circuits with lcamtuf / Michał Zalewski (June 3, 2026)">[725]</a></sup> The scope of what qualifies as an integrated circuit has expanded continuously: in the 1970s and early 1980s the term covered a timer, an operational amplifier and a family of logic gates, with anything more ambitious built from discrete transistors, whereas modern practice treats the IC as the atomic unit from which entire systems are assembled.<sup><a href="#ref-704" title="Ep 704: Applied Embedded Electronics with Jerry Twomey (October 2, 2025)">[704]</a></sup><sup><a href="#ref-165" title="Ep 165: An Interview with Henry Ott - Forced FCC Filtering (September 30, 2013)">[165]</a></sup> Integration typically consolidates cost onto the silicon, making a single integrated device cheaper than the equivalent collection of separate packages, and has consequently moved most electronics engineering from circuit construction to system-level design.<sup><a href="#ref-253" title="Ep 253: Consolidate All The Things - Zonked Zelotic Zaitech (June 9, 2015)">[253]</a></sup><sup><a href="#ref-185" title="Ep 185: An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism (February 17, 2014)">[185]</a></sup>
 
 ## History

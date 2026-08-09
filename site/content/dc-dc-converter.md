@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 66 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,27.3 11.1,14.3 22.2,12.4 33.4,5.0 44.5,27.3 55.6,29.1 66.8,6.9 77.9,21.7 89.0,25.4 100.1,25.4 111.2,23.6 122.4,18.0 133.5,31.0 144.6,19.9 155.8,25.4 166.9,25.4 178.0,25.4 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,27.3 11.1,14.3 22.2,12.4 33.4,5.0 44.5,27.3 55.6,29.1 66.8,6.9 77.9,21.7 89.0,25.4 100.1,25.4 111.2,23.6 122.4,18.0 133.5,31.0 144.6,19.9 155.8,25.4 166.9,25.4 178.0,25.4" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">66</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">88</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">39</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#4 — #719</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Henry Ott</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./digi-key">digi key</a> · <a href="./transformer">transformer</a> · <a href="./microcontroller">microcontroller</a> · <a href="./multimeter">multimeter</a> · <a href="./battery">battery</a></td></tr></table></div>
+
+
 A DC-DC converter is an electronic circuit that converts direct-current electrical power from one voltage to another, either stepping down — as when a nine-volt battery is reduced to a five-volt rail — or stepping up, as when two AA cells must supply a higher voltage than they provide.<sup><a href="#ref-32" title="Ep 32: Cores, Digikey, Electronic Design - The Commercial Competitor Commencement">[32]</a></sup> Modern converters accomplish this through high-frequency semiconductor switching with magnetic energy storage, and conversion work that once filled equipment racks is now performed by a small switcher chip and a small inductor.<sup><a href="#ref-88" title="Ep 88: Yonderly Yodeling Yobbos (March 25, 2012)">[88]</a></sup> The devices are pervasive in digital systems, where a single design routinely requires half a dozen separate rails — 3.3 volts for I/O, a 1.2-volt core, a 1.5-volt PLL supply and more — making the power budget a set of interacting converters rather than a single calculation.<sup><a href="#ref-53" title="Ep 53: Biarchy Birthday Bavardage">[53]</a></sup> Switching converters are also among the largest sources of conducted noise in a product, placing them at the centre of most electromagnetic compliance problems.<sup><a href="#ref-165" title="Ep 165: An Interview with Henry Ott - Forced FCC Filtering (September 30, 2013)">[165]</a></sup>
 
 ## Efficiency

@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 52 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,25.4 22.2,21.7 33.4,5.0 44.5,16.1 55.6,25.4 66.8,21.7 77.9,21.7 89.0,27.3 100.1,23.6 111.2,23.6 122.4,23.6 133.5,25.4 144.6,29.1 155.8,31.0 166.9,27.3 178.0,31.0 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,25.4 22.2,21.7 33.4,5.0 44.5,16.1 55.6,25.4 66.8,21.7 77.9,21.7 89.0,27.3 100.1,23.6 111.2,23.6 122.4,23.6 133.5,25.4 144.6,29.1 155.8,31.0 166.9,27.3 178.0,31.0" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">52</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">63</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">44</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#32 — #707</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Jon Oxer</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./product-pricing">product pricing</a> · <a href="./kickstarter">kickstarter</a> · <a href="./sparkfun">sparkfun</a> · <a href="./3d-printer">3d printer</a> · <a href="./altium">altium</a></td></tr></table></div>
+
+
 **Profit margin** is the share of a product's selling price that remains after costs, and in hardware businesses it is typically managed through a multiplier applied to the bill-of-materials (BOM) cost rather than as an afterthought added to the parts total.<sup><a href="#ref-123" title="Ep 123: An Interview with Jon Oxer - Innoxious Implant Innovator (November 26, 2012)">[123]</a></sup><sup><a href="#ref-40" title="Ep 40: Adafruit, Chip heist, Hackerspaces - The Kit Conniption">[40]</a></sup> The multiplier matters because it has to absorb every cost between the parts arriving and the customer receiving the product — assembly, distribution, payment processing, yield loss and support — none of which appears in the BOM itself.<sup><a href="#ref-123" title="Ep 123: An Interview with Jon Oxer - Innoxious Implant Innovator (November 26, 2012)">[123]</a></sup><sup><a href="#ref-153" title="Ep 153: An Interview with Ryan O'Hara - Keyed, Kerfed Kapton (July 8, 2013)">[153]</a></sup> A business running at a sustained twenty percent annual profit is regarded as genuinely good performance in an ordinary industry, and revenue figures alone reveal almost nothing about the health of the operation behind them.<sup><a href="#ref-118" title="Ep 118: Kickstarter, Open Source RC & Modelsource - Facinorous Financial Foulness (October 21, 2012)">[118]</a></sup><sup><a href="#ref-253" title="Ep 253: Consolidate All The Things - Zonked Zelotic Zaitech (June 9, 2015)">[253]</a></sup>
 
 ## Pricing multipliers

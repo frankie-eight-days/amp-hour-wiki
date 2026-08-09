@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 47 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,28.3 22.2,28.3 33.4,18.7 44.5,28.3 55.6,31.0 66.8,26.9 77.9,26.9 89.0,28.3 100.1,26.9 111.2,25.5 122.4,24.2 133.5,18.7 144.6,5.0 155.8,14.6 166.9,22.8 178.0,26.9 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,28.3 22.2,28.3 33.4,18.7 44.5,28.3 55.6,31.0 66.8,26.9 77.9,26.9 89.0,28.3 100.1,26.9 111.2,25.5 122.4,24.2 133.5,18.7 144.6,5.0 155.8,14.6 166.9,22.8 178.0,26.9" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">47</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">84</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">16</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#44 — #729</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Ari Gerstman</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./solar-power">solar power</a> · <a href="./solar-panel">solar panel</a></td></tr></table></div>
+
+
 The power grid is the interconnected system of generation, transmission and distribution infrastructure that supplies electrical energy, and it is plausibly the largest and most complex machine ever built.<sup><a href="#ref-583" title="Ep 583: The Smart Grid with Paul Zawada (March 27, 2022)">[583]</a></sup> Its defining operational problem is the continuous matching of generation to load, a balance communicated to every participant through a single physical quantity: grid frequency.<sup><a href="#ref-583" title="Ep 583: The Smart Grid with Paul Zawada (March 27, 2022)">[583]</a></sup> Modern society depends not merely on electricity but on its consistency — power available instantly, constantly and cheaply, such that operating a switch is not a decision — and that consistency, rather than raw capacity, is the property that separates a functioning grid from a nominal one.<sup><a href="#ref-102" title="Ep 102: Gouging Green Gardyloo (July 1, 2012)">[102]</a></sup>
 
 ## Operation and control

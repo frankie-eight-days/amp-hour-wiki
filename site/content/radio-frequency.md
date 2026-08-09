@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 130 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,23.7 22.2,17.5 33.4,16.4 44.5,13.3 55.6,23.7 66.8,14.4 77.9,20.6 89.0,24.8 100.1,8.1 111.2,5.0 122.4,21.6 133.5,25.8 144.6,19.6 155.8,25.8 166.9,23.7 178.0,28.9 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,23.7 22.2,17.5 33.4,16.4 44.5,13.3 55.6,23.7 66.8,14.4 77.9,20.6 89.0,24.8 100.1,8.1 111.2,5.0 122.4,21.6 133.5,25.8 144.6,19.6 155.8,25.8 166.9,23.7 178.0,28.9" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">130</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">176</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">36</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#6 — #729</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Hank Zumbahlen</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./antenna">antenna</a> · <a href="./bluetooth">bluetooth</a> · <a href="./fpga">fpga</a> · <a href="./spectrum-analyzer">spectrum analyzer</a> · <a href="./internet-of-things">internet of things</a></td></tr></table></div>
+
+
 **Radio frequency** (RF) is the portion of electronics practice concerned with signals whose frequency is high enough that physical dimensions, parasitic elements and return-current paths govern circuit behaviour.<sup><a href="#ref-185" title="Ep 185: An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism (February 17, 2014)">[185]</a></sup><sup><a href="#ref-533" title="Ep 533: Microwave measurement with Joel Dunsmore (March 7, 2021)">[533]</a></sup><sup><a href="#ref-476" title="Ep 476: An Interview with Kendall Castor-Perry (January 26, 2020)">[476]</a></sup> The boundary between low-frequency and high-frequency design is not sharply defined and sits somewhere between 10 and 100 MHz: below about a megahertz the treatment is straightforward, while above about 100 MHz every aspect of a design has to be reconsidered—roughly the same threshold at which a circuit starts to radiate appreciably.<sup><a href="#ref-185" title="Ep 185: An Interview with Hank Zumbahlen - Zoppa Zumbahlen Zateticism (February 17, 2014)">[185]</a></sup> The field matters beyond radio products themselves, because the spectral content of a digital signal is set by its transition rate rather than its clock rate, so digital designers are engaged in radio-frequency design whether they recognise it or not.<sup><a href="#ref-165" title="Ep 165: An Interview with Henry Ott - Forced FCC Filtering (September 30, 2013)">[165]</a></sup>
 
 ## Defining behaviour at radio frequency

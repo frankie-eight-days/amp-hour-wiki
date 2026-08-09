@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 102 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,26.0 11.1,21.1 22.2,29.8 33.4,5.0 44.5,23.6 55.6,19.9 66.8,18.6 77.9,18.6 89.0,21.1 100.1,18.6 111.2,16.1 122.4,19.9 133.5,24.8 144.6,24.8 155.8,18.6 166.9,26.0 178.0,28.5 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,26.0 11.1,21.1 22.2,29.8 33.4,5.0 44.5,23.6 55.6,19.9 66.8,18.6 77.9,18.6 89.0,21.1 100.1,18.6 111.2,16.1 122.4,19.9 133.5,24.8 144.6,24.8 155.8,18.6 166.9,26.0 178.0,28.5" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">102</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">134</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">39</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#2 — #718</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Vic Aprea</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./altium">altium</a> · <a href="./kicad">kicad</a> · <a href="./pcb-fabrication">pcb fabrication</a> · <a href="./digi-key">digi key</a> · <a href="./fpga">fpga</a></td></tr></table></div>
+
+
 Printed circuit board (PCB) design is the engineering activity of turning a circuit schematic into a physical, manufacturable board: capturing and sharing a circuit is comparatively easy, and the remaining effort of producing the actual board is where the work lies.<sup><a href="#ref-106" title="Ep 106: Tektronix, ChipReport.tv, & the Signal Path - Temperative Tegmen Temperature (July 29, 2012)">[106]</a></sup><sup><a href="#ref-626" title="Ep 626: Intelligent Routing with Sergiy Nesterenko (April 2, 2023)">[626]</a></sup> It is a learned skill acquired by doing rather than by study — certification courses exist, but they certify knowledge the designer already possesses rather than teaching it, so experience has to come first.<sup><a href="#ref-8" title="Ep 8: Layouts and Design-Outs">[8]</a></sup> The craft admits no unique solution: the same design handed to twenty designers produces twenty different layouts, which is why it is taught by experience rather than by rule.<sup><a href="#ref-16" title="Ep 16: LED Designs, Last Minute Designs and Board Designs">[16]</a></sup> Despite being central to building anything physical, board design is frequently absent from university curricula, and many engineers first encounter it at work or in a hobby project.<sup><a href="#ref-573" title="Ep 573: Mixed Signal Education with Philip Salmony (January 17, 2022)">[573]</a></sup>
 
 ## The craft and its acquisition

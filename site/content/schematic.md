@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 186 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,30.3 11.1,21.6 22.2,23.8 33.4,5.0 44.5,18.7 55.6,15.1 66.8,8.6 77.9,19.4 89.0,24.5 100.1,20.2 111.2,20.9 122.4,18.0 133.5,20.9 144.6,24.5 155.8,28.8 166.9,28.1 178.0,28.1 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,30.3 11.1,21.6 22.2,23.8 33.4,5.0 44.5,18.7 55.6,15.1 66.8,8.6 77.9,19.4 89.0,24.5 100.1,20.2 111.2,20.9 122.4,18.0 133.5,20.9 144.6,24.5 155.8,28.8 166.9,28.1 178.0,28.1" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">186</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">236</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">67</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#5 — #727</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Dave Jones, Chris Gammell, Louis Rossmann</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./pcb-layout">pcb layout</a> · <a href="./bill-of-materials">bill of materials</a> · <a href="./open-source-hardware">open source hardware</a> · <a href="./pcb">pcb</a> · <a href="./datasheet">datasheet</a></td></tr></table></div>
+
+
 A **schematic** is the abstract, symbolic representation of an electronic circuit, and in printed circuit board engineering it functions as the specification the physical board must satisfy: the job of a PCB is to execute the schematic faithfully, so that an ideal board would have zero-length traces with no resistance, inductance or capacitance, and every real board is an approximation of its schematic.<sup><a href="#ref-626" title="Ep 626: Intelligent Routing with Sergiy Nesterenko (April 2, 2023)">[626]</a></sup> Board design begins with a finished schematic carrying the design notes that constrain layout, and only after it is complete are footprints and library components verified and any track laid.<sup><a href="#ref-16" title="Ep 16: LED Designs, Last Minute Designs and Board Designs">[16]</a></sup> Because the schematic is the canonical source of the design, it is treated in professional practice as a control document from which the bill of materials and other downstream artefacts are generated, and as the object on which review, verification and release procedures are centred.<sup><a href="#ref-174" title="Ep 174: Motors And Upgrading Sinclairs - Adapting Apraxiated Automobiles (December 2, 2013)">[174]</a></sup><sup><a href="#ref-243" title="Ep 243: An interview with Macrofab - Macro Manufacturing Mechanization (March 31, 2015)">[243]</a></sup>
 
 ## Role in the design process

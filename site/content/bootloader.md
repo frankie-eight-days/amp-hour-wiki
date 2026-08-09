@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 53 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,31.0 22.2,31.0 33.4,24.5 44.5,22.9 55.6,21.2 66.8,29.4 77.9,5.0 89.0,16.4 100.1,26.1 111.2,11.5 122.4,18.0 133.5,22.9 144.6,29.4 155.8,29.4 166.9,22.9 178.0,19.6 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,31.0 22.2,31.0 33.4,24.5 44.5,22.9 55.6,21.2 66.8,29.4 77.9,5.0 89.0,16.4 100.1,26.1 111.2,11.5 122.4,18.0 133.5,22.9 144.6,29.4 155.8,29.4 166.9,22.9 178.0,19.6" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">53</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">83</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">35</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#113 — #724</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Colin O&#x27;Flynn</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./firmware-update">firmware update</a> · <a href="./firmware">firmware</a> · <a href="./bluetooth">bluetooth</a> · <a href="./flash-memory">flash memory</a> · <a href="./serial-port">serial port</a></td></tr></table></div>
+
+
 A **bootloader** is a small program resident in a device's program storage that runs first at power-up, checks the application image for validity, and transfers execution to it when the image is good.<sup><a href="#ref-212" title="Ep 212: An Interview with Trey German - Launchpad Laden Lodesman (August 18, 2014)">[212]</a></sup> Its primary purpose is to allow the application firmware to be replaced in the field: updating requires a route for the running application to re-enter the bootloader, after which a replacement image arrives over whatever communication channel the product already has — a vehicle bus, USB, or a plain serial link.<sup><a href="#ref-212" title="Ep 212: An Interview with Trey German - Launchpad Laden Lodesman (August 18, 2014)">[212]</a></sup> The mechanism exists because the alternative is physical access: a microcontroller buried in a product cannot be removed, opened, and reprogrammed through its debug header when a defect is found.<sup><a href="#ref-212" title="Ep 212: An Interview with Trey German - Launchpad Laden Lodesman (August 18, 2014)">[212]</a></sup>
 
 ## Purpose and operation

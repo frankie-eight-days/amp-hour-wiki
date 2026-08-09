@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 80 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,27.1 22.2,24.5 33.4,5.0 44.5,27.1 55.6,19.3 66.8,24.5 77.9,21.9 89.0,25.8 100.1,5.0 111.2,27.1 122.4,25.8 133.5,23.2 144.6,20.6 155.8,28.4 166.9,24.5 178.0,25.8 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,27.1 22.2,24.5 33.4,5.0 44.5,27.1 55.6,19.3 66.8,24.5 77.9,21.9 89.0,25.8 100.1,5.0 111.2,27.1 122.4,25.8 133.5,23.2 144.6,20.6 155.8,28.4 166.9,24.5 178.0,25.8" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">80</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">108</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">40</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#17 — #718</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Chrissy Meyer</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./contract-manufacturer">contract manufacturer</a> · <a href="./injection-molding">injection molding</a> · <a href="./digi-key">digi key</a> · <a href="./kickstarter">kickstarter</a> · <a href="./prototype">prototype</a></td></tr></table></div>
+
+
 Design for manufacturing (DFM) is the practice of shaping a product's design around the capabilities, constraints, and economics of the processes that will build it, so that the design can be produced at the intended volume and cost.<sup><a href="#ref-33" title="Ep 33: Bob Widlar, Electronic Design, FIRST Robotics - Monday, Meta Monday">[33]</a></sup><sup><a href="#ref-437" title="Ep 437: An Interview with Chrissy Meyer (April 7, 2019)">[437]</a></sup> Effective DFM depends on the designer having visibility into the specific equipment and supply ecosystem of the chosen manufacturer, because layout, component selection, and mechanical geometry are optimised around what a particular assembler or fabricator can actually do rather than around abstract best practice.<sup><a href="#ref-33" title="Ep 33: Bob Widlar, Electronic Design, FIRST Robotics - Monday, Meta Monday">[33]</a></sup><sup><a href="#ref-450" title="Ep 450: Stories from Teardown 2019 (July 7, 2019)">[450]</a></sup> The discipline spans printed circuit board fabrication and assembly, mechanical processes such as machining, casting, and injection moulding, test fixturing, and supply chain decisions, and it determines whether a working prototype can become a product at a viable price point.<sup><a href="#ref-268" title="Ep 268: An Interview with Luke Iseman of yCombinator (September 22, 2015)">[268]</a></sup><sup><a href="#ref-644" title="Ep 644: Garbage Ninjas (August 28, 2023)">[644]</a></sup>
 
 ## Process visibility as a design input

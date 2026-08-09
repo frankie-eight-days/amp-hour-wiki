@@ -6,6 +6,25 @@ model: k3
 spec: knowledge-only-v4-cluster
 ---
 
+<style>
+.amp-infobox { float: right; width: 210px; margin: 0 0 1rem 1.4rem;
+  background: var(--lightgray); border: 1px solid var(--lightgray);
+  padding: 10px 12px; font-size: 0.78rem; border-radius: 4px; }
+.amp-infobox table { width: 100%; margin: 0; border-collapse: collapse; }
+.amp-infobox td { padding: 2px 0; border: none; vertical-align: top; }
+.amp-infobox .ibk { color: var(--darkgray); padding-right: 8px;
+  white-space: nowrap; }
+.amp-infobox .ibv { text-align: right; }
+.ib-sparklabel { text-align: center; color: var(--darkgray);
+  font-size: 0.68rem; margin-bottom: 6px; }
+.amp-provenance { color: var(--darkgray); font-size: 0.8rem;
+  margin: -0.4rem 0 1.1rem; }
+@media (max-width: 800px) { .amp-infobox { float: none; width: 100%;
+  margin: 0 0 1rem; } }
+</style>
+<div class="amp-provenance">Synthesized from 65 episodes of <a href="https://theamphour.com">The Amp Hour</a> · AI-generated, every claim cited to a verbatim transcript passage</div><div class="amp-infobox"><div class="ib-spark"><svg width="178" height="34" viewBox="0 0 178 34" preserveAspectRatio="none" role="img" aria-label="mentions per year"><polygon points="0,34 0.0,31.0 11.1,19.2 22.2,21.5 33.4,5.0 44.5,28.6 55.6,21.5 66.8,12.1 77.9,9.7 89.0,12.1 100.1,21.5 111.2,12.1 122.4,19.2 133.5,19.2 144.6,28.6 155.8,12.1 166.9,21.5 178.0,26.3 178,34" fill="var(--tertiary)" opacity="0.25"/><polyline points="0.0,31.0 11.1,19.2 22.2,21.5 33.4,5.0 44.5,28.6 55.6,21.5 66.8,12.1 77.9,9.7 89.0,12.1 100.1,21.5 111.2,12.1 122.4,19.2 133.5,19.2 144.6,28.6 155.8,12.1 166.9,21.5 178.0,26.3" fill="none" stroke="var(--secondary)" stroke-width="1.6"/></svg><div class="ib-sparklabel">mentions 2010–2026</div></div><table><tr><td class="ibk">Episodes</td><td class="ibv">65</td></tr><tr><td class="ibk">Mentions</td><td class="ibv">87</td></tr><tr><td class="ibk">Cited here</td><td class="ibv">46</td></tr><tr><td class="ibk">First — last</td><td class="ibv">#8 — #722</td></tr><tr><td class="ibk">Most heard</td><td class="ibv">Chris Gammell, Dave Jones, Michael</td></tr><tr><td class="ibk">Related</td><td class="ibv"><a href="./digi-key">digi key</a> · <a href="./bluetooth">bluetooth</a> · <a href="./internet-of-things">internet of things</a> · <a href="./arduino">arduino</a> · <a href="./linux">linux</a></td></tr></table></div>
+
+
 An application programming interface (API) is the defined boundary through which one piece of software or hardware exposes its functions to another: a component distributor's part database queried by design software,<sup><a href="#ref-8" title="Ep 8: Layouts and Design-Outs">[8]</a></sup><sup><a href="#ref-411" title="Ep 411: An Interview with Chris Denney (October 14, 2018)">[411]</a></sup> a driver that presents several physical devices as one set of calls,<sup><a href="#ref-101" title="Ep 101: An Interview with Matt Ettus - Quality Quadrature Quidam (June 24, 2012)">[101]</a></sup> or a web endpoint that triggers a manufacturing order without a human placing the request.<sup><a href="#ref-315" title="Ep 315: Mashuppery (with MEP)">[315]</a></sup> In electronic systems, APIs appear at every level of the stack, from register access inside an FPGA fabric to cloud services behind connected products, and their structure, documentation and stability determine how easily systems can be integrated, ported and maintained.<sup><a href="#ref-375" title="Ep 375: An Interview with Tim &quot;Mithro&quot; Ansell (January 14, 2018)">[375]</a></sup><sup><a href="#ref-235" title="Ep 235: An Interview with Matt Richardson - Raspberry Risorgimento Regent (February 3, 2015)">[235]</a></sup><sup><a href="#ref-221" title="Ep 221: Warming Up To IoT - Tendentious Thermal Tools">[221]</a></sup>
 
 ## Layering and hardware abstraction
