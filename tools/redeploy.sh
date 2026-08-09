@@ -8,9 +8,10 @@ python3 tools/sync_site.py
 cd site
 npx quartz build
 
-# quartz build wipes public/, which destroys the vercel link — restore it
-# from the stable copy kept at site/.vercel
+# quartz build wipes public/, which destroys the vercel link and config —
+# restore both from the stable copies kept at site/
 cp -r .vercel public/ 2>/dev/null || true
+cp vercel.json public/ 2>/dev/null || true
 cd public
 if [ ! -d .vercel ]; then
   npx vercel link --yes --project amphour-wiki --scope frankie-eight-days-projects
