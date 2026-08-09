@@ -85,5 +85,40 @@ if card_anchor in s:
 else:
     raise SystemExit("card anchor not found — template changed")
 
+# The one synchronous resize() at startup can run before CSS and web fonts have
+# applied, so it measures a not-yet-laid-out canvas, builds a small backing
+# store, and the browser stretches it — the graph looks soft until a reload,
+# when cached CSS makes layout immediate. Re-measure whenever layout actually
+# settles, and never size the buffer from zero dimensions.
+RESIZE_GUARD = """
+// --- backing-store fixes: re-measure once layout has really settled ---
+(function () {
+  var last = 0;
+  function reflow() {
+    if (!cv.clientWidth || !cv.clientHeight) return;   // not laid out yet
+    var key = cv.clientWidth + 'x' + cv.clientHeight +
+              'x' + (window.devicePixelRatio || 1);
+    if (key === last) return;                          // nothing actually changed
+    last = key;
+    resize();
+    if (typeof draw === 'function') draw();
+  }
+  requestAnimationFrame(reflow);
+  addEventListener('load', reflow);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(reflow);
+  if (window.ResizeObserver) new ResizeObserver(reflow).observe(cv);
+  // devicePixelRatio changes when a window moves between displays
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(resolution: 1dppx)');
+    if (mq.addEventListener) mq.addEventListener('change', reflow);
+  }
+  setTimeout(reflow, 250);
+})();
+"""
+anchor = "resetView();\n</script>"
+if anchor not in s:
+    raise SystemExit("explorer init anchor not found — template changed")
+s = s.replace(anchor, "resetView();\n" + RESIZE_GUARD + "</script>", 1)
+
 OUT.write_text(s)
 print(f"explore written: {len(s):,} bytes, {len(published)} published slugs linked")

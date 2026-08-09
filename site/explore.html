@@ -820,6 +820,30 @@ syncBtns();
 resize();
 readTheme();
 resetView();
+
+// --- backing-store fixes: re-measure once layout has really settled ---
+(function () {
+  var last = 0;
+  function reflow() {
+    if (!cv.clientWidth || !cv.clientHeight) return;   // not laid out yet
+    var key = cv.clientWidth + 'x' + cv.clientHeight +
+              'x' + (window.devicePixelRatio || 1);
+    if (key === last) return;                          // nothing actually changed
+    last = key;
+    resize();
+    if (typeof draw === 'function') draw();
+  }
+  requestAnimationFrame(reflow);
+  addEventListener('load', reflow);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(reflow);
+  if (window.ResizeObserver) new ResizeObserver(reflow).observe(cv);
+  // devicePixelRatio changes when a window moves between displays
+  if (window.matchMedia) {
+    var mq = window.matchMedia('(resolution: 1dppx)');
+    if (mq.addEventListener) mq.addEventListener('change', reflow);
+  }
+  setTimeout(reflow, 250);
+})();
 </script>
 
 
